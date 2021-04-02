@@ -3,7 +3,6 @@ from multiprocessing import Pool
 import json
 import os
 import io
-from itertools import islice
 import re
 import csv
 import requests
