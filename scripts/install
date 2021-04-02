@@ -1,0 +1,14 @@
+#!/bin/sh -e
+
+PYTHON="python3"
+VENV="venv"
+BIN="$VENV/bin/"
+
+set -x
+
+if [ ! -d $VENV ]; then
+  $PYTHON -m venv $VENV
+fi
+
+${BIN}pip install -U pip wheel
+${BIN}pip install -r requirements.txt

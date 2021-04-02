@@ -1,0 +1,23 @@
+---
+name: Scrape
+
+on:
+  # https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events
+  schedule:
+    # https://crontab.guru/
+    # '0/n' = 'every n minutes'
+    - cron: "0/10 * * * *"
+
+jobs:
+  scrape:
+    name: "Scrape"
+    runs-on: "ubuntu-20.04"
+    steps:
+      - uses: "actions/checkout@v2"
+      - uses: "actions/setup-python@v2"
+        with:
+          python-version: "3.8"
+      - name: "Install"
+        run: scripts/install
+      - name: "Scrape"
+        run: scripts/scrape
