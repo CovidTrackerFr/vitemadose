@@ -3,7 +3,7 @@ import io
 import re
 import csv
 import requests
-
+from bs4 import BeautifulSoup
 
 DOCTOLIB_HEADERS = {
     'X-Covid-Tracker-Key': os.environ.get('DOCTOLIB_API_KEY', None)
@@ -72,7 +72,6 @@ def fetch_doctolib_slots(rdv_site_web, start_date):
 
     return None
 
-
 def fetch_centre_slots(rdv_site_web, start_date):
     if rdv_site_web.startswith('https://partners.doctolib.fr'):
         return 'Doctolib', fetch_doctolib_slots(rdv_site_web, start_date)
@@ -114,5 +113,5 @@ def fetch_all_slots(start_date):
         })
     return output
         
-
-print(fetch_all_slots('2021-04-15'))
+if __name__ == "__main__":
+    print(fetch_all_slots('2021-04-15'))
