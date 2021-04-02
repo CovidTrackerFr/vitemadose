@@ -13,7 +13,7 @@ session = requests.session()
 if os.getenv('WITH_TOR', 'no') == 'yes':
   session.proxies = {'http':  'socks5://127.0.0.1:9050', 'https': 'socks5://127.0.0.1:9050'}
 
-POOL_SIZE = int(os.getenv('POOL_SIZE', 8))
+POOL_SIZE = int(os.getenv('POOL_SIZE', 20))
 DOCTOLIB_HEADERS = {
     'X-Covid-Tracker-Key': os.environ.get('DOCTOLIB_APIKEY', None)
 }
@@ -48,6 +48,8 @@ def cherche_prochain_rdv_dans_centre(centre):
     }
 
 def export_data(centres_cherchés):
+    compte_centres = 0
+    compte_centres_avec_dispo = 0
     par_departement = {
         code: {
             'version': 1,
@@ -58,11 +60,13 @@ def export_data(centres_cherchés):
         for code in import_departements()
     }
     for centre in centres_cherchés:
+        compte_centres += 1
         code_departement = centre['departement']
         if code_departement in par_departement:
             if centre['prochain_rdv'] is None:
                 par_departement[code_departement]['centres_indisponibles'].append(centre)
             else:
+                compte_centres_avec_dispo += 1
                 par_departement[code_departement]['centres_disponibles'].append(centre)
         else:
             print(f"WARNING: le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
@@ -71,6 +75,8 @@ def export_data(centres_cherchés):
         print(f'writing result to {code_departement}.json file')
         with open(f'data/output/{code_departement}.json', "w") as outfile:
             outfile.write(json.dumps(disponibilités, indent=2))
+
+    print (f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
 
 
 def fetch_centre_slots(rdv_site_web, start_date):
