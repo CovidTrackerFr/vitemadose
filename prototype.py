@@ -10,7 +10,7 @@ import requests
 import pandas as pd
 
 session = requests.session()
-if os.getenv('WITH_TOR') is not None:
+if os.getenv('WITH_TOR', 'no') == 'yes':
   session.proxies = {'http':  'socks5://127.0.0.1:9050', 'https': 'socks5://127.0.0.1:9050'}
 
 POOL_SIZE = int(os.getenv('POOL_SIZE', 8))
@@ -28,21 +28,21 @@ def main():
         )
         export_data(centres_cherchés)
 
-def cherche_prochain_rdv_dans_centre(row):
+def cherche_prochain_rdv_dans_centre(centre):
     start_date = datetime.now().isoformat()[:10]
     try:
-        plateforme, next_slot = fetch_centre_slots(row['rdv_site_web'], start_date)
+        plateforme, next_slot = fetch_centre_slots(centre['rdv_site_web'], start_date)
     except Exception as e:
-        print(f"erreur lors du traitement de la ligne {row['gid']}")
+        print(f"erreur lors du traitement de la ligne avec le gid {centre['gid']}")
         print(e)
         next_slot = None
         plateforme = None
 
-    print(plateforme, next_slot, numero_departement(row))
+    print(plateforme, next_slot, numero_departement(centre))
     return {
-        'departement': numero_departement(row),
-        'nom': row['nom'],
-        'url': row['rdv_site_web'],
+        'departement': numero_departement(centre),
+        'nom': centre['nom'],
+        'url': centre['rdv_site_web'],
         'plateforme': plateforme,
         'prochain_rdv': next_slot
     }
