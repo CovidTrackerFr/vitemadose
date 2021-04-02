@@ -174,8 +174,10 @@ def numero_departement(centre):
     return code_insee[:2]
 
 def import_departements():
-    df = pd.read_csv('data/input/departements-france.csv')
-    return df.code_departement.astype(str).to_list()
+    import csv
+    with open('data/input/departements-france.csv', newline='\n') as csvfile:
+        reader = csv.DictReader(csvfile)
+        return [str(row["code_departement"]) for row in reader]
 
 
 main()
