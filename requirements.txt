@@ -1,1 +1,3 @@
 requests==2.25.1
+requests[socks]
+pandas==0.25.3
