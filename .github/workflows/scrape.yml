@@ -5,8 +5,8 @@ on:
   # https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events
   schedule:
     # https://crontab.guru/
-    # '0/n' = 'every n minutes'
-    - cron: "0/10 * * * *"
+    # '*/n' = 'every n minutes'
+    - cron: "*/10 * * * *"
 
 jobs:
   scrape:
