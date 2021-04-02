@@ -163,6 +163,12 @@ def centre_iterator():
         yield row
 
 
+# NOTE:
+# les codes INSEE de communes sont _normalement_ sur 5 chiffres
+#   - SAUF, si on a mis le type de la colonne à "nombre" dans excel et qu'il vire le 0 au début de 02401
+# Le code INSEE commence par le code du département sur ses 2 premiers caractères
+#   - SAUF pour l'outre-mer (>96) où c'est concrètement le bordel
+#         
 def numero_departement(centre):
     code_insee = centre['com_insee']
     if len(code_insee) == 4:
