@@ -7,7 +7,7 @@ import re
 import csv
 import requests
 
-session = requests.session()
+session = requests.Session()
 if os.getenv('WITH_TOR', 'no') == 'yes':
   session.proxies = {'http':  'socks5://127.0.0.1:9050', 'https': 'socks5://127.0.0.1:9050'}
 
