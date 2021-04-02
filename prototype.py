@@ -19,11 +19,10 @@ DOCTOLIB_HEADERS = {
 }
 
 def main():
-    sauter_n_centres = 0
     with Pool(POOL_SIZE) as pool:
         centres_cherchés = pool.imap_unordered(
             cherche_prochain_rdv_dans_centre,
-            islice(centre_iterator(), 0, None, 1 + sauter_n_centres),
+            centre_iterator(),
             1
         )
         export_data(centres_cherchés)
