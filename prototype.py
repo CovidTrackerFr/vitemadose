@@ -115,4 +115,5 @@ def fetch_all_slots(start_date):
     return output
         
 
-print(fetch_all_slots('2021-04-15'))
+if __name__ == "__main__":
+    print(fetch_all_slots('2021-04-15'))
