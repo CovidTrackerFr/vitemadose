@@ -15,3 +15,9 @@ Lancer le scraper (il tourne périodiquement, cf `.github/workflows/scrape.yml`)
 ```bash
 scripts/scrape
 ```
+
+Exécuter les tests :
+
+```bash
+scripts/test
+```
