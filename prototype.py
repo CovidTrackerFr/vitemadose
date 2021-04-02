@@ -15,7 +15,7 @@ if os.getenv('WITH_TOR', 'no') == 'yes':
 
 POOL_SIZE = int(os.getenv('POOL_SIZE', 20))
 DOCTOLIB_HEADERS = {
-    'X-Covid-Tracker-Key': os.environ.get('DOCTOLIB_APIKEY', None)
+    'X-Covid-Tracker-Key': os.environ.get('DOCTOLIB_API_KEY', None)
 }
 
 def main():
