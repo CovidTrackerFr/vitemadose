@@ -183,4 +183,5 @@ def import_departements():
         return [str(row["code_departement"]) for row in reader]
 
 
-main()
+if __name__ == "__main__":
+  main()
