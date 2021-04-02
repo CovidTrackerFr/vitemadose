@@ -7,7 +7,6 @@ from itertools import islice
 import re
 import csv
 import requests
-import pandas as pd
 
 session = requests.session()
 if os.getenv('WITH_TOR', 'no') == 'yes':
