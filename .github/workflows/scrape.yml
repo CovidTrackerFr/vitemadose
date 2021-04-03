@@ -31,3 +31,4 @@ jobs:
         with:
           commit_message: Automatic Update
           branch: data-auto
+          push_options: '--force'
