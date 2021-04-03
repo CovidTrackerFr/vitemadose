@@ -45,12 +45,10 @@ class DoctolibSlots:
 
         # visit_motive_categories
         # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1
-        visit_category_id = _find_visit_motive_category_id(data)
-        if visit_category_id is None:
-            return None
+        visit_motive_category_id = _find_visit_motive_category_id(data)
 
         # visit_motive_id
-        visit_motive_id = _find_visit_motive_id(data, visit_category_id)
+        visit_motive_id = _find_visit_motive_id(data, visit_motive_category_id=visit_motive_category_id)
         if visit_motive_id is None:
             return None
 
@@ -106,7 +104,7 @@ def _find_visit_motive_category_id(data: dict) -> Optional[str]:
     return None
 
 
-def _find_visit_motive_id(data: dict, visit_motive_category_id: str) -> Optional[str]:
+def _find_visit_motive_id(data: dict, visit_motive_category_id: str = None) -> Optional[str]:
     """
     Etant donnée une réponse à /booking/<centre>.json, renvoie le cas échéant
     l'ID du 1er motif de visite disponible correspondant à une 1ère dose pour
@@ -117,6 +115,11 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: str) -> Optional
         # après la 1ère dose, donc les gens n'ont pas besoin d'aide pour l'obtenir).
         if not visit_motive['name'].startswith('1ère injection vaccin COVID-19'):
             continue
+        # NOTE: 'visit_motive_category_id' agit comme un filtre. Il y a 2 cas :
+        # * visit_motive_category_id=None : pas de filtre, et on veut les motifs qui ne
+        # sont pas non plus rattachés à une catégorie
+        # * visit_motive_category_id=<id> : filtre => on veut les motifs qui
+        # correspondent à la catégorie en question.
         if visit_motive.get('visit_motive_category_id') == visit_motive_category_id:
             return visit_motive['id']
     return None
