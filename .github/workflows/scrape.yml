@@ -26,9 +26,8 @@ jobs:
       - name: "Install"
         run: scripts/install
       - name: "Scraping..."
-        run: venv/bin/python3 -m scraper.prototype
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Automatic Update
-          branch: data-auto
-          push_options: '--force origin data-auto'
+        run: scripts/scrape
+      - name: "Publish"
+        run: scripts/publish
+        env:
+          TARGET_BRANCH: data-auto

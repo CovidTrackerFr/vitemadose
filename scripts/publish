@@ -1,0 +1,21 @@
+#!/bin/sh -e
+
+TARGET_BRANCH="${TARGET_BRANCH:-data-auto}"
+
+set -x
+
+# Ensure the test suite passes before publishing.
+scripts/test
+
+# Deal with detached head state that GitHub Actions puts us in
+git checkout main
+set +e; git branch -D $TARGET_BRANCH; set -e  # Branch may not exist yet; don't fail.
+git checkout -b $TARGET_BRANCH
+
+# Create a commit with the date attached
+datetime=`date "+%Y-%m-%d"`
+git add data/output/
+git commit -m "Automated update on $datetime"
+
+# Push the commit
+git push --force --set-upstream origin $TARGET_BRANCH
