@@ -17,6 +17,7 @@ def fetch_keldoc_motives(center_id, specialty_ids, cabinet_ids):
     for specialty in specialty_ids:
         for cabinet in cabinet_ids:
             motive_req = session.get(motive_url.format(center_id, specialty, cabinet))
+            motive_req.raise_for_status()
             motive_data = motive_req.json()
             for motive_cat in motive_data:
                 motive_categories.append(motive_cat)
@@ -62,18 +63,24 @@ def parse_keldoc_availability(availability_data):
 def fetch_slots(rdv_site_web, start_date):
     # Fetch new URL after redirection
     rq = session.get(rdv_site_web)
+    rq.raise_for_status()
     new_url = rq.url
 
     # Keldoc needs an end date, but if no appointment are found,
     # it still returns the next available appointment. Bigger end date
     # makes Keldoc responses slower.
     date_obj = datetime.strptime(start_date, '%Y-%m-%d')
-    end_date = date_obj + timedelta(days=1)
-    end_date = date_obj.strftime('%Y-%m-%d')
+    end_date = (date_obj + timedelta(days=1)).strftime('%Y-%m-%d')
 
     # Parse revelant GET params for Keldoc API requests
     query = urlsplit(new_url).query
     params_get = parse_qs(query)
+    mandatory_params = ['dom', 'inst', 'user']
+    # Some vaccination centers on Keldoc do not
+    # accept online appointments, so you cannot retrieve a date
+    for mandatory_param in mandatory_params:
+        if not mandatory_param in params_get:
+            return None
     resource_params = {
         'type': params_get.get('dom')[0],
         'location': params_get.get('inst')[0],
@@ -83,6 +90,7 @@ def fetch_slots(rdv_site_web, start_date):
     # Fetch center id
     resource_url = f'https://booking.keldoc.com/api/patients/v2/searches/resource'
     resource = session.get(resource_url, params=resource_params)
+    resource.raise_for_status()
     data = resource.json()
 
     center_id = data.get('id', None)
@@ -110,9 +118,11 @@ def fetch_slots(rdv_site_web, start_date):
             'agenda_ids[]': revelant_motive.get('agendas', [])
         }
         calendar_req = session.get(calendar_url, params=calendar_params)
+        calendar_req.raise_for_status()
         date = parse_keldoc_availability(calendar_req.json())
         if date is None:
             continue
+        # Compare first available date
         if first_availability is None or date < first_availability:
             first_availability = date
     if not first_availability:
