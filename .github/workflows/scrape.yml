@@ -19,25 +19,15 @@ jobs:
     runs-on: "ubuntu-20.04"
 
     steps:
-
       - uses: "actions/checkout@v2"
-
       - uses: "actions/setup-python@v2"
         with:
           python-version: "3.8"
-
       - name: "Install"
         run: scripts/install
-
       - name: "Scraping..."
         run: venv/bin/python3 prototype.py
-
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          # Optional but recommended
-          # Defaults to "Apply automatic changes"
-          commit_message: Aautomatic Update
-
-          # Optional branch name where commit should be pushed to
-          # Defaults to the current branch
+          commit_message: Automatic Update
           branch: data-auto
