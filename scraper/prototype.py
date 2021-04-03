@@ -34,9 +34,13 @@ def cherche_prochain_rdv_dans_centre(centre):
         next_slot = None
         plateforme = None
 
-    departement = to_departement_number(insee_code=centre['com_insee'])
+    try:
+        departement = to_departement_number(insee_code=centre['com_insee'])
+    except ValueError:
+        print(f"erreur lors du traitement de la ligne avec le gid {centre['gid']}, com_insee={centre['com_insee']}")
+        departement = ''
 
-    print(plateforme, next_slot, departement)
+    print(f'{centre["gid"]:>8} {plateforme:16} {next_slot or ""!s:32} {departement:6}')
 
     return {
         'departement': departement,
