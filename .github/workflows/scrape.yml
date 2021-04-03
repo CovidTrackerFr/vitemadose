@@ -22,4 +22,4 @@ jobs:
       - name: "Install"
         run: scripts/install
       - name: "Tentative scrap"
-        run: python3 prototype.py
+        run: venv/bin/python3 prototype.py
