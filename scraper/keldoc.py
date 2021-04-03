@@ -75,10 +75,12 @@ def fetch_slots(rdv_site_web, start_date):
     # Parse revelant GET params for Keldoc API requests
     query = urlsplit(new_url).query
     params_get = parse_qs(query)
+    mandatory_params = ['dom', 'inst', 'user']
     # Some vaccination centers on Keldoc do not
     # accept online appointments, so you cannot retrieve a date
-    if not params_get:
-        return None
+    for mandatory_param in mandatory_params:
+        if not mandatory_param in params_get:
+            return None
     resource_params = {
         'type': params_get.get('dom')[0],
         'location': params_get.get('inst')[0],
@@ -106,8 +108,8 @@ def fetch_slots(rdv_site_web, start_date):
 
     # Find next availabilities
     for revelant_motive in revelant_motives:
-        if not 'id' in revelant_motive or not 'agendas' in revelant_motive:
-            continue
+        assert 'id' in revelant_motive, 'Unknown motive ID'
+        assert 'agendas' in revelant_motive, 'No agenda related to this motive'
         motive_id = revelant_motive.get('id', None)
         calendar_url = f'https://www.keldoc.com/api/patients/v2/timetables/{motive_id}'
         calendar_params = {
