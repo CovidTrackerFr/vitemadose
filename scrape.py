@@ -1,1 +1,3 @@
-print("TODO")
+from scraper import main
+
+main()
