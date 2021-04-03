@@ -73,6 +73,6 @@ def _clean_insee_code(insee_code: str) -> str:
         insee_code = f"0{insee_code}"
 
     if len(insee_code) != 5:
-        raise RuntimeError(f'Code INSEE non-valide : {insee_code}')
+        raise ValueError(f'Code INSEE non-valide : {insee_code}')
 
     return insee_code
