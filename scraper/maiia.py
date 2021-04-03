@@ -1,6 +1,6 @@
 import json
 import requests
-from datetime import datetime
+from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 
 
@@ -48,19 +48,21 @@ def get_slots_from(rdv_form, rdv_url):
         return None
 
     if "firstPhysicalStartDateTime" in availability:
-        return datetime.strptime(availability['firstPhysicalStartDateTime'],
-                                 '%Y-%m-%dT%H:%M:%S.%fZ').strftime("%Y-%m-%d %H:%M")
+        dt = datetime.strptime(availability['firstPhysicalStartDateTime'],
+                               '%Y-%m-%dT%H:%M:%S.%fZ')
+        dt = dt + timedelta(hours=2)
+        dt = dt.strftime("%Y-%m-%d %H:%M")
+        return dt
 
     # Ne sachant pas si 'firstPhysicalStartDateTime' est un attribut par défault dans
     # la réponse, je préfère faire des tests sur l'existence des attributs
-    if (
-            "closestPhysicalAvailability" in availability
-            and "startDateTime" in availability
-    ):
-        return datetime.strptime(
-            availability['closestPhysicalAvailability']["startDateTime"],
-            '%Y-%m-%dT%H:%M:%S.%fZ'
-        ).strftime("%Y-%m-%d %H:%m")
+    if "closestPhysicalAvailability" in availability and "startDateTime" in availability:
+        dt = datetime.strptime(
+                availability['closestPhysicalAvailability']["startDateTime"],
+                '%Y-%m-%dT%H:%M:%S.%fZ')
+        dt = dt + timedelta(hours=2)
+        dt = dt.strftime("%Y-%m-%d %H:%M")
+        return dt
 
 
     return None
