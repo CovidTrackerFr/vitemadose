@@ -16,7 +16,10 @@ def fetch_keldoc_motives(center_id, specialty_ids, cabinet_ids):
 
     for specialty in specialty_ids:
         for cabinet in cabinet_ids:
-            motive_req = session.get(motive_url.format(center_id, specialty, cabinet))
+            try:
+                motive_req = session.get(motive_url.format(center_id, specialty, cabinet), timeout=5)
+            except requests.exceptions.Timeout:
+                continue
             motive_req.raise_for_status()
             motive_data = motive_req.json()
             for motive_cat in motive_data:
@@ -62,7 +65,10 @@ def parse_keldoc_availability(availability_data):
 
 def fetch_slots(rdv_site_web, start_date):
     # Fetch new URL after redirection
-    rq = session.get(rdv_site_web)
+    try:
+        rq = session.get(rdv_site_web, timeout=10)
+    except requests.exceptions.Timeout:
+        return None
     rq.raise_for_status()
     new_url = rq.url
 
@@ -89,7 +95,10 @@ def fetch_slots(rdv_site_web, start_date):
 
     # Fetch center id
     resource_url = f'https://booking.keldoc.com/api/patients/v2/searches/resource'
-    resource = session.get(resource_url, params=resource_params)
+    try:
+        resource = session.get(resource_url, params=resource_params, timeout=10)
+    except requests.exceptions.Timeout:
+        return None
     resource.raise_for_status()
     data = resource.json()
 
@@ -117,8 +126,14 @@ def fetch_slots(rdv_site_web, start_date):
             'to': end_date,
             'agenda_ids[]': revelant_motive.get('agendas', [])
         }
-        calendar_req = session.get(calendar_url, params=calendar_params)
+        try:
+            calendar_req = session.get(calendar_url, params=calendar_params, timeout=10)
+        except requests.exceptions.Timeout:
+            # Some requests on Keldoc are taking too much time (for few centers)
+            # and block the process completion.
+            continue
         calendar_req.raise_for_status()
+
         date = parse_keldoc_availability(calendar_req.json())
         if date is None:
             continue
