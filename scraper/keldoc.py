@@ -108,8 +108,8 @@ def fetch_slots(rdv_site_web, start_date):
 
     # Find next availabilities
     for revelant_motive in revelant_motives:
-        assert 'id' in revelant_motive, 'Unknown motive ID'
-        assert 'agendas' in revelant_motive, 'No agenda related to this motive'
+        if not 'id' in revelant_motive or not 'agendas' in revelant_motive:
+            continue
         motive_id = revelant_motive.get('id', None)
         calendar_url = f'https://www.keldoc.com/api/patients/v2/timetables/{motive_id}'
         calendar_params = {
