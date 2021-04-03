@@ -87,7 +87,7 @@ def fetch_centre_slots(rdv_site_web, start_date):
     if rdv_site_web.startswith('https://partners.doctolib.fr') or rdv_site_web.startswith('https://www.doctolib.fr'):
         return 'Doctolib', doctolib_fetch_slots(rdv_site_web, start_date)
     if rdv_site_web.startswith('https://vaccination-covid.keldoc.com'):
-        return 'Keldoc', keldoc_fetch_slots(rdv_site_web, start_date)
+        return 'Keldoc', None #keldoc_fetch_slots(rdv_site_web, start_date)
     if rdv_site_web.startswith('https://www.maiia.com'):
         return 'Maiia', maiia_fetch_slots(rdv_site_web, start_date)
     return 'Autre', None
