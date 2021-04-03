@@ -29,13 +29,15 @@ jobs:
       - name: "Install"
         run: scripts/install
 
-      - name: "Tentative scrap"
+      - name: "Scraping..."
         run: venv/bin/python3 prototype.py
 
-      - uses: EndBug/add-and-commit@v7
+      - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          add: 'data/output' # git add data/output
-          branch: data
-          message: 'Auto Update'
-          push: true
+          # Optional but recommended
+          # Defaults to "Apply automatic changes"
+          commit_message: Aautomatic Update
 
+          # Optional branch name where commit should be pushed to
+          # Defaults to the current branch
+          branch: data
