@@ -1,10 +1,11 @@
 import os
 import re
-import requests
-import httpx
 from typing import Optional, Tuple
 
-DEFAULT_HEADERS = {
+import httpx
+import requests
+
+DOCTOLIB_HEADERS = {
     'X-Covid-Tracker-Key': os.environ.get('DOCTOLIB_API_KEY', ''),
 }
 
@@ -38,7 +39,7 @@ class DoctolibSlots:
         centre = _parse_centre(rdv_site_web)
 
         centre_api_url = f'https://partners.doctolib.fr/booking/{centre}.json'
-        response = self._client.get(centre_api_url, headers=DEFAULT_HEADERS)
+        response = self._client.get(centre_api_url, headers=DOCTOLIB_HEADERS)
         response.raise_for_status()
         data = response.json()
 
@@ -60,18 +61,9 @@ class DoctolibSlots:
 
         # temporary_booking_disabled ??
 
-        slots_api_url = 'https://partners.doctolib.fr/availabilities.json'
-        params = {
-            "start_date": start_date,
-            "visit_motive_ids": visit_motive_id,
-            "agenda_ids": "-".join(agenda_ids),
-            "practice_ids": "-".join(practice_ids),
-            "insurance_sector": "public",
-            "destroy_temporary": True,
-            "limit": 7,
-        }
+        slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={visit_motive_id}&agenda_ids={agenda_ids}&insurance_sector=public&practice_ids={practice_ids}&destroy_temporary=true&limit=7'
 
-        response = self._client.get(slots_api_url, params=params, headers=DEFAULT_HEADERS)
+        response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
         response.raise_for_status()
 
         slots = response.json()
@@ -140,8 +132,8 @@ def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str) -> Tuple[lis
         if agenda['booking_disabled']:
             continue
         agenda_id = str(agenda['id'])
-        for pratice_id, visit_motive_ids in agenda['visit_motive_ids_by_practice_id'].items():
-            if visit_motive_id in visit_motive_ids:
+        for pratice_id, visit_motive_list in agenda['visit_motive_ids_by_practice_id'].items():
+            if visit_motive_id in visit_motive_list:
                 practice_ids.append(str(pratice_id))
                 if agenda_id not in agenda_ids:
                     agenda_ids.append(agenda_id)
