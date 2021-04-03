@@ -30,5 +30,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Automatic Update
-          branch: data-auto
-          push_options: '--force origin data-auto'
+          push_options: '--force HEAD:data-auto'
