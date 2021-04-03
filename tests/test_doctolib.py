@@ -48,6 +48,32 @@ def test_doctolib():
     assert next_date == "2021-04-10"
 
 
+def test_doctolib_motive_categories():
+    # Certains centres opèrent une distinction de motifs pour les professionnels de santé /
+    # non professionnels de santé.
+    # On doit gérer ces cas-là.
+
+    start_date = "2021-04-03"
+    rdv_site_web = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
+
+    def app(request: httpx.Request) -> httpx.Response:
+        assert "X-Covid-Tracker-Key" in request.headers
+
+        if request.url.path == "/booking/centre1.json":
+            path = Path("tests", "fixtures", "doctolib", "category-booking.json")
+            return httpx.Response(200, json=json.loads(path.read_text()))
+
+        assert request.url.path == "/availabilities.json"
+        path = Path("tests", "fixtures", "doctolib", "category-availabilities.json")
+        return httpx.Response(200, json=json.loads(path.read_text()))
+
+    client = httpx.Client(transport=httpx.MockTransport(app))
+    slots = DoctolibSlots(client=client)
+
+    next_date = slots.fetch(rdv_site_web, start_date)
+    assert next_date == "2021-04-10"
+
+
 def test_doctolib_next_slot():
     # Cas de repli : c'est surprenant, mais parfois la liste des dispos
     # est vide, mais il y a un champ 'next_slot' qui contient la date de

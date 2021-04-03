@@ -1,9 +1,15 @@
 {
   "data": {
-    "visit_motive_categories": [],
+    "visit_motive_categories": [
+      {
+        "id": 1,
+        "name": "Non professionnels de santé"
+      }
+    ],
     "visit_motives": [
       {
         "id": 2,
+        "visit_motive_category_id": 1,
         "name": "1ère injection vaccin COVID-19 (Moderna)"
       }
     ],
