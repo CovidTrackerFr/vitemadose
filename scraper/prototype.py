@@ -40,7 +40,7 @@ def cherche_prochain_rdv_dans_centre(centre):
         print(f"erreur lors du traitement de la ligne avec le gid {centre['gid']}, com_insee={centre['com_insee']}")
         departement = ''
 
-    print(f'{centre["gid"]:>8} {plateforme:16} {next_slot or ""!s:32} {departement:6}')
+    print(f'{centre.get("gid", "")!s:>8} {plateforme!s:16} {next_slot or ""!s:32} {departement!s:6}')
 
     return {
         'departement': departement,
