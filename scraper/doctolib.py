@@ -12,12 +12,12 @@ DOCTOLIB_HEADERS = {
 DEFAULT_CLIENT: httpx.Client
 
 if os.getenv('WITH_TOR', 'no') == 'yes':
-    DEFAULT_CLIENT = requests.Session(  # type: ignore
-        proxies={
-            'http': 'socks5://127.0.0.1:9050',
-            'https': 'socks5://127.0.0.1:9050',
-        },
-    )
+    session = requests.Session()
+    session.proxies = {  # type: ignore
+        'http': 'socks5://127.0.0.1:9050',
+        'https': 'socks5://127.0.0.1:9050',
+    }
+    DEFAULT_CLIENT = session  # type: ignore
 else:
     DEFAULT_CLIENT = httpx.Client()
 
