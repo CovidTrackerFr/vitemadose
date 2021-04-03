@@ -25,7 +25,7 @@ def fetch_keldoc_motives(center_id, specialty_ids, cabinet_ids):
         motives = motive_cat.get('motives', {})
         for motive in motives:
             motive_name = motive.get('name', None)
-            if not motive_name or not '1ère injection' in motive_name:
+            if not motive_name or not '1ère injection' in motive_name.lower():
                 continue
             motive_agendas = [motive_agenda.get('id', None) for motive_agenda in motive.get('agendas', {})]
             motive_info = {
@@ -74,11 +74,15 @@ def fetch_slots(rdv_site_web, start_date):
     # Parse revelant GET params for Keldoc API requests
     query = urlsplit(new_url).query
     params_get = parse_qs(query)
-    dom, inst, user = params_get.get('dom')[0], params_get.get('inst')[0], params_get.get('user')[0]
+    resource_params = {
+        'type': params_get.get('dom')[0],
+        'location': params_get.get('inst')[0],
+        'slug': params_get.get('user')[0]
+    }
 
     # Fetch center id
-    resource_url = f'https://booking.keldoc.com/api/patients/v2/searches/resource?type={dom}&location={inst}&slug={user}'
-    resource = session.get(resource_url)
+    resource_url = f'https://booking.keldoc.com/api/patients/v2/searches/resource'
+    resource = session.get(resource_url, params=resource_params)
     data = resource.json()
 
     center_id = data.get('id', None)
