@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+BIN="venv/bin/"
+
+set -x
+
+${BIN}pytest

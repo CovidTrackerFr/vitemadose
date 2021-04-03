@@ -1,29 +1,39 @@
 import os
 import io
 import re
-import csv
 import requests
-from bs4 import BeautifulSoup
+
+
+session = requests.Session()
+if os.getenv('WITH_TOR', 'no') == 'yes':
+    session.proxies = {'http': 'socks5://127.0.0.1:9050', 'https': 'socks5://127.0.0.1:9050'}
 
 DOCTOLIB_HEADERS = {
     'X-Covid-Tracker-Key': os.environ.get('DOCTOLIB_API_KEY', None)
 }
 
 
-def fetch_doctolib_slots(rdv_site_web, start_date):
-    centre = re.search(r'\/([^`\/]*)\?', rdv_site_web)
-    if not centre:
-        return None
+def fetch_slots(rdv_site_web, start_date):
+    centre = re.search(r'\/([^`\/]+)\?', rdv_site_web)
+    if centre:
+        # nouvelle URL https://partners.doctolib.fr/...
+        centre = centre.group(1)
+    else:
+        # ancienne URL https://www.doctolib.fr/....
+        # centre est en minuscule
+        centre = rdv_site_web.split('/')[-1].lower()
+        if centre == '':
+            return None
 
-    centre_api_url = f'https://partners.doctolib.fr/booking/{centre.group(1)}.json'
-    response = requests.get(centre_api_url, headers=DOCTOLIB_HEADERS)
+    centre_api_url = f'https://partners.doctolib.fr/booking/{centre}.json'
+    response = session.get(centre_api_url, headers=DOCTOLIB_HEADERS)
     response.raise_for_status()
     data = response.json()
 
     # visit_motive_categories
     # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1
     visit_category = None
-    for category in  data.get('data', {}).get('visit_motive_categories', []):
+    for category in data.get('data', {}).get('visit_motive_categories', []):
         if category['name'] == 'Non professionnels de santé':
             visit_category = category['id']
             break
@@ -62,7 +72,7 @@ def fetch_doctolib_slots(rdv_site_web, start_date):
 
     slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={visit_motive_id}&agenda_ids={agenda_ids}&insurance_sector=public&practice_ids={practice_ids}&destroy_temporary=true&limit=7'
 
-    response = requests.get(slots_api_url, headers=DOCTOLIB_HEADERS)
+    response = session.get(slots_api_url, headers=DOCTOLIB_HEADERS)
     response.raise_for_status()
 
     slots = response.json()
@@ -70,48 +80,4 @@ def fetch_doctolib_slots(rdv_site_web, start_date):
         if len(slot['slots']) > 0:
             return slot['slots'][0]['start_date']
 
-    return None
-
-def fetch_centre_slots(rdv_site_web, start_date):
-    if rdv_site_web.startswith('https://partners.doctolib.fr'):
-        return 'Doctolib', fetch_doctolib_slots(rdv_site_web, start_date)
-    if rdv_site_web.startswith('https://vaccination-covid.keldoc.com'):
-        return 'Keldoc', None
-    if rdv_site_web.startswith('https://www.maiia.com'):
-        return 'Maiia', None
-    return 'Autre', None
-    
-
-def centre_iterator():
-    url = "https://www.data.gouv.fr/fr/datasets/r/5cb21a85-b0b0-4a65-a249-806a040ec372"
-    response = requests.get(url)
-    response.raise_for_status()
-
-    reader = io.StringIO(response.content.decode('utf8'))
-    csvreader = csv.DictReader(reader, delimiter=';')
-    for row in csvreader:
-        yield row
-
-
-def fetch_all_slots(start_date):
-    output = []
-    for row in centre_iterator():
-        try:
-            plateforme, slots = fetch_centre_slots(row['rdv_site_web'], start_date)
-        except requests.exceptions.RequestException as e:
-            print(row['rdv_site_web'], e)
-            slots = None
-            plateforme = None
-
-        print(plateforme, slots, row['rdv_site_web'])
-
-        output.append({
-            'nom': row['nom'],
-            'url': row['rdv_site_web'],
-            'plateforme': plateforme,
-            'prochain_rdv': slots
-        })
-    return output
-        
-if __name__ == "__main__":
-    print(fetch_all_slots('2021-04-15'))
+    return slots.get('next_slot')

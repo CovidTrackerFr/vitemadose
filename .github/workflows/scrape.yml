@@ -6,14 +6,18 @@ on:
   schedule:
     # https://crontab.guru/
     # '*/n' = 'every n minutes'
-    - cron: "*/10 * * * *"
+    - cron: "*/5 * * * *"
   # Allow running manually
   workflow_dispatch:
 
 jobs:
+
   scrape:
+
     name: "Scrape"
+
     runs-on: "ubuntu-20.04"
+
     steps:
       - uses: "actions/checkout@v2"
       - uses: "actions/setup-python@v2"
@@ -21,5 +25,9 @@ jobs:
           python-version: "3.8"
       - name: "Install"
         run: scripts/install
-      - name: "Scrape"
-        run: scripts/scrape
+      - name: "Scraping..."
+        run: venv/bin/python3 -m scraper.prototype
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Automatic Update
+          branch: data-auto
