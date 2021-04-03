@@ -11,4 +11,4 @@ if [ ! -d $VENV ]; then
 fi
 
 ${BIN}pip install -U pip wheel
-${BIN}pip install -r requirements.txt
+${BIN}pip install .
