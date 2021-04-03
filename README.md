@@ -4,7 +4,7 @@ Doc : https://hackmd.io/YHcjKsUzQ1-cMomOUuTpXw
 
 ## Démarrage rapide
 
-Installation du modules (À la racine de `vitemadose`) :
+Installation du module (À la racine de `vitemadose`) :
 
 ```bash
 scripts/install
