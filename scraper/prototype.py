@@ -82,7 +82,8 @@ def export_data(centres_cherchés):
 
 
 def fetch_centre_slots(rdv_site_web, start_date):
-    if rdv_site_web.startswith('https://partners.doctolib.fr'):
+    rdv_site_web = rdv_site_web.strip()
+    if rdv_site_web.startswith('https://partners.doctolib.fr') or rdv_site_web.startswith('https://www.doctolib.fr'):
         return 'Doctolib', fetch_doctolib_slots(rdv_site_web, start_date)
     if rdv_site_web.startswith('https://vaccination-covid.keldoc.com'):
         return 'Keldoc', None
@@ -92,11 +93,18 @@ def fetch_centre_slots(rdv_site_web, start_date):
 
 
 def fetch_doctolib_slots(rdv_site_web, start_date):
-    centre = re.search(r'\/([^`\/]*)\?', rdv_site_web)
-    if not centre:
-        return None
+    centre = re.search(r'\/([^`\/]+)\?', rdv_site_web)
+    if centre:
+        # nouvelle URL https://partners.doctolib.fr/...
+        centre = centre.group(1)
+    else:
+        # ancienne URL https://www.doctolib.fr/....
+        # centre est en minuscule
+        centre = rdv_site_web.split('/')[-1].lower()
+        if centre == '':
+            return None
 
-    centre_api_url = f'https://partners.doctolib.fr/booking/{centre.group(1)}.json'
+    centre_api_url = f'https://partners.doctolib.fr/booking/{centre}.json'
     response = session.get(centre_api_url, headers=DOCTOLIB_HEADERS)
     response.raise_for_status()
     data = response.json()
