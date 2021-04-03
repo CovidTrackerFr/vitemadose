@@ -7,5 +7,6 @@ setup(
     install_requires=[
         'requests[socks]==2.25.1',
         'pytest==6.2.2',
+        'beautifulsoup4==4.9.3'
     ],
 )
