@@ -6,7 +6,7 @@ on:
   schedule:
     # https://crontab.guru/
     # '*/n' = 'every n minutes'
-    - cron: "*/10 * * * *"
+    - cron: "*/5 * * * *"
   # Allow running manually
   workflow_dispatch:
 
