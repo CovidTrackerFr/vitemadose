@@ -22,4 +22,4 @@ jobs:
       - name: "Install"
         run: scripts/install
       - name: "Tentative scrap"
-        run: prototype.py
+        run: python3 prototype.py
