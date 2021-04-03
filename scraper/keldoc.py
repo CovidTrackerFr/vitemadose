@@ -2,11 +2,73 @@ from datetime import datetime, timedelta
 from urllib.parse import urlsplit, parse_qs
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3 import Retry
 
 session = requests.Session()
 
+retries = Retry(total=2,
+                backoff_factor=0.1,
+                status_forcelist=[500, 502, 503, 504])
+session.mount("https://", HTTPAdapter(max_retries=retries))
 
-def fetch_keldoc_motives(center_id, specialty_ids, cabinet_ids):
+KELDOC_COVID_SPECIALTIES = [
+    'Maladies infectieuses'
+]
+
+KELDOC_APPOINTMENT_REASON = [
+    '1ère injection'
+]
+
+
+# Filter by relevant appointments
+def is_appointment_relevant(appointment_name):
+    if not appointment_name:
+        return False
+
+    appointment_name = appointment_name.lower()
+    for allowed_appointments in KELDOC_APPOINTMENT_REASON:
+        if allowed_appointments in appointment_name:
+            return True
+    return False
+
+
+# Filter by revelant specialties
+def is_specialty_relevant(specialty_name):
+    if not specialty_name:
+        return False
+
+    for allowed_specialties in KELDOC_COVID_SPECIALTIES:
+        if allowed_specialties == specialty_name:
+            return True
+    return False
+
+
+# Get relevant cabinets
+def get_relevant_cabinets(center_id, specialty_ids):
+    cabinets = []
+    if not center_id or not specialty_ids:
+        return cabinets
+
+    for specialty in specialty_ids:
+        cabinet_url = f'https://booking.keldoc.com/api/patients/v2/clinics/{center_id}/specialties/{specialty}/cabinets'
+        try:
+            cabinet_req = session.get(cabinet_url, timeout=5)
+        except requests.exceptions.Timeout:
+            continue
+        cabinet_req.raise_for_status()
+        data = cabinet_req.json()
+        if not data:
+            return cabinets
+        for cabinet in data:
+            cabinet_id = cabinet.get('id', None)
+            if not cabinet_id:
+                continue
+            cabinets.append(cabinet_id)
+    return cabinets
+
+
+def fetch_keldoc_motives(base_url, center_id, specialty_ids, cabinet_ids):
     if center_id is None or specialty_ids is None or cabinet_ids is None:
         return None
 
@@ -16,7 +78,10 @@ def fetch_keldoc_motives(center_id, specialty_ids, cabinet_ids):
 
     for specialty in specialty_ids:
         for cabinet in cabinet_ids:
-            motive_req = session.get(motive_url.format(center_id, specialty, cabinet))
+            try:
+                motive_req = session.get(motive_url.format(center_id, specialty, cabinet), timeout=10)
+            except requests.exceptions.Timeout:
+                continue
             motive_req.raise_for_status()
             motive_data = motive_req.json()
             for motive_cat in motive_data:
@@ -26,7 +91,8 @@ def fetch_keldoc_motives(center_id, specialty_ids, cabinet_ids):
         motives = motive_cat.get('motives', {})
         for motive in motives:
             motive_name = motive.get('name', None)
-            if not motive_name or not '1ère injection' in motive_name.lower():
+
+            if not motive_name or not is_appointment_relevant(motive_name):
                 continue
             motive_agendas = [motive_agenda.get('id', None) for motive_agenda in motive.get('agendas', {})]
             motive_info = {
@@ -62,7 +128,10 @@ def parse_keldoc_availability(availability_data):
 
 def fetch_slots(rdv_site_web, start_date):
     # Fetch new URL after redirection
-    rq = session.get(rdv_site_web)
+    try:
+        rq = session.get(rdv_site_web, timeout=10)
+    except requests.exceptions.Timeout:
+        return None
     rq.raise_for_status()
     new_url = rq.url
 
@@ -89,7 +158,10 @@ def fetch_slots(rdv_site_web, start_date):
 
     # Fetch center id
     resource_url = f'https://booking.keldoc.com/api/patients/v2/searches/resource'
-    resource = session.get(resource_url, params=resource_params)
+    try:
+        resource = session.get(resource_url, params=resource_params, timeout=10)
+    except requests.exceptions.Timeout:
+        return None
     resource.raise_for_status()
     data = resource.json()
 
@@ -97,16 +169,19 @@ def fetch_slots(rdv_site_web, start_date):
     if not center_id:
         return None
 
-    # Put specialty & cabinet IDs in lists
-    specialty_ids = [specialty.get('id', None) for specialty in data.get('specialties', {})]
-    cabinet_ids = [cabinet.get('id', None) for cabinet in data.get('cabinets', {})]
-    revelant_motives = fetch_keldoc_motives(center_id, specialty_ids, cabinet_ids)
-
+    # Put revelant specialty & cabinet IDs in lists
+    specialty_ids = []
+    for specialty in data.get('specialties', {}):
+        if not is_specialty_relevant(specialty.get('name', None)):
+            continue
+        specialty_ids.append(specialty.get('id', None))
+    cabinet_ids = get_relevant_cabinets(center_id, specialty_ids)
+    revelant_motives = fetch_keldoc_motives(rdv_site_web, center_id, specialty_ids, cabinet_ids)
     if revelant_motives is None:
         return None
-    first_availability = None
 
     # Find next availabilities
+    first_availability = None
     for revelant_motive in revelant_motives:
         if not 'id' in revelant_motive or not 'agendas' in revelant_motive:
             continue
@@ -117,8 +192,14 @@ def fetch_slots(rdv_site_web, start_date):
             'to': end_date,
             'agenda_ids[]': revelant_motive.get('agendas', [])
         }
-        calendar_req = session.get(calendar_url, params=calendar_params)
+        try:
+            calendar_req = session.get(calendar_url, params=calendar_params, timeout=10)
+        except requests.exceptions.Timeout:
+            # Some requests on Keldoc are taking too much time (for few centers)
+            # and block the process completion.
+            continue
         calendar_req.raise_for_status()
+
         date = parse_keldoc_availability(calendar_req.json())
         if date is None:
             continue
