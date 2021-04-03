@@ -7,7 +7,7 @@ def centre_iterator():
     import csv
     import os
     print(os.getcwd())
-    with open('data/input/centres-vaccination.csv', newline='\n') as csvfile:
+    with open('../data/input/centres-vaccination.csv', newline='\n') as csvfile:
         reader = csv.DictReader(csvfile, delimiter=';')
         for row in reader:
             yield row
