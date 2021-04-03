@@ -7,9 +7,11 @@ import re
 import csv
 import requests
 
+from .departements import to_departement_number, import_departements
+
 session = requests.Session()
 if os.getenv('WITH_TOR', 'no') == 'yes':
-  session.proxies = {'http':  'socks5://127.0.0.1:9050', 'https': 'socks5://127.0.0.1:9050'}
+    session.proxies = {'http': 'socks5://127.0.0.1:9050', 'https': 'socks5://127.0.0.1:9050'}
 
 POOL_SIZE = int(os.getenv('POOL_SIZE', 20))
 DOCTOLIB_HEADERS = {
@@ -35,9 +37,12 @@ def cherche_prochain_rdv_dans_centre(centre):
         next_slot = None
         plateforme = None
 
-    print(plateforme, next_slot, numero_departement(centre))
+    departement = to_departement_number(insee_code=centre['com_insee'])
+
+    print(plateforme, next_slot, departement)
+
     return {
-        'departement': numero_departement(centre),
+        'departement': departement,
         'nom': centre['nom'],
         'url': centre['rdv_site_web'],
         'plateforme': plateforme,
@@ -73,7 +78,7 @@ def export_data(centres_cherchés):
         with open(f'data/output/{code_departement}.json', "w") as outfile:
             outfile.write(json.dumps(disponibilités, indent=2))
 
-    print (f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
+    print(f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
 
 
 def fetch_centre_slots(rdv_site_web, start_date):
@@ -99,7 +104,7 @@ def fetch_doctolib_slots(rdv_site_web, start_date):
     # visit_motive_categories
     # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1
     visit_category = None
-    for category in  data.get('data', {}).get('visit_motive_categories', []):
+    for category in data.get('data', {}).get('visit_motive_categories', []):
         if category['name'] == 'Non professionnels de santé':
             visit_category = category['id']
             break
@@ -160,28 +165,5 @@ def centre_iterator():
         yield row
 
 
-# NOTE:
-# les codes INSEE de communes sont _normalement_ sur 5 chiffres
-#   - SAUF, si on a mis le type de la colonne à "nombre" dans excel et qu'il vire le 0 au début de 02401
-# Le code INSEE commence par le code du département sur ses 2 premiers caractères
-#   - SAUF pour l'outre-mer (>96) où c'est concrètement le bordel
-#         
-def numero_departement(centre):
-    code_insee = centre['com_insee']
-    if len(code_insee) == 4:
-        code_insee = '0' + code_insee
-    if code_insee.startswith('977') or code_insee.startswith('978'):
-        return '971'
-    if code_insee.startswith('97'):
-        return code_insee[:3]
-    return code_insee[:2]
-
-def import_departements():
-    import csv
-    with open('data/input/departements-france.csv', newline='\n') as csvfile:
-        reader = csv.DictReader(csvfile)
-        return [str(row["code_departement"]) for row in reader]
-
-
 if __name__ == "__main__":
-  main()
+    main()
