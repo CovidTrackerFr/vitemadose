@@ -11,15 +11,31 @@ on:
   workflow_dispatch:
 
 jobs:
+
   scrape:
+
     name: "Scrape"
+
     runs-on: "ubuntu-20.04"
+
     steps:
+
       - uses: "actions/checkout@v2"
+
       - uses: "actions/setup-python@v2"
         with:
           python-version: "3.8"
+
       - name: "Install"
         run: scripts/install
+
       - name: "Tentative scrap"
         run: venv/bin/python3 prototype.py
+
+      - uses: EndBug/add-and-commit@v7
+        with:
+          add: 'data/output' # git add data/output
+          branch: data
+          message: 'Auto Update'
+          push: true
+
