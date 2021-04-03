@@ -151,7 +151,7 @@ def fetch_doctolib_slots(rdv_site_web, start_date):
         if len(slot['slots']) > 0:
             return slot['slots'][0]['start_date']
 
-    return None
+    return slots.get('next_slot')
 
 
 def centre_iterator():
