@@ -10,4 +10,5 @@ if [ ! -d $VENV ]; then
   $PYTHON -m venv $VENV
 fi
 
+${BIN}pip install -U pip wheel
 ${BIN}pip install -e .
