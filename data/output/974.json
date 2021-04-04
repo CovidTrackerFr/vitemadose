@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T17:04:49.296781+02:00",
+  "last_updated": "2021-04-04T17:06:15.170808+02:00",
   "centres_disponibles": [
     {
       "departement": "974",
@@ -18,31 +18,10 @@
     },
     {
       "departement": "974",
-      "nom": "Centre de vaccination COVID-19 de Saint-Paul - Salle polyvalente de l'etang",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-paul-97460/saint-paul/centre-de-vaccination-de-saint-paul",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-17T16:15:00.000000+0200"
-    },
-    {
-      "departement": "974",
       "nom": "Centre de vaccination COVID-19 de Saint-Denis - Salle Reydellet",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-denis-97400/saint-denis/centre-de-vaccination-de-saint-denis",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-15T14:45:00.000000+0200"
-    },
-    {
-      "departement": "974",
-      "nom": "centre de vaccination a\u00e9roport de Pierrefonds",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/le-tampon-97418/centre-de-vaccination-covid-19-aeroport-de-pierrefonds",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-08T16:08:00.000000+0200"
-    },
-    {
-      "departement": "974",
-      "nom": "Centre de vaccination COVID-19 de Saint-Andr\u00e9 - Ex commissariat de la police nationale",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-andre-97440/saint-andre/centre-de-vaccination-de-saint-andre",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-19T11:05:00.000000+0200"
     },
     {
       "departement": "974",
@@ -53,10 +32,17 @@
     },
     {
       "departement": "974",
-      "nom": "Centre de vaccination Covid-19 du GHER",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/saint-benoit-97437/gher-saint-benoit/centre-de-vaccination-du-gher-saint-benoit",
+      "nom": "Centre de vaccination COVID-19 de Saint-Paul - Salle polyvalente de l'etang",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-paul-97460/saint-paul/centre-de-vaccination-de-saint-paul",
       "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-20T14:59:00.000000+0200"
+      "prochain_rdv": "2021-04-17T16:15:00.000000+0200"
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID-19 de Saint-Andr\u00e9 - Ex commissariat de la police nationale",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-andre-97440/saint-andre/centre-de-vaccination-de-saint-andre",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-19T11:05:00.000000+0200"
     },
     {
       "departement": "974",
@@ -64,6 +50,20 @@
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/le-tampon-97418/le-tampon/centre-de-vaccination-le-tampon",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-17T14:10:00.000000+0200"
+    },
+    {
+      "departement": "974",
+      "nom": "centre de vaccination a\u00e9roport de Pierrefonds",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/le-tampon-97418/centre-de-vaccination-covid-19-aeroport-de-pierrefonds",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-08T16:08:00.000000+0200"
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination Covid-19 du GHER",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/saint-benoit-97437/gher-saint-benoit/centre-de-vaccination-du-gher-saint-benoit",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-20T14:59:00.000000+0200"
     }
   ],
   "centres_indisponibles": [
@@ -71,13 +71,6 @@
       "departement": "974",
       "nom": "Centre de vaccination COVID 19 : site de Hell-Bourg",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-benoit-97437/centre-de-vaccination-ephemere-mairie-annexe-d-hell-bourg",
-      "plateforme": "Keldoc",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "974",
-      "nom": "Centre de vaccination COVID 19 : Site de Mare \u00e0 vieille place",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-benoit-97437/centre-de-vaccination-ephemere-case-de-mare-a-vieille-place",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },
@@ -97,13 +90,6 @@
     },
     {
       "departement": "974",
-      "nom": "Centre de vaccination COVID 19 : Site de Cilaos",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/le-tampon-97418/hopital-de-cilaos-chu?category=3107&cabinet=17204&specialty=496",
-      "plateforme": "Keldoc",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "974",
       "nom": "CD - US Centre p\u00e9nitentiaire du Port / Maison d'Arr\u00eat de Saint-Pierre-de-la-R\u00e9union",
       "url": "",
       "plateforme": "Autre",
@@ -114,6 +100,20 @@
       "nom": "CP - US CP  Saint-Pierre / Maison d'Arr\u00eat de Saint-Pierre-de-la-R\u00e9union",
       "url": "",
       "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID 19 : Site de Cilaos",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/le-tampon-97418/hopital-de-cilaos-chu?category=3107&cabinet=17204&specialty=496",
+      "plateforme": "Keldoc",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID 19 : Site de Mare \u00e0 vieille place",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-benoit-97437/centre-de-vaccination-ephemere-case-de-mare-a-vieille-place",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {

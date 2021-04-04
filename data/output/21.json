@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T17:04:49.296013+02:00",
+  "last_updated": "2021-04-04T17:06:15.169918+02:00",
   "centres_disponibles": [],
   "centres_indisponibles": [
     {
@@ -40,6 +40,13 @@
     },
     {
       "departement": "21",
+      "nom": "DIJON Salle Devosge",
+      "url": "https://partners.doctolib.fr/maison-de-sante/dijon/cpts-de-dijon-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "21",
       "nom": "SEURRE maison de sant\u00e9 pluriprofessionnelle ",
       "url": "https://partners.doctolib.fr/maison-de-sante/seurre/centre-de-vaccination-pole-de-sante-rives-de-saone?pid=practice-167163&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -57,13 +64,6 @@
       "nom": "Chatillon-sur-Seine salle Luc Schreder (gymnase)",
       "url": "",
       "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "21",
-      "nom": "DIJON Salle Devosge",
-      "url": "https://partners.doctolib.fr/maison-de-sante/dijon/cpts-de-dijon-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -180,13 +180,6 @@
     },
     {
       "departement": "21",
-      "nom": "BRAZEY-EN-PLAINE Salle polyvalente Georges Balme",
-      "url": "https://partners.doctolib.fr/centre-de-sante/brazey-en-plaine/cpts-pays-d-or-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "21",
       "nom": "CHU Dijon (B\u00e2timent Courtois)",
       "url": "https://partners.doctolib.fr/hopital-public/dijon/centre-de-vaccination-covid-chu-dijon?pid=practice-169594&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -196,6 +189,13 @@
       "departement": "21",
       "nom": "CHATILLON-SUR-SEINE Salle Luc Schreder",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ch\u00e2tillon-sur-seine/centre-de-vaccination-chatillon-sur-seine?pid=practice-164745?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "21",
+      "nom": "BRAZEY-EN-PLAINE Salle polyvalente Georges Balme",
+      "url": "https://partners.doctolib.fr/centre-de-sante/brazey-en-plaine/cpts-pays-d-or-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

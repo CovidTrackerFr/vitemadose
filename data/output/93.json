@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T17:04:49.296727+02:00",
+  "last_updated": "2021-04-04T17:06:15.170741+02:00",
   "centres_disponibles": [
     {
       "departement": "93",
       "nom": "Tr\u00e8s grand centre du Stade de France",
       "url": "https://www.doctolib.fr/centre-de-sante/saint-denis/centre-de-vaccination-covid-19-stade-de-France",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-07T16:40:00.000+02:00"
+      "prochain_rdv": "2021-04-07T16:50:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -34,16 +34,16 @@
     },
     {
       "departement": "93",
-      "nom": "EMV Saint-Denis Auberge Municipale",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "AVICENNE",
+      "url": "https://partners.doctolib.fr/hopital-public/paris/centres-de-vaccination-covid-19-ap-hp-hors-professionnels-de-sante?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "93",
-      "nom": "AVICENNE",
-      "url": "https://partners.doctolib.fr/hopital-public/paris/centres-de-vaccination-covid-19-ap-hp-hors-professionnels-de-sante?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "EMV Saint-Denis Auberge Municipale",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
@@ -76,13 +76,6 @@
     },
     {
       "departement": "93",
-      "nom": "Salle des f\u00eates Marcel Pagnol",
-      "url": "https://partners.doctolib.fr/centre-de-sante/neuilly-sur-marne/centre-de-vaccination-covid-marne-plaisance?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "93",
       "nom": "EMV Aubervilliers",
       "url": "",
       "plateforme": "Autre",
@@ -93,6 +86,13 @@
       "nom": "EMV Noisy-le-Grand (CD)",
       "url": "",
       "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "93",
+      "nom": "Salle des f\u00eates Marcel Pagnol",
+      "url": "https://partners.doctolib.fr/centre-de-sante/neuilly-sur-marne/centre-de-vaccination-covid-marne-plaisance?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -146,16 +146,16 @@
     },
     {
       "departement": "93",
-      "nom": "Centre de vaccination - B\u00e2timent Charlotte Petit",
-      "url": "https://partners.doctolib.fr/centre-de-sante/clichy-sous-bois/centre-municipal-de-vaccination-covid-charlotte-petit?pid=practice-165986&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "EMV Avicennes",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "93",
-      "nom": "EMV Avicennes",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Centre de vaccination - B\u00e2timent Charlotte Petit",
+      "url": "https://partners.doctolib.fr/centre-de-sante/clichy-sous-bois/centre-municipal-de-vaccination-covid-charlotte-petit?pid=practice-165986&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -170,13 +170,6 @@
       "nom": "EMV Romainville",
       "url": "",
       "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "93",
-      "nom": "Centre de vaccination - H\u00f4tel de ville",
-      "url": "https://partners.doctolib.fr/centre-de-sante/montreuil/centre-de-vaccination-de-la-ville-de-montreuil?pid=practice-175106&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -198,6 +191,13 @@
       "nom": "EMV Ballanger",
       "url": "",
       "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "93",
+      "nom": "Centre de vaccination - H\u00f4tel de ville",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montreuil/centre-de-vaccination-de-la-ville-de-montreuil?pid=practice-175106&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -244,15 +244,15 @@
     },
     {
       "departement": "93",
-      "nom": "CHI Robert Ballanger",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/ile-de-france/ars-ile-de-france-vaccination-des-professionnels-de-sante?pid=practice-162590&?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "EMV Ren\u00e9 Muret",
+      "url": "https://partners.doctolib.fr/hopital-public/sevran/policlinique-medicale-hopital-rene-muret-ap-hp?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "93",
-      "nom": "EMV Ren\u00e9 Muret",
-      "url": "https://partners.doctolib.fr/hopital-public/sevran/policlinique-medicale-hopital-rene-muret-ap-hp?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "CHI Robert Ballanger",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/ile-de-france/ars-ile-de-france-vaccination-des-professionnels-de-sante?pid=practice-162590&?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

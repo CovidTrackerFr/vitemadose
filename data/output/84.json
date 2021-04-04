@@ -1,7 +1,15 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T17:04:49.296646+02:00",
-  "centres_disponibles": [],
+  "last_updated": "2021-04-04T17:06:15.170646+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "84",
+      "nom": "CPTS Grand Avignon - Ch\u00e2teau de la Barbi\u00e8re",
+      "url": "https://partners.doctolib.fr/centre-de-sante/morieres-les-avignon/centre-de-vaccination-covid-morieres-les-avignon?pid=practice-168035&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-30"
+    }
+  ],
   "centres_indisponibles": [
     {
       "departement": "84",
@@ -14,13 +22,6 @@
       "departement": "84",
       "nom": "Centre de vaccination MIN Cavaillon",
       "url": "https://partners.doctolib.fr/hopital-public/cavaillon/centre-hospitalier-intercommunal-cavaillon-lauris-vaccination-covid-19-cavaillon?pid=practice-165842&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "84",
-      "nom": "CPTS Grand Avignon - Ch\u00e2teau de la Barbi\u00e8re",
-      "url": "https://partners.doctolib.fr/centre-de-sante/morieres-les-avignon/centre-de-vaccination-covid-morieres-les-avignon?pid=practice-168035&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -47,6 +48,13 @@
     },
     {
       "departement": "84",
+      "nom": "Centre de vaccination CH Avignon",
+      "url": "https://partners.doctolib.fr/hopital-public/avignon/centre-hospitalier-d-avignon-vaccination-covid-avignon?pid=practice-162807&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "84",
       "nom": "Centre de vaccination de Boll\u00e8ne",
       "url": "https://www.maiia.com/centre-de-vaccination/84500-bollene/centre-intercommunal-de-vaccination-de-bollene",
       "plateforme": "Maiia",
@@ -57,13 +65,6 @@
       "nom": "CP - US le PONTET AVIGNON / Centre P\u00e9nitentiaire d'Avignon-le Pontet",
       "url": "",
       "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "84",
-      "nom": "Centre de vaccination CH Avignon",
-      "url": "https://partners.doctolib.fr/hopital-public/avignon/centre-hospitalier-d-avignon-vaccination-covid-avignon?pid=practice-162807&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -89,15 +90,15 @@
     },
     {
       "departement": "84",
-      "nom": "CPTS SANTE LUB /MSP Les glycines",
-      "url": "https://partners.doctolib.fr/centre-de-sante/pertuis/centre-de-vaccination-la-tour-d-aigues?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "SOS M\u00e9decins LE PONTET",
+      "url": "https://partners.doctolib.fr/centre-de-sante/le-pontet/centre-de-vaccination-covid-maison-medicale-de-la-rose-des-vents-sos-medecins?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "84",
-      "nom": "SOS M\u00e9decins LE PONTET",
-      "url": "https://partners.doctolib.fr/centre-de-sante/le-pontet/centre-de-vaccination-covid-maison-medicale-de-la-rose-des-vents-sos-medecins?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "CPTS SANTE LUB /MSP Les glycines",
+      "url": "https://partners.doctolib.fr/centre-de-sante/pertuis/centre-de-vaccination-la-tour-d-aigues?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

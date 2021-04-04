@@ -1,12 +1,19 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T17:04:49.295898+02:00",
+  "last_updated": "2021-04-04T17:06:15.169730+02:00",
   "centres_disponibles": [],
   "centres_indisponibles": [
     {
       "departement": "08",
       "nom": "MSP CARIGNAN",
       "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-173870&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "08",
+      "nom": "Centre de Vaccination Salle B\u00e9r\u00e9govoy  VRIGNE-AUX-BOIS",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-165013&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -19,13 +26,6 @@
     },
     {
       "departement": "08",
-      "nom": "MSP Buzancy",
-      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-167626&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "08",
       "nom": "MSP Signy-le-Petit",
       "url": "",
       "plateforme": "Autre",
@@ -33,8 +33,8 @@
     },
     {
       "departement": "08",
-      "nom": "Centre de Vaccination Salle B\u00e9r\u00e9govoy  VRIGNE-AUX-BOIS",
-      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-165013&enable_cookies_consent=1",
+      "nom": "MSP Buzancy",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-167626&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

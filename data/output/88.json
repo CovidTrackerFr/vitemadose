@@ -1,15 +1,16 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T17:04:49.296685+02:00",
-  "centres_disponibles": [],
-  "centres_indisponibles": [
+  "last_updated": "2021-04-04T17:06:15.170695+02:00",
+  "centres_disponibles": [
     {
       "departement": "88",
       "nom": "Centre de vaccination de Remiremont",
       "url": "https://partners.doctolib.fr/hopital-public/remiremont/ch-remiremont?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
+      "prochain_rdv": "2021-05-04"
+    }
+  ],
+  "centres_indisponibles": [
     {
       "departement": "88",
       "nom": "MA - US D'EPINAL / Maison d'Arr\u00eat d'Epinal",
@@ -19,15 +20,15 @@
     },
     {
       "departement": "88",
-      "nom": "Centre de vaccination d'Epinal (Palais des congr\u00e8s)",
-      "url": "https://partners.doctolib.fr/hopital-public/epinal/ch-emile-durkheim?pid=practice-164046&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de Gerardmer ",
+      "url": "https://partners.doctolib.fr/hopital-public/gerardmer/ch-de-gerardmer?pid=practice-163880&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "88",
-      "nom": "Centre de vaccination de Gerardmer ",
-      "url": "https://partners.doctolib.fr/hopital-public/gerardmer/ch-de-gerardmer?pid=practice-163880&enable_cookies_consent=1",
+      "nom": "Centre de vaccination d'Epinal (Palais des congr\u00e8s)",
+      "url": "https://partners.doctolib.fr/hopital-public/epinal/ch-emile-durkheim?pid=practice-164046&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

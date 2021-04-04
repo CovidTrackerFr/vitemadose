@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T17:04:49.296181+02:00",
+  "last_updated": "2021-04-04T17:06:15.170106+02:00",
   "centres_disponibles": [
     {
       "departement": "33",
@@ -18,6 +18,13 @@
     },
     {
       "departement": "33",
+      "nom": "CH ARCACHON",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/la-teste-de-buch-33529/centre-hospitalier-arcachon/centre-de-vaccination-du-centre-hospitalier-arcachon",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-12T14:30:00.000000+0200"
+    },
+    {
+      "departement": "33",
       "nom": "Centre de vaccination du CH Sud Gironde",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/langon-33210/centre-hospitalier-sud-gironde?category=-1&cabinet=16578&specialty=496",
       "plateforme": "Keldoc",
@@ -32,13 +39,6 @@
     },
     {
       "departement": "33",
-      "nom": "CH ARCACHON",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/la-teste-de-buch-33529/centre-hospitalier-arcachon/centre-de-vaccination-du-centre-hospitalier-arcachon",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-12T14:30:00.000000+0200"
-    },
-    {
-      "departement": "33",
       "nom": "CENTRE DE VACCINATION INTERCOMMUNAL -ST-MEDARD-EN-JALLES",
       "url": "https://partners.doctolib.fr/centre-de-sante/saint-medard-en-jalles/centre-de-vaccination-covid-19-saint-medard-en-jalles?pid=practice-179381&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -48,15 +48,15 @@
   "centres_indisponibles": [
     {
       "departement": "33",
-      "nom": "Centre de vaccination du pays foyen",
-      "url": "https://partners.doctolib.fr/centre-de-sante/sainte-foy-la-grande/centre-de-vaccination-covid-19-saint-foy-la-grande?pid=practice-173546&enable_cookies_consent=1",
+      "nom": "CENTRE DE VACCINATION - BIGANOS",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/biganos/centre-de-vaccination-covid-19-biganos?pid=practice-171118&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "33",
-      "nom": "CENTRE DE VACCINATION - BIGANOS",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/biganos/centre-de-vaccination-covid-19-biganos?pid=practice-171118&enable_cookies_consent=1",
+      "nom": "Centre de vaccination du pays foyen",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sainte-foy-la-grande/centre-de-vaccination-covid-19-saint-foy-la-grande?pid=practice-173546&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -76,16 +76,16 @@
     },
     {
       "departement": "33",
-      "nom": "Centre de vaccination Lormont Carriet",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "CHU BORDEAUX - SITE PELLEGRIN",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/bordeaux-33000/chu-de-bordeaux?cabinet=16876&specialty=496",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
       "departement": "33",
-      "nom": "CHU BORDEAUX - SITE PELLEGRIN",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/bordeaux-33000/chu-de-bordeaux?cabinet=16876&specialty=496",
-      "plateforme": "Keldoc",
+      "nom": "Centre de vaccination Lormont Carriet",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
@@ -97,16 +97,16 @@
     },
     {
       "departement": "33",
-      "nom": "Centre de Vaccination - Salle Lucie Aubrac",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/floirac-33270/salle-lucie-aubrac",
-      "plateforme": "Keldoc",
+      "nom": "Centre de vaccination - Mairie de Lacanau / p\u00f4le de l'aiguillonne",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/lacanau/centre-de-vaccination-covid-lacanau-lacanau?pid=practice-173292&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "33",
-      "nom": "Centre de vaccination - Mairie de Lacanau / p\u00f4le de l'aiguillonne",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/lacanau/centre-de-vaccination-covid-lacanau-lacanau?pid=practice-173292&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "Centre de Vaccination - Salle Lucie Aubrac",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/floirac-33270/salle-lucie-aubrac",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
@@ -188,13 +188,6 @@
     },
     {
       "departement": "33",
-      "nom": "NOUVELLE CLINIQUE DU TONDU",
-      "url": "https://partners.doctolib.fr/centre-de-sante/floirac/centre-de-vaccination-covid-19-nouvelle-clinique-bordeaux-tondu?pid=practice-164998?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "33",
       "nom": "CENTRE DE SANTE MUTUALISTE GALLIENI",
       "url": "https://partners.doctolib.fr/centre-de-sante/bordeaux/centre-de-vaccination-covid-19-gallieni?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -204,6 +197,13 @@
       "departement": "33",
       "nom": "HOPITAL SUBURBAIN DU BOUSCAT",
       "url": "https://partners.doctolib.fr/centre-de-sante/le-bouscat/centre-de-vaccination-hopital-du-bouscat?pid=practice-164677?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "33",
+      "nom": "NOUVELLE CLINIQUE DU TONDU",
+      "url": "https://partners.doctolib.fr/centre-de-sante/floirac/centre-de-vaccination-covid-19-nouvelle-clinique-bordeaux-tondu?pid=practice-164998?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

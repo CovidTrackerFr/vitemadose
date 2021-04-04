@@ -1,14 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T17:04:49.296020+02:00",
+  "last_updated": "2021-04-04T17:06:15.169928+02:00",
   "centres_disponibles": [
-    {
-      "departement": "22",
-      "nom": "LOUDEAC - Foyer municipal",
-      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/loudeac-22600/centre-de-vaccination-loudeac-foyer-municipal",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-16T13:30:00.000000+0200"
-    },
     {
       "departement": "22",
       "nom": "ST BRIEUC - Salle Robien",
@@ -18,10 +11,17 @@
     },
     {
       "departement": "22",
-      "nom": "LANNION - Salle des ursulines",
-      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/lannion-22300/centre-de-vaccination-de-lannion/centre-de-vaccination-de-lannion-salle-des-ursulines",
+      "nom": "LOUDEAC - Foyer municipal",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/loudeac-22600/centre-de-vaccination-loudeac-foyer-municipal",
       "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-13T11:45:00.000000+0200"
+      "prochain_rdv": "2021-04-16T13:30:00.000000+0200"
+    },
+    {
+      "departement": "22",
+      "nom": "LAMBALLE - Salle municipale",
+      "url": "https://vaccination-covid.keldoc.com/maison-de-sante/lamballe-22400/lamballe/centre-de-vaccination-lamballe-salle-municipale-lamballe",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-17T12:00:00.000000+0200"
     }
   ],
   "centres_indisponibles": [
@@ -58,13 +58,6 @@
       "nom": "CH ST-BRIEUC (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
       "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/st-brieuc-22000/service-de-sante-au-travail?category=-1&cabinet=16544",
       "plateforme": null,
-      "prochain_rdv": null
-    },
-    {
-      "departement": "22",
-      "nom": "LAMBALLE - Salle municipale",
-      "url": "https://vaccination-covid.keldoc.com/maison-de-sante/lamballe-22400/lamballe/centre-de-vaccination-lamballe-salle-municipale-lamballe",
-      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
@@ -121,6 +114,13 @@
       "nom": "CH DINAN (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
       "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-malo-et-dinan/gh-rance-emeraude-vaccination-covid?pid=practice-163106&enable_cookies_consent=1",
       "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "22",
+      "nom": "LANNION - Salle des ursulines",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/lannion-22300/centre-de-vaccination-de-lannion/centre-de-vaccination-de-lannion-salle-des-ursulines",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     }
   ]
