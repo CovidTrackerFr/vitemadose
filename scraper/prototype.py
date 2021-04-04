@@ -52,10 +52,6 @@ def cherche_prochain_rdv_dans_centre(centre):
     }
 
 def sort_centers(data):
-    if not data:
-        return data
-    if type(data) is not list:
-        return data
     return sorted(data, key=lambda i: i['prochain_rdv'])
 
 def export_data(centres_cherchés):
