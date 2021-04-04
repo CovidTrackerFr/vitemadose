@@ -91,7 +91,7 @@ def fetch_centre_slots(rdv_site_web, start_date):
                     first_availability = date
     return first_availability
 
-def test():   
+def centre_iterator():   
     items = search()
     for item in items["items"]:
         payload = {}
@@ -104,7 +104,7 @@ def test():
             payload["nom"] = item["name"]
             payload["url"] = rdv_site_web
             payload["prochain_rdv"] = str(next_slot)
-            print(payload)
+            yield payload
         except httpx.HTTPStatusError as exc:
             continue
         except TimeoutException:
