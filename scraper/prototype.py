@@ -51,9 +51,17 @@ def cherche_prochain_rdv_dans_centre(centre):
         'prochain_rdv': next_slot
     }
 
+def sort_centers(data):
+    if not data:
+        return data
+    if type(data) is not list:
+        return data
+    return sorted(data, key=lambda i: i['prochain_rdv'])
+
 def export_data(centres_cherchés):
     compte_centres = 0
     compte_centres_avec_dispo = 0
+    centres_cherchés = sort_centers(centres_cherchés)
     par_departement = {
         code: {
             'version': 1,
