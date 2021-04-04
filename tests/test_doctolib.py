@@ -70,7 +70,7 @@ def test_doctolib_motive_categories():
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client)
 
-    next_date = slots.fetch(rdv_site_web, slots.selected_practice_id, start_date)
+    next_date = slots.fetch(rdv_site_web, start_date)
     assert next_date == "2021-04-10"
 
 
@@ -217,6 +217,6 @@ def test_find_agenda_and_practice_ids():
             ],
         },
     }
-    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=1)
+    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, None, visit_motive_id=1)
     assert agenda_ids == ["10"]
     assert practice_ids == ["20", "21"]
