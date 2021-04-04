@@ -5,6 +5,7 @@ import os
 import io
 import csv
 import requests
+import pytz
 
 from .departements import to_departement_number, import_departements
 from .doctolib import fetch_slots as doctolib_fetch_slots
@@ -56,7 +57,7 @@ def export_data(centres_cherchés):
     par_departement = {
         code: {
             'version': 1,
-            'last_updated': datetime.now().isoformat(),
+            'last_updated': datetime.now(tz=pytz.timezone('Europe/Paris')).isoformat(),
             'centres_disponibles': [],
             'centres_indisponibles': []
         }
