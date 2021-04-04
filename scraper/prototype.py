@@ -52,7 +52,10 @@ def cherche_prochain_rdv_dans_centre(centre):
     }
 
 def sort_centers(data):
-    return sorted(data, key=lambda i: i['prochain_rdv'])
+    print(data)
+    print(type(data))
+    return data
+    #return sorted(data, key=lambda i: i['prochain_rdv'])
 
 def export_data(centres_cherchés):
     compte_centres = 0
