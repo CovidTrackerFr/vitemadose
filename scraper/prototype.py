@@ -17,18 +17,18 @@ POOL_SIZE = int(os.getenv('POOL_SIZE', 20))
 
 
 def main():
-    centres_cherchés = []
     with Pool(POOL_SIZE) as pool:
         centres_cherchés = pool.imap_unordered(
             cherche_prochain_rdv_dans_centre,
             centre_iterator(),
             1
         )
-    compte_centres, compte_centres_avec_dispo = export_data(centres_cherchés)
-    print(f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
-    if compte_centres_avec_dispo == 0:
-        print("Aucune disponibilité n'a été trouvée sur tous les centres, c'est bizarre, alors c'est probablement une erreur")
-        exit(code = 1)
+        compte_centres, compte_centres_avec_dispo = export_data(centres_cherchés)
+        print(f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
+        if compte_centres_avec_dispo == 0:
+            print(
+                "Aucune disponibilité n'a été trouvée sur tous les centres, c'est bizarre, alors c'est probablement une erreur")
+            exit(code=1)
 
 
 def cherche_prochain_rdv_dans_centre(centre):
