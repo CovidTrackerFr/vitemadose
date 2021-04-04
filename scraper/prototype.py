@@ -58,9 +58,12 @@ def cherche_prochain_rdv_dans_centre(centre):
     }
 
 
-def sort_centers(data):
-    sorted(data, key=lambda i: i['prochain_rdv'] if 'prochain_rdv' in i and i['prochain_rdv'] else '-')
-    return data
+def sort_center(center):
+    if not center:
+        return '-'
+    if not 'prochain_rdv' in center or not center['prochain_rdv']:
+        return '-'
+    return center['prochain_rdv']
 
 
 def export_data(centres_cherchés):
@@ -75,10 +78,7 @@ def export_data(centres_cherchés):
         }
         for code in import_departements()
     }
-    #center_list = []
-    #for centre in centres_cherchés:
-    #    center_list.append(centre)
-    #center_list = sort_centers(center_list)
+    
     for centre in centres_cherchés:
         compte_centres += 1
         code_departement = centre['departement']
@@ -93,6 +93,8 @@ def export_data(centres_cherchés):
                 f"WARNING: le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
 
     for code_departement, disponibilités in par_departement.items():
+        if 'centres_disponibles' in disponibilités:
+            disponibilités['centres_disponibles'] = sorted(disponibilités['centres_disponibles'], key=sort_center)
         print(f'writing result to {code_departement}.json file')
         with open(f'data/output/{code_departement}.json', "w") as outfile:
             outfile.write(json.dumps(disponibilités, indent=2))
