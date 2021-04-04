@@ -2,12 +2,8 @@
 name: Scrape
 
 on:
-  # https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events
-  schedule:
-    # https://crontab.guru/
-    # '*/n' = 'every n minutes'
-    - cron: "*/5 * * * *"
-  # Allow running manually
+  push:
+    branches: ["feature/maiia"]
   workflow_dispatch:
 
 jobs:
@@ -20,14 +16,12 @@ jobs:
 
     steps:
       - uses: "actions/checkout@v2"
+        with:
+            token: ${{ secrets.PAT_GRZ }}
       - uses: "actions/setup-python@v2"
         with:
           python-version: "3.8"
       - name: "Install"
         run: scripts/install
       - name: "Scraping..."
-        run: venv/bin/python3 -m scraper.prototype
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Automatic Update
-          branch: data-auto
+        run: scripts/scrape
