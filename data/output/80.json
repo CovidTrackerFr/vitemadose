@@ -1,7 +1,15 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:53:30.454850+02:00",
-  "centres_disponibles": [],
+  "last_updated": "2021-04-04T16:55:11.364663+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "80",
+      "nom": "Centre de vaccination - Communaut\u00e9 de commune VIMEU Baie de la somme ( Salle Edith Piaf)",
+      "url": "https://partners.doctolib.fr/centre-de-sante/friville-escarbotin/centre-de-vaccination-covid-vimeu-baie-de-somme?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-13"
+    }
+  ],
   "centres_indisponibles": [
     {
       "departement": "80",
@@ -19,6 +27,13 @@
     },
     {
       "departement": "80",
+      "nom": "Centre de vaccination - CHIMR EHPAD Lucien Vivien",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/montdidier-80500/centre-hospitalier-montdidier-roye-ehpad-lucien-vivien/centre-de-vaccination-du-centre-hospitalier-montdidier-roye-ehpad-lucien-vivien",
+      "plateforme": "Keldoc",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "80",
       "nom": "Centre de vaccination - MSP Cr\u00e9cy en Ponthieu",
       "url": "https://vaccination-covid.keldoc.com/maison-de-sante/crecy-en-ponthieu-80150/msp-de-crecy-en-ponthieu/centre-de-vaccination-de-la-msp-de-crecy-en-ponthieu",
       "plateforme": "Keldoc",
@@ -28,13 +43,6 @@
       "departement": "80",
       "nom": "Centre de vaccination - CH Abbeville, Mairie Abbeville ",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/abbeville-80001/centre-hospitalier-abbeville-salle-des-fetes/centre-de-vaccination-du-centre-hospitalier-abbeville-salle-des-fetes",
-      "plateforme": "Keldoc",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "80",
-      "nom": "Centre de vaccination - CHIMR EHPAD Lucien Vivien",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/montdidier-80500/centre-hospitalier-montdidier-roye-ehpad-lucien-vivien/centre-de-vaccination-du-centre-hospitalier-montdidier-roye-ehpad-lucien-vivien",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },
@@ -96,13 +104,6 @@
     },
     {
       "departement": "80",
-      "nom": "Centre de vaccination - Communaut\u00e9 de commune VIMEU Baie de la somme ( Salle Edith Piaf)",
-      "url": "https://partners.doctolib.fr/centre-de-sante/friville-escarbotin/centre-de-vaccination-covid-vimeu-baie-de-somme?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "80",
       "nom": "Centre de vaccination- CHU Amiens",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/amiens-80000/chu-amiens-picardie-site-nord?category=-1&cabinet=16656&specialty=496",
       "plateforme": "Keldoc",
@@ -131,15 +132,15 @@
     },
     {
       "departement": "80",
-      "nom": "Centre de vaccination : Maison M\u00e9dicale de Corbie",
-      "url": "https://partners.doctolib.fr/centre-de-sante/corbie/centre-de-vaccination-covid-ville-de-corbie?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - P\u00f4le priv\u00e9 des cliniques d'Amiens",
+      "url": "https://partners.doctolib.fr/centre-de-sante/amiens/centre-de-vaccination-du-pole-prive-d-amiens?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "80",
-      "nom": "Centre de vaccination - P\u00f4le priv\u00e9 des cliniques d'Amiens",
-      "url": "https://partners.doctolib.fr/centre-de-sante/amiens/centre-de-vaccination-du-pole-prive-d-amiens?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination : Maison M\u00e9dicale de Corbie",
+      "url": "https://partners.doctolib.fr/centre-de-sante/corbie/centre-de-vaccination-covid-ville-de-corbie?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     }

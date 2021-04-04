@@ -1,20 +1,27 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:53:30.454667+02:00",
+  "last_updated": "2021-04-04T16:55:11.364488+02:00",
   "centres_disponibles": [
     {
       "departement": "62",
       "nom": "Centre de vaccination - \"Centre Hospitalier  de Boulogne sur mer\"",
       "url": "https://partners.doctolib.fr/hopital-public/boulogne-sur-mer/ch-boulogne-sur-mer-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-06T10:10:00.000+02:00"
+      "prochain_rdv": "2021-04-06T09:55:00.000+02:00"
     },
     {
       "departement": "62",
       "nom": "Centre de vaccination - Ville de Calais (Forum Gambetta)",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/calais/centre-de-vaccination-covid-19-forum-gambetta?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-06T09:40:00.000+02:00"
+      "prochain_rdv": "2021-04-06T09:00:00.000+02:00"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - CPTS Artois Lys Laventie 1, Salle des f\u00eates",
+      "url": "https://partners.doctolib.fr/centre-de-sante/laventie/centre-de-vaccination-covid-19-flandre-lys?pid=practice-165123&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-14"
     }
   ],
   "centres_indisponibles": [
@@ -260,13 +267,6 @@
       "departement": "62",
       "nom": "Centre de vaccination - MSPP L\u00e9onard de Vinci, sur site centre hospitalier Ternois",
       "url": "https://partners.doctolib.fr/hopital-public/arras/ght-artois-ternois-vaccination-covid?pid=practice-163453&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "62",
-      "nom": "Centre de vaccination - CPTS Artois Lys Laventie 1, Salle des f\u00eates",
-      "url": "https://partners.doctolib.fr/centre-de-sante/laventie/centre-de-vaccination-covid-19-flandre-lys?pid=practice-165123&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

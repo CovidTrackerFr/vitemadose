@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:53:30.454469+02:00",
+  "last_updated": "2021-04-04T16:55:11.364292+02:00",
   "centres_disponibles": [],
   "centres_indisponibles": [
     {
@@ -54,6 +54,13 @@
     },
     {
       "departement": "41",
+      "nom": "Centre de vaccination \u00e9ph\u00e9m\u00e8re de La Ville aux Clercs",
+      "url": "",
+      "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "41",
       "nom": "CV \u00e9ph\u00e9m\u00e8re d'Oucques la nouvelle",
       "url": "https://partners.doctolib.fr/maison-de-sante/oucques-la-nouvelle/centre-de-vaccination-ephemere-oucques?pid=practice-174293&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -61,7 +68,7 @@
     },
     {
       "departement": "41",
-      "nom": "Centre de vaccination \u00e9ph\u00e9m\u00e8re de La Ville aux Clercs",
+      "nom": "Centre de vaccination \u00e9ph\u00e9m\u00e8re de La Chapelle Vend\u00f4moise",
       "url": "",
       "plateforme": "Autre",
       "prochain_rdv": null
@@ -71,13 +78,6 @@
       "nom": "Centre de vaccination \u00e9ph\u00e9m\u00e8re de de Saint Laurent Nouan",
       "url": "https://partners.doctolib.fr/centre-de-sante/saint-laurent-nouan/centre-vaccination-saint-laurent-nouan?pid=practice-172473&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "41",
-      "nom": "Centre de vaccination \u00e9ph\u00e9m\u00e8re de La Chapelle Vend\u00f4moise",
-      "url": "",
-      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
@@ -229,13 +229,6 @@
     },
     {
       "departement": "41",
-      "nom": "Centre de vaccination - la Gare des Collines - Maison France Service",
-      "url": "https://partners.doctolib.fr/maison-de-sante/mondoubleau/centre-de-vaccination-covid-la-gare-des-collines?pid=practice-168224&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "41",
       "nom": "Centre hospitalier de Blois - Simone Veil - r\u00e9serv\u00e9 aux professionnels de sant\u00e9",
       "url": "https://partners.doctolib.fr/hopital-public/blois/ch-blois-centre-de-vaccination-covid-19-reserve-aux-professionnels-du-chb?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -246,6 +239,13 @@
       "nom": "Selles sur Cher centre \u00e9ph\u00e9m\u00e8re",
       "url": "",
       "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "41",
+      "nom": "Centre de vaccination - la Gare des Collines - Maison France Service",
+      "url": "https://partners.doctolib.fr/maison-de-sante/mondoubleau/centre-de-vaccination-covid-la-gare-des-collines?pid=practice-168224&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     }
   ]

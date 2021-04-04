@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:53:30.454719+02:00",
+  "last_updated": "2021-04-04T16:55:11.364538+02:00",
   "centres_disponibles": [
     {
       "departement": "67",
@@ -8,6 +8,13 @@
       "url": "https://partners.doctolib.fr/hopital-public/saverne/ch-saverne-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-27"
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination de Lingolshein",
+      "url": "https://partners.doctolib.fr/maison-de-sante/lingolsheim/centre-de-vaccination-anti-covid-de-lingolsheim?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-29"
     }
   ],
   "centres_indisponibles": [
@@ -41,15 +48,15 @@
     },
     {
       "departement": "67",
-      "nom": "Centre de vaccination SOS M\u00e9decins Cronembourg",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/strasbourg/centre-de-vaccination-sos-medecin-67?pid=practice-165779&enable_cookies_consent=1",
+      "nom": "Centre de vaccination SOS M\u00e9decins Neuhof",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/strasbourg/centre-de-vaccination-sos-medecin-67?pid=practice-165780&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "67",
-      "nom": "Centre de vaccination SOS M\u00e9decins Neuhof",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/strasbourg/centre-de-vaccination-sos-medecin-67?pid=practice-165780&enable_cookies_consent=1",
+      "nom": "Centre de vaccination SOS M\u00e9decins Cronembourg",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/strasbourg/centre-de-vaccination-sos-medecin-67?pid=practice-165779&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -134,13 +141,6 @@
       "departement": "67",
       "nom": "Centre de vaccination de Wasselonne ",
       "url": "https://partners.doctolib.fr/centre-de-sante/wasselonne/centre-de-vaccination-covid-mossig-et-vignoble?pid=practice-164920&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "67",
-      "nom": "Centre de vaccination de Lingolshein",
-      "url": "https://partners.doctolib.fr/maison-de-sante/lingolsheim/centre-de-vaccination-anti-covid-de-lingolsheim?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

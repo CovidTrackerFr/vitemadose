@@ -1,14 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:53:30.454104+02:00",
+  "last_updated": "2021-04-04T16:55:11.363941+02:00",
   "centres_disponibles": [
-    {
-      "departement": "13",
-      "nom": "Centre de vaccination Gardanne",
-      "url": "https://partners.doctolib.fr/centre-de-sante/gardanne/centre-de-vaccination-gardanne-cpts-provence-sante?pid=practice-165090?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-09T15:00:00.000+02:00"
-    },
     {
       "departement": "13",
       "nom": "Centre de vaccination  Vitrolles - Espace Mandela",
@@ -18,17 +11,17 @@
     },
     {
       "departement": "13",
-      "nom": "Centre de vaccination CPTS VAL DURANCE",
-      "url": "https://partners.doctolib.fr/centre-de-sante/senas/centre-de-vaccination-covid-cpts-val-durance?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination Gardanne",
+      "url": "https://partners.doctolib.fr/centre-de-sante/gardanne/centre-de-vaccination-gardanne-cpts-provence-sante?pid=practice-165090?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-07T08:14:00.000+02:00"
+      "prochain_rdv": "2021-04-09T15:00:00.000+02:00"
     },
     {
       "departement": "13",
-      "nom": "CPTS Pays de Martigues",
-      "url": "https://partners.doctolib.fr/hopital-public/martigues/centre-de-vaccination-cpts-chm?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination CPTS VAL DURANCE",
+      "url": "https://partners.doctolib.fr/centre-de-sante/senas/centre-de-vaccination-covid-cpts-val-durance?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-30"
+      "prochain_rdv": "2021-04-07T08:00:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -174,16 +167,16 @@
     },
     {
       "departement": "13",
-      "nom": "Centre Vaccination Arenc",
-      "url": "https://partners.doctolib.fr/centre-de-sante/marseille/centre-de-vaccination-covid-arenc?pid=practice-176820&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "Centre de vaccination Durance Sud Meyrargues",
+      "url": "Doctolib",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "13",
-      "nom": "Centre de vaccination Durance Sud Meyrargues",
-      "url": "Doctolib",
-      "plateforme": "Autre",
+      "nom": "Centre Vaccination Arenc",
+      "url": "https://partners.doctolib.fr/centre-de-sante/marseille/centre-de-vaccination-covid-arenc?pid=practice-176820&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -314,13 +307,6 @@
     },
     {
       "departement": "13",
-      "nom": "Clinique g\u00e9n\u00e9rale de Marignane",
-      "url": "https://partners.doctolib.fr/clinique-privee/marignane/centre-de-vaccination-covid-19-clinique-generale-de-marignane?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "13",
       "nom": "Centre de vaccination de l'H\u00f4pital d'Instruction des Arm\u00e9es Laveran",
       "url": "Doctolib",
       "plateforme": "Autre",
@@ -330,6 +316,20 @@
       "departement": "13",
       "nom": "Clinique de Vitrolles (R\u00e9serv\u00e9 aux professionnels de sant\u00e9 lib\u00e9raux)",
       "url": "https://partners.doctolib.fr/clinique-privee/vitrolles/clinique-de-vitrolles-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "13",
+      "nom": "CPTS Pays de Martigues",
+      "url": "https://partners.doctolib.fr/hopital-public/martigues/centre-de-vaccination-cpts-chm?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "13",
+      "nom": "Clinique g\u00e9n\u00e9rale de Marignane",
+      "url": "https://partners.doctolib.fr/clinique-privee/marignane/centre-de-vaccination-covid-19-clinique-generale-de-marignane?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

@@ -1,7 +1,15 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:53:30.454896+02:00",
-  "centres_disponibles": [],
+  "last_updated": "2021-04-04T16:55:11.364708+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "85",
+      "nom": "Centre de vaccination COVID - LA ROCHE SUR YON - Petite salle des f\u00eates du Bourg-sous-la Roche",
+      "url": "https://partners.doctolib.fr/maison-de-sante/la-roche-sur-yon/centre-de-vaccination-de-la-la-roche-sur-yon?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-29"
+    }
+  ],
   "centres_indisponibles": [
     {
       "departement": "85",
@@ -57,13 +65,6 @@
       "nom": "Centre de vaccination COVID -Lu\u00e7on - Espace Plaisance",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/lucon/centre-de-vaccination-de-lucon?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "85",
-      "nom": "Centre de vaccination COVID - LA ROCHE SUR YON - Petite salle des f\u00eates du Bourg-sous-la Roche",
-      "url": "https://partners.doctolib.fr/maison-de-sante/la-roche-sur-yon/centre-de-vaccination-de-la-la-roche-sur-yon?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": null,
       "prochain_rdv": null
     },
     {

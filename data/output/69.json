@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:53:30.454738+02:00",
+  "last_updated": "2021-04-04T16:55:11.364556+02:00",
   "centres_disponibles": [
     {
       "departement": "69",
@@ -14,14 +14,14 @@
       "nom": "Centre de vaccination international de Villeurbanne",
       "url": "https://partners.doctolib.fr/centre-de-sante/villeurbanne/centre-de-vaccinations-internationales-villeurbanne-miit?pid=practice-165173?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-15"
+      "prochain_rdv": "2021-04-20"
     },
     {
       "departement": "69",
       "nom": "Centre de vaccination - Palais des sports de Gerland /Hospices Civils de Lyon",
       "url": "https://partners.doctolib.fr/hopital-public/lyon/palais-des-sports-gerland-hcl-vaccination-covid?pid=practice-163661&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-12"
+      "prochain_rdv": "2021-04-13"
     }
   ],
   "centres_indisponibles": [
@@ -90,16 +90,16 @@
     },
     {
       "departement": "69",
-      "nom": "Centre de vaccination de l'H\u00f4pital de Beaujeu",
-      "url": "https://partners.doctolib.fr/hopital-public/belleville-en-beaujolais/centre-de-vaccination-covid-belleville?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "Centre de vaccination de la Ville de Rillieux-La-Pape - Salle de l'ancienne mairie de Rillieux",
+      "url": "https://www.maiia.com/centre-de-vaccination/69140-rillieux-la-pape/centre-de-vaccination---rillieux-la-pape",
+      "plateforme": "Maiia",
       "prochain_rdv": null
     },
     {
       "departement": "69",
-      "nom": "Centre de vaccination de la Ville de Rillieux-La-Pape - Salle de l'ancienne mairie de Rillieux",
-      "url": "https://www.maiia.com/centre-de-vaccination/69140-rillieux-la-pape/centre-de-vaccination---rillieux-la-pape",
-      "plateforme": "Maiia",
+      "nom": "Centre de vaccination de l'H\u00f4pital de Beaujeu",
+      "url": "https://partners.doctolib.fr/hopital-public/belleville-en-beaujolais/centre-de-vaccination-covid-belleville?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -174,13 +174,6 @@
     },
     {
       "departement": "69",
-      "nom": "Centre de vaccination -H\u00f4pital Edouard Herriot-HCL",
-      "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-edouard-herriot-hcl-vaccination-covid?pid=practice-163794&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "69",
       "nom": "Centre de vaccination de l'H\u00f4pital Nord-Ouest-Villefranche - H\u00f4pital de Gleiz\u00e9",
       "url": "https://partners.doctolib.fr/hopital-public/villefranche-sur-saone/centre-de-vaccination-covid-villefranche-hopital-nord-ouest?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -202,6 +195,13 @@
     },
     {
       "departement": "69",
+      "nom": "Centre de vaccination -H\u00f4pital Edouard Herriot-HCL",
+      "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-edouard-herriot-hcl-vaccination-covid?pid=practice-163794&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "69",
       "nom": "Centre de vaccination de la communaut\u00e9 professionnelle territoriale de sant\u00e9 de Venissieux -  Salle communale Ir\u00e8ne Joliot-Curie",
       "url": "https://partners.doctolib.fr/centre-depistage-covid/venissieux/cdhs-centre-de-sante-et-prevention-venissieux-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -216,15 +216,15 @@
     },
     {
       "departement": "69",
-      "nom": "Centre de vaccination de L'Arbresle - Salle Claude Terrasse",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/l'arbresle/centre-de-vaccination-covid-19-l-arbresle?pid=practice-165179?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de l'H\u00f4pital de Neuville sur Sa\u00f4ne",
+      "url": "https://partners.doctolib.fr/hopital-public/neuville-sur-sa\u00f4ne/centre-hospitalier-de-neuville-centre-de-vaccination?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "69",
-      "nom": "Centre de vaccination de l'H\u00f4pital de Neuville sur Sa\u00f4ne",
-      "url": "https://partners.doctolib.fr/hopital-public/neuville-sur-sa\u00f4ne/centre-hospitalier-de-neuville-centre-de-vaccination?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de L'Arbresle - Salle Claude Terrasse",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/l'arbresle/centre-de-vaccination-covid-19-l-arbresle?pid=practice-165179?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -251,15 +251,15 @@
     },
     {
       "departement": "69",
-      "nom": "Centre de vaccination -H\u00f4pital Lyon sud - HCL",
-      "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-lyon-sud-hcl-vaccination-covid?pid=practice-163795&enable_cookies_consent=1",
+      "nom": "Centre de vaccination -H\u00f4pital Pierre Wertheimer - HCL",
+      "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-pierre-wertheimer-hcl-vaccination-covid?pid=practice-163796&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "69",
-      "nom": "Centre de vaccination -H\u00f4pital Pierre Wertheimer - HCL",
-      "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-pierre-wertheimer-hcl-vaccination-covid?pid=practice-163796&enable_cookies_consent=1",
+      "nom": "Centre de vaccination -H\u00f4pital Lyon sud - HCL",
+      "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-lyon-sud-hcl-vaccination-covid?pid=practice-163795&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     }
