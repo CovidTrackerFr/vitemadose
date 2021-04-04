@@ -77,6 +77,7 @@ def export_data(centres_cherchés):
             'centres_indisponibles': []
         }
         for code in import_departements()
+    }
     
     for centre in centres_cherchés:
         compte_centres += 1
