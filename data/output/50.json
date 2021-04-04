@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-04T16:53:30.454552+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "50",
+      "nom": "CHPC  centre d\u00e9localis\u00e9 Valognes - salle Lechanoine",
+      "url": "https://vaccination-covid.keldoc.com/redirect/?dom=maison-de-sante&inst=valognes-50700&user=chpc-centre-delocalise-salle-lechanoine-valognes&cabinet=17307&specialty=496",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-10T13:20:00.000000+0200"
+    },
+    {
+      "departement": "50",
+      "nom": "Centre de vaccination de Carentan-Les-Marais - Salle des f\u00eates",
+      "url": "https://partners.doctolib.fr/centre-de-sante/carentan-les-marais/centre-de-vaccination-covid-19-de-carentan-les-marais?pid=practice-179197&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-12"
+    },
+    {
+      "departement": "50",
+      "nom": "Site de Coutances",
+      "url": "https://partners.doctolib.fr/centre-de-sante/coutances/vaccination-site-des-unelles-coutances?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-13"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "50",
+      "nom": "Salles des f\u00eates - place centrale",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/cherbourg-octeville-50100/cpts-nord-cotentin?motive=81940&category=-1&cabinet=16689&specialty=496",
+      "plateforme": "Keldoc",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "50",
+      "nom": "CHPC Centre d\u00e9localis\u00e9 Salle Montecot Octeville",
+      "url": "https://www.keldoc.com/centre-hospitalier/cherbourg-octeville-50100/chpc-centre-delocalise-salle-de-l-europe-tourlaville?motive=85732&category=3140&cabinet=17298&specialty=496",
+      "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "50",
+      "nom": "MA - US CHPC / Maison d'Arr\u00eat de Cherbourg",
+      "url": "",
+      "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "50",
+      "nom": "MA - US / Maison d'Arr\u00eat de Coutances",
+      "url": "",
+      "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "50",
+      "nom": "Equipe Mobile R\u00e9sidences Autonomie et Territoire Manche",
+      "url": "",
+      "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "50",
+      "nom": "Granville : salle h\u00e9rel",
+      "url": "https://partners.doctolib.fr/hopital-public/avranches-granville/ch-d-avranches-granville-centre-de-vaccination-covid?pid=practice-162823&?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "50",
+      "nom": "Avranches : salle omnisports roger lemoin",
+      "url": "https://partners.doctolib.fr/hopital-public/avranches-granville/ch-d-avranches-granville-centre-de-vaccination-covid?pid=practice-162761&?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "50",
+      "nom": "Site du CH ST Hilaire du Harcou\u00ebt",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-hilaire-du-harcouet/centre-de-vaccination-covid-19-du-ch-de-st-hilaire-du-harcouet?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "50",
+      "nom": "SAINT-LO : SALLE ALLENDE (d\u00e9localisation CH MEMORIAL FRANCE SAINT-LO)",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-lo/centre-vaccination-ch-memorial-france-etats-unis-de-saint-lo?pid=practice-176124&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    }
+  ]
+}

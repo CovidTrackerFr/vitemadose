@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-04T16:53:30.453901+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "01",
+      "nom": "Centre de vaccination de Valserh\u00f4ne - Centre Jean Marinet",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/valserhone-1200/jean-marinet/centre-de-vaccination-de-jean-marinet",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-08T15:00:00.000000+0200"
+    },
+    {
+      "departement": "01",
+      "nom": "Centre de vaccination du CH d'Oyonnax - Centre hospitalier du Haut Bugey",
+      "url": "https://partners.doctolib.fr/hopital-public/oyonnax/centre-de-vaccination-du-centre-hospitalier-du-haut-bugey?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-23"
+    },
+    {
+      "departement": "01",
+      "nom": "Centre de vaccination Miribel C\u00f4ti\u00e8re - Th\u00e9\u00e2tre All\u00e9gro",
+      "url": "https://partners.doctolib.fr/centre-de-sante/miribel/centre-de-vaccination-miribel-cotiere?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-27"
+    },
+    {
+      "departement": "01",
+      "nom": "Centre de vaccination de Bugey Sud - Boulodrome couvert du Bas-Bugey",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/belley/centre-de-vaccination-covid-19-bugey-sud?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-07T17:30:00.000+02:00"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "01",
+      "nom": "Centre de vaccination du Pays de Gex - Centre hospitalier du Pays de Gex",
+      "url": "https://partners.doctolib.fr/centre-de-sante/gex/centre-de-vaccination-pays-de-gex-agglo?pid=practice-168273&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "01",
+      "nom": "Centre de vaccination de Bourg-en-Bresse - Gymnase St Roch",
+      "url": "https://www.maiia.com/centre-de-vaccination/01000-bourg-en-bresse/centre-de-vaccination---gymnase-saint-roch--bourg-en-bresse",
+      "plateforme": "Maiia",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "01",
+      "nom": "CP - US CP Bourg-en-Bresse / Centre p\u00e9nitentiaire de Bourg-en-Bresse",
+      "url": "",
+      "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "01",
+      "nom": "Centre de vaccination de la Plaine de l'Ain - Espace 1500",
+      "url": "https://www.maiia.com/centre-de-vaccination/01500-amberieu-en-bugey/centre-de-vaccination-de-la-plaine-de-l-ain",
+      "plateforme": "Maiia",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "01",
+      "nom": "L'H\u00f4pital Nord-Ouest - Site de Tr\u00e9voux",
+      "url": "https://partners.doctolib.fr/hopital-public/villefranche-sur-saone/centre-de-vaccination-covid-trevoux-hopital-nord-ouest?pid=practice-177499&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "01",
+      "nom": "Centre de vaccination mobile du Conseil d\u00e9partemental de l'Ain",
+      "url": "",
+      "plateforme": "Autre",
+      "prochain_rdv": null
+    }
+  ]
+}
