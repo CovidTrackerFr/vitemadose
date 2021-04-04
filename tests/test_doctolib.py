@@ -70,7 +70,7 @@ def test_doctolib_motive_categories():
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client)
 
-    next_date = slots.fetch(rdv_site_web, start_date)
+    next_date = slots.fetch(rdv_site_web, slots.selected_practice_id, start_date)
     assert next_date == "2021-04-10"
 
 
