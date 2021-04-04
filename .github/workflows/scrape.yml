@@ -20,10 +20,11 @@ jobs:
 
     steps:
       - uses: "actions/checkout@v2"
+      with:
+          token: ${{ secrets.PAT_GRZ }}
       - uses: "actions/setup-python@v2"
         with:
           python-version: "3.8"
-          token: ${{ secrets.PAT_GRZ }}
       - name: "Install"
         run: scripts/install
       - name: "Scraping..."
