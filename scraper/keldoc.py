@@ -200,30 +200,6 @@ def is_specialty_relevant(specialty_name):
             return True
     return False
 
-
-# Get relevant cabinets
-def get_relevant_cabinets(center_id, specialty_ids):
-    cabinets = []
-    if not center_id or not specialty_ids:
-        return cabinets
-
-    for specialty in specialty_ids:
-        cabinet_url = f'https://booking.keldoc.com/api/patients/v2/clinics/{center_id}/specialties/{specialty}/cabinets'
-        try:
-            cabinet_req = session.get(cabinet_url, timeout=5)
-        except requests.exceptions.Timeout:
-            continue
-        cabinet_req.raise_for_status()
-        data = cabinet_req.json()
-        if not data:
-            return cabinets
-        for cabinet in data:
-            cabinet_id = cabinet.get('id', None)
-            if not cabinet_id:
-                continue
-            cabinets.append(cabinet_id)
-    return cabinets
-
 def parse_keldoc_availability(availability_data):
     if not availability_data:
         return None
