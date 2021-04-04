@@ -1,13 +1,11 @@
-import time
 from datetime import datetime, timedelta
 from urllib.parse import urlsplit, parse_qs
 
 import httpx
-import requests
-from requests.adapters import HTTPAdapter
-from urllib3 import Retry
+from httpx import TimeoutException
 
-session = httpx.Client()
+timeout = httpx.Timeout(15.0, connect=15.0)
+session = httpx.Client(timeout=timeout)
 
 KELDOC_COVID_SPECIALTIES = [
     'Maladies infectieuses'
@@ -26,6 +24,7 @@ API_KELDOC_CENTER = 'https://booking.keldoc.com/api/patients/v2/searches/resourc
 API_KELDOC_MOTIVES = 'https://booking.keldoc.com/api/patients/v2/clinics/{0}/specialties/{1}/cabinets/{2}/motive_categories'
 API_KELDOC_CABINETS = 'https://booking.keldoc.com/api/patients/v2/clinics/{0}/specialties/{1}/cabinets'
 API_KELDOC_CALENDAR = 'https://www.keldoc.com/api/patients/v2/timetables/{0}'
+
 
 class KeldocCenter:
 
@@ -59,8 +58,8 @@ class KeldocCenter:
         for specialty in self.vaccine_specialties:
             for cabinet in self.vaccine_cabinets:
                 try:
-                    motive_req = session.get(API_KELDOC_MOTIVES.format(self.id, specialty, cabinet), timeout=10)
-                except requests.exceptions.Timeout:
+                    motive_req = session.get(API_KELDOC_MOTIVES.format(self.id, specialty, cabinet))
+                except TimeoutException:
                     continue
                 motive_req.raise_for_status()
                 motive_data = motive_req.json()
@@ -87,8 +86,8 @@ class KeldocCenter:
         for specialty in self.vaccine_specialties:
             cabinet_url = API_KELDOC_CABINETS.format(self.id, specialty)
             try:
-                cabinet_req = session.get(cabinet_url, timeout=10)
-            except requests.exceptions.Timeout:
+                cabinet_req = session.get(cabinet_url)
+            except TimeoutException:
                 continue
             cabinet_req.raise_for_status()
             data = cabinet_req.json()
@@ -102,8 +101,8 @@ class KeldocCenter:
             return False
         # Fetch center id
         try:
-            resource = session.get(API_KELDOC_CENTER, params=self.resource_params, timeout=10)
-        except requests.exceptions.Timeout:
+            resource = session.get(API_KELDOC_CENTER, params=self.resource_params)
+        except TimeoutException:
             return False
         resource.raise_for_status()
         data = resource.json()
@@ -118,8 +117,8 @@ class KeldocCenter:
 
         # Fetch new URL after redirection
         try:
-            rq = session.get(self.base_url, timeout=10)
-        except requests.exceptions.Timeout:
+            rq = session.get(self.base_url)
+        except TimeoutException:
             return False
         rq.raise_for_status()
         new_url = rq.url._uri_reference.unsplit()
@@ -157,8 +156,8 @@ class KeldocCenter:
                 'agenda_ids[]': relevant_motive.get('agendas', [])
             }
             try:
-                calendar_req = session.get(calendar_url, params=calendar_params, timeout=10)
-            except requests.exceptions.Timeout:
+                calendar_req = session.get(calendar_url, params=calendar_params)
+            except TimeoutException:
                 # Some requests on Keldoc are taking too much time (for few centers)
                 # and block the process completion.
                 continue
@@ -206,6 +205,7 @@ def is_specialty_relevant(specialty):
             return True
     return False
 
+
 def parse_keldoc_availability(availability_data):
     if not availability_data:
         return None
@@ -236,7 +236,7 @@ def fetch_slots(base_url, start_date):
     date_obj = datetime.strptime(start_date, '%Y-%m-%d')
     end_date = (date_obj + timedelta(days=1)).strftime('%Y-%m-%d')
 
-    center = KeldocCenter(base_url=base_url, timeout=10)
+    center = KeldocCenter(base_url=base_url)
     # Unable to parse center resources (id, location)?
     if not center.parse_resource():
         return None
