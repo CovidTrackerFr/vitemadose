@@ -2,10 +2,10 @@
 name: Scrape
 
 on:
-  # https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events
+  push:
+    branches:
+      - data-auto
   schedule:
-    # https://crontab.guru/
-    # '*/n' = 'every n minutes'
     - cron: "*/5 * * * *"
   # Allow running manually
   workflow_dispatch:
@@ -20,6 +20,8 @@ jobs:
 
     steps:
       - uses: "actions/checkout@v2"
+        with:
+            token: ${{ secrets.PAT_GRZ }}
       - uses: "actions/setup-python@v2"
         with:
           python-version: "3.8"
