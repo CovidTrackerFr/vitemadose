@@ -74,9 +74,6 @@ def export_data(centres_cherchés):
     for centre in centres_cherchés:
         center_list.append(centre)
     center_list = sort_centers(center_list)
-    if not center_list:
-        sys.stderr.write("No vaccination center found. Data error?")
-        exit(1)
     for centre in center_list:
         compte_centres += 1
         code_departement = centre['departement']
