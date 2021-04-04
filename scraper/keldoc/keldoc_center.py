@@ -20,6 +20,7 @@ class KeldocCenter:
         self.vaccine_specialties = None
         self.vaccine_cabinets = None
         self.vaccine_motives = None
+        self.selected_cabinet = None
 
     def fetch_vaccine_cabinets(self):
         if not self.id or not self.vaccine_specialties:
@@ -75,6 +76,11 @@ class KeldocCenter:
         for mandatory_param in mandatory_params:
             if not mandatory_param in params_get:
                 return False
+        # If the vaccination URL have several medication places,
+        # we select the current cabinet, since CSV data contains subURLs
+        self.selected_cabinet = params_get.get('cabinet', {None})[0]
+        if self.selected_cabinet:
+            self.selected_cabinet = int(self.selected_cabinet)
         self.resource_params = {
             'type': params_get.get('dom')[0],
             'location': params_get.get('inst')[0],
@@ -105,7 +111,6 @@ class KeldocCenter:
                 # and block the process completion.
                 continue
             calendar_req.raise_for_status()
-
             date = parse_keldoc_availability(calendar_req.json())
             if date is None:
                 continue

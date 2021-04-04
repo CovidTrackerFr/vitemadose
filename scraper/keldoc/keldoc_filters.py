@@ -87,7 +87,7 @@ def filter_vaccine_specialties(specialties):
     return vaccine_specialties
 
 
-def filter_vaccine_motives(session, id, vaccine_specialties, vaccine_cabinets):
+def filter_vaccine_motives(session, selected_cabinet, id, vaccine_specialties, vaccine_cabinets):
     if not id or not vaccine_specialties or not vaccine_cabinets:
         return None
 
@@ -96,6 +96,8 @@ def filter_vaccine_motives(session, id, vaccine_specialties, vaccine_cabinets):
 
     for specialty in vaccine_specialties:
         for cabinet in vaccine_cabinets:
+            if selected_cabinet is not None and cabinet != selected_cabinet:
+                continue
             try:
                 motive_req = session.get(API_KELDOC_MOTIVES.format(id, specialty, cabinet))
             except TimeoutException:

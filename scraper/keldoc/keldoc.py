@@ -32,7 +32,8 @@ def fetch_slots(base_url, start_date):
     # Filter specialties, cabinets & motives
     center.vaccine_specialties = filter_vaccine_specialties(center.specialties)
     center.fetch_vaccine_cabinets()
-    center.vaccine_motives = filter_vaccine_motives(session, center.id, center.vaccine_specialties, center.vaccine_cabinets)
+    center.vaccine_motives = filter_vaccine_motives(session, center.selected_cabinet, center.id,
+                                                    center.vaccine_specialties, center.vaccine_cabinets)
     # Find the first availability
     date = center.find_first_availability(start_date, end_date)
     if not date:
