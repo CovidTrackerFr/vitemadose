@@ -3,11 +3,7 @@ name: Scrape
 
 on:
   push:
-    branches:
-      - data-auto
-  schedule:
-    - cron: "*/5 * * * *"
-  # Allow running manually
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
@@ -29,11 +25,3 @@ jobs:
         run: scripts/install
       - name: "Scraping..."
         run: scripts/scrape
-      - name: Sleep
-        uses: jakejarvis/wait-action@master
-        with:
-          time: '120s'
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Automatic Update
-          push_options: '--force HEAD:data-auto'
