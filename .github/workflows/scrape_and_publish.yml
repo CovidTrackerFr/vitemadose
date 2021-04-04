@@ -30,9 +30,7 @@ jobs:
       - name: "Scraping..."
         run: scripts/scrape
       - name: Sleep
-        uses: jakejarvis/wait-action@master
-        with:
-          time: '120s'
+        run: 'sleep 120s'
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Automatic Update
