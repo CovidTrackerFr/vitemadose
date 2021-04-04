@@ -1,8 +1,6 @@
-from datetime import datetime, timedelta
 from urllib.parse import urlsplit, parse_qs
 
 import httpx
-from eventlet import Timeout
 from httpx import TimeoutException
 
 from scraper.keldoc.keldoc_filters import parse_keldoc_availability
