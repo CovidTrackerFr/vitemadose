@@ -22,7 +22,7 @@ def fetch_slots(rdv_site_web, start_date):
 
     rdv_form = soup.find(id="__NEXT_DATA__")
     if rdv_form:
-        return get_slots_from(rdv_form, rdv_site_web)
+        return get_slots_from(rdv_form, rdv_site_web, start_date)
 
     return None
 
