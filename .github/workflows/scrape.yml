@@ -9,8 +9,6 @@ on:
     - cron: "*/5 * * * *"
   # Allow running manually
   workflow_dispatch:
-  push:
-    branches: ["aureliancnx-keldoc-1"] # for test purposes
 
 jobs:
 
