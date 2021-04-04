@@ -102,15 +102,31 @@ def export_data(centres_cherchés):
     return compte_centres, compte_centres_avec_dispo
 
 
-def fetch_centre_slots(rdv_site_web, start_date):
+def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
+    if fetch_map is None:
+        # Map platform to implementation.
+        # May be overridden for unit testing purposes.
+        fetch_map = {
+            'Doctolib': doctolib_fetch_slots,
+            'Keldoc': keldoc_fetch_slots,
+            'Maiia': maiia_fetch_slots,
+        }
+
     rdv_site_web = rdv_site_web.strip()
+
+    # Determine platform based on visit URL.
     if rdv_site_web.startswith('https://partners.doctolib.fr') or rdv_site_web.startswith('https://www.doctolib.fr'):
-        return 'Doctolib', doctolib_fetch_slots(rdv_site_web, start_date)
-    if rdv_site_web.startswith('https://vaccination-covid.keldoc.com'):
-        return 'Keldoc', keldoc_fetch_slots(rdv_site_web, start_date)
-    if rdv_site_web.startswith('https://www.maiia.com'):
-        return 'Maiia', maiia_fetch_slots(rdv_site_web)
-    return 'Autre', None
+        platform = 'Doctolib'
+    elif rdv_site_web.startswith('https://vaccination-covid.keldoc.com'):
+        platform = 'Keldoc'
+    elif rdv_site_web.startswith('https://www.maiia.com'):
+        platform = 'Maiia'
+    else:
+        return 'Autre', None
+
+    # Dispatch to appropriate implementation.
+    fetch_impl = fetch_map[platform]
+    return platform, fetch_impl(rdv_site_web, start_date)
 
 
 def centre_iterator():
