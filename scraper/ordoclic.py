@@ -11,11 +11,13 @@ def search():
     base_url = 'https://api.ordoclic.fr/v1/public/search'
     payload = {'page': '1', 'per_page': '500', 'in.isCovidVaccineSupported': 'true', 'in.isPublicProfile': 'true' }
     r = session.get(base_url, params=payload)
+    r.raise_for_status()
     return(r.json())
   
 def getReasons(entityId):
     base_url = 'https://api.ordoclic.fr/v1/solar/entities/{0}/reasons'.format(entityId)
     r = session.get(base_url)
+    r.raise_for_status()
     return(r.json())
 
 def getSlots(entityId, medicalStaffId, reasonId, start_date, end_date):
@@ -27,12 +29,14 @@ def getSlots(entityId, medicalStaffId, reasonId, start_date, end_date):
                "dateStart": "{0}T23:59:59.000Z".format(start_date)}
     headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
     r = session.post(base_url, data=json.dumps(payload), headers=headers)
+    r.raise_for_status()
     return(r.json())
 
 def getProfile(rdv_site_web):
     base_url = 'https://api.ordoclic.fr/v1/public/entities/profile/{0}'
     base_url = base_url.format(rdv_site_web.rsplit('/', 1)[-1])
     r = session.get(base_url)
+    r.raise_for_status()
     return(r.json())
 
 def parse_ordoclic_slots(availability_data):
@@ -62,7 +66,6 @@ def fetch_centre_slots(rdv_site_web, start_date):
     slug = profile["profileSlug"]
     entityId = profile["entityId"]
     for professional in profile["publicProfessionals"]:
-        #print(professional)
         medicalStaffId = professional["id"]
         name = professional["fullName"]
         zip = professional["zip"]
