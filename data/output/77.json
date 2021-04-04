@@ -1,16 +1,15 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T17:03:02.326522+02:00",
-  "centres_disponibles": [
+  "last_updated": "2021-04-04T17:04:49.296587+02:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
     {
       "departement": "77",
       "nom": "GHEF-site CH Coulommiers",
       "url": "https://partners.doctolib.fr/hopital-public/meaux/ghef-centre-de-vaccination-covid-reserve-aux-professionnels-de-sante-de-ville?pid=practice-162149&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-06T10:00:00.000+02:00"
-    }
-  ],
-  "centres_indisponibles": [
+      "prochain_rdv": null
+    },
     {
       "departement": "77",
       "nom": "GHEF-Site de Jossigny",
@@ -34,16 +33,16 @@
     },
     {
       "departement": "77",
-      "nom": "Centre de vaccination GHSIF MELUN - Site de Brie Comte Robert",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/brie-comte-robert/centre-de-vaccination-de-la-brie?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "CHSSM-Site de Fontainebleau",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "77",
-      "nom": "CHSSM-Site de Fontainebleau",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Centre de vaccination GHSIF MELUN - Site de Brie Comte Robert",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/brie-comte-robert/centre-de-vaccination-de-la-brie?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -125,14 +124,14 @@
     },
     {
       "departement": "77",
-      "nom": "CD - Melun / Centre de D\u00e9tention de Melun",
+      "nom": "CP - Unit\u00e9 Sanitaire (USS + DSP) du Centre P\u00e9nitentiaire Sud Francilien / Centre de D\u00e9tention de Melun",
       "url": "",
       "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "77",
-      "nom": "CP - Unit\u00e9 Sanitaire (USS + DSP) du Centre P\u00e9nitentiaire Sud Francilien / Centre de D\u00e9tention de Melun",
+      "nom": "CD - Melun / Centre de D\u00e9tention de Melun",
       "url": "",
       "plateforme": "Autre",
       "prochain_rdv": null
@@ -153,16 +152,16 @@
     },
     {
       "departement": "77",
-      "nom": "Centres de vaccination GHIF Melun- site de Savigny le temple",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/savigny-le-temple-77176/centre-de-vaccination-covid-ghsif-site-de-savigny-le-temple",
-      "plateforme": null,
+      "nom": "centre de vaccination GHSIF MELUN - site de Combs la Ville",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "77",
-      "nom": "centre de vaccination GHSIF MELUN - site de Combs la Ville",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Centres de vaccination GHIF Melun- site de Savigny le temple",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/savigny-le-temple-77176/centre-de-vaccination-covid-ghsif-site-de-savigny-le-temple",
+      "plateforme": null,
       "prochain_rdv": null
     },
     {
@@ -202,15 +201,15 @@
     },
     {
       "departement": "77",
-      "nom": "Ville de Nemours",
-      "url": "https://partners.doctolib.fr/centre-de-sante/nemours/centre-vaccination-covid-19-msp-pays-de-nemours?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Ville de Montereau",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montereau-fault-yonne/centre-de-vaccination-covid-de-montereau-fault-yonne-reserve-personnes-plus-de-75ans?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "77",
-      "nom": "Ville de Montereau",
-      "url": "https://partners.doctolib.fr/centre-de-sante/montereau-fault-yonne/centre-de-vaccination-covid-de-montereau-fault-yonne-reserve-personnes-plus-de-75ans?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Ville de Nemours",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nemours/centre-vaccination-covid-19-msp-pays-de-nemours?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     }

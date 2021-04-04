@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T17:03:02.325891+02:00",
+  "last_updated": "2021-04-04T17:04:49.296053+02:00",
   "centres_disponibles": [
     {
       "departement": "25",
@@ -8,6 +8,13 @@
       "url": "https://partners.doctolib.fr/centre-de-sante/pontarlier/cvcpts-pontarlier-reserve-aux-professionnels-de-sante?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-27"
+    },
+    {
+      "departement": "25",
+      "nom": "Centre de vaccination de Morteau",
+      "url": "https://partners.doctolib.fr/centre-de-sante/morteau/cvc-morteau?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-06T15:50:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -83,15 +90,15 @@
     },
     {
       "departement": "25",
-      "nom": "CHU Besan\u00e7on",
-      "url": "https://partners.doctolib.fr/hopital-public/besan\u00e7on/chru-besancon-centre-de-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de Quingey",
+      "url": "https://partners.doctolib.fr/centre-de-sante/quingey/centre-de-vaccination-covid-19-quingey?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "25",
-      "nom": "Centre de vaccination de Quingey",
-      "url": "https://partners.doctolib.fr/centre-de-sante/quingey/centre-de-vaccination-covid-19-quingey?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "CHU Besan\u00e7on",
+      "url": "https://partners.doctolib.fr/hopital-public/besan\u00e7on/chru-besancon-centre-de-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -113,13 +120,6 @@
       "departement": "25",
       "nom": "Site Lucine - Audincourt",
       "url": "https://partners.doctolib.fr/centre-de-sante/audincourt/centre-de-vaccination-audincourt?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "25",
-      "nom": "Centre de vaccination de Morteau",
-      "url": "https://partners.doctolib.fr/centre-de-sante/morteau/cvc-morteau?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

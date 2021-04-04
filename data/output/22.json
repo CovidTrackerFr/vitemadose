@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T17:03:02.325843+02:00",
+  "last_updated": "2021-04-04T17:04:49.296020+02:00",
   "centres_disponibles": [
     {
       "departement": "22",
@@ -15,6 +15,13 @@
       "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/st-brieuc-22000/robien-saint-brieuc/centre-de-vaccination-de-robien-saint-brieuc",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-22T11:45:00.000000+0200"
+    },
+    {
+      "departement": "22",
+      "nom": "LANNION - Salle des ursulines",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/lannion-22300/centre-de-vaccination-de-lannion/centre-de-vaccination-de-lannion-salle-des-ursulines",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-13T11:45:00.000000+0200"
     }
   ],
   "centres_indisponibles": [
@@ -34,16 +41,16 @@
     },
     {
       "departement": "22",
-      "nom": "ROSTRENEN - Salle des f\u00eates",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/rostrenen-22110/salle-des-fetes-rostrenen/centre-de-vaccination-de-la-salle-des-fetes-rostrenen",
-      "plateforme": "Keldoc",
+      "nom": "22-Grand centre de vaccination",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "22",
-      "nom": "22-Grand centre de vaccination",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "ROSTRENEN - Salle des f\u00eates",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/rostrenen-22110/salle-des-fetes-rostrenen/centre-de-vaccination-de-la-salle-des-fetes-rostrenen",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
@@ -83,13 +90,6 @@
     },
     {
       "departement": "22",
-      "nom": "LANVOLLON - Salle Armor Argoat",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/lanvollon-22290/ville-de-lanvollon/centre-de-vaccination-de-la-ville-de-lanvollon",
-      "plateforme": "Keldoc",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "22",
       "nom": "GUINGAMP - Centre de sant\u00e9 (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
       "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/pabu-22200/equipe-d-infectiologie-3?agenda=51168&motive=81341&category=-1&cabinet=16558",
       "plateforme": null,
@@ -97,8 +97,8 @@
     },
     {
       "departement": "22",
-      "nom": "GUINGAMP - Centre social",
-      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/guingamp-22200/guingamp/centre-de-vaccination-guingamp-centre-social-guingamp",
+      "nom": "LANVOLLON - Salle Armor Argoat",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/lanvollon-22290/ville-de-lanvollon/centre-de-vaccination-de-la-ville-de-lanvollon",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },
@@ -111,16 +111,16 @@
     },
     {
       "departement": "22",
-      "nom": "CH DINAN (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-malo-et-dinan/gh-rance-emeraude-vaccination-covid?pid=practice-163106&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "GUINGAMP - Centre social",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/guingamp-22200/guingamp/centre-de-vaccination-guingamp-centre-social-guingamp",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
       "departement": "22",
-      "nom": "LANNION - Salle des ursulines",
-      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/lannion-22300/centre-de-vaccination-de-lannion/centre-de-vaccination-de-lannion-salle-des-ursulines",
-      "plateforme": "Keldoc",
+      "nom": "CH DINAN (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-malo-et-dinan/gh-rance-emeraude-vaccination-covid?pid=practice-163106&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     }
   ]

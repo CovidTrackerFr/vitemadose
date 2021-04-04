@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T17:03:02.325812+02:00",
+  "last_updated": "2021-04-04T17:04:49.295997+02:00",
   "centres_disponibles": [
     {
       "departement": "18",
@@ -11,17 +11,17 @@
     },
     {
       "departement": "18",
-      "nom": "Centre de Vaccination Aubigny - Salle polyvalente - Les terrasses de la N\u00e8re",
-      "url": "https://partners.doctolib.fr/maison-de-sante/aubigny-sur-nere/centre-de-vaccination-covid-19-aubigny-sur-nere?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-09T16:10:00.000+02:00"
-    },
-    {
-      "departement": "18",
       "nom": "Centre de vaccination - Palais des sports du Prado",
       "url": "https://partners.doctolib.fr/maison-de-sante/bourges/cpts-pays-de-bourge?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-16"
+    },
+    {
+      "departement": "18",
+      "nom": "Centre de Vaccination Aubigny - Salle polyvalente - Les terrasses de la N\u00e8re",
+      "url": "https://partners.doctolib.fr/maison-de-sante/aubigny-sur-nere/centre-de-vaccination-covid-19-aubigny-sur-nere?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-13"
     }
   ],
   "centres_indisponibles": [
@@ -90,16 +90,16 @@
     },
     {
       "departement": "18",
-      "nom": "Caserne SDIS Bourges (danjons) CV \u00e9ph\u00e9m\u00e8re",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "CV \u00e9ph\u00e9m\u00e8re - Levet",
+      "url": "https://partners.doctolib.fr/centre-de-sante/levet/centre-de-vaccination-covid-19-levet?pid=practice-173070&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "18",
-      "nom": "CV \u00e9ph\u00e9m\u00e8re - Levet",
-      "url": "https://partners.doctolib.fr/centre-de-sante/levet/centre-de-vaccination-covid-19-levet?pid=practice-173070&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "Caserne SDIS Bourges (danjons) CV \u00e9ph\u00e9m\u00e8re",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
@@ -174,14 +174,14 @@
     },
     {
       "departement": "18",
-      "nom": "CV \u00e9ph\u00e9m\u00e8re Henrichemont",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "CV \u00e9ph\u00e9m\u00e8re - Dun-sur-Auron",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dun-sur-auron/centre-de-vaccination-covid-19-dun-sur-auron?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "18",
-      "nom": "CV \u00e9ph\u00e9m\u00e8re - Neuvy-sur-Barangeon",
+      "nom": "CV \u00e9ph\u00e9m\u00e8re Henrichemont",
       "url": "",
       "plateforme": "Autre",
       "prochain_rdv": null
@@ -195,6 +195,13 @@
     },
     {
       "departement": "18",
+      "nom": "CV \u00e9ph\u00e9m\u00e8re - Neuvy-sur-Barangeon",
+      "url": "",
+      "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "18",
       "nom": "CV \u00e9ph\u00e9m\u00e8re - Ligni\u00e8res",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/lignieres/centre-covid-19-mairie-de-lignieres?pid=practice-170325&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -202,8 +209,8 @@
     },
     {
       "departement": "18",
-      "nom": "CV \u00e9ph\u00e9m\u00e8re - Dun-sur-Auron",
-      "url": "https://partners.doctolib.fr/centre-de-sante/dun-sur-auron/centre-de-vaccination-covid-19-dun-sur-auron?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "CV \u00e9ph\u00e9m\u00e8re - Ch\u00e2teaumaillant",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chateaumeillant/centre-de-vaccination-covid-19-chateaumeillant?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -211,13 +218,6 @@
       "departement": "18",
       "nom": "CV \u00e9ph\u00e9m\u00e8re - Avord",
       "url": "https://partners.doctolib.fr/centre-de-sante/avord/centre-vaccination-avord-baugy?pid=practice-169561&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "18",
-      "nom": "CV \u00e9ph\u00e9m\u00e8re - Ch\u00e2teaumaillant",
-      "url": "https://partners.doctolib.fr/centre-de-sante/chateaumeillant/centre-de-vaccination-covid-19-chateaumeillant?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -272,6 +272,13 @@
     },
     {
       "departement": "18",
+      "nom": "CV \u00e9ph\u00e9m\u00e8re - Les Aix d'Angillon",
+      "url": "https://partners.doctolib.fr/centre-de-sante/les-aix-d-angillon/centre-vaccination-mairie-les-aix-d-angillon-les-aix-d-angillon?pid=practice-172324&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "18",
       "nom": "CV \u00e9ph\u00e9m\u00e8re - Sancergues",
       "url": "https://partners.doctolib.fr/maison-de-sante/sancergues/centre-de-vaccination-covid-19-ville-de-sancergues?pid=practice-171982&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -281,13 +288,6 @@
       "departement": "18",
       "nom": "CV \u00e9ph\u00e9m\u00e8re - Touchay-sur-Ligni\u00e8res",
       "url": "https://partners.doctolib.fr/centre-de-sante/touchay/centre-de-vaccination-covid-19-mairie-de-touchay?pid=practice-170619&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "18",
-      "nom": "CV \u00e9ph\u00e9m\u00e8re - Les Aix d'Angillon",
-      "url": "https://partners.doctolib.fr/centre-de-sante/les-aix-d-angillon/centre-vaccination-mairie-les-aix-d-angillon-les-aix-d-angillon?pid=practice-172324&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

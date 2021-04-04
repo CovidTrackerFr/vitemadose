@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T17:03:02.326710+02:00",
+  "last_updated": "2021-04-04T17:04:49.296743+02:00",
   "centres_disponibles": [
     {
       "departement": "95",
@@ -8,20 +8,6 @@
       "url": "https://partners.doctolib.fr/hopital-public/pontoise/ght-novo-ghcpo-chrd-vaccination-covid-19?pid=practice-162508&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-08T13:30:00.000+02:00"
-    },
-    {
-      "departement": "95",
-      "nom": "Centre de vaccination Pean Auvers-sur-Oise",
-      "url": "https://partners.doctolib.fr/centre-de-sante/auvers-sur-oise/centre-de-vaccination-d-auvers-sur-oise?pid=practice-177442&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-07T13:35:00.000+02:00"
-    },
-    {
-      "departement": "95",
-      "nom": "MAISON DE QUARTIER VALERY WATTEAU",
-      "url": "https://partners.doctolib.fr/centre-de-sante/sarcelles/centre-de-vaccination-de-sarcelles?pid=practice-162701&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-22"
     }
   ],
   "centres_indisponibles": [
@@ -41,13 +27,6 @@
     },
     {
       "departement": "95",
-      "nom": "Centre Hospitalier de Gonesse",
-      "url": "https://partners.doctolib.fr/hopital-public/gonesse/centre-de-vaccinations-covid-ch-gonesse?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "95",
       "nom": "Centre de vaccination territorial Centre Val d'Oise",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/st-brice-sous-foret-95350/vaccination-plaine-vallee-saint-brice-sous-foret?category=-1&cabinet=16609&specialty=496",
       "plateforme": "Keldoc",
@@ -55,16 +34,16 @@
     },
     {
       "departement": "95",
-      "nom": "Centre de vaccination de Garges-l\u00e8s-Gonesse",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Centre Hospitalier de Gonesse",
+      "url": "https://partners.doctolib.fr/hopital-public/gonesse/centre-de-vaccinations-covid-ch-gonesse?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "95",
-      "nom": "Centre de vaccination territorial Centre Val d'Oise",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/montmorency-95160/vaccination-plaine-vallee-montmorency-salle-des-fetes?category=-1&cabinet=16607&specialty=496",
-      "plateforme": "Keldoc",
+      "nom": "Centre de vaccination de Garges-l\u00e8s-Gonesse",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
@@ -111,6 +90,13 @@
     },
     {
       "departement": "95",
+      "nom": "EMV Domicile Jos\u00e9phine",
+      "url": "",
+      "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "95",
       "nom": "Centre de vaccination de Sannois",
       "url": "https://www.doctolib.fr/centre-de-sante/sannois/centre-de-vaccination-covid-19-commune-de-sannois",
       "plateforme": "Doctolib",
@@ -118,9 +104,9 @@
     },
     {
       "departement": "95",
-      "nom": "EMV Domicile Jos\u00e9phine",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Centre de vaccination territorial Centre Val d'Oise",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/montmorency-95160/vaccination-plaine-vallee-montmorency-salle-des-fetes?category=-1&cabinet=16607&specialty=496",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
@@ -132,16 +118,16 @@
     },
     {
       "departement": "95",
-      "nom": "Centre de vaccination territorial du Haut Val d'Oise",
-      "url": "https://partners.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/l'isle-adam/centre-de-vaccination-covid19-de-l-isle-adam-hopital-chantepie-mancier?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "EMV CV territorial du Haut Val d'Oise",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "95",
-      "nom": "EMV CV territorial du Haut Val d'Oise",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Centre de vaccination territorial du Haut Val d'Oise",
+      "url": "https://partners.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/l'isle-adam/centre-de-vaccination-covid19-de-l-isle-adam-hopital-chantepie-mancier?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -177,6 +163,13 @@
       "nom": "MA - US Maison d'Arr\u00eat d'Osny / Maison d'Arr\u00eat d'Osny-Val-d'Oise",
       "url": "",
       "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "95",
+      "nom": "Centre de vaccination Pean Auvers-sur-Oise",
+      "url": "https://partners.doctolib.fr/centre-de-sante/auvers-sur-oise/centre-de-vaccination-d-auvers-sur-oise?pid=practice-177442&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -246,6 +239,13 @@
       "departement": "95",
       "nom": "CENTRE DE VACCINATION TAVERNY",
       "url": "https://partners.doctolib.fr/centre-de-sante/taverny/centre-de-vaccination-de-taverny?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "95",
+      "nom": "MAISON DE QUARTIER VALERY WATTEAU",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sarcelles/centre-de-vaccination-de-sarcelles?pid=practice-162701&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

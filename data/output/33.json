@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T17:03:02.326037+02:00",
+  "last_updated": "2021-04-04T17:04:49.296181+02:00",
   "centres_disponibles": [
     {
       "departement": "33",
-      "nom": "Centre de vaccination du CH Sud Gironde",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/langon-33210/centre-hospitalier-sud-gironde?category=-1&cabinet=16578&specialty=496",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-12T13:20:00.000000+0200"
+      "nom": "CENTRE DE VACCINATION DU GRAND CUBZAGUAIS",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-andre-de-cubzac/centre-de-vaccination-du-grand-cubzaguais?pid=practice-179089&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-24"
     },
     {
       "departement": "33",
@@ -18,10 +18,10 @@
     },
     {
       "departement": "33",
-      "nom": "CH ARCACHON",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/la-teste-de-buch-33529/centre-hospitalier-arcachon/centre-de-vaccination-du-centre-hospitalier-arcachon",
+      "nom": "Centre de vaccination du CH Sud Gironde",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/langon-33210/centre-hospitalier-sud-gironde?category=-1&cabinet=16578&specialty=496",
       "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-12T14:30:00.000000+0200"
+      "prochain_rdv": "2021-04-12T13:20:00.000000+0200"
     },
     {
       "departement": "33",
@@ -29,6 +29,20 @@
       "url": "https://partners.doctolib.fr/centre-de-sante/arcachon/centre-municipal-de-vaccination-anti-covid-19-de-la-ville-d-arcachon?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-07T10:30:00.000+02:00"
+    },
+    {
+      "departement": "33",
+      "nom": "CH ARCACHON",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/la-teste-de-buch-33529/centre-hospitalier-arcachon/centre-de-vaccination-du-centre-hospitalier-arcachon",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-12T14:30:00.000000+0200"
+    },
+    {
+      "departement": "33",
+      "nom": "CENTRE DE VACCINATION INTERCOMMUNAL -ST-MEDARD-EN-JALLES",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-medard-en-jalles/centre-de-vaccination-covid-19-saint-medard-en-jalles?pid=practice-179381&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-06T17:12:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -62,13 +76,6 @@
     },
     {
       "departement": "33",
-      "nom": "CHU BORDEAUX - SITE PELLEGRIN",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/bordeaux-33000/chu-de-bordeaux?cabinet=16876&specialty=496",
-      "plateforme": "Keldoc",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "33",
       "nom": "Centre de vaccination Lormont Carriet",
       "url": "",
       "plateforme": "Autre",
@@ -76,9 +83,9 @@
     },
     {
       "departement": "33",
-      "nom": "CENTRE DE VACCINATION DU GRAND CUBZAGUAIS",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-andre-de-cubzac/centre-de-vaccination-du-grand-cubzaguais?pid=practice-179089&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "CHU BORDEAUX - SITE PELLEGRIN",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/bordeaux-33000/chu-de-bordeaux?cabinet=16876&specialty=496",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
@@ -90,16 +97,16 @@
     },
     {
       "departement": "33",
-      "nom": "Centre de vaccination - Mairie de Lacanau / p\u00f4le de l'aiguillonne",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/lacanau/centre-de-vaccination-covid-lacanau-lacanau?pid=practice-173292&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "Centre de Vaccination - Salle Lucie Aubrac",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/floirac-33270/salle-lucie-aubrac",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
       "departement": "33",
-      "nom": "Centre de Vaccination - Salle Lucie Aubrac",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/floirac-33270/salle-lucie-aubrac",
-      "plateforme": "Keldoc",
+      "nom": "Centre de vaccination - Mairie de Lacanau / p\u00f4le de l'aiguillonne",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/lacanau/centre-de-vaccination-covid-lacanau-lacanau?pid=practice-173292&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -181,6 +188,13 @@
     },
     {
       "departement": "33",
+      "nom": "NOUVELLE CLINIQUE DU TONDU",
+      "url": "https://partners.doctolib.fr/centre-de-sante/floirac/centre-de-vaccination-covid-19-nouvelle-clinique-bordeaux-tondu?pid=practice-164998?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "33",
       "nom": "CENTRE DE SANTE MUTUALISTE GALLIENI",
       "url": "https://partners.doctolib.fr/centre-de-sante/bordeaux/centre-de-vaccination-covid-19-gallieni?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -195,22 +209,8 @@
     },
     {
       "departement": "33",
-      "nom": "NOUVELLE CLINIQUE DU TONDU",
-      "url": "https://partners.doctolib.fr/centre-de-sante/floirac/centre-de-vaccination-covid-19-nouvelle-clinique-bordeaux-tondu?pid=practice-164998?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "33",
       "nom": "Maison de sant\u00e9 de Blaye",
       "url": "https://partners.doctolib.fr/maison-de-sante/blaye/centre-de-vaccination-covid-msp-blaye?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "33",
-      "nom": "CENTRE DE VACCINATION INTERCOMMUNAL -ST-MEDARD-EN-JALLES",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-medard-en-jalles/centre-de-vaccination-covid-19-saint-medard-en-jalles?pid=practice-179381&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     }

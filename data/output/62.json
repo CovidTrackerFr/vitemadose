@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T17:03:02.326347+02:00",
+  "last_updated": "2021-04-04T17:04:49.296449+02:00",
   "centres_disponibles": [
     {
       "departement": "62",
@@ -14,7 +14,7 @@
       "nom": "Centre de vaccination - Ville de Calais (Forum Gambetta)",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/calais/centre-de-vaccination-covid-19-forum-gambetta?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-06T09:00:00.000+02:00"
+      "prochain_rdv": "2021-04-06T09:40:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -83,15 +83,15 @@
     },
     {
       "departement": "62",
-      "nom": "Centre de vaccination - Maison de Sant\u00e9 Pluriprofessionnelle de Fruges",
-      "url": "https://partners.doctolib.fr/centre-de-sante/fruges/centre-de-vaccination-maison-de-sante-pluriprofessionnelle-de-fruges?pid=practice-176732&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - Ville de BETHUNE, Foyer Francois Albert",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bethune/centre-de-vaccination-covid-19-bethune?pid=practice-175335&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "62",
-      "nom": "Centre de vaccination - Ville de BETHUNE, Foyer Francois Albert",
-      "url": "https://partners.doctolib.fr/centre-de-sante/bethune/centre-de-vaccination-covid-19-bethune?pid=practice-175335&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - Maison de Sant\u00e9 Pluriprofessionnelle de Fruges",
+      "url": "https://partners.doctolib.fr/centre-de-sante/fruges/centre-de-vaccination-maison-de-sante-pluriprofessionnelle-de-fruges?pid=practice-176732&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -181,13 +181,6 @@
     },
     {
       "departement": "62",
-      "nom": "Centre de vaccination - Ville de Vitry-en-Artois, salle polyvalente",
-      "url": "",
-      "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "62",
       "nom": "Centre de vaccination - Mairie HESDIN, Maison des Jeunes et de la Cultures ",
       "url": "https://partners.doctolib.fr/centre-de-sante/hesdin/centre-de-vaccination-covid-19-salle-mjc-d-hesdin?pid=practice-176804&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -195,15 +188,22 @@
     },
     {
       "departement": "62",
-      "nom": "Centre de vaccination - MSP AUXI-LE-CHATEAU",
-      "url": "https://www.doctolib.fr/centre-de-sante/auxi-le-chateau/centre-de-vaccination-d-auxi-le-chateau",
-      "plateforme": "Doctolib",
+      "nom": "Centre de vaccination - Ville de Vitry-en-Artois, salle polyvalente",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "62",
       "nom": "Centre de vaccination - Commune AUCHEL, SALLE ROGER COUDERC",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/auchel/centre-de-vaccination-covid-19-roger-couderc?pid=practice-176918&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - MSP AUXI-LE-CHATEAU",
+      "url": "https://www.doctolib.fr/centre-de-sante/auxi-le-chateau/centre-de-vaccination-d-auxi-le-chateau",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -230,6 +230,13 @@
     },
     {
       "departement": "62",
+      "nom": "Centre de vaccination - Centre SDIS Lumbres, Salle Leio Lagrang",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bruay-la-buissiere/centre-de-vaccination-covid-pas-de-calais?pid=practice-164610&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "62",
       "nom": "Centre de vaccination - Centre SDIS Avesnes Le Comte, Salle Jacques Nirdol",
       "url": "https://partners.doctolib.fr/centre-de-sante/bruay-la-buissiere/centre-de-vaccination-covid-pas-de-calais?pid=practice-164609&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -239,13 +246,6 @@
       "departement": "62",
       "nom": "Centre de vaccination - CHRSO et CPTS Audomaroise, Salle des sports du pavillon 3 \u2013 CH St Omer",
       "url": "https://partners.doctolib.fr/hopital-public/saint-omer/ch-region-st-omer-centre-de-vaccination-covid-19?pid=practice-164177&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "62",
-      "nom": "Centre de vaccination - Centre SDIS Lumbres, Salle Leio Lagrang",
-      "url": "https://partners.doctolib.fr/centre-de-sante/bruay-la-buissiere/centre-de-vaccination-covid-pas-de-calais?pid=practice-164610&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

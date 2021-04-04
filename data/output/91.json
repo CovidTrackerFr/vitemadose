@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T17:03:02.326671+02:00",
+  "last_updated": "2021-04-04T17:04:49.296710+02:00",
   "centres_disponibles": [],
   "centres_indisponibles": [
     {
@@ -26,16 +26,16 @@
     },
     {
       "departement": "91",
-      "nom": "Site de \"La Croix Louis\" ",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/bretigny-sur-orge-91220/centre-de-vaccination-covid19-bretigny?agenda=48971&motive=81790&category=-1&cabinet=16650&specialty=496",
-      "plateforme": "Keldoc",
+      "nom": "EMV Etampes",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "91",
-      "nom": "EMV Etampes",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Site de \"La Croix Louis\" ",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/bretigny-sur-orge-91220/centre-de-vaccination-covid19-bretigny?agenda=48971&motive=81790&category=-1&cabinet=16650&specialty=496",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
@@ -208,8 +208,8 @@
     },
     {
       "departement": "91",
-      "nom": "Espace Ren\u00e9 L'HELGUEN ",
-      "url": "https://partners.doctolib.fr/centre-de-sante/athis-mons/centre-de-vaccination-covid-mairie-athis-mons?pid=practice-164918?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Salle des F\u00eates ",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/brunoy/centre-de-vaccination-covid-brunoy?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -222,8 +222,8 @@
     },
     {
       "departement": "91",
-      "nom": "Salle des F\u00eates ",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/brunoy/centre-de-vaccination-covid-brunoy?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Espace Ren\u00e9 L'HELGUEN ",
+      "url": "https://partners.doctolib.fr/centre-de-sante/athis-mons/centre-de-vaccination-covid-mairie-athis-mons?pid=practice-164918?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -250,13 +250,6 @@
     },
     {
       "departement": "91",
-      "nom": "Complexe sportif - Jean Segalard",
-      "url": "https://partners.doctolib.fr/centre-de-sante/cerny/centre-de-vaccination-covid-19-cerny?pid=practice-165742&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "91",
       "nom": "Maison de sant\u00e9",
       "url": "https://partners.doctolib.fr/centre-de-sante/dourdan/centre-de-vaccination-covid-19-maison-de-sante-dourdan?pid=practice-165040?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -266,6 +259,13 @@
       "departement": "91",
       "nom": "Foyer Club ",
       "url": "https://partners.doctolib.fr/centre-de-sante/evry-courcouronnes/centre-de-vaccination-covid-foyer-club-reserve-aux-personnes-de-plus-de-75-ans?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "91",
+      "nom": "Complexe sportif - Jean Segalard",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cerny/centre-de-vaccination-covid-19-cerny?pid=practice-165742&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

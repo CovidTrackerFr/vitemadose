@@ -1,14 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T17:03:02.326318+02:00",
+  "last_updated": "2021-04-04T17:04:49.296424+02:00",
   "centres_disponibles": [
-    {
-      "departement": "59",
-      "nom": "Centre de vaccination - CH LE CATEAU",
-      "url": "https://partners.doctolib.fr/hopital-public/le-cateau-cambr\u00e9sis/ch-le-cateau-centre-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-06T13:30:00.000+02:00"
-    },
     {
       "departement": "59",
       "nom": "Centre de vaccination - Ville de Bourbourg, Espace Pierre de Coubertin ",
@@ -50,6 +43,13 @@
       "departement": "59",
       "nom": "Centre de vaccination - Centre de ville de Lille",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/lille/centre-vaccination-institut-pasteur-de-lille?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "59",
+      "nom": "Centre de vaccination - CH LE CATEAU",
+      "url": "https://partners.doctolib.fr/hopital-public/le-cateau-cambr\u00e9sis/ch-le-cateau-centre-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -97,15 +97,15 @@
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination  - CPTS Bergues - Bourbourg - Hondshotte, Salle Emmanuel Looten",
-      "url": "https://partners.doctolib.fr/centre-de-sante/bergues/centre-vaccination-communaute-de-communes-des-hauts-de-flandre-cchf?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - Polyclinique de Grande Synthe",
+      "url": "https://partners.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/grande-synthe/vaccination-covid-polyclinique-de-grande-synthe?pid=practice-165272&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - Polyclinique de Grande Synthe",
-      "url": "https://partners.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/grande-synthe/vaccination-covid-polyclinique-de-grande-synthe?pid=practice-165272&enable_cookies_consent=1",
+      "nom": "Centre de vaccination  - CPTS Bergues - Bourbourg - Hondshotte, Salle Emmanuel Looten",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bergues/centre-vaccination-communaute-de-communes-des-hauts-de-flandre-cchf?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -202,16 +202,16 @@
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - Maison m\u00e9dicale de Bavay",
-      "url": "https://www.maiia.com/centre-de-vaccination/59570-bavay/centre-de-vaccination---maison-medicale-de-bavay",
-      "plateforme": "Maiia",
+      "nom": "Centre de vaccination - CHSA Maubeuge",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/maubeuge-59600/centre-hospitalier-de-sambre-avesnois/centre-de-vaccination-du-centre-hospitalier-de-sambre-avesnois",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - CHSA Maubeuge",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/maubeuge-59600/centre-hospitalier-de-sambre-avesnois/centre-de-vaccination-du-centre-hospitalier-de-sambre-avesnois",
-      "plateforme": "Keldoc",
+      "nom": "Centre de vaccination - Maison m\u00e9dicale de Bavay",
+      "url": "https://www.maiia.com/centre-de-vaccination/59570-bavay/centre-de-vaccination---maison-medicale-de-bavay",
+      "plateforme": "Maiia",
       "prochain_rdv": null
     },
     {
@@ -279,15 +279,15 @@
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - HOPITAL PRIV\u00c9 LE BOIS",
-      "url": "https://partners.doctolib.fr/centre-de-sante/villeneuve-d-ascq/vaccination-covid-19-hopital-prive-le-bois-et-villeneuve-d-ascq?pid=practice-163992&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - CH Seclin (SALLE ROSENBERG)",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/haut-de-france/vaccination-gh-seclin-carvin?pid=practice-163841&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - CH Seclin (SALLE ROSENBERG)",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/haut-de-france/vaccination-gh-seclin-carvin?pid=practice-163841&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - HOPITAL PRIV\u00c9 LE BOIS",
+      "url": "https://partners.doctolib.fr/centre-de-sante/villeneuve-d-ascq/vaccination-covid-19-hopital-prive-le-bois-et-villeneuve-d-ascq?pid=practice-163992&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -342,15 +342,15 @@
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - CH Roubaix  ",
-      "url": "https://partners.doctolib.fr/hopital-public/roubaix/ch-de-roubaix-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - Polyclinique Saint-Roch, Salle Georges Catry",
+      "url": "https://partners.doctolib.fr/clinique-privee/roncq/centre-de-vaccination-covid-19-clinique-saint-roch?pid=practice-164701?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - Polyclinique Saint-Roch, Salle Georges Catry",
-      "url": "https://partners.doctolib.fr/clinique-privee/roncq/centre-de-vaccination-covid-19-clinique-saint-roch?pid=practice-164701?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - CH Roubaix  ",
+      "url": "https://partners.doctolib.fr/hopital-public/roubaix/ch-de-roubaix-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

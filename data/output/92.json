@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T17:03:02.326681+02:00",
+  "last_updated": "2021-04-04T17:04:49.296718+02:00",
   "centres_disponibles": [
     {
       "departement": "92",
@@ -41,16 +41,16 @@
     },
     {
       "departement": "92",
-      "nom": "CH de Beaujon",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "CH des 4 Villes",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-cloud/ch-4-villes-centre-de-vaccination-reserve-aux-personnels-de-l-etablissement?pid=practice-163521&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "92",
-      "nom": "CH des 4 Villes",
-      "url": "https://partners.doctolib.fr/hopital-public/saint-cloud/ch-4-villes-centre-de-vaccination-reserve-aux-personnels-de-l-etablissement?pid=practice-163521&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "CH de Beaujon",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
@@ -104,16 +104,16 @@
     },
     {
       "departement": "92",
-      "nom": "Ville de Levallois-Perret",
-      "url": "https://partners.doctolib.fr/centre-de-sante/levallois-perret/centre-de-vaccination-de-levallois?pid=practice-175351&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "ville de Montrouge",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "92",
-      "nom": "ville de Montrouge",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Ville de Levallois-Perret",
+      "url": "https://partners.doctolib.fr/centre-de-sante/levallois-perret/centre-de-vaccination-de-levallois?pid=practice-175351&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -230,13 +230,6 @@
     },
     {
       "departement": "92",
-      "nom": "Ville de la Garenne Colombes",
-      "url": "https://partners.doctolib.fr/centre-de-sante/la-garenne-colombes/centre-de-vaccination-covid-19-la-garenne-colombes?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "92",
       "nom": "Ville de Chatenay-Malabry",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ch\u00e2tenay-malabry/centre-de-vaccination-de-chatenay-malabry?pid=practice-164883?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -246,6 +239,13 @@
       "departement": "92",
       "nom": "Ville de Courbevoie",
       "url": "https://partners.doctolib.fr/centre-de-sante/courbevoie/centre-de-vaccination-covid-19-de-courbevoie?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "92",
+      "nom": "Ville de la Garenne Colombes",
+      "url": "https://partners.doctolib.fr/centre-de-sante/la-garenne-colombes/centre-de-vaccination-covid-19-la-garenne-colombes?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
