@@ -1,5 +1,5 @@
 import sys
-from datetime import datetime
+import datetime as dt
 from multiprocessing import Pool
 import json
 import os
@@ -32,7 +32,7 @@ def main():
 
 
 def cherche_prochain_rdv_dans_centre(centre):
-    start_date = datetime.now().isoformat()[:10]
+    start_date = dt.datetime.now().isoformat()[:10]
     try:
         plateforme, next_slot = fetch_centre_slots(centre['rdv_site_web'], start_date)
     except Exception as e:
@@ -66,13 +66,13 @@ def sort_center(center):
     return center['prochain_rdv']
 
 
-def export_data(centres_cherchés):
+def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
     compte_centres = 0
     compte_centres_avec_dispo = 0
     par_departement = {
         code: {
             'version': 1,
-            'last_updated': datetime.now(tz=pytz.timezone('Europe/Paris')).isoformat(),
+            'last_updated': dt.datetime.now(tz=pytz.timezone('Europe/Paris')).isoformat(),
             'centres_disponibles': [],
             'centres_indisponibles': []
         }
@@ -95,8 +95,9 @@ def export_data(centres_cherchés):
     for code_departement, disponibilités in par_departement.items():
         if 'centres_disponibles' in disponibilités:
             disponibilités['centres_disponibles'] = sorted(disponibilités['centres_disponibles'], key=sort_center)
-        print(f'writing result to {code_departement}.json file')
-        with open(f'data/output/{code_departement}.json', "w") as outfile:
+        outpath = outpath_format.format(code_departement)
+        print(f'writing result to {outpath} file')
+        with open(outpath, "w") as outfile:
             outfile.write(json.dumps(disponibilités, indent=2))
 
     return compte_centres, compte_centres_avec_dispo
