@@ -10,11 +10,13 @@ def search():
     base_url = 'https://api.ordoclic.fr/v1/public/search'
     payload = {'page': '1', 'per_page': '500', 'in.isCovidVaccineSupported': 'true', 'in.isPublicProfile': 'true' }#, 'or.location.zip': 75}
     r = session.get(base_url, params=payload)
+    r.raise_for_status()
     return(r.json())
-  
+
 def getReasons(entityId):
     base_url = 'https://api.ordoclic.fr/v1/solar/entities/{0}/reasons'.format(entityId)
     r = session.get(base_url)
+    r.raise_for_status()
     return(r.json())
 
 def getSlots(entityId, medicalStaffId, reasonId, start_date, end_date):
@@ -24,14 +26,17 @@ def getSlots(entityId, medicalStaffId, reasonId, start_date, end_date):
                "reasonId": reasonId,
                "dateEnd": "{0}T00:00:00.000Z".format(end_date), 
                "dateStart": "{0}T23:59:59.000Z".format(start_date)}
+    #print(payload)
     headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
     r = session.post(base_url, data=json.dumps(payload), headers=headers)
+    r.raise_for_status()
     return(r.json())
 
 def getProfile(rdv_site_web):
     base_url = 'https://api.ordoclic.fr/v1/public/entities/profile/{0}'
     base_url = base_url.format(rdv_site_web.rsplit('/', 1)[-1])
     r = session.get(base_url)
+    r.raise_for_status()
     return(r.json())
 
 def parse_ordoclic_slots(availability_data):
@@ -58,15 +63,12 @@ def parse_ordoclic_slots(availability_data):
 def fetch_centre_slots(rdv_site_web, start_date):
     first_availability = None
     profile = getProfile(rdv_site_web)
-    #print(profile)
     slug = profile["profileSlug"]
     entityId = profile["entityId"]
     for professional in profile["publicProfessionals"]:
-        #print(professional)
         medicalStaffId = professional["id"]
         name = professional["fullName"]
         zip = professional["zip"]
-        #print("{0} {1}".format(name, medicalStaffId))
         reasons = getReasons(entityId)
         for reason in reasons["reasons"]:
             if reason["reasonTypeId"] == 4 and reason["canBookOnline"] == True: #injection#1?
