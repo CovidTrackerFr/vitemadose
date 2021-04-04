@@ -111,9 +111,13 @@ def _parse_practice_id(rdv_site_web: str) -> Optional[int]:
 
     # QueryParams({'pid': 'practice-164984'}) -> 'practice-164984'
     # /!\ Some URL query strings look like this:
-    # ...?pid=practice-162589&?speciality_id=5494&enable_cookies_consent=1
-    # Notice the weird &?speciality_id. It's handled correctly by `httpx.QueryParams`,
-    # so that 'pid' only contains 'practice-164984'.
+    # 1) ...?pid=practice-162589&?speciality_id=5494&enable_cookies_consent=1
+    # 2) ...?pid=practice-162589?speciality_id=5494&enable_cookies_consent=1
+    # Notice the weird &?speciality_id or ?speciality_id.
+    # Case 1) is handled correctly by `httpx.QueryParams`: in that
+    # case, 'pid' contains 'practice-164984'.
+    # Case 2), 'pid' contains 'pid=practice-162589?speciality_id=5494'
+    # which must be handled manually.
     pid = params.get('pid')
     if pid is None:
         return None
@@ -121,6 +125,8 @@ def _parse_practice_id(rdv_site_web: str) -> Optional[int]:
     try:
         # -> '164984'
         pid = pid.split('-')[-1]
+        # May be '164984?specialty=13' due to a weird format, drop everything after '?'
+        pid, _, _ = pid.partition('?')
         # -> 164984
         return int(pid)
     except (ValueError, TypeError, IndexError):
