@@ -70,11 +70,11 @@ def export_data(centres_cherchés):
         }
         for code in import_departements()
     }
-    center_list = []
+    #center_list = []
+    #for centre in centres_cherchés:
+    #    center_list.append(centre)
+    #center_list = sort_centers(center_list)
     for centre in centres_cherchés:
-        center_list.append(centre)
-    center_list = sort_centers(center_list)
-    for centre in center_list:
         compte_centres += 1
         code_departement = centre['departement']
         if code_departement in par_departement:
