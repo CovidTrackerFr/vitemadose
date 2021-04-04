@@ -52,7 +52,7 @@ def get_slots_from(rdv_form, rdv_url):
         dt = datetime.strptime(availability['firstPhysicalStartDateTime'],
                                '%Y-%m-%dT%H:%M:%S.%fZ')
         dt = dt + timedelta(hours=2)
-        dt = dt.strftime("%Y-%m-%d %H:%M")
+        dt = dt.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
         return dt
 
     # Ne sachant pas si 'firstPhysicalStartDateTime' est un attribut par défault dans
@@ -62,7 +62,7 @@ def get_slots_from(rdv_form, rdv_url):
                 availability['closestPhysicalAvailability']["startDateTime"],
                 '%Y-%m-%dT%H:%M:%S.%fZ')
         dt = dt + timedelta(hours=2)
-        dt = dt.strftime("%Y-%m-%d %H:%M")
+        dt = dt.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
         return dt
 
 
