@@ -124,7 +124,12 @@ def test_parse_practice_id():
     url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
     assert _parse_practice_id(url) == 165752
 
+    # Format bizarre 1
     url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-162589&?speciality_id=5494&enable_cookies_consent=1"  # noqa
+    assert _parse_practice_id(url) == 162589
+
+    # Format bizarre 2
+    url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-162589?speciality_id=5494&enable_cookies_consent=1"  # noqa
     assert _parse_practice_id(url) == 162589
 
     # Broken 1 : manque le numéro

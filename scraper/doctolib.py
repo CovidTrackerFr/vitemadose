@@ -121,6 +121,8 @@ def _parse_practice_id(rdv_site_web: str) -> Optional[int]:
     try:
         # -> '164984'
         pid = pid.split('-')[-1]
+        # May be '164984?specialty=13' due to a weird format, drop everything after '?'
+        pid, _, _ = pid.partition('?')
         # -> 164984
         return int(pid)
     except (ValueError, TypeError, IndexError):
