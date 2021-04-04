@@ -258,4 +258,5 @@ def fetch_slots(base_url, start_date):
     center.fetch_vaccine_cabinets()
     center.filter_vaccine_motives()
     # Find the first availability
-    return center.find_first_availability(start_date, end_date)
+    date = center.find_first_availability(start_date, end_date)
+    return date.strftime(start_date, '%Y-%m-%dT%H:%M:%S.%f%z')
