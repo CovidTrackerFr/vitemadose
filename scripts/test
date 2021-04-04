@@ -4,4 +4,6 @@ BIN="venv/bin/"
 
 set -x
 
-${BIN}pytest
+${BIN}coverage run -m pytest
+
+scripts/coverage
