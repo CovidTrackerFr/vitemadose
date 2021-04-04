@@ -5,6 +5,8 @@ from typing import Optional, Tuple
 import httpx
 import requests
 
+from scraper.prototype import logger
+
 DOCTOLIB_SLOT_LIMIT = 50
 
 DOCTOLIB_HEADERS = {
@@ -130,7 +132,7 @@ def _parse_practice_id(rdv_site_web: str) -> Optional[int]:
         # -> 164984
         return int(pid)
     except (ValueError, TypeError, IndexError):
-        print(f'ERROR: failed to parse practice ID: {pid=}')
+        logger.error(f'failed to parse practice ID: {pid=}')
         return None
 
 
