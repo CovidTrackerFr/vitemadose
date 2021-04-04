@@ -1,6 +1,7 @@
 import os
 import re
 from typing import Optional, Tuple
+from urllib.parse import urlsplit, parse_qs
 
 import httpx
 import requests
@@ -34,10 +35,21 @@ class DoctolibSlots:
 
     def __init__(self, client: httpx.Client = None) -> None:
         self._client = DEFAULT_CLIENT if client is None else client
+        self.selected_practice_id = None
 
     def fetch(self, rdv_site_web: str, start_date: str) -> Optional[str]:
         centre = _parse_centre(rdv_site_web)
 
+        query = urlsplit(rdv_site_web).query
+        params_get = parse_qs(query)
+        # Doctolib fetches multiple vaccination centers sometimes
+        # so if a practice id is present in query, only related agendas
+        # will be selected.
+        if 'pid' in params_get:
+            self.selected_practice_id = params_get.get('pid', [None])[0]
+            if self.selected_practice_id:
+                self.selected_practice_id = self.selected_practice_id.split('-')[-1]
+                self.selected_practice_id = int(self.selected_practice_id)
         centre_api_url = f'https://partners.doctolib.fr/booking/{centre}.json'
         response = self._client.get(centre_api_url, headers=DOCTOLIB_HEADERS)
         response.raise_for_status()
@@ -53,7 +65,7 @@ class DoctolibSlots:
             return None
 
         # practice_ids / agenda_ids
-        agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id)
+        agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, self.selected_practice_id, visit_motive_id)
         if not agenda_ids or not practice_ids:
             return None
 
@@ -62,7 +74,6 @@ class DoctolibSlots:
         agenda_ids_q = "-".join(agenda_ids)
         practice_ids_q = "-".join(practice_ids)
         slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={visit_motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit=7'
-
         response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
         response.raise_for_status()
 
@@ -125,7 +136,7 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: str = None) -> O
     return None
 
 
-def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str) -> Tuple[list, list]:
+def _find_agenda_and_practice_ids(data: dict, practice_id: int, visit_motive_id: str) -> Tuple[list, list]:
     """
     Etant donné une réponse à /booking/<centre>.json, renvoie tous les
     "agendas" et "pratiques" (jargon Doctolib) qui correspondent au motif de visite.
@@ -134,6 +145,8 @@ def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str) -> Tuple[lis
     agenda_ids = []
     practice_ids = []
     for agenda in data['data']['agendas']:
+        if practice_id is not None and agenda['practice_id'] != practice_id:
+            continue
         if agenda['booking_disabled']:
             continue
         agenda_id = str(agenda['id'])
