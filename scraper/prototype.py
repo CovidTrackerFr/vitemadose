@@ -93,7 +93,7 @@ def export_data(centres_cherchés):
                 f"WARNING: le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
 
     for code_departement, disponibilités in par_departement.items():
-        if not 'centres_disponibles' in disponibilités:
+        if 'centres_disponibles' in disponibilités:
             disponibilités['centres_disponibles'] = sorted(disponibilités['centres_disponibles'], key=sort_center)
         print(f'writing result to {code_departement}.json file')
         with open(f'data/output/{code_departement}.json', "w") as outfile:
