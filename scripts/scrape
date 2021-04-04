@@ -1,5 +1,5 @@
 #!/bin/sh -e
 
-BIN="venv/bin/"
+BIN=""
 
-${BIN}python scrape.py
+${BIN}python3 scrape.py

@@ -1,10 +1,7 @@
-import logging
-import threading
-import traceback
 from datetime import datetime
 from multiprocessing import Pool
 
-from scraper.keldoc import fetch_slots
+from scraper.keldoc.keldoc import fetch_slots
 
 CENTER_ID = 0
 
