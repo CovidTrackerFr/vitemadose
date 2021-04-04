@@ -1,14 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T17:01:13.106660+02:00",
+  "last_updated": "2021-04-04T17:03:02.326037+02:00",
   "centres_disponibles": [
-    {
-      "departement": "33",
-      "nom": "CENTRE DE VACCINATION - BIGANOS",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/biganos/centre-de-vaccination-covid-19-biganos?pid=practice-171118&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-22"
-    },
     {
       "departement": "33",
       "nom": "Centre de vaccination du CH Sud Gironde",
@@ -36,13 +29,6 @@
       "url": "https://partners.doctolib.fr/centre-de-sante/arcachon/centre-municipal-de-vaccination-anti-covid-19-de-la-ville-d-arcachon?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-07T10:30:00.000+02:00"
-    },
-    {
-      "departement": "33",
-      "nom": "CENTRE DE VACCINATION INTERCOMMUNAL -ST-MEDARD-EN-JALLES",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-medard-en-jalles/centre-de-vaccination-covid-19-saint-medard-en-jalles?pid=practice-179381&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-09T17:20:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -50,6 +36,13 @@
       "departement": "33",
       "nom": "Centre de vaccination du pays foyen",
       "url": "https://partners.doctolib.fr/centre-de-sante/sainte-foy-la-grande/centre-de-vaccination-covid-19-saint-foy-la-grande?pid=practice-173546&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "33",
+      "nom": "CENTRE DE VACCINATION - BIGANOS",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/biganos/centre-de-vaccination-covid-19-biganos?pid=practice-171118&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -69,6 +62,13 @@
     },
     {
       "departement": "33",
+      "nom": "CHU BORDEAUX - SITE PELLEGRIN",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/bordeaux-33000/chu-de-bordeaux?cabinet=16876&specialty=496",
+      "plateforme": "Keldoc",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "33",
       "nom": "Centre de vaccination Lormont Carriet",
       "url": "",
       "plateforme": "Autre",
@@ -79,13 +79,6 @@
       "nom": "CENTRE DE VACCINATION DU GRAND CUBZAGUAIS",
       "url": "https://partners.doctolib.fr/centre-de-sante/saint-andre-de-cubzac/centre-de-vaccination-du-grand-cubzaguais?pid=practice-179089&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "33",
-      "nom": "CHU BORDEAUX - SITE PELLEGRIN",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/bordeaux-33000/chu-de-bordeaux?cabinet=16876&specialty=496",
-      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
@@ -195,13 +188,6 @@
     },
     {
       "departement": "33",
-      "nom": "NOUVELLE CLINIQUE DU TONDU",
-      "url": "https://partners.doctolib.fr/centre-de-sante/floirac/centre-de-vaccination-covid-19-nouvelle-clinique-bordeaux-tondu?pid=practice-164998?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "33",
       "nom": "HOPITAL SUBURBAIN DU BOUSCAT",
       "url": "https://partners.doctolib.fr/centre-de-sante/le-bouscat/centre-de-vaccination-hopital-du-bouscat?pid=practice-164677?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -209,8 +195,22 @@
     },
     {
       "departement": "33",
+      "nom": "NOUVELLE CLINIQUE DU TONDU",
+      "url": "https://partners.doctolib.fr/centre-de-sante/floirac/centre-de-vaccination-covid-19-nouvelle-clinique-bordeaux-tondu?pid=practice-164998?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "33",
       "nom": "Maison de sant\u00e9 de Blaye",
       "url": "https://partners.doctolib.fr/maison-de-sante/blaye/centre-de-vaccination-covid-msp-blaye?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "33",
+      "nom": "CENTRE DE VACCINATION INTERCOMMUNAL -ST-MEDARD-EN-JALLES",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-medard-en-jalles/centre-de-vaccination-covid-19-saint-medard-en-jalles?pid=practice-179381&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     }
