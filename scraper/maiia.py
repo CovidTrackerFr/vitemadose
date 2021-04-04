@@ -13,7 +13,11 @@ session = requests.Session()
 def fetch_slots(rdv_site_web):
     response = session.get(rdv_site_web)
     soup = BeautifulSoup(response.text, 'html.parser')
-    response.raise_for_status()
+    try:
+        response.raise_for_status()
+    except requests.exceptions.HTTPError as e:
+        print(f"Requête pour {rdv_site_web} a levé une erreur : {e}")
+        return None
 
     rdv_form = soup.find(id="__NEXT_DATA__")
     if rdv_form:
