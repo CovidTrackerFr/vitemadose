@@ -1,3 +1,4 @@
+import time
 from datetime import datetime, timedelta
 from urllib.parse import urlsplit, parse_qs
 
@@ -20,6 +21,162 @@ KELDOC_APPOINTMENT_REASON = [
     '1ère injection'
 ]
 
+API_KELDOC_CABINETS = 'https://booking.keldoc.com/api/patients/v2/clinics/{0}/specialties/{1}/cabinets'
+
+class KeldocCenter:
+
+    def __init__(self, base_url):
+        self.base_url = base_url
+        self.resource_params = None
+        self.id = None
+        self.specialties = None
+        self.vaccine_specialties = None
+        self.vaccine_cabinets = None
+        self.vaccine_motives = None
+
+    def filter_vaccine_specialties(self):
+        if not self.specialties:
+            return False
+        # Put relevant specialty & cabinet IDs in lists
+        self.vaccine_specialties = []
+        for specialty in self.specialties:
+            if not is_specialty_relevant(specialty.get('name', None)):
+                print(specialty)
+                continue
+            self.vaccine_specialties.append(specialty.get('id', None))
+        return self.vaccine_specialties
+
+    def filter_vaccine_motives(self):
+        if not self.id or not self.vaccine_specialties or not self.vaccine_cabinets:
+            return None
+
+        motive_url = 'https://booking.keldoc.com/api/patients/v2/clinics/{0}/specialties/{1}/cabinets/{2}/motive_categories'
+        motive_categories = []
+        self.vaccine_motives = []
+
+        for specialty in self.vaccine_specialties:
+            for cabinet in self.vaccine_cabinets:
+                try:
+                    motive_req = session.get(motive_url.format(self.id, specialty, cabinet), timeout=10)
+                except requests.exceptions.Timeout:
+                    continue
+                motive_req.raise_for_status()
+                motive_data = motive_req.json()
+                motive_categories.extend(motive_data)
+
+        for motive_cat in motive_categories:
+            motives = motive_cat.get('motives', {})
+            for motive in motives:
+                motive_name = motive.get('name', None)
+
+                if not motive_name or not is_appointment_relevant(motive_name):
+                    continue
+                motive_agendas = [motive_agenda.get('id', None) for motive_agenda in motive.get('agendas', {})]
+                motive_info = {
+                    'id': motive.get('id', None),
+                    'agendas': motive_agendas
+                }
+                self.vaccine_motives.append(motive_info)
+        return self.vaccine_motives
+
+    def fetch_vaccine_cabinets(self):
+        if not self.id or not self.vaccine_specialties:
+            return False
+
+        self.vaccine_cabinets = []
+        for specialty in self.vaccine_specialties:
+            cabinet_url = API_KELDOC_CABINETS.format(self.id, specialty)
+            try:
+                cabinet_req = session.get(cabinet_url, timeout=5)
+            except requests.exceptions.Timeout:
+                continue
+            cabinet_req.raise_for_status()
+            data = cabinet_req.json()
+            if not data:
+                continue
+            for cabinet in data:
+                cabinet_id = cabinet.get('id', None)
+                if not cabinet_id:
+                    continue
+                self.vaccine_cabinets.append(cabinet_id)
+        return self.vaccine_cabinets
+
+    def fetch_center_data(self):
+        if not self.base_url:
+            return False
+        # Fetch center id
+        resource_url = f'https://booking.keldoc.com/api/patients/v2/searches/resource'
+        try:
+            resource = session.get(resource_url, params=self.resource_params, timeout=10)
+        except requests.exceptions.Timeout:
+            return False
+        resource.raise_for_status()
+        data = resource.json()
+
+        self.id = data.get('id', None)
+        self.specialties = data.get('specialties', None)
+        return True
+
+    def parse_resource(self):
+        if not self.base_url:
+            return False
+
+        # Fetch new URL after redirection
+        try:
+            rq = session.get(self.base_url, timeout=10)
+        except requests.exceptions.Timeout:
+            return False
+        rq.raise_for_status()
+        new_url = rq.url
+
+        # Parse relevant GET params for Keldoc API requests
+        query = urlsplit(new_url).query
+        params_get = parse_qs(query)
+        mandatory_params = ['dom', 'inst', 'user']
+        # Some vaccination centers on Keldoc do not
+        # accept online appointments, so you cannot retrieve data
+        for mandatory_param in mandatory_params:
+            if not mandatory_param in params_get:
+                return False
+        self.resource_params = {
+            'type': params_get.get('dom')[0],
+            'location': params_get.get('inst')[0],
+            'slug': params_get.get('user')[0]
+        }
+        return True
+
+    def find_first_availability(self, start_date, end_date):
+        if not self.vaccine_motives:
+            return None
+
+        # Find next availabilities
+        first_availability = None
+        for relevant_motive in self.vaccine_motives:
+            if not 'id' in relevant_motive or not 'agendas' in relevant_motive:
+                continue
+            motive_id = relevant_motive.get('id', None)
+            calendar_url = f'https://www.keldoc.com/api/patients/v2/timetables/{motive_id}'
+            calendar_params = {
+                'from': start_date,
+                'to': end_date,
+                'agenda_ids[]': relevant_motive.get('agendas', [])
+            }
+            try:
+                calendar_req = session.get(calendar_url, params=calendar_params, timeout=10)
+            except requests.exceptions.Timeout:
+                # Some requests on Keldoc are taking too much time (for few centers)
+                # and block the process completion.
+                continue
+            calendar_req.raise_for_status()
+
+            date = parse_keldoc_availability(calendar_req.json())
+            if date is None:
+                continue
+            # Compare first available date
+            if first_availability is None or date < first_availability:
+                first_availability = date
+        return first_availability
+
 
 # Filter by relevant appointments
 def is_appointment_relevant(appointment_name):
@@ -33,7 +190,7 @@ def is_appointment_relevant(appointment_name):
     return False
 
 
-# Filter by revelant specialties
+# Filter by relevant specialties
 def is_specialty_relevant(specialty_name):
     if not specialty_name:
         return False
@@ -67,42 +224,6 @@ def get_relevant_cabinets(center_id, specialty_ids):
             cabinets.append(cabinet_id)
     return cabinets
 
-
-def fetch_keldoc_motives(base_url, center_id, specialty_ids, cabinet_ids):
-    if center_id is None or specialty_ids is None or cabinet_ids is None:
-        return None
-
-    motive_url = 'https://booking.keldoc.com/api/patients/v2/clinics/{0}/specialties/{1}/cabinets/{2}/motive_categories'
-    motive_categories = []
-    revelant_motives = []
-
-    for specialty in specialty_ids:
-        for cabinet in cabinet_ids:
-            try:
-                motive_req = session.get(motive_url.format(center_id, specialty, cabinet), timeout=10)
-            except requests.exceptions.Timeout:
-                continue
-            motive_req.raise_for_status()
-            motive_data = motive_req.json()
-            for motive_cat in motive_data:
-                motive_categories.append(motive_cat)
-
-    for motive_cat in motive_categories:
-        motives = motive_cat.get('motives', {})
-        for motive in motives:
-            motive_name = motive.get('name', None)
-
-            if not motive_name or not is_appointment_relevant(motive_name):
-                continue
-            motive_agendas = [motive_agenda.get('id', None) for motive_agenda in motive.get('agendas', {})]
-            motive_info = {
-                'id': motive.get('id', None),
-                'agendas': motive_agendas
-            }
-            revelant_motives.append(motive_info)
-    return revelant_motives
-
-
 def parse_keldoc_availability(availability_data):
     if not availability_data:
         return None
@@ -126,86 +247,24 @@ def parse_keldoc_availability(availability_data):
     return None
 
 
-def fetch_slots(rdv_site_web, start_date):
-    # Fetch new URL after redirection
-    try:
-        rq = session.get(rdv_site_web, timeout=10)
-    except requests.exceptions.Timeout:
-        return None
-    rq.raise_for_status()
-    new_url = rq.url
-
+def fetch_slots(base_url, start_date):
     # Keldoc needs an end date, but if no appointment are found,
     # it still returns the next available appointment. Bigger end date
     # makes Keldoc responses slower.
     date_obj = datetime.strptime(start_date, '%Y-%m-%d')
     end_date = (date_obj + timedelta(days=1)).strftime('%Y-%m-%d')
 
-    # Parse revelant GET params for Keldoc API requests
-    query = urlsplit(new_url).query
-    params_get = parse_qs(query)
-    mandatory_params = ['dom', 'inst', 'user']
-    # Some vaccination centers on Keldoc do not
-    # accept online appointments, so you cannot retrieve a date
-    for mandatory_param in mandatory_params:
-        if not mandatory_param in params_get:
-            return None
-    resource_params = {
-        'type': params_get.get('dom')[0],
-        'location': params_get.get('inst')[0],
-        'slug': params_get.get('user')[0]
-    }
-
-    # Fetch center id
-    resource_url = f'https://booking.keldoc.com/api/patients/v2/searches/resource'
-    try:
-        resource = session.get(resource_url, params=resource_params, timeout=10)
-    except requests.exceptions.Timeout:
+    center = KeldocCenter(base_url=base_url)
+    # Unable to parse center resources (id, location)?
+    if not center.parse_resource():
         return None
-    resource.raise_for_status()
-    data = resource.json()
-
-    center_id = data.get('id', None)
-    if not center_id:
+    # Try to fetch center data
+    if not center.fetch_center_data():
         return None
 
-    # Put revelant specialty & cabinet IDs in lists
-    specialty_ids = []
-    for specialty in data.get('specialties', {}):
-        if not is_specialty_relevant(specialty.get('name', None)):
-            continue
-        specialty_ids.append(specialty.get('id', None))
-    cabinet_ids = get_relevant_cabinets(center_id, specialty_ids)
-    revelant_motives = fetch_keldoc_motives(rdv_site_web, center_id, specialty_ids, cabinet_ids)
-    if revelant_motives is None:
-        return None
-
-    # Find next availabilities
-    first_availability = None
-    for revelant_motive in revelant_motives:
-        if not 'id' in revelant_motive or not 'agendas' in revelant_motive:
-            continue
-        motive_id = revelant_motive.get('id', None)
-        calendar_url = f'https://www.keldoc.com/api/patients/v2/timetables/{motive_id}'
-        calendar_params = {
-            'from': start_date,
-            'to': end_date,
-            'agenda_ids[]': revelant_motive.get('agendas', [])
-        }
-        try:
-            calendar_req = session.get(calendar_url, params=calendar_params, timeout=10)
-        except requests.exceptions.Timeout:
-            # Some requests on Keldoc are taking too much time (for few centers)
-            # and block the process completion.
-            continue
-        calendar_req.raise_for_status()
-
-        date = parse_keldoc_availability(calendar_req.json())
-        if date is None:
-            continue
-        # Compare first available date
-        if first_availability is None or date < first_availability:
-            first_availability = date
-    if not first_availability:
-        return None
-    return first_availability.strftime('%Y-%m-%dT%H:%M:%S.%f%z')
+    # Filter specialties, cabinets & motives
+    center.filter_vaccine_specialties()
+    center.fetch_vaccine_cabinets()
+    center.filter_vaccine_motives()
+    # Find the first availability
+    return center.find_first_availability(start_date, end_date)
