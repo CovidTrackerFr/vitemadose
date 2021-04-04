@@ -1,14 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:56:38.518247+02:00",
+  "last_updated": "2021-04-04T16:58:12.203417+02:00",
   "centres_disponibles": [
-    {
-      "departement": "04",
-      "nom": "Palais des Congr\u00e8s",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/digne-les-bains-04000/centre-de-vaccination-palais-des-congres-de-digne-les-bains?category=-1&cabinet=16641&specialty=496",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-14T10:25:00.000000+0200"
-    },
     {
       "departement": "04",
       "nom": "Salle polyvalente de Riez ",
@@ -22,6 +15,13 @@
       "url": "https://partners.doctolib.fr/centre-de-sante/forcalquier/centre-de-vaccination-ville-de-forcalquier?pid=practice-164823?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-14"
+    },
+    {
+      "departement": "04",
+      "nom": "Palais des Congr\u00e8s",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/digne-les-bains-04000/centre-de-vaccination-palais-des-congres-de-digne-les-bains?category=-1&cabinet=16641&specialty=496",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-14T10:30:00.000000+0200"
     }
   ],
   "centres_indisponibles": [

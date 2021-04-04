@@ -1,30 +1,23 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:56:38.518900+02:00",
+  "last_updated": "2021-04-04T16:58:12.204009+02:00",
   "centres_disponibles": [
     {
       "departement": "59",
       "nom": "Centre de vaccination - CH LE CATEAU",
       "url": "https://partners.doctolib.fr/hopital-public/le-cateau-cambr\u00e9sis/ch-le-cateau-centre-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-06T13:30:00.000+02:00"
+      "prochain_rdv": "2021-04-15"
     },
     {
       "departement": "59",
       "nom": "Centre de vaccination - Ville de Bourbourg, Espace Pierre de Coubertin ",
       "url": "https://partners.doctolib.fr/centre-de-sante/bourbourg/centre-de-vaccination-covid-19-bourbourg?pid=practice-175280&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-09T10:40:00.000+02:00"
+      "prochain_rdv": "2021-04-09T10:45:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
-    {
-      "departement": "59",
-      "nom": "Centre de vaccination - Commune de  Villers-Outr\u00e9aux, Salle des f\u00eates",
-      "url": "https://partners.doctolib.fr/centre-de-sante/gouzeaucourt/centre-de-vaccination-covid-19-cpts-du-haut-escault?pid=practice-177052&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
     {
       "departement": "59",
       "nom": "Centre de vaccination - Commune de Masni\u00e8res, Salle du Bicentenaire",
@@ -36,6 +29,13 @@
       "departement": "59",
       "nom": "Centre de vaccination - Commune de Bertry, Salle des f\u00eates",
       "url": "https://partners.doctolib.fr/centre-de-sante/gouzeaucourt/centre-de-vaccination-covid-19-cpts-du-haut-escault?pid=practice-178391&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "59",
+      "nom": "Centre de vaccination - Commune de  Villers-Outr\u00e9aux, Salle des f\u00eates",
+      "url": "https://partners.doctolib.fr/centre-de-sante/gouzeaucourt/centre-de-vaccination-covid-19-cpts-du-haut-escault?pid=practice-177052&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -216,6 +216,13 @@
     },
     {
       "departement": "59",
+      "nom": "Centre de vaccination - Maison de sant\u00e9 Aulnoye Aymeries",
+      "url": "https://partners.doctolib.fr/maison-de-sante/aulnoye-aymeries/centre-de-vaccination-covid-19-maison-de-sante-aulnoye-aymeries?pid=practice-165270&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "59",
       "nom": "Centre de vaccination - Commune de Cond\u00e9-sur-l'Escaut, MSP",
       "url": "https://www.doctolib.fr/centre-de-sante/conde-sur-l-escaut",
       "plateforme": null,
@@ -225,13 +232,6 @@
       "departement": "59",
       "nom": "Centre de vaccination - CH SOMAIN",
       "url": "https://partners.doctolib.fr/hopital-public/somain/centre-de-vaccination-covid-19-ch-de-somain?pid=practice-177099&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "59",
-      "nom": "Centre de vaccination - Maison de sant\u00e9 Aulnoye Aymeries",
-      "url": "https://partners.doctolib.fr/maison-de-sante/aulnoye-aymeries/centre-de-vaccination-covid-19-maison-de-sante-aulnoye-aymeries?pid=practice-165270&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -272,6 +272,13 @@
     },
     {
       "departement": "59",
+      "nom": "Centre de vaccination - CH Seclin (SALLE ROSENBERG)",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/haut-de-france/vaccination-gh-seclin-carvin?pid=practice-163841&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "59",
       "nom": "Centre de vaccination - POLYCLINIQUE VAUBAN",
       "url": "https://partners.doctolib.fr/centre-de-sante/saint-saulve/centre-de-vaccination-covid-19-groupe-elsan?pid=practice-162448&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -281,13 +288,6 @@
       "departement": "59",
       "nom": "Centre de vaccination - HOPITAL PRIV\u00c9 LE BOIS",
       "url": "https://partners.doctolib.fr/centre-de-sante/villeneuve-d-ascq/vaccination-covid-19-hopital-prive-le-bois-et-villeneuve-d-ascq?pid=practice-163992&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "59",
-      "nom": "Centre de vaccination - CH Seclin (SALLE ROSENBERG)",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/haut-de-france/vaccination-gh-seclin-carvin?pid=practice-163841&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -307,15 +307,15 @@
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - CH Denain, centre de sant\u00e9 (Salle Pierre Baudin)",
-      "url": "https://partners.doctolib.fr/hopital-public/denain/reserve-hospitalier-de-denain?pid=practice-164939&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - CH LE QUESNOY",
+      "url": "https://partners.doctolib.fr/hopital-public/le-quesnoy/ch-le-quesnoy?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - CH LE QUESNOY",
-      "url": "https://partners.doctolib.fr/hopital-public/le-quesnoy/ch-le-quesnoy?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - CH Denain, centre de sant\u00e9 (Salle Pierre Baudin)",
+      "url": "https://partners.doctolib.fr/hopital-public/denain/reserve-hospitalier-de-denain?pid=practice-164939&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -349,15 +349,15 @@
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - CH Armenti\u00e8res",
-      "url": "https://partners.doctolib.fr/hopital-public/armentieres/ch-armentieres?pid=practice-175038&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - Polyclinique Saint-Roch, Salle Georges Catry",
+      "url": "https://partners.doctolib.fr/clinique-privee/roncq/centre-de-vaccination-covid-19-clinique-saint-roch?pid=practice-164701?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - Polyclinique Saint-Roch, Salle Georges Catry",
-      "url": "https://partners.doctolib.fr/clinique-privee/roncq/centre-de-vaccination-covid-19-clinique-saint-roch?pid=practice-164701?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - CH Armenti\u00e8res",
+      "url": "https://partners.doctolib.fr/hopital-public/armentieres/ch-armentieres?pid=practice-175038&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -447,15 +447,15 @@
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - Clinique Sainte Marie (GHICL) ",
-      "url": "https://partners.doctolib.fr/clinique-privee/cambrai/centre-de-vaccination-covid-19-clinique-sainte-marie-ghicl-cambrai?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - CH DUNKERQUE",
+      "url": "https://partners.doctolib.fr/hopital-public/dunkerque/ch-dunkerque-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - CH DUNKERQUE",
-      "url": "https://partners.doctolib.fr/hopital-public/dunkerque/ch-dunkerque-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - Clinique Sainte Marie (GHICL) ",
+      "url": "https://partners.doctolib.fr/clinique-privee/cambrai/centre-de-vaccination-covid-19-clinique-sainte-marie-ghicl-cambrai?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     }

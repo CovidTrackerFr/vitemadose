@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:56:38.518651+02:00",
+  "last_updated": "2021-04-04T16:58:12.203767+02:00",
   "centres_disponibles": [],
   "centres_indisponibles": [
     {
@@ -54,13 +54,6 @@
     },
     {
       "departement": "34",
-      "nom": "Centre de vaccination - Clinique St Louis de Ganges",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/ganges/centres-de-vaccination-cap-sante?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "34",
       "nom": "S\u00e8te Centre de vaccination ",
       "url": "https://partners.doctolib.fr/centre-de-sante/sete/centre-de-vaccination-cpts-du-bassin-de-thau?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -75,15 +68,15 @@
     },
     {
       "departement": "34",
-      "nom": "LODEVE Centre vaccination ",
-      "url": "https://partners.doctolib.fr/centre-de-sante/lodeve/cccol-centre-de-consultation-covid-de-lodevois?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "BEZIERS Centre Zinga Zanga (grande salle de spectacle)",
+      "url": "https://partners.doctolib.fr/centre-de-sante/beziers/centre-de-vaccination-publiques-de-la-ville-de-beziers?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "34",
-      "nom": "MONTPELLIER Centre vaccination \u00e0 la Clinique du Mill\u00e9naire",
-      "url": "https://partners.doctolib.fr/clinique-privee/montpellier/oc-sante-clinique-du-millenaire-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - Clinique St Louis de Ganges",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/ganges/centres-de-vaccination-cap-sante?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -96,8 +89,15 @@
     },
     {
       "departement": "34",
-      "nom": "BEZIERS Centre Zinga Zanga (grande salle de spectacle)",
-      "url": "https://partners.doctolib.fr/centre-de-sante/beziers/centre-de-vaccination-publiques-de-la-ville-de-beziers?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "MONTPELLIER Centre vaccination \u00e0 la Clinique du Mill\u00e9naire",
+      "url": "https://partners.doctolib.fr/clinique-privee/montpellier/oc-sante-clinique-du-millenaire-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "34",
+      "nom": "LODEVE Centre vaccination ",
+      "url": "https://partners.doctolib.fr/centre-de-sante/lodeve/cccol-centre-de-consultation-covid-de-lodevois?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -173,13 +173,6 @@
     },
     {
       "departement": "34",
-      "nom": "VAILHAUQUES Service de Sant\u00e9 SDIS 34",
-      "url": "https://partners.doctolib.fr/centre-de-sante/vailhauques/centre-de-vaccination-covid-de-vailhauques?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "34",
       "nom": "BEDARIEUX Clinique 3 Vall\u00e9es",
       "url": "https://partners.doctolib.fr/centre-depistage-covid/bedarieux/centre-de-vaccination-polyclinique-des-3-vallees-cap-sante?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -187,8 +180,8 @@
     },
     {
       "departement": "34",
-      "nom": "Centre Hospitalier R\u00e9publique - CTPS PAYS DE LUNEL",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/lunel/ch-republique?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "VAILHAUQUES Service de Sant\u00e9 SDIS 34",
+      "url": "https://partners.doctolib.fr/centre-de-sante/vailhauques/centre-de-vaccination-covid-de-vailhauques?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -196,6 +189,13 @@
       "departement": "34",
       "nom": "CASTELNAU LE LEZ Clinique du Parc",
       "url": "https://partners.doctolib.fr/centre-de-sante/castelnau-le-lez/clinique-du-parc-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "34",
+      "nom": "Centre Hospitalier R\u00e9publique - CTPS PAYS DE LUNEL",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/lunel/ch-republique?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

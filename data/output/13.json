@@ -1,20 +1,20 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:56:38.518356+02:00",
+  "last_updated": "2021-04-04T16:58:12.203522+02:00",
   "centres_disponibles": [
-    {
-      "departement": "13",
-      "nom": "Centre de vaccination  Vitrolles - Espace Mandela",
-      "url": "https://partners.doctolib.fr/maison-de-sante/vitrolles/vaccination-covid-19-vitrolles-espace-mandela?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-08T11:50:00.000+02:00"
-    },
     {
       "departement": "13",
       "nom": "Centre de vaccination Gardanne",
       "url": "https://partners.doctolib.fr/centre-de-sante/gardanne/centre-de-vaccination-gardanne-cpts-provence-sante?pid=practice-165090?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-12"
+    },
+    {
+      "departement": "13",
+      "nom": "Centre de vaccination  Vitrolles - Espace Mandela",
+      "url": "https://partners.doctolib.fr/maison-de-sante/vitrolles/vaccination-covid-19-vitrolles-espace-mandela?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-08T11:50:00.000+02:00"
     },
     {
       "departement": "13",
@@ -153,6 +153,13 @@
     },
     {
       "departement": "13",
+      "nom": "Centre de secours de la basse vall\u00e9e de l\u2019Arc",
+      "url": "https://partners.doctolib.fr/centre-de-sante/coudoux/centre-de-vaccination-covid-19-centre-de-secours-de-basse-vallee-de-l-arc?pid=practice-175327&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "13",
       "nom": "Ville de Marseille",
       "url": "https://www.maiia.com/centre-de-vaccination/13005-marseille/centre-de-vaccination---rue-louis-astruc---ville-de-marseille",
       "plateforme": "Maiia",
@@ -160,8 +167,8 @@
     },
     {
       "departement": "13",
-      "nom": "Centre de secours de la basse vall\u00e9e de l\u2019Arc",
-      "url": "https://partners.doctolib.fr/centre-de-sante/coudoux/centre-de-vaccination-covid-19-centre-de-secours-de-basse-vallee-de-l-arc?pid=practice-175327&enable_cookies_consent=1",
+      "nom": "Centre Vaccination Arenc",
+      "url": "https://partners.doctolib.fr/centre-de-sante/marseille/centre-de-vaccination-covid-arenc?pid=practice-176820&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -170,13 +177,6 @@
       "nom": "Centre de vaccination Durance Sud Meyrargues",
       "url": "Doctolib",
       "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "13",
-      "nom": "Centre Vaccination Arenc",
-      "url": "https://partners.doctolib.fr/centre-de-sante/marseille/centre-de-vaccination-covid-arenc?pid=practice-176820&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -300,6 +300,13 @@
     },
     {
       "departement": "13",
+      "nom": "CPTS Pays de Martigues",
+      "url": "https://partners.doctolib.fr/hopital-public/martigues/centre-de-vaccination-cpts-chm?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "13",
       "nom": "Centre de vaccination de Ch\u00e2teaurenard",
       "url": "https://www.maiia.com/centre-de-vaccination/13160-chateaurenard/centre-de-vaccination-covid---chateaurenard-de-provence",
       "plateforme": "Maiia",
@@ -314,13 +321,6 @@
     },
     {
       "departement": "13",
-      "nom": "Clinique de Vitrolles (R\u00e9serv\u00e9 aux professionnels de sant\u00e9 lib\u00e9raux)",
-      "url": "https://partners.doctolib.fr/clinique-privee/vitrolles/clinique-de-vitrolles-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "13",
       "nom": "Centre de vaccination de l'H\u00f4pital d'Instruction des Arm\u00e9es Laveran",
       "url": "Doctolib",
       "plateforme": "Autre",
@@ -328,8 +328,8 @@
     },
     {
       "departement": "13",
-      "nom": "CPTS Pays de Martigues",
-      "url": "https://partners.doctolib.fr/hopital-public/martigues/centre-de-vaccination-cpts-chm?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Clinique de Vitrolles (R\u00e9serv\u00e9 aux professionnels de sant\u00e9 lib\u00e9raux)",
+      "url": "https://partners.doctolib.fr/clinique-privee/vitrolles/clinique-de-vitrolles-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

@@ -1,14 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:56:38.519249+02:00",
+  "last_updated": "2021-04-04T16:58:12.204332+02:00",
   "centres_disponibles": [
-    {
-      "departement": "93",
-      "nom": "CHI Robert Ballanger",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/ile-de-france/ars-ile-de-france-vaccination-des-professionnels-de-sante?pid=practice-162590&?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-08T17:10:00.000+02:00"
-    },
     {
       "departement": "93",
       "nom": "Tr\u00e8s grand centre du Stade de France",
@@ -41,16 +34,16 @@
     },
     {
       "departement": "93",
-      "nom": "EMV Saint-Denis Auberge Municipale",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "AVICENNE",
+      "url": "https://partners.doctolib.fr/hopital-public/paris/centres-de-vaccination-covid-19-ap-hp-hors-professionnels-de-sante?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "93",
-      "nom": "AVICENNE",
-      "url": "https://partners.doctolib.fr/hopital-public/paris/centres-de-vaccination-covid-19-ap-hp-hors-professionnels-de-sante?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "EMV Saint-Denis Auberge Municipale",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
@@ -83,6 +76,13 @@
     },
     {
       "departement": "93",
+      "nom": "Salle des f\u00eates Marcel Pagnol",
+      "url": "https://partners.doctolib.fr/centre-de-sante/neuilly-sur-marne/centre-de-vaccination-covid-marne-plaisance?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "93",
       "nom": "EMV Aubervilliers",
       "url": "",
       "plateforme": "Autre",
@@ -93,13 +93,6 @@
       "nom": "EMV Noisy-le-Grand (CD)",
       "url": "",
       "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "93",
-      "nom": "Salle des f\u00eates Marcel Pagnol",
-      "url": "https://partners.doctolib.fr/centre-de-sante/neuilly-sur-marne/centre-de-vaccination-covid-marne-plaisance?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -181,20 +174,6 @@
     },
     {
       "departement": "93",
-      "nom": "Vaccinodrome St Denis",
-      "url": "",
-      "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "93",
-      "nom": "EMV Ballanger",
-      "url": "",
-      "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "93",
       "nom": "Centre de vaccination - H\u00f4tel de ville",
       "url": "https://partners.doctolib.fr/centre-de-sante/montreuil/centre-de-vaccination-de-la-ville-de-montreuil?pid=practice-175106&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -202,9 +181,23 @@
     },
     {
       "departement": "93",
+      "nom": "Vaccinodrome St Denis",
+      "url": "",
+      "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "93",
       "nom": "Centre de vaccination - Gymnase Guimier",
       "url": "https://partners.doctolib.fr/centre-de-sante/tremblay-en-france/gymnase-jean-guimier-centre-de-vaccination-covid-19?pid=practice-175982&enable_cookies_consent=1",
       "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "93",
+      "nom": "EMV Ballanger",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
@@ -258,6 +251,13 @@
     },
     {
       "departement": "93",
+      "nom": "CHI Robert Ballanger",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/ile-de-france/ars-ile-de-france-vaccination-des-professionnels-de-sante?pid=practice-162590&?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "93",
       "nom": "Centre de vaccination - centre d'examen de sant\u00e9",
       "url": "https://partners.doctolib.fr/centre-medical-et-dentaire/st-denis/cpam-seine-st-denis-93-centre-de-vaccination?pid=practice-164038&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -272,15 +272,15 @@
     },
     {
       "departement": "93",
-      "nom": "CH SAINT-DENIS",
-      "url": "https://partners.doctolib.fr/hopital-public/saint-denis/centre-hospitalier-de-saint-denis-vaccination-covid19?pid=practice-164541&enable_cookies_consent=1",
+      "nom": "Annexe du coll\u00e8ge international ",
+      "url": "https://partners.doctolib.fr/centre-de-sante/noisy-le-grand/centre-de-vaccination-covid-espace-partage-du-college-international?highlight%5Bagenda_ids%5D%5B%5D=409542&highlight%5Bagenda_ids%5D%5B%5D=409543?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "93",
-      "nom": "Annexe du coll\u00e8ge international ",
-      "url": "https://partners.doctolib.fr/centre-de-sante/noisy-le-grand/centre-de-vaccination-covid-espace-partage-du-college-international?highlight%5Bagenda_ids%5D%5B%5D=409542&highlight%5Bagenda_ids%5D%5B%5D=409543?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "CH SAINT-DENIS",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-denis/centre-hospitalier-de-saint-denis-vaccination-covid19?pid=practice-164541&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:56:38.518952+02:00",
+  "last_updated": "2021-04-04T16:58:12.204054+02:00",
   "centres_disponibles": [
     {
       "departement": "64",
@@ -39,13 +39,6 @@
     },
     {
       "departement": "64",
-      "nom": "Centre de Vaccination de la Ville de Pau",
-      "url": "https://partners.doctolib.fr/centre-de-sante/pau/centre-de-vaccination-covid-de-pau?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-12"
-    },
-    {
-      "departement": "64",
       "nom": "Centre de Vaccination de la Ville de Lescar",
       "url": "https://partners.doctolib.fr/centre-depistage-covid/lescar/centre-de-vaccination-covid-ville-de-lescar?pid=practice-164414?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -53,17 +46,17 @@
     },
     {
       "departement": "64",
+      "nom": "Centre de Vaccination de la Ville de Pau",
+      "url": "https://partners.doctolib.fr/centre-de-sante/pau/centre-de-vaccination-covid-de-pau?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-12"
+    },
+    {
+      "departement": "64",
       "nom": "Centre de Vaccination - Ville d'Anglet",
       "url": "https://partners.doctolib.fr/centre-de-sante/anglet/centre-de-vaccination-covid-d-anglet?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-13"
-    },
-    {
-      "departement": "64",
-      "nom": "Centre de vaccination Saint-Jean-Pied-de-Port",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/saint-jean-pied-de-port/centre-de-vaccination-covid-19-st-jean-pied-de-port?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-12"
     },
     {
       "departement": "64",
@@ -183,6 +176,13 @@
       "departement": "64",
       "nom": "CH BAYONNE",
       "url": "https://partners.doctolib.fr/hopital-public/bayonne/centre-de-vaccination-covid-19-ch-cote-basque?pid=practice-61501&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "64",
+      "nom": "Centre de vaccination Saint-Jean-Pied-de-Port",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/saint-jean-pied-de-port/centre-de-vaccination-covid-19-st-jean-pied-de-port?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

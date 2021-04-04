@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:56:38.519231+02:00",
+  "last_updated": "2021-04-04T16:58:12.204314+02:00",
   "centres_disponibles": [],
   "centres_indisponibles": [
     {
@@ -40,6 +40,13 @@
     },
     {
       "departement": "91",
+      "nom": "Site de \"La Croix Louis\" ",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/bretigny-sur-orge-91220/centre-de-vaccination-covid19-bretigny?agenda=48971&motive=81790&category=-1&cabinet=16650&specialty=496",
+      "plateforme": "Keldoc",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "91",
       "nom": "Salle Polyvalente - Michel Ange",
       "url": "https://partners.doctolib.fr/centre-de-sante/mennecy/centre-de-vaccination-covid-19-mennecy?pid=practice-172591&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -50,13 +57,6 @@
       "nom": "ETRECHY",
       "url": "https://partners.doctolib.fr/centre-de-sante/montgeron/centre-de-vaccination-covid-conseil-departemental-de-l-essonne-cd91?pid=practice-165168?speciality_id=5494&enable_cookies_consent=1  ",
       "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "91",
-      "nom": "Site de \"La Croix Louis\" ",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/bretigny-sur-orge-91220/centre-de-vaccination-covid19-bretigny?agenda=48971&motive=81790&category=-1&cabinet=16650&specialty=496",
-      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
@@ -110,15 +110,15 @@
     },
     {
       "departement": "91",
-      "nom": "Centre de vaccination mobile - Salle des f\u00eates",
-      "url": "https://partners.doctolib.fr/centre-de-sante/montgeron/centre-de-vaccination-covid-conseil-departemental-de-l-essonne-cd91?pid=practice-165211&enable_cookies_consent=1",
+      "nom": "Centre de vaccination mobile - Salle polyvalente Guy BONIN",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montgeron/centre-de-vaccination-covid-conseil-departemental-de-l-essonne-cd91?pid=practice-165168&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "91",
-      "nom": "Centre de vaccination mobile - Salle polyvalente Guy BONIN",
-      "url": "https://partners.doctolib.fr/centre-de-sante/montgeron/centre-de-vaccination-covid-conseil-departemental-de-l-essonne-cd91?pid=practice-165168&enable_cookies_consent=1",
+      "nom": "Centre de vaccination mobile - Salle des f\u00eates",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montgeron/centre-de-vaccination-covid-conseil-departemental-de-l-essonne-cd91?pid=practice-165211&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -138,16 +138,16 @@
     },
     {
       "departement": "91",
-      "nom": "Centre de Paray Vieille Poste / Morangis - Salle communale des Mimosas / Espace Saint Michel",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Palais des sports",
+      "url": "https://partners.doctolib.fr/centre-de-sante/corbeil-essonnes/centre-de-vaccination-covid-19-corbeil-essonne?pid=practice-178964&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "91",
-      "nom": "Palais des sports",
-      "url": "https://partners.doctolib.fr/centre-de-sante/corbeil-essonnes/centre-de-vaccination-covid-19-corbeil-essonne?pid=practice-178964&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "Centre de Paray Vieille Poste / Morangis - Salle communale des Mimosas / Espace Saint Michel",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
@@ -180,13 +180,6 @@
     },
     {
       "departement": "91",
-      "nom": "Gymnase Champagne",
-      "url": "https://partners.doctolib.fr/etablissement-de-prevention/savigny-sur-orge/vaccination-covid-19-savigny-sur-orge?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "91",
       "nom": "Salle polyvante Anne Franck ",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/longjumeau/centre-de-vaccination-covid-19-ville-de-longjumeau?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -201,6 +194,13 @@
     },
     {
       "departement": "91",
+      "nom": "Annexe Gymnase St Exup\u00e9ry ",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/igny/centre-de-vaccination-covid-commune-d-igny?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "91",
       "nom": "Salle L'astral ",
       "url": "https://partners.doctolib.fr/centre-de-sante/montgeron/centre-de-vaccination-covid-conseil-departemental-de-l-essonne-cd91?pid=practice-165168?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -208,15 +208,22 @@
     },
     {
       "departement": "91",
-      "nom": "Espace Ren\u00e9 L'HELGUEN ",
-      "url": "https://partners.doctolib.fr/centre-de-sante/athis-mons/centre-de-vaccination-covid-mairie-athis-mons?pid=practice-164918?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Espace du Val de Gif ",
+      "url": "https://partners.doctolib.fr/cabinet-medical/gif-sur-yvette/centre-de-vaccination-covid-19-gif-sur-yvette?pid=practice-165182?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "91",
-      "nom": "Annexe Gymnase St Exup\u00e9ry ",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/igny/centre-de-vaccination-covid-commune-d-igny?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Gymnase Champagne",
+      "url": "https://partners.doctolib.fr/etablissement-de-prevention/savigny-sur-orge/vaccination-covid-19-savigny-sur-orge?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "91",
+      "nom": "Espace Ren\u00e9 L'HELGUEN ",
+      "url": "https://partners.doctolib.fr/centre-de-sante/athis-mons/centre-de-vaccination-covid-mairie-athis-mons?pid=practice-164918?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -236,13 +243,6 @@
     },
     {
       "departement": "91",
-      "nom": "Espace du Val de Gif ",
-      "url": "https://partners.doctolib.fr/cabinet-medical/gif-sur-yvette/centre-de-vaccination-covid-19-gif-sur-yvette?pid=practice-165182?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "91",
       "nom": "Salle de la CDPS",
       "url": "https://partners.doctolib.fr/centre-de-sante/montgeron/centre-de-vaccination-covid-conseil-departemental-de-l-essonne-cd91?pid=practice-164603&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -250,15 +250,15 @@
     },
     {
       "departement": "91",
-      "nom": "Foyer Club ",
-      "url": "https://partners.doctolib.fr/centre-de-sante/evry-courcouronnes/centre-de-vaccination-covid-foyer-club-reserve-aux-personnes-de-plus-de-75-ans?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Maison de sant\u00e9",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dourdan/centre-de-vaccination-covid-19-maison-de-sante-dourdan?pid=practice-165040?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "91",
-      "nom": "Maison de sant\u00e9",
-      "url": "https://partners.doctolib.fr/centre-de-sante/dourdan/centre-de-vaccination-covid-19-maison-de-sante-dourdan?pid=practice-165040?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Foyer Club ",
+      "url": "https://partners.doctolib.fr/centre-de-sante/evry-courcouronnes/centre-de-vaccination-covid-foyer-club-reserve-aux-personnes-de-plus-de-75-ans?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

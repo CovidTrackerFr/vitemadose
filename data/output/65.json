@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:56:38.518961+02:00",
+  "last_updated": "2021-04-04T16:58:12.204063+02:00",
   "centres_disponibles": [
     {
       "departement": "65",
@@ -8,13 +8,6 @@
       "url": "https://partners.doctolib.fr/centre-de-sante/bagneres-de-bigorre/centre-de-vaccination-covid-19-de-bagneres-de-bigorre?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-14"
-    },
-    {
-      "departement": "65",
-      "nom": "CENTRE DE VACCINATION DE LANNEMEZAN",
-      "url": "https://partners.doctolib.fr/maison-de-sante/lannemezan/centre-de-vaccination-codi-19-mairie-lannemezan?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-20"
     }
   ],
   "centres_indisponibles": [
@@ -57,6 +50,13 @@
       "departement": "65",
       "nom": "CENTRE DE VACCINATION DE LOURDES - Espace Robert Hossein",
       "url": "https://partners.doctolib.fr/centre-de-sante/lourdes/centre-de-vaccination-covid-19-lourdes?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "65",
+      "nom": "CENTRE DE VACCINATION DE LANNEMEZAN",
+      "url": "https://partners.doctolib.fr/maison-de-sante/lannemezan/centre-de-vaccination-codi-19-mairie-lannemezan?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     }
