@@ -18,7 +18,12 @@ KELDOC_COVID_SPECIALTIES = [
 ]
 
 KELDOC_APPOINTMENT_REASON = [
-    '1ère injection'
+    '1ère injection',
+    'COVID19 - Vaccination'
+]
+
+KELDOC_COVID_SKILLS = [
+    'Centre de vaccination COVID-19'
 ]
 
 API_KELDOC_CABINETS = 'https://booking.keldoc.com/api/patients/v2/clinics/{0}/specialties/{1}/cabinets'
@@ -40,8 +45,7 @@ class KeldocCenter:
         # Put relevant specialty & cabinet IDs in lists
         self.vaccine_specialties = []
         for specialty in self.specialties:
-            if not is_specialty_relevant(specialty.get('name', None)):
-                print(specialty)
+            if not is_specialty_relevant(specialty):
                 continue
             self.vaccine_specialties.append(specialty.get('id', None))
         return self.vaccine_specialties
@@ -191,12 +195,23 @@ def is_appointment_relevant(appointment_name):
 
 
 # Filter by relevant specialties
-def is_specialty_relevant(specialty_name):
-    if not specialty_name:
+def is_specialty_relevant(specialty):
+    if not specialty:
         return False
 
+    id = specialty.get('id', None)
+    name = specialty.get('name', None)
+    skills = specialty.get('skills', {})
+    if not id or not name:
+        return False
+    for skill in skills:
+        skill_name = skill.get('name', None)
+        if not skill_name:
+            continue
+        if skill_name in KELDOC_COVID_SKILLS:
+            return True
     for allowed_specialties in KELDOC_COVID_SPECIALTIES:
-        if allowed_specialties == specialty_name:
+        if allowed_specialties == name:
             return True
     return False
 
