@@ -58,7 +58,7 @@ def sort_centers(data):
 def export_data(centres_cherchés):
     compte_centres = 0
     compte_centres_avec_dispo = 0
-    centres_cherchés = sort_centers(centres_cherchés)
+    #centres_cherchés = sort_centers(centres_cherchés)
     par_departement = {
         code: {
             'version': 1,
