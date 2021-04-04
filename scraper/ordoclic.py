@@ -105,3 +105,11 @@ def centre_iterator():
             centre["com_insee"] = item["location"]["zip"]
             centre["nom"] = item.get("name")
             yield centre
+       elif item.get("type") in ["Laboratoire d’analyse", "Clinique", "Maison médicale", "Centre de soins", "Cabinet de groupe"]:
+            centre = {}
+            slug = item["publicProfile"]["slug"]
+            centre["gid"] = item["id"][:8]
+            centre["rdv_site_web"] = f"https://app.ordoclic.fr/app/entite/{slug}"
+            centre["com_insee"] = item["location"]["zip"]
+            centre["nom"] = item.get("name")
+            yield centre
