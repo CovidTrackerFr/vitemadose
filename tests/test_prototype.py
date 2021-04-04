@@ -20,7 +20,7 @@ def test_export_data(tmp_path):
             "nom": "CH Armentières",
             "url": "https://example.com/ch-armentieres",
             "plateforme": "Keldoc",
-            "prochain_rdv": "2021-04-10T00:00:00",
+            "prochain_rdv": "2021-04-11:00:00",
         },
         {
             "departement": "59",
@@ -35,7 +35,7 @@ def test_export_data(tmp_path):
             "nom": "Hôpital magique",
             "url": "https://example.com/hopital-magique",
             "plateforme": "Doctolib",
-            "prochain_rdv": "2021-04-10T00:00:00",
+            "prochain_rdv": "2021-04-12:00:00",
         },
     ]
 
@@ -47,8 +47,9 @@ def test_export_data(tmp_path):
     with mock_datetime_now(fake_now):
         export_data(centres_cherchés, outpath_format=outpath_format)
 
+    # All departements for which we don't have data should be empty.
     for departement in import_departements():
-        if departement in ("01", "59"):  # These are non-empty.
+        if departement in ("01", "59"):
             continue
         content = json.loads((out_dir / f"{departement}.json").read_text())
         assert content == {
@@ -85,7 +86,7 @@ def test_export_data(tmp_path):
                 "nom": "CH Armentières",
                 "url": "https://example.com/ch-armentieres",
                 "plateforme": "Keldoc",
-                "prochain_rdv": "2021-04-10T00:00:00",
+                "prochain_rdv": "2021-04-11:00:00",
             },
         ],
         "centres_indisponibles": [
@@ -101,31 +102,10 @@ def test_export_data(tmp_path):
     }
 
 
-def test_export_data_empty(tmp_path):
-    centres_cherchés = []
-
-    out_dir = tmp_path / "out"
-    out_dir.mkdir()
-    outpath_format = str(out_dir / "{}.json")
-
-    fake_now = dt.datetime(2021, 4, 4)
-    with mock_datetime_now(fake_now):
-        export_data(centres_cherchés, outpath_format=outpath_format)
-
-    content = json.loads((out_dir / "01.json").read_text())
-    assert content == {
-        "version": 1,
-        "centres_disponibles": [],
-        "centres_indisponibles": [],
-        "last_updated": "2021-04-04T00:00:00",
-    }
-
-
 def test_fetch_centre_slots():
     """
     We detect which implementation to use based on the visit URL.
     """
-
     def fake_doctolib_fetch_slots(rdv_site_web, start_date):
         return "2021-04-04"
 
