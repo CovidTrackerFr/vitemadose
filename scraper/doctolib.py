@@ -136,7 +136,7 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: str = None) -> O
     return None
 
 
-def _find_agenda_and_practice_ids(data: dict, practice_id: int, visit_motive_id: str) -> Tuple[list, list]:
+def _find_agenda_and_practice_ids(data: dict, practice_id, visit_motive_id: str) -> Tuple[list, list]:
     """
     Etant donné une réponse à /booking/<centre>.json, renvoie tous les
     "agendas" et "pratiques" (jargon Doctolib) qui correspondent au motif de visite.
@@ -145,7 +145,7 @@ def _find_agenda_and_practice_ids(data: dict, practice_id: int, visit_motive_id:
     agenda_ids = []
     practice_ids = []
     for agenda in data['data']['agendas']:
-        if practice_id is not None and agenda['practice_id'] != practice_id:
+        if 'practice_id' in agenda and practice_id is not None and agenda['practice_id'] != practice_id:
             continue
         if agenda['booking_disabled']:
             continue
