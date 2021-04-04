@@ -42,7 +42,7 @@ class DoctolibSlots:
 
         # Doctolib fetches multiple vaccination centers sometimes
         # so if a practice id is present in query, only related agendas
-        # will be selected.
+        # should be selected.
         practice_id = _parse_practice_id(rdv_site_web)
 
         centre_api_url = f'https://partners.doctolib.fr/booking/{centre}.json'
