@@ -11,7 +11,7 @@ BASE_AVAILIBILITY_URL = "https://www.maiia.com/api/pat-public/availability-close
 session = requests.Session()
 
 
-def fetch_slots(rdv_site_web):
+def fetch_slots(rdv_site_web, start_date):
     response = session.get(rdv_site_web)
     soup = BeautifulSoup(response.text, 'html.parser')
     try:
@@ -22,12 +22,12 @@ def fetch_slots(rdv_site_web):
 
     rdv_form = soup.find(id="__NEXT_DATA__")
     if rdv_form:
-        return get_slots_from(rdv_form, rdv_site_web)
+        return get_slots_from(rdv_form, rdv_site_web, start_date)
 
     return None
 
 
-def get_slots_from(rdv_form, rdv_url):
+def get_slots_from(rdv_form, rdv_url, start_date):
     json_form = json.loads(rdv_form.contents[0])
 
     rdv_form_attributes = ['props', 'initialState', 'cards', 'item', 'center']
@@ -45,7 +45,7 @@ def get_slots_from(rdv_form, rdv_url):
     center_infos = tmp
     center_id = center_infos['id']
 
-    availability = get_any_availibility_from(center_id)
+    availability = get_any_availibility_from(center_id, start_date)
     if availability["availabilityCount"] == 0:
         return None
 
@@ -67,9 +67,11 @@ def get_slots_from(rdv_form, rdv_url):
     return None
 
 
-def get_any_availibility_from(center_id):
+def get_any_availibility_from(center_id, start_date):
+    start_date = datetime.strptime(start_date, '%Y-%m-%d')
+    start_date = start_date.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
     request_params = {
-        "date_str": datetime.now().strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
+        "date_str": start_date,
         "centerId": center_id,
         "limit": 200,
         "page": 0,
