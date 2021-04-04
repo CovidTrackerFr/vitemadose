@@ -59,8 +59,7 @@ def cherche_prochain_rdv_dans_centre(centre):
 
 
 def sort_centers(data):
-    sorted(data, key=lambda i: i['prochain_rdv'] if 'prochain_rdv' in i and i['prochain_rdv'] else '-')
-    return data
+    return sorted(data, key=lambda i: i['prochain_rdv'] if 'prochain_rdv' in i and i['prochain_rdv'] else '-')
 
 
 def export_data(centres_cherchés):
@@ -75,11 +74,11 @@ def export_data(centres_cherchés):
         }
         for code in import_departements()
     }
-    #center_list = []
-    #for centre in centres_cherchés:
-    #    center_list.append(centre)
-    #center_list = sort_centers(center_list)
+    center_list = []
     for centre in centres_cherchés:
+        center_list.append(centre)
+    center_list = sort_centers(center_list)
+    for centre in center_list:
         compte_centres += 1
         code_departement = centre['departement']
         if code_departement in par_departement:
