@@ -9,7 +9,7 @@ KELDOC_COVID_SPECIALTIES = [
 ]
 
 KELDOC_APPOINTMENT_REASON = [
-    '1ère injection',
+    '1ère inj',
     'COVID19 - Vaccination'
 ]
 
