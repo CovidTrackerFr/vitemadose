@@ -105,7 +105,7 @@ def centre_iterator():
             centre["com_insee"] = item["location"]["zip"]
             centre["nom"] = item.get("name")
             yield centre
-       elif item.get("type") in ["Laboratoire d’analyse", "Clinique", "Maison médicale", "Centre de soins", "Cabinet de groupe"]:
+        elif item.get("type") in ["Laboratoire d’analyse", "Clinique", "Maison médicale", "Centre de soins", "Cabinet de groupe"]:
             centre = {}
             slug = item["publicProfile"]["slug"]
             centre["gid"] = item["id"][:8]
