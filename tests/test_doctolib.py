@@ -217,6 +217,6 @@ def test_find_agenda_and_practice_ids():
             ],
         },
     }
-    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=1)
+    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, None, visit_motive_id=1)
     assert agenda_ids == ["10"]
     assert practice_ids == ["20", "21"]
