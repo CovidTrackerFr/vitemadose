@@ -1,5 +1,6 @@
 import logging
 import threading
+import traceback
 from datetime import datetime
 from multiprocessing import Pool
 
@@ -10,14 +11,11 @@ CENTER_ID = 0
 def async_keldoc_scrape(website):
     vaccine_center = website.split('/')[-1].split('?')[0]
     #print("Vaccine Center {0}: looking for an appointment".format(vaccine_center))
-    try:
-        date = fetch_slots(website, datetime.now().strftime('%Y-%m-%d'))
-        if not date:
-            #print("Vaccine Center {0}: no appointment found".format(vaccine_center))
-            return
-        #print("Vaccine Center {0}: next appointment found: {1}".format(vaccine_center, date))
-    except Exception as e:
-        print(e)
+    date = fetch_slots(website, datetime.now().strftime('%Y-%m-%d'))
+    if not date:
+        print("Vaccine Center {0}: no appointment found".format(vaccine_center))
+        return
+    print("Vaccine Center {0}: next appointment found: {1}".format(vaccine_center, date))
 
 
 def main():
