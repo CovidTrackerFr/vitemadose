@@ -13,10 +13,7 @@ session = requests.Session()
 def fetch_slots(rdv_site_web):
     response = session.get(rdv_site_web)
     soup = BeautifulSoup(response.text, 'html.parser')
-
-    if response.status_code != 200:
-        print(f'Requêtes vers {rdv_site_web} failed avec code : {response.status_code}.')
-        return None
+    response.raise_for_status()
 
     rdv_form = soup.find(id="__NEXT_DATA__")
     if rdv_form:
