@@ -67,7 +67,7 @@ def parse_ordoclic_slots(availability_data):
                     first_availability = date        
     return first_availability
     
-def fetch_centre_slots(rdv_site_web, start_date):
+def fetch_slots(rdv_site_web, start_date):
     first_availability = None    
     profile = getProfile(rdv_site_web)
     slug = profile["profileSlug"]
@@ -89,23 +89,19 @@ def fetch_centre_slots(rdv_site_web, start_date):
                     continue
                 if first_availability is None or date < first_availability:
                     first_availability = date
-    return first_availability
+    if first_availability == None:
+        return None
+    return str(first_availability)
 
-def centre_iterator():   
+def centre_iterator():
     items = search()
     for item in items["items"]:
-        payload = {}
-        slug = item["publicProfile"]["slug"]
-        rdv_site_web = f"https://app.ordoclic.fr/app/pharmacie/{slug}"
-        start_date = datetime.now().isoformat()[:10]
-        try:
-            next_slot = fetch_centre_slots(rdv_site_web, start_date)
-            payload["departement"] = item["location"]["zip"][:2]
-            payload["nom"] = item["name"]
-            payload["url"] = rdv_site_web
-            payload["prochain_rdv"] = str(next_slot)
-            yield payload
-        except httpx.HTTPStatusError as exc:
-            continue
-        except TimeoutException:
-            continue
+        # plusieur types possibles (pharmacie, maison mediacle, pharmacien, medecin, ...), pour l'instant on filtre juste les pharmacies
+        if item.get("type") == "Pharmacie":
+            centre = {}
+            slug = item["publicProfile"]["slug"]
+            centre["gid"] = item["id"][:8]
+            centre["rdv_site_web"] = f"https://app.ordoclic.fr/app/pharmacie/{slug}"
+            centre["com_insee"] = item["location"]["zip"]
+            centre["nom"] = item.get("name")
+            yield centre
