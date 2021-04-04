@@ -6,6 +6,8 @@ from urllib.parse import urlsplit, parse_qs
 import httpx
 import requests
 
+DOCTOLIB_SLOT_LIMIT = 50
+
 DOCTOLIB_HEADERS = {
     'X-Covid-Tracker-Key': os.environ.get('DOCTOLIB_API_KEY', ''),
 }
@@ -73,7 +75,7 @@ class DoctolibSlots:
 
         agenda_ids_q = "-".join(agenda_ids)
         practice_ids_q = "-".join(practice_ids)
-        slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={visit_motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit=7'
+        slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={visit_motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={DOCTOLIB_SLOT_LIMIT}'
         response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
         response.raise_for_status()
 
