@@ -1,3 +1,4 @@
+import sys
 from datetime import datetime
 from multiprocessing import Pool
 import json
@@ -12,7 +13,6 @@ from .doctolib import fetch_slots as doctolib_fetch_slots
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
 from .maiia import fetch_slots as maiia_fetch_slots
 
-
 POOL_SIZE = int(os.getenv('POOL_SIZE', 20))
 
 
@@ -24,6 +24,7 @@ def main():
             1
         )
         export_data(centres_cherchés)
+
 
 def cherche_prochain_rdv_dans_centre(centre):
     start_date = datetime.now().isoformat()[:10]
@@ -51,14 +52,15 @@ def cherche_prochain_rdv_dans_centre(centre):
         'prochain_rdv': next_slot
     }
 
+
 def sort_centers(data):
     sorted(data, key=lambda i: i['prochain_rdv'] if 'prochain_rdv' in i and i['prochain_rdv'] else '-')
     return data
 
+
 def export_data(centres_cherchés):
     compte_centres = 0
     compte_centres_avec_dispo = 0
-    #centres_cherchés = sort_centers(centres_cherchés)
     par_departement = {
         code: {
             'version': 1,
@@ -68,11 +70,14 @@ def export_data(centres_cherchés):
         }
         for code in import_departements()
     }
-    #center_list = []
-    #for centre in centres_cherchés:
-    #    center_list.append(centre)
-    #center_list = sort_centers(center_list)
+    center_list = []
     for centre in centres_cherchés:
+        center_list.append(centre)
+    center_list = sort_centers(center_list)
+    if not center_list:
+        sys.stderr.write("No vaccination center found. Data error?")
+        exit(1)
+    for centre in center_list:
         compte_centres += 1
         code_departement = centre['departement']
         if code_departement in par_departement:
@@ -82,7 +87,8 @@ def export_data(centres_cherchés):
                 compte_centres_avec_dispo += 1
                 par_departement[code_departement]['centres_disponibles'].append(centre)
         else:
-            print(f"WARNING: le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
+            print(
+                f"WARNING: le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
 
     for code_departement, disponibilités in par_departement.items():
         print(f'writing result to {code_departement}.json file')
