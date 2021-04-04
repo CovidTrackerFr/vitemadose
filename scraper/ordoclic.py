@@ -9,7 +9,8 @@ session = httpx.Client(timeout=timeout)
 # get all slugs
 def search():
     base_url = 'https://api.ordoclic.fr/v1/public/search'
-    payload = {'page': '1', 'per_page': '500', 'in.isCovidVaccineSupported': 'true', 'in.isPublicProfile': 'true' }
+    #payload = {'page': '1', 'per_page': '10000', 'in.isCovidVaccineSupported': 'true', 'in.isPublicProfile': 'true' }
+    payload = {'page': '1', 'per_page': '10000', 'in.isPublicProfile': 'true' }
     r = session.get(base_url, params=payload)
     r.raise_for_status()
     return(r.json())
@@ -25,8 +26,8 @@ def getSlots(entityId, medicalStaffId, reasonId, start_date, end_date):
     payload = {"entityId": entityId, 
                "medicalStaffId": medicalStaffId, 
                "reasonId": reasonId,
-               "dateEnd": "{0}T00:00:00.000Z".format(end_date), 
-               "dateStart": "{0}T23:59:59.000Z".format(start_date)}
+               "dateEnd": f"{end_date}T00:00:00.000Z", 
+               "dateStart": f"{start_date}T23:59:59.000Z"}
     headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
     r = session.post(base_url, data=json.dumps(payload), headers=headers)
     r.raise_for_status()
@@ -40,28 +41,34 @@ def getProfile(rdv_site_web):
     return(r.json())
 
 def parse_ordoclic_slots(availability_data):
-    start_date = None
+    first_availability = None
     if not availability_data:
         return None
     if 'nextAvailableSlotDate' in availability_data:
-        date = availability_data.get('nextAvailableSlotDate', None)
-        if date == None:
-            return None
-        date_obj = datetime.strptime(date, '%Y-%m-%dT%H:%M:%S%z')
-        return date_obj
+        nextAvailableSlotDate = availability_data.get('nextAvailableSlotDate', None)
+        if nextAvailableSlotDate != None:
+            first_availability = datetime.strptime(nextAvailableSlotDate, '%Y-%m-%dT%H:%M:%S%z') + timedelta(minutes=120)
+            return first_availability
 
     availabilities = availability_data.get('slots', None)
     if availabilities is None:
         return None
-    for slot in availabilities["slots"]:
-        start_date = slot.get('timeStart', None)
-        if not start_date:
+    for slot in availabilities:
+        timeStart = slot.get('timeStart', None)
+        if not timeStart:
             continue
-        return datetime.strptime(start_date, '%Y-%m-%dT%H:%M:%S.%f%z')
-    return None
+        date = datetime.strptime(timeStart, '%Y-%m-%dT%H:%M:%S%z')
+        if 'timeStartUtcOffset' in slot:
+            timeStartUtcOffset = slot["timeStartUtcOffset"]
+            date += timedelta(minutes=timeStartUtcOffset)
+        if date is None:
+            continue
+        if first_availability is None or date < first_availability:
+                    first_availability = date        
+    return first_availability
     
 def fetch_centre_slots(rdv_site_web, start_date):
-    first_availability = None
+    first_availability = None    
     profile = getProfile(rdv_site_web)
     slug = profile["profileSlug"]
     entityId = profile["entityId"]
@@ -75,7 +82,7 @@ def fetch_centre_slots(rdv_site_web, start_date):
             if reason["reasonTypeId"] == 4 and reason["canBookOnline"] == True: 
                 reasonId = reason["id"]
                 date_obj = datetime.strptime(start_date, '%Y-%m-%d')
-                end_date = (date_obj + timedelta(days=1)).strftime('%Y-%m-%d')
+                end_date = (date_obj + timedelta(days=6)).strftime('%Y-%m-%d')
                 slots = getSlots(entityId, medicalStaffId, reasonId, start_date, end_date)
                 date = parse_ordoclic_slots(slots)
                 if date is None:
@@ -83,3 +90,22 @@ def fetch_centre_slots(rdv_site_web, start_date):
                 if first_availability is None or date < first_availability:
                     first_availability = date
     return first_availability
+
+def test():   
+    items = search()
+    for item in items["items"]:
+        payload = {}
+        slug = item["publicProfile"]["slug"]
+        rdv_site_web = f"https://app.ordoclic.fr/app/pharmacie/{slug}"
+        start_date = datetime.now().isoformat()[:10]
+        try:
+            next_slot = fetch_centre_slots(rdv_site_web, start_date)
+            payload["departement"] = item["location"]["zip"][:2]
+            payload["nom"] = item["name"]
+            payload["url"] = rdv_site_web
+            payload["prochain_rdv"] = str(next_slot)
+            print(payload)
+        except httpx.HTTPStatusError as exc:
+            continue
+        except TimeoutException:
+            continue
