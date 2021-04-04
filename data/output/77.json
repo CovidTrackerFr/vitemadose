@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:59:25.991821+02:00",
+  "last_updated": "2021-04-04T17:01:13.107001+02:00",
   "centres_disponibles": [],
   "centres_indisponibles": [
     {
@@ -61,13 +61,6 @@
     },
     {
       "departement": "77",
-      "nom": "Centre de vaccination du GHSIF Melun",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/melun-cedex-77011/groupe-hospitalier-sud-ile-de-france/centre-covid?specialty=496",
-      "plateforme": "Keldoc",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "77",
       "nom": "Centre de vaccination du SDIS",
       "url": "https://partners.doctolib.fr/centre-de-sante/melun/centre-de-vaccination-covid-19-sdis-77?pid=practice-175244&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -92,6 +85,13 @@
       "nom": "EMV Conseil D\u00e9partemental 77",
       "url": "",
       "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "77",
+      "nom": "Centre de vaccination du GHSIF Melun",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/melun-cedex-77011/groupe-hospitalier-sud-ile-de-france/centre-covid?specialty=496",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
@@ -159,6 +159,13 @@
     },
     {
       "departement": "77",
+      "nom": "Centres de vaccination GHIF Melun- site de Savigny le temple",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/savigny-le-temple-77176/centre-de-vaccination-covid-ghsif-site-de-savigny-le-temple",
+      "plateforme": null,
+      "prochain_rdv": null
+    },
+    {
+      "departement": "77",
       "nom": "Tr\u00e8s grand centre SDIS",
       "url": "",
       "plateforme": "Autre",
@@ -169,13 +176,6 @@
       "nom": " Ville de Pontault Combault",
       "url": "https://partners.doctolib.fr/centre-de-sante/pontault-combault/centre-de-vaccination-mairie-de-pontault-combault?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "77",
-      "nom": "Centres de vaccination GHIF Melun- site de Savigny le temple",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/savigny-le-temple-77176/centre-de-vaccination-covid-ghsif-site-de-savigny-le-temple",
-      "plateforme": null,
       "prochain_rdv": null
     },
     {
@@ -194,15 +194,15 @@
     },
     {
       "departement": "77",
-      "nom": "Ville de Chelles",
-      "url": "https://partners.doctolib.fr/centre-de-sante/chelles/centre-de-vaccination-ville-de-chelles?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Ville de Montereau",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montereau-fault-yonne/centre-de-vaccination-covid-de-montereau-fault-yonne-reserve-personnes-plus-de-75ans?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "77",
-      "nom": "Ville de Montereau",
-      "url": "https://partners.doctolib.fr/centre-de-sante/montereau-fault-yonne/centre-de-vaccination-covid-de-montereau-fault-yonne-reserve-personnes-plus-de-75ans?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Ville de Chelles",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chelles/centre-de-vaccination-ville-de-chelles?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

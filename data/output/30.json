@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:59:25.991339+02:00",
+  "last_updated": "2021-04-04T17:01:13.106634+02:00",
   "centres_disponibles": [
     {
       "departement": "30",
@@ -15,6 +15,13 @@
       "url": "https://partners.doctolib.fr/centre-de-sante/ales/centre-de-vaccination-covid-19-ales?pid=practice-165321&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-27"
+    },
+    {
+      "departement": "30",
+      "nom": "CHU N\u00eemes",
+      "url": "https://partners.doctolib.fr/hopital-public/nimes/chu-nimes-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-18"
     },
     {
       "departement": "30",
@@ -55,15 +62,15 @@
     },
     {
       "departement": "30",
-      "nom": "centre Costi\u00e8res CPTS N\u00eemes",
-      "url": "https://partners.doctolib.fr/centre-de-sante/nimes/centre-de-vaccination-ville-de-nimes?pid=practice-166788&enable_cookies_consent=1",
+      "nom": "Centre MSP de Pont-Saint-Esprit",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/pont-saint-esprit/msp-de-pont-saint-esprit-vaccination-covid?pid=practice-171376&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "30",
-      "nom": "Centre MSP de Pont-Saint-Esprit",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/pont-saint-esprit/msp-de-pont-saint-esprit-vaccination-covid?pid=practice-171376&enable_cookies_consent=1",
+      "nom": "centre Costi\u00e8res CPTS N\u00eemes",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nimes/centre-de-vaccination-ville-de-nimes?pid=practice-166788&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -90,13 +97,6 @@
     },
     {
       "departement": "30",
-      "nom": "Centre de vaccination Grand Public",
-      "url": "https://partners.doctolib.fr/centre-de-sante/bagnols-sur-ceze/centre-de-vaccination-covid-19-grand-public-bagnols-sur-ceze?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "30",
       "nom": "CH Al\u00e8s",
       "url": "https://partners.doctolib.fr/hopital-public/al\u00e8s/centre-de-vaccination-du-centre-hospitalier-d-ales?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -104,9 +104,9 @@
     },
     {
       "departement": "30",
-      "nom": "CHU N\u00eemes",
-      "url": "https://partners.doctolib.fr/hopital-public/nimes/chu-nimes-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": null,
+      "nom": "Centre de vaccination Grand Public",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bagnols-sur-ceze/centre-de-vaccination-covid-19-grand-public-bagnols-sur-ceze?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {

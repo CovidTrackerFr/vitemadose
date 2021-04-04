@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:59:25.991468+02:00",
+  "last_updated": "2021-04-04T17:01:13.106733+02:00",
   "centres_disponibles": [
     {
       "departement": "42",
@@ -15,6 +15,13 @@
       "url": "https://partners.doctolib.fr/centre-de-sante/montbrison/centre-de-vaccination-covid-ville-de-montbrison?pid=practice-166002&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-05-17"
+    },
+    {
+      "departement": "42",
+      "nom": "Centre hospitalier de Feurs - Maison des Sapins",
+      "url": "https://partners.doctolib.fr/centre-de-sante/feurs/centre-de-vaccination-covid-ch-du-forez-site-de-feurs?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-08T15:45:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -90,16 +97,16 @@
     },
     {
       "departement": "42",
-      "nom": "antenne MSP St Just en Chevalet ",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-just-en-chevalet/centre-de-vaccination-covid-19-maison-de-sante-du-pays-d-urfe?pid=practice-175972&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "MA - USN 1Maison d'Arr\u00eat de la Talaudi\u00e8re / Maison d'Arr\u00eat de Saint-Etienne-la-Talaudi\u00e8re",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "42",
-      "nom": "MA - USN 1Maison d'Arr\u00eat de la Talaudi\u00e8re / Maison d'Arr\u00eat de Saint-Etienne-la-Talaudi\u00e8re",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "antenne MSP St Just en Chevalet ",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-just-en-chevalet/centre-de-vaccination-covid-19-maison-de-sante-du-pays-d-urfe?pid=practice-175972&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -142,13 +149,6 @@
       "nom": "Centre de vaccination de l'H\u00f4pital priv\u00e9 de la Loire ",
       "url": "https://partners.doctolib.fr/clinique-privee/saint-etienne/centre-de-vaccination-covid-hopital-prive-de-la-loire-saint-etienne?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "42",
-      "nom": "Centre hospitalier de Feurs - Maison des Sapins",
-      "url": "https://partners.doctolib.fr/centre-de-sante/feurs/centre-de-vaccination-covid-ch-du-forez-site-de-feurs?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": null,
       "prochain_rdv": null
     }
   ]

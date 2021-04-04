@@ -1,14 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:59:25.992017+02:00",
+  "last_updated": "2021-04-04T17:01:13.107264+02:00",
   "centres_disponibles": [
-    {
-      "departement": "974",
-      "nom": "Centre de vaccination COVID 19-Nord : Site Felix Guyon",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/saint-denis-97400/centre-hospitalier-universitaire-la-reunion-site-felix-guyon/centre-de-vaccination-du-centre-hospitalier-universitaire-la-reunion-site-felix-guyon",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-05-01T08:50:00.000000+0200"
-    },
     {
       "departement": "974",
       "nom": "Centre de vaccination COVID 19-Sud : Site de St Pierre",
@@ -18,17 +11,17 @@
     },
     {
       "departement": "974",
+      "nom": "Centre de vaccination COVID 19-Nord : Site Felix Guyon",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/saint-denis-97400/centre-hospitalier-universitaire-la-reunion-site-felix-guyon/centre-de-vaccination-du-centre-hospitalier-universitaire-la-reunion-site-felix-guyon",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-05-01T08:50:00.000000+0200"
+    },
+    {
+      "departement": "974",
       "nom": "Centre de vaccination COVID 19 du CHOR",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/saint-paul-97460/centre-hospitalier-ouest-reunion/centre-de-vaccination-du-centre-hospitalier-ouest-reunion",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-13T18:16:00.000000+0200"
-    },
-    {
-      "departement": "974",
-      "nom": "centre de vaccination a\u00e9roport de Pierrefonds",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/le-tampon-97418/centre-de-vaccination-covid-19-aeroport-de-pierrefonds",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-08T16:08:00.000000+0200"
     },
     {
       "departement": "974",
@@ -46,6 +39,13 @@
     },
     {
       "departement": "974",
+      "nom": "centre de vaccination a\u00e9roport de Pierrefonds",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/le-tampon-97418/centre-de-vaccination-covid-19-aeroport-de-pierrefonds",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-08T16:08:00.000000+0200"
+    },
+    {
+      "departement": "974",
       "nom": "Centre de vaccination COVID-19 de Saint-Andr\u00e9 - Ex commissariat de la police nationale",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-andre-97440/saint-andre/centre-de-vaccination-de-saint-andre",
       "plateforme": "Keldoc",
@@ -53,17 +53,17 @@
     },
     {
       "departement": "974",
-      "nom": "Centre de vaccination COVID-19 du Tampon - Salle Raymond Lauret 14e",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/le-tampon-97418/le-tampon/centre-de-vaccination-le-tampon",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-28T09:50:00.000000+0200"
-    },
-    {
-      "departement": "974",
       "nom": "Centre de vaccination Covid-19 du GHER",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/saint-benoit-97437/gher-saint-benoit/centre-de-vaccination-du-gher-saint-benoit",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-20T14:59:00.000000+0200"
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID-19 du Tampon - Salle Raymond Lauret 14e",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/le-tampon-97418/le-tampon/centre-de-vaccination-le-tampon",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-17T14:10:00.000000+0200"
     }
   ],
   "centres_indisponibles": [

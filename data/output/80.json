@@ -1,7 +1,15 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:59:25.991846+02:00",
-  "centres_disponibles": [],
+  "last_updated": "2021-04-04T17:01:13.107023+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "80",
+      "nom": "Centre de vaccination - Communaut\u00e9 de commune VIMEU Baie de la somme ( Salle Edith Piaf)",
+      "url": "https://partners.doctolib.fr/centre-de-sante/friville-escarbotin/centre-de-vaccination-covid-vimeu-baie-de-somme?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-13"
+    }
+  ],
   "centres_indisponibles": [
     {
       "departement": "80",
@@ -54,15 +62,15 @@
     },
     {
       "departement": "80",
-      "nom": "Centre de vaccination - CH DOULLENS (Espace culturel)",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/doullens-80600/centre-hospitalier-doullens/centre-de-vaccination-du-centre-hospitalier-doullens",
+      "nom": "Centre de vaccination - Commune CHAULNES, Centre socioculturel ",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/chaulnes-80320/centre-de-vaccination-ephemere-chaulnes",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
       "departement": "80",
-      "nom": "Centre de vaccination - Commune CHAULNES, Centre socioculturel ",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/chaulnes-80320/centre-de-vaccination-ephemere-chaulnes",
+      "nom": "Centre de vaccination - CH DOULLENS (Espace culturel)",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/doullens-80600/centre-hospitalier-doullens/centre-de-vaccination-du-centre-hospitalier-doullens",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },
@@ -71,13 +79,6 @@
       "nom": "Centre de vaccination - Ville de OISEMON, salle des associations",
       "url": "https://www.keldoc.com/cabinet-medical/oisemont-80140/centre-de-vaccination-oisemont-salle-des-association/centre-de-vaccination-oisemont-salle-des-association",
       "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "80",
-      "nom": "Centre de Vaccination - Ville de Flixecourt, Salle Le Chiffon Rouge",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/flixecourt-80420/flixecourt/centre-de-vaccination-de-flixecourt",
-      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
@@ -96,15 +97,8 @@
     },
     {
       "departement": "80",
-      "nom": "Centre de vaccination - Communaut\u00e9 de commune VIMEU Baie de la somme ( Salle Edith Piaf)",
-      "url": "https://partners.doctolib.fr/centre-de-sante/friville-escarbotin/centre-de-vaccination-covid-vimeu-baie-de-somme?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "80",
-      "nom": "Centre de vaccination- CHU Amiens",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/amiens-80000/chu-amiens-picardie-site-nord?category=-1&cabinet=16656&specialty=496",
+      "nom": "Centre de Vaccination - Ville de Flixecourt, Salle Le Chiffon Rouge",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/flixecourt-80420/flixecourt/centre-de-vaccination-de-flixecourt",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },
@@ -113,6 +107,13 @@
       "nom": "Centre de vaccination - CH P\u00c9RONNE",
       "url": "https://partners.doctolib.fr/hopital-public/peronne/ch-de-peronne?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "80",
+      "nom": "Centre de vaccination- CHU Amiens",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/amiens-80000/chu-amiens-picardie-site-nord?category=-1&cabinet=16656&specialty=496",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {

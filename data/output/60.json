@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:59:25.991640+02:00",
+  "last_updated": "2021-04-04T17:01:13.106867+02:00",
   "centres_disponibles": [
     {
       "departement": "60",
@@ -8,6 +8,13 @@
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/breuil-le-sec-60840/centre-hospitalier-isarien-de-clermont/centre-de-vaccination-covid-du-centre-hospitalier-isarien-de-clermont",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-26T10:50:00.000000+0200"
+    },
+    {
+      "departement": "60",
+      "nom": "Centre de vaccination - Mairie de Creil, centre culturel La Faiencerie \u2013 Salle de la manufacture",
+      "url": "https://partners.doctolib.fr/centre-de-sante/creil/centre-de-vaccination-covid-19-mairie-de-creil?pid=practice-175283&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-06T13:40:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -78,13 +85,6 @@
       "departement": "60",
       "nom": "Centre de vaccination - Commune de Pont Sainte Maxence,  gymnase la Salamandre rue Charles Frigaux ",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/pont-sainte-maxence/centre-de-vaccination-covid-19-pont-sainte-maxence?pid=practice-175373&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "60",
-      "nom": "Centre de vaccination - Mairie de Creil, centre culturel La Faiencerie \u2013 Salle de la manufacture",
-      "url": "https://partners.doctolib.fr/centre-de-sante/creil/centre-de-vaccination-covid-19-mairie-de-creil?pid=practice-175283&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

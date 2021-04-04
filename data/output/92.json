@@ -1,20 +1,13 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:59:25.991953+02:00",
+  "last_updated": "2021-04-04T17:01:13.107209+02:00",
   "centres_disponibles": [
     {
       "departement": "92",
       "nom": "Ville de Gennevilliers",
       "url": "https://www.doctolib.fr/centre-de-vaccinations-internationales/gennevilliers/centre-de-vaccination-covid-19-gymnase-paul-langevin",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-08T13:55:00.000+02:00"
-    },
-    {
-      "departement": "92",
-      "nom": "Ville de Courbevoie",
-      "url": "https://partners.doctolib.fr/centre-de-sante/courbevoie/centre-de-vaccination-covid-19-de-courbevoie?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-04T18:10:00.000+02:00"
+      "prochain_rdv": "2021-04-09T10:20:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -48,16 +41,16 @@
     },
     {
       "departement": "92",
-      "nom": "CH des 4 Villes",
-      "url": "https://partners.doctolib.fr/hopital-public/saint-cloud/ch-4-villes-centre-de-vaccination-reserve-aux-personnels-de-l-etablissement?pid=practice-163521&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "CH de Beaujon",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "92",
-      "nom": "CH de Beaujon",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "CH des 4 Villes",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-cloud/ch-4-villes-centre-de-vaccination-reserve-aux-personnels-de-l-etablissement?pid=practice-163521&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -246,6 +239,13 @@
       "departement": "92",
       "nom": "Ville de la Garenne Colombes",
       "url": "https://partners.doctolib.fr/centre-de-sante/la-garenne-colombes/centre-de-vaccination-covid-19-la-garenne-colombes?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "92",
+      "nom": "Ville de Courbevoie",
+      "url": "https://partners.doctolib.fr/centre-de-sante/courbevoie/centre-de-vaccination-covid-19-de-courbevoie?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

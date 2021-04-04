@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:59:25.991726+02:00",
+  "last_updated": "2021-04-04T17:01:13.106936+02:00",
   "centres_disponibles": [
     {
       "departement": "69",
@@ -15,6 +15,13 @@
       "url": "https://partners.doctolib.fr/centre-de-sante/villeurbanne/centre-de-vaccinations-internationales-villeurbanne-miit?pid=practice-165173?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-22"
+    },
+    {
+      "departement": "69",
+      "nom": "Centre de vaccination - Palais des sports de Gerland /Hospices Civils de Lyon",
+      "url": "https://partners.doctolib.fr/hopital-public/lyon/palais-des-sports-gerland-hcl-vaccination-covid?pid=practice-163661&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-14"
     }
   ],
   "centres_indisponibles": [
@@ -160,13 +167,6 @@
     },
     {
       "departement": "69",
-      "nom": "Centre de vaccination de Beauvallon - Salle des Varennes ",
-      "url": "",
-      "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "69",
       "nom": "Centre de vaccination -H\u00f4pital Edouard Herriot-HCL",
       "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-edouard-herriot-hcl-vaccination-covid?pid=practice-163794&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -174,7 +174,7 @@
     },
     {
       "departement": "69",
-      "nom": "Grand centre de Lyon - Eurexpo (en cours de d\u00e9claration)",
+      "nom": "Centre de vaccination de Beauvallon - Salle des Varennes ",
       "url": "",
       "plateforme": "Autre",
       "prochain_rdv": null
@@ -184,6 +184,13 @@
       "nom": "Centre de vaccination de l'H\u00f4pital Nord-Ouest-Villefranche - H\u00f4pital de Gleiz\u00e9",
       "url": "https://partners.doctolib.fr/hopital-public/villefranche-sur-saone/centre-de-vaccination-covid-villefranche-hopital-nord-ouest?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "69",
+      "nom": "Grand centre de Lyon - Eurexpo (en cours de d\u00e9claration)",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
@@ -232,13 +239,6 @@
       "departement": "69",
       "nom": "Centre de vaccination de l'H\u00f4pital de Thizy",
       "url": "https://partners.doctolib.fr/hopital-public/thizy-les-bourgs/centre-de-vaccination-de-thizy?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "69",
-      "nom": "Centre de vaccination - Palais des sports de Gerland /Hospices Civils de Lyon",
-      "url": "https://partners.doctolib.fr/hopital-public/lyon/palais-des-sports-gerland-hcl-vaccination-covid?pid=practice-163661&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
