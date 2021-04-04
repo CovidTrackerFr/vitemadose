@@ -48,7 +48,7 @@ class DoctolibSlots:
         if 'pid' in params_get:
             self.selected_practice_id = params_get.get('pid', [None])[0]
             if self.selected_practice_id:
-                self.selected_practice_id = self.selected_practice_id.split('-')[-1]
+                self.selected_practice_id = self.selected_practice_id.split('-')[-1].split('?')[0]
                 self.selected_practice_id = int(self.selected_practice_id)
         centre_api_url = f'https://partners.doctolib.fr/booking/{centre}.json'
         response = self._client.get(centre_api_url, headers=DOCTOLIB_HEADERS)
