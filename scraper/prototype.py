@@ -109,7 +109,7 @@ def fetch_centre_slots(rdv_site_web, start_date):
     if rdv_site_web.startswith('https://vaccination-covid.keldoc.com'):
         return 'Keldoc', keldoc_fetch_slots(rdv_site_web, start_date)
     if rdv_site_web.startswith('https://www.maiia.com'):
-        return 'Maiia', maiia_fetch_slots(rdv_site_web, start_date)
+        return 'Maiia', maiia_fetch_slots(rdv_site_web)
     return 'Autre', None
 
 
