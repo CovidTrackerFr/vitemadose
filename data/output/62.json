@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:55:11.364488+02:00",
+  "last_updated": "2021-04-04T16:56:38.518932+02:00",
   "centres_disponibles": [
     {
       "departement": "62",
@@ -15,13 +15,6 @@
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/calais/centre-de-vaccination-covid-19-forum-gambetta?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-06T09:00:00.000+02:00"
-    },
-    {
-      "departement": "62",
-      "nom": "Centre de vaccination - CPTS Artois Lys Laventie 1, Salle des f\u00eates",
-      "url": "https://partners.doctolib.fr/centre-de-sante/laventie/centre-de-vaccination-covid-19-flandre-lys?pid=practice-165123&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-14"
     }
   ],
   "centres_indisponibles": [
@@ -272,6 +265,13 @@
     },
     {
       "departement": "62",
+      "nom": "Centre de vaccination - CPTS Artois Lys Laventie 1, Salle des f\u00eates",
+      "url": "https://partners.doctolib.fr/centre-de-sante/laventie/centre-de-vaccination-covid-19-flandre-lys?pid=practice-165123&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "62",
       "nom": "Centre de vaccination - CH LENS",
       "url": "https://partners.doctolib.fr/centre-depistage-covid/lens/ch-de-lens-lens?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -279,15 +279,15 @@
     },
     {
       "departement": "62",
-      "nom": "Centre de vaccination - CH Arras",
-      "url": "https://partners.doctolib.fr/hopital-public/arras/ght-artois-ternois-vaccination-covid?pid=practice-163451&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - Centre SDIS Bruay La Buissi\u00e8re, salle Marmottan",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bruay-la-buissiere/centre-de-vaccination-covid-pas-de-calais?pid=practice-164608&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "62",
-      "nom": "Centre de vaccination - Centre SDIS Bruay La Buissi\u00e8re, salle Marmottan",
-      "url": "https://partners.doctolib.fr/centre-de-sante/bruay-la-buissiere/centre-de-vaccination-covid-pas-de-calais?pid=practice-164608&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - CH Arras",
+      "url": "https://partners.doctolib.fr/hopital-public/arras/ght-artois-ternois-vaccination-covid?pid=practice-163451&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

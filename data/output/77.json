@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:55:11.364637+02:00",
+  "last_updated": "2021-04-04T16:56:38.519081+02:00",
   "centres_disponibles": [],
   "centres_indisponibles": [
     {
@@ -61,16 +61,16 @@
     },
     {
       "departement": "77",
-      "nom": "Centre de vaccination du GHSIF Melun",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/melun-cedex-77011/groupe-hospitalier-sud-ile-de-france/centre-covid?specialty=496",
-      "plateforme": "Keldoc",
+      "nom": "Centre de vaccination du SDIS",
+      "url": "https://partners.doctolib.fr/centre-de-sante/melun/centre-de-vaccination-covid-19-sdis-77?pid=practice-175244&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "77",
-      "nom": "Centre de vaccination du SDIS",
-      "url": "https://partners.doctolib.fr/centre-de-sante/melun/centre-de-vaccination-covid-19-sdis-77?pid=practice-175244&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "Centre de vaccination du GHSIF Melun",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/melun-cedex-77011/groupe-hospitalier-sud-ile-de-france/centre-covid?specialty=496",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
@@ -96,13 +96,6 @@
     },
     {
       "departement": "77",
-      "nom": "Ville de Fontainebleau",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/fontainebleau/vaccination-covid-19-ville-de-fontainebleau?pid=practice-168865&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "77",
       "nom": "EMV Thomery",
       "url": "",
       "plateforme": "Autre",
@@ -112,6 +105,13 @@
       "departement": "77",
       "nom": "EMV Torcy",
       "url": "https://partners.doctolib.fr/centre-de-sante/torcy/point-de-vaccination-avance-de-torcy?pid=practice-173895&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "77",
+      "nom": "Ville de Fontainebleau",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/fontainebleau/vaccination-covid-19-ville-de-fontainebleau?pid=practice-168865&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -166,16 +166,16 @@
     },
     {
       "departement": "77",
-      "nom": "Centres de vaccination GHIF Melun- site de Savigny le temple",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/savigny-le-temple-77176/centre-de-vaccination-covid-ghsif-site-de-savigny-le-temple",
-      "plateforme": null,
+      "nom": " Ville de Pontault Combault",
+      "url": "https://partners.doctolib.fr/centre-de-sante/pontault-combault/centre-de-vaccination-mairie-de-pontault-combault?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "77",
-      "nom": " Ville de Pontault Combault",
-      "url": "https://partners.doctolib.fr/centre-de-sante/pontault-combault/centre-de-vaccination-mairie-de-pontault-combault?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "Centres de vaccination GHIF Melun- site de Savigny le temple",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/savigny-le-temple-77176/centre-de-vaccination-covid-ghsif-site-de-savigny-le-temple",
+      "plateforme": null,
       "prochain_rdv": null
     },
     {
@@ -201,15 +201,15 @@
     },
     {
       "departement": "77",
-      "nom": "Ville de Montereau",
-      "url": "https://partners.doctolib.fr/centre-de-sante/montereau-fault-yonne/centre-de-vaccination-covid-de-montereau-fault-yonne-reserve-personnes-plus-de-75ans?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Ville de Nemours",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nemours/centre-vaccination-covid-19-msp-pays-de-nemours?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "77",
-      "nom": "Ville de Nemours",
-      "url": "https://partners.doctolib.fr/centre-de-sante/nemours/centre-vaccination-covid-19-msp-pays-de-nemours?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Ville de Montereau",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montereau-fault-yonne/centre-de-vaccination-covid-de-montereau-fault-yonne-reserve-personnes-plus-de-75ans?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     }

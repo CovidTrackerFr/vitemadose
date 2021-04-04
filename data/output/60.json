@@ -1,7 +1,15 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:55:11.364470+02:00",
-  "centres_disponibles": [],
+  "last_updated": "2021-04-04T16:56:38.518909+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "60",
+      "nom": "Centre de vaccination - CHI Clermont",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/breuil-le-sec-60840/centre-hospitalier-isarien-de-clermont/centre-de-vaccination-covid-du-centre-hospitalier-isarien-de-clermont",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-26T10:50:00.000000+0200"
+    }
+  ],
   "centres_indisponibles": [
     {
       "departement": "60",
@@ -40,9 +48,9 @@
     },
     {
       "departement": "60",
-      "nom": "Centre de vaccination - CHI Clermont",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/breuil-le-sec-60840/centre-hospitalier-isarien-de-clermont/centre-de-vaccination-covid-du-centre-hospitalier-isarien-de-clermont",
-      "plateforme": null,
+      "nom": "Centre de vaccination - Ville de Chantilly",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chantilly/centre-de-vaccination-chantilly?pid=practice-164497&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -61,13 +69,6 @@
     },
     {
       "departement": "60",
-      "nom": "Centre de vaccination - CPTS du pays de Bray",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-aubin-en-bray/communaute-de-soins-du-pays-de-bray-vaccination-covid?pid=practice-164539&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "60",
       "nom": "Centre de vaccination - Commune de Pont Sainte Maxence,  gymnase la Salamandre rue Charles Frigaux ",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/pont-sainte-maxence/centre-de-vaccination-covid-19-pont-sainte-maxence?pid=practice-175373&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -75,15 +76,15 @@
     },
     {
       "departement": "60",
-      "nom": "Centre de vaccination - Mairie de Creil, centre culturel La Faiencerie \u2013 Salle de la manufacture",
-      "url": "https://partners.doctolib.fr/centre-de-sante/creil/centre-de-vaccination-covid-19-mairie-de-creil?pid=practice-175283&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - CPTS du pays de Bray",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-aubin-en-bray/communaute-de-soins-du-pays-de-bray-vaccination-covid?pid=practice-164539&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "60",
-      "nom": "Centre de vaccination - Ville de Chantilly",
-      "url": "https://partners.doctolib.fr/centre-de-sante/chantilly/centre-de-vaccination-chantilly?pid=practice-164497&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - Mairie de Creil, centre culturel La Faiencerie \u2013 Salle de la manufacture",
+      "url": "https://partners.doctolib.fr/centre-de-sante/creil/centre-de-vaccination-covid-19-mairie-de-creil?pid=practice-175283&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -138,15 +139,15 @@
     },
     {
       "departement": "60",
-      "nom": "Centre de vaccination - CH CREIL GHPSO ",
-      "url": "https://partners.doctolib.fr/hopital-public/creil/ghpso-centre-de-vaccination-covid-19-reserve-aux-professionnels-de-sante?pid=practice-165159&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - Polyclinique SAINT COME",
+      "url": "https://partners.doctolib.fr/clinique-privee/compi\u00e8gne/polyclinique-saint-come-vaccination?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "60",
-      "nom": "Centre de vaccination - Polyclinique SAINT COME",
-      "url": "https://partners.doctolib.fr/clinique-privee/compi\u00e8gne/polyclinique-saint-come-vaccination?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - CH CREIL GHPSO ",
+      "url": "https://partners.doctolib.fr/hopital-public/creil/ghpso-centre-de-vaccination-covid-19-reserve-aux-professionnels-de-sante?pid=practice-165159&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

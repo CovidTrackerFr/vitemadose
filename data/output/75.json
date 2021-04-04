@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:55:11.364618+02:00",
+  "last_updated": "2021-04-04T16:56:38.519062+02:00",
   "centres_disponibles": [
     {
       "departement": "75",
@@ -21,7 +21,7 @@
       "nom": "SOS M\u00e9decin Paris 17e",
       "url": "https://partners.doctolib.fr/centre-de-sante/paris/sos-medecins-paris?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-05T12:45:00.000+02:00"
+      "prochain_rdv": "2021-04-05T09:30:00.000+02:00"
     },
     {
       "departement": "75",
@@ -35,7 +35,7 @@
       "nom": "Centre de vaccination Jaures Rothschild",
       "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-paris-19eme?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-06T18:24:00.000+02:00"
+      "prochain_rdv": "2021-04-16"
     }
   ],
   "centres_indisponibles": [
@@ -48,16 +48,16 @@
     },
     {
       "departement": "75",
-      "nom": "H\u00f4tel Dieu",
-      "url": "https://partners.doctolib.fr/hopital-public/paris/vacci-hotel-dieu-ap-hp-interne?pid=practice-164073&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "LARIBOISIERE AP-HP",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "75",
-      "nom": "LARIBOISIERE AP-HP",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "H\u00f4tel Dieu",
+      "url": "https://partners.doctolib.fr/hopital-public/paris/vacci-hotel-dieu-ap-hp-interne?pid=practice-164073&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -104,16 +104,16 @@
     },
     {
       "departement": "75",
-      "nom": "ROBERT DEBRE Centre de vaccination",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Le 104",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-164926&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "75",
-      "nom": "Le 104",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-164926&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "ROBERT DEBRE Centre de vaccination",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
@@ -139,13 +139,6 @@
     },
     {
       "departement": "75",
-      "nom": "GHU Paris - Site Pierre Bayle",
-      "url": "https://partners.doctolib.fr/hopital-public/paris/ghu-paris?pid=practice-163228&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "75",
       "nom": "Centre de g\u00e9rontologie Henry Dunant / Croix Rouge",
       "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-centre-henry-dunant-croix-rouge-francaise?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -156,6 +149,13 @@
       "nom": "EMV CV7e - Gymnase Camou",
       "url": "",
       "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "75",
+      "nom": "GHU Paris - Site Pierre Bayle",
+      "url": "https://partners.doctolib.fr/hopital-public/paris/ghu-paris?pid=practice-163228&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -307,15 +307,15 @@
     },
     {
       "departement": "75",
-      "nom": "Mairie du 10e",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-176642&enable_cookies_consent=1",
+      "nom": "Centre Eph\u00e9m\u00e8re - Caserne Champerret",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-des-sapeurs-pompiers-de-paris?pid=practice-175266&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "75",
-      "nom": "Centre Eph\u00e9m\u00e8re - Caserne Champerret",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-des-sapeurs-pompiers-de-paris?pid=practice-175266&enable_cookies_consent=1",
+      "nom": "Mairie du 10e",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-176642&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -370,6 +370,20 @@
     },
     {
       "departement": "75",
+      "nom": "Mairie du 15e",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-paris-15e?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "75",
+      "nom": "Centre de vaccinations internationales Air France",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/paris/centre-de-vaccination-covid-19-centre-medical-international-cmi?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "75",
       "nom": "Salle Olympe de Gouges",
       "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-164922&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -384,13 +398,6 @@
     },
     {
       "departement": "75",
-      "nom": "Centre de vaccinations internationales Air France",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/paris/centre-de-vaccination-covid-19-centre-medical-international-cmi?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "75",
       "nom": "Mairie de Paris Centre",
       "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-164812&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -400,13 +407,6 @@
       "departement": "75",
       "nom": "Mairie du XIVe",
       "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-paris-14e?pid=practice-164733?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "75",
-      "nom": "Mairie du 15e",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-paris-15e?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -440,15 +440,15 @@
     },
     {
       "departement": "75",
-      "nom": "Mairie du 6e",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/paris/centre-de-vaccination-covid-19-mairie-du-6eme-arrondissement-de-paris?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de sant\u00e9 Bauchat-Nation",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-centre-de-sante-bauchat-nation?pid=practice-165403?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "75",
-      "nom": "Centre de sant\u00e9 Bauchat-Nation",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-centre-de-sante-bauchat-nation?pid=practice-165403?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Mairie du 6e",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/paris/centre-de-vaccination-covid-19-mairie-du-6eme-arrondissement-de-paris?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     }

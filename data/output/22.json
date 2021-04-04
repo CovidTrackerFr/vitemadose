@@ -1,20 +1,20 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:55:11.364026+02:00",
+  "last_updated": "2021-04-04T16:56:38.518473+02:00",
   "centres_disponibles": [
-    {
-      "departement": "22",
-      "nom": "LOUDEAC - Foyer municipal",
-      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/loudeac-22600/centre-de-vaccination-loudeac-foyer-municipal",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-16T13:30:00.000000+0200"
-    },
     {
       "departement": "22",
       "nom": "ST BRIEUC - Salle Robien",
       "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/st-brieuc-22000/robien-saint-brieuc/centre-de-vaccination-de-robien-saint-brieuc",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-22T11:55:00.000000+0200"
+    },
+    {
+      "departement": "22",
+      "nom": "LOUDEAC - Foyer municipal",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/loudeac-22600/centre-de-vaccination-loudeac-foyer-municipal",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-16T13:30:00.000000+0200"
     },
     {
       "departement": "22",
@@ -27,16 +27,16 @@
   "centres_indisponibles": [
     {
       "departement": "22",
-      "nom": "CH LANNION (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
-      "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/lannion-22300/equipe-d-infectiologie?agenda=51159&motive=81356&category=-1&cabinet=16554",
-      "plateforme": null,
+      "nom": "DINAN - Centre des congr\u00e8s",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-malo-et-dinan/gh-rance-emeraude-vaccination-covid?pid=practice-164881&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "22",
-      "nom": "DINAN - Centre des congr\u00e8s",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-malo-et-dinan/gh-rance-emeraude-vaccination-covid?pid=practice-164881&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "CH LANNION (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
+      "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/lannion-22300/equipe-d-infectiologie?agenda=51159&motive=81356&category=-1&cabinet=16554",
+      "plateforme": null,
       "prochain_rdv": null
     },
     {

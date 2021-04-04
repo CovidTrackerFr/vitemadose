@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:55:11.364845+02:00",
+  "last_updated": "2021-04-04T16:56:38.519309+02:00",
   "centres_disponibles": [
     {
       "departement": "974",
@@ -18,6 +18,13 @@
     },
     {
       "departement": "974",
+      "nom": "Centre de vaccination COVID 19 du CHOR",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/saint-paul-97460/centre-hospitalier-ouest-reunion/centre-de-vaccination-du-centre-hospitalier-ouest-reunion",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-13T18:16:00.000000+0200"
+    },
+    {
+      "departement": "974",
       "nom": "Centre de vaccination COVID-19 de Saint-Paul - Salle polyvalente de l'etang",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-paul-97460/saint-paul/centre-de-vaccination-de-saint-paul",
       "plateforme": "Keldoc",
@@ -29,13 +36,6 @@
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/le-tampon-97418/centre-de-vaccination-covid-19-aeroport-de-pierrefonds",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-08T16:08:00.000000+0200"
-    },
-    {
-      "departement": "974",
-      "nom": "Centre de vaccination COVID 19 du CHOR",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/saint-paul-97460/centre-hospitalier-ouest-reunion/centre-de-vaccination-du-centre-hospitalier-ouest-reunion",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-13T18:16:00.000000+0200"
     },
     {
       "departement": "974",
@@ -76,13 +76,6 @@
     },
     {
       "departement": "974",
-      "nom": "Centre de vaccination COVID 19 : Site de Grand Ilet",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-benoit-97437/centre-de-vaccination-ephemere-station-de-trail-grand-ilet",
-      "plateforme": null,
-      "prochain_rdv": null
-    },
-    {
-      "departement": "974",
       "nom": "Centre de vaccination COVID 19 : Site de Mare \u00e0 vieille place",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-benoit-97437/centre-de-vaccination-ephemere-case-de-mare-a-vieille-place",
       "plateforme": "Keldoc",
@@ -111,6 +104,13 @@
     },
     {
       "departement": "974",
+      "nom": "Centre de vaccination COVID 19 : Site de Grand Ilet",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-benoit-97437/centre-de-vaccination-ephemere-station-de-trail-grand-ilet",
+      "plateforme": "Keldoc",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "974",
       "nom": "Centre de vaccination COVID 19 : Site de Cilaos",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/le-tampon-97418/hopital-de-cilaos-chu?category=3107&cabinet=17204&specialty=496",
       "plateforme": "Keldoc",
@@ -125,16 +125,16 @@
     },
     {
       "departement": "974",
-      "nom": "Centre de vaccination COVID 19 : Site du Port",
-      "url": "https://vaccination-covid.keldoc.com/vaccination-covid19/saint-paul-97460/file-1-centre-de-vaccination-ephemere-du-port",
-      "plateforme": null,
+      "nom": "Centre de vaccination COVID 19 : site des Makes",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-louis-97134/centre-de-vaccination-ephemere-mairie-annexe-des-makes",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
       "departement": "974",
-      "nom": "Centre de vaccination COVID 19 : site des Makes",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-louis-97134/centre-de-vaccination-ephemere-mairie-annexe-des-makes",
-      "plateforme": "Keldoc",
+      "nom": "Centre de vaccination COVID 19 : Site du Port",
+      "url": "https://vaccination-covid.keldoc.com/vaccination-covid19/saint-paul-97460/file-1-centre-de-vaccination-ephemere-du-port",
+      "plateforme": null,
       "prochain_rdv": null
     }
   ]
