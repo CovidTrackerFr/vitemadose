@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:58:12.204120+02:00",
+  "last_updated": "2021-04-04T16:59:25.991744+02:00",
   "centres_disponibles": [
     {
       "departement": "71",
@@ -39,13 +39,6 @@
     },
     {
       "departement": "71",
-      "nom": "Centre vaccination CHALON SUR SAONE - Salle Sembat",
-      "url": "https://partners.doctolib.fr/centre-de-sante/chalon-sur-saone/centre-de-vaccination-de-chalon-sur-saone?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-05-05"
-    },
-    {
-      "departement": "71",
       "nom": "Centre de vaccination de Pierre de Bresse",
       "url": "https://partners.doctolib.fr/centre-de-sante/chalon-sur-saone/centre-de-vaccination-covid-19-de-pierre-de-bresse?pid=practice-178058&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -60,17 +53,17 @@
     },
     {
       "departement": "71",
-      "nom": "Centre vaccination LOUHANS/BRANGES - Salle du Marais",
-      "url": "https://partners.doctolib.fr/centre-de-sante/louhans/centre-de-vaccination-de-louhans?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-05-07"
-    },
-    {
-      "departement": "71",
       "nom": "Centre de vaccination DIGOIN - Grande salle des f\u00eates",
       "url": "https://partners.doctolib.fr/centre-de-sante/digoin/centre-de-vaccination-de-digoin?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-05-04"
+    },
+    {
+      "departement": "71",
+      "nom": "Centre vaccination LOUHANS/BRANGES - Salle du Marais",
+      "url": "https://partners.doctolib.fr/centre-de-sante/louhans/centre-de-vaccination-de-louhans?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-05-07"
     },
     {
       "departement": "71",
@@ -139,6 +132,13 @@
     },
     {
       "departement": "71",
+      "nom": "Centre vaccination CHALON SUR SAONE - Salle Sembat",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chalon-sur-saone/centre-de-vaccination-de-chalon-sur-saone?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": null,
+      "prochain_rdv": null
+    },
+    {
+      "departement": "71",
       "nom": "Centre de vaccination GIVRY -  Maison m\u00e9dicale",
       "url": "https://partners.doctolib.fr/centre-de-sante/givry/centre-de-vaccination-de-givry?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -146,15 +146,15 @@
     },
     {
       "departement": "71",
-      "nom": "Centre de vaccination de PARAY LE MONIAL - Salle du Centre associatif Parodien",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paray-le-monial/centre-de-vaccination-de-paray-le-monial?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre vaccination MACON - Halle sportive du centre omnisport",
+      "url": "https://partners.doctolib.fr/centre-de-sante/macon/centre-de-vaccination-de-macon?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "71",
-      "nom": "Centre vaccination MACON - Halle sportive du centre omnisport",
-      "url": "https://partners.doctolib.fr/centre-de-sante/macon/centre-de-vaccination-de-macon?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de PARAY LE MONIAL - Salle du Centre associatif Parodien",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paray-le-monial/centre-de-vaccination-de-paray-le-monial?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     }

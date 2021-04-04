@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:58:12.204164+02:00",
+  "last_updated": "2021-04-04T16:59:25.991793+02:00",
   "centres_disponibles": [
     {
       "departement": "75",
       "nom": "SOS M\u00e9decin Paris 17e",
       "url": "https://partners.doctolib.fr/centre-de-sante/paris/sos-medecins-paris?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-05T09:30:00.000+02:00"
+      "prochain_rdv": "2021-04-05T10:00:00.000+02:00"
     },
     {
       "departement": "75",
@@ -69,6 +69,13 @@
     },
     {
       "departement": "75",
+      "nom": "HU de Tenon (Centre Covisan 20)",
+      "url": "https://partners.doctolib.fr/hopital-public/paris/cvc-cpts-ump?pid=practice-163361&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "75",
       "nom": "SAINT-LOUIS AP-HP",
       "url": "",
       "plateforme": "Autre",
@@ -85,13 +92,6 @@
       "departement": "75",
       "nom": "Le 104",
       "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-164926&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "75",
-      "nom": "HU de Tenon (Centre Covisan 20)",
-      "url": "https://partners.doctolib.fr/hopital-public/paris/cvc-cpts-ump?pid=practice-163361&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -279,16 +279,16 @@
     },
     {
       "departement": "75",
-      "nom": "Centre \u00e9ph\u00e9m\u00e8re - Caserne Massena",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-des-sapeurs-pompiers-de-paris?pid=practice-175265&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "EMV - L\u2019\u00e9quipe mobile du CASVP ",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "75",
-      "nom": "EMV - L\u2019\u00e9quipe mobile du CASVP ",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Centre \u00e9ph\u00e9m\u00e8re - Caserne Massena",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-des-sapeurs-pompiers-de-paris?pid=practice-175265&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -302,6 +302,13 @@
       "departement": "75",
       "nom": "Centre Eph\u00e9m\u00e8re - Caserne Champerret",
       "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-des-sapeurs-pompiers-de-paris?pid=practice-175266&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "75",
+      "nom": "Mairie du 10e",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-176642&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -335,13 +342,6 @@
     },
     {
       "departement": "75",
-      "nom": "Mairie du 10e",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-176642&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "75",
       "nom": "Square de la Mutualit\u00e9 - Gymnase des Patriarches",
       "url": "",
       "plateforme": "Autre",
@@ -363,8 +363,15 @@
     },
     {
       "departement": "75",
-      "nom": "Salle Olympe de Gouges",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-164922&enable_cookies_consent=1",
+      "nom": "Mairie du 15e",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-paris-15e?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "75",
+      "nom": "Mairie du 9e",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-mairie-du-9eme-arrondissement?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -377,8 +384,8 @@
     },
     {
       "departement": "75",
-      "nom": "Mairie du 9e",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-mairie-du-9eme-arrondissement?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Salle Olympe de Gouges",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-164922&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -400,13 +407,6 @@
       "departement": "75",
       "nom": "Mairie du XIVe",
       "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-paris-14e?pid=practice-164733?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "75",
-      "nom": "Mairie du 15e",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-paris-15e?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -440,15 +440,15 @@
     },
     {
       "departement": "75",
-      "nom": "Mairie du 6e",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/paris/centre-de-vaccination-covid-19-mairie-du-6eme-arrondissement-de-paris?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de sant\u00e9 Bauchat-Nation",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-centre-de-sante-bauchat-nation?pid=practice-165403?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "75",
-      "nom": "Centre de sant\u00e9 Bauchat-Nation",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-centre-de-sante-bauchat-nation?pid=practice-165403?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Mairie du 6e",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/paris/centre-de-vaccination-covid-19-mairie-du-6eme-arrondissement-de-paris?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     }

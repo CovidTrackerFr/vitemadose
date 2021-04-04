@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:58:12.203727+02:00",
+  "last_updated": "2021-04-04T16:59:25.991339+02:00",
   "centres_disponibles": [
     {
       "departement": "30",
@@ -15,13 +15,6 @@
       "url": "https://partners.doctolib.fr/centre-de-sante/ales/centre-de-vaccination-covid-19-ales?pid=practice-165321&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-27"
-    },
-    {
-      "departement": "30",
-      "nom": "CHU N\u00eemes",
-      "url": "https://partners.doctolib.fr/hopital-public/nimes/chu-nimes-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-18"
     },
     {
       "departement": "30",
@@ -83,15 +76,15 @@
     },
     {
       "departement": "30",
-      "nom": "CH Mas Careiron",
-      "url": "https://partners.doctolib.fr/hopital-public/uzes/centre-de-vaccination-covid-ch-le-mas-careiron?pid=practice-164184&enable_cookies_consent=1",
+      "nom": "Centre de vaccination Vauvert - Petite Camargue",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/vauvert/centre-de-vaccination-de-vauvert-petite-camargue?pid=practice-166678&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "30",
-      "nom": "Centre de vaccination Vauvert - Petite Camargue",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/vauvert/centre-de-vaccination-de-vauvert-petite-camargue?pid=practice-166678&enable_cookies_consent=1",
+      "nom": "CH Mas Careiron",
+      "url": "https://partners.doctolib.fr/hopital-public/uzes/centre-de-vaccination-covid-ch-le-mas-careiron?pid=practice-164184&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -107,6 +100,13 @@
       "nom": "CH Al\u00e8s",
       "url": "https://partners.doctolib.fr/hopital-public/al\u00e8s/centre-de-vaccination-du-centre-hospitalier-d-ales?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "30",
+      "nom": "CHU N\u00eemes",
+      "url": "https://partners.doctolib.fr/hopital-public/nimes/chu-nimes-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": null,
       "prochain_rdv": null
     },
     {

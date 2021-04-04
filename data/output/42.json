@@ -1,34 +1,20 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:58:12.203847+02:00",
+  "last_updated": "2021-04-04T16:59:25.991468+02:00",
   "centres_disponibles": [
     {
       "departement": "42",
       "nom": "Centre de vaccination - Centre de soins non programm\u00e9s - Ville d'Andr\u00e9zieux-Bouth\u00e9on",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/andrezieux-boutheon/centre-de-vaccination-covid-19-andrezieux-boutheon?pid=practice-165752&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-26"
+      "prochain_rdv": "2021-05-11"
     },
     {
       "departement": "42",
       "nom": "Ville de Montbrison - salle de l'Orangerie - Jardin d'Allard",
       "url": "https://partners.doctolib.fr/centre-de-sante/montbrison/centre-de-vaccination-covid-ville-de-montbrison?pid=practice-166002&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-05-03"
-    },
-    {
-      "departement": "42",
-      "nom": "Centre hospitalier de Feurs - Maison des Sapins",
-      "url": "https://partners.doctolib.fr/centre-de-sante/feurs/centre-de-vaccination-covid-ch-du-forez-site-de-feurs?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-08T15:45:00.000+02:00"
-    },
-    {
-      "departement": "42",
-      "nom": "Centre de vaccination de l'H\u00f4pital priv\u00e9 de la Loire ",
-      "url": "https://partners.doctolib.fr/clinique-privee/saint-etienne/centre-de-vaccination-covid-hopital-prive-de-la-loire-saint-etienne?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-05-03"
+      "prochain_rdv": "2021-05-17"
     }
   ],
   "centres_indisponibles": [
@@ -62,15 +48,15 @@
     },
     {
       "departement": "42",
-      "nom": "Centre de vaccination au  CHU DE SAINT-ETIENNE - H\u00f4pital Nord - Salle de Conf\u00e9rence - Hall AB",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-priest-en-jarez/centre-de-vaccination-covid-19-chu-saint-etienne?pid=practice-168936&enable_cookies_consent=1",
+      "nom": "CMSI clinique Mutualiste",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-etienne/centre-de-vaccination-de-cmsi-42?pid=practice-179779&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "42",
-      "nom": "CMSI clinique Mutualiste",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-etienne/centre-de-vaccination-de-cmsi-42?pid=practice-179779&enable_cookies_consent=1",
+      "nom": "Centre de vaccination au  CHU DE SAINT-ETIENNE - H\u00f4pital Nord - Salle de Conf\u00e9rence - Hall AB",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-priest-en-jarez/centre-de-vaccination-covid-19-chu-saint-etienne?pid=practice-168936&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -149,6 +135,20 @@
       "nom": "Pilat Rhodanien",
       "url": "https://partners.doctolib.fr/centre-de-sante/saint-pierre-de-boeuf/centre-de-vaccination-du-pilat-rhodanien?pid=practice-177622&enable_cookies_consent=1",
       "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "42",
+      "nom": "Centre de vaccination de l'H\u00f4pital priv\u00e9 de la Loire ",
+      "url": "https://partners.doctolib.fr/clinique-privee/saint-etienne/centre-de-vaccination-covid-hopital-prive-de-la-loire-saint-etienne?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "42",
+      "nom": "Centre hospitalier de Feurs - Maison des Sapins",
+      "url": "https://partners.doctolib.fr/centre-de-sante/feurs/centre-de-vaccination-covid-ch-du-forez-site-de-feurs?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": null,
       "prochain_rdv": null
     }
   ]

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:58:12.203740+02:00",
+  "last_updated": "2021-04-04T16:59:25.991357+02:00",
   "centres_disponibles": [
     {
       "departement": "31",
@@ -32,6 +32,20 @@
     },
     {
       "departement": "31",
+      "nom": "CDV31 Toulouse Limayrac",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/toulouse-31000/toulouse-limayrac/centre-de-vaccination-de-toulouse-limayrac",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-05T08:45:00.000000+0200"
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Toulouse Bourbaki",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/toulouse-31000/toulouse-bourbaki/centre-de-vaccination-de-toulouse-bourbaki",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-27T14:40:00.000000+0200"
+    },
+    {
+      "departement": "31",
       "nom": "CDV31 Saint Orens De Gameville",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/st-orens-de-gameville-31650/saint-orens-de-gameville/centre-de-vaccination-de-saint-orens-de-gameville",
       "plateforme": "Keldoc",
@@ -46,17 +60,17 @@
     },
     {
       "departement": "31",
-      "nom": "CDV31 Toulouse Bourbaki",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/toulouse-31000/toulouse-bourbaki/centre-de-vaccination-de-toulouse-bourbaki",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-27T14:40:00.000000+0200"
-    },
-    {
-      "departement": "31",
       "nom": "CDV31 Ramonville Saint Agne",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/ramonville-saint-agne-31520/centre-de-vaccination-ramonville-saint-agne/centre-de-vaccination-de-ramonville-saint-agne-00d84921944f81a0",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-15T17:30:00.000000+0200"
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Muret (Salle Agora)",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/muret-31600/muret-salle-horizon/centre-de-vaccination-de-muret-salle-horizon",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-07T11:05:00.000000+0200"
     },
     {
       "departement": "31",
@@ -67,10 +81,10 @@
     },
     {
       "departement": "31",
-      "nom": "CDV31 Muret (Salle Agora)",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/muret-31600/muret-salle-horizon/centre-de-vaccination-de-muret-salle-horizon",
+      "nom": "CDV31 - Grand Centre Hall 8 \u00eele Ramier",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/toulouse-31000/vaccinodrome-toulouse?motive=88503&category=3243&cabinet=18777&specialty=144",
       "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-07T11:05:00.000000+0200"
+      "prochain_rdv": "2021-04-07T12:20:00.000000+0200"
     },
     {
       "departement": "31",
@@ -88,13 +102,6 @@
     },
     {
       "departement": "31",
-      "nom": "CDV31 - Grand Centre Hall 8 \u00eele Ramier",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/toulouse-31000/vaccinodrome-toulouse?motive=88503&category=3243&cabinet=18777&specialty=144",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-07T12:20:00.000000+0200"
-    },
-    {
-      "departement": "31",
       "nom": "CDV31 Blagnac Androm\u00e8de",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/blagnac-31700/centre-de-vaccination-blagnac",
       "plateforme": "Keldoc",
@@ -104,15 +111,15 @@
   "centres_indisponibles": [
     {
       "departement": "31",
-      "nom": "CDV31 Boulogne sur Gesse",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/boulogne-sur-gesse-31350/boulogne-sur-gesse/centre-de-vaccination-de-boulogne-sur-gesse",
+      "nom": "CDV31 Balma",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/balma-31130/balma/centre-de-vaccination-de-balma",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
       "departement": "31",
-      "nom": "CDV31 Balma",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/balma-31130/balma/centre-de-vaccination-de-balma",
+      "nom": "CDV31 Boulogne sur Gesse",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/boulogne-sur-gesse-31350/boulogne-sur-gesse/centre-de-vaccination-de-boulogne-sur-gesse",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },
@@ -139,13 +146,6 @@
     },
     {
       "departement": "31",
-      "nom": "CDV31 Montr\u00e9jeau",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/montrejeau-31210/montrejeau/centre-de-vaccination-de-montrejeau",
-      "plateforme": "Keldoc",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "31",
       "nom": "CDV31 Saint Gaudens",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-gaudens-31800/saint-gaudens/centre-de-vaccination-de-saint-gaudens",
       "plateforme": "Keldoc",
@@ -160,9 +160,9 @@
     },
     {
       "departement": "31",
-      "nom": "CDV31 Toulouse Pierre Baudis",
-      "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/toulouse-31000/centre-de-vaccination-departemental-toulouse-pierre-baudis",
-      "plateforme": null,
+      "nom": "CDV31 Montr\u00e9jeau",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/montrejeau-31210/montrejeau/centre-de-vaccination-de-montrejeau",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
@@ -174,15 +174,15 @@
     },
     {
       "departement": "31",
-      "nom": "CDV31 Bagn\u00e8res de Luchon",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/bagneres-de-luchon-31110/crf-hopitaux-luchon/centre-de-vaccination-du-crf-hopitaux-luchon",
-      "plateforme": "Keldoc",
+      "nom": "CDV31 Toulouse Pierre Baudis",
+      "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/toulouse-31000/centre-de-vaccination-departemental-toulouse-pierre-baudis",
+      "plateforme": null,
       "prochain_rdv": null
     },
     {
       "departement": "31",
-      "nom": "CDV31 Labarthe sur L\u00e8ze",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/labarthe-sur-leze-31860/labarthe-sur-leze/centre-de-vaccination-de-labarthe-sur-leze",
+      "nom": "CDV31 Bagn\u00e8res de Luchon",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/bagneres-de-luchon-31110/crf-hopitaux-luchon/centre-de-vaccination-du-crf-hopitaux-luchon",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },
@@ -195,16 +195,16 @@
     },
     {
       "departement": "31",
-      "nom": "CDV31 Colomiers",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/colomiers-31770/colomiers/centre-de-vaccination-de-colomiers",
+      "nom": "CDV31 Labarthe sur L\u00e8ze",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/labarthe-sur-leze-31860/labarthe-sur-leze/centre-de-vaccination-de-labarthe-sur-leze",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
       "departement": "31",
-      "nom": "CDV31 Toulouse Limayrac",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/toulouse-31000/toulouse-limayrac/centre-de-vaccination-de-toulouse-limayrac",
-      "plateforme": null,
+      "nom": "CDV31 Colomiers",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/colomiers-31770/colomiers/centre-de-vaccination-de-colomiers",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
@@ -223,13 +223,6 @@
     },
     {
       "departement": "31",
-      "nom": "CDV31 Caz\u00e8res",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/cazeres-31220/cazeres/centre-de-vaccination-de-cazeres",
-      "plateforme": "Keldoc",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "31",
       "nom": "CDV31 Rieumes",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/rieumes-31370/rieumes/centre-de-vaccination-de-rieumes",
       "plateforme": "Keldoc",
@@ -237,15 +230,8 @@
     },
     {
       "departement": "31",
-      "nom": "CDV31 - CHU Toulouse Larrey",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/toulouse-31059/centre-hospitalier-universitaire-toulouse-larrey/centre-de-vaccination-du-centre-hospitalier-universitaire-toulouse-larrey",
-      "plateforme": "Keldoc",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "31",
-      "nom": "CDV31 Revel",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/revel-31250/revel/centre-de-vaccination-de-revel",
+      "nom": "CDV31 Caz\u00e8res",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/cazeres-31220/cazeres/centre-de-vaccination-de-cazeres",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },
@@ -268,6 +254,20 @@
       "nom": "CD - US du Centre de D\u00e9tention de Muret / CHU Toulouse / Centre de D\u00e9tention de Muret",
       "url": "",
       "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Revel",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/revel-31250/revel/centre-de-vaccination-de-revel",
+      "plateforme": "Keldoc",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 - CHU Toulouse Larrey",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/toulouse-31059/centre-hospitalier-universitaire-toulouse-larrey/centre-de-vaccination-du-centre-hospitalier-universitaire-toulouse-larrey",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {

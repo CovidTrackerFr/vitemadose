@@ -1,14 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:58:12.204390+02:00",
+  "last_updated": "2021-04-04T16:59:25.992017+02:00",
   "centres_disponibles": [
-    {
-      "departement": "974",
-      "nom": "Centre de vaccination COVID 19-Sud : Site de St Pierre",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/saint-pierre-97448/centre-hospitalier-universitaire-la-reunion-sud/centre-de-vaccination-du-centre-hospitalier-universitaire-la-reunion-sud",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-24T16:40:00.000000+0200"
-    },
     {
       "departement": "974",
       "nom": "Centre de vaccination COVID 19-Nord : Site Felix Guyon",
@@ -18,17 +11,17 @@
     },
     {
       "departement": "974",
+      "nom": "Centre de vaccination COVID 19-Sud : Site de St Pierre",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/saint-pierre-97448/centre-hospitalier-universitaire-la-reunion-sud/centre-de-vaccination-du-centre-hospitalier-universitaire-la-reunion-sud",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-24T16:40:00.000000+0200"
+    },
+    {
+      "departement": "974",
       "nom": "Centre de vaccination COVID 19 du CHOR",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/saint-paul-97460/centre-hospitalier-ouest-reunion/centre-de-vaccination-du-centre-hospitalier-ouest-reunion",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-13T18:16:00.000000+0200"
-    },
-    {
-      "departement": "974",
-      "nom": "Centre de vaccination COVID-19 de Saint-Denis - Salle Reydellet",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-denis-97400/saint-denis/centre-de-vaccination-de-saint-denis",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-15T14:45:00.000000+0200"
     },
     {
       "departement": "974",
@@ -43,6 +36,13 @@
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-paul-97460/saint-paul/centre-de-vaccination-de-saint-paul",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-17T16:15:00.000000+0200"
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID-19 de Saint-Denis - Salle Reydellet",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-denis-97400/saint-denis/centre-de-vaccination-de-saint-denis",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-15T14:45:00.000000+0200"
     },
     {
       "departement": "974",
@@ -83,6 +83,13 @@
     },
     {
       "departement": "974",
+      "nom": "Centre de vaccination COVID 19 : Site de Grand Ilet",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-benoit-97437/centre-de-vaccination-ephemere-station-de-trail-grand-ilet",
+      "plateforme": "Keldoc",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "974",
       "nom": "CP - US Saint-Denis / Maison d'Arr\u00eat de Saint-Pierre-de-la-R\u00e9union",
       "url": "",
       "plateforme": "Autre",
@@ -106,13 +113,6 @@
       "departement": "974",
       "nom": "Centre de vaccination COVID 19 : Site de Cilaos",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/le-tampon-97418/hopital-de-cilaos-chu?category=3107&cabinet=17204&specialty=496",
-      "plateforme": "Keldoc",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "974",
-      "nom": "Centre de vaccination COVID 19 : Site de Grand Ilet",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-benoit-97437/centre-de-vaccination-ephemere-station-de-trail-grand-ilet",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },

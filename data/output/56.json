@@ -1,14 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:58:12.203983+02:00",
+  "last_updated": "2021-04-04T16:59:25.991605+02:00",
   "centres_disponibles": [
-    {
-      "departement": "56",
-      "nom": "LE FAOUET - Maison de sant\u00e9",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?cabinet=16913&specialty=144",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-05-06T16:30:00.000000+0200"
-    },
     {
       "departement": "56",
       "nom": "NOYAL-PONTIVY - CH Centre Bretagne site K\u00e9rio",
@@ -18,10 +11,17 @@
     },
     {
       "departement": "56",
+      "nom": "LE FAOUET - Maison de sant\u00e9",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?cabinet=16913&specialty=144",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-05-06T16:30:00.000000+0200"
+    },
+    {
+      "departement": "56",
       "nom": "LORIENT - Cit\u00e9 de la Voile",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?specialty=144 ",
       "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-20T10:45:00.000000+0200"
+      "prochain_rdv": "2021-04-20T10:55:00.000000+0200"
     }
   ],
   "centres_indisponibles": [
@@ -76,13 +76,6 @@
     },
     {
       "departement": "56",
-      "nom": "GHBS - B\u00e2timent Onc'Oriant",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?cabinet=16571&specialty=144",
-      "plateforme": "Keldoc",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "56",
       "nom": "CH AURAY",
       "url": "https://partners.doctolib.fr/hopital-public/auray/chba-centre-de-vaccination-covid-d-auray?pid=practice-164632&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -93,6 +86,13 @@
       "nom": "GRANDCHAMP - Salle multifonctionnelle",
       "url": "https://partners.doctolib.fr/hopital-public/grand-champ/ghba-centre-de-vaccination-covid-grandchamp?pid=practice-165902&enable_cookies_consent=1",
       "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "56",
+      "nom": "GHBS - B\u00e2timent Onc'Oriant",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?cabinet=16571&specialty=144",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {

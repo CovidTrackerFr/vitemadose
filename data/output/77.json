@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:58:12.204182+02:00",
+  "last_updated": "2021-04-04T16:59:25.991821+02:00",
   "centres_disponibles": [],
   "centres_indisponibles": [
     {
@@ -40,13 +40,6 @@
     },
     {
       "departement": "77",
-      "nom": "CHSSM-Site CH Montereau Fault Yonne",
-      "url": "",
-      "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "77",
       "nom": "Centre de vaccination GHSIF MELUN - Site de Brie Comte Robert",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/brie-comte-robert/centre-de-vaccination-de-la-brie?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -54,8 +47,22 @@
     },
     {
       "departement": "77",
+      "nom": "CHSSM-Site CH Montereau Fault Yonne",
+      "url": "",
+      "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "77",
       "nom": "Lagny Centre de vaccination du Totem ",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/lagny-sur-marne-77400/cpts-liens-sante-77?motive=81620&category=-1&cabinet=16552&specialty=47",
+      "plateforme": "Keldoc",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "77",
+      "nom": "Centre de vaccination du GHSIF Melun",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/melun-cedex-77011/groupe-hospitalier-sud-ile-de-france/centre-covid?specialty=496",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },
@@ -85,13 +92,6 @@
       "nom": "EMV Conseil D\u00e9partemental 77",
       "url": "",
       "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "77",
-      "nom": "Centre de vaccination du GHSIF Melun",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/melun-cedex-77011/groupe-hospitalier-sud-ile-de-france/centre-covid?specialty=496",
-      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
@@ -152,13 +152,6 @@
     },
     {
       "departement": "77",
-      "nom": "Centres de vaccination GHIF Melun- site de Savigny le temple",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/savigny-le-temple-77176/centre-de-vaccination-covid-ghsif-site-de-savigny-le-temple",
-      "plateforme": null,
-      "prochain_rdv": null
-    },
-    {
-      "departement": "77",
       "nom": "centre de vaccination GHSIF MELUN - site de Combs la Ville",
       "url": "",
       "plateforme": "Autre",
@@ -176,6 +169,13 @@
       "nom": " Ville de Pontault Combault",
       "url": "https://partners.doctolib.fr/centre-de-sante/pontault-combault/centre-de-vaccination-mairie-de-pontault-combault?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "77",
+      "nom": "Centres de vaccination GHIF Melun- site de Savigny le temple",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/savigny-le-temple-77176/centre-de-vaccination-covid-ghsif-site-de-savigny-le-temple",
+      "plateforme": null,
       "prochain_rdv": null
     },
     {

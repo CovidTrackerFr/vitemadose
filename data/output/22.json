@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-04T16:58:12.203607+02:00",
+  "last_updated": "2021-04-04T16:59:25.991205+02:00",
   "centres_disponibles": [
     {
       "departement": "22",
@@ -15,28 +15,21 @@
       "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/loudeac-22600/centre-de-vaccination-loudeac-foyer-municipal",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-16T13:30:00.000000+0200"
-    },
-    {
-      "departement": "22",
-      "nom": "LANNION - Salle des ursulines",
-      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/lannion-22300/centre-de-vaccination-de-lannion/centre-de-vaccination-de-lannion-salle-des-ursulines",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-13T11:45:00.000000+0200"
     }
   ],
   "centres_indisponibles": [
     {
       "departement": "22",
-      "nom": "CH LANNION (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
-      "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/lannion-22300/equipe-d-infectiologie?agenda=51159&motive=81356&category=-1&cabinet=16554",
-      "plateforme": null,
+      "nom": "DINAN - Centre des congr\u00e8s",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-malo-et-dinan/gh-rance-emeraude-vaccination-covid?pid=practice-164881&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "22",
-      "nom": "DINAN - Centre des congr\u00e8s",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-malo-et-dinan/gh-rance-emeraude-vaccination-covid?pid=practice-164881&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "CH LANNION (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
+      "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/lannion-22300/equipe-d-infectiologie?agenda=51159&motive=81356&category=-1&cabinet=16554",
+      "plateforme": null,
       "prochain_rdv": null
     },
     {
@@ -104,15 +97,15 @@
     },
     {
       "departement": "22",
-      "nom": "PLEUMEUR BODOU - PHOENIX",
-      "url": "https://vaccination-covid.keldoc.com/maison-de-sante/pleumeur-bodou-22560/centre-de-vaccination-ephemere-sdis-pleumeur-bodou/centre-de-vaccination-ephemere-sdis-lannion?category=-1&cabinet=17301&specialty=496",
+      "nom": "GUINGAMP - Centre social",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/guingamp-22200/guingamp/centre-de-vaccination-guingamp-centre-social-guingamp",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
       "departement": "22",
-      "nom": "GUINGAMP - Centre social",
-      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/guingamp-22200/guingamp/centre-de-vaccination-guingamp-centre-social-guingamp",
+      "nom": "PLEUMEUR BODOU - PHOENIX",
+      "url": "https://vaccination-covid.keldoc.com/maison-de-sante/pleumeur-bodou-22560/centre-de-vaccination-ephemere-sdis-pleumeur-bodou/centre-de-vaccination-ephemere-sdis-lannion?category=-1&cabinet=17301&specialty=496",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },
@@ -121,6 +114,13 @@
       "nom": "CH DINAN (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
       "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-malo-et-dinan/gh-rance-emeraude-vaccination-covid?pid=practice-163106&enable_cookies_consent=1",
       "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "22",
+      "nom": "LANNION - Salle des ursulines",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/lannion-22300/centre-de-vaccination-de-lannion/centre-de-vaccination-de-lannion-salle-des-ursulines",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     }
   ]
