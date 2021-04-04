@@ -15,7 +15,7 @@ def search():
     return(r.json())
   
 def getReasons(entityId):
-    base_url = 'https://api.ordoclic.fr/v1/solar/entities/{0}/reasons'.format(entityId)
+    base_url = f'https://api.ordoclic.fr/v1/solar/entities/{entityId}/reasons'
     r = session.get(base_url)
     r.raise_for_status()
     return(r.json())
@@ -33,8 +33,8 @@ def getSlots(entityId, medicalStaffId, reasonId, start_date, end_date):
     return(r.json())
 
 def getProfile(rdv_site_web):
-    base_url = 'https://api.ordoclic.fr/v1/public/entities/profile/{0}'
-    base_url = base_url.format(rdv_site_web.rsplit('/', 1)[-1])
+    profile_name = rdv_site_web.rsplit('/', 1)[-1]
+    base_url = f'https://api.ordoclic.fr/v1/public/entities/profile/{profile_name}'
     r = session.get(base_url)
     r.raise_for_status()
     return(r.json())
