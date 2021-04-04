@@ -1,11 +1,10 @@
+import logging
 import os
 import re
 from typing import Optional, Tuple
 
 import httpx
 import requests
-
-from scraper.prototype import logger
 
 DOCTOLIB_SLOT_LIMIT = 50
 
@@ -14,6 +13,7 @@ DOCTOLIB_HEADERS = {
 }
 
 DEFAULT_CLIENT: httpx.Client
+logger = logging.getLogger('scraper')
 
 if os.getenv('WITH_TOR', 'no') == 'yes':
     session = requests.Session()

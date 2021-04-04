@@ -1,16 +1,16 @@
 import json
+import logging
+
 import requests
 from datetime import datetime, timedelta
 from dateutil.parser import isoparse
 from bs4 import BeautifulSoup
 
-from scraper.prototype import logger
-
 DEBUG = True
 BASE_AVAILIBILITY_URL = "https://www.maiia.com/api/pat-public/availability-closests"
 
 session = requests.Session()
-
+logger = logging.getLogger('scraper')
 
 def fetch_slots(rdv_site_web, start_date):
     response = session.get(rdv_site_web)
