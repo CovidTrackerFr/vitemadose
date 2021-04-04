@@ -1,7 +1,6 @@
 import os
 import re
 from typing import Optional, Tuple
-from urllib.parse import urlsplit, parse_qs
 
 import httpx
 import requests
