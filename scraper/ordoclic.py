@@ -47,7 +47,8 @@ def parse_ordoclic_slots(availability_data):
     if 'nextAvailableSlotDate' in availability_data:
         nextAvailableSlotDate = availability_data.get('nextAvailableSlotDate', None)
         if nextAvailableSlotDate != None:
-            first_availability = datetime.strptime(nextAvailableSlotDate, '%Y-%m-%dT%H:%M:%S%z') + timedelta(minutes=120)
+            first_availability = datetime.strptime(nextAvailableSlotDate, '%Y-%m-%dT%H:%M:%S%z')
+            first_availability += first_availability.replace(tzinfo=timezone('CET')).utcoffset()
             return first_availability
 
     availabilities = availability_data.get('slots', None)
