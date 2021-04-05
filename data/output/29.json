@@ -1,15 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:09:55.751118+02:00",
-  "centres_disponibles": [
-    {
-      "departement": "29",
-      "nom": "BREST Arena",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/brest/centre-de-vaccination-covid-19-brest-arena?pid=practice-175124&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-06T16:18:00.000+02:00"
-    }
-  ],
+  "last_updated": "2021-04-05T11:13:42.589843+02:00",
+  "centres_disponibles": [],
   "centres_indisponibles": [
     {
       "departement": "29",
@@ -41,13 +33,6 @@
     },
     {
       "departement": "29",
-      "nom": "CHU Brest - Site Cavale Blanche",
-      "url": "https://partners.doctolib.fr/hopital-public/brest/chru-de-brest-vaccination-covid-19?pid=practice-163680&?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "29",
       "nom": "QUIMPERLE - Complexe sportif",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/quimperle/centre-de-vaccination-covid-19-de-quimperle?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -55,16 +40,16 @@
     },
     {
       "departement": "29",
-      "nom": "DOUARNENEZ - Centre Gradlon",
-      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/douarnenez-29100/gradlon/centre-de-vaccination-de-gradlon",
-      "plateforme": null,
+      "nom": "CHU Brest - Site Cavale Blanche",
+      "url": "https://partners.doctolib.fr/hopital-public/brest/chru-de-brest-vaccination-covid-19?pid=practice-163680&?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "29",
-      "nom": "MORLAIX - LANGOLVAS",
-      "url": "https://partners.doctolib.fr/maison-de-sante/morlaix/ch-morlaix-centre-de-vaccination-covid-19?pid=practice-163107&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "LANDERNEAU - Le Mille Club",
+      "url": "https://www.maiia.com/centre-de-vaccination/29800-landerneau/centre-de-vaccination---landerneau---lesneven",
+      "plateforme": "Maiia",
       "prochain_rdv": null
     },
     {
@@ -76,9 +61,23 @@
     },
     {
       "departement": "29",
-      "nom": "LANDERNEAU - Le Mille Club",
-      "url": "https://www.maiia.com/centre-de-vaccination/29800-landerneau/centre-de-vaccination---landerneau---lesneven",
-      "plateforme": "Maiia",
+      "nom": "MORLAIX - LANGOLVAS",
+      "url": "https://partners.doctolib.fr/maison-de-sante/morlaix/ch-morlaix-centre-de-vaccination-covid-19?pid=practice-163107&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "29",
+      "nom": "DOUARNENEZ - Centre Gradlon",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/douarnenez-29100/gradlon/centre-de-vaccination-de-gradlon",
+      "plateforme": "Keldoc",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "29",
+      "nom": "BREST Arena",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/brest/centre-de-vaccination-covid-19-brest-arena?pid=practice-175124&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {

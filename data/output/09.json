@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:09:55.750867+02:00",
+  "last_updated": "2021-04-05T11:13:42.589664+02:00",
   "centres_disponibles": [
     {
       "departement": "09",
@@ -15,13 +15,6 @@
       "url": "https://partners.doctolib.fr/centre-de-sante/laroque-d-olmes/centre-de-vaccination-covid-msp-laroque?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-13T08:00:00.000+02:00"
-    },
-    {
-      "departement": "09",
-      "nom": "cabinet m\u00e9dical des 5 hameaux (Moderna Pfizer)",
-      "url": "https://partners.doctolib.fr/cabinet-medical/pamiers/centre-de-vaccination-covid-19-cabinet-medical-de-pamiers?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-13T15:50:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -55,15 +48,15 @@
     },
     {
       "departement": "09",
-      "nom": "Cabinet m\u00e9dical de Saverdun (Pfizer)",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saverdun/centre-de-vaccination-covid-19-cabinet-medical-saverdun?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Cabinet m\u00e9dical \u00e0 Maz\u00e8res (Pfizer Moderna)",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/mazeres/centre-de-vaccination-covid-19-cabinet-medical-de-mazeres?pid=practice-174807&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "09",
-      "nom": "Cabinet m\u00e9dical \u00e0 Maz\u00e8res (Pfizer Moderna)",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/mazeres/centre-de-vaccination-covid-19-cabinet-medical-de-mazeres?pid=practice-174807&enable_cookies_consent=1",
+      "nom": "Cabinet m\u00e9dical de Saverdun (Pfizer)",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saverdun/centre-de-vaccination-covid-19-cabinet-medical-saverdun?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -78,6 +71,13 @@
       "departement": "09",
       "nom": "MSP DE MASSAT (Moderna)",
       "url": "https://partners.doctolib.fr/centre-de-sante/massat/centre-de-vaccination-covid-msp-massat?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "09",
+      "nom": "cabinet m\u00e9dical des 5 hameaux (Moderna Pfizer)",
+      "url": "https://partners.doctolib.fr/cabinet-medical/pamiers/centre-de-vaccination-covid-19-cabinet-medical-de-pamiers?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

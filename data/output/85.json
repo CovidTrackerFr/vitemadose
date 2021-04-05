@@ -1,27 +1,13 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:09:55.751679+02:00",
+  "last_updated": "2021-04-05T11:13:42.590377+02:00",
   "centres_disponibles": [
     {
       "departement": "85",
       "nom": "Centre de vaccination COVID - LA ROCHE SUR YON - Petite salle des f\u00eates du Bourg-sous-la Roche",
       "url": "https://partners.doctolib.fr/maison-de-sante/la-roche-sur-yon/centre-de-vaccination-de-la-la-roche-sur-yon?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-15T12:40:00.000+02:00"
-    },
-    {
-      "departement": "85",
-      "nom": "Centre de vaccination COVID - MONTAIGU - Salle Dolia",
-      "url": "https://partners.doctolib.fr/centre-de-sante/montaigu-vendee/centre-de-vaccination-terres-de-montaigu?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-19T17:55:00.000+02:00"
-    },
-    {
-      "departement": "85",
-      "nom": "Centre de vaccination COVID - LES SABLES D'OLONNE - Olonnespace",
-      "url": "https://partners.doctolib.fr/centre-de-sante/les-sables-d'olonne/centre-de-vaccination-covid-des-sables-d-olonne?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-05-04T16:00:00.000+02:00"
+      "prochain_rdv": "2021-04-29T14:25:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -62,6 +48,13 @@
     },
     {
       "departement": "85",
+      "nom": "Centre de vaccination COVID - LES SABLES D'OLONNE - Olonnespace",
+      "url": "https://partners.doctolib.fr/centre-de-sante/les-sables-d'olonne/centre-de-vaccination-covid-des-sables-d-olonne?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "85",
       "nom": "Centre de vaccination COVID - CHALLANS - Salles Louis-Claude Roux",
       "url": "https://partners.doctolib.fr/centre-de-sante/challans/cpts-lvo-centre-vaccination?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -85,6 +78,13 @@
       "departement": "85",
       "nom": "Centre de vaccination COVID - NOIRMOUTIER - Espace Hubert Poignant",
       "url": "https://partners.doctolib.fr/centre-depistage-covid/noirmoutier-en-l-ile/centre-de-vaccination-de-noirmoutier?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "85",
+      "nom": "Centre de vaccination COVID - MONTAIGU - Salle Dolia",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montaigu-vendee/centre-de-vaccination-terres-de-montaigu?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     }

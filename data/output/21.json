@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:09:55.750986+02:00",
+  "last_updated": "2021-04-05T11:13:42.589774+02:00",
   "centres_disponibles": [
     {
       "departement": "21",
@@ -8,13 +8,6 @@
       "url": "https://partners.doctolib.fr/maison-de-sante/dijon/cpts-de-dijon-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-06T12:30:00.000+02:00"
-    },
-    {
-      "departement": "21",
-      "nom": "BRAZEY-EN-PLAINE Salle polyvalente Georges Balme",
-      "url": "https://partners.doctolib.fr/centre-de-sante/brazey-en-plaine/cpts-pays-d-or-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-08T15:45:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -41,16 +34,16 @@
     },
     {
       "departement": "21",
-      "nom": "GENLIS - Mairie",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "EPOISSES Salle communale",
+      "url": "https://partners.doctolib.fr/maison-de-sante/seurre/centre-de-vaccination-pole-de-sante-rives-de-saone?pid=practice-177319&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "21",
-      "nom": "EPOISSES Salle communale",
-      "url": "https://partners.doctolib.fr/maison-de-sante/seurre/centre-de-vaccination-pole-de-sante-rives-de-saone?pid=practice-177319&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "GENLIS - Mairie",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
@@ -190,6 +183,13 @@
       "departement": "21",
       "nom": "CHU Dijon (B\u00e2timent Courtois)",
       "url": "https://partners.doctolib.fr/hopital-public/dijon/centre-de-vaccination-covid-chu-dijon?pid=practice-169594&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "21",
+      "nom": "BRAZEY-EN-PLAINE Salle polyvalente Georges Balme",
+      "url": "https://partners.doctolib.fr/centre-de-sante/brazey-en-plaine/cpts-pays-d-or-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

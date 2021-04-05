@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:09:55.751739+02:00",
+  "last_updated": "2021-04-05T11:13:42.590447+02:00",
   "centres_disponibles": [],
   "centres_indisponibles": [
     {
@@ -26,13 +26,6 @@
     },
     {
       "departement": "91",
-      "nom": "Site de \"La Croix Louis\" ",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/bretigny-sur-orge-91220/centre-de-vaccination-covid19-bretigny?agenda=48971&motive=81790&category=-1&cabinet=16650&specialty=496",
-      "plateforme": "Keldoc",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "91",
       "nom": "EMV Etampes",
       "url": "",
       "plateforme": "Autre",
@@ -50,6 +43,13 @@
       "nom": "Salle Polyvalente - Michel Ange",
       "url": "https://partners.doctolib.fr/centre-de-sante/mennecy/centre-de-vaccination-covid-19-mennecy?pid=practice-172591&enable_cookies_consent=1",
       "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "91",
+      "nom": "Site de \"La Croix Louis\" ",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/bretigny-sur-orge-91220/centre-de-vaccination-covid19-bretigny?agenda=48971&motive=81790&category=-1&cabinet=16650&specialty=496",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
@@ -180,8 +180,8 @@
     },
     {
       "departement": "91",
-      "nom": "Salle polyvante Anne Franck ",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/longjumeau/centre-de-vaccination-covid-19-ville-de-longjumeau?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Gymnase Champagne",
+      "url": "https://partners.doctolib.fr/etablissement-de-prevention/savigny-sur-orge/vaccination-covid-19-savigny-sur-orge?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -194,8 +194,8 @@
     },
     {
       "departement": "91",
-      "nom": "Gymnase Champagne",
-      "url": "https://partners.doctolib.fr/etablissement-de-prevention/savigny-sur-orge/vaccination-covid-19-savigny-sur-orge?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Salle polyvante Anne Franck ",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/longjumeau/centre-de-vaccination-covid-19-ville-de-longjumeau?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -203,6 +203,13 @@
       "departement": "91",
       "nom": "Salle L'astral ",
       "url": "https://partners.doctolib.fr/centre-de-sante/montgeron/centre-de-vaccination-covid-conseil-departemental-de-l-essonne-cd91?pid=practice-165168?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "91",
+      "nom": "Espace Ren\u00e9 L'HELGUEN ",
+      "url": "https://partners.doctolib.fr/centre-de-sante/athis-mons/centre-de-vaccination-covid-mairie-athis-mons?pid=practice-164918?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -217,13 +224,6 @@
       "departement": "91",
       "nom": "Annexe Gymnase St Exup\u00e9ry ",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/igny/centre-de-vaccination-covid-commune-d-igny?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "91",
-      "nom": "Espace Ren\u00e9 L'HELGUEN ",
-      "url": "https://partners.doctolib.fr/centre-de-sante/athis-mons/centre-de-vaccination-covid-mairie-athis-mons?pid=practice-164918?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -250,15 +250,15 @@
     },
     {
       "departement": "91",
-      "nom": "Complexe sportif - Jean Segalard",
-      "url": "https://partners.doctolib.fr/centre-de-sante/cerny/centre-de-vaccination-covid-19-cerny?pid=practice-165742&enable_cookies_consent=1",
+      "nom": "Maison de sant\u00e9",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dourdan/centre-de-vaccination-covid-19-maison-de-sante-dourdan?pid=practice-165040?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "91",
-      "nom": "Maison de sant\u00e9",
-      "url": "https://partners.doctolib.fr/centre-de-sante/dourdan/centre-de-vaccination-covid-19-maison-de-sante-dourdan?pid=practice-165040?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Complexe sportif - Jean Segalard",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cerny/centre-de-vaccination-covid-19-cerny?pid=practice-165742&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

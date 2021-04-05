@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:09:55.751763+02:00",
+  "last_updated": "2021-04-05T11:13:42.590463+02:00",
   "centres_disponibles": [
     {
       "departement": "93",
       "nom": "Tr\u00e8s grand centre du Stade de France",
       "url": "https://www.doctolib.fr/centre-de-sante/saint-denis/centre-de-vaccination-covid-19-stade-de-France",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-08T16:50:00.000+02:00"
+      "prochain_rdv": "2021-04-09T14:50:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -146,16 +146,16 @@
     },
     {
       "departement": "93",
-      "nom": "Centre de vaccination - B\u00e2timent Charlotte Petit",
-      "url": "https://partners.doctolib.fr/centre-de-sante/clichy-sous-bois/centre-municipal-de-vaccination-covid-charlotte-petit?pid=practice-165986&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "EMV Avicennes",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "93",
-      "nom": "EMV Avicennes",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Centre de vaccination - B\u00e2timent Charlotte Petit",
+      "url": "https://partners.doctolib.fr/centre-de-sante/clichy-sous-bois/centre-municipal-de-vaccination-covid-charlotte-petit?pid=practice-165986&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -174,13 +174,6 @@
     },
     {
       "departement": "93",
-      "nom": "Vaccinodrome St Denis",
-      "url": "",
-      "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "93",
       "nom": "Centre de vaccination - H\u00f4tel de ville",
       "url": "https://partners.doctolib.fr/centre-de-sante/montreuil/centre-de-vaccination-de-la-ville-de-montreuil?pid=practice-175106&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -188,16 +181,23 @@
     },
     {
       "departement": "93",
-      "nom": "EMV Ballanger",
+      "nom": "Centre de vaccination - Gymnase Guimier",
+      "url": "https://partners.doctolib.fr/centre-de-sante/tremblay-en-france/gymnase-jean-guimier-centre-de-vaccination-covid-19?pid=practice-175982&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "93",
+      "nom": "Vaccinodrome St Denis",
       "url": "",
       "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "93",
-      "nom": "Centre de vaccination - Gymnase Guimier",
-      "url": "https://partners.doctolib.fr/centre-de-sante/tremblay-en-france/gymnase-jean-guimier-centre-de-vaccination-covid-19?pid=practice-175982&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "EMV Ballanger",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
@@ -244,15 +244,15 @@
     },
     {
       "departement": "93",
-      "nom": "EMV Ren\u00e9 Muret",
-      "url": "https://partners.doctolib.fr/hopital-public/sevran/policlinique-medicale-hopital-rene-muret-ap-hp?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "CHI Robert Ballanger",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/ile-de-france/ars-ile-de-france-vaccination-des-professionnels-de-sante?pid=practice-162590&?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "93",
-      "nom": "CHI Robert Ballanger",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/ile-de-france/ars-ile-de-france-vaccination-des-professionnels-de-sante?pid=practice-162590&?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "EMV Ren\u00e9 Muret",
+      "url": "https://partners.doctolib.fr/hopital-public/sevran/policlinique-medicale-hopital-rene-muret-ap-hp?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

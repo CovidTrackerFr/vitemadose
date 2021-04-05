@@ -1,20 +1,27 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:09:55.751177+02:00",
+  "last_updated": "2021-04-05T11:13:42.589896+02:00",
   "centres_disponibles": [
     {
       "departement": "33",
       "nom": "Centre de Vaccination - Salle Lucie Aubrac",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/floirac-33270/salle-lucie-aubrac",
       "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-06T16:40:00.000000+0200"
+      "prochain_rdv": "2021-04-06T16:45:00.000000+0200"
+    },
+    {
+      "departement": "33",
+      "nom": "Mairie d'Arcachon",
+      "url": "https://partners.doctolib.fr/centre-de-sante/arcachon/centre-municipal-de-vaccination-anti-covid-19-de-la-ville-d-arcachon?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-09T14:05:00.000+02:00"
     },
     {
       "departement": "33",
       "nom": "CH ARCACHON",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/la-teste-de-buch-33529/centre-hospitalier-arcachon/centre-de-vaccination-du-centre-hospitalier-arcachon",
       "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-10T11:10:00.000000+0200"
+      "prochain_rdv": "2021-04-12T14:30:00.000000+0200"
     },
     {
       "departement": "33",
@@ -25,17 +32,17 @@
     },
     {
       "departement": "33",
-      "nom": "Mairie d'Arcachon",
-      "url": "https://partners.doctolib.fr/centre-de-sante/arcachon/centre-municipal-de-vaccination-anti-covid-19-de-la-ville-d-arcachon?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-15T10:10:00.000+02:00"
+      "nom": "Centre de Vaccination du CH SUD GIRONDE - Site de LA REOLE",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/langon-33210/centre-hospitalier-sud-gironde?category=-1&cabinet=16855&specialty=496",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-14T15:15:00.000000+0200"
     },
     {
       "departement": "33",
       "nom": "Centre de vaccination - Domaine des Lug\u00e9es",
       "url": "https://partners.doctolib.fr/centre-de-sante/ares/centre-de-vaccination-covid-19-nord-bassin-ville-d-ares?pid=practice-171900&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-05-12T16:20:00.000+02:00"
+      "prochain_rdv": "2021-05-12T16:15:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -153,13 +160,6 @@
     },
     {
       "departement": "33",
-      "nom": "Centre de Vaccination du CH SUD GIRONDE - Site de LA REOLE",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/langon-33210/centre-hospitalier-sud-gironde?category=-1&cabinet=16855&specialty=496",
-      "plateforme": "Keldoc",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "33",
       "nom": "Centre de vaccination - CA du Libournais",
       "url": "https://partners.doctolib.fr/centre-de-sante/libourne/centre-de-vaccination-du-libournais-libourne?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -181,6 +181,13 @@
     },
     {
       "departement": "33",
+      "nom": "HOPITAL SUBURBAIN DU BOUSCAT",
+      "url": "https://partners.doctolib.fr/centre-de-sante/le-bouscat/centre-de-vaccination-hopital-du-bouscat?pid=practice-164677?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "33",
       "nom": "CENTRE DE SANTE MUTUALISTE GALLIENI",
       "url": "https://partners.doctolib.fr/centre-de-sante/bordeaux/centre-de-vaccination-covid-19-gallieni?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -190,13 +197,6 @@
       "departement": "33",
       "nom": "NOUVELLE CLINIQUE DU TONDU",
       "url": "https://partners.doctolib.fr/centre-de-sante/floirac/centre-de-vaccination-covid-19-nouvelle-clinique-bordeaux-tondu?pid=practice-164998?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "33",
-      "nom": "HOPITAL SUBURBAIN DU BOUSCAT",
-      "url": "https://partners.doctolib.fr/centre-de-sante/le-bouscat/centre-de-vaccination-hopital-du-bouscat?pid=practice-164677?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:09:55.751259+02:00",
+  "last_updated": "2021-04-05T11:13:42.589973+02:00",
   "centres_disponibles": [
     {
       "departement": "42",
@@ -21,7 +21,7 @@
       "nom": "Centre Hyg\u00e9e au CHU de Saint-Etienne",
       "url": "https://partners.doctolib.fr/hopital-public/saint-priest-en-jarez/chste?pid=practice-169578&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-09T14:40:00.000+02:00"
+      "prochain_rdv": "2021-04-09T14:50:00.000+02:00"
     },
     {
       "departement": "42",
@@ -32,13 +32,6 @@
     },
     {
       "departement": "42",
-      "nom": "Centre de vaccination au  CHU DE SAINT-ETIENNE - H\u00f4pital Nord - Salle de Conf\u00e9rence - Hall AB",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-priest-en-jarez/centre-de-vaccination-covid-19-chu-saint-etienne?pid=practice-168936&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-22T11:50:00.000+02:00"
-    },
-    {
-      "departement": "42",
       "nom": "Ville de Montbrison - salle de l'Orangerie - Jardin d'Allard",
       "url": "https://partners.doctolib.fr/centre-de-sante/montbrison/centre-de-vaccination-covid-ville-de-montbrison?pid=practice-166002&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -46,10 +39,17 @@
     },
     {
       "departement": "42",
+      "nom": "Centre de vaccination au  CHU DE SAINT-ETIENNE - H\u00f4pital Nord - Salle de Conf\u00e9rence - Hall AB",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-priest-en-jarez/centre-de-vaccination-covid-19-chu-saint-etienne?pid=practice-168936&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-27T13:40:00.000+02:00"
+    },
+    {
+      "departement": "42",
       "nom": "Centre de vaccination - Centre de soins non programm\u00e9s - Ville d'Andr\u00e9zieux-Bouth\u00e9on",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/andrezieux-boutheon/centre-de-vaccination-covid-19-andrezieux-boutheon?pid=practice-165752&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-05-11T12:05:00.000+02:00"
+      "prochain_rdv": "2021-05-12T18:50:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -104,16 +104,16 @@
     },
     {
       "departement": "42",
-      "nom": "antenne MSP Ambierle ",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ambierle/centre-de-vaccination-covid-19-msp-d-ambierle?pid=practice-175394&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "MA - USN 1Maison d'Arr\u00eat de la Talaudi\u00e8re / Maison d'Arr\u00eat de Saint-Etienne-la-Talaudi\u00e8re",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "42",
-      "nom": "MA - USN 1Maison d'Arr\u00eat de la Talaudi\u00e8re / Maison d'Arr\u00eat de Saint-Etienne-la-Talaudi\u00e8re",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "antenne MSP Ambierle ",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ambierle/centre-de-vaccination-covid-19-msp-d-ambierle?pid=practice-175394&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {

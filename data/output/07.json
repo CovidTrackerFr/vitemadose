@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:09:55.750847+02:00",
+  "last_updated": "2021-04-05T11:13:42.589645+02:00",
   "centres_disponibles": [
     {
       "departement": "07",
@@ -18,6 +18,13 @@
     },
     {
       "departement": "07",
+      "nom": "Centre de vaccination du CH d'Aubenas - Maison m\u00e9dicale de garde",
+      "url": "https://partners.doctolib.fr/hopital-public/aubenas/centre-de-vaccination-covid-ch-d-ardeche-meridionale?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-21T12:35:00.000+02:00"
+    },
+    {
+      "departement": "07",
       "nom": "Centre de Vaccination de la CPTS sud Ard\u00e8che C\u00e9vennes ",
       "url": "https://partners.doctolib.fr/hopital-public/les-vans/relai-de-proximite-du-centre-hospitalier-des-cevennes-ardechoises?pid=practice-167899&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -25,17 +32,10 @@
     },
     {
       "departement": "07",
-      "nom": "Centre de vaccination du CH d'Aubenas - Maison m\u00e9dicale de garde",
-      "url": "https://partners.doctolib.fr/hopital-public/aubenas/centre-de-vaccination-covid-ch-d-ardeche-meridionale?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-24T15:20:00.000+02:00"
-    },
-    {
-      "departement": "07",
       "nom": "Clinique Pasteur de Guilherand-Granges",
       "url": "https://partners.doctolib.fr/clinique-privee/guilherand-granges/centre-de-vaccination-covid19-clinique-pasteur?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-05-03T16:15:00.000+02:00"
+      "prochain_rdv": "2021-05-03T17:15:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -83,16 +83,16 @@
     },
     {
       "departement": "07",
-      "nom": "Centre de Vaccination Territorial et hospitalier BSAV - Gymnase Pierre Pieri",
-      "url": "https://partners.doctolib.fr/centre-de-sante/bourg-saint-andeol/centre-de-vaccination-territorial-bourg-saint-andeol?pid=practice-166627&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "CENTRE HOSPITALIER VALS D'ARDECHE - B\u00e2timent Esperanto 1er \u00e9tage",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "07",
-      "nom": "CENTRE HOSPITALIER VALS D'ARDECHE - B\u00e2timent Esperanto 1er \u00e9tage",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Centre de Vaccination Territorial et hospitalier BSAV - Gymnase Pierre Pieri",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bourg-saint-andeol/centre-de-vaccination-territorial-bourg-saint-andeol?pid=practice-166627&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {

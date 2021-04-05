@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:09:55.751222+02:00",
+  "last_updated": "2021-04-05T11:13:42.589938+02:00",
   "centres_disponibles": [
     {
       "departement": "38",
@@ -14,14 +14,7 @@
       "nom": "Centre de vaccination - Maison des Associations  - C\u0152UR DE CHARTREUSE",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/st-laurent-du-pont-38380/centre-de-vaccination-coeur-de-chartreuse",
       "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-07T11:09:00.000000+0200"
-    },
-    {
-      "departement": "38",
-      "nom": "Centre de vaccination de St Etienne de St Geoirs - Grenoble Air Parc",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/saint-etienne-de-saint-geoirs/centre-vaccination-de-la-bievre?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-07T12:55:00.000+02:00"
+      "prochain_rdv": "2021-04-07T11:15:00.000000+0200"
     },
     {
       "departement": "38",
@@ -32,17 +25,17 @@
     },
     {
       "departement": "38",
-      "nom": "Communaut\u00e9 professionnelle territoriale de sant\u00e9 (CPTS) Sud est Grenoblois - Salle des f\u00eates",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/eybens-80000/cpts-sud-est-grenoblois/centre-de-vaccination-du-cpts-sud-est-grenoblois",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-13T10:35:00.000000+0200"
-    },
-    {
-      "departement": "38",
       "nom": "Centre de vaccination du Gr\u00e9sivaudan - Salle polyvalente",
       "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/le-versoud-38420/salle-polyvalente-le-versoud/centre-de-vaccination-de-la-salle-polyvalente-le-versoud",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-14T09:40:00.000000+0200"
+    },
+    {
+      "departement": "38",
+      "nom": "Centre de vaccination de St Etienne de St Geoirs - Grenoble Air Parc",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/saint-etienne-de-saint-geoirs/centre-vaccination-de-la-bievre?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-14T12:40:00.000+02:00"
     },
     {
       "departement": "38",
@@ -83,6 +76,13 @@
     },
     {
       "departement": "38",
+      "nom": "MA - US MA de Grenoble-Varces / Maison d'Arr\u00eat de Grenoble-Varces",
+      "url": "",
+      "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "38",
       "nom": "Centre de vaccination de Vienne - Man\u00e8ge",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/vienne-38200/cegidd/cegidd-du-chu-grenoble",
       "plateforme": "Keldoc",
@@ -90,9 +90,9 @@
     },
     {
       "departement": "38",
-      "nom": "MA - US MA de Grenoble-Varces / Maison d'Arr\u00eat de Grenoble-Varces",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Communaut\u00e9 professionnelle territoriale de sant\u00e9 (CPTS) Sud est Grenoblois - Salle des f\u00eates",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/eybens-80000/cpts-sud-est-grenoblois/centre-de-vaccination-du-cpts-sud-est-grenoblois",
+      "plateforme": null,
       "prochain_rdv": null
     },
     {
@@ -125,6 +125,13 @@
     },
     {
       "departement": "38",
+      "nom": "Centre de vaccinations Nationales et Internationales de la ville de Grenoble",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/grenoble-38000/centre-national-et-international-de-la-ville-de-grenoble/centre-de-vaccination-du-centre-national-et-international-de-la-ville-de-grenoble",
+      "plateforme": "Keldoc",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "38",
       "nom": "Centre de vaccination de Grenoble - Centre d\u00e9partemental de sant\u00e9",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/grenoble-38000/centre-departemental-de-sante-du-chu-grenoble/centre-departemental-de-sante-du-chu-grenoble",
       "plateforme": "Keldoc",
@@ -135,13 +142,6 @@
       "nom": "Centre de vaccination COVID - Centre hospitalier de Vienne - (Professionnels de sant\u00e9 uniquement)",
       "url": "https://partners.doctolib.fr/hopital-public/vienne/centre-de-vaccination-covid-19-ch-vienne?pid=practice-165717&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "38",
-      "nom": "Centre de vaccinations Nationales et Internationales de la ville de Grenoble",
-      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/grenoble-38000/centre-national-et-international-de-la-ville-de-grenoble/centre-de-vaccination-du-centre-national-et-international-de-la-ville-de-grenoble",
-      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {

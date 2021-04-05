@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:09:55.751803+02:00",
+  "last_updated": "2021-04-05T11:13:42.590507+02:00",
   "centres_disponibles": [
     {
       "departement": "972",
@@ -8,6 +8,13 @@
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/fort-de-france-97200/centre-de-vaccination-du-lamentin",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-05T16:40:00.000000+0200"
+    },
+    {
+      "departement": "972",
+      "nom": "Centre de vaccination de Fort-de-France",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/fort-de-france-97200/ville-de-fort-de-france/centre-de-vaccination-de-la-ville-de-fort-de-france",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-05-14T10:00:00.000000+0200"
     }
   ],
   "centres_indisponibles": [
@@ -30,13 +37,6 @@
       "nom": "CP - Centre P\u00e9nitentiaire de Ducos / Centre P\u00e9nitentiaire de Ducos",
       "url": "",
       "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "972",
-      "nom": "Centre de vaccination de Fort-de-France",
-      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/fort-de-france-97200/ville-de-fort-de-france/centre-de-vaccination-de-la-ville-de-fort-de-france",
-      "plateforme": null,
       "prochain_rdv": null
     },
     {

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:09:55.750935+02:00",
+  "last_updated": "2021-04-05T11:13:42.589728+02:00",
   "centres_disponibles": [
     {
       "departement": "16",
@@ -8,13 +8,6 @@
       "url": "https://partners.doctolib.fr/hopital-public/cognac/centre-de-vaccination-covid-19-chi-de-cognac?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-13T13:00:00.000+02:00"
-    },
-    {
-      "departement": "16",
-      "nom": "CH RUFFEC",
-      "url": "https://partners.doctolib.fr/hopital-public/ruffec/centre-de-vaccination-covid-19-ch-de-ruffec?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-15T13:05:00.000+02:00"
     },
     {
       "departement": "16",
@@ -36,6 +29,13 @@
       "url": "https://partners.doctolib.fr/centre-de-sante/terres-de-haute-charente/centre-de-vaccination-covid-19-terres-de-haute-charente?pid=practice-165251&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-23T17:50:00.000+02:00"
+    },
+    {
+      "departement": "16",
+      "nom": "CH RUFFEC",
+      "url": "https://partners.doctolib.fr/hopital-public/ruffec/centre-de-vaccination-covid-19-ch-de-ruffec?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-05-03T14:10:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -104,9 +104,9 @@
     },
     {
       "departement": "16",
-      "nom": "GRAND CENTRE ANGOULEME",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "CENTRE CLINICAL DE SOYAUX",
+      "url": "https://partners.doctolib.fr/clinique-privee/soyaux/vaccination-covid-centre-clinical-soyaux-elsan?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -118,9 +118,9 @@
     },
     {
       "departement": "16",
-      "nom": "CENTRE CLINICAL DE SOYAUX",
-      "url": "https://partners.doctolib.fr/clinique-privee/soyaux/vaccination-covid-centre-clinical-soyaux-elsan?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "GRAND CENTRE ANGOULEME",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {

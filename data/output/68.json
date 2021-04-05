@@ -1,7 +1,14 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:09:55.751515+02:00",
+  "last_updated": "2021-04-05T11:13:42.590224+02:00",
   "centres_disponibles": [
+    {
+      "departement": "68",
+      "nom": "Centre de vaccination de Colmar",
+      "url": "https://partners.doctolib.fr/centre-de-sante/colmar/centre-de-vaccination-covid-19-de-colmar?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-07T14:50:00.000+02:00"
+    },
     {
       "departement": "68",
       "nom": "Centre de vaccination de Saint-Louis",
@@ -20,6 +27,13 @@
     },
     {
       "departement": "68",
+      "nom": "Centre de vaccination de Munster - Salle des F\u00eates ",
+      "url": "https://partners.doctolib.fr/centre-de-sante/munster/centre-de-vaccination-covid-19-munster?pid=practice-178928&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "68",
       "nom": "Centre de vaccination de Rixheim - Cit\u00e9 des sports",
       "url": "https://partners.doctolib.fr/entre-de-sante/rixheim/centre-de-vaccination-de-rixheim?pid=practice-179721&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -29,13 +43,6 @@
       "departement": "68",
       "nom": "Centre de vaccination multisites UGECAM (Centres m\u00e9dicaux Masevaux, Jungholtz, Bouxwiller)",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/haut-rhin/centres-de-vaccination-covid-19-ugecam-haut-rhin?pid=practice-170520&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "68",
-      "nom": "Centre de vaccination de Munster - Salle des F\u00eates ",
-      "url": "https://partners.doctolib.fr/centre-de-sante/munster/centre-de-vaccination-covid-19-munster?pid=practice-178928&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -106,13 +113,6 @@
       "departement": "68",
       "nom": "Centre de vaccination d'Altkirch",
       "url": "https://partners.doctolib.fr/centre-de-sante/altkirch/centre-de-vaccination-covid-19-mairie-d-altkirch?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "68",
-      "nom": "Centre de vaccination de Colmar",
-      "url": "https://partners.doctolib.fr/centre-de-sante/colmar/centre-de-vaccination-covid-19-de-colmar?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
