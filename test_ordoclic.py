@@ -4,16 +4,17 @@ from multiprocessing import Pool
 from scraper.ordoclic import fetch_slots as ordoclic_fetch_slots
 from scraper.ordoclic import centre_iterator as ordoclic_centre_iterator
 
+today = datetime.now().strftime('%Y-%m-%d')
 
 def async_ordoclic_scrape(centre):
     vaccine_center = centre["nom"]
     website = centre["rdv_site_web"]
     #print("Vaccine Center {0}: looking for an appointment".format(vaccine_center))
-    date = ordoclic_fetch_slots(website, datetime.now().strftime('%Y-%m-%d'))
+    date = ordoclic_fetch_slots(website, today)
     if not date:
-        print("Vaccine Center {0}: no appointment found".format(vaccine_center))
+        print(f"Vaccine Center {vaccine_center}: no appointment found")
         return
-    print("Vaccine Center {0}: next appointment found: {1}".format(vaccine_center, date))
+    print(f"Vaccine Center {vaccine_center}: next appointment found: {date}")
 
 
 def main():
