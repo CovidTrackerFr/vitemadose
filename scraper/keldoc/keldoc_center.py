@@ -63,7 +63,6 @@ class KeldocCenter:
 
         # Fetch new URL after redirection
         try:
-            print(self.base_url)
             rq = self.client.get(self.base_url)
         except TimeoutException:
             return False
