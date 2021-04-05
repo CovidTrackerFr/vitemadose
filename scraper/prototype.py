@@ -31,8 +31,6 @@ def main():
             logger.error("Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur")
             exit(code=1)
 
-        export_stats(compte_centres, compte_centres_avec_dispo)
-
 
 def cherche_prochain_rdv_dans_centre(centre):
     start_date = dt.datetime.now().isoformat()[:10]
@@ -145,15 +143,6 @@ def centre_iterator():
     csvreader = csv.DictReader(reader, delimiter=';')
     for row in csvreader:
         yield row
-
-
-def export_stats(compte_centres, compte_centres_avec_dispo):
-    stats_data = {
-        "nbre_total_centre": compte_centres,
-        "nbre_total_centre_dispo": compte_centres_avec_dispo
-    }
-    with open("data/output/stats.json", "w") as stats_file:
-        json.dump(stats_data, stats_file)
 
 
 if __name__ == "__main__":
