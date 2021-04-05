@@ -1,13 +1,27 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T10:59:06.382656+02:00",
+  "last_updated": "2021-04-05T11:02:44.944496+02:00",
   "centres_disponibles": [
+    {
+      "departement": "33",
+      "nom": "Centre de Vaccination - Salle Lucie Aubrac",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/floirac-33270/salle-lucie-aubrac",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-06T16:10:00.000000+0200"
+    },
+    {
+      "departement": "33",
+      "nom": "Mairie d'Arcachon",
+      "url": "https://partners.doctolib.fr/centre-de-sante/arcachon/centre-municipal-de-vaccination-anti-covid-19-de-la-ville-d-arcachon?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-09T17:10:00.000+02:00"
+    },
     {
       "departement": "33",
       "nom": "CH ARCACHON",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/la-teste-de-buch-33529/centre-hospitalier-arcachon/centre-de-vaccination-du-centre-hospitalier-arcachon",
       "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-10T11:30:00.000000+0200"
+      "prochain_rdv": "2021-04-12T14:30:00.000000+0200"
     },
     {
       "departement": "33",
@@ -28,21 +42,21 @@
       "nom": "Centre de vaccination - Domaine des Lug\u00e9es",
       "url": "https://partners.doctolib.fr/centre-de-sante/ares/centre-de-vaccination-covid-19-nord-bassin-ville-d-ares?pid=practice-171900&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-05-12T16:15:00.000+02:00"
+      "prochain_rdv": "2021-05-12T15:50:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
     {
       "departement": "33",
-      "nom": "CENTRE DE VACCINATION - BIGANOS",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/biganos/centre-de-vaccination-covid-19-biganos?pid=practice-171118&enable_cookies_consent=1",
+      "nom": "Centre de vaccination du pays foyen",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sainte-foy-la-grande/centre-de-vaccination-covid-19-saint-foy-la-grande?pid=practice-173546&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "33",
-      "nom": "Centre de vaccination du pays foyen",
-      "url": "https://partners.doctolib.fr/centre-de-sante/sainte-foy-la-grande/centre-de-vaccination-covid-19-saint-foy-la-grande?pid=practice-173546&enable_cookies_consent=1",
+      "nom": "CENTRE DE VACCINATION - BIGANOS",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/biganos/centre-de-vaccination-covid-19-biganos?pid=practice-171118&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -62,13 +76,6 @@
     },
     {
       "departement": "33",
-      "nom": "Centre de vaccination Lormont Carriet",
-      "url": "",
-      "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "33",
       "nom": "CHU BORDEAUX - SITE PELLEGRIN",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/bordeaux-33000/chu-de-bordeaux?cabinet=16876&specialty=496",
       "plateforme": "Keldoc",
@@ -76,9 +83,9 @@
     },
     {
       "departement": "33",
-      "nom": "Centre de Vaccination - Salle Lucie Aubrac",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/floirac-33270/salle-lucie-aubrac",
-      "plateforme": "Keldoc",
+      "nom": "Centre de vaccination Lormont Carriet",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
@@ -190,13 +197,6 @@
       "departement": "33",
       "nom": "NOUVELLE CLINIQUE DU TONDU",
       "url": "https://partners.doctolib.fr/centre-de-sante/floirac/centre-de-vaccination-covid-19-nouvelle-clinique-bordeaux-tondu?pid=practice-164998?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "33",
-      "nom": "Mairie d'Arcachon",
-      "url": "https://partners.doctolib.fr/centre-de-sante/arcachon/centre-municipal-de-vaccination-anti-covid-19-de-la-ville-d-arcachon?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T10:59:06.383239+02:00",
+  "last_updated": "2021-04-05T11:02:44.945137+02:00",
   "centres_disponibles": [
     {
       "departement": "94",
@@ -15,13 +15,6 @@
       "url": "https://www.maiia.com/centre-de-vaccination/94190-villeneuve-saint-georges/centre-de-vaccination---chi-de-villeneuve-saint-georges",
       "plateforme": "Maiia",
       "prochain_rdv": "2021-04-07T15:00:00.000000Z"
-    },
-    {
-      "departement": "94",
-      "nom": "Centre de Vaccination d'Ivry sur Seine",
-      "url": "https://partners.doctolib.fr/centre-de-sante/ivry-sur-seine/centre-de-vaccination-covid-19-ivry-sur-seine?pid=practice-176560&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-08T12:30:00.000+02:00"
     },
     {
       "departement": "94",
@@ -111,13 +104,6 @@
     },
     {
       "departement": "94",
-      "nom": "Centre de Vaccination ambulatoire de Choisy-le-Roi",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/choisy-le-roi/centre-de-vaccination-covid-19-choisy-le-roi?pid=practice-175848&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "94",
       "nom": "Centre de Vaccination Limeil La Boite \u00e0 Clous",
       "url": "",
       "plateforme": "Autre",
@@ -125,9 +111,23 @@
     },
     {
       "departement": "94",
+      "nom": "Centre de Vaccination ambulatoire de Choisy-le-Roi",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/choisy-le-roi/centre-de-vaccination-covid-19-choisy-le-roi?pid=practice-175848&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "94",
       "nom": "CP - US  de Fresnes / Centre P\u00e9nitentiaire de Fresnes",
       "url": "",
       "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "94",
+      "nom": "Centre de Vaccination d'Ivry sur Seine",
+      "url": "https://partners.doctolib.fr/centre-de-sante/ivry-sur-seine/centre-de-vaccination-covid-19-ivry-sur-seine?pid=practice-176560&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -167,15 +167,15 @@
     },
     {
       "departement": "94",
-      "nom": "H\u00f4pital des Arm\u00e9es B\u00e9gin",
-      "url": "https://partners.doctolib.fr/hopital-public/saint-mande/centre-de-vaccination-covid-19-hopital-des-armees-begin?pid=practice-178732&enable_cookies_consent=1",
+      "nom": "CENTRE DE VACCINATION AMBULATOIRE DE CHAMPIGNY",
+      "url": "https://partners.doctolib.fr/centre-de-sante/champigny-sur-marne/centre-de-vaccination-ambulatoire-de-champigny?pid=practice-167416&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "94",
-      "nom": "CENTRE DE VACCINATION AMBULATOIRE DE CHAMPIGNY",
-      "url": "https://partners.doctolib.fr/centre-de-sante/champigny-sur-marne/centre-de-vaccination-ambulatoire-de-champigny?pid=practice-167416&enable_cookies_consent=1",
+      "nom": "H\u00f4pital des Arm\u00e9es B\u00e9gin",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-mande/centre-de-vaccination-covid-19-hopital-des-armees-begin?pid=practice-178732&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

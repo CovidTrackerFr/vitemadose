@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T10:59:06.382482+02:00",
+  "last_updated": "2021-04-05T11:02:44.944304+02:00",
   "centres_disponibles": [
     {
       "departement": "13",
       "nom": "Centre de vaccination Gardanne",
       "url": "https://partners.doctolib.fr/centre-de-sante/gardanne/centre-de-vaccination-gardanne-cpts-provence-sante?pid=practice-165090?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-08T14:00:00.000+02:00"
+      "prochain_rdv": "2021-04-07T19:30:00.000+02:00"
     },
     {
       "departement": "13",
@@ -21,7 +21,7 @@
       "nom": "Centre de vaccination  Vitrolles - Espace Mandela",
       "url": "https://partners.doctolib.fr/maison-de-sante/vitrolles/vaccination-covid-19-vitrolles-espace-mandela?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-09T11:35:00.000+02:00"
+      "prochain_rdv": "2021-04-09T12:05:00.000+02:00"
     },
     {
       "departement": "13",
@@ -35,7 +35,14 @@
       "nom": "Centre de vaccination CPTS VAL DURANCE",
       "url": "https://partners.doctolib.fr/centre-de-sante/senas/centre-de-vaccination-covid-cpts-val-durance?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-30T09:45:00.000+02:00"
+      "prochain_rdv": "2021-04-30T08:14:00.000+02:00"
+    },
+    {
+      "departement": "13",
+      "nom": "CPTS Pays de Martigues",
+      "url": "https://partners.doctolib.fr/hopital-public/martigues/centre-de-vaccination-cpts-chm?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-05-03T15:25:00.000+02:00"
     },
     {
       "departement": "13",
@@ -188,15 +195,15 @@
     },
     {
       "departement": "13",
-      "nom": "CPTS des Collines (Allauch-Plan-de-Cuques) ",
-      "url": "https://partners.doctolib.fr/hopital-public/allauch/centre-de-vaccination-covid-ch-allauch?pid=practice-165288&enable_cookies_consent=1",
+      "nom": "Centre de vaccination intercommunal Velaux - Ventabren - La Fare les Olivierss - Eguilles - Coudoux",
+      "url": "https://partners.doctolib.fr/maison-de-sante/ventabren/centre-vaccination-covid-ventabren?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "13",
-      "nom": "Centre de vaccination intercommunal Velaux - Ventabren - La Fare les Olivierss - Eguilles - Coudoux",
-      "url": "https://partners.doctolib.fr/maison-de-sante/ventabren/centre-vaccination-covid-ventabren?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "CPTS des Collines (Allauch-Plan-de-Cuques) ",
+      "url": "https://partners.doctolib.fr/hopital-public/allauch/centre-de-vaccination-covid-ch-allauch?pid=practice-165288&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -216,15 +223,15 @@
     },
     {
       "departement": "13",
-      "nom": "Centre g\u00e9rontologique d\u00e9partemental",
-      "url": "https://partners.doctolib.fr/centre-de-sante/marseille/centre-de-vaccination-covid-cgd13?pid=practice-164336?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "P\u00f4le de sant\u00e9 Aubagne CD 13",
+      "url": "https://partners.doctolib.fr/centre-de-sante/aubagne/centre-de-vaccination-covid-pole-de-sante-aubagne?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "13",
-      "nom": "P\u00f4le de sant\u00e9 Aubagne CD 13",
-      "url": "https://partners.doctolib.fr/centre-de-sante/aubagne/centre-de-vaccination-covid-pole-de-sante-aubagne?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre g\u00e9rontologique d\u00e9partemental",
+      "url": "https://partners.doctolib.fr/centre-de-sante/marseille/centre-de-vaccination-covid-cgd13?pid=practice-164336?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -300,13 +307,6 @@
     },
     {
       "departement": "13",
-      "nom": "CPTS Pays de Martigues",
-      "url": "https://partners.doctolib.fr/hopital-public/martigues/centre-de-vaccination-cpts-chm?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "13",
       "nom": "Clinique g\u00e9n\u00e9rale de Marignane",
       "url": "https://partners.doctolib.fr/clinique-privee/marignane/centre-de-vaccination-covid-19-clinique-generale-de-marignane?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -335,15 +335,15 @@
     },
     {
       "departement": "13",
-      "nom": "H\u00f4pital Nord (R\u00e9serv\u00e9 aux professionnels de sant\u00e9 lib\u00e9raux)",
-      "url": "https://partners.doctolib.fr/hopital-public/marseille/vaccination-covid-19-assistance-publique-hopitaux-de-marseille/?pid=practice-79902&enable_cookies_consent=1",
+      "nom": "H\u00f4pital Conception (R\u00e9serv\u00e9 aux professionnels de sant\u00e9 lib\u00e9raux)",
+      "url": "https://partners.doctolib.fr/hopital-public/marseille/vaccination-covid-19-assistance-publique-hopitaux-de-marseille/?pid=practice-78743&enable_cookies_consent=1",
       "plateforme": null,
       "prochain_rdv": null
     },
     {
       "departement": "13",
-      "nom": "H\u00f4pital Conception (R\u00e9serv\u00e9 aux professionnels de sant\u00e9 lib\u00e9raux)",
-      "url": "https://partners.doctolib.fr/hopital-public/marseille/vaccination-covid-19-assistance-publique-hopitaux-de-marseille/?pid=practice-78743&enable_cookies_consent=1",
+      "nom": "H\u00f4pital Nord (R\u00e9serv\u00e9 aux professionnels de sant\u00e9 lib\u00e9raux)",
+      "url": "https://partners.doctolib.fr/hopital-public/marseille/vaccination-covid-19-assistance-publique-hopitaux-de-marseille/?pid=practice-79902&enable_cookies_consent=1",
       "plateforme": null,
       "prochain_rdv": null
     },

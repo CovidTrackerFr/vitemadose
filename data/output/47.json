@@ -1,7 +1,15 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T10:59:06.382768+02:00",
-  "centres_disponibles": [],
+  "last_updated": "2021-04-05T11:02:44.944622+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "47",
+      "nom": "Centre de vaccination au centre des congr\u00e8s d'Agen",
+      "url": "https://partners.doctolib.fr/centre-de-sante/agen/centre-de-vaccination-centre-des-congres-d-agen?pid=practice-174333&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-14T14:35:00.000+02:00"
+    }
+  ],
   "centres_indisponibles": [
     {
       "departement": "47",
@@ -15,13 +23,6 @@
       "nom": "CD - Centre de D\u00e9tention d'Eysses / Centre de D\u00e9tention d'Eysses-Villeneuve-sur-Lot",
       "url": "",
       "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "47",
-      "nom": "Centre de vaccination au centre des congr\u00e8s d'Agen",
-      "url": "https://partners.doctolib.fr/centre-de-sante/agen/centre-de-vaccination-centre-des-congres-d-agen?pid=practice-174333&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {

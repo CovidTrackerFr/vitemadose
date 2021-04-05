@@ -1,15 +1,16 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T10:59:06.382931+02:00",
-  "centres_disponibles": [],
-  "centres_indisponibles": [
+  "last_updated": "2021-04-05T11:02:44.944804+02:00",
+  "centres_disponibles": [
     {
       "departement": "67",
-      "nom": "Centre de vaccination S\u00e9lestat -Les Tanzmatten ",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/selestat/centre-de-vaccination-covid-19-ville-de-selestat?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination SOS M\u00e9decins Cronembourg",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/strasbourg/centre-de-vaccination-sos-medecin-67?pid=practice-165779&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
+      "prochain_rdv": "2021-05-18T11:00:00.000+02:00"
+    }
+  ],
+  "centres_indisponibles": [
     {
       "departement": "67",
       "nom": "Centre de vaccination UGECAM d'Illkirch-Graffenstaden ",
@@ -26,6 +27,13 @@
     },
     {
       "departement": "67",
+      "nom": "Centre de vaccination S\u00e9lestat -Les Tanzmatten ",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/selestat/centre-de-vaccination-covid-19-ville-de-selestat?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "67",
       "nom": "Centre de vaccination Drulingen ",
       "url": "https://partners.doctolib.fr/centre-de-sante/drulingen/centre-de-vaccination-d-alsace-bossue?pid=practice-173639&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -33,22 +41,15 @@
     },
     {
       "departement": "67",
-      "nom": "Centre de vaccination Molsheim ",
-      "url": "https://partners.doctolib.fr/centre-de-sante/molsheim/centre-de-vaccination-covid-19-molsheim?pid=practice-173886&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "67",
-      "nom": "Centre de vaccination SOS M\u00e9decins Cronembourg",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/strasbourg/centre-de-vaccination-sos-medecin-67?pid=practice-165779&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "67",
       "nom": "Centre de vaccination SOS M\u00e9decins Neuhof",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/strasbourg/centre-de-vaccination-sos-medecin-67?pid=practice-165780&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination Molsheim ",
+      "url": "https://partners.doctolib.fr/centre-de-sante/molsheim/centre-de-vaccination-covid-19-molsheim?pid=practice-173886&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -138,15 +139,15 @@
     },
     {
       "departement": "67",
-      "nom": "Centre de vaccination de Lingolshein",
-      "url": "https://partners.doctolib.fr/maison-de-sante/lingolsheim/centre-de-vaccination-anti-covid-de-lingolsheim?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination St Luc Schirmeck - antenne du groupe Saint Vincent de Strasbourg ",
+      "url": "https://partners.doctolib.fr/etablissement-de-prevention/strasbourg/gh-saint-vincent-centre-vaccination-covid?pid=practice-163151&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "67",
-      "nom": "Centre de vaccination St Luc Schirmeck - antenne du groupe Saint Vincent de Strasbourg ",
-      "url": "https://partners.doctolib.fr/etablissement-de-prevention/strasbourg/gh-saint-vincent-centre-vaccination-covid?pid=practice-163151&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de Lingolshein",
+      "url": "https://partners.doctolib.fr/maison-de-sante/lingolsheim/centre-de-vaccination-anti-covid-de-lingolsheim?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T10:59:06.382555+02:00",
+  "last_updated": "2021-04-05T11:02:44.944386+02:00",
   "centres_disponibles": [
     {
       "departement": "22",
@@ -8,6 +8,13 @@
       "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/lannion-22300/centre-de-vaccination-de-lannion/centre-de-vaccination-de-lannion-salle-des-ursulines",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-06T12:45:00.000000+0200"
+    },
+    {
+      "departement": "22",
+      "nom": "ST BRIEUC - Salle Robien",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/st-brieuc-22000/robien-saint-brieuc/centre-de-vaccination-de-robien-saint-brieuc",
+      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-14T12:25:00.000000+0200"
     },
     {
       "departement": "22",
@@ -22,13 +29,6 @@
       "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/loudeac-22600/centre-de-vaccination-loudeac-foyer-municipal",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-16T13:30:00.000000+0200"
-    },
-    {
-      "departement": "22",
-      "nom": "ST BRIEUC - Salle Robien",
-      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/st-brieuc-22000/robien-saint-brieuc/centre-de-vaccination-de-robien-saint-brieuc",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-22T15:25:00.000000+0200"
     },
     {
       "departement": "22",
@@ -104,16 +104,16 @@
     },
     {
       "departement": "22",
-      "nom": "GUINGAMP - Centre de sant\u00e9 (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
-      "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/pabu-22200/equipe-d-infectiologie-3?agenda=51168&motive=81341&category=-1&cabinet=16558",
-      "plateforme": null,
+      "nom": "PLEUMEUR BODOU - PHOENIX",
+      "url": "https://vaccination-covid.keldoc.com/maison-de-sante/pleumeur-bodou-22560/centre-de-vaccination-ephemere-sdis-pleumeur-bodou/centre-de-vaccination-ephemere-sdis-lannion?category=-1&cabinet=17301&specialty=496",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
       "departement": "22",
-      "nom": "PLEUMEUR BODOU - PHOENIX",
-      "url": "https://vaccination-covid.keldoc.com/maison-de-sante/pleumeur-bodou-22560/centre-de-vaccination-ephemere-sdis-pleumeur-bodou/centre-de-vaccination-ephemere-sdis-lannion?category=-1&cabinet=17301&specialty=496",
-      "plateforme": "Keldoc",
+      "nom": "GUINGAMP - Centre de sant\u00e9 (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
+      "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/pabu-22200/equipe-d-infectiologie-3?agenda=51168&motive=81341&category=-1&cabinet=16558",
+      "plateforme": null,
       "prochain_rdv": null
     },
     {

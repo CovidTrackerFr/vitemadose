@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T10:59:06.382512+02:00",
+  "last_updated": "2021-04-05T11:02:44.944338+02:00",
   "centres_disponibles": [
     {
       "departement": "16",
       "nom": "Centre de vaccination du CH COGNAC",
       "url": "https://partners.doctolib.fr/hopital-public/cognac/centre-de-vaccination-covid-19-chi-de-cognac?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-12T11:50:00.000+02:00"
+      "prochain_rdv": "2021-04-13T12:40:00.000+02:00"
     },
     {
       "departement": "16",
@@ -28,14 +28,14 @@
       "nom": "Centre de vaccination de Dignac",
       "url": "https://partners.doctolib.fr/centre-de-sante/dignac/centre-de-vaccination-covid-msp-de-la-cle-d-or?pid=practice-164788&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-19T15:25:00.000+02:00"
+      "prochain_rdv": "2021-04-16T17:10:00.000+02:00"
     },
     {
       "departement": "16",
       "nom": "Centre de vaccination Terres de Haute Charente",
       "url": "https://partners.doctolib.fr/centre-de-sante/terres-de-haute-charente/centre-de-vaccination-covid-19-terres-de-haute-charente?pid=practice-165251&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-23T17:40:00.000+02:00"
+      "prochain_rdv": "2021-04-23T17:50:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -104,13 +104,6 @@
     },
     {
       "departement": "16",
-      "nom": "CENTRE CLINICAL DE SOYAUX",
-      "url": "https://partners.doctolib.fr/clinique-privee/soyaux/vaccination-covid-centre-clinical-soyaux-elsan?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "16",
       "nom": "GRAND CENTRE ANGOULEME",
       "url": "",
       "plateforme": "Autre",
@@ -120,6 +113,13 @@
       "departement": "16",
       "nom": "Centre de vaccination de La Couronne",
       "url": "https://partners.doctolib.fr/centre-de-sante/la-couronne/maison-de-sante-la-couronne-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "16",
+      "nom": "CENTRE CLINICAL DE SOYAUX",
+      "url": "https://partners.doctolib.fr/clinique-privee/soyaux/vaccination-covid-centre-clinical-soyaux-elsan?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

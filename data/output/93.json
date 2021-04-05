@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T10:59:06.383227+02:00",
+  "last_updated": "2021-04-05T11:02:44.945129+02:00",
   "centres_disponibles": [
     {
       "departement": "93",
@@ -34,6 +34,13 @@
     },
     {
       "departement": "93",
+      "nom": "AVICENNE",
+      "url": "https://partners.doctolib.fr/hopital-public/paris/centres-de-vaccination-covid-19-ap-hp-hors-professionnels-de-sante?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "93",
       "nom": "EMV Saint-Denis Auberge Municipale",
       "url": "",
       "plateforme": "Autre",
@@ -44,13 +51,6 @@
       "nom": "EMV Saint-Ouen-sur-Seine",
       "url": "",
       "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "93",
-      "nom": "AVICENNE",
-      "url": "https://partners.doctolib.fr/hopital-public/paris/centres-de-vaccination-covid-19-ap-hp-hors-professionnels-de-sante?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -76,16 +76,16 @@
     },
     {
       "departement": "93",
-      "nom": "Salle des f\u00eates Marcel Pagnol",
-      "url": "https://partners.doctolib.fr/centre-de-sante/neuilly-sur-marne/centre-de-vaccination-covid-marne-plaisance?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "EMV Aubervilliers",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "93",
-      "nom": "EMV Aubervilliers",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Salle des f\u00eates Marcel Pagnol",
+      "url": "https://partners.doctolib.fr/centre-de-sante/neuilly-sur-marne/centre-de-vaccination-covid-marne-plaisance?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -139,13 +139,6 @@
     },
     {
       "departement": "93",
-      "nom": "Centre de vaccination - Centre municipal de sant\u00e9",
-      "url": "https://www.maiia.com/centre-de-vaccination/93230-romainville/centre-de-vaccination--louise-michel",
-      "plateforme": "Maiia",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "93",
       "nom": "Centre de vaccination - B\u00e2timent Charlotte Petit",
       "url": "https://partners.doctolib.fr/centre-de-sante/clichy-sous-bois/centre-municipal-de-vaccination-covid-charlotte-petit?pid=practice-165986&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -174,6 +167,20 @@
     },
     {
       "departement": "93",
+      "nom": "Centre de vaccination - Centre municipal de sant\u00e9",
+      "url": "https://www.maiia.com/centre-de-vaccination/93230-romainville/centre-de-vaccination--louise-michel",
+      "plateforme": "Maiia",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "93",
+      "nom": "Vaccinodrome St Denis",
+      "url": "",
+      "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "93",
       "nom": "Centre de vaccination - H\u00f4tel de ville",
       "url": "https://partners.doctolib.fr/centre-de-sante/montreuil/centre-de-vaccination-de-la-ville-de-montreuil?pid=practice-175106&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -184,13 +191,6 @@
       "nom": "Centre de vaccination - Gymnase Guimier",
       "url": "https://partners.doctolib.fr/centre-de-sante/tremblay-en-france/gymnase-jean-guimier-centre-de-vaccination-covid-19?pid=practice-175982&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "93",
-      "nom": "Vaccinodrome St Denis",
-      "url": "",
-      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {

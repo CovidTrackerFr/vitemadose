@@ -1,7 +1,14 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T10:59:06.382961+02:00",
+  "last_updated": "2021-04-05T11:02:44.944838+02:00",
   "centres_disponibles": [
+    {
+      "departement": "71",
+      "nom": "Centre de vaccination de PARAY LE MONIAL - Salle du Centre associatif Parodien",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paray-le-monial/centre-de-vaccination-de-paray-le-monial?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-08T09:24:00.000+02:00"
+    },
     {
       "departement": "71",
       "nom": "Centre de vaccination d'Epinac",
@@ -25,17 +32,10 @@
     },
     {
       "departement": "71",
-      "nom": "Centre de vaccination de Gergy",
-      "url": "https://partners.doctolib.fr/centre-de-sante/gergy/centre-de-vaccination-covid-19-de-gergy?pid=practice-178054&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-16T11:54:00.000+02:00"
-    },
-    {
-      "departement": "71",
       "nom": "Centre de vaccination de Chagny",
       "url": "https://partners.doctolib.fr/centre-de-sante/chagny/centre-de-vaccination-covid-19-de-chagny?pid=practice-178053&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-22T12:48:00.000+02:00"
+      "prochain_rdv": "2021-04-22T13:36:00.000+02:00"
     },
     {
       "departement": "71",
@@ -56,7 +56,7 @@
       "nom": "Centre de vaccination DIGOIN - Grande salle des f\u00eates",
       "url": "https://partners.doctolib.fr/centre-de-sante/digoin/centre-de-vaccination-de-digoin?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-05-04T15:36:00.000+02:00"
+      "prochain_rdv": "2021-05-04T15:18:00.000+02:00"
     },
     {
       "departement": "71",
@@ -111,6 +111,13 @@
     },
     {
       "departement": "71",
+      "nom": "Centre de vaccination de Gergy",
+      "url": "https://partners.doctolib.fr/centre-de-sante/gergy/centre-de-vaccination-covid-19-de-gergy?pid=practice-178054&enable_cookies_consent=1",
+      "plateforme": null,
+      "prochain_rdv": null
+    },
+    {
+      "departement": "71",
       "nom": "Centre de vaccination du CH William Morey",
       "url": "https://partners.doctolib.fr/hopital-public/chalon-sur-sa\u00f4ne/ch-chalon-sur-saone-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -148,13 +155,6 @@
       "departement": "71",
       "nom": "Centre vaccination MACON - Halle sportive du centre omnisport",
       "url": "https://partners.doctolib.fr/centre-de-sante/macon/centre-de-vaccination-de-macon?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "71",
-      "nom": "Centre de vaccination de PARAY LE MONIAL - Salle du Centre associatif Parodien",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paray-le-monial/centre-de-vaccination-de-paray-le-monial?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     }

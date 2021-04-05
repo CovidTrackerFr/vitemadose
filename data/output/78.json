@@ -1,20 +1,27 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T10:59:06.383023+02:00",
+  "last_updated": "2021-04-05T11:02:44.944910+02:00",
   "centres_disponibles": [
+    {
+      "departement": "78",
+      "nom": "Communaut\u00e9 d'agglom\u00e9ration de Saint-Quentin-en-Yvelines",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montigny-le-bretonneux/centre-de-vaccination-covid-19-de-montigny-le-bretonneux?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-06T11:15:00.000+02:00"
+    },
     {
       "departement": "78",
       "nom": "Communaut\u00e9 de communes Gally-Mauldre \u00e0 Crespi\u00e8res",
       "url": "https://partners.doctolib.fr/centre-de-sante/le-chesnay-rocquencourt/centre-de-vaccination-de-la-communaute-de-communes-gally-mauldre-crespieres?pid=practice-174913&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-06T09:50:00.000+02:00"
+      "prochain_rdv": "2021-04-06T11:30:00.000+02:00"
     },
     {
       "departement": "78",
       "nom": "Communaut\u00e9 de communes Haute Vall\u00e9e de Chevreuse",
       "url": "https://partners.doctolib.fr/centre-de-sante/saint-remy-les-chevreuse/centre-de-vaccination-de-saint-remy-les-chevreuse?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-06T11:30:00.000+02:00"
+      "prochain_rdv": "2021-04-06T16:00:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -146,15 +153,15 @@
     },
     {
       "departement": "78",
-      "nom": "Centre  de vaccination de Chatou",
-      "url": "https://partners.doctolib.fr/centre-de-sante/chatou/apta-78-vaccination-covid-19-chatou?pid=practice-178074&enable_cookies_consent=1",
+      "nom": "Communaut\u00e9 de communes du Pays Houdanais",
+      "url": "https://partners.doctolib.fr/centre-de-sante/houdan/centre-de-vaccination-covid-de-houdan?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "78",
-      "nom": "Communaut\u00e9 de communes du Pays Houdanais",
-      "url": "https://partners.doctolib.fr/centre-de-sante/houdan/centre-de-vaccination-covid-de-houdan?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre  de vaccination de Chatou",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chatou/apta-78-vaccination-covid-19-chatou?pid=practice-178074&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -169,13 +176,6 @@
       "departement": "78",
       "nom": "Communaut\u00e9 d'agglom\u00e9ration Saint-Germain Boucle de la Seine",
       "url": "https://partners.doctolib.fr/centre-de-sante/saint-germain-en-laye/centre-de-vaccination-covid-de-saint-germain-en-laye?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "78",
-      "nom": "Communaut\u00e9 d'agglom\u00e9ration de Saint-Quentin-en-Yvelines",
-      "url": "https://partners.doctolib.fr/centre-de-sante/montigny-le-bretonneux/centre-de-vaccination-covid-19-de-montigny-le-bretonneux?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T10:59:06.383250+02:00",
+  "last_updated": "2021-04-05T11:02:44.945159+02:00",
   "centres_disponibles": [
     {
       "departement": "95",
@@ -8,6 +8,13 @@
       "url": "https://partners.doctolib.fr/hopital-public/pontoise/ght-novo-ghcpo-chrd-vaccination-covid-19?pid=practice-162508&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-08T13:55:00.000+02:00"
+    },
+    {
+      "departement": "95",
+      "nom": "MAISON DE QUARTIER VALERY WATTEAU",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sarcelles/centre-de-vaccination-de-sarcelles?pid=practice-162701&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-22T17:10:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -48,9 +55,9 @@
     },
     {
       "departement": "95",
-      "nom": "Centre de vaccination de Cergy",
-      "url": "https://partners.doctolib.fr/centre-de-sante/cergy/centre-de-vaccination-covid-19-ville-de-cergy?pid=practice-176567&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "Centre de vaccination territorial Centre Val d'Oise",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/montmorency-95160/vaccination-plaine-vallee-montmorency-salle-des-fetes?category=-1&cabinet=16607&specialty=496",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
@@ -69,9 +76,9 @@
     },
     {
       "departement": "95",
-      "nom": "Centre de vaccination territorial Centre Val d'Oise",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/montmorency-95160/vaccination-plaine-vallee-montmorency-salle-des-fetes?category=-1&cabinet=16607&specialty=496",
-      "plateforme": "Keldoc",
+      "nom": "Centre de vaccination de Cergy",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cergy/centre-de-vaccination-covid-19-ville-de-cergy?pid=practice-176567&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -79,13 +86,6 @@
       "nom": "EMV Domicile Opalia",
       "url": "",
       "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "95",
-      "nom": "Centre de vaccination de Sannois",
-      "url": "https://www.doctolib.fr/centre-de-sante/sannois/centre-de-vaccination-covid-19-commune-de-sannois",
-      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -100,6 +100,13 @@
       "nom": "Centre d\u00e9partemental de d\u00e9pistage et de soins - site de Garges-l\u00e8s-Gonesse",
       "url": "",
       "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "95",
+      "nom": "Centre de vaccination de Sannois",
+      "url": "https://www.doctolib.fr/centre-de-sante/sannois/centre-de-vaccination-covid-19-commune-de-sannois",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -225,13 +232,6 @@
       "departement": "95",
       "nom": "Centre de vaccination Linandes-Cordeliers/site des Linandes",
       "url": "https://partners.doctolib.fr/centre-de-sante/cergy/centre-de-vaccination-cergy-pontoise?pid=practice-164301&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "95",
-      "nom": "MAISON DE QUARTIER VALERY WATTEAU",
-      "url": "https://partners.doctolib.fr/centre-de-sante/sarcelles/centre-de-vaccination-de-sarcelles?pid=practice-162701&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
