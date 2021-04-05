@@ -53,7 +53,7 @@ def get_slots_from(rdv_form, rdv_url, start_date):
     if "firstPhysicalStartDateTime" in availability:
         dt = isoparse(availability['firstPhysicalStartDateTime'])
         dt = dt + timedelta(hours=2)
-        dt = dt.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
+        dt = dt.isoformat()
         return dt
 
     # Ne sachant pas si 'firstPhysicalStartDateTime' est un attribut par défault dans
@@ -61,7 +61,7 @@ def get_slots_from(rdv_form, rdv_url, start_date):
     if "closestPhysicalAvailability" in availability and "startDateTime" in availability["closestPhysicalAvailability"]:
         dt = isoparse(availability['closestPhysicalAvailability']["startDateTime"])
         dt = dt + timedelta(hours=2)
-        dt = dt.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
+        dt = dt.isoformat()
         return dt
 
 
@@ -69,10 +69,8 @@ def get_slots_from(rdv_form, rdv_url, start_date):
 
 
 def get_any_availibility_from(center_id, start_date):
-    start_date = datetime.strptime(start_date, '%Y-%m-%d')
-    start_date = start_date.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
     request_params = {
-        "date_str": start_date,
+        "date_str": start_date.isoformat(),
         "centerId": center_id,
         "limit": 200,
         "page": 0,
