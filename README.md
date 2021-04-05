@@ -11,7 +11,7 @@ scripts/install
 ```
 
 On peut ensuite importer les fonctions définies dans `scraper/__init__.py`
-telles que `main` (définie dans `scraper/prototype.py`) :
+telles que `main` (définie dans `scraper/scraper.py`) :
 
 ```python
 >>> from scraper import main
