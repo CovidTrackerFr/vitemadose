@@ -23,8 +23,12 @@ class CustomFormatter(logging.Formatter):
         return formatter.format(record)
 
 
-def init_logger():
+def get_logger():
     # create logger
+    return logging.getLogger('scraper')
+
+
+def enable_logger_for_production():
     logger = logging.getLogger('scraper')
     logger.setLevel(logging.INFO)
 
@@ -32,4 +36,10 @@ def init_logger():
     ch.setLevel(logging.DEBUG)
     ch.setFormatter(CustomFormatter())
     logger.addHandler(ch)
-    return logger
+
+
+def enable_logger_for_debug():
+    ch = logging.StreamHandler()
+    ch.setLevel(logging.DEBUG)
+    ch.setFormatter(CustomFormatter())
+    logging.basicConfig(level=logging.DEBUG, handlers=[ch])

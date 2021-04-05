@@ -2,4 +2,4 @@
 
 BIN="venv/bin/"
 
-${BIN}python scrape.py
+${BIN}python scrape.py $@
