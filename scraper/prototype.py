@@ -143,9 +143,9 @@ def centre_iterator():
         yield row
 
 
-def export_stats(compte_centre, compte_centres_avec_dispo):
+def export_stats(compte_centres, compte_centres_avec_dispo):
     stats_data = {
-        "nbre_total_centre": compte_centre,
+        "nbre_total_centre": compte_centres,
         "nbre_total_centre_dispo": compte_centres_avec_dispo
     }
     with open("data/output/stats.json", "w") as stats_file:
