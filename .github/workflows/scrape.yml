@@ -2,12 +2,8 @@
 name: Scrape
 
 on:
-  # https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events
-  schedule:
-    # https://crontab.guru/
-    # '*/n' = 'every n minutes'
-    - cron: "*/5 * * * *"
-  # Allow running manually
+  push:
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
@@ -20,6 +16,8 @@ jobs:
 
     steps:
       - uses: "actions/checkout@v2"
+        with:
+            token: ${{ secrets.PAT_GRZ }}
       - uses: "actions/setup-python@v2"
         with:
           python-version: "3.8"
@@ -27,7 +25,3 @@ jobs:
         run: scripts/install
       - name: "Scraping..."
         run: scripts/scrape
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Automatic Update
-          push_options: '--force HEAD:data-auto'

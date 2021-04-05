@@ -8,6 +8,8 @@ from scraper.doctolib import (
     _find_visit_motive_category_id,
     _find_visit_motive_id,
     _parse_centre,
+    _parse_practice_id,
+    DOCTOLIB_SLOT_LIMIT,
 )
 
 
@@ -36,7 +38,7 @@ def test_doctolib():
             "insurance_sector": "public",
             "practice_ids": "4",
             "destroy_temporary": "true",
-            "limit": "7",
+            "limit": str(DOCTOLIB_SLOT_LIMIT),
         }
         path = Path("tests", "fixtures", "doctolib", "basic-availabilities.json")
         return httpx.Response(200, json=json.loads(path.read_text()))
@@ -115,6 +117,28 @@ def test_parse_centre():
     # URL invalide
     url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville2/"
     assert _parse_centre(url) is None
+
+
+def test_parse_practice_id():
+    # Cas de base
+    url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
+    assert _parse_practice_id(url) == 165752
+
+    # Format bizarre 1
+    url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-162589&?speciality_id=5494&enable_cookies_consent=1"  # noqa
+    assert _parse_practice_id(url) == 162589
+
+    # Format bizarre 2
+    url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-162589?speciality_id=5494&enable_cookies_consent=1"  # noqa
+    assert _parse_practice_id(url) == 162589
+
+    # Broken 1 : manque le numéro
+    url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-&enable_cookies_consent=1"  # noqa
+    assert _parse_practice_id(url) is None
+
+    # Broken 2 : pid vide
+    url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=&enable_cookies_consent=1"  # noqa
+    assert _parse_practice_id(url) is None
 
 
 def test_find_visit_motive_category_id():
@@ -200,6 +224,7 @@ def test_find_agenda_and_practice_ids():
             "agendas": [
                 {
                     "id": 10,
+                    "practice_id": 20,
                     "booking_disabled": False,
                     "visit_motive_ids_by_practice_id": {
                         "20": [1, 2],
@@ -214,9 +239,22 @@ def test_find_agenda_and_practice_ids():
                         "23": [1, 2],
                     },
                 },
+                {
+                    "id": 12,
+                    "practice_id": 21,
+                    "booking_disabled": False,
+                    "visit_motive_ids_by_practice_id": {
+                        "21": [1, 2],
+                        "24": [1],
+                    },
+                },
             ],
         },
     }
-    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, None, visit_motive_id=1)
-    assert agenda_ids == ["10"]
-    assert practice_ids == ["20", "21"]
+    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=1)
+    assert agenda_ids == ["10", "12"]
+    assert practice_ids == ["20", "21", "24"]
+
+    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=1, practice_id_filter=21)
+    assert agenda_ids == ["12"]
+    assert practice_ids == ["21", "24"]

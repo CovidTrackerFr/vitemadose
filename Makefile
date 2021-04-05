@@ -11,5 +11,8 @@ install: ## sets up package and its dependencies
 test: ## sets up package and its dependencies
 	scripts/test
 
+coverage: ## reports test coverage (automatically run by `test`)
+	scripts/coverage
+
 scrape: ## runs the full scraping experience
 	scripts/scrape

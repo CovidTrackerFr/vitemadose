@@ -1,4 +1,5 @@
-from datetime import datetime
+import sys
+import datetime as dt
 from multiprocessing import Pool
 import json
 import os
@@ -7,6 +8,7 @@ import csv
 import requests
 import pytz
 
+from utils.vmd_logger import init_logger
 from .departements import to_departement_number, import_departements
 from .doctolib import fetch_slots as doctolib_fetch_slots
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
@@ -14,9 +16,8 @@ from .maiia import fetch_slots as maiia_fetch_slots
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
 from .ordoclic import centre_iterator as ordoclic_centre_iterator
 
-
 POOL_SIZE = int(os.getenv('POOL_SIZE', 20))
-
+logger = init_logger()
 
 def main():
     with Pool(POOL_SIZE) as pool:
@@ -25,14 +26,19 @@ def main():
             centre_iterator(),
             1
         )
-        export_data(centres_cherchés)
+        compte_centres, compte_centres_avec_dispo = export_data(centres_cherchés)
+        logger.info(f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
+        if compte_centres_avec_dispo == 0:
+            logger.error("Aucune disponibilité n'a été trouvée sur tous les centres, c'est bizarre, alors c'est probablement une erreur")
+            exit(code=1)
+
 
 def cherche_prochain_rdv_dans_centre(centre):
-    start_date = datetime.now().isoformat()[:10]
+    start_date = dt.datetime.now().isoformat()[:10]
     try:
         plateforme, next_slot = fetch_centre_slots(centre['rdv_site_web'], start_date)
     except Exception as e:
-        print(f"erreur lors du traitement de la ligne avec le gid {centre['gid']}")
+        logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']}")
         print(e)
         next_slot = None
         plateforme = None
@@ -40,10 +46,10 @@ def cherche_prochain_rdv_dans_centre(centre):
     try:
         departement = to_departement_number(insee_code=centre['com_insee'])
     except ValueError:
-        print(f"erreur lors du traitement de la ligne avec le gid {centre['gid']}, com_insee={centre['com_insee']}")
+        logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']}, com_insee={centre['com_insee']}")
         departement = ''
 
-    print(f'{centre.get("gid", "")!s:>8} {plateforme!s:16} {next_slot or ""!s:32} {departement!s:6}')
+    logger.info(f'{centre.get("gid", "")!s:>8} {plateforme!s:16} {next_slot or ""!s:32} {departement!s:6}')
 
     return {
         'departement': departement,
@@ -53,18 +59,28 @@ def cherche_prochain_rdv_dans_centre(centre):
         'prochain_rdv': next_slot
     }
 
-def export_data(centres_cherchés):
+
+def sort_center(center):
+    if not center:
+        return '-'
+    if not 'prochain_rdv' in center or not center['prochain_rdv']:
+        return '-'
+    return center['prochain_rdv']
+
+
+def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
     compte_centres = 0
     compte_centres_avec_dispo = 0
     par_departement = {
         code: {
             'version': 1,
-            'last_updated': datetime.now(tz=pytz.timezone('Europe/Paris')).isoformat(),
+            'last_updated': dt.datetime.now(tz=pytz.timezone('Europe/Paris')).isoformat(),
             'centres_disponibles': [],
             'centres_indisponibles': []
         }
         for code in import_departements()
     }
+    
     for centre in centres_cherchés:
         compte_centres += 1
         code_departement = centre['departement']
@@ -75,27 +91,44 @@ def export_data(centres_cherchés):
                 compte_centres_avec_dispo += 1
                 par_departement[code_departement]['centres_disponibles'].append(centre)
         else:
-            print(f"WARNING: le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
+            logger.warning(f"le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
 
     for code_departement, disponibilités in par_departement.items():
-        print(f'writing result to {code_departement}.json file')
-        with open(f'data/output/{code_departement}.json', "w") as outfile:
+        if 'centres_disponibles' in disponibilités:
+            disponibilités['centres_disponibles'] = sorted(disponibilités['centres_disponibles'], key=sort_center)
+        outpath = outpath_format.format(code_departement)
+        logger.debug(f'writing result to {outpath} file')
+        with open(outpath, "w") as outfile:
             outfile.write(json.dumps(disponibilités, indent=2))
 
-    print(f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
+    return compte_centres, compte_centres_avec_dispo
 
 
-def fetch_centre_slots(rdv_site_web, start_date):
+def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
+    if fetch_map is None:
+        # Map platform to implementation.
+        # May be overridden for unit testing purposes.
+        fetch_map = {
+            'Doctolib': doctolib_fetch_slots,
+            'Keldoc': keldoc_fetch_slots,
+            'Maiia': maiia_fetch_slots,
+        }
+
     rdv_site_web = rdv_site_web.strip()
+
+    # Determine platform based on visit URL.
     if rdv_site_web.startswith('https://partners.doctolib.fr') or rdv_site_web.startswith('https://www.doctolib.fr'):
-        return 'Doctolib', doctolib_fetch_slots(rdv_site_web, start_date)
-    if rdv_site_web.startswith('https://vaccination-covid.keldoc.com'):
-        return 'Keldoc', keldoc_fetch_slots(rdv_site_web, start_date)
-    if rdv_site_web.startswith('https://www.maiia.com'):
-        return 'Maiia', maiia_fetch_slots(rdv_site_web, start_date)
-    if rdv_site_web.startswith('https://app.ordoclic.fr/'):
-        return 'Ordoclic', ordoclic_fetch_slots(rdv_site_web, start_date)
-    return 'Autre', None
+        platform = 'Doctolib'
+    elif rdv_site_web.startswith('https://vaccination-covid.keldoc.com'):
+        platform = 'Keldoc'
+    elif rdv_site_web.startswith('https://www.maiia.com'):
+        platform = 'Maiia'
+    else:
+        return 'Autre', None
+
+    # Dispatch to appropriate implementation.
+    fetch_impl = fetch_map[platform]
+    return platform, fetch_impl(rdv_site_web, start_date)
 
 
 def centre_iterator():

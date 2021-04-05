@@ -9,5 +9,8 @@ setup(
         'httpx==0.17.1',
         'requests[socks]==2.25.1',
         'pytest==6.2.2',
+        'beautifulsoup4==4.9.3',
+        'coverage==5.5',
+        'python-dateutil',
     ],
 )

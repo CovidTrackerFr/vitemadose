@@ -10,7 +10,7 @@ API_KELDOC_MOTIVES = 'https://booking.keldoc.com/api/patients/v2/clinics/{0}/spe
 API_KELDOC_CABINETS = 'https://booking.keldoc.com/api/patients/v2/clinics/{0}/specialties/{1}/cabinets'
 API_KELDOC_CALENDAR = 'https://www.keldoc.com/api/patients/v2/timetables/{0}'
 
-timeout = httpx.Timeout(15.0, connect=15.0)
+timeout = httpx.Timeout(30.0, connect=30.0)
 session = httpx.Client(timeout=timeout)
 
 
