@@ -4,58 +4,45 @@ import json
 from pathlib import Path
 
 import httpx
-from django.template.defaultfilters import center
 
 from scraper.keldoc.keldoc_center import KeldocCenter
 from scraper.keldoc.keldoc_filters import filter_vaccine_specialties, filter_vaccine_motives
-from scraper.keldoc.keldoc_routes import API_KELDOC_CENTER
+
+CENTER1_KELDOC = {
+    "/api/patients/v2/clinics/2563/specialties/144/cabinets": "center1-cabinet",
+    "/api/patients/v2/clinics/2563/specialties/144/cabinets/18780/motive_categories": "center1-cabinet-18780",
+    "/api/patients/v2/clinics/2563/specialties/144/cabinets/16910/motive_categories": "center1-cabinet-16910",
+    "/api/patients/v2/clinics/2563/specialties/144/cabinets/16913/motive_categories": "center1-cabinet-16913",
+    "/api/patients/v2/timetables/81484": "center1-timetable-81484",
+    "/api/patients/v2/timetables/81486": "center1-timetable-81486",
+    "/api/patients/v2/timetables/81466": "center1-timetable-81466",
+    "/api/patients/v2/timetables/82874": "center1-timetable-82874",
+    "/api/patients/v2/searches/resource": "center1-info"
+}
+
+
+def get_test_data(file_name):
+    path = Path("tests", "fixtures", "keldoc", f"{file_name}.json")
+    return json.loads(path.read_text())
+
+
+def app_center1(request: httpx.Request) -> httpx.Response:
+    if request.url.path == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff":
+        return httpx.Response(302, headers={
+            "Location": "https://vaccination-covid.keldoc.com/redirect/?dom=centre-hospitalier-regional&inst=lorient-56100&user=groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff&specialty=144 "})
+    for path in CENTER1_KELDOC:
+        if request.url.path == path:
+            return httpx.Response(200, json=get_test_data(CENTER1_KELDOC[path]))
+    return httpx.Response(200, json={})
 
 
 def test_keldoc_parse_center():
     center1_url = "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier" \
                   "-bretagne-sud-lorient-hopital-du-scorff?specialty=144 "
-    center1_redirect = "https://vaccination-covid.keldoc.com/redirect/?dom=centre-hospitalier-regional&inst=lorient" \
-                       "-56100&user=groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff&specialty=144 "
 
     center1_data = json.loads(Path("tests", "fixtures", "keldoc", "center1-info.json").read_text())
 
-    def app(request: httpx.Request) -> httpx.Response:
-        if request.url.path == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff":
-            return httpx.Response(302, headers={"Location": center1_redirect})
-        if request.url.path == "/api/patients/v2/searches/resource":
-            return httpx.Response(200, json=center1_data)
-        if request.url.path == "/api/patients/v2/clinics/2563/specialties/144/cabinets":
-            path = Path("tests", "fixtures", "keldoc", "center1-cabinet.json")
-            return httpx.Response(200, json=json.loads(path.read_text()))
-        if request.url.path == "/api/patients/v2/clinics/2563/specialties/144/cabinets/18780/motive_categories":
-            path = Path("tests", "fixtures", "keldoc", "center1-cabinet-18780.json")
-            return httpx.Response(200, json=json.loads(path.read_text()))
-        if request.url.path == "/api/patients/v2/clinics/2563/specialties/144/cabinets/16913/motive_categories":
-            path = Path("tests", "fixtures", "keldoc", "center1-cabinet-16913.json")
-            return httpx.Response(200, json=json.loads(path.read_text()))
-        if request.url.path == "/api/patients/v2/clinics/2563/specialties/144/cabinets/16910/motive_categories":
-            path = Path("tests", "fixtures", "keldoc", "center1-cabinet-16910.json")
-            return httpx.Response(200, json=json.loads(path.read_text()))
-        if request.url.path == "/api/patients/v2/timetables/81484":
-            path = Path("tests", "fixtures", "keldoc", "center1-timetable-81484.json")
-            return httpx.Response(200, json=json.loads(path.read_text()))
-        if request.url.path == "/api/patients/v2/timetables/81486":
-            path = Path("tests", "fixtures", "keldoc", "center1-timetable-81486.json")
-            return httpx.Response(200, json=json.loads(path.read_text()))
-        if request.url.path == "/api/patients/v2/timetables/81488":
-            path = Path("tests", "fixtures", "keldoc", "center1-timetable-81488.json")
-            return httpx.Response(200, json=json.loads(path.read_text()))
-        if request.url.path == "/api/patients/v2/timetables/82874":
-            path = Path("tests", "fixtures", "keldoc", "center1-timetable-82874.json")
-            return httpx.Response(200, json=json.loads(path.read_text()))
-        if request.url.path == "/api/patients/v2/clinics/2563/specialties/144/cabinets/16571/motive_categories":
-            return httpx.Response(200, json={})
-        if request.url.path == "/booking/centre1.json":
-            path = Path("tests", "fixtures", "doctolib", "next-slot-booking.json")
-            return httpx.Response(200, json=json.loads(path.read_text()))
-        return httpx.Response(200, json={})
-
-    client = httpx.Client(transport=httpx.MockTransport(app))
+    client = httpx.Client(transport=httpx.MockTransport(app_center1))
     test_center_1 = KeldocCenter(base_url=center1_url, client=client)
     assert test_center_1.parse_resource()
 
