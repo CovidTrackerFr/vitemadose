@@ -1,0 +1,34 @@
+stages:
+  - test
+  - scrape
+  - deploy
+
+test:
+  stage: test
+  image: python:3.8-alpine
+  before_script:
+    - ./scripts/install
+  script:
+    - ./scripts/test
+
+scrape:
+  stage: scrape
+  image: python:3.8-alpine
+  before_script:
+    - ./scripts/install
+  script:
+    - ./scripts/scrape
+  artifacts:
+    name: "rdv"
+    paths:
+      - data/output
+
+pages:
+  stage: deploy
+  image: python:3.8-alpine
+  script:
+    - mkdir -p public
+    - cp data/output/*.json public/
+  artifacts:
+    paths:
+      - public
