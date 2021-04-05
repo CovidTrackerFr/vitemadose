@@ -119,7 +119,7 @@ def cp_to_insee(cp):
     if cp in insee:
         insee_com = insee.get(cp).get("insee")
     else:
-        logger.error(f'Ordoclic unable to translate cp >{cp}< to insee')
+        logger.warning(f'Ordoclic unable to translate cp >{cp}< to insee')
     return insee_com
 
 
