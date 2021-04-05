@@ -1,3 +1,4 @@
+import logging
 import os
 import re
 from typing import Optional, Tuple
@@ -12,6 +13,7 @@ DOCTOLIB_HEADERS = {
 }
 
 DEFAULT_CLIENT: httpx.Client
+logger = logging.getLogger('scraper')
 
 if os.getenv('WITH_TOR', 'no') == 'yes':
     session = requests.Session()
@@ -130,7 +132,7 @@ def _parse_practice_id(rdv_site_web: str) -> Optional[int]:
         # -> 164984
         return int(pid)
     except (ValueError, TypeError, IndexError):
-        print(f'ERROR: failed to parse practice ID: {pid=}')
+        logger.error(f'failed to parse practice ID: {pid=}')
         return None
 
 
