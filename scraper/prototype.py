@@ -94,6 +94,10 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         else:
             logger.warning(f"le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
 
+    outpath = outpath_format.format("info_centres")
+    with open(outpath, "w") as info_centres:
+        json.dump(par_departement, info_centres)
+
     for code_departement, disponibilités in par_departement.items():
         if 'centres_disponibles' in disponibilités:
             disponibilités['centres_disponibles'] = sorted(disponibilités['centres_disponibles'], key=sort_center)
