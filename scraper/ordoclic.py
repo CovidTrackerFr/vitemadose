@@ -1,39 +1,47 @@
+import logging
+
 import httpx
 from httpx import TimeoutException
 import json
 from datetime import datetime, timedelta
 from pytz import timezone
 
+logger = logging.getLogger('scraper')
+
 timeout = httpx.Timeout(15.0, connect=15.0)
 session = httpx.Client(timeout=timeout)
 insee = {}
 
+
 # get all slugs
 def search():
     base_url = 'https://api.ordoclic.fr/v1/public/search'
-    #payload = {'page': '1', 'per_page': '10000', 'in.isCovidVaccineSupported': 'true', 'in.isPublicProfile': 'true' }
-    payload = {'page': '1', 'per_page': '10000', 'in.isPublicProfile': 'true' }
+    # payload = {'page': '1', 'per_page': '10000', 'in.isCovidVaccineSupported': 'true', 'in.isPublicProfile': 'true' }
+    payload = {'page': '1', 'per_page': '10000', 'in.isPublicProfile': 'true'}
     r = session.get(base_url, params=payload)
     r.raise_for_status()
-    return(r.json())
-  
+    return r.json()
+
+
 def getReasons(entityId):
     base_url = f'https://api.ordoclic.fr/v1/solar/entities/{entityId}/reasons'
     r = session.get(base_url)
     r.raise_for_status()
-    return(r.json())
+    return r.json()
+
 
 def getSlots(entityId, medicalStaffId, reasonId, start_date, end_date):
     base_url = 'https://api.ordoclic.fr/v1/solar/slots/availableSlots'
-    payload = {"entityId": entityId, 
-               "medicalStaffId": medicalStaffId, 
+    payload = {"entityId": entityId,
+               "medicalStaffId": medicalStaffId,
                "reasonId": reasonId,
-               "dateEnd": f"{end_date}T00:00:00.000Z", 
+               "dateEnd": f"{end_date}T00:00:00.000Z",
                "dateStart": f"{start_date}T23:59:59.000Z"}
     headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
     r = session.post(base_url, data=json.dumps(payload), headers=headers)
     r.raise_for_status()
-    return(r.json())
+    return r.json()
+
 
 def getProfile(rdv_site_web):
     slug = rdv_site_web.rsplit('/', 1)[-1]
@@ -44,7 +52,8 @@ def getProfile(rdv_site_web):
         base_url = f'https://api.ordoclic.fr/v1/public/entities/profile/{slug}'
     r = session.get(base_url)
     r.raise_for_status()
-    return(r.json())
+    return r.json()
+
 
 def parse_ordoclic_slots(availability_data):
     first_availability = None
@@ -69,11 +78,12 @@ def parse_ordoclic_slots(availability_data):
             timeStartUtcOffset = slot["timeStartUtcOffset"]
             date += timedelta(minutes=timeStartUtcOffset)
         if first_availability is None or date < first_availability:
-            first_availability = date        
+            first_availability = date
     return first_availability
-    
+
+
 def fetch_slots(rdv_site_web, start_date):
-    first_availability = None    
+    first_availability = None
     profile = getProfile(rdv_site_web)
     slug = profile["profileSlug"]
     entityId = profile["entityId"]
@@ -82,9 +92,9 @@ def fetch_slots(rdv_site_web, start_date):
         name = professional["fullName"]
         zip = professional["zip"]
         reasons = getReasons(entityId)
-        #reasonTypeId = 4 -> 1er Vaccin
+        # reasonTypeId = 4 -> 1er Vaccin
         for reason in reasons["reasons"]:
-            if reason["reasonTypeId"] == 4 and reason["canBookOnline"] == True: 
+            if reason["reasonTypeId"] == 4 and reason["canBookOnline"] == True:
                 reasonId = reason["id"]
                 date_obj = datetime.strptime(start_date, '%Y-%m-%d')
                 end_date = (date_obj + timedelta(days=6)).strftime('%Y-%m-%d')
@@ -98,8 +108,9 @@ def fetch_slots(rdv_site_web, start_date):
         return None
     return first_availability.isoformat()
 
+
 def cp_to_insee(cp):
-    insee_com = cp # si jamais on ne trouve pas de correspondance...
+    insee_com = cp  # si jamais on ne trouve pas de correspondance...
     # on charge la table de correspondance cp/insee, une seule fois
     global insee
     if insee == {}:
@@ -108,8 +119,9 @@ def cp_to_insee(cp):
     if cp in insee:
         insee_com = insee.get(cp).get("insee")
     else:
-        print(f'Ordoclic unable to translate cp >{cp}< to insee')
+        logger.error(f'Ordoclic unable to translate cp >{cp}< to insee')
     return insee_com
+
 
 def centre_iterator():
     items = search()
