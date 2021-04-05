@@ -96,7 +96,7 @@ def fetch_slots(rdv_site_web, start_date):
                     first_availability = date
     if first_availability == None:
         return None
-    return str(first_availability)
+    return first_availability.isoformat()
 
 def cp_to_insee(cp):
     insee_com = cp # si jamais on ne trouve pas de correspondance...
