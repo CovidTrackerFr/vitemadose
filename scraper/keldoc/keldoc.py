@@ -21,7 +21,7 @@ def fetch_slots(base_url, start_date):
     date_obj = datetime.strptime(start_date, '%Y-%m-%d')
     end_date = (date_obj + timedelta(days=1)).strftime('%Y-%m-%d')
 
-    center = KeldocCenter(base_url=base_url)
+    center = KeldocCenter(base_url=base_url, client=session)
     # Unable to parse center resources (id, location)?
     if not center.parse_resource():
         return None
