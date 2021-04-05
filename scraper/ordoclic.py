@@ -2,9 +2,11 @@ import httpx
 from httpx import TimeoutException
 import json
 from datetime import datetime, timedelta
+from pytz import timezone
 
 timeout = httpx.Timeout(15.0, connect=15.0)
 session = httpx.Client(timeout=timeout)
+insee = {}
 
 # get all slugs
 def search():
@@ -62,10 +64,8 @@ def parse_ordoclic_slots(availability_data):
         if 'timeStartUtcOffset' in slot:
             timeStartUtcOffset = slot["timeStartUtcOffset"]
             date += timedelta(minutes=timeStartUtcOffset)
-        if date is None:
-            continue
         if first_availability is None or date < first_availability:
-                    first_availability = date        
+            first_availability = date        
     return first_availability
     
 def fetch_slots(rdv_site_web, start_date):
@@ -94,6 +94,20 @@ def fetch_slots(rdv_site_web, start_date):
         return None
     return str(first_availability)
 
+def cp_to_insee(cp):
+    insee_com = cp # si jamais on ne trouve pas de correspondance...
+    # on charge la table de correspondance cp/insee, une seule fois
+    global insee
+    if insee == {}:
+        url = "https://www.data.gouv.fr/fr/datasets/r/e88c6fda-1d09-42a0-a069-606d3259114e"
+        response = session.get(url)
+        response.raise_for_status()
+        insee = json.loads(response.content.decode('utf8'))
+    for record in insee:
+        if record["fields"]["postal_code"] == cp:
+            insee_com = record["fields"]["insee_com"]
+    return insee_com
+
 def centre_iterator():
     items = search()
     for item in items["items"]:
@@ -111,6 +125,6 @@ def centre_iterator():
             slug = item["publicProfile"]["slug"]
             centre["gid"] = item["id"][:8]
             centre["rdv_site_web"] = f"https://app.ordoclic.fr/app/entite/{slug}"
-            centre["com_insee"] = item["location"]["zip"]
+            centre["com_insee"] = cp_to_insee(item["location"]["zip"])
             centre["nom"] = item.get("name")
             yield centre
