@@ -25,3 +25,9 @@ jobs:
         run: scripts/install
       - name: "Scraping..."
         run: scripts/scrape
+      - name: "Store JSON artifact"
+        uses: actions/upload-artifact@v2
+        with:
+          name: output
+          path: data/output
+          retention-days: 1
