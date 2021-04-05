@@ -80,6 +80,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
     }
     
     for centre in centres_cherchés:
+        centre['nom'] = centre['nom'].strip()
         compte_centres += 1
         code_departement = centre['departement']
         if code_departement in par_departement:
