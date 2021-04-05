@@ -16,3 +16,7 @@ coverage: ## reports test coverage (automatically run by `test`)
 
 scrape: ## runs the full scraping experience
 	scripts/scrape
+
+stats: ## Run the statistiques scripts
+	venv/bin/python -m scraper.centres_stats
+RuntimeWarning: '' found in sys.modules after import of package '', but prior to execution of ''; this may result in unpredictable behaviour
