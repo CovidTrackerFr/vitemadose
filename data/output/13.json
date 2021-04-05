@@ -1,14 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:06:14.644239+02:00",
+  "last_updated": "2021-04-05T11:09:55.750906+02:00",
   "centres_disponibles": [
-    {
-      "departement": "13",
-      "nom": "Centre de vaccination Gardanne",
-      "url": "https://partners.doctolib.fr/centre-de-sante/gardanne/centre-de-vaccination-gardanne-cpts-provence-sante?pid=practice-165090?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-07T19:30:00.000+02:00"
-    },
     {
       "departement": "13",
       "nom": "Centre de vaccination de la Mairie des 15e et 16e arrondissement de Marseille",
@@ -21,7 +14,14 @@
       "nom": "Centre de vaccination  Vitrolles - Espace Mandela",
       "url": "https://partners.doctolib.fr/maison-de-sante/vitrolles/vaccination-covid-19-vitrolles-espace-mandela?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-09T10:05:00.000+02:00"
+      "prochain_rdv": "2021-04-09T09:55:00.000+02:00"
+    },
+    {
+      "departement": "13",
+      "nom": "Centre de vaccination Gardanne",
+      "url": "https://partners.doctolib.fr/centre-de-sante/gardanne/centre-de-vaccination-gardanne-cpts-provence-sante?pid=practice-165090?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-10T15:30:00.000+02:00"
     },
     {
       "departement": "13",
@@ -36,13 +36,6 @@
       "url": "https://partners.doctolib.fr/centre-de-sante/senas/centre-de-vaccination-covid-cpts-val-durance?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-30T08:14:00.000+02:00"
-    },
-    {
-      "departement": "13",
-      "nom": "CPTS Pays de Martigues",
-      "url": "https://partners.doctolib.fr/hopital-public/martigues/centre-de-vaccination-cpts-chm?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-05-03T15:25:00.000+02:00"
     },
     {
       "departement": "13",
@@ -307,9 +300,9 @@
     },
     {
       "departement": "13",
-      "nom": "Clinique g\u00e9n\u00e9rale de Marignane",
-      "url": "https://partners.doctolib.fr/clinique-privee/marignane/centre-de-vaccination-covid-19-clinique-generale-de-marignane?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "Centre de vaccination de Ch\u00e2teaurenard",
+      "url": "https://www.maiia.com/centre-de-vaccination/13160-chateaurenard/centre-de-vaccination-covid---chateaurenard-de-provence",
+      "plateforme": "Maiia",
       "prochain_rdv": null
     },
     {
@@ -321,6 +314,13 @@
     },
     {
       "departement": "13",
+      "nom": "Clinique g\u00e9n\u00e9rale de Marignane",
+      "url": "https://partners.doctolib.fr/clinique-privee/marignane/centre-de-vaccination-covid-19-clinique-generale-de-marignane?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "13",
       "nom": "Clinique de Vitrolles (R\u00e9serv\u00e9 aux professionnels de sant\u00e9 lib\u00e9raux)",
       "url": "https://partners.doctolib.fr/clinique-privee/vitrolles/clinique-de-vitrolles-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -328,9 +328,9 @@
     },
     {
       "departement": "13",
-      "nom": "Centre de vaccination de Ch\u00e2teaurenard",
-      "url": "https://www.maiia.com/centre-de-vaccination/13160-chateaurenard/centre-de-vaccination-covid---chateaurenard-de-provence",
-      "plateforme": "Maiia",
+      "nom": "CPTS Pays de Martigues",
+      "url": "https://partners.doctolib.fr/hopital-public/martigues/centre-de-vaccination-cpts-chm?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {

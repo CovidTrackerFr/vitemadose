@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:06:14.644306+02:00",
+  "last_updated": "2021-04-05T11:09:55.750995+02:00",
   "centres_disponibles": [
     {
       "departement": "22",
@@ -8,13 +8,6 @@
       "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/lannion-22300/centre-de-vaccination-de-lannion/centre-de-vaccination-de-lannion-salle-des-ursulines",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-06T12:45:00.000000+0200"
-    },
-    {
-      "departement": "22",
-      "nom": "ST BRIEUC - Salle Robien",
-      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/st-brieuc-22000/robien-saint-brieuc/centre-de-vaccination-de-robien-saint-brieuc",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-14T12:25:00.000000+0200"
     },
     {
       "departement": "22",
@@ -32,10 +25,10 @@
     },
     {
       "departement": "22",
-      "nom": "LANVOLLON - Salle Armor Argoat",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/lanvollon-22290/ville-de-lanvollon/centre-de-vaccination-de-la-ville-de-lanvollon",
+      "nom": "ST BRIEUC - Salle Robien",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/st-brieuc-22000/robien-saint-brieuc/centre-de-vaccination-de-robien-saint-brieuc",
       "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-30T15:20:00.000000+0200"
+      "prochain_rdv": "2021-04-22T15:35:00.000000+0200"
     }
   ],
   "centres_indisponibles": [
@@ -113,6 +106,13 @@
       "departement": "22",
       "nom": "PLEUMEUR BODOU - PHOENIX",
       "url": "https://vaccination-covid.keldoc.com/maison-de-sante/pleumeur-bodou-22560/centre-de-vaccination-ephemere-sdis-pleumeur-bodou/centre-de-vaccination-ephemere-sdis-lannion?category=-1&cabinet=17301&specialty=496",
+      "plateforme": "Keldoc",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "22",
+      "nom": "LANVOLLON - Salle Armor Argoat",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/lanvollon-22290/ville-de-lanvollon/centre-de-vaccination-de-la-ville-de-lanvollon",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },

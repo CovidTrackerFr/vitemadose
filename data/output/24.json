@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:06:14.644324+02:00",
+  "last_updated": "2021-04-05T11:09:55.751067+02:00",
   "centres_disponibles": [
     {
       "departement": "24",
@@ -15,6 +15,13 @@
       "url": "https://www.maiia.com/centre-de-vaccination/24550-villefranche-du-perigord/centre-de-vaccination-covid---villefranche-du-perigord",
       "plateforme": "Maiia",
       "prochain_rdv": "2021-04-22T10:15:00.000000Z"
+    },
+    {
+      "departement": "24",
+      "nom": "Centre de Vaccination - CH Saint-Astier",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-astier/centre-de-vaccination-covid-19-ch-de-saint-astier?pid=practice-175745&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-05-11T16:00:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -27,16 +34,16 @@
     },
     {
       "departement": "24",
-      "nom": "Centre de vaccination - CH de Jean Leclaire de Sarlat",
-      "url": "https://partners.doctolib.fr/hopital-public/sarlat-la-caneda/vaccination-ch-jean-leclaire-sarlat?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "MSP Saint Alv\u00e8re",
+      "url": "https://www.maiia.com/centre-de-vaccination/24510-val-de-louyre-et-caudeau/centre-de-vaccination-val-de-louyre-et-caudeau",
+      "plateforme": "Maiia",
       "prochain_rdv": null
     },
     {
       "departement": "24",
-      "nom": "MSP Saint Alv\u00e8re",
-      "url": "https://www.maiia.com/centre-de-vaccination/24510-val-de-louyre-et-caudeau/centre-de-vaccination-val-de-louyre-et-caudeau",
-      "plateforme": "Maiia",
+      "nom": "Centre de vaccination - CH de Jean Leclaire de Sarlat",
+      "url": "https://partners.doctolib.fr/hopital-public/sarlat-la-caneda/vaccination-ch-jean-leclaire-sarlat?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -83,13 +90,6 @@
     },
     {
       "departement": "24",
-      "nom": "Centre de Vaccination - CH Saint-Astier",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-astier/centre-de-vaccination-covid-19-ch-de-saint-astier?pid=practice-175745&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "24",
       "nom": "CD - Unit\u00e9 Sanitaire Niveau 1 - Centre de D\u00e9tention de MAUZAC / Centre de D\u00e9tention de Mauzac",
       "url": "",
       "plateforme": "Autre",
@@ -111,16 +111,16 @@
     },
     {
       "departement": "24",
-      "nom": "Maison de sant\u00e9 du Pays Montponnais",
-      "url": "https://partners.doctolib.fr/centre-de-sante/montpon-menesterol/centre-de-vaccination-covid-19-montpon-menestrol?pid=practice-170938&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "CV mobile -Perigueux- SDIS/CD",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "24",
-      "nom": "CV mobile -Perigueux- SDIS/CD",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Maison de sant\u00e9 du Pays Montponnais",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montpon-menesterol/centre-de-vaccination-covid-19-montpon-menestrol?pid=practice-170938&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {

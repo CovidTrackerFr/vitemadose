@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:06:14.644461+02:00",
+  "last_updated": "2021-04-05T11:09:55.751222+02:00",
   "centres_disponibles": [
     {
       "departement": "38",
@@ -15,6 +15,13 @@
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/st-laurent-du-pont-38380/centre-de-vaccination-coeur-de-chartreuse",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-07T11:09:00.000000+0200"
+    },
+    {
+      "departement": "38",
+      "nom": "Centre de vaccination de St Etienne de St Geoirs - Grenoble Air Parc",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/saint-etienne-de-saint-geoirs/centre-vaccination-de-la-bievre?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-07T12:55:00.000+02:00"
     },
     {
       "departement": "38",
@@ -39,17 +46,10 @@
     },
     {
       "departement": "38",
-      "nom": "Centre de vaccination de St Etienne de St Geoirs - Grenoble Air Parc",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/saint-etienne-de-saint-geoirs/centre-vaccination-de-la-bievre?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-14T12:40:00.000+02:00"
-    },
-    {
-      "departement": "38",
       "nom": "Centre de vaccination du CH de Saint Marcellin",
       "url": "https://partners.doctolib.fr/centre-de-sante/saint-marcellin/centre-de-vaccination-covid-19-st-marcellin-vercors-isere-communaute?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-16T12:30:00.000+02:00"
+      "prochain_rdv": "2021-04-15T10:15:00.000+02:00"
     },
     {
       "departement": "38",
@@ -83,16 +83,16 @@
     },
     {
       "departement": "38",
-      "nom": "MA - US MA de Grenoble-Varces / Maison d'Arr\u00eat de Grenoble-Varces",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Centre de vaccination de Vienne - Man\u00e8ge",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/vienne-38200/cegidd/cegidd-du-chu-grenoble",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
       "departement": "38",
-      "nom": "Centre de vaccination de Vienne - Man\u00e8ge",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/vienne-38200/cegidd/cegidd-du-chu-grenoble",
-      "plateforme": "Keldoc",
+      "nom": "MA - US MA de Grenoble-Varces / Maison d'Arr\u00eat de Grenoble-Varces",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
@@ -111,16 +111,16 @@
     },
     {
       "departement": "38",
-      "nom": "Centre de vaccination - Clinique des C\u00f4tes du Rh\u00f4ne",
-      "url": "https://vaccination-covid.keldoc.com/clinique/roussillon-38150/clinique-des-cotes-du-rhone/centre-de-vaccination-de-la-clinique-des-cotes-du-rhone",
-      "plateforme": "Keldoc",
+      "nom": "Grand centre de vaccination - Alpexpo",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "38",
-      "nom": "Grand centre de vaccination - Alpexpo",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Centre de vaccination - Clinique des C\u00f4tes du Rh\u00f4ne",
+      "url": "https://vaccination-covid.keldoc.com/clinique/roussillon-38150/clinique-des-cotes-du-rhone/centre-de-vaccination-de-la-clinique-des-cotes-du-rhone",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {

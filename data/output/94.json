@@ -1,13 +1,20 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:06:14.644979+02:00",
+  "last_updated": "2021-04-05T11:09:55.751771+02:00",
   "centres_disponibles": [
     {
       "departement": "94",
       "nom": "CENTRE SAINT-MANDE",
       "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-mand\u00e9/centre-de-vaccinations-covid-saint-mande?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-06T08:55:00.000+02:00"
+      "prochain_rdv": "2021-04-06T09:05:00.000+02:00"
+    },
+    {
+      "departement": "94",
+      "nom": "H\u00f4pital des Arm\u00e9es B\u00e9gin",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-mande/centre-de-vaccination-covid-19-hopital-des-armees-begin?pid=practice-178732&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-06T10:15:00.000+02:00"
     },
     {
       "departement": "94",
@@ -21,14 +28,14 @@
       "nom": "BONNEUIL SUR MARNE",
       "url": "https://www.maiia.com/centre-de-vaccination/94380-bonneuil-sur-marne/-centre-de-vaccination---espace-louise-voelckel",
       "plateforme": "Maiia",
-      "prochain_rdv": "2021-04-22T11:35:00.000000Z"
+      "prochain_rdv": "2021-04-22T11:40:00.000000Z"
     },
     {
       "departement": "94",
       "nom": "CENTRE DE VACCINATION AMBULATOIRE ALFORTVILLE",
       "url": "https://partners.doctolib.fr/centre-de-sante/alfortville/centre-de-vaccination-ambulatoire-d-alfortville-reserve-aux-professionnels-de-sante?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-05-05T14:45:00.000+02:00"
+      "prochain_rdv": "2021-05-05T14:30:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -97,13 +104,6 @@
     },
     {
       "departement": "94",
-      "nom": "Centre de Vaccination ambulatoire de Choisy-le-Roi",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/choisy-le-roi/centre-de-vaccination-covid-19-choisy-le-roi?pid=practice-175848&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "94",
       "nom": "CENTRE SUCY EN BRIE",
       "url": "https://www.maiia.com/centre-de-vaccination/94370-sucy-en-brie/centre-de-vaccination-de-sucy-en-brie",
       "plateforme": "Maiia",
@@ -114,6 +114,13 @@
       "nom": "Centre de Vaccination Limeil La Boite \u00e0 Clous",
       "url": "",
       "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "94",
+      "nom": "Centre de Vaccination ambulatoire de Choisy-le-Roi",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/choisy-le-roi/centre-de-vaccination-covid-19-choisy-le-roi?pid=practice-175848&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -174,13 +181,6 @@
     },
     {
       "departement": "94",
-      "nom": "H\u00f4pital des Arm\u00e9es B\u00e9gin",
-      "url": "https://partners.doctolib.fr/hopital-public/saint-mande/centre-de-vaccination-covid-19-hopital-des-armees-begin?pid=practice-178732&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "94",
       "nom": "Centre de Vaccination Marie-Th\u00e9r\u00e8se EYQUEM Cr\u00e9teil",
       "url": "https://partners.doctolib.fr/centre-de-sante/creteil/centre-de-vaccination-covid-ville-de-creteil?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -188,15 +188,15 @@
     },
     {
       "departement": "94",
-      "nom": "Centre d'ORLY",
-      "url": "https://partners.doctolib.fr/centre-de-sante/orly/centre-vaccination-covid-cms-orly?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "CENTRE SAINT MAUR DES FOSSES",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-maur-des-foss\u00e9s/centre-de-vaccination-de-saint-maur-des-fosses?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "94",
-      "nom": "CENTRE SAINT MAUR DES FOSSES",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-maur-des-foss\u00e9s/centre-de-vaccination-de-saint-maur-des-fosses?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre d'ORLY",
+      "url": "https://partners.doctolib.fr/centre-de-sante/orly/centre-vaccination-covid-cms-orly?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

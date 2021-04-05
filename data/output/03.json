@@ -1,19 +1,20 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:06:14.644145+02:00",
-  "centres_disponibles": [],
+  "last_updated": "2021-04-05T11:09:55.750800+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "03",
+      "nom": "Communaut\u00e9 Professionnelle Territoriale de Sant\u00e9 Nord Allier",
+      "url": "https://partners.doctolib.fr/centre-de-sante/moulins/cpts-nord-allier-centre-de-vaccination?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-17T12:48:00.000+02:00"
+    }
+  ],
   "centres_indisponibles": [
     {
       "departement": "03",
       "nom": "Centre de vaccination de Vichy - Maison des Associations",
       "url": "https://partners.doctolib.fr/centre-de-sante/vichy/centre-de-vaccination-de-la-maison-des-associations-vichy?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "03",
-      "nom": "Communaut\u00e9 Professionnelle Territoriale de Sant\u00e9 Nord Allier",
-      "url": "https://partners.doctolib.fr/centre-de-sante/moulins/cpts-nord-allier-centre-de-vaccination?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

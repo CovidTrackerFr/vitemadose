@@ -1,20 +1,27 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:06:14.644889+02:00",
+  "last_updated": "2021-04-05T11:09:55.751679+02:00",
   "centres_disponibles": [
-    {
-      "departement": "85",
-      "nom": "Centre de vaccination COVID - MONTAIGU - Salle Dolia",
-      "url": "https://partners.doctolib.fr/centre-de-sante/montaigu-vendee/centre-de-vaccination-terres-de-montaigu?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-19T17:40:00.000+02:00"
-    },
     {
       "departement": "85",
       "nom": "Centre de vaccination COVID - LA ROCHE SUR YON - Petite salle des f\u00eates du Bourg-sous-la Roche",
       "url": "https://partners.doctolib.fr/maison-de-sante/la-roche-sur-yon/centre-de-vaccination-de-la-la-roche-sur-yon?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-29T12:10:00.000+02:00"
+      "prochain_rdv": "2021-04-15T12:40:00.000+02:00"
+    },
+    {
+      "departement": "85",
+      "nom": "Centre de vaccination COVID - MONTAIGU - Salle Dolia",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montaigu-vendee/centre-de-vaccination-terres-de-montaigu?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-19T17:55:00.000+02:00"
+    },
+    {
+      "departement": "85",
+      "nom": "Centre de vaccination COVID - LES SABLES D'OLONNE - Olonnespace",
+      "url": "https://partners.doctolib.fr/centre-de-sante/les-sables-d'olonne/centre-de-vaccination-covid-des-sables-d-olonne?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-05-04T16:00:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -50,13 +57,6 @@
       "departement": "85",
       "nom": "Centre de vaccination COVID - FONTENAY LE COMTE - Espace culturel et de congr\u00e8s Ren\u00e9-Cassin",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/fontenay-le-comte/centre-vaccination-fontenay-le-comte?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "85",
-      "nom": "Centre de vaccination COVID - LES SABLES D'OLONNE - Olonnespace",
-      "url": "https://partners.doctolib.fr/centre-de-sante/les-sables-d'olonne/centre-de-vaccination-covid-des-sables-d-olonne?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

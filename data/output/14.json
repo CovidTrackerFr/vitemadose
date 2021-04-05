@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:06:14.644247+02:00",
+  "last_updated": "2021-04-05T11:09:55.750916+02:00",
   "centres_disponibles": [
     {
       "departement": "14",
@@ -8,6 +8,13 @@
       "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/caen-14000/caen-lemiere-ancienne-ecole-lemiere/centre-de-vaccination-de-caen-lemiere-ancienne-ecole-lemiere",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-06T11:20:00.000000+0200"
+    },
+    {
+      "departement": "14",
+      "nom": "Polyclinique du parc - Caen - service soins externes",
+      "url": "https://partners.doctolib.fr/clinique-privee/caen/centre-de-vaccination-polyclinique-du-parc-caen?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-07T16:50:00.000+02:00"
     },
     {
       "departement": "14",
@@ -106,13 +113,6 @@
       "departement": "14",
       "nom": "CH de Lisieux",
       "url": "https://partners.doctolib.fr/hopital-public/lisieux/centre-de-vaccination-covid-19-ch-de-lisieux?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "14",
-      "nom": "Polyclinique du parc - Caen - service soins externes",
-      "url": "https://partners.doctolib.fr/clinique-privee/caen/centre-de-vaccination-polyclinique-du-parc-caen?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

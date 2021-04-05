@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:06:14.644830+02:00",
+  "last_updated": "2021-04-05T11:09:55.751634+02:00",
   "centres_disponibles": [],
   "centres_indisponibles": [
     {
@@ -14,13 +14,6 @@
       "departement": "80",
       "nom": "Centre de vaccination - CHIMR Roye (MSP)",
       "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/roye-80700/centre-de-vaccination-mairie-de-roye",
-      "plateforme": "Keldoc",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "80",
-      "nom": "Centre de vaccination - MSP Cr\u00e9cy en Ponthieu",
-      "url": "https://vaccination-covid.keldoc.com/maison-de-sante/crecy-en-ponthieu-80150/msp-de-crecy-en-ponthieu/centre-de-vaccination-de-la-msp-de-crecy-en-ponthieu",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },
@@ -40,6 +33,13 @@
     },
     {
       "departement": "80",
+      "nom": "Centre de vaccination - MSP Cr\u00e9cy en Ponthieu",
+      "url": "https://vaccination-covid.keldoc.com/maison-de-sante/crecy-en-ponthieu-80150/msp-de-crecy-en-ponthieu/centre-de-vaccination-de-la-msp-de-crecy-en-ponthieu",
+      "plateforme": "Keldoc",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "80",
       "nom": "MA - USDSS / Maison d'Arr\u00eat d'Amiens",
       "url": "",
       "plateforme": "Autre",
@@ -47,15 +47,15 @@
     },
     {
       "departement": "80",
-      "nom": "Centre de Vaccination : Espace Sant\u00e9 Ravel Amiens",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/amiens-80000/espace-sante-maurice-ravel",
+      "nom": "Centre de vaccination - CH DOULLENS (Espace culturel)",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/doullens-80600/centre-hospitalier-doullens/centre-de-vaccination-du-centre-hospitalier-doullens",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
       "departement": "80",
-      "nom": "Centre de vaccination - CH DOULLENS (Espace culturel)",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/doullens-80600/centre-hospitalier-doullens/centre-de-vaccination-du-centre-hospitalier-doullens",
+      "nom": "Centre de Vaccination : Espace Sant\u00e9 Ravel Amiens",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/amiens-80000/espace-sante-maurice-ravel",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },
@@ -96,16 +96,16 @@
     },
     {
       "departement": "80",
-      "nom": "Centre de vaccination - Communaut\u00e9 de commune VIMEU Baie de la somme ( Salle Edith Piaf)",
-      "url": "https://partners.doctolib.fr/centre-de-sante/friville-escarbotin/centre-de-vaccination-covid-vimeu-baie-de-somme?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "Centre de vaccination- CHU Amiens",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/amiens-80000/chu-amiens-picardie-site-nord?category=-1&cabinet=16656&specialty=496",
+      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
       "departement": "80",
-      "nom": "Centre de vaccination- CHU Amiens",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/amiens-80000/chu-amiens-picardie-site-nord?category=-1&cabinet=16656&specialty=496",
-      "plateforme": "Keldoc",
+      "nom": "Centre de vaccination - Communaut\u00e9 de commune VIMEU Baie de la somme ( Salle Edith Piaf)",
+      "url": "https://partners.doctolib.fr/centre-de-sante/friville-escarbotin/centre-de-vaccination-covid-vimeu-baie-de-somme?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {

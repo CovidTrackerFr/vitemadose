@@ -1,20 +1,20 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:06:14.644230+02:00",
+  "last_updated": "2021-04-05T11:09:55.750896+02:00",
   "centres_disponibles": [
+    {
+      "departement": "12",
+      "nom": "Villefrance-De-Rouergue",
+      "url": "https://partners.doctolib.fr/centre-de-sante/villefranche-de-rouergue/centre-de-vaccination-covid-villefranche-de-rouergue?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-09T13:20:00.000+02:00"
+    },
     {
       "departement": "12",
       "nom": "Centre de Vaccination Millau",
       "url": "https://partners.doctolib.fr/hopital-public/millau/centre-de-vaccination-millau?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-13T10:55:00.000+02:00"
-    },
-    {
-      "departement": "12",
-      "nom": "Villefrance-De-Rouergue",
-      "url": "https://partners.doctolib.fr/centre-de-sante/villefranche-de-rouergue/centre-de-vaccination-covid-villefranche-de-rouergue?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-13T13:20:00.000+02:00"
     },
     {
       "departement": "12",
@@ -28,7 +28,7 @@
       "nom": "CH DE DECAZEVILLE",
       "url": "https://partners.doctolib.fr/hopital-public/decazeville/centre-de-vaccination-covid-ch-decazeville?pid=practice-165118?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-23T11:58:00.000+02:00"
+      "prochain_rdv": "2021-04-21T11:10:00.000+02:00"
     }
   ],
   "centres_indisponibles": [

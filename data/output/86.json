@@ -1,15 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:06:14.644899+02:00",
-  "centres_disponibles": [
-    {
-      "departement": "86",
-      "nom": "CHU POITIERS - Site de MONTMORILLON",
-      "url": "https://partners.doctolib.fr/hopital-public/montmorillon/centre-de-vaccination-chu-poitiers-site-de-montmorillon?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-05-04T15:35:00.000+02:00"
-    }
-  ],
+  "last_updated": "2021-04-05T11:09:55.751689+02:00",
+  "centres_disponibles": [],
   "centres_indisponibles": [
     {
       "departement": "86",
@@ -99,6 +91,13 @@
       "departement": "86",
       "nom": "Centre de vaccination SDIS de Chauvigny",
       "url": "https://partners.doctolib.fr/centre-de-sante/chauvigny/centre-de-vaccination-covid-19-sdis-86?pid=practice-179211&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "86",
+      "nom": "CHU POITIERS - Site de MONTMORILLON",
+      "url": "https://partners.doctolib.fr/hopital-public/montmorillon/centre-de-vaccination-chu-poitiers-site-de-montmorillon?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

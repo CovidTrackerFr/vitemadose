@@ -1,7 +1,15 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:06:14.644367+02:00",
-  "centres_disponibles": [],
+  "last_updated": "2021-04-05T11:09:55.751118+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "29",
+      "nom": "BREST Arena",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/brest/centre-de-vaccination-covid-19-brest-arena?pid=practice-175124&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-06T16:18:00.000+02:00"
+    }
+  ],
   "centres_indisponibles": [
     {
       "departement": "29",
@@ -47,23 +55,9 @@
     },
     {
       "departement": "29",
-      "nom": "LANDERNEAU - Le Mille Club",
-      "url": "https://www.maiia.com/centre-de-vaccination/29800-landerneau/centre-de-vaccination---landerneau---lesneven",
-      "plateforme": "Maiia",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "29",
-      "nom": "CH MORLAIX (anciens locaux EFS)",
-      "url": "https://partners.doctolib.fr/hopital-public/morlaix/ch-morlaix-centre-de-vaccination-covid-19-reserve-aux-professionnels-de-sante?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "29",
       "nom": "DOUARNENEZ - Centre Gradlon",
       "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/douarnenez-29100/gradlon/centre-de-vaccination-de-gradlon",
-      "plateforme": "Keldoc",
+      "plateforme": null,
       "prochain_rdv": null
     },
     {
@@ -75,9 +69,16 @@
     },
     {
       "departement": "29",
-      "nom": "BREST Arena",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/brest/centre-de-vaccination-covid-19-brest-arena?pid=practice-175124&enable_cookies_consent=1",
+      "nom": "CH MORLAIX (anciens locaux EFS)",
+      "url": "https://partners.doctolib.fr/hopital-public/morlaix/ch-morlaix-centre-de-vaccination-covid-19-reserve-aux-professionnels-de-sante?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "29",
+      "nom": "LANDERNEAU - Le Mille Club",
+      "url": "https://www.maiia.com/centre-de-vaccination/29800-landerneau/centre-de-vaccination---landerneau---lesneven",
+      "plateforme": "Maiia",
       "prochain_rdv": null
     },
     {
@@ -85,13 +86,6 @@
       "nom": "MA - BREST / Maison d'Arr\u00eat de Brest",
       "url": "",
       "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "29",
-      "nom": "ST RENAN - Centre culturel",
-      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/st-renan-29290/saint-renan/centre-de-vaccination-de-saint-renan",
-      "plateforme": "Keldoc",
       "prochain_rdv": null
     },
     {
@@ -105,6 +99,13 @@
       "departement": "29",
       "nom": "QUIMPER - Maison des associations",
       "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/quimper-29000/quimper/centre-de-vaccination-de-quimper",
+      "plateforme": "Keldoc",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "29",
+      "nom": "ST RENAN - Centre culturel",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/st-renan-29290/saint-renan/centre-de-vaccination-de-saint-renan",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },

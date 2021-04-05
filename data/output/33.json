@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:06:14.644418+02:00",
+  "last_updated": "2021-04-05T11:09:55.751177+02:00",
   "centres_disponibles": [
     {
       "departement": "33",
@@ -11,24 +11,10 @@
     },
     {
       "departement": "33",
-      "nom": "Mairie d'Arcachon",
-      "url": "https://partners.doctolib.fr/centre-de-sante/arcachon/centre-municipal-de-vaccination-anti-covid-19-de-la-ville-d-arcachon?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-09T14:05:00.000+02:00"
-    },
-    {
-      "departement": "33",
       "nom": "CH ARCACHON",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/la-teste-de-buch-33529/centre-hospitalier-arcachon/centre-de-vaccination-du-centre-hospitalier-arcachon",
       "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-12T14:30:00.000000+0200"
-    },
-    {
-      "departement": "33",
-      "nom": "CENTRE DE VACCINATION DU GRAND CUBZAGUAIS",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-andre-de-cubzac/centre-de-vaccination-du-grand-cubzaguais?pid=practice-179089&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-12T15:46:00.000+02:00"
+      "prochain_rdv": "2021-04-10T11:10:00.000000+0200"
     },
     {
       "departement": "33",
@@ -39,10 +25,17 @@
     },
     {
       "departement": "33",
+      "nom": "Mairie d'Arcachon",
+      "url": "https://partners.doctolib.fr/centre-de-sante/arcachon/centre-municipal-de-vaccination-anti-covid-19-de-la-ville-d-arcachon?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-15T10:10:00.000+02:00"
+    },
+    {
+      "departement": "33",
       "nom": "Centre de vaccination - Domaine des Lug\u00e9es",
       "url": "https://partners.doctolib.fr/centre-de-sante/ares/centre-de-vaccination-covid-19-nord-bassin-ville-d-ares?pid=practice-171900&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-05-12T15:50:00.000+02:00"
+      "prochain_rdv": "2021-05-12T16:20:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -79,6 +72,13 @@
       "nom": "Centre de vaccination Lormont Carriet",
       "url": "",
       "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "33",
+      "nom": "CENTRE DE VACCINATION DU GRAND CUBZAGUAIS",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-andre-de-cubzac/centre-de-vaccination-du-grand-cubzaguais?pid=practice-179089&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {

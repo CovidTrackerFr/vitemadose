@@ -1,7 +1,21 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:06:14.644962+02:00",
+  "last_updated": "2021-04-05T11:09:55.751753+02:00",
   "centres_disponibles": [
+    {
+      "departement": "92",
+      "nom": "Ville de Levallois-Perret",
+      "url": "https://partners.doctolib.fr/centre-de-sante/levallois-perret/centre-de-vaccination-de-levallois?pid=practice-175351&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-06T10:20:00.000+02:00"
+    },
+    {
+      "departement": "92",
+      "nom": "Ville de Gennevilliers",
+      "url": "https://www.doctolib.fr/centre-de-vaccinations-internationales/gennevilliers/centre-de-vaccination-covid-19-gymnase-paul-langevin",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-09T09:45:00.000+02:00"
+    },
     {
       "departement": "92",
       "nom": "Ville de Garches - M\u00e9diath\u00e8que Jacques GAUTIER",
@@ -71,20 +85,6 @@
       "departement": "92",
       "nom": "Ville de Chatillon Malakoff",
       "url": "https://partners.doctolib.fr/centre-de-sante/chatillon/centre-de-vaccination-covid-19-chatillon-malakoff?pid=practice-176419&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "92",
-      "nom": "Ville de Gennevilliers",
-      "url": "https://www.doctolib.fr/centre-de-vaccinations-internationales/gennevilliers/centre-de-vaccination-covid-19-gymnase-paul-langevin",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "92",
-      "nom": "Ville de Levallois-Perret",
-      "url": "https://partners.doctolib.fr/centre-de-sante/levallois-perret/centre-de-vaccination-de-levallois?pid=practice-175351&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -237,15 +237,15 @@
     },
     {
       "departement": "92",
-      "nom": "Ville de Courbevoie",
-      "url": "https://partners.doctolib.fr/centre-de-sante/courbevoie/centre-de-vaccination-covid-19-de-courbevoie?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Ville de la Garenne Colombes",
+      "url": "https://partners.doctolib.fr/centre-de-sante/la-garenne-colombes/centre-de-vaccination-covid-19-la-garenne-colombes?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "92",
-      "nom": "Ville de la Garenne Colombes",
-      "url": "https://partners.doctolib.fr/centre-de-sante/la-garenne-colombes/centre-de-vaccination-covid-19-la-garenne-colombes?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Ville de Courbevoie",
+      "url": "https://partners.doctolib.fr/centre-de-sante/courbevoie/centre-de-vaccination-covid-19-de-courbevoie?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

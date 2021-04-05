@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:06:14.644646+02:00",
+  "last_updated": "2021-04-05T11:09:55.751428+02:00",
   "centres_disponibles": [
     {
       "departement": "59",
@@ -11,17 +11,24 @@
     },
     {
       "departement": "59",
+      "nom": "Centre de vaccination - Centre Hospitalier de Valenciennes et CPTS du Valenciennois 2, Salle JEAN MINEUR",
+      "url": "https://partners.doctolib.fr/centre-de-sante/valenciennes/centre-vaccination?placeId=practice-162438?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-10T12:00:00.000+02:00"
+    },
+    {
+      "departement": "59",
+      "nom": "Centre de vaccination - CH LE CATEAU",
+      "url": "https://partners.doctolib.fr/hopital-public/le-cateau-cambr\u00e9sis/ch-le-cateau-centre-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-13T13:45:00.000+02:00"
+    },
+    {
+      "departement": "59",
       "nom": "Centre de vaccination - CHSA Maubeuge",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/maubeuge-59600/centre-hospitalier-de-sambre-avesnois/centre-de-vaccination-du-centre-hospitalier-de-sambre-avesnois",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-05-04T09:45:00.000000+0200"
-    },
-    {
-      "departement": "59",
-      "nom": "Centre de vaccination - CPTS P\u00e9v\u00e8le du Douaisis, Salle la Grange",
-      "url": "https://partners.doctolib.fr/centre-de-sante/orchies/centre-de-vaccination-covid-19-orchies?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-05-05T17:40:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -43,13 +50,6 @@
       "departement": "59",
       "nom": "Centre de vaccination - Commune de Bertry, Salle des f\u00eates",
       "url": "https://partners.doctolib.fr/centre-de-sante/gouzeaucourt/centre-de-vaccination-covid-19-cpts-du-haut-escault?pid=practice-178391&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "59",
-      "nom": "Centre de vaccination - CH LE CATEAU",
-      "url": "https://partners.doctolib.fr/hopital-public/le-cateau-cambr\u00e9sis/ch-le-cateau-centre-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -111,15 +111,15 @@
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - Polyclinique de Grande Synthe",
-      "url": "https://partners.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/grande-synthe/vaccination-covid-polyclinique-de-grande-synthe?pid=practice-165272&enable_cookies_consent=1",
+      "nom": "Centre de vaccination  - CPTS Bergues - Bourbourg - Hondshotte, Salle Emmanuel Looten",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bergues/centre-vaccination-communaute-de-communes-des-hauts-de-flandre-cchf?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination  - CPTS Bergues - Bourbourg - Hondshotte, Salle Emmanuel Looten",
-      "url": "https://partners.doctolib.fr/centre-de-sante/bergues/centre-vaccination-communaute-de-communes-des-hauts-de-flandre-cchf?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - Polyclinique de Grande Synthe",
+      "url": "https://partners.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/grande-synthe/vaccination-covid-polyclinique-de-grande-synthe?pid=practice-165272&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -202,13 +202,6 @@
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - Centre Hospitalier de Valenciennes et CPTS du Valenciennois 2, Salle JEAN MINEUR",
-      "url": "https://partners.doctolib.fr/centre-de-sante/valenciennes/centre-vaccination?placeId=practice-162438?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "59",
       "nom": "Centre de vaccination - CPTS Val de Sambre La LUNA",
       "url": "https://www.maiia.com/centre-de-vaccination/59600-maubeuge/centre-de-vaccination-la-luna--espace-sculfort-",
       "plateforme": "Maiia",
@@ -279,13 +272,6 @@
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - CH Seclin (SALLE ROSENBERG)",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/haut-de-france/vaccination-gh-seclin-carvin?pid=practice-163841&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "59",
       "nom": "Centre de vaccination - POLYCLINIQUE VAUBAN",
       "url": "https://partners.doctolib.fr/centre-de-sante/saint-saulve/centre-de-vaccination-covid-19-groupe-elsan?pid=practice-162448&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -295,6 +281,13 @@
       "departement": "59",
       "nom": "Centre de vaccination - HOPITAL PRIV\u00c9 LE BOIS",
       "url": "https://partners.doctolib.fr/centre-de-sante/villeneuve-d-ascq/vaccination-covid-19-hopital-prive-le-bois-et-villeneuve-d-ascq?pid=practice-163992&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "59",
+      "nom": "Centre de vaccination - CH Seclin (SALLE ROSENBERG)",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/haut-de-france/vaccination-gh-seclin-carvin?pid=practice-163841&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -328,15 +321,15 @@
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - CPTS du Grand Douai- salle d'Anchin Douai",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/douai/cpts-grand-douai-salle-d-anchin-douai?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - commune de Gouzeaucourt, Salle de sport Jean Degros",
+      "url": "https://partners.doctolib.fr/centre-de-sante/gouzeaucourt/centre-de-vaccination-covid-19-cpts-du-haut-escault?pid=practice-177023&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - commune de Gouzeaucourt, Salle de sport Jean Degros",
-      "url": "https://partners.doctolib.fr/centre-de-sante/gouzeaucourt/centre-de-vaccination-covid-19-cpts-du-haut-escault?pid=practice-177023&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - CPTS du Grand Douai- salle d'Anchin Douai",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/douai/cpts-grand-douai-salle-d-anchin-douai?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -394,6 +387,13 @@
       "nom": "Centre de vaccination - CH Douai",
       "url": "https://partners.doctolib.fr/hopital-public/douai/centre-de-vaccination-covid-ch-douai?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "59",
+      "nom": "Centre de vaccination - CPTS P\u00e9v\u00e8le du Douaisis, Salle la Grange",
+      "url": "https://partners.doctolib.fr/centre-de-sante/orchies/centre-de-vaccination-covid-19-orchies?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": null,
       "prochain_rdv": null
     },
     {
