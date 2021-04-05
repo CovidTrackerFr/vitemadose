@@ -1,6 +1,8 @@
+import json
 from urllib.parse import urlsplit, parse_qs
 
 import httpx
+import requests
 from httpx import TimeoutException
 
 from scraper.keldoc.keldoc_filters import parse_keldoc_availability
@@ -26,7 +28,6 @@ class KeldocCenter:
     def fetch_vaccine_cabinets(self):
         if not self.id or not self.vaccine_specialties:
             return False
-
         self.vaccine_cabinets = []
         for specialty in self.vaccine_specialties:
             cabinet_url = API_KELDOC_CABINETS.format(self.id, specialty)
@@ -62,6 +63,7 @@ class KeldocCenter:
 
         # Fetch new URL after redirection
         try:
+            print(self.base_url)
             rq = self.client.get(self.base_url)
         except TimeoutException:
             return False
