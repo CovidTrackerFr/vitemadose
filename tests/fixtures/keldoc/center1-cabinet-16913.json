@@ -1,0 +1,77 @@
+[{
+	"motive_category_id": 2526,
+	"name": "Je suis une personne de + 70 ANS (PF)",
+	"position": 0,
+	"resource_type": "Clinic",
+	"motives": [{
+		"id": 81484,
+		"name": "1ère injection Vaccin COVID +70 ANS  (PF)",
+		"position": 0,
+		"teleconsultation": false,
+		"booking_delay_until": 1440,
+		"agendas": [{
+			"id": 49335,
+			"name": "Equipe de vaccination  LE FAOUET - Maison de santé",
+			"hidden": true
+		}, {
+			"id": 51414,
+			"name": "Equipe de vaccination 2 LE FAOUET - Maison de santé",
+			"hidden": true
+		}]
+	}]
+}, {
+	"motive_category_id": 2527,
+	"name": "Je suis professionnel.le de santé liberal.e (PF)",
+	"position": 1,
+	"resource_type": "Clinic",
+	"motives": [{
+		"id": 81486,
+		"name": "1ère injection Vaccin COVID LIBERAUX  (PF)",
+		"position": 0,
+		"teleconsultation": false,
+		"booking_delay_until": 1440,
+		"agendas": [{
+			"id": 49335,
+			"name": "Equipe de vaccination  LE FAOUET - Maison de santé",
+			"hidden": true
+		}]
+	}]
+}, {
+	"motive_category_id": 2528,
+	"name": "Je suis professionnel.le du GHBS  (PF)",
+	"position": 2,
+	"resource_type": "Clinic",
+	"motives": [{
+		"id": 81488,
+		"name": "1ère injection Vaccin COVID Professionnel.le.s GHBS  (PF)",
+		"position": 0,
+		"teleconsultation": false,
+		"booking_delay_until": 1440,
+		"agendas": [{
+			"id": 49335,
+			"name": "Equipe de vaccination  LE FAOUET - Maison de santé",
+			"hidden": true
+		}]
+	}]
+}, {
+	"motive_category_id": 2763,
+	"name": "Je suis une personne vulnérable à très haut risque  (PF)",
+	"position": 999,
+	"resource_type": "Clinic",
+	"motives": [{
+		"id": 82874,
+		"name": "1ère injection Vaccin COVID personne vulnérable à très haut risque  (PF)",
+		"position": 999,
+		"teleconsultation": false,
+		"booking_delay_until": 720,
+		"agendas": [{
+			"id": 49335,
+			"name": "Equipe de vaccination  LE FAOUET - Maison de santé",
+			"hidden": true
+		}, {
+			"id": 51414,
+			"name": "Equipe de vaccination 2 LE FAOUET - Maison de santé",
+			"hidden": true
+		}]
+	}]
+}]
