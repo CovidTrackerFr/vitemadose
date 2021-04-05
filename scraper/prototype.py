@@ -93,6 +93,8 @@ def fetch_centre_slots(rdv_site_web, start_date):
         return 'Keldoc', keldoc_fetch_slots(rdv_site_web, start_date)
     if rdv_site_web.startswith('https://www.maiia.com'):
         return 'Maiia', maiia_fetch_slots(rdv_site_web, start_date)
+    if rdv_site_web.startswith('https://app.ordoclic.fr/'):
+        return 'Ordoclic', ordoclic_fetch_slots(rdv_site_web, start_date)
     return 'Autre', None
 
 
