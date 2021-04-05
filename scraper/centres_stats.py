@@ -29,3 +29,7 @@ def export_centres_stats():
 def get_centres_info():
     with open("data/output/info_centres.json", "r") as f:
         return json.load(f)
+
+
+if __name__ == '__main__':
+    export_centres_stats()
