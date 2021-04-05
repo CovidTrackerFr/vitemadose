@@ -4,6 +4,7 @@ import logging
 import requests
 from datetime import datetime, timedelta
 from dateutil.parser import isoparse
+from pytz import timezone
 from bs4 import BeautifulSoup
 
 DEBUG = True
@@ -52,7 +53,7 @@ def get_slots_from(rdv_form, rdv_url, start_date):
 
     if "firstPhysicalStartDateTime" in availability:
         dt = isoparse(availability['firstPhysicalStartDateTime'])
-        dt = dt + timedelta(hours=2)
+        dt = dt + dt.replace(tzinfo=timezone('CET')).utcoffset()
         dt = dt.isoformat()
         return dt
 
@@ -60,7 +61,7 @@ def get_slots_from(rdv_form, rdv_url, start_date):
     # la réponse, je préfère faire des tests sur l'existence des attributs
     if "closestPhysicalAvailability" in availability and "startDateTime" in availability["closestPhysicalAvailability"]:
         dt = isoparse(availability['closestPhysicalAvailability']["startDateTime"])
-        dt = dt + timedelta(hours=2)
+        dt = dt + dt.replace(tzinfo=timezone('CET')).utcoffset()
         dt = dt.isoformat()
         return dt
 
