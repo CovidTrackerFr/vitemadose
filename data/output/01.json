@@ -1,14 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:02:44.944145+02:00",
+  "last_updated": "2021-04-05T11:06:14.644065+02:00",
   "centres_disponibles": [
-    {
-      "departement": "01",
-      "nom": "Centre de vaccination du CH d'Oyonnax - Centre hospitalier du Haut Bugey",
-      "url": "https://partners.doctolib.fr/hopital-public/oyonnax/centre-de-vaccination-du-centre-hospitalier-du-haut-bugey?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-06T09:05:00.000+02:00"
-    },
     {
       "departement": "01",
       "nom": "Centre de vaccination de Bugey Sud - Boulodrome couvert du Bas-Bugey",
@@ -32,10 +25,24 @@
     },
     {
       "departement": "01",
+      "nom": "Centre de vaccination Miribel C\u00f4ti\u00e8re - Th\u00e9\u00e2tre All\u00e9gro",
+      "url": "https://partners.doctolib.fr/centre-de-sante/miribel/centre-de-vaccination-miribel-cotiere?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-15T09:40:00.000+02:00"
+    },
+    {
+      "departement": "01",
       "nom": "Centre de vaccination de la Plaine de l'Ain - Espace 1500",
       "url": "https://www.maiia.com/centre-de-vaccination/01500-amberieu-en-bugey/centre-de-vaccination-de-la-plaine-de-l-ain",
       "plateforme": "Maiia",
-      "prochain_rdv": "2021-04-21T11:55:00.000000Z"
+      "prochain_rdv": "2021-04-21T12:00:00.000000Z"
+    },
+    {
+      "departement": "01",
+      "nom": "Centre de vaccination du CH d'Oyonnax - Centre hospitalier du Haut Bugey",
+      "url": "https://partners.doctolib.fr/hopital-public/oyonnax/centre-de-vaccination-du-centre-hospitalier-du-haut-bugey?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-23T10:15:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -57,13 +64,6 @@
       "departement": "01",
       "nom": "L'H\u00f4pital Nord-Ouest - Site de Tr\u00e9voux",
       "url": "https://partners.doctolib.fr/hopital-public/villefranche-sur-saone/centre-de-vaccination-covid-trevoux-hopital-nord-ouest?pid=practice-177499&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "01",
-      "nom": "Centre de vaccination Miribel C\u00f4ti\u00e8re - Th\u00e9\u00e2tre All\u00e9gro",
-      "url": "https://partners.doctolib.fr/centre-de-sante/miribel/centre-de-vaccination-miribel-cotiere?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

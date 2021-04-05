@@ -1,14 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:02:44.944821+02:00",
+  "last_updated": "2021-04-05T11:06:14.644734+02:00",
   "centres_disponibles": [
-    {
-      "departement": "69",
-      "nom": "Centre de vaccination \u00e9ph\u00e9m\u00e8re - stade Groupama stadium",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/decines-charpieu/centre-de-vaccination-covid-19-groupama-stadium?pid=practice-179930&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-05T14:24:00.000+02:00"
-    },
     {
       "departement": "69",
       "nom": "Centre de vaccination de l\u2019Ouest Lyonnais - B\u00e2timent Le Trait d\u2019Union",
@@ -21,7 +14,7 @@
       "nom": "Centre de vaccination de Villeurbanne- salle du CCVA",
       "url": "https://partners.doctolib.fr/centre-de-sante/villeurbanne/centre-de-vaccination-covid-19-villeurbanne?pid=practice-173261&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-19T14:25:00.000+02:00"
+      "prochain_rdv": "2021-04-19T11:15:00.000+02:00"
     },
     {
       "departement": "69",
@@ -167,9 +160,9 @@
     },
     {
       "departement": "69",
-      "nom": "Grand centre de Lyon - Eurexpo (en cours de d\u00e9claration)",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Centre de vaccination -H\u00f4pital Edouard Herriot-HCL",
+      "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-edouard-herriot-hcl-vaccination-covid?pid=practice-163794&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -181,8 +174,15 @@
     },
     {
       "departement": "69",
-      "nom": "Centre de vaccination -H\u00f4pital Edouard Herriot-HCL",
-      "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-edouard-herriot-hcl-vaccination-covid?pid=practice-163794&enable_cookies_consent=1",
+      "nom": "Grand centre de Lyon - Eurexpo (en cours de d\u00e9claration)",
+      "url": "",
+      "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "69",
+      "nom": "Centre de vaccination \u00e9ph\u00e9m\u00e8re - stade Groupama stadium",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/decines-charpieu/centre-de-vaccination-covid-19-groupama-stadium?pid=practice-179930&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -202,15 +202,15 @@
     },
     {
       "departement": "69",
-      "nom": "Centre de vaccination de l'H\u00f4pital de Neuville sur Sa\u00f4ne",
-      "url": "https://partners.doctolib.fr/hopital-public/neuville-sur-sa\u00f4ne/centre-hospitalier-de-neuville-centre-de-vaccination?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de L'Arbresle - Salle Claude Terrasse",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/l'arbresle/centre-de-vaccination-covid-19-l-arbresle?pid=practice-165179?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "69",
-      "nom": "Centre de vaccination de L'Arbresle - Salle Claude Terrasse",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/l'arbresle/centre-de-vaccination-covid-19-l-arbresle?pid=practice-165179?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de l'H\u00f4pital de Neuville sur Sa\u00f4ne",
+      "url": "https://partners.doctolib.fr/hopital-public/neuville-sur-sa\u00f4ne/centre-hospitalier-de-neuville-centre-de-vaccination?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -230,6 +230,13 @@
     },
     {
       "departement": "69",
+      "nom": "Centre de vaccination - Palais des sports de Gerland /Hospices Civils de Lyon",
+      "url": "https://partners.doctolib.fr/hopital-public/lyon/palais-des-sports-gerland-hcl-vaccination-covid?pid=practice-163661&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "69",
       "nom": "Centre de vaccination international de Villeurbanne",
       "url": "https://partners.doctolib.fr/centre-de-sante/villeurbanne/centre-de-vaccinations-internationales-villeurbanne-miit?pid=practice-165173?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -244,13 +251,6 @@
     },
     {
       "departement": "69",
-      "nom": "Centre de vaccination -H\u00f4pital Pierre Wertheimer - HCL",
-      "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-pierre-wertheimer-hcl-vaccination-covid?pid=practice-163796&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "69",
       "nom": "Centre de vaccination -H\u00f4pital Lyon sud - HCL",
       "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-lyon-sud-hcl-vaccination-covid?pid=practice-163795&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -258,8 +258,8 @@
     },
     {
       "departement": "69",
-      "nom": "Centre de vaccination - Palais des sports de Gerland /Hospices Civils de Lyon",
-      "url": "https://partners.doctolib.fr/hopital-public/lyon/palais-des-sports-gerland-hcl-vaccination-covid?pid=practice-163661&enable_cookies_consent=1",
+      "nom": "Centre de vaccination -H\u00f4pital Pierre Wertheimer - HCL",
+      "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-pierre-wertheimer-hcl-vaccination-covid?pid=practice-163796&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     }

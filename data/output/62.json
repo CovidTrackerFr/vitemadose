@@ -1,20 +1,20 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:02:44.944762+02:00",
+  "last_updated": "2021-04-05T11:06:14.644671+02:00",
   "centres_disponibles": [
     {
       "departement": "62",
       "nom": "Centre de vaccination - Ville de Calais (Forum Gambetta)",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/calais/centre-de-vaccination-covid-19-forum-gambetta?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-06T12:50:00.000+02:00"
+      "prochain_rdv": "2021-04-06T12:55:00.000+02:00"
     },
     {
       "departement": "62",
       "nom": "Centre de vaccination - CPTS Lievin Pays d'Artois, Salle Gilbert R\u00e9gnier",
       "url": "https://www.maiia.com/centre-de-vaccination/62800-lievin/centre-de-vaccination-lievin-pays-dartois",
       "plateforme": "Maiia",
-      "prochain_rdv": "2021-04-19T10:50:00.000000Z"
+      "prochain_rdv": "2021-04-19T11:10:00.000000Z"
     }
   ],
   "centres_indisponibles": [
@@ -230,13 +230,6 @@
     },
     {
       "departement": "62",
-      "nom": "Centre de vaccination - Centre SDIS Avesnes Le Comte, Salle Jacques Nirdol",
-      "url": "https://partners.doctolib.fr/centre-de-sante/bruay-la-buissiere/centre-de-vaccination-covid-pas-de-calais?pid=practice-164609&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "62",
       "nom": "Centre de vaccination - CHRSO et CPTS Audomaroise, Salle des sports du pavillon 3 \u2013 CH St Omer",
       "url": "https://partners.doctolib.fr/hopital-public/saint-omer/ch-region-st-omer-centre-de-vaccination-covid-19?pid=practice-164177&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -246,6 +239,13 @@
       "departement": "62",
       "nom": "Centre de vaccination - Centre SDIS Lumbres, Salle Leio Lagrang",
       "url": "https://partners.doctolib.fr/centre-de-sante/bruay-la-buissiere/centre-de-vaccination-covid-pas-de-calais?pid=practice-164610&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Centre SDIS Avesnes Le Comte, Salle Jacques Nirdol",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bruay-la-buissiere/centre-de-vaccination-covid-pas-de-calais?pid=practice-164609&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

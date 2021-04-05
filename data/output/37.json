@@ -1,41 +1,34 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:02:44.944530+02:00",
+  "last_updated": "2021-04-05T11:06:14.644452+02:00",
   "centres_disponibles": [
     {
       "departement": "37",
       "nom": "Centre m\u00e9dical du SDIS - Neuill\u00e9-Pont-Pierre",
       "url": "https://partners.doctolib.fr/centre-de-sante/neuille-pont-pierre/centre-de-vaccination-nord-touraine?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-06T12:10:00.000+02:00"
+      "prochain_rdv": "2021-04-06T11:50:00.000+02:00"
     },
     {
       "departement": "37",
       "nom": "Maison des associations - Loches",
       "url": "https://partners.doctolib.fr/centre-de-sante/loches/centre-de-vaccination-covid-cpts-sud-lochois?pid=practice-165185?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-13T09:00:00.000+02:00"
+      "prochain_rdv": "2021-04-13T09:06:00.000+02:00"
     },
     {
       "departement": "37",
       "nom": "Salle Polyvalente - Amboise",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/amboise/vaccination-mairie-amboise?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-19T10:30:00.000+02:00"
+      "prochain_rdv": "2021-04-19T10:36:00.000+02:00"
     },
     {
       "departement": "37",
       "nom": "CHRU Tours - Site de Bretonneau  - CAP Sant\u00e9 Centre de vaccination",
       "url": "https://partners.doctolib.fr/hopital-public/tours/centre-de-vaccination-covid-chru-tours-reserve-aux-professionnels-de-sante?pid=practice-162208&?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-23T10:18:00.000+02:00"
-    },
-    {
-      "departement": "37",
-      "nom": "Maison des associations - Clos neuf",
-      "url": "https://partners.doctolib.fr/centre-de-sante/tours/centre-vaccination-covid-tours-metrople?speciality_id=5494&pid=practice-164868&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-30T17:00:00.000+02:00"
+      "prochain_rdv": "2021-04-23T10:54:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -106,6 +99,13 @@
       "departement": "37",
       "nom": "Centre de vaccination Les Halles de Tours",
       "url": "https://partners.doctolib.fr/centre-de-sante/tours/centre-vaccination-covid-tours-metrople?pid=practice-164864&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "37",
+      "nom": "Maison des associations - Clos neuf",
+      "url": "https://partners.doctolib.fr/centre-de-sante/tours/centre-vaccination-covid-tours-metrople?speciality_id=5494&pid=practice-164868&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     }

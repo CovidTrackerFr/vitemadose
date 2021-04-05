@@ -1,27 +1,20 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:02:44.944885+02:00",
+  "last_updated": "2021-04-05T11:06:14.644789+02:00",
   "centres_disponibles": [
-    {
-      "departement": "75",
-      "nom": "Centre de g\u00e9rontologie Henry Dunant / Croix Rouge",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-centre-henry-dunant-croix-rouge-francaise?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-08T11:50:00.000+02:00"
-    },
     {
       "departement": "75",
       "nom": "Centre de vaccination Jaures Rothschild",
       "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-paris-19eme?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-20T17:50:00.000+02:00"
+      "prochain_rdv": "2021-04-17T16:40:00.000+02:00"
     },
     {
       "departement": "75",
-      "nom": "Mairie du 15e",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-paris-15e?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de g\u00e9rontologie Henry Dunant / Croix Rouge",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-centre-henry-dunant-croix-rouge-francaise?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-29T12:20:00.000+02:00"
+      "prochain_rdv": "2021-04-23T17:10:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -118,16 +111,16 @@
     },
     {
       "departement": "75",
-      "nom": "GHU Paris - Site Pierre Bayle",
-      "url": "https://partners.doctolib.fr/hopital-public/paris/ghu-paris?pid=practice-163228&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "EMV Mairie du 5\u00e8me - Centre COVISAN 5",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "75",
-      "nom": "EMV Mairie du 5\u00e8me - Centre COVISAN 5",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "GHU Paris - Site Pierre Bayle",
+      "url": "https://partners.doctolib.fr/hopital-public/paris/ghu-paris?pid=practice-163228&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -181,16 +174,16 @@
     },
     {
       "departement": "75",
-      "nom": "EMV Centre de vaccination Bertheau",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Centre de vaccination Paris 20e",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-164924&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "75",
-      "nom": "Centre de vaccination Paris 20e",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-164924&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
+      "nom": "EMV Centre de vaccination Bertheau",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
@@ -258,6 +251,13 @@
     },
     {
       "departement": "75",
+      "nom": "EMV- Mairie du 20e - Centre COVISAN 20",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-166459&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "75",
       "nom": "Espace Gabriel Lam\u00e9",
       "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-175177&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -286,13 +286,6 @@
     },
     {
       "departement": "75",
-      "nom": "EMV- Mairie du 20e - Centre COVISAN 20",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-166459&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "75",
       "nom": "CD - US PLS / Prison de la Sant\u00e9",
       "url": "",
       "plateforme": "Autre",
@@ -302,6 +295,13 @@
       "departement": "75",
       "nom": "Centre Eph\u00e9m\u00e8re - Caserne Champerret",
       "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-des-sapeurs-pompiers-de-paris?pid=practice-175266&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "75",
+      "nom": "Mairie du 10e",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-176642&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -321,8 +321,8 @@
     },
     {
       "departement": "75",
-      "nom": "Mairie du 10e",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-176642&enable_cookies_consent=1",
+      "nom": "Mairie du 17e",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/paris/centre-de-vaccination-covid-19-paris-17eme?pid=practice-176666&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -331,13 +331,6 @@
       "nom": "Centre \u00e9ph\u00e9m\u00e8re - Caserne M\u00e9nilmontant",
       "url": "RIen",
       "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "75",
-      "nom": "Mairie du 17e",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/paris/centre-de-vaccination-covid-19-paris-17eme?pid=practice-176666&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -370,8 +363,8 @@
     },
     {
       "departement": "75",
-      "nom": "Centre de vaccinations internationales Air France",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/paris/centre-de-vaccination-covid-19-centre-medical-international-cmi?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Mairie du 15e",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-paris-15e?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -379,6 +372,20 @@
       "departement": "75",
       "nom": "Mairie du 9e",
       "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-mairie-du-9eme-arrondissement?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "75",
+      "nom": "Centre de vaccinations internationales Air France",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/paris/centre-de-vaccination-covid-19-centre-medical-international-cmi?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "75",
+      "nom": "Salle Olympe de Gouges",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-164922&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -400,13 +407,6 @@
       "departement": "75",
       "nom": "Mairie de Paris Centre",
       "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-164812&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "75",
-      "nom": "Salle Olympe de Gouges",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-19-ville-de-paris?pid=practice-164922&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -440,15 +440,15 @@
     },
     {
       "departement": "75",
-      "nom": "Mairie du 6e",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/paris/centre-de-vaccination-covid-19-mairie-du-6eme-arrondissement-de-paris?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de sant\u00e9 Bauchat-Nation",
+      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-centre-de-sante-bauchat-nation?pid=practice-165403?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "75",
-      "nom": "Centre de sant\u00e9 Bauchat-Nation",
-      "url": "https://partners.doctolib.fr/centre-de-sante/paris/centre-de-vaccination-covid-centre-de-sante-bauchat-nation?pid=practice-165403?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Mairie du 6e",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/paris/centre-de-vaccination-covid-19-mairie-du-6eme-arrondissement-de-paris?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     }

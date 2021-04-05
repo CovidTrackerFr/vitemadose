@@ -1,8 +1,15 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:02:44.944901+02:00",
+  "last_updated": "2021-04-05T11:06:14.644806+02:00",
   "centres_disponibles": [],
   "centres_indisponibles": [
+    {
+      "departement": "77",
+      "nom": "GHEF-site CH Coulommiers",
+      "url": "https://partners.doctolib.fr/hopital-public/meaux/ghef-centre-de-vaccination-covid-reserve-aux-professionnels-de-sante-de-ville?pid=practice-162149&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
     {
       "departement": "77",
       "nom": "GHEF-Site de Jossigny",
@@ -12,8 +19,8 @@
     },
     {
       "departement": "77",
-      "nom": "GHEF-site CH Coulommiers",
-      "url": "https://partners.doctolib.fr/hopital-public/meaux/ghef-centre-de-vaccination-covid-reserve-aux-professionnels-de-sante-de-ville?pid=practice-162149&enable_cookies_consent=1",
+      "nom": "GHEF-Site CH Meaux",
+      "url": "https://partners.doctolib.fr/hopital-public/meaux/ghef-centre-de-vaccination-covid-reserve-aux-professionnels-de-sante-de-ville?pid=practice-162173&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -43,13 +50,6 @@
       "nom": "CHSSM-Site CH Montereau Fault Yonne",
       "url": "",
       "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "77",
-      "nom": "GHEF-Site CH Meaux",
-      "url": "https://partners.doctolib.fr/hopital-public/meaux/ghef-centre-de-vaccination-covid-reserve-aux-professionnels-de-sante-de-ville?pid=practice-162173&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
@@ -96,13 +96,6 @@
     },
     {
       "departement": "77",
-      "nom": "EMV Thomery",
-      "url": "",
-      "plateforme": "Autre",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "77",
       "nom": "Ville de Fontainebleau",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/fontainebleau/vaccination-covid-19-ville-de-fontainebleau?pid=practice-168865&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -113,6 +106,13 @@
       "nom": "EMV Torcy",
       "url": "https://partners.doctolib.fr/centre-de-sante/torcy/point-de-vaccination-avance-de-torcy?pid=practice-173895&enable_cookies_consent=1",
       "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "77",
+      "nom": "EMV Thomery",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
@@ -152,16 +152,16 @@
     },
     {
       "departement": "77",
-      "nom": "Centres de vaccination GHIF Melun- site de Savigny le temple",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/savigny-le-temple-77176/centre-de-vaccination-covid-ghsif-site-de-savigny-le-temple",
-      "plateforme": null,
+      "nom": "centre de vaccination GHSIF MELUN - site de Combs la Ville",
+      "url": "",
+      "plateforme": "Autre",
       "prochain_rdv": null
     },
     {
       "departement": "77",
-      "nom": "centre de vaccination GHSIF MELUN - site de Combs la Ville",
-      "url": "",
-      "plateforme": "Autre",
+      "nom": "Centres de vaccination GHIF Melun- site de Savigny le temple",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/savigny-le-temple-77176/centre-de-vaccination-covid-ghsif-site-de-savigny-le-temple",
+      "plateforme": null,
       "prochain_rdv": null
     },
     {

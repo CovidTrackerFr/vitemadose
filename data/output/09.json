@@ -1,7 +1,14 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:02:44.944269+02:00",
+  "last_updated": "2021-04-05T11:06:14.644204+02:00",
   "centres_disponibles": [
+    {
+      "departement": "09",
+      "nom": "CV LE FOSSAT (Moderna Pfizer)",
+      "url": "https://partners.doctolib.fr/centre-de-sante/fossat/centre-de-vaccination-covid-du-fossat?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-06T09:50:00.000+02:00"
+    },
     {
       "departement": "09",
       "nom": "MSP multisites de Laroque d'Olmes (Pfizer)",
@@ -15,13 +22,6 @@
       "url": "https://partners.doctolib.fr/cabinet-medical/pamiers/centre-de-vaccination-covid-19-cabinet-medical-de-pamiers?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": "2021-04-13T15:50:00.000+02:00"
-    },
-    {
-      "departement": "09",
-      "nom": "CV LE FOSSAT (Moderna Pfizer)",
-      "url": "https://partners.doctolib.fr/centre-de-sante/fossat/centre-de-vaccination-covid-du-fossat?speciality_id=5494&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-15T16:10:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -55,15 +55,15 @@
     },
     {
       "departement": "09",
-      "nom": "Cabinet m\u00e9dical \u00e0 Maz\u00e8res (Pfizer Moderna)",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/mazeres/centre-de-vaccination-covid-19-cabinet-medical-de-mazeres?pid=practice-174807&enable_cookies_consent=1",
+      "nom": "Cabinet m\u00e9dical de Saverdun (Pfizer)",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saverdun/centre-de-vaccination-covid-19-cabinet-medical-saverdun?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "09",
-      "nom": "Cabinet m\u00e9dical de Saverdun (Pfizer)",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saverdun/centre-de-vaccination-covid-19-cabinet-medical-saverdun?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Cabinet m\u00e9dical \u00e0 Maz\u00e8res (Pfizer Moderna)",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/mazeres/centre-de-vaccination-covid-19-cabinet-medical-de-mazeres?pid=practice-174807&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

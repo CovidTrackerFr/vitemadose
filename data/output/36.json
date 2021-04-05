@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:02:44.944522+02:00",
+  "last_updated": "2021-04-05T11:06:14.644444+02:00",
   "centres_disponibles": [
     {
       "departement": "36",
@@ -14,7 +14,7 @@
       "nom": "Centre de vaccination public - Salle des f\u00eates Jean Moulin ",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/villedieu-sur-indre/centre-de-vaccination-de-villedieu-sur-indre?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-05-03T17:10:00.000+02:00"
+      "prochain_rdv": "2021-05-10T09:00:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -62,6 +62,13 @@
     },
     {
       "departement": "36",
+      "nom": "Salle des f\u00eates Saint Gaultier / CPTS Val de Creuse",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-gaultier/centre-de-vaccination-saint-gaultier?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "36",
       "nom": "Maison M\u00e9dicale Vatan",
       "url": "https://partners.doctolib.fr/centre-depistage-covid/valencay/centres-de-vaccination-covid-du-boischaut-nord?pid=practice-165107&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -69,8 +76,8 @@
     },
     {
       "departement": "36",
-      "nom": "Salle des f\u00eates Saint Gaultier / CPTS Val de Creuse",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-gaultier/centre-de-vaccination-saint-gaultier?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Espace Tivoli - Chatillon",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/chatillon-sur-indre/vaccination-covid-19-ville-de-chatillon-sur-indre-espace-tivoli?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -85,13 +92,6 @@
       "departement": "36",
       "nom": "MSP Clos St Joseph Argenton sur Creuse",
       "url": "https://partners.doctolib.fr/centre-de-sante/argenton-sur-creuse/centre-de-vaccination-d-argenton-sur-creuse?pid=practice-168762&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "36",
-      "nom": "Espace Tivoli - Chatillon",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/chatillon-sur-indre/vaccination-covid-19-ville-de-chatillon-sur-indre-espace-tivoli?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },

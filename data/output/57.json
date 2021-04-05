@@ -1,21 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:02:44.944719+02:00",
+  "last_updated": "2021-04-05T11:06:14.644630+02:00",
   "centres_disponibles": [
-    {
-      "departement": "57",
-      "nom": "Centre de vaccination d'Hettange-Grande - Hall omnisport",
-      "url": "https://partners.doctolib.fr/centre-de-sante/hettange-grande/centre-de-vaccination-d-hettange-grande?pid=practice-177585&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-09T10:55:00.000+02:00"
-    },
-    {
-      "departement": "57",
-      "nom": "Centre de vaccination de Thionville - Th\u00e9\u00e2tre municipal",
-      "url": "https://partners.doctolib.fr/centre-de-sante/thionville/centre-de-vaccination-covid-19-thionville?pid=practice-172629&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": "2021-04-23T13:15:00.000+02:00"
-    },
     {
       "departement": "57",
       "nom": "Centre de vaccination de Metz - Clinique Claude Bernard (Entr\u00e9e B)",
@@ -36,6 +22,13 @@
       "departement": "57",
       "nom": "Centre de vaccination de Metz - UNEOS - Site Belle Isle",
       "url": "https://partners.doctolib.fr/centre-de-sante/metz/centre-vaccination-covid19-hbi-uneos?pid=practice-165011&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Thionville - Th\u00e9\u00e2tre municipal",
+      "url": "https://partners.doctolib.fr/centre-de-sante/thionville/centre-de-vaccination-covid-19-thionville?pid=practice-172629&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
@@ -146,6 +139,13 @@
     },
     {
       "departement": "57",
+      "nom": "Centre de vaccination d'Hettange-Grande - Hall omnisport",
+      "url": "https://partners.doctolib.fr/centre-de-sante/hettange-grande/centre-de-vaccination-d-hettange-grande?pid=practice-177585&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "57",
       "nom": "Centre de vaccination de Ch\u00e2teau-Salins - CH - CPTS du Saulnois",
       "url": "https://partners.doctolib.fr/hopital-public/chateau-salins/centre-de-vaccination-covid-19-hopital-de-chateau-salins?pid=practice-165120&enable_cookies_consent=1",
       "plateforme": "Doctolib",
@@ -188,15 +188,15 @@
     },
     {
       "departement": "57",
-      "nom": "Centre de vaccination de Sarrebourg",
-      "url": "https://partners.doctolib.fr/hopital-public/saverne/ch-sarrebourg-centre-de-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de Thionville - Clinique Notre-Dame",
+      "url": "https://partners.doctolib.fr/clinique-privee/thionville/centre-de-vaccination-thionville-elsan?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {
       "departement": "57",
-      "nom": "Centre de vaccination de Thionville - Clinique Notre-Dame",
-      "url": "https://partners.doctolib.fr/clinique-privee/thionville/centre-de-vaccination-thionville-elsan?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de Sarrebourg",
+      "url": "https://partners.doctolib.fr/hopital-public/saverne/ch-sarrebourg-centre-de-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
       "plateforme": "Doctolib",
       "prochain_rdv": null
     }

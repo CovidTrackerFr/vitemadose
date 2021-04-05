@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:02:44.944613+02:00",
+  "last_updated": "2021-04-05T11:06:14.644535+02:00",
   "centres_disponibles": [
     {
       "departement": "46",
@@ -28,7 +28,7 @@
       "nom": "Centre de vaccination - Montcuq",
       "url": "https://partners.doctolib.fr/centre-de-sante/montcuq/centre-de-vaccination-covid-montcuq-allee-des-marronniers?pid=practice-166113&enable_cookies_consent=1",
       "plateforme": "Doctolib",
-      "prochain_rdv": "2021-05-05T15:55:00.000+02:00"
+      "prochain_rdv": "2021-05-05T15:45:00.000+02:00"
     }
   ],
   "centres_indisponibles": [
@@ -69,13 +69,6 @@
     },
     {
       "departement": "46",
-      "nom": "MSP CATUS",
-      "url": "https://partners.doctolib.fr/centre-de-sante/catus/centre-de-vaccination-covid-msp-catus?pid=practice-179532&enable_cookies_consent=1",
-      "plateforme": "Doctolib",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "46",
       "nom": "MSP Lalbenque",
       "url": "",
       "plateforme": "Autre",
@@ -86,6 +79,13 @@
       "nom": "Cressesac",
       "url": "",
       "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "46",
+      "nom": "MSP CATUS",
+      "url": "https://partners.doctolib.fr/centre-de-sante/catus/centre-de-vaccination-covid-msp-catus?pid=practice-179532&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
       "prochain_rdv": null
     },
     {

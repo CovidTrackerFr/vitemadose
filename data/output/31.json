@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-05T11:02:44.944480+02:00",
+  "last_updated": "2021-04-05T11:06:14.644401+02:00",
   "centres_disponibles": [
     {
       "departement": "31",
@@ -8,13 +8,6 @@
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/toulouse-31000/toulouse-limayrac/centre-de-vaccination-de-toulouse-limayrac",
       "plateforme": "Keldoc",
       "prochain_rdv": "2021-04-06T14:00:00.000000+0200"
-    },
-    {
-      "departement": "31",
-      "nom": "CDV31 Muret (Salle Agora)",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/muret-31600/muret-salle-horizon/centre-de-vaccination-de-muret-salle-horizon",
-      "plateforme": "Keldoc",
-      "prochain_rdv": "2021-04-07T11:05:00.000000+0200"
     },
     {
       "departement": "31",
@@ -167,6 +160,13 @@
     },
     {
       "departement": "31",
+      "nom": "CDV31 Toulouse Pierre Baudis",
+      "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/toulouse-31000/centre-de-vaccination-departemental-toulouse-pierre-baudis",
+      "plateforme": null,
+      "prochain_rdv": null
+    },
+    {
+      "departement": "31",
       "nom": "CDV31 CHU Toulouse Purpan",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/toulouse-31059/centre-hospitalier-universitaire-toulouse-site-purpan/centre-de-vaccination-du-chu-toulouse-site-purpan",
       "plateforme": "Keldoc",
@@ -177,13 +177,6 @@
       "nom": "CDV31 Saint Gaudens",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-gaudens-31800/saint-gaudens/centre-de-vaccination-de-saint-gaudens",
       "plateforme": "Keldoc",
-      "prochain_rdv": null
-    },
-    {
-      "departement": "31",
-      "nom": "CDV31 Toulouse Pierre Baudis",
-      "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/toulouse-31000/centre-de-vaccination-departemental-toulouse-pierre-baudis",
-      "plateforme": null,
       "prochain_rdv": null
     },
     {
@@ -274,6 +267,13 @@
       "departement": "31",
       "nom": "CDV31 Gragnague",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/gragnague-31380/centre-de-vaccination-de-gragnague/centre-de-vaccination-de-gragnague",
+      "plateforme": "Keldoc",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Muret (Salle Agora)",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/muret-31600/muret-salle-horizon/centre-de-vaccination-de-muret-salle-horizon",
       "plateforme": "Keldoc",
       "prochain_rdv": null
     },
