@@ -103,7 +103,7 @@ def cp_to_insee(cp):
     # on charge la table de correspondance cp/insee, une seule fois
     global insee
     if insee == {}:
-        with open("scraper/codepostal_to_insee.json") as json_file:
+        with open("data/input/codepostal_to_insee.json") as json_file:
             insee = json.load(json_file)
     if cp in insee:
         insee_com = insee.get(cp).get("insee")
