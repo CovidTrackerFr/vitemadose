@@ -103,13 +103,12 @@ def cp_to_insee(cp):
     # on charge la table de correspondance cp/insee, une seule fois
     global insee
     if insee == {}:
-        url = "https://www.data.gouv.fr/fr/datasets/r/e88c6fda-1d09-42a0-a069-606d3259114e"
-        response = session.get(url)
-        response.raise_for_status()
-        insee = json.loads(response.content.decode('utf8'))
-    for record in insee:
-        if record["fields"]["postal_code"] == cp:
-            insee_com = record["fields"]["insee_com"]
+        with open("scraper/codepostal_to_insee.json") as json_file:
+            insee = json.load(json_file)
+    if cp in insee:
+        insee_com = insee.get(cp).get("insee")
+    else:
+        print(f'Ordoclic unable to translate cp >{cp}< to insee')
     return insee_com
 
 def centre_iterator():
