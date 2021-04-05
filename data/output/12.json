@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-05T10:59:06.382474+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "12",
+      "nom": "Centre de Vaccination Millau",
+      "url": "https://partners.doctolib.fr/hopital-public/millau/centre-de-vaccination-millau?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-13T10:55:00.000+02:00"
+    },
+    {
+      "departement": "12",
+      "nom": "Villefrance-De-Rouergue",
+      "url": "https://partners.doctolib.fr/centre-de-sante/villefranche-de-rouergue/centre-de-vaccination-covid-villefranche-de-rouergue?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-13T13:20:00.000+02:00"
+    },
+    {
+      "departement": "12",
+      "nom": "CH de Rodez H\u00f4pital Jacques Puel ",
+      "url": "https://partners.doctolib.fr/hopital-public/rodez/centre-de-vaccination-covid-hopital-ville-rodez?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-15T17:10:00.000+02:00"
+    },
+    {
+      "departement": "12",
+      "nom": "CH DE DECAZEVILLE",
+      "url": "https://partners.doctolib.fr/hopital-public/decazeville/centre-de-vaccination-covid-ch-decazeville?pid=practice-165118?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-23T11:58:00.000+02:00"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "12",
+      "nom": "CHI ESPALION",
+      "url": "https://partners.doctolib.fr/hopital-public/espalion/centre-de-vaccination-covid-chi-espalion?pid=practice-165128?speciality_id=5494&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "12",
+      "nom": "CH SAINT-AFFRIQUE",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-affrique/centre-hospitalier-emile-borel?pid=practice-165693&enable_cookies_consent=1",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "12",
+      "nom": "MA - US / Maison d'Arr\u00eat de Rodez / Maison d'Arr\u00eat de Rodez",
+      "url": "",
+      "plateforme": "Autre",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "12",
+      "nom": "Onet le Chateau",
+      "url": "",
+      "plateforme": "Autre",
+      "prochain_rdv": null
+    }
+  ]
+}
