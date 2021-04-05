@@ -112,6 +112,7 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
             'Doctolib': doctolib_fetch_slots,
             'Keldoc': keldoc_fetch_slots,
             'Maiia': maiia_fetch_slots,
+            'Ordoclic': ordoclic_fetch_slots,
         }
 
     rdv_site_web = rdv_site_web.strip()
@@ -123,6 +124,8 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
         platform = 'Keldoc'
     elif rdv_site_web.startswith('https://www.maiia.com'):
         platform = 'Maiia'
+    elif rdv_site_web.startswith('https://app.ordoclic.fr/'):
+        platform = 'Ordoclic'
     else:
         return 'Autre', None
 
