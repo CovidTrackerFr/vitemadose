@@ -89,7 +89,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
                 compte_centres_avec_dispo += 1
                 par_departement[code_departement]['centres_disponibles'].append(centre)
         else:
-            logger.warning("le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
+            logger.warning(f"le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
 
     for code_departement, disponibilités in par_departement.items():
         if 'centres_disponibles' in disponibilités:
