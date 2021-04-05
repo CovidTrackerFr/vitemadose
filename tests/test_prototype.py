@@ -1,10 +1,21 @@
 import datetime as dt
 import json
-from scraper.departements import import_departements
+import pytest
+from scraper.departements import import_departements, to_departement_number
 from scraper.prototype import fetch_centre_slots, export_data
 
 from .utils import mock_datetime_now
 
+def test_insee_to_departement_code():
+    right_insee_code = "12345"
+    short_insee_code = "1234"
+    DOM_TOM_insee_code = "97234"
+    wrong_insee_code = "123"
+    assert to_departement_number(right_insee_code) == right_insee_code[:2]
+    assert to_departement_number(short_insee_code) == f"0{short_insee_code[:1]}"
+    assert to_departement_number(DOM_TOM_insee_code) == DOM_TOM_insee_code[:3]
+    with pytest.raises(ValueError):
+        to_departement_number(wrong_insee_code)
 
 def test_export_data(tmp_path):
     centres_cherchés = [
