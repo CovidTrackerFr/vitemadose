@@ -36,8 +36,12 @@ def getSlots(entityId, medicalStaffId, reasonId, start_date, end_date):
     return(r.json())
 
 def getProfile(rdv_site_web):
-    profile_name = rdv_site_web.rsplit('/', 1)[-1]
-    base_url = f'https://api.ordoclic.fr/v1/public/entities/profile/{profile_name}'
+    slug = rdv_site_web.rsplit('/', 1)[-1]
+    prof = rdv_site_web.rsplit('/', 2)[-2]
+    if prof in ['pharmacien', 'medecin']:
+        base_url = f'https://api.ordoclic.fr/v1/professionals/profile/{slug}'
+    else:
+        base_url = f'https://api.ordoclic.fr/v1/public/entities/profile/{slug}'
     r = session.get(base_url)
     r.raise_for_status()
     return(r.json())
@@ -112,19 +116,44 @@ def centre_iterator():
     items = search()
     for item in items["items"]:
         # plusieur types possibles (pharmacie, maison mediacle, pharmacien, medecin, ...), pour l'instant on filtre juste les pharmacies
-        if item.get("type") == "Pharmacie":
-            centre = {}
-            slug = item["publicProfile"]["slug"]
-            centre["gid"] = item["id"][:8]
-            centre["rdv_site_web"] = f"https://app.ordoclic.fr/app/pharmacie/{slug}"
-            centre["com_insee"] = cp_to_insee(item["location"]["zip"])
-            centre["nom"] = item.get("name")
-            yield centre
-        elif item.get("type") in ["Laboratoire d’analyse", "Clinique", "Maison médicale", "Centre de soins", "Cabinet de groupe"]:
-            centre = {}
-            slug = item["publicProfile"]["slug"]
-            centre["gid"] = item["id"][:8]
-            centre["rdv_site_web"] = f"https://app.ordoclic.fr/app/entite/{slug}"
-            centre["com_insee"] = cp_to_insee(item["location"]["zip"])
-            centre["nom"] = item.get("name")
-            yield centre
+        if 'type' in item:
+            t = item.get("type")
+            if t == "Pharmacie":
+                centre = {}
+                slug = item["publicProfile"]["slug"]
+                centre["gid"] = item["id"][:8]
+                centre["rdv_site_web"] = f"https://app.ordoclic.fr/app/pharmacie/{slug}"
+                centre["com_insee"] = cp_to_insee(item["location"]["zip"])
+                centre["nom"] = item.get("name")
+                yield centre
+            elif t in ["Laboratoire d’analyse", "Clinique", "Maison médicale", "Centre de soins", "Cabinet de groupe"]:
+                centre = {}
+                slug = item["publicProfile"]["slug"]
+                centre["gid"] = item["id"][:8]
+                centre["rdv_site_web"] = f"https://app.ordoclic.fr/app/entite/{slug}"
+                centre["com_insee"] = cp_to_insee(item["location"]["zip"])
+                centre["nom"] = item.get("name")
+                print(f"Ordoclic: Type {t} non pris en charge")
+            else:
+                print(f"Ordoclic: Type {t} non supporté")
+        elif 'jobId' in item:
+            jobId = item.get("jobId")
+            job = item.get("job")
+            if jobId == 1: #pharmacien
+                centre = {}
+                slug = item["publicProfile"]["slug"]
+                centre["gid"] = item["id"][:8]
+                centre["rdv_site_web"] = f"https://app.ordoclic.fr/app/pharmacien/{slug}"
+                centre["com_insee"] = cp_to_insee(item["location"]["zip"])
+                centre["nom"] = item.get("firstName") + " " + item.get("lastName")
+                print(f"Ordoclic: Job {job} non pris en charge")
+            elif jobId == 3: #medecin
+                centre = {}
+                slug = item["publicProfile"]["slug"]
+                centre["gid"] = item["id"][:8]
+                centre["rdv_site_web"] = f"https://app.ordoclic.fr/app/medecin/{slug}"
+                centre["com_insee"] = cp_to_insee(item["location"]["zip"])
+                centre["nom"] = item.get("firstName") + " " + item.get("lastName")
+                print(f"Ordoclic: Job {job} non pris en charge")
+            else:
+                print(f"Ordoclic: Job {job} non pris en charge")
