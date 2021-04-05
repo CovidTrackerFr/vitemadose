@@ -24,11 +24,14 @@ def main():
             1
         )
         compte_centres, compte_centres_avec_dispo = export_data(centres_cherchés)
-        print(f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
+        print(
+            f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
         if compte_centres_avec_dispo == 0:
             print(
                 "Aucune disponibilité n'a été trouvée sur tous les centres, c'est bizarre, alors c'est probablement une erreur")
             exit(code=1)
+
+    export_stats(compte_centres, compte_centres_avec_dispo)
 
 
 def cherche_prochain_rdv_dans_centre(centre):
@@ -44,10 +47,12 @@ def cherche_prochain_rdv_dans_centre(centre):
     try:
         departement = to_departement_number(insee_code=centre['com_insee'])
     except ValueError:
-        print(f"erreur lors du traitement de la ligne avec le gid {centre['gid']}, com_insee={centre['com_insee']}")
+        print(
+            f"erreur lors du traitement de la ligne avec le gid {centre['gid']}, com_insee={centre['com_insee']}")
         departement = ''
 
-    print(f'{centre.get("gid", "")!s:>8} {plateforme!s:16} {next_slot or ""!s:32} {departement!s:6}')
+    print(
+        f'{centre.get("gid", "")!s:>8} {plateforme!s:16} {next_slot or ""!s:32} {departement!s:6}')
 
     return {
         'departement': departement,
@@ -72,19 +77,21 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
     par_departement = {
         code: {
             'version': 1,
-            'last_updated': dt.datetime.now(tz=pytz.timezone('Europe/Paris')).isoformat(),
+            'last_updated': dt.datetime.now(
+                tz=pytz.timezone('Europe/Paris')).isoformat(),
             'centres_disponibles': [],
             'centres_indisponibles': []
         }
         for code in import_departements()
     }
-    
+
     for centre in centres_cherchés:
         compte_centres += 1
         code_departement = centre['departement']
         if code_departement in par_departement:
             if centre['prochain_rdv'] is None:
-                par_departement[code_departement]['centres_indisponibles'].append(centre)
+                par_departement[code_departement]['centres_indisponibles'].append(
+                    centre)
             else:
                 compte_centres_avec_dispo += 1
                 par_departement[code_departement]['centres_disponibles'].append(centre)
@@ -94,7 +101,8 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
 
     for code_departement, disponibilités in par_departement.items():
         if 'centres_disponibles' in disponibilités:
-            disponibilités['centres_disponibles'] = sorted(disponibilités['centres_disponibles'], key=sort_center)
+            disponibilités['centres_disponibles'] = sorted(
+                disponibilités['centres_disponibles'], key=sort_center)
         outpath = outpath_format.format(code_departement)
         print(f'writing result to {outpath} file')
         with open(outpath, "w") as outfile:
@@ -116,7 +124,9 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
     rdv_site_web = rdv_site_web.strip()
 
     # Determine platform based on visit URL.
-    if rdv_site_web.startswith('https://partners.doctolib.fr') or rdv_site_web.startswith('https://www.doctolib.fr'):
+    if rdv_site_web.startswith(
+            'https://partners.doctolib.fr') or rdv_site_web.startswith(
+            'https://www.doctolib.fr'):
         platform = 'Doctolib'
     elif rdv_site_web.startswith('https://vaccination-covid.keldoc.com'):
         platform = 'Keldoc'
@@ -139,6 +149,15 @@ def centre_iterator():
     csvreader = csv.DictReader(reader, delimiter=';')
     for row in csvreader:
         yield row
+
+
+def export_stats(compte_centre, compte_centres_avec_dispo):
+    stats_data = {
+        "nbre_total_centre": compte_centre,
+        "nbre_total_centre_dispo": compte_centres_avec_dispo
+    }
+    with open("data/output/stats.json", "w") as stats_file:
+        json.dump(stats_data, stats_file)
 
 
 if __name__ == "__main__":
