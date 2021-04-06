@@ -36,7 +36,7 @@ jobs:
       - name: "Install coverage badge"
         run: pip install pytest coverage coverage-badge
       - name: "Generate coverage badge"
-        run: coverage-badge -o .github/coverage.svg
+        run: rm -rf .github/coverage.svg; coverage-badge -o .github/coverage.svg
       - name: Sleep
         run: 'sleep 30s'
       - uses: stefanzweifel/git-auto-commit-action@v4
