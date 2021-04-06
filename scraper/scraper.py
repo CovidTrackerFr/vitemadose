@@ -51,6 +51,9 @@ def cherche_prochain_rdv_dans_centre(centre):
 
     logger.info(f'{centre.get("gid", "")!s:>8} {plateforme!s:16} {next_slot or ""!s:32} {departement!s:6}')
 
+    if plateforme == 'Doctolib':
+        centre['rdv_site_web'] = centre['rdv_site_web'].lower()
+
     return {
         'departement': departement,
         'nom': centre['nom'],
