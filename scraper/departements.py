@@ -47,30 +47,12 @@ def to_departement_number(insee_code: str) -> str:
     if len(insee_code) != 5:
         raise ValueError(f'Code INSEE non-valide : {insee_code}')
 
-    with open("data/input/insee_to_codepostal.json") as json_file:
-        insee_to_code_postal_table = json.load(json_file)
+    with open("data/input/insee_to_codepostal_and_code_departement.json") as json_file:
+        insee_to_code_departement_table = json.load(json_file)
 
-    if insee_code in insee_to_code_postal_table:
-        # Gestion des cas spéciaux pour l'outre-mer et Monaco (>= 97).
+    if insee_code in insee_to_code_departement_table:
+        return insee_to_code_departement_table[insee_code]["departement"]
 
-        if insee_code.startswith("99138"):
-            # Monaco
-            return "98"
-
-        if insee_code.startswith(("977", "978")):
-            # Territoires historiquement rattachés à la Guadeloupe (971) :
-            # - Saint-Barthélémy (977)
-            # - Saint-Martin (978)
-            return "971"
-
-        if insee_code.startswith("97"):
-            # Autres DOM-TOM.
-            # Ex : Saint-Pierre (La Réunion, dpt 974) = 97410 -> 974
-            return insee_code[:3]
-
-        # Cas général.
-        # Ex : Lille = 59350 -> 59
-        return insee_code[:2]
     else:
         raise ValueError(f'Code INSEE absent de la base des codes INSEE : {insee_code}')
 
