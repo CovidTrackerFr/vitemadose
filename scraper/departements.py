@@ -38,7 +38,15 @@ def to_departement_number(insee_code: str) -> str:
     >>> to_departement_number('97701')  # Saint-Barthélémy
     '971'
     """
-    insee_code = _clean_insee_code(insee_code)
+    # Verification du code INSEE
+    if len(insee_code) == 4:
+        # Quand le CSV des centres de vaccinations est édité avec un tableur comme Excel,
+        # il est possible que le 1er zéro soit retiré si la colonne est interprétée comme
+        # un nombre (par ex 02401 devient 2401, mais on veut 02401 au complet).
+        insee_code = insee_code.zfill(5)
+
+    if len(insee_code) != 5:
+        raise ValueError(f'Code INSEE non-valide : {insee_code}')
 
     with open("data/input/insee_to_codepostal.json") as json_file:
         insee_to_code_postal_table = json.load(json_file)
@@ -58,22 +66,3 @@ def to_departement_number(insee_code: str) -> str:
     else:
         raise ValueError(f'Code INSEE absent de la base des codes INSEE : {insee_code}')
 
-def _clean_insee_code(insee_code: str) -> str:
-    """
-    Nettoie et valide le code INSEE.
-
-    >>> _clean_insee_code('59350')
-    '59350'
-    >>> _clean_insee_code('2401')
-    '02401'
-    """
-    if len(insee_code) == 4:
-        # Quand le CSV des centres de vaccinations est édité avec un tableur comme Excel,
-        # il est possible que le 1er zéro soit retiré si la colonne est interprétée comme
-        # un nombre (par ex 02401 devient 2401, mais on veut 02401 au complet).
-        insee_code = f"0{insee_code}"
-
-    if len(insee_code) != 5:
-        raise ValueError(f'Code INSEE non-valide : {insee_code}')
-
-    return insee_code
