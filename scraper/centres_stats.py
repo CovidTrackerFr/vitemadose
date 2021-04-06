@@ -1,5 +1,6 @@
 import json
 
+
 def export_centres_stats():
     centres_info = get_centres_info()
     centres_stats = {

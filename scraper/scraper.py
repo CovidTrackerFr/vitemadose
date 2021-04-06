@@ -1,20 +1,20 @@
-import sys
+import csv
 import datetime as dt
-from multiprocessing import Pool
+import io
 import json
 import os
-import io
-import csv
-import requests
+from multiprocessing import Pool
+
 import pytz
+import requests
 
 from utils.vmd_logger import init_logger
 from .departements import to_departement_number, import_departements
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
 from .maiia import fetch_slots as maiia_fetch_slots
-from .ordoclic import fetch_slots as ordoclic_fetch_slots
 from .ordoclic import centre_iterator as ordoclic_centre_iterator
+from .ordoclic import fetch_slots as ordoclic_fetch_slots
 
 POOL_SIZE = int(os.getenv('POOL_SIZE', 20))
 logger = init_logger()

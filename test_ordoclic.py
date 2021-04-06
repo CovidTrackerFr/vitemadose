@@ -1,8 +1,8 @@
 from datetime import datetime
 from multiprocessing import Pool
 
-from scraper.ordoclic import fetch_slots as ordoclic_fetch_slots
 from scraper.ordoclic import centre_iterator as ordoclic_centre_iterator
+from scraper.ordoclic import fetch_slots as ordoclic_fetch_slots
 
 today = datetime.now().strftime('%Y-%m-%d')
 

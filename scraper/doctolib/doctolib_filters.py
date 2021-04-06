@@ -1,10 +1,4 @@
-import logging
-import os
 import re
-from typing import Optional, Tuple
-
-import httpx
-import requests
 
 DOCTOLIB_APPOINTMENT_REASON = [
     '1ère injection',

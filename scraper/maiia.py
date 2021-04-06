@@ -12,6 +12,7 @@ BASE_AVAILIBILITY_URL = "https://www.maiia.com/api/pat-public/availability-close
 session = requests.Session()
 logger = logging.getLogger('scraper')
 
+
 def fetch_slots(rdv_site_web, start_date):
     response = session.get(rdv_site_web)
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -63,7 +64,6 @@ def get_slots_from(rdv_form, rdv_url, start_date):
         dt = dt + timedelta(hours=2)
         dt = dt.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
         return dt
-
 
     return None
 

@@ -1,8 +1,6 @@
-import json
 from urllib.parse import urlsplit, parse_qs
 
 import httpx
-import requests
 from httpx import TimeoutException
 
 from scraper.keldoc.keldoc_filters import parse_keldoc_availability

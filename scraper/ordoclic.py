@@ -1,9 +1,8 @@
+import json
 import logging
+from datetime import datetime, timedelta
 
 import httpx
-from httpx import TimeoutException
-import json
-from datetime import datetime, timedelta
 from pytz import timezone
 
 logger = logging.getLogger('scraper')
