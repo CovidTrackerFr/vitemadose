@@ -19,6 +19,7 @@ from .ordoclic import centre_iterator as ordoclic_centre_iterator
 POOL_SIZE = int(os.getenv('POOL_SIZE', 20))
 logger = init_logger()
 
+
 def main():
     with Pool(POOL_SIZE) as pool:
         centres_cherchés = pool.imap_unordered(
@@ -29,7 +30,7 @@ def main():
         compte_centres, compte_centres_avec_dispo = export_data(centres_cherchés)
         logger.info(f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
         if compte_centres_avec_dispo == 0:
-            logger.error("Aucune disponibilité n'a été trouvée sur tous les centres, c'est bizarre, alors c'est probablement une erreur")
+            logger.error("Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur")
             exit(code=1)
 
 
@@ -97,6 +98,10 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
                 par_departement[code_departement]['centres_disponibles'].append(centre)
         else:
             logger.warning(f"le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
+
+    outpath = outpath_format.format("info_centres")
+    with open(outpath, "w") as info_centres:
+        json.dump(par_departement, info_centres)
 
     for code_departement, disponibilités in par_departement.items():
         if 'centres_disponibles' in disponibilités:
