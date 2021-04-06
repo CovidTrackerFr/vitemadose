@@ -1,6 +1,7 @@
 import json
 import logging
 from datetime import datetime
+from pathlib import Path
 
 import pytz
 import requests
@@ -35,7 +36,7 @@ def compute_plateforme_data(centres_info):
 
 
 def generate_stats_center_types(centres_info):
-    stats_path = "data/output/stats_center_types.json"
+    stats_path = Path("data/output/stats_center_types.json")
     stats_data = {'dates': [], 'plateformes': {}}
 
     try:
@@ -49,8 +50,7 @@ def generate_stats_center_types(centres_info):
     ctz = pytz.timezone('Europe/Paris')
     current_time = datetime.now(tz=ctz).strftime("%Y-%m-%d %H:00:00")
     if current_time in stats_data['dates']:
-        with open(stats_path, "w") as stat_graph_file:
-            json.dump(stats_data, stat_graph_file)
+        stats_path.write_text(json.dumps(stats_data))
         logger.info(f"Stats file already updated: {stats_path}")
         return
 
@@ -67,6 +67,5 @@ def generate_stats_center_types(centres_info):
         current_data = stats_data['plateformes'][plateforme]
         current_data['disponible'].append(plateform_data['disponible'])
         current_data['total'].append(plateform_data['total'])
-    with open(stats_path, "w") as stat_graph_file:
-        json.dump(stats_data, stat_graph_file)
+    stats_path.write_text(json.dumps(stats_data))
     logger.info(f"Updated stats file: {stats_path}")

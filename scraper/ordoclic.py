@@ -1,6 +1,7 @@
 import json
 import logging
 from datetime import datetime, timedelta
+from pathlib import Path
 
 import httpx
 from pytz import timezone
@@ -110,8 +111,7 @@ def cp_to_insee(cp):
     # on charge la table de correspondance cp/insee, une seule fois
     global insee
     if insee == {}:
-        with open("data/input/codepostal_to_insee.json") as json_file:
-            insee = json.load(json_file)
+        insee = json.loads(Path("data/input/codepostal_to_insee.json").read_text())
     if cp in insee:
         insee_com = insee.get(cp).get("insee")
     else:

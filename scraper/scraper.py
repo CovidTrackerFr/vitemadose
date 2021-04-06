@@ -5,6 +5,7 @@ import io
 import json
 import os
 from multiprocessing import Pool
+from pathlib import Path
 
 import pytz
 import requests
@@ -123,17 +124,15 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         else:
             logger.warning(f"le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
 
-    outpath = outpath_format.format("info_centres")
-    with open(outpath, "w") as info_centres:
-        json.dump(par_departement, info_centres, indent=2)
+    outpath = Path(outpath_format.format("info_centres"))
+    outpath.write_text(json.dumps(par_departement, indent=2))
 
     for code_departement, disponibilités in par_departement.items():
         if 'centres_disponibles' in disponibilités:
             disponibilités['centres_disponibles'] = sorted(disponibilités['centres_disponibles'], key=sort_center)
-        outpath = outpath_format.format(code_departement)
+        outpath = Path(outpath_format.format(code_departement))
         logger.debug(f'writing result to {outpath} file')
-        with open(outpath, "w") as outfile:
-            outfile.write(json.dumps(disponibilités, indent=2))
+        outpath.write_text(json.dumps(disponibilités, indent=2))
 
     return compte_centres, compte_centres_avec_dispo
 

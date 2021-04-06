@@ -1,4 +1,5 @@
 from datetime import datetime
+from pathlib import Path
 
 from bs4 import BeautifulSoup
 import requests
@@ -24,8 +25,8 @@ class MockBeautifulSoup:
         pass
 
     def find(self, id):
-        with open("tests/maiia_test_rdv_form.html", "r") as f:
-            return BeautifulSoup(f.read(), "html.parser").find(id=id)
+        path = Path("tests/maiia_test_rdv_form.html")
+        return BeautifulSoup(path.read_text(), "html.parser").find(id=id)
 
 
 class TestMaiia:

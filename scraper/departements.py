@@ -1,4 +1,5 @@
 import csv
+from pathlib import Path
 from typing import List
 
 
@@ -18,9 +19,11 @@ def import_departements() -> List[str]:
     >>> sorted(departements) == departements
     True
     """
-    with open("data/input/departements-france.csv", newline="\n") as csvfile:
+    csvpath = Path("data/input/departements-france.csv")
+    with csvpath.open(newline="\n") as csvfile:
         reader = csv.DictReader(csvfile)
-        return [str(row["code_departement"]) for row in reader]
+        res = [str(row["code_departement"]) for row in reader]
+    return res
 
 
 def to_departement_number(insee_code: str) -> str:
