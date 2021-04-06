@@ -6,5 +6,5 @@ from scraper.scraper_doctolib import search
 from .utils import mock_datetime_now
 
 
-def test:
+def test():
 	search(10)
