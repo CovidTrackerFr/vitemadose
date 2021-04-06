@@ -23,7 +23,7 @@ def export_centres_stats():
         tout_dep_obj["total"] += count
 
     with open("data/output/stats.json", "w") as stats_file:
-        json.dump(centres_stats, stats_file)
+        json.dump(centres_stats, stats_file, indent=2)
 
 
 def get_centres_info():
