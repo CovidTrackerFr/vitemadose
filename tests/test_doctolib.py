@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 import httpx
-from scraper.doctolib import (
+from scraper.doctolib.doctolib import (
     DoctolibSlots,
     _find_agenda_and_practice_ids,
     _find_visit_motive_category_id,

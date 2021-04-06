@@ -7,13 +7,14 @@ from scraper.keldoc.keldoc_filters import parse_keldoc_availability
 from scraper.keldoc.keldoc_routes import API_KELDOC_CALENDAR, API_KELDOC_CENTER, API_KELDOC_CABINETS
 
 timeout = httpx.Timeout(15.0, connect=15.0)
-session = httpx.Client(timeout=timeout)
+DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 
 
 class KeldocCenter:
 
-    def __init__(self, base_url):
+    def __init__(self, base_url: str, client: httpx.Client = None):
         self.base_url = base_url
+        self.client = DEFAULT_CLIENT if client is None else client
         self.resource_params = None
         self.id = None
         self.specialties = None
@@ -25,12 +26,11 @@ class KeldocCenter:
     def fetch_vaccine_cabinets(self):
         if not self.id or not self.vaccine_specialties:
             return False
-
         self.vaccine_cabinets = []
         for specialty in self.vaccine_specialties:
             cabinet_url = API_KELDOC_CABINETS.format(self.id, specialty)
             try:
-                cabinet_req = session.get(cabinet_url)
+                cabinet_req = self.client.get(cabinet_url)
             except TimeoutException:
                 continue
             cabinet_req.raise_for_status()
@@ -45,7 +45,7 @@ class KeldocCenter:
             return False
         # Fetch center id
         try:
-            resource = session.get(API_KELDOC_CENTER, params=self.resource_params)
+            resource = self.client.get(API_KELDOC_CENTER, params=self.resource_params)
         except TimeoutException:
             return False
         resource.raise_for_status()
@@ -61,7 +61,7 @@ class KeldocCenter:
 
         # Fetch new URL after redirection
         try:
-            rq = session.get(self.base_url)
+            rq = self.client.get(self.base_url)
         except TimeoutException:
             return False
         rq.raise_for_status()
@@ -105,7 +105,7 @@ class KeldocCenter:
                 'agenda_ids[]': relevant_motive.get('agendas', [])
             }
             try:
-                calendar_req = session.get(calendar_url, params=calendar_params)
+                calendar_req = self.client.get(calendar_url, params=calendar_params)
             except TimeoutException:
                 # Some requests on Keldoc are taking too much time (for few centers)
                 # and block the process completion.

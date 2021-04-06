@@ -1,21 +1,24 @@
-import sys
+import csv
 import datetime as dt
-from multiprocessing import Pool
+import io
 import json
 import os
-import io
-import csv
-import requests
+from multiprocessing import Pool
+
 import pytz
+import requests
 
 from utils.vmd_logger import init_logger
 from .departements import to_departement_number, import_departements
-from .doctolib import fetch_slots as doctolib_fetch_slots
+from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
 from .maiia import fetch_slots as maiia_fetch_slots
+from .ordoclic import centre_iterator as ordoclic_centre_iterator
+from .ordoclic import fetch_slots as ordoclic_fetch_slots
 
 POOL_SIZE = int(os.getenv('POOL_SIZE', 20))
 logger = init_logger()
+
 
 def main():
     with Pool(POOL_SIZE) as pool:
@@ -27,7 +30,7 @@ def main():
         compte_centres, compte_centres_avec_dispo = export_data(centres_cherchés)
         logger.info(f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
         if compte_centres_avec_dispo == 0:
-            logger.error("Aucune disponibilité n'a été trouvée sur tous les centres, c'est bizarre, alors c'est probablement une erreur")
+            logger.error("Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur")
             exit(code=1)
 
 
@@ -48,6 +51,10 @@ def cherche_prochain_rdv_dans_centre(centre):
         departement = ''
 
     logger.info(f'{centre.get("gid", "")!s:>8} {plateforme!s:16} {next_slot or ""!s:32} {departement!s:6}')
+
+    if plateforme == 'Doctolib' and not centre['rdv_site_web'].islower():
+        logger.info(f"Centre {centre['rdv_site_web']} URL contained an uppercase - lowering the URL")
+        centre['rdv_site_web'] = centre['rdv_site_web'].lower()
 
     return {
         'departement': departement,
@@ -80,6 +87,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
     }
     
     for centre in centres_cherchés:
+        centre['nom'] = centre['nom'].strip()
         compte_centres += 1
         code_departement = centre['departement']
         if code_departement in par_departement:
@@ -90,6 +98,10 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
                 par_departement[code_departement]['centres_disponibles'].append(centre)
         else:
             logger.warning(f"le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
+
+    outpath = outpath_format.format("info_centres")
+    with open(outpath, "w") as info_centres:
+        json.dump(par_departement, info_centres, indent=2)
 
     for code_departement, disponibilités in par_departement.items():
         if 'centres_disponibles' in disponibilités:
@@ -110,6 +122,7 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
             'Doctolib': doctolib_fetch_slots,
             'Keldoc': keldoc_fetch_slots,
             'Maiia': maiia_fetch_slots,
+            'Ordoclic': ordoclic_fetch_slots,
         }
 
     rdv_site_web = rdv_site_web.strip()
@@ -121,6 +134,8 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
         platform = 'Keldoc'
     elif rdv_site_web.startswith('https://www.maiia.com'):
         platform = 'Maiia'
+    elif rdv_site_web.startswith('https://app.ordoclic.fr/'):
+        platform = 'Ordoclic'
     else:
         return 'Autre', None
 
@@ -138,6 +153,8 @@ def centre_iterator():
     csvreader = csv.DictReader(reader, delimiter=';')
     for row in csvreader:
         yield row
+    for centre in ordoclic_centre_iterator():
+        yield centre
 
 
 if __name__ == "__main__":

@@ -5,11 +5,6 @@ import httpx
 from scraper.keldoc.keldoc_center import KeldocCenter
 from scraper.keldoc.keldoc_filters import filter_vaccine_specialties, filter_vaccine_motives
 
-API_KELDOC_CENTER = 'https://booking.keldoc.com/api/patients/v2/searches/resource'
-API_KELDOC_MOTIVES = 'https://booking.keldoc.com/api/patients/v2/clinics/{0}/specialties/{1}/cabinets/{2}/motive_categories'
-API_KELDOC_CABINETS = 'https://booking.keldoc.com/api/patients/v2/clinics/{0}/specialties/{1}/cabinets'
-API_KELDOC_CALENDAR = 'https://www.keldoc.com/api/patients/v2/timetables/{0}'
-
 timeout = httpx.Timeout(30.0, connect=30.0)
 session = httpx.Client(timeout=timeout)
 
@@ -21,7 +16,7 @@ def fetch_slots(base_url, start_date):
     date_obj = datetime.strptime(start_date, '%Y-%m-%d')
     end_date = (date_obj + timedelta(days=1)).strftime('%Y-%m-%d')
 
-    center = KeldocCenter(base_url=base_url)
+    center = KeldocCenter(base_url=base_url, client=session)
     # Unable to parse center resources (id, location)?
     if not center.parse_resource():
         return None

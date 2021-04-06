@@ -1,7 +1,7 @@
 import datetime as dt
 import json
 from scraper.departements import import_departements
-from scraper.prototype import fetch_centre_slots, export_data
+from scraper.scraper import fetch_centre_slots, export_data
 
 from .utils import mock_datetime_now
 
