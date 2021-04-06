@@ -112,7 +112,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         with open(outpath, "w") as outfile:
             outfile.write(json.dumps(disponibilités, indent=2))
 
-    for disponibilités in tous_departements.items():
+    for _, disponibilités in tous_departements.items():
         if 'centres_disponibles' in disponibilités:
             disponibilités['centres_disponibles'] = sorted(disponibilités['centres_disponibles'], key=sort_center)
         outpath='data/output/tous_departements.json'
