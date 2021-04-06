@@ -4,9 +4,12 @@ import json
 from pathlib import Path
 
 import httpx
+import pytest
 
+from scraper.keldoc.keldoc import fetch_slots
 from scraper.keldoc.keldoc_center import KeldocCenter
-from scraper.keldoc.keldoc_filters import filter_vaccine_specialties, filter_vaccine_motives
+from scraper.keldoc.keldoc_filters import filter_vaccine_specialties, filter_vaccine_motives, is_appointment_relevant, \
+    is_specialty_relevant
 
 CENTER1_KELDOC = {
     "/api/patients/v2/clinics/2563/specialties/144/cabinets": "center1-cabinet",
@@ -97,3 +100,65 @@ def test_keldoc_missing_params():
     client = httpx.Client(transport=httpx.MockTransport(app))
     test_center_1 = KeldocCenter(base_url=center1_url, client=client)
     assert not test_center_1.parse_resource()
+
+
+def test_keldoc_timeout():
+    center1_url = "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/foo/bar?specialty=no"
+    center1_redirect = "https://vaccination-covid.keldoc.com/redirect/?dom=foo&user=ok&specialty=no"
+
+    def app(request: httpx.Request) -> httpx.Response:
+        if request.url.path == "/centre-hospitalier-regional/foo/bar":
+            raise TimeoutError
+        if request.url.path == "/api/patients/v2/searches/resource":
+            raise TimeoutError
+        if request.url.path == "/api/patients/v2/clinics/1/specialties/1/cabinets":
+            raise TimeoutError
+        print(request.url.path)
+        return httpx.Response(200, json={})
+
+    client = httpx.Client(transport=httpx.MockTransport(app))
+    test_center_1 = KeldocCenter(base_url=center1_url, client=client)
+
+    # Test center info TA
+    with pytest.raises(TimeoutError):
+        test_center_1.parse_resource()
+    with pytest.raises(TimeoutError):
+        test_center_1.fetch_center_data()
+
+    # Test cabinet TA
+    test_center_1.id = 1
+    test_center_1.vaccine_specialties = [1]
+    with pytest.raises(TimeoutError):
+        test_center_1.fetch_vaccine_cabinets()
+    assert not test_center_1.vaccine_cabinets
+
+
+def test_keldoc_basicfetch():
+    with pytest.raises(httpx.HTTPStatusError):
+        fetch_slots("https://vaccination-covid.keldoc.com/centre-hospitalier-regional/foo/bar", "2020-04-06")
+
+    date = fetch_slots("https://vaccination-covid.keldoc.com", "2020-04-06")
+    assert not date
+
+    date = fetch_slots("https://vaccination-covid.keldoc.com/cabinet-medical/bain-de-bretagne-35470/salle-des-fetes-de-bain-de-bretagne/centre-de-vaccination-de-la-salle-des-fetes-de-bain-de-bretagne", "2020-04-06")
+    assert not date
+
+    date = fetch_slots("https://www.keldoc.com/?dom=cabinet-medical&inst=bain-de-bretagne-35470&user=salle-des-fetes-de-bain-de-bretagne", "2020-04-06")
+    assert not date
+
+
+def test_keldoc_filters():
+    # Test appointments
+    assert is_appointment_relevant('Vaccin 1ère inj. +70 ans COVID')
+    assert is_appointment_relevant('1ère dose (Pfizer)')
+    assert is_appointment_relevant('Première injection de vaccin (Moderna)')
+    assert not is_appointment_relevant('Vaccin 2nde inj. +70 ans COVID')
+    assert not is_appointment_relevant(None)
+
+    # Test specialties
+    assert not is_specialty_relevant(None)
+    assert not is_specialty_relevant({'name': 'Maladies infectieuses'})
+    assert not is_specialty_relevant({'id': 144})
+    assert is_specialty_relevant({'id': 1, 'name': 'Maladies infectieuses', 'skills': []})
+    assert is_specialty_relevant({'id': 1, 'name': 'Vaccination contre la COVID', 'skills': [{'name': 'Centre de vaccination COVID-19'}]})
+    assert not is_specialty_relevant({'id': 1, 'name': 'Vaccination contre la COVID', 'skills': [{'id': 123}]})
