@@ -94,7 +94,7 @@ def cherche_prochain_rdv_dans_centre(centre):
 def sort_center(center):
     if not center:
         return '-'
-    if not 'prochain_rdv' in center or not center['prochain_rdv']:
+    if 'prochain_rdv' not in center or not center['prochain_rdv']:
         return '-'
     return center['prochain_rdv']
 
@@ -111,7 +111,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         }
         for code in import_departements()
     }
-    
+
     for centre in centres_cherchés:
         centre['nom'] = centre['nom'].strip()
         compte_centres += 1

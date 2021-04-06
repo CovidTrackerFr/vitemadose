@@ -74,7 +74,7 @@ class KeldocCenter:
         # Some vaccination centers on Keldoc do not
         # accept online appointments, so you cannot retrieve data
         for mandatory_param in mandatory_params:
-            if not mandatory_param in params_get:
+            if mandatory_param not in params_get:
                 return False
         # If the vaccination URL have several medication places,
         # we select the current cabinet, since CSV data contains subURLs
@@ -95,7 +95,7 @@ class KeldocCenter:
         # Find next availabilities
         first_availability = None
         for relevant_motive in self.vaccine_motives:
-            if not 'id' in relevant_motive or not 'agendas' in relevant_motive:
+            if 'id' not in relevant_motive or 'agendas' not in relevant_motive:
                 continue
             motive_id = relevant_motive.get('id', None)
             calendar_url = API_KELDOC_CALENDAR.format(motive_id)

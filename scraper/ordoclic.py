@@ -84,16 +84,13 @@ def parse_ordoclic_slots(availability_data):
 def fetch_slots(rdv_site_web, start_date, client: httpx.Client = DEFAULT_CLIENT):
     first_availability = None
     profile = getProfile(rdv_site_web)
-    slug = profile["profileSlug"]
     entityId = profile["entityId"]
     for professional in profile["publicProfessionals"]:
         medicalStaffId = professional["id"]
-        name = professional["fullName"]
-        zip = professional["zip"]
         reasons = getReasons(entityId)
         # reasonTypeId = 4 -> 1er Vaccin
         for reason in reasons["reasons"]:
-            if reason["reasonTypeId"] == 4 and reason["canBookOnline"] == True:
+            if reason["reasonTypeId"] == 4 and reason["canBookOnline"] is True:
                 reasonId = reason["id"]
                 date_obj = datetime.strptime(start_date, '%Y-%m-%d')
                 end_date = (date_obj + timedelta(days=6)).strftime('%Y-%m-%d')
