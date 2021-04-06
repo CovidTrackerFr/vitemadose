@@ -92,9 +92,7 @@ def cherche_prochain_rdv_dans_centre(centre):
 
 
 def sort_center(center):
-    if not center:
-        return '-'
-    if 'prochain_rdv' not in center or not center['prochain_rdv']:
+    if not center or not center.get('prochain_rdv'):
         return '-'
     return center['prochain_rdv']
 
