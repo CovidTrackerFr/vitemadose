@@ -10,7 +10,7 @@ import time
 insee = {}
 
 
-def search():
+def search(max_page=1000):
 
     BASE_URL = "https://www.doctolib.fr"
     RECHERCHE_URL = "/vaccination-covid-19/france?"
@@ -39,7 +39,7 @@ def search():
 
     centres = True
 
-    while centres:
+    while centres and page <= max_page:
 
         url_recherche = BASE_URL + RECHERCHE_URL + "page=" + str(page) + "&" + PARAMETRES
 
@@ -71,7 +71,7 @@ def search():
         print("page", page)
         page+=1
 
-    with open("doctolib.json", "w") as outfile:
+    with open("data/output/centres_doctolib.json", "w") as outfile:
         outfile.write(json.dumps(liste_centres, indent=2))
 
 
