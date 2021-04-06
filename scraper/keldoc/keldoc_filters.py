@@ -1,3 +1,4 @@
+import re
 from datetime import datetime
 
 from httpx import TimeoutException
@@ -10,7 +11,17 @@ KELDOC_COVID_SPECIALTIES = [
 
 KELDOC_APPOINTMENT_REASON = [
     '1ère inj',
-    'COVID19 - Vaccination'
+    '1 ère inj',
+    '1 ere inj',
+    '1ere inj',
+    '1ère dose',
+    '1ere dose',
+    '1 er inj',
+    'inj 1',
+    'inj. 1',
+    'première injection',
+    'covid19 - vaccination',
+    'inj1'
 ]
 
 KELDOC_COVID_SKILLS = [
@@ -24,6 +35,7 @@ def is_appointment_relevant(appointment_name):
         return False
 
     appointment_name = appointment_name.lower()
+    appointment_name = re.sub(' +', ' ', appointment_name)
     for allowed_appointments in KELDOC_APPOINTMENT_REASON:
         if allowed_appointments in appointment_name:
             return True

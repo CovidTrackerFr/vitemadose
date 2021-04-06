@@ -13,6 +13,8 @@ from .departements import to_departement_number, import_departements
 from .doctolib import fetch_slots as doctolib_fetch_slots
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
 from .maiia import fetch_slots as maiia_fetch_slots
+from .ordoclic import fetch_slots as ordoclic_fetch_slots
+from .ordoclic import centre_iterator as ordoclic_centre_iterator
 
 POOL_SIZE = int(os.getenv('POOL_SIZE', 20))
 logger = init_logger()
@@ -50,6 +52,10 @@ def cherche_prochain_rdv_dans_centre(centre):
 
     logger.info(f'{centre.get("gid", "")!s:>8} {plateforme!s:16} {next_slot or ""!s:32} {departement!s:6}')
 
+    if plateforme == 'Doctolib' and not centre['rdv_site_web'].islower():
+        logger.info(f"Centre {centre['rdv_site_web']} URL contained an uppercase - lowering the URL")
+        centre['rdv_site_web'] = centre['rdv_site_web'].lower()
+
     return {
         'departement': departement,
         'nom': centre['nom'],
@@ -81,6 +87,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
     }
     
     for centre in centres_cherchés:
+        centre['nom'] = centre['nom'].strip()
         compte_centres += 1
         code_departement = centre['departement']
         if code_departement in par_departement:
@@ -115,6 +122,7 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
             'Doctolib': doctolib_fetch_slots,
             'Keldoc': keldoc_fetch_slots,
             'Maiia': maiia_fetch_slots,
+            'Ordoclic': ordoclic_fetch_slots,
         }
 
     rdv_site_web = rdv_site_web.strip()
@@ -126,6 +134,8 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
         platform = 'Keldoc'
     elif rdv_site_web.startswith('https://www.maiia.com'):
         platform = 'Maiia'
+    elif rdv_site_web.startswith('https://app.ordoclic.fr/'):
+        platform = 'Ordoclic'
     else:
         return 'Autre', None
 
@@ -143,6 +153,8 @@ def centre_iterator():
     csvreader = csv.DictReader(reader, delimiter=';')
     for row in csvreader:
         yield row
+    for centre in ordoclic_centre_iterator():
+        yield centre
 
 
 if __name__ == "__main__":
