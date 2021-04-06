@@ -1,6 +1,11 @@
 <a href="https://covidtracker.fr/vitemadose"><img src="./.github/assets/logo.png" width="150" alt="Vite Ma Dose !" /></a>
 
-[Vite Ma Dose !](https://covidtracker.fr/vitemadose) est un outil de [CovidTracker](https://covidtracker.fr) permettant de détecter les rendez-vous disponibles dans votre département afin de vous faire vacciner (sous réserve d'éligibilité).
+[Vite Ma Dose !](https://covidtracker.fr/vitemadose) est un outil open source de [CovidTracker](https://covidtracker.fr) permettant de détecter les rendez-vous disponibles dans votre département afin de vous faire vacciner (sous réserve d'éligibilité).
+
+[![Contributeurs][contributors-shield]][contributors-url]
+[![Issues][issues-shield]][issues-url]
+[![Licence][license-shield]][license-url]
+![Coverage][coverage-shield]
 
 ## Plateformes supportées
 
@@ -46,4 +51,13 @@ Lancer des tests unitaires :
 make test
 ```
 
-## Contributeurs
+<!-- shield cards !-->
+[contributors-shield]: https://img.shields.io/github/contributors/CovidTrackerFr/vitemadose.svg?style=for-the-badge
+[contributors-url]: https://github.com/CovidTrackerFr/vitemadose/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/CovidTrackerFr/vitemadose.svg?style=for-the-badge
+[forks-url]: https://github.com/CovidTrackerFr/vitemadose/network/members
+[issues-shield]: https://img.shields.io/github/issues/CovidTrackerFr/vitemadose.svg?style=for-the-badge
+[issues-url]: https://github.com/CovidTrackerFr/vitemadose/issues
+[license-shield]: https://img.shields.io/github/license/CovidTrackerFr/vitemadose.svg?style=for-the-badge
+[license-url]: https://github.com/CovidTrackerFr/vitemadose/blob/master/LICENSE
+[coverage-shield]: https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/.github/coverage.svg
