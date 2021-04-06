@@ -54,7 +54,7 @@ def cherche_prochain_rdv_dans_centre(centre):
     return {
         'departement': departement,
         'nom': centre['nom'],
-        'url': centre['rdv_site_web'],
+        'url': centre['rdv_site_web'].lower(),
         'plateforme': plateforme,
         'prochain_rdv': next_slot
     }
