@@ -6,6 +6,8 @@ from typing import Optional, Tuple
 import httpx
 import requests
 
+from scraper.doctolib.doctolib_filters import is_appointment_relevant
+
 DOCTOLIB_SLOT_LIMIT = 50
 
 DOCTOLIB_HEADERS = {
@@ -157,7 +159,7 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: str = None) -> O
     for visit_motive in data.get('data', {}).get('visit_motives', []):
         # On ne gère que les 1ère doses (le RDV pour la 2e dose est en général donné
         # après la 1ère dose, donc les gens n'ont pas besoin d'aide pour l'obtenir).
-        if not visit_motive['name'].startswith('1ère injection vaccin COVID-19'):
+        if not is_appointment_relevant(visit_motive['name']):
             continue
         # NOTE: 'visit_motive_category_id' agit comme un filtre. Il y a 2 cas :
         # * visit_motive_category_id=None : pas de filtre, et on veut les motifs qui ne
