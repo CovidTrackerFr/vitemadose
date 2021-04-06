@@ -7,15 +7,14 @@ import io
 import csv
 import requests
 import pytz
-
+import bs4 as Beau
 from utils.vmd_logger import init_logger
 from .departements import to_departement_number, import_departements
-from .doctolib import fetch_slots as doctolib_fetch_slots
+from .doctolib import fetch_slots as doctolib_fetch_slots, centre_iterator as doctolib_centre_iterator
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
 from .maiia import fetch_slots as maiia_fetch_slots
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
 from .ordoclic import centre_iterator as ordoclic_centre_iterator
-from .scraper_doctolib import centre_iterator as doctolib_centre_iterator
 
 POOL_SIZE = int(os.getenv('POOL_SIZE', 20))
 logger = init_logger()
@@ -154,7 +153,7 @@ def centre_iterator():
     for centre in ordoclic_centre_iterator():
         yield centre
     """
-    
+
     for centre in doctolib_centre_iterator():
         yield centre
 
