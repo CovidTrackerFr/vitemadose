@@ -11,7 +11,7 @@ from scraper.doctolib.doctolib_filters import is_appointment_relevant
 DOCTOLIB_SLOT_LIMIT = 50
 
 DOCTOLIB_HEADERS = {
-    'User-Agent': os.environ.get('DOCTOLIB_API_KEY', ''),
+    'X-Covid-Tracker-Key': os.environ.get('DOCTOLIB_API_KEY', ''),
 }
 
 DEFAULT_CLIENT: httpx.Client
