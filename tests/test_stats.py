@@ -18,4 +18,6 @@ def test_stat_count():
     base_content = base_file.read()
     base_file.close()
 
-    assert json.loads(base_content) == json.loads(generated_content)
+    stats = json.loads(generated_content)
+    assert stats['tout_departement']['disponibles'] == 280
+    assert stats['tout_departement']['total'] == 2291
