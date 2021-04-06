@@ -1,8 +1,8 @@
 import json
 
 
-def export_centres_stats():
-    centres_info = get_centres_info()
+def export_centres_stats(center_data = 'data/output/info_centres.json'):
+    centres_info = get_centres_info(center_data)
     centres_stats = {
         "tout_departement": {
             "disponibles": 0,
@@ -27,8 +27,8 @@ def export_centres_stats():
         json.dump(centres_stats, stats_file, indent=2)
 
 
-def get_centres_info():
-    with open("data/output/info_centres.json", "r") as f:
+def get_centres_info(center_data):
+    with open(center_data, "r") as f:
         return json.load(f)
 
 
