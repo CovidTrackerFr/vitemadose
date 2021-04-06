@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-07T01:14:36.950796+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "82",
+      "nom": "Centre de vaccination Covid de Caussade",
+      "url": "https://www.doctolib.fr/centre-de-sante/caussade/centre-de-vaccination-covid-de-caussade?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-08T09:40:00.000+02:00"
+    },
+    {
+      "departement": "82",
+      "nom": "Centre de vaccination COVID - CH Turenne (N\u00e8grepelisse)",
+      "url": "https://www.doctolib.fr/hopital-public/negrepelisse/centre-de-vaccination-covid-ch-negrepelisse?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-10T12:40:00.000+02:00"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "82",
+      "nom": "Centre de vaccination COVID 19 - Moissac",
+      "url": "https://www.doctolib.fr/cabinet-medical/moissac/centre-covid-cosec",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    },
+    {
+      "departement": "82",
+      "nom": "Centre de vaccination - Valence d'Agen",
+      "url": "https://www.doctolib.fr/centre-de-vaccinations-internationales/valence-d-agen/centre-de-vaccination-valence-d-agen?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    }
+  ]
+}

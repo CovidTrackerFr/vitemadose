@@ -15,6 +15,7 @@ from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
 from .maiia import fetch_slots as maiia_fetch_slots
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
 from .ordoclic import centre_iterator as ordoclic_centre_iterator
+from .scraper_doctolib import centre_iterator as doctolib_centre_iterator
 
 POOL_SIZE = int(os.getenv('POOL_SIZE', 20))
 logger = init_logger()
@@ -146,10 +147,15 @@ def centre_iterator():
 
     reader = io.StringIO(response.content.decode('utf8'))
     csvreader = csv.DictReader(reader, delimiter=';')
+    """
     for row in csvreader:
         yield row
     for centre in ordoclic_centre_iterator():
         yield centre
+    """
+    for centre in doctolib_centre_iterator():
+        yield centre
+
 
 
 if __name__ == "__main__":

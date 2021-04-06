@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-07T01:14:36.947793+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "2B",
+      "nom": "Centre de vaccination COVID - CPTS De Balagne",
+      "url": "https://www.doctolib.fr/maison-de-sante/l-ile-rousse/centre-de-vaccination-covid-l-ile-rousse",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-08T11:20:00.000+02:00"
+    },
+    {
+      "departement": "2B",
+      "nom": "Centre de Vaccination Covid-19 - CH de Calvi",
+      "url": "https://www.doctolib.fr/hopital-public/calvi/centre-de-vaccination-covid-19-ch-de-calvi?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-13T08:35:00.000+02:00"
+    },
+    {
+      "departement": "2B",
+      "nom": "Centre de vaccination COVID - Maison de sant\u00e9 Bastia Erbajolu",
+      "url": "https://www.doctolib.fr/maison-de-sante/bastia/centre-de-vaccination-covid-maison-de-sante-bastia-erbajolu",
+      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-17T08:00:00.000+02:00"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "2B",
+      "nom": "Centre de vaccination COVID - CPTS De Balagne",
+      "url": "https://www.doctolib.fr/maison-de-sante/l-ile-rousse/centre-de-vaccination-covid-l-ile-rousse?pid=practice-168845",
+      "plateforme": "Doctolib",
+      "prochain_rdv": null
+    }
+  ]
+}
