@@ -1,7 +1,45 @@
 import json
+import logging
+from datetime import datetime
+
+import pytz
+import requests
+
+from utils.vmd_logger import enable_logger_for_production
+
+logger = logging.getLogger('scraper')
+
+STATS_BY_DATE = 'https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/stats_by_date.json'
 
 
-def export_centres_stats(center_data = 'data/output/info_centres.json'):
+def generate_stats_date(centres_stats):
+    stats_data = {'dates': [],
+                  'total_centres_disponibles': [],
+                  'total_centres': []
+                  }
+
+    try:
+        history_rq = requests.get(STATS_BY_DATE)
+        data = history_rq.json()
+        if data:
+            stats_data = data
+    except Exception as e:
+        logger.warning("Unable to fetch {0}: generating a template file.".format(STATS_BY_DATE))
+        pass
+    ctz = pytz.timezone('Europe/Paris')
+    current_time = datetime.now(tz=ctz).strftime("%Y-%m-%d %H:00:00")
+    if current_time in stats_data['dates']:
+        return
+    data_alldep = centres_stats['tout_departement']
+    stats_data['dates'].append(current_time)
+    stats_data['total_centres_disponibles'].append(data_alldep['disponibles'])
+    stats_data['total_centres'].append(data_alldep['total'])
+
+    with open("data/output/stats_by_date.json", "w") as stat_graph_file:
+        json.dump(stats_data, stat_graph_file, indent=2)
+
+
+def export_centres_stats(center_data='data/output/info_centres.json'):
     centres_info = get_centres_info(center_data)
     centres_stats = {
         "tout_departement": {
@@ -23,8 +61,12 @@ def export_centres_stats(center_data = 'data/output/info_centres.json'):
         tout_dep_obj["disponibles"] += nombre_disponibles
         tout_dep_obj["total"] += count
 
+    available_pct = (tout_dep_obj["disponibles"] / max(1, tout_dep_obj["total"])) * 100
+    logger.info("Found {0}/{1} available centers. ({2}%)".format(tout_dep_obj["disponibles"],
+                                                                 tout_dep_obj["total"], round(available_pct, 2)))
     with open("data/output/stats.json", "w") as stats_file:
         json.dump(centres_stats, stats_file, indent=2)
+    generate_stats_date(centres_stats)
 
 
 def get_centres_info(center_data):
@@ -33,4 +75,5 @@ def get_centres_info(center_data):
 
 
 if __name__ == '__main__':
+    enable_logger_for_production()
     export_centres_stats()
