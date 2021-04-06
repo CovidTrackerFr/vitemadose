@@ -15,9 +15,11 @@ scrape:
   stage: scrape
   image: python:3.8-alpine
   before_script:
+    - apk add --update make
     - ./scripts/install
   script:
     - ./scripts/scrape
+    - make stats
   artifacts:
     name: "rdv"
     paths:
