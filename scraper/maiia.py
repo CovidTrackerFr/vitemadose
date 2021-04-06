@@ -7,7 +7,7 @@ from dateutil.parser import isoparse
 from pytz import timezone
 from bs4 import BeautifulSoup
 
-DEBUG = True
+
 BASE_AVAILIBILITY_URL = "https://www.maiia.com/api/pat-public/availability-closests"
 
 session = requests.Session()
