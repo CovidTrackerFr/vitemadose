@@ -1,4 +1,5 @@
 import csv
+import json
 from typing import List
 
 
@@ -39,23 +40,23 @@ def to_departement_number(insee_code: str) -> str:
     """
     insee_code = _clean_insee_code(insee_code)
 
-    # Gestion des cas spéciaux pour l'outre-mer (>= 97).
+    with open("data/input/insee_to_codepostal.json") as json_file:
+        insee_to_code_postal_table = json.load(json_file)
+    if insee_code in insee_to_code_postal_table:
+        code_postal = insee_to_code_postal_table[insee_code]["code postal"]
 
-    if insee_code.startswith(("977", "978")):
-        # Territoires historiquement rattachés à la Guadeloupe (971) :
-        # - Saint-Barthélémy (977)
-        # - Saint-Martin (978)
-        return "971"
+        # Gestion des cas spéciaux pour l'outre-mer (>= 97).
 
-    if insee_code.startswith("97"):
-        # Autres DOM-TOM.
-        # Ex : Saint-Pierre (La Réunion, dpt 974) = 97410 -> 974
-        return insee_code[:3]
+        if insee_code.startswith("97"):
+            # Autres DOM-TOM.
+            # Ex : Saint-Pierre (La Réunion, dpt 974) = 97410 -> 974
+            return code_postal[:3]
 
-    # Cas général.
-    # Ex : Lille = 59350 -> 59
-    return insee_code[:2]
-
+        # Cas général.
+        # Ex : Lille = 59350 -> 59
+        return code_postal[:2]
+    else:
+        raise ValueError(f'Code INSEE absent de la base des codes INSEE : {insee_code}')
 
 def _clean_insee_code(insee_code: str) -> str:
     """
