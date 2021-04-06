@@ -15,7 +15,7 @@ def test_insee_to_departement_code():
     assert to_departement_number(short_insee_code) == short_insee_code.zfill(5)[:2]
     assert to_departement_number(DOM_TOM_insee_code) == DOM_TOM_insee_code[:3]
     assert to_departement_number(passed_linked_to_Guadeloupe_insee_code) == "971"
-    assert to_departement_number(corse_insee_code) == "20"
+    assert to_departement_number(corse_insee_code) == "2A"
     with pytest.raises(ValueError):
         to_departement_number(wrong_insee_code)
     with pytest.raises(ValueError):

@@ -48,15 +48,21 @@ def to_departement_number(insee_code: str) -> str:
     if len(insee_code) != 5:
         raise ValueError(f'Code INSEE non-valide : {insee_code}')
 
+
     with open("data/input/insee_to_codepostal.json") as json_file:
         insee_to_code_postal_table = json.load(json_file)
     if insee_code in insee_to_code_postal_table:
         code_postal = insee_to_code_postal_table[insee_code]["code postal"]
 
         # Gestion des cas spéciaux pour l'outre-mer (>= 97).
+        if insee_code.startswith(("2A", "2B")):
+            # Cas particulier de la Corse
+            # Le code département est le début du code INSEE (2A pour Corse du Sud
+            # et 2B pour Haute Corse)
+            return insee_code[:2]
 
         if insee_code.startswith("97"):
-            # Autres DOM-TOM.
+            # DOM-TOM.
             # Ex : Saint-Pierre (La Réunion, dpt 974) = 97410 -> 974
             return code_postal[:3]
 
