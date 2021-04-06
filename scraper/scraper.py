@@ -52,7 +52,7 @@ def cherche_prochain_rdv_dans_centre(centre):
     logger.info(f'{centre.get("gid", "")!s:>8} {plateforme!s:16} {next_slot or ""!s:32} {departement!s:6}')
 
     if plateforme == 'Doctolib' and not centre['rdv_site_web'].islower():
-        logger.info(f"Centre {centre['rdv_site_web']} URL contained an uppercase - lowering the URL"):
+        logger.info(f"Centre {centre['rdv_site_web']} URL contained an uppercase - lowering the URL")
         centre['rdv_site_web'] = centre['rdv_site_web'].lower()
 
     return {
