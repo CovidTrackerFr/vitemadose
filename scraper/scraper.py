@@ -80,6 +80,14 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         }
         for code in import_departements()
     }
+
+    # Pour avoir un fichier contenant tous les centres
+    tous_departements = {
+        'version': 1,
+        'last_updated': dt.datetime.now(tz=pytz.timezone('Europe/Paris')).isoformat(),
+        'centres_disponibles': [],
+        'centres_indisponibles': []
+    }
     
     for centre in centres_cherchés:
         centre['nom'] = centre['nom'].strip()
@@ -88,9 +96,11 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         if code_departement in par_departement:
             if centre['prochain_rdv'] is None:
                 par_departement[code_departement]['centres_indisponibles'].append(centre)
+                tous_departements['centres_indisponibles'].append(centre)
             else:
                 compte_centres_avec_dispo += 1
                 par_departement[code_departement]['centres_disponibles'].append(centre)
+                tous_departements['centres_disponibles'].append(centre)
         else:
             logger.warning(f"le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
 
@@ -99,6 +109,13 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
             disponibilités['centres_disponibles'] = sorted(disponibilités['centres_disponibles'], key=sort_center)
         outpath = outpath_format.format(code_departement)
         logger.debug(f'writing result to {outpath} file')
+        with open(outpath, "w") as outfile:
+            outfile.write(json.dumps(disponibilités, indent=2))
+
+    for disponibilités in tous_departements.items():
+        if 'centres_disponibles' in disponibilités:
+            disponibilités['centres_disponibles'] = sorted(disponibilités['centres_disponibles'], key=sort_center)
+        outpath='data/output/tous_departements.json'
         with open(outpath, "w") as outfile:
             outfile.write(json.dumps(disponibilités, indent=2))
 
