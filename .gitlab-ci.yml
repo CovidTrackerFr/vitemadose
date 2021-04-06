@@ -30,7 +30,8 @@ pages:
   image: python:3.8-alpine
   script:
     - mkdir -p public
-    - cp data/output/*.json public/
+    - cp data/output/* public/
+    - gzip -k -6 $(find public -type f)
   artifacts:
     paths:
       - public
