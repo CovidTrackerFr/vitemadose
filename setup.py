@@ -12,5 +12,6 @@ setup(
         'beautifulsoup4==4.9.3',
         'coverage==5.5',
         'python-dateutil',
+        'coverage-badge'
     ],
 )

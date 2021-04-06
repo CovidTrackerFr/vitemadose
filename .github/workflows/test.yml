@@ -2,7 +2,7 @@ name: Test
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "ft/readme"]
   pull_request:
     branches: ["main"]
 
@@ -19,3 +19,5 @@ jobs:
         run: scripts/install
       - name: "Run tests"
         run: scripts/test
+      - name: "Generate coverage badge"
+        run: coverage-badge
