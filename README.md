@@ -1,4 +1,4 @@
-<a href="https://covidtracker.fr/vitemadose"><img src="./.github/assets/logo.png" width="200" alt="Vite Ma Dose !" /></a>
+<a href="https://covidtracker.fr/vitemadose"><img src="./.github/assets/logo.png" width="150" alt="Vite Ma Dose !" /></a>
 
 [Vite Ma Dose !](https://covidtracker.fr/vitemadose) est un outil de [CovidTracker](https://covidtracker.fr) permettant de détecter les rendez-vous disponibles dans votre département afin de vous faire vacciner (sous réserve d'éligibilité).
 
