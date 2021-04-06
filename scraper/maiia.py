@@ -48,7 +48,7 @@ def get_slots_from(rdv_form, rdv_url, start_date):
     center_id = center_infos['id']
 
     availability = get_any_availibility_from(center_id, start_date)
-    if availability["availabilityCount"] == 0:
+    if not availability or availability["availabilityCount"] == 0:
         return None
 
     if "firstPhysicalStartDateTime" in availability:
@@ -79,4 +79,7 @@ def get_any_availibility_from(center_id, start_date):
     }
 
     availability = session.get(BASE_AVAILIBILITY_URL, params=request_params)
-    return availability.json()
+    try:
+        return availability.json()
+    except:
+        return None
