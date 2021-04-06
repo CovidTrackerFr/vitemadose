@@ -32,7 +32,7 @@ jobs:
       - name: "Stats"
         run: make stats
       - name: Sleep
-        run: 'sleep 120s'
+        run: 'sleep 30s'
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Automatic Update
