@@ -1,3 +1,4 @@
+import sys
 import csv
 import datetime as dt
 import io
@@ -8,7 +9,7 @@ from multiprocessing import Pool
 import pytz
 import requests
 
-from utils.vmd_logger import init_logger
+from utils.vmd_logger import get_logger, enable_logger_for_production, enable_logger_for_debug
 from .departements import to_departement_number, import_departements
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
@@ -17,10 +18,36 @@ from .ordoclic import centre_iterator as ordoclic_centre_iterator
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
 
 POOL_SIZE = int(os.getenv('POOL_SIZE', 20))
-logger = init_logger()
+logger = get_logger()
 
 
 def main():
+    if len(sys.argv) == 1:
+        scrape()
+    else:
+        scrape_debug(sys.argv[1:])
+
+
+def get_start_date():
+    return dt.date.today().isoformat()
+
+
+def scrape_debug(urls):
+    enable_logger_for_debug()
+    start_date = get_start_date()
+    for rdv_site_web in urls:
+        logger.info('scraping URL %s', rdv_site_web)
+        try:
+            plateforme, next_slot = fetch_centre_slots(rdv_site_web, start_date)
+        except Exception as e:
+            logger.exception(f"erreur lors du traitement")
+            next_slot = None
+            plateforme = None
+        logger.info(f'{plateforme!s:16} {next_slot or ""!s:32}')
+
+
+def scrape():
+    enable_logger_for_production()
     with Pool(POOL_SIZE) as pool:
         centres_cherchés = pool.imap_unordered(
             cherche_prochain_rdv_dans_centre,
@@ -35,12 +62,11 @@ def main():
 
 
 def cherche_prochain_rdv_dans_centre(centre):
-    start_date = dt.datetime.now().isoformat()[:10]
+    start_date = get_start_date()
     try:
         plateforme, next_slot = fetch_centre_slots(centre['rdv_site_web'], start_date)
     except Exception as e:
-        logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']}")
-        print(e)
+        logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(e)}")
         next_slot = None
         plateforme = None
 
