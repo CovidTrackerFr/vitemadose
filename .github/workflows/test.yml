@@ -2,7 +2,7 @@ name: Test
 
 on:
   push:
-    branches: ["main", "ft/readme"]
+    branches: ["main"]
   pull_request:
     branches: ["main"]
 

@@ -11,7 +11,7 @@ setup(
         'pytest==6.2.2',
         'beautifulsoup4==4.9.3',
         'coverage==5.5',
-        'python-dateutil',
-        'coverage-badge'
+        'python-dateutil==2.8.1',
+        'coverage-badge==1.0.1'
     ],
 )
