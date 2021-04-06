@@ -8,28 +8,28 @@ from pytz import timezone
 logger = logging.getLogger('scraper')
 
 timeout = httpx.Timeout(15.0, connect=15.0)
-session = httpx.Client(timeout=timeout)
+DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 insee = {}
 
 
 # get all slugs
-def search():
+def search(client: httpx.Client = DEFAULT_CLIENT):
     base_url = 'https://api.ordoclic.fr/v1/public/search'
     # payload = {'page': '1', 'per_page': '10000', 'in.isCovidVaccineSupported': 'true', 'in.isPublicProfile': 'true' }
     payload = {'page': '1', 'per_page': '10000', 'in.isPublicProfile': 'true'}
-    r = session.get(base_url, params=payload)
+    r = client.get(base_url, params=payload)
     r.raise_for_status()
     return r.json()
 
 
-def getReasons(entityId):
+def getReasons(entityId, client: httpx.Client = DEFAULT_CLIENT):
     base_url = f'https://api.ordoclic.fr/v1/solar/entities/{entityId}/reasons'
-    r = session.get(base_url)
+    r = client.get(base_url)
     r.raise_for_status()
     return r.json()
 
 
-def getSlots(entityId, medicalStaffId, reasonId, start_date, end_date):
+def getSlots(entityId, medicalStaffId, reasonId, start_date, end_date, client: httpx.Client = DEFAULT_CLIENT):
     base_url = 'https://api.ordoclic.fr/v1/solar/slots/availableSlots'
     payload = {"entityId": entityId,
                "medicalStaffId": medicalStaffId,
@@ -37,19 +37,19 @@ def getSlots(entityId, medicalStaffId, reasonId, start_date, end_date):
                "dateEnd": f"{end_date}T00:00:00.000Z",
                "dateStart": f"{start_date}T23:59:59.000Z"}
     headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-    r = session.post(base_url, data=json.dumps(payload), headers=headers)
+    r = client.post(base_url, data=json.dumps(payload), headers=headers)
     r.raise_for_status()
     return r.json()
 
 
-def getProfile(rdv_site_web):
+def getProfile(rdv_site_web, client: httpx.Client = DEFAULT_CLIENT):
     slug = rdv_site_web.rsplit('/', 1)[-1]
     prof = rdv_site_web.rsplit('/', 2)[-2]
     if prof in ['pharmacien', 'medecin']:
         base_url = f'https://api.ordoclic.fr/v1/professionals/profile/{slug}'
     else:
         base_url = f'https://api.ordoclic.fr/v1/public/entities/profile/{slug}'
-    r = session.get(base_url)
+    r = client.get(base_url)
     r.raise_for_status()
     return r.json()
 
@@ -60,7 +60,7 @@ def parse_ordoclic_slots(availability_data):
         return None
     if 'nextAvailableSlotDate' in availability_data:
         nextAvailableSlotDate = availability_data.get('nextAvailableSlotDate', None)
-        if nextAvailableSlotDate != None:
+        if nextAvailableSlotDate is not None:
             first_availability = datetime.strptime(nextAvailableSlotDate, '%Y-%m-%dT%H:%M:%S%z')
             first_availability += first_availability.replace(tzinfo=timezone('CET')).utcoffset()
             return first_availability
@@ -81,7 +81,7 @@ def parse_ordoclic_slots(availability_data):
     return first_availability
 
 
-def fetch_slots(rdv_site_web, start_date):
+def fetch_slots(rdv_site_web, start_date, client: httpx.Client = DEFAULT_CLIENT):
     first_availability = None
     profile = getProfile(rdv_site_web)
     slug = profile["profileSlug"]
@@ -97,13 +97,13 @@ def fetch_slots(rdv_site_web, start_date):
                 reasonId = reason["id"]
                 date_obj = datetime.strptime(start_date, '%Y-%m-%d')
                 end_date = (date_obj + timedelta(days=6)).strftime('%Y-%m-%d')
-                slots = getSlots(entityId, medicalStaffId, reasonId, start_date, end_date)
+                slots = getSlots(entityId, medicalStaffId, reasonId, start_date, end_date, client)
                 date = parse_ordoclic_slots(slots)
                 if date is None:
                     continue
                 if first_availability is None or date < first_availability:
                     first_availability = date
-    if first_availability == None:
+    if first_availability is None:
         return None
     return first_availability.isoformat()
 
