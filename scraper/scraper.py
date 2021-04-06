@@ -101,7 +101,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
 
     outpath = outpath_format.format("info_centres")
     with open(outpath, "w") as info_centres:
-        json.dump(par_departement, info_centres)
+        json.dump(par_departement, info_centres, indent=2)
 
     for code_departement, disponibilités in par_departement.items():
         if 'centres_disponibles' in disponibilités:
