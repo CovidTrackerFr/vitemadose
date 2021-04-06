@@ -19,5 +19,7 @@ jobs:
         run: scripts/install
       - name: "Run tests"
         run: scripts/test
+      - name: "Install coverage badge"
+        run: pip install coverage-badge
       - name: "Generate coverage badge"
         run: coverage-badge
