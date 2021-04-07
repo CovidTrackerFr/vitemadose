@@ -33,6 +33,27 @@ class CenterInfo:
         return self.__dict__
 
 
+def convert_csv_address(data: dict) -> str:
+    adr_num = data.get('adr_num', '')
+    adr_voie = data.get('adr_voie', '')
+    adr_cp = data.get('com_cp', '')
+    adr_nom = data.get('com_nom', '')
+    return f'{adr_num} {adr_voie}, {adr_cp} {adr_nom}'
+
+def convert_csv_business_hours(data: dict) -> str:
+    keys = ["rdv_lundi", "rdv_mardi", "rdv_mercredi", "rdv_jeudi", "rdv_vendredi", "rdv_samedi", "rdv_dimanche"]
+    meta = {}
+
+    for key in data:
+        if key not in keys:
+            continue
+        formatted_key = key.replace("rdv_", "")
+        meta[formatted_key] = data[key]
+    if not meta:
+        return None
+    return meta
+
+
 def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     name = data.get('nom', None)
     departement = ''
@@ -45,4 +66,9 @@ def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
 
     center = CenterInfo(departement, name, url)
     center.fill_localization(convert_csv_data_to_location(data))
+    center.metadata = dict()
+    center.metadata['address'] = convert_csv_address(data)
+    if data.get('rdv_tel'):
+        center.metadata['phone_number'] = data.get('rdv_tel')
+    center.metadata['business_hours'] = convert_csv_business_hours(data)
     return center
