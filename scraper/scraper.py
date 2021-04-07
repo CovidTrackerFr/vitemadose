@@ -11,7 +11,7 @@ import requests
 
 from utils.vmd_logger import get_logger, enable_logger_for_production, enable_logger_for_debug
 from .departements import to_departement_number, import_departements
-from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
+from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots, doctolib_centre_iterator
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
 from .maiia import fetch_slots as maiia_fetch_slots
 from .ordoclic import centre_iterator as ordoclic_centre_iterator
@@ -47,6 +47,7 @@ def scrape_debug(urls):
 
 
 def scrape():
+
     enable_logger_for_production()
     with Pool(POOL_SIZE) as pool:
         centres_cherchés = pool.imap_unordered(
@@ -174,12 +175,14 @@ def centre_iterator():
     url = "https://www.data.gouv.fr/fr/datasets/r/5cb21a85-b0b0-4a65-a249-806a040ec372"
     response = requests.get(url)
     response.raise_for_status()
-
     reader = io.StringIO(response.content.decode('utf8'))
     csvreader = csv.DictReader(reader, delimiter=';')
     for row in csvreader:
-        yield row
+        if not 'doctolib' in row['rdv_site_web']:
+            yield row
     for centre in ordoclic_centre_iterator():
+        yield centre
+    for centre in doctolib_centre_iterator():
         yield centre
 
 
