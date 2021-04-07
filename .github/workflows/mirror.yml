@@ -1,0 +1,24 @@
+---
+name: Push Gitlab
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+
+  push_gitlab:
+
+    name: "Push On Gitlab"
+
+    runs-on: "ubuntu-20.04"
+
+    steps:
+      - uses: "actions/checkout@v2"
+      - name: "Mirror to Gitlab.com"
+        shell: bash
+        env:
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+        run: "git push https://vitemadose-github:${GITLAB_TOKEN}@gitlab.com/ViteMaDose/vitemadose.git main"
+
