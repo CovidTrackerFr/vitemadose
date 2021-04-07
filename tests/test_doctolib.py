@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from scraper.error import BlockedByDoctolibError
 
 import httpx
 from scraper.doctolib.doctolib import (
@@ -16,6 +17,70 @@ from scraper.doctolib.doctolib import (
 # -- Tests de l'API (offline) --
 from scraper.scraper_result import ScraperRequest
 
+
+def test_blocked_by_doctolib_par_centre():
+    # Cas de base.
+
+    start_date = "2021-04-03"
+    base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
+    scrap_request = ScraperRequest(base_url, start_date)
+
+    def app(request: httpx.Request) -> httpx.Response:
+        assert "User-Agent" in request.headers
+
+        if request.url.path == "/booking/centre1.json":
+            path = Path("tests", "fixtures", "doctolib", "basic-booking.json")
+            return httpx.Response(403, text="Anti dDos")
+
+        assert request.url.path == "/availabilities.json"
+        params = dict(httpx.QueryParams(request.url.query))
+        assert params == {
+            "start_date": start_date,
+            "visit_motive_ids": "2",
+            "agenda_ids": "3",
+            "insurance_sector": "public",
+            "practice_ids": "4",
+            "destroy_temporary": "true",
+            "limit": str(DOCTOLIB_SLOT_LIMIT),
+        }
+        path = Path("tests", "fixtures", "doctolib", "basic-availabilities.json")
+        return httpx.Response(200, json=json.loads(path.read_text()))
+
+    client = httpx.Client(transport=httpx.MockTransport(app))
+    slots = DoctolibSlots(client=client)
+
+    error = None
+    try:
+        next_date = slots.fetch(scrap_request)
+    except Exception as e:
+        error = e
+    assert True == isinstance(error, BlockedByDoctolibError)
+
+def test_blocked_by_doctolib_par_availabilities():
+    # Cas de base.
+
+    start_date = "2021-04-03"
+    base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
+    scrap_request = ScraperRequest(base_url, start_date)
+
+    def app(request: httpx.Request) -> httpx.Response:
+        assert "User-Agent" in request.headers
+
+        if request.url.path == "/booking/centre1.json":
+            path = Path("tests", "fixtures", "doctolib", "basic-booking.json")
+            return httpx.Response(200, json=json.loads(path.read_text()))
+
+        return httpx.Response(403, text="Anti dDos")
+
+    client = httpx.Client(transport=httpx.MockTransport(app))
+    slots = DoctolibSlots(client=client)
+
+    error = None
+    try:
+        next_date = slots.fetch(scrap_request)
+    except Exception as e:
+        error = e
+    assert True == isinstance(error, BlockedByDoctolibError)
 
 def test_doctolib():
     # Cas de base.
