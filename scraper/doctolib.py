@@ -1,12 +1,12 @@
 import logging
 import os
 import re
+import httpx
+import requests
 from typing import Optional, Tuple
 from .departements import cp_to_insee
 from bs4 import BeautifulSoup
-import httpx
-import requests
-import json
+
 
 DOCTOLIB_SLOT_LIMIT = 50
 
@@ -26,6 +26,11 @@ if os.getenv('WITH_TOR', 'no') == 'yes':
     DEFAULT_CLIENT = session  # type: ignore
 else:
     DEFAULT_CLIENT = httpx.Client()
+
+
+BASE_URL = "https://www.doctolib.fr"
+RECHERCHE_URL = "/vaccination-covid-19/france?"
+PARAMETRES = "ref_visit_motive_ids[]=6970&ref_visit_motive_ids[]=7005&ref_visit_motive_ids[]=7107"
 
 
 def fetch_slots(rdv_site_web, start_date):
@@ -196,15 +201,13 @@ def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str, practice_id_
     return sorted(agenda_ids), sorted(practice_ids)
 
 
-def centre_iterator(max_page=3):
+def centre_iterator(max_page=1000):
 
     BASE_URL = "https://www.doctolib.fr"
     RECHERCHE_URL = "/vaccination-covid-19/france?"
     PARAMETRES = "ref_visit_motive_ids[]=6970&ref_visit_motive_ids[]=7005&ref_visit_motive_ids[]=7107"
 
     page = 1
-    liste_centres = []
-
     centres = True
 
     while centres and page <= max_page:
