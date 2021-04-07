@@ -22,7 +22,8 @@ def test_blocked_by_doctolib_par_centre():
     # Cas de base.
 
     start_date = "2021-04-03"
-    rdv_site_web = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
+    base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
+    scrap_request = ScraperRequest(base_url, start_date)
 
     def app(request: httpx.Request) -> httpx.Response:
         assert "User-Agent" in request.headers
@@ -50,7 +51,7 @@ def test_blocked_by_doctolib_par_centre():
 
     error = None
     try:
-        next_date = slots.fetch(rdv_site_web, start_date)
+        next_date = slots.fetch(scrap_request)
     except Exception as e:
         error = e
     assert True == isinstance(error, BlockedByDoctolibError)
@@ -59,7 +60,8 @@ def test_blocked_by_doctolib_par_availabilities():
     # Cas de base.
 
     start_date = "2021-04-03"
-    rdv_site_web = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
+    base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
+    scrap_request = ScraperRequest(base_url, start_date)
 
     def app(request: httpx.Request) -> httpx.Response:
         assert "User-Agent" in request.headers
@@ -75,7 +77,7 @@ def test_blocked_by_doctolib_par_availabilities():
 
     error = None
     try:
-        next_date = slots.fetch(rdv_site_web, start_date)
+        next_date = slots.fetch(scrap_request)
     except Exception as e:
         error = e
     assert True == isinstance(error, BlockedByDoctolibError)

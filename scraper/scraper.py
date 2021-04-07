@@ -61,8 +61,8 @@ def scrape():
             logger.error("Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur")
             exit(code=1)
 
-        if compte_bloqués > 0:
-            logger.error("Notre IP a été bloquée par le CDN Doctolib. Pour éviter de pousser des données erronées, on s'arrête ici")
+        if compte_bloqués > 10:
+            logger.error("Notre IP a été bloquée par le CDN Doctolib plus de 10 fois. Pour éviter de pousser des données erronées, on s'arrête ici")
             exit(code=2)
 
 
@@ -74,6 +74,7 @@ def cherche_prochain_rdv_dans_centre(centre):
         plateforme, next_slot = fetch_centre_slots(centre['rdv_site_web'], start_date)
 
     except ScrapeError as scrape_error:
+        logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(scrape_error)}")
         plateforme = scrape_error.plateforme
         next_slot = None
         has_error = scrape_error
@@ -89,10 +90,10 @@ def cherche_prochain_rdv_dans_centre(centre):
         logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']}, com_insee={centre['com_insee']}")
         departement = ''
 
-    if has_error is not None:
+    if has_error is None:
       logger.info(f'{centre.get("gid", "")!s:>8} {plateforme!s:16} {next_slot or ""!s:32} {departement!s:6}')
     else:
-      logger.warning(f'{centre.get("gid", "")!s:>8} {plateforme!s:16} {"Erreur" or ""!s:32} {departement!s:6}')
+      logger.info(f'{centre.get("gid", "")!s:>8} {plateforme!s:16} {"Erreur" or ""!s:32} {departement!s:6}')
 
 
     if plateforme == 'Doctolib' and not centre['rdv_site_web'].islower():
@@ -130,17 +131,18 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         }
         for code in import_departements()
     }
-    
+
     for centre in centres_cherchés:
         centre['nom'] = centre['nom'].strip()
         compte_centres += 1
         code_departement = centre['departement']
         if code_departement in par_departement:
+            erreur = centre.pop('erreur', None)
             if centre['prochain_rdv'] is None:
                 par_departement[code_departement]['centres_indisponibles'].append(centre)
-                erreur = centre['erreur']
                 if isinstance(erreur, BlockedByDoctolibError):
-                  bloqués_doctolib += 1
+                    par_departement[code_departement]['doctolib_bloqué'] = True
+                    bloqués_doctolib += 1
             else:
                 compte_centres_avec_dispo += 1
                 par_departement[code_departement]['centres_disponibles'].append(centre)
