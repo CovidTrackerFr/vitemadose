@@ -2,7 +2,7 @@
 import json
 import os
 
-from scraper.centres_stats import export_centres_stats
+from stats_generation.stats_available_centers import export_centres_stats
 
 
 def test_stat_count():

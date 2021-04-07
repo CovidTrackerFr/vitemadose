@@ -20,4 +20,4 @@ scrape: ## runs the full scraping experience
 	scripts/scrape $(URL)
 
 stats: ## Run the statistiques scripts
-	venv/bin/python -m stats_generation.generate_center_stats
+	venv/bin/python -m stats_generation.stats_available_centers
