@@ -74,13 +74,9 @@ def cherche_prochain_rdv_dans_centre(centre):
     try:
         result = fetch_centre_slots(centre['rdv_site_web'], start_date)
         center_data.fill_result(result)
-
-        plateforme, next_slot = fetch_centre_slots(centre['rdv_site_web'], start_date)
-
+        result = fetch_centre_slots(centre['rdv_site_web'], start_date)
     except ScrapeError as scrape_error:
         logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(scrape_error)}")
-        plateforme = scrape_error.plateforme
-        next_slot = None
         has_error = scrape_error
 
     if has_error is None:
@@ -92,6 +88,8 @@ def cherche_prochain_rdv_dans_centre(centre):
         logger.info(f"Centre {centre['rdv_site_web']} URL contained an uppercase - lowering the URL")
         center_data.url = center_data.url.lower()
 
+    print('yolo')
+    print(center_data.default())
     return center_data.default()
 
 def sort_center(center):

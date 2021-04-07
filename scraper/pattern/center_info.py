@@ -28,7 +28,8 @@ class CenterInfo:
         self.plateforme = result.platform
 
     def default(self):
-        self.location = self.location.default()
+        if type(self.location) is CenterLocation:
+            self.location = self.location.default()
         return self.__dict__
 
 
