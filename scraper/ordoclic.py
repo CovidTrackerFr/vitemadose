@@ -137,4 +137,7 @@ def centre_iterator():
                 centre["rdv_site_web"] = f"https://app.ordoclic.fr/app/pharmacie/{slug}"
                 centre["com_insee"] = cp_to_insee(item["location"]["zip"])
                 centre["nom"] = item.get("name")
+                centre["phone_number"] = item.get("phone")
+                centre["location"] = item.get("location")
+                centre["iterator"] = "ordoclic"
                 yield centre

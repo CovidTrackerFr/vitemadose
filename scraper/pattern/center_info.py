@@ -55,6 +55,21 @@ def convert_csv_business_hours(data: dict) -> str:
     return meta
 
 
+def convert_ordoclic_to_center_info(data: dict, center: CenterInfo) -> CenterInfo:
+    localization = data['location']
+    coordinates = localization['coordinates']
+
+    if coordinates['lon'] or coordinates['lat']:
+        loc = CenterLocation(coordinates['lon'], coordinates['lat'])
+        center.fill_localization(loc)
+    center.metadata = dict()
+    center.metadata['address'] = f'{localization["address"]}, {localization["zip"]} {localization["city"]}'
+    if len(data.get('phone_number', '')) > 5:
+        center.metadata['phone_number'] = data.get('phone_number')
+    center.metadata['business_hours'] = None
+    return center
+
+
 def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     name = data.get('nom', None)
     departement = ''
@@ -66,6 +81,8 @@ def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
             f"erreur lors du traitement de la ligne avec le gid {data['gid']}, com_insee={data['com_insee']}")
 
     center = CenterInfo(departement, name, url)
+    if data.get('iterator', '') == 'ordoclic':
+        return convert_ordoclic_to_center_info(data, center)
     center.fill_localization(convert_csv_data_to_location(data))
     center.metadata = dict()
     center.metadata['address'] = convert_csv_address(data)
