@@ -7,7 +7,7 @@ import io
 import csv
 import requests
 import pytz
-import bs4 as Beau
+
 from utils.vmd_logger import init_logger
 from .departements import to_departement_number, import_departements
 from .doctolib import fetch_slots as doctolib_fetch_slots, centre_iterator as doctolib_centre_iterator
