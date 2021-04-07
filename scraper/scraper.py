@@ -178,11 +178,11 @@ def centre_iterator():
     response.raise_for_status()
     reader = io.StringIO(response.content.decode('utf8'))
     csvreader = csv.DictReader(reader, delimiter=';')
-    """for row in csvreader:
+    for row in csvreader:
         if not 'doctolib' in row['rdv_site_web']:
             yield row
     for centre in ordoclic_centre_iterator():
-        yield centre"""
+        yield centre
     for centre in doctolib_centre_iterator():
         yield centre
 
