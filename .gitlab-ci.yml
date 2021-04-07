@@ -11,6 +11,8 @@ test:
     - ./scripts/install
   script:
     - ./scripts/test
+  except:
+    - schedules
 
 scrape:
   stage: scrape
@@ -42,6 +44,10 @@ pages:
     - mkdir -p public
     - cp data/output/* public/
     - gzip -k -6 $(find public -type f)
+  only:
+    - master
+    - gitlab-publish
+    - schedules
   artifacts:
     paths:
       - public
