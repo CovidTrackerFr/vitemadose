@@ -5,6 +5,7 @@ import io
 import json
 import os
 from multiprocessing import Pool
+from scraper.error import ScrapeError, BlockedByDoctolibError
 
 import pytz
 import requests
@@ -54,31 +55,44 @@ def scrape():
             centre_iterator(),
             1
         )
-        compte_centres, compte_centres_avec_dispo = export_data(centres_cherchés)
+        compte_centres, compte_centres_avec_dispo, compte_bloqués = export_data(centres_cherchés)
         logger.info(f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
         if compte_centres_avec_dispo == 0:
             logger.error("Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur")
             exit(code=1)
 
+        if compte_bloqués > 10:
+            logger.error("Notre IP a été bloquée par le CDN Doctolib plus de 10 fois. Pour éviter de pousser des données erronées, on s'arrête ici")
+            exit(code=2)
+
+
 
 def cherche_prochain_rdv_dans_centre(centre):
     center_data = convert_csv_data_to_center_info(centre)
     start_date = get_start_date()
+    has_error = None
     try:
         result = fetch_centre_slots(centre['rdv_site_web'], start_date)
         center_data.fill_result(result)
-    except Exception as e:
-        logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(e)}")
-        return center_data.default()
 
-    logger.info(f'{centre.get("gid", "")!s:>8} {center_data.plateforme!s:16} {center_data.prochain_rdv or ""!s:32} {center_data.departement!s:6}')
+        plateforme, next_slot = fetch_centre_slots(centre['rdv_site_web'], start_date)
 
+    except ScrapeError as scrape_error:
+        logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(scrape_error)}")
+        plateforme = scrape_error.plateforme
+        next_slot = None
+        has_error = scrape_error
+
+    if has_error is None:
+        logger.info(f'{centre.get("gid", "")!s:>8} {center_data.plateforme!s:16} {center_data.prochain_rdv or ""!s:32} {center_data.departement!s:6}')
+    else:
+        logger.info(f'{centre.get("gid", "")!s:>8} {center_data.plateforme!s:16} {"Erreur" or ""!s:32} {center_data.departement!s:6}')
+        
     if result.platform == 'Doctolib' and not center_data.url.islower():
         logger.info(f"Centre {centre['rdv_site_web']} URL contained an uppercase - lowering the URL")
         center_data.url = center_data.url.lower()
 
     return center_data.default()
-
 
 def sort_center(center):
     if not center:
@@ -91,6 +105,7 @@ def sort_center(center):
 def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
     compte_centres = 0
     compte_centres_avec_dispo = 0
+    bloqués_doctolib = 0
     par_departement = {
         code: {
             'version': 1,
@@ -100,13 +115,18 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         }
         for code in import_departements()
     }
+
     for centre in centres_cherchés:
         centre['nom'] = centre['nom'].strip()
         compte_centres += 1
         code_departement = centre['departement']
         if code_departement in par_departement:
+            erreur = centre.pop('erreur', None)
             if centre['prochain_rdv'] is None:
                 par_departement[code_departement]['centres_indisponibles'].append(centre)
+                if isinstance(erreur, BlockedByDoctolibError):
+                    par_departement[code_departement]['doctolib_bloqué'] = True
+                    bloqués_doctolib += 1
             else:
                 compte_centres_avec_dispo += 1
                 par_departement[code_departement]['centres_disponibles'].append(centre)
@@ -127,7 +147,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
                 print(json.dumps(disponibilités, indent=2))
             outfile.write(json.dumps(disponibilités, indent=2))
 
-    return compte_centres, compte_centres_avec_dispo
+    return compte_centres, compte_centres_avec_dispo, bloqués_doctolib
 
 
 def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):

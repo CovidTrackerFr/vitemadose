@@ -8,6 +8,8 @@ import requests
 
 from scraper.doctolib.doctolib_filters import is_appointment_relevant
 from scraper.pattern.scraper_request import ScraperRequest
+from scraper.scraper_result import ScraperRequest
+from scraper.error import BlockedByDoctolibError
 
 DOCTOLIB_SLOT_LIMIT = 50
 
@@ -52,6 +54,9 @@ class DoctolibSlots:
 
         centre_api_url = f'https://partners.doctolib.fr/booking/{centre}.json'
         response = self._client.get(centre_api_url, headers=DOCTOLIB_HEADERS)
+        if response.status_code == 403:
+            raise BlockedByDoctolibError(centre_api_url)
+
         response.raise_for_status()
         data = response.json()
 
@@ -78,6 +83,9 @@ class DoctolibSlots:
         start_date = request.get_start_date()
         slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={visit_motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={DOCTOLIB_SLOT_LIMIT}'
         response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
+        if response.status_code == 403:
+            raise BlockedByDoctolibError(centre_api_url)
+
         response.raise_for_status()
 
         slots = response.json()

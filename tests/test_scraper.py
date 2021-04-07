@@ -1,10 +1,12 @@
 import datetime as dt
+import pytest
 import json
 from scraper.departements import import_departements
 from scraper.pattern.scraper_result import ScraperResult
 from scraper.scraper import fetch_centre_slots, export_data
 from scraper.pattern.scraper_request import ScraperRequest
-
+from scraper.scraper_result import ScraperRequest
+from scraper.error import BlockedByDoctolibError
 from .utils import mock_datetime_now
 
 
@@ -16,6 +18,7 @@ def test_export_data(tmp_path):
             "url": "https://example.com/bugey-sud",
             "plateforme": "Doctolib",
             "prochain_rdv": "2021-04-10T00:00:00",
+            "erreur": None
         },
         {
             "departement": "59",
@@ -23,6 +26,7 @@ def test_export_data(tmp_path):
             "url": "https://example.com/ch-armentieres",
             "plateforme": "Keldoc",
             "prochain_rdv": "2021-04-11:00:00",
+            "erreur": None
         },
         {
             "departement": "59",
@@ -30,6 +34,7 @@ def test_export_data(tmp_path):
             "url": "https://example.com/clinique-du-cambresis",
             "plateforme": "Maiia",
             "prochain_rdv": None,
+            "erreur": None
         },
         {
             # Unknown departement (edge case) => should be skipped w/o failing
@@ -38,6 +43,7 @@ def test_export_data(tmp_path):
             "url": "https://example.com/hopital-magique",
             "plateforme": "Doctolib",
             "prochain_rdv": "2021-04-12:00:00",
+            "erreur": None
         },
     ]
 
@@ -102,6 +108,73 @@ def test_export_data(tmp_path):
         ],
         "last_updated": "2021-04-04T00:00:00",
     }
+
+
+def test_export_data_when_blocked(tmp_path):
+    centres_cherchés = [
+        {
+            "departement": "59",
+            "nom": "Clinique du Cambresis",
+            "url": "https://example.com/clinique-du-cambresis",
+            "plateforme": "Maiia",
+            "prochain_rdv": "2021-04-12:00:00",
+            "erreur": None
+        },
+        {
+            "departement": "14",
+            "nom": "Hôpital magique",
+            "url": "https://example.com/hopital-magique",
+            "plateforme": "Doctolib",
+            "prochain_rdv": None,
+            "erreur": BlockedByDoctolibError("https://example.com/hopital-magique")
+        },
+    ]
+
+    out_dir = tmp_path / "out"
+    out_dir.mkdir()
+    outpath_format = str(out_dir / "{}.json")
+
+    fake_now = dt.datetime(2021, 4, 4)
+    with mock_datetime_now(fake_now):
+        total, actifs, bloqués = export_data(centres_cherchés, outpath_format=outpath_format)
+
+    # les totaux doivent être bons
+    assert total == 2
+    assert actifs == 1
+    assert bloqués == 1
+
+    # Departements 14 and 59 should contain expected data.
+    content = json.loads((out_dir / "14.json").read_text())
+    assert content == {
+        "version": 1,
+        "doctolib_bloqué": True,
+        "centres_disponibles": [],
+        "centres_indisponibles": [{
+            "departement": "14",
+            "nom": "Hôpital magique",
+            "url": "https://example.com/hopital-magique",
+            "plateforme": "Doctolib",
+            "prochain_rdv": None,
+        }],
+        "last_updated": "2021-04-04T00:00:00",
+    }
+
+    content = json.loads((out_dir / "59.json").read_text())
+    assert content == {
+        "version": 1,
+        "centres_disponibles": [
+            {
+                "departement": "59",
+                "nom": "Clinique du Cambresis",
+                "url": "https://example.com/clinique-du-cambresis",
+                "plateforme": "Maiia",
+                "prochain_rdv": "2021-04-12:00:00",
+            },
+        ],
+        "centres_indisponibles": [],
+        "last_updated": "2021-04-04T00:00:00",
+    }
+
 
 
 def test_fetch_centre_slots():
