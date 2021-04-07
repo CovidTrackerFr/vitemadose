@@ -15,7 +15,7 @@ variable "gitlab_runner_token" {
 variable "nb_instances" {
   description = "Le nombre de runners à lancer"
   type = number
-  default = 3
+  default = 2
 }
 variable "name" {
   description = "Nom de base de l'instance gitlab-runner"

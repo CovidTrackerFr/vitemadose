@@ -14,7 +14,7 @@ resource "openstack_compute_instance_v2" "runner" {
   flavor_name     = var.flavor
   image_id        = local.image_id_by_dc[var.ovh_region]
   name            = "${var.name}-${count.index}-${var.ovh_region}"
-  security_groups = []
+  security_groups = ["default"]
   key_pair        = openstack_compute_keypair_v2.runner_keypair.name
   user_data       = <<EOP
 #!/bin/bash
