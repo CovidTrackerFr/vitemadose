@@ -123,6 +123,8 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         outpath = outpath_format.format(code_departement)
         logger.debug(f'writing result to {outpath} file')
         with open(outpath, "w") as outfile:
+            if code_departement == "35": # TODO debug: remove
+                print(json.dumps(disponibilités, indent=2))
             outfile.write(json.dumps(disponibilités, indent=2))
 
     return compte_centres, compte_centres_avec_dispo
