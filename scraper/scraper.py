@@ -176,7 +176,8 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
 
     # Dispatch to appropriate implementation.
     fetch_impl = fetch_map[platform]
-    result = ScraperResult(request, platform, fetch_impl(request))
+    result = ScraperResult(request, platform, None)
+    result.next_availability = fetch_impl(request)
     return result
 
 
