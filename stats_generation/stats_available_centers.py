@@ -5,6 +5,7 @@ from datetime import datetime
 import pytz
 import requests
 
+from stats_generation.stats_center_types import generate_stats_center_types
 from utils.vmd_logger import enable_logger_for_production
 
 logger = logging.getLogger('scraper')
@@ -108,6 +109,7 @@ def export_centres_stats(center_data='data/output/info_centres.json'):
         json.dump(centres_stats, stats_file, indent=2)
     generate_stats_date(centres_stats)
     generate_stats_dep_date(centres_stats)
+    generate_stats_center_types(centres_info)
 
 
 def get_centres_info(center_data):
