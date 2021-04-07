@@ -82,7 +82,4 @@ def get_any_availibility_from(center_id, start_date):
     }
 
     availability = session.get(BASE_AVAILIBILITY_URL, params=request_params)
-    try:
-        return availability.json()
-    except:
-        return None
+    return availability.json()
