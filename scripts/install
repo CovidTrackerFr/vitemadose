@@ -1,14 +1,9 @@
 #!/bin/sh -e
 
-PYTHON="python3"
+PYTHON="py"
 VENV="venv"
 BIN="$VENV/bin/"
 
-set -x
 
-if [ ! -d $VENV ]; then
-  $PYTHON -m venv $VENV
-fi
-
-${BIN}pip install -U pip wheel
-${BIN}pip install -e .
+pip install -U pip wheel
+pip install -e .

@@ -55,6 +55,7 @@ def to_departement_number(insee_code: str) -> str:
     # Cas général.
     # Ex : Lille = 59350 -> 59
     return insee_code[:2]
+	
 
 
 def _clean_insee_code(insee_code: str) -> str:
