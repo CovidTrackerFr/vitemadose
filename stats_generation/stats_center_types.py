@@ -9,7 +9,7 @@ from utils.vmd_logger import enable_logger_for_production
 
 logger = logging.getLogger('scraper')
 
-STATS_CENTER_TYPES = 'https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/stats_center_types.json'
+DATA_AUTO = 'https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/'
 
 
 def compute_plateforme_data(centres_info):
@@ -35,22 +35,23 @@ def compute_plateforme_data(centres_info):
 
 
 def generate_stats_center_types(centres_info):
+    stats_path = "data/output/stats_center_types.json"
     stats_data = {'dates': [], 'plateformes': {}}
 
     try:
-        history_rq = requests.get(STATS_CENTER_TYPES)
+        history_rq = requests.get(f"{DATA_AUTO}{stats_path}")
         data = history_rq.json()
         if data:
             stats_data = data
     except Exception as e:
-        logger.warning("Unable to fetch {0}: generating a template file.".format(STATS_CENTER_TYPES))
+        logger.warning(f"Unable to fetch {DATA_AUTO}{stats_path}: generating a template file.")
         pass
     ctz = pytz.timezone('Europe/Paris')
     current_time = datetime.now(tz=ctz).strftime("%Y-%m-%d %H:00:00")
     if current_time in stats_data['dates']:
-        with open("data/output/stats_center_types.json", "w") as stat_graph_file:
+        with open(stats_path, "w") as stat_graph_file:
             json.dump(stats_data, stat_graph_file)
-        logger.info("Stats file already updated: data/output/stats_center_types.json")
+        logger.info(f"Stats file already updated: {stats_path}")
         return
 
     stats_data['dates'].append(current_time)
@@ -66,6 +67,6 @@ def generate_stats_center_types(centres_info):
         current_data = stats_data['plateformes'][plateforme]
         current_data['disponible'].append(plateform_data['disponible'])
         current_data['total'].append(plateform_data['total'])
-    with open("data/output/stats_center_types.json", "w") as stat_graph_file:
+    with open(stats_path, "w") as stat_graph_file:
         json.dump(stats_data, stat_graph_file)
-    logger.info("Updated stats file: data/output/stats_center_types.json")
+    logger.info(f"Updated stats file: {stats_path}")

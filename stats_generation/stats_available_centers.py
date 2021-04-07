@@ -10,61 +10,62 @@ from utils.vmd_logger import enable_logger_for_production
 
 logger = logging.getLogger('scraper')
 
-STATS_BY_DATE = 'https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/stats_by_date.json'
-STATS_BY_DATE_DEP = 'https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/stats_by_date_dep.json'
+DATA_AUTO = 'https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/'
 
 
 def generate_stats_date(centres_stats):
+    stats_path = "data/output/stats_by_date.json"
     stats_data = {'dates': [],
                   'total_centres_disponibles': [],
                   'total_centres': []
                   }
 
     try:
-        history_rq = requests.get(STATS_BY_DATE)
+        history_rq = requests.get(f"{DATA_AUTO}{stats_path}")
         data = history_rq.json()
         if data:
             stats_data = data
     except Exception as e:
-        logger.warning("Unable to fetch {0}: generating a template file.".format(STATS_BY_DATE))
+        logger.warning(f"Unable to fetch {DATA_AUTO}{stats_path}: generating a template file.")
         pass
     ctz = pytz.timezone('Europe/Paris')
     current_time = datetime.now(tz=ctz).strftime("%Y-%m-%d %H:00:00")
     if current_time in stats_data['dates']:
-        with open("data/output/stats_by_date.json", "w") as stat_graph_file:
+        with open(stats_path, "w") as stat_graph_file:
             json.dump(stats_data, stat_graph_file)
-        logger.info("Stats file already updated: data/output/stats_by_date.json")
+        logger.info(f"Stats file already updated: {stats_path}")
         return
     data_alldep = centres_stats['tout_departement']
     stats_data['dates'].append(current_time)
     stats_data['total_centres_disponibles'].append(data_alldep['disponibles'])
     stats_data['total_centres'].append(data_alldep['total'])
 
-    with open("data/output/stats_by_date.json", "w") as stat_graph_file:
+    with open(stats_path, "w") as stat_graph_file:
         json.dump(stats_data, stat_graph_file)
-    logger.info("Updated stats file: data/output/stats_by_date.json")
+    logger.info(f"Updated stats file: {stats_path}")
 
 
 def generate_stats_dep_date(centres_stats):
+    stats_path = "data/output/stats_by_date_dep.json"
     stats_data = {'dates': [],
                   'dep_centres_disponibles': {},
                   'dep_centres': {}
                   }
 
     try:
-        history_rq = requests.get(STATS_BY_DATE_DEP)
+        history_rq = requests.get(f"{DATA_AUTO}{stats_path}")
         data = history_rq.json()
         if data:
             stats_data = data
     except Exception as e:
-        logger.warning("Unable to fetch {0}: generating a template file.".format(STATS_BY_DATE_DEP))
+        logger.warning(f"Unable to fetch {DATA_AUTO}{stats_path}: generating a template file.")
         pass
     ctz = pytz.timezone('Europe/Paris')
     current_time = datetime.now(tz=ctz).strftime("%Y-%m-%d %H:00:00")
     if current_time in stats_data['dates']:
-        with open("data/output/stats_by_date_dep.json", "w") as stat_graph_file:
+        with open(stats_path, "w") as stat_graph_file:
             json.dump(stats_data, stat_graph_file)
-        logger.info("Stats file already updated: data/output/stats_by_date_dep.json")
+        logger.info(f"Stats file already updated: {stats_path}")
         return
     stats_data['dates'].append(current_time)
 
@@ -79,9 +80,9 @@ def generate_stats_dep_date(centres_stats):
         stats_data['dep_centres_disponibles'][dep].append(dep_data['disponibles'])
         stats_data['dep_centres'][dep].append(dep_data['total'])
 
-    with open("data/output/stats_by_date_dep.json", "w") as stat_graph_file:
+    with open(stats_path, "w") as stat_graph_file:
         json.dump(stats_data, stat_graph_file)
-    logger.info("Updated stats file: data/output/stats_by_date_dep.json")
+    logger.info(f"Updated stats file: {stats_path}")
 
 
 def export_centres_stats(center_data='data/output/info_centres.json'):
