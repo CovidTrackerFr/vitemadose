@@ -73,28 +73,23 @@ def cherche_prochain_rdv_dans_centre(centre):
     has_error = None
     result = None
     try:
-        print("----------FETCH--------")
-        print('ah')
         result = fetch_centre_slots(centre['rdv_site_web'], start_date)
-        print(result)
-        print("-----------OK-----------")
         center_data.fill_result(result)
-
-        if result and result.platform == 'Doctolib' and not center_data.url.islower():
-            logger.info(f"Centre {centre['rdv_site_web']} URL contained an uppercase - lowering the URL")
-            center_data.url = center_data.url.lower()
-        print("-----------OK2-----------")
-    except Exception as e:
-        print('center')
-        print(centre['gid'])
-        print(e)
+    except ScrapeError as scrape_error:
         logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(scrape_error)}")
-        return center_data.default()
+        has_error = scrape_error
+    except Exception as e:
+        print(e)
 
+    if has_error is None:
+        logger.info(f'{centre.get("gid", "")!s:>8} {center_data.plateforme!s:16} {center_data.prochain_rdv or ""!s:32} {center_data.departement!s:6}')
+    else:
+        logger.info(f'{centre.get("gid", "")!s:>8} {center_data.plateforme!s:16} {"Erreur" or ""!s:32} {center_data.departement!s:6}')
 
-    print('yolo')
-    print(center_data.default())
-    print('oui')
+    if result and result.platform == 'Doctolib' and not center_data.url.islower():
+        logger.info(f"Centre {centre['rdv_site_web']} URL contained an uppercase - lowering the URL")
+        center_data.url = center_data.url.lower()
+
     return center_data.default()
 
 def sort_center(center):
@@ -150,7 +145,6 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
                 print(json.dumps(disponibilités, indent=2))
             outfile.write(json.dumps(disponibilités, indent=2))
 
-    print('fin')
     return compte_centres, compte_centres_avec_dispo, bloqués_doctolib
 
 
@@ -183,8 +177,6 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
     # Dispatch to appropriate implementation.
     fetch_impl = fetch_map[platform]
     result = ScraperResult(request, platform, fetch_impl(request))
-    print('cado')
-    print(result.default())
     return result
 
 
