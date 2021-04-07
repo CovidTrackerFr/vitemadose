@@ -56,6 +56,12 @@ def scrape():
             1
         )
 
+        outpath = "data/output/liste_centres_doctolib.json"
+        with open(outpath, "w") as info_centres:
+        json.dump(centres_cherchés, info_centres, indent=2)
+
+        return
+
         compte_centres, compte_centres_avec_dispo = export_data(centres_cherchés)
         logger.info(f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
         if compte_centres_avec_dispo == 0:
@@ -183,7 +189,7 @@ def centre_iterator():
             yield row
     for centre in ordoclic_centre_iterator():
         yield centre"""
-        
+
     for centre in doctolib_centre_iterator():
         yield centre
 
