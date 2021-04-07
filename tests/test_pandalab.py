@@ -1,4 +1,4 @@
-#import scraper
+import scraper
 
 from datetime import datetime
 from multiprocessing import Pool, freeze_support

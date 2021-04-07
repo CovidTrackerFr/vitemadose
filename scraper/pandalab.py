@@ -25,9 +25,9 @@ def getSchedules(pharmacyId, practitionerId, reasonId):
         headers = {'Content-type': 'application/json', 'Accept': '*/*'}
         r = session.post(base_url, data=json.dumps(payload), headers=headers)
         r.raise_for_status()
-        return(r.json())
+        return r.json()
     except httpx.HTTPStatusError as hex:
-        return([])
+        return []
 
 def getReasons(pharmacyId):
     base_url = f"https://diapatient-api.diatelic.net/public/v1/appointment/ict/practitioner/{pharmacyId}/reasons"
@@ -36,13 +36,13 @@ def getReasons(pharmacyId):
         r.raise_for_status()
         return(r.json())
     except httpx.HTTPStatusError as hex:
-        return([])
+        return []
 
 def getPractitionerId(finessGeo):
     base_url = f"https://diapatient-api.diatelic.net/public/v1/appointment/ict/pharmacy/{finessGeo}"
     r = session.get(base_url)
     r.raise_for_status()
-    return(r.json())
+    return r.json()
 
 def cp_to_insee(cp):
     insee_com = cp # si jamais on ne trouve pas de correspondance...
@@ -58,11 +58,12 @@ def cp_to_insee(cp):
     return insee_com
 
 def centre_iterator():
+    filtre_vaccins = [ 'Première injection – Vaccin covid AstraZeneca' ]
     with open("data/input/pandalab.json", "r") as json_file:
         dict_ict = json.load(json_file)
         for key in dict_ict.keys():
             ict = dict_ict[key]
-            if ict.get("availability") == True: # pris de rdv en ligne possible
+            if ict.get("availability"): # pris de rdv en ligne possible
                 centre = {}
                 centre["nom"] = ict["name"]
                 centre["com_insee"] = cp_to_insee(ict["address"]["zip"].strip().zfill(5))
@@ -72,11 +73,11 @@ def centre_iterator():
                 reasons = getReasons(practitionerId)
                 for reason in reasons:
                     reasonId = reason["id"]
-                    if reason["label"] == "Première injection – Vaccin covid AstraZeneca": # on ne remonte pas les 2ndes injections
+                    if reason["label"] in filtre_vaccins: # on ne remonte pas les 2ndes injections
                         new_centre = centre
                         new_centre["gid"] = key
                         new_centre["rdv_site_web"] = f"https://masante.pandalab.eu/medical-team/medical-team-result-pharmacy/new/org/details/{key}?pharmacyId={pharmacyId}&practitionerId={practitionerId}&reasonId={reasonId}"
-                        yield(new_centre)
+                        yield new_centre
 
 def fetch_slots(rdv_site_web, start_date):
     parsed = urlparse.urlparse(rdv_site_web)
@@ -87,8 +88,8 @@ def fetch_slots(rdv_site_web, start_date):
     first_slot = None
     for schedule in schedules:
         begin = datetime.strptime(schedule.get("begin"), "%Y-%m-%dT%H:%M:%S")
-        if first_slot == None or first_slot > begin:
+        if first_slot is None or first_slot > begin:
             first_slot = begin
-    if first_slot == None:
+    if first_slot is None:
         return None
-    return(first_slot.isoformat())
+    return first_slot.isoformat()
