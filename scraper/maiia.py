@@ -59,7 +59,10 @@ def get_slots_from(rdv_form, rdv_url, start_date):
 
     # Ne sachant pas si 'firstPhysicalStartDateTime' est un attribut par défault dans
     # la réponse, je préfère faire des tests sur l'existence des attributs
-    if "closestPhysicalAvailability" in availability and "startDateTime" in availability:
+    if (
+            "closestPhysicalAvailability" in availability and
+            "startDateTime" in availability["closestPhysicalAvailability"]
+    ):
         dt = isoparse(availability['closestPhysicalAvailability']["startDateTime"])
         dt = dt + timedelta(hours=2)
         dt = dt.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
@@ -79,7 +82,4 @@ def get_any_availibility_from(center_id, start_date):
     }
 
     availability = session.get(BASE_AVAILIBILITY_URL, params=request_params)
-    try:
-        return availability.json()
-    except:
-        return None
+    return availability.json()
