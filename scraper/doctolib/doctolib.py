@@ -30,8 +30,19 @@ else:
     DEFAULT_CLIENT = httpx.Client()
 
 BASE_URL = "https://www.doctolib.fr"
-RECHERCHE_URL = "/vaccination-covid-19/france?"
-PARAMETRES = "ref_visit_motive_ids[]=6970&ref_visit_motive_ids[]=7005&ref_visit_motive_ids[]=7107"
+RECHERCHE_URLS = [
+    "/vaccination-covid-19/france?",
+    "/vaccination-covid-19-pour-les-professionnels-medico-sociaux/france?"
+]
+
+
+LISTE_PARAMETRES = [
+    "ref_visit_motive_ids[]=6970&ref_visit_motive_ids[]=7005&ref_visit_motive_ids[]=7107",
+    "ref_visit_motive_ids[]=6970&ref_visit_motive_ids[]=7005",
+    "ref_visit_motive_ids[]=7107"
+]
+
+
 
 
 def fetch_slots(rdv_site_web, start_date):
@@ -97,43 +108,46 @@ class DoctolibSlots:
 
     def centre_iterator(self, max_page=1000):
 
-        page = 1
-        centres = True
+        for recherche_url in RECHERCHE_URLS:
+            for parametre in LISTE_PARAMETRES:
 
-        while centres and page <= max_page:
+                page = 1
+                centres = True
 
-            url_recherche = BASE_URL + RECHERCHE_URL + "page={}&".format(page) + PARAMETRES
+                while centres and page <= max_page:
 
-            response = self._client.get(url_recherche, headers=DOCTOLIB_HEADERS)
+                    url_recherche = BASE_URL + recherche_url + "page={}&".format(page) + parametre
 
-            try:
-                response.raise_for_status()
-                soup = BeautifulSoup(response.content, "html.parser")
-                centres = soup.find_all("div", {"class": "dl-search-result"})
+                    response = self._client.get(url_recherche, headers=DOCTOLIB_HEADERS)
 
-                for _centre in centres:
+                    try:
+                        response.raise_for_status()
+                        soup = BeautifulSoup(response.content, "html.parser")
+                        centres = soup.find_all("div", {"class": "dl-search-result"})
 
-                    centre = {}
+                    except Exception as e:
+                        logger.error(f"erreur lors du traitement de recherche sur Doctolib {str(e)}")
+                        break
 
-                    centre['gid'] = _centre.get('id')[14:]
+                    for _centre in centres:
 
-                    nom = _centre.select_one(".dl-search-result-name").getText()
-                    centre['nom'] = nom
+                        centre = {}
 
-                    rdv_site_web = BASE_URL + _centre.select_one('a[data-analytics-event-action="bookAppointmentButton"]')['href']
-                    centre['rdv_site_web'] = rdv_site_web
+                        centre['gid'] = _centre.get('id')[14:]
+
+                        nom = _centre.select_one(".dl-search-result-name").getText()
+                        centre['nom'] = nom
+
+                        rdv_site_web = BASE_URL + _centre.select_one('a[data-analytics-event-action="bookAppointmentButton"]')['href']
+                        centre['rdv_site_web'] = rdv_site_web
 
 
-                    adresse = _centre.select_one('.dl-text.dl-text-body.dl-text-s').getText().split(' ')
-                    centre["com_insee"] = cp_to_insee(_recherche_cp(adresse))
+                        adresse = _centre.select_one('.dl-text.dl-text-body.dl-text-s').getText().split(' ')
+                        centre["com_insee"] = cp_to_insee(_recherche_cp(adresse))
 
-                    yield centre
+                        yield centre
 
-            except Exception as e:
-                logger.error(f"erreur lors du traitement de recherche sur Doctolib {str(e)}")
-                break
-
-            page += 1
+                    page += 1
 
 def _parse_centre(rdv_site_web: str) -> Optional[str]:
     """
