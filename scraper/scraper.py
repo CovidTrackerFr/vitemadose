@@ -56,6 +56,11 @@ def scrape():
             1
         )
 
+
+        liste = []
+        for centre in centres_cherchés:
+            liste.append(centre)
+
         outpath = "data/output/liste_centres_doctolib.json"
         with open(outpath, "w") as info_centres:
             json.dump(centres_cherchés, info_centres, indent=2)
