@@ -15,7 +15,7 @@ from scraper.doctolib.doctolib import (
 
 
 # -- Tests de l'API (offline) --
-from scraper.scraper_result import ScraperRequest
+from scraper.pattern.scraper_request import ScraperRequest
 
 
 def test_blocked_by_doctolib_par_centre():

@@ -7,7 +7,7 @@ import httpx
 import requests
 
 from scraper.doctolib.doctolib_filters import is_appointment_relevant
-from scraper.scraper_result import ScraperRequest
+from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 
 DOCTOLIB_SLOT_LIMIT = 50

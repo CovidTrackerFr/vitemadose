@@ -2,10 +2,10 @@ import datetime as dt
 import pytest
 import json
 from scraper.departements import import_departements
+from scraper.pattern.scraper_result import ScraperResult
 from scraper.scraper import fetch_centre_slots, export_data
-from scraper.scraper_result import ScraperRequest
+from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
-
 from .utils import mock_datetime_now
 
 
@@ -199,32 +199,30 @@ def test_fetch_centre_slots():
 
     # Doctolib
     url = "https://partners.doctolib.fr/blabla"
-    assert fetch_centre_slots(url, start_date, fetch_map=fetch_map) == (
-        "Doctolib",
-        "2021-04-04",
-    )
+    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map)
+    assert res.platform == "Doctolib"
+    assert res.next_availability == "2021-04-04"
 
     # Doctolib (old)
     url = "https://www.doctolib.fr/blabla"
-    assert fetch_centre_slots(url, start_date, fetch_map=fetch_map) == (
-        "Doctolib",
-        "2021-04-04",
-    )
+    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map)
+    assert res.platform == "Doctolib"
+    assert res.next_availability == "2021-04-04"
 
     # Keldoc
     url = "https://vaccination-covid.keldoc.com/blabla"
-    assert fetch_centre_slots(url, start_date, fetch_map=fetch_map) == (
-        "Keldoc",
-        "2021-04-05",
-    )
+    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map)
+    assert res.platform == "Keldoc"
+    assert res.next_availability == "2021-04-05"
 
     # Maiia
     url = "https://www.maiia.com/blabla"
-    assert fetch_centre_slots(url, start_date, fetch_map=fetch_map) == (
-        "Maiia",
-        "2021-04-06",
-    )
+    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map)
+    assert res.platform == "Maiia"
+    assert res.next_availability == "2021-04-06"
 
     # Default / unknown
     url = "https://www.example.com"
-    assert fetch_centre_slots(url, start_date, fetch_map=fetch_map) == ("Autre", None)
+    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map)
+    assert res.platform == "Autre"
+    assert res.next_availability is None

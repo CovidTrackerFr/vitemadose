@@ -1,4 +1,3 @@
-from dataclasses import make_dataclass, field
 from datetime import datetime
 import json
 
@@ -10,7 +9,7 @@ from scraper.maiia import (
     fetch_slots,
     get_slots_from,
 )
-from scraper.scraper_result import ScraperRequest
+from scraper.pattern.scraper_request import ScraperRequest
 
 
 class MockResponse:
