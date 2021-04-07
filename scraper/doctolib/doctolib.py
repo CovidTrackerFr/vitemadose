@@ -127,6 +127,8 @@ class DoctolibSlots:
                     adresse = _centre.select_one('.dl-text.dl-text-body.dl-text-s').getText().split(' ')
                     centre["com_insee"] = cp_to_insee(_recherche_cp(adresse))
 
+                    yield centre
+
             except Exception as e:
                 logger.error(f"erreur lors du traitement de recherche sur Doctolib {str(e)}")
                 break
