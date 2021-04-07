@@ -6,6 +6,7 @@ stages:
 test:
   stage: test
   image: python:3.8-alpine
+  timeout: "2 minutes"
   before_script:
     - ./scripts/install
   script:
@@ -14,6 +15,7 @@ test:
 scrape:
   stage: scrape
   image: python:3.8-alpine
+  timeout: "5 minutes"
   tags:
     - ovh
   before_script:
@@ -26,6 +28,10 @@ scrape:
     name: "rdv"
     paths:
       - data/output
+  only:
+    - master
+    - gitlab-publish
+    - schedules
 
 pages:
   stage: deploy
