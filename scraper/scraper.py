@@ -58,7 +58,7 @@ def scrape():
 
         outpath = "data/output/liste_centres_doctolib.json"
         with open(outpath, "w") as info_centres:
-        json.dump(centres_cherchés, info_centres, indent=2)
+            json.dump(centres_cherchés, info_centres, indent=2)
 
         return
 
