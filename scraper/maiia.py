@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 from dateutil.parser import isoparse
 from bs4 import BeautifulSoup
 
+from scraper.scraper_result import ScraperRequest
 
 BASE_AVAILIBILITY_URL = "https://www.maiia.com/api/pat-public/availability-closests"
 
@@ -13,23 +14,23 @@ session = requests.Session()
 logger = logging.getLogger('scraper')
 
 
-def fetch_slots(rdv_site_web, start_date):
-    response = session.get(rdv_site_web)
+def fetch_slots(request: ScraperRequest):
+    response = session.get(request.get_url())
     soup = BeautifulSoup(response.text, 'html.parser')
     try:
         response.raise_for_status()
     except requests.exceptions.HTTPError as e:
-        logger.error(f"Requête pour {rdv_site_web} a levé une erreur : {e}")
+        logger.error(f"Requête pour {request.get_url()} a levé une erreur : {e}")
         return None
 
     rdv_form = soup.find(id="__NEXT_DATA__")
     if rdv_form:
-        return get_slots_from(rdv_form, rdv_site_web, start_date)
+        return get_slots_from(rdv_form, request)
 
     return None
 
 
-def get_slots_from(rdv_form, rdv_url, start_date):
+def get_slots_from(rdv_form, request: ScraperRequest):
     json_form = json.loads(rdv_form.contents[0])
 
     rdv_form_attributes = ['props', 'initialState', 'cards', 'item', 'center']
@@ -47,7 +48,7 @@ def get_slots_from(rdv_form, rdv_url, start_date):
     center_infos = tmp
     center_id = center_infos['id']
 
-    availability = get_any_availibility_from(center_id, start_date)
+    availability = get_any_availibility_from(center_id, request.get_start_date())
     if not availability or availability["availabilityCount"] == 0:
         return None
 

@@ -10,6 +10,7 @@ from scraper.keldoc.keldoc import fetch_slots
 from scraper.keldoc.keldoc_center import KeldocCenter
 from scraper.keldoc.keldoc_filters import filter_vaccine_specialties, filter_vaccine_motives, is_appointment_relevant, \
     is_specialty_relevant
+from scraper.scraper_result import ScraperRequest
 
 CENTER1_KELDOC = {
     "/api/patients/v2/clinics/2563/specialties/144/cabinets": "center1-cabinet",
@@ -135,15 +136,21 @@ def test_keldoc_timeout():
 
 def test_keldoc_basicfetch():
     with pytest.raises(httpx.HTTPStatusError):
-        fetch_slots("https://vaccination-covid.keldoc.com/centre-hospitalier-regional/foo/bar", "2020-04-06")
+        scrap_request = ScraperRequest("https://vaccination-covid.keldoc.com/centre-hospitalier-regional/foo/bar", "2020-04-06")
+        fetch_slots(scrap_request)
 
-    date = fetch_slots("https://vaccination-covid.keldoc.com", "2020-04-06")
+    scrap_request = ScraperRequest("https://vaccination-covid.keldoc.com", "2020-04-06")
+    date = fetch_slots(scrap_request)
     assert not date
 
-    date = fetch_slots("https://vaccination-covid.keldoc.com/cabinet-medical/bain-de-bretagne-35470/salle-des-fetes-de-bain-de-bretagne/centre-de-vaccination-de-la-salle-des-fetes-de-bain-de-bretagne", "2020-04-06")
+    scrap_request = ScraperRequest("https://vaccination-covid.keldoc.com/cabinet-medical/bain-de-bretagne-35470/salle-des-fetes-de-bain-de-bretagne/centre-de-vaccination-de-la-salle-des-fetes-de-bain-de-bretagne", "2020-04-06")
+    date = fetch_slots(scrap_request)
     assert not date
 
-    date = fetch_slots("https://www.keldoc.com/?dom=cabinet-medical&inst=bain-de-bretagne-35470&user=salle-des-fetes-de-bain-de-bretagne", "2020-04-06")
+    scrap_request = ScraperRequest(
+        "https://www.keldoc.com/?dom=cabinet-medical&inst=bain-de-bretagne-35470&user=salle-des-fetes-de-bain-de-bretagne",
+        "2020-04-06")
+    date = fetch_slots(scrap_request)
     assert not date
 
 

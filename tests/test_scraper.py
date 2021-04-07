@@ -2,6 +2,7 @@ import datetime as dt
 import json
 from scraper.departements import import_departements
 from scraper.scraper import fetch_centre_slots, export_data
+from scraper.scraper_result import ScraperRequest
 
 from .utils import mock_datetime_now
 
@@ -106,13 +107,13 @@ def test_fetch_centre_slots():
     """
     We detect which implementation to use based on the visit URL.
     """
-    def fake_doctolib_fetch_slots(rdv_site_web, start_date):
+    def fake_doctolib_fetch_slots(request: ScraperRequest):
         return "2021-04-04"
 
-    def fake_keldoc_fetch_slots(rdv_site_web, start_date):
+    def fake_keldoc_fetch_slots(request: ScraperRequest):
         return "2021-04-05"
 
-    def fake_maiia_fetch_slots(rdv_site_web, start_date):
+    def fake_maiia_fetch_slots(request: ScraperRequest):
         return "2021-04-06"
 
     fetch_map = {

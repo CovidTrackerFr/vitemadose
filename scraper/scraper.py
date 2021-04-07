@@ -9,6 +9,7 @@ from multiprocessing import Pool
 import pytz
 import requests
 
+from scraper.scraper_result import ScraperRequest
 from utils.vmd_logger import get_logger, enable_logger_for_production, enable_logger_for_debug
 from .departements import to_departement_number, import_departements
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
@@ -18,8 +19,8 @@ from .ordoclic import centre_iterator as ordoclic_centre_iterator
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
 
 POOL_SIZE = int(os.getenv('POOL_SIZE', 20))
-logger = get_logger()
 
+logger = enable_logger_for_production()
 
 def main():
     if len(sys.argv) == 1:
@@ -47,14 +48,13 @@ def scrape_debug(urls):
 
 
 def scrape():
-    enable_logger_for_production()
     with Pool(POOL_SIZE) as pool:
         centres_cherchés = pool.imap_unordered(
             cherche_prochain_rdv_dans_centre,
             centre_iterator(),
             1
         )
-        compte_centres, compte_centres_avec_dispo = export_data(centres_cherchés)
+        compte_centres, compte_centres_avec_dispo = export_data(centres_cherchés, logger)
         logger.info(f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
         if compte_centres_avec_dispo == 0:
             logger.error("Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur")
@@ -167,7 +167,8 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
 
     # Dispatch to appropriate implementation.
     fetch_impl = fetch_map[platform]
-    return platform, fetch_impl(rdv_site_web, start_date)
+    request = ScraperRequest(rdv_site_web, start_date)
+    return platform, fetch_impl(request)
 
 
 def centre_iterator():

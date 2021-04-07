@@ -5,6 +5,8 @@ from datetime import datetime, timedelta
 import httpx
 from pytz import timezone
 
+from scraper.scraper_result import ScraperRequest
+
 logger = logging.getLogger('scraper')
 
 timeout = httpx.Timeout(15.0, connect=15.0)
@@ -42,9 +44,9 @@ def getSlots(entityId, medicalStaffId, reasonId, start_date, end_date, client: h
     return r.json()
 
 
-def getProfile(rdv_site_web, client: httpx.Client = DEFAULT_CLIENT):
-    slug = rdv_site_web.rsplit('/', 1)[-1]
-    prof = rdv_site_web.rsplit('/', 2)[-2]
+def getProfile(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
+    slug = request.get_url().rsplit('/', 1)[-1]
+    prof = request.get_url().rsplit('/', 2)[-2]
     if prof in ['pharmacien', 'medecin']:
         base_url = f'https://api.ordoclic.fr/v1/professionals/profile/{slug}'
     else:
@@ -81,9 +83,9 @@ def parse_ordoclic_slots(availability_data):
     return first_availability
 
 
-def fetch_slots(rdv_site_web, start_date, client: httpx.Client = DEFAULT_CLIENT):
+def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     first_availability = None
-    profile = getProfile(rdv_site_web)
+    profile = getProfile(request)
     slug = profile["profileSlug"]
     entityId = profile["entityId"]
     for professional in profile["publicProfessionals"]:
@@ -95,9 +97,9 @@ def fetch_slots(rdv_site_web, start_date, client: httpx.Client = DEFAULT_CLIENT)
         for reason in reasons["reasons"]:
             if reason["reasonTypeId"] == 4 and reason["canBookOnline"] == True:
                 reasonId = reason["id"]
-                date_obj = datetime.strptime(start_date, '%Y-%m-%d')
+                date_obj = datetime.strptime(request.get_start_date(), '%Y-%m-%d')
                 end_date = (date_obj + timedelta(days=6)).strftime('%Y-%m-%d')
-                slots = getSlots(entityId, medicalStaffId, reasonId, start_date, end_date, client)
+                slots = getSlots(entityId, medicalStaffId, reasonId, request.get_start_date(), end_date, client)
                 date = parse_ordoclic_slots(slots)
                 if date is None:
                     continue

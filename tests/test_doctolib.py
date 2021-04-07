@@ -14,13 +14,15 @@ from scraper.doctolib.doctolib import (
 
 
 # -- Tests de l'API (offline) --
+from scraper.scraper_result import ScraperRequest
 
 
 def test_doctolib():
     # Cas de base.
 
     start_date = "2021-04-03"
-    rdv_site_web = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
+    base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
+    scrap_request = ScraperRequest(base_url, start_date)
 
     def app(request: httpx.Request) -> httpx.Response:
         assert "User-Agent" in request.headers
@@ -46,7 +48,7 @@ def test_doctolib():
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client)
 
-    next_date = slots.fetch(rdv_site_web, start_date)
+    next_date = slots.fetch(scrap_request)
     assert next_date == "2021-04-10"
 
 
@@ -56,7 +58,8 @@ def test_doctolib_motive_categories():
     # On doit gérer ces cas-là.
 
     start_date = "2021-04-03"
-    rdv_site_web = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
+    base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
+    scrap_request = ScraperRequest(base_url, start_date)
 
     def app(request: httpx.Request) -> httpx.Response:
         assert "User-Agent" in request.headers
@@ -72,7 +75,7 @@ def test_doctolib_motive_categories():
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client)
 
-    next_date = slots.fetch(rdv_site_web, start_date)
+    next_date = slots.fetch(scrap_request)
     assert next_date == "2021-04-10"
 
 
@@ -82,7 +85,8 @@ def test_doctolib_next_slot():
     # la prochaine visite, que l'on utilise dans ce cas.
 
     start_date = "2021-04-03"
-    rdv_site_web = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
+    base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
+    scrap_request = ScraperRequest(base_url, start_date)
 
     def app(request: httpx.Request) -> httpx.Response:
         assert "User-Agent" in request.headers
@@ -98,7 +102,7 @@ def test_doctolib_next_slot():
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client)
 
-    next_date = slots.fetch(rdv_site_web, start_date)
+    next_date = slots.fetch(scrap_request)
     assert next_date == "2021-04-10"
 
 

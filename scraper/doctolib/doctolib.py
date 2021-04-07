@@ -7,6 +7,7 @@ import httpx
 import requests
 
 from scraper.doctolib.doctolib_filters import is_appointment_relevant
+from scraper.scraper_result import ScraperRequest
 
 DOCTOLIB_SLOT_LIMIT = 50
 
@@ -28,10 +29,10 @@ else:
     DEFAULT_CLIENT = httpx.Client()
 
 
-def fetch_slots(rdv_site_web, start_date):
+def fetch_slots(request: ScraperRequest):
     # Fonction principale avec le comportement "de prod".
     doctolib = DoctolibSlots(client=DEFAULT_CLIENT)
-    return doctolib.fetch(rdv_site_web, start_date)
+    return doctolib.fetch(request)
 
 
 class DoctolibSlots:
@@ -41,13 +42,13 @@ class DoctolibSlots:
     def __init__(self, client: httpx.Client = None) -> None:
         self._client = DEFAULT_CLIENT if client is None else client
 
-    def fetch(self, rdv_site_web: str, start_date: str) -> Optional[str]:
-        centre = _parse_centre(rdv_site_web)
+    def fetch(self, request: ScraperRequest) -> Optional[str]:
+        centre = _parse_centre(request.get_url())
 
         # Doctolib fetches multiple vaccination centers sometimes
         # so if a practice id is present in query, only related agendas
         # should be selected.
-        practice_id = _parse_practice_id(rdv_site_web)
+        practice_id = _parse_practice_id(request.get_url())
 
         centre_api_url = f'https://partners.doctolib.fr/booking/{centre}.json'
         response = self._client.get(centre_api_url, headers=DOCTOLIB_HEADERS)
@@ -74,6 +75,7 @@ class DoctolibSlots:
 
         agenda_ids_q = "-".join(agenda_ids)
         practice_ids_q = "-".join(practice_ids)
+        start_date = request.get_start_date()
         slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={visit_motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={DOCTOLIB_SLOT_LIMIT}'
         response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
         response.raise_for_status()
