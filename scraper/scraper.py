@@ -16,6 +16,8 @@ from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
 from .maiia import fetch_slots as maiia_fetch_slots
 from .ordoclic import centre_iterator as ordoclic_centre_iterator
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
+from .pandalab import centre_iterator as pandalab_centre_iterator
+from .pandalab import fetch_slots as pandalab_fetch_slots
 
 POOL_SIZE = int(os.getenv('POOL_SIZE', 20))
 logger = get_logger()
@@ -149,6 +151,7 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
             'Keldoc': keldoc_fetch_slots,
             'Maiia': maiia_fetch_slots,
             'Ordoclic': ordoclic_fetch_slots,
+            'Pandalab': pandalab_fetch_slots,
         }
 
     rdv_site_web = rdv_site_web.strip()
@@ -162,6 +165,8 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
         platform = 'Maiia'
     elif rdv_site_web.startswith('https://app.ordoclic.fr/'):
         platform = 'Ordoclic'
+    elif rdv_site_web.startswith('https://masante.pandalab.eu/'):
+        platform = 'Pandalab'
     else:
         return 'Autre', None
 
@@ -180,6 +185,8 @@ def centre_iterator():
     for row in csvreader:
         yield row
     for centre in ordoclic_centre_iterator():
+        yield centre
+    for centre in pandalab_centre_iterator():
         yield centre
 
 
