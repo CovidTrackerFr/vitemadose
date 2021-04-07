@@ -141,7 +141,7 @@ class DoctolibSlots:
 
                             yield centre
 
-                   except Exception as e:
+                    except Exception as e:
                         logger.error(f"erreur lors du traitement de recherche sur Doctolib {str(e)}")
                         break
 
