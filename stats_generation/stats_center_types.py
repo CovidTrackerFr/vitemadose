@@ -48,6 +48,8 @@ def generate_stats_center_types(centres_info):
     ctz = pytz.timezone('Europe/Paris')
     current_time = datetime.now(tz=ctz).strftime("%Y-%m-%d %H:00:00")
     if current_time in stats_data['dates']:
+        with open("data/output/stats_center_types.json", "w") as stat_graph_file:
+            json.dump(stats_data, stat_graph_file)
         logger.info("Stats file already updated: data/output/stats_center_types.json")
         return
 
