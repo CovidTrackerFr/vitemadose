@@ -43,8 +43,6 @@ LISTE_PARAMETRES = [
 ]
 
 
-
-
 def fetch_slots(rdv_site_web, start_date):
     # Fonction principale avec le comportement "de prod".
     doctolib = DoctolibSlots(client=DEFAULT_CLIENT)
@@ -125,27 +123,27 @@ class DoctolibSlots:
                         soup = BeautifulSoup(response.content, "html.parser")
                         centres = soup.find_all("div", {"class": "dl-search-result"})
 
-                    except Exception as e:
+                        for _centre in centres:
+
+                            centre = {}
+
+                            centre['gid'] = _centre.get('id')[14:]
+
+                            nom = _centre.select_one(".dl-search-result-name").getText()
+                            centre['nom'] = nom
+
+                            rdv_site_web = BASE_URL + _centre.select_one('a[data-analytics-event-action="bookAppointmentButton"]')['href']
+                            centre['rdv_site_web'] = rdv_site_web
+
+
+                            adresse = _centre.select_one('.dl-text.dl-text-body.dl-text-s').getText().split(' ')
+                            centre["com_insee"] = cp_to_insee(_recherche_cp(adresse))
+
+                            yield centre
+
+                   except Exception as e:
                         logger.error(f"erreur lors du traitement de recherche sur Doctolib {str(e)}")
                         break
-
-                    for _centre in centres:
-
-                        centre = {}
-
-                        centre['gid'] = _centre.get('id')[14:]
-
-                        nom = _centre.select_one(".dl-search-result-name").getText()
-                        centre['nom'] = nom
-
-                        rdv_site_web = BASE_URL + _centre.select_one('a[data-analytics-event-action="bookAppointmentButton"]')['href']
-                        centre['rdv_site_web'] = rdv_site_web
-
-
-                        adresse = _centre.select_one('.dl-text.dl-text-body.dl-text-s').getText().split(' ')
-                        centre["com_insee"] = cp_to_insee(_recherche_cp(adresse))
-
-                        yield centre
 
                     page += 1
 
