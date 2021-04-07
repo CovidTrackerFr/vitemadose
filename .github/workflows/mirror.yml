@@ -18,7 +18,7 @@ jobs:
       - name: "Mirror to Gitlab.com"
         shell: bash
         env:
-          GITLAB_TOKEN: ${{ screts.GITLAB_TOKEN }}
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
         run: "git push https://vitemadose-github:${GITLAB_TOKEN}@https://gitlab.com/ViteMaDose/vitemadose.git"
       - uses: "actions/checkout@v2"
 
