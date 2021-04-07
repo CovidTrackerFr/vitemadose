@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 import httpx
 from pytz import timezone
 
-from scraper.scraper_result import ScraperRequest
+from scraper.pattern.scraper_request import ScraperRequest
 
 logger = logging.getLogger('scraper')
 

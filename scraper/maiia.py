@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from dateutil.parser import isoparse
 from bs4 import BeautifulSoup
 
-from scraper.scraper_result import ScraperRequest
+from scraper.pattern.scraper_request import ScraperRequest
 
 BASE_AVAILIBILITY_URL = "https://www.maiia.com/api/pat-public/availability-closests"
 

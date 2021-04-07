@@ -9,8 +9,10 @@ from multiprocessing import Pool
 import pytz
 import requests
 
-from scraper.scraper_result import ScraperRequest
-from utils.vmd_logger import get_logger, enable_logger_for_production, enable_logger_for_debug
+from scraper.pattern.center_info import convert_csv_data_to_center_info
+from scraper.pattern.scraper_request import ScraperRequest
+from scraper.pattern.scraper_result import ScraperResult
+from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
 from .departements import to_departement_number, import_departements
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
@@ -39,12 +41,10 @@ def scrape_debug(urls):
     for rdv_site_web in urls:
         logger.info('scraping URL %s', rdv_site_web)
         try:
-            plateforme, next_slot = fetch_centre_slots(rdv_site_web, start_date)
+            result = fetch_centre_slots(rdv_site_web, start_date)
         except Exception as e:
             logger.exception(f"erreur lors du traitement")
-            next_slot = None
-            plateforme = None
-        logger.info(f'{plateforme!s:16} {next_slot or ""!s:32}')
+        logger.info(f'{result.platform!s:16} {result.next_availability or ""!s:32}')
 
 
 def scrape():
@@ -62,33 +62,22 @@ def scrape():
 
 
 def cherche_prochain_rdv_dans_centre(centre):
+    center_data = convert_csv_data_to_center_info(centre)
     start_date = get_start_date()
     try:
-        plateforme, next_slot = fetch_centre_slots(centre['rdv_site_web'], start_date)
+        result = fetch_centre_slots(centre['rdv_site_web'], start_date)
+        center_data.fill_result(result)
     except Exception as e:
         logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(e)}")
-        next_slot = None
-        plateforme = None
+        return center_data.default()
 
-    try:
-        departement = to_departement_number(insee_code=centre['com_insee'])
-    except ValueError:
-        logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']}, com_insee={centre['com_insee']}")
-        departement = ''
+    logger.info(f'{centre.get("gid", "")!s:>8} {center_data.plateforme!s:16} {center_data.prochain_rdv or ""!s:32} {center_data.departement!s:6}')
 
-    logger.info(f'{centre.get("gid", "")!s:>8} {plateforme!s:16} {next_slot or ""!s:32} {departement!s:6}')
-
-    if plateforme == 'Doctolib' and not centre['rdv_site_web'].islower():
+    if result.platform == 'Doctolib' and not center_data.url.islower():
         logger.info(f"Centre {centre['rdv_site_web']} URL contained an uppercase - lowering the URL")
-        centre['rdv_site_web'] = centre['rdv_site_web'].lower()
+        center_data.url = center_data.url.lower()
 
-    return {
-        'departement': departement,
-        'nom': centre['nom'],
-        'url': centre['rdv_site_web'],
-        'plateforme': plateforme,
-        'prochain_rdv': next_slot
-    }
+    return center_data.default()
 
 
 def sort_center(center):
@@ -111,7 +100,6 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         }
         for code in import_departements()
     }
-    
     for centre in centres_cherchés:
         centre['nom'] = centre['nom'].strip()
         compte_centres += 1
@@ -152,6 +140,7 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
         }
 
     rdv_site_web = rdv_site_web.strip()
+    request = ScraperRequest(rdv_site_web, start_date)
 
     # Determine platform based on visit URL.
     if rdv_site_web.startswith('https://partners.doctolib.fr') or rdv_site_web.startswith('https://www.doctolib.fr'):
@@ -163,12 +152,12 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
     elif rdv_site_web.startswith('https://app.ordoclic.fr/'):
         platform = 'Ordoclic'
     else:
-        return 'Autre', None
+        return ScraperResult(request, 'Autre', None)
 
     # Dispatch to appropriate implementation.
     fetch_impl = fetch_map[platform]
-    request = ScraperRequest(rdv_site_web, start_date)
-    return platform, fetch_impl(request)
+    result = ScraperResult(request, platform, fetch_impl(request))
+    return result
 
 
 def centre_iterator():

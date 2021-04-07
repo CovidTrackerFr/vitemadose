@@ -4,7 +4,7 @@ import httpx
 
 from scraper.keldoc.keldoc_center import KeldocCenter
 from scraper.keldoc.keldoc_filters import filter_vaccine_specialties, filter_vaccine_motives
-from scraper.scraper_result import ScraperRequest
+from scraper.pattern.scraper_request import ScraperRequest
 
 timeout = httpx.Timeout(30.0, connect=30.0)
 session = httpx.Client(timeout=timeout)

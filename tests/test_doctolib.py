@@ -14,7 +14,7 @@ from scraper.doctolib.doctolib import (
 
 
 # -- Tests de l'API (offline) --
-from scraper.scraper_result import ScraperRequest
+from scraper.pattern.scraper_request import ScraperRequest
 
 
 def test_doctolib():
