@@ -3,7 +3,9 @@ name: Scrape
 
 on:
   push:
-    branches: ["main"]
+    branches: ["dev"]
+  pull_request:
+    branches: ["dev"]
   workflow_dispatch:
 
 jobs:
@@ -17,7 +19,7 @@ jobs:
     steps:
       - uses: "actions/checkout@v2"
         with:
-            token: ${{ secrets.PAT_GRZ }}
+            token: ${{ secrets.TOKEN }}
       - uses: "actions/setup-python@v2"
         with:
           python-version: "3.8"
