@@ -266,7 +266,7 @@ def doctolib_getcsv_scrap(is_professionnel):
                 options.headless = True
                 options.binary_location = r'C:\Program Files\Mozilla Firefox\firefox.exe'
                 driver = webdriver.Firefox(
-                    executable_path=r'C:\Users\Sacha Guilhaumou\AppData\Local\Programs\Python\Python38-32\geckodriver.exe', firefox_options=options)
+                    executable_path=r'C:\Users\AppData\Local\Programs\Python\Python38-32\geckodriver.exe', firefox_options=options)
 
 
                 # On prépare l'adaptation de l'url selon que pro de santé ou non.
