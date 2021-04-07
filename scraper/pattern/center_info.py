@@ -40,6 +40,7 @@ def convert_csv_address(data: dict) -> str:
     adr_nom = data.get('com_nom', '')
     return f'{adr_num} {adr_voie}, {adr_cp} {adr_nom}'
 
+
 def convert_csv_business_hours(data: dict) -> str:
     keys = ["rdv_lundi", "rdv_mardi", "rdv_mercredi", "rdv_jeudi", "rdv_vendredi", "rdv_samedi", "rdv_dimanche"]
     meta = {}
