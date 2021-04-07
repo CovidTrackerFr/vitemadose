@@ -85,7 +85,7 @@ def generate_stats_dep_date(centres_stats):
     logger.info(f"Updated stats file: {stats_path}")
 
 
-def export_centres_stats(center_data='data/output/info_centres.json'):
+def export_centres_stats(center_data='data/output/info_centres.json', stats_path='data/output/stats.json'):
     centres_info = get_centres_info(center_data)
     centres_stats = {
         "tout_departement": {
@@ -110,7 +110,7 @@ def export_centres_stats(center_data='data/output/info_centres.json'):
     available_pct = (tout_dep_obj["disponibles"] / max(1, tout_dep_obj["total"])) * 100
     logger.info("Found {0}/{1} available centers. ({2}%)".format(tout_dep_obj["disponibles"],
                                                                  tout_dep_obj["total"], round(available_pct, 2)))
-    with open("data/output/stats.json", "w") as stats_file:
+    with open(stats_path, "w") as stats_file:
         json.dump(centres_stats, stats_file, indent=2)
     generate_stats_date(centres_stats)
     generate_stats_dep_date(centres_stats)
