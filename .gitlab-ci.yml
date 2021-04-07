@@ -14,7 +14,7 @@ test:
   except:
     - schedules
 
-scrape:
+trouver_les_rdv:
   stage: scrape
   image: python:3.8-alpine
   timeout: "5 minutes"
