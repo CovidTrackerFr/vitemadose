@@ -7,6 +7,8 @@ import httpx
 import requests
 
 from scraper.doctolib.doctolib_filters import is_appointment_relevant
+from scraper.departements import cp_to_insee
+from bs4 import BeautifulSoup
 
 DOCTOLIB_SLOT_LIMIT = 50
 
@@ -27,11 +29,19 @@ if os.getenv('WITH_TOR', 'no') == 'yes':
 else:
     DEFAULT_CLIENT = httpx.Client()
 
+BASE_URL = "https://www.doctolib.fr"
+RECHERCHE_URL = "/vaccination-covid-19/france?"
+PARAMETRES = "ref_visit_motive_ids[]=6970&ref_visit_motive_ids[]=7005&ref_visit_motive_ids[]=7107"
+
 
 def fetch_slots(rdv_site_web, start_date):
     # Fonction principale avec le comportement "de prod".
     doctolib = DoctolibSlots(client=DEFAULT_CLIENT)
     return doctolib.fetch(rdv_site_web, start_date)
+
+def doctolib_centre_iterator():
+    doctolib = DoctolibSlots(client=DEFAULT_CLIENT)
+    return doctolib.centre_iterator()
 
 
 class DoctolibSlots:
@@ -85,6 +95,43 @@ class DoctolibSlots:
 
         return slots.get('next_slot')
 
+    def centre_iterator(self, max_page=1000):
+
+        page = 1
+        centres = True
+
+        while centres and page <= max_page:
+
+            url_recherche = BASE_URL + RECHERCHE_URL + "page={}&".format(page) + PARAMETRES
+
+            response = self._client.get(url_recherche, headers=DOCTOLIB_HEADERS)
+
+            try:
+                response.raise_for_status()
+                soup = BeautifulSoup(response.content, "html.parser")
+                centres = soup.find_all("div", {"class": "dl-search-result"})
+
+                for _centre in centres:
+
+                    centre = {}
+
+                    centre['gid'] = _centre.get('id')[14:]
+
+                    nom = _centre.select_one(".dl-search-result-name").getText()
+                    centre['nom'] = nom
+
+                    rdv_site_web = BASE_URL + _centre.select_one('a[data-analytics-event-action="bookAppointmentButton"]')['href']
+                    centre['rdv_site_web'] = rdv_site_web
+
+
+                    adresse = _centre.select_one('.dl-text.dl-text-body.dl-text-s').getText().split(' ')
+                    centre["com_insee"] = cp_to_insee(_recherche_cp(adresse))
+
+            except Exception as e:
+                logger.error(f"erreur lors du traitement de recherche sur Doctolib {str(e)}")
+                break
+
+            page += 1
 
 def _parse_centre(rdv_site_web: str) -> Optional[str]:
     """
@@ -194,3 +241,19 @@ def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str, practice_id_
                 practice_ids.add(str(pratice_id))
                 agenda_ids.add(agenda_id)
     return sorted(agenda_ids), sorted(practice_ids)
+
+
+def _recherche_cp(adresse):
+
+    trouve = False
+    i = len(adresse)
+
+    while not trouve:
+        code_postal = adresse[i-1]
+
+        if code_postal.isnumeric():
+            trouve = code_postal
+
+        i-=1
+
+    return trouve

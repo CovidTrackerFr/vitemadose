@@ -1,5 +1,9 @@
 import csv
+import json
+import logging
 from typing import List
+
+insee = {}
 
 
 def import_departements() -> List[str]:
@@ -76,3 +80,17 @@ def _clean_insee_code(insee_code: str) -> str:
         raise ValueError(f'Code INSEE non-valide : {insee_code}')
 
     return insee_code
+
+
+def cp_to_insee(cp):
+    insee_com = cp  # si jamais on ne trouve pas de correspondance...
+    # on charge la table de correspondance cp/insee, une seule fois
+    global insee
+    if insee == {}:
+        with open("data/input/codepostal_to_insee.json") as json_file:
+            insee = json.load(json_file)
+    if cp in insee:
+        insee_com = insee.get(cp).get("insee")
+    else:
+        logger.warning(f'Ordoclic unable to translate cp >{cp}< to insee')
+    return insee_com
