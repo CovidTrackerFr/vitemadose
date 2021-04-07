@@ -183,6 +183,7 @@ def centre_iterator():
             yield row
     for centre in ordoclic_centre_iterator():
         yield centre"""
+        
     for centre in doctolib_centre_iterator():
         yield centre
 
