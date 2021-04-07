@@ -112,6 +112,8 @@ def export_centres_stats(center_data='data/output/info_centres.json', stats_path
                                                                  tout_dep_obj["total"], round(available_pct, 2)))
     with open(stats_path, "w") as stats_file:
         json.dump(centres_stats, stats_file, indent=2)
+    if stats_path is not 'data/output/stats.json':
+        return
     generate_stats_date(centres_stats)
     generate_stats_dep_date(centres_stats)
     generate_stats_center_types(centres_info)
