@@ -54,7 +54,7 @@ def scrape():
             centre_iterator(),
             1
         )
-        compte_centres, compte_centres_avec_dispo = export_data(centres_cherchés, logger)
+        compte_centres, compte_centres_avec_dispo = export_data(centres_cherchés)
         logger.info(f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
         if compte_centres_avec_dispo == 0:
             logger.error("Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur")
