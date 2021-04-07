@@ -23,7 +23,7 @@ def test_doctolib():
     rdv_site_web = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
 
     def app(request: httpx.Request) -> httpx.Response:
-        assert "X-Covid-Tracker-Key" in request.headers
+        assert "User-Agent" in request.headers
 
         if request.url.path == "/booking/centre1.json":
             path = Path("tests", "fixtures", "doctolib", "basic-booking.json")
@@ -59,7 +59,7 @@ def test_doctolib_motive_categories():
     rdv_site_web = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
 
     def app(request: httpx.Request) -> httpx.Response:
-        assert "X-Covid-Tracker-Key" in request.headers
+        assert "User-Agent" in request.headers
 
         if request.url.path == "/booking/centre1.json":
             path = Path("tests", "fixtures", "doctolib", "category-booking.json")
@@ -85,7 +85,7 @@ def test_doctolib_next_slot():
     rdv_site_web = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
 
     def app(request: httpx.Request) -> httpx.Response:
-        assert "X-Covid-Tracker-Key" in request.headers
+        assert "User-Agent" in request.headers
 
         if request.url.path == "/booking/centre1.json":
             path = Path("tests", "fixtures", "doctolib", "next-slot-booking.json")
