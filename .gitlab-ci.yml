@@ -30,6 +30,8 @@ scrape:
 pages:
   stage: deploy
   image: python:3.8-alpine
+  tags:
+    - ovh
   script:
     - mkdir -p public
     - cp data/output/* public/
