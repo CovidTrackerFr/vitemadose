@@ -8,7 +8,11 @@ set -o errtrace
 GITLAB_HOST="gitlab.com"
 RUNNER_NAME="Chez ${RUNNER_LOCATION:-inconnu}"
 GITLAB_RUNNER_TOKEN=${GITLAB_RUNNER_TOKEN}
-TAG_LIST="local,privileged"
+TAG_LIST="${TAG_LIST:-no_tag},priviledged"
+RUN_UNTAGGED=true
+if [[ "${GITLAB_RUN_UNTAGGED}" = "false" ]]; then
+  RUN_UNTAGGED=false
+fi
 if test -z "${GITLAB_RUNNER_TOKEN}"; then
   echo vous devez définir GITLAB_RUNNER_TOKEN en variable d\'environnement >&2
   exit 1
@@ -44,7 +48,7 @@ function register_gitlab_runner () {
   gitlab-runner unregister --all-runners
   gitlab-runner register -n \
      --url https://${GITLAB_HOST}/ \
-     --run-untagged=true \
+     --run-untagged=${RUN_UNTAGGED} \
      --tag-list "${TAG_LIST},${LOCATION_TAG}" \
      --registration-token ${GITLAB_RUNNER_TOKEN} \
      --docker-image docker:19.03.12 \
@@ -52,7 +56,7 @@ function register_gitlab_runner () {
      --description "${RUNNER_NAME}" \
      --docker-privileged \
      --docker-volumes "/certs/client" \
-     --env "DOCKER_DRIVER=overlay2"
+     --env "DOCKER_DRIVER=overlay2" 
 
   sed -ri 's/concurrent = .+/concurrent = 2/' /etc/gitlab-runner/config.toml
   service gitlab-runner restart

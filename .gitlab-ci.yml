@@ -14,6 +14,8 @@ test:
 scrape:
   stage: scrape
   image: python:3.8-alpine
+  tags:
+    - ovh
   before_script:
     - apk add --update make
     - ./scripts/install
