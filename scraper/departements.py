@@ -4,6 +4,7 @@ import logger
 from typing import List
 
 logger = logging.getLogger('scraper')
+insee = {}
 
 
 def import_departements() -> List[str]:
