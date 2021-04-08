@@ -141,6 +141,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         json.dump(par_departement, info_centres, indent=2)
 
     for code_departement, disponibilités in par_departement.items():
+        disponibilités['last_updated'] = dt.datetime.now(tz=pytz.timezone('Europe/Paris')).isoformat()
         if 'centres_disponibles' in disponibilités:
             disponibilités['centres_disponibles'] = sorted(disponibilités['centres_disponibles'], key=sort_center)
         outpath = outpath_format.format(code_departement)
