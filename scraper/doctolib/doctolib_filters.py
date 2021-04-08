@@ -1,6 +1,6 @@
 import re
 
-from scraper.pattern.scraper_result import PractitionerType
+from scraper.pattern.scraper_result import DRUG_STORE, GENERAL_PRACTITIONER, VACCINATION_CENTER
 
 DOCTOLIB_APPOINTMENT_REASON = [
     '1ère injection',
@@ -28,11 +28,11 @@ def is_appointment_relevant(appointment_name):
 # Parse practitioner type from Doctolib booking data.
 def parse_practitioner_type(name, data):
     if 'pharmacie' in name.lower():
-        return PractitionerType.DRUG_STORE
+        return DRUG_STORE
     specialty = data.get('specialty', {})
     if not specialty:
         return False
     slug = specialty.get('slug', None)
     if slug and slug == 'medecin-generaliste':
-        return PractitionerType.GENERAL_PRACTITIONER
-    return PractitionerType.VACCINATION_CENTER
+        return GENERAL_PRACTITIONER
+    return VACCINATION_CENTER

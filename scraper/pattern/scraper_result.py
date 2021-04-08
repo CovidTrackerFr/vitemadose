@@ -4,10 +4,10 @@ from enum import Enum
 from scraper.pattern.scraper_request import ScraperRequest
 
 
-class PractitionerType(Enum):
-    GENERAL_PRACTITIONER = 'general-practitioner',
-    VACCINATION_CENTER = 'vaccination-center',
-    DRUG_STORE = 'drugstore'
+# Practitioner type enum
+GENERAL_PRACTITIONER = 'general-practitioner'
+VACCINATION_CENTER = 'vaccination-center'
+DRUG_STORE = 'drugstore'
 
 
 class ScraperResult:

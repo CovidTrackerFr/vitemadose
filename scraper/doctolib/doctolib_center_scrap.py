@@ -8,7 +8,6 @@ from bs4 import BeautifulSoup
 
 from scraper.doctolib.doctolib_filters import parse_practitioner_type
 from scraper.ordoclic import cp_to_insee
-from scraper.pattern.scraper_result import PractitionerType
 from scraper.scraper import centre_iterator
 from utils.vmd_logger import enable_logger_for_production
 
