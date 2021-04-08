@@ -104,10 +104,11 @@ def cherche_prochain_rdv_dans_centre(centre):
 
 
 def fix_scrap_urls(url):
+    url = url.strip()
     # Fix Keldoc
     if url.startswith("https://www.keldoc.com/"):
         url = url.replace("https://www.keldoc.com/", "https://vaccination-covid.keldoc.com/")
-    return url.strip()
+    return url
 
 
 def sort_center(center):
