@@ -3,7 +3,7 @@ name: Scrape
 
 on:
   push:
-    branches: ["main", "ft/scrapdata"]
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
