@@ -140,6 +140,12 @@ def is_revelant_url(url):
     return True
 
 
+def get_url_path(href):
+    if not href:
+        return None
+    return href.split('?')[0]
+
+
 def scrape_page(page_id, url_list):
     data = requests.get(BASE_URL.format(page_id))
     data.raise_for_status()
@@ -154,7 +160,7 @@ def scrape_page(page_id, url_list):
         if not is_revelant_url(link):
             continue
         vp = str(link.div.string)
-        if href in center_urls:
+        if get_url_path(href) in center_urls or get_url_path(href) in center_urls:
             continue
         total_urls += 1
         api_name = href.split('/')[-1]
