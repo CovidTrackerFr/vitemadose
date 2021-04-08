@@ -1,0 +1,38 @@
+---
+name: Scrape And Publish (nosleep)
+
+on:
+  # Allow running manually
+  workflow_dispatch:
+
+jobs:
+
+  scrape_and_publish_nosleep:
+
+    name: "Scrape And Publish No Sleep"
+
+    runs-on: "ubuntu-20.04"
+
+    steps:
+      - uses: "actions/checkout@v2"
+        with:
+            token: ${{ secrets.PAT_GRZ }}
+      - uses: "actions/setup-python@v2"
+        with:
+          python-version: "3.8"
+      - name: "Install"
+        run: scripts/install
+      - name: "Scraping..."
+        run: scripts/scrape
+      - name: "Stats"
+        run: make stats
+      - name: "Run tests"
+        run: scripts/test
+      - name: "Install coverage badge"
+        run: pip install pytest coverage coverage-badge
+      - name: "Generate coverage badge"
+        run: rm -rf .github/coverage.svg; coverage-badge -o .github/coverage.svg
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Automatic Update
+          push_options: '--force HEAD:data-auto'
