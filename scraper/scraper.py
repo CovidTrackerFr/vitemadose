@@ -205,6 +205,7 @@ def centre_iterator():
         file = open(center_path, 'w')
         file.write(json.dumps(data, indent=2))
         file.close()
+        logger.info(f"Found {len(data)} Doctolib centers (external scraper).")
         for center in data:
             yield center
     except Exception as e:

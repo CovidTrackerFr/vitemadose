@@ -6,6 +6,7 @@ import httpx
 from pytz import timezone
 
 from scraper.pattern.scraper_request import ScraperRequest
+from scraper.pattern.scraper_result import DRUG_STORE
 
 logger = logging.getLogger('scraper')
 
@@ -140,4 +141,5 @@ def centre_iterator():
                 centre["phone_number"] = item.get("phone")
                 centre["location"] = item.get("location")
                 centre["iterator"] = "ordoclic"
+                centre["type"] = DRUG_STORE
                 yield centre
