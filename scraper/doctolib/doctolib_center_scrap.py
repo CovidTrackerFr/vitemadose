@@ -122,7 +122,7 @@ def scrape_page(page_id, url_list):
     data = requests.get(BASE_URL.format(page_id))
     data.raise_for_status()
     output = data.text
-    soup = BeautifulSoup(output)
+    soup = BeautifulSoup(output, features="html.parser")
     center_urls = []
     total_urls = 0  # Total url count in this page
     # It even counts filtered URLs
@@ -163,6 +163,7 @@ def main():
                 "Page: {0} <-> Found {1} centers not in data.gouv CSV.".format(i, len(center_urls)))
         except Exception as e:
             logger.warning("Unable to scrape Doctolib page {0}".format(i))
+            break
         i += 1
     if len(center_urls) == 0:
         logger.error("No Doctolib center found. Banned?")
