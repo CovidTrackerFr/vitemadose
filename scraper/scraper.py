@@ -11,7 +11,7 @@ import requests
 
 from utils.vmd_logger import get_logger, enable_logger_for_production, enable_logger_for_debug
 from .departements import to_departement_number, import_departements
-from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots, doctolib_centre_iterator
+from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots, doctolib_liste_centres
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
 from .maiia import fetch_slots as maiia_fetch_slots
 from .ordoclic import centre_iterator as ordoclic_centre_iterator
@@ -48,6 +48,13 @@ def scrape_debug(urls):
 
 def scrape():
 
+    """liste_centres = doctolib_liste_centres()
+    outpath = "data/output/liste_centres_doctolib.json"
+    with open(outpath, "w") as info_centres:
+        json.dump(liste_centres, info_centres, indent=2)
+    
+    return    
+    """
     enable_logger_for_production()
     with Pool(POOL_SIZE) as pool:
         centres_cherchés = pool.imap_unordered(
@@ -55,17 +62,6 @@ def scrape():
             centre_iterator(),
             1
         )
-
-
-        liste = []
-        for centre in centres_cherchés:
-            liste.append(centre)
-
-        outpath = "data/output/liste_centres_doctolib.json"
-        with open(outpath, "w") as info_centres:
-            json.dump(liste, info_centres, indent=2)
-
-        return
 
         compte_centres, compte_centres_avec_dispo = export_data(centres_cherchés)
         logger.info(f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
@@ -195,7 +191,7 @@ def centre_iterator():
     for centre in ordoclic_centre_iterator():
         yield centre"""
 
-    for centre in doctolib_centre_iterator():
+    for centre in doctolib_liste_centres():
         yield centre
 
 

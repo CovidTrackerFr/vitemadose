@@ -48,9 +48,9 @@ def fetch_slots(rdv_site_web, start_date):
     doctolib = DoctolibSlots(client=DEFAULT_CLIENT)
     return doctolib.fetch(rdv_site_web, start_date)
 
-def doctolib_centre_iterator():
+def doctolib_liste_centres():
     doctolib = DoctolibSlots(client=DEFAULT_CLIENT)
-    return doctolib.centre_iterator()
+    return doctolib.liste_centres()
 
 
 class DoctolibSlots:
@@ -104,7 +104,10 @@ class DoctolibSlots:
 
         return slots.get('next_slot')
 
-    def centre_iterator(self, max_page=1000):
+
+    def liste_centres(self, max_page=1000):
+
+        liste = []
 
         for recherche_url in RECHERCHE_URLS:
             for parametre in LISTE_PARAMETRES:
@@ -139,13 +142,16 @@ class DoctolibSlots:
                             adresse = _centre.select_one('.dl-text.dl-text-body.dl-text-s').getText().split(' ')
                             centre["com_insee"] = cp_to_insee(_recherche_cp(adresse))
 
-                            yield centre
+                            liste.append(centre)
 
                     except Exception as e:
                         logger.error(f"erreur lors du traitement de recherche sur Doctolib {str(e)}")
                         break
 
                     page += 1
+
+            return liste
+
 
 def _parse_centre(rdv_site_web: str) -> Optional[str]:
     """
