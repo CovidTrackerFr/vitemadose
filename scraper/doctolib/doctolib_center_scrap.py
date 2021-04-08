@@ -1,3 +1,5 @@
+import csv
+import io
 import json
 import time
 import traceback
@@ -30,9 +32,20 @@ DOCTOLIB_DOMAINS = [
 ]
 
 
+def get_csv():
+    url = "https://www.data.gouv.fr/fr/datasets/r/5cb21a85-b0b0-4a65-a249-806a040ec372"
+    response = requests.get(url)
+    response.raise_for_status()
+
+    reader = io.StringIO(response.content.decode('utf8'))
+    csvreader = csv.DictReader(reader, delimiter=';')
+    for row in csvreader:
+        yield row
+
+
 def get_doctolib_csv_urls():
     urls = []
-    for center in centre_iterator():
+    for center in get_csv():
         url = center['rdv_site_web']
         if len(url) == 0:
             continue
