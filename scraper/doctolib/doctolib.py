@@ -102,9 +102,9 @@ class DoctolibSlots:
                 sdate = slot_info.get('start_date', None)
                 return sdate
 
-        if isinstance(slots.get('next_slot'), list):
+        if isinstance(slots, list):
             print('-- NEXT SLOT --')
-            print(slots.get('next_slot'))
+            print(slots)
         return slots.get('next_slot')
 
 
