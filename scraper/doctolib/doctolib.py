@@ -1,12 +1,15 @@
 import logging
 import os
 import re
+from datetime import date
 from typing import Optional, Tuple
 
 import httpx
 import requests
 
-from scraper.doctolib.doctolib_filters import is_appointment_relevant
+from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type
+from scraper.pattern.scraper_request import ScraperRequest
+from scraper.error import BlockedByDoctolibError
 
 DOCTOLIB_SLOT_LIMIT = 50
 
@@ -28,10 +31,10 @@ else:
     DEFAULT_CLIENT = httpx.Client()
 
 
-def fetch_slots(rdv_site_web, start_date):
+def fetch_slots(request: ScraperRequest):
     # Fonction principale avec le comportement "de prod".
     doctolib = DoctolibSlots(client=DEFAULT_CLIENT)
-    return doctolib.fetch(rdv_site_web, start_date)
+    return doctolib.fetch(request)
 
 
 class DoctolibSlots:
@@ -41,18 +44,24 @@ class DoctolibSlots:
     def __init__(self, client: httpx.Client = None) -> None:
         self._client = DEFAULT_CLIENT if client is None else client
 
-    def fetch(self, rdv_site_web: str, start_date: str) -> Optional[str]:
-        centre = _parse_centre(rdv_site_web)
+    def fetch(self, request: ScraperRequest) -> Optional[str]:
+        centre = _parse_centre(request.get_url())
 
         # Doctolib fetches multiple vaccination centers sometimes
         # so if a practice id is present in query, only related agendas
         # should be selected.
-        practice_id = _parse_practice_id(rdv_site_web)
+        practice_id = _parse_practice_id(request.get_url())
 
         centre_api_url = f'https://partners.doctolib.fr/booking/{centre}.json'
         response = self._client.get(centre_api_url, headers=DOCTOLIB_HEADERS)
+        if response.status_code == 403:
+            raise BlockedByDoctolibError(centre_api_url)
+
         response.raise_for_status()
         data = response.json()
+        rdata = data.get('data', {})
+        appointment_count = 0
+        request.update_practitioner_type(parse_practitioner_type(centre, rdata))
 
         # visit_motive_categories
         # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1
@@ -74,16 +83,33 @@ class DoctolibSlots:
 
         agenda_ids_q = "-".join(agenda_ids)
         practice_ids_q = "-".join(practice_ids)
+        start_date = request.get_start_date()
         slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={visit_motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={DOCTOLIB_SLOT_LIMIT}'
         response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
+        if response.status_code == 403:
+            raise BlockedByDoctolibError(centre_api_url)
+
         response.raise_for_status()
 
         slots = response.json()
-        for slot in slots['availabilities']:
-            if len(slot['slots']) > 0:
-                return slot['slots'][0]['start_date']
 
-        return slots.get('next_slot')
+        for availability in slots['availabilities']:
+            slot_list = availability.get('slots', None)
+            if not slot_list or len(slot_list) == 0:
+                continue
+            if isinstance(slot_list[0], str):
+                return slot_list[0]
+            for slot_info in slot_list:
+                sdate = slot_info.get('start_date', None)
+                return sdate
+        if slots.get('total'):
+            appointment_count += int(slots.get('total', 0))
+        request.update_appointment_count(appointment_count)
+
+        if type(slots) is dict:
+            next_slot = slots.get('next_slot', None)
+            return next_slot
+        return None
 
 
 def _parse_centre(rdv_site_web: str) -> Optional[str]:
@@ -161,6 +187,10 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: str = None) -> O
         # après la 1ère dose, donc les gens n'ont pas besoin d'aide pour l'obtenir).
         if not is_appointment_relevant(visit_motive['name']):
             continue
+        # Si le lieu de vaccination n'accepte pas les nouveaux patients
+        # on ne considère pas comme valable.
+        if 'allow_new_patients' in visit_motive and not visit_motive['allow_new_patients']:
+            continue
         # NOTE: 'visit_motive_category_id' agit comme un filtre. Il y a 2 cas :
         # * visit_motive_category_id=None : pas de filtre, et on veut les motifs qui ne
         # sont pas non plus rattachés à une catégorie
@@ -171,7 +201,8 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: str = None) -> O
     return None
 
 
-def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str, practice_id_filter: int = None) -> Tuple[list, list]:
+def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str, practice_id_filter: int = None) -> Tuple[
+    list, list]:
     """
     Etant donné une réponse à /booking/<centre>.json, renvoie tous les
     "agendas" et "pratiques" (jargon Doctolib) qui correspondent au motif de visite.
@@ -181,9 +212,9 @@ def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str, practice_id_
     practice_ids = set()
     for agenda in data['data']['agendas']:
         if (
-            'practice_id' in agenda
-            and practice_id_filter is not None
-            and agenda['practice_id'] != practice_id_filter
+                'practice_id' in agenda
+                and practice_id_filter is not None
+                and agenda['practice_id'] != practice_id_filter
         ):
             continue
         if agenda['booking_disabled']:

@@ -4,19 +4,20 @@ import httpx
 
 from scraper.keldoc.keldoc_center import KeldocCenter
 from scraper.keldoc.keldoc_filters import filter_vaccine_specialties, filter_vaccine_motives
+from scraper.pattern.scraper_request import ScraperRequest
 
-timeout = httpx.Timeout(30.0, connect=30.0)
+timeout = httpx.Timeout(10.0, connect=10.0)
 session = httpx.Client(timeout=timeout)
 
 
-def fetch_slots(base_url, start_date):
+def fetch_slots(request: ScraperRequest):
     # Keldoc needs an end date, but if no appointment are found,
     # it still returns the next available appointment. Bigger end date
     # makes Keldoc responses slower.
-    date_obj = datetime.strptime(start_date, '%Y-%m-%d')
+    date_obj = datetime.strptime(request.get_start_date(), '%Y-%m-%d')
     end_date = (date_obj + timedelta(days=1)).strftime('%Y-%m-%d')
 
-    center = KeldocCenter(base_url=base_url, client=session)
+    center = KeldocCenter(base_url=request.get_url(), client=session)
     # Unable to parse center resources (id, location)?
     if not center.parse_resource():
         return None
@@ -30,7 +31,7 @@ def fetch_slots(base_url, start_date):
     center.vaccine_motives = filter_vaccine_motives(session, center.selected_cabinet, center.id,
                                                     center.vaccine_specialties, center.vaccine_cabinets)
     # Find the first availability
-    date = center.find_first_availability(start_date, end_date)
+    date = center.find_first_availability(request.get_start_date(), end_date)
     if not date:
         return None
     return date.strftime('%Y-%m-%dT%H:%M:%S.%f%z')

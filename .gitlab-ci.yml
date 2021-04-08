@@ -1,0 +1,56 @@
+stages:
+  - test
+  - scrape
+  - deploy
+
+test:
+  stage: test
+  image: python:3.8-alpine
+  timeout: "2 minutes"
+  before_script:
+    - ./scripts/install
+  script:
+    - ./scripts/test
+  except:
+    - schedules
+
+trouver_les_rdv:
+  stage: scrape
+  image: python:3.8-alpine
+  timeout: "5 minutes"
+  tags:
+    - ovh
+  before_script:
+    - apk add --no-cache make curl
+    - ./scripts/install
+    - echo IP publique de sortie du gitlab runner $(curl -s https://ifconfig.me/ip )
+    - traceroute -4 -l -I partners.doctolib.fr
+    - curl --silent --fail --head https://partners.doctolib.fr/
+  script:
+    - ./scripts/scrape
+    - make stats
+  artifacts:
+    name: "rdv"
+    paths:
+      - data/output
+  only:
+    - main
+    - gitlab-publish
+    - schedules
+
+pages:
+  stage: deploy
+  image: python:3.8-alpine
+  tags:
+    - ovh
+  script:
+    - mkdir -p public
+    - cp data/output/* public/
+    - gzip -k -6 $(find public -type f)
+  only:
+    - main
+    - gitlab-publish
+    - schedules
+  artifacts:
+    paths:
+      - public

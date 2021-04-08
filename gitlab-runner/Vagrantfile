@@ -1,0 +1,34 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+local_user_name = ENV['USERNAME'] || ENV['USER'] || "inconnu"
+gitlab_runner_token = ENV['GITLAB_RUNNER_TOKEN']
+
+Vagrant.configure("2") do |config|
+  # The most common configuration options are documented and commented below.
+  # For a complete reference, please see the online documentation at
+  # https://docs.vagrantup.com.
+
+  # Every Vagrant development environment requires a box. You can search for
+  # boxes at https://vagrantcloud.com/search.
+
+  config.vm.box = "debian/stretch64"
+  config.vm.define "local-runner" do |runner|
+    runner.vm.provider "virtualbox" do |vm|
+      vm.cpus = 2
+      vm.memory = 2048
+    end
+    runner.vm.network "private_network", ip: "192.168.50.5"
+    runner.vm.provision "shell", path: "./deploy-dev-runner.sh", env: {
+      "GITLAB_RUNNER_TOKEN" => gitlab_runner_token,
+      "RUNNER_LOCATION" => local_user_name
+    }
+    runner.trigger.before :destroy do |trigger|
+      trigger.run_remote = { 'inline' => "gitlab-runner unregister --all-runners || true" }
+    end
+  end
+end
