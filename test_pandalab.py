@@ -1,23 +1,28 @@
 import scraper
+import logging
 
 from datetime import datetime
 from multiprocessing import Pool, freeze_support
 
 from scraper.pandalab import fetch_slots as pandalab_fetch_slots
 from scraper.pandalab import centre_iterator as pandalab_centre_iterator
+from scraper.pattern.scraper_result import ScraperResult
+from scraper.pattern.scraper_request import ScraperRequest
 
+logger = logging.getLogger('scraper')
 today = datetime.now().strftime('%Y-%m-%d')
 
 def async_pandalab_scrape(centre):
     vaccine_center = centre["nom"]
     com_insee = centre["com_insee"]
-    website = centre["rdv_site_web"]
-    print("Vaccine Center {0}: looking for an appointment".format(vaccine_center))
-    date = pandalab_fetch_slots(website, today)
+    rdv_site_web = centre["rdv_site_web"]
+    logger.info("Vaccine Center {0}: looking for an appointment".format(vaccine_center))
+    request = ScraperRequest(rdv_site_web, today)
+    date = pandalab_fetch_slots(request)
     if not date:
-        print(f"Vaccine Center {com_insee} {vaccine_center}: no appointment found")
+        logger.info(f"Vaccine Center {com_insee} {vaccine_center}: no appointment found")
         return
-    print(f"Vaccine Center {com_insee} {vaccine_center}: next appointment found: {date}")
+    logger.info(f"Vaccine Center {com_insee} {vaccine_center}: next appointment found: {date}")
 
 
 def main():
