@@ -36,6 +36,8 @@ class CenterInfo:
 
 
 def convert_csv_address(data: dict) -> str:
+    if data.get('address', None):
+        return data.get('address')
     adr_num = data.get('adr_num', '')
     adr_voie = data.get('adr_voie', '')
     adr_cp = data.get('com_cp', '')
@@ -44,6 +46,8 @@ def convert_csv_address(data: dict) -> str:
 
 
 def convert_csv_business_hours(data: dict) -> str:
+    if data.get('business_hours'):
+        return data.get('business_hours')
     keys = ["rdv_lundi", "rdv_mardi", "rdv_mercredi", "rdv_jeudi", "rdv_vendredi", "rdv_samedi", "rdv_dimanche"]
     meta = {}
 
@@ -66,7 +70,7 @@ def convert_ordoclic_to_center_info(data: dict, center: CenterInfo) -> CenterInf
         center.fill_localization(loc)
     center.metadata = dict()
     center.metadata['address'] = f'{localization["address"]}, {localization["zip"]} {localization["city"]}'
-    if len(data.get('phone_number', '')) > 5:
+    if len(data.get('phone_number', '')) > 3:
         center.metadata['phone_number'] = data.get('phone_number')
     center.metadata['business_hours'] = None
     return center
@@ -90,5 +94,7 @@ def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     center.metadata['address'] = convert_csv_address(data)
     if data.get('rdv_tel'):
         center.metadata['phone_number'] = data.get('rdv_tel')
+    if data.get('phone_number'):
+        center.metadata['phone_number'] = data.get('phone_number')
     center.metadata['business_hours'] = convert_csv_business_hours(data)
     return center
