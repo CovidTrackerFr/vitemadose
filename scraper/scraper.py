@@ -100,7 +100,6 @@ def cherche_prochain_rdv_dans_centre(centre):
         center_data.type = centre['type']
     if not center_data.type:
         center_data.type = VACCINATION_CENTER
-    center_data.appointment_count = result.
     logger.debug(center_data.default())
     return center_data.default()
 
