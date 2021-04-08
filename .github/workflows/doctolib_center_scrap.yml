@@ -23,6 +23,16 @@ jobs:
         run: make install
       - name: "Doctolib scrap..."
         run: make doctoscrap
+      - name: "Scraping..."
+        run: scripts/scrape
+      - name: "Stats"
+        run: make stats
+      - name: "Run tests"
+        run: scripts/test
+      - name: "Install coverage badge"
+        run: pip install pytest coverage coverage-badge
+      - name: "Generate coverage badge"
+        run: rm -rf .github/coverage.svg; coverage-badge -o .github/coverage.svg
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Automatic Update
