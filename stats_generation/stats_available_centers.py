@@ -100,7 +100,7 @@ def export_centres_stats(center_data='data/output/info_centres.json', stats_path
     for dep_code, dep_value in centres_info.items():
         nombre_disponibles = len(dep_value["centres_disponibles"])
         count = len(dep_value["centres_indisponibles"]) + nombre_disponibles
-        creneaux = sum([center.get('appointment_count', 0) for center in dep_value["centre_disponibles"]])
+        creneaux = sum([center.get('appointment_count', 0) for center in dep_value["centres_disponibles"]])
 
         centres_stats[dep_code] = {
             "disponibles": nombre_disponibles,
