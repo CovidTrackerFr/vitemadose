@@ -29,7 +29,8 @@ def is_appointment_relevant(appointment_name):
 def parse_practitioner_type(name, data):
     if 'pharmacie' in name.lower():
         return DRUG_STORE
-    specialty = data.get('specialty', {})
+    profile = data.get('profile', {})
+    specialty = profile.get('speciality', {})
     if specialty:
         slug = specialty.get('slug', None)
         if slug and slug == 'medecin-generaliste':
