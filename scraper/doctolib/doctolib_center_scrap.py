@@ -124,6 +124,8 @@ def scrape_page(page_id, url_list):
     output = data.text
     soup = BeautifulSoup(output)
     center_urls = []
+    total_urls = 0  # Total url count in this page
+    # It even counts filtered URLs
 
     for link in soup.findAll("a"):
         href = link.get('href')
@@ -132,6 +134,7 @@ def scrape_page(page_id, url_list):
         vp = str(link.div.string)
         if href in center_urls:
             continue
+        total_urls += 1
         api_name = href.split('/')[-1]
         if is_url_in_csv(href, url_list):
             continue
@@ -140,7 +143,7 @@ def scrape_page(page_id, url_list):
         if not center_data:
             continue
         center_urls.append(center_data)
-    return center_urls
+    return center_urls, total_urls
 
 
 def main():
@@ -151,8 +154,8 @@ def main():
 
     while i < 2000:
         try:
-            centr = scrape_page(i, url_list)
-            if len(centr) == 0:
+            centr, url_count = scrape_page(i, url_list)
+            if url_count == 0:
                 logger.info("Page: {0} <-> No center on this page. Stopping.".format(i))
                 break
             center_urls.extend(centr)
