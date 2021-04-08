@@ -6,7 +6,7 @@ from httpx import TimeoutException
 from scraper.keldoc.keldoc_filters import parse_keldoc_availability
 from scraper.keldoc.keldoc_routes import API_KELDOC_CALENDAR, API_KELDOC_CENTER, API_KELDOC_CABINETS
 
-timeout = httpx.Timeout(15.0, connect=15.0)
+timeout = httpx.Timeout(10.0, connect=10.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 
 
