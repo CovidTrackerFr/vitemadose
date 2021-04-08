@@ -142,7 +142,7 @@ def scrape_page(page_id, url_list):
         center_data = get_doctolib_center_data(center_data)
         if not center_data:
             continue
-        center_data['rdv_site_web'] = f'https://partners.doctolib.fr/{href}'
+        center_data['rdv_site_web'] = f'https://partners.doctolib.fr{href}'
         center_urls.append(center_data)
     return center_urls, total_urls
 
