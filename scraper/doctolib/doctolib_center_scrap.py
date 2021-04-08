@@ -6,7 +6,9 @@ from urllib import parse
 import requests
 from bs4 import BeautifulSoup
 
+from scraper.doctolib.doctolib_filters import parse_practitioner_type
 from scraper.ordoclic import cp_to_insee
+from scraper.pattern.scraper_result import PractitionerType
 from scraper.scraper import centre_iterator
 from utils.vmd_logger import enable_logger_for_production
 
@@ -86,6 +88,10 @@ def get_doctolib_center_data(url_data):
 
     # Parse place
     place = output.get('places', {})
+
+    # Parse practitioner type
+    url_data['type'] = parse_practitioner_type(url_data['nom'], output)
+
     if not place:
         return url_data
     place = place[0]  # for the moment

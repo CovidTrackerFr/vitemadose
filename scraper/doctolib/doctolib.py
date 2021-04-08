@@ -6,7 +6,7 @@ from typing import Optional, Tuple
 import httpx
 import requests
 
-from scraper.doctolib.doctolib_filters import is_appointment_relevant
+from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 
@@ -58,6 +58,8 @@ class DoctolibSlots:
 
         response.raise_for_status()
         data = response.json()
+        rdata = data.get('data', {})
+        request.update_practitioner_type(parse_practitioner_type(centre, rdata))
 
         # visit_motive_categories
         # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1

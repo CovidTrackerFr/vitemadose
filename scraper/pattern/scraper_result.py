@@ -1,9 +1,18 @@
 import json
+from enum import Enum
+
+from scraper.pattern.scraper_request import ScraperRequest
+
+
+class PractitionerType(Enum):
+    GENERAL_PRACTITIONER = 'general-practitioner',
+    VACCINATION_CENTER = 'vaccination-center',
+    DRUG_STORE = 'drugstore'
 
 
 class ScraperResult:
-    def __init__(self, center_info, platform, next_availability):
-        self.center_info = center_info
+    def __init__(self, request: ScraperRequest, platform, next_availability):
+        self.request = request
         self.platform = platform
         self.next_availability = next_availability
 

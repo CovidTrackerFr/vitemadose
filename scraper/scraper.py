@@ -4,6 +4,7 @@ import datetime as dt
 import io
 import json
 import os
+import traceback
 from multiprocessing import Pool
 from scraper.error import ScrapeError, BlockedByDoctolibError
 
@@ -12,7 +13,7 @@ import requests
 
 from scraper.pattern.center_info import convert_csv_data_to_center_info
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.pattern.scraper_result import ScraperResult
+from scraper.pattern.scraper_result import ScraperResult, PractitionerType
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
 from .departements import to_departement_number, import_departements
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
@@ -90,6 +91,10 @@ def cherche_prochain_rdv_dans_centre(centre):
         logger.info(f"Centre {centre['rdv_site_web']} URL contained an uppercase - lowering the URL")
         center_data.url = center_data.url.lower()
 
+    if 'type' in centre:
+        center_data.type = centre['type']
+    if not center_data.type:
+        center_data.type = PractitionerType.VACCINATION_CENTER
     return center_data.default()
 
 def sort_center(center):
@@ -191,11 +196,15 @@ def centre_iterator():
     for centre in ordoclic_centre_iterator():
         yield centre
     try:
-        url = "https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/doctolib-centers.json"
+        center_path = 'data/output/doctolib-centers.json'
+        url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"
         response = requests.get(url)
         response.raise_for_status()
 
         data = response.json()
+        file = open(center_path, 'w')
+        file.write(json.dumps(data, indent=2))
+        file.close()
         for center in data:
             yield center
     except Exception as e:
