@@ -33,3 +33,4 @@ jobs:
           branch: data-auto
           file_pattern: data/output/doctolib-centers.json
           commit_message: Updated Doctolib centers
+          push_options: '--force HEAD:data-auto'
