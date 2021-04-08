@@ -3,7 +3,7 @@ name: Scrape
 
 on:
   push:
-    branches: ["main", "fix/doctolib"]
+    branches: ["main", "ft/appointmentcount"]
   workflow_dispatch:
 
 jobs:
