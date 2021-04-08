@@ -1,4 +1,5 @@
 locals {
+  provision_script_url = "https://gitlab.com/ViteMaDose/vitemadose/-/raw/main/gitlab-runner/deploy-dev-runner.sh"
   # C'est toujours une Debian 9 qu'on utilise
   image_id_by_dc = {
     "GRA5" = "7b3b7b4c-51fa-47bf-8a9b-15eeb3161a1e"
@@ -22,7 +23,7 @@ export GITLAB_RUNNER_TOKEN=${var.gitlab_runner_token}
 export RUNNER_LOCATION="OVH ${var.ovh_region} (num ${count.index})"
 export TAG_LIST="ovh,ovh-${var.ovh_region},${formatdate("DD MMM YYYY hh:mm ZZZ", timestamp())}"
 export GITLAB_RUN_UNTAGGED=yes
-curl https://gitlab.com/ViteMaDose/vitemadose/-/raw/gitlab-publish/gitlab-runner/deploy-dev-runner.sh > /tmp/provision.sh
+curl ${local.provision_script_url} > /tmp/provision.sh
 bash /tmp/provision.sh
 EOP
 
