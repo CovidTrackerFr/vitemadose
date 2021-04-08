@@ -22,10 +22,14 @@ jobs:
       - name: "Install"
         run: make install
       - name: "Doctolib scrap..."
-        run: make doctoscrap
-      - name: "Pull from data-auto"
-        run: git pull origin data-auto
+        run: echo "[]" > data-auto/data/output/doctolib-centers.json
+      - name: "Get folder from data-auto"
+        run: |
+          git clone --branch data-auto git@github.com:CovidTrackerFr/vitemadose.git tmp/
+          cp -R tmp/data/output data/output
+          rm -rf tmp/
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
+          branch: data-auto
           file_pattern: data/output/doctolib-centers.json
           commit_message: Updated Doctolib centers
