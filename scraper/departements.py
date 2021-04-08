@@ -42,7 +42,7 @@ def to_departement_number(insee_code: str) -> str:
     >>> to_departement_number('97701')  # Saint-Barthélémy
     '971'
     """
-     if len(insee_code) == 4:
+    if len(insee_code) == 4:
         # Quand le CSV des centres de vaccinations est édité avec un tableur comme Excel,
         # il est possible que le 1er zéro soit retiré si la colonne est interprétée comme
         # un nombre (par ex 02401 devient 2401, mais on veut 02401 au complet).
