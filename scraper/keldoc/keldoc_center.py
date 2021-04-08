@@ -90,7 +90,7 @@ class KeldocCenter:
 
     def find_first_availability(self, start_date, end_date):
         if not self.vaccine_motives:
-            return None
+            return None, 0
 
         # Find next availabilities
         first_availability = None
