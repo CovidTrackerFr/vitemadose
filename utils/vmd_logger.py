@@ -36,6 +36,7 @@ def enable_logger_for_production():
     ch.setLevel(logging.DEBUG)
     ch.setFormatter(CustomFormatter())
     logger.addHandler(ch)
+    return logger
 
 
 def enable_logger_for_debug():

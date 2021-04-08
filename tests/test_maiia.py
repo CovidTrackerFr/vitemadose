@@ -1,4 +1,3 @@
-from dataclasses import make_dataclass, field
 from datetime import datetime
 import json
 
@@ -10,6 +9,7 @@ from scraper.maiia import (
     fetch_slots,
     get_slots_from,
 )
+from scraper.pattern.scraper_request import ScraperRequest
 
 
 class MockResponse:
@@ -42,15 +42,18 @@ class TestMaiia:
 
         # On applique la fonction pour "mockée" pour la levée d'exception :
         monkeypatch.setattr(requests, "get", mock_get)
-        assert fetch_slots("http://dummy_website.com", TestMaiia.START_DATE) is None
+        scrap_request = ScraperRequest("http://dummy_website.com", TestMaiia.START_DATE)
+        assert fetch_slots(scrap_request) is None
 
     def test_fetch_slot_with_incorrect_soup(self):
         dt = datetime.now()
-        assert fetch_slots("http://google.com", TestMaiia.START_DATE) is None
+        scrap_request = ScraperRequest("http://google.com", TestMaiia.START_DATE)
+        assert fetch_slots(scrap_request) is None
 
     def test_fetch_slot(self):
         scraper.maiia.BeautifulSoup = MockBeautifulSoup
-        assert fetch_slots("https://google.com", TestMaiia.START_DATE) is None
+        scrap_request = ScraperRequest("http://google.com", TestMaiia.START_DATE)
+        assert fetch_slots(scrap_request) is None
 
     def test_get_slots_from(self):
         # Testing the None return if rdv_form doesn't have a correct shape
@@ -71,11 +74,12 @@ class TestMaiia:
             return availibility
 
         scraper.maiia.get_any_availibility_from = mock_get_availibility
+        scrap_request = ScraperRequest("", "")
 
-        assert get_slots_from(soup.script, "", "") == "2021-05-04T14:00:00.000000Z"
+        assert get_slots_from(soup.script, scrap_request) == "2021-05-04T14:00:00.000000Z"
 
         del availibility["firstPhysicalStartDateTime"]
-        assert get_slots_from(soup.script, "", "") == "2021-05-04T14:00:00.000000Z"
+        assert get_slots_from(soup.script, scrap_request) == "2021-05-04T14:00:00.000000Z"
 
         del availibility["closestPhysicalAvailability"]
-        assert get_slots_from(soup.script, "", "") is None
+        assert get_slots_from(soup.script, scrap_request) is None

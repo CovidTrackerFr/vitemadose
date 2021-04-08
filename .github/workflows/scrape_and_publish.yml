@@ -6,7 +6,7 @@ on:
     branches:
       - data-auto
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/10 * * * *"
   # Allow running manually
   workflow_dispatch:
 

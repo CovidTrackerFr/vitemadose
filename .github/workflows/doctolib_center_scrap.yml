@@ -1,0 +1,37 @@
+---
+name: Doctolib center scrap
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  # Allow running manually
+  workflow_dispatch:
+
+jobs:
+
+  scrape:
+    name: "Doctolib center scrap"
+    runs-on: "ubuntu-20.04"
+    steps:
+      - uses: "actions/checkout@v2"
+        with:
+            token: ${{ secrets.PAT_GRZ }}
+      - uses: "actions/setup-python@v2"
+        with:
+          python-version: "3.8"
+      - name: "Install"
+        run: make install
+      - name: "Doctolib scrap..."
+        run: make doctoscrap
+      - name: "Copy output file"
+        run: cp data/output/doctolib-centers.json .
+      - name: "Get folder from data-auto"
+        run: |
+          git clone --branch data-auto https://github.com/CovidTrackerFr/vitemadose.git tmp/
+          cp -R tmp/data/output/* data/output
+          rm -rf tmp/
+          cp doctolib-centers.json data/output
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Updated Doctolib centers
+          push_options: '--force HEAD:data-auto'
