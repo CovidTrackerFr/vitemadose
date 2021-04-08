@@ -94,9 +94,13 @@ class DoctolibSlots:
         for slot in slots['availabilities']:
             if not slot['slots'] or len(slot['slots']) == 0:
                 continue
-            for slot_info in slot['slots']:
-                sdate = slot_info.get('start_date', None)
-                return sdate
+            try:
+                for slot_info in slot['slots']:
+                    sdate = slot_info.get('start_date', None)
+                    return sdate
+            except:
+                print("-- SLOTSINFO --")
+                print(slot)
 
         return slots.get('next_slot')
 
