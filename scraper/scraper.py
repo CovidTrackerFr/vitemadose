@@ -196,11 +196,15 @@ def centre_iterator():
     for centre in ordoclic_centre_iterator():
         yield centre
     try:
-        url = "https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/doctolib-centers.json"
+        center_path = 'data/output/doctolib-centers.json'
+        url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"
         response = requests.get(url)
         response.raise_for_status()
 
         data = response.json()
+        file = open(center_path, 'w')
+        file.write(json.dumps(data, indent=2))
+        file.close()
         for center in data:
             yield center
     except Exception as e:
