@@ -1,11 +1,13 @@
 import json
 import time
 import traceback
+from urllib import parse
 
 import requests
 from bs4 import BeautifulSoup
 
 from scraper.ordoclic import cp_to_insee
+from scraper.scraper import centre_iterator
 from utils.vmd_logger import enable_logger_for_production
 
 BASE_URL = 'https://www.doctolib.fr/vaccination-covid-19/france?page={0}'
@@ -20,6 +22,35 @@ CENTER_TYPES = [
     'centre-de-vaccinations-internationales',
     'centre-examens-de-sante'
 ]
+
+DOCTOLIB_DOMAINS = [
+    'https://partners.doctolib.fr',
+    'https://www.doctolib.fr'
+]
+
+
+def get_doctolib_csv_urls():
+    urls = []
+    for center in centre_iterator():
+        url = center['rdv_site_web']
+        if len(url) == 0:
+            continue
+        is_doctolib_url = False
+        for domain in DOCTOLIB_DOMAINS:
+            if url.startswith(domain):
+                is_doctolib_url = True
+        if not is_doctolib_url:
+            continue
+        uri_info = parse.urlsplit(url)
+        urls.append(uri_info.path)
+    return urls
+
+
+def is_url_in_csv(url, list):
+    uri_info = parse.urlsplit(url)
+    path = uri_info.path
+
+    return path in list
 
 
 def parse_doctolib_business_hours(url_data, place):
@@ -87,7 +118,7 @@ def is_revelant_url(url):
     return True
 
 
-def scrape_page(page_id):
+def scrape_page(page_id, url_list):
     data = requests.get(BASE_URL.format(page_id))
     data.raise_for_status()
     output = data.text
@@ -102,6 +133,8 @@ def scrape_page(page_id):
         if href in center_urls:
             continue
         api_name = href.split('/')[-1]
+        if is_url_in_csv(href, url_list):
+            continue
         center_data = {'rdv_site_web': href, 'nom': vp, 'internal_api_name': api_name}
         center_data = get_doctolib_center_data(center_data)
         if not center_data:
@@ -113,18 +146,21 @@ def scrape_page(page_id):
 def main():
     logger = enable_logger_for_production()
     center_urls = []
+    url_list = get_doctolib_csv_urls()
     i = 1
+
     while i < 2000:
         try:
-            centr = scrape_page(i)
+            centr = scrape_page(i, url_list)
             if len(centr) == 0:
                 break
             center_urls.extend(centr)
-            logger.info("Center total : {0} | Current page: {1} | Center page: {2}".format(len(center_urls), i, len(centr)))
-            i += 1
+            logger.info(
+                "Center total : {0} | Current page: {1} | Center page: {2}".format(len(center_urls), i, len(centr)))
         except Exception as e:
             traceback.print_exc()
             logger.warning("Unable to scrape Doctolib page {0}".format(i))
+        i += 1
     if len(center_urls) == 0:
         logger.error("No Doctolib center found. Banned?")
         exit(1)
