@@ -102,10 +102,10 @@ class DoctolibSlots:
                 sdate = slot_info.get('start_date', None)
                 return sdate
 
-        print('-- NEXT SLOT --')
-        print(slots)
-        return slots.get('next_slot')
-
+        if type(slots) is dict:
+            next_slot = slots.get('next_slot', None)
+            return next_slot
+        return None
 
 def _parse_centre(rdv_site_web: str) -> Optional[str]:
     """
