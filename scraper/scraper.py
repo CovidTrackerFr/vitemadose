@@ -190,6 +190,16 @@ def centre_iterator():
         yield row
     for centre in ordoclic_centre_iterator():
         yield centre
+    try:
+        url = "https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/doctolib-centers.json"
+        response = requests.get(url)
+        response.raise_for_status()
+
+        data = response.json()
+        for center in data:
+            yield center
+    except Exception as e:
+        logger.warning(f"Unable to scrape doctolib centers: {e}")
 
 
 if __name__ == "__main__":
