@@ -6,6 +6,7 @@ from urllib import parse
 import requests
 from bs4 import BeautifulSoup
 
+from scraper.doctolib.doctolib_filters import parse_practitioner_type
 from scraper.ordoclic import cp_to_insee
 from scraper.pattern.scraper_result import PractitionerType
 from scraper.scraper import centre_iterator
@@ -78,18 +79,6 @@ def parse_doctolib_business_hours(url_data, place):
     return url_data
 
 
-def parse_practitioner_type(data):
-    if 'pharmacie' in data['nom'].lower():
-        return PractitionerType.DRUG_STORE
-    specialty = data.get('specialty', {})
-    if not specialty:
-        return False
-    slug = specialty.get('slug', None)
-    if slug and slug == 'medecin-generaliste':
-        return PractitionerType.GENERAL_PRACTITIONER
-    return PractitionerType.VACCINATION_CENTER
-
-
 def get_doctolib_center_data(url_data):
     data = requests.get(BOOKING_URL.format(url_data['internal_api_name']))
     data.raise_for_status()
@@ -101,7 +90,7 @@ def get_doctolib_center_data(url_data):
     place = output.get('places', {})
 
     # Parse practitioner type
-    url_data['type'] = parse_practitioner_type
+    url_data['type'] = parse_practitioner_type(url_data['nom'], output)
 
     if not place:
         return url_data

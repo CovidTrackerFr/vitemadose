@@ -4,6 +4,7 @@ import datetime as dt
 import io
 import json
 import os
+import traceback
 from multiprocessing import Pool
 from scraper.error import ScrapeError, BlockedByDoctolibError
 
