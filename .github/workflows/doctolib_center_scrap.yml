@@ -31,6 +31,5 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           branch: data-auto
-          file_pattern: data/output/doctolib-centers.json
           commit_message: Updated Doctolib centers
           push_options: '--force HEAD:data-auto'
