@@ -34,7 +34,7 @@ trouver_les_rdv:
     paths:
       - data/output
   only:
-    - master
+    - main
     - gitlab-publish
     - schedules
 
@@ -48,7 +48,7 @@ pages:
     - cp data/output/* public/
     - gzip -k -6 $(find public -type f)
   only:
-    - master
+    - main
     - gitlab-publish
     - schedules
   artifacts:
