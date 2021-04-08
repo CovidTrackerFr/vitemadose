@@ -25,6 +25,7 @@ trouver_les_rdv:
     - ./scripts/install
     - echo IP publique de sortie du gitlab runner $(curl iconfig.me)
     - traceroute -4 -l -I partners.doctolib.fr
+    - curl -I --fail https://partners.doctolib.fr/
   script:
     - ./scripts/scrape
     - make stats
