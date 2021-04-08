@@ -13,7 +13,7 @@ import requests
 
 from scraper.pattern.center_info import convert_csv_data_to_center_info
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.pattern.scraper_result import ScraperResult, PractitionerType
+from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
 from .departements import to_departement_number, import_departements
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
@@ -94,7 +94,7 @@ def cherche_prochain_rdv_dans_centre(centre):
     if 'type' in centre:
         center_data.type = centre['type']
     if not center_data.type:
-        center_data.type = PractitionerType.VACCINATION_CENTER
+        center_data.type = VACCINATION_CENTER
     return center_data.default()
 
 def sort_center(center):
