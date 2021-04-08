@@ -94,7 +94,7 @@ class KeldocCenter:
 
         # Find next availabilities
         first_availability = None
-        appointments = dict()
+        appointments = []
         for relevant_motive in self.vaccine_motives:
             if 'id' not in relevant_motive or 'agendas' not in relevant_motive:
                 continue
