@@ -1,6 +1,7 @@
 import logging
 import os
 import re
+from datetime import date
 from typing import Optional, Tuple
 
 import httpx
@@ -91,8 +92,11 @@ class DoctolibSlots:
 
         slots = response.json()
         for slot in slots['availabilities']:
-            if len(slot['slots']) > 0:
-                return slot['slots'][0]['start_date']
+            if not slot['slots'] or len(slot['slots']) == 0:
+                continue
+            for slot_info in slot['slots']:
+                sdate = slot_info.get('start_date', None)
+                return sdate
 
         return slots.get('next_slot')
 
