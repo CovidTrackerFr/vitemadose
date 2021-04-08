@@ -19,6 +19,7 @@ class CenterInfo:
         self.metadata = None
         self.prochain_rdv = None
         self.plateforme = None
+        self.type = None
 
     def fill_localization(self, location: Optional[CenterLocation]):
         self.location = location
@@ -26,6 +27,7 @@ class CenterInfo:
     def fill_result(self, result: ScraperResult):
         self.prochain_rdv = result.next_availability # TODO change with filters
         self.plateforme = result.platform
+        self.type = result.request.practitioner_type
 
     def default(self):
         if type(self.location) is CenterLocation:
