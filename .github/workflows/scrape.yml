@@ -27,7 +27,7 @@ jobs:
         run: scripts/install
       - name: "Scraping..."
         run: scripts/scrape
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - name: "Save files"
+        uses: ad-m/github-push-action@master
         with:
-          commit_message: Automatic Update
-          push_options: '--force HEAD:dev'
+          token: ${{ secrets.TOKEN }}
