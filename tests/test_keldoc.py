@@ -134,26 +134,6 @@ def test_keldoc_timeout():
     assert not test_center_1.vaccine_cabinets
 
 
-def test_keldoc_basicfetch():
-    with pytest.raises(httpx.HTTPStatusError):
-        scrap_request = ScraperRequest("https://vaccination-covid.keldoc.com/centre-hospitalier-regional/foo/bar", "2020-04-06")
-        fetch_slots(scrap_request)
-
-    scrap_request = ScraperRequest("https://vaccination-covid.keldoc.com", "2020-04-06")
-    date = fetch_slots(scrap_request)
-    assert not date
-
-    scrap_request = ScraperRequest("https://vaccination-covid.keldoc.com/cabinet-medical/bain-de-bretagne-35470/salle-des-fetes-de-bain-de-bretagne/centre-de-vaccination-de-la-salle-des-fetes-de-bain-de-bretagne", "2020-04-06")
-    date = fetch_slots(scrap_request)
-    assert not date
-
-    scrap_request = ScraperRequest(
-        "https://www.keldoc.com/?dom=cabinet-medical&inst=bain-de-bretagne-35470&user=salle-des-fetes-de-bain-de-bretagne",
-        "2020-04-06")
-    date = fetch_slots(scrap_request)
-    assert not date
-
-
 def test_keldoc_filters():
     # Test appointments
     assert is_appointment_relevant('Vaccin 1ère inj. +70 ans COVID')
