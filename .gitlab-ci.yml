@@ -21,8 +21,10 @@ trouver_les_rdv:
   tags:
     - ovh
   before_script:
-    - apk add --update make
+    - apk add --no-cache make curl
     - ./scripts/install
+    - echo IP publique de sortie du gitlab runner $(curl iconfig.me)
+    - traceroute -4 -l -I partners.doctolib.fr
   script:
     - ./scripts/scrape
     - make stats
