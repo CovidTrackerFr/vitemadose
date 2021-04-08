@@ -94,6 +94,7 @@ class KeldocCenter:
 
         # Find next availabilities
         first_availability = None
+        appointment_count = 0
         for relevant_motive in self.vaccine_motives:
             if not 'id' in relevant_motive or not 'agendas' in relevant_motive:
                 continue
@@ -111,10 +112,11 @@ class KeldocCenter:
                 # and block the process completion.
                 continue
             calendar_req.raise_for_status()
-            date = parse_keldoc_availability(calendar_req.json())
+            date, count = parse_keldoc_availability(calendar_req.json())
+            appointment_count += count
             if date is None:
                 continue
             # Compare first available date
             if first_availability is None or date < first_availability:
                 first_availability = date
-        return first_availability
+        return first_availability, appointment_count
