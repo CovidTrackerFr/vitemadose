@@ -1,9 +1,6 @@
 import csv
 import json
-<<<<<<< HEAD
 import logging
-=======
->>>>>>> upstream/main
 from typing import List
 
 logger = logging.getLogger('scraper')
