@@ -17,7 +17,7 @@ test:
 trouver_les_rdv:
   stage: scrape
   image: python:3.8-alpine
-  timeout: "5 minutes"
+  timeout: "4 minutes"
   tags:
     - ovh
   before_script:
