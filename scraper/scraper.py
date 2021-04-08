@@ -26,6 +26,7 @@ POOL_SIZE = int(os.getenv('POOL_SIZE', 40))
 
 logger = enable_logger_for_production()
 
+
 def main():
     if len(sys.argv) == 1:
         scrape()
@@ -57,15 +58,17 @@ def scrape():
             1
         )
         compte_centres, compte_centres_avec_dispo, compte_bloqués = export_data(centres_cherchés)
-        logger.info(f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
+        logger.info(
+            f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
         if compte_centres_avec_dispo == 0:
-            logger.error("Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur")
+            logger.error(
+                "Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur")
             exit(code=1)
 
         if compte_bloqués > 10:
-            logger.error("Notre IP a été bloquée par le CDN Doctolib plus de 10 fois. Pour éviter de pousser des données erronées, on s'arrête ici")
+            logger.error(
+                "Notre IP a été bloquée par le CDN Doctolib plus de 10 fois. Pour éviter de pousser des données erronées, on s'arrête ici")
             exit(code=2)
-
 
 
 def cherche_prochain_rdv_dans_centre(centre):
@@ -84,9 +87,11 @@ def cherche_prochain_rdv_dans_centre(centre):
         traceback.print_exc()
 
     if has_error is None:
-        logger.info(f'{centre.get("gid", "")!s:>8} {center_data.plateforme!s:16} {center_data.prochain_rdv or ""!s:32} {center_data.departement!s:6}')
+        logger.info(
+            f'{centre.get("gid", "")!s:>8} {center_data.plateforme!s:16} {center_data.prochain_rdv or ""!s:32} {center_data.departement!s:6}')
     else:
-        logger.info(f'{centre.get("gid", "")!s:>8} {center_data.plateforme!s:16} {"Erreur" or ""!s:32} {center_data.departement!s:6}')
+        logger.info(
+            f'{centre.get("gid", "")!s:>8} {center_data.plateforme!s:16} {"Erreur" or ""!s:32} {center_data.departement!s:6}')
 
     if result and result.platform == 'Doctolib' and not center_data.url.islower():
         center_data.url = center_data.url.lower()
@@ -97,10 +102,18 @@ def cherche_prochain_rdv_dans_centre(centre):
         center_data.type = VACCINATION_CENTER
     return center_data.default()
 
+
+def fix_scrap_urls(url):
+    # Fix Keldoc
+    if url.startswith("https://www.keldoc.com/"):
+        url = url.replace("https://www.keldoc.com/", "https://vaccination-covid.keldoc.com/")
+    return url.strip()
+
+
 def sort_center(center):
     if not center:
         return '-'
-    if not 'prochain_rdv' in center or not center['prochain_rdv']:
+    if 'prochain_rdv' not in center or not center['prochain_rdv']:
         return '-'
     return center['prochain_rdv']
 
@@ -134,7 +147,8 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
                 compte_centres_avec_dispo += 1
                 par_departement[code_departement]['centres_disponibles'].append(centre)
         else:
-            logger.warning(f"le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
+            logger.warning(
+                f"le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
 
     outpath = outpath_format.format("info_centres")
     with open(outpath, "w") as info_centres:
@@ -163,7 +177,7 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
             'Ordoclic': ordoclic_fetch_slots,
         }
 
-    rdv_site_web = rdv_site_web.strip()
+    rdv_site_web = fix_scrap_urls(rdv_site_web)
     request = ScraperRequest(rdv_site_web, start_date)
 
     # Determine platform based on visit URL.
