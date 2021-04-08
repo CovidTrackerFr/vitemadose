@@ -153,12 +153,12 @@ def main():
         try:
             centr = scrape_page(i, url_list)
             if len(centr) == 0:
+                logger.info("Page: {0} <-> No center on this page. Stopping.".format(i))
                 break
             center_urls.extend(centr)
             logger.info(
-                "Center total : {0} | Current page: {1} | Center page: {2}".format(len(center_urls), i, len(centr)))
+                "Page: {0} <-> Found {1} centers not in data.gouv CSV.".format(i, len(center_urls)))
         except Exception as e:
-            traceback.print_exc()
             logger.warning("Unable to scrape Doctolib page {0}".format(i))
         i += 1
     if len(center_urls) == 0:
@@ -167,7 +167,6 @@ def main():
     file = open('data/output/doctolib-centers.json', 'w')
     file.write(json.dumps(center_urls, indent=2))
     file.close()
-    logger.info("Doctolib center scrapped: {0}".format(center_urls))
 
 
 if __name__ == "__main__":
