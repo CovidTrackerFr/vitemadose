@@ -190,10 +190,6 @@ def centre_iterator():
         yield row
     for centre in ordoclic_centre_iterator():
         yield centre
-    center_iterator_doctolib_scrap()
-
-
-def center_iterator_doctolib_scrap():
     try:
         url = "https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/doctolib-centers.json"
         response = requests.get(url)
