@@ -76,12 +76,10 @@ def parse_keldoc_availability(availability_data, appointments):
     availabilities = availability_data.get('availabilities', None)
     if availabilities is None:
         return None, appointments
-    availability_count = 0
     for date in availabilities:
         slots = availabilities.get(date, [])
         if not slots:
             continue
-        availability_count += len(slots)
         for slot in slots:
             if slot not in appointments:
                 appointments.append(slot)
