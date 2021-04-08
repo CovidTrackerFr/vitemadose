@@ -24,7 +24,7 @@ jobs:
       - name: "Get folder from data-auto"
         run: |
           git clone --branch data-auto https://github.com/CovidTrackerFr/vitemadose.git tmp/
-          cp -R tmp/data/output data/output
+          cp -R tmp/data/output/* data/output
           rm -rf tmp/
       - name: "Doctolib scrap..."
         run: echo "[]" > data/output/doctolib-centers.json
