@@ -25,3 +25,5 @@ jobs:
         run: scripts/install
       - name: "Scraping..."
         run: scripts/scrape
+      - name: "Stats"
+        run: make stats
