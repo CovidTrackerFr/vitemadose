@@ -20,6 +20,7 @@ class CenterInfo:
         self.prochain_rdv = None
         self.plateforme = None
         self.type = None
+        self.appointment_count = 0
 
     def fill_localization(self, location: Optional[CenterLocation]):
         self.location = location
@@ -28,6 +29,7 @@ class CenterInfo:
         self.prochain_rdv = result.next_availability # TODO change with filters
         self.plateforme = result.platform
         self.type = result.request.practitioner_type
+        self.appointment_count = result.request.appointment_count
 
     def default(self):
         if type(self.location) is CenterLocation:

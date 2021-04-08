@@ -60,6 +60,7 @@ class DoctolibSlots:
         response.raise_for_status()
         data = response.json()
         rdata = data.get('data', {})
+        appointment_count = 0
         request.update_practitioner_type(parse_practitioner_type(centre, rdata))
 
         # visit_motive_categories
@@ -101,11 +102,15 @@ class DoctolibSlots:
             for slot_info in slot_list:
                 sdate = slot_info.get('start_date', None)
                 return sdate
+        if slots.get('total'):
+            appointment_count += int(slots.get('total', 0))
+        request.update_appointment_count(appointment_count)
 
         if type(slots) is dict:
             next_slot = slots.get('next_slot', None)
             return next_slot
         return None
+
 
 def _parse_centre(rdv_site_web: str) -> Optional[str]:
     """
@@ -196,7 +201,8 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: str = None) -> O
     return None
 
 
-def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str, practice_id_filter: int = None) -> Tuple[list, list]:
+def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str, practice_id_filter: int = None) -> Tuple[
+    list, list]:
     """
     Etant donné une réponse à /booking/<centre>.json, renvoie tous les
     "agendas" et "pratiques" (jargon Doctolib) qui correspondent au motif de visite.
@@ -206,9 +212,9 @@ def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str, practice_id_
     practice_ids = set()
     for agenda in data['data']['agendas']:
         if (
-            'practice_id' in agenda
-            and practice_id_filter is not None
-            and agenda['practice_id'] != practice_id_filter
+                'practice_id' in agenda
+                and practice_id_filter is not None
+                and agenda['practice_id'] != practice_id_filter
         ):
             continue
         if agenda['booking_disabled']:
