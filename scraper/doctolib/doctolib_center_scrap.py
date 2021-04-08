@@ -96,6 +96,10 @@ def get_doctolib_center_data(url_data):
     url_data['lat_coor1'] = place['latitude']
     url_data["com_insee"] = cp_to_insee(place["zipcode"])
 
+    # Parse landline number
+    if place.get('landline_number', None):
+        url_data['phone_number'] = place.get('landline_number', None)
+
     url_data = parse_doctolib_business_hours(url_data, place)
     return url_data
 
