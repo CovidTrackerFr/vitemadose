@@ -2,8 +2,9 @@
 name: Doctolib center scrap
 
 on:
-  push:
-    branches: ["ft/doctoscrap"]
+  schedule:
+    - cron: "0 * * * *"
+  # Allow running manually
   workflow_dispatch:
 
 jobs:
