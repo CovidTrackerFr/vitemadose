@@ -6,6 +6,7 @@ set -o nounset
 set -o errtrace
 
 GITLAB_HOST="gitlab.com"
+RUNNER_CONCURRENCY=${RUNNER_CONCURRENCY:-1}
 RUNNER_NAME="Chez ${RUNNER_LOCATION:-inconnu}"
 GITLAB_RUNNER_TOKEN=${GITLAB_RUNNER_TOKEN}
 TAG_LIST="${TAG_LIST:-no_tag},priviledged"
@@ -58,7 +59,7 @@ function register_gitlab_runner () {
      --docker-volumes "/certs/client" \
      --env "DOCKER_DRIVER=overlay2" 
 
-  sed -ri 's/concurrent = .+/concurrent = 2/' /etc/gitlab-runner/config.toml
+  sed -ri "s/concurrent = .+/concurrent = ${RUNNER_CONCURRENCY}/" /etc/gitlab-runner/config.toml
   service gitlab-runner restart
 }
 
