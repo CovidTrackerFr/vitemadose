@@ -30,9 +30,8 @@ def parse_practitioner_type(name, data):
     if 'pharmacie' in name.lower():
         return DRUG_STORE
     specialty = data.get('specialty', {})
-    if not specialty:
-        return False
-    slug = specialty.get('slug', None)
-    if slug and slug == 'medecin-generaliste':
-        return GENERAL_PRACTITIONER
+    if specialty:
+        slug = specialty.get('slug', None)
+        if slug and slug == 'medecin-generaliste':
+            return GENERAL_PRACTITIONER
     return VACCINATION_CENTER
