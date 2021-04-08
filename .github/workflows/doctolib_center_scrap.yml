@@ -23,8 +23,9 @@ jobs:
         run: make install
       - name: "Doctolib scrap..."
         run: make doctoscrap
+      - name: "Pull from data-auto"
+        run: git pull origin data-auto
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           file_pattern: data/output/doctolib-centers.json
           commit_message: Updated Doctolib centers
-          push_options: '--force HEAD:data-auto'
