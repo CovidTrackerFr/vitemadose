@@ -27,7 +27,7 @@ jobs:
           cp -R tmp/data/output/* data/output
           rm -rf tmp/
       - name: "Doctolib scrap..."
-        run: echo "[]" > data/output/doctolib-centers.json
+        run: make doctoscrap
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Updated Doctolib centers
