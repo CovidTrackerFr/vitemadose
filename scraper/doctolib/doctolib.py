@@ -96,7 +96,7 @@ class DoctolibSlots:
             slots = availability.get('slots', None)
             if not slots or len(slots) == 0:
                 continue
-            if isinstance(slots[0], list):
+            if isinstance(slots[0], str):
                 return slots[0]
             for slot_info in slots:
                 sdate = slot_info.get('start_date', None)
