@@ -22,7 +22,7 @@ jobs:
       - name: "Install"
         run: make install
       - name: "Doctolib scrap..."
-        run: echo "[]" > data-auto/data/output/doctolib-centers.json
+        run: echo "[]" > data/output/doctolib-centers.json
       - name: "Get folder from data-auto"
         run: |
           git clone --branch data-auto git@github.com:CovidTrackerFr/vitemadose.git tmp/
