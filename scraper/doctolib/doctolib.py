@@ -93,6 +93,9 @@ class DoctolibSlots:
 
         slots = response.json()
 
+        if slots.get('total'):
+            appointment_count += int(slots.get('total', 0))
+        request.update_appointment_count(appointment_count)
         for availability in slots['availabilities']:
             slot_list = availability.get('slots', None)
             if not slot_list or len(slot_list) == 0:
@@ -102,9 +105,6 @@ class DoctolibSlots:
             for slot_info in slot_list:
                 sdate = slot_info.get('start_date', None)
                 return sdate
-        if slots.get('total'):
-            appointment_count += int(slots.get('total', 0))
-        request.update_appointment_count(appointment_count)
 
         if type(slots) is dict:
             next_slot = slots.get('next_slot', None)
