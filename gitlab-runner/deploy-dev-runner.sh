@@ -19,7 +19,7 @@ if test -z "${GITLAB_RUNNER_TOKEN}"; then
 fi
 
 function main () {
-  cartouche "Intsalling Docker"
+  cartouche "Installing Docker"
   install_docker
 
   cartouche "Installing Gitlab Runner"
