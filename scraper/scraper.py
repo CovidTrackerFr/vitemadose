@@ -48,13 +48,12 @@ def scrape_debug(urls):
 
 def scrape():
 
-    """liste_centres = doctolib_liste_centres()
+    liste_centres = doctolib_liste_centres()
     outpath = "data/output/liste_centres_doctolib.json"
     with open(outpath, "w") as info_centres:
         json.dump(liste_centres, info_centres, indent=2)
     
-    return    
-    """
+    
     enable_logger_for_production()
     with Pool(POOL_SIZE) as pool:
         centres_cherchés = pool.imap_unordered(
@@ -121,7 +120,9 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         for code in import_departements()
     }
     
-    for centre in centres_cherchés:
+    liste_centres = liste_unique(centres_cherchés)
+
+    for centre in liste_centres:
         centre['nom'] = centre['nom'].strip()
         compte_centres += 1
         code_departement = centre['departement']
@@ -197,3 +198,16 @@ def centre_iterator():
 
 if __name__ == "__main__":
     main()
+
+
+def liste_unique(centres):
+
+
+    liste_centres = []
+    liste_rdvs = []
+    for centre in centres:
+        if centre["prochain_rdv"] not in liste_rdvs:
+            liste_centres.append(centre)
+            liste_rdvs.append(centre["prochain_rdv"])
+
+    return liste_centres
