@@ -23,7 +23,7 @@ trouver_les_rdv:
   before_script:
     - apk add --no-cache make curl
     - ./scripts/install
-    - echo IP publique de sortie du gitlab runner $(curl https://ifconfig.me/ip)
+    - echo IP publique de sortie du gitlab runner $(curl -s https://ifconfig.me/ip )
     - traceroute -4 -l -I partners.doctolib.fr
     - curl -I --fail https://partners.doctolib.fr/
   script:
