@@ -182,6 +182,10 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: str = None) -> O
         # après la 1ère dose, donc les gens n'ont pas besoin d'aide pour l'obtenir).
         if not is_appointment_relevant(visit_motive['name']):
             continue
+        # Si le lieu de vaccination n'accepte pas les nouveaux patients
+        # on ne considère pas comme valable.
+        if 'allow_new_patients' in visit_motive and not visit_motive['allow_new_patients']:
+            continue
         # NOTE: 'visit_motive_category_id' agit comme un filtre. Il y a 2 cas :
         # * visit_motive_category_id=None : pas de filtre, et on veut les motifs qui ne
         # sont pas non plus rattachés à une catégorie
