@@ -91,11 +91,12 @@ class DoctolibSlots:
         response.raise_for_status()
 
         slots = response.json()
+
         for availability in slots['availabilities']:
             slots = availability.get('slots', None)
             if not slots or len(slots) == 0:
                 continue
-            if isinstance(slots, list):
+            if isinstance(slots[0], list):
                 return slots[0]
             for slot_info in slots:
                 sdate = slot_info.get('start_date', None)
