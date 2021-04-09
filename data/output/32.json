@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.958956+02:00",
+  "last_updated": "2021-04-09T15:21:54.135164+02:00",
   "centres_disponibles": [],
   "centres_indisponibles": [
     {
@@ -135,32 +135,6 @@
     },
     {
       "departement": "32",
-      "nom": "Salle d'animation NOGARO",
-      "url": "https://partners.doctolib.fr/centre-de-sante/nogaro/centre-de-vaccination-covid-19-nogaro?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-0.0328511",
-        "latitude": "43.7607"
-      },
-      "metadata": {
-        "address": " place des Ar\u00e8nes, 32110 Nogaro",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "09:00-12:00/14:00-17:00",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "32",
       "nom": "Hall des expositions EAUZE",
       "url": "https://partners.doctolib.fr/centre-de-sante/eauze/centre-de-vaccination-covid-19-eauze?pid=practice-166214&enable_cookies_consent=1",
       "location": {
@@ -175,6 +149,32 @@
           "mardi": "ferm\u00e9",
           "mercredi": "ferm\u00e9",
           "jeudi": "09:00-12:00/14:00-17:00",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "32",
+      "nom": "Salle d'animation NOGARO",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nogaro/centre-de-vaccination-covid-19-nogaro?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-0.0328511",
+        "latitude": "43.7607"
+      },
+      "metadata": {
+        "address": " place des Ar\u00e8nes, 32110 Nogaro",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "09:00-12:00/14:00-17:00",
+          "jeudi": "ferm\u00e9",
           "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
@@ -239,32 +239,6 @@
     },
     {
       "departement": "32",
-      "nom": "Salle culturelle GIMONT",
-      "url": "https://partners.doctolib.fr/centre-de-sante/gimont/centre-de-vaccination-covid-19-gimont?pid=practice-166223&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.878835",
-        "latitude": "43.6262"
-      },
-      "metadata": {
-        "address": " Boulevard du Nord, 32200 Gimont",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "09:00-12:00/14:00-17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "32",
       "nom": "Salle Pierre de Montesquiou  CONDOM",
       "url": "https://partners.doctolib.fr/centre-de-sante/condom/centre-de-vaccination-covid-19-condom?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -280,6 +254,32 @@
           "mercredi": "ferm\u00e9",
           "jeudi": "09:00-12:00/14:00-17:00",
           "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "32",
+      "nom": "Salle culturelle GIMONT",
+      "url": "https://partners.doctolib.fr/centre-de-sante/gimont/centre-de-vaccination-covid-19-gimont?pid=practice-166223&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.878835",
+        "latitude": "43.6262"
+      },
+      "metadata": {
+        "address": " Boulevard du Nord, 32200 Gimont",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "09:00-12:00/14:00-17:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }

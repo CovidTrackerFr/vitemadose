@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.995167+02:00",
+  "last_updated": "2021-04-09T15:21:54.184784+02:00",
   "centres_disponibles": [
     {
       "departement": "76",
@@ -22,7 +22,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-29T08:30:00.000+02:00",
+      "prochain_rdv": "2021-04-16T09:50:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -48,7 +48,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-29T11:55:00.000+02:00",
+      "prochain_rdv": "2021-04-29T12:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -522,14 +522,14 @@
     },
     {
       "departement": "76",
-      "nom": "CH DIEPPE",
-      "url": "https://partners.doctolib.fr/hopital-public/dieppe/centre-de-vaccination-covid-public?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Site de Sotteville - salle des f\u00eates",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sotteville-les-rouen/centre-de-vaccination-sotteville-les-rouen?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "1.07872",
-        "latitude": "49.9189"
+        "longitude": "1.08904",
+        "latitude": "49.414"
       },
       "metadata": {
-        "address": " avenue pasteur, 76200 Dieppe",
+        "address": "37 Avenue Jean Jaur\u00e8s, 76300 Sotteville-l\u00e8s-Rouen",
         "phone_number": "+33279461156",
         "business_hours": {
           "lundi": "",
@@ -548,14 +548,14 @@
     },
     {
       "departement": "76",
-      "nom": "Site de Sotteville - salle des f\u00eates",
-      "url": "https://partners.doctolib.fr/centre-de-sante/sotteville-les-rouen/centre-de-vaccination-sotteville-les-rouen?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "CH DIEPPE",
+      "url": "https://partners.doctolib.fr/hopital-public/dieppe/centre-de-vaccination-covid-public?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "1.08904",
-        "latitude": "49.414"
+        "longitude": "1.07872",
+        "latitude": "49.9189"
       },
       "metadata": {
-        "address": "37 Avenue Jean Jaur\u00e8s, 76300 Sotteville-l\u00e8s-Rouen",
+        "address": " avenue pasteur, 76200 Dieppe",
         "phone_number": "+33279461156",
         "business_hours": {
           "lundi": "",
@@ -919,32 +919,6 @@
     },
     {
       "departement": "76",
-      "nom": "CHI Elbeuf, Louviers, Val de Reuil - Centre de vaccination COVID",
-      "url": "https://partners.doctolib.fr/hopital-public/saint-aubin-les-elbeuf/chi-elbeuf-louviers-val-de-reuil-centre-de-vaccination-covid-reserve-aux-professionnels-de-sante-nation-covid?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": 1.040542,
-        "latitude": 49.305182
-      },
-      "metadata": {
-        "address": "Rue du Docteur Villers, 76410 Saint-Aubin-l\u00e8s-Elbeuf",
-        "phone_number": "02 79 46 11 56",
-        "business_hours": {
-          "lundi": null,
-          "mardi": null,
-          "mercredi": null,
-          "jeudi": null,
-          "vendredi": null,
-          "samedi": null,
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "76",
       "nom": "Pharmacie de La Mairie",
       "url": "https://partners.doctolib.fr/pharmacie/montivilliers/pharmacie-de-la-mairie-dr-guillaume-riquier",
       "location": {
@@ -967,6 +941,32 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "76",
+      "nom": "CHI Elbeuf, Louviers, Val de Reuil - Centre de vaccination COVID",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-aubin-les-elbeuf/chi-elbeuf-louviers-val-de-reuil-centre-de-vaccination-covid-reserve-aux-professionnels-de-sante-nation-covid?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 1.040542,
+        "latitude": 49.305182
+      },
+      "metadata": {
+        "address": "Rue du Docteur Villers, 76410 Saint-Aubin-l\u00e8s-Elbeuf",
+        "phone_number": "02 79 46 11 56",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
       "appointment_count": 0
     }
   ]

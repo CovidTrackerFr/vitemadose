@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.976294+02:00",
+  "last_updated": "2021-04-09T15:21:54.159337+02:00",
   "centres_disponibles": [
     {
       "departement": "57",
@@ -49,7 +49,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-13T14:35:00.000+02:00",
+      "prochain_rdv": "2021-04-13T14:25:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -75,7 +75,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-20T09:15:00.000+02:00",
+      "prochain_rdv": "2021-04-21T14:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -344,6 +344,31 @@
     },
     {
       "departement": "57",
+      "nom": "CD - US d'OERMINGEN / Maison d'Arr\u00eat de Sarreguemines",
+      "url": "",
+      "location": {
+        "longitude": "7.05806",
+        "latitude": "49.1062"
+      },
+      "metadata": {
+        "address": "9 Rue Victor Hugo, 57200 Sarreguemines",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
       "nom": "MA - US DE SARREGUEMINES / Maison d'Arr\u00eat de Sarreguemines",
       "url": "",
       "location": {
@@ -377,31 +402,6 @@
       },
       "metadata": {
         "address": "1 Rue de la Source, 57000 Metz",
-        "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "57",
-      "nom": "CD - US d'OERMINGEN / Maison d'Arr\u00eat de Sarreguemines",
-      "url": "",
-      "location": {
-        "longitude": "7.05806",
-        "latitude": "49.1062"
-      },
-      "metadata": {
-        "address": "9 Rue Victor Hugo, 57200 Sarreguemines",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -523,32 +523,6 @@
     },
     {
       "departement": "57",
-      "nom": "Centre de vaccination d'Hettange-Grande - Hall omnisport",
-      "url": "https://partners.doctolib.fr/centre-de-sante/hettange-grande/centre-de-vaccination-d-hettange-grande?pid=practice-177585&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.16235",
-        "latitude": "49.4018"
-      },
-      "metadata": {
-        "address": "5 Rue de Pederobba, 57330 Hettange-Grande",
-        "phone_number": "+33387345345",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "9:00-17:00",
-          "dimanche": "9:00-17:00"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "57",
       "nom": "Centre de vaccination de Metz - Clinique Claude Bernard (Entr\u00e9e B)",
       "url": "https://partners.doctolib.fr/clinique-privee/metz/centre-de-vaccination-metz-elsan?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -566,6 +540,32 @@
           "vendredi": "8:00-17:00",
           "samedi": "8:00-12:00",
           "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination d'Hettange-Grande - Hall omnisport",
+      "url": "https://partners.doctolib.fr/centre-de-sante/hettange-grande/centre-de-vaccination-d-hettange-grande?pid=practice-177585&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.16235",
+        "latitude": "49.4018"
+      },
+      "metadata": {
+        "address": "5 Rue de Pederobba, 57330 Hettange-Grande",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "9:00-17:00",
+          "dimanche": "9:00-17:00"
         }
       },
       "prochain_rdv": null,

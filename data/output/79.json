@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.998451+02:00",
+  "last_updated": "2021-04-09T15:21:54.189515+02:00",
   "centres_disponibles": [
     {
       "departement": "79",
@@ -23,7 +23,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-12T15:05:00.000+02:00",
+      "prochain_rdv": "2021-04-10T16:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -75,32 +75,6 @@
         }
       },
       "prochain_rdv": "2021-04-13T09:25:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "79",
-      "nom": "Centre de vaccination - SUD CAN",
-      "url": "https://partners.doctolib.fr/centre-de-sante/mauze-sur-le-mignon/centre-de-vaccination-covid-19-mauze-sur-le-mignon?pid=practice-176650&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-0.669665",
-        "latitude": "46.1966"
-      },
-      "metadata": {
-        "address": "6 Rue de la Distillerie, 79210 Mauz\u00e9-sur-le-Mignon",
-        "phone_number": "+33549267752",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-28T09:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -176,6 +150,32 @@
           "mercredi": "08:15-12:00",
           "jeudi": "08:15-12:00",
           "vendredi": "08:15-12:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "79",
+      "nom": "Centre de vaccination - SUD CAN",
+      "url": "https://partners.doctolib.fr/centre-de-sante/mauze-sur-le-mignon/centre-de-vaccination-covid-19-mauze-sur-le-mignon?pid=practice-176650&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-0.669665",
+        "latitude": "46.1966"
+      },
+      "metadata": {
+        "address": "6 Rue de la Distillerie, 79210 Mauz\u00e9-sur-le-Mignon",
+        "phone_number": "+33549267752",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -366,15 +366,15 @@
     },
     {
       "departement": "79",
-      "nom": "Centre de vaccination de Nueil-les-Aubiers  - CPTS du Bressuirais",
-      "url": "https://partners.doctolib.fr/centre-de-sante/moncoutant-sur-sevre/centre-de-vaccination-de-moncoutant-sur-sevre?pid=practice-177725&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de Cerizay - CPTS du Bressuirais",
+      "url": "https://partners.doctolib.fr/centre-de-sante/moncoutant-sur-sevre/centre-de-vaccination-de-moncoutant-sur-sevre?pid=practice-177609&enable_cookies_consent=1",
       "location": {
-        "longitude": "-0.593426",
-        "latitude": "46.9501"
+        "longitude": "-0.671963",
+        "latitude": "46.8212"
       },
       "metadata": {
-        "address": "45 Avenue Saint-Hubert, 79250 Nueil-les-Aubiers",
-        "phone_number": "+33675036843",
+        "address": "5 Place du Saint-Pere, 79140 Cerizay",
+        "phone_number": "+33755601381",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -392,15 +392,15 @@
     },
     {
       "departement": "79",
-      "nom": "Centre de vaccination de Cerizay - CPTS du Bressuirais",
-      "url": "https://partners.doctolib.fr/centre-de-sante/moncoutant-sur-sevre/centre-de-vaccination-de-moncoutant-sur-sevre?pid=practice-177609&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de Nueil-les-Aubiers  - CPTS du Bressuirais",
+      "url": "https://partners.doctolib.fr/centre-de-sante/moncoutant-sur-sevre/centre-de-vaccination-de-moncoutant-sur-sevre?pid=practice-177725&enable_cookies_consent=1",
       "location": {
-        "longitude": "-0.671963",
-        "latitude": "46.8212"
+        "longitude": "-0.593426",
+        "latitude": "46.9501"
       },
       "metadata": {
-        "address": "5 Place du Saint-Pere, 79140 Cerizay",
-        "phone_number": "+33755601381",
+        "address": "45 Avenue Saint-Hubert, 79250 Nueil-les-Aubiers",
+        "phone_number": "+33675036843",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",

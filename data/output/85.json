@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:50.003223+02:00",
+  "last_updated": "2021-04-09T15:21:54.195414+02:00",
   "centres_disponibles": [
     {
       "departement": "85",
@@ -23,7 +23,7 @@
           "dimanche": "Ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-12T12:20:00.000+02:00",
+      "prochain_rdv": "2021-04-12T12:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -49,7 +49,33 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-13T16:05:00.000+02:00",
+      "prochain_rdv": "2021-04-15T11:35:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "85",
+      "nom": "Centre de vaccination COVID -Lu\u00e7on - Espace Plaisance",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/lucon/centre-de-vaccination-de-lucon?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.18018",
+        "latitude": "46.456"
+      },
+      "metadata": {
+        "address": " Chemin de la motte des 4 seigneurs, 85400 Lu\u00e7on",
+        "phone_number": "+33256906412",
+        "business_hours": {
+          "lundi": "9h15-12h45 / 14h15-17h45",
+          "mardi": "9h15-12h45 / 14h15-17h45",
+          "mercredi": "9h15-12h45 / 14h15-17h45",
+          "jeudi": "9h15-12h45 / 14h15-17h45",
+          "vendredi": "9h15-12h45 / 14h15-17h45",
+          "samedi": "9h15-12h45",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-19T16:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -76,32 +102,6 @@
         }
       },
       "prochain_rdv": "2021-04-23T16:10:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "85",
-      "nom": "Centre de vaccination COVID -Lu\u00e7on - Espace Plaisance",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/lucon/centre-de-vaccination-de-lucon?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-1.18018",
-        "latitude": "46.456"
-      },
-      "metadata": {
-        "address": " Chemin de la motte des 4 seigneurs, 85400 Lu\u00e7on",
-        "phone_number": "+33256906412",
-        "business_hours": {
-          "lundi": "9h15-12h45 / 14h15-17h45",
-          "mardi": "9h15-12h45 / 14h15-17h45",
-          "mercredi": "9h15-12h45 / 14h15-17h45",
-          "jeudi": "9h15-12h45 / 14h15-17h45",
-          "vendredi": "9h15-12h45 / 14h15-17h45",
-          "samedi": "9h15-12h45",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-26T12:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0

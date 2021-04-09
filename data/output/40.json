@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.965569+02:00",
+  "last_updated": "2021-04-09T15:21:54.144713+02:00",
   "centres_disponibles": [
     {
       "departement": "40",
@@ -48,7 +48,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-13T15:30:00.000000Z",
+      "prochain_rdv": "2021-04-13T15:40:00.000000Z",
       "plateforme": "Maiia",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -464,6 +464,24 @@
     },
     {
       "departement": "40",
+      "nom": "Pharmacie Terral",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-terral-mont-de-marsan",
+      "location": {
+        "longitude": -0.4894305,
+        "latitude": 43.897425
+      },
+      "metadata": {
+        "address": "762 avenue du mar\u00e9chal Foch, 40000 Mont de Marsan",
+        "phone_number": "+33558857212",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
       "nom": "Pharmacie Du Marensin",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-marensin-castets",
       "location": {
@@ -548,24 +566,6 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "40",
-      "nom": "Pharmacie Terral",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-terral-mont-de-marsan",
-      "location": {
-        "longitude": -0.4894305,
-        "latitude": 43.897425
-      },
-      "metadata": {
-        "address": "762 avenue du mar\u00e9chal Foch, 40000 Mont de Marsan",
-        "phone_number": "+33558857212",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
       "appointment_count": 0
     }
   ]

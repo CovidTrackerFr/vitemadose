@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.938248+02:00",
+  "last_updated": "2021-04-09T15:21:54.105968+02:00",
   "centres_disponibles": [
     {
       "departement": "06",
@@ -49,7 +49,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-10T12:40:00.000+02:00",
+      "prochain_rdv": "2021-04-10T12:46:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "drugstore",
       "appointment_count": 0
@@ -100,7 +100,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-13T10:15:00.000+02:00",
+      "prochain_rdv": "2021-04-13T10:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -126,7 +126,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-13T11:45:00.000+02:00",
+      "prochain_rdv": "2021-04-13T11:35:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -751,32 +751,6 @@
     },
     {
       "departement": "06",
-      "nom": "CPTS Des Collines/ Mairie de Biot Salle Gilardi",
-      "url": "https://partners.doctolib.fr/cabinet-pluridisciplinaire/le-rouret/cpts-des-collines-vaccination-covid??pid=practice-163940&enable_cookies_consent=1",
-      "location": {
-        "longitude": "7.10004",
-        "latitude": "43.6285"
-      },
-      "metadata": {
-        "address": "644 Chemin des Combes, 06410 Biot",
-        "phone_number": "0698349976",
-        "business_hours": {
-          "lundi": "16h 18h",
-          "mardi": "16h 18h",
-          "mercredi": "16h 18h",
-          "jeudi": "16h 18h",
-          "vendredi": "16h 18h",
-          "samedi": "16h 18h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "06",
       "nom": "CPTS de la Riviera Fran\u00e7aise - Site MSP de Sospel",
       "url": "https://partners.doctolib.fr/centre-de-sante/sospel/centre-de-vaccination-covid-sospel?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -793,6 +767,32 @@
           "jeudi": "ferm\u00e9",
           "vendredi": "14h 17h",
           "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "06",
+      "nom": "CPTS Des Collines/ Mairie de Biot Salle Gilardi",
+      "url": "https://partners.doctolib.fr/cabinet-pluridisciplinaire/le-rouret/cpts-des-collines-vaccination-covid??pid=practice-163940&enable_cookies_consent=1",
+      "location": {
+        "longitude": "7.10004",
+        "latitude": "43.6285"
+      },
+      "metadata": {
+        "address": "644 Chemin des Combes, 06410 Biot",
+        "phone_number": "0698349976",
+        "business_hours": {
+          "lundi": "16h 18h",
+          "mardi": "16h 18h",
+          "mercredi": "16h 18h",
+          "jeudi": "16h 18h",
+          "vendredi": "16h 18h",
+          "samedi": "16h 18h",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -1010,6 +1010,24 @@
     },
     {
       "departement": "06",
+      "nom": "Pharmacie Hanbury",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-hanbury-menton",
+      "location": {
+        "longitude": 7.521359399999999,
+        "latitude": 43.78500950000001
+      },
+      "metadata": {
+        "address": "1 avenue Aristide Briand, 06500 MENTON",
+        "phone_number": "+33493357644",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "06",
       "nom": "Pharmacie De Fabron",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-fabron-nice",
       "location": {
@@ -1028,19 +1046,19 @@
     },
     {
       "departement": "06",
-      "nom": "Pharmacie Hanbury",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-hanbury-menton",
+      "nom": "Grande Pharmacie Mentonnaise",
+      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-mentonnaise-menton",
       "location": {
-        "longitude": 7.521359399999999,
-        "latitude": 43.78500950000001
+        "longitude": 7.504231300000001,
+        "latitude": 43.7756553
       },
       "metadata": {
-        "address": "1 avenue Aristide Briand, 06500 MENTON",
-        "phone_number": "+33493357644",
+        "address": "32 RUE DE LA REPUBLIQUE, 06500 MENTON",
+        "phone_number": "+33493575779",
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -1055,24 +1073,6 @@
       "metadata": {
         "address": "13 AVENUE CYRILLE BESSET, 06800 CAGNES-SUR-MER",
         "phone_number": "+33493206572",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "06",
-      "nom": "Grande Pharmacie Mentonnaise",
-      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-mentonnaise-menton",
-      "location": {
-        "longitude": 7.504231300000001,
-        "latitude": 43.7756553
-      },
-      "metadata": {
-        "address": "32 RUE DE LA REPUBLIQUE, 06500 MENTON",
-        "phone_number": "+33493575779",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -1100,24 +1100,6 @@
     },
     {
       "departement": "06",
-      "nom": "Pharmacie De L'Horloge",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-l'horloge-nice",
-      "location": {
-        "longitude": 7.2526853,
-        "latitude": 43.7185431
-      },
-      "metadata": {
-        "address": "98 Boulevard DE CESSOLE, 06100 NICE",
-        "phone_number": "+33493844886",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "06",
       "nom": "Pharmacie Nice Europe",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-nice-europe-nice",
       "location": {
@@ -1127,6 +1109,24 @@
       "metadata": {
         "address": "43 RUE DE L'HOTEL DES POSTES, 06000 NICE",
         "phone_number": "+33493854159",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie De L'Horloge",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-l'horloge-nice",
+      "location": {
+        "longitude": 7.2526853,
+        "latitude": 43.7185431
+      },
+      "metadata": {
+        "address": "98 Boulevard DE CESSOLE, 06100 NICE",
+        "phone_number": "+33493844886",
         "business_hours": null
       },
       "prochain_rdv": null,

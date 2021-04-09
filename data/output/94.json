@@ -1,33 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:50.010849+02:00",
+  "last_updated": "2021-04-09T15:21:54.206323+02:00",
   "centres_disponibles": [
-    {
-      "departement": "94",
-      "nom": "CH INTERCOMMUNAL DE VILLENEUVE SAINT GEORGE",
-      "url": "https://www.maiia.com/centre-de-vaccination/94190-villeneuve-saint-georges/centre-de-vaccination---chi-de-villeneuve-saint-georges",
-      "location": {
-        "longitude": "2.44846",
-        "latitude": "48.7245"
-      },
-      "metadata": {
-        "address": "40 All\u00e9e de la Source, 94190 Villeneuve-Saint-Georges",
-        "phone_number": "+33143862150",
-        "business_hours": {
-          "lundi": "9h-17h",
-          "mardi": "9h-17h",
-          "mercredi": "9h-17h",
-          "jeudi": "9h-17h",
-          "vendredi": "9h-17h",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-13T12:30:00.000000Z",
-      "plateforme": "Maiia",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "94",
       "nom": "Pharmacie Huynh - Martin Huynh",
@@ -49,9 +23,35 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-15T15:40:00.000+02:00",
+      "prochain_rdv": "2021-04-15T15:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "94",
+      "nom": "CH INTERCOMMUNAL DE VILLENEUVE SAINT GEORGE",
+      "url": "https://www.maiia.com/centre-de-vaccination/94190-villeneuve-saint-georges/centre-de-vaccination---chi-de-villeneuve-saint-georges",
+      "location": {
+        "longitude": "2.44846",
+        "latitude": "48.7245"
+      },
+      "metadata": {
+        "address": "40 All\u00e9e de la Source, 94190 Villeneuve-Saint-Georges",
+        "phone_number": "+33143862150",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-16T12:20:00.000000Z",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
       "appointment_count": 0
     },
     {
@@ -101,7 +101,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-05-17T15:45:00.000+02:00",
+      "prochain_rdv": "2021-05-14T15:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -444,32 +444,6 @@
     },
     {
       "departement": "94",
-      "nom": "BONNEUIL SUR MARNE",
-      "url": "https://www.maiia.com/centre-de-vaccination/94380-bonneuil-sur-marne/-centre-de-vaccination---espace-louise-voelckel",
-      "location": {
-        "longitude": "2.48139",
-        "latitude": "48.7709"
-      },
-      "metadata": {
-        "address": "Espace Louise Voelkel Rue du 8 mai 1945, 94380 Bonneuil-sur-Marne",
-        "phone_number": "+33180518039",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "9h-17h",
-          "mercredi": "9h-17h",
-          "jeudi": "9h-17h",
-          "vendredi": "9h-17h",
-          "samedi": "9h-17h",
-          "dimanche": "9h-17h"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Maiia",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "94",
       "nom": "Centre de Vaccination d'Ivry sur Seine",
       "url": "https://partners.doctolib.fr/centre-de-sante/ivry-sur-seine/centre-de-vaccination-covid-19-ivry-sur-seine?pid=practice-176560&enable_cookies_consent=1",
       "location": {
@@ -491,6 +465,32 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "94",
+      "nom": "BONNEUIL SUR MARNE",
+      "url": "https://www.maiia.com/centre-de-vaccination/94380-bonneuil-sur-marne/-centre-de-vaccination---espace-louise-voelckel",
+      "location": {
+        "longitude": "2.48139",
+        "latitude": "48.7709"
+      },
+      "metadata": {
+        "address": "Espace Louise Voelkel Rue du 8 mai 1945, 94380 Bonneuil-sur-Marne",
+        "phone_number": "+33180518039",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-17h",
+          "dimanche": "9h-17h"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -805,6 +805,24 @@
     },
     {
       "departement": "94",
+      "nom": "Pharmacie Du March\u00e9 Le Perreux",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-marche-le-perreux-le-perreux-sur-marne",
+      "location": {
+        "longitude": 2.5054228,
+        "latitude": 48.8418167
+      },
+      "metadata": {
+        "address": "106 avenue du General de Gaulle, 94170 Le perreux sur Marne",
+        "phone_number": "+33143242093",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "94",
       "nom": "Pharmacie Du Boulevard",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-boulevard--nogent-sur-marne",
       "location": {
@@ -818,24 +836,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "94",
-      "nom": "Pharmacie Du March\u00e9 Le Perreux",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-marche-le-perreux-le-perreux-sur-marne",
-      "location": {
-        "longitude": 2.5054228,
-        "latitude": 48.8418167
-      },
-      "metadata": {
-        "address": "106 avenue du General de Gaulle, 94170 Le perreux sur Marne",
-        "phone_number": "+33143242093",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },

@@ -1,33 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.987014+02:00",
+  "last_updated": "2021-04-09T15:21:54.174150+02:00",
   "centres_disponibles": [
-    {
-      "departement": "68",
-      "nom": "Centre de vaccination de Munster - Salle des F\u00eates",
-      "url": "https://partners.doctolib.fr/centre-de-sante/munster/centre-de-vaccination-covid-19-munster?pid=practice-178928&enable_cookies_consent=1",
-      "location": {
-        "longitude": "7.13931",
-        "latitude": "48.04"
-      },
-      "metadata": {
-        "address": "14 Rue de la R\u00e9publique, 68140 Munster",
-        "phone_number": "+33970818161",
-        "business_hours": {
-          "lundi": "9:00-17:00",
-          "mardi": "ferm\u00e9",
-          "mercredi": "9:00-17:00",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "9:00-17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-12T12:30:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "68",
       "nom": "Centre de vaccination d'Altkirch",
@@ -75,7 +49,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-14T08:00:00.000+02:00",
+      "prochain_rdv": "2021-04-14T08:48:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -127,7 +101,7 @@
           "dimanche": "non pr\u00e9cis\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-16T19:15:00.000+02:00",
+      "prochain_rdv": "2021-04-16T19:25:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -205,7 +179,33 @@
           "dimanche": "non pr\u00e9cis\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-28T08:40:00.000+02:00",
+      "prochain_rdv": "2021-04-22T16:25:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "68",
+      "nom": "Centre de vaccination de Munster - Salle des F\u00eates",
+      "url": "https://partners.doctolib.fr/centre-de-sante/munster/centre-de-vaccination-covid-19-munster?pid=practice-178928&enable_cookies_consent=1",
+      "location": {
+        "longitude": "7.13931",
+        "latitude": "48.04"
+      },
+      "metadata": {
+        "address": "14 Rue de la R\u00e9publique, 68140 Munster",
+        "phone_number": "+33970818161",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "ferm\u00e9",
+          "mercredi": "9:00-17:00",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "9:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-03T12:40:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -394,14 +394,14 @@
     },
     {
       "departement": "68",
-      "nom": "MC - US d'Ensisheim / Maison centrale d'Ensisheim",
+      "nom": "MA - USN1 Mulhouse / Maison d'Arr\u00eat de Mulhouse",
       "url": "",
       "location": {
-        "longitude": "7.35055",
-        "latitude": "47.865"
+        "longitude": "7.3444",
+        "latitude": "47.7534"
       },
       "metadata": {
-        "address": " Rue de la 1\u00e8re Arm\u00e9e Fran\u00e7aise, 68190 Ensisheim",
+        "address": "59 Avenue Robert Schuman, 68100 Mulhouse",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -419,14 +419,14 @@
     },
     {
       "departement": "68",
-      "nom": "MA - USN1 Mulhouse / Maison d'Arr\u00eat de Mulhouse",
+      "nom": "MC - US d'Ensisheim / Maison centrale d'Ensisheim",
       "url": "",
       "location": {
-        "longitude": "7.3444",
-        "latitude": "47.7534"
+        "longitude": "7.35055",
+        "latitude": "47.865"
       },
       "metadata": {
-        "address": "59 Avenue Robert Schuman, 68100 Mulhouse",
+        "address": " Rue de la 1\u00e8re Arm\u00e9e Fran\u00e7aise, 68190 Ensisheim",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -552,7 +552,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },

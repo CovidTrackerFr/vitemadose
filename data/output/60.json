@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.980664+02:00",
+  "last_updated": "2021-04-09T15:21:54.165108+02:00",
   "centres_disponibles": [
     {
       "departement": "60",
@@ -23,7 +23,7 @@
           "dimanche": "09:00-17:00"
         }
       },
-      "prochain_rdv": "2021-04-10T09:25:00.000+02:00",
+      "prochain_rdv": "2021-04-10T09:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -81,24 +81,6 @@
     },
     {
       "departement": "60",
-      "nom": "Chambly Pharma",
-      "url": "https://app.ordoclic.fr/app/pharmacie/chambly-pharma-chambly",
-      "location": {
-        "longitude": 2.2564365,
-        "latitude": 49.15763519999999
-      },
-      "metadata": {
-        "address": "rue francois truffaut , 60230 Chambly",
-        "phone_number": "+33134705137",
-        "business_hours": null
-      },
-      "prochain_rdv": "2021-04-23T16:40:00+00:00",
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "60",
       "nom": "Centre de vaccination - CHI Clermont",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/breuil-le-sec-60840/centre-hospitalier-isarien-de-clermont/centre-de-vaccination-covid-du-centre-hospitalier-isarien-de-clermont",
       "location": {
@@ -144,7 +126,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-30T11:00:00.000+02:00",
+      "prochain_rdv": "2021-05-17T16:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -282,57 +264,6 @@
     },
     {
       "departement": "60",
-      "nom": "Centre de vaccination - Commune de Pont Sainte Maxence,  gymnase la Salamandre rue Charles Frigaux",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/pont-sainte-maxence/centre-de-vaccination-covid-19-pont-sainte-maxence?pid=practice-175373&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.5971",
-        "latitude": "49.3004"
-      },
-      "metadata": {
-        "address": "223 Rue Charles Frigaux, 60700 Pont-Sainte-Maxence",
-        "phone_number": "+33344562983",
-        "business_hours": {
-          "lundi": "",
-          "mardi": "",
-          "mercredi": "",
-          "jeudi": "",
-          "vendredi": "",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "60",
-      "nom": "CP - US2 / Centre P\u00e9nitentiaire de Liancourt",
-      "url": "",
-      "location": {
-        "longitude": "2.47469",
-        "latitude": "49.3334"
-      },
-      "metadata": {
-        "address": "1 Rue Robert Badinter, 60140 Liancourt",
-        "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "60",
       "nom": "CP - Centre Hospitalier de Beauvais / Centre p\u00e9nitentiaire de Beauvais",
       "url": "",
       "location": {
@@ -383,14 +314,40 @@
     },
     {
       "departement": "60",
-      "nom": "Centre de vaccination - MSP Cr\u00e9vecoeur le Grand",
-      "url": "https://partners.doctolib.fr/centre-de-sante/crevecoeur-le-grand/centre-de-vaccination-covid-19-msp-crevecoeur-le-grand?pid=practice-176391&enable_cookies_consent=1",
+      "nom": "CP - US2 / Centre P\u00e9nitentiaire de Liancourt",
+      "url": "",
       "location": {
-        "longitude": "2.07257",
-        "latitude": "49.6053"
+        "longitude": "2.47469",
+        "latitude": "49.3334"
       },
       "metadata": {
-        "address": "4 Rue du Stade, 60360 Cr\u00e8vec\u0153ur-le-Grand",
+        "address": "1 Rue Robert Badinter, 60140 Liancourt",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "60",
+      "nom": "Centre de vaccination - Commune de Pont Sainte Maxence,  gymnase la Salamandre rue Charles Frigaux",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/pont-sainte-maxence/centre-de-vaccination-covid-19-pont-sainte-maxence?pid=practice-175373&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.5971",
+        "latitude": "49.3004"
+      },
+      "metadata": {
+        "address": "223 Rue Charles Frigaux, 60700 Pont-Sainte-Maxence",
+        "phone_number": "+33344562983",
         "business_hours": {
           "lundi": "",
           "mardi": "",
@@ -416,6 +373,31 @@
       },
       "metadata": {
         "address": "5003 Rue Brunehaut, 60130 Saint-Just-en-Chauss\u00e9e",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "60",
+      "nom": "Centre de vaccination - MSP Cr\u00e9vecoeur le Grand",
+      "url": "https://partners.doctolib.fr/centre-de-sante/crevecoeur-le-grand/centre-de-vaccination-covid-19-msp-crevecoeur-le-grand?pid=practice-176391&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.07257",
+        "latitude": "49.6053"
+      },
+      "metadata": {
+        "address": "4 Rue du Stade, 60360 Cr\u00e8vec\u0153ur-le-Grand",
         "business_hours": {
           "lundi": "",
           "mardi": "",
@@ -756,7 +738,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -783,6 +765,24 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "60",
+      "nom": "Chambly Pharma",
+      "url": "https://app.ordoclic.fr/app/pharmacie/chambly-pharma-chambly",
+      "location": {
+        "longitude": 2.2564365,
+        "latitude": 49.15763519999999
+      },
+      "metadata": {
+        "address": "rue francois truffaut , 60230 Chambly",
+        "phone_number": "+33134705137",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     }

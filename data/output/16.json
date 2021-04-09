@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.945728+02:00",
+  "last_updated": "2021-04-09T15:21:54.117141+02:00",
   "centres_disponibles": [
     {
       "departement": "16",
@@ -23,33 +23,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-15T11:45:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "16",
-      "nom": "Centre de vaccination de Lunesse",
-      "url": "https://partners.doctolib.fr/maison-de-sante/angouleme/centre-de-vaccination-covid-19-espace-lunesse-angouleme?pid=practice-165813&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.178965",
-        "latitude": "45.6562"
-      },
-      "metadata": {
-        "address": " Rue Adrien Paul Mairat, 16000 Angoul\u00eame",
-        "phone_number": "+33545387006",
-        "business_hours": {
-          "lundi": "14:00-17:00",
-          "mardi": "09:00-12:00/14:00-17:00",
-          "mercredi": "09:00-12:00/14:00-17:00",
-          "jeudi": "09:00-12:00/14:00-17:00",
-          "vendredi": "14:00-17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-19T16:24:00.000+02:00",
+      "prochain_rdv": "2021-04-15T12:35:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -75,7 +49,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-22T10:00:00.000+02:00",
+      "prochain_rdv": "2021-05-06T10:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -101,6 +75,32 @@
           "vendredi": "9:30-17:00",
           "samedi": "9:30-16:30",
           "dimanche": "9:30-16:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "16",
+      "nom": "Centre de vaccination de Lunesse",
+      "url": "https://partners.doctolib.fr/maison-de-sante/angouleme/centre-de-vaccination-covid-19-espace-lunesse-angouleme?pid=practice-165813&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.178965",
+        "latitude": "45.6562"
+      },
+      "metadata": {
+        "address": " Rue Adrien Paul Mairat, 16000 Angoul\u00eame",
+        "phone_number": "+33545387006",
+        "business_hours": {
+          "lundi": "14:00-17:00",
+          "mardi": "09:00-12:00/14:00-17:00",
+          "mercredi": "09:00-12:00/14:00-17:00",
+          "jeudi": "09:00-12:00/14:00-17:00",
+          "vendredi": "14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,

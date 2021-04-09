@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.997287+02:00",
+  "last_updated": "2021-04-09T15:21:54.188071+02:00",
   "centres_disponibles": [
     {
       "departement": "78",
@@ -23,7 +23,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-10T09:00:00.000+02:00",
+      "prochain_rdv": "2021-04-10T09:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -367,14 +367,14 @@
     },
     {
       "departement": "78",
-      "nom": "MC - USMP de Poissy / Maison Centrale de Poissy",
+      "nom": "EPM - US de Porcheville / Etablissement sp\u00e9cialis\u00e9 pour mineurs de Porcheville",
       "url": "",
       "location": {
-        "longitude": "2.03857",
-        "latitude": "48.9287"
+        "longitude": "1.76737",
+        "latitude": "48.9888"
       },
       "metadata": {
-        "address": "17 Rue de l?Abbaye, 78300 Poissy",
+        "address": " Chemin Rouen Paris, 78440 Porcheville",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -392,14 +392,14 @@
     },
     {
       "departement": "78",
-      "nom": "EPM - US de Porcheville / Etablissement sp\u00e9cialis\u00e9 pour mineurs de Porcheville",
+      "nom": "MC - USMP de Poissy / Maison Centrale de Poissy",
       "url": "",
       "location": {
-        "longitude": "1.76737",
-        "latitude": "48.9888"
+        "longitude": "2.03857",
+        "latitude": "48.9287"
       },
       "metadata": {
-        "address": " Chemin Rouen Paris, 78440 Porcheville",
+        "address": "17 Rue de l?Abbaye, 78300 Poissy",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -622,32 +622,6 @@
     },
     {
       "departement": "78",
-      "nom": "Communaut\u00e9 de communes du Pays Houdanais",
-      "url": "https://partners.doctolib.fr/centre-de-sante/houdan/centre-de-vaccination-covid-de-houdan?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "1.60301",
-        "latitude": "48.7883"
-      },
-      "metadata": {
-        "address": "31 Rue d'Epernon, 78550 Houdan",
-        "phone_number": "+33644733300",
-        "business_hours": {
-          "lundi": "9:00-13:00/14:00-18:00",
-          "mardi": "9:00-13:00/14:00-18:00",
-          "mercredi": "9:00-13:00/14:00-18:00",
-          "jeudi": "9:00-13:00/14:00-18:00",
-          "vendredi": "9:00-13:00/14:00-18:00",
-          "samedi": "14:00-18:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "78",
       "nom": "Centre  de vaccination de Chatou",
       "url": "https://partners.doctolib.fr/centre-de-sante/chatou/apta-78-vaccination-covid-19-chatou?pid=practice-178074&enable_cookies_consent=1",
       "location": {
@@ -664,6 +638,32 @@
           "jeudi": "9:00-12:00/14:00-17:00",
           "vendredi": "9:00-12:00/14:00-17:00",
           "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "78",
+      "nom": "Communaut\u00e9 de communes du Pays Houdanais",
+      "url": "https://partners.doctolib.fr/centre-de-sante/houdan/centre-de-vaccination-covid-de-houdan?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.60301",
+        "latitude": "48.7883"
+      },
+      "metadata": {
+        "address": "31 Rue d'Epernon, 78550 Houdan",
+        "phone_number": "+33644733300",
+        "business_hours": {
+          "lundi": "9:00-13:00/14:00-18:00",
+          "mardi": "9:00-13:00/14:00-18:00",
+          "mercredi": "9:00-13:00/14:00-18:00",
+          "jeudi": "9:00-13:00/14:00-18:00",
+          "vendredi": "9:00-13:00/14:00-18:00",
+          "samedi": "14:00-18:00",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -821,31 +821,6 @@
     },
     {
       "departement": "78",
-      "nom": "Dr Audrey ATLAN-COTTIN",
-      "url": "https://partners.doctolib.fr/medecin-generaliste/le-chesnay/audrey-atlan-cottin",
-      "location": {
-        "longitude": 2.12536019999993,
-        "latitude": 48.8264374
-      },
-      "metadata": {
-        "address": "13 Rue Pottier, 78150 Le Chesnay",
-        "business_hours": {
-          "lundi": "08:00-20:00",
-          "mardi": "08:00-20:00",
-          "mercredi": "08:00-20:00",
-          "jeudi": "08:00-20:00",
-          "vendredi": "08:00-20:00",
-          "samedi": "08:00-12:00",
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "general-practitioner",
-      "appointment_count": 0
-    },
-    {
-      "departement": "78",
       "nom": "Pharmacie de Chennevi\u00e8res",
       "url": "https://partners.doctolib.fr/pharmacie/conflans-sainte-honorine/pharmacie-de-chennevieres",
       "location": {
@@ -868,6 +843,31 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "78",
+      "nom": "Dr Audrey ATLAN-COTTIN",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/le-chesnay/audrey-atlan-cottin",
+      "location": {
+        "longitude": 2.12536019999993,
+        "latitude": 48.8264374
+      },
+      "metadata": {
+        "address": "13 Rue Pottier, 78150 Le Chesnay",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
       "appointment_count": 0
     },
     {

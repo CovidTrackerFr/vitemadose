@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.984324+02:00",
+  "last_updated": "2021-04-09T15:21:54.170321+02:00",
   "centres_disponibles": [
     {
       "departement": "64",
@@ -23,7 +23,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-09T17:30:00.000+02:00",
+      "prochain_rdv": "2021-04-10T12:40:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -100,7 +100,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-14T10:00:00.000+02:00",
+      "prochain_rdv": "2021-04-14T14:55:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -178,7 +178,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-16T09:15:00.000+02:00",
+      "prochain_rdv": "2021-04-16T09:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "drugstore",
       "appointment_count": 0
@@ -522,6 +522,31 @@
     },
     {
       "departement": "64",
+      "nom": "MA - US CH COTE BASQUE / Maison d'Arr\u00eat de Bayonne",
+      "url": "",
+      "location": {
+        "longitude": "-1.4633",
+        "latitude": "43.4918"
+      },
+      "metadata": {
+        "address": "44 Rue Charles Floquet, 64100 Bayonne",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "64",
       "nom": "Centre de vaccination de Monein",
       "url": "https://www.doctolib.fr/centre-de-sante/monein/centre-de-vaccination-covid-19-monein",
       "location": {
@@ -543,31 +568,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "64",
-      "nom": "MA - US CH COTE BASQUE / Maison d'Arr\u00eat de Bayonne",
-      "url": "",
-      "location": {
-        "longitude": "-1.4633",
-        "latitude": "43.4918"
-      },
-      "metadata": {
-        "address": "44 Rue Charles Floquet, 64100 Bayonne",
-        "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },

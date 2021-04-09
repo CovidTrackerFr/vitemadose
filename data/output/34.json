@@ -1,7 +1,34 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.960846+02:00",
-  "centres_disponibles": [],
+  "last_updated": "2021-04-09T15:21:54.137877+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "34",
+      "nom": "GIGNAC CENTRE DE VACCINATION",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/gignac/cc-vallee-herault-vaccination-covid?pid=practice-164133?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.5449",
+        "latitude": "43.6501"
+      },
+      "metadata": {
+        "address": "4 Chemin du Moulin de Carabotte, 34150 Gignac",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "9:00 13:00",
+          "mercredi": "9:00 13:00",
+          "jeudi": "9:00 13:00",
+          "vendredi": "9:00 13:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-16T09:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ],
   "centres_indisponibles": [
     {
       "departement": "34",
@@ -161,22 +188,48 @@
     },
     {
       "departement": "34",
-      "nom": "MONTPELLIER CVP Bouisson Bertrand",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/montpellier/institut-bouisson-bertrand-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - Clinique St Louis de Ganges",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/ganges/centres-de-vaccination-cap-sante?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "3.87333",
-        "latitude": "43.6127"
+        "longitude": "3.70327",
+        "latitude": "43.9325"
       },
       "metadata": {
-        "address": "5 Rue Ecole de M\u00e9decine, 34000 Montpellier",
+        "address": "2 Place Joseph Boudouresques, 34190 Ganges",
         "phone_number": "+33800541919",
         "business_hours": {
-          "lundi": "8:30-12:30/13:30-17:00",
-          "mardi": "13:00-17:30",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "8:30-12:30",
-          "vendredi": "8:30-12:30",
+          "lundi": "ferm\u00e9",
+          "mardi": "13:00-17:00",
+          "mercredi": "13:00-17:00",
+          "jeudi": "13:00-18:30",
+          "vendredi": "13:00-18:30",
           "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "34",
+      "nom": "S\u00e8te Centre de vaccination",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sete/centre-de-vaccination-cpts-du-bassin-de-thau?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.69848",
+        "latitude": "43.4127"
+      },
+      "metadata": {
+        "address": " Route de Cayenne (parking du Mas Coulet), 34200 S\u00e8te",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "12:00-18:00",
+          "mardi": "10:00-18:00",
+          "mercredi": "10:00-18:00",
+          "jeudi": "10:00-18:00",
+          "vendredi": "10:00-18:00",
+          "samedi": "10:00-18:00",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -239,47 +292,21 @@
     },
     {
       "departement": "34",
-      "nom": "S\u00e8te Centre de vaccination",
-      "url": "https://partners.doctolib.fr/centre-de-sante/sete/centre-de-vaccination-cpts-du-bassin-de-thau?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "MONTPELLIER CVP Bouisson Bertrand",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/montpellier/institut-bouisson-bertrand-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "3.69848",
-        "latitude": "43.4127"
+        "longitude": "3.87333",
+        "latitude": "43.6127"
       },
       "metadata": {
-        "address": " Route de Cayenne (parking du Mas Coulet), 34200 S\u00e8te",
+        "address": "5 Rue Ecole de M\u00e9decine, 34000 Montpellier",
         "phone_number": "+33800541919",
         "business_hours": {
-          "lundi": "12:00-18:00",
-          "mardi": "10:00-18:00",
-          "mercredi": "10:00-18:00",
-          "jeudi": "10:00-18:00",
-          "vendredi": "10:00-18:00",
-          "samedi": "10:00-18:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "34",
-      "nom": "Centre de vaccination - Clinique St Louis de Ganges",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/ganges/centres-de-vaccination-cap-sante?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "3.70327",
-        "latitude": "43.9325"
-      },
-      "metadata": {
-        "address": "2 Place Joseph Boudouresques, 34190 Ganges",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "13:00-17:00",
-          "mercredi": "13:00-17:00",
-          "jeudi": "13:00-18:30",
-          "vendredi": "13:00-18:30",
+          "lundi": "8:30-12:30/13:30-17:00",
+          "mardi": "13:00-17:30",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "8:30-12:30",
+          "vendredi": "8:30-12:30",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -317,32 +344,6 @@
     },
     {
       "departement": "34",
-      "nom": "LODEVE Centre vaccination",
-      "url": "https://partners.doctolib.fr/centre-de-sante/lodeve/cccol-centre-de-consultation-covid-de-lodevois?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "3.31809",
-        "latitude": "43.7331"
-      },
-      "metadata": {
-        "address": "1 bis Rue du 4 Septembre, 34700 Lod\u00e8ve",
-        "phone_number": "+33974350365",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "8:30-13h / 14:00-19:00",
-          "mercredi": "8:30-13h / 14:00-19:00",
-          "jeudi": "8:30-13h / 14:00-19:00",
-          "vendredi": "8:30-12:30",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "34",
       "nom": "MONTPELLIER Centre vaccination \u00e0 la Clinique du Mill\u00e9naire",
       "url": "https://partners.doctolib.fr/clinique-privee/montpellier/oc-sante-clinique-du-millenaire-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -360,6 +361,32 @@
           "vendredi": "",
           "samedi": "",
           "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "34",
+      "nom": "LODEVE Centre vaccination",
+      "url": "https://partners.doctolib.fr/centre-de-sante/lodeve/cccol-centre-de-consultation-covid-de-lodevois?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.31809",
+        "latitude": "43.7331"
+      },
+      "metadata": {
+        "address": "1 bis Rue du 4 Septembre, 34700 Lod\u00e8ve",
+        "phone_number": "+33974350365",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "8:30-13h / 14:00-19:00",
+          "mercredi": "8:30-13h / 14:00-19:00",
+          "jeudi": "8:30-13h / 14:00-19:00",
+          "vendredi": "8:30-12:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
@@ -563,32 +590,6 @@
           "mercredi": "16:00-20:00",
           "jeudi": "14:00-18:00",
           "vendredi": "14:00-18:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "34",
-      "nom": "GIGNAC CENTRE DE VACCINATION",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/gignac/cc-vallee-herault-vaccination-covid?pid=practice-164133?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "3.5449",
-        "latitude": "43.6501"
-      },
-      "metadata": {
-        "address": "4 Chemin du Moulin de Carabotte, 34150 Gignac",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "9:00 13:00",
-          "mercredi": "9:00 13:00",
-          "jeudi": "9:00 13:00",
-          "vendredi": "9:00 13:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -838,7 +839,25 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "34",
+      "nom": "Pharmacie Des Herbes De Saint Jean",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-herbes-de-saint-jean-saint-jean-de-vedas",
+      "location": {
+        "longitude": 3.8309382,
+        "latitude": 43.5759883
+      },
+      "metadata": {
+        "address": "164 esplanade de l'Ortet, 34430 Saint Jean de V\u00e9das",
+        "phone_number": "+33467999980",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -906,31 +925,6 @@
     },
     {
       "departement": "34",
-      "nom": "Pharmacie Richter",
-      "url": "https://partners.doctolib.fr/pharmacie/montpellier/pharmacie-richter",
-      "location": {
-        "longitude": 3.9021696,
-        "latitude": 43.6017342
-      },
-      "metadata": {
-        "address": "181 Place Ernest Granier, 34000 Montpellier",
-        "business_hours": {
-          "lundi": "08:30-19:00",
-          "mardi": "08:30-19:00",
-          "mercredi": "08:30-19:00",
-          "jeudi": "08:30-19:00",
-          "vendredi": "08:30-19:00",
-          "samedi": "09:00-19:00",
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "34",
       "nom": "Dr Jean-Louis DUBOIS",
       "url": "https://partners.doctolib.fr/medecin-generaliste/montpellier/dubois-jean-louis",
       "location": {
@@ -952,6 +946,31 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "general-practitioner",
+      "appointment_count": 0
+    },
+    {
+      "departement": "34",
+      "nom": "Pharmacie Richter",
+      "url": "https://partners.doctolib.fr/pharmacie/montpellier/pharmacie-richter",
+      "location": {
+        "longitude": 3.9021696,
+        "latitude": 43.6017342
+      },
+      "metadata": {
+        "address": "181 Place Ernest Granier, 34000 Montpellier",
+        "business_hours": {
+          "lundi": "08:30-19:00",
+          "mardi": "08:30-19:00",
+          "mercredi": "08:30-19:00",
+          "jeudi": "08:30-19:00",
+          "vendredi": "08:30-19:00",
+          "samedi": "09:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
       "appointment_count": 0
     },
     {
@@ -1030,24 +1049,6 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "34",
-      "nom": "Pharmacie Des Herbes De Saint Jean",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-herbes-de-saint-jean-saint-jean-de-vedas",
-      "location": {
-        "longitude": 3.8309382,
-        "latitude": 43.5759883
-      },
-      "metadata": {
-        "address": "164 esplanade de l'Ortet, 34430 Saint Jean de V\u00e9das",
-        "phone_number": "+33467999980",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
       "appointment_count": 0
     },
     {

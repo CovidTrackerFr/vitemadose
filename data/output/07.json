@@ -1,33 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.939796+02:00",
+  "last_updated": "2021-04-09T15:21:54.108143+02:00",
   "centres_disponibles": [
-    {
-      "departement": "07",
-      "nom": "Centre de Vaccination de la CPTS sud Ard\u00e8che C\u00e9vennes",
-      "url": "https://partners.doctolib.fr/hopital-public/les-vans/relai-de-proximite-du-centre-hospitalier-des-cevennes-ardechoises?pid=practice-167899&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.13464",
-        "latitude": "44.4043"
-      },
-      "metadata": {
-        "address": " Place Fernand Aubert, 07140 Les Vans",
-        "phone_number": "+33800009110",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "13:30-17:30",
-          "mercredi": "13:30-17:30",
-          "jeudi": "13:30-17:30",
-          "vendredi": "13:30-17:30",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-12T15:35:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "07",
       "nom": "Centre vaccinal de l\u2019Eyrieux",
@@ -105,6 +79,32 @@
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
+    },
+    {
+      "departement": "07",
+      "nom": "Centre de Vaccination de la CPTS sud Ard\u00e8che C\u00e9vennes",
+      "url": "https://partners.doctolib.fr/hopital-public/les-vans/relai-de-proximite-du-centre-hospitalier-des-cevennes-ardechoises?pid=practice-167899&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.13464",
+        "latitude": "44.4043"
+      },
+      "metadata": {
+        "address": " Place Fernand Aubert, 07140 Les Vans",
+        "phone_number": "+33800009110",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "13:30-17:30",
+          "mercredi": "13:30-17:30",
+          "jeudi": "13:30-17:30",
+          "vendredi": "13:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-17T15:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
     }
   ],
   "centres_indisponibles": [
@@ -131,6 +131,32 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "07",
+      "nom": "CENTRE HOSPITALIER D'ARDECHE NORD (Professionnels de sant\u00e9 uniquement)",
+      "url": "https://www.maiia.com/centre-hospitalier-(ch)/07100-annonay/centre-hospitalier-d-ardeche-nord-",
+      "location": {
+        "longitude": "4.66582",
+        "latitude": "45.2419"
+      },
+      "metadata": {
+        "address": "1 rue du Bon Pasteur, 07100 Annonay",
+        "phone_number": "+33475673927",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "09:00-12:30/13:00-16:30",
+          "mercredi": "09:00-12:30/13:00-16:30",
+          "jeudi": "09:00-12:30/13:00-16:30",
+          "vendredi": "09:00-12:30/13:00-16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -182,32 +208,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "07",
-      "nom": "CENTRE HOSPITALIER D'ARDECHE NORD (Professionnels de sant\u00e9 uniquement)",
-      "url": "https://www.maiia.com/centre-hospitalier-(ch)/07100-annonay/centre-hospitalier-d-ardeche-nord-",
-      "location": {
-        "longitude": "4.66582",
-        "latitude": "45.2419"
-      },
-      "metadata": {
-        "address": "1 rue du Bon Pasteur, 07100 Annonay",
-        "phone_number": "+33475673927",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "09:00-12:30/13:00-16:30",
-          "mercredi": "09:00-12:30/13:00-16:30",
-          "jeudi": "09:00-12:30/13:00-16:30",
-          "vendredi": "09:00-12:30/13:00-16:30",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Maiia",
       "type": "vaccination-center",
       "appointment_count": 0
     },

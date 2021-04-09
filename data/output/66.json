@@ -1,29 +1,28 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.985593+02:00",
+  "last_updated": "2021-04-09T15:21:54.172105+02:00",
   "centres_disponibles": [
     {
       "departement": "66",
-      "nom": "CH Prades",
-      "url": "https://partners.doctolib.fr/hopital-public/prades/centre-de-vaccination-covid-19-ch-de-prades?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Grand centre Perpignan",
+      "url": "https://www.doctolib.fr/hopital-public/perpignan/centres-de-vaccination-covid-19-du-departement-66?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
-        "longitude": "2.4173",
-        "latitude": "42.626"
+        "longitude": "2.89341",
+        "latitude": "42.7047"
       },
       "metadata": {
-        "address": " route de Cattlar, 66500 Prades",
-        "phone_number": "+33800541919",
+        "address": "12 Avenue du Palais des Expositions, 66000 Perpignan",
         "business_hours": {
-          "lundi": "09:00-13:00",
-          "mardi": "09:00-13:00",
-          "mercredi": "09:00-13:00",
-          "jeudi": "09:00-13:00",
-          "vendredi": "09:00-13:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
+          "lundi": "09:00-20:00",
+          "mardi": "09:00-20:00",
+          "mercredi": "09:00-20:00",
+          "jeudi": "09:00-20:00",
+          "vendredi": "09:00-20:00",
+          "samedi": "09:00-20:00",
+          "dimanche": "09:00-20:00"
         }
       },
-      "prochain_rdv": "2021-04-10T15:00:00.000+02:00",
+      "prochain_rdv": "2021-04-09T16:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -48,32 +47,59 @@
           "dimanche": "09:00-20:00"
         }
       },
-      "prochain_rdv": "2021-04-13T16:40:00.000+02:00",
+      "prochain_rdv": "2021-04-09T16:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
     {
       "departement": "66",
-      "nom": "Grand centre Perpignan",
-      "url": "https://www.doctolib.fr/hopital-public/perpignan/centres-de-vaccination-covid-19-du-departement-66?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "nom": "CH Prades",
+      "url": "https://partners.doctolib.fr/hopital-public/prades/centre-de-vaccination-covid-19-ch-de-prades?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.89341",
-        "latitude": "42.7047"
+        "longitude": "2.4173",
+        "latitude": "42.626"
       },
       "metadata": {
-        "address": "12 Avenue du Palais des Expositions, 66000 Perpignan",
+        "address": " route de Cattlar, 66500 Prades",
+        "phone_number": "+33800541919",
         "business_hours": {
-          "lundi": "09:00-20:00",
-          "mardi": "09:00-20:00",
-          "mercredi": "09:00-20:00",
-          "jeudi": "09:00-20:00",
-          "vendredi": "09:00-20:00",
-          "samedi": "09:00-20:00",
-          "dimanche": "09:00-20:00"
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-13T18:05:00.000+02:00",
+      "prochain_rdv": "2021-04-10T15:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "66",
+      "nom": "Centre de vaccination Saint Cyprien",
+      "url": "https://partners.doctolib.fr/centre-de-sante/st-cyprien/centres-de-vaccination-covid-19-st-cyprien?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.03124",
+        "latitude": "42.6051"
+      },
+      "metadata": {
+        "address": " Stade les capellans, 66750 Saint-Cyprien",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-12T14:40:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -252,32 +278,6 @@
           "mercredi": "09:30-12:30/13:30-16:30",
           "jeudi": "09:30-12:30/13:30-16:30",
           "vendredi": "09:30-12:30/13:30-16:30",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "66",
-      "nom": "Centre de vaccination Saint Cyprien",
-      "url": "https://partners.doctolib.fr/centre-de-sante/st-cyprien/centres-de-vaccination-covid-19-st-cyprien?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "3.03124",
-        "latitude": "42.6051"
-      },
-      "metadata": {
-        "address": " Stade les capellans, 66750 Saint-Cyprien",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "14:00-18:00",
-          "mardi": "14:00-18:00",
-          "mercredi": "14:00-18:00",
-          "jeudi": "14:00-18:00",
-          "vendredi": "14:00-18:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }

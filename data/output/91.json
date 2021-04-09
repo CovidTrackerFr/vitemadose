@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:50.006150+02:00",
+  "last_updated": "2021-04-09T15:21:54.199565+02:00",
   "centres_disponibles": [
     {
       "departement": "91",
@@ -159,32 +159,6 @@
     },
     {
       "departement": "91",
-      "nom": "Site de \"La Croix Louis\"",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/bretigny-sur-orge-91220/centre-de-vaccination-covid19-bretigny?agenda=48971&motive=81790&category=-1&cabinet=16650&specialty=496",
-      "location": {
-        "longitude": "2.31322",
-        "latitude": "48.6036"
-      },
-      "metadata": {
-        "address": "6 Rue de la Croix Louis, 91220 Br\u00e9tigny-sur-Orge",
-        "phone_number": "01 69 88 40 64",
-        "business_hours": {
-          "lundi": "9h00 \u00e0 17h00 ",
-          "mardi": "9h00 \u00e0 17h00 ",
-          "mercredi": "9h00 \u00e0 17h00 ",
-          "jeudi": "9h00 \u00e0 17h00 ",
-          "vendredi": "9h00 \u00e0 17h00 ",
-          "samedi": "9h00 \u00e0 13h00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "91",
       "nom": "GHNE",
       "url": "https://partners.doctolib.fr/hopital-public/longjumeau/gh-nord-essonne-site-longjumeau?pid=practice-19668&enable_cookies_consent=1",
       "location": {
@@ -206,6 +180,32 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "91",
+      "nom": "Site de \"La Croix Louis\"",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/bretigny-sur-orge-91220/centre-de-vaccination-covid19-bretigny?agenda=48971&motive=81790&category=-1&cabinet=16650&specialty=496",
+      "location": {
+        "longitude": "2.31322",
+        "latitude": "48.6036"
+      },
+      "metadata": {
+        "address": "6 Rue de la Croix Louis, 91220 Br\u00e9tigny-sur-Orge",
+        "phone_number": "01 69 88 40 64",
+        "business_hours": {
+          "lundi": "9h00 \u00e0 17h00 ",
+          "mardi": "9h00 \u00e0 17h00 ",
+          "mercredi": "9h00 \u00e0 17h00 ",
+          "jeudi": "9h00 \u00e0 17h00 ",
+          "vendredi": "9h00 \u00e0 17h00 ",
+          "samedi": "9h00 \u00e0 13h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -339,31 +339,6 @@
     },
     {
       "departement": "91",
-      "nom": "CPAM Grigny",
-      "url": "",
-      "location": {
-        "longitude": "2.38657",
-        "latitude": "48.6569"
-      },
-      "metadata": {
-        "address": "9 Rue Gabriel P\u00e9ri, 91350 Grigny",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "91",
       "nom": "Maison des activit\u00e9s de Nozay",
       "url": "https://www.maiia.com/centre-de-vaccination/91620-nozay/centre-de-vaccination-covid---msp-de-nozay",
       "location": {
@@ -390,14 +365,39 @@
     },
     {
       "departement": "91",
-      "nom": "Ecole D\u00e9partementale d'Incendie et de Secours 91",
-      "url": "https://partners.doctolib.fr/centre-de-sante/fleury-merogis/centre-de-vaccination-covid-19-ecole-departementale-d-incendie-et-de-secours-91?pid=practice-175260&enable_cookies_consent=1",
+      "nom": "CPAM Grigny",
+      "url": "",
       "location": {
-        "longitude": "2.38313",
-        "latitude": "48.6415"
+        "longitude": "2.38657",
+        "latitude": "48.6569"
       },
       "metadata": {
-        "address": "11 Avenue des Peupliers, 91700 Fleury-M\u00e9rogis",
+        "address": "9 Rue Gabriel P\u00e9ri, 91350 Grigny",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "91",
+      "nom": "Centre de Palaiseau - Complexe sportif J. Allain",
+      "url": "https://partners.doctolib.fr/centre-de-sante/palaiseau/centre-de-vaccination-covid-19-de-palaiseau-complexe-sportif-j-allain?pid=practice-175257&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.23229",
+        "latitude": "48.7188"
+      },
+      "metadata": {
+        "address": "19 Rue Maximilien Robespierre, 91120 Palaiseau",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -415,14 +415,14 @@
     },
     {
       "departement": "91",
-      "nom": "Centre de Palaiseau - Complexe sportif J. Allain",
-      "url": "https://partners.doctolib.fr/centre-de-sante/palaiseau/centre-de-vaccination-covid-19-de-palaiseau-complexe-sportif-j-allain?pid=practice-175257&enable_cookies_consent=1",
+      "nom": "Ecole D\u00e9partementale d'Incendie et de Secours 91",
+      "url": "https://partners.doctolib.fr/centre-de-sante/fleury-merogis/centre-de-vaccination-covid-19-ecole-departementale-d-incendie-et-de-secours-91?pid=practice-175260&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.23229",
-        "latitude": "48.7188"
+        "longitude": "2.38313",
+        "latitude": "48.6415"
       },
       "metadata": {
-        "address": "19 Rue Maximilien Robespierre, 91120 Palaiseau",
+        "address": "11 Avenue des Peupliers, 91700 Fleury-M\u00e9rogis",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -698,6 +698,32 @@
     },
     {
       "departement": "91",
+      "nom": "Salle Claude Nougaro",
+      "url": "https://partners.doctolib.fr/centre-de-sante/evry-courcouronnes/centre-de-vaccination-covid-salle-claude-nougaro-reserve-aux-personnes-de-plus-de-75-ans?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.41903",
+        "latitude": "48.6277"
+      },
+      "metadata": {
+        "address": "10 Rue du marquis de Raies, 91080 \u00c9vry-Courcouronnes",
+        "phone_number": "01 64 97 49 79",
+        "business_hours": {
+          "lundi": "9:00-13:00 / 14:00-18:00",
+          "mardi": "9:00-13:00 / 14:00-18:00",
+          "mercredi": "9:00-13:00 / 14:00-18:00",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "91",
       "nom": "Espace Ren\u00e9 L'HELGUEN",
       "url": "https://partners.doctolib.fr/centre-de-sante/athis-mons/centre-de-vaccination-covid-mairie-athis-mons?pid=practice-164918?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -750,32 +776,6 @@
     },
     {
       "departement": "91",
-      "nom": "Salle Claude Nougaro",
-      "url": "https://partners.doctolib.fr/centre-de-sante/evry-courcouronnes/centre-de-vaccination-covid-salle-claude-nougaro-reserve-aux-personnes-de-plus-de-75-ans?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.41903",
-        "latitude": "48.6277"
-      },
-      "metadata": {
-        "address": "10 Rue du marquis de Raies, 91080 \u00c9vry-Courcouronnes",
-        "phone_number": "01 64 97 49 79",
-        "business_hours": {
-          "lundi": "9:00-13:00 / 14:00-18:00",
-          "mardi": "9:00-13:00 / 14:00-18:00",
-          "mercredi": "9:00-13:00 / 14:00-18:00",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "91",
       "nom": "Espace du Val de Gif",
       "url": "https://partners.doctolib.fr/cabinet-medical/gif-sur-yvette/centre-de-vaccination-covid-19-gif-sur-yvette?pid=practice-165182?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -791,32 +791,6 @@
           "mercredi": "14h-18h",
           "jeudi": "14h-18h",
           "vendredi": "14h-18h",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "91",
-      "nom": "Salle L'astral",
-      "url": "https://partners.doctolib.fr/centre-de-sante/montgeron/centre-de-vaccination-covid-conseil-departemental-de-l-essonne-cd91?pid=practice-165168?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.46764",
-        "latitude": "48.7002"
-      },
-      "metadata": {
-        "address": "121 Rue de la R\u00e9publique, 91230 Montgeron",
-        "phone_number": "0160919797",
-        "business_hours": {
-          "lundi": "9h-12h30 / 14h-17h30",
-          "mardi": "9h-12h30 / 14h-17h30",
-          "mercredi": "9h-12h30 / 14h-17h30",
-          "jeudi": "9h-12h30 / 14h-17h30",
-          "vendredi": "9h-12h30 / 14h-17h30",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -844,6 +818,32 @@
           "jeudi": "9h - 13h / 14h - 18h",
           "vendredi": "9h - 13h / 14h - 18h",
           "samedi": "9h - 13h / 14h - 18h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "91",
+      "nom": "Salle L'astral",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montgeron/centre-de-vaccination-covid-conseil-departemental-de-l-essonne-cd91?pid=practice-165168?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.46764",
+        "latitude": "48.7002"
+      },
+      "metadata": {
+        "address": "121 Rue de la R\u00e9publique, 91230 Montgeron",
+        "phone_number": "0160919797",
+        "business_hours": {
+          "lundi": "9h-12h30 / 14h-17h30",
+          "mardi": "9h-12h30 / 14h-17h30",
+          "mercredi": "9h-12h30 / 14h-17h30",
+          "jeudi": "9h-12h30 / 14h-17h30",
+          "vendredi": "9h-12h30 / 14h-17h30",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -1034,24 +1034,6 @@
     },
     {
       "departement": "91",
-      "nom": "Pharmacie Centrale Valdoly",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-centrale-valdoly-vigneux-sur-seine",
-      "location": {
-        "longitude": 2.4367541,
-        "latitude": 48.7150961
-      },
-      "metadata": {
-        "address": "6 Rue de la Longueraie, 91270 Vigneux-sur-Seine",
-        "phone_number": "+33169425965",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "91",
       "nom": "Pharmacie Du Theatre",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-theatre-longjumeau",
       "location": {
@@ -1061,6 +1043,24 @@
       "metadata": {
         "address": "13 AVENUE DU GENERAL DE GAULLE, 91160 Longjumeau",
         "phone_number": "+33169098775",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "91",
+      "nom": "Pharmacie Centrale Valdoly",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-centrale-valdoly-vigneux-sur-seine",
+      "location": {
+        "longitude": 2.4367541,
+        "latitude": 48.7150961
+      },
+      "metadata": {
+        "address": "6 Rue de la Longueraie, 91270 Vigneux-sur-Seine",
+        "phone_number": "+33169425965",
         "business_hours": null
       },
       "prochain_rdv": null,

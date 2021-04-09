@@ -1,33 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.983534+02:00",
+  "last_updated": "2021-04-09T15:21:54.169352+02:00",
   "centres_disponibles": [
-    {
-      "departement": "63",
-      "nom": "Centre de vaccination du Centre Hospitalier Universitaire DE CLERMONT-FERRAND, site Gabriel MONTPIED",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/clermont-ferrand/chu-de-clermont-ferrand-centre-de-depistage-covid-19?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "3.09131",
-        "latitude": "45.7593"
-      },
-      "metadata": {
-        "address": "58 Rue Montalembert, 63000 Clermont-Ferrand",
-        "phone_number": "+33473754117",
-        "business_hours": {
-          "lundi": "07:00-20:00",
-          "mardi": "07:00-20:00",
-          "mercredi": "07:00-20:00",
-          "jeudi": "07:00-20:00",
-          "vendredi": "07:00-20:00",
-          "samedi": "07:00-20:00",
-          "dimanche": "07:00-20:00"
-        }
-      },
-      "prochain_rdv": "2021-04-13T12:20:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "63",
       "nom": "Pharmacie de l'Esplanade",
@@ -51,6 +25,32 @@
       "prochain_rdv": "2021-04-13T13:40:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "63",
+      "nom": "Centre de vaccination du Centre Hospitalier Universitaire DE CLERMONT-FERRAND, site Gabriel MONTPIED",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/clermont-ferrand/chu-de-clermont-ferrand-centre-de-depistage-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.09131",
+        "latitude": "45.7593"
+      },
+      "metadata": {
+        "address": "58 Rue Montalembert, 63000 Clermont-Ferrand",
+        "phone_number": "+33473754117",
+        "business_hours": {
+          "lundi": "07:00-20:00",
+          "mardi": "07:00-20:00",
+          "mercredi": "07:00-20:00",
+          "jeudi": "07:00-20:00",
+          "vendredi": "07:00-20:00",
+          "samedi": "07:00-20:00",
+          "dimanche": "07:00-20:00"
+        }
+      },
+      "prochain_rdv": "2021-04-17T17:15:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
       "appointment_count": 0
     },
     {

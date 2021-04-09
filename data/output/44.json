@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.968239+02:00",
+  "last_updated": "2021-04-09T15:21:54.148396+02:00",
   "centres_disponibles": [
     {
       "departement": "44",
@@ -47,7 +47,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-13T11:35:00.000+02:00",
+      "prochain_rdv": "2021-04-13T11:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -123,7 +123,84 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-16T10:25:00.000+02:00",
+      "prochain_rdv": "2021-04-15T16:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de vaccination - MACHECOUL - Salle Vall\u00e9e du Tenu",
+      "url": "https://www.doctolib.fr/centre-de-sante/saint-meme-le-tenu/centre-de-vaccination-covid-machecoul-st-meme",
+      "location": {
+        "longitude": "-1.79338",
+        "latitude": "47.0191"
+      },
+      "metadata": {
+        "address": " Rue des Ch\u00eanes, 44270 Machecoul-Saint-M\u00eame",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-19T12:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Grand centre NANTES (en cours de d\u00e9claration)",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nantes/centre-de-vaccination-covid-19-centre-d-exposition-de-la-beaujoire?pid=practice-164268&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.53135",
+        "latitude": "47.258"
+      },
+      "metadata": {
+        "address": " Avenue de Normandie, 44300 Nantes",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-25T17:54:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de Vaccination COVID - NANTES Nord - Salle Erdre",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nantes/centre-de-vaccination-metroplitain-salle-festive-nantes-erdre?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.53101",
+        "latitude": "47.2541"
+      },
+      "metadata": {
+        "address": "251 Route de Saint Joseph, 44300 Nantes",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-29T09:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -175,31 +252,6 @@
           "vendredi": "9h / 17h",
           "samedi": "9h/17h",
           "dimanche": "9h/17h"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "44",
-      "nom": "Grand centre NANTES (en cours de d\u00e9claration)",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nantes/centre-de-vaccination-covid-19-centre-d-exposition-de-la-beaujoire?pid=practice-164268&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-1.53135",
-        "latitude": "47.258"
-      },
-      "metadata": {
-        "address": " Avenue de Normandie, 44300 Nantes",
-        "business_hours": {
-          "lundi": "9h-17h",
-          "mardi": "9h-17h",
-          "mercredi": "9h-17h",
-          "jeudi": "9h-17h",
-          "vendredi": "9h-17h",
-          "samedi": "9h-17h",
-          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
@@ -312,32 +364,6 @@
     },
     {
       "departement": "44",
-      "nom": "Centre de vaccination - St HERBLAIN - Complexe du Vigneau",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-herblain/centre-de-vaccination-de-saint-herblain-complexe-sportif-du-vigneau?pid=practice-177796&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-1.62093",
-        "latitude": "47.2191"
-      },
-      "metadata": {
-        "address": " Boulevard Salvador Allende, 44800 Saint-Herblain",
-        "phone_number": "+33806000344",
-        "business_hours": {
-          "lundi": "10h30-12h / 14h-17h",
-          "mardi": "9h-12h / 14h-17h",
-          "mercredi": "9h-18h",
-          "jeudi": "9h-18h",
-          "vendredi": "9h-18h",
-          "samedi": "9h-18h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "44",
       "nom": "Centre de vaccination - REZE - MSP Loire et S\u00e8vre",
       "url": "https://partners.doctolib.fr/centre-de-sante/reze/centre-de-vaccination-covid-19-msp-pole-sante-loire-et-sevre?pid=practice-177634&enable_cookies_consent=1",
       "location": {
@@ -354,6 +380,32 @@
           "jeudi": "9h-12h / 13h-16h",
           "vendredi": "9h-12h / 13h-16h",
           "samedi": "13h-18h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de vaccination - St HERBLAIN - Complexe du Vigneau",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-herblain/centre-de-vaccination-de-saint-herblain-complexe-sportif-du-vigneau?pid=practice-177796&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.62093",
+        "latitude": "47.2191"
+      },
+      "metadata": {
+        "address": " Boulevard Salvador Allende, 44800 Saint-Herblain",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "10h30-12h / 14h-17h",
+          "mardi": "9h-12h / 14h-17h",
+          "mercredi": "9h-18h",
+          "jeudi": "9h-18h",
+          "vendredi": "9h-18h",
+          "samedi": "9h-18h",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -407,32 +459,6 @@
           "vendredi": "8h-20h",
           "samedi": "8h-20h",
           "dimanche": "8h-20h"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "44",
-      "nom": "Centre de vaccination - MACHECOUL - Salle Vall\u00e9e du Tenu",
-      "url": "https://www.doctolib.fr/centre-de-sante/saint-meme-le-tenu/centre-de-vaccination-covid-machecoul-st-meme",
-      "location": {
-        "longitude": "-1.79338",
-        "latitude": "47.0191"
-      },
-      "metadata": {
-        "address": " Rue des Ch\u00eanes, 44270 Machecoul-Saint-M\u00eame",
-        "phone_number": "+33806000344",
-        "business_hours": {
-          "lundi": "9h-17h",
-          "mardi": "9h-17h",
-          "mercredi": "9h-17h",
-          "jeudi": "9h-17h",
-          "vendredi": "9h-17h",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
@@ -572,32 +598,6 @@
     },
     {
       "departement": "44",
-      "nom": "Centre de Vaccination COVID - NANTES Nord - Salle Erdre",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nantes/centre-de-vaccination-metroplitain-salle-festive-nantes-erdre?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-1.53101",
-        "latitude": "47.2541"
-      },
-      "metadata": {
-        "address": "251 Route de Saint Joseph, 44300 Nantes",
-        "phone_number": "+33806000344",
-        "business_hours": {
-          "lundi": "9h-17h",
-          "mardi": "9h-17h",
-          "mercredi": "9h-17h",
-          "jeudi": "9h-17h",
-          "vendredi": "9h-17h",
-          "samedi": "9h-17h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "44",
       "nom": "CP - US Centre de d\u00e9tention et SMPR niv.1 Centre de D\u00e9tention / Etablissement Sp\u00e9cialis\u00e9 pour mineurs d'Orvault",
       "url": "",
       "location": {
@@ -635,7 +635,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },

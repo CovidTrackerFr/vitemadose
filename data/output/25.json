@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.951939+02:00",
+  "last_updated": "2021-04-09T15:21:54.126334+02:00",
   "centres_disponibles": [
     {
       "departement": "25",
@@ -23,7 +23,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-12T08:30:00.000+02:00",
+      "prochain_rdv": "2021-04-12T08:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -210,32 +210,6 @@
     },
     {
       "departement": "25",
-      "nom": "Centre de vaccination RESAL",
-      "url": "https://partners.doctolib.fr/centre-de-sante/besan\u00e7on/cbpps-ville-besancon?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.03675",
-        "latitude": "47.253"
-      },
-      "metadata": {
-        "address": "12 Rue Pierre Semard, 25000 Besan\u00e7on",
-        "phone_number": "0363421013",
-        "business_hours": {
-          "lundi": "9H00-12h15 / 14h00-17h15",
-          "mardi": "9H00-12h15 / 14h00-17h15",
-          "mercredi": "9H00-12h15 / 14h00-17h15",
-          "jeudi": "9H00-12h15 / 14h00-17h15",
-          "vendredi": "9H00-12h15 / 14h00-17h15",
-          "samedi": "9H00-12h15 / 14h00-17h15",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "25",
       "nom": "Espace La Cray - Voujeaucourt",
       "url": "https://partners.doctolib.fr/centre-de-sante/voujeaucourt/centre-de-vaccination-ville-de-voujeaucourt?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -252,6 +226,32 @@
           "jeudi": "8:30-12:30/13:30-17:30",
           "vendredi": "8:30-12:30/13:30-17:30",
           "samedi": "13:30-17:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "25",
+      "nom": "Centre de vaccination RESAL",
+      "url": "https://partners.doctolib.fr/centre-de-sante/besan\u00e7on/cbpps-ville-besancon?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.03675",
+        "latitude": "47.253"
+      },
+      "metadata": {
+        "address": "12 Rue Pierre Semard, 25000 Besan\u00e7on",
+        "phone_number": "0363421013",
+        "business_hours": {
+          "lundi": "9H00-12h15 / 14h00-17h15",
+          "mardi": "9H00-12h15 / 14h00-17h15",
+          "mercredi": "9H00-12h15 / 14h00-17h15",
+          "jeudi": "9H00-12h15 / 14h00-17h15",
+          "vendredi": "9H00-12h15 / 14h00-17h15",
+          "samedi": "9H00-12h15 / 14h00-17h15",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -314,32 +314,6 @@
     },
     {
       "departement": "25",
-      "nom": "CHU Besan\u00e7on",
-      "url": "https://partners.doctolib.fr/hopital-public/besan\u00e7on/chru-besancon-centre-de-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "5.9627",
-        "latitude": "47.2257"
-      },
-      "metadata": {
-        "address": "3 Boulevard Alexandre Fleming, 25000 Besan\u00e7on",
-        "phone_number": "0363421013",
-        "business_hours": {
-          "lundi": "8:30-18:30",
-          "mardi": "8:30-18:30",
-          "mercredi": "8:30-18:30",
-          "jeudi": "8:30-18:30",
-          "vendredi": "8:30-18:30",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "25",
       "nom": "Centre de vaccination de Quingey",
       "url": "https://partners.doctolib.fr/centre-de-sante/quingey/centre-de-vaccination-covid-19-quingey?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -355,6 +329,32 @@
           "mercredi": "13h30-17h15",
           "jeudi": "13h30-17h15",
           "vendredi": "13h30-17h15",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "25",
+      "nom": "CHU Besan\u00e7on",
+      "url": "https://partners.doctolib.fr/hopital-public/besan\u00e7on/chru-besancon-centre-de-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.9627",
+        "latitude": "47.2257"
+      },
+      "metadata": {
+        "address": "3 Boulevard Alexandre Fleming, 25000 Besan\u00e7on",
+        "phone_number": "0363421013",
+        "business_hours": {
+          "lundi": "8:30-18:30",
+          "mardi": "8:30-18:30",
+          "mercredi": "8:30-18:30",
+          "jeudi": "8:30-18:30",
+          "vendredi": "8:30-18:30",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }

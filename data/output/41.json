@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.966225+02:00",
+  "last_updated": "2021-04-09T15:21:54.145612+02:00",
   "centres_disponibles": [
     {
       "departement": "41",
@@ -736,6 +736,31 @@
     },
     {
       "departement": "41",
+      "nom": "Centre de vaccination - en attente (41)",
+      "url": "",
+      "location": {
+        "longitude": "1.33744",
+        "latitude": "47.5742"
+      },
+      "metadata": {
+        "address": " , 41000 Blois",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "41",
       "nom": "Centre de vaccination - Dojo",
       "url": "https://partners.doctolib.fr/centre-de-sante/saint-georges-sur-cher/centre-de-vaccination-covid-19-de-saint-georges-sur-cher?pid=practice-166204&enable_cookies_consent=1",
       "location": {
@@ -757,31 +782,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "41",
-      "nom": "Centre de vaccination - en attente (41)",
-      "url": "",
-      "location": {
-        "longitude": "1.33744",
-        "latitude": "47.5742"
-      },
-      "metadata": {
-        "address": " , 41000 Blois",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },

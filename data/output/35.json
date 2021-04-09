@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.961991+02:00",
+  "last_updated": "2021-04-09T15:21:54.139947+02:00",
   "centres_disponibles": [
     {
       "departement": "35",
@@ -23,7 +23,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-15T14:35:00.000+02:00",
+      "prochain_rdv": "2021-04-15T14:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "drugstore",
       "appointment_count": 0
@@ -75,7 +75,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-26T12:30:00.000+02:00",
+      "prochain_rdv": "2021-04-26T11:35:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -110,32 +110,6 @@
   "centres_indisponibles": [
     {
       "departement": "35",
-      "nom": "DOL DE BGNE-Club de l'amiti\u00e9",
-      "url": "https://partners.doctolib.fr/centre-de-sante/dol-de-bretagne/centre-de-vaccination-dol-de-bretagne?pid=practice-165293&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-1.74728",
-        "latitude": "48.5495"
-      },
-      "metadata": {
-        "address": "21 Rue El\u00e9onor Daubr\u00e9e, 35120 Dol-de-Bretagne",
-        "phone_number": "+33805690821",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "9h-12h / 14h-17h",
-          "mercredi": "9h-12h / 14h-17h",
-          "jeudi": "9h-12h / 14h-17h",
-          "vendredi": "9h-12h / 14h-17h",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "35",
       "nom": "MONTFORT SUR MEU-COSEC",
       "url": "https://partners.doctolib.fr/centre-de-sante/montfort-sur-meu/centre-de-vaccination-covid-19-de-broceliande?pid=practice-166461&enable_cookies_consent=1",
       "location": {
@@ -151,6 +125,32 @@
           "mercredi": "9h-13h / 14h-18h",
           "jeudi": "9h-13h / 14h-18h",
           "vendredi": "9h-13h / 14h-18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "35",
+      "nom": "DOL DE BGNE-Club de l'amiti\u00e9",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dol-de-bretagne/centre-de-vaccination-dol-de-bretagne?pid=practice-165293&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.74728",
+        "latitude": "48.5495"
+      },
+      "metadata": {
+        "address": "21 Rue El\u00e9onor Daubr\u00e9e, 35120 Dol-de-Bretagne",
+        "phone_number": "+33805690821",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "9h-12h / 14h-17h",
+          "mercredi": "9h-12h / 14h-17h",
+          "jeudi": "9h-12h / 14h-17h",
+          "vendredi": "9h-12h / 14h-17h",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -292,6 +292,31 @@
     },
     {
       "departement": "35",
+      "nom": "CP - UCSA - Centre p\u00e9nitentiaire des Hommes Rennes-Vezin / Centre p\u00e9nitentiaire de Rennes-V\u00e9zin le Coquet",
+      "url": "",
+      "location": {
+        "longitude": "-1.73923",
+        "latitude": "48.1074"
+      },
+      "metadata": {
+        "address": " Rue du Petit Pr\u00e9, 35132 Vezin-le-Coquet",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "35",
       "nom": "MA - USPN MAISON D'ARRET DE SAINT MALO / Maison d'Arr\u00eat de Saint-Malo",
       "url": "",
       "location": {
@@ -318,31 +343,6 @@
     {
       "departement": "35",
       "nom": "CP - UCSA  Centre P\u00e9nitentiaire des Femmes - Rennes / Centre p\u00e9nitentiaire de Rennes-V\u00e9zin le Coquet",
-      "url": "",
-      "location": {
-        "longitude": "-1.73923",
-        "latitude": "48.1074"
-      },
-      "metadata": {
-        "address": " Rue du Petit Pr\u00e9, 35132 Vezin-le-Coquet",
-        "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "35",
-      "nom": "CP - UCSA - Centre p\u00e9nitentiaire des Hommes Rennes-Vezin / Centre p\u00e9nitentiaire de Rennes-V\u00e9zin le Coquet",
       "url": "",
       "location": {
         "longitude": "-1.73923",
@@ -612,7 +612,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },

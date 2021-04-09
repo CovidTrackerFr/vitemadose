@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.974940+02:00",
+  "last_updated": "2021-04-09T15:21:54.157485+02:00",
   "centres_disponibles": [
     {
       "departement": "55",
@@ -23,7 +23,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-12T15:40:00.000+02:00",
+      "prochain_rdv": "2021-04-13T15:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -49,33 +49,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-12T15:40:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "55",
-      "nom": "Centre de vaccination de Verdun (Salle Cassin) (Equipe mixte CH/m\u00e9decine de ville)",
-      "url": "https://partners.doctolib.fr/hopital-public/verdun/centre-de-vaccination-covid-19-ch-verdun?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "5.3799",
-        "latitude": "49.1544"
-      },
-      "metadata": {
-        "address": " Allee du Pre l'Eveque, 55100 Verdun",
-        "phone_number": "+33801908955",
-        "business_hours": {
-          "lundi": "13:00-17:30",
-          "mardi": "08:30-17:30",
-          "mercredi": "08:30-17:30",
-          "jeudi": "08:30-17:30",
-          "vendredi": "08:30-17:30",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-27T17:15:00.000+02:00",
+      "prochain_rdv": "2021-04-13T15:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -101,7 +75,33 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-27T17:15:00.000+02:00",
+      "prochain_rdv": "2021-04-27T17:20:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "55",
+      "nom": "Centre de vaccination de Verdun (Salle Cassin) (Equipe mixte CH/m\u00e9decine de ville)",
+      "url": "https://partners.doctolib.fr/hopital-public/verdun/centre-de-vaccination-covid-19-ch-verdun?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.3799",
+        "latitude": "49.1544"
+      },
+      "metadata": {
+        "address": " Allee du Pre l'Eveque, 55100 Verdun",
+        "phone_number": "+33801908955",
+        "business_hours": {
+          "lundi": "13:00-17:30",
+          "mardi": "08:30-17:30",
+          "mercredi": "08:30-17:30",
+          "jeudi": "08:30-17:30",
+          "vendredi": "08:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-28T11:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -162,32 +162,6 @@
     },
     {
       "departement": "55",
-      "nom": "Lieu de vaccination de MONTMEDY (salle des f\u00eates)",
-      "url": "https://www.maiia.com/centre-de-vaccination/55600-montmedy/centre-de-vaccination---montmedy-et-marville",
-      "location": {
-        "longitude": "5.36862",
-        "latitude": "49.5212"
-      },
-      "metadata": {
-        "address": " Place Eug\u00e8ne Tronville, 55600 Montm\u00e9dy",
-        "phone_number": "+33372850117",
-        "business_hours": {
-          "lundi": "A pr\u00e9ciser",
-          "mardi": "A pr\u00e9ciser",
-          "mercredi": "A pr\u00e9ciser",
-          "jeudi": "A pr\u00e9ciser",
-          "vendredi": "A pr\u00e9ciser",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Maiia",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "55",
       "nom": "Lieu de vaccination de CLERMONT EN ARGONNE",
       "url": "https://www.maiia.com/centre-de-vaccination/55120-clermont-en-argonne/centre-de-vaccination---clermont-en-argonne",
       "location": {
@@ -203,6 +177,32 @@
           "mercredi": "ferm\u00e9",
           "jeudi": "14:00-18:00",
           "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "55",
+      "nom": "Lieu de vaccination de MONTMEDY (salle des f\u00eates)",
+      "url": "https://www.maiia.com/centre-de-vaccination/55600-montmedy/centre-de-vaccination---montmedy-et-marville",
+      "location": {
+        "longitude": "5.36862",
+        "latitude": "49.5212"
+      },
+      "metadata": {
+        "address": " Place Eug\u00e8ne Tronville, 55600 Montm\u00e9dy",
+        "phone_number": "+33372850117",
+        "business_hours": {
+          "lundi": "A pr\u00e9ciser",
+          "mardi": "A pr\u00e9ciser",
+          "mercredi": "A pr\u00e9ciser",
+          "jeudi": "A pr\u00e9ciser",
+          "vendredi": "A pr\u00e9ciser",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -318,6 +318,32 @@
     },
     {
       "departement": "55",
+      "nom": "Lieu de vaccination de VIGNEULLES (Maison de sant\u00e9)",
+      "url": "https://www.maiia.com/centre-de-vaccination/55210-vigneulles-les-hattonchatel/centre-de-vaccination---vigneulles-les-hattonchatel--",
+      "location": {
+        "longitude": "5.71484",
+        "latitude": "48.9789"
+      },
+      "metadata": {
+        "address": "74 Rue Raymond Poincar\u00e9, 55210 Vigneulles-l\u00e8s-Hattonch\u00e2tel",
+        "phone_number": "+33372850117",
+        "business_hours": {
+          "lundi": "\u00e0 pr\u00e9ciser",
+          "mardi": "\u00e0 pr\u00e9ciser",
+          "mercredi": "\u00e0 pr\u00e9ciser",
+          "jeudi": "\u00e0 pr\u00e9ciser",
+          "vendredi": "\u00e0 pr\u00e9ciser",
+          "samedi": "\u00e0 pr\u00e9ciser",
+          "dimanche": "\u00e0 pr\u00e9ciser"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "55",
       "nom": "Lieu de vaccination de DIEUE SUR MEUSE",
       "url": "https://www.maiia.com/centre-de-vaccination/55320-dieue-sur-meuse/centre-de-vaccination---dieue-sur-meuse",
       "location": {
@@ -370,32 +396,6 @@
     },
     {
       "departement": "55",
-      "nom": "Lieu de vaccination de VIGNEULLES (Maison de sant\u00e9)",
-      "url": "https://www.maiia.com/centre-de-vaccination/55210-vigneulles-les-hattonchatel/centre-de-vaccination---vigneulles-les-hattonchatel--",
-      "location": {
-        "longitude": "5.71484",
-        "latitude": "48.9789"
-      },
-      "metadata": {
-        "address": "74 Rue Raymond Poincar\u00e9, 55210 Vigneulles-l\u00e8s-Hattonch\u00e2tel",
-        "phone_number": "+33372850117",
-        "business_hours": {
-          "lundi": "\u00e0 pr\u00e9ciser",
-          "mardi": "\u00e0 pr\u00e9ciser",
-          "mercredi": "\u00e0 pr\u00e9ciser",
-          "jeudi": "\u00e0 pr\u00e9ciser",
-          "vendredi": "\u00e0 pr\u00e9ciser",
-          "samedi": "\u00e0 pr\u00e9ciser",
-          "dimanche": "\u00e0 pr\u00e9ciser"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Maiia",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "55",
       "nom": "Lieu de vaccination d'ANCERVILLE",
       "url": "https://www.maiia.com/centre-de-vaccination/55170-ancerville/centre-de-vaccination-ancerville",
       "location": {
@@ -422,14 +422,14 @@
     },
     {
       "departement": "55",
-      "nom": "MA - US Bar le Duc / Maison d'Arr\u00eat de Bar-le-Duc",
+      "nom": "CD - US MONTMEDY / Centre de D\u00e9tention de Montm\u00e9dy",
       "url": "",
       "location": {
-        "longitude": "5.1595",
-        "latitude": "48.7686"
+        "longitude": "5.37153",
+        "latitude": "49.5241"
       },
       "metadata": {
-        "address": "24 Place Saint-Pierre, 55000 Bar-le-Duc",
+        "address": "18 Rue du Commandant M\u00e9nard, 55600 Montm\u00e9dy",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -472,14 +472,14 @@
     },
     {
       "departement": "55",
-      "nom": "CD - US MONTMEDY / Centre de D\u00e9tention de Montm\u00e9dy",
+      "nom": "MA - US Bar le Duc / Maison d'Arr\u00eat de Bar-le-Duc",
       "url": "",
       "location": {
-        "longitude": "5.37153",
-        "latitude": "49.5241"
+        "longitude": "5.1595",
+        "latitude": "48.7686"
       },
       "metadata": {
-        "address": "18 Rue du Commandant M\u00e9nard, 55600 Montm\u00e9dy",
+        "address": "24 Place Saint-Pierre, 55000 Bar-le-Duc",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -492,32 +492,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "55",
-      "nom": "Lieu de vaccination de ST-MIHIEL (Palais Abbatial)",
-      "url": "https://www.maiia.com/centre-de-vaccination/55300-saint-mihiel/centre-de-vaccination---saint-mihiel",
-      "location": {
-        "longitude": "5.54112",
-        "latitude": "48.8885"
-      },
-      "metadata": {
-        "address": "6 Rue du Palais de Justice, 55300 Saint-Mihiel",
-        "phone_number": "03 72 85 01 17",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "13h-18h",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Maiia",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -538,6 +512,32 @@
           "mercredi": "14:00-18:00",
           "jeudi": "ferm\u00e9",
           "vendredi": "09:00-12:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "55",
+      "nom": "Lieu de vaccination de ST-MIHIEL (Palais Abbatial)",
+      "url": "https://www.maiia.com/centre-de-vaccination/55300-saint-mihiel/centre-de-vaccination---saint-mihiel",
+      "location": {
+        "longitude": "5.54112",
+        "latitude": "48.8885"
+      },
+      "metadata": {
+        "address": "6 Rue du Palais de Justice, 55300 Saint-Mihiel",
+        "phone_number": "03 72 85 01 17",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "13h-18h",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }

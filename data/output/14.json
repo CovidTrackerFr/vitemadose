@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.944769+02:00",
+  "last_updated": "2021-04-09T15:21:54.115667+02:00",
   "centres_disponibles": [
     {
       "departement": "14",
@@ -49,7 +49,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-16T15:35:00.000+02:00",
+      "prochain_rdv": "2021-04-16T15:40:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -240,7 +240,7 @@
     },
     {
       "departement": "14",
-      "nom": "CP - US de Caen / Maison d'Arr\u00eat de Caen",
+      "nom": "MA - US de la maison d'arr\u00eat de Caen / Maison d'Arr\u00eat de Caen",
       "url": "",
       "location": {
         "longitude": "-0.391071",
@@ -265,7 +265,7 @@
     },
     {
       "departement": "14",
-      "nom": "MA - US de la maison d'arr\u00eat de Caen / Maison d'Arr\u00eat de Caen",
+      "nom": "CP - US de Caen / Maison d'Arr\u00eat de Caen",
       "url": "",
       "location": {
         "longitude": "-0.391071",
@@ -515,42 +515,6 @@
     },
     {
       "departement": "14",
-      "nom": "Pharmacie Mozart",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-mozart-lisieux",
-      "location": {
-        "longitude": 0.2545302,
-        "latitude": 49.143775
-      },
-      "metadata": {
-        "address": "13 Place Mozart, 14100 Lisieux",
-        "phone_number": "+33231310756",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "14",
-      "nom": "Pharmacie Decoutere",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-decoutere-argences",
-      "location": {
-        "longitude": -0.1650576,
-        "latitude": 49.1270886
-      },
-      "metadata": {
-        "address": "7 Boulevard Delean, 14370 Argences",
-        "phone_number": "+33231236035",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "14",
       "nom": "Pharmacie Ferran",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-ferran-mondeville",
       "location": {
@@ -563,7 +527,61 @@
         "business_hours": null
       },
       "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie Mozart",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-mozart-lisieux",
+      "location": {
+        "longitude": 0.2545302,
+        "latitude": 49.143775
+      },
+      "metadata": {
+        "address": "13 Place Mozart, 14100 Lisieux",
+        "phone_number": "+33231310756",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
       "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie De La Plage",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-plage-merville-franceville",
+      "location": {
+        "longitude": -0.2027435,
+        "latitude": 49.2840845
+      },
+      "metadata": {
+        "address": "59 avenue de Paris, 14810 Merville Franceville",
+        "phone_number": "+33231242187",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie Du Port",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-port-ouistreham",
+      "location": {
+        "longitude": -0.250916,
+        "latitude": 49.2791064
+      },
+      "metadata": {
+        "address": "1 place du g\u00e9n\u00e9ral de gaulle, 14150 OUISTREHAM",
+        "phone_number": "+33231962541",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -587,33 +605,15 @@
     },
     {
       "departement": "14",
-      "nom": "Pharmacie De La Plage",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-plage-merville-franceville",
+      "nom": "Pharmacie Decoutere",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-decoutere-argences",
       "location": {
-        "longitude": -0.2027435,
-        "latitude": 49.2840845
+        "longitude": -0.1650576,
+        "latitude": 49.1270886
       },
       "metadata": {
-        "address": "59 avenue de Paris, 14810 Merville Franceville",
-        "phone_number": "+33231242187",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "14",
-      "nom": "Pharmacie Du Port",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-port-ouistreham",
-      "location": {
-        "longitude": -0.250916,
-        "latitude": 49.2791064
-      },
-      "metadata": {
-        "address": "1 place du g\u00e9n\u00e9ral de gaulle, 14150 OUISTREHAM",
-        "phone_number": "+33231962541",
+        "address": "7 Boulevard Delean, 14370 Argences",
+        "phone_number": "+33231236035",
         "business_hours": null
       },
       "prochain_rdv": null,

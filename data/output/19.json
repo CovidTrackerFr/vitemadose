@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.948557+02:00",
+  "last_updated": "2021-04-09T15:21:54.121056+02:00",
   "centres_disponibles": [
     {
       "departement": "19",
@@ -23,7 +23,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-11T15:45:00.000+02:00",
+      "prochain_rdv": "2021-04-11T15:25:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -238,32 +238,6 @@
     },
     {
       "departement": "19",
-      "nom": "Centre de vaccination - Objat",
-      "url": "https://partners.doctolib.fr/centre-de-sante/objat/centre-de-vaccination-d-objat?pid=practice-175821&enable_cookies_consent=1",
-      "location": {
-        "longitude": "1.40961",
-        "latitude": "45.2632"
-      },
-      "metadata": {
-        "address": " Rue de l'ancien Temple, 19130 Objat",
-        "phone_number": "06 08 07 04 92",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "09:00-12:30/14:00-17:00",
-          "samedi": "09:00-12:30/14:00-17:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "19",
       "nom": "Centre de vaccination - Beaulieu sur Dordogne",
       "url": "https://www.maiia.com/centre-de-vaccination/19120-beaulieu-sur-dordogne/-centre-de-vaccination-de-beaulieu-sur-dordogne",
       "location": {
@@ -285,6 +259,32 @@
       },
       "prochain_rdv": null,
       "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "19",
+      "nom": "Centre de vaccination - Objat",
+      "url": "https://partners.doctolib.fr/centre-de-sante/objat/centre-de-vaccination-d-objat?pid=practice-175821&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.40961",
+        "latitude": "45.2632"
+      },
+      "metadata": {
+        "address": " Rue de l'ancien Temple, 19130 Objat",
+        "phone_number": "06 08 07 04 92",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "09:00-12:30/14:00-17:00",
+          "samedi": "09:00-12:30/14:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -366,32 +366,6 @@
     },
     {
       "departement": "19",
-      "nom": "CH USSEL",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/limousin/vaccination-covid-19-professionnels-de-sante?speciality_id=5494&pid=practice-162958&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.31344",
-        "latitude": "45.5446"
-      },
-      "metadata": {
-        "address": "2 Avenue du Docteur Roullet, 19200 Ussel",
-        "phone_number": "+33555087520",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "10: 00-16: 00",
-          "jeudi": "10: 00-16: 00",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "19",
       "nom": "Centre Hospitalier du pays d'Eygurande",
       "url": "https://partners.doctolib.fr/hopital-public/monestier-merlines/centre-hospitalier-du-pays-d-eygurande-monestier-merlines?pid=practice-143160&enable_cookies_consent=1",
       "location": {
@@ -406,6 +380,32 @@
           "mardi": "13:00-16:00",
           "mercredi": "ferm\u00e9",
           "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "19",
+      "nom": "CH USSEL",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/limousin/vaccination-covid-19-professionnels-de-sante?speciality_id=5494&pid=practice-162958&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.31344",
+        "latitude": "45.5446"
+      },
+      "metadata": {
+        "address": "2 Avenue du Docteur Roullet, 19200 Ussel",
+        "phone_number": "+33555087520",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "10: 00-16: 00",
+          "jeudi": "10: 00-16: 00",
           "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"

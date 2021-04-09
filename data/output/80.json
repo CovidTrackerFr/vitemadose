@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.999344+02:00",
+  "last_updated": "2021-04-09T15:21:54.190677+02:00",
   "centres_disponibles": [
     {
       "departement": "80",
@@ -573,32 +573,6 @@
     },
     {
       "departement": "80",
-      "nom": "Centre de vaccination Covid-19 de Saleux",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saleux/centre-de-vaccination-covid-19-de-saleux?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": 2.2386104,
-        "latitude": 49.8608525
-      },
-      "metadata": {
-        "address": "Place Numa Buignet, 80480 Saleux",
-        "phone_number": "06 01 56 77 22",
-        "business_hours": {
-          "lundi": "09:00-19:00",
-          "mardi": "09:00-19:00",
-          "mercredi": "09:00-19:00",
-          "jeudi": "09:00-19:00",
-          "vendredi": "09:00-19:00",
-          "samedi": "09:00-18:00",
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "80",
       "nom": "Centre de vaccination Covid-19 - CH de P\u00e9ronne",
       "url": "https://partners.doctolib.fr/hopital-public/peronne/centre-de-vaccination-covid-19-ch-de-peronne?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
@@ -615,6 +589,32 @@
           "jeudi": null,
           "vendredi": null,
           "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "80",
+      "nom": "Centre de vaccination Covid-19 de Saleux",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saleux/centre-de-vaccination-covid-19-de-saleux?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 2.2386104,
+        "latitude": 49.8608525
+      },
+      "metadata": {
+        "address": "Place Numa Buignet, 80480 Saleux",
+        "phone_number": "06 01 56 77 22",
+        "business_hours": {
+          "lundi": "09:00-19:00",
+          "mardi": "09:00-19:00",
+          "mercredi": "09:00-19:00",
+          "jeudi": "09:00-19:00",
+          "vendredi": "09:00-19:00",
+          "samedi": "09:00-18:00",
           "dimanche": null
         }
       },

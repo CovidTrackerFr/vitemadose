@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.981978+02:00",
+  "last_updated": "2021-04-09T15:21:54.167268+02:00",
   "centres_disponibles": [
     {
       "departement": "62",
@@ -47,7 +47,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-10T08:15:00.000+02:00",
+      "prochain_rdv": "2021-04-10T08:35:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -150,7 +150,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-10T13:50:00.000000+0200",
+      "prochain_rdv": "2021-04-10T14:20:00.000000+0200",
       "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -178,24 +178,6 @@
       "prochain_rdv": "2021-04-10T14:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "62",
-      "nom": "Pharmacie Henin Beaumont",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-henin-beaumont-henin-beaumont",
-      "location": {
-        "longitude": 2.9487318,
-        "latitude": 50.4203365
-      },
-      "metadata": {
-        "address": "74 Place Carnot, 62110 H\u00e9nin-Beaumont",
-        "phone_number": "+33321200024",
-        "business_hours": null
-      },
-      "prochain_rdv": "2021-04-10T15:00:00+00:00",
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
       "appointment_count": 0
     },
     {
@@ -269,7 +251,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-12T09:40:00.000+02:00",
+      "prochain_rdv": "2021-04-12T09:50:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -294,7 +276,7 @@
           "dimanche": "09:00-13:00/14:00-18:00"
         }
       },
-      "prochain_rdv": "2021-04-15T14:28:00.000+02:00",
+      "prochain_rdv": "2021-04-15T15:03:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -506,6 +488,31 @@
     },
     {
       "departement": "62",
+      "nom": "Centre de vaccination - Maison de Sant\u00e9 Pluriprofessionnelle de Fruges",
+      "url": "https://partners.doctolib.fr/centre-de-sante/fruges/centre-de-vaccination-maison-de-sante-pluriprofessionnelle-de-fruges?pid=practice-176732&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.13007",
+        "latitude": "50.5143"
+      },
+      "metadata": {
+        "address": "1 Avenue Fran\u00e7ois Mitterrand, 62310 Fruges",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "62",
       "nom": "Centre de vaccination - Ville de BETHUNE, Foyer Francois Albert",
       "url": "https://partners.doctolib.fr/centre-de-sante/bethune/centre-de-vaccination-covid-19-bethune?pid=practice-175335&enable_cookies_consent=1",
       "location": {
@@ -523,31 +530,6 @@
           "vendredi": "ferm\u00e9",
           "samedi": "08:00-22:00",
           "dimanche": "08:00-22:00"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "62",
-      "nom": "Centre de vaccination - Maison de Sant\u00e9 Pluriprofessionnelle de Fruges",
-      "url": "https://partners.doctolib.fr/centre-de-sante/fruges/centre-de-vaccination-maison-de-sante-pluriprofessionnelle-de-fruges?pid=practice-176732&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.13007",
-        "latitude": "50.5143"
-      },
-      "metadata": {
-        "address": "1 Avenue Fran\u00e7ois Mitterrand, 62310 Fruges",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
@@ -582,39 +564,14 @@
     },
     {
       "departement": "62",
-      "nom": "CP - US du centre hospitalier de la R\u00e9gion de Saint-Omer / Centre P\u00e9nitentiaire de Longuenesse",
+      "nom": "CD - US BAPAUME / Maison d'Arr\u00eat d'Arras",
       "url": "",
       "location": {
-        "longitude": "2.23624",
-        "latitude": "50.7305"
+        "longitude": "2.76048",
+        "latitude": "50.293"
       },
       "metadata": {
-        "address": " Chemin du Plateau des Bruy\u00e8res, 62219 Longuenesse",
-        "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "62",
-      "nom": "MA - US DE BETHUNE / Maison d'Arr\u00eat de B\u00e9thune",
-      "url": "",
-      "location": {
-        "longitude": "2.63691",
-        "latitude": "50.5365"
-      },
-      "metadata": {
-        "address": "106 Rue d?Aire, 62400 B\u00e9thune",
+        "address": "12 Rue des Carabiniers d?Artois, 62000 Arras",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -657,14 +614,39 @@
     },
     {
       "departement": "62",
-      "nom": "CD - US BAPAUME / Maison d'Arr\u00eat d'Arras",
+      "nom": "MA - US DE BETHUNE / Maison d'Arr\u00eat de B\u00e9thune",
       "url": "",
       "location": {
-        "longitude": "2.76048",
-        "latitude": "50.293"
+        "longitude": "2.63691",
+        "latitude": "50.5365"
       },
       "metadata": {
-        "address": "12 Rue des Carabiniers d?Artois, 62000 Arras",
+        "address": "106 Rue d?Aire, 62400 B\u00e9thune",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "62",
+      "nom": "CP - US du centre hospitalier de la R\u00e9gion de Saint-Omer / Centre P\u00e9nitentiaire de Longuenesse",
+      "url": "",
+      "location": {
+        "longitude": "2.23624",
+        "latitude": "50.7305"
+      },
+      "metadata": {
+        "address": " Chemin du Plateau des Bruy\u00e8res, 62219 Longuenesse",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -911,32 +893,6 @@
     },
     {
       "departement": "62",
-      "nom": "Centre de vaccination - Centre SDIS Lumbres, Salle Leio Lagrang",
-      "url": "https://partners.doctolib.fr/centre-de-sante/bruay-la-buissiere/centre-de-vaccination-covid-pas-de-calais?pid=practice-164610&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.12533",
-        "latitude": "50.7048"
-      },
-      "metadata": {
-        "address": " Rue de l'Isle, 62380 Lumbres",
-        "phone_number": "+33392043471",
-        "business_hours": {
-          "lundi": "09:00-12:30/13:30-18:00",
-          "mardi": "09:00-12:30/13:30-18:00",
-          "mercredi": "09:00-12:30/13:30-18:00",
-          "jeudi": "09:00-12:30/13:30-18:00",
-          "vendredi": "09:00-12:30/13:30-18:00",
-          "samedi": "09:00-12:30/13:30-18:00",
-          "dimanche": "09:00-12:30/13:30-18:00"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "62",
       "nom": "Centre de vaccination - Centre SDIS Avesnes Le Comte, Salle Jacques Nirdol",
       "url": "https://partners.doctolib.fr/centre-de-sante/bruay-la-buissiere/centre-de-vaccination-covid-pas-de-calais?pid=practice-164609&enable_cookies_consent=1",
       "location": {
@@ -954,6 +910,32 @@
           "vendredi": "08:00-12:30/13:30-18:00",
           "samedi": "08:00-12:30/13:30-18:00",
           "dimanche": "08:00-12:30/13:30-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Centre SDIS Lumbres, Salle Leio Lagrang",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bruay-la-buissiere/centre-de-vaccination-covid-pas-de-calais?pid=practice-164610&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.12533",
+        "latitude": "50.7048"
+      },
+      "metadata": {
+        "address": " Rue de l'Isle, 62380 Lumbres",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "09:00-12:30/13:30-18:00",
+          "mardi": "09:00-12:30/13:30-18:00",
+          "mercredi": "09:00-12:30/13:30-18:00",
+          "jeudi": "09:00-12:30/13:30-18:00",
+          "vendredi": "09:00-12:30/13:30-18:00",
+          "samedi": "09:00-12:30/13:30-18:00",
+          "dimanche": "09:00-12:30/13:30-18:00"
         }
       },
       "prochain_rdv": null,
@@ -1279,6 +1261,42 @@
         "business_hours": null
       },
       "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "62",
+      "nom": "Pharmacie Henin Beaumont",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-henin-beaumont-henin-beaumont",
+      "location": {
+        "longitude": 2.9487318,
+        "latitude": 50.4203365
+      },
+      "metadata": {
+        "address": "74 Place Carnot, 62110 H\u00e9nin-Beaumont",
+        "phone_number": "+33321200024",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "62",
+      "nom": "Pharmacie Du Donjon",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-donjon-bruay-la-buissiere",
+      "location": {
+        "longitude": 2.5644602,
+        "latitude": 50.4904659
+      },
+      "metadata": {
+        "address": "2 rue Jean  Jaur\u00e8s, 62700 BRUAY-LA-BUISSIERE",
+        "phone_number": "+33321624076",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
       "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
@@ -1407,6 +1425,24 @@
     },
     {
       "departement": "62",
+      "nom": "Pharmacie D'Eleu",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-d'eleu-eleu-dit-leauwette",
+      "location": {
+        "longitude": 2.8171747,
+        "latitude": 50.4161742
+      },
+      "metadata": {
+        "address": "2 rue gabriel P\u00e9ri, 62300 ELEU-DIT-LEAUWETTE",
+        "phone_number": "+33321282330",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "62",
       "nom": "M\u00e9ga Centre de Vaccination Covid-19 B\u00e9thune",
       "url": "https://partners.doctolib.fr/hopital-public/beuvry/mega-centre-de-vaccination-covid-19-bethune?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
@@ -1428,24 +1464,6 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "62",
-      "nom": "Pharmacie Du Donjon",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-donjon-bruay-la-buissiere",
-      "location": {
-        "longitude": 2.5644602,
-        "latitude": 50.4904659
-      },
-      "metadata": {
-        "address": "2 rue Jean  Jaur\u00e8s, 62700 BRUAY-LA-BUISSIERE",
-        "phone_number": "+33321624076",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
       "appointment_count": 0
     },
     {
@@ -1472,24 +1490,6 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "62",
-      "nom": "Pharmacie D'Eleu",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-d'eleu-eleu-dit-leauwette",
-      "location": {
-        "longitude": 2.8171747,
-        "latitude": 50.4161742
-      },
-      "metadata": {
-        "address": "2 rue gabriel P\u00e9ri, 62300 ELEU-DIT-LEAUWETTE",
-        "phone_number": "+33321282330",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
       "appointment_count": 0
     }
   ]

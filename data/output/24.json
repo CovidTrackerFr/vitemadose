@@ -1,33 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.951006+02:00",
+  "last_updated": "2021-04-09T15:21:54.124825+02:00",
   "centres_disponibles": [
-    {
-      "departement": "24",
-      "nom": "CH P\u00e9rigueux - Vaccination COVID-19",
-      "url": "https://partners.doctolib.fr/hopital-public/rendez-vous-a-la/vaccination-covid?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": 0.6979976,
-        "latitude": 45.1985047
-      },
-      "metadata": {
-        "address": "15 Chemin des Feutres du Toulon, 24000 P\u00e9rigueux",
-        "phone_number": "05 53 45 31 33",
-        "business_hours": {
-          "lundi": null,
-          "mardi": null,
-          "mercredi": null,
-          "jeudi": null,
-          "vendredi": null,
-          "samedi": null,
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": "2021-04-11T16:24:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "24",
       "nom": "Filature de l'Isle",
@@ -49,7 +23,33 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-11T16:36:00.000+02:00",
+      "prochain_rdv": "2021-04-11T15:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "CH P\u00e9rigueux - Vaccination COVID-19",
+      "url": "https://partners.doctolib.fr/hopital-public/rendez-vous-a-la/vaccination-covid?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 0.6979976,
+        "latitude": 45.1985047
+      },
+      "metadata": {
+        "address": "15 Chemin des Feutres du Toulon, 24000 P\u00e9rigueux",
+        "phone_number": "05 53 45 31 33",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-11T15:48:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -100,7 +100,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-26T10:05:00.000+02:00",
+      "prochain_rdv": "2021-04-26T10:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -186,31 +186,6 @@
     },
     {
       "departement": "24",
-      "nom": "EHPAD de La Madeleine",
-      "url": "",
-      "location": {
-        "longitude": "0.478498",
-        "latitude": "44.8473"
-      },
-      "metadata": {
-        "address": "40 Rue du Mar\u00e9chal Joffre, 24100 Bergerac",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "24",
       "nom": "EHPAD La Madeleine",
       "url": "https://partners.doctolib.fr/centre-de-sante/bergerac/centre-de-vaccination-covid-19-ehpad-la-madeleine?pid=practice-174840&enable_cookies_consent=1",
       "location": {
@@ -231,6 +206,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "EHPAD de La Madeleine",
+      "url": "",
+      "location": {
+        "longitude": "0.478498",
+        "latitude": "44.8473"
+      },
+      "metadata": {
+        "address": "40 Rue du Mar\u00e9chal Joffre, 24100 Bergerac",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -437,31 +437,6 @@
     },
     {
       "departement": "24",
-      "nom": "Clinique Pasteur & CPTS",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/bergerac/centre-de-vaccination-covid-19-clinique-pasteur-bergerac-elsan?pid=practice-172067&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.489893",
-        "latitude": "44.8512"
-      },
-      "metadata": {
-        "address": "54 Rue du Professeur Pozzi, 24100 Bergerac",
-        "business_hours": {
-          "lundi": "13:00-17:00",
-          "mardi": "13:00-17:00",
-          "mercredi": "13:00-17:00",
-          "jeudi": "13:00-17:00",
-          "vendredi": "13:00-17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "24",
       "nom": "Maison de sant\u00e9 du Pays Montponnais",
       "url": "https://partners.doctolib.fr/centre-de-sante/montpon-menesterol/centre-de-vaccination-covid-19-montpon-menestrol?pid=practice-170938&enable_cookies_consent=1",
       "location": {
@@ -508,6 +483,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "Clinique Pasteur & CPTS",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/bergerac/centre-de-vaccination-covid-19-clinique-pasteur-bergerac-elsan?pid=practice-172067&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.489893",
+        "latitude": "44.8512"
+      },
+      "metadata": {
+        "address": "54 Rue du Professeur Pozzi, 24100 Bergerac",
+        "business_hours": {
+          "lundi": "13:00-17:00",
+          "mardi": "13:00-17:00",
+          "mercredi": "13:00-17:00",
+          "jeudi": "13:00-17:00",
+          "vendredi": "13:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -691,32 +691,6 @@
     },
     {
       "departement": "24",
-      "nom": "Centre hospitalier de Bergerac",
-      "url": "https://vaccination-covid.keldoc.com/redirect/?dom=centre-hospitalier&inst=bergerac-24100&user=centre-hospitalier-samuel-pozzi&specialty=144",
-      "location": {
-        "longitude": "0.496978",
-        "latitude": "44.8506"
-      },
-      "metadata": {
-        "address": "9 Av du Professeur Albert Calmette, 24100 Bergerac",
-        "phone_number": "+33553638999",
-        "business_hours": {
-          "lundi": "8h30- 18h30",
-          "mardi": "8h30- 18h30",
-          "mercredi": "8h30- 18h30",
-          "jeudi": "8h30- 18h30",
-          "vendredi": "8h30- 18h30",
-          "samedi": "8h30- 16h30",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "24",
       "nom": "Centre de vaccination - CH de Nontron",
       "url": "https://partners.doctolib.fr/hopital-public/nontron/ch-nontron-vaccination?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -769,6 +743,32 @@
     },
     {
       "departement": "24",
+      "nom": "Centre hospitalier de Bergerac",
+      "url": "https://vaccination-covid.keldoc.com/redirect/?dom=centre-hospitalier&inst=bergerac-24100&user=centre-hospitalier-samuel-pozzi&specialty=144",
+      "location": {
+        "longitude": "0.496978",
+        "latitude": "44.8506"
+      },
+      "metadata": {
+        "address": "9 Av du Professeur Albert Calmette, 24100 Bergerac",
+        "phone_number": "+33553638999",
+        "business_hours": {
+          "lundi": "8h30- 18h30",
+          "mardi": "8h30- 18h30",
+          "mercredi": "8h30- 18h30",
+          "jeudi": "8h30- 18h30",
+          "vendredi": "8h30- 18h30",
+          "samedi": "8h30- 16h30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
       "nom": "Pharmacie Des Reynats",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-reynats-chancelade",
       "location": {
@@ -781,7 +781,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     }

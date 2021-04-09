@@ -1,7 +1,32 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.967225+02:00",
+  "last_updated": "2021-04-09T15:21:54.147064+02:00",
   "centres_disponibles": [
+    {
+      "departement": "42",
+      "nom": "Centre Hyg\u00e9e \u2013 Vaccination Moderna",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-priest-en-jarez/centre-hygee-vaccination-moderna?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 4.3604699,
+        "latitude": 45.4798076
+      },
+      "metadata": {
+        "address": "1 Chemin de la Marandi\u00e8re, 42270 Saint-Priest-en-Jarez",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": "09:00-18:00",
+          "dimanche": "09:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-04-10T11:20:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
     {
       "departement": "42",
       "nom": "Vaccinodrome Salle Omnisport",
@@ -23,33 +48,7 @@
           "dimanche": "09:00-18:00"
         }
       },
-      "prochain_rdv": "2021-04-10T13:55:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "42",
-      "nom": "Centre de vaccination de l'H\u00f4pital priv\u00e9 de la Loire",
-      "url": "https://partners.doctolib.fr/clinique-privee/saint-etienne/centre-de-vaccination-covid-hopital-prive-de-la-loire-saint-etienne?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.4171",
-        "latitude": "45.4279"
-      },
-      "metadata": {
-        "address": "39 Boulevard de la Palle, 42100 Saint-\u00c9tienne",
-        "phone_number": "+33970771710",
-        "business_hours": {
-          "lundi": "09:00-21:00",
-          "mardi": "09:00-21:00",
-          "mercredi": "09:00-21:00",
-          "jeudi": "09:00-21:00",
-          "vendredi": "09:00-21:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-12T15:45:00.000+02:00",
+      "prochain_rdv": "2021-04-11T12:05:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -127,33 +126,33 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-20T15:30:00.000+02:00",
+      "prochain_rdv": "2021-04-21T13:50:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
     {
       "departement": "42",
-      "nom": "CMSI clinique Mutualiste",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-etienne/centre-de-vaccination-de-cmsi-42?pid=practice-179779&enable_cookies_consent=1",
+      "nom": "Centre de vaccination Covid 19 - CHU Saint Etienne",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/saint-priest-en-jarez/centre-de-vaccination-covid-19-chu-saint-etienne?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
-        "longitude": "4.39407",
-        "latitude": "45.4146"
+        "longitude": 4.3678168,
+        "latitude": 45.4760329
       },
       "metadata": {
-        "address": "3 Rue le Verrier, 42100 Saint-\u00c9tienne",
-        "phone_number": "04 77 12 13 14",
+        "address": "Avenue Albert Raimond, 42270 Saint-Priest-en-Jarez",
+        "phone_number": "09 70 77 17 10",
         "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": null,
+          "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-22T12:25:00.000+02:00",
+      "prochain_rdv": "2021-04-22T12:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -179,7 +178,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-24T15:45:00.000+02:00",
+      "prochain_rdv": "2021-04-23T17:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -205,7 +204,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-25T19:25:00.000+02:00",
+      "prochain_rdv": "2021-04-25T19:40:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -231,7 +230,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-26T12:00:00.000+02:00",
+      "prochain_rdv": "2021-04-26T12:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -257,7 +256,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-05-15T17:10:00.000+02:00",
+      "prochain_rdv": "2021-05-15T17:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -444,31 +443,6 @@
     },
     {
       "departement": "42",
-      "nom": "MA - USN 1Maison d'Arr\u00eat de la Talaudi\u00e8re / Maison d'Arr\u00eat de Saint-Etienne-la-Talaudi\u00e8re",
-      "url": "",
-      "location": {
-        "longitude": "4.4165",
-        "latitude": "45.4731"
-      },
-      "metadata": {
-        "address": " Rue de la Sauvag\u00e8re, 42350 La Talaudi\u00e8re",
-        "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "42",
       "nom": "antenne MSP St Bonnet le Courreau",
       "url": "",
       "location": {
@@ -485,6 +459,31 @@
           "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "MA - USN 1Maison d'Arr\u00eat de la Talaudi\u00e8re / Maison d'Arr\u00eat de Saint-Etienne-la-Talaudi\u00e8re",
+      "url": "",
+      "location": {
+        "longitude": "4.4165",
+        "latitude": "45.4731"
+      },
+      "metadata": {
+        "address": " Rue de la Sauvag\u00e8re, 42350 La Talaudi\u00e8re",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
         }
       },
       "prochain_rdv": null,
@@ -598,23 +597,23 @@
     },
     {
       "departement": "42",
-      "nom": "Centre de vaccination Covid 19 - CHU Saint Etienne",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/saint-priest-en-jarez/centre-de-vaccination-covid-19-chu-saint-etienne?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "nom": "CMSI clinique Mutualiste",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-etienne/centre-de-vaccination-de-cmsi-42?pid=practice-179779&enable_cookies_consent=1",
       "location": {
-        "longitude": 4.3678168,
-        "latitude": 45.4760329
+        "longitude": "4.39407",
+        "latitude": "45.4146"
       },
       "metadata": {
-        "address": "Avenue Albert Raimond, 42270 Saint-Priest-en-Jarez",
-        "phone_number": "09 70 77 17 10",
+        "address": "3 Rue le Verrier, 42100 Saint-\u00c9tienne",
+        "phone_number": "04 77 12 13 14",
         "business_hours": {
-          "lundi": "09:00-17:00",
-          "mardi": "09:00-17:00",
-          "mercredi": "09:00-17:00",
-          "jeudi": "09:00-17:00",
-          "vendredi": "09:00-17:00",
-          "samedi": null,
-          "dimanche": null
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
@@ -624,22 +623,23 @@
     },
     {
       "departement": "42",
-      "nom": "Centre Hyg\u00e9e \u2013 Vaccination Moderna",
-      "url": "https://partners.doctolib.fr/hopital-public/saint-priest-en-jarez/centre-hygee-vaccination-moderna?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "nom": "Centre de vaccination de l'H\u00f4pital priv\u00e9 de la Loire",
+      "url": "https://partners.doctolib.fr/clinique-privee/saint-etienne/centre-de-vaccination-covid-hopital-prive-de-la-loire-saint-etienne?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": 4.3604699,
-        "latitude": 45.4798076
+        "longitude": "4.4171",
+        "latitude": "45.4279"
       },
       "metadata": {
-        "address": "1 Chemin de la Marandi\u00e8re, 42270 Saint-Priest-en-Jarez",
+        "address": "39 Boulevard de la Palle, 42100 Saint-\u00c9tienne",
+        "phone_number": "+33970771710",
         "business_hours": {
-          "lundi": "09:00-18:00",
-          "mardi": "09:00-18:00",
-          "mercredi": "09:00-18:00",
-          "jeudi": "09:00-18:00",
-          "vendredi": "09:00-18:00",
-          "samedi": "09:00-18:00",
-          "dimanche": "09:00-18:00"
+          "lundi": "09:00-21:00",
+          "mardi": "09:00-21:00",
+          "mercredi": "09:00-21:00",
+          "jeudi": "09:00-21:00",
+          "vendredi": "09:00-21:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,

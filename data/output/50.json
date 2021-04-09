@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.971887+02:00",
+  "last_updated": "2021-04-09T15:21:54.153148+02:00",
   "centres_disponibles": [
     {
       "departement": "50",
@@ -49,7 +49,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-10T16:56:00.000+02:00",
+      "prochain_rdv": "2021-04-10T17:36:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -75,7 +75,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-16T13:25:00.000000+0200",
+      "prochain_rdv": "2021-04-16T13:10:00.000000+0200",
       "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -101,7 +101,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-24T17:37:00.000+02:00",
+      "prochain_rdv": "2021-04-23T17:37:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -211,14 +211,14 @@
     },
     {
       "departement": "50",
-      "nom": "Granville : salle h\u00e9rel",
-      "url": "https://partners.doctolib.fr/hopital-public/avranches-granville/ch-d-avranches-granville-centre-de-vaccination-covid?pid=practice-162823&?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Avranches : salle omnisports roger lemoin",
+      "url": "https://partners.doctolib.fr/hopital-public/avranches-granville/ch-d-avranches-granville-centre-de-vaccination-covid?pid=practice-162761&?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "-1.59604",
-        "latitude": "48.8357"
+        "longitude": "-1.35842",
+        "latitude": "48.6768"
       },
       "metadata": {
-        "address": " Bd des Amiraux Granvillais - salle h\u00e9rel, 50400 Granville",
+        "address": " Boulevard Pasteur - salle roger lemoine, 50300 Avranches",
         "phone_number": "+33279461156",
         "business_hours": {
           "lundi": "",
@@ -237,14 +237,14 @@
     },
     {
       "departement": "50",
-      "nom": "Avranches : salle omnisports roger lemoin",
-      "url": "https://partners.doctolib.fr/hopital-public/avranches-granville/ch-d-avranches-granville-centre-de-vaccination-covid?pid=practice-162761&?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Granville : salle h\u00e9rel",
+      "url": "https://partners.doctolib.fr/hopital-public/avranches-granville/ch-d-avranches-granville-centre-de-vaccination-covid?pid=practice-162823&?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "-1.35842",
-        "latitude": "48.6768"
+        "longitude": "-1.59604",
+        "latitude": "48.8357"
       },
       "metadata": {
-        "address": " Boulevard Pasteur - salle roger lemoine, 50300 Avranches",
+        "address": " Bd des Amiraux Granvillais - salle h\u00e9rel, 50400 Granville",
         "phone_number": "+33279461156",
         "business_hours": {
           "lundi": "",
@@ -333,6 +333,24 @@
     },
     {
       "departement": "50",
+      "nom": "Pharmacie Des Matignon",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-matignon-granville",
+      "location": {
+        "longitude": -1.5619506,
+        "latitude": 48.8376172
+      },
+      "metadata": {
+        "address": "1720 AVENUE DES MATIGNON, 50400 GRANVILLE",
+        "phone_number": "+33233617324",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "50",
       "nom": "Pharmacie Lamoureux",
       "url": "https://partners.doctolib.fr/pharmacie/villedieu-les-poeles-rouffigny/pharmacie-lamoureux",
       "location": {
@@ -406,24 +424,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "50",
-      "nom": "Pharmacie Des Matignon",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-matignon-granville",
-      "location": {
-        "longitude": -1.5619506,
-        "latitude": 48.8376172
-      },
-      "metadata": {
-        "address": "1720 AVENUE DES MATIGNON, 50400 GRANVILLE",
-        "phone_number": "+33233617324",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     }

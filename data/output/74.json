@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.991898+02:00",
+  "last_updated": "2021-04-09T15:21:54.180601+02:00",
   "centres_disponibles": [
     {
       "departement": "74",
@@ -261,6 +261,32 @@
     },
     {
       "departement": "74",
+      "nom": "Complexe Martin Luther King",
+      "url": "https://partners.doctolib.fr/centre-de-sante/annemasse/centre-de-vaccination-covid-annemasse-complexe-martin-luther-king?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.23831",
+        "latitude": "46.1985"
+      },
+      "metadata": {
+        "address": " rue du Dr Francis Baud, 74100 Annemasse",
+        "phone_number": "+33450336233",
+        "business_hours": {
+          "lundi": "08:00-13:00/14:00-18:00",
+          "mardi": "08:00-13:00/14:00-18:00",
+          "mercredi": "08:00-13:00/14:00-18:00",
+          "jeudi": "08:00-13:00/14:00-18:00",
+          "vendredi": "08:00-13:00/14:00-18:00",
+          "samedi": "08:00-13:00/14:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-06T12:15:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "74",
       "nom": "Bonneville - AGORA",
       "url": "https://partners.doctolib.fr/centre-de-sante/bonneville/centre-de-vaccination-agora-bonneville?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -281,32 +307,6 @@
         }
       },
       "prochain_rdv": "2021-05-06T16:15:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "74",
-      "nom": "Complexe Martin Luther King",
-      "url": "https://partners.doctolib.fr/centre-de-sante/annemasse/centre-de-vaccination-covid-annemasse-complexe-martin-luther-king?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.23831",
-        "latitude": "46.1985"
-      },
-      "metadata": {
-        "address": " rue du Dr Francis Baud, 74100 Annemasse",
-        "phone_number": "+33450336233",
-        "business_hours": {
-          "lundi": "08:00-13:00/14:00-18:00",
-          "mardi": "08:00-13:00/14:00-18:00",
-          "mercredi": "08:00-13:00/14:00-18:00",
-          "jeudi": "08:00-13:00/14:00-18:00",
-          "vendredi": "08:00-13:00/14:00-18:00",
-          "samedi": "08:00-13:00/14:00-18:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-05-11T10:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -797,6 +797,24 @@
     },
     {
       "departement": "74",
+      "nom": "Pharmacie Du Credo",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-credo--valserhone",
+      "location": {
+        "longitude": 5.8116598,
+        "latitude": 46.1256735
+      },
+      "metadata": {
+        "address": "Avenue Mal de Lattre de Tassigny (Bellegarde-sur-Valserine), 01200 Valserh\u00f4ne",
+        "phone_number": "+33450482726",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "74",
       "nom": "Centre de vaccination Covid-19 du Haut Chablais",
       "url": "https://partners.doctolib.fr/centre-de-sante/saint-jean-d-aulps/centre-de-vaccination-covid-19-du-haut-chablais?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
@@ -870,24 +888,6 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "74",
-      "nom": "Pharmacie Du Credo",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-credo--valserhone",
-      "location": {
-        "longitude": 5.8116598,
-        "latitude": 46.1256735
-      },
-      "metadata": {
-        "address": "Avenue Mal de Lattre de Tassigny (Bellegarde-sur-Valserine), 01200 Valserh\u00f4ne",
-        "phone_number": "+33450482726",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
       "appointment_count": 0
     }
   ]

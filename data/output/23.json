@@ -1,34 +1,8 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.950685+02:00",
+  "last_updated": "2021-04-09T15:21:54.124250+02:00",
   "centres_disponibles": [],
   "centres_indisponibles": [
-    {
-      "departement": "23",
-      "nom": "CH BOURGANEUF",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/limousin/vaccination-covid-19-professionnels-de-sante?speciality_id=5494&pid=practice-163731&enable_cookies_consent=1",
-      "location": {
-        "longitude": "1.75069",
-        "latitude": "45.9534"
-      },
-      "metadata": {
-        "address": " Place Tournois, 23400 Bourganeuf",
-        "phone_number": "+33555515571",
-        "business_hours": {
-          "lundi": "13:30-16:00",
-          "mardi": "13:30-16:00",
-          "mercredi": "13:30-16:00",
-          "jeudi": "13:30-16:00",
-          "vendredi": "13:30-16:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "23",
       "nom": "CH EVAUX LES BAINS",
@@ -46,6 +20,32 @@
           "mercredi": "14:00-17:00",
           "jeudi": "14:00-17:00",
           "vendredi": "14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "23",
+      "nom": "CH BOURGANEUF",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/limousin/vaccination-covid-19-professionnels-de-sante?speciality_id=5494&pid=practice-163731&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.75069",
+        "latitude": "45.9534"
+      },
+      "metadata": {
+        "address": " Place Tournois, 23400 Bourganeuf",
+        "phone_number": "+33555515571",
+        "business_hours": {
+          "lundi": "13:30-16:00",
+          "mardi": "13:30-16:00",
+          "mercredi": "13:30-16:00",
+          "jeudi": "13:30-16:00",
+          "vendredi": "13:30-16:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }

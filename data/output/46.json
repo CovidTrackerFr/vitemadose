@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.970032+02:00",
+  "last_updated": "2021-04-09T15:21:54.150272+02:00",
   "centres_disponibles": [
     {
       "departement": "46",
@@ -317,26 +317,27 @@
     },
     {
       "departement": "46",
-      "nom": "Cressesac",
-      "url": "",
+      "nom": "MSP CATUS",
+      "url": "https://partners.doctolib.fr/centre-de-sante/catus/centre-de-vaccination-covid-msp-catus?pid=practice-179532&enable_cookies_consent=1",
       "location": {
-        "longitude": "1.51701",
-        "latitude": "45.0198"
+        "longitude": "1.33644",
+        "latitude": "44.5554"
       },
       "metadata": {
-        "address": " combe de la sal\u00e9, 46600 Cressensac-Sarrazac",
+        "address": " Quai du vert, 46150 Catus",
+        "phone_number": "+33800541919",
         "business_hours": {
           "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
           "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
-      "plateforme": "Autre",
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -368,27 +369,26 @@
     },
     {
       "departement": "46",
-      "nom": "MSP CATUS",
-      "url": "https://partners.doctolib.fr/centre-de-sante/catus/centre-de-vaccination-covid-msp-catus?pid=practice-179532&enable_cookies_consent=1",
+      "nom": "Cressesac",
+      "url": "",
       "location": {
-        "longitude": "1.33644",
-        "latitude": "44.5554"
+        "longitude": "1.51701",
+        "latitude": "45.0198"
       },
       "metadata": {
-        "address": " Quai du vert, 46150 Catus",
-        "phone_number": "+33800541919",
+        "address": " combe de la sal\u00e9, 46600 Cressensac-Sarrazac",
         "business_hours": {
           "lundi": "ferm\u00e9",
-          "mardi": "ouvert",
-          "mercredi": "ouvert",
-          "jeudi": "ouvert",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
           "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
-      "plateforme": "Doctolib",
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },

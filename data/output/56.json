@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.975673+02:00",
+  "last_updated": "2021-04-09T15:21:54.158546+02:00",
   "centres_disponibles": [
     {
       "departement": "56",
@@ -136,14 +136,14 @@
     },
     {
       "departement": "56",
-      "nom": "MA - US - MAISON D'ARRET DE VANNES / Maison d'Arr\u00eat de Vannes",
+      "nom": "CP - US du CHBS au Centre P\u00e9nitentiaire de Lorient Ploemeur / Centre P\u00e9nitentiaire de Lorient-Ploemeur",
       "url": "",
       "location": {
-        "longitude": "-2.76332",
-        "latitude": "47.6597"
+        "longitude": "-3.41234",
+        "latitude": "47.7264"
       },
       "metadata": {
-        "address": "12 Place de Nazareth, 56000 Vannes",
+        "address": " Route de Larmor, 56270 Ploemeur",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -161,14 +161,14 @@
     },
     {
       "departement": "56",
-      "nom": "CP - US du CHBS au Centre P\u00e9nitentiaire de Lorient Ploemeur / Centre P\u00e9nitentiaire de Lorient-Ploemeur",
+      "nom": "MA - US - MAISON D'ARRET DE VANNES / Maison d'Arr\u00eat de Vannes",
       "url": "",
       "location": {
-        "longitude": "-3.41234",
-        "latitude": "47.7264"
+        "longitude": "-2.76332",
+        "latitude": "47.6597"
       },
       "metadata": {
-        "address": " Route de Larmor, 56270 Ploemeur",
+        "address": "12 Place de Nazareth, 56000 Vannes",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -238,32 +238,6 @@
     },
     {
       "departement": "56",
-      "nom": "CH AURAY",
-      "url": "https://partners.doctolib.fr/hopital-public/auray/chba-centre-de-vaccination-covid-d-auray?pid=practice-164632&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-2.97902",
-        "latitude": "47.6692"
-      },
-      "metadata": {
-        "address": "2 Rue du Pratel, 56400 Auray",
-        "phone_number": "+33297019956",
-        "business_hours": {
-          "lundi": "13h-17h",
-          "mardi": "9h-17h",
-          "mercredi": "9h-17h",
-          "jeudi": "9h-17h",
-          "vendredi": "9h-17h",
-          "samedi": "9h-13h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "56",
       "nom": "GRANDCHAMP - Salle multifonctionnelle",
       "url": "https://partners.doctolib.fr/hopital-public/grand-champ/ghba-centre-de-vaccination-covid-grandchamp?pid=practice-165902&enable_cookies_consent=1",
       "location": {
@@ -280,6 +254,32 @@
           "jeudi": "9h-12h / 14h30-17h30",
           "vendredi": "9h-12h / 14h30-17h30",
           "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "56",
+      "nom": "CH AURAY",
+      "url": "https://partners.doctolib.fr/hopital-public/auray/chba-centre-de-vaccination-covid-d-auray?pid=practice-164632&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-2.97902",
+        "latitude": "47.6692"
+      },
+      "metadata": {
+        "address": "2 Rue du Pratel, 56400 Auray",
+        "phone_number": "+33297019956",
+        "business_hours": {
+          "lundi": "13h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-13h",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -449,20 +449,20 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
     {
       "departement": "56",
-      "nom": "Centre de Vaccination Covid-19 - Vannes Kercado",
-      "url": "https://partners.doctolib.fr/hopital-public/vannes/centre-de-vaccination-covid-19-vannes-kercado?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "nom": "GH Broc\u00e9liande Atlantique (GHBA) - Centre de vaccination COVID Quiberon",
+      "url": "https://partners.doctolib.fr/centre-de-sante/quiberon/gh-broceliande-atlantique-ghba-centre-de-vaccination-covid-quiberon?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
-        "longitude": -2.7713769,
-        "latitude": 47.6444702
+        "longitude": -3.1212589,
+        "latitude": 47.484727
       },
       "metadata": {
-        "address": "28 Rue Winston Churchill, 56000 Vannes",
+        "address": "6 Rue Jules Ferry, 56170 Quiberon",
         "business_hours": {
           "lundi": null,
           "mardi": null,
@@ -480,14 +480,14 @@
     },
     {
       "departement": "56",
-      "nom": "GH Broc\u00e9liande Atlantique (GHBA) - Centre de vaccination COVID Quiberon",
-      "url": "https://partners.doctolib.fr/centre-de-sante/quiberon/gh-broceliande-atlantique-ghba-centre-de-vaccination-covid-quiberon?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "nom": "Centre de Vaccination Covid-19 - Vannes Kercado",
+      "url": "https://partners.doctolib.fr/hopital-public/vannes/centre-de-vaccination-covid-19-vannes-kercado?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
-        "longitude": -3.1212589,
-        "latitude": 47.484727
+        "longitude": -2.7713769,
+        "latitude": 47.6444702
       },
       "metadata": {
-        "address": "6 Rue Jules Ferry, 56170 Quiberon",
+        "address": "28 Rue Winston Churchill, 56000 Vannes",
         "business_hours": {
           "lundi": null,
           "mardi": null,

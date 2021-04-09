@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.950139+02:00",
+  "last_updated": "2021-04-09T15:21:54.123308+02:00",
   "centres_disponibles": [
     {
       "departement": "22",
@@ -23,59 +23,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-15T12:05:00.000000+0200",
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "22",
-      "nom": "Gymnase Kerraoul 2",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/paimpol-22500/centre-de-vaccination-de-paimpol-gymnase-k2",
-      "location": {
-        "longitude": "-3.06482",
-        "latitude": "48.7833"
-      },
-      "metadata": {
-        "address": "18 Voie Communale Hent Kervig, 22500 Paimpol",
-        "phone_number": "02 57 18 00 60",
-        "business_hours": {
-          "lundi": "09:00-13:00/13:00-17:30",
-          "mardi": "09:00-13:00/13:00-17:30",
-          "mercredi": "09:00-13:00/13:00-17:30",
-          "jeudi": "09:00-13:00/13:00-17:30",
-          "vendredi": "09:00-13:00/13:00-17:30",
-          "samedi": "09:00-13:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-26T11:40:00.000000+0200",
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "22",
-      "nom": "GUINGAMP - Centre social",
-      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/guingamp-22200/guingamp/centre-de-vaccination-guingamp-centre-social-guingamp",
-      "location": {
-        "longitude": "-3.15965",
-        "latitude": "48.5639"
-      },
-      "metadata": {
-        "address": " Rue Hyacinthe Cheval, 22200 Guingamp",
-        "phone_number": "+33257180060",
-        "business_hours": {
-          "lundi": "9h00-13h00 / 13h30-17h30",
-          "mardi": "9h00-13h00 / 13h30-17h30",
-          "mercredi": "9h00-13h00 / 13h30-17h30",
-          "jeudi": "9h00-13h00 / 13h30-17h30",
-          "vendredi": "9h00-13h00 / 13h30-17h30",
-          "samedi": "9h00-13h00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-26T15:45:00.000000+0200",
+      "prochain_rdv": "2021-04-14T11:05:00.000000+0200",
       "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -313,32 +261,6 @@
     },
     {
       "departement": "22",
-      "nom": "LANVOLLON - Salle Armor Argoat",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/lanvollon-22290/ville-de-lanvollon/centre-de-vaccination-de-la-ville-de-lanvollon",
-      "location": {
-        "longitude": "-2.99161",
-        "latitude": "48.6371"
-      },
-      "metadata": {
-        "address": " Rue du Tregor, 22290 Lanvollon",
-        "phone_number": "+33257180060",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "9h-13h / 13h30-17h30",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "22",
       "nom": "GUINGAMP - Centre de sant\u00e9 (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
       "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/pabu-22200/equipe-d-infectiologie-3?agenda=51168&motive=81341&category=-1&cabinet=16558",
       "location": {
@@ -381,6 +303,58 @@
           "jeudi": "9h-17h30",
           "vendredi": "9h-17h30",
           "samedi": "9h-17h30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "LANVOLLON - Salle Armor Argoat",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/lanvollon-22290/ville-de-lanvollon/centre-de-vaccination-de-la-ville-de-lanvollon",
+      "location": {
+        "longitude": "-2.99161",
+        "latitude": "48.6371"
+      },
+      "metadata": {
+        "address": " Rue du Tregor, 22290 Lanvollon",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "9h-13h / 13h30-17h30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "GUINGAMP - Centre social",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/guingamp-22200/guingamp/centre-de-vaccination-guingamp-centre-social-guingamp",
+      "location": {
+        "longitude": "-3.15965",
+        "latitude": "48.5639"
+      },
+      "metadata": {
+        "address": " Rue Hyacinthe Cheval, 22200 Guingamp",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "9h00-13h00 / 13h30-17h30",
+          "mardi": "9h00-13h00 / 13h30-17h30",
+          "mercredi": "9h00-13h00 / 13h30-17h30",
+          "jeudi": "9h00-13h00 / 13h30-17h30",
+          "vendredi": "9h00-13h00 / 13h30-17h30",
+          "samedi": "9h00-13h00",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -456,6 +430,32 @@
       "prochain_rdv": null,
       "plateforme": "Ordoclic",
       "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "Gymnase Kerraoul 2",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/paimpol-22500/centre-de-vaccination-de-paimpol-gymnase-k2",
+      "location": {
+        "longitude": "-3.06482",
+        "latitude": "48.7833"
+      },
+      "metadata": {
+        "address": "18 Voie Communale Hent Kervig, 22500 Paimpol",
+        "phone_number": "02 57 18 00 60",
+        "business_hours": {
+          "lundi": "09:00-13:00/13:00-17:30",
+          "mardi": "09:00-13:00/13:00-17:30",
+          "mercredi": "09:00-13:00/13:00-17:30",
+          "jeudi": "09:00-13:00/13:00-17:30",
+          "vendredi": "09:00-13:00/13:00-17:30",
+          "samedi": "09:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
       "appointment_count": 0
     }
   ]

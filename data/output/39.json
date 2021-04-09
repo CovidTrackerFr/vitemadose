@@ -1,59 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.964866+02:00",
+  "last_updated": "2021-04-09T15:21:54.143754+02:00",
   "centres_disponibles": [
-    {
-      "departement": "39",
-      "nom": "Centre Hauts de Bienne - Morez",
-      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-163395&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.02154",
-        "latitude": "46.5221"
-      },
-      "metadata": {
-        "address": "5 Espace Lamartine, 39400 Hauts de Bienne",
-        "phone_number": "+33384868600",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "",
-          "vendredi": "",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-13T09:02:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "39",
-      "nom": "Centre de vaccination des Rousses",
-      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-164052&?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.06061",
-        "latitude": "46.4849"
-      },
-      "metadata": {
-        "address": "281 Rue Pasteur, 39220 Les Rousses",
-        "phone_number": "+33384868600",
-        "business_hours": {
-          "lundi": "13:30-17:30",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "13:30-17:30",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-13T17:46:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "39",
       "nom": "Centre de Salins les Bains",
@@ -82,6 +30,32 @@
     },
     {
       "departement": "39",
+      "nom": "Centre de vaccination des Rousses",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-164052&?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.06061",
+        "latitude": "46.4849"
+      },
+      "metadata": {
+        "address": "281 Rue Pasteur, 39220 Les Rousses",
+        "phone_number": "+33384868600",
+        "business_hours": {
+          "lundi": "13:30-17:30",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "13:30-17:30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-14T14:18:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "39",
       "nom": "Centre d'Arbois - espace Pasteur",
       "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-164596&?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -102,6 +76,32 @@
         }
       },
       "prochain_rdv": "2021-04-23T13:38:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "39",
+      "nom": "Centre Hauts de Bienne - Morez",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-163395&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.02154",
+        "latitude": "46.5221"
+      },
+      "metadata": {
+        "address": "5 Espace Lamartine, 39400 Hauts de Bienne",
+        "phone_number": "+33384868600",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-29T12:14:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0

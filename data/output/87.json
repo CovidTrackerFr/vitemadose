@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:50.004381+02:00",
+  "last_updated": "2021-04-09T15:21:54.197040+02:00",
   "centres_disponibles": [
     {
       "departement": "87",
@@ -23,7 +23,7 @@
           "dimanche": "09:00-17:00"
         }
       },
-      "prochain_rdv": "2021-04-20T13:30:00.000+02:00",
+      "prochain_rdv": "2021-04-19T09:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -49,7 +49,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-21T09:00:00.000+02:00",
+      "prochain_rdv": "2021-04-21T09:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -213,32 +213,6 @@
     },
     {
       "departement": "87",
-      "nom": "CH SAINT JUNIEN",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/limousin/vaccination-covid-19-professionnels-de-sante?speciality_id=5494&pid=practice-162981&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.897567",
-        "latitude": "45.8886"
-      },
-      "metadata": {
-        "address": "12 Rue Chateaubriand, 87200 Saint-Junien",
-        "phone_number": "+33555087533",
-        "business_hours": {
-          "lundi": "09:30-12:30  13:30-16:00",
-          "mardi": "09:30-12:30  13:30-16:00",
-          "mercredi": "09:30-12:30  13:30-16:00",
-          "jeudi": "09:30-12:30  13:30-16:00",
-          "vendredi": "",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "87",
       "nom": "POLYCLINIQUE - SITE CHENIEUX",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/limousin/vaccination-covid-19-professionnels-de-sante?speciality_id=5494&pid=practice-162986&enable_cookies_consent=1",
       "location": {
@@ -255,6 +229,32 @@
           "jeudi": "11:00-19:00",
           "vendredi": "11:00-19:00",
           "samedi": "11:00-19:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "87",
+      "nom": "CH SAINT JUNIEN",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/limousin/vaccination-covid-19-professionnels-de-sante?speciality_id=5494&pid=practice-162981&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.897567",
+        "latitude": "45.8886"
+      },
+      "metadata": {
+        "address": "12 Rue Chateaubriand, 87200 Saint-Junien",
+        "phone_number": "+33555087533",
+        "business_hours": {
+          "lundi": "09:30-12:30  13:30-16:00",
+          "mardi": "09:30-12:30  13:30-16:00",
+          "mercredi": "09:30-12:30  13:30-16:00",
+          "jeudi": "09:30-12:30  13:30-16:00",
+          "vendredi": "",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },

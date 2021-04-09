@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.973985+02:00",
+  "last_updated": "2021-04-09T15:21:54.156229+02:00",
   "centres_disponibles": [
     {
       "departement": "54",
@@ -23,7 +23,7 @@
           "dimanche": "non pr\u00e9cis\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-12T11:20:00.000+02:00",
+      "prochain_rdv": "2021-04-12T10:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -75,7 +75,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-14T17:10:00.000+02:00",
+      "prochain_rdv": "2021-04-14T17:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -101,7 +101,7 @@
           "dimanche": "non renseign\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-15T13:03:00.000+02:00",
+      "prochain_rdv": "2021-04-15T13:38:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -127,7 +127,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-15T15:14:00.000+02:00",
+      "prochain_rdv": "2021-04-15T15:28:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -153,7 +153,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-17T09:55:00.000+02:00",
+      "prochain_rdv": "2021-04-17T12:02:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -239,14 +239,14 @@
     },
     {
       "departement": "54",
-      "nom": "CP - US Nancy / Centre p\u00e9nitentiaire de Nancy-Max\u00e9ville",
+      "nom": "CD - US du CD de TOUL / Centre de D\u00e9tention d'Ecrouves",
       "url": "",
       "location": {
-        "longitude": "6.17156",
-        "latitude": "48.6882"
+        "longitude": "5.85112",
+        "latitude": "48.6811"
       },
       "metadata": {
-        "address": " Nancy, 54100 Nancy",
+        "address": "323 Route de Pagney, 54200 \u00c9crouves",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -264,14 +264,14 @@
     },
     {
       "departement": "54",
-      "nom": "CD - US du CD de TOUL / Centre de D\u00e9tention d'Ecrouves",
+      "nom": "CP - US Nancy / Centre p\u00e9nitentiaire de Nancy-Max\u00e9ville",
       "url": "",
       "location": {
-        "longitude": "5.85112",
-        "latitude": "48.6811"
+        "longitude": "6.17156",
+        "latitude": "48.6882"
       },
       "metadata": {
-        "address": "323 Route de Pagney, 54200 \u00c9crouves",
+        "address": " Nancy, 54100 Nancy",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -341,32 +341,6 @@
     },
     {
       "departement": "54",
-      "nom": "Nancy - H\u00f4pital Central",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-162190&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.19336",
-        "latitude": "48.6839"
-      },
-      "metadata": {
-        "address": " Rue Lionnois, 54000 Nancy",
-        "phone_number": "+33383851300",
-        "business_hours": {
-          "lundi": "9:00-17:00",
-          "mardi": "9:00-17:00",
-          "mercredi": "9:00-17:00",
-          "jeudi": "9:00-17:00",
-          "vendredi": "9:00-17:00",
-          "samedi": "non renseign\u00e9",
-          "dimanche": "non renseign\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "54",
       "nom": "Jarville - Espace communal Foch",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?speciality_id=5494&pid=practice-163351&enable_cookies_consent=1",
       "location": {
@@ -384,6 +358,32 @@
           "vendredi": "09:00-13:00/14:00-17:00",
           "samedi": "non pr\u00e9cis\u00e9",
           "dimanche": "non pr\u00e9cis\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "54",
+      "nom": "Nancy - H\u00f4pital Central",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-162190&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.19336",
+        "latitude": "48.6839"
+      },
+      "metadata": {
+        "address": " Rue Lionnois, 54000 Nancy",
+        "phone_number": "+33383851300",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "9:00-17:00",
+          "jeudi": "9:00-17:00",
+          "vendredi": "9:00-17:00",
+          "samedi": "non renseign\u00e9",
+          "dimanche": "non renseign\u00e9"
         }
       },
       "prochain_rdv": null,
@@ -679,14 +679,14 @@
     },
     {
       "departement": "54",
-      "nom": "CH de Pont-\u00e0-Mousson",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-163827&enable_cookies_consent=1",
+      "nom": "CHI de Pompey",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-163828&enable_cookies_consent=1",
       "location": {
-        "longitude": "6.05115",
-        "latitude": "48.9058"
+        "longitude": "6.1201",
+        "latitude": "48.7648"
       },
       "metadata": {
-        "address": "1 Place Colombe, 54700 Pont-\u00e0-Mousson",
+        "address": "3 Rue de l'Avant-garde, 54340 Pompey",
         "phone_number": "+33383851300",
         "business_hours": {
           "lundi": "non renseign\u00e9",
@@ -705,14 +705,14 @@
     },
     {
       "departement": "54",
-      "nom": "CHI de Pompey",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-163828&enable_cookies_consent=1",
+      "nom": "CH de Pont-\u00e0-Mousson",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-163827&enable_cookies_consent=1",
       "location": {
-        "longitude": "6.1201",
-        "latitude": "48.7648"
+        "longitude": "6.05115",
+        "latitude": "48.9058"
       },
       "metadata": {
-        "address": "3 Rue de l'Avant-garde, 54340 Pompey",
+        "address": "1 Place Colombe, 54700 Pont-\u00e0-Mousson",
         "phone_number": "+33383851300",
         "business_hours": {
           "lundi": "non renseign\u00e9",
@@ -835,32 +835,6 @@
     },
     {
       "departement": "54",
-      "nom": "Centre de vaccination de LONGWY",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-167650&enable_cookies_consent=1",
-      "location": {
-        "longitude": "5.75398",
-        "latitude": "49.5278"
-      },
-      "metadata": {
-        "address": "189 Rue de Lorraine, 54400 Cosnes-et-Romain",
-        "phone_number": "+33383851300",
-        "business_hours": {
-          "lundi": "non renseign\u00e9",
-          "mardi": "non renseign\u00e9",
-          "mercredi": "non renseign\u00e9",
-          "jeudi": "non renseign\u00e9",
-          "vendredi": "non renseign\u00e9",
-          "samedi": "non renseign\u00e9",
-          "dimanche": "non renseign\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "54",
       "nom": "CH de Toul",
       "url": "https://partners.doctolib.fr/hopital-public/toul/centre-de-vaccination-de-toul?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -878,6 +852,32 @@
           "vendredi": "08:30-12:00/13:30-17:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "54",
+      "nom": "Centre de vaccination de LONGWY",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-167650&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.75398",
+        "latitude": "49.5278"
+      },
+      "metadata": {
+        "address": "189 Rue de Lorraine, 54400 Cosnes-et-Romain",
+        "phone_number": "+33383851300",
+        "business_hours": {
+          "lundi": "non renseign\u00e9",
+          "mardi": "non renseign\u00e9",
+          "mercredi": "non renseign\u00e9",
+          "jeudi": "non renseign\u00e9",
+          "vendredi": "non renseign\u00e9",
+          "samedi": "non renseign\u00e9",
+          "dimanche": "non renseign\u00e9"
         }
       },
       "prochain_rdv": null,

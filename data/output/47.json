@@ -1,34 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.970708+02:00",
-  "centres_disponibles": [
-    {
-      "departement": "47",
-      "nom": "ESPACE EXPO MARMANDE (CHIC MARMANDE)",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/marmande/ch-intercommunal-marmande?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.143191",
-        "latitude": "44.5085"
-      },
-      "metadata": {
-        "address": "6 Avenue Francois Mitterrand, 47200 Marmande",
-        "phone_number": "+33553203110",
-        "business_hours": {
-          "lundi": "9:00-12:00/13:00-17:00",
-          "mardi": "9:00-12:00/13:00-17:00",
-          "mercredi": "9:00-12:00/13:00-17:00",
-          "jeudi": "9:00-12:00/13:00-17:00",
-          "vendredi": "9:00-12:00/13:00-17:00",
-          "samedi": "9:00-12:00/13:00-17:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-12T09:05:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    }
-  ],
+  "last_updated": "2021-04-09T15:21:54.151330+02:00",
+  "centres_disponibles": [],
   "centres_indisponibles": [
     {
       "departement": "47",
@@ -123,6 +96,32 @@
           "jeudi": "non precis\u00e9",
           "vendredi": "non precis\u00e9",
           "samedi": "non precis\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "47",
+      "nom": "ESPACE EXPO MARMANDE (CHIC MARMANDE)",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/marmande/ch-intercommunal-marmande?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.143191",
+        "latitude": "44.5085"
+      },
+      "metadata": {
+        "address": "6 Avenue Francois Mitterrand, 47200 Marmande",
+        "phone_number": "+33553203110",
+        "business_hours": {
+          "lundi": "9:00-12:00/13:00-17:00",
+          "mardi": "9:00-12:00/13:00-17:00",
+          "mercredi": "9:00-12:00/13:00-17:00",
+          "jeudi": "9:00-12:00/13:00-17:00",
+          "vendredi": "9:00-12:00/13:00-17:00",
+          "samedi": "9:00-12:00/13:00-17:00",
           "dimanche": "ferm\u00e9"
         }
       },

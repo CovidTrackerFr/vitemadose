@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.972414+02:00",
+  "last_updated": "2021-04-09T15:21:54.154034+02:00",
   "centres_disponibles": [],
   "centres_indisponibles": [
     {
@@ -560,7 +560,25 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "51",
+      "nom": "Pharmacie Talleyrand",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-talleyrand-reims",
+      "location": {
+        "longitude": 4.029668,
+        "latitude": 49.2547207
+      },
+      "metadata": {
+        "address": "13 rue Talleyrand, 51100 Reims",
+        "phone_number": "+33326473232",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -613,24 +631,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "51",
-      "nom": "Pharmacie Talleyrand",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-talleyrand-reims",
-      "location": {
-        "longitude": 4.029668,
-        "latitude": 49.2547207
-      },
-      "metadata": {
-        "address": "13 rue Talleyrand, 51100 Reims",
-        "phone_number": "+33326473232",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     }

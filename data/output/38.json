@@ -1,7 +1,33 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.964066+02:00",
+  "last_updated": "2021-04-09T15:21:54.142728+02:00",
   "centres_disponibles": [
+    {
+      "departement": "38",
+      "nom": "Grand centre de vaccination - Alpexpo",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/grenoble-38000/vaccinodrome-grenoble?category=-1&cabinet=18795&specialty=144",
+      "location": {
+        "longitude": "5.73508",
+        "latitude": "45.1568"
+      },
+      "metadata": {
+        "address": " Rue Henri Barbusse, 38100 Grenoble",
+        "phone_number": "+33476003134 ",
+        "business_hours": {
+          "lundi": "09:00-18:30",
+          "mardi": "09:00-18:30",
+          "mercredi": "09:00-18:30",
+          "jeudi": "09:00-18:30",
+          "vendredi": "09:00-18:30",
+          "samedi": "09:00-18:30",
+          "dimanche": "09:00-18:30"
+        }
+      },
+      "prochain_rdv": "2021-04-10T17:40:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
     {
       "departement": "38",
       "nom": "Centre de vaccination de St Etienne de St Geoirs - Grenoble Air Parc",
@@ -108,32 +134,6 @@
     },
     {
       "departement": "38",
-      "nom": "Communaut\u00e9 professionnelle territoriale de sant\u00e9 (CPTS) Sud est Grenoblois - Salle des f\u00eates",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/eybens-80000/cpts-sud-est-grenoblois/centre-de-vaccination-du-cpts-sud-est-grenoblois",
-      "location": {
-        "longitude": "5.75446",
-        "latitude": "45.1495"
-      },
-      "metadata": {
-        "address": "5 Rue du Chateau, 38320 Eybens",
-        "phone_number": "+33476003134",
-        "business_hours": {
-          "lundi": "09:00-16:00",
-          "mardi": "09:00-16:00",
-          "mercredi": "09:00-16:00",
-          "jeudi": "09:00-16:00",
-          "vendredi": "09:00-16:00",
-          "samedi": "09:00-16:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-16T14:30:00.000000+0200",
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "38",
       "nom": "Centre de vaccination du Gr\u00e9sivaudan - Salle polyvalente",
       "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/le-versoud-38420/salle-polyvalente-le-versoud/centre-de-vaccination-de-la-salle-polyvalente-le-versoud",
       "location": {
@@ -154,6 +154,32 @@
         }
       },
       "prochain_rdv": "2021-04-19T10:10:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "38",
+      "nom": "Communaut\u00e9 professionnelle territoriale de sant\u00e9 (CPTS) Sud est Grenoblois - Salle des f\u00eates",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/eybens-80000/cpts-sud-est-grenoblois/centre-de-vaccination-du-cpts-sud-est-grenoblois",
+      "location": {
+        "longitude": "5.75446",
+        "latitude": "45.1495"
+      },
+      "metadata": {
+        "address": "5 Rue du Chateau, 38320 Eybens",
+        "phone_number": "+33476003134",
+        "business_hours": {
+          "lundi": "09:00-16:00",
+          "mardi": "09:00-16:00",
+          "mercredi": "09:00-16:00",
+          "jeudi": "09:00-16:00",
+          "vendredi": "09:00-16:00",
+          "samedi": "09:00-16:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-19T11:10:00.000000+0200",
       "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -181,32 +207,6 @@
       },
       "prochain_rdv": "2021-04-23T12:15:00.000+02:00",
       "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "38",
-      "nom": "Centre de vaccination de Vienne - Man\u00e8ge",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/vienne-38200/cegidd/cegidd-du-chu-grenoble",
-      "location": {
-        "longitude": "4.86576",
-        "latitude": "45.5132"
-      },
-      "metadata": {
-        "address": "30 Avenue G\u00e9n\u00e9ral Leclerc, 38200 Vienne",
-        "phone_number": "+33476003134",
-        "business_hours": {
-          "lundi": "09:00-12:00/13:30-16:30",
-          "mardi": "ferm\u00e9",
-          "mercredi": "09:00-12:00/13:30-16:30",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "09:00-15:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-23T16:50:00.000000+0200",
-      "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -368,6 +368,32 @@
     },
     {
       "departement": "38",
+      "nom": "Centre de vaccination de Vienne - Man\u00e8ge",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/vienne-38200/cegidd/cegidd-du-chu-grenoble",
+      "location": {
+        "longitude": "4.86576",
+        "latitude": "45.5132"
+      },
+      "metadata": {
+        "address": "30 Avenue G\u00e9n\u00e9ral Leclerc, 38200 Vienne",
+        "phone_number": "+33476003134",
+        "business_hours": {
+          "lundi": "09:00-12:00/13:30-16:30",
+          "mardi": "ferm\u00e9",
+          "mercredi": "09:00-12:00/13:30-16:30",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "09:00-15:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "38",
       "nom": "Centre de vaccination  Communaut\u00e9 professionnelle territoriale de sant\u00e9 (CPTS) Vercors",
       "url": "https://vaccination-covid.keldoc.com/vaccination-covid19/villard-de-lans-38250/equipe-de-vaccination-centre-de-vaccination-du-vercors?agenda=51417&motive=81974&category=-1&cabinet=16698",
       "location": {
@@ -420,6 +446,31 @@
     },
     {
       "departement": "38",
+      "nom": "Centre de vaccination COVID - Centre hospitalier de Vienne - (Professionnels de sant\u00e9 uniquement)",
+      "url": "https://partners.doctolib.fr/hopital-public/vienne/centre-de-vaccination-covid-19-ch-vienne?pid=practice-165717&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.87999",
+        "latitude": "45.5337"
+      },
+      "metadata": {
+        "address": " Mont Salomon, 38200 Vienne",
+        "business_hours": {
+          "lundi": "13:00-16:00",
+          "mardi": "ferm\u00e913:00-16:00",
+          "mercredi": "13:00-16:00",
+          "jeudi": "13:00-16:00",
+          "vendredi": "13:00-16:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "38",
       "nom": "Centre de vaccination - Clinique des C\u00f4tes du Rh\u00f4ne",
       "url": "https://vaccination-covid.keldoc.com/clinique/roussillon-38150/clinique-des-cotes-du-rhone/centre-de-vaccination-de-la-clinique-des-cotes-du-rhone",
       "location": {
@@ -441,31 +492,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "38",
-      "nom": "Centre de vaccination COVID - Centre hospitalier de Vienne - (Professionnels de sant\u00e9 uniquement)",
-      "url": "https://partners.doctolib.fr/hopital-public/vienne/centre-de-vaccination-covid-19-ch-vienne?pid=practice-165717&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.87999",
-        "latitude": "45.5337"
-      },
-      "metadata": {
-        "address": " Mont Salomon, 38200 Vienne",
-        "business_hours": {
-          "lundi": "13:00-16:00",
-          "mardi": "ferm\u00e913:00-16:00",
-          "mercredi": "13:00-16:00",
-          "jeudi": "13:00-16:00",
-          "vendredi": "13:00-16:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -537,32 +563,6 @@
       "prochain_rdv": null,
       "plateforme": "Ordoclic",
       "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "38",
-      "nom": "Grand centre de vaccination - Alpexpo",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/grenoble-38000/vaccinodrome-grenoble?category=-1&cabinet=18795&specialty=144",
-      "location": {
-        "longitude": "5.73508",
-        "latitude": "45.1568"
-      },
-      "metadata": {
-        "address": " Rue Henri Barbusse, 38100 Grenoble",
-        "phone_number": "+33476003134 ",
-        "business_hours": {
-          "lundi": "09:00-18:30",
-          "mardi": "09:00-18:30",
-          "mercredi": "09:00-18:30",
-          "jeudi": "09:00-18:30",
-          "vendredi": "09:00-18:30",
-          "samedi": "09:00-18:30",
-          "dimanche": "09:00-18:30"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
       "appointment_count": 0
     },
     {

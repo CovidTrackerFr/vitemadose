@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.935270+02:00",
+  "last_updated": "2021-04-09T15:21:54.101356+02:00",
   "centres_disponibles": [
     {
       "departement": "01",
@@ -56,18 +56,36 @@
     },
     {
       "departement": "01",
-      "nom": "Pharmacie Des Deux Rives",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-deux-rives-montreal-la-cluse",
+      "nom": "Pharmacie Centrale Montrevel",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-centrale-montrevel-montrevel-en-bresse",
       "location": {
-        "longitude": 5.5744149,
-        "latitude": 46.1711369
+        "longitude": 5.1284131,
+        "latitude": 46.33727589999999
       },
       "metadata": {
-        "address": "15 avenue de Bresse, 01460 Montr\u00e9al-la-Cluse",
-        "phone_number": "+33474760666",
+        "address": "25 Grande Rue, 01340 Montrevel en Bresse",
+        "phone_number": "+33474254017",
         "business_hours": null
       },
       "prochain_rdv": "2021-04-12T16:00:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "01",
+      "nom": "Pharmacie Du Coll\u00e8ge",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-college",
+      "location": {
+        "longitude": 5.606802999999999,
+        "latitude": 46.153488
+      },
+      "metadata": {
+        "address": "19 rue du Coll\u00e8ge, 01130 Nantua",
+        "phone_number": "+33474750042",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-04-13T09:00:00+00:00",
       "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
@@ -150,32 +168,6 @@
     },
     {
       "departement": "01",
-      "nom": "Centre de vaccination du Pays de Gex - Centre hospitalier du Pays de Gex",
-      "url": "https://partners.doctolib.fr/centre-de-sante/gex/centre-de-vaccination-pays-de-gex-agglo?pid=practice-168273&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.05794",
-        "latitude": "46.3224"
-      },
-      "metadata": {
-        "address": "160 Rue Marc Panissod, 01170 Gex",
-        "phone_number": "+33485292109",
-        "business_hours": {
-          "lundi": "08:00-12:00/14:00-18:00",
-          "mardi": "08:00-12:00/14:00-18:00",
-          "mercredi": "08:00-12:00/14:00-18:00",
-          "jeudi": "08:00-12:00/14:00-18:00",
-          "vendredi": "08:00-12:00/14:00-18:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-27T15:15:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "01",
       "nom": "Centre de vaccination de la Plaine de l'Ain - Espace 1500",
       "url": "https://www.maiia.com/centre-de-vaccination/01500-amberieu-en-bugey/centre-de-vaccination-de-la-plaine-de-l-ain",
       "location": {
@@ -195,13 +187,39 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-05-04T15:45:00.000000Z",
+      "prochain_rdv": "2021-05-04T15:50:00.000000Z",
       "plateforme": "Maiia",
       "type": "vaccination-center",
       "appointment_count": 0
     }
   ],
   "centres_indisponibles": [
+    {
+      "departement": "01",
+      "nom": "Centre de vaccination du Pays de Gex - Centre hospitalier du Pays de Gex",
+      "url": "https://partners.doctolib.fr/centre-de-sante/gex/centre-de-vaccination-pays-de-gex-agglo?pid=practice-168273&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.05794",
+        "latitude": "46.3224"
+      },
+      "metadata": {
+        "address": "160 Rue Marc Panissod, 01170 Gex",
+        "phone_number": "+33485292109",
+        "business_hours": {
+          "lundi": "08:00-12:00/14:00-18:00",
+          "mardi": "08:00-12:00/14:00-18:00",
+          "mercredi": "08:00-12:00/14:00-18:00",
+          "jeudi": "08:00-12:00/14:00-18:00",
+          "vendredi": "08:00-12:00/14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
     {
       "departement": "01",
       "nom": "CP - US CP Bourg-en-Bresse / Centre p\u00e9nitentiaire de Bourg-en-Bresse",
@@ -331,33 +349,15 @@
     },
     {
       "departement": "01",
-      "nom": "Pharmacie Centrale Montrevel",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-centrale-montrevel-montrevel-en-bresse",
+      "nom": "Pharmacie Des Deux Rives",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-deux-rives-montreal-la-cluse",
       "location": {
-        "longitude": 5.1284131,
-        "latitude": 46.33727589999999
+        "longitude": 5.5744149,
+        "latitude": 46.1711369
       },
       "metadata": {
-        "address": "25 Grande Rue, 01340 Montrevel en Bresse",
-        "phone_number": "+33474254017",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "01",
-      "nom": "Pharmacie Du Coll\u00e8ge",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-college",
-      "location": {
-        "longitude": 5.606802999999999,
-        "latitude": 46.153488
-      },
-      "metadata": {
-        "address": "19 rue du Coll\u00e8ge, 01130 Nantua",
-        "phone_number": "+33474750042",
+        "address": "15 avenue de Bresse, 01460 Montr\u00e9al-la-Cluse",
+        "phone_number": "+33474760666",
         "business_hours": null
       },
       "prochain_rdv": null,

@@ -1,30 +1,30 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:50.011903+02:00",
+  "last_updated": "2021-04-09T15:21:54.207710+02:00",
   "centres_disponibles": [
     {
       "departement": "95",
-      "nom": "Centre de vaccination territorial Centre Val d'Oise",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/st-brice-sous-foret-95350/vaccination-plaine-vallee-saint-brice-sous-foret?category=-1&cabinet=16609&specialty=496",
+      "nom": "MAISON DE QUARTIER VALERY WATTEAU",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sarcelles/centre-de-vaccination-de-sarcelles?pid=practice-162701&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.34897",
-        "latitude": "49.0047"
+        "longitude": "2.38869",
+        "latitude": "48.9816"
       },
       "metadata": {
-        "address": "5bis Rue de la For\u00eat, 95350 Saint-Brice-sous-For\u00eat",
-        "phone_number": "0130103980",
+        "address": "1 Route des Refuzniks, 95200 Sarcelles",
+        "phone_number": "0134457402",
         "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "14h-17h",
-          "jeudi": "14h-17h",
-          "vendredi": "9h-17h",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
+          "lundi": "14h-20h",
+          "mardi": "14h-20h",
+          "mercredi": "14h-20h",
+          "jeudi": "14h-20h",
+          "vendredi": "14h-20h",
+          "samedi": "14h-20h",
+          "dimanche": "14h-20h"
         }
       },
-      "prochain_rdv": "2021-04-09T17:55:00.000000+0200",
-      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-11T15:25:00.000+02:00",
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -49,27 +49,9 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-15T09:35:00.000+02:00",
+      "prochain_rdv": "2021-04-15T10:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "95",
-      "nom": "Pharmacie De La Mairie",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-andilly",
-      "location": {
-        "longitude": 2.2988758,
-        "latitude": 49.0048594
-      },
-      "metadata": {
-        "address": "9 place louis jean finot, 95580 andilly",
-        "phone_number": "+33139592168",
-        "business_hours": null
-      },
-      "prochain_rdv": "2021-05-08T11:30:00+00:00",
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
       "appointment_count": 0
     }
   ],
@@ -180,6 +162,32 @@
     },
     {
       "departement": "95",
+      "nom": "Centre de vaccination territorial Centre Val d'Oise",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/st-brice-sous-foret-95350/vaccination-plaine-vallee-saint-brice-sous-foret?category=-1&cabinet=16609&specialty=496",
+      "location": {
+        "longitude": "2.34897",
+        "latitude": "49.0047"
+      },
+      "metadata": {
+        "address": "5bis Rue de la For\u00eat, 95350 Saint-Brice-sous-For\u00eat",
+        "phone_number": "0130103980",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "14h-17h",
+          "jeudi": "14h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "95",
       "nom": "Centre de vaccination de Garges-l\u00e8s-Gonesse",
       "url": "",
       "location": {
@@ -231,14 +239,14 @@
     },
     {
       "departement": "95",
-      "nom": "Centre d\u00e9partemental de d\u00e9pistage et de soins - site d'Argenteuil",
+      "nom": "EMV Domicile COORDINOV",
       "url": "",
       "location": {
-        "longitude": "2.22773",
-        "latitude": "48.9523"
+        "longitude": "2.0713",
+        "latitude": "49.0508"
       },
       "metadata": {
-        "address": "11 rue Jean Lurcat, 95100 Argenteuil",
+        "address": "12 Chauss\u00e9e Jules C\u00e9sar, 95520 Osny",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -256,14 +264,14 @@
     },
     {
       "departement": "95",
-      "nom": "EMV Domicile COORDINOV",
+      "nom": "Centre d\u00e9partemental de d\u00e9pistage et de soins - site d'Argenteuil",
       "url": "",
       "location": {
-        "longitude": "2.0713",
-        "latitude": "49.0508"
+        "longitude": "2.22773",
+        "latitude": "48.9523"
       },
       "metadata": {
-        "address": "12 Chauss\u00e9e Jules C\u00e9sar, 95520 Osny",
+        "address": "11 rue Jean Lurcat, 95100 Argenteuil",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -381,6 +389,32 @@
     },
     {
       "departement": "95",
+      "nom": "Centre de vaccination territorial Centre Val d'Oise",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/montmorency-95160/vaccination-plaine-vallee-montmorency-salle-des-fetes?category=-1&cabinet=16607&specialty=496",
+      "location": {
+        "longitude": "2.32059",
+        "latitude": "48.9893"
+      },
+      "metadata": {
+        "address": "3 Avenue Foch, 95160 Montmorency",
+        "phone_number": "0130103980",
+        "business_hours": {
+          "lundi": "14h-17h",
+          "mardi": "14h-17h",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "14h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "95",
       "nom": "EMV Domicile Vexin Pean",
       "url": "",
       "location": {
@@ -427,32 +461,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "95",
-      "nom": "Centre de vaccination territorial Centre Val d'Oise",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/montmorency-95160/vaccination-plaine-vallee-montmorency-salle-des-fetes?category=-1&cabinet=16607&specialty=496",
-      "location": {
-        "longitude": "2.32059",
-        "latitude": "48.9893"
-      },
-      "metadata": {
-        "address": "3 Avenue Foch, 95160 Montmorency",
-        "phone_number": "0130103980",
-        "business_hours": {
-          "lundi": "14h-17h",
-          "mardi": "14h-17h",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "14h-17h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -660,6 +668,32 @@
     },
     {
       "departement": "95",
+      "nom": "Centre de vaccination territorial Centre Val d'Oise",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/enghien-les-bains-95880/vaccination-plaine-vallee-enghien-les-bains?category=-1&cabinet=16606&specialty=496",
+      "location": {
+        "longitude": "2.30465",
+        "latitude": "48.9684"
+      },
+      "metadata": {
+        "address": "85 Rue du G\u00e9n\u00e9ral de Gaulle, 95880 Enghien-les-Bains",
+        "phone_number": "0130103980",
+        "business_hours": {
+          "lundi": "9h-12h",
+          "mardi": "9h-12h",
+          "mercredi": "9h-12h",
+          "jeudi": "9h-12h",
+          "vendredi": "ferm\u00e9",
+          "samedi": "9h-12h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "95",
       "nom": "Centre intercommunal de vaccination - Viarmes",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/viarmes/centre-de-vaccination-covid-19-centre-intercommunal-de-viarmes?pid=practice-178712&enable_cookies_consent=1",
       "location": {
@@ -705,32 +739,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "95",
-      "nom": "Centre de vaccination territorial Centre Val d'Oise",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/enghien-les-bains-95880/vaccination-plaine-vallee-enghien-les-bains?category=-1&cabinet=16606&specialty=496",
-      "location": {
-        "longitude": "2.30465",
-        "latitude": "48.9684"
-      },
-      "metadata": {
-        "address": "85 Rue du G\u00e9n\u00e9ral de Gaulle, 95880 Enghien-les-Bains",
-        "phone_number": "0130103980",
-        "business_hours": {
-          "lundi": "9h-12h",
-          "mardi": "9h-12h",
-          "mercredi": "9h-12h",
-          "jeudi": "9h-12h",
-          "vendredi": "ferm\u00e9",
-          "samedi": "9h-12h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -787,31 +795,6 @@
     },
     {
       "departement": "95",
-      "nom": "Centre de vaccination PMI Marines",
-      "url": "",
-      "location": {
-        "longitude": "1.97638",
-        "latitude": "49.1462"
-      },
-      "metadata": {
-        "address": "10 Boulevard Gambetta, 95640 Marines",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "95",
       "nom": "Centre de vaccination Linandes-Cordeliers/site des Cordeliers",
       "url": "https://partners.doctolib.fr/centre-de-sante/cergy/centre-de-vaccination-cergy-pontoise?pid=practice-164245&enable_cookies_consent=1",
       "location": {
@@ -833,6 +816,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "95",
+      "nom": "Centre de vaccination PMI Marines",
+      "url": "",
+      "location": {
+        "longitude": "1.97638",
+        "latitude": "49.1462"
+      },
+      "metadata": {
+        "address": "10 Boulevard Gambetta, 95640 Marines",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -930,32 +938,6 @@
           "vendredi": "9-17h00",
           "samedi": "10-12h00",
           "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "95",
-      "nom": "MAISON DE QUARTIER VALERY WATTEAU",
-      "url": "https://partners.doctolib.fr/centre-de-sante/sarcelles/centre-de-vaccination-de-sarcelles?pid=practice-162701&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.38869",
-        "latitude": "48.9816"
-      },
-      "metadata": {
-        "address": "1 Route des Refuzniks, 95200 Sarcelles",
-        "phone_number": "0134457402",
-        "business_hours": {
-          "lundi": "14h-20h",
-          "mardi": "14h-20h",
-          "mercredi": "14h-20h",
-          "jeudi": "14h-20h",
-          "vendredi": "14h-20h",
-          "samedi": "14h-20h",
-          "dimanche": "14h-20h"
         }
       },
       "prochain_rdv": null,
@@ -1091,6 +1073,24 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "95",
+      "nom": "Pharmacie De La Mairie",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-andilly",
+      "location": {
+        "longitude": 2.2988758,
+        "latitude": 49.0048594
+      },
+      "metadata": {
+        "address": "9 place louis jean finot, 95580 andilly",
+        "phone_number": "+33139592168",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
       "appointment_count": 0
     },
     {

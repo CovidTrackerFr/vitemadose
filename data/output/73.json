@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.990967+02:00",
+  "last_updated": "2021-04-09T15:21:54.179401+02:00",
   "centres_disponibles": [
     {
       "departement": "73",
@@ -22,7 +22,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-10T10:50:00.000+02:00",
+      "prochain_rdv": "2021-04-10T11:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -72,7 +72,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-15T11:41:00.000+02:00",
+      "prochain_rdv": "2021-04-15T11:55:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -588,6 +588,31 @@
     },
     {
       "departement": "73",
+      "nom": "Centre de vaccination COVID Ad Hoc de Saint Alban Leysse",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chambery/centre-de-vaccination-grand-chambery?pid=practice-178866&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.95943",
+        "latitude": "45.5788"
+      },
+      "metadata": {
+        "address": "6500 Av de la Mairie, 73230 Saint-Alban-Leysse",
+        "business_hours": {
+          "lundi": "OUVERT",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "73",
       "nom": "Centre de vaccination COVID Ad Hoc de COGNIN",
       "url": "https://partners.doctolib.fr/centre-de-sante/chambery/centre-de-vaccination-grand-chambery?pid=practice-178865&enable_cookies_consent=1",
       "location": {
@@ -613,19 +638,19 @@
     },
     {
       "departement": "73",
-      "nom": "Centre de vaccination COVID Ad Hoc de Saint Alban Leysse",
-      "url": "https://partners.doctolib.fr/centre-de-sante/chambery/centre-de-vaccination-grand-chambery?pid=practice-178866&enable_cookies_consent=1",
+      "nom": "Centre de vaccination COVID Ad Hoc de Saint Jean d'Arvey",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chambery/centre-de-vaccination-grand-chambery?pid=practice-178862&enable_cookies_consent=1",
       "location": {
-        "longitude": "5.95943",
-        "latitude": "45.5788"
+        "longitude": "5.99609",
+        "latitude": "45.5862"
       },
       "metadata": {
-        "address": "6500 Av de la Mairie, 73230 Saint-Alban-Leysse",
+        "address": "2461 Rte des Bauges, 73230 Saint-Jean-d'Arvey",
         "business_hours": {
-          "lundi": "OUVERT",
+          "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
           "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
+          "jeudi": "08:45-12:05/13:45-17:05",
           "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
@@ -663,20 +688,20 @@
     },
     {
       "departement": "73",
-      "nom": "Centre de vaccination COVID Ad Hoc de Saint Jean d'Arvey",
-      "url": "https://partners.doctolib.fr/centre-de-sante/chambery/centre-de-vaccination-grand-chambery?pid=practice-178862&enable_cookies_consent=1",
+      "nom": "Centre de vaccination COVID Ad Hoc de Lescheraines",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chambery/centre-de-vaccination-grand-chambery?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "5.99609",
-        "latitude": "45.5862"
+        "longitude": "6.11164",
+        "latitude": "45.7033"
       },
       "metadata": {
-        "address": "2461 Rte des Bauges, 73230 Saint-Jean-d'Arvey",
+        "address": "1373 Rte du Plan d\u2019Eau, 73340 Lescheraines",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
           "mercredi": "ferm\u00e9",
-          "jeudi": "08:45-12:05/13:45-17:05",
-          "vendredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "08:45-12:05/13:45-17:05",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -708,31 +733,6 @@
       },
       "prochain_rdv": null,
       "plateforme": null,
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "73",
-      "nom": "Centre de vaccination COVID Ad Hoc de Lescheraines",
-      "url": "https://partners.doctolib.fr/centre-de-sante/chambery/centre-de-vaccination-grand-chambery?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.11164",
-        "latitude": "45.7033"
-      },
-      "metadata": {
-        "address": "1373 Rte du Plan d\u2019Eau, 73340 Lescheraines",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "08:45-12:05/13:45-17:05",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },

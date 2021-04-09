@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:49.996212+02:00",
+  "last_updated": "2021-04-09T15:21:54.186522+02:00",
   "centres_disponibles": [
     {
       "departement": "77",
@@ -462,14 +462,14 @@
     },
     {
       "departement": "77",
-      "nom": "CP - Unit\u00e9 Sanitaire (USS + DSP) du Centre P\u00e9nitentiaire Sud Francilien / Centre de D\u00e9tention de Melun",
+      "nom": "CP - US Meaux Chauconin-Neufmontiers / Centre P\u00e9nitentiaire de Meaux-Chauconin-Neufmontiers",
       "url": "",
       "location": {
-        "longitude": "2.66195",
-        "latitude": "48.5355"
+        "longitude": "2.86414",
+        "latitude": "48.958"
       },
       "metadata": {
-        "address": "10 Quai de la Courtille, 77000 Melun",
+        "address": " Rue du Lycee, 77124 Chauconin-Neufmontiers",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -487,14 +487,14 @@
     },
     {
       "departement": "77",
-      "nom": "CP - US Meaux Chauconin-Neufmontiers / Centre P\u00e9nitentiaire de Meaux-Chauconin-Neufmontiers",
+      "nom": "CP - Unit\u00e9 Sanitaire (USS + DSP) du Centre P\u00e9nitentiaire Sud Francilien / Centre de D\u00e9tention de Melun",
       "url": "",
       "location": {
-        "longitude": "2.86414",
-        "latitude": "48.958"
+        "longitude": "2.66195",
+        "latitude": "48.5355"
       },
       "metadata": {
-        "address": " Rue du Lycee, 77124 Chauconin-Neufmontiers",
+        "address": "10 Quai de la Courtille, 77000 Melun",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -589,31 +589,6 @@
     },
     {
       "departement": "77",
-      "nom": "Centres de vaccination GHIF Melun- site de Savigny le temple",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/savigny-le-temple-77176/centre-de-vaccination-covid-ghsif-site-de-savigny-le-temple",
-      "location": {
-        "longitude": "2.58289",
-        "latitude": "48.5955"
-      },
-      "metadata": {
-        "address": "3 Place du 19 Mars 1962, 77176 Savigny-le-Temple",
-        "business_hours": {
-          "lundi": "9h-17h",
-          "mardi": "9h-17h",
-          "mercredi": "9h-17h",
-          "jeudi": "9h-17h",
-          "vendredi": "9h-17h",
-          "samedi": "9h-17h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "77",
       "nom": "centre de vaccination GHSIF MELUN - site de Combs la Ville",
       "url": "",
       "location": {
@@ -685,6 +660,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "77",
+      "nom": "Centres de vaccination GHIF Melun- site de Savigny le temple",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/savigny-le-temple-77176/centre-de-vaccination-covid-ghsif-site-de-savigny-le-temple",
+      "location": {
+        "longitude": "2.58289",
+        "latitude": "48.5955"
+      },
+      "metadata": {
+        "address": "3 Place du 19 Mars 1962, 77176 Savigny-le-Temple",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -850,7 +850,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -868,7 +868,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -895,6 +895,23 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "77",
+      "nom": "Pharmacie Du Bel Air",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-bel-air-combs-la-ville",
+      "location": {
+        "longitude": 2.559098,
+        "latitude": 48.6661852
+      },
+      "metadata": {
+        "address": "30 place de l'an 2000, 77380 Combs la ville",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -999,23 +1016,6 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "general-practitioner",
-      "appointment_count": 0
-    },
-    {
-      "departement": "77",
-      "nom": "Pharmacie Du Bel Air",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-bel-air-combs-la-ville",
-      "location": {
-        "longitude": 2.559098,
-        "latitude": 48.6661852
-      },
-      "metadata": {
-        "address": "30 place de l'an 2000, 77380 Combs la ville",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
       "appointment_count": 0
     }
   ]

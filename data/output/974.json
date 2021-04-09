@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:50.014049+02:00",
+  "last_updated": "2021-04-09T15:21:54.210722+02:00",
   "centres_disponibles": [
     {
       "departement": "974",
@@ -292,32 +292,6 @@
     },
     {
       "departement": "974",
-      "nom": "Centre de vaccination COVID 19 : Site de Grand Ilet",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-benoit-97437/centre-de-vaccination-ephemere-station-de-trail-grand-ilet",
-      "location": {
-        "longitude": "55.4773",
-        "latitude": "-21.0307"
-      },
-      "metadata": {
-        "address": "10 Rue du P\u00e8re Eugene Jouanno, 97433 Salazie",
-        "phone_number": "+262262724720",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "08h30 12h - 14h 17h30",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "974",
       "nom": "Centre de vaccination COVID 19 : Site de Cilaos",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/le-tampon-97418/hopital-de-cilaos-chu?category=3107&cabinet=17204&specialty=496",
       "location": {
@@ -334,6 +308,32 @@
           "jeudi": "ferm\u00e9",
           "vendredi": "08h30 12h00  -  13h30 17h00",
           "samedi": "08h30 12h00  -  13h30 17h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID 19 : Site de Grand Ilet",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-benoit-97437/centre-de-vaccination-ephemere-station-de-trail-grand-ilet",
+      "location": {
+        "longitude": "55.4773",
+        "latitude": "-21.0307"
+      },
+      "metadata": {
+        "address": "10 Rue du P\u00e8re Eugene Jouanno, 97433 Salazie",
+        "phone_number": "+262262724720",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "08h30 12h - 14h 17h30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },

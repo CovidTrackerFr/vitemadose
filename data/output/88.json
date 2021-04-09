@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:17:50.004851+02:00",
+  "last_updated": "2021-04-09T15:21:54.197701+02:00",
   "centres_disponibles": [
     {
       "departement": "88",
@@ -23,7 +23,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-05-05T17:15:00.000+02:00",
+      "prochain_rdv": "2021-04-13T17:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -161,32 +161,6 @@
     },
     {
       "departement": "88",
-      "nom": "Centre de vaccination d'Epinal (CH Emile Durkheim)",
-      "url": "https://partners.doctolib.fr/hopital-public/\u00e9pinal/ch-emile-durkheim?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.4541",
-        "latitude": "48.1794"
-      },
-      "metadata": {
-        "address": "3 Avenue Robert Schuman, 88000 \u00c9pinal",
-        "phone_number": "+33329666220",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "88",
       "nom": "Centre de vaccination de St Di\u00e9 des Vosges (Palais Omnisports)",
       "url": "https://partners.doctolib.fr/hopital-public/saint-die-des-vosges/mairie-saint-die-des-vosges?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -202,6 +176,32 @@
           "mercredi": "08:30-12:30/13:30-17:30",
           "jeudi": "08:30-12:30/13:30-17:30",
           "vendredi": "08:30-12:30/13:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "88",
+      "nom": "Centre de vaccination d'Epinal (CH Emile Durkheim)",
+      "url": "https://partners.doctolib.fr/hopital-public/\u00e9pinal/ch-emile-durkheim?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.4541",
+        "latitude": "48.1794"
+      },
+      "metadata": {
+        "address": "3 Avenue Robert Schuman, 88000 \u00c9pinal",
+        "phone_number": "+33329666220",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
