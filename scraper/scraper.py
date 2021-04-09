@@ -174,29 +174,38 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
         # Map platform to implementation.
         # May be overridden for unit testing purposes.
         fetch_map = {
-            'Doctolib': doctolib_fetch_slots,
-            'Keldoc': keldoc_fetch_slots,
-            'Maiia': maiia_fetch_slots,
-            'Ordoclic': ordoclic_fetch_slots,
+            'Doctolib': {'urls': [
+                'https://partners.doctolib.fr',
+                'https://www.doctolib.fr'
+            ], 'scraper_ptr': doctolib_fetch_slots},
+            'Keldoc': {'urls': [
+                'https://vaccination-covid.keldoc.com',
+                'https://keldoc.com'
+            ], 'scraper_ptr': keldoc_fetch_slots},
+            'Maiia': {'urls': [
+                'https://www.maiia.com'
+            ], 'scraper_ptr': maiia_fetch_slots},
+            'Ordoclic': {'urls': [
+                'https://app.ordoclic.fr/',
+            ], 'scraper_ptr': ordoclic_fetch_slots}
         }
 
     rdv_site_web = fix_scrap_urls(rdv_site_web)
     request = ScraperRequest(rdv_site_web, start_date)
 
-    # Determine platform based on visit URL.
-    if rdv_site_web.startswith('https://partners.doctolib.fr') or rdv_site_web.startswith('https://www.doctolib.fr'):
-        platform = 'Doctolib'
-    elif rdv_site_web.startswith('https://vaccination-covid.keldoc.com'):
-        platform = 'Keldoc'
-    elif rdv_site_web.startswith('https://www.maiia.com'):
-        platform = 'Maiia'
-    elif rdv_site_web.startswith('https://app.ordoclic.fr/'):
-        platform = 'Ordoclic'
-    else:
-        return ScraperResult(request, 'Autre', None)
+    # Determine platform based on visit URL
+    platform = None
+    for scraper_name in fetch_map:
+        scraper = fetch_map[scraper_name]
+        scrap = sum([1 if rdv_site_web.startswith(url) else 0 for url in scraper.get('urls', [])])
+        if scrap == 0:
+            continue
+        platform = scraper_name
 
+    if not platform:
+        return ScraperResult(request, 'Autre', None)
     # Dispatch to appropriate implementation.
-    fetch_impl = fetch_map[platform]
+    fetch_impl = fetch_map[platform]['scraper_ptr']
     result = ScraperResult(request, platform, None)
     result.next_availability = fetch_impl(request)
     return result
