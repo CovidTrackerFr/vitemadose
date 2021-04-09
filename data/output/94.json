@@ -1,33 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.597202+02:00",
+  "last_updated": "2021-04-09T15:30:28.599627+02:00",
   "centres_disponibles": [
-    {
-      "departement": "94",
-      "nom": "Centre de Vaccination Marie-Th\u00e9r\u00e8se EYQUEM Cr\u00e9teil",
-      "url": "https://partners.doctolib.fr/centre-de-sante/creteil/centre-de-vaccination-covid-ville-de-creteil?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.44597",
-        "latitude": "48.7967"
-      },
-      "metadata": {
-        "address": "6 Rue Thomas Edison, 94000 Cr\u00e9teil",
-        "phone_number": "+33800089250",
-        "business_hours": {
-          "lundi": "9h-12h et 13h-19h",
-          "mardi": "9h-12h et 13h-19h",
-          "mercredi": "9h-12h et 13h-19h",
-          "jeudi": "9h-12h et 13h-19h",
-          "vendredi": "9h-12h et 13h-19h",
-          "samedi": "9h-12h et 13h-19h",
-          "dimanche": "9h-12h et 13h-19h"
-        }
-      },
-      "prochain_rdv": "2021-04-10T11:12:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "94",
       "nom": "Pharmacie Huynh - Martin Huynh",
@@ -127,7 +101,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-05-16T13:45:00.000+02:00",
+      "prochain_rdv": "2021-05-13T10:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -342,6 +316,31 @@
     },
     {
       "departement": "94",
+      "nom": "Equipe mobile \u2013 Conseil D\u00e9partemental",
+      "url": "",
+      "location": {
+        "longitude": "2.4645",
+        "latitude": "48.7976"
+      },
+      "metadata": {
+        "address": "40 Avenue de Verdun, 94000 Cr\u00e9teil",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "94",
       "nom": "CENTRE SUCY EN BRIE",
       "url": "https://www.maiia.com/centre-de-vaccination/94370-sucy-en-brie/centre-de-vaccination-de-sucy-en-brie",
       "location": {
@@ -368,26 +367,27 @@
     },
     {
       "departement": "94",
-      "nom": "Equipe mobile \u2013 Conseil D\u00e9partemental",
-      "url": "",
+      "nom": "Centre de Vaccination ambulatoire de Choisy-le-Roi",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/choisy-le-roi/centre-de-vaccination-covid-19-choisy-le-roi?pid=practice-175848&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.4645",
-        "latitude": "48.7976"
+        "longitude": "2.41031",
+        "latitude": "48.7641"
       },
       "metadata": {
-        "address": "40 Avenue de Verdun, 94000 Cr\u00e9teil",
+        "address": "13 Avenue Anatole France, 94600 Choisy-le-Roi",
+        "phone_number": "+33801902611 ",
         "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
+          "lundi": "13H-17H",
+          "mardi": "13H-17H",
+          "mercredi": "13H-17H",
+          "jeudi": "13H-17H",
+          "vendredi": "13H-17H",
+          "samedi": "13H-17H",
           "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
-      "plateforme": "Autre",
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -414,32 +414,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "94",
-      "nom": "Centre de Vaccination ambulatoire de Choisy-le-Roi",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/choisy-le-roi/centre-de-vaccination-covid-19-choisy-le-roi?pid=practice-175848&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.41031",
-        "latitude": "48.7641"
-      },
-      "metadata": {
-        "address": "13 Avenue Anatole France, 94600 Choisy-le-Roi",
-        "phone_number": "+33801902611 ",
-        "business_hours": {
-          "lundi": "13H-17H",
-          "mardi": "13H-17H",
-          "mercredi": "13H-17H",
-          "jeudi": "13H-17H",
-          "vendredi": "13H-17H",
-          "samedi": "13H-17H",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -702,6 +676,32 @@
     },
     {
       "departement": "94",
+      "nom": "Centre de Vaccination Marie-Th\u00e9r\u00e8se EYQUEM Cr\u00e9teil",
+      "url": "https://partners.doctolib.fr/centre-de-sante/creteil/centre-de-vaccination-covid-ville-de-creteil?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.44597",
+        "latitude": "48.7967"
+      },
+      "metadata": {
+        "address": "6 Rue Thomas Edison, 94000 Cr\u00e9teil",
+        "phone_number": "+33800089250",
+        "business_hours": {
+          "lundi": "9h-12h et 13h-19h",
+          "mardi": "9h-12h et 13h-19h",
+          "mercredi": "9h-12h et 13h-19h",
+          "jeudi": "9h-12h et 13h-19h",
+          "vendredi": "9h-12h et 13h-19h",
+          "samedi": "9h-12h et 13h-19h",
+          "dimanche": "9h-12h et 13h-19h"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "94",
       "nom": "Centre d'ORLY",
       "url": "https://partners.doctolib.fr/centre-de-sante/orly/centre-vaccination-covid-cms-orly?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -805,24 +805,6 @@
     },
     {
       "departement": "94",
-      "nom": "Pharmacie Du Boulevard",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-boulevard--nogent-sur-marne",
-      "location": {
-        "longitude": 2.4883484,
-        "latitude": 48.8449856
-      },
-      "metadata": {
-        "address": "147 ter boulevard de Strasbourg, 94130 Nogent sur Marne",
-        "phone_number": "+33148760820",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "94",
       "nom": "Pharmacie Du March\u00e9 Le Perreux",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-marche-le-perreux-le-perreux-sur-marne",
       "location": {
@@ -835,7 +817,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -889,6 +871,24 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "general-practitioner",
+      "appointment_count": 0
+    },
+    {
+      "departement": "94",
+      "nom": "Pharmacie Du Boulevard",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-boulevard--nogent-sur-marne",
+      "location": {
+        "longitude": 2.4883484,
+        "latitude": 48.8449856
+      },
+      "metadata": {
+        "address": "147 ter boulevard de Strasbourg, 94130 Nogent sur Marne",
+        "phone_number": "+33148760820",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
       "appointment_count": 0
     },
     {

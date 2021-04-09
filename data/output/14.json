@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.506039+02:00",
+  "last_updated": "2021-04-09T15:30:28.507165+02:00",
   "centres_disponibles": [
     {
       "departement": "14",
@@ -23,8 +23,34 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-12T14:32:00.000+02:00",
+      "prochain_rdv": "2021-04-12T15:28:00.000+02:00",
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "14",
+      "nom": "Centre de Vaccination Caen-Centre (ancienne caserne Canada)",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/caen-14000/caen-lemiere-ancienne-ecole-lemiere/centre-de-vaccination-de-caen-lemiere-ancienne-ecole-lemiere",
+      "location": {
+        "longitude": "-0.372545",
+        "latitude": "49.1843"
+      },
+      "metadata": {
+        "address": "14 Rue de l\u2019Academie, 14000 Caen",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-13T17:25:00.000000+0200",
+      "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -101,7 +127,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-30T14:30:00.000+02:00",
+      "prochain_rdv": "2021-04-30T11:55:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -128,32 +154,6 @@
         }
       },
       "prochain_rdv": "2021-05-03T12:30:00.000000+0200",
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "14",
-      "nom": "Centre de Vaccination Caen-Centre (ancienne caserne Canada)",
-      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/caen-14000/caen-lemiere-ancienne-ecole-lemiere/centre-de-vaccination-de-caen-lemiere-ancienne-ecole-lemiere",
-      "location": {
-        "longitude": "-0.372545",
-        "latitude": "49.1843"
-      },
-      "metadata": {
-        "address": "14 Rue de l\u2019Academie, 14000 Caen",
-        "phone_number": "+33279461156",
-        "business_hours": {
-          "lundi": "",
-          "mardi": "",
-          "mercredi": "",
-          "jeudi": "",
-          "vendredi": "",
-          "samedi": "",
-          "dimanche": ""
-        }
-      },
-      "prochain_rdv": "2021-06-07T18:15:00.000000+0200",
       "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -240,7 +240,7 @@
     },
     {
       "departement": "14",
-      "nom": "CP - US de Caen / Maison d'Arr\u00eat de Caen",
+      "nom": "MA - US de la maison d'arr\u00eat de Caen / Maison d'Arr\u00eat de Caen",
       "url": "",
       "location": {
         "longitude": "-0.391071",
@@ -265,7 +265,7 @@
     },
     {
       "departement": "14",
-      "nom": "MA - US de la maison d'arr\u00eat de Caen / Maison d'Arr\u00eat de Caen",
+      "nom": "CP - US de Caen / Maison d'Arr\u00eat de Caen",
       "url": "",
       "location": {
         "longitude": "-0.391071",
@@ -497,15 +497,33 @@
     },
     {
       "departement": "14",
-      "nom": "Pharmacie Mozart",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-mozart-lisieux",
+      "nom": "Pharmacie Treich",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-treich-demouville-1",
       "location": {
-        "longitude": 0.2545302,
-        "latitude": 49.143775
+        "longitude": -0.2706907,
+        "latitude": 49.1785092
       },
       "metadata": {
-        "address": "13 Place Mozart, 14100 Lisieux",
-        "phone_number": "+33231310756",
+        "address": "13 rue du Centre, 14840 D\u00e9mouville",
+        "phone_number": "+33231723626",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie Decoutere",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-decoutere-argences",
+      "location": {
+        "longitude": -0.1650576,
+        "latitude": 49.1270886
+      },
+      "metadata": {
+        "address": "7 Boulevard Delean, 14370 Argences",
+        "phone_number": "+33231236035",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -569,15 +587,15 @@
     },
     {
       "departement": "14",
-      "nom": "Pharmacie Decoutere",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-decoutere-argences",
+      "nom": "Pharmacie Mozart",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-mozart-lisieux",
       "location": {
-        "longitude": -0.1650576,
-        "latitude": 49.1270886
+        "longitude": 0.2545302,
+        "latitude": 49.143775
       },
       "metadata": {
-        "address": "7 Boulevard Delean, 14370 Argences",
-        "phone_number": "+33231236035",
+        "address": "13 Place Mozart, 14100 Lisieux",
+        "phone_number": "+33231310756",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -596,24 +614,6 @@
       "metadata": {
         "address": "1 place du g\u00e9n\u00e9ral de gaulle, 14150 OUISTREHAM",
         "phone_number": "+33231962541",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "14",
-      "nom": "Pharmacie Treich",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-treich-demouville-1",
-      "location": {
-        "longitude": -0.2706907,
-        "latitude": 49.1785092
-      },
-      "metadata": {
-        "address": "13 rue du Centre, 14840 D\u00e9mouville",
-        "phone_number": "+33231723626",
         "business_hours": null
       },
       "prochain_rdv": null,

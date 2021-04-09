@@ -1,33 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.502980+02:00",
+  "last_updated": "2021-04-09T15:30:28.504407+02:00",
   "centres_disponibles": [
-    {
-      "departement": "12",
-      "nom": "Villefrance-De-Rouergue",
-      "url": "https://partners.doctolib.fr/centre-de-sante/villefranche-de-rouergue/centre-de-vaccination-covid-villefranche-de-rouergue?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.03243",
-        "latitude": "44.344"
-      },
-      "metadata": {
-        "address": " Rue des treize pierres, 12200 Villefranche-de-Rouergue",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "13:00-17:00",
-          "mardi": "09:00-12:00/14:00-17:00",
-          "mercredi": "09:00-12:00/14:00-17:00",
-          "jeudi": "09:00-12:00/14:00-17:00",
-          "vendredi": "09:00-12:00/14:00-17:00",
-          "samedi": "",
-          "dimanche": ""
-        }
-      },
-      "prochain_rdv": "2021-04-13T12:10:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "12",
       "nom": "Centre de Vaccination Millau",
@@ -49,7 +23,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-19T17:10:00.000+02:00",
+      "prochain_rdv": "2021-04-19T16:55:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -75,7 +49,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-22T17:40:00.000+02:00",
+      "prochain_rdv": "2021-04-22T17:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -187,6 +161,32 @@
     },
     {
       "departement": "12",
+      "nom": "Villefrance-De-Rouergue",
+      "url": "https://partners.doctolib.fr/centre-de-sante/villefranche-de-rouergue/centre-de-vaccination-covid-villefranche-de-rouergue?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.03243",
+        "latitude": "44.344"
+      },
+      "metadata": {
+        "address": " Rue des treize pierres, 12200 Villefranche-de-Rouergue",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "13:00-17:00",
+          "mardi": "09:00-12:00/14:00-17:00",
+          "mercredi": "09:00-12:00/14:00-17:00",
+          "jeudi": "09:00-12:00/14:00-17:00",
+          "vendredi": "09:00-12:00/14:00-17:00",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "12",
       "nom": "Pharmacie De Capdenac",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-capdenac-capdenac",
       "location": {
@@ -199,7 +199,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     }

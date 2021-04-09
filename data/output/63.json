@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.559318+02:00",
+  "last_updated": "2021-04-09T15:30:28.562587+02:00",
   "centres_disponibles": [
     {
       "departement": "63",
@@ -48,7 +48,7 @@
           "dimanche": "07:00-20:00"
         }
       },
-      "prochain_rdv": "2021-04-17T15:35:00.000+02:00",
+      "prochain_rdv": "2021-04-17T16:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -385,32 +385,6 @@
     },
     {
       "departement": "63",
-      "nom": "Centre de vaccination des Combrailles - Maison de sant\u00e9 de Pontgibaud",
-      "url": "https://partners.doctolib.fr/centre-de-sante/pontgibaud/centre-de-vaccination-covid-des-combrailles?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.85222",
-        "latitude": "45.8319"
-      },
-      "metadata": {
-        "address": "2 Place de la Republique, 63230 Pontgibaud",
-        "phone_number": "+33788135430",
-        "business_hours": {
-          "lundi": "08:30-12:30/14:00-17:00",
-          "mardi": "08:30-12:30/14:00-17:00",
-          "mercredi": "08:30-12:30/14:00-17:00",
-          "jeudi": "08:30-12:30/14:00-17:00",
-          "vendredi": "08:30-12:30/14:00-17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "63",
       "nom": "Centre de vaccination municipal de Clermont-Ferrand - Maison des Sports de Clermont-Ferrand",
       "url": "https://partners.doctolib.fr/centre-de-sante/clermont-ferrand/centre-de-vaccination-municipal-clermont-ferrand?pid=practice-164799?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -426,6 +400,32 @@
           "mercredi": "09:00-17:00",
           "jeudi": "09:00-17:00",
           "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "63",
+      "nom": "Centre de vaccination des Combrailles - Maison de sant\u00e9 de Pontgibaud",
+      "url": "https://partners.doctolib.fr/centre-de-sante/pontgibaud/centre-de-vaccination-covid-des-combrailles?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.85222",
+        "latitude": "45.8319"
+      },
+      "metadata": {
+        "address": "2 Place de la Republique, 63230 Pontgibaud",
+        "phone_number": "+33788135430",
+        "business_hours": {
+          "lundi": "08:30-12:30/14:00-17:00",
+          "mardi": "08:30-12:30/14:00-17:00",
+          "mercredi": "08:30-12:30/14:00-17:00",
+          "jeudi": "08:30-12:30/14:00-17:00",
+          "vendredi": "08:30-12:30/14:00-17:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }

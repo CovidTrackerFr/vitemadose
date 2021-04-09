@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.533678+02:00",
+  "last_updated": "2021-04-09T15:30:28.536685+02:00",
   "centres_disponibles": [
     {
       "departement": "39",
@@ -50,6 +50,32 @@
         }
       },
       "prochain_rdv": "2021-04-14T14:18:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "39",
+      "nom": "Centre de Vaccination de Champagnole - Oppidum",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-164484&?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.91012",
+        "latitude": "46.7475"
+      },
+      "metadata": {
+        "address": " Rue de l'Egalit\u00e9, 39300 Champagnole",
+        "phone_number": "+33384868600",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-16T09:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -488,32 +514,6 @@
           "jeudi": "11:00-14:00/18:00-20:00",
           "vendredi": "11:00-14:00/18:00-20:00",
           "samedi": "10:00-12:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "39",
-      "nom": "Centre de Vaccination de Champagnole - Oppidum",
-      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-164484&?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "5.91012",
-        "latitude": "46.7475"
-      },
-      "metadata": {
-        "address": " Rue de l'Egalit\u00e9, 39300 Champagnole",
-        "phone_number": "+33384868600",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },

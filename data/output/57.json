@@ -1,59 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.549396+02:00",
+  "last_updated": "2021-04-09T15:30:28.553015+02:00",
   "centres_disponibles": [
-    {
-      "departement": "57",
-      "nom": "Centre de vaccination de Saint-Avold - SOS Sant\u00e9",
-      "url": "https://partners.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/st-avold/centre-de-vaccination-covid-hopital-de-saint-avold?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.72429",
-        "latitude": "49.1116"
-      },
-      "metadata": {
-        "address": " Rue Ambroise Par\u00e9, 57500 Saint-Avold",
-        "phone_number": "+33387918170 ",
-        "business_hours": {
-          "lundi": "08:00-17:00",
-          "mardi": "08:00-17:00",
-          "mercredi": "08:00-17:00",
-          "jeudi": "08:00-17:00",
-          "vendredi": "08:00-17:00",
-          "samedi": "08:00-12:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-13T10:00:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "57",
-      "nom": "Centre de vaccination de Sarrebourg",
-      "url": "https://partners.doctolib.fr/hopital-public/saverne/ch-sarrebourg-centre-de-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "7.0504",
-        "latitude": "48.7299"
-      },
-      "metadata": {
-        "address": "25 Avenue du G\u00e9n\u00e9ral de Gaulle, 57400 Sarrebourg",
-        "phone_number": "+33387345345",
-        "business_hours": {
-          "lundi": "11:00-15:00",
-          "mardi": "11:00-15:00",
-          "mercredi": "11:00-15:00",
-          "jeudi": "11:00-15:00",
-          "vendredi": "11:00-15:00",
-          "samedi": "09:00-12:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-13T15:40:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "57",
       "nom": "Centre de vaccination de Thionville - Th\u00e9\u00e2tre municipal",
@@ -75,7 +23,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-20T09:10:00.000+02:00",
+      "prochain_rdv": "2021-04-20T09:55:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -105,32 +53,6 @@
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
-    },
-    {
-      "departement": "57",
-      "nom": "Centre de vaccination de Metz - HIA LEGOUEST - 2",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/metz/centre-de-vaccination-n-2-hia-legouest?pid=practice-172148&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.18639",
-        "latitude": "49.1133"
-      },
-      "metadata": {
-        "address": " Rue des Fr\u00e8res Lacretelle, 57070 Metz",
-        "phone_number": "+33387345345",
-        "business_hours": {
-          "lundi": "9:00-17:00",
-          "mardi": "9:00-17:00",
-          "mercredi": "9:00-17:00",
-          "jeudi": "9:00-17:00",
-          "vendredi": "9:00-17:00",
-          "samedi": "9:00-17:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-05-04T15:25:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
     }
   ],
   "centres_indisponibles": [
@@ -152,6 +74,32 @@
           "jeudi": "7:00-19:00",
           "vendredi": "7:00-19:00",
           "samedi": "7:00-19:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Metz - HIA LEGOUEST - 2",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/metz/centre-de-vaccination-n-2-hia-legouest?pid=practice-172148&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.18639",
+        "latitude": "49.1133"
+      },
+      "metadata": {
+        "address": " Rue des Fr\u00e8res Lacretelle, 57070 Metz",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "9:00-17:00",
+          "jeudi": "9:00-17:00",
+          "vendredi": "9:00-17:00",
+          "samedi": "9:00-17:00",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -369,14 +317,14 @@
     },
     {
       "departement": "57",
-      "nom": "MA - US DE SARREGUEMINES / Maison d'Arr\u00eat de Sarreguemines",
+      "nom": "CP - US / Centre P\u00e9nitentiaire de Metz",
       "url": "",
       "location": {
-        "longitude": "7.05806",
-        "latitude": "49.1062"
+        "longitude": "6.19126",
+        "latitude": "49.0781"
       },
       "metadata": {
-        "address": "9 Rue Victor Hugo, 57200 Sarreguemines",
+        "address": "1 Rue de la Source, 57000 Metz",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -394,14 +342,14 @@
     },
     {
       "departement": "57",
-      "nom": "CP - US / Centre P\u00e9nitentiaire de Metz",
+      "nom": "MA - US DE SARREGUEMINES / Maison d'Arr\u00eat de Sarreguemines",
       "url": "",
       "location": {
-        "longitude": "6.19126",
-        "latitude": "49.0781"
+        "longitude": "7.05806",
+        "latitude": "49.1062"
       },
       "metadata": {
-        "address": "1 Rue de la Source, 57000 Metz",
+        "address": "9 Rue Victor Hugo, 57200 Sarreguemines",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -705,6 +653,32 @@
     },
     {
       "departement": "57",
+      "nom": "Centre de vaccination de Saint-Avold - SOS Sant\u00e9",
+      "url": "https://partners.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/st-avold/centre-de-vaccination-covid-hopital-de-saint-avold?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.72429",
+        "latitude": "49.1116"
+      },
+      "metadata": {
+        "address": " Rue Ambroise Par\u00e9, 57500 Saint-Avold",
+        "phone_number": "+33387918170 ",
+        "business_hours": {
+          "lundi": "08:00-17:00",
+          "mardi": "08:00-17:00",
+          "mercredi": "08:00-17:00",
+          "jeudi": "08:00-17:00",
+          "vendredi": "08:00-17:00",
+          "samedi": "08:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
       "nom": "Centre de vaccination de Thionville - Clinique Notre-Dame",
       "url": "https://partners.doctolib.fr/clinique-privee/thionville/centre-de-vaccination-thionville-elsan?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -721,6 +695,32 @@
           "jeudi": "8:00-17:00",
           "vendredi": "8:00-17:00",
           "samedi": "8:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Sarrebourg",
+      "url": "https://partners.doctolib.fr/hopital-public/saverne/ch-sarrebourg-centre-de-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "7.0504",
+        "latitude": "48.7299"
+      },
+      "metadata": {
+        "address": "25 Avenue du G\u00e9n\u00e9ral de Gaulle, 57400 Sarrebourg",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "11:00-15:00",
+          "mardi": "11:00-15:00",
+          "mercredi": "11:00-15:00",
+          "jeudi": "11:00-15:00",
+          "vendredi": "11:00-15:00",
+          "samedi": "09:00-12:00",
           "dimanche": "ferm\u00e9"
         }
       },

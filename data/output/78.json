@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.578679+02:00",
+  "last_updated": "2021-04-09T15:30:28.581253+02:00",
   "centres_disponibles": [
     {
       "departement": "78",
@@ -417,6 +417,31 @@
     },
     {
       "departement": "78",
+      "nom": "MA - US MA de Bois d'Arcy / Maison d'Arr\u00eat de Versailles",
+      "url": "",
+      "location": {
+        "longitude": "2.13489",
+        "latitude": "48.8005"
+      },
+      "metadata": {
+        "address": "28 Avenue de Paris, 78000 Versailles",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "78",
       "nom": "EPM - US de Porcheville / Etablissement sp\u00e9cialis\u00e9 pour mineurs de Porcheville",
       "url": "",
       "location": {
@@ -443,31 +468,6 @@
     {
       "departement": "78",
       "nom": "MA - US MA de Versailles / Maison d'Arr\u00eat de Versailles",
-      "url": "",
-      "location": {
-        "longitude": "2.13489",
-        "latitude": "48.8005"
-      },
-      "metadata": {
-        "address": "28 Avenue de Paris, 78000 Versailles",
-        "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "78",
-      "nom": "MA - US MA de Bois d'Arcy / Maison d'Arr\u00eat de Versailles",
       "url": "",
       "location": {
         "longitude": "2.13489",
@@ -647,32 +647,6 @@
     },
     {
       "departement": "78",
-      "nom": "Centre  de vaccination de Chatou",
-      "url": "https://partners.doctolib.fr/centre-de-sante/chatou/apta-78-vaccination-covid-19-chatou?pid=practice-178074&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.1614",
-        "latitude": "48.8856"
-      },
-      "metadata": {
-        "address": "31 Ile des Impressionnistes, 78400 Chatou",
-        "phone_number": "+33134804958",
-        "business_hours": {
-          "lundi": "9:00-12:00/14:00-17:00",
-          "mardi": "9:00-12:00/14:00-17:00",
-          "mercredi": "9:00-12:00/14:00-17:00",
-          "jeudi": "9:00-12:00/14:00-17:00",
-          "vendredi": "9:00-12:00/14:00-17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "78",
       "nom": "Communaut\u00e9 de communes du Pays Houdanais",
       "url": "https://partners.doctolib.fr/centre-de-sante/houdan/centre-de-vaccination-covid-de-houdan?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -689,6 +663,32 @@
           "jeudi": "9:00-13:00/14:00-18:00",
           "vendredi": "9:00-13:00/14:00-18:00",
           "samedi": "14:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "78",
+      "nom": "Centre  de vaccination de Chatou",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chatou/apta-78-vaccination-covid-19-chatou?pid=practice-178074&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.1614",
+        "latitude": "48.8856"
+      },
+      "metadata": {
+        "address": "31 Ile des Impressionnistes, 78400 Chatou",
+        "phone_number": "+33134804958",
+        "business_hours": {
+          "lundi": "9:00-12:00/14:00-17:00",
+          "mardi": "9:00-12:00/14:00-17:00",
+          "mercredi": "9:00-12:00/14:00-17:00",
+          "jeudi": "9:00-12:00/14:00-17:00",
+          "vendredi": "9:00-12:00/14:00-17:00",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -820,28 +820,28 @@
     },
     {
       "departement": "78",
-      "nom": "Pharmacie de Chennevi\u00e8res",
-      "url": "https://partners.doctolib.fr/pharmacie/conflans-sainte-honorine/pharmacie-de-chennevieres",
+      "nom": "Dr Marianne Guirimand",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/guyancourt/marianne-guirimand-guyancourt",
       "location": {
-        "longitude": 2.1169026,
-        "latitude": 49.0055363
+        "longitude": 2.07748349999997,
+        "latitude": 48.7661906
       },
       "metadata": {
-        "address": "Place de la Libert\u00e9, 78700 Conflans-Sainte-Honorine",
-        "phone_number": "01 39 19 73 49",
+        "address": "15 Rue Andr\u00e9 Leroi Gourhan, 78280 Guyancourt",
+        "phone_number": "01 34 52 77 77",
         "business_hours": {
-          "lundi": "08:30-20:00",
-          "mardi": "08:30-20:00",
-          "mercredi": "08:30-20:00",
-          "jeudi": "08:30-20:00",
-          "vendredi": "08:30-20:00",
-          "samedi": "09:00-19:30",
+          "lundi": "08:00-13:00, 14:00-19:00",
+          "mardi": "08:00-13:00, 14:00-19:00",
+          "mercredi": "08:00-13:00, 14:00-19:00",
+          "jeudi": "08:00-13:00, 14:00-19:00",
+          "vendredi": "08:00-13:00, 14:00-19:00",
+          "samedi": "08:00-13:00",
           "dimanche": null
         }
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "drugstore",
+      "type": "general-practitioner",
       "appointment_count": 0
     },
     {
@@ -871,28 +871,28 @@
     },
     {
       "departement": "78",
-      "nom": "Dr Marianne Guirimand",
-      "url": "https://partners.doctolib.fr/medecin-generaliste/guyancourt/marianne-guirimand-guyancourt",
+      "nom": "Pharmacie de Chennevi\u00e8res",
+      "url": "https://partners.doctolib.fr/pharmacie/conflans-sainte-honorine/pharmacie-de-chennevieres",
       "location": {
-        "longitude": 2.07748349999997,
-        "latitude": 48.7661906
+        "longitude": 2.1169026,
+        "latitude": 49.0055363
       },
       "metadata": {
-        "address": "15 Rue Andr\u00e9 Leroi Gourhan, 78280 Guyancourt",
-        "phone_number": "01 34 52 77 77",
+        "address": "Place de la Libert\u00e9, 78700 Conflans-Sainte-Honorine",
+        "phone_number": "01 39 19 73 49",
         "business_hours": {
-          "lundi": "08:00-13:00, 14:00-19:00",
-          "mardi": "08:00-13:00, 14:00-19:00",
-          "mercredi": "08:00-13:00, 14:00-19:00",
-          "jeudi": "08:00-13:00, 14:00-19:00",
-          "vendredi": "08:00-13:00, 14:00-19:00",
-          "samedi": "08:00-13:00",
+          "lundi": "08:30-20:00",
+          "mardi": "08:30-20:00",
+          "mercredi": "08:30-20:00",
+          "jeudi": "08:30-20:00",
+          "vendredi": "08:30-20:00",
+          "samedi": "09:00-19:30",
           "dimanche": null
         }
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "general-practitioner",
+      "type": "drugstore",
       "appointment_count": 0
     },
     {

@@ -1,7 +1,32 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.569972+02:00",
+  "last_updated": "2021-04-09T15:30:28.571895+02:00",
   "centres_disponibles": [
+    {
+      "departement": "73",
+      "nom": "Centre de vaccination Covid 19 - Savoie - Parc des expositions Chamb\u00e9ry",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chambery/centre-de-vaccination-covid-19-savoie-parc-des-expositions-chambery?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 5.8984423,
+        "latitude": 45.5826519
+      },
+      "metadata": {
+        "address": "1725 Avenue du Grand Arietaz, 73000 Chamb\u00e9ry",
+        "business_hours": {
+          "lundi": "09:00-12:30, 14:00-17:30",
+          "mardi": "09:00-12:30, 14:00-17:30",
+          "mercredi": "09:00-12:30, 14:00-17:30",
+          "jeudi": "09:00-12:30, 14:00-17:30",
+          "vendredi": "09:00-12:30, 14:00-17:30",
+          "samedi": "09:00-12:30, 14:00-17:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-14T10:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
     {
       "departement": "73",
       "nom": "Centre de vaccination Saint Jean de Maurienne",
@@ -23,31 +48,6 @@
         }
       },
       "prochain_rdv": "2021-04-15T09:30:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "73",
-      "nom": "Centre de vaccination Covid 19 - Savoie - Parc des expositions Chamb\u00e9ry",
-      "url": "https://partners.doctolib.fr/centre-de-sante/chambery/centre-de-vaccination-covid-19-savoie-parc-des-expositions-chambery?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": 5.8984423,
-        "latitude": 45.5826519
-      },
-      "metadata": {
-        "address": "1725 Avenue du Grand Arietaz, 73000 Chamb\u00e9ry",
-        "business_hours": {
-          "lundi": "09:00-12:30, 14:00-17:30",
-          "mardi": "09:00-12:30, 14:00-17:30",
-          "mercredi": "09:00-12:30, 14:00-17:30",
-          "jeudi": "09:00-12:30, 14:00-17:30",
-          "vendredi": "09:00-12:30, 14:00-17:30",
-          "samedi": "09:00-12:30, 14:00-17:30",
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": "2021-04-15T14:14:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -788,8 +788,8 @@
     },
     {
       "departement": "73",
-      "nom": "Centre de vaccination Chamb\u00e9ry (professionnels de sant\u00e9 uniquement)",
-      "url": "https://partners.doctolib.fr/hopital-public/chambery/sst-chambery-az-exterieur?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "nom": "Centre de vaccination Chamb\u00e9ry (professionnels de sant\u00e9 CHMS uniquement)",
+      "url": "https://partners.doctolib.fr/hopital-public/chambery/sst-chambery-az-chms?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
         "longitude": 5.9081887,
         "latitude": 45.5640429
@@ -813,8 +813,8 @@
     },
     {
       "departement": "73",
-      "nom": "Centre de vaccination Chamb\u00e9ry (professionnels de sant\u00e9 CHMS uniquement)",
-      "url": "https://partners.doctolib.fr/hopital-public/chambery/sst-chambery-az-chms?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "nom": "Centre de vaccination Chamb\u00e9ry (professionnels de sant\u00e9 uniquement)",
+      "url": "https://partners.doctolib.fr/hopital-public/chambery/sst-chambery-az-exterieur?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
         "longitude": 5.9081887,
         "latitude": 45.5640429

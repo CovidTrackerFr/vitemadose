@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.577091+02:00",
+  "last_updated": "2021-04-09T15:30:28.579851+02:00",
   "centres_disponibles": [
     {
       "departement": "77",
@@ -23,7 +23,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-13T11:15:00.000+02:00",
+      "prochain_rdv": "2021-04-13T10:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -158,6 +158,31 @@
     },
     {
       "departement": "77",
+      "nom": "CHSSM-Site de Fontainebleau",
+      "url": "",
+      "location": {
+        "longitude": "2.6963",
+        "latitude": "48.4119"
+      },
+      "metadata": {
+        "address": "55 Boulevard du Mar\u00e9chal Joffre, 77300 Fontainebleau",
+        "business_hours": {
+          "lundi": "8H30-17H30",
+          "mardi": "8H30-17H30",
+          "mercredi": "8H30-17H30",
+          "jeudi": "8H30-17H30",
+          "vendredi": "8H30-17H30",
+          "samedi": "",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "77",
       "nom": "Centre de vaccination GHSIF MELUN - Site de Brie Comte Robert",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/brie-comte-robert/centre-de-vaccination-de-la-brie?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -179,31 +204,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "77",
-      "nom": "CHSSM-Site de Fontainebleau",
-      "url": "",
-      "location": {
-        "longitude": "2.6963",
-        "latitude": "48.4119"
-      },
-      "metadata": {
-        "address": "55 Boulevard du Mar\u00e9chal Joffre, 77300 Fontainebleau",
-        "business_hours": {
-          "lundi": "8H30-17H30",
-          "mardi": "8H30-17H30",
-          "mercredi": "8H30-17H30",
-          "jeudi": "8H30-17H30",
-          "vendredi": "8H30-17H30",
-          "samedi": "",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -305,32 +305,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "77",
-      "nom": "Centre de vaccination du GHSIF Melun",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/melun-cedex-77011/groupe-hospitalier-sud-ile-de-france/centre-covid?specialty=496",
-      "location": {
-        "longitude": "2.67334",
-        "latitude": "48.5396"
-      },
-      "metadata": {
-        "address": "8 Rue de Vaux, 77000 Melun",
-        "phone_number": "+33181742700",
-        "business_hours": {
-          "lundi": "09:00-17:00",
-          "mardi": "09:00-17:00",
-          "mercredi": "09:00-17:00",
-          "jeudi": "09:00-17:00",
-          "vendredi": "09:00-17:00",
-          "samedi": "09h00-17h00",
-          "dimanche": "ouvert"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -457,6 +431,32 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "77",
+      "nom": "Centre de vaccination du GHSIF Melun",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/melun-cedex-77011/groupe-hospitalier-sud-ile-de-france/centre-covid?specialty=496",
+      "location": {
+        "longitude": "2.67334",
+        "latitude": "48.5396"
+      },
+      "metadata": {
+        "address": "8 Rue de Vaux, 77000 Melun",
+        "phone_number": "+33181742700",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09h00-17h00",
+          "dimanche": "ouvert"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -768,32 +768,6 @@
     },
     {
       "departement": "77",
-      "nom": "Ville de Nemours",
-      "url": "https://partners.doctolib.fr/centre-de-sante/nemours/centre-vaccination-covid-19-msp-pays-de-nemours?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.71008",
-        "latitude": "48.2663"
-      },
-      "metadata": {
-        "address": "135 route de Moret, 77140 Nemours",
-        "phone_number": "+33164787071",
-        "business_hours": {
-          "lundi": "9:00-13:00/14:00-18:00",
-          "mardi": "9:00-13:00/14:00-18:00",
-          "mercredi": "9:00-13:00/14:00-18:00",
-          "jeudi": "9:00-13:00/14:00-18:00",
-          "vendredi": "9:00-13:00/14:00-18:00",
-          "samedi": "9:00-13:00/14:00-18:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "77",
       "nom": "Ville de Montereau",
       "url": "https://partners.doctolib.fr/centre-de-sante/montereau-fault-yonne/centre-de-vaccination-covid-de-montereau-fault-yonne-reserve-personnes-plus-de-75ans?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -810,6 +784,32 @@
           "jeudi": "14:00-17:00 ",
           "vendredi": "14:00-17:00 ",
           "samedi": "ouvert",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "77",
+      "nom": "Ville de Nemours",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nemours/centre-vaccination-covid-19-msp-pays-de-nemours?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.71008",
+        "latitude": "48.2663"
+      },
+      "metadata": {
+        "address": "135 route de Moret, 77140 Nemours",
+        "phone_number": "+33164787071",
+        "business_hours": {
+          "lundi": "9:00-13:00/14:00-18:00",
+          "mardi": "9:00-13:00/14:00-18:00",
+          "mercredi": "9:00-13:00/14:00-18:00",
+          "jeudi": "9:00-13:00/14:00-18:00",
+          "vendredi": "9:00-13:00/14:00-18:00",
+          "samedi": "9:00-13:00/14:00-18:00",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -838,24 +838,6 @@
     },
     {
       "departement": "77",
-      "nom": "Grande Pharmacie De Boissenart",
-      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-de-boissenart-cesson",
-      "location": {
-        "longitude": 2.5998397,
-        "latitude": 48.5881003
-      },
-      "metadata": {
-        "address": "Centre Commercial de Boissenart, 77240 Cesson",
-        "phone_number": "+33160630503",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "77",
       "nom": "Pharmacie De Saint Soupplets",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-saint-soupplets-saint-soupplets",
       "location": {
@@ -865,6 +847,24 @@
       "metadata": {
         "address": "35 rue du Bourget, 77165 Saint Soupplets",
         "phone_number": "+33160015039",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "77",
+      "nom": "Grande Pharmacie De Boissenart",
+      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-de-boissenart-cesson",
+      "location": {
+        "longitude": 2.5998397,
+        "latitude": 48.5881003
+      },
+      "metadata": {
+        "address": "Centre Commercial de Boissenart, 77240 Cesson",
+        "phone_number": "+33160630503",
         "business_hours": null
       },
       "prochain_rdv": null,

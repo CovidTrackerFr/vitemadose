@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.494521+02:00",
+  "last_updated": "2021-04-09T15:30:28.495623+02:00",
   "centres_disponibles": [
     {
       "departement": "03",
@@ -23,7 +23,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-11T09:10:00.000+02:00",
+      "prochain_rdv": "2021-04-11T11:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -53,19 +53,45 @@
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
+    },
+    {
+      "departement": "03",
+      "nom": "Communaut\u00e9 Professionnelle Territoriale de Sant\u00e9 Nord Allier",
+      "url": "https://partners.doctolib.fr/centre-de-sante/moulins/cpts-nord-allier-centre-de-vaccination?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.33256",
+        "latitude": "46.5622"
+      },
+      "metadata": {
+        "address": "1 PLACE MARECHAL DE LATTRE DE TASSIGNY, 03000 Moulins",
+        "phone_number": "+33470485000",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "12:00-14:00/16:00-20:00 ",
+          "mercredi": "12:00-14:00/16:00-20:00 ",
+          "jeudi": "12:00-14:00/16:00-20:00 ",
+          "vendredi": "ferm\u00e9",
+          "samedi": "09:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-20T19:24:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
     }
   ],
   "centres_indisponibles": [
     {
       "departement": "03",
-      "nom": "MA - US   MONTLUCON / Maison d'Arr\u00eat de Montlu\u00e7on",
+      "nom": "CP - US du Centre Hospitalier de Moulins-Yzeure / Centre P\u00e9nitentiaire de Moulins-Yzeure",
       "url": "",
       "location": {
-        "longitude": "2.60421",
-        "latitude": "46.3403"
+        "longitude": "3.35762",
+        "latitude": "46.5536"
       },
       "metadata": {
-        "address": "3 Rue du Chateau, 03100 Montlu\u00e7on",
+        "address": " Boulevard Jean Moulin, 03400 Yzeure",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -83,14 +109,14 @@
     },
     {
       "departement": "03",
-      "nom": "CP - US du Centre Hospitalier de Moulins-Yzeure / Centre P\u00e9nitentiaire de Moulins-Yzeure",
+      "nom": "MA - US   MONTLUCON / Maison d'Arr\u00eat de Montlu\u00e7on",
       "url": "",
       "location": {
-        "longitude": "3.35762",
-        "latitude": "46.5536"
+        "longitude": "2.60421",
+        "latitude": "46.3403"
       },
       "metadata": {
-        "address": " Boulevard Jean Moulin, 03400 Yzeure",
+        "address": "3 Rue du Chateau, 03100 Montlu\u00e7on",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -129,32 +155,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Maiia",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "03",
-      "nom": "Communaut\u00e9 Professionnelle Territoriale de Sant\u00e9 Nord Allier",
-      "url": "https://partners.doctolib.fr/centre-de-sante/moulins/cpts-nord-allier-centre-de-vaccination?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "3.33256",
-        "latitude": "46.5622"
-      },
-      "metadata": {
-        "address": "1 PLACE MARECHAL DE LATTRE DE TASSIGNY, 03000 Moulins",
-        "phone_number": "+33470485000",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "12:00-14:00/16:00-20:00 ",
-          "mercredi": "12:00-14:00/16:00-20:00 ",
-          "jeudi": "12:00-14:00/16:00-20:00 ",
-          "vendredi": "ferm\u00e9",
-          "samedi": "09:00-13:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },

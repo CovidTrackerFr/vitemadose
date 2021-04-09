@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.581531+02:00",
+  "last_updated": "2021-04-09T15:30:28.584125+02:00",
   "centres_disponibles": [
     {
       "departement": "80",
@@ -127,7 +127,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-19T13:30:00.000+02:00",
+      "prochain_rdv": "2021-04-19T11:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "drugstore",
       "appointment_count": 0
@@ -365,32 +365,6 @@
     },
     {
       "departement": "80",
-      "nom": "Centre de vaccination - CH P\u00c9RONNE",
-      "url": "https://partners.doctolib.fr/hopital-public/peronne/ch-de-peronne?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.93133",
-        "latitude": "49.9346"
-      },
-      "metadata": {
-        "address": " Place du Jeu de Paume, 80200 P\u00e9ronne",
-        "phone_number": "03 92 04 34 71 ",
-        "business_hours": {
-          "lundi": "08:30-12:30/13:30-17:30",
-          "mardi": "08:30-12:30/13:30-17:30",
-          "mercredi": "08:30-12:30/13:30-17:30",
-          "jeudi": "08:30-12:30/14:30-17:30",
-          "vendredi": "08:30-12:30/13:30-17:30",
-          "samedi": "08:30-12:30/13:30-17:30",
-          "dimanche": "08:30-12:30/13:30-17:30"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "80",
       "nom": "Centre de vaccination - Communaut\u00e9 de commune VIMEU Baie de la somme ( Salle Edith Piaf)",
       "url": "https://partners.doctolib.fr/centre-de-sante/friville-escarbotin/centre-de-vaccination-covid-vimeu-baie-de-somme?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -408,6 +382,32 @@
           "vendredi": "08:00-12:00/14:00-18:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "80",
+      "nom": "Centre de vaccination - CH P\u00c9RONNE",
+      "url": "https://partners.doctolib.fr/hopital-public/peronne/ch-de-peronne?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.93133",
+        "latitude": "49.9346"
+      },
+      "metadata": {
+        "address": " Place du Jeu de Paume, 80200 P\u00e9ronne",
+        "phone_number": "03 92 04 34 71 ",
+        "business_hours": {
+          "lundi": "08:30-12:30/13:30-17:30",
+          "mardi": "08:30-12:30/13:30-17:30",
+          "mercredi": "08:30-12:30/13:30-17:30",
+          "jeudi": "08:30-12:30/14:30-17:30",
+          "vendredi": "08:30-12:30/13:30-17:30",
+          "samedi": "08:30-12:30/13:30-17:30",
+          "dimanche": "08:30-12:30/13:30-17:30"
         }
       },
       "prochain_rdv": null,
@@ -573,32 +573,6 @@
     },
     {
       "departement": "80",
-      "nom": "Centre de vaccination Covid-19 de Saleux",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saleux/centre-de-vaccination-covid-19-de-saleux?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": 2.2386104,
-        "latitude": 49.8608525
-      },
-      "metadata": {
-        "address": "Place Numa Buignet, 80480 Saleux",
-        "phone_number": "06 01 56 77 22",
-        "business_hours": {
-          "lundi": "09:00-19:00",
-          "mardi": "09:00-19:00",
-          "mercredi": "09:00-19:00",
-          "jeudi": "09:00-19:00",
-          "vendredi": "09:00-19:00",
-          "samedi": "09:00-18:00",
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "80",
       "nom": "Centre de vaccination Covid-19 - CH de P\u00e9ronne",
       "url": "https://partners.doctolib.fr/hopital-public/peronne/centre-de-vaccination-covid-19-ch-de-peronne?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
@@ -615,6 +589,32 @@
           "jeudi": null,
           "vendredi": null,
           "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "80",
+      "nom": "Centre de vaccination Covid-19 de Saleux",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saleux/centre-de-vaccination-covid-19-de-saleux?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 2.2386104,
+        "latitude": 49.8608525
+      },
+      "metadata": {
+        "address": "Place Numa Buignet, 80480 Saleux",
+        "phone_number": "06 01 56 77 22",
+        "business_hours": {
+          "lundi": "09:00-19:00",
+          "mardi": "09:00-19:00",
+          "mercredi": "09:00-19:00",
+          "jeudi": "09:00-19:00",
+          "vendredi": "09:00-19:00",
+          "samedi": "09:00-18:00",
           "dimanche": null
         }
       },

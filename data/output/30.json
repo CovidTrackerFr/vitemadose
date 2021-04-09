@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.522748+02:00",
+  "last_updated": "2021-04-09T15:30:28.525372+02:00",
   "centres_disponibles": [
     {
       "departement": "30",
@@ -30,6 +30,32 @@
     },
     {
       "departement": "30",
+      "nom": "Centre de vaccination Uz\u00e8s",
+      "url": "https://partners.doctolib.fr/centre-de-sante/uzes/centre-de-vaccination-covid-cpts-uzes?pid=practice-165203&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.42203",
+        "latitude": "44.012"
+      },
+      "metadata": {
+        "address": " Place de l'Ev\u00each\u00e9 - Salle Polyvalente, 30700 Uz\u00e8s",
+        "phone_number": "0800541919",
+        "business_hours": {
+          "lundi": "13:00 - 18:00",
+          "mardi": "13:00 - 18:00",
+          "mercredi": "13:00 - 18:00",
+          "jeudi": "13:00 - 18:00",
+          "vendredi": "13:00 - 18:00",
+          "samedi": "9:00 - 13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-16T11:48:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "30",
       "nom": "Centre MSP Le Jardin des Orantes",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/le-vigan/msp-jardin-des-orantes-vaccination-covid?pid=practice-171378&enable_cookies_consent=1",
       "location": {
@@ -55,31 +81,6 @@
     },
     {
       "departement": "30",
-      "nom": "Centre Al\u00e8s Fil",
-      "url": "https://partners.doctolib.fr/centre-de-sante/ales/centre-de-vaccination-covid-19-ales?pid=practice-165321&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.08864",
-        "latitude": "44.1189"
-      },
-      "metadata": {
-        "address": "177 Chemin des Sports, 30100 Al\u00e8s",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "13:30 - 17:00",
-          "jeudi": "13:30 - 17:00",
-          "vendredi": "13:30 - 17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-20T14:00:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "30",
       "nom": "Centre de vaccination La Prairie",
       "url": "https://partners.doctolib.fr/centre-de-sante/ales/centre-de-vaccination-covid-19-ales?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -99,7 +100,32 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-20T14:00:00.000+02:00",
+      "prochain_rdv": "2021-04-20T14:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "30",
+      "nom": "Centre Al\u00e8s Fil",
+      "url": "https://partners.doctolib.fr/centre-de-sante/ales/centre-de-vaccination-covid-19-ales?pid=practice-165321&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.08864",
+        "latitude": "44.1189"
+      },
+      "metadata": {
+        "address": "177 Chemin des Sports, 30100 Al\u00e8s",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "13:30 - 17:00",
+          "jeudi": "13:30 - 17:00",
+          "vendredi": "13:30 - 17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-20T14:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -176,7 +202,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-21T14:40:00.000+02:00",
+      "prochain_rdv": "2021-04-21T14:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -228,33 +254,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-05-05T16:40:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "30",
-      "nom": "Centre de vaccination Uz\u00e8s",
-      "url": "https://partners.doctolib.fr/centre-de-sante/uzes/centre-de-vaccination-covid-cpts-uzes?pid=practice-165203&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.42203",
-        "latitude": "44.012"
-      },
-      "metadata": {
-        "address": " Place de l'Ev\u00each\u00e9 - Salle Polyvalente, 30700 Uz\u00e8s",
-        "phone_number": "0800541919",
-        "business_hours": {
-          "lundi": "13:00 - 18:00",
-          "mardi": "13:00 - 18:00",
-          "mercredi": "13:00 - 18:00",
-          "jeudi": "13:00 - 18:00",
-          "vendredi": "13:00 - 18:00",
-          "samedi": "9:00 - 13:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-05-07T16:18:00.000+02:00",
+      "prochain_rdv": "2021-05-05T17:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -442,32 +442,6 @@
     },
     {
       "departement": "30",
-      "nom": "CH Al\u00e8s",
-      "url": "https://partners.doctolib.fr/hopital-public/al\u00e8s/centre-de-vaccination-du-centre-hospitalier-d-ales?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.0975",
-        "latitude": "44.1471"
-      },
-      "metadata": {
-        "address": "811 avenue du Dr Jean Goubert, 30100 Al\u00e8s",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "9:00-12:30",
-          "mardi": "9:00-12:30",
-          "mercredi": "9:00-12:30",
-          "jeudi": "9:00-12:30",
-          "vendredi": "9:00-12:30",
-          "samedi": "9:00-12:30",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "30",
       "nom": "Centre de vaccination Vauvert - Petite Camargue",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/vauvert/centre-de-vaccination-de-vauvert-petite-camargue?pid=practice-166678&enable_cookies_consent=1",
       "location": {
@@ -510,6 +484,32 @@
           "jeudi": "08:00-16:00",
           "vendredi": "08:00-16:00",
           "samedi": "",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "30",
+      "nom": "CH Al\u00e8s",
+      "url": "https://partners.doctolib.fr/hopital-public/al\u00e8s/centre-de-vaccination-du-centre-hospitalier-d-ales?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.0975",
+        "latitude": "44.1471"
+      },
+      "metadata": {
+        "address": "811 avenue du Dr Jean Goubert, 30100 Al\u00e8s",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9:00-12:30",
+          "mardi": "9:00-12:30",
+          "mercredi": "9:00-12:30",
+          "jeudi": "9:00-12:30",
+          "vendredi": "9:00-12:30",
+          "samedi": "9:00-12:30",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -597,15 +597,15 @@
     },
     {
       "departement": "30",
-      "nom": "Pharmacie Des Aires",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-aires-sommieres",
+      "nom": "Grande Pharmacie Du Talabot",
+      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-du-talabot-nimes",
       "location": {
-        "longitude": 4.0875267,
-        "latitude": 43.7825887
+        "longitude": 4.372371999999999,
+        "latitude": 43.83867009999999
       },
       "metadata": {
-        "address": "845 route de Salinelles, 30250 sommieres",
-        "phone_number": "+33466777065",
+        "address": "53 rue de Beaucaire, 30000 nimes",
+        "phone_number": "+33466679942",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -627,21 +627,21 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
     {
       "departement": "30",
-      "nom": "Grande Pharmacie Du Talabot",
-      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-du-talabot-nimes",
+      "nom": "Pharmacie Des Aires",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-aires-sommieres",
       "location": {
-        "longitude": 4.372371999999999,
-        "latitude": 43.83867009999999
+        "longitude": 4.0875267,
+        "latitude": 43.7825887
       },
       "metadata": {
-        "address": "53 rue de Beaucaire, 30000 nimes",
-        "phone_number": "+33466679942",
+        "address": "845 route de Salinelles, 30250 sommieres",
+        "phone_number": "+33466777065",
         "business_hours": null
       },
       "prochain_rdv": null,

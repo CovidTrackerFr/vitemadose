@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.556352+02:00",
+  "last_updated": "2021-04-09T15:30:28.559552+02:00",
   "centres_disponibles": [
     {
       "departement": "61",
@@ -24,32 +24,6 @@
         }
       },
       "prochain_rdv": "2021-04-10T16:30:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "61",
-      "nom": "Salle Michaux Parc expo",
-      "url": "https://partners.doctolib.fr/centre-de-sante/alencon/centres-de-vaccination-covid-departement-orne-saonois?pid=practice-164092&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.628534",
-        "latitude": "48.7662"
-      },
-      "metadata": {
-        "address": " Avenue de la Comtesse de Segur, 61300 L'Aigle",
-        "phone_number": "+33279461156",
-        "business_hours": {
-          "lundi": "",
-          "mardi": "",
-          "mercredi": "",
-          "jeudi": "",
-          "vendredi": "",
-          "samedi": "",
-          "dimanche": ""
-        }
-      },
-      "prochain_rdv": "2021-04-21T16:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -82,6 +56,32 @@
     },
     {
       "departement": "61",
+      "nom": "Salle Michaux Parc expo",
+      "url": "https://partners.doctolib.fr/centre-de-sante/alencon/centres-de-vaccination-covid-departement-orne-saonois?pid=practice-164092&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.628534",
+        "latitude": "48.7662"
+      },
+      "metadata": {
+        "address": " Avenue de la Comtesse de Segur, 61300 L'Aigle",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-22T16:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "61",
       "nom": "HALLE AUX TOILES",
       "url": "https://partners.doctolib.fr/centre-de-sante/alencon/centres-de-vaccination-covid-departement-orne-saonois?pid=practice-163785&enable_cookies_consent=1",
       "location": {
@@ -101,7 +101,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-26T16:30:00.000+02:00",
+      "prochain_rdv": "2021-04-26T17:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -110,14 +110,14 @@
   "centres_indisponibles": [
     {
       "departement": "61",
-      "nom": "CD - US du Centre Hospitalier d'Argentan / Centre de D\u00e9tention d'Argentan",
+      "nom": "CP - US de Cond\u00e9 sur Sarthe / Centre P\u00e9nitentiaire Alen\u00e7on-Cond\u00e9-sur-Sarthe",
       "url": "",
       "location": {
-        "longitude": "0.008345",
-        "latitude": "48.7231"
+        "longitude": "0.022828",
+        "latitude": "48.4363"
       },
       "metadata": {
-        "address": " Le Frichot, 61200 Argentan",
+        "address": " Rue du Pont Perc\u00e9, 61250 Cond\u00e9-sur-Sarthe",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -135,14 +135,14 @@
     },
     {
       "departement": "61",
-      "nom": "CP - US de Cond\u00e9 sur Sarthe / Centre P\u00e9nitentiaire Alen\u00e7on-Cond\u00e9-sur-Sarthe",
+      "nom": "CD - US du Centre Hospitalier d'Argentan / Centre de D\u00e9tention d'Argentan",
       "url": "",
       "location": {
-        "longitude": "0.022828",
-        "latitude": "48.4363"
+        "longitude": "0.008345",
+        "latitude": "48.7231"
       },
       "metadata": {
-        "address": " Rue du Pont Perc\u00e9, 61250 Cond\u00e9-sur-Sarthe",
+        "address": " Le Frichot, 61200 Argentan",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",

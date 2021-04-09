@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.496728+02:00",
+  "last_updated": "2021-04-09T15:30:28.497736+02:00",
   "centres_disponibles": [
     {
       "departement": "06",
@@ -100,7 +100,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-13T11:45:00.000+02:00",
+      "prochain_rdv": "2021-04-13T11:50:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -127,32 +127,6 @@
         }
       },
       "prochain_rdv": "2021-04-13T16:50:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "06",
-      "nom": "Centre de vaccination de la ville de Nice",
-      "url": "https://partners.doctolib.fr/centre-de-sante/nice/centre-de-vaccination-covid-hancy-reserve-aux-professionnels-de-sante?pid=practice-172330&enable_cookies_consent=1",
-      "location": {
-        "longitude": "7.26815",
-        "latitude": "43.7047"
-      },
-      "metadata": {
-        "address": "10 Rue Hancy, 06000 Nice",
-        "phone_number": "04 97 13 56 04",
-        "business_hours": {
-          "lundi": "8h/20h",
-          "mardi": "8h/20h",
-          "mercredi": "8h/20h",
-          "jeudi": "8h/20h",
-          "vendredi": "8h/20h",
-          "samedi": "8h/20h",
-          "dimanche": ""
-        }
-      },
-      "prochain_rdv": "2021-04-15T09:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -206,6 +180,32 @@
       "prochain_rdv": "2021-04-26T17:12:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "general-practitioner",
+      "appointment_count": 0
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination de la ville de Nice",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nice/centre-de-vaccination-covid-hancy-reserve-aux-professionnels-de-sante?pid=practice-172330&enable_cookies_consent=1",
+      "location": {
+        "longitude": "7.26815",
+        "latitude": "43.7047"
+      },
+      "metadata": {
+        "address": "10 Rue Hancy, 06000 Nice",
+        "phone_number": "04 97 13 56 04",
+        "business_hours": {
+          "lundi": "8h/20h",
+          "mardi": "8h/20h",
+          "mercredi": "8h/20h",
+          "jeudi": "8h/20h",
+          "vendredi": "8h/20h",
+          "samedi": "8h/20h",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-30T08:35:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
       "appointment_count": 0
     }
   ],
@@ -341,14 +341,14 @@
     },
     {
       "departement": "06",
-      "nom": "MA - Nice / Maison d'Arr\u00eat de Nice",
+      "nom": "MA - US GRASSE / Maison d'Arr\u00eat de Grasse",
       "url": "",
       "location": {
-        "longitude": "7.28011",
-        "latitude": "43.7114"
+        "longitude": "6.90668",
+        "latitude": "43.6746"
       },
       "metadata": {
-        "address": "12 Rue de la Gendarmerie, 06000 Nice",
+        "address": "55 Route des Genets, 06130 Grasse",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -366,14 +366,14 @@
     },
     {
       "departement": "06",
-      "nom": "MA - US GRASSE / Maison d'Arr\u00eat de Grasse",
+      "nom": "MA - Nice / Maison d'Arr\u00eat de Nice",
       "url": "",
       "location": {
-        "longitude": "6.90668",
-        "latitude": "43.6746"
+        "longitude": "7.28011",
+        "latitude": "43.7114"
       },
       "metadata": {
-        "address": "55 Route des Genets, 06130 Grasse",
+        "address": "12 Rue de la Gendarmerie, 06000 Nice",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -1010,19 +1010,37 @@
     },
     {
       "departement": "06",
-      "nom": "Grande Pharmacie Mentonnaise",
-      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-mentonnaise-menton",
+      "nom": "Pharmacie Hanbury",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-hanbury-menton",
       "location": {
-        "longitude": 7.504231300000001,
-        "latitude": 43.7756553
+        "longitude": 7.521359399999999,
+        "latitude": 43.78500950000001
       },
       "metadata": {
-        "address": "32 RUE DE LA REPUBLIQUE, 06500 MENTON",
-        "phone_number": "+33493575779",
+        "address": "1 avenue Aristide Briand, 06500 MENTON",
+        "phone_number": "+33493357644",
         "business_hours": null
       },
       "prochain_rdv": null,
       "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Du Beal",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-beal-cagnes-sur-mer",
+      "location": {
+        "longitude": 7.1547223,
+        "latitude": 43.6643829
+      },
+      "metadata": {
+        "address": "13 AVENUE CYRILLE BESSET, 06800 CAGNES-SUR-MER",
+        "phone_number": "+33493206572",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -1046,19 +1064,19 @@
     },
     {
       "departement": "06",
-      "nom": "Pharmacie Des 4 Chemins Antibes",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-4-chemins-antibes-antibes",
+      "nom": "Grande Pharmacie Mentonnaise",
+      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-mentonnaise-menton",
       "location": {
-        "longitude": 7.1136716,
-        "latitude": 43.6033348
+        "longitude": 7.504231300000001,
+        "latitude": 43.7756553
       },
       "metadata": {
-        "address": "828 Chemin des Quatre Chemins, 06600 Antibes",
-        "phone_number": "+33493749200",
+        "address": "32 RUE DE LA REPUBLIQUE, 06500 MENTON",
+        "phone_number": "+33493575779",
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -1100,6 +1118,24 @@
     },
     {
       "departement": "06",
+      "nom": "Pharmacie Des 4 Chemins Antibes",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-4-chemins-antibes-antibes",
+      "location": {
+        "longitude": 7.1136716,
+        "latitude": 43.6033348
+      },
+      "metadata": {
+        "address": "828 Chemin des Quatre Chemins, 06600 Antibes",
+        "phone_number": "+33493749200",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "06",
       "nom": "Pharmacie De La Madeleine",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-madeleine-nice",
       "location": {
@@ -1109,42 +1145,6 @@
       "metadata": {
         "address": "12 BOULEVARD DE LA MADELEINE, 06000 NICE",
         "phone_number": "+33493865211",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "06",
-      "nom": "Pharmacie De Fabron",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-fabron-nice",
-      "location": {
-        "longitude": 7.2407192,
-        "latitude": 43.68950340000001
-      },
-      "metadata": {
-        "address": "54 avenue de la Californie, 06200 Nice",
-        "phone_number": "+33493865267",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "06",
-      "nom": "Pharmacie Du Beal",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-beal-cagnes-sur-mer",
-      "location": {
-        "longitude": 7.1547223,
-        "latitude": 43.6643829
-      },
-      "metadata": {
-        "address": "13 AVENUE CYRILLE BESSET, 06800 CAGNES-SUR-MER",
-        "phone_number": "+33493206572",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -1205,24 +1205,6 @@
     },
     {
       "departement": "06",
-      "nom": "Pharmacie Hanbury",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-hanbury-menton",
-      "location": {
-        "longitude": 7.521359399999999,
-        "latitude": 43.78500950000001
-      },
-      "metadata": {
-        "address": "1 avenue Aristide Briand, 06500 MENTON",
-        "phone_number": "+33493357644",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "06",
       "nom": "Centre de vaccination Covid Menton Carf",
       "url": "https://partners.doctolib.fr/centre-de-sante/menton/centre-de-vaccination-covid-menton-carf?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
@@ -1271,6 +1253,24 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie De Fabron",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-fabron-nice",
+      "location": {
+        "longitude": 7.2407192,
+        "latitude": 43.68950340000001
+      },
+      "metadata": {
+        "address": "54 avenue de la Californie, 06200 Nice",
+        "phone_number": "+33493865267",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
       "appointment_count": 0
     }
   ]

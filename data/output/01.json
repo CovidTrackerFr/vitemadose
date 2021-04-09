@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.491055+02:00",
+  "last_updated": "2021-04-09T15:30:28.493320+02:00",
   "centres_disponibles": [
     {
       "departement": "01",
@@ -52,42 +52,6 @@
       "prochain_rdv": "2021-04-12T12:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "01",
-      "nom": "Pharmacie Centrale Montrevel",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-centrale-montrevel-montrevel-en-bresse",
-      "location": {
-        "longitude": 5.1284131,
-        "latitude": 46.33727589999999
-      },
-      "metadata": {
-        "address": "25 Grande Rue, 01340 Montrevel en Bresse",
-        "phone_number": "+33474254017",
-        "business_hours": null
-      },
-      "prochain_rdv": "2021-04-12T16:00:00+00:00",
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "01",
-      "nom": "Pharmacie Du Coll\u00e8ge",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-college",
-      "location": {
-        "longitude": 5.606802999999999,
-        "latitude": 46.153488
-      },
-      "metadata": {
-        "address": "19 rue du Coll\u00e8ge, 01130 Nantua",
-        "phone_number": "+33474750042",
-        "business_hours": null
-      },
-      "prochain_rdv": "2021-04-13T10:00:00+00:00",
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
       "appointment_count": 0
     },
     {
@@ -358,6 +322,42 @@
       "metadata": {
         "address": "15 avenue de Bresse, 01460 Montr\u00e9al-la-Cluse",
         "phone_number": "+33474760666",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "01",
+      "nom": "Pharmacie Centrale Montrevel",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-centrale-montrevel-montrevel-en-bresse",
+      "location": {
+        "longitude": 5.1284131,
+        "latitude": 46.33727589999999
+      },
+      "metadata": {
+        "address": "25 Grande Rue, 01340 Montrevel en Bresse",
+        "phone_number": "+33474254017",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "01",
+      "nom": "Pharmacie Du Coll\u00e8ge",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-college",
+      "location": {
+        "longitude": 5.606802999999999,
+        "latitude": 46.153488
+      },
+      "metadata": {
+        "address": "19 rue du Coll\u00e8ge, 01130 Nantua",
+        "phone_number": "+33474750042",
         "business_hours": null
       },
       "prochain_rdv": null,

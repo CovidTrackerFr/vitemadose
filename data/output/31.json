@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.524129+02:00",
+  "last_updated": "2021-04-09T15:30:28.526379+02:00",
   "centres_disponibles": [
     {
       "departement": "31",
@@ -205,7 +205,7 @@
           "dimanche": "Ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-16T11:45:00.000000+0200",
+      "prochain_rdv": "2021-04-16T13:00:00.000000+0200",
       "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -335,7 +335,7 @@
           "dimanche": "Ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-21T15:20:00.000000+0200",
+      "prochain_rdv": "2021-04-21T15:25:00.000000+0200",
       "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -604,32 +604,6 @@
     },
     {
       "departement": "31",
-      "nom": "CDV31 Bagn\u00e8res de Luchon",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/bagneres-de-luchon-31110/crf-hopitaux-luchon/centre-de-vaccination-du-crf-hopitaux-luchon",
-      "location": {
-        "longitude": "0.5944",
-        "latitude": "42.7888"
-      },
-      "metadata": {
-        "address": "Pavillon Normand place Richelieu, 31110 Bagn\u00e8res-de-Luchon",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "8:00-12:00 / 14:00-18:00",
-          "vendredi": "8:00-12:00 / 14:00-18:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "31",
       "nom": "CDV31 Saint Gaudens",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-gaudens-31800/saint-gaudens/centre-de-vaccination-de-saint-gaudens",
       "location": {
@@ -708,22 +682,22 @@
     },
     {
       "departement": "31",
-      "nom": "CDV31 Colomiers",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/colomiers-31770/colomiers/centre-de-vaccination-de-colomiers",
+      "nom": "CDV31 Bagn\u00e8res de Luchon",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/bagneres-de-luchon-31110/crf-hopitaux-luchon/centre-de-vaccination-du-crf-hopitaux-luchon",
       "location": {
-        "longitude": "1.34685",
-        "latitude": "43.615"
+        "longitude": "0.5944",
+        "latitude": "42.7888"
       },
       "metadata": {
-        "address": "12 Avenue Yves Brunaud, 31770 Colomiers",
+        "address": "Pavillon Normand place Richelieu, 31110 Bagn\u00e8res-de-Luchon",
         "phone_number": "+33800541919",
         "business_hours": {
-          "lundi": "14:00-18:00",
-          "mardi": "14:00-18:00",
-          "mercredi": "14:00-18:00",
-          "jeudi": "14:00-18:00",
-          "vendredi": "14:00-18:00",
-          "samedi": "14:00-18:00",
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "8:00-12:00 / 14:00-18:00",
+          "vendredi": "8:00-12:00 / 14:00-18:00",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -786,6 +760,58 @@
     },
     {
       "departement": "31",
+      "nom": "CDV31 Colomiers",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/colomiers-31770/colomiers/centre-de-vaccination-de-colomiers",
+      "location": {
+        "longitude": "1.34685",
+        "latitude": "43.615"
+      },
+      "metadata": {
+        "address": "12 Avenue Yves Brunaud, 31770 Colomiers",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "14:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 CHU Toulouse La Grave",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/toulouse-31059/centre-hospitalier-universitaire-toulouse-la-grave-hotel-dieu/centre-de-vaccination-du-centre-hospitalier-universitaire-toulouse-la-grave-hotel-dieu",
+      "location": {
+        "longitude": "1.43413",
+        "latitude": "43.6008"
+      },
+      "metadata": {
+        "address": " Place Lange, 31300 Toulouse",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "9:00-16:30",
+          "vendredi": "9:00-16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
       "nom": "CDV31 Salies du Salat",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/salies-du-salat-31260/salies-du-salat/centre-de-vaccination-de-salies-du-salat",
       "location": {
@@ -838,32 +864,6 @@
     },
     {
       "departement": "31",
-      "nom": "CDV31 CHU Toulouse La Grave",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/toulouse-31059/centre-hospitalier-universitaire-toulouse-la-grave-hotel-dieu/centre-de-vaccination-du-centre-hospitalier-universitaire-toulouse-la-grave-hotel-dieu",
-      "location": {
-        "longitude": "1.43413",
-        "latitude": "43.6008"
-      },
-      "metadata": {
-        "address": " Place Lange, 31300 Toulouse",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "9:00-16:30",
-          "vendredi": "9:00-16:30",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "31",
       "nom": "CDV31 Caz\u00e8res",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/cazeres-31220/cazeres/centre-de-vaccination-de-cazeres",
       "location": {
@@ -880,6 +880,58 @@
           "jeudi": "14:00-18:00",
           "vendredi": "14:00-18:00",
           "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Muret (Salle Agora)",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/muret-31600/muret-salle-horizon/centre-de-vaccination-de-muret-salle-horizon",
+      "location": {
+        "longitude": "1.31459",
+        "latitude": "43.4419"
+      },
+      "metadata": {
+        "address": "138 Avenue des Pyr\u00e9n\u00e9es, 31600 Muret",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "Ferm\u00e9",
+          "mardi": "Ferm\u00e9",
+          "mercredi": "9:00-13:00 / 13:30-17:30",
+          "jeudi": "9:00-13:00 / 13:30-17:30",
+          "vendredi": "9:00-13:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Labastide Saint Sernin",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/labastide-st-sernin-31620/labastide-saint-sernin/centre-de-vaccination-de-labastide-saint-sernin",
+      "location": {
+        "longitude": "1.47053",
+        "latitude": "43.7383"
+      },
+      "metadata": {
+        "address": "17 Rue Jean Pascal, 31620 Labastide-Saint-Sernin",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "09:00-13:00",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -916,14 +968,14 @@
     },
     {
       "departement": "31",
-      "nom": "CDV31 Labastide Saint Sernin",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/labastide-st-sernin-31620/labastide-saint-sernin/centre-de-vaccination-de-labastide-saint-sernin",
+      "nom": "CDV31 Revel",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/revel-31250/revel/centre-de-vaccination-de-revel",
       "location": {
-        "longitude": "1.47053",
-        "latitude": "43.7383"
+        "longitude": "2.00571",
+        "latitude": "43.4623"
       },
       "metadata": {
-        "address": "17 Rue Jean Pascal, 31620 Labastide-Saint-Sernin",
+        "address": "2 Rue du Padouvenc de Castres, 31250 Revel",
         "phone_number": "+33800541919",
         "business_hours": {
           "lundi": "14:00-18:00",
@@ -931,7 +983,7 @@
           "mercredi": "14:00-18:00",
           "jeudi": "14:00-18:00",
           "vendredi": "14:00-18:00",
-          "samedi": "09:00-13:00",
+          "samedi": "14:00-18:00",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -958,32 +1010,6 @@
           "jeudi": "9:00-13:00",
           "vendredi": "9:00-13:00",
           "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "31",
-      "nom": "CDV31 Revel",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/revel-31250/revel/centre-de-vaccination-de-revel",
-      "location": {
-        "longitude": "2.00571",
-        "latitude": "43.4623"
-      },
-      "metadata": {
-        "address": "2 Rue du Padouvenc de Castres, 31250 Revel",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "14:00-18:00",
-          "mardi": "14:00-18:00",
-          "mercredi": "14:00-18:00",
-          "jeudi": "14:00-18:00",
-          "vendredi": "14:00-18:00",
-          "samedi": "14:00-18:00",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -1083,32 +1109,6 @@
           "mercredi": "ferm\u00e9",
           "jeudi": "ferm\u00e9",
           "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "31",
-      "nom": "CDV31 Muret (Salle Agora)",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/muret-31600/muret-salle-horizon/centre-de-vaccination-de-muret-salle-horizon",
-      "location": {
-        "longitude": "1.31459",
-        "latitude": "43.4419"
-      },
-      "metadata": {
-        "address": "138 Avenue des Pyr\u00e9n\u00e9es, 31600 Muret",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "Ferm\u00e9",
-          "mardi": "Ferm\u00e9",
-          "mercredi": "9:00-13:00 / 13:30-17:30",
-          "jeudi": "9:00-13:00 / 13:30-17:30",
-          "vendredi": "9:00-13:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }

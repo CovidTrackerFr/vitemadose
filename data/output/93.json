@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.595179+02:00",
+  "last_updated": "2021-04-09T15:30:28.597749+02:00",
   "centres_disponibles": [
     {
       "departement": "93",
@@ -30,31 +30,6 @@
     },
     {
       "departement": "93",
-      "nom": "Centre de vaccination h\u00f4pital Avicenne - AP-HP",
-      "url": "https://partners.doctolib.fr/hopital-public/bobigny/centres-de-vaccination-hopital-avicenne-ap-hp?highlight%5bspeciality_ids%5d%5b%5d=378",
-      "location": {
-        "longitude": 2.42363130000001,
-        "latitude": 48.9148355
-      },
-      "metadata": {
-        "address": "125 Rue de Stalingrad, 93000 Bobigny",
-        "business_hours": {
-          "lundi": null,
-          "mardi": null,
-          "mercredi": null,
-          "jeudi": null,
-          "vendredi": null,
-          "samedi": null,
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": "2021-04-12T09:00:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "93",
       "nom": "H\u00f4pital Avicenne - AP-HP",
       "url": "https://partners.doctolib.fr/hopital-public/bobigny/hopital-avicenne-ap-hp?highlight%5bspeciality_ids%5d%5b%5d=378",
       "location": {
@@ -73,7 +48,32 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-12T09:00:00.000+02:00",
+      "prochain_rdv": "2021-04-12T09:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "93",
+      "nom": "Centre de vaccination h\u00f4pital Avicenne - AP-HP",
+      "url": "https://partners.doctolib.fr/hopital-public/bobigny/centres-de-vaccination-hopital-avicenne-ap-hp?highlight%5bspeciality_ids%5d%5b%5d=378",
+      "location": {
+        "longitude": 2.42363130000001,
+        "latitude": 48.9148355
+      },
+      "metadata": {
+        "address": "125 Rue de Stalingrad, 93000 Bobigny",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-12T09:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -99,7 +99,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-12T16:00:00.000+02:00",
+      "prochain_rdv": "2021-04-12T16:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -644,32 +644,6 @@
     },
     {
       "departement": "93",
-      "nom": "Centre de vaccination - B\u00e2timent Charlotte Petit",
-      "url": "https://partners.doctolib.fr/centre-de-sante/clichy-sous-bois/centre-municipal-de-vaccination-covid-charlotte-petit?pid=practice-165986&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.5461",
-        "latitude": "48.9107"
-      },
-      "metadata": {
-        "address": "3 Place du 11 novembre 1918, 93390 Clichy-sous-Bois",
-        "phone_number": "06 30 81 63 67",
-        "business_hours": {
-          "lundi": "9h-18h",
-          "mardi": "9h-18h",
-          "mercredi": "9h-18h",
-          "jeudi": "9h-18h",
-          "vendredi": "9h-18h",
-          "samedi": "9h-18h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "93",
       "nom": "EMV Avicennes",
       "url": "",
       "location": {
@@ -720,21 +694,48 @@
     },
     {
       "departement": "93",
-      "nom": "Centre de vaccination - Gymnase Guimier",
-      "url": "https://partners.doctolib.fr/centre-de-sante/tremblay-en-france/gymnase-jean-guimier-centre-de-vaccination-covid-19?pid=practice-175982&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - H\u00f4tel de ville",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montreuil/centre-de-vaccination-de-la-ville-de-montreuil?pid=practice-175106&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.5794",
-        "latitude": "48.9505"
+        "longitude": "2.44139",
+        "latitude": "48.8621"
       },
       "metadata": {
-        "address": "70 Avenue Gilbert Berger, 93290 Tremblay-en-France",
+        "address": "1 Place Jean Jaures, 93100 Montreuil",
+        "phone_number": "01 48 70 69 88",
         "business_hours": {
           "lundi": "9h-17h",
           "mardi": "9h-17h",
           "mercredi": "9h-17h",
           "jeudi": "9h-17h",
           "vendredi": "9h-17h",
-          "samedi": "9h-17h",
+          "samedi": "9H-17H",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "93",
+      "nom": "Centre de vaccination - B\u00e2timent Charlotte Petit",
+      "url": "https://partners.doctolib.fr/centre-de-sante/clichy-sous-bois/centre-municipal-de-vaccination-covid-charlotte-petit?pid=practice-165986&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.5461",
+        "latitude": "48.9107"
+      },
+      "metadata": {
+        "address": "3 Place du 11 novembre 1918, 93390 Clichy-sous-Bois",
+        "phone_number": "06 30 81 63 67",
+        "business_hours": {
+          "lundi": "9h-18h",
+          "mardi": "9h-18h",
+          "mercredi": "9h-18h",
+          "jeudi": "9h-18h",
+          "vendredi": "9h-18h",
+          "samedi": "9h-18h",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -770,22 +771,21 @@
     },
     {
       "departement": "93",
-      "nom": "Centre de vaccination - H\u00f4tel de ville",
-      "url": "https://partners.doctolib.fr/centre-de-sante/montreuil/centre-de-vaccination-de-la-ville-de-montreuil?pid=practice-175106&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - Gymnase Guimier",
+      "url": "https://partners.doctolib.fr/centre-de-sante/tremblay-en-france/gymnase-jean-guimier-centre-de-vaccination-covid-19?pid=practice-175982&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.44139",
-        "latitude": "48.8621"
+        "longitude": "2.5794",
+        "latitude": "48.9505"
       },
       "metadata": {
-        "address": "1 Place Jean Jaures, 93100 Montreuil",
-        "phone_number": "01 48 70 69 88",
+        "address": "70 Avenue Gilbert Berger, 93290 Tremblay-en-France",
         "business_hours": {
           "lundi": "9h-17h",
           "mardi": "9h-17h",
           "mercredi": "9h-17h",
           "jeudi": "9h-17h",
           "vendredi": "9h-17h",
-          "samedi": "9H-17H",
+          "samedi": "9h-17h",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -872,6 +872,31 @@
     },
     {
       "departement": "93",
+      "nom": "EMV",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montreuil/centre-de-vaccination-de-la-ville-de-montreuil?pid=practice-175106&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.44139",
+        "latitude": "48.8621"
+      },
+      "metadata": {
+        "address": "1 Place Jean Jaures, 93100 Montreuil",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "93",
       "nom": "Vaccinodrome AulnAy-sous-Bois",
       "url": "https://partners.doctolib.fr/centre-de-sante/aulnay-sous-bois/centre-de-vaccination-covid-19-aulnay?pid=practice-175261&enable_cookies_consent=1",
       "location": {
@@ -887,31 +912,6 @@
           "mercredi": "9h-12h30 / 13h30-17h30",
           "jeudi": "9h-12h30 / 13h30-17h30",
           "vendredi": "9h-12h30 / 13h30-17h30",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "93",
-      "nom": "EMV",
-      "url": "https://partners.doctolib.fr/centre-de-sante/montreuil/centre-de-vaccination-de-la-ville-de-montreuil?pid=practice-175106&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.44139",
-        "latitude": "48.8621"
-      },
-      "metadata": {
-        "address": "1 Place Jean Jaures, 93100 Montreuil",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -1308,6 +1308,32 @@
     },
     {
       "departement": "93",
+      "nom": "Centre Hospitalier Montfermeil - Vaccination COVID",
+      "url": "https://partners.doctolib.fr/hopital-public/montfermeil/centre-hospitalier-montfermeil-vaccination-covid?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 2.572726,
+        "latitude": 48.8991653
+      },
+      "metadata": {
+        "address": "10 Rue du G\u00e9n\u00e9ral Leclerc, 93370 Montfermeil",
+        "phone_number": "06 46 77 75 75",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-18:00",
+          "mardi": "09:00-13:00, 14:00-18:00",
+          "mercredi": "09:00-13:00, 14:00-18:00",
+          "jeudi": "09:00-13:00, 14:00-18:00",
+          "vendredi": "09:00-13:00, 14:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "93",
       "nom": "Sant\u00e9 Plus - Centre Saint Denis",
       "url": "https://partners.doctolib.fr/centre-de-sante/saint-denis/sante-plus-centre-saint-denis?highlight%5bspeciality_ids%5d%5b%5d=2",
       "location": {
@@ -1348,32 +1374,6 @@
           "mercredi": null,
           "jeudi": null,
           "vendredi": null,
-          "samedi": null,
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "93",
-      "nom": "Centre Hospitalier Montfermeil - Vaccination COVID",
-      "url": "https://partners.doctolib.fr/hopital-public/montfermeil/centre-hospitalier-montfermeil-vaccination-covid?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": 2.572726,
-        "latitude": 48.8991653
-      },
-      "metadata": {
-        "address": "10 Rue du G\u00e9n\u00e9ral Leclerc, 93370 Montfermeil",
-        "phone_number": "06 46 77 75 75",
-        "business_hours": {
-          "lundi": "09:00-13:00, 14:00-18:00",
-          "mardi": "09:00-13:00, 14:00-18:00",
-          "mercredi": "09:00-13:00, 14:00-18:00",
-          "jeudi": "09:00-13:00, 14:00-18:00",
-          "vendredi": "09:00-13:00, 14:00-18:00",
           "samedi": null,
           "dimanche": null
         }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.511704+02:00",
+  "last_updated": "2021-04-09T15:30:28.512604+02:00",
   "centres_disponibles": [
     {
       "departement": "19",
@@ -366,32 +366,6 @@
     },
     {
       "departement": "19",
-      "nom": "Centre Hospitalier du pays d'Eygurande",
-      "url": "https://partners.doctolib.fr/hopital-public/monestier-merlines/centre-hospitalier-du-pays-d-eygurande-monestier-merlines?pid=practice-143160&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.51367",
-        "latitude": "45.6405"
-      },
-      "metadata": {
-        "address": " La celette, 19340 MONESTIERS-MERLINES",
-        "phone_number": "+335 55 94 32 07",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "13:00-16:00",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "19",
       "nom": "CH USSEL",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/limousin/vaccination-covid-19-professionnels-de-sante?speciality_id=5494&pid=practice-162958&enable_cookies_consent=1",
       "location": {
@@ -406,6 +380,32 @@
           "mardi": "ferm\u00e9",
           "mercredi": "10: 00-16: 00",
           "jeudi": "10: 00-16: 00",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "19",
+      "nom": "Centre Hospitalier du pays d'Eygurande",
+      "url": "https://partners.doctolib.fr/hopital-public/monestier-merlines/centre-hospitalier-du-pays-d-eygurande-monestier-merlines?pid=practice-143160&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.51367",
+        "latitude": "45.6405"
+      },
+      "metadata": {
+        "address": " La celette, 19340 MONESTIERS-MERLINES",
+        "phone_number": "+335 55 94 32 07",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "13:00-16:00",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
           "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"

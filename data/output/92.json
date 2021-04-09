@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.592922+02:00",
+  "last_updated": "2021-04-09T15:30:28.595397+02:00",
   "centres_disponibles": [
     {
       "departement": "92",
@@ -47,32 +47,6 @@
     },
     {
       "departement": "92",
-      "nom": "Centre de vaccination CASH de Nanterre",
-      "url": "https://partners.doctolib.fr/etablissement-de-prevention/nanterre/cash-nanterre-vaccination-covid19-professionnels-de-sante?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.22204",
-        "latitude": "48.9137"
-      },
-      "metadata": {
-        "address": "403 Avenue de la R\u00e9publique, 92000 Nanterre",
-        "phone_number": "+33147697234",
-        "business_hours": {
-          "lundi": "09:00-17:00",
-          "mardi": "09:00-17:00",
-          "mercredi": "09:00-17:00",
-          "jeudi": "09:00-17:00",
-          "vendredi": "09:00-17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-13T13:45:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "92",
       "nom": "Dr Nathaniel COHEN",
       "url": "https://partners.doctolib.fr/medecin-generaliste/asnieres-sur-seine/nathaniel-cohen",
       "location": {
@@ -95,6 +69,23 @@
       "prochain_rdv": "2021-04-13T17:09:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "general-practitioner",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Snc Pharmacie Du Centre Tchikirian - Teknetzian",
+      "url": "https://app.ordoclic.fr/app/pharmacie/snc-pharmacie-du-centre-tchikirian---teknetzian--la-garenne-colombes",
+      "location": {
+        "longitude": 2.2479974,
+        "latitude": 48.90670799999999
+      },
+      "metadata": {
+        "address": "2 Rd Pt du Souvenir Fran\u00e7ais , 92250 LA GARENNE COLOMBES",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-04-14T09:30:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
       "appointment_count": 0
     },
     {
@@ -488,15 +479,15 @@
     },
     {
       "departement": "92",
-      "nom": "Ville de Levallois-Perret",
-      "url": "https://partners.doctolib.fr/centre-de-sante/levallois-perret/centre-de-vaccination-de-levallois?pid=practice-175351&enable_cookies_consent=1",
+      "nom": "Ville de Gennevilliers",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/gennevilliers/centre-de-vaccination-covid-19-gymnase-paul-langevin?pid=practice-176133&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.27825",
-        "latitude": "48.8961"
+        "longitude": "2.29701",
+        "latitude": "48.9344"
       },
       "metadata": {
-        "address": "141 Rue Danton, 92300 Levallois-Perret",
-        "phone_number": "0147157515",
+        "address": "16 bis Rue de la Paix, 92230 Gennevilliers",
+        "phone_number": "01 40 85 66 50",
         "business_hours": {
           "lundi": "8h00 - 20h00",
           "mardi": "8h00 - 20h00",
@@ -514,15 +505,15 @@
     },
     {
       "departement": "92",
-      "nom": "Ville de Gennevilliers",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/gennevilliers/centre-de-vaccination-covid-19-gymnase-paul-langevin?pid=practice-176133&enable_cookies_consent=1",
+      "nom": "Ville de Levallois-Perret",
+      "url": "https://partners.doctolib.fr/centre-de-sante/levallois-perret/centre-de-vaccination-de-levallois?pid=practice-175351&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.29701",
-        "latitude": "48.9344"
+        "longitude": "2.27825",
+        "latitude": "48.8961"
       },
       "metadata": {
-        "address": "16 bis Rue de la Paix, 92230 Gennevilliers",
-        "phone_number": "01 40 85 66 50",
+        "address": "141 Rue Danton, 92300 Levallois-Perret",
+        "phone_number": "0147157515",
         "business_hours": {
           "lundi": "8h00 - 20h00",
           "mardi": "8h00 - 20h00",
@@ -841,6 +832,32 @@
     },
     {
       "departement": "92",
+      "nom": "Centre de vaccination CASH de Nanterre",
+      "url": "https://partners.doctolib.fr/etablissement-de-prevention/nanterre/cash-nanterre-vaccination-covid19-professionnels-de-sante?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.22204",
+        "latitude": "48.9137"
+      },
+      "metadata": {
+        "address": "403 Avenue de la R\u00e9publique, 92000 Nanterre",
+        "phone_number": "+33147697234",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
       "nom": "CENTRE RUEIL-MALMAISON",
       "url": "https://partners.doctolib.fr/centre-de-sante/rueil-malmaison/centre-de-vaccination-covid-europe-rueil-malmaison?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -996,6 +1013,32 @@
     },
     {
       "departement": "92",
+      "nom": "Ville de Chatenay-Malabry",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ch\u00e2tenay-malabry/centre-de-vaccination-de-chatenay-malabry?pid=practice-164883?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.27859",
+        "latitude": "48.7636"
+      },
+      "metadata": {
+        "address": "160 Avenue de la Division Leclerc, 92290 Ch\u00e2tenay-Malabry",
+        "phone_number": "+33146834683",
+        "business_hours": {
+          "lundi": "08:00-19:30",
+          "mardi": "08:00-19:30",
+          "mercredi": "08:00-19:30",
+          "jeudi": "08:00-19:30",
+          "vendredi": "08:00-19:30",
+          "samedi": "08:00-19:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
       "nom": "Ville de Courbevoie",
       "url": "https://partners.doctolib.fr/centre-de-sante/courbevoie/centre-de-vaccination-covid-19-de-courbevoie?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -1038,32 +1081,6 @@
           "jeudi": "09:00-12:00/14:00-17:00",
           "vendredi": "09:00-12:00/14:00-17:00",
           "samedi": "09:00-12:00/14:00-17:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "92",
-      "nom": "Ville de Chatenay-Malabry",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ch\u00e2tenay-malabry/centre-de-vaccination-de-chatenay-malabry?pid=practice-164883?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.27859",
-        "latitude": "48.7636"
-      },
-      "metadata": {
-        "address": "160 Avenue de la Division Leclerc, 92290 Ch\u00e2tenay-Malabry",
-        "phone_number": "+33146834683",
-        "business_hours": {
-          "lundi": "08:00-19:30",
-          "mardi": "08:00-19:30",
-          "mercredi": "08:00-19:30",
-          "jeudi": "08:00-19:30",
-          "vendredi": "08:00-19:30",
-          "samedi": "08:00-19:30",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -1176,6 +1193,42 @@
     },
     {
       "departement": "92",
+      "nom": "Pharmacie Des Bourguignons",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-bourguignons-bois-colombes",
+      "location": {
+        "longitude": 2.2803462,
+        "latitude": 48.9190372
+      },
+      "metadata": {
+        "address": "145 rue des bourguignons, 92270 BOIS-COLOMBES",
+        "phone_number": "+33142421223",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Des 3 Moulins",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-3-moulins-issy-les-moulineaux",
+      "location": {
+        "longitude": -1.5445787,
+        "latitude": 47.1786685
+      },
+      "metadata": {
+        "address": "CC les 3 Moulins - 3 Allee Sainte Lucie, 92130 Issy-les-Moulineaux",
+        "phone_number": "+33146422389",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
       "nom": "Pharmacie Cottard",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-cottard-meudon",
       "location": {
@@ -1184,6 +1237,78 @@
       },
       "metadata": {
         "address": "3 Place Stalingrad, 92190 Meudon",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Jean Jaures",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-jean-jaures-boulogne-billancourt",
+      "location": {
+        "longitude": 2.2477077,
+        "latitude": 48.827718
+      },
+      "metadata": {
+        "address": "247 bis Boulevard Jean Jaures, 92100 Boulogne-Billancourt",
+        "phone_number": "+33146214811",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Du Progr\u00e8s",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-progres-malakoff",
+      "location": {
+        "longitude": 2.3035016,
+        "latitude": 48.8212886
+      },
+      "metadata": {
+        "address": "10 rue B\u00e9ranger, 92240 Malakoff",
+        "phone_number": "+33142531579",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Des Jardins Suresnes",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-jardins-suresnes-suresnes",
+      "location": {
+        "longitude": 2.2115501,
+        "latitude": 48.8631131
+      },
+      "metadata": {
+        "address": "28 avenue Edouard Vaillant, 92150 Suresnes",
+        "phone_number": "+33145061174",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie De La Gare",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-gare-nanterre",
+      "location": {
+        "longitude": 2.1962787,
+        "latitude": 48.8949177
+      },
+      "metadata": {
+        "address": "82bis rue Maurice Thorez, 92000 Nanterre",
+        "phone_number": "+33147211223",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -1211,19 +1336,37 @@
     },
     {
       "departement": "92",
-      "nom": "Pharmacie Du Progr\u00e8s",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-progres-malakoff",
+      "nom": "Pharmacie Leonard De Vinci",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-leonard-de-vinci--courbevoie",
       "location": {
-        "longitude": 2.3035016,
-        "latitude": 48.8212886
+        "longitude": 2.2359706,
+        "latitude": 48.8961164
       },
       "metadata": {
-        "address": "10 rue B\u00e9ranger, 92240 Malakoff",
-        "phone_number": "+33142531579",
+        "address": "23 Avenue L\u00e9onard de Vinci, 92400 Courbevoie",
+        "phone_number": "+33146671111",
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Aprium Demo",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-aprium-demo-levallois-perret",
+      "location": {
+        "longitude": 2.351883,
+        "latitude": 48.842628
+      },
+      "metadata": {
+        "address": "100 Rue de Villiers, 92300 Levallois-Perret",
+        "phone_number": "+33202020202",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -1259,60 +1402,6 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "92",
-      "nom": "Pharmacie Jean Jaures",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-jean-jaures-boulogne-billancourt",
-      "location": {
-        "longitude": 2.2477077,
-        "latitude": 48.827718
-      },
-      "metadata": {
-        "address": "247 bis Boulevard Jean Jaures, 92100 Boulogne-Billancourt",
-        "phone_number": "+33146214811",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "92",
-      "nom": "Pharmacie Leonard De Vinci",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-leonard-de-vinci--courbevoie",
-      "location": {
-        "longitude": 2.2359706,
-        "latitude": 48.8961164
-      },
-      "metadata": {
-        "address": "23 Avenue L\u00e9onard de Vinci, 92400 Courbevoie",
-        "phone_number": "+33146671111",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "92",
-      "nom": "Pharmacie De La Gare",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-gare-nanterre",
-      "location": {
-        "longitude": 2.1962787,
-        "latitude": 48.8949177
-      },
-      "metadata": {
-        "address": "82bis rue Maurice Thorez, 92000 Nanterre",
-        "phone_number": "+33147211223",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
       "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
@@ -1337,59 +1426,6 @@
     },
     {
       "departement": "92",
-      "nom": "Snc Pharmacie Du Centre Tchikirian - Teknetzian",
-      "url": "https://app.ordoclic.fr/app/pharmacie/snc-pharmacie-du-centre-tchikirian---teknetzian--la-garenne-colombes",
-      "location": {
-        "longitude": 2.2479974,
-        "latitude": 48.90670799999999
-      },
-      "metadata": {
-        "address": "2 Rd Pt du Souvenir Fran\u00e7ais , 92250 LA GARENNE COLOMBES",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "92",
-      "nom": "Pharmacie  \u00cele Saint Germain",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie--ile-saint-germain--issy-les-moulineaux",
-      "location": {
-        "longitude": 2.2499669,
-        "latitude": 48.8229807
-      },
-      "metadata": {
-        "address": "15 Boulevard des Iles, 92130 Issy-les-Moulineaux",
-        "phone_number": "+33146422805",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "92",
-      "nom": "Pharmacie Aprium Demo",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-aprium-demo-levallois-perret",
-      "location": {
-        "longitude": 2.351883,
-        "latitude": 48.842628
-      },
-      "metadata": {
-        "address": "100 Rue de Villiers, 92300 Levallois-Perret",
-        "phone_number": "+33202020202",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "92",
       "nom": "Pharmacie Du Centre Le Mont Val\u00e9rien",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-centre-le-mont-valerien-nanterre",
       "location": {
@@ -1399,42 +1435,6 @@
       "metadata": {
         "address": "99 RUE PAUL VAILLANT COUTURIER, 92000 Nanterre",
         "phone_number": "+33147240194",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "92",
-      "nom": "Pharmacie Des 3 Moulins",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-3-moulins-issy-les-moulineaux",
-      "location": {
-        "longitude": -1.5445787,
-        "latitude": 47.1786685
-      },
-      "metadata": {
-        "address": "CC les 3 Moulins - 3 Allee Sainte Lucie, 92130 Issy-les-Moulineaux",
-        "phone_number": "+33146422389",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "92",
-      "nom": "Pharmacie Trincal",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-trincal-vanves",
-      "location": {
-        "longitude": 2.2900994,
-        "latitude": 48.82025789999999
-      },
-      "metadata": {
-        "address": "55 R RAYMOND MARCHERON, 92170 VANVES",
-        "phone_number": "+33146420381",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -1492,42 +1492,6 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "92",
-      "nom": "Pharmacie Des Bourguignons",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-bourguignons-bois-colombes",
-      "location": {
-        "longitude": 2.2803462,
-        "latitude": 48.9190372
-      },
-      "metadata": {
-        "address": "145 rue des bourguignons, 92270 BOIS-COLOMBES",
-        "phone_number": "+33142421223",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "92",
-      "nom": "Pharmacie Des Jardins Suresnes",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-jardins-suresnes-suresnes",
-      "location": {
-        "longitude": 2.2115501,
-        "latitude": 48.8631131
-      },
-      "metadata": {
-        "address": "28 avenue Edouard Vaillant, 92150 Suresnes",
-        "phone_number": "+33145061174",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
       "appointment_count": 0
     },
     {
@@ -1623,6 +1587,42 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Trincal",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-trincal-vanves",
+      "location": {
+        "longitude": 2.2900994,
+        "latitude": 48.82025789999999
+      },
+      "metadata": {
+        "address": "55 R RAYMOND MARCHERON, 92170 VANVES",
+        "phone_number": "+33146420381",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie  \u00cele Saint Germain",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie--ile-saint-germain--issy-les-moulineaux",
+      "location": {
+        "longitude": 2.2499669,
+        "latitude": 48.8229807
+      },
+      "metadata": {
+        "address": "15 Boulevard des Iles, 92130 Issy-les-Moulineaux",
+        "phone_number": "+33146422805",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
       "appointment_count": 0
     }
   ]

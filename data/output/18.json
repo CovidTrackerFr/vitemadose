@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.510166+02:00",
+  "last_updated": "2021-04-09T15:30:28.510974+02:00",
   "centres_disponibles": [
     {
       "departement": "18",
@@ -126,7 +126,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-21T15:45:00.000+02:00",
+      "prochain_rdv": "2021-04-23T15:52:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -152,7 +152,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-26T09:12:00.000+02:00",
+      "prochain_rdv": "2021-04-26T09:48:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -178,7 +178,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-26T09:12:00.000+02:00",
+      "prochain_rdv": "2021-04-26T09:48:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -203,7 +203,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-05-01T13:40:00.000+02:00",
+      "prochain_rdv": "2021-05-01T13:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -287,31 +287,6 @@
     },
     {
       "departement": "18",
-      "nom": "Trouy/Plaimpied Cv \u00e9ph\u00e9m\u00e8re",
-      "url": "",
-      "location": {
-        "longitude": "2.35642",
-        "latitude": "47.009"
-      },
-      "metadata": {
-        "address": " , 18570 Trouy",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "18",
       "nom": "La guerche sur l'Aubois CV \u00e9ph\u00e9m\u00e8re",
       "url": "https://partners.doctolib.fr/centre-de-sante/la-guerche-sur-l-aubois/centre-de-vaccination-covid-la-guerche-sur-l-aubois?pid=practice-177332&enable_cookies_consent=1",
       "location": {
@@ -332,6 +307,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "18",
+      "nom": "Trouy/Plaimpied Cv \u00e9ph\u00e9m\u00e8re",
+      "url": "",
+      "location": {
+        "longitude": "2.35642",
+        "latitude": "47.009"
+      },
+      "metadata": {
+        "address": " , 18570 Trouy",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -687,14 +687,14 @@
     },
     {
       "departement": "18",
-      "nom": "CV \u00e9ph\u00e9m\u00e8re Henrichemont",
-      "url": "",
+      "nom": "CV \u00e9ph\u00e9m\u00e8re - Dun-sur-Auron",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dun-sur-auron/centre-de-vaccination-covid-19-dun-sur-auron?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.52442",
-        "latitude": "47.3037"
+        "longitude": "2.57394",
+        "latitude": "46.8879"
       },
       "metadata": {
-        "address": "1 Place de l\u2019Hotel de Ville, 18250 Henrichemont",
+        "address": "13 Place du Champ de Foire, 18130 Dun-sur-Auron",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -706,7 +706,7 @@
         }
       },
       "prochain_rdv": null,
-      "plateforme": "Autre",
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -737,14 +737,14 @@
     },
     {
       "departement": "18",
-      "nom": "CV \u00e9ph\u00e9m\u00e8re - Dun-sur-Auron",
-      "url": "https://partners.doctolib.fr/centre-de-sante/dun-sur-auron/centre-de-vaccination-covid-19-dun-sur-auron?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "CV \u00e9ph\u00e9m\u00e8re Henrichemont",
+      "url": "",
       "location": {
-        "longitude": "2.57394",
-        "latitude": "46.8879"
+        "longitude": "2.52442",
+        "latitude": "47.3037"
       },
       "metadata": {
-        "address": "13 Place du Champ de Foire, 18130 Dun-sur-Auron",
+        "address": "1 Place de l\u2019Hotel de Ville, 18250 Henrichemont",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -756,32 +756,7 @@
         }
       },
       "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "18",
-      "nom": "MSP relai Baugy",
-      "url": "https://partners.doctolib.fr/centre-de-sante/avord/centre-vaccination-avord-baugy?pid=practice-169562&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.72824",
-        "latitude": "47.081"
-      },
-      "metadata": {
-        "address": "3 Rue du Chancelier, 18800 Baugy",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -812,14 +787,14 @@
     },
     {
       "departement": "18",
-      "nom": "CV \u00e9ph\u00e9m\u00e8re - Avord",
-      "url": "https://partners.doctolib.fr/centre-de-sante/avord/centre-vaccination-avord-baugy?pid=practice-169561&enable_cookies_consent=1",
+      "nom": "MSP relai Baugy",
+      "url": "https://partners.doctolib.fr/centre-de-sante/avord/centre-vaccination-avord-baugy?pid=practice-169562&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.65039",
-        "latitude": "47.0317"
+        "longitude": "2.72824",
+        "latitude": "47.081"
       },
       "metadata": {
-        "address": "14 Rue D\u00e9sir\u00e9 Deschamps, 18520 Avord",
+        "address": "3 Rue du Chancelier, 18800 Baugy",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -845,6 +820,31 @@
       },
       "metadata": {
         "address": "14 r Pauline Lapautre, 18140 Sancergues",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "18",
+      "nom": "CV \u00e9ph\u00e9m\u00e8re - Avord",
+      "url": "https://partners.doctolib.fr/centre-de-sante/avord/centre-vaccination-avord-baugy?pid=practice-169561&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.65039",
+        "latitude": "47.0317"
+      },
+      "metadata": {
+        "address": "14 Rue D\u00e9sir\u00e9 Deschamps, 18520 Avord",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",

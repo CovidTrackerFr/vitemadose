@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.501397+02:00",
+  "last_updated": "2021-04-09T15:30:28.502683+02:00",
   "centres_disponibles": [],
   "centres_indisponibles": [
     {
@@ -57,31 +57,6 @@
     },
     {
       "departement": "10",
-      "nom": "MA - US de TROYES / Maison d'Arr\u00eat de Troyes",
-      "url": "",
-      "location": {
-        "longitude": "4.07753",
-        "latitude": "48.3"
-      },
-      "metadata": {
-        "address": "1 bis Rue Hennequin, 10000 Troyes",
-        "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "10",
       "nom": "MC - US DE CLAIRVAUX / Maison d'Arr\u00eat de Troyes",
       "url": "",
       "location": {
@@ -108,6 +83,31 @@
     {
       "departement": "10",
       "nom": "CD - US DE VILLENAUXE LA GRANDE / Maison d'Arr\u00eat de Troyes",
+      "url": "",
+      "location": {
+        "longitude": "4.07753",
+        "latitude": "48.3"
+      },
+      "metadata": {
+        "address": "1 bis Rue Hennequin, 10000 Troyes",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "10",
+      "nom": "MA - US de TROYES / Maison d'Arr\u00eat de Troyes",
       "url": "",
       "location": {
         "longitude": "4.07753",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.600701+02:00",
+  "last_updated": "2021-04-09T15:30:28.603207+02:00",
   "centres_disponibles": [
     {
       "departement": "972",
@@ -24,32 +24,6 @@
         }
       },
       "prochain_rdv": "2021-04-09T17:30:00.000000+0200",
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "972",
-      "nom": "Centre de vaccination de Fort-de-France",
-      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/fort-de-france-97200/ville-de-fort-de-france/centre-de-vaccination-de-la-ville-de-fort-de-france",
-      "location": {
-        "longitude": "-61.0617",
-        "latitude": "14.6032"
-      },
-      "metadata": {
-        "address": " Avenue Maurice Bishop, immeuble du Port, 97200 Fort-de-France",
-        "phone_number": "0596425560",
-        "business_hours": {
-          "lundi": "9h00 \u00e0 17h00",
-          "mardi": "9h00 \u00e0 17h00",
-          "mercredi": "9h00 \u00e0 17h00",
-          "jeudi": "9h00 \u00e0 17h00",
-          "vendredi": "9h00 \u00e0 17h00",
-          "samedi": "9h00 \u00e0 13h00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-12T10:40:00.000000+0200",
       "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -102,6 +76,32 @@
         }
       },
       "prochain_rdv": "2021-05-03T13:50:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "972",
+      "nom": "Centre de vaccination de Fort-de-France",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/fort-de-france-97200/ville-de-fort-de-france/centre-de-vaccination-de-la-ville-de-fort-de-france",
+      "location": {
+        "longitude": "-61.0617",
+        "latitude": "14.6032"
+      },
+      "metadata": {
+        "address": " Avenue Maurice Bishop, immeuble du Port, 97200 Fort-de-France",
+        "phone_number": "0596425560",
+        "business_hours": {
+          "lundi": "9h00 \u00e0 17h00",
+          "mardi": "9h00 \u00e0 17h00",
+          "mercredi": "9h00 \u00e0 17h00",
+          "jeudi": "9h00 \u00e0 17h00",
+          "vendredi": "9h00 \u00e0 17h00",
+          "samedi": "9h00 \u00e0 13h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-10T11:40:00.000000+0200",
       "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0

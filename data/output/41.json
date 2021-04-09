@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.535496+02:00",
+  "last_updated": "2021-04-09T15:30:28.538456+02:00",
   "centres_disponibles": [
     {
       "departement": "41",
@@ -22,7 +22,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-22T14:10:00.000+02:00",
+      "prochain_rdv": "2021-04-22T13:40:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -435,31 +435,6 @@
     },
     {
       "departement": "41",
-      "nom": "Montrichard CV \u00e9ph\u00e9m\u00e8re",
-      "url": "",
-      "location": {
-        "longitude": "1.18362",
-        "latitude": "47.3431"
-      },
-      "metadata": {
-        "address": " , 41400 Montrichard Val de Cher",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "41",
       "nom": "Centre de vaccination de Salbris",
       "url": "https://partners.doctolib.fr/centre-de-sante/salbris/centre-de-vaccination-mairie-salbris-salle-polyvalente?pid=practice-172976&enable_cookies_consent=1",
       "location": {
@@ -480,6 +455,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "41",
+      "nom": "Montrichard CV \u00e9ph\u00e9m\u00e8re",
+      "url": "",
+      "location": {
+        "longitude": "1.18362",
+        "latitude": "47.3431"
+      },
+      "metadata": {
+        "address": " , 41400 Montrichard Val de Cher",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -560,14 +560,14 @@
     },
     {
       "departement": "41",
-      "nom": "Sellommes Centre \u00e9ph\u00e9m\u00e8re",
+      "nom": "Centre de vaccination - en attente (41)",
       "url": "",
       "location": {
-        "longitude": "1.1931",
-        "latitude": "47.756"
+        "longitude": "1.32687",
+        "latitude": "47.5914"
       },
       "metadata": {
-        "address": " , 41100 Selommes",
+        "address": " , 41000 Blois",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -585,14 +585,14 @@
     },
     {
       "departement": "41",
-      "nom": "Centre de vaccination - en attente (41)",
+      "nom": "Sellommes Centre \u00e9ph\u00e9m\u00e8re",
       "url": "",
       "location": {
-        "longitude": "1.32687",
-        "latitude": "47.5914"
+        "longitude": "1.1931",
+        "latitude": "47.756"
       },
       "metadata": {
-        "address": " , 41000 Blois",
+        "address": " , 41100 Selommes",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -736,6 +736,31 @@
     },
     {
       "departement": "41",
+      "nom": "Centre de vaccination - en attente (41)",
+      "url": "",
+      "location": {
+        "longitude": "1.33744",
+        "latitude": "47.5742"
+      },
+      "metadata": {
+        "address": " , 41000 Blois",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "41",
       "nom": "Centre de vaccination - Dojo",
       "url": "https://partners.doctolib.fr/centre-de-sante/saint-georges-sur-cher/centre-de-vaccination-covid-19-de-saint-georges-sur-cher?pid=practice-166204&enable_cookies_consent=1",
       "location": {
@@ -757,31 +782,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "41",
-      "nom": "Centre de vaccination - en attente (41)",
-      "url": "",
-      "location": {
-        "longitude": "1.33744",
-        "latitude": "47.5742"
-      },
-      "metadata": {
-        "address": " , 41000 Blois",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -839,32 +839,6 @@
     },
     {
       "departement": "41",
-      "nom": "Centre hospitalier de Blois - Simone Veil - r\u00e9serv\u00e9 aux professionnels de sant\u00e9",
-      "url": "https://partners.doctolib.fr/hopital-public/blois/ch-blois-centre-de-vaccination-covid-19-reserve-aux-professionnels-du-chb?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "1.3397",
-        "latitude": "47.6001"
-      },
-      "metadata": {
-        "address": " Mail Pierre Charlot, 41000 Blois",
-        "phone_number": "+33254556046",
-        "business_hours": {
-          "lundi": "ouvert",
-          "mardi": "ouvert",
-          "mercredi": "ouvert",
-          "jeudi": "ouvert",
-          "vendredi": "ouvert",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "41",
       "nom": "Centre de vaccination - la Gare des Collines - Maison France Service",
       "url": "https://partners.doctolib.fr/maison-de-sante/mondoubleau/centre-de-vaccination-covid-la-gare-des-collines?pid=practice-168224&enable_cookies_consent=1",
       "location": {
@@ -880,6 +854,32 @@
           "mercredi": "ferm\u00e9",
           "jeudi": "Ouvert",
           "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "41",
+      "nom": "Centre hospitalier de Blois - Simone Veil - r\u00e9serv\u00e9 aux professionnels de sant\u00e9",
+      "url": "https://partners.doctolib.fr/hopital-public/blois/ch-blois-centre-de-vaccination-covid-19-reserve-aux-professionnels-du-chb?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.3397",
+        "latitude": "47.6001"
+      },
+      "metadata": {
+        "address": " Mail Pierre Charlot, 41000 Blois",
+        "phone_number": "+33254556046",
+        "business_hours": {
+          "lundi": "ouvert",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -928,7 +928,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     }

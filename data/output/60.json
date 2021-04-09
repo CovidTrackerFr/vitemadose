@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.555022+02:00",
+  "last_updated": "2021-04-09T15:30:28.558310+02:00",
   "centres_disponibles": [
     {
       "departement": "60",
@@ -23,7 +23,7 @@
           "dimanche": "09:00-17:00"
         }
       },
-      "prochain_rdv": "2021-04-10T09:10:00.000+02:00",
+      "prochain_rdv": "2021-04-10T09:55:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -48,7 +48,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-10T15:35:00.000+02:00",
+      "prochain_rdv": "2021-04-10T14:55:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -100,7 +100,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-12T15:15:00.000+02:00",
+      "prochain_rdv": "2021-04-13T13:27:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -409,14 +409,14 @@
     },
     {
       "departement": "60",
-      "nom": "centre de vaccination - Mairie de Saint Just en chauss\u00e9e, L'OPUS",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-just-en-chaussee/centre-de-vaccination-covid-19-saint-just-en-chaussee?pid=practice-176105&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - MSP Cr\u00e9vecoeur le Grand",
+      "url": "https://partners.doctolib.fr/centre-de-sante/crevecoeur-le-grand/centre-de-vaccination-covid-19-msp-crevecoeur-le-grand?pid=practice-176391&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.43414",
-        "latitude": "49.5144"
+        "longitude": "2.07257",
+        "latitude": "49.6053"
       },
       "metadata": {
-        "address": "5003 Rue Brunehaut, 60130 Saint-Just-en-Chauss\u00e9e",
+        "address": "4 Rue du Stade, 60360 Cr\u00e8vec\u0153ur-le-Grand",
         "business_hours": {
           "lundi": "",
           "mardi": "",
@@ -434,14 +434,14 @@
     },
     {
       "departement": "60",
-      "nom": "Centre de vaccination - MSP Cr\u00e9vecoeur le Grand",
-      "url": "https://partners.doctolib.fr/centre-de-sante/crevecoeur-le-grand/centre-de-vaccination-covid-19-msp-crevecoeur-le-grand?pid=practice-176391&enable_cookies_consent=1",
+      "nom": "centre de vaccination - Mairie de Saint Just en chauss\u00e9e, L'OPUS",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-just-en-chaussee/centre-de-vaccination-covid-19-saint-just-en-chaussee?pid=practice-176105&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.07257",
-        "latitude": "49.6053"
+        "longitude": "2.43414",
+        "latitude": "49.5144"
       },
       "metadata": {
-        "address": "4 Rue du Stade, 60360 Cr\u00e8vec\u0153ur-le-Grand",
+        "address": "5003 Rue Brunehaut, 60130 Saint-Just-en-Chauss\u00e9e",
         "business_hours": {
           "lundi": "",
           "mardi": "",
@@ -536,32 +536,6 @@
     },
     {
       "departement": "60",
-      "nom": "Centre de vaccination - Polyclinique SAINT COME",
-      "url": "https://partners.doctolib.fr/clinique-privee/compi\u00e8gne/polyclinique-saint-come-vaccination?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.80901",
-        "latitude": "49.4031"
-      },
-      "metadata": {
-        "address": "7 Rue Jean-jacques Bernard, 60200 Compi\u00e8gne",
-        "phone_number": "03 92 04 34 71 ",
-        "business_hours": {
-          "lundi": "13:00-18:00",
-          "mardi": "13:00-18:00",
-          "mercredi": "13:00-18:00",
-          "jeudi": "13:00-18:00",
-          "vendredi": "13:00-18:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "60",
       "nom": "Centre de vaccination - CH CREIL GHPSO",
       "url": "https://partners.doctolib.fr/hopital-public/creil/ghpso-centre-de-vaccination-covid-19-reserve-aux-professionnels-de-sante?pid=practice-165159&enable_cookies_consent=1",
       "location": {
@@ -577,6 +551,32 @@
           "mercredi": "09:00-12:00/13:00-16:30",
           "jeudi": "09:00-12:00/13:00-16:30",
           "vendredi": "09:00-12:00/13:00-16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "60",
+      "nom": "Centre de vaccination - Polyclinique SAINT COME",
+      "url": "https://partners.doctolib.fr/clinique-privee/compi\u00e8gne/polyclinique-saint-come-vaccination?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.80901",
+        "latitude": "49.4031"
+      },
+      "metadata": {
+        "address": "7 Rue Jean-jacques Bernard, 60200 Compi\u00e8gne",
+        "phone_number": "03 92 04 34 71 ",
+        "business_hours": {
+          "lundi": "13:00-18:00",
+          "mardi": "13:00-18:00",
+          "mercredi": "13:00-18:00",
+          "jeudi": "13:00-18:00",
+          "vendredi": "13:00-18:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }

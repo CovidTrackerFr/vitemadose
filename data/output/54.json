@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.546113+02:00",
+  "last_updated": "2021-04-09T15:30:28.549896+02:00",
   "centres_disponibles": [
     {
       "departement": "54",
@@ -23,7 +23,7 @@
           "dimanche": "non pr\u00e9cis\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-12T10:40:00.000+02:00",
+      "prochain_rdv": "2021-04-12T15:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -49,33 +49,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-14T17:10:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "54",
-      "nom": "Site de vaccination Moselle et Madon - Centre culturel Jean l'H\u00f4te",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-167641&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.10597",
-        "latitude": "48.6148"
-      },
-      "metadata": {
-        "address": " Place Ernest Poirson, 54230 Neuves-Maisons",
-        "phone_number": "+33383851300",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "14:00-17:00",
-          "mercredi": "14:00-17:00",
-          "jeudi": "14:00-17:00",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-15T09:10:00.000+02:00",
+      "prochain_rdv": "2021-04-14T17:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -101,7 +75,7 @@
           "dimanche": "non renseign\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-15T14:13:00.000+02:00",
+      "prochain_rdv": "2021-04-15T14:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -127,7 +101,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-15T15:14:00.000+02:00",
+      "prochain_rdv": "2021-04-15T16:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -153,7 +127,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-17T09:55:00.000+02:00",
+      "prochain_rdv": "2021-04-17T12:02:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -180,6 +154,32 @@
         }
       },
       "prochain_rdv": "2021-04-23T08:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "54",
+      "nom": "Jarville - Espace communal Foch",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?speciality_id=5494&pid=practice-163351&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.20536",
+        "latitude": "48.6693"
+      },
+      "metadata": {
+        "address": "15 Rue Marechal Foch, 54140 Jarville-la-Malgrange",
+        "phone_number": "+33383851300",
+        "business_hours": {
+          "lundi": "09:00-13:00/14:00-17:00",
+          "mardi": "09:00-13:00/14:00-17:00",
+          "mercredi": "09:00-13:00/14:00-17:00",
+          "jeudi": "09:00-13:00/14:00-17:00",
+          "vendredi": "09:00-13:00/14:00-17:00",
+          "samedi": "non pr\u00e9cis\u00e9",
+          "dimanche": "non pr\u00e9cis\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-27T09:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -315,6 +315,32 @@
     },
     {
       "departement": "54",
+      "nom": "Site de vaccination Moselle et Madon - Centre culturel Jean l'H\u00f4te",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-167641&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.10597",
+        "latitude": "48.6148"
+      },
+      "metadata": {
+        "address": " Place Ernest Poirson, 54230 Neuves-Maisons",
+        "phone_number": "+33383851300",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "14:00-17:00",
+          "mercredi": "14:00-17:00",
+          "jeudi": "14:00-17:00",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "54",
       "nom": "Site de vaccination de Bagneux - Salle des f\u00eates",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-167645&enable_cookies_consent=1",
       "location": {
@@ -332,32 +358,6 @@
           "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "54",
-      "nom": "Jarville - Espace communal Foch",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?speciality_id=5494&pid=practice-163351&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.20536",
-        "latitude": "48.6693"
-      },
-      "metadata": {
-        "address": "15 Rue Marechal Foch, 54140 Jarville-la-Malgrange",
-        "phone_number": "+33383851300",
-        "business_hours": {
-          "lundi": "09:00-13:00/14:00-17:00",
-          "mardi": "09:00-13:00/14:00-17:00",
-          "mercredi": "09:00-13:00/14:00-17:00",
-          "jeudi": "09:00-13:00/14:00-17:00",
-          "vendredi": "09:00-13:00/14:00-17:00",
-          "samedi": "non pr\u00e9cis\u00e9",
-          "dimanche": "non pr\u00e9cis\u00e9"
         }
       },
       "prochain_rdv": null,
@@ -445,14 +445,14 @@
     },
     {
       "departement": "54",
-      "nom": "Centre de vaccination d'Audun-le-Roman - Si\u00e8ge de la communaut\u00e9 de communes Coeur de Pays Haut",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-175513&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de Dombasle - Salle polyvalente",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-173392&enable_cookies_consent=1",
       "location": {
-        "longitude": "5.90591",
-        "latitude": "49.3667"
+        "longitude": "6.35771",
+        "latitude": "48.6186"
       },
       "metadata": {
-        "address": "71 Route de Briey, 54560 Audun-le-Roman",
+        "address": " Avenue du L\u00e9omont, 54110 Dombasle-sur-Meurthe",
         "phone_number": "+33383851300",
         "business_hours": {
           "lundi": "En attente de pr\u00e9cisions",
@@ -471,14 +471,14 @@
     },
     {
       "departement": "54",
-      "nom": "Centre de vaccination de Dombasle - Salle polyvalente",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-173392&enable_cookies_consent=1",
+      "nom": "Centre de vaccination d'Audun-le-Roman - Si\u00e8ge de la communaut\u00e9 de communes Coeur de Pays Haut",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-175513&enable_cookies_consent=1",
       "location": {
-        "longitude": "6.35771",
-        "latitude": "48.6186"
+        "longitude": "5.90591",
+        "latitude": "49.3667"
       },
       "metadata": {
-        "address": " Avenue du L\u00e9omont, 54110 Dombasle-sur-Meurthe",
+        "address": "71 Route de Briey, 54560 Audun-le-Roman",
         "phone_number": "+33383851300",
         "business_hours": {
           "lundi": "En attente de pr\u00e9cisions",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.507768+02:00",
+  "last_updated": "2021-04-09T15:30:28.508642+02:00",
   "centres_disponibles": [
     {
       "departement": "16",
@@ -24,6 +24,32 @@
         }
       },
       "prochain_rdv": "2021-04-15T12:35:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "16",
+      "nom": "CH RUFFEC",
+      "url": "https://partners.doctolib.fr/hopital-public/ruffec/centre-de-vaccination-covid-19-ch-de-ruffec?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.195442",
+        "latitude": "46.0288"
+      },
+      "metadata": {
+        "address": "15 Rue de l'H\u00f4pital, 16700 Ruffec",
+        "phone_number": "+33545295080",
+        "business_hours": {
+          "lundi": "13:00-16:00",
+          "mardi": "13:00-16:00",
+          "mercredi": "13:00-16:00",
+          "jeudi": "13:00-16:00",
+          "vendredi": "13:00-16:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-06T10:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -265,32 +291,6 @@
     },
     {
       "departement": "16",
-      "nom": "Centre de vaccination Portes du P\u00e9rigord (La Rochefoucauld/Montbron/Chazelles)",
-      "url": "https://partners.doctolib.fr/maison-de-sante/la-rochefoucauld-en-angoumois/centre-vaccination-covid-19-maison-de-sante-val-de-tardoire?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.389657",
-        "latitude": "45.7391"
-      },
-      "metadata": {
-        "address": " Espace Tardoire - Boulevard Bossand, 16110 La Rochefoucauld-en-Angoumois",
-        "phone_number": "+33545630001",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "08:00-13:00/14:00-18:00",
-          "mercredi": "08:00-13:00/14:00-18:00",
-          "jeudi": "08:00-13:00/14:00-18:00",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "16",
       "nom": "Centre de vaccination Montmoreau St Cybard/Chalais",
       "url": "https://partners.doctolib.fr/centre-de-sante/montmoreau-saint-cybard/centre-de-vaccination-montmoreau?pid=practice-166024&enable_cookies_consent=1",
       "location": {
@@ -317,21 +317,21 @@
     },
     {
       "departement": "16",
-      "nom": "CH RUFFEC",
-      "url": "https://partners.doctolib.fr/hopital-public/ruffec/centre-de-vaccination-covid-19-ch-de-ruffec?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination Portes du P\u00e9rigord (La Rochefoucauld/Montbron/Chazelles)",
+      "url": "https://partners.doctolib.fr/maison-de-sante/la-rochefoucauld-en-angoumois/centre-vaccination-covid-19-maison-de-sante-val-de-tardoire?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "0.195442",
-        "latitude": "46.0288"
+        "longitude": "0.389657",
+        "latitude": "45.7391"
       },
       "metadata": {
-        "address": "15 Rue de l'H\u00f4pital, 16700 Ruffec",
-        "phone_number": "+33545295080",
+        "address": " Espace Tardoire - Boulevard Bossand, 16110 La Rochefoucauld-en-Angoumois",
+        "phone_number": "+33545630001",
         "business_hours": {
-          "lundi": "13:00-16:00",
-          "mardi": "13:00-16:00",
-          "mercredi": "13:00-16:00",
-          "jeudi": "13:00-16:00",
-          "vendredi": "13:00-16:00",
+          "lundi": "ferm\u00e9",
+          "mardi": "08:00-13:00/14:00-18:00",
+          "mercredi": "08:00-13:00/14:00-18:00",
+          "jeudi": "08:00-13:00/14:00-18:00",
+          "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }

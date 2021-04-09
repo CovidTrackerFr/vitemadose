@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.580084+02:00",
+  "last_updated": "2021-04-09T15:30:28.582976+02:00",
   "centres_disponibles": [
     {
       "departement": "79",
@@ -23,7 +23,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-12T15:45:00.000+02:00",
+      "prochain_rdv": "2021-04-12T15:50:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -83,32 +83,6 @@
   "centres_indisponibles": [
     {
       "departement": "79",
-      "nom": "GH HAUT VAL DE SEVRE ET DU MELLOIS - SITE DE ST-MAIXENT",
-      "url": "https://partners.doctolib.fr/hopital-public/saint-maixent-l-ecole/centre-de-vaccination-ghvsm-site-saint-maixent-l-ecole?pid=practice-166861&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-0.220705",
-        "latitude": "46.4104"
-      },
-      "metadata": {
-        "address": "13 Rue du Panier Fleuri, 79400 Saint-Maixent-l'\u00c9cole",
-        "phone_number": "+33670592682",
-        "business_hours": {
-          "lundi": "",
-          "mardi": "",
-          "mercredi": "",
-          "jeudi": "",
-          "vendredi": "",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "79",
       "nom": "POLYCLINIQUE INKERMANN",
       "url": "https://partners.doctolib.fr/centre-de-sante/niort/vaccination-covid-19-inkermann?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -124,6 +98,32 @@
           "mercredi": "09:30-12:30/13:30-17:30",
           "jeudi": "09:30-12:30/13:30-17:30",
           "vendredi": "09:30-12:30/13:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "79",
+      "nom": "GH HAUT VAL DE SEVRE ET DU MELLOIS - SITE DE ST-MAIXENT",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-maixent-l-ecole/centre-de-vaccination-ghvsm-site-saint-maixent-l-ecole?pid=practice-166861&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-0.220705",
+        "latitude": "46.4104"
+      },
+      "metadata": {
+        "address": "13 Rue du Panier Fleuri, 79400 Saint-Maixent-l'\u00c9cole",
+        "phone_number": "+33670592682",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -213,31 +213,6 @@
     },
     {
       "departement": "79",
-      "nom": "Centre de vaccination du SDIS - Bassin de Bressuire",
-      "url": "",
-      "location": {
-        "longitude": "-0.597003",
-        "latitude": "46.7095"
-      },
-      "metadata": {
-        "address": "1 La Morini\u00e8re, 79320 Moncoutant-sur-S\u00e8vre",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "79",
       "nom": "centre de vaccination du SDIS - Bressuire",
       "url": "https://partners.doctolib.fr/centre-de-sante/moncoutant-sur-sevre/centre-de-vaccination-de-moncoutant-sur-sevre?pid=practice-176955&enable_cookies_consent=1",
       "location": {
@@ -258,6 +233,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "79",
+      "nom": "Centre de vaccination du SDIS - Bassin de Bressuire",
+      "url": "",
+      "location": {
+        "longitude": "-0.597003",
+        "latitude": "46.7095"
+      },
+      "metadata": {
+        "address": "1 La Morini\u00e8re, 79320 Moncoutant-sur-S\u00e8vre",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -366,15 +366,15 @@
     },
     {
       "departement": "79",
-      "nom": "Centre de vaccination de Nueil-les-Aubiers  - CPTS du Bressuirais",
-      "url": "https://partners.doctolib.fr/centre-de-sante/moncoutant-sur-sevre/centre-de-vaccination-de-moncoutant-sur-sevre?pid=practice-177725&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de Cerizay - CPTS du Bressuirais",
+      "url": "https://partners.doctolib.fr/centre-de-sante/moncoutant-sur-sevre/centre-de-vaccination-de-moncoutant-sur-sevre?pid=practice-177609&enable_cookies_consent=1",
       "location": {
-        "longitude": "-0.593426",
-        "latitude": "46.9501"
+        "longitude": "-0.671963",
+        "latitude": "46.8212"
       },
       "metadata": {
-        "address": "45 Avenue Saint-Hubert, 79250 Nueil-les-Aubiers",
-        "phone_number": "+33675036843",
+        "address": "5 Place du Saint-Pere, 79140 Cerizay",
+        "phone_number": "+33755601381",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -392,15 +392,15 @@
     },
     {
       "departement": "79",
-      "nom": "Centre de vaccination de Cerizay - CPTS du Bressuirais",
-      "url": "https://partners.doctolib.fr/centre-de-sante/moncoutant-sur-sevre/centre-de-vaccination-de-moncoutant-sur-sevre?pid=practice-177609&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de Nueil-les-Aubiers  - CPTS du Bressuirais",
+      "url": "https://partners.doctolib.fr/centre-de-sante/moncoutant-sur-sevre/centre-de-vaccination-de-moncoutant-sur-sevre?pid=practice-177725&enable_cookies_consent=1",
       "location": {
-        "longitude": "-0.671963",
-        "latitude": "46.8212"
+        "longitude": "-0.593426",
+        "latitude": "46.9501"
       },
       "metadata": {
-        "address": "5 Place du Saint-Pere, 79140 Cerizay",
-        "phone_number": "+33755601381",
+        "address": "45 Avenue Saint-Hubert, 79250 Nueil-les-Aubiers",
+        "phone_number": "+33675036843",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",

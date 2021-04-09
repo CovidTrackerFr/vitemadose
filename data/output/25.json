@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.516325+02:00",
+  "last_updated": "2021-04-09T15:30:28.518767+02:00",
   "centres_disponibles": [
     {
       "departement": "25",
@@ -496,32 +496,6 @@
     },
     {
       "departement": "25",
-      "nom": "Centre de vaccination Covid-19 - Doubs central",
-      "url": "https://partners.doctolib.fr/centre-de-sante/baume-les-dames/centre-de-vaccination-petr-doubs-central?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": 6.3623318,
-        "latitude": 47.3521933
-      },
-      "metadata": {
-        "address": "5 Place de l'Abbaye, 25110 Baume-les-Dames",
-        "phone_number": "03 70 88 98 80",
-        "business_hours": {
-          "lundi": "09:00-12:00, 14:00-17:00",
-          "mardi": "09:00-12:00, 14:00-17:00",
-          "mercredi": "09:00-12:00",
-          "jeudi": "09:00-12:00, 14:00-17:00",
-          "vendredi": "09:00-12:00, 13:30-17:00",
-          "samedi": null,
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "25",
       "nom": "CHRU Besan\u00e7on - Centre de Vaccination Covid-19",
       "url": "https://partners.doctolib.fr/hopital-public/besancon/chru-besancon-centre-de-vaccination-covid?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
@@ -537,6 +511,32 @@
           "mercredi": "08:30-18:00",
           "jeudi": "08:30-18:00",
           "vendredi": "08:30-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "25",
+      "nom": "Centre de vaccination Covid-19 - Doubs central",
+      "url": "https://partners.doctolib.fr/centre-de-sante/baume-les-dames/centre-de-vaccination-petr-doubs-central?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 6.3623318,
+        "latitude": 47.3521933
+      },
+      "metadata": {
+        "address": "5 Place de l'Abbaye, 25110 Baume-les-Dames",
+        "phone_number": "03 70 88 98 80",
+        "business_hours": {
+          "lundi": "09:00-12:00, 14:00-17:00",
+          "mardi": "09:00-12:00, 14:00-17:00",
+          "mercredi": "09:00-12:00",
+          "jeudi": "09:00-12:00, 14:00-17:00",
+          "vendredi": "09:00-12:00, 13:30-17:00",
           "samedi": null,
           "dimanche": null
         }

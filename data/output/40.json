@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.534568+02:00",
+  "last_updated": "2021-04-09T15:30:28.537606+02:00",
   "centres_disponibles": [
     {
       "departement": "40",
@@ -74,7 +74,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-21T10:15:00.000000Z",
+      "prochain_rdv": "2021-04-21T14:15:00.000000Z",
       "plateforme": "Maiia",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -482,24 +482,6 @@
     },
     {
       "departement": "40",
-      "nom": "Pharmacie Bougniot",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-bougniot-labouheyre",
-      "location": {
-        "longitude": -0.9197061000000001,
-        "latitude": 44.2125705
-      },
-      "metadata": {
-        "address": "97 rue Jacques Berqu\u00e9, 40210 Labouheyre",
-        "phone_number": "+33558070013",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "40",
       "nom": "Pharmacie du Trinquet",
       "url": "https://partners.doctolib.fr/pharmacie/soorts-hossegor/pharmacie-soorts",
       "location": {
@@ -521,24 +503,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "40",
-      "nom": "Pharmacie Du Marensin",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-marensin-castets",
-      "location": {
-        "longitude": -1.148117,
-        "latitude": 43.8812422
-      },
-      "metadata": {
-        "address": "149 rue Saint Helene, 40260 Castets",
-        "phone_number": "+33558894043",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -566,6 +530,42 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Pharmacie Bougniot",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-bougniot-labouheyre",
+      "location": {
+        "longitude": -0.9197061000000001,
+        "latitude": 44.2125705
+      },
+      "metadata": {
+        "address": "97 rue Jacques Berqu\u00e9, 40210 Labouheyre",
+        "phone_number": "+33558070013",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Pharmacie Du Marensin",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-marensin-castets",
+      "location": {
+        "longitude": -1.148117,
+        "latitude": 43.8812422
+      },
+      "metadata": {
+        "address": "149 rue Saint Helene, 40260 Castets",
+        "phone_number": "+33558894043",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
       "appointment_count": 0
     }
   ]

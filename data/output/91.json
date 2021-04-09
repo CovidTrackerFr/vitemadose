@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.591198+02:00",
+  "last_updated": "2021-04-09T15:30:28.593760+02:00",
   "centres_disponibles": [
     {
       "departement": "91",
@@ -23,60 +23,9 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-15T10:45:00.000+02:00",
+      "prochain_rdv": "2021-05-06T09:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "general-practitioner",
-      "appointment_count": 0
-    },
-    {
-      "departement": "91",
-      "nom": "Espace du Val de Gif",
-      "url": "https://partners.doctolib.fr/cabinet-medical/gif-sur-yvette/centre-de-vaccination-covid-19-gif-sur-yvette?pid=practice-165182?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.13326",
-        "latitude": "48.6977"
-      },
-      "metadata": {
-        "address": "1 Place du chapitre, 91190 Gif-sur-Yvette",
-        "phone_number": "0170565286",
-        "business_hours": {
-          "lundi": "14h-18h",
-          "mardi": "14h-18h",
-          "mercredi": "14h-18h",
-          "jeudi": "14h-18h",
-          "vendredi": "14h-18h",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-05-01T10:00:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "91",
-      "nom": "Centre de vaccination Covid-19 Gif sur Yvette",
-      "url": "https://partners.doctolib.fr/centre-de-sante/gif-sur-yvette/centre-de-vaccination-covid-19-gif-sur-yvette-gif-sur-yvette?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": 2.1301529,
-        "latitude": 48.6971854
-      },
-      "metadata": {
-        "address": "Place du Chapitre, 91190 Gif-sur-Yvette",
-        "business_hours": {
-          "lundi": "08:45-12:00, 13:30-17:30",
-          "mardi": "08:45-12:00, 13:30-17:30",
-          "mercredi": "08:45-12:00, 13:30-17:30",
-          "jeudi": "08:45-12:00, 13:30-17:30",
-          "vendredi": "08:45-12:00, 13:30-17:30",
-          "samedi": null,
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": "2021-05-01T16:50:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
       "appointment_count": 0
     }
   ],
@@ -185,31 +134,6 @@
     },
     {
       "departement": "91",
-      "nom": "EMV Etampes",
-      "url": "",
-      "location": {
-        "longitude": "2.16132",
-        "latitude": "48.435"
-      },
-      "metadata": {
-        "address": "13 Rue des Marionnettes, 91150 \u00c9tampes",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "91",
       "nom": "Site de \"La Croix Louis\"",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/bretigny-sur-orge-91220/centre-de-vaccination-covid19-bretigny?agenda=48971&motive=81790&category=-1&cabinet=16650&specialty=496",
       "location": {
@@ -231,6 +155,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "91",
+      "nom": "EMV Etampes",
+      "url": "",
+      "location": {
+        "longitude": "2.16132",
+        "latitude": "48.435"
+      },
+      "metadata": {
+        "address": "13 Rue des Marionnettes, 91150 \u00c9tampes",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -491,32 +440,6 @@
     },
     {
       "departement": "91",
-      "nom": "Centre de vaccination mobile - Salle des f\u00eates",
-      "url": "https://partners.doctolib.fr/centre-de-sante/montgeron/centre-de-vaccination-covid-conseil-departemental-de-l-essonne-cd91?pid=practice-165211&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.46763",
-        "latitude": "48.4045"
-      },
-      "metadata": {
-        "address": "11 Boulevard du Mar\u00e9chal Lyautey, 91490 Milly-la-For\u00eat",
-        "phone_number": "01 60 91 97 97",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "9h00-12h30 / 13h30-17h00",
-          "jeudi": "9h00-12h30 / 13h30-17h00",
-          "vendredi": "9h00-12h30 / 13h30-17h00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "91",
       "nom": "Centre de vaccination mobile - Salle polyvalente Guy BONIN",
       "url": "https://partners.doctolib.fr/centre-de-sante/montgeron/centre-de-vaccination-covid-conseil-departemental-de-l-essonne-cd91?pid=practice-165168&enable_cookies_consent=1",
       "location": {
@@ -532,6 +455,32 @@
           "mercredi": "ferm\u00e9",
           "jeudi": "ferm\u00e9",
           "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "91",
+      "nom": "Centre de vaccination mobile - Salle des f\u00eates",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montgeron/centre-de-vaccination-covid-conseil-departemental-de-l-essonne-cd91?pid=practice-165211&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.46763",
+        "latitude": "48.4045"
+      },
+      "metadata": {
+        "address": "11 Boulevard du Mar\u00e9chal Lyautey, 91490 Milly-la-For\u00eat",
+        "phone_number": "01 60 91 97 97",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "9h00-12h30 / 13h30-17h00",
+          "jeudi": "9h00-12h30 / 13h30-17h00",
+          "vendredi": "9h00-12h30 / 13h30-17h00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -749,6 +698,32 @@
     },
     {
       "departement": "91",
+      "nom": "Espace Ren\u00e9 L'HELGUEN",
+      "url": "https://partners.doctolib.fr/centre-de-sante/athis-mons/centre-de-vaccination-covid-mairie-athis-mons?pid=practice-164918?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.39558",
+        "latitude": "48.7061"
+      },
+      "metadata": {
+        "address": "12 Rue Edouard Vaillant, 91200 Athis-Mons",
+        "phone_number": "01 69 54 54 17",
+        "business_hours": {
+          "lundi": "\u00e0 pr\u00e9ciser",
+          "mardi": "\u00e0 pr\u00e9ciser",
+          "mercredi": "\u00e0 pr\u00e9ciser",
+          "jeudi": "\u00e0 pr\u00e9ciser",
+          "vendredi": "\u00e0 pr\u00e9ciser",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "91",
       "nom": "Salle Claude Nougaro",
       "url": "https://partners.doctolib.fr/centre-de-sante/evry-courcouronnes/centre-de-vaccination-covid-salle-claude-nougaro-reserve-aux-personnes-de-plus-de-75-ans?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -801,6 +776,32 @@
     },
     {
       "departement": "91",
+      "nom": "Salle des F\u00eates",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/brunoy/centre-de-vaccination-covid-brunoy?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.50444",
+        "latitude": "48.6978"
+      },
+      "metadata": {
+        "address": "1 Impasse de la Mairie, 91800 Brunoy",
+        "phone_number": "01 69 39 89 92",
+        "business_hours": {
+          "lundi": "9h - 13h / 14h - 18h",
+          "mardi": "9h - 13h / 14h - 18h",
+          "mercredi": "9h - 13h / 14h - 18h",
+          "jeudi": "9h - 13h / 14h - 18h",
+          "vendredi": "9h - 13h / 14h - 18h",
+          "samedi": "9h - 13h / 14h - 18h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "91",
       "nom": "Salle L'astral",
       "url": "https://partners.doctolib.fr/centre-de-sante/montgeron/centre-de-vaccination-covid-conseil-departemental-de-l-essonne-cd91?pid=practice-165168?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -827,48 +828,22 @@
     },
     {
       "departement": "91",
-      "nom": "Espace Ren\u00e9 L'HELGUEN",
-      "url": "https://partners.doctolib.fr/centre-de-sante/athis-mons/centre-de-vaccination-covid-mairie-athis-mons?pid=practice-164918?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Espace du Val de Gif",
+      "url": "https://partners.doctolib.fr/cabinet-medical/gif-sur-yvette/centre-de-vaccination-covid-19-gif-sur-yvette?pid=practice-165182?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.39558",
-        "latitude": "48.7061"
+        "longitude": "2.13326",
+        "latitude": "48.6977"
       },
       "metadata": {
-        "address": "12 Rue Edouard Vaillant, 91200 Athis-Mons",
-        "phone_number": "01 69 54 54 17",
+        "address": "1 Place du chapitre, 91190 Gif-sur-Yvette",
+        "phone_number": "0170565286",
         "business_hours": {
-          "lundi": "\u00e0 pr\u00e9ciser",
-          "mardi": "\u00e0 pr\u00e9ciser",
-          "mercredi": "\u00e0 pr\u00e9ciser",
-          "jeudi": "\u00e0 pr\u00e9ciser",
-          "vendredi": "\u00e0 pr\u00e9ciser",
+          "lundi": "14h-18h",
+          "mardi": "14h-18h",
+          "mercredi": "14h-18h",
+          "jeudi": "14h-18h",
+          "vendredi": "14h-18h",
           "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "91",
-      "nom": "Salle des F\u00eates",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/brunoy/centre-de-vaccination-covid-brunoy?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.50444",
-        "latitude": "48.6978"
-      },
-      "metadata": {
-        "address": "1 Impasse de la Mairie, 91800 Brunoy",
-        "phone_number": "01 69 39 89 92",
-        "business_hours": {
-          "lundi": "9h - 13h / 14h - 18h",
-          "mardi": "9h - 13h / 14h - 18h",
-          "mercredi": "9h - 13h / 14h - 18h",
-          "jeudi": "9h - 13h / 14h - 18h",
-          "vendredi": "9h - 13h / 14h - 18h",
-          "samedi": "9h - 13h / 14h - 18h",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -931,32 +906,6 @@
     },
     {
       "departement": "91",
-      "nom": "Complexe sportif - Jean Segalard",
-      "url": "https://partners.doctolib.fr/centre-de-sante/cerny/centre-de-vaccination-covid-19-cerny?pid=practice-165742&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.32709",
-        "latitude": "48.4781"
-      },
-      "metadata": {
-        "address": " RD 191, 91590 Cerny",
-        "phone_number": "01 69 36 44 13",
-        "business_hours": {
-          "lundi": "9h - 17h",
-          "mardi": "9h - 17h",
-          "mercredi": "9h - 17h",
-          "jeudi": "9h - 17h",
-          "vendredi": "9h - 17h",
-          "samedi": "9h - 17h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "91",
       "nom": "Maison de sant\u00e9",
       "url": "https://partners.doctolib.fr/centre-de-sante/dourdan/centre-de-vaccination-covid-19-maison-de-sante-dourdan?pid=practice-165040?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -973,6 +922,32 @@
           "jeudi": "ferm\u00e9",
           "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "91",
+      "nom": "Complexe sportif - Jean Segalard",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cerny/centre-de-vaccination-covid-19-cerny?pid=practice-165742&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.32709",
+        "latitude": "48.4781"
+      },
+      "metadata": {
+        "address": " RD 191, 91590 Cerny",
+        "phone_number": "01 69 36 44 13",
+        "business_hours": {
+          "lundi": "9h - 17h",
+          "mardi": "9h - 17h",
+          "mercredi": "9h - 17h",
+          "jeudi": "9h - 17h",
+          "vendredi": "9h - 17h",
+          "samedi": "9h - 17h",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -1059,6 +1034,24 @@
     },
     {
       "departement": "91",
+      "nom": "Pharmacie Centrale Valdoly",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-centrale-valdoly-vigneux-sur-seine",
+      "location": {
+        "longitude": 2.4367541,
+        "latitude": 48.7150961
+      },
+      "metadata": {
+        "address": "6 Rue de la Longueraie, 91270 Vigneux-sur-Seine",
+        "phone_number": "+33169425965",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "91",
       "nom": "Pharmacie Du Theatre",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-theatre-longjumeau",
       "location": {
@@ -1071,7 +1064,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -1180,6 +1173,31 @@
     },
     {
       "departement": "91",
+      "nom": "Centre de vaccination Covid-19 Gif sur Yvette",
+      "url": "https://partners.doctolib.fr/centre-de-sante/gif-sur-yvette/centre-de-vaccination-covid-19-gif-sur-yvette-gif-sur-yvette?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 2.1301529,
+        "latitude": 48.6971854
+      },
+      "metadata": {
+        "address": "Place du Chapitre, 91190 Gif-sur-Yvette",
+        "business_hours": {
+          "lundi": "08:45-12:00, 13:30-17:30",
+          "mardi": "08:45-12:00, 13:30-17:30",
+          "mercredi": "08:45-12:00, 13:30-17:30",
+          "jeudi": "08:45-12:00, 13:30-17:30",
+          "vendredi": "08:45-12:00, 13:30-17:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "91",
       "nom": "Centre de Vaccination Covid-19 - Savigny-sur-Orge",
       "url": "https://partners.doctolib.fr/centre-de-sante/savigny-sur-orge/vaccination-covid-19-savigny-sur-orge?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
@@ -1227,24 +1245,6 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "91",
-      "nom": "Pharmacie Centrale Valdoly",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-centrale-valdoly-vigneux-sur-seine",
-      "location": {
-        "longitude": 2.4367541,
-        "latitude": 48.7150961
-      },
-      "metadata": {
-        "address": "6 Rue de la Longueraie, 91270 Vigneux-sur-Seine",
-        "phone_number": "+33169425965",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
       "appointment_count": 0
     }
   ]

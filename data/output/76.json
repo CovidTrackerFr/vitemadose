@@ -1,33 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.575637+02:00",
+  "last_updated": "2021-04-09T15:30:28.578229+02:00",
   "centres_disponibles": [
-    {
-      "departement": "76",
-      "nom": "centre de vaccination Yvetot, clinique Hemera",
-      "url": "https://partners.doctolib.fr/centre-de-sante/yvetot/centre-de-vaccination-covid-19-pole-de-sante-d-yvetot?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.744011",
-        "latitude": "49.6182"
-      },
-      "metadata": {
-        "address": "14A Avenue du Marechal Foch, 76190 Yvetot",
-        "phone_number": "+33279461156",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-14T17:25:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "76",
       "nom": "AMSN - Service de sant\u00e9 au travail Normand",
@@ -470,14 +444,14 @@
     },
     {
       "departement": "76",
-      "nom": "Saint-Aubin-l\u00e8s-Elbeuf : salle des f\u00eates",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-aubin-les-elbeuf/centre-de-vaccination-covid-du-territoire-elbeuvien?pid=practice-164306&enable_cookies_consent=1",
+      "nom": "CH FECAMP - HALL DU RDC",
+      "url": "https://partners.doctolib.fr/hopital-public/f\u00e9camp/ch-fecamp-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "1.00974",
-        "latitude": "49.2974"
+        "longitude": "0.386192",
+        "latitude": "49.7461"
       },
       "metadata": {
-        "address": " Rue L\u00e9on Gambetta, 76410 Saint-Aubin-l\u00e8s-Elbeuf",
+        "address": "100 Avenue du Pr\u00e9sident Fran\u00e7ois Mitterrand, 76400 F\u00e9camp",
         "phone_number": "+33279461156",
         "business_hours": {
           "lundi": "",
@@ -496,14 +470,14 @@
     },
     {
       "departement": "76",
-      "nom": "CH FECAMP - HALL DU RDC",
-      "url": "https://partners.doctolib.fr/hopital-public/f\u00e9camp/ch-fecamp-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Saint-Aubin-l\u00e8s-Elbeuf : salle des f\u00eates",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-aubin-les-elbeuf/centre-de-vaccination-covid-du-territoire-elbeuvien?pid=practice-164306&enable_cookies_consent=1",
       "location": {
-        "longitude": "0.386192",
-        "latitude": "49.7461"
+        "longitude": "1.00974",
+        "latitude": "49.2974"
       },
       "metadata": {
-        "address": "100 Avenue du Pr\u00e9sident Fran\u00e7ois Mitterrand, 76400 F\u00e9camp",
+        "address": " Rue L\u00e9on Gambetta, 76410 Saint-Aubin-l\u00e8s-Elbeuf",
         "phone_number": "+33279461156",
         "business_hours": {
           "lundi": "",
@@ -678,6 +652,50 @@
     },
     {
       "departement": "76",
+      "nom": "centre de vaccination Yvetot, clinique Hemera",
+      "url": "https://partners.doctolib.fr/centre-de-sante/yvetot/centre-de-vaccination-covid-19-pole-de-sante-d-yvetot?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.744011",
+        "latitude": "49.6182"
+      },
+      "metadata": {
+        "address": "14A Avenue du Marechal Foch, 76190 Yvetot",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "76",
+      "nom": "Grande Pharmacie Thiers",
+      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-thiers-le-havre",
+      "location": {
+        "longitude": 0.1117815,
+        "latitude": 49.4969659
+      },
+      "metadata": {
+        "address": "42 Avenue Ren\u00e9 Coty, 76600 Le Havre",
+        "phone_number": "+33235211010",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "76",
       "nom": "Pharmacie Cauchoise",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-cauchoise-rouen",
       "location": {
@@ -690,7 +708,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -897,24 +915,6 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "76",
-      "nom": "Grande Pharmacie Thiers",
-      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-thiers-le-havre",
-      "location": {
-        "longitude": 0.1117815,
-        "latitude": 49.4969659
-      },
-      "metadata": {
-        "address": "42 Avenue Ren\u00e9 Coty, 76600 Le Havre",
-        "phone_number": "+33235211010",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
       "appointment_count": 0
     },
     {

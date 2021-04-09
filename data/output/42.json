@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.536692+02:00",
+  "last_updated": "2021-04-09T15:30:28.540043+02:00",
   "centres_disponibles": [
     {
       "departement": "42",
@@ -23,7 +23,33 @@
           "dimanche": "09:00-18:00"
         }
       },
-      "prochain_rdv": "2021-04-11T12:10:00.000+02:00",
+      "prochain_rdv": "2021-04-11T12:20:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "Centre de vaccination COVID-19 - Clinique du Renaison",
+      "url": "https://partners.doctolib.fr/centre-de-sante/roanne/centre-de-vaccination-covid-19-clinique-du-renaison?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 4.0519322,
+        "latitude": 46.0337336
+      },
+      "metadata": {
+        "address": "1 Rue Henri Desroches, 42153 Roanne",
+        "phone_number": "04 77 44 88 99",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-11T13:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -101,33 +127,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-23T17:15:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "42",
-      "nom": "Centre de vaccination COVID-19 - Clinique du Renaison",
-      "url": "https://partners.doctolib.fr/centre-de-sante/roanne/centre-de-vaccination-covid-19-clinique-du-renaison?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": 4.0519322,
-        "latitude": 46.0337336
-      },
-      "metadata": {
-        "address": "1 Rue Henri Desroches, 42153 Roanne",
-        "phone_number": "04 77 44 88 99",
-        "business_hours": {
-          "lundi": null,
-          "mardi": null,
-          "mercredi": null,
-          "jeudi": null,
-          "vendredi": null,
-          "samedi": null,
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": "2021-04-25T19:40:00.000+02:00",
+      "prochain_rdv": "2021-04-24T16:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -154,58 +154,6 @@
         }
       },
       "prochain_rdv": "2021-04-26T12:20:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "42",
-      "nom": "Centre de vaccination au  CHU DE SAINT-ETIENNE - H\u00f4pital Nord - Salle de Conf\u00e9rence - Hall AB",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-priest-en-jarez/centre-de-vaccination-covid-19-chu-saint-etienne?pid=practice-168936&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.36293",
-        "latitude": "45.4817"
-      },
-      "metadata": {
-        "address": "108 bis Avenue Albert Raimond, 42270 Saint-Priest-en-Jarez",
-        "phone_number": "+33970771710",
-        "business_hours": {
-          "lundi": "09:00-18:00",
-          "mardi": "09:00-18:00",
-          "mercredi": "09:00-18:00",
-          "jeudi": "09:00-18:00",
-          "vendredi": "09:00-18:00",
-          "samedi": "09:00-18:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-29T17:10:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "42",
-      "nom": "Centre de vaccination Covid 19 - CHU Saint Etienne",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/saint-priest-en-jarez/centre-de-vaccination-covid-19-chu-saint-etienne?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": 4.3678168,
-        "latitude": 45.4760329
-      },
-      "metadata": {
-        "address": "Avenue Albert Raimond, 42270 Saint-Priest-en-Jarez",
-        "phone_number": "09 70 77 17 10",
-        "business_hours": {
-          "lundi": "09:00-17:00",
-          "mardi": "09:00-17:00",
-          "mercredi": "09:00-17:00",
-          "jeudi": "09:00-17:00",
-          "vendredi": "09:00-17:00",
-          "samedi": null,
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": "2021-04-29T17:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -257,7 +205,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-05-15T17:45:00.000+02:00",
+      "prochain_rdv": "2021-05-15T18:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -282,6 +230,32 @@
           "jeudi": "ferm\u00e9",
           "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "Centre de vaccination au  CHU DE SAINT-ETIENNE - H\u00f4pital Nord - Salle de Conf\u00e9rence - Hall AB",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-priest-en-jarez/centre-de-vaccination-covid-19-chu-saint-etienne?pid=practice-168936&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.36293",
+        "latitude": "45.4817"
+      },
+      "metadata": {
+        "address": "108 bis Avenue Albert Raimond, 42270 Saint-Priest-en-Jarez",
+        "phone_number": "+33970771710",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": "09:00-18:00",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -615,6 +589,32 @@
           "vendredi": "09:00-21:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "Centre de vaccination Covid 19 - CHU Saint Etienne",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/saint-priest-en-jarez/centre-de-vaccination-covid-19-chu-saint-etienne?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 4.3678168,
+        "latitude": 45.4760329
+      },
+      "metadata": {
+        "address": "Avenue Albert Raimond, 42270 Saint-Priest-en-Jarez",
+        "phone_number": "09 70 77 17 10",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": null,
+          "dimanche": null
         }
       },
       "prochain_rdv": null,

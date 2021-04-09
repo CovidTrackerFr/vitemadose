@@ -1,7 +1,33 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.541578+02:00",
-  "centres_disponibles": [],
+  "last_updated": "2021-04-09T15:30:28.545201+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "47",
+      "nom": "Centre de vaccination de la Myre Mory - Villeneuve-sur-Lot",
+      "url": "https://partners.doctolib.fr/centre-de-sante/villeneuve-sur-lot/pole-de-sante-du-villeneuvois-vaccination-covid-19-3b10160b-a824-4b06-8a44-f4c31ab8e388?pid=practice-178187&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.712099",
+        "latitude": "44.3922"
+      },
+      "metadata": {
+        "address": "72 Avenue d\u2019Agen, 47300 Villeneuve-sur-Lot",
+        "business_hours": {
+          "lundi": "non precis\u00e9",
+          "mardi": "non precis\u00e9",
+          "mercredi": "non precis\u00e9",
+          "jeudi": "non precis\u00e9",
+          "vendredi": "non precis\u00e9",
+          "samedi": "non precis\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-12T16:50:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ],
   "centres_indisponibles": [
     {
       "departement": "47",
@@ -71,31 +97,6 @@
           "jeudi": "non precis\u00e9",
           "vendredi": "non precis\u00e9",
           "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "47",
-      "nom": "Centre de vaccination de la Myre Mory - Villeneuve-sur-Lot",
-      "url": "https://partners.doctolib.fr/centre-de-sante/villeneuve-sur-lot/pole-de-sante-du-villeneuvois-vaccination-covid-19-3b10160b-a824-4b06-8a44-f4c31ab8e388?pid=practice-178187&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.712099",
-        "latitude": "44.3922"
-      },
-      "metadata": {
-        "address": "72 Avenue d\u2019Agen, 47300 Villeneuve-sur-Lot",
-        "business_hours": {
-          "lundi": "non precis\u00e9",
-          "mardi": "non precis\u00e9",
-          "mercredi": "non precis\u00e9",
-          "jeudi": "non precis\u00e9",
-          "vendredi": "non precis\u00e9",
-          "samedi": "non precis\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },

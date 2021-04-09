@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.542562+02:00",
+  "last_updated": "2021-04-09T15:30:28.546263+02:00",
   "centres_disponibles": [
     {
       "departement": "49",
@@ -55,6 +55,31 @@
     },
     {
       "departement": "49",
+      "nom": "Centre de vaccination Covid-19 - Ville de Cholet",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/cholet/centre-de-vaccination-covid-19-ville-de-cholet?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": -0.8969172,
+        "latitude": 47.0576899
+      },
+      "metadata": {
+        "address": "2 Avenue Marcel Prat, 49300 Cholet",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-13T18:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "49",
       "nom": "Centre de Vaccination - CHOLET - Salle des f\u00eates",
       "url": "https://partners.doctolib.fr/maison-de-sante/cholet/centre-de-vaccination-covid-19-ville-de-cholet?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -81,25 +106,26 @@
     },
     {
       "departement": "49",
-      "nom": "Centre de vaccination Covid-19 - Ville de Cholet",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/cholet/centre-de-vaccination-covid-19-ville-de-cholet?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "nom": "Centre de Vaccination - SAUMUR - Espace Jean Rostand",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saumur/centre-de-vaccination-covid-19-ville-de-saumur?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": -0.8969172,
-        "latitude": 47.0576899
+        "longitude": "-0.0674521",
+        "latitude": "47.2683"
       },
       "metadata": {
-        "address": "2 Avenue Marcel Prat, 49300 Cholet",
+        "address": "404 Rue Emmanuel Clairefond, 49400 Saumur",
+        "phone_number": "+33241831288",
         "business_hours": {
-          "lundi": null,
-          "mardi": null,
-          "mercredi": null,
-          "jeudi": null,
-          "vendredi": null,
-          "samedi": null,
-          "dimanche": null
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-17h",
+          "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-14T11:00:00.000+02:00",
+      "prochain_rdv": "2021-04-19T10:50:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -125,33 +151,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-17T10:10:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "49",
-      "nom": "Centre de Vaccination - SAUMUR - Espace Jean Rostand",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saumur/centre-de-vaccination-covid-19-ville-de-saumur?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-0.0674521",
-        "latitude": "47.2683"
-      },
-      "metadata": {
-        "address": "404 Rue Emmanuel Clairefond, 49400 Saumur",
-        "phone_number": "+33241831288",
-        "business_hours": {
-          "lundi": "9h-17h",
-          "mardi": "9h-17h",
-          "mercredi": "9h-17h",
-          "jeudi": "9h-17h",
-          "vendredi": "9h-17h",
-          "samedi": "9h-17h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-19T10:50:00.000+02:00",
+      "prochain_rdv": "2021-04-27T16:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0

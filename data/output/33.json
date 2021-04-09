@@ -1,30 +1,29 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.526939+02:00",
+  "last_updated": "2021-04-09T15:30:28.529283+02:00",
   "centres_disponibles": [
     {
       "departement": "33",
-      "nom": "CHU BORDEAUX - SITE PELLEGRIN",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/bordeaux-33000/chu-de-bordeaux?cabinet=16876&specialty=496",
+      "nom": "M\u00e9ga centre de vaccination Covid-19 - Bordeaux M\u00e9tropole",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/bordeaux/mega-centre-de-vaccination-covid-19-bordeaux-metropole?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
-        "longitude": "-0.603878",
-        "latitude": "44.8282"
+        "longitude": -0.5642854,
+        "latitude": 44.8914257
       },
       "metadata": {
-        "address": "1 PLACE AMELIE RABA LEON, 33000 Bordeaux",
-        "phone_number": "+33557820005",
+        "address": "Cours Charles Bricaud, 33300 Bordeaux",
         "business_hours": {
-          "lundi": "08:30-19:30",
-          "mardi": "08:30-19:30",
-          "mercredi": "08:30-19:30",
-          "jeudi": "08:30-19:30",
-          "vendredi": "08:30-19:30",
-          "samedi": "08:30-19:30",
-          "dimanche": "08:30-19:30"
+          "lundi": "08:00-19:30",
+          "mardi": "08:00-19:30",
+          "mercredi": "08:00-19:30",
+          "jeudi": "09:00-19:30",
+          "vendredi": "08:00-19:30",
+          "samedi": "08:00-19:30",
+          "dimanche": "08:00-19:30"
         }
       },
-      "prochain_rdv": "2021-04-10T09:10:00.000000+0200",
-      "plateforme": "Keldoc",
+      "prochain_rdv": "2021-04-12T08:40:00.000+02:00",
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -106,26 +105,27 @@
     },
     {
       "departement": "33",
-      "nom": "M\u00e9ga centre de vaccination Covid-19 - Bordeaux M\u00e9tropole",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/bordeaux/mega-centre-de-vaccination-covid-19-bordeaux-metropole?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "nom": "Centre de vaccination du CH Sud Gironde - LANGON",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/langon-33210/centre-hospitalier-sud-gironde?category=-1&cabinet=16578&specialty=496",
       "location": {
-        "longitude": -0.5642854,
-        "latitude": 44.8914257
+        "longitude": "-0.245072",
+        "latitude": "44.5558"
       },
       "metadata": {
-        "address": "Cours Charles Bricaud, 33300 Bordeaux",
+        "address": " Avenue Elie Samson - Espace Nougaro, 33210 Langon",
+        "phone_number": "+33556763450",
         "business_hours": {
-          "lundi": "08:00-19:30",
-          "mardi": "08:00-19:30",
-          "mercredi": "08:00-19:30",
-          "jeudi": "09:00-19:30",
-          "vendredi": "08:00-19:30",
-          "samedi": "08:00-19:30",
-          "dimanche": "08:00-19:30"
+          "lundi": "08:30-12:30/13:00-17:00",
+          "mardi": "08:30-12:30/13:00-17:00",
+          "mercredi": "08:30-12:30/13:00-17:00",
+          "jeudi": "08:30-12:30/13:00-17:00",
+          "vendredi": "08:30-12:30/13:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-16T15:40:00.000+02:00",
-      "plateforme": "Doctolib",
+      "prochain_rdv": "2021-04-15T11:35:00.000000+0200",
+      "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -209,6 +209,32 @@
     },
     {
       "departement": "33",
+      "nom": "Centre de vaccination COVID -  Salle Ermitage Compostelle - Le Bouscat",
+      "url": "https://partners.doctolib.fr/centre-de-sante/le-bouscat/centre-de-vaccination-covid-ermitage?highlight%5bspeciality_ids%5d%5b%5d=5494&pid=practice-164677",
+      "location": {
+        "longitude": -0.5975418,
+        "latitude": 44.8651743
+      },
+      "metadata": {
+        "address": "10 Rue Bertrand Hauret, 33110 Le Bouscat",
+        "phone_number": "05 56 17 50 99",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-27T15:20:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "33",
       "nom": "Mairie d'Arcachon",
       "url": "https://partners.doctolib.fr/centre-de-sante/arcachon/centre-municipal-de-vaccination-anti-covid-19-de-la-ville-d-arcachon?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -228,7 +254,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-30T18:50:00.000+02:00",
+      "prochain_rdv": "2021-04-30T19:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -313,32 +339,6 @@
     },
     {
       "departement": "33",
-      "nom": "Centre de vaccination du CH Sud Gironde - LANGON",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/langon-33210/centre-hospitalier-sud-gironde?category=-1&cabinet=16578&specialty=496",
-      "location": {
-        "longitude": "-0.245072",
-        "latitude": "44.5558"
-      },
-      "metadata": {
-        "address": " Avenue Elie Samson - Espace Nougaro, 33210 Langon",
-        "phone_number": "+33556763450",
-        "business_hours": {
-          "lundi": "08:30-12:30/13:00-17:00",
-          "mardi": "08:30-12:30/13:00-17:00",
-          "mercredi": "08:30-12:30/13:00-17:00",
-          "jeudi": "08:30-12:30/13:00-17:00",
-          "vendredi": "08:30-12:30/13:00-17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "33",
       "nom": "Centre de vaccination - SADIRAC - Salle Cabral\u00e8s",
       "url": "",
       "location": {
@@ -411,6 +411,32 @@
       },
       "prochain_rdv": null,
       "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "33",
+      "nom": "CHU BORDEAUX - SITE PELLEGRIN",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/bordeaux-33000/chu-de-bordeaux?cabinet=16876&specialty=496",
+      "location": {
+        "longitude": "-0.603878",
+        "latitude": "44.8282"
+      },
+      "metadata": {
+        "address": "1 PLACE AMELIE RABA LEON, 33000 Bordeaux",
+        "phone_number": "+33557820005",
+        "business_hours": {
+          "lundi": "08:30-19:30",
+          "mardi": "08:30-19:30",
+          "mercredi": "08:30-19:30",
+          "jeudi": "08:30-19:30",
+          "vendredi": "08:30-19:30",
+          "samedi": "08:30-19:30",
+          "dimanche": "08:30-19:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -847,32 +873,6 @@
     },
     {
       "departement": "33",
-      "nom": "CENTRE DE SANTE MUTUALISTE GALLIENI",
-      "url": "https://partners.doctolib.fr/centre-de-sante/bordeaux/centre-de-vaccination-covid-19-gallieni?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-0.591376",
-        "latitude": "44.8243"
-      },
-      "metadata": {
-        "address": "45 Cours du Mar\u00e9chal Gallieni, 33000 Bordeaux",
-        "phone_number": "+33698113647",
-        "business_hours": {
-          "lundi": "08:00-12:30",
-          "mardi": "08:00-12:30",
-          "mercredi": "08:00-12:30",
-          "jeudi": "08:00-12:30",
-          "vendredi": "08:00-12:30",
-          "samedi": "08:00-12:30",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "33",
       "nom": "NOUVELLE CLINIQUE DU TONDU",
       "url": "https://partners.doctolib.fr/centre-de-sante/floirac/centre-de-vaccination-covid-19-nouvelle-clinique-bordeaux-tondu?pid=practice-164998?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -889,6 +889,32 @@
           "jeudi": "10:00-20:00",
           "vendredi": "10:00-20:00",
           "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "33",
+      "nom": "CENTRE DE SANTE MUTUALISTE GALLIENI",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bordeaux/centre-de-vaccination-covid-19-gallieni?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-0.591376",
+        "latitude": "44.8243"
+      },
+      "metadata": {
+        "address": "45 Cours du Mar\u00e9chal Gallieni, 33000 Bordeaux",
+        "phone_number": "+33698113647",
+        "business_hours": {
+          "lundi": "08:00-12:30",
+          "mardi": "08:00-12:30",
+          "mercredi": "08:00-12:30",
+          "jeudi": "08:00-12:30",
+          "vendredi": "08:00-12:30",
+          "samedi": "08:00-12:30",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -925,6 +951,24 @@
     },
     {
       "departement": "33",
+      "nom": "Pharmacie Guillot",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-guillot-artigues-pres-bordeaux",
+      "location": {
+        "longitude": -0.4729472,
+        "latitude": 44.865377
+      },
+      "metadata": {
+        "address": "3 AV DU PERIGORD, 33370 ARTIGUES PRES BORDEAUX",
+        "phone_number": "+33557340542",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "33",
       "nom": "Lamothe-Landerron",
       "url": "https://app.ordoclic.fr/app/pharmacie/lamothe-landerron-lamothe-landerron",
       "location": {
@@ -937,20 +981,21 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
     {
       "departement": "33",
-      "nom": "Pharmacie Delahaye Eurl",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-delahaye-eurl-saint-aubin-de-medoc",
+      "nom": "Pharmacie De La Jalle",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-jalle-saint-medard-en-jalles",
       "location": {
-        "longitude": -0.7228249999999999,
-        "latitude": 44.9115791
+        "longitude": -0.6973977,
+        "latitude": 44.8859084
       },
       "metadata": {
-        "address": "15 Route de Germignan, 33160 Saint-Aubin-de-M\u00e9doc",
+        "address": "34 Avenue Descartes, 33160 Saint-M\u00e9dard-en-Jalles",
+        "phone_number": "+33556957030",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -969,24 +1014,6 @@
       "metadata": {
         "address": "35 Avenue Francois Mitterrand, 33910 Saint-Denis-de-Pile",
         "phone_number": "+33557550545",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "33",
-      "nom": "Snc Dulin Guimard",
-      "url": "https://app.ordoclic.fr/app/pharmacie/snc-dulin-guimard-branne",
-      "location": {
-        "longitude": -0.1878246,
-        "latitude": 44.8292853
-      },
-      "metadata": {
-        "address": "83 rue emmanuel Roy, 33420 branne",
-        "phone_number": "+33557845132",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -1048,24 +1075,6 @@
     },
     {
       "departement": "33",
-      "nom": "Pharmacie De La Jalle",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-jalle-saint-medard-en-jalles",
-      "location": {
-        "longitude": -0.6973977,
-        "latitude": 44.8859084
-      },
-      "metadata": {
-        "address": "34 Avenue Descartes, 33160 Saint-M\u00e9dard-en-Jalles",
-        "phone_number": "+33556957030",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "33",
       "nom": "Pharmacie du Pouyalet",
       "url": "https://partners.doctolib.fr/pharmacie/pauillac/pharmacie-du-pouyalet",
       "location": {
@@ -1087,24 +1096,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "33",
-      "nom": "Pharmacie Guillot",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-guillot-artigues-pres-bordeaux",
-      "location": {
-        "longitude": -0.4729472,
-        "latitude": 44.865377
-      },
-      "metadata": {
-        "address": "3 AV DU PERIGORD, 33370 ARTIGUES PRES BORDEAUX",
-        "phone_number": "+33557340542",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -1136,28 +1127,37 @@
     },
     {
       "departement": "33",
-      "nom": "Centre de vaccination COVID -  Salle Ermitage Compostelle - Le Bouscat",
-      "url": "https://partners.doctolib.fr/centre-de-sante/le-bouscat/centre-de-vaccination-covid-ermitage?highlight%5bspeciality_ids%5d%5b%5d=5494&pid=practice-164677",
+      "nom": "Pharmacie Delahaye Eurl",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-delahaye-eurl-saint-aubin-de-medoc",
       "location": {
-        "longitude": -0.5975418,
-        "latitude": 44.8651743
+        "longitude": -0.7228249999999999,
+        "latitude": 44.9115791
       },
       "metadata": {
-        "address": "10 Rue Bertrand Hauret, 33110 Le Bouscat",
-        "phone_number": "05 56 17 50 99",
-        "business_hours": {
-          "lundi": null,
-          "mardi": null,
-          "mercredi": null,
-          "jeudi": null,
-          "vendredi": null,
-          "samedi": null,
-          "dimanche": null
-        }
+        "address": "15 Route de Germignan, 33160 Saint-Aubin-de-M\u00e9doc",
+        "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "33",
+      "nom": "Snc Dulin Guimard",
+      "url": "https://app.ordoclic.fr/app/pharmacie/snc-dulin-guimard-branne",
+      "location": {
+        "longitude": -0.1878246,
+        "latitude": 44.8292853
+      },
+      "metadata": {
+        "address": "83 rue emmanuel Roy, 33420 branne",
+        "phone_number": "+33557845132",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
       "appointment_count": 0
     }
   ]

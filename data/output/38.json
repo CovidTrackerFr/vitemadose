@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.532762+02:00",
+  "last_updated": "2021-04-09T15:30:28.535605+02:00",
   "centres_disponibles": [
     {
       "departement": "38",
@@ -82,6 +82,32 @@
     },
     {
       "departement": "38",
+      "nom": "Centre de vaccination de St Etienne de St Geoirs - Grenoble Air Parc",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/saint-etienne-de-saint-geoirs/centre-vaccination-de-la-bievre?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.33652",
+        "latitude": "45.3557"
+      },
+      "metadata": {
+        "address": "1 Avenue Roland Garros, 38590 Saint-\u00c9tienne-de-Saint-Geoirs",
+        "phone_number": "+33476003134",
+        "business_hours": {
+          "lundi": "09:00-12:00 13:30-17:00",
+          "mardi": "09:00-12:00 13:30-17:00",
+          "mercredi": "09:00-12:00 13:30-17:00",
+          "jeudi": "09:00-12:00 13:30-17:00",
+          "vendredi": "09:00-12:00 13:30-17:00",
+          "samedi": "09:00-12:00 13:30-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-15T12:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "38",
       "nom": "Centre hospitalier universitaire de Grenoble CHUGA (RDC du Pavillon Chatin, face au b\u00e2timent de la Direction G\u00e9n\u00e9rale)",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/la-tronche-38700/centre-hospitalier-universitaire-grenoble-nord/centre-de-vaccination-du-chu-grenoble-nord ",
       "location": {
@@ -129,32 +155,6 @@
       },
       "prochain_rdv": "2021-04-16T15:30:00.000000+0200",
       "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "38",
-      "nom": "Centre de vaccination de St Etienne de St Geoirs - Grenoble Air Parc",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/saint-etienne-de-saint-geoirs/centre-vaccination-de-la-bievre?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "5.33652",
-        "latitude": "45.3557"
-      },
-      "metadata": {
-        "address": "1 Avenue Roland Garros, 38590 Saint-\u00c9tienne-de-Saint-Geoirs",
-        "phone_number": "+33476003134",
-        "business_hours": {
-          "lundi": "09:00-12:00 13:30-17:00",
-          "mardi": "09:00-12:00 13:30-17:00",
-          "mercredi": "09:00-12:00 13:30-17:00",
-          "jeudi": "09:00-12:00 13:30-17:00",
-          "vendredi": "09:00-12:00 13:30-17:00",
-          "samedi": "09:00-12:00 13:30-17:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-16T16:50:00.000+02:00",
-      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -231,7 +231,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-23T12:25:00.000+02:00",
+      "prochain_rdv": "2021-04-23T12:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -309,7 +309,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-30T13:25:00.000000+0200",
+      "prochain_rdv": "2021-04-30T13:35:00.000000+0200",
       "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -549,24 +549,6 @@
     },
     {
       "departement": "38",
-      "nom": "Pharmacie Martin Pinel",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-martin-pinel-pont-de-cheruy",
-      "location": {
-        "longitude": 5.173681,
-        "latitude": 45.750949
-      },
-      "metadata": {
-        "address": "21 Rue Centrale, 38230 Pont-de-Ch\u00e9ruy",
-        "phone_number": "+33478321240",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "38",
       "nom": "Grande Pharmacie De L'Avenue",
       "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-de-l'avenue-roussillon",
       "location": {
@@ -580,6 +562,24 @@
       },
       "prochain_rdv": null,
       "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "38",
+      "nom": "Pharmacie Martin Pinel",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-martin-pinel-pont-de-cheruy",
+      "location": {
+        "longitude": 5.173681,
+        "latitude": 45.750949
+      },
+      "metadata": {
+        "address": "21 Rue Centrale, 38230 Pont-de-Ch\u00e9ruy",
+        "phone_number": "+33478321240",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.551229+02:00",
+  "last_updated": "2021-04-09T15:30:28.554854+02:00",
   "centres_disponibles": [
     {
       "departement": "59",
@@ -49,7 +49,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-10T08:30:00.000+02:00",
+      "prochain_rdv": "2021-04-10T08:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -74,7 +74,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-10T08:30:00.000+02:00",
+      "prochain_rdv": "2021-04-10T08:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -99,7 +99,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-10T10:03:00.000+02:00",
+      "prochain_rdv": "2021-04-10T10:17:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -613,7 +613,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-05-07T15:40:00.000+02:00",
+      "prochain_rdv": "2021-05-06T17:50:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -875,32 +875,6 @@
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination  - CPTS Bergues - Bourbourg - Hondshotte, Salle Emmanuel Looten",
-      "url": "https://partners.doctolib.fr/centre-de-sante/bergues/centre-vaccination-communaute-de-communes-des-hauts-de-flandre-cchf?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.43406",
-        "latitude": "50.9687"
-      },
-      "metadata": {
-        "address": " Rue Leon Claeys, 59380 Bergues",
-        "phone_number": "+33328681639",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "09:00-11:30/14:00-16:30",
-          "mercredi": "09:00-11:30/14:00-16:30",
-          "jeudi": "09:00-11:30/14:00-16:30",
-          "vendredi": "09:00-11:30/14:00-16:30",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "59",
       "nom": "Centre de vaccination - Polyclinique de Grande Synthe",
       "url": "https://partners.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/grande-synthe/vaccination-covid-polyclinique-de-grande-synthe?pid=practice-165272&enable_cookies_consent=1",
       "location": {
@@ -927,22 +901,23 @@
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - KURSAAL",
-      "url": "https://partners.doctolib.fr/centre-de-sante/dunkerque/centre-de-vaccination-covid-19-kursaal-dunkerque?pid=practice-175344&enable_cookies_consent=1",
+      "nom": "Centre de vaccination  - CPTS Bergues - Bourbourg - Hondshotte, Salle Emmanuel Looten",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bergues/centre-vaccination-communaute-de-communes-des-hauts-de-flandre-cchf?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.39022",
-        "latitude": "51.0483"
+        "longitude": "2.43406",
+        "latitude": "50.9687"
       },
       "metadata": {
-        "address": "7 bis Place du Casino, 59240 Dunkerque",
+        "address": " Rue Leon Claeys, 59380 Bergues",
+        "phone_number": "+33328681639",
         "business_hours": {
           "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "09:00-17:30",
-          "dimanche": "09:00-17:30"
+          "mardi": "09:00-11:30/14:00-16:30",
+          "mercredi": "09:00-11:30/14:00-16:30",
+          "jeudi": "09:00-11:30/14:00-16:30",
+          "vendredi": "09:00-11:30/14:00-16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
@@ -968,6 +943,31 @@
           "vendredi": "",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "59",
+      "nom": "Centre de vaccination - KURSAAL",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dunkerque/centre-de-vaccination-covid-19-kursaal-dunkerque?pid=practice-175344&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.39022",
+        "latitude": "51.0483"
+      },
+      "metadata": {
+        "address": "7 bis Place du Casino, 59240 Dunkerque",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "09:00-17:30",
+          "dimanche": "09:00-17:30"
         }
       },
       "prochain_rdv": null,
@@ -1027,14 +1027,14 @@
     },
     {
       "departement": "59",
-      "nom": "CP - US Centre P\u00e9nitentiaire d'Annoeullin / Centre P\u00e9nitentiaire de Lille-Loos-Sequedin",
+      "nom": "CP - MAUBEUGE / Centre P\u00e9nitentiaire de Maubeuge",
       "url": "",
       "location": {
-        "longitude": "2.98381",
-        "latitude": "50.6205"
+        "longitude": "3.99663",
+        "latitude": "50.2855"
       },
       "metadata": {
-        "address": " Place de la Paix, 59320 Sequedin",
+        "address": " Route d?Assevent, 59600 Maubeuge",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -1052,14 +1052,14 @@
     },
     {
       "departement": "59",
-      "nom": "CP - MAUBEUGE / Centre P\u00e9nitentiaire de Maubeuge",
+      "nom": "CP - US Centre P\u00e9nitentiaire d'Annoeullin / Centre P\u00e9nitentiaire de Lille-Loos-Sequedin",
       "url": "",
       "location": {
-        "longitude": "3.99663",
-        "latitude": "50.2855"
+        "longitude": "2.98381",
+        "latitude": "50.6205"
       },
       "metadata": {
-        "address": " Route d?Assevent, 59600 Maubeuge",
+        "address": " Place de la Paix, 59320 Sequedin",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -1202,6 +1202,31 @@
     },
     {
       "departement": "59",
+      "nom": "Centre de vaccination - Maison m\u00e9dicale de Bavay",
+      "url": "https://www.maiia.com/centre-de-vaccination/59570-bavay/centre-de-vaccination---maison-medicale-de-bavay",
+      "location": {
+        "longitude": "3.79424",
+        "latitude": "50.2965"
+      },
+      "metadata": {
+        "address": "29 Rue des Remparts, 59570 Bavay",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "59",
       "nom": "Centre de vaccination - Centre Hospitalier de Valenciennes et CPTS du Valenciennois 2, Salle JEAN MINEUR",
       "url": "https://partners.doctolib.fr/centre-de-sante/valenciennes/centre-vaccination?placeid=practice-162438?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -1223,31 +1248,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "59",
-      "nom": "Centre de vaccination - Maison m\u00e9dicale de Bavay",
-      "url": "https://www.maiia.com/centre-de-vaccination/59570-bavay/centre-de-vaccination---maison-medicale-de-bavay",
-      "location": {
-        "longitude": "3.79424",
-        "latitude": "50.2965"
-      },
-      "metadata": {
-        "address": "29 Rue des Remparts, 59570 Bavay",
-        "business_hours": {
-          "lundi": "",
-          "mardi": "",
-          "mercredi": "",
-          "jeudi": "",
-          "vendredi": "",
-          "samedi": "",
-          "dimanche": ""
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Maiia",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -1458,6 +1458,31 @@
     },
     {
       "departement": "59",
+      "nom": "Centre de vaccination - CH La Bass\u00e9e, salle VOX (salle municipale)",
+      "url": "https://partners.doctolib.fr/hopital-public/bassee/ch-la-bassee-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.80431",
+        "latitude": "50.5309"
+      },
+      "metadata": {
+        "address": "17 Avenue Jean Baptiste Lebas, 59480 La Bass\u00e9e",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "59",
       "nom": "Centre de vaccination - CH LE QUESNOY, Salle de sport",
       "url": "https://partners.doctolib.fr/hopital-public/le-quesnoy/ch-le-quesnoy?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -1475,31 +1500,6 @@
           "vendredi": "09:00-12:30/14:00-17:30",
           "samedi": "",
           "dimanche": ""
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "59",
-      "nom": "Centre de vaccination - CH La Bass\u00e9e, salle VOX (salle municipale)",
-      "url": "https://partners.doctolib.fr/hopital-public/bassee/ch-la-bassee-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.80431",
-        "latitude": "50.5309"
-      },
-      "metadata": {
-        "address": "17 Avenue Jean Baptiste Lebas, 59480 La Bass\u00e9e",
-        "business_hours": {
-          "lundi": "",
-          "mardi": "",
-          "mercredi": "",
-          "jeudi": "",
-          "vendredi": "",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
@@ -1613,6 +1613,32 @@
     },
     {
       "departement": "59",
+      "nom": "Centre de vaccination - CH Armenti\u00e8res",
+      "url": "https://partners.doctolib.fr/hopital-public/armentieres/ch-armentieres?pid=practice-175038&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.86711",
+        "latitude": "50.6869"
+      },
+      "metadata": {
+        "address": "136 Boulevard Faidherbe, 59280 Armenti\u00e8res",
+        "phone_number": "+33320481003",
+        "business_hours": {
+          "lundi": "13:00-18:00",
+          "mardi": "13:00-18:00",
+          "mercredi": "13:00-18:00",
+          "jeudi": "13:00-18:00",
+          "vendredi": "13:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "59",
       "nom": "Centre de vaccination - Polyclinique Saint-Roch, Salle Georges Catry",
       "url": "https://partners.doctolib.fr/clinique-privee/roncq/centre-de-vaccination-covid-19-clinique-saint-roch?pid=practice-164701?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -1639,22 +1665,22 @@
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - CH Armenti\u00e8res",
-      "url": "https://partners.doctolib.fr/hopital-public/armentieres/ch-armentieres?pid=practice-175038&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - CPTS P\u00e9v\u00e8le du Douaisis, Salle la Grange",
+      "url": "https://partners.doctolib.fr/centre-de-sante/orchies/centre-de-vaccination-covid-19-orchies?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.86711",
-        "latitude": "50.6869"
+        "longitude": "3.24249",
+        "latitude": "50.472"
       },
       "metadata": {
-        "address": "136 Boulevard Faidherbe, 59280 Armenti\u00e8res",
-        "phone_number": "+33320481003",
+        "address": "11 Rue Albert Poutrain, 59310 Orchies",
+        "phone_number": "03 92 04 34 71 ",
         "business_hours": {
-          "lundi": "13:00-18:00",
-          "mardi": "13:00-18:00",
-          "mercredi": "13:00-18:00",
-          "jeudi": "13:00-18:00",
-          "vendredi": "13:00-18:00",
-          "samedi": "ferm\u00e9",
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-14:00",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -1707,32 +1733,6 @@
           "vendredi": "09:00-20:00",
           "samedi": "09:00-20:00",
           "dimanche": "09:00-20:00"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "59",
-      "nom": "Centre de vaccination - CPTS P\u00e9v\u00e8le du Douaisis, Salle la Grange",
-      "url": "https://partners.doctolib.fr/centre-de-sante/orchies/centre-de-vaccination-covid-19-orchies?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "3.24249",
-        "latitude": "50.472"
-      },
-      "metadata": {
-        "address": "11 Rue Albert Poutrain, 59310 Orchies",
-        "phone_number": "03 92 04 34 71 ",
-        "business_hours": {
-          "lundi": "08:00-20:00",
-          "mardi": "08:00-20:00",
-          "mercredi": "08:00-20:00",
-          "jeudi": "08:00-20:00",
-          "vendredi": "08:00-20:00",
-          "samedi": "08:00-14:00",
-          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
@@ -1898,32 +1898,6 @@
     },
     {
       "departement": "59",
-      "nom": "Centre de vaccination - Hopital Saint Vincent GHICL",
-      "url": "https://partners.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/lille/centre-de-vaccination-covid-19-sv?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "3.07702",
-        "latitude": "50.6191"
-      },
-      "metadata": {
-        "address": "51 Boulevard de Belfort, 59000 Lille",
-        "phone_number": "+33320877530",
-        "business_hours": {
-          "lundi": "09:00-17:00",
-          "mardi": "09:00-17:00",
-          "mercredi": "09:00-17:00",
-          "jeudi": "09:00-17:00",
-          "vendredi": "09:00-17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "59",
       "nom": "Centre de vaccination - CPTS de la Marque",
       "url": "https://partners.doctolib.fr/cabinet-medical/wasquehal/ch-de-roubaix?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -1939,6 +1913,32 @@
           "mercredi": "09:00-12:00/14:00-17:00",
           "jeudi": "09:00-12:00/14:00-17:00",
           "vendredi": "09:00-12:00/14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "59",
+      "nom": "Centre de vaccination - Hopital Saint Vincent GHICL",
+      "url": "https://partners.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/lille/centre-de-vaccination-covid-19-sv?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.07702",
+        "latitude": "50.6191"
+      },
+      "metadata": {
+        "address": "51 Boulevard de Belfort, 59000 Lille",
+        "phone_number": "+33320877530",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -2078,109 +2078,19 @@
     },
     {
       "departement": "59",
-      "nom": "Pharmacie Du Bourg",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-bourg-marq-en-baroeul",
+      "nom": "Pharmacie Sebastopol",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-sebastopol--lille",
       "location": {
-        "longitude": 3.0903794,
-        "latitude": 50.6766316
+        "longitude": 3.056889,
+        "latitude": 50.6264939
       },
       "metadata": {
-        "address": "9 place du G\u00e9n\u00e9ral de Gaulle, 59700 Marq en Baroeul",
-        "phone_number": "+33320721024",
+        "address": "51 rue des Postes, 59000 Lille",
+        "phone_number": "+33320546165",
         "business_hours": null
       },
       "prochain_rdv": null,
       "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "59",
-      "nom": "Pharmacie Lievens",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-lievens-wasquehal",
-      "location": {
-        "longitude": 3.1238541,
-        "latitude": 50.6812005
-      },
-      "metadata": {
-        "address": "Rond Point Ave Gd Cottignies - C.commerc., 59290 Wasquehal",
-        "phone_number": "+33320989001",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "59",
-      "nom": "Pharmacie De La Sambre",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-sambre-jeumont",
-      "location": {
-        "longitude": 4.102241999999999,
-        "latitude": 50.29707430000001
-      },
-      "metadata": {
-        "address": "27 Rue Jean Jaur\u00e8s, 59460 Jeumont",
-        "phone_number": "+33327396187",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "59",
-      "nom": "Grande Pharmacie De Wazemmes",
-      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-de-wazemmes-lille",
-      "location": {
-        "longitude": 3.0483095,
-        "latitude": 50.6269412
-      },
-      "metadata": {
-        "address": "Rue Leon Gambetta, 59000 Lille",
-        "phone_number": "+33320573995",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "59",
-      "nom": "Grande Pharmacie De Paris",
-      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-de-paris-lille",
-      "location": {
-        "longitude": 3.0689837,
-        "latitude": 50.6368403
-      },
-      "metadata": {
-        "address": "1 Place de la Gare, 59000 Lille",
-        "phone_number": "+33320062064",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "59",
-      "nom": "Pharmacie Nationale Du Square",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-nationale-du-square-lille",
-      "location": {
-        "longitude": 3.057356,
-        "latitude": 50.6346208
-      },
-      "metadata": {
-        "address": "103 Rue Nationale, 59800 Lille",
-        "phone_number": "+33650889307",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -2195,24 +2105,6 @@
       "metadata": {
         "address": "101 R SAINT SEBASTIEN, 59800 LILLE",
         "phone_number": "+33320551842",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "59",
-      "nom": "Pharmacie De La Madeleine",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-madeleine-la-madeleine",
-      "location": {
-        "longitude": 3.0740603,
-        "latitude": 50.6576514
-      },
-      "metadata": {
-        "address": "226 bis rue du g\u00e9n\u00e9ral de gaulle, 59110 La Madeleine",
-        "phone_number": "+33320555089",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -2240,6 +2132,60 @@
     },
     {
       "departement": "59",
+      "nom": "Pharmacie Flandre Littorale",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-flandre-littorale-grande-synthe",
+      "location": {
+        "longitude": 2.294963,
+        "latitude": 51.0159309
+      },
+      "metadata": {
+        "address": "Chemin Communal Centre Commercial Ouest, 59760 Grande-Synthe",
+        "phone_number": "+33328279280",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie De La Madeleine",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-madeleine-la-madeleine",
+      "location": {
+        "longitude": 3.0740603,
+        "latitude": 50.6576514
+      },
+      "metadata": {
+        "address": "226 bis rue du g\u00e9n\u00e9ral de gaulle, 59110 La Madeleine",
+        "phone_number": "+33320555089",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "59",
+      "nom": "Grande Pharmacie Des Halles",
+      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-des-halles-lille",
+      "location": {
+        "longitude": 3.054965,
+        "latitude": 50.6312977
+      },
+      "metadata": {
+        "address": "99 Rue de Solferino, 59000 Lille",
+        "phone_number": "+33320540274",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "59",
       "nom": "Pharmacie V2",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-v2-villeneuve-d'ascq",
       "location": {
@@ -2252,7 +2198,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -2267,6 +2213,24 @@
       "metadata": {
         "address": "19 Rue de la R\u00e9publique, 59980 Bertry",
         "phone_number": "+33327751862",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie Du Bourg",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-bourg-marq-en-baroeul",
+      "location": {
+        "longitude": 3.0903794,
+        "latitude": 50.6766316
+      },
+      "metadata": {
+        "address": "9 place du G\u00e9n\u00e9ral de Gaulle, 59700 Marq en Baroeul",
+        "phone_number": "+33320721024",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -2288,21 +2252,93 @@
         "business_hours": null
       },
       "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie Lievens",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-lievens-wasquehal",
+      "location": {
+        "longitude": 3.1238541,
+        "latitude": 50.6812005
+      },
+      "metadata": {
+        "address": "Rond Point Ave Gd Cottignies - C.commerc., 59290 Wasquehal",
+        "phone_number": "+33320989001",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
       "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
     {
       "departement": "59",
-      "nom": "Grande Pharmacie Des Halles",
-      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-des-halles-lille",
+      "nom": "Pharmacie Nationale Du Square",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-nationale-du-square-lille",
       "location": {
-        "longitude": 3.054965,
-        "latitude": 50.6312977
+        "longitude": 3.057356,
+        "latitude": 50.6346208
       },
       "metadata": {
-        "address": "99 Rue de Solferino, 59000 Lille",
-        "phone_number": "+33320540274",
+        "address": "103 Rue Nationale, 59800 Lille",
+        "phone_number": "+33650889307",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie De La Sambre",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-sambre-jeumont",
+      "location": {
+        "longitude": 4.102241999999999,
+        "latitude": 50.29707430000001
+      },
+      "metadata": {
+        "address": "27 Rue Jean Jaur\u00e8s, 59460 Jeumont",
+        "phone_number": "+33327396187",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "59",
+      "nom": "Grande Pharmacie De Paris",
+      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-de-paris-lille",
+      "location": {
+        "longitude": 3.0689837,
+        "latitude": 50.6368403
+      },
+      "metadata": {
+        "address": "1 Place de la Gare, 59000 Lille",
+        "phone_number": "+33320062064",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "59",
+      "nom": "Grande Pharmacie De Wazemmes",
+      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-de-wazemmes-lille",
+      "location": {
+        "longitude": 3.0483095,
+        "latitude": 50.6269412
+      },
+      "metadata": {
+        "address": "Rue Leon Gambetta, 59000 Lille",
+        "phone_number": "+33320573995",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -2441,32 +2477,6 @@
     },
     {
       "departement": "59",
-      "nom": "Pharmacie Casetta",
-      "url": "https://partners.doctolib.fr/pharmacie/lille/pharmacie-casetta",
-      "location": {
-        "longitude": 3.0670914,
-        "latitude": 50.6370278
-      },
-      "metadata": {
-        "address": "35 Rue Faidherbe 59800, 59000 Lille",
-        "phone_number": "03 20 06 16 31",
-        "business_hours": {
-          "lundi": "07:30-19:00",
-          "mardi": "07:30-19:00",
-          "mercredi": "07:30-19:00",
-          "jeudi": "07:30-19:00",
-          "vendredi": "07:30-19:00",
-          "samedi": "09:00-19:00",
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "59",
       "nom": "Dr Fanny Ballois",
       "url": "https://partners.doctolib.fr/medecin-generaliste/croix/fanny-ballois",
       "location": {
@@ -2493,24 +2503,6 @@
     },
     {
       "departement": "59",
-      "nom": "Pharmacie Sebastopol",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-sebastopol--lille",
-      "location": {
-        "longitude": 3.056889,
-        "latitude": 50.6264939
-      },
-      "metadata": {
-        "address": "51 rue des Postes, 59000 Lille",
-        "phone_number": "+33320546165",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "59",
       "nom": "Pharmacie Bennani",
       "url": "https://partners.doctolib.fr/pharmacie/lille/pharmacie-bennani",
       "location": {
@@ -2527,6 +2519,32 @@
           "jeudi": "09:00-12:30, 14:00-19:30",
           "vendredi": "08:30-12:30, 14:00-19:30",
           "samedi": "09:15-13:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie Casetta",
+      "url": "https://partners.doctolib.fr/pharmacie/lille/pharmacie-casetta",
+      "location": {
+        "longitude": 3.0670914,
+        "latitude": 50.6370278
+      },
+      "metadata": {
+        "address": "35 Rue Faidherbe 59800, 59000 Lille",
+        "phone_number": "03 20 06 16 31",
+        "business_hours": {
+          "lundi": "07:30-19:00",
+          "mardi": "07:30-19:00",
+          "mercredi": "07:30-19:00",
+          "jeudi": "07:30-19:00",
+          "vendredi": "07:30-19:00",
+          "samedi": "09:00-19:00",
           "dimanche": null
         }
       },
@@ -2558,24 +2576,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "59",
-      "nom": "Pharmacie Flandre Littorale",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-flandre-littorale-grande-synthe",
-      "location": {
-        "longitude": 2.294963,
-        "latitude": 51.0159309
-      },
-      "metadata": {
-        "address": "Chemin Communal Centre Commercial Ouest, 59760 Grande-Synthe",
-        "phone_number": "+33328279280",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },

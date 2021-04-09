@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.582703+02:00",
+  "last_updated": "2021-04-09T15:30:28.585109+02:00",
   "centres_disponibles": [
     {
       "departement": "81",
@@ -23,7 +23,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-11T09:20:00.000+02:00",
+      "prochain_rdv": "2021-04-11T09:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -101,7 +101,7 @@
           "dimanche": "09:00-17:30"
         }
       },
-      "prochain_rdv": "2021-04-13T11:50:00.000+02:00",
+      "prochain_rdv": "2021-04-13T11:40:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -134,6 +134,32 @@
     },
     {
       "departement": "81",
+      "nom": "Centre de vaccination Clinique Toulouse Lautrec",
+      "url": "https://partners.doctolib.fr/hopital-public/tarn/chic-castres-mazamet-centre-de-vaccination?speciality_id=5494&pid=practice-164870&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.1801",
+        "latitude": "43.9284"
+      },
+      "metadata": {
+        "address": "2 Rue Jacques Monod, 81000 Albi",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": "09:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-16T14:15:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "81",
       "nom": "Centre de vaccination de Lavaur - Centre Hospitalier",
       "url": "https://partners.doctolib.fr/hopital-public/lavaur/centre-de-vaccination-ch-lavaur?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -160,32 +186,6 @@
     }
   ],
   "centres_indisponibles": [
-    {
-      "departement": "81",
-      "nom": "Centre de vaccination Clinique Toulouse Lautrec",
-      "url": "https://partners.doctolib.fr/hopital-public/tarn/chic-castres-mazamet-centre-de-vaccination?speciality_id=5494&pid=practice-164870&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.1801",
-        "latitude": "43.9284"
-      },
-      "metadata": {
-        "address": "2 Rue Jacques Monod, 81000 Albi",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "09:00-18:00",
-          "mardi": "09:00-18:00",
-          "mercredi": "09:00-18:00",
-          "jeudi": "09:00-18:00",
-          "vendredi": "09:00-18:00",
-          "samedi": "09:00-18:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "81",
       "nom": "MSP Haute Vall\u00e9e du Thor\u00e9 Labastide Rouairoux",
@@ -240,31 +240,6 @@
     },
     {
       "departement": "81",
-      "nom": "CD - US SAINT SULPICE / Centre de D\u00e9tention de Saint-Sulpice-la-Pointe",
-      "url": "",
-      "location": {
-        "longitude": "1.69325",
-        "latitude": "43.7762"
-      },
-      "metadata": {
-        "address": "17 Chemin des Pescayres, 81370 Saint-Sulpice-la-Pointe",
-        "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "81",
       "nom": "MA - US  Albi / Maison d'Arr\u00eat d'Albi",
       "url": "",
       "location": {
@@ -291,6 +266,31 @@
     {
       "departement": "81",
       "nom": "EPM - US EPM LAVAUR / Centre de D\u00e9tention de Saint-Sulpice-la-Pointe",
+      "url": "",
+      "location": {
+        "longitude": "1.69325",
+        "latitude": "43.7762"
+      },
+      "metadata": {
+        "address": "17 Chemin des Pescayres, 81370 Saint-Sulpice-la-Pointe",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "81",
+      "nom": "CD - US SAINT SULPICE / Centre de D\u00e9tention de Saint-Sulpice-la-Pointe",
       "url": "",
       "location": {
         "longitude": "1.69325",

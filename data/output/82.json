@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.583502+02:00",
+  "last_updated": "2021-04-09T15:30:28.585763+02:00",
   "centres_disponibles": [
     {
       "departement": "82",
@@ -49,7 +49,7 @@
           "dimanche": "8h-12h et 14h-18h"
         }
       },
-      "prochain_rdv": "2021-04-11T11:12:00.000+02:00",
+      "prochain_rdv": "2021-04-11T11:54:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -103,32 +103,6 @@
       },
       "prochain_rdv": "2021-04-14T11:35:00.000000Z",
       "plateforme": "Maiia",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "82",
-      "nom": "centre de vaccination Valence d'Agen",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/valence-d'agen/centre-de-vaccination-valence-d-agen?pid=practice-165331?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.894605",
-        "latitude": "44.1082"
-      },
-      "metadata": {
-        "address": "halle jean Baylet Avenue Jean Baylet, 82400 Valence",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-27T16:40:00.000+02:00",
-      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     }
@@ -229,6 +203,32 @@
           "jeudi": "9:00-13:00/14:00-18:00",
           "vendredi": "9:00-13:00/14:00-18:00",
           "samedi": "9:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "82",
+      "nom": "centre de vaccination Valence d'Agen",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/valence-d'agen/centre-de-vaccination-valence-d-agen?pid=practice-165331?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.894605",
+        "latitude": "44.1082"
+      },
+      "metadata": {
+        "address": "halle jean Baylet Avenue Jean Baylet, 82400 Valence",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },

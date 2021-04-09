@@ -1,33 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.531312+02:00",
+  "last_updated": "2021-04-09T15:30:28.533892+02:00",
   "centres_disponibles": [
-    {
-      "departement": "36",
-      "nom": "MSP Clos St Joseph Argenton sur Creuse",
-      "url": "https://partners.doctolib.fr/centre-de-sante/argenton-sur-creuse/centre-de-vaccination-d-argenton-sur-creuse?pid=practice-168762&enable_cookies_consent=1",
-      "location": {
-        "longitude": "1.51592",
-        "latitude": "46.5855"
-      },
-      "metadata": {
-        "address": "1 Chemin du Clos St-Joseph, 36200 Argenton-sur-Creuse",
-        "phone_number": "+33638174143",
-        "business_hours": {
-          "lundi": "13h-17h",
-          "mardi": "13h-17h",
-          "mercredi": "13h-17h",
-          "jeudi": "13h-17h",
-          "vendredi": "13h-17h",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-13T18:40:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "36",
       "nom": "Centre de vaccination - Salle des f\u00eates de Levroux",
@@ -48,7 +22,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-28T10:05:00.000+02:00",
+      "prochain_rdv": "2021-04-28T10:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -184,31 +158,6 @@
     },
     {
       "departement": "36",
-      "nom": "Espace Tivoli - Chatillon",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/chatillon-sur-indre/vaccination-covid-19-ville-de-chatillon-sur-indre-espace-tivoli?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "1.17241",
-        "latitude": "46.987"
-      },
-      "metadata": {
-        "address": " rue jean Lur\u00e7at, 36700 Ch\u00e2tillon-sur-Indre",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "36",
       "nom": "Maison M\u00e9dicale Vatan",
       "url": "https://partners.doctolib.fr/centre-depistage-covid/valencay/centres-de-vaccination-covid-du-boischaut-nord?pid=practice-165107&enable_cookies_consent=1",
       "location": {
@@ -248,6 +197,57 @@
           "mercredi": "ferm\u00e9",
           "jeudi": "ferm\u00e9",
           "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "36",
+      "nom": "Espace Tivoli - Chatillon",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/chatillon-sur-indre/vaccination-covid-19-ville-de-chatillon-sur-indre-espace-tivoli?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.17241",
+        "latitude": "46.987"
+      },
+      "metadata": {
+        "address": " rue jean Lur\u00e7at, 36700 Ch\u00e2tillon-sur-Indre",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "36",
+      "nom": "MSP Clos St Joseph Argenton sur Creuse",
+      "url": "https://partners.doctolib.fr/centre-de-sante/argenton-sur-creuse/centre-de-vaccination-d-argenton-sur-creuse?pid=practice-168762&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.51592",
+        "latitude": "46.5855"
+      },
+      "metadata": {
+        "address": "1 Chemin du Clos St-Joseph, 36200 Argenton-sur-Creuse",
+        "phone_number": "+33638174143",
+        "business_hours": {
+          "lundi": "13h-17h",
+          "mardi": "13h-17h",
+          "mercredi": "13h-17h",
+          "jeudi": "13h-17h",
+          "vendredi": "13h-17h",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -362,21 +362,22 @@
     },
     {
       "departement": "36",
-      "nom": "P\u00f4le de sant\u00e9 de Valen\u00e7ay /CPTS Boischaut nord",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/valencay/centres-de-vaccination-covid-du-boischaut-nord?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination public - Salle des f\u00eates Jean Moulin",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/villedieu-sur-indre/centre-de-vaccination-de-villedieu-sur-indre?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "1.57349",
-        "latitude": "47.1625"
+        "longitude": "1.53732",
+        "latitude": "46.8469"
       },
       "metadata": {
-        "address": "28 Rue des Princes, 36600 Valen\u00e7ay",
+        "address": "10 Rue Jean Jaures, 36320 Villedieu-sur-Indre",
+        "phone_number": "+33805021400",
         "business_hours": {
-          "lundi": "ferm\u00e9",
+          "lundi": "9h-12h / 14h-17h",
           "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
+          "mercredi": "9h-12h / 14h-17h",
           "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
+          "vendredi": "14h-17h",
+          "samedi": "10h-13h",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -413,22 +414,21 @@
     },
     {
       "departement": "36",
-      "nom": "Centre de vaccination public - Salle des f\u00eates Jean Moulin",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/villedieu-sur-indre/centre-de-vaccination-de-villedieu-sur-indre?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "P\u00f4le de sant\u00e9 de Valen\u00e7ay /CPTS Boischaut nord",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/valencay/centres-de-vaccination-covid-du-boischaut-nord?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "1.53732",
-        "latitude": "46.8469"
+        "longitude": "1.57349",
+        "latitude": "47.1625"
       },
       "metadata": {
-        "address": "10 Rue Jean Jaures, 36320 Villedieu-sur-Indre",
-        "phone_number": "+33805021400",
+        "address": "28 Rue des Princes, 36600 Valen\u00e7ay",
         "business_hours": {
-          "lundi": "9h-12h / 14h-17h",
+          "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
-          "mercredi": "9h-12h / 14h-17h",
+          "mercredi": "ferm\u00e9",
           "jeudi": "ferm\u00e9",
-          "vendredi": "14h-17h",
-          "samedi": "10h-13h",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },

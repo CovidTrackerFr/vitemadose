@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.587628+02:00",
+  "last_updated": "2021-04-09T15:30:28.589903+02:00",
   "centres_disponibles": [
     {
       "departement": "86",
@@ -22,33 +22,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-16T16:06:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "86",
-      "nom": "Centre de vaccination - Centre d'examen de Sant\u00e9 - CPAM 86",
-      "url": "https://partners.doctolib.fr/centre-de-sante/poitiers/centre-de-vaccination-covid-19-de-la-cpam-de-la-vienne?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.377836",
-        "latitude": "46.5883"
-      },
-      "metadata": {
-        "address": "79 Rue de Saint Eloi, 86000 Poitiers",
-        "phone_number": "05 49 62 75 31",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "08:00-12:00/13:30-16:00",
-          "mercredi": "08:00-12:00/13:30-16:00",
-          "jeudi": "08:00-12:00/13:30-16:00",
-          "vendredi": "08:00-12:00/13:30-16:00",
-          "samedi": "08:00-12:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-23T13:45:00.000+02:00",
+      "prochain_rdv": "2021-04-16T12:48:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -74,32 +48,6 @@
         }
       },
       "prochain_rdv": "2021-04-24T11:35:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "86",
-      "nom": "Centre de vaccination - CHU POITIERS - Site de CH\u00c2TELLERAULT",
-      "url": "https://partners.doctolib.fr/hopital-public/chatellerault/centre-de-vaccination-chu-poitiers-site-de-chatellerault?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.556456",
-        "latitude": "46.8316"
-      },
-      "metadata": {
-        "address": " Rue Docteur Luc Montagnier, 86100 Ch\u00e2tellerault",
-        "phone_number": "+33516604064",
-        "business_hours": {
-          "lundi": "08:00-09:00",
-          "mardi": "08:00-09:00",
-          "mercredi": "08:00-09:00",
-          "jeudi": "08:00-09:00",
-          "vendredi": "08:00-09:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-05-15T17:25:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -261,31 +209,6 @@
     },
     {
       "departement": "86",
-      "nom": "MSP de Vivonne",
-      "url": "",
-      "location": {
-        "longitude": "0.265763",
-        "latitude": "46.4284"
-      },
-      "metadata": {
-        "address": "5 place des tilleuls, 86370 Vivonne",
-        "business_hours": {
-          "lundi": "13h-18h",
-          "mardi": "13h-18h",
-          "mercredi": "13h-18h",
-          "jeudi": "13h-18h",
-          "vendredi": "13h-18h",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "86",
       "nom": "MSP Usson du Poitou",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/usson-du-poitou/centre-de-vaccination-covid-19-sisa-pole-sante?pid=practice-173641&enable_cookies_consent=1",
       "location": {
@@ -306,6 +229,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "86",
+      "nom": "MSP de Vivonne",
+      "url": "",
+      "location": {
+        "longitude": "0.265763",
+        "latitude": "46.4284"
+      },
+      "metadata": {
+        "address": "5 place des tilleuls, 86370 Vivonne",
+        "business_hours": {
+          "lundi": "13h-18h",
+          "mardi": "13h-18h",
+          "mercredi": "13h-18h",
+          "jeudi": "13h-18h",
+          "vendredi": "13h-18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -351,6 +299,32 @@
           "mercredi": "07:00-09:30/12:00-13:30/18:00-19:30",
           "jeudi": "07:00-09:30/12:00-13:30/18:00-19:30",
           "vendredi": "07:00-09:30/12:00-13:30/18:00-19:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "86",
+      "nom": "Centre de vaccination - CHU POITIERS - Site de CH\u00c2TELLERAULT",
+      "url": "https://partners.doctolib.fr/hopital-public/chatellerault/centre-de-vaccination-chu-poitiers-site-de-chatellerault?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.556456",
+        "latitude": "46.8316"
+      },
+      "metadata": {
+        "address": " Rue Docteur Luc Montagnier, 86100 Ch\u00e2tellerault",
+        "phone_number": "+33516604064",
+        "business_hours": {
+          "lundi": "08:00-09:00",
+          "mardi": "08:00-09:00",
+          "mercredi": "08:00-09:00",
+          "jeudi": "08:00-09:00",
+          "vendredi": "08:00-09:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -540,6 +514,32 @@
     },
     {
       "departement": "86",
+      "nom": "Centre de vaccination - Centre d'examen de Sant\u00e9 - CPAM 86",
+      "url": "https://partners.doctolib.fr/centre-de-sante/poitiers/centre-de-vaccination-covid-19-de-la-cpam-de-la-vienne?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.377836",
+        "latitude": "46.5883"
+      },
+      "metadata": {
+        "address": "79 Rue de Saint Eloi, 86000 Poitiers",
+        "phone_number": "05 49 62 75 31",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "08:00-12:00/13:30-16:00",
+          "mercredi": "08:00-12:00/13:30-16:00",
+          "jeudi": "08:00-12:00/13:30-16:00",
+          "vendredi": "08:00-12:00/13:30-16:00",
+          "samedi": "08:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "86",
       "nom": "Pharmacie De Lucas",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-lucas--nerignac",
       "location": {
@@ -552,7 +552,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -570,7 +570,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     }

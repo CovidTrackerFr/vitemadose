@@ -1,7 +1,33 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.528620+02:00",
+  "last_updated": "2021-04-09T15:30:28.531079+02:00",
   "centres_disponibles": [
+    {
+      "departement": "34",
+      "nom": "VAILHAUQUES Service de Sant\u00e9 SDIS 34",
+      "url": "https://partners.doctolib.fr/centre-de-sante/vailhauques/centre-de-vaccination-covid-de-vailhauques?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.73874",
+        "latitude": "43.6439"
+      },
+      "metadata": {
+        "address": "150 Rue Super Nova, 34570 Vailhauqu\u00e8s",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-17:00",
+          "mardi": "14:00-17:00",
+          "mercredi": "14:00-17:00",
+          "jeudi": "14:00-17:00",
+          "vendredi": "14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-13T17:50:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
     {
       "departement": "34",
       "nom": "GIGNAC CENTRE DE VACCINATION",
@@ -23,7 +49,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-16T10:00:00.000+02:00",
+      "prochain_rdv": "2021-04-16T10:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -110,32 +136,6 @@
     },
     {
       "departement": "34",
-      "nom": "BEZIERS CENTRE HOSPITALIER ASTRAZENECA",
-      "url": "https://partners.doctolib.fr/hopital-public/beziers/centre-vaccination-covid-ch-beziers?pid=practice-164117&enable_cookies_consent=1",
-      "location": {
-        "longitude": "3.25431",
-        "latitude": "43.3397"
-      },
-      "metadata": {
-        "address": "2 Rue Valentin Hauy, 34500 B\u00e9ziers",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "9:00-12:00 / 13:00-17:00",
-          "mardi": "9:00-12:00 / 13:00-17:00",
-          "mercredi": "9:00-12:00 / 13:00-17:00",
-          "jeudi": "9:00-12:00 / 13:00-17:00",
-          "vendredi": "9:00-12:00 / 13:00-17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "34",
       "nom": "ST PONS DE THOMIERES CASERNE DES SAPEURS POMPIERS",
       "url": "https://partners.doctolib.fr/centre-de-sante/saint-pons-de-thomieres/centre-de-vaccination-covid-de-saint-pons-de-thomieres?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -152,6 +152,32 @@
           "jeudi": "9:00-12:00 / 13:00-17:00",
           "vendredi": "9:00-12:00 / 13:00-17:00",
           "samedi": "9:00-12:00 / 13:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "34",
+      "nom": "BEZIERS CENTRE HOSPITALIER ASTRAZENECA",
+      "url": "https://partners.doctolib.fr/hopital-public/beziers/centre-vaccination-covid-ch-beziers?pid=practice-164117&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.25431",
+        "latitude": "43.3397"
+      },
+      "metadata": {
+        "address": "2 Rue Valentin Hauy, 34500 B\u00e9ziers",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9:00-12:00 / 13:00-17:00",
+          "mardi": "9:00-12:00 / 13:00-17:00",
+          "mercredi": "9:00-12:00 / 13:00-17:00",
+          "jeudi": "9:00-12:00 / 13:00-17:00",
+          "vendredi": "9:00-12:00 / 13:00-17:00",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -214,22 +240,22 @@
     },
     {
       "departement": "34",
-      "nom": "BEZIERS Centre Zinga Zanga (grande salle de spectacle)",
-      "url": "https://partners.doctolib.fr/centre-de-sante/beziers/centre-de-vaccination-publiques-de-la-ville-de-beziers?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination St Martin de Londres",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-martin-de-londres/centre-de-vaccination-covid-saint-martin-de-londres?pid=practice-165713&enable_cookies_consent=1",
       "location": {
-        "longitude": "3.18991",
-        "latitude": "43.331"
+        "longitude": "3.73291",
+        "latitude": "43.7912"
       },
       "metadata": {
-        "address": " Traverse de Colombiers, 34500 B\u00e9ziers",
+        "address": " Place de la Mairie (Salle des rencontres), 34380 Saint-Martin-de-Londres",
         "phone_number": "+33800541919",
         "business_hours": {
-          "lundi": "9:00-17:00",
-          "mardi": "9:00-17:00",
-          "mercredi": "9:00-17:00",
-          "jeudi": "9:00-17:00",
-          "vendredi": "9:00-17:00",
-          "samedi": "9:00-17:00",
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "9:00-13:00 / 14:00-18:00",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -266,32 +292,6 @@
     },
     {
       "departement": "34",
-      "nom": "Centre de vaccination St Martin de Londres",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-martin-de-londres/centre-de-vaccination-covid-saint-martin-de-londres?pid=practice-165713&enable_cookies_consent=1",
-      "location": {
-        "longitude": "3.73291",
-        "latitude": "43.7912"
-      },
-      "metadata": {
-        "address": " Place de la Mairie (Salle des rencontres), 34380 Saint-Martin-de-Londres",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "9:00-13:00 / 14:00-18:00",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "34",
       "nom": "Centre de vaccination - Clinique St Louis de Ganges",
       "url": "https://partners.doctolib.fr/centre-depistage-covid/ganges/centres-de-vaccination-cap-sante?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -308,6 +308,32 @@
           "jeudi": "13:00-18:30",
           "vendredi": "13:00-18:30",
           "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "34",
+      "nom": "BEZIERS Centre Zinga Zanga (grande salle de spectacle)",
+      "url": "https://partners.doctolib.fr/centre-de-sante/beziers/centre-de-vaccination-publiques-de-la-ville-de-beziers?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.18991",
+        "latitude": "43.331"
+      },
+      "metadata": {
+        "address": " Traverse de Colombiers, 34500 B\u00e9ziers",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "9:00-17:00",
+          "jeudi": "9:00-17:00",
+          "vendredi": "9:00-17:00",
+          "samedi": "9:00-17:00",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -344,32 +370,6 @@
     },
     {
       "departement": "34",
-      "nom": "LODEVE Centre vaccination",
-      "url": "https://partners.doctolib.fr/centre-de-sante/lodeve/cccol-centre-de-consultation-covid-de-lodevois?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "3.31809",
-        "latitude": "43.7331"
-      },
-      "metadata": {
-        "address": "1 bis Rue du 4 Septembre, 34700 Lod\u00e8ve",
-        "phone_number": "+33974350365",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "8:30-13h / 14:00-19:00",
-          "mercredi": "8:30-13h / 14:00-19:00",
-          "jeudi": "8:30-13h / 14:00-19:00",
-          "vendredi": "8:30-12:30",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "34",
       "nom": "MONTPELLIER Centre vaccination \u00e0 la Clinique du Mill\u00e9naire",
       "url": "https://partners.doctolib.fr/clinique-privee/montpellier/oc-sante-clinique-du-millenaire-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -387,6 +387,32 @@
           "vendredi": "",
           "samedi": "",
           "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "34",
+      "nom": "LODEVE Centre vaccination",
+      "url": "https://partners.doctolib.fr/centre-de-sante/lodeve/cccol-centre-de-consultation-covid-de-lodevois?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.31809",
+        "latitude": "43.7331"
+      },
+      "metadata": {
+        "address": "1 bis Rue du 4 Septembre, 34700 Lod\u00e8ve",
+        "phone_number": "+33974350365",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "8:30-13h / 14:00-19:00",
+          "mercredi": "8:30-13h / 14:00-19:00",
+          "jeudi": "8:30-13h / 14:00-19:00",
+          "vendredi": "8:30-12:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
@@ -523,32 +549,6 @@
     },
     {
       "departement": "34",
-      "nom": "CLERMONT L'HERAULT Centre Hospitalier",
-      "url": "https://partners.doctolib.fr/hopital-public/clermont-l'h\u00e9rault/centre-de-vaccination-hopital-de-clermont-l-herault?pid=practice-164971?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "3.4388",
-        "latitude": "43.6238"
-      },
-      "metadata": {
-        "address": " Cours de la Chicane, 34800 Clermont-l'H\u00e9rault",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "9:30 12:30 / 13:30 16:30",
-          "mercredi": "9:30 12:30 / 13:30 16:30",
-          "jeudi": "9:30 12:30 / 13:30 16:30",
-          "vendredi": "9:30 12:30 / 13:30 16:30",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "34",
       "nom": "ST JEAN DE VEDAS Clinique St Jean",
       "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-jean-de-vedas/centre-de-vaccination-clinique-saint-jean-sud-de-france-cap-sante-saint-jean-de-vedas?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -575,6 +575,32 @@
     },
     {
       "departement": "34",
+      "nom": "CLERMONT L'HERAULT Centre Hospitalier",
+      "url": "https://partners.doctolib.fr/hopital-public/clermont-l'h\u00e9rault/centre-de-vaccination-hopital-de-clermont-l-herault?pid=practice-164971?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.4388",
+        "latitude": "43.6238"
+      },
+      "metadata": {
+        "address": " Cours de la Chicane, 34800 Clermont-l'H\u00e9rault",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "9:30 12:30 / 13:30 16:30",
+          "mercredi": "9:30 12:30 / 13:30 16:30",
+          "jeudi": "9:30 12:30 / 13:30 16:30",
+          "vendredi": "9:30 12:30 / 13:30 16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "34",
       "nom": "PEZENAS Centre Hospitalier (Salle Vayrac)",
       "url": "https://partners.doctolib.fr/hopital-public/pezenas/centre-de-vaccination-hopital-de-pezenas?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -590,32 +616,6 @@
           "mercredi": "16:00-20:00",
           "jeudi": "14:00-18:00",
           "vendredi": "14:00-18:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "34",
-      "nom": "VAILHAUQUES Service de Sant\u00e9 SDIS 34",
-      "url": "https://partners.doctolib.fr/centre-de-sante/vailhauques/centre-de-vaccination-covid-de-vailhauques?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "3.73874",
-        "latitude": "43.6439"
-      },
-      "metadata": {
-        "address": "150 Rue Super Nova, 34570 Vailhauqu\u00e8s",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "14:00-17:00",
-          "mardi": "14:00-17:00",
-          "mercredi": "14:00-17:00",
-          "jeudi": "14:00-17:00",
-          "vendredi": "14:00-17:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -679,32 +679,6 @@
     },
     {
       "departement": "34",
-      "nom": "MONTPELLIER Centre municipal le Polygone",
-      "url": "https://partners.doctolib.fr/centre-de-sante/montpellier/centre-de-vaccination-ville-de-montpellier?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "3.8864",
-        "latitude": "43.6082"
-      },
-      "metadata": {
-        "address": "2  Place Paul Bec, 34000 Montpellier",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "9:00-12:00 / 14:00-17:00",
-          "mardi": "9:00-12:00 / 14:00-17:00",
-          "mercredi": "9:00-12:00 / 14:00-17:00",
-          "jeudi": "9:00-12:00 / 14:00-17:00",
-          "vendredi": "9:00-12:00 / 14:00-17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "34",
       "nom": "CASTELNAU LE LEZ Clinique du Parc",
       "url": "https://partners.doctolib.fr/centre-de-sante/castelnau-le-lez/clinique-du-parc-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -747,6 +721,32 @@
           "jeudi": "08:00-20:00",
           "vendredi": "08:00-20:00",
           "samedi": "08:00-20:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "34",
+      "nom": "MONTPELLIER Centre municipal le Polygone",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montpellier/centre-de-vaccination-ville-de-montpellier?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.8864",
+        "latitude": "43.6082"
+      },
+      "metadata": {
+        "address": "2  Place Paul Bec, 34000 Montpellier",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9:00-12:00 / 14:00-17:00",
+          "mardi": "9:00-12:00 / 14:00-17:00",
+          "mercredi": "9:00-12:00 / 14:00-17:00",
+          "jeudi": "9:00-12:00 / 14:00-17:00",
+          "vendredi": "9:00-12:00 / 14:00-17:00",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -809,42 +809,6 @@
     },
     {
       "departement": "34",
-      "nom": "Pharmacie Du Languedoc",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-languedoc-beziers",
-      "location": {
-        "longitude": 3.2354824,
-        "latitude": 43.35668340000001
-      },
-      "metadata": {
-        "address": "23 boulevard du Languedoc, 34500 BEZIERS",
-        "phone_number": "+33467283812",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "34",
-      "nom": "Pharmacie Des Lilas",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-lilas",
-      "location": {
-        "longitude": 3.8485323,
-        "latitude": 43.60161950000001
-      },
-      "metadata": {
-        "address": "66 route de laverune, 34070 montpellier",
-        "phone_number": "+33467426614",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "34",
       "nom": "Pharmacie Du Vidourle",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-vidourle-lunel",
       "location": {
@@ -863,15 +827,15 @@
     },
     {
       "departement": "34",
-      "nom": "Pharmacie Des Herbes De Saint Jean",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-herbes-de-saint-jean-saint-jean-de-vedas",
+      "nom": "Pharmacie Du Languedoc",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-languedoc-beziers",
       "location": {
-        "longitude": 3.8309382,
-        "latitude": 43.5759883
+        "longitude": 3.2354824,
+        "latitude": 43.35668340000001
       },
       "metadata": {
-        "address": "164 esplanade de l'Ortet, 34430 Saint Jean de V\u00e9das",
-        "phone_number": "+33467999980",
+        "address": "23 boulevard du Languedoc, 34500 BEZIERS",
+        "phone_number": "+33467283812",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -893,7 +857,25 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "34",
+      "nom": "Pharmacie Des Lilas",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-lilas",
+      "location": {
+        "longitude": 3.8485323,
+        "latitude": 43.60161950000001
+      },
+      "metadata": {
+        "address": "66 route de laverune, 34070 montpellier",
+        "phone_number": "+33467426614",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -1075,6 +1057,24 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "34",
+      "nom": "Pharmacie Des Herbes De Saint Jean",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-herbes-de-saint-jean-saint-jean-de-vedas",
+      "location": {
+        "longitude": 3.8309382,
+        "latitude": 43.5759883
+      },
+      "metadata": {
+        "address": "164 esplanade de l'Ortet, 34430 Saint Jean de V\u00e9das",
+        "phone_number": "+33467999980",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
       "appointment_count": 0
     }
   ]

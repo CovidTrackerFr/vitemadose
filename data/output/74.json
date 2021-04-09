@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.571492+02:00",
+  "last_updated": "2021-04-09T15:30:28.572993+02:00",
   "centres_disponibles": [
     {
       "departement": "74",
@@ -73,7 +73,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-12T16:41:00.000+02:00",
+      "prochain_rdv": "2021-04-12T16:55:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -99,6 +99,32 @@
         }
       },
       "prochain_rdv": "2021-04-13T08:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "74",
+      "nom": "Maison de sant\u00e9 de la vall\u00e9e d'Aulps",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-jean-d'aulps/centre-de-vaccination-covid-19-du-haut-chablais?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.6594",
+        "latitude": "46.2299"
+      },
+      "metadata": {
+        "address": "58 Imp Alexis Leaud, 74430 Saint-Jean-d'Aulps",
+        "phone_number": "+33612529410",
+        "business_hours": {
+          "lundi": "09:00-13:00/14:00-18:00",
+          "mardi": "09:00-13:00/14:00-18:00",
+          "mercredi": "09:00-13:00/14:00-18:00",
+          "jeudi": "09:00-13:00/14:00-18:00",
+          "vendredi": "09:00-13:00/14:00-18:00",
+          "samedi": "08:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-15T15:40:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -365,32 +391,6 @@
     }
   ],
   "centres_indisponibles": [
-    {
-      "departement": "74",
-      "nom": "Maison de sant\u00e9 de la vall\u00e9e d'Aulps",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-jean-d'aulps/centre-de-vaccination-covid-19-du-haut-chablais?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.6594",
-        "latitude": "46.2299"
-      },
-      "metadata": {
-        "address": "58 Imp Alexis Leaud, 74430 Saint-Jean-d'Aulps",
-        "phone_number": "+33612529410",
-        "business_hours": {
-          "lundi": "09:00-13:00/14:00-18:00",
-          "mardi": "09:00-13:00/14:00-18:00",
-          "mercredi": "09:00-13:00/14:00-18:00",
-          "jeudi": "09:00-13:00/14:00-18:00",
-          "vendredi": "09:00-13:00/14:00-18:00",
-          "samedi": "08:00-13:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "74",
       "nom": "Equipe mobile du d\u00e9partement de la Haute-Savoie",
@@ -675,32 +675,6 @@
     },
     {
       "departement": "74",
-      "nom": "THONES - Espace Coeur des Vall\u00e9es",
-      "url": "",
-      "location": {
-        "longitude": "6.32231",
-        "latitude": "45.8816"
-      },
-      "metadata": {
-        "address": "2 R du Pre de Foire, 74230 Th\u00f4nes",
-        "phone_number": "+33450021210",
-        "business_hours": {
-          "lundi": "Ferm\u00e9",
-          "mardi": "09:00-13:00/14:00-18:00",
-          "mercredi": "09:00-13:00/14:00-18:00",
-          "jeudi": "09:00-13:00/14:00-18:00",
-          "vendredi": "09:00-13:00/14:00-18:00",
-          "samedi": "09:00-13:00/14:00-18:00",
-          "dimanche": "09:00-13:00/14:00-18:00"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "74",
       "nom": "Centre Hospitalier St Julien en Genevois",
       "url": "https://partners.doctolib.fr/hopital-public/annecy/centre-hospitalier-annecy-genevois-centre-de-depistage-et-de-vaccination-covid-19?pid=practice-163575?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -727,6 +701,32 @@
     },
     {
       "departement": "74",
+      "nom": "THONES - Espace Coeur des Vall\u00e9es",
+      "url": "",
+      "location": {
+        "longitude": "6.32231",
+        "latitude": "45.8816"
+      },
+      "metadata": {
+        "address": "2 R du Pre de Foire, 74230 Th\u00f4nes",
+        "phone_number": "+33450021210",
+        "business_hours": {
+          "lundi": "Ferm\u00e9",
+          "mardi": "09:00-13:00/14:00-18:00",
+          "mercredi": "09:00-13:00/14:00-18:00",
+          "jeudi": "09:00-13:00/14:00-18:00",
+          "vendredi": "09:00-13:00/14:00-18:00",
+          "samedi": "09:00-13:00/14:00-18:00",
+          "dimanche": "09:00-13:00/14:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "74",
       "nom": "Pharmacie Du Credo",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-credo--valserhone",
       "location": {
@@ -740,24 +740,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "74",
-      "nom": "Pharmacie Du Mortier",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-mortier-valserhone",
-      "location": {
-        "longitude": 2.4819234,
-        "latitude": 50.5623406
-      },
-      "metadata": {
-        "address": "3 Rue Joseph Bertola, 01200 Valserh\u00f4ne",
-        "phone_number": "+33450482806",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -836,6 +818,24 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "74",
+      "nom": "Pharmacie Du Mortier",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-mortier-valserhone",
+      "location": {
+        "longitude": 2.4819234,
+        "latitude": 50.5623406
+      },
+      "metadata": {
+        "address": "3 Rue Joseph Bertola, 01200 Valserh\u00f4ne",
+        "phone_number": "+33450482806",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },

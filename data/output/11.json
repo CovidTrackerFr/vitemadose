@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.502155+02:00",
+  "last_updated": "2021-04-09T15:30:28.503538+02:00",
   "centres_disponibles": [
     {
       "departement": "11",
@@ -22,7 +22,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-15T15:45:00.000+02:00",
+      "prochain_rdv": "2021-04-15T13:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -237,6 +237,32 @@
     },
     {
       "departement": "11",
+      "nom": "CH Castelnaudary - Jean Pierre Cassabel",
+      "url": "https://partners.doctolib.fr/hopital-public/castelnaudary/centre-de-vaccination-ch-de-castelnaudary?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.96212",
+        "latitude": "43.3152"
+      },
+      "metadata": {
+        "address": "19 Avenue Monseigneur de Langle, 11400 Castelnaudary",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "8:30-12:00/13:30-17:00",
+          "mardi": "8:30-12:00/13:30-17:00",
+          "mercredi": "8:30-12:00/13:30-17:00",
+          "jeudi": "8:30-12:00/13:30-17:00",
+          "vendredi": "8:30-12:00/13:30-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "11",
       "nom": "Centre de vaccination du narbonnais",
       "url": "https://pro.doctolib.fr/configuration/profiles/centre-de-vaccination-du-narbonnais/edit",
       "location": {
@@ -278,32 +304,6 @@
           "mercredi": "14:30-18:30",
           "jeudi": "14:30-18:30",
           "vendredi": "14:30-18:30",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "11",
-      "nom": "CH Castelnaudary - Jean Pierre Cassabel",
-      "url": "https://partners.doctolib.fr/hopital-public/castelnaudary/centre-de-vaccination-ch-de-castelnaudary?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "1.96212",
-        "latitude": "43.3152"
-      },
-      "metadata": {
-        "address": "19 Avenue Monseigneur de Langle, 11400 Castelnaudary",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "8:30-12:00/13:30-17:00",
-          "mardi": "8:30-12:00/13:30-17:00",
-          "mercredi": "8:30-12:00/13:30-17:00",
-          "jeudi": "8:30-12:00/13:30-17:00",
-          "vendredi": "8:30-12:00/13:30-17:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }

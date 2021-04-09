@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.585846+02:00",
+  "last_updated": "2021-04-09T15:30:28.588150+02:00",
   "centres_disponibles": [
     {
       "departement": "84",
@@ -262,32 +262,6 @@
     },
     {
       "departement": "84",
-      "nom": "CPTS SANTE LUB / LAURIS",
-      "url": "https://partners.doctolib.fr/centre-de-sante/lauris/centre-de-vaccination-lauris?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "5.31476",
-        "latitude": "43.7475"
-      },
-      "metadata": {
-        "address": " Foyer rural, Rue de la Mairie, 84360 Lauris",
-        "phone_number": "+33972502700",
-        "business_hours": {
-          "lundi": "13H - 15H",
-          "mardi": "13H - 15H",
-          "mercredi": "13H - 15H",
-          "jeudi": "13H - 15H",
-          "vendredi": "13H - 15H",
-          "samedi": "10H-12H",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "84",
       "nom": "Centre de vaccination de Valr\u00e9as",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/valreas/centre-de-vaccination-covid-19-de-valreas?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -304,6 +278,32 @@
           "jeudi": "ferm\u00e9",
           "vendredi": "Ouvert",
           "samedi": "Ouvert",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "84",
+      "nom": "CPTS SANTE LUB / LAURIS",
+      "url": "https://partners.doctolib.fr/centre-de-sante/lauris/centre-de-vaccination-lauris?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.31476",
+        "latitude": "43.7475"
+      },
+      "metadata": {
+        "address": " Foyer rural, Rue de la Mairie, 84360 Lauris",
+        "phone_number": "+33972502700",
+        "business_hours": {
+          "lundi": "13H - 15H",
+          "mardi": "13H - 15H",
+          "mercredi": "13H - 15H",
+          "jeudi": "13H - 15H",
+          "vendredi": "13H - 15H",
+          "samedi": "10H-12H",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -444,6 +444,32 @@
     },
     {
       "departement": "84",
+      "nom": "Maison de la Culture et des Association",
+      "url": "https://partners.doctolib.fr/centre-de-sante/pertuis/centre-de-vaccination-pertuis?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.50729",
+        "latitude": "43.695"
+      },
+      "metadata": {
+        "address": "168 Rue R\u00e9sini, 84120 Pertuis",
+        "phone_number": "+33972502700",
+        "business_hours": {
+          "lundi": "14h \u00e0 18h ",
+          "mardi": "14h \u00e0 18h ",
+          "mercredi": "14h \u00e0 18h ",
+          "jeudi": "14h \u00e0 18h ",
+          "vendredi": "14h \u00e0 18h ",
+          "samedi": "10h \u00e0 12h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "84",
       "nom": "Centre municipal de vaccination - Entraigues",
       "url": "Doctolib",
       "location": {
@@ -469,22 +495,22 @@
     },
     {
       "departement": "84",
-      "nom": "Maison de la Culture et des Association",
-      "url": "https://partners.doctolib.fr/centre-de-sante/pertuis/centre-de-vaccination-pertuis?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "MSP - SORGUES - salle Ren\u00e9 Varoqui",
+      "url": "https://partners.doctolib.fr/maison-de-sante/sorgues/centre-de-vaccination-covid-maison-de-sante-francois-rabelais?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "5.50729",
-        "latitude": "43.695"
+        "longitude": "4.87966",
+        "latitude": "43.9974"
       },
       "metadata": {
-        "address": "168 Rue R\u00e9sini, 84120 Pertuis",
-        "phone_number": "+33972502700",
+        "address": " Chemin de Lucette, 84700 Sorgues",
+        "phone_number": "+33423100690",
         "business_hours": {
-          "lundi": "14h \u00e0 18h ",
-          "mardi": "14h \u00e0 18h ",
-          "mercredi": "14h \u00e0 18h ",
-          "jeudi": "14h \u00e0 18h ",
-          "vendredi": "14h \u00e0 18h ",
-          "samedi": "10h \u00e0 12h",
+          "lundi": "9h-13h",
+          "mardi": "9h-13h",
+          "mercredi": "9h-13h",
+          "jeudi": "9h-13h",
+          "vendredi": "9h-13h ",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -521,28 +547,20 @@
     },
     {
       "departement": "84",
-      "nom": "MSP - SORGUES - salle Ren\u00e9 Varoqui",
-      "url": "https://partners.doctolib.fr/maison-de-sante/sorgues/centre-de-vaccination-covid-maison-de-sante-francois-rabelais?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Pharmacie Principale",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-principale-pertuis",
       "location": {
-        "longitude": "4.87966",
-        "latitude": "43.9974"
+        "longitude": 5.5016043,
+        "latitude": 43.6934976
       },
       "metadata": {
-        "address": " Chemin de Lucette, 84700 Sorgues",
-        "phone_number": "+33423100690",
-        "business_hours": {
-          "lundi": "9h-13h",
-          "mardi": "9h-13h",
-          "mercredi": "9h-13h",
-          "jeudi": "9h-13h",
-          "vendredi": "9h-13h ",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
+        "address": "114 Place Jean Jaures, 84120 PERTUIS",
+        "phone_number": "+33490097271",
+        "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
       "appointment_count": 0
     },
     {
@@ -594,24 +612,6 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "84",
-      "nom": "Pharmacie Principale",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-principale-pertuis",
-      "location": {
-        "longitude": 5.5016043,
-        "latitude": 43.6934976
-      },
-      "metadata": {
-        "address": "114 Place Jean Jaures, 84120 PERTUIS",
-        "phone_number": "+33490097271",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
       "appointment_count": 0
     }
   ]

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.499517+02:00",
+  "last_updated": "2021-04-09T15:30:28.501028+02:00",
   "centres_disponibles": [
     {
       "departement": "08",
@@ -30,6 +30,31 @@
     }
   ],
   "centres_indisponibles": [
+    {
+      "departement": "08",
+      "nom": "Centre de vaccination COSEC Roger Marche VILLERS-SEMEUSE",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-165006&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.73896",
+        "latitude": "49.7427"
+      },
+      "metadata": {
+        "address": " Route Nationale, 08000 Villers-Semeuse",
+        "business_hours": {
+          "lundi": "A pr\u00e9ciser",
+          "mardi": "A pr\u00e9ciser",
+          "mercredi": "A pr\u00e9ciser",
+          "jeudi": "A pr\u00e9ciser",
+          "vendredi": "A pr\u00e9ciser",
+          "samedi": "A pr\u00e9ciser",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
     {
       "departement": "08",
       "nom": "MSP CARIGNAN",
@@ -83,56 +108,6 @@
     },
     {
       "departement": "08",
-      "nom": "MSP Signy-le-Petit",
-      "url": "",
-      "location": {
-        "longitude": "4.27997",
-        "latitude": "49.9029"
-      },
-      "metadata": {
-        "address": "1 Rue Nicolas de Rumigny, 08380 Signy-le-Petit",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "13H-17H",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "08",
-      "nom": "Centre de vaccination COSEC Roger Marche VILLERS-SEMEUSE",
-      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-165006&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.73896",
-        "latitude": "49.7427"
-      },
-      "metadata": {
-        "address": " Route Nationale, 08000 Villers-Semeuse",
-        "business_hours": {
-          "lundi": "A pr\u00e9ciser",
-          "mardi": "A pr\u00e9ciser",
-          "mercredi": "A pr\u00e9ciser",
-          "jeudi": "A pr\u00e9ciser",
-          "vendredi": "A pr\u00e9ciser",
-          "samedi": "A pr\u00e9ciser",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "08",
       "nom": "MSP Buzancy",
       "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-167626&enable_cookies_consent=1",
       "location": {
@@ -153,6 +128,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "MSP Signy-le-Petit",
+      "url": "",
+      "location": {
+        "longitude": "4.27997",
+        "latitude": "49.9029"
+      },
+      "metadata": {
+        "address": "1 Rue Nicolas de Rumigny, 08380 Signy-le-Petit",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "13H-17H",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -521,32 +521,6 @@
     },
     {
       "departement": "08",
-      "nom": "MSP Signy L'Abbaye",
-      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-167625&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.42296",
-        "latitude": "49.696"
-      },
-      "metadata": {
-        "address": "48 Rue de Rethel, 08460 Signy-l'Abbaye",
-        "phone_number": "+33972760250",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "Vendredi 5 f\u00e9vrier, 13:00-18:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "08",
       "nom": "Centre de vaccination d'AUBRIVES",
       "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-167628&enable_cookies_consent=1",
       "location": {
@@ -562,6 +536,32 @@
           "mercredi": "ferm\u00e9",
           "jeudi": "13:30-18:30",
           "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "MSP Signy L'Abbaye",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-167625&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.42296",
+        "latitude": "49.696"
+      },
+      "metadata": {
+        "address": "48 Rue de Rethel, 08460 Signy-l'Abbaye",
+        "phone_number": "+33972760250",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "Vendredi 5 f\u00e9vrier, 13:00-18:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }

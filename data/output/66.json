@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.562189+02:00",
+  "last_updated": "2021-04-09T15:30:28.565115+02:00",
   "centres_disponibles": [
     {
       "departement": "66",
@@ -48,7 +48,7 @@
           "dimanche": "09:00-20:00"
         }
       },
-      "prochain_rdv": "2021-04-12T14:45:00.000+02:00",
+      "prochain_rdv": "2021-04-13T18:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -73,7 +73,7 @@
           "dimanche": "09:00-20:00"
         }
       },
-      "prochain_rdv": "2021-04-12T14:45:00.000+02:00",
+      "prochain_rdv": "2021-04-13T18:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -99,6 +99,32 @@
           "vendredi": "09:00-18:30",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9 "
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "66",
+      "nom": "MSP Font Romeu",
+      "url": "https://partners.doctolib.fr/maison-de-sante/font-romeu/centre-de-vaccination-covid-19-msp-font-romeu?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.04082",
+        "latitude": "42.4995"
+      },
+      "metadata": {
+        "address": "28 Boulevard du Cambre d'Aze, 66120 Font-Romeu-Odeillo-Via",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "09:00-12:00/14:00-18:00",
+          "mardi": "09:00-12:00/14:00-18:00",
+          "mercredi": "09:00-12:00/14:00-18:00",
+          "jeudi": "09:00-12:00/14:00-18:00",
+          "vendredi": "09:00-12:00/14:00-18:00",
+          "samedi": "09:00-12:00",
+          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
@@ -150,32 +176,6 @@
           "jeudi": "09:00-17:00",
           "vendredi": "09:00-17:00",
           "samedi": "09:00-17:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "66",
-      "nom": "MSP Font Romeu",
-      "url": "https://partners.doctolib.fr/maison-de-sante/font-romeu/centre-de-vaccination-covid-19-msp-font-romeu?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.04082",
-        "latitude": "42.4995"
-      },
-      "metadata": {
-        "address": "28 Boulevard du Cambre d'Aze, 66120 Font-Romeu-Odeillo-Via",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "09:00-12:00/14:00-18:00",
-          "mardi": "09:00-12:00/14:00-18:00",
-          "mercredi": "09:00-12:00/14:00-18:00",
-          "jeudi": "09:00-12:00/14:00-18:00",
-          "vendredi": "09:00-12:00/14:00-18:00",
-          "samedi": "09:00-12:00",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -263,32 +263,6 @@
     },
     {
       "departement": "66",
-      "nom": "Centre de vaccination de Saint Paul de fenouillet",
-      "url": "https://partners.doctolib.fr/maison-de-sante/st-paul-de-fenouillet/centres-de-vaccination-covid-19-msp-saint-paul-de-fenouillet?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.50509",
-        "latitude": "42.8113"
-      },
-      "metadata": {
-        "address": " Foyer rural place L\u00e9o Lagrange, 66220 Saint-Paul-de-Fenouillet",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "14:00-18:00",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "08:30-12:30/14:00-18:00",
-          "vendredi": "08:30-12:30/14:00-18:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "66",
       "nom": "Centre de vaccination Saint Cyprien",
       "url": "https://partners.doctolib.fr/centre-de-sante/st-cyprien/centres-de-vaccination-covid-19-st-cyprien?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -304,6 +278,32 @@
           "mercredi": "14:00-18:00",
           "jeudi": "14:00-18:00",
           "vendredi": "14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "66",
+      "nom": "Centre de vaccination de Saint Paul de fenouillet",
+      "url": "https://partners.doctolib.fr/maison-de-sante/st-paul-de-fenouillet/centres-de-vaccination-covid-19-msp-saint-paul-de-fenouillet?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.50509",
+        "latitude": "42.8113"
+      },
+      "metadata": {
+        "address": " Foyer rural place L\u00e9o Lagrange, 66220 Saint-Paul-de-Fenouillet",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "08:30-12:30/14:00-18:00",
+          "vendredi": "08:30-12:30/14:00-18:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }

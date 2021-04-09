@@ -1,7 +1,59 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:27:36.513879+02:00",
+  "last_updated": "2021-04-09T15:30:28.515904+02:00",
   "centres_disponibles": [
+    {
+      "departement": "22",
+      "nom": "LANNION - Salle des ursulines",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/lannion-22300/centre-de-vaccination-de-lannion/centre-de-vaccination-de-lannion-salle-des-ursulines",
+      "location": {
+        "longitude": "-3.45495",
+        "latitude": "48.7312"
+      },
+      "metadata": {
+        "address": " Place des Patriotes, 22300 Lannion",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "9h00-13h00 / 13h30-17h30 ",
+          "mardi": "9h00-13h00 / 13h30-17h30 ",
+          "mercredi": "9h00-13h00 / 13h30-17h30 ",
+          "jeudi": "9h00-13h00 / 13h30-17h30 ",
+          "vendredi": "9h00-13h00 / 13h30-17h30 ",
+          "samedi": "9h00-13h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-14T11:15:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "LAMBALLE - Salle municipale",
+      "url": "https://vaccination-covid.keldoc.com/maison-de-sante/lamballe-22400/lamballe/centre-de-vaccination-lamballe-salle-municipale-lamballe",
+      "location": {
+        "longitude": "-2.51413",
+        "latitude": "48.4654"
+      },
+      "metadata": {
+        "address": "6 Rue mouexigne, 22400 Lamballe-Armor",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "9h-13h puis 13h30-17h30",
+          "mardi": "9h-13h puis 13h30-17h30",
+          "mercredi": "9h-13h puis 13h30-17h30",
+          "jeudi": "9h-13h puis 13h30-17h30",
+          "vendredi": "9h-13h puis 13h30-17h30",
+          "samedi": "9h-13h",
+          "dimanche": "non pr\u00e9cis\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-21T17:30:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
     {
       "departement": "22",
       "nom": "ST BRIEUC - Salle Robien",
@@ -179,7 +231,7 @@
         }
       },
       "prochain_rdv": null,
-      "plateforme": "Keldoc",
+      "plateforme": null,
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -205,32 +257,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "22",
-      "nom": "LANNION - Salle des ursulines",
-      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/lannion-22300/centre-de-vaccination-de-lannion/centre-de-vaccination-de-lannion-salle-des-ursulines",
-      "location": {
-        "longitude": "-3.45495",
-        "latitude": "48.7312"
-      },
-      "metadata": {
-        "address": " Place des Patriotes, 22300 Lannion",
-        "phone_number": "+33257180060",
-        "business_hours": {
-          "lundi": "9h00-13h00 / 13h30-17h30 ",
-          "mardi": "9h00-13h00 / 13h30-17h30 ",
-          "mercredi": "9h00-13h00 / 13h30-17h30 ",
-          "jeudi": "9h00-13h00 / 13h30-17h30 ",
-          "vendredi": "9h00-13h00 / 13h30-17h30 ",
-          "samedi": "9h00-13h00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -287,32 +313,6 @@
     },
     {
       "departement": "22",
-      "nom": "PLEUMEUR BODOU - PHOENIX",
-      "url": "https://vaccination-covid.keldoc.com/maison-de-sante/pleumeur-bodou-22560/centre-de-vaccination-ephemere-sdis-pleumeur-bodou/centre-de-vaccination-ephemere-sdis-lannion?category=-1&cabinet=17301&specialty=496",
-      "location": {
-        "longitude": "-3.52707",
-        "latitude": "48.7814"
-      },
-      "metadata": {
-        "address": " Route du Rad\u00f4me, 22560 Pleumeur-Bodou",
-        "phone_number": "+332 57 18 00 60",
-        "business_hours": {
-          "lundi": "9h-17h30",
-          "mardi": "9h-17h30",
-          "mercredi": "9h-17h30",
-          "jeudi": "9h-17h30",
-          "vendredi": "9h-17h30",
-          "samedi": "9h-17h30",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "22",
       "nom": "GUINGAMP - Centre de sant\u00e9 (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
       "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/pabu-22200/equipe-d-infectiologie-3?agenda=51168&motive=81341&category=-1&cabinet=16558",
       "location": {
@@ -334,6 +334,32 @@
       },
       "prochain_rdv": null,
       "plateforme": null,
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "PLEUMEUR BODOU - PHOENIX",
+      "url": "https://vaccination-covid.keldoc.com/maison-de-sante/pleumeur-bodou-22560/centre-de-vaccination-ephemere-sdis-pleumeur-bodou/centre-de-vaccination-ephemere-sdis-lannion?category=-1&cabinet=17301&specialty=496",
+      "location": {
+        "longitude": "-3.52707",
+        "latitude": "48.7814"
+      },
+      "metadata": {
+        "address": " Route du Rad\u00f4me, 22560 Pleumeur-Bodou",
+        "phone_number": "+332 57 18 00 60",
+        "business_hours": {
+          "lundi": "9h-17h30",
+          "mardi": "9h-17h30",
+          "mercredi": "9h-17h30",
+          "jeudi": "9h-17h30",
+          "vendredi": "9h-17h30",
+          "samedi": "9h-17h30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -390,32 +416,6 @@
     },
     {
       "departement": "22",
-      "nom": "LAMBALLE - Salle municipale",
-      "url": "https://vaccination-covid.keldoc.com/maison-de-sante/lamballe-22400/lamballe/centre-de-vaccination-lamballe-salle-municipale-lamballe",
-      "location": {
-        "longitude": "-2.51413",
-        "latitude": "48.4654"
-      },
-      "metadata": {
-        "address": "6 Rue mouexigne, 22400 Lamballe-Armor",
-        "phone_number": "+33257180060",
-        "business_hours": {
-          "lundi": "9h-13h puis 13h30-17h30",
-          "mardi": "9h-13h puis 13h30-17h30",
-          "mercredi": "9h-13h puis 13h30-17h30",
-          "jeudi": "9h-13h puis 13h30-17h30",
-          "vendredi": "9h-13h puis 13h30-17h30",
-          "samedi": "9h-13h",
-          "dimanche": "non pr\u00e9cis\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "22",
       "nom": "Pharmacie St Nicolas",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-st-nicolas-loudeac",
       "location": {
@@ -428,7 +428,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
