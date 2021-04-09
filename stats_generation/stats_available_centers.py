@@ -91,6 +91,7 @@ def export_centres_stats(center_data='data/output/info_centres.json', stats_path
         "tout_departement": {
             "disponibles": 0,
             "total": 0,
+            "creneaux": 0
         }
     }
 
@@ -99,14 +100,19 @@ def export_centres_stats(center_data='data/output/info_centres.json', stats_path
     for dep_code, dep_value in centres_info.items():
         nombre_disponibles = len(dep_value["centres_disponibles"])
         count = len(dep_value["centres_indisponibles"]) + nombre_disponibles
+        creneaux = sum([center.get('appointment_count', 0) for center in dep_value["centres_disponibles"]])
+
         centres_stats[dep_code] = {
             "disponibles": nombre_disponibles,
             "total": count,
+            "creneaux": creneaux
         }
 
         tout_dep_obj["disponibles"] += nombre_disponibles
         tout_dep_obj["total"] += count
+        tout_dep_obj["creneaux"] += creneaux
 
+    print(centres_stats)  # TODO remove debug
     available_pct = (tout_dep_obj["disponibles"] / max(1, tout_dep_obj["total"])) * 100
     logger.info("Found {0}/{1} available centers. ({2}%)".format(tout_dep_obj["disponibles"],
                                                                  tout_dep_obj["total"], round(available_pct, 2)))
