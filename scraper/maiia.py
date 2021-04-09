@@ -9,9 +9,31 @@ from bs4 import BeautifulSoup
 from scraper.pattern.scraper_request import ScraperRequest
 
 BASE_AVAILIBILITY_URL = "https://www.maiia.com/api/pat-public/availability-closests"
+MAIIA_DAY_LIMIT = 50
+MAIIA_LIMIT = 10000
 
 session = requests.Session()
 logger = logging.getLogger('scraper')
+
+
+def get_availability_count(center_id, request: ScraperRequest):
+    now = datetime.now()
+    start_date = datetime.strftime(now, '%Y-%m-%dT%H:%M:%S.%f%zZ')
+    end_date = (now + timedelta(days=MAIIA_DAY_LIMIT)).strftime('%Y-%m-%dT%H:%M:%S.%f%zZ')
+
+    url = f'https://www.maiia.com/api/pat-public/availabilities?centerId={center_id}&from={start_date}&to={end_date}&page=0&limit={MAIIA_LIMIT}'
+    req = session.get(url)
+    req.raise_for_status()
+    data = req.json()
+    items = data.get('items', [])
+    slots = []
+    for item in items:
+        timeslot = item.get('timeSlotId', None)
+        if not timeslot:
+            continue
+        if timeslot not in slots:
+            slots.append(timeslot)
+    return len(slots)
 
 
 def fetch_slots(request: ScraperRequest):
@@ -52,6 +74,9 @@ def get_slots_from(rdv_form, request: ScraperRequest):
     if not availability or availability["availabilityCount"] == 0:
         return None
 
+    # Update availability count
+    availability_count = get_availability_count(center_id, request)
+    request.update_appointment_count(availability_count)
     if "firstPhysicalStartDateTime" in availability:
         dt = isoparse(availability['firstPhysicalStartDateTime'])
         dt = dt + timedelta(hours=2)
