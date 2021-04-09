@@ -17,7 +17,8 @@ def generate_stats_date(centres_stats):
     stats_path = "data/output/stats_by_date.json"
     stats_data = {'dates': [],
                   'total_centres_disponibles': [],
-                  'total_centres': []
+                  'total_centres': [],
+                  'total_appointments': []
                   }
 
     try:
@@ -39,6 +40,7 @@ def generate_stats_date(centres_stats):
     stats_data['dates'].append(current_time)
     stats_data['total_centres_disponibles'].append(data_alldep['disponibles'])
     stats_data['total_centres'].append(data_alldep['total'])
+    stats_data['total_appointments'].append(data_alldep['creneaux'])
 
     with open(stats_path, "w") as stat_graph_file:
         json.dump(stats_data, stat_graph_file)
@@ -49,7 +51,8 @@ def generate_stats_dep_date(centres_stats):
     stats_path = "data/output/stats_by_date_dep.json"
     stats_data = {'dates': [],
                   'dep_centres_disponibles': {},
-                  'dep_centres': {}
+                  'dep_centres': {},
+                  'dep_appointments': {}
                   }
 
     try:
@@ -76,9 +79,12 @@ def generate_stats_dep_date(centres_stats):
             stats_data['dep_centres_disponibles'][dep] = []
         if dep not in stats_data['dep_centres']:
             stats_data['dep_centres'][dep] = []
+        if dep not in stats_data['dep_appointments']:
+            stats_data['dep_appointments'][dep] = []
         dep_data = centres_stats[dep]
         stats_data['dep_centres_disponibles'][dep].append(dep_data['disponibles'])
         stats_data['dep_centres'][dep].append(dep_data['total'])
+        stats_data['dep_appointments'][dep].append(dep_data['creneaux'])
 
     with open(stats_path, "w") as stat_graph_file:
         json.dump(stats_data, stat_graph_file)
