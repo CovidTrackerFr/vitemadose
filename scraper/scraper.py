@@ -189,7 +189,10 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
             ], 'scraper_ptr': maiia_fetch_slots},
             'Ordoclic': {'urls': [
                 'https://app.ordoclic.fr/',
-            ], 'scraper_ptr': ordoclic_fetch_slots}
+            ], 'scraper_ptr': ordoclic_fetch_slots},
+            'Mapharma': {'urls': [
+                'https://mapharma.net/',
+            ], 'scraper_ptr': mapharma_fetch_slots}
         }
 
     rdv_site_web = fix_scrap_urls(rdv_site_web)
