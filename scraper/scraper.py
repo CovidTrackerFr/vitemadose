@@ -22,7 +22,7 @@ from .maiia import fetch_slots as maiia_fetch_slots
 from .ordoclic import centre_iterator as ordoclic_centre_iterator
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
 
-POOL_SIZE = int(os.getenv('POOL_SIZE', 40))
+POOL_SIZE = int(os.getenv('POOL_SIZE', 15))
 
 logger = enable_logger_for_production()
 
