@@ -103,7 +103,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
             if reason["reasonTypeId"] == 4 and reason["canBookOnline"] == True:
                 reasonId = reason["id"]
                 date_obj = datetime.strptime(request.get_start_date(), '%Y-%m-%d')
-                end_date = (date_obj + timedelta(days=6)).strftime('%Y-%m-%d')
+                end_date = (date_obj + timedelta(days=50)).strftime('%Y-%m-%d')
                 slots = getSlots(entityId, medicalStaffId, reasonId, request.get_start_date(), end_date, client)
                 date = parse_ordoclic_slots(request, slots)
                 if date is None:
