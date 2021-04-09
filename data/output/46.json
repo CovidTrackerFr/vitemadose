@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.835606+02:00",
+  "last_updated": "2021-04-09T15:27:36.540582+02:00",
   "centres_disponibles": [
     {
       "departement": "46",
@@ -75,7 +75,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-05-04T17:24:00.000+02:00",
+      "prochain_rdv": "2021-05-03T09:48:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -343,6 +343,31 @@
     },
     {
       "departement": "46",
+      "nom": "Cressesac",
+      "url": "",
+      "location": {
+        "longitude": "1.51701",
+        "latitude": "45.0198"
+      },
+      "metadata": {
+        "address": " combe de la sal\u00e9, 46600 Cressensac-Sarrazac",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "46",
       "nom": "MSP Lalbenque",
       "url": "",
       "location": {
@@ -357,31 +382,6 @@
           "mardi": "ouvert",
           "mercredi": "ouvert",
           "jeudi": "ouvert",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "46",
-      "nom": "Cressesac",
-      "url": "",
-      "location": {
-        "longitude": "1.51701",
-        "latitude": "45.0198"
-      },
-      "metadata": {
-        "address": " combe de la sal\u00e9, 46600 Cressensac-Sarrazac",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
           "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"

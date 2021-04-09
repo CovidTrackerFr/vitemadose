@@ -1,29 +1,107 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.860614+02:00",
+  "last_updated": "2021-04-09T15:27:36.565173+02:00",
   "centres_disponibles": [
     {
       "departement": "69",
-      "nom": "Centre de vaccination international de Villeurbanne",
-      "url": "https://partners.doctolib.fr/centre-de-sante/villeurbanne/centre-de-vaccinations-internationales-villeurbanne-miit?pid=practice-165173?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination -H\u00f4pital Lyon sud - HCL",
+      "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-lyon-sud-hcl-vaccination-covid?pid=practice-163795&enable_cookies_consent=1",
       "location": {
-        "longitude": "4.90634",
-        "latitude": "45.7607"
+        "longitude": "4.80642",
+        "latitude": "45.7021"
       },
       "metadata": {
-        "address": "173 Rue L\u00e9on Blum, 69100 Villeurbanne",
+        "address": "165 Chemin du Grand Revoyet, 69310 Pierre-B\u00e9nite",
         "phone_number": "+33423101010",
         "business_hours": {
-          "lundi": "",
-          "mardi": "",
-          "mercredi": "",
-          "jeudi": "",
-          "vendredi": "",
-          "samedi": "",
+          "lundi": "9:00 - 16:00",
+          "mardi": "9:00 - 16:00",
+          "mercredi": "9:00 - 16:00",
+          "jeudi": "9:00 - 16:00",
+          "vendredi": "9:00 - 16:00",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-17T08:30:00.000+02:00",
+      "prochain_rdv": "2021-04-11T11:05:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "69",
+      "nom": "Centre de vaccination de l\u2019Ouest Lyonnais - B\u00e2timent Le Trait d\u2019Union",
+      "url": "https://partners.doctolib.fr/centre-de-sante/lyon/centre-de-vaccination-de-l-ouest-lyonnais?pid=practice-176810&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.7857",
+        "latitude": "45.7879"
+      },
+      "metadata": {
+        "address": "29 b Avenue des Sources, 69009 Lyon",
+        "phone_number": "33423101010",
+        "business_hours": {
+          "lundi": "9:00  -  17:00",
+          "mardi": "9:00  -  17:00",
+          "mercredi": "9:00  -  17:00",
+          "jeudi": "9:00  -  17:00",
+          "vendredi": "9:00  -  17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-13T14:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "69",
+      "nom": "Centre de vaccination de Villeurbanne- salle du CCVA",
+      "url": "https://partners.doctolib.fr/centre-de-sante/villeurbanne/centre-de-vaccination-covid-19-villeurbanne?pid=practice-173261&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.88787",
+        "latitude": "45.7679"
+      },
+      "metadata": {
+        "address": "234 Cours Emile Zola, 69100 Villeurbanne",
+        "phone_number": "33423101010",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "8:30  -  12:30",
+          "mercredi": "8:30  -  12:30",
+          "jeudi": "8:30  -  12:30",
+          "vendredi": "8:30  -  12:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-13T14:25:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "69",
+      "nom": "Centre de vaccination - Palais des sports de Gerland /Hospices Civils de Lyon",
+      "url": "https://partners.doctolib.fr/hopital-public/lyon/palais-des-sports-gerland-hcl-vaccination-covid?pid=practice-163661&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.83026",
+        "latitude": "45.724"
+      },
+      "metadata": {
+        "address": "350 Avenue Jean Jaur\u00e8s, 69007 Lyon",
+        "phone_number": "+33423101010",
+        "business_hours": {
+          "lundi": "08:30-20:00",
+          "mardi": "08:30-20:00",
+          "mercredi": "08:30-20:00",
+          "jeudi": "08:30-20:00",
+          "vendredi": "08:30-20:00",
+          "samedi": "08:30-20:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-17T18:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -49,7 +127,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-23T10:15:00.000+02:00",
+      "prochain_rdv": "2021-04-23T11:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -74,7 +152,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-29T14:50:00.000+02:00",
+      "prochain_rdv": "2021-04-27T09:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -187,59 +265,32 @@
     },
     {
       "departement": "69",
-      "nom": "Centre de vaccination de Villeurbanne- salle du CCVA",
-      "url": "https://partners.doctolib.fr/centre-de-sante/villeurbanne/centre-de-vaccination-covid-19-villeurbanne?pid=practice-173261&enable_cookies_consent=1",
+      "nom": "EPM - US/SMPR EPM du Rhone / Etablissement sp\u00e9cialis\u00e9 pour mineursdu Rh\u00f4ne",
+      "url": "",
       "location": {
-        "longitude": "4.88787",
-        "latitude": "45.7679"
+        "longitude": "4.99769",
+        "latitude": "45.7605"
       },
       "metadata": {
-        "address": "234 Cours Emile Zola, 69100 Villeurbanne",
-        "phone_number": "33423101010",
+        "address": " Rue du Rambion, 69330 Meyzieu",
         "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "8:30  -  12:30",
-          "mercredi": "8:30  -  12:30",
-          "jeudi": "8:30  -  12:30",
-          "vendredi": "8:30  -  12:30",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
         }
       },
       "prochain_rdv": null,
-      "plateforme": "Doctolib",
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
     {
       "departement": "69",
-      "nom": "Centre de vaccination de l\u2019Ouest Lyonnais - B\u00e2timent Le Trait d\u2019Union",
-      "url": "https://partners.doctolib.fr/centre-de-sante/lyon/centre-de-vaccination-de-l-ouest-lyonnais?pid=practice-176810&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.7857",
-        "latitude": "45.7879"
-      },
-      "metadata": {
-        "address": "29 b Avenue des Sources, 69009 Lyon",
-        "phone_number": "33423101010",
-        "business_hours": {
-          "lundi": "9:00  -  17:00",
-          "mardi": "9:00  -  17:00",
-          "mercredi": "9:00  -  17:00",
-          "jeudi": "9:00  -  17:00",
-          "vendredi": "9:00  -  17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "69",
-      "nom": "CP - US SAINT QUENTIN FALLAVIER / Etablissement sp\u00e9cialis\u00e9 pour mineurs du Rh\u00f4ne",
+      "nom": "MA - US Corbas / Etablissement sp\u00e9cialis\u00e9 pour mineurs du Rh\u00f4ne",
       "url": "",
       "location": {
         "longitude": "4.99769",
@@ -290,32 +341,7 @@
     },
     {
       "departement": "69",
-      "nom": "EPM - US/SMPR EPM du Rhone / Etablissement sp\u00e9cialis\u00e9 pour mineursdu Rh\u00f4ne",
-      "url": "",
-      "location": {
-        "longitude": "4.99769",
-        "latitude": "45.7605"
-      },
-      "metadata": {
-        "address": " Rue du Rambion, 69330 Meyzieu",
-        "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "69",
-      "nom": "MA - US Corbas / Etablissement sp\u00e9cialis\u00e9 pour mineurs du Rh\u00f4ne",
+      "nom": "CP - US SAINT QUENTIN FALLAVIER / Etablissement sp\u00e9cialis\u00e9 pour mineurs du Rh\u00f4ne",
       "url": "",
       "location": {
         "longitude": "4.99769",
@@ -493,31 +519,6 @@
     },
     {
       "departement": "69",
-      "nom": "Equipe mobile du CDHS",
-      "url": "",
-      "location": {
-        "longitude": "4.80186",
-        "latitude": "45.763"
-      },
-      "metadata": {
-        "address": "110 Avenue Barth\u00e9l\u00e9my Buyer, 69009 Lyon",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "69",
       "nom": "Centre de vaccination d'Arnas - Espace sportif de l'Escale",
       "url": "https://partners.doctolib.fr/centre-de-sante/arnas/centre-de-vaccination-covid-19-l-escale-arnas?pid=practice-180202&enable_cookies_consent=1",
       "location": {
@@ -539,6 +540,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "69",
+      "nom": "Equipe mobile du CDHS",
+      "url": "",
+      "location": {
+        "longitude": "4.80186",
+        "latitude": "45.763"
+      },
+      "metadata": {
+        "address": "110 Avenue Barth\u00e9l\u00e9my Buyer, 69009 Lyon",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -596,32 +622,6 @@
     },
     {
       "departement": "69",
-      "nom": "Centre de vaccination de la communaut\u00e9 professionnelle territoriale de sant\u00e9  -  Salle Jacques Anquetil de Genas",
-      "url": "https://partners.doctolib.fr/centre-de-sante/genas/centre-de-vaccination-cpst-salle-polyvalente-genas?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "5.0117",
-        "latitude": "45.7289"
-      },
-      "metadata": {
-        "address": "2  Rue de la Fraternite, 69740 Genas",
-        "phone_number": "+33423101010",
-        "business_hours": {
-          "lundi": "14:00 - 18:00",
-          "mardi": "09:00  - 18:00",
-          "mercredi": "09:00  - 18:00",
-          "jeudi": "09:00  - 18:00",
-          "vendredi": "09:00  - 18:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "69",
       "nom": "Centre de vaccination -H\u00f4pital Edouard Herriot-HCL",
       "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-edouard-herriot-hcl-vaccination-covid?pid=practice-163794&enable_cookies_consent=1",
       "location": {
@@ -638,6 +638,32 @@
           "jeudi": "08:00-20:00",
           "vendredi": "08:00-20:00",
           "samedi": "08:30-17:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "69",
+      "nom": "Centre de vaccination de la communaut\u00e9 professionnelle territoriale de sant\u00e9  -  Salle Jacques Anquetil de Genas",
+      "url": "https://partners.doctolib.fr/centre-de-sante/genas/centre-de-vaccination-cpst-salle-polyvalente-genas?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.0117",
+        "latitude": "45.7289"
+      },
+      "metadata": {
+        "address": "2  Rue de la Fraternite, 69740 Genas",
+        "phone_number": "+33423101010",
+        "business_hours": {
+          "lundi": "14:00 - 18:00",
+          "mardi": "09:00  - 18:00",
+          "mercredi": "09:00  - 18:00",
+          "jeudi": "09:00  - 18:00",
+          "vendredi": "09:00  - 18:00",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -751,32 +777,6 @@
     },
     {
       "departement": "69",
-      "nom": "Centre de vaccination - H\u00f4pital de la Croix Rousse- HCL",
-      "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-de-la-croix-rousse-hcl-vaccination-covid?pid=practice-163793&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.83035",
-        "latitude": "45.7823"
-      },
-      "metadata": {
-        "address": "103  Grande rue de la Croix-Rousse, 69004 Lyon",
-        "phone_number": "+33423101010",
-        "business_hours": {
-          "lundi": "08:00-20:00",
-          "mardi": "08:00-20:00",
-          "mercredi": "08:00-20:00",
-          "jeudi": "08:00-20:00",
-          "vendredi": "08:00-20:00",
-          "samedi": "08:00-20:00",
-          "dimanche": "8:00-18:00"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "69",
       "nom": "Centre de vaccination de L'Arbresle - Salle Claude Terrasse",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/l'arbresle/centre-de-vaccination-covid-19-l-arbresle?pid=practice-165179?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -794,6 +794,32 @@
           "vendredi": "09:00-17:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "69",
+      "nom": "Centre de vaccination - H\u00f4pital de la Croix Rousse- HCL",
+      "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-de-la-croix-rousse-hcl-vaccination-covid?pid=practice-163793&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.83035",
+        "latitude": "45.7823"
+      },
+      "metadata": {
+        "address": "103  Grande rue de la Croix-Rousse, 69004 Lyon",
+        "phone_number": "+33423101010",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-20:00",
+          "dimanche": "8:00-18:00"
         }
       },
       "prochain_rdv": null,
@@ -907,6 +933,32 @@
     },
     {
       "departement": "69",
+      "nom": "Centre de vaccination international de Villeurbanne",
+      "url": "https://partners.doctolib.fr/centre-de-sante/villeurbanne/centre-de-vaccinations-internationales-villeurbanne-miit?pid=practice-165173?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.90634",
+        "latitude": "45.7607"
+      },
+      "metadata": {
+        "address": "173 Rue L\u00e9on Blum, 69100 Villeurbanne",
+        "phone_number": "+33423101010",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "69",
       "nom": "Centre de vaccination -H\u00f4pital Pierre Wertheimer - HCL",
       "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-pierre-wertheimer-hcl-vaccination-covid?pid=practice-163796&enable_cookies_consent=1",
       "location": {
@@ -933,76 +985,6 @@
     },
     {
       "departement": "69",
-      "nom": "Centre de vaccination -H\u00f4pital Lyon sud - HCL",
-      "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-lyon-sud-hcl-vaccination-covid?pid=practice-163795&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.80642",
-        "latitude": "45.7021"
-      },
-      "metadata": {
-        "address": "165 Chemin du Grand Revoyet, 69310 Pierre-B\u00e9nite",
-        "phone_number": "+33423101010",
-        "business_hours": {
-          "lundi": "9:00 - 16:00",
-          "mardi": "9:00 - 16:00",
-          "mercredi": "9:00 - 16:00",
-          "jeudi": "9:00 - 16:00",
-          "vendredi": "9:00 - 16:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "69",
-      "nom": "Centre de vaccination - Palais des sports de Gerland /Hospices Civils de Lyon",
-      "url": "https://partners.doctolib.fr/hopital-public/lyon/palais-des-sports-gerland-hcl-vaccination-covid?pid=practice-163661&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.83026",
-        "latitude": "45.724"
-      },
-      "metadata": {
-        "address": "350 Avenue Jean Jaur\u00e8s, 69007 Lyon",
-        "phone_number": "+33423101010",
-        "business_hours": {
-          "lundi": "08:30-20:00",
-          "mardi": "08:30-20:00",
-          "mercredi": "08:30-20:00",
-          "jeudi": "08:30-20:00",
-          "vendredi": "08:30-20:00",
-          "samedi": "08:30-20:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "69",
-      "nom": "Pharmacie De La Place Ronde",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-place-ronde-lyon",
-      "location": {
-        "longitude": 4.8907415,
-        "latitude": 45.7534696
-      },
-      "metadata": {
-        "address": "50 cours Richard Vitton, 69003 Lyon",
-        "phone_number": "+33478540176",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "69",
       "nom": "Pharmacie Du Village De Corbas",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-village-de-corbas--corbas",
       "location": {
@@ -1012,6 +994,24 @@
       "metadata": {
         "address": "8 rue de la r\u00e9publique, 69960 Corbas",
         "phone_number": "+33472502011",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "69",
+      "nom": "Pharmacie De La Mairie Limas",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-limas-limas",
+      "location": {
+        "longitude": 4.706728399999999,
+        "latitude": 45.9751681
+      },
+      "metadata": {
+        "address": "2 bis rue Pierre Ponot, 69400 Limas",
+        "phone_number": "+33474622551",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -1068,6 +1068,24 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "69",
+      "nom": "Pharmacie De La Place Ronde",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-place-ronde-lyon",
+      "location": {
+        "longitude": 4.8907415,
+        "latitude": 45.7534696
+      },
+      "metadata": {
+        "address": "50 cours Richard Vitton, 69003 Lyon",
+        "phone_number": "+33478540176",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -1250,24 +1268,6 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "69",
-      "nom": "Pharmacie De La Mairie Limas",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-limas-limas",
-      "location": {
-        "longitude": 4.706728399999999,
-        "latitude": 45.9751681
-      },
-      "metadata": {
-        "address": "2 bis rue Pierre Ponot, 69400 Limas",
-        "phone_number": "+33474622551",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
       "appointment_count": 0
     }
   ]

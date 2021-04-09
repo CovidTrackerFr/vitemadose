@@ -1,32 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.864963+02:00",
+  "last_updated": "2021-04-09T15:27:36.569972+02:00",
   "centres_disponibles": [
-    {
-      "departement": "73",
-      "nom": "Centre de vaccination Covid - Chindrieux",
-      "url": "https://partners.doctolib.fr/centre-de-sante/chindrieux/centre-de-vaccination-covid-chindrieux?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": 5.8496913,
-        "latitude": 45.8136204
-      },
-      "metadata": {
-        "address": "903 Route d'Aix, 73310 Chindrieux",
-        "business_hours": {
-          "lundi": "08:30-12:30, 14:00-18:00",
-          "mardi": "08:30-12:30, 14:00-18:00",
-          "mercredi": "08:30-12:30, 14:00-18:00",
-          "jeudi": "08:30-12:30, 14:00-18:00",
-          "vendredi": "08:30-12:30, 14:00-18:00",
-          "samedi": null,
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": "2021-04-10T11:00:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "73",
       "nom": "Centre de vaccination Saint Jean de Maurienne",
@@ -72,7 +47,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-15T14:07:00.000+02:00",
+      "prochain_rdv": "2021-04-15T14:14:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -588,18 +563,18 @@
     },
     {
       "departement": "73",
-      "nom": "Centre de vaccination COVID Ad Hoc de Saint Alban Leysse",
-      "url": "https://partners.doctolib.fr/centre-de-sante/chambery/centre-de-vaccination-grand-chambery?pid=practice-178866&enable_cookies_consent=1",
+      "nom": "Centre de vaccination COVID Ad Hoc de COGNIN",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chambery/centre-de-vaccination-grand-chambery?pid=practice-178865&enable_cookies_consent=1",
       "location": {
-        "longitude": "5.95943",
-        "latitude": "45.5788"
+        "longitude": "5.89493",
+        "latitude": "45.5605"
       },
       "metadata": {
-        "address": "6500 Av de la Mairie, 73230 Saint-Alban-Leysse",
+        "address": "16 R de la Forgerie, 73160 Cognin",
         "business_hours": {
-          "lundi": "OUVERT",
+          "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
+          "mercredi": "08:45-12:05/13:45-17:05",
           "jeudi": "ferm\u00e9",
           "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
@@ -613,18 +588,18 @@
     },
     {
       "departement": "73",
-      "nom": "Centre de vaccination COVID Ad Hoc de COGNIN",
-      "url": "https://partners.doctolib.fr/centre-de-sante/chambery/centre-de-vaccination-grand-chambery?pid=practice-178865&enable_cookies_consent=1",
+      "nom": "Centre de vaccination COVID Ad Hoc de Saint Alban Leysse",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chambery/centre-de-vaccination-grand-chambery?pid=practice-178866&enable_cookies_consent=1",
       "location": {
-        "longitude": "5.89493",
-        "latitude": "45.5605"
+        "longitude": "5.95943",
+        "latitude": "45.5788"
       },
       "metadata": {
-        "address": "16 R de la Forgerie, 73160 Cognin",
+        "address": "6500 Av de la Mairie, 73230 Saint-Alban-Leysse",
         "business_hours": {
-          "lundi": "ferm\u00e9",
+          "lundi": "OUVERT",
           "mardi": "ferm\u00e9",
-          "mercredi": "08:45-12:05/13:45-17:05",
+          "mercredi": "ferm\u00e9",
           "jeudi": "ferm\u00e9",
           "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
@@ -788,8 +763,33 @@
     },
     {
       "departement": "73",
-      "nom": "Centre de vaccination Chamb\u00e9ry (professionnels de sant\u00e9 CHMS uniquement)",
-      "url": "https://partners.doctolib.fr/hopital-public/chambery/sst-chambery-az-chms?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "nom": "Centre de vaccination Covid - Chindrieux",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chindrieux/centre-de-vaccination-covid-chindrieux?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 5.8496913,
+        "latitude": 45.8136204
+      },
+      "metadata": {
+        "address": "903 Route d'Aix, 73310 Chindrieux",
+        "business_hours": {
+          "lundi": "08:30-12:30, 14:00-18:00",
+          "mardi": "08:30-12:30, 14:00-18:00",
+          "mercredi": "08:30-12:30, 14:00-18:00",
+          "jeudi": "08:30-12:30, 14:00-18:00",
+          "vendredi": "08:30-12:30, 14:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "73",
+      "nom": "Centre de vaccination Chamb\u00e9ry (professionnels de sant\u00e9 uniquement)",
+      "url": "https://partners.doctolib.fr/hopital-public/chambery/sst-chambery-az-exterieur?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
         "longitude": 5.9081887,
         "latitude": 45.5640429
@@ -813,8 +813,8 @@
     },
     {
       "departement": "73",
-      "nom": "Centre de vaccination Chamb\u00e9ry (professionnels de sant\u00e9 uniquement)",
-      "url": "https://partners.doctolib.fr/hopital-public/chambery/sst-chambery-az-exterieur?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "nom": "Centre de vaccination Chamb\u00e9ry (professionnels de sant\u00e9 CHMS uniquement)",
+      "url": "https://partners.doctolib.fr/hopital-public/chambery/sst-chambery-az-chms?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
         "longitude": 5.9081887,
         "latitude": 45.5640429

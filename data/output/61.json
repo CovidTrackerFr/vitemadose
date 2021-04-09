@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.852335+02:00",
+  "last_updated": "2021-04-09T15:27:36.556352+02:00",
   "centres_disponibles": [
     {
       "departement": "61",
@@ -24,32 +24,6 @@
         }
       },
       "prochain_rdv": "2021-04-10T16:30:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "61",
-      "nom": "HALLE AUX TOILES",
-      "url": "https://partners.doctolib.fr/centre-de-sante/alencon/centres-de-vaccination-covid-departement-orne-saonois?pid=practice-163785&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.0892535",
-        "latitude": "48.432"
-      },
-      "metadata": {
-        "address": " Rue Porchaine - cours cl\u00e9menceau, 61000 Alen\u00e7on",
-        "phone_number": "+33279461156",
-        "business_hours": {
-          "lundi": "",
-          "mardi": "",
-          "mercredi": "",
-          "jeudi": "",
-          "vendredi": "",
-          "samedi": "",
-          "dimanche": ""
-        }
-      },
-      "prochain_rdv": "2021-04-13T14:50:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -102,6 +76,32 @@
         }
       },
       "prochain_rdv": "2021-04-21T17:35:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "61",
+      "nom": "HALLE AUX TOILES",
+      "url": "https://partners.doctolib.fr/centre-de-sante/alencon/centres-de-vaccination-covid-departement-orne-saonois?pid=practice-163785&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.0892535",
+        "latitude": "48.432"
+      },
+      "metadata": {
+        "address": " Rue Porchaine - cours cl\u00e9menceau, 61000 Alen\u00e7on",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-26T16:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0

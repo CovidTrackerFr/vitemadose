@@ -1,7 +1,33 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.892922+02:00",
+  "last_updated": "2021-04-09T15:27:36.597202+02:00",
   "centres_disponibles": [
+    {
+      "departement": "94",
+      "nom": "Centre de Vaccination Marie-Th\u00e9r\u00e8se EYQUEM Cr\u00e9teil",
+      "url": "https://partners.doctolib.fr/centre-de-sante/creteil/centre-de-vaccination-covid-ville-de-creteil?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.44597",
+        "latitude": "48.7967"
+      },
+      "metadata": {
+        "address": "6 Rue Thomas Edison, 94000 Cr\u00e9teil",
+        "phone_number": "+33800089250",
+        "business_hours": {
+          "lundi": "9h-12h et 13h-19h",
+          "mardi": "9h-12h et 13h-19h",
+          "mercredi": "9h-12h et 13h-19h",
+          "jeudi": "9h-12h et 13h-19h",
+          "vendredi": "9h-12h et 13h-19h",
+          "samedi": "9h-12h et 13h-19h",
+          "dimanche": "9h-12h et 13h-19h"
+        }
+      },
+      "prochain_rdv": "2021-04-10T11:12:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
     {
       "departement": "94",
       "nom": "Pharmacie Huynh - Martin Huynh",
@@ -23,7 +49,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-15T15:20:00.000+02:00",
+      "prochain_rdv": "2021-04-15T15:40:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "drugstore",
       "appointment_count": 0
@@ -101,7 +127,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-05-17T16:15:00.000+02:00",
+      "prochain_rdv": "2021-05-16T13:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -367,32 +393,6 @@
     },
     {
       "departement": "94",
-      "nom": "Centre de Vaccination ambulatoire de Choisy-le-Roi",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/choisy-le-roi/centre-de-vaccination-covid-19-choisy-le-roi?pid=practice-175848&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.41031",
-        "latitude": "48.7641"
-      },
-      "metadata": {
-        "address": "13 Avenue Anatole France, 94600 Choisy-le-Roi",
-        "phone_number": "+33801902611 ",
-        "business_hours": {
-          "lundi": "13H-17H",
-          "mardi": "13H-17H",
-          "mercredi": "13H-17H",
-          "jeudi": "13H-17H",
-          "vendredi": "13H-17H",
-          "samedi": "13H-17H",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "94",
       "nom": "Centre de Vaccination Limeil La Boite \u00e0 Clous",
       "url": "",
       "location": {
@@ -414,6 +414,32 @@
       },
       "prochain_rdv": null,
       "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "94",
+      "nom": "Centre de Vaccination ambulatoire de Choisy-le-Roi",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/choisy-le-roi/centre-de-vaccination-covid-19-choisy-le-roi?pid=practice-175848&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.41031",
+        "latitude": "48.7641"
+      },
+      "metadata": {
+        "address": "13 Avenue Anatole France, 94600 Choisy-le-Roi",
+        "phone_number": "+33801902611 ",
+        "business_hours": {
+          "lundi": "13H-17H",
+          "mardi": "13H-17H",
+          "mercredi": "13H-17H",
+          "jeudi": "13H-17H",
+          "vendredi": "13H-17H",
+          "samedi": "13H-17H",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -598,32 +624,6 @@
     },
     {
       "departement": "94",
-      "nom": "CENTRE NOGENT SUR MARNE",
-      "url": "https://partners.doctolib.fr/centre-de-sante/nogent-sur-marne/accueil-ambulatoire-de-recours-ville-de-nogent-sur-marne-adp94?pid=practice-123104&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.49234",
-        "latitude": "48.8383"
-      },
-      "metadata": {
-        "address": "2  rue Jean Monnet (Maison des associations Simone Veil), 94130 Nogent-sur-Marne",
-        "phone_number": "+33143246221",
-        "business_hours": {
-          "lundi": "14:00-20:00",
-          "mardi": "14:00-20:00",
-          "mercredi": "14:00-20:00",
-          "jeudi": "14:00-20:00",
-          "vendredi": "14:00-20:00",
-          "samedi": "08:00-20:00",
-          "dimanche": "08:00-20:00"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "94",
       "nom": "CENTRE SAINT-MANDE",
       "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-mand\u00e9/centre-de-vaccinations-covid-saint-mande?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -650,6 +650,32 @@
     },
     {
       "departement": "94",
+      "nom": "CENTRE NOGENT SUR MARNE",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nogent-sur-marne/accueil-ambulatoire-de-recours-ville-de-nogent-sur-marne-adp94?pid=practice-123104&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.49234",
+        "latitude": "48.8383"
+      },
+      "metadata": {
+        "address": "2  rue Jean Monnet (Maison des associations Simone Veil), 94130 Nogent-sur-Marne",
+        "phone_number": "+33143246221",
+        "business_hours": {
+          "lundi": "14:00-20:00",
+          "mardi": "14:00-20:00",
+          "mercredi": "14:00-20:00",
+          "jeudi": "14:00-20:00",
+          "vendredi": "14:00-20:00",
+          "samedi": "08:00-20:00",
+          "dimanche": "08:00-20:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "94",
       "nom": "CENTRE DE VACCINATION AMBULATOIRE DE CHAMPIGNY",
       "url": "https://partners.doctolib.fr/centre-de-sante/champigny-sur-marne/centre-de-vaccination-ambulatoire-de-champigny?pid=practice-167416&enable_cookies_consent=1",
       "location": {
@@ -667,32 +693,6 @@
           "vendredi": "09:00-17:00",
           "samedi": "08:00-20:00",
           "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "94",
-      "nom": "Centre de Vaccination Marie-Th\u00e9r\u00e8se EYQUEM Cr\u00e9teil",
-      "url": "https://partners.doctolib.fr/centre-de-sante/creteil/centre-de-vaccination-covid-ville-de-creteil?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.44597",
-        "latitude": "48.7967"
-      },
-      "metadata": {
-        "address": "6 Rue Thomas Edison, 94000 Cr\u00e9teil",
-        "phone_number": "+33800089250",
-        "business_hours": {
-          "lundi": "9h-12h et 13h-19h",
-          "mardi": "9h-12h et 13h-19h",
-          "mercredi": "9h-12h et 13h-19h",
-          "jeudi": "9h-12h et 13h-19h",
-          "vendredi": "9h-12h et 13h-19h",
-          "samedi": "9h-12h et 13h-19h",
-          "dimanche": "9h-12h et 13h-19h"
         }
       },
       "prochain_rdv": null,
@@ -805,24 +805,6 @@
     },
     {
       "departement": "94",
-      "nom": "Pharmacie Du March\u00e9 Le Perreux",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-marche-le-perreux-le-perreux-sur-marne",
-      "location": {
-        "longitude": 2.5054228,
-        "latitude": 48.8418167
-      },
-      "metadata": {
-        "address": "106 avenue du General de Gaulle, 94170 Le perreux sur Marne",
-        "phone_number": "+33143242093",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "94",
       "nom": "Pharmacie Du Boulevard",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-boulevard--nogent-sur-marne",
       "location": {
@@ -832,6 +814,24 @@
       "metadata": {
         "address": "147 ter boulevard de Strasbourg, 94130 Nogent sur Marne",
         "phone_number": "+33148760820",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "94",
+      "nom": "Pharmacie Du March\u00e9 Le Perreux",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-marche-le-perreux-le-perreux-sur-marne",
+      "location": {
+        "longitude": 2.5054228,
+        "latitude": 48.8418167
+      },
+      "metadata": {
+        "address": "106 avenue du General de Gaulle, 94170 Le perreux sur Marne",
+        "phone_number": "+33143242093",
         "business_hours": null
       },
       "prochain_rdv": null,

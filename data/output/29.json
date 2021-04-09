@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.815113+02:00",
+  "last_updated": "2021-04-09T15:27:36.520460+02:00",
   "centres_disponibles": [
     {
       "departement": "29",
@@ -49,8 +49,34 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-14T13:50:00.000000+0200",
+      "prochain_rdv": "2021-04-14T16:55:00.000000+0200",
       "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "29",
+      "nom": "QUIMPERLE - Complexe sportif",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/quimperle/centre-de-vaccination-covid-19-de-quimperle?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-3.56062",
+        "latitude": "47.8666"
+      },
+      "metadata": {
+        "address": " Rue de Kerjouanneau, 29300 Quimperl\u00e9",
+        "phone_number": "+33257180061",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "8h30-12h / 13h-17h30",
+          "mercredi": "8h30-12h / 13h-17h30",
+          "jeudi": "8h30-12h / 13h-17h30",
+          "vendredi": "8h30-12h / 13h-17h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-15T15:30:00.000+02:00",
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     }
@@ -161,32 +187,6 @@
     },
     {
       "departement": "29",
-      "nom": "QUIMPERLE - Complexe sportif",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/quimperle/centre-de-vaccination-covid-19-de-quimperle?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-3.56062",
-        "latitude": "47.8666"
-      },
-      "metadata": {
-        "address": " Rue de Kerjouanneau, 29300 Quimperl\u00e9",
-        "phone_number": "+33257180061",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "8h30-12h / 13h-17h30",
-          "mercredi": "8h30-12h / 13h-17h30",
-          "jeudi": "8h30-12h / 13h-17h30",
-          "vendredi": "8h30-12h / 13h-17h30",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "29",
       "nom": "CHU Brest - Site Cavale Blanche",
       "url": "https://partners.doctolib.fr/hopital-public/brest/chru-de-brest-vaccination-covid-19?pid=practice-163680&?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -213,27 +213,27 @@
     },
     {
       "departement": "29",
-      "nom": "LANDERNEAU - Gymnase Kergreis",
-      "url": "https://www.maiia.com/centre-de-vaccination/29800-landerneau/centre-de-vaccination---landerneau---lesneven",
+      "nom": "MORLAIX - LANGOLVAS",
+      "url": "https://partners.doctolib.fr/maison-de-sante/morlaix/ch-morlaix-centre-de-vaccination-covid-19?pid=practice-163107&enable_cookies_consent=1",
       "location": {
-        "longitude": "-4.28307",
-        "latitude": "48.4509"
+        "longitude": "-3.79181",
+        "latitude": "48.5869"
       },
       "metadata": {
-        "address": " Route de K\u00e9ran\u00e9ost, 29800 Landerneau",
+        "address": " Langolvas, 29610 Garlan",
         "phone_number": "+33257180061",
         "business_hours": {
-          "lundi": "14h-19h",
-          "mardi": "9h-12h / 14h-19h",
-          "mercredi": "9h-12h / 14h-19h",
-          "jeudi": "9h-12h / 14h-19h",
-          "vendredi": "9h-12h / 14h-19h",
-          "samedi": "9h-12h / 14h-19h",
+          "lundi": "8h30-19h30",
+          "mardi": "8h30-19h30",
+          "mercredi": "8h30-19h30",
+          "jeudi": "8h30-19h30",
+          "vendredi": "8h30-19h30",
+          "samedi": "8h30-19h30",
           "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
-      "plateforme": "Maiia",
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -265,27 +265,27 @@
     },
     {
       "departement": "29",
-      "nom": "MORLAIX - LANGOLVAS",
-      "url": "https://partners.doctolib.fr/maison-de-sante/morlaix/ch-morlaix-centre-de-vaccination-covid-19?pid=practice-163107&enable_cookies_consent=1",
+      "nom": "LANDERNEAU - Gymnase Kergreis",
+      "url": "https://www.maiia.com/centre-de-vaccination/29800-landerneau/centre-de-vaccination---landerneau---lesneven",
       "location": {
-        "longitude": "-3.79181",
-        "latitude": "48.5869"
+        "longitude": "-4.28307",
+        "latitude": "48.4509"
       },
       "metadata": {
-        "address": " Langolvas, 29610 Garlan",
+        "address": " Route de K\u00e9ran\u00e9ost, 29800 Landerneau",
         "phone_number": "+33257180061",
         "business_hours": {
-          "lundi": "8h30-19h30",
-          "mardi": "8h30-19h30",
-          "mercredi": "8h30-19h30",
-          "jeudi": "8h30-19h30",
-          "vendredi": "8h30-19h30",
-          "samedi": "8h30-19h30",
+          "lundi": "14h-19h",
+          "mardi": "9h-12h / 14h-19h",
+          "mercredi": "9h-12h / 14h-19h",
+          "jeudi": "9h-12h / 14h-19h",
+          "vendredi": "9h-12h / 14h-19h",
+          "samedi": "9h-12h / 14h-19h",
           "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
-      "plateforme": "Doctolib",
+      "plateforme": "Maiia",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -618,24 +618,6 @@
     },
     {
       "departement": "29",
-      "nom": "Pharmacie La Galerie",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-la-galerie-quimper",
-      "location": {
-        "longitude": -4.094823,
-        "latitude": 47.9747201
-      },
-      "metadata": {
-        "address": "163 RTE DE BENODET, 29000 quimper",
-        "phone_number": "+33298905316",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "29",
       "nom": "Pharmacie D'Ergue-Armel C.C Casino",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-d'ergue-armel-c.c-casino-quimper",
       "location": {
@@ -649,6 +631,24 @@
       },
       "prochain_rdv": null,
       "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "29",
+      "nom": "Pharmacie La Galerie",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-la-galerie-quimper",
+      "location": {
+        "longitude": -4.094823,
+        "latitude": 47.9747201
+      },
+      "metadata": {
+        "address": "163 RTE DE BENODET, 29000 quimper",
+        "phone_number": "+33298905316",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },

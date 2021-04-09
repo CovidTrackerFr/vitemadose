@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.816256+02:00",
+  "last_updated": "2021-04-09T15:27:36.521623+02:00",
   "centres_disponibles": [
     {
       "departement": "2A",
@@ -109,32 +109,6 @@
     },
     {
       "departement": "2A",
-      "nom": "CH Ajaccio (Centre de vaccination les Salines)",
-      "url": "https://partners.doctolib.fr/hopital-public/ajaccio/centre-de-vaccination-covid-des-salines?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "8.75096",
-        "latitude": "41.938"
-      },
-      "metadata": {
-        "address": " Avenue Marechal Juin, 20090 Ajaccio",
-        "phone_number": "+33495296700",
-        "business_hours": {
-          "lundi": "09:00-12:15/13:00-17:15",
-          "mardi": "09:00-12:15/13:00-17:15",
-          "mercredi": "09:00-12:15/13:00-17:15",
-          "jeudi": "09:00-12:15/13:00-17:15",
-          "vendredi": "09:00-12:15/13:00-17:15",
-          "samedi": "09:00-12:15/13:00-17:15",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "2A",
       "nom": "CH Sart\u00e8ne",
       "url": "https://partners.doctolib.fr/hopital-public/sartene/centre-hospitalier-de-sartene-sartene?pid=practice-163903&enable_cookies_consent=1",
       "location": {
@@ -152,6 +126,32 @@
           "vendredi": "A confirmer",
           "samedi": "A confirmer",
           "dimanche": "A confirmer"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "2A",
+      "nom": "CH Ajaccio (Centre de vaccination les Salines)",
+      "url": "https://partners.doctolib.fr/hopital-public/ajaccio/centre-de-vaccination-covid-des-salines?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "8.75096",
+        "latitude": "41.938"
+      },
+      "metadata": {
+        "address": " Avenue Marechal Juin, 20090 Ajaccio",
+        "phone_number": "+33495296700",
+        "business_hours": {
+          "lundi": "09:00-12:15/13:00-17:15",
+          "mardi": "09:00-12:15/13:00-17:15",
+          "mercredi": "09:00-12:15/13:00-17:15",
+          "jeudi": "09:00-12:15/13:00-17:15",
+          "vendredi": "09:00-12:15/13:00-17:15",
+          "samedi": "09:00-12:15/13:00-17:15",
+          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
@@ -251,7 +251,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     }

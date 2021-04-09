@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.789749+02:00",
+  "last_updated": "2021-04-09T15:27:36.494521+02:00",
   "centres_disponibles": [
     {
       "departement": "03",
@@ -49,33 +49,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-12T14:30:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "03",
-      "nom": "Communaut\u00e9 Professionnelle Territoriale de Sant\u00e9 Nord Allier",
-      "url": "https://partners.doctolib.fr/centre-de-sante/moulins/cpts-nord-allier-centre-de-vaccination?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "3.33256",
-        "latitude": "46.5622"
-      },
-      "metadata": {
-        "address": "1 PLACE MARECHAL DE LATTRE DE TASSIGNY, 03000 Moulins",
-        "phone_number": "+33470485000",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "12:00-14:00/16:00-20:00 ",
-          "mercredi": "12:00-14:00/16:00-20:00 ",
-          "jeudi": "12:00-14:00/16:00-20:00 ",
-          "vendredi": "ferm\u00e9",
-          "samedi": "09:00-13:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-20T19:24:00.000+02:00",
+      "prochain_rdv": "2021-04-12T13:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -155,6 +129,32 @@
       },
       "prochain_rdv": null,
       "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "03",
+      "nom": "Communaut\u00e9 Professionnelle Territoriale de Sant\u00e9 Nord Allier",
+      "url": "https://partners.doctolib.fr/centre-de-sante/moulins/cpts-nord-allier-centre-de-vaccination?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.33256",
+        "latitude": "46.5622"
+      },
+      "metadata": {
+        "address": "1 PLACE MARECHAL DE LATTRE DE TASSIGNY, 03000 Moulins",
+        "phone_number": "+33470485000",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "12:00-14:00/16:00-20:00 ",
+          "mercredi": "12:00-14:00/16:00-20:00 ",
+          "jeudi": "12:00-14:00/16:00-20:00 ",
+          "vendredi": "ferm\u00e9",
+          "samedi": "09:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.855155+02:00",
+  "last_updated": "2021-04-09T15:27:36.559318+02:00",
   "centres_disponibles": [
     {
       "departement": "63",
@@ -48,7 +48,7 @@
           "dimanche": "07:00-20:00"
         }
       },
-      "prochain_rdv": "2021-04-14T15:15:00.000+02:00",
+      "prochain_rdv": "2021-04-17T15:35:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -385,32 +385,6 @@
     },
     {
       "departement": "63",
-      "nom": "Centre de vaccination municipal de Clermont-Ferrand - Maison des Sports de Clermont-Ferrand",
-      "url": "https://partners.doctolib.fr/centre-de-sante/clermont-ferrand/centre-de-vaccination-municipal-clermont-ferrand?pid=practice-164799?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "3.08674",
-        "latitude": "45.7859"
-      },
-      "metadata": {
-        "address": " Place des Bughes, 63000 Clermont-Ferrand",
-        "phone_number": "+33473403333",
-        "business_hours": {
-          "lundi": "09:00-17:00",
-          "mardi": "09:00-17:00",
-          "mercredi": "09:00-17:00",
-          "jeudi": "09:00-17:00",
-          "vendredi": "09:00-17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "63",
       "nom": "Centre de vaccination des Combrailles - Maison de sant\u00e9 de Pontgibaud",
       "url": "https://partners.doctolib.fr/centre-de-sante/pontgibaud/centre-de-vaccination-covid-des-combrailles?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -426,6 +400,32 @@
           "mercredi": "08:30-12:30/14:00-17:00",
           "jeudi": "08:30-12:30/14:00-17:00",
           "vendredi": "08:30-12:30/14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "63",
+      "nom": "Centre de vaccination municipal de Clermont-Ferrand - Maison des Sports de Clermont-Ferrand",
+      "url": "https://partners.doctolib.fr/centre-de-sante/clermont-ferrand/centre-de-vaccination-municipal-clermont-ferrand?pid=practice-164799?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.08674",
+        "latitude": "45.7859"
+      },
+      "metadata": {
+        "address": " Place des Bughes, 63000 Clermont-Ferrand",
+        "phone_number": "+33473403333",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }

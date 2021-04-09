@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.850805+02:00",
+  "last_updated": "2021-04-09T15:27:36.555022+02:00",
   "centres_disponibles": [
     {
       "departement": "60",
@@ -81,6 +81,32 @@
     },
     {
       "departement": "60",
+      "nom": "Centre de vaccination -Communaut\u00e9 d'Agglom\u00e9ration du Beauvaisis, gymnase Andr\u00e9-Ambroise",
+      "url": "https://partners.doctolib.fr/centre-de-sante/beauvais/centre-de-vaccination-covid-departement-de-l-oise?pid=practice-176858&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.09327",
+        "latitude": "49.4283"
+      },
+      "metadata": {
+        "address": "31 Rue du Pr\u00e9 Martinet, 60000 Beauvais",
+        "phone_number": "+33375570025",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-12T15:15:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "60",
       "nom": "Chambly Pharma",
       "url": "https://app.ordoclic.fr/app/pharmacie/chambly-pharma-chambly",
       "location": {
@@ -120,32 +146,6 @@
       },
       "prochain_rdv": "2021-04-26T10:50:00.000000+0200",
       "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "60",
-      "nom": "Centre de vaccination - Mairie de Creil, centre culturel La Faiencerie \u2013 Salle de la manufacture",
-      "url": "https://partners.doctolib.fr/centre-de-sante/creil/centre-de-vaccination-covid-19-mairie-de-creil?pid=practice-175283&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.47317",
-        "latitude": "49.2597"
-      },
-      "metadata": {
-        "address": "1 Allee Nelson, 60100 Creil",
-        "phone_number": "+33800602009",
-        "business_hours": {
-          "lundi": "",
-          "mardi": "",
-          "mercredi": "",
-          "jeudi": "",
-          "vendredi": "",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-05-17T16:20:00.000+02:00",
-      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     }
@@ -308,31 +308,6 @@
     },
     {
       "departement": "60",
-      "nom": "Centre de vaccination - CPTS du pays de Bray",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-aubin-en-bray/communaute-de-soins-du-pays-de-bray-vaccination-covid?pid=practice-164539&enable_cookies_consent=1",
-      "location": {
-        "longitude": "1.88293",
-        "latitude": "49.4274"
-      },
-      "metadata": {
-        "address": "38 Rue des Clerets, 60650 Saint-Aubin-en-Bray",
-        "business_hours": {
-          "lundi": "",
-          "mardi": "",
-          "mercredi": "",
-          "jeudi": "",
-          "vendredi": "",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "60",
       "nom": "CP - Centre Hospitalier de Beauvais / Centre p\u00e9nitentiaire de Beauvais",
       "url": "",
       "location": {
@@ -383,14 +358,40 @@
     },
     {
       "departement": "60",
-      "nom": "Centre de vaccination - MSP Cr\u00e9vecoeur le Grand",
-      "url": "https://partners.doctolib.fr/centre-de-sante/crevecoeur-le-grand/centre-de-vaccination-covid-19-msp-crevecoeur-le-grand?pid=practice-176391&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - CPTS du pays de Bray",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-aubin-en-bray/communaute-de-soins-du-pays-de-bray-vaccination-covid?pid=practice-164539&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.07257",
-        "latitude": "49.6053"
+        "longitude": "1.88293",
+        "latitude": "49.4274"
       },
       "metadata": {
-        "address": "4 Rue du Stade, 60360 Cr\u00e8vec\u0153ur-le-Grand",
+        "address": "38 Rue des Clerets, 60650 Saint-Aubin-en-Bray",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "60",
+      "nom": "Centre de vaccination - Mairie de Creil, centre culturel La Faiencerie \u2013 Salle de la manufacture",
+      "url": "https://partners.doctolib.fr/centre-de-sante/creil/centre-de-vaccination-covid-19-mairie-de-creil?pid=practice-175283&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.47317",
+        "latitude": "49.2597"
+      },
+      "metadata": {
+        "address": "1 Allee Nelson, 60100 Creil",
+        "phone_number": "+33800602009",
         "business_hours": {
           "lundi": "",
           "mardi": "",
@@ -433,22 +434,22 @@
     },
     {
       "departement": "60",
-      "nom": "Centre de vaccination - communaut\u00e9 de commune du Liancourtois, Salle Guy Lejeune",
-      "url": "https://partners.doctolib.fr/centre-de-sante/liancourt/centre-de-vaccination-covid-liancourt-liancourt?pid=practice-179037&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - MSP Cr\u00e9vecoeur le Grand",
+      "url": "https://partners.doctolib.fr/centre-de-sante/crevecoeur-le-grand/centre-de-vaccination-covid-19-msp-crevecoeur-le-grand?pid=practice-176391&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.4598",
-        "latitude": "49.3292"
+        "longitude": "2.07257",
+        "latitude": "49.6053"
       },
       "metadata": {
-        "address": "176 Avenue Louis Aragon, 60140 Liancourt",
+        "address": "4 Rue du Stade, 60360 Cr\u00e8vec\u0153ur-le-Grand",
         "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "",
-          "dimanche": ""
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
@@ -458,15 +459,14 @@
     },
     {
       "departement": "60",
-      "nom": "Centre de vaccination -Communaut\u00e9 d'Agglom\u00e9ration du Beauvaisis, gymnase Andr\u00e9-Ambroise",
-      "url": "https://partners.doctolib.fr/centre-de-sante/beauvais/centre-de-vaccination-covid-departement-de-l-oise?pid=practice-176858&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - communaut\u00e9 de commune du Liancourtois, Salle Guy Lejeune",
+      "url": "https://partners.doctolib.fr/centre-de-sante/liancourt/centre-de-vaccination-covid-liancourt-liancourt?pid=practice-179037&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.09327",
-        "latitude": "49.4283"
+        "longitude": "2.4598",
+        "latitude": "49.3292"
       },
       "metadata": {
-        "address": "31 Rue du Pr\u00e9 Martinet, 60000 Beauvais",
-        "phone_number": "+33375570025",
+        "address": "176 Avenue Louis Aragon, 60140 Liancourt",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -640,32 +640,6 @@
     },
     {
       "departement": "60",
-      "nom": "Centre de vaccination - Ville de  Nogent-sur-Oise",
-      "url": "https://partners.doctolib.fr/centre-de-sante/nogent-sur-oise/centre-de-vaccination-covid-centre-municipal-de-sante-de-nogent-sur-oise?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.46831",
-        "latitude": "49.2746"
-      },
-      "metadata": {
-        "address": "95 Rue du G\u00e9n\u00e9ral de Gaulle, 60180 Nogent-sur-Oise",
-        "phone_number": "+33375190103",
-        "business_hours": {
-          "lundi": "09:00-12:00/14:00-17:30",
-          "mardi": "09:00-12:00/14:00-17:30",
-          "mercredi": "09:00-12:00/14:00-17:30",
-          "jeudi": "09:00-12:00/14:00-17:30",
-          "vendredi": "09:00-12:00/14:00-17:30",
-          "samedi": "09:00-12:00/14:00-17:30",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "60",
       "nom": "Centre de vaccination - Ville de CREPY",
       "url": "https://partners.doctolib.fr/centre-depistage-covid/crepy-en-valois/centre-de-vaccination-covid-ville-de-crepy-en-valois?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -682,6 +656,32 @@
           "jeudi": "09:00-12:25/14:17:45",
           "vendredi": "09:00-12:25/14:17:45",
           "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "60",
+      "nom": "Centre de vaccination - Ville de  Nogent-sur-Oise",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nogent-sur-oise/centre-de-vaccination-covid-centre-municipal-de-sante-de-nogent-sur-oise?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.46831",
+        "latitude": "49.2746"
+      },
+      "metadata": {
+        "address": "95 Rue du G\u00e9n\u00e9ral de Gaulle, 60180 Nogent-sur-Oise",
+        "phone_number": "+33375190103",
+        "business_hours": {
+          "lundi": "09:00-12:00/14:00-17:30",
+          "mardi": "09:00-12:00/14:00-17:30",
+          "mercredi": "09:00-12:00/14:00-17:30",
+          "jeudi": "09:00-12:00/14:00-17:30",
+          "vendredi": "09:00-12:00/14:00-17:30",
+          "samedi": "09:00-12:00/14:00-17:30",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -756,7 +756,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },

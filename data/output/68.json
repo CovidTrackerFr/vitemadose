@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.859732+02:00",
+  "last_updated": "2021-04-09T15:27:36.564249+02:00",
   "centres_disponibles": [
     {
       "departement": "68",
@@ -49,7 +49,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-14T09:12:00.000+02:00",
+      "prochain_rdv": "2021-04-14T08:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -127,7 +127,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-20T11:30:00.000+02:00",
+      "prochain_rdv": "2021-04-20T17:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -153,7 +153,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-20T18:20:00.000+02:00",
+      "prochain_rdv": "2021-04-23T11:50:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -231,7 +231,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-05-11T10:15:00.000+02:00",
+      "prochain_rdv": "2021-05-11T10:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -444,32 +444,6 @@
     },
     {
       "departement": "68",
-      "nom": "Centre de vaccination de Wittenheim - Complexe L\u00e9o Lagrange",
-      "url": "https://partners.doctolib.fr/centre-de-sante/wittenheim/centre-de-vaccination-covid-19-ville-de-wittenheim?pid=practice-176378&enable_cookies_consent=1",
-      "location": {
-        "longitude": "7.32741",
-        "latitude": "47.8112"
-      },
-      "metadata": {
-        "address": "4 Rue du Vercors, 68270 Wittenheim",
-        "phone_number": "+33970818161",
-        "business_hours": {
-          "lundi": "9:00-11:30 / 13:30-16:00",
-          "mardi": "9:00-11:30 / 13:30-16:00",
-          "mercredi": "9:00-11:30 / 13:30-16:00",
-          "jeudi": "9:00-11:30 / 13:30-16:00",
-          "vendredi": "9:00-11:30 / 13:30-16:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "68",
       "nom": "Centre de vaccination mobile - Mulhouse Alsace Agglom\u00e9ration (M2A)",
       "url": "https://partners.doctolib.fr/centre-de-sante/mulhouse/centre-de-vaccination-vacci-bus-m2a?pid=practice-175755&enable_cookies_consent=1",
       "location": {
@@ -486,6 +460,32 @@
           "jeudi": "8:00-18:00",
           "vendredi": "8:00-18:00",
           "samedi": "8:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "68",
+      "nom": "Centre de vaccination de Wittenheim - Complexe L\u00e9o Lagrange",
+      "url": "https://partners.doctolib.fr/centre-de-sante/wittenheim/centre-de-vaccination-covid-19-ville-de-wittenheim?pid=practice-176378&enable_cookies_consent=1",
+      "location": {
+        "longitude": "7.32741",
+        "latitude": "47.8112"
+      },
+      "metadata": {
+        "address": "4 Rue du Vercors, 68270 Wittenheim",
+        "phone_number": "+33970818161",
+        "business_hours": {
+          "lundi": "9:00-11:30 / 13:30-16:00",
+          "mardi": "9:00-11:30 / 13:30-16:00",
+          "mercredi": "9:00-11:30 / 13:30-16:00",
+          "jeudi": "9:00-11:30 / 13:30-16:00",
+          "vendredi": "9:00-11:30 / 13:30-16:00",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },

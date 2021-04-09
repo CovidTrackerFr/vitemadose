@@ -1,33 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.808706+02:00",
+  "last_updated": "2021-04-09T15:27:36.513879+02:00",
   "centres_disponibles": [
-    {
-      "departement": "22",
-      "nom": "LANNION - Salle des ursulines",
-      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/lannion-22300/centre-de-vaccination-de-lannion/centre-de-vaccination-de-lannion-salle-des-ursulines",
-      "location": {
-        "longitude": "-3.45495",
-        "latitude": "48.7312"
-      },
-      "metadata": {
-        "address": " Place des Patriotes, 22300 Lannion",
-        "phone_number": "+33257180060",
-        "business_hours": {
-          "lundi": "9h00-13h00 / 13h30-17h30 ",
-          "mardi": "9h00-13h00 / 13h30-17h30 ",
-          "mercredi": "9h00-13h00 / 13h30-17h30 ",
-          "jeudi": "9h00-13h00 / 13h30-17h30 ",
-          "vendredi": "9h00-13h00 / 13h30-17h30 ",
-          "samedi": "9h00-13h00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-14T11:05:00.000000+0200",
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "22",
       "nom": "ST BRIEUC - Salle Robien",
@@ -83,32 +57,6 @@
     },
     {
       "departement": "22",
-      "nom": "ROSTRENEN - Salle des f\u00eates",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/rostrenen-22110/salle-des-fetes-rostrenen/centre-de-vaccination-de-la-salle-des-fetes-rostrenen",
-      "location": {
-        "longitude": "-3.31588",
-        "latitude": "48.2352"
-      },
-      "metadata": {
-        "address": " Place du Bourk Kozh, 22110 Rostrenen",
-        "phone_number": "+33257180060",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "13h30-17h30",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "13h30-17h30",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "22",
       "nom": "DINAN - Centre des congr\u00e8s",
       "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-malo-et-dinan/gh-rance-emeraude-vaccination-covid?pid=practice-164881&enable_cookies_consent=1",
       "location": {
@@ -130,6 +78,32 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "ROSTRENEN - Salle des f\u00eates",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/rostrenen-22110/salle-des-fetes-rostrenen/centre-de-vaccination-de-la-salle-des-fetes-rostrenen",
+      "location": {
+        "longitude": "-3.31588",
+        "latitude": "48.2352"
+      },
+      "metadata": {
+        "address": " Place du Bourk Kozh, 22110 Rostrenen",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "13h30-17h30",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "13h30-17h30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -236,6 +210,32 @@
     },
     {
       "departement": "22",
+      "nom": "LANNION - Salle des ursulines",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/lannion-22300/centre-de-vaccination-de-lannion/centre-de-vaccination-de-lannion-salle-des-ursulines",
+      "location": {
+        "longitude": "-3.45495",
+        "latitude": "48.7312"
+      },
+      "metadata": {
+        "address": " Place des Patriotes, 22300 Lannion",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "9h00-13h00 / 13h30-17h30 ",
+          "mardi": "9h00-13h00 / 13h30-17h30 ",
+          "mercredi": "9h00-13h00 / 13h30-17h30 ",
+          "jeudi": "9h00-13h00 / 13h30-17h30 ",
+          "vendredi": "9h00-13h00 / 13h30-17h30 ",
+          "samedi": "9h00-13h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
       "nom": "CH PAIMPOL (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
       "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/paimpol-22500/equipe-d-infectiologie-2?cabinet=16557",
       "location": {
@@ -261,27 +261,27 @@
     },
     {
       "departement": "22",
-      "nom": "GUINGAMP - Centre de sant\u00e9 (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
-      "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/pabu-22200/equipe-d-infectiologie-3?agenda=51168&motive=81341&category=-1&cabinet=16558",
+      "nom": "LANVOLLON - Salle Armor Argoat",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/lanvollon-22290/ville-de-lanvollon/centre-de-vaccination-de-la-ville-de-lanvollon",
       "location": {
-        "longitude": "-3.14408",
-        "latitude": "48.5681"
+        "longitude": "-2.99161",
+        "latitude": "48.6371"
       },
       "metadata": {
-        "address": "17 Rue de l'Armor, 22200 Pabu",
+        "address": " Rue du Tregor, 22290 Lanvollon",
         "phone_number": "+33257180060",
         "business_hours": {
-          "lundi": "9h30-16h30",
-          "mardi": "9h30-16h30",
-          "mercredi": "9h30-16h30",
-          "jeudi": "9h30-16h30",
-          "vendredi": "9h30-16h30",
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "9h-13h / 13h30-17h30",
+          "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -313,6 +313,32 @@
     },
     {
       "departement": "22",
+      "nom": "GUINGAMP - Centre de sant\u00e9 (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
+      "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/pabu-22200/equipe-d-infectiologie-3?agenda=51168&motive=81341&category=-1&cabinet=16558",
+      "location": {
+        "longitude": "-3.14408",
+        "latitude": "48.5681"
+      },
+      "metadata": {
+        "address": "17 Rue de l'Armor, 22200 Pabu",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "9h30-16h30",
+          "mardi": "9h30-16h30",
+          "mercredi": "9h30-16h30",
+          "jeudi": "9h30-16h30",
+          "vendredi": "9h30-16h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
       "nom": "GUINGAMP - Centre social",
       "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/guingamp-22200/guingamp/centre-de-vaccination-guingamp-centre-social-guingamp",
       "location": {
@@ -329,32 +355,6 @@
           "jeudi": "9h00-13h00 / 13h30-17h30",
           "vendredi": "9h00-13h00 / 13h30-17h30",
           "samedi": "9h00-13h00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "22",
-      "nom": "LANVOLLON - Salle Armor Argoat",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/lanvollon-22290/ville-de-lanvollon/centre-de-vaccination-de-la-ville-de-lanvollon",
-      "location": {
-        "longitude": "-2.99161",
-        "latitude": "48.6371"
-      },
-      "metadata": {
-        "address": " Rue du Tregor, 22290 Lanvollon",
-        "phone_number": "+33257180060",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "9h-13h / 13h30-17h30",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -428,7 +428,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.788406+02:00",
+  "last_updated": "2021-04-09T15:27:36.491989+02:00",
   "centres_disponibles": [
     {
       "departement": "02",
@@ -440,32 +440,6 @@
     },
     {
       "departement": "02",
-      "nom": "Centre de vaccination - MSP de Bohain en Vermandois",
-      "url": "https://partners.doctolib.fr/centre-de-sante/bohain-en-vermandois/centre-de-vaccination-msp-maison-medicale-du-vermandois?pid=practice-165174&enable_cookies_consent=1",
-      "location": {
-        "longitude": "3.45429",
-        "latitude": "49.9858"
-      },
-      "metadata": {
-        "address": "18 Rue Elysee Alavoine, 02110 Bohain-en-Vermandois",
-        "phone_number": "+33323655999",
-        "business_hours": {
-          "lundi": "13:30-17:30",
-          "mardi": "13:30-17:30",
-          "mercredi": "13:30-17:30",
-          "jeudi": "13:30-17:30",
-          "vendredi": "13:30-17:30",
-          "samedi": "13:30-17:30",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "02",
       "nom": "Centre de vaccination- CH Ch\u00e2teau-Thierry",
       "url": "https://partners.doctolib.fr/hopital-public/chateau-thierry/centre-de-vaccination-covid-ch-chateau-thierry-reserve-aux-professionnels-de-sante?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -483,6 +457,32 @@
           "vendredi": "09:00-12:00/13:30-16:30",
           "samedi": "09:00-14:00",
           "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "02",
+      "nom": "Centre de vaccination - MSP de Bohain en Vermandois",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bohain-en-vermandois/centre-de-vaccination-msp-maison-medicale-du-vermandois?pid=practice-165174&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.45429",
+        "latitude": "49.9858"
+      },
+      "metadata": {
+        "address": "18 Rue Elysee Alavoine, 02110 Bohain-en-Vermandois",
+        "phone_number": "+33323655999",
+        "business_hours": {
+          "lundi": "13:30-17:30",
+          "mardi": "13:30-17:30",
+          "mercredi": "13:30-17:30",
+          "jeudi": "13:30-17:30",
+          "vendredi": "13:30-17:30",
+          "samedi": "13:30-17:30",
+          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
@@ -660,7 +660,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -677,7 +677,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },

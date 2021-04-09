@@ -1,7 +1,33 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.878838+02:00",
+  "last_updated": "2021-04-09T15:27:36.583502+02:00",
   "centres_disponibles": [
+    {
+      "departement": "82",
+      "nom": "CH N\u00e8grepelisse",
+      "url": "https://partners.doctolib.fr/hopital-public/negrepelisse/centre-de-vaccination-covid-ch-negrepelisse?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.52185",
+        "latitude": "44.0743"
+      },
+      "metadata": {
+        "address": "31 Rue de Turenne, 82800 N\u00e8grepelisse",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9:00-13:00-14:00-18:00",
+          "mardi": "9:00-13:00-14:00-18:00",
+          "mercredi": "9:00-13:00-14:00-18:00",
+          "jeudi": "9:00-13:00-14:00-18:00",
+          "vendredi": "9:00-13:00-14:00-18:00",
+          "samedi": "9:00-13:00",
+          "dimanche": "Non pr\u00e9cis\u00e9 \u00e0 ce jour"
+        }
+      },
+      "prochain_rdv": "2021-04-10T17:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
     {
       "departement": "82",
       "nom": "Centre \u00e9ph\u00e9m\u00e8re SDIS 82",
@@ -23,7 +49,7 @@
           "dimanche": "8h-12h et 14h-18h"
         }
       },
-      "prochain_rdv": "2021-04-11T11:54:00.000+02:00",
+      "prochain_rdv": "2021-04-11T11:12:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -82,32 +108,6 @@
     },
     {
       "departement": "82",
-      "nom": "CH N\u00e8grepelisse",
-      "url": "https://partners.doctolib.fr/hopital-public/negrepelisse/centre-de-vaccination-covid-ch-negrepelisse?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "1.52185",
-        "latitude": "44.0743"
-      },
-      "metadata": {
-        "address": "31 Rue de Turenne, 82800 N\u00e8grepelisse",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "9:00-13:00-14:00-18:00",
-          "mardi": "9:00-13:00-14:00-18:00",
-          "mercredi": "9:00-13:00-14:00-18:00",
-          "jeudi": "9:00-13:00-14:00-18:00",
-          "vendredi": "9:00-13:00-14:00-18:00",
-          "samedi": "9:00-13:00",
-          "dimanche": "Non pr\u00e9cis\u00e9 \u00e0 ce jour"
-        }
-      },
-      "prochain_rdv": "2021-04-14T16:50:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "82",
       "nom": "centre de vaccination Valence d'Agen",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/valence-d'agen/centre-de-vaccination-valence-d-agen?pid=practice-165331?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -125,32 +125,6 @@
           "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-27T16:40:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "82",
-      "nom": "Centre de vaccination - Valence d'Agen",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/valence-d-agen/centre-de-vaccination-valence-d-agen?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": 0.8950384,
-        "latitude": 44.1081336
-      },
-      "metadata": {
-        "address": "Avenue Jean Baylet, 82400 Valence d'Agen",
-        "phone_number": "0 809 54 19 19",
-        "business_hours": {
-          "lundi": "09:00-13:00, 14:00-18:00",
-          "mardi": "09:00-13:00, 14:00-18:00",
-          "mercredi": "09:00-13:00, 14:00-18:00",
-          "jeudi": "09:00-13:00, 14:00-18:00",
-          "vendredi": "09:00-13:00, 14:00-18:00",
-          "samedi": "09:00-13:00, 14:00-18:00",
-          "dimanche": null
         }
       },
       "prochain_rdv": "2021-04-27T16:40:00.000+02:00",
@@ -277,8 +251,34 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "82",
+      "nom": "Centre de vaccination - Valence d'Agen",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/valence-d-agen/centre-de-vaccination-valence-d-agen?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 0.8950384,
+        "latitude": 44.1081336
+      },
+      "metadata": {
+        "address": "Avenue Jean Baylet, 82400 Valence d'Agen",
+        "phone_number": "0 809 54 19 19",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-18:00",
+          "mardi": "09:00-13:00, 14:00-18:00",
+          "mercredi": "09:00-13:00, 14:00-18:00",
+          "jeudi": "09:00-13:00, 14:00-18:00",
+          "vendredi": "09:00-13:00, 14:00-18:00",
+          "samedi": "09:00-13:00, 14:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
       "appointment_count": 0
     }
   ]

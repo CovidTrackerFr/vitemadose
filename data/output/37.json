@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.826806+02:00",
+  "last_updated": "2021-04-09T15:27:36.532002+02:00",
   "centres_disponibles": [
     {
       "departement": "37",
@@ -23,32 +23,6 @@
         }
       },
       "prochain_rdv": "2021-04-11T17:50:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "37",
-      "nom": "Centre de vaccination Les Halles de Tours",
-      "url": "https://partners.doctolib.fr/centre-de-sante/tours/centre-vaccination-covid-tours-metrople?pid=practice-164864&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.680888",
-        "latitude": "47.3914"
-      },
-      "metadata": {
-        "address": "1 Place Gaston Paillhou - 1er \u00e9tage, 37000 Tours",
-        "phone_number": "+33805021400",
-        "business_hours": {
-          "lundi": "9h-18h",
-          "mardi": "9h-18h",
-          "mercredi": "9h-18h",
-          "jeudi": "9h-18h",
-          "vendredi": "9h-18h",
-          "samedi": "9h-12h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-16T17:40:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -109,32 +83,6 @@
     },
     {
       "departement": "37",
-      "nom": "Salle Polyvalente - Amboise",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/amboise/vaccination-mairie-amboise?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.979625",
-        "latitude": "47.4112"
-      },
-      "metadata": {
-        "address": " Avenue des Martyrs de la R\u00e9sistance, 37400 Amboise",
-        "phone_number": "+33805021400",
-        "business_hours": {
-          "lundi": "9h-18h sauf matin du 18",
-          "mardi": "9h-18h",
-          "mercredi": "9h-18h",
-          "jeudi": "9h-18h",
-          "vendredi": "9h-18h",
-          "samedi": "9h-12h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "37",
       "nom": "Centre de vaccination - Gymnase Onze Arpents de Saint-Avertin",
       "url": "https://partners.doctolib.fr/centre-de-sante/saint-avertin/centre-de-vaccination-covid-19-saint-avertin?pid=practice-179340&enable_cookies_consent=1",
       "location": {
@@ -151,6 +99,32 @@
           "jeudi": "ouvert",
           "vendredi": "ouvert",
           "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "37",
+      "nom": "Salle Polyvalente - Amboise",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/amboise/vaccination-mairie-amboise?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.979625",
+        "latitude": "47.4112"
+      },
+      "metadata": {
+        "address": " Avenue des Martyrs de la R\u00e9sistance, 37400 Amboise",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "9h-18h sauf matin du 18",
+          "mardi": "9h-18h",
+          "mercredi": "9h-18h",
+          "jeudi": "9h-18h",
+          "vendredi": "9h-18h",
+          "samedi": "9h-12h",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -356,6 +330,32 @@
           "jeudi": "9h-17h",
           "vendredi": "9h-17h",
           "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "37",
+      "nom": "Centre de vaccination Les Halles de Tours",
+      "url": "https://partners.doctolib.fr/centre-de-sante/tours/centre-vaccination-covid-tours-metrople?pid=practice-164864&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.680888",
+        "latitude": "47.3914"
+      },
+      "metadata": {
+        "address": "1 Place Gaston Paillhou - 1er \u00e9tage, 37000 Tours",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "9h-18h",
+          "mardi": "9h-18h",
+          "mercredi": "9h-18h",
+          "jeudi": "9h-18h",
+          "vendredi": "9h-18h",
+          "samedi": "9h-12h",
           "dimanche": "ferm\u00e9"
         }
       },

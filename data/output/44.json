@@ -1,7 +1,58 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.833574+02:00",
+  "last_updated": "2021-04-09T15:27:36.537989+02:00",
   "centres_disponibles": [
+    {
+      "departement": "44",
+      "nom": "Grand centre NANTES (en cours de d\u00e9claration)",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nantes/centre-de-vaccination-covid-19-centre-d-exposition-de-la-beaujoire?pid=practice-164268&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.53135",
+        "latitude": "47.258"
+      },
+      "metadata": {
+        "address": " Avenue de Normandie, 44300 Nantes",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-11T15:00:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de Vaccination COVID - NANTES Nord - Salle Erdre",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nantes/centre-de-vaccination-metroplitain-salle-festive-nantes-erdre?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.53101",
+        "latitude": "47.2541"
+      },
+      "metadata": {
+        "address": "251 Route de Saint Joseph, 44300 Nantes",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-11T17:36:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
     {
       "departement": "44",
       "nom": "Grande pharmacie de Paris",
@@ -22,7 +73,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-12T16:24:00.000+02:00",
+      "prochain_rdv": "2021-04-12T15:18:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "drugstore",
       "appointment_count": 0
@@ -47,33 +98,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-13T11:45:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "44",
-      "nom": "Centre de vaccination - SAVENAY - Couvent des Cordeliers",
-      "url": "https://partners.doctolib.fr/centre-de-sante/savenay/centre-de-vaccination-covid-19-savenay?pid=practice-179749&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-1.94493",
-        "latitude": "47.3594"
-      },
-      "metadata": {
-        "address": " Place Fran\u00e7ois Ledoux, 44260 Savenay",
-        "phone_number": "+33806000344",
-        "business_hours": {
-          "lundi": "10h30-12h / 14h-17h",
-          "mardi": "10h30-12h / 14h-17h",
-          "mercredi": "10h30-12h / 14h-17h",
-          "jeudi": "10h30-12h / 14h-17h",
-          "vendredi": "10h30-12h / 14h-17h",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-13T13:21:00.000+02:00",
+      "prochain_rdv": "2021-04-13T12:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -175,38 +200,11 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-19T12:40:00.000+02:00",
+      "prochain_rdv": "2021-04-19T14:50:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
-    {
-      "departement": "44",
-      "nom": "Grand centre NANTES (en cours de d\u00e9claration)",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nantes/centre-de-vaccination-covid-19-centre-d-exposition-de-la-beaujoire?pid=practice-164268&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-1.53135",
-        "latitude": "47.258"
-      },
-      "metadata": {
-        "address": " Avenue de Normandie, 44300 Nantes",
-        "business_hours": {
-          "lundi": "9h-17h",
-          "mardi": "9h-17h",
-          "mercredi": "9h-17h",
-          "jeudi": "9h-17h",
-          "vendredi": "9h-17h",
-          "samedi": "9h-17h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-29T14:40:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    }
-  ],
-  "centres_indisponibles": [
     {
       "departement": "44",
       "nom": "Centre de vaccination - SAINT PHILBERT de GRAND LIEU - Salle des Marais",
@@ -228,11 +226,13 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": null,
+      "prochain_rdv": "2021-04-28T16:40:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
-    },
+    }
+  ],
+  "centres_indisponibles": [
     {
       "departement": "44",
       "nom": "Centre de Vaccination - LA BAULE - Espace Jean Gaillardon",
@@ -312,6 +312,32 @@
     },
     {
       "departement": "44",
+      "nom": "Centre de vaccination - SAVENAY - Couvent des Cordeliers",
+      "url": "https://partners.doctolib.fr/centre-de-sante/savenay/centre-de-vaccination-covid-19-savenay?pid=practice-179749&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.94493",
+        "latitude": "47.3594"
+      },
+      "metadata": {
+        "address": " Place Fran\u00e7ois Ledoux, 44260 Savenay",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "10h30-12h / 14h-17h",
+          "mardi": "10h30-12h / 14h-17h",
+          "mercredi": "10h30-12h / 14h-17h",
+          "jeudi": "10h30-12h / 14h-17h",
+          "vendredi": "10h30-12h / 14h-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
       "nom": "Centre de vaccination - SAINT NAZAIRE - Base sous-marins",
       "url": "https://www.doctolib.fr/centre-de-sante/saint-nazaire/centre-de-vaccination-covid-19-ville-de-st-nazaire",
       "location": {
@@ -338,32 +364,6 @@
     },
     {
       "departement": "44",
-      "nom": "Centre de vaccination - St HERBLAIN - Complexe du Vigneau",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-herblain/centre-de-vaccination-de-saint-herblain-complexe-sportif-du-vigneau?pid=practice-177796&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-1.62093",
-        "latitude": "47.2191"
-      },
-      "metadata": {
-        "address": " Boulevard Salvador Allende, 44800 Saint-Herblain",
-        "phone_number": "+33806000344",
-        "business_hours": {
-          "lundi": "10h30-12h / 14h-17h",
-          "mardi": "9h-12h / 14h-17h",
-          "mercredi": "9h-18h",
-          "jeudi": "9h-18h",
-          "vendredi": "9h-18h",
-          "samedi": "9h-18h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "44",
       "nom": "Centre de vaccination - REZE - MSP Loire et S\u00e8vre",
       "url": "https://partners.doctolib.fr/centre-de-sante/reze/centre-de-vaccination-covid-19-msp-pole-sante-loire-et-sevre?pid=practice-177634&enable_cookies_consent=1",
       "location": {
@@ -380,6 +380,32 @@
           "jeudi": "9h-12h / 13h-16h",
           "vendredi": "9h-12h / 13h-16h",
           "samedi": "13h-18h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de vaccination - St HERBLAIN - Complexe du Vigneau",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-herblain/centre-de-vaccination-de-saint-herblain-complexe-sportif-du-vigneau?pid=practice-177796&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.62093",
+        "latitude": "47.2191"
+      },
+      "metadata": {
+        "address": " Boulevard Salvador Allende, 44800 Saint-Herblain",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "10h30-12h / 14h-17h",
+          "mardi": "9h-12h / 14h-17h",
+          "mercredi": "9h-18h",
+          "jeudi": "9h-18h",
+          "vendredi": "9h-18h",
+          "samedi": "9h-18h",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -572,32 +598,6 @@
     },
     {
       "departement": "44",
-      "nom": "Centre de Vaccination COVID - NANTES Nord - Salle Erdre",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nantes/centre-de-vaccination-metroplitain-salle-festive-nantes-erdre?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-1.53101",
-        "latitude": "47.2541"
-      },
-      "metadata": {
-        "address": "251 Route de Saint Joseph, 44300 Nantes",
-        "phone_number": "+33806000344",
-        "business_hours": {
-          "lundi": "9h-17h",
-          "mardi": "9h-17h",
-          "mercredi": "9h-17h",
-          "jeudi": "9h-17h",
-          "vendredi": "9h-17h",
-          "samedi": "9h-17h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "44",
       "nom": "CP - US Centre de d\u00e9tention et SMPR niv.1 Centre de D\u00e9tention / Etablissement Sp\u00e9cialis\u00e9 pour mineurs d'Orvault",
       "url": "",
       "location": {
@@ -635,7 +635,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },

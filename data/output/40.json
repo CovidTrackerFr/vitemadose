@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.829668+02:00",
+  "last_updated": "2021-04-09T15:27:36.534568+02:00",
   "centres_disponibles": [
     {
       "departement": "40",
@@ -482,24 +482,6 @@
     },
     {
       "departement": "40",
-      "nom": "Pharmacie Du Marensin",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-marensin-castets",
-      "location": {
-        "longitude": -1.148117,
-        "latitude": 43.8812422
-      },
-      "metadata": {
-        "address": "149 rue Saint Helene, 40260 Castets",
-        "phone_number": "+33558894043",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "40",
       "nom": "Pharmacie Bougniot",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-bougniot-labouheyre",
       "location": {
@@ -512,7 +494,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -539,6 +521,24 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Pharmacie Du Marensin",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-marensin-castets",
+      "location": {
+        "longitude": -1.148117,
+        "latitude": 43.8812422
+      },
+      "metadata": {
+        "address": "149 rue Saint Helene, 40260 Castets",
+        "phone_number": "+33558894043",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },

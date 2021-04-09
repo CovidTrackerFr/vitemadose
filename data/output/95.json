@@ -1,7 +1,33 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.894267+02:00",
+  "last_updated": "2021-04-09T15:27:36.598572+02:00",
   "centres_disponibles": [
+    {
+      "departement": "95",
+      "nom": "Centre de vaccination territorial du Haut Val d'Oise",
+      "url": "https://partners.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/l'isle-adam/centre-de-vaccination-covid19-de-l-isle-adam-hopital-chantepie-mancier?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.22138",
+        "latitude": "49.1138"
+      },
+      "metadata": {
+        "address": "9 Rue Chantepie Mancier, 95290 L'Isle-Adam",
+        "phone_number": "+33659103906",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "14h-18h",
+          "vendredi": "14h-18h",
+          "samedi": "10h-18h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-12T11:45:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
     {
       "departement": "95",
       "nom": "Centre de vaccination Franconville",
@@ -23,27 +49,9 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-15T11:20:00.000+02:00",
+      "prochain_rdv": "2021-04-14T09:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "95",
-      "nom": "Pharmacie De La Mairie",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-andilly",
-      "location": {
-        "longitude": 2.2988758,
-        "latitude": 49.0048594
-      },
-      "metadata": {
-        "address": "9 place louis jean finot, 95580 andilly",
-        "phone_number": "+33139592168",
-        "business_hours": null
-      },
-      "prochain_rdv": "2021-05-08T11:30:00+00:00",
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
       "appointment_count": 0
     }
   ],
@@ -231,14 +239,14 @@
     },
     {
       "departement": "95",
-      "nom": "Centre d\u00e9partemental de d\u00e9pistage et de soins - site d'Argenteuil",
+      "nom": "EMV Domicile COORDINOV",
       "url": "",
       "location": {
-        "longitude": "2.22773",
-        "latitude": "48.9523"
+        "longitude": "2.0713",
+        "latitude": "49.0508"
       },
       "metadata": {
-        "address": "11 rue Jean Lurcat, 95100 Argenteuil",
+        "address": "12 Chauss\u00e9e Jules C\u00e9sar, 95520 Osny",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -256,14 +264,14 @@
     },
     {
       "departement": "95",
-      "nom": "EMV Domicile COORDINOV",
+      "nom": "Centre d\u00e9partemental de d\u00e9pistage et de soins - site d'Argenteuil",
       "url": "",
       "location": {
-        "longitude": "2.0713",
-        "latitude": "49.0508"
+        "longitude": "2.22773",
+        "latitude": "48.9523"
       },
       "metadata": {
-        "address": "12 Chauss\u00e9e Jules C\u00e9sar, 95520 Osny",
+        "address": "11 rue Jean Lurcat, 95100 Argenteuil",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -401,32 +409,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "95",
-      "nom": "Centre de vaccination territorial du Haut Val d'Oise",
-      "url": "https://partners.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/l'isle-adam/centre-de-vaccination-covid19-de-l-isle-adam-hopital-chantepie-mancier?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.22138",
-        "latitude": "49.1138"
-      },
-      "metadata": {
-        "address": "9 Rue Chantepie Mancier, 95290 L'Isle-Adam",
-        "phone_number": "+33659103906",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "14h-18h",
-          "vendredi": "14h-18h",
-          "samedi": "10h-18h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -634,32 +616,6 @@
     },
     {
       "departement": "95",
-      "nom": "Centre de vaccination territorial Centre Val d'Oise",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/enghien-les-bains-95880/vaccination-plaine-vallee-enghien-les-bains?category=-1&cabinet=16606&specialty=496",
-      "location": {
-        "longitude": "2.30465",
-        "latitude": "48.9684"
-      },
-      "metadata": {
-        "address": "85 Rue du G\u00e9n\u00e9ral de Gaulle, 95880 Enghien-les-Bains",
-        "phone_number": "0130103980",
-        "business_hours": {
-          "lundi": "9h-12h",
-          "mardi": "9h-12h",
-          "mercredi": "9h-12h",
-          "jeudi": "9h-12h",
-          "vendredi": "ferm\u00e9",
-          "samedi": "9h-12h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "95",
       "nom": "Centre de vaccination municipal d'Argenteuil",
       "url": "https://partners.doctolib.fr/centre-de-sante/argenteuil/centre-de-vaccination-covid-ville-d-argenteuil?pid=practice-177958&enable_cookies_consent=1",
       "location": {
@@ -681,6 +637,32 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "95",
+      "nom": "Centre de vaccination territorial Centre Val d'Oise",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/enghien-les-bains-95880/vaccination-plaine-vallee-enghien-les-bains?category=-1&cabinet=16606&specialty=496",
+      "location": {
+        "longitude": "2.30465",
+        "latitude": "48.9684"
+      },
+      "metadata": {
+        "address": "85 Rue du G\u00e9n\u00e9ral de Gaulle, 95880 Enghien-les-Bains",
+        "phone_number": "0130103980",
+        "business_hours": {
+          "lundi": "9h-12h",
+          "mardi": "9h-12h",
+          "mercredi": "9h-12h",
+          "jeudi": "9h-12h",
+          "vendredi": "ferm\u00e9",
+          "samedi": "9h-12h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -1095,6 +1077,24 @@
     },
     {
       "departement": "95",
+      "nom": "Pharmacie De La Mairie",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-andilly",
+      "location": {
+        "longitude": 2.2988758,
+        "latitude": 49.0048594
+      },
+      "metadata": {
+        "address": "9 place louis jean finot, 95580 andilly",
+        "phone_number": "+33139592168",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "95",
       "nom": "Olivier Sanchez",
       "url": "https://app.ordoclic.fr/app/pharmacie/olivier-sanchez-la-frette-sur-seine",
       "location": {
@@ -1107,7 +1107,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },

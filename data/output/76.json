@@ -1,7 +1,33 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.870754+02:00",
+  "last_updated": "2021-04-09T15:27:36.575637+02:00",
   "centres_disponibles": [
+    {
+      "departement": "76",
+      "nom": "centre de vaccination Yvetot, clinique Hemera",
+      "url": "https://partners.doctolib.fr/centre-de-sante/yvetot/centre-de-vaccination-covid-19-pole-de-sante-d-yvetot?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.744011",
+        "latitude": "49.6182"
+      },
+      "metadata": {
+        "address": "14A Avenue du Marechal Foch, 76190 Yvetot",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-14T17:25:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
     {
       "departement": "76",
       "nom": "AMSN - Service de sant\u00e9 au travail Normand",
@@ -22,7 +48,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-16T09:50:00.000+02:00",
+      "prochain_rdv": "2021-04-29T08:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -48,7 +74,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-19T10:15:00.000+02:00",
+      "prochain_rdv": "2021-04-29T13:35:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -522,14 +548,14 @@
     },
     {
       "departement": "76",
-      "nom": "Site de Sotteville - salle des f\u00eates",
-      "url": "https://partners.doctolib.fr/centre-de-sante/sotteville-les-rouen/centre-de-vaccination-sotteville-les-rouen?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "CH DIEPPE",
+      "url": "https://partners.doctolib.fr/hopital-public/dieppe/centre-de-vaccination-covid-public?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "1.08904",
-        "latitude": "49.414"
+        "longitude": "1.07872",
+        "latitude": "49.9189"
       },
       "metadata": {
-        "address": "37 Avenue Jean Jaur\u00e8s, 76300 Sotteville-l\u00e8s-Rouen",
+        "address": " avenue pasteur, 76200 Dieppe",
         "phone_number": "+33279461156",
         "business_hours": {
           "lundi": "",
@@ -548,14 +574,14 @@
     },
     {
       "departement": "76",
-      "nom": "CH DIEPPE",
-      "url": "https://partners.doctolib.fr/hopital-public/dieppe/centre-de-vaccination-covid-public?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Site de Sotteville - salle des f\u00eates",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sotteville-les-rouen/centre-de-vaccination-sotteville-les-rouen?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "1.07872",
-        "latitude": "49.9189"
+        "longitude": "1.08904",
+        "latitude": "49.414"
       },
       "metadata": {
-        "address": " avenue pasteur, 76200 Dieppe",
+        "address": "37 Avenue Jean Jaur\u00e8s, 76300 Sotteville-l\u00e8s-Rouen",
         "phone_number": "+33279461156",
         "business_hours": {
           "lundi": "",
@@ -626,32 +652,6 @@
     },
     {
       "departement": "76",
-      "nom": "centre de vaccination Yvetot, clinique Hemera",
-      "url": "https://partners.doctolib.fr/centre-de-sante/yvetot/centre-de-vaccination-covid-19-pole-de-sante-d-yvetot?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.744011",
-        "latitude": "49.6182"
-      },
-      "metadata": {
-        "address": "14A Avenue du Marechal Foch, 76190 Yvetot",
-        "phone_number": "+33279461156",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "76",
       "nom": "Centre de vaccination de Dieppe- MDS (Maison des sports)",
       "url": "https://partners.doctolib.fr/hopital-public/dieppe/centre-de-vaccination-covid-public?pid=practice-181348&enable_cookies_consent=1",
       "location": {
@@ -687,24 +687,6 @@
       "metadata": {
         "address": "7 Place Cauchoise, 76000 Rouen",
         "phone_number": "+33235713020",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "76",
-      "nom": "Grande Pharmacie Thiers",
-      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-thiers-le-havre",
-      "location": {
-        "longitude": 0.1117815,
-        "latitude": 49.4969659
-      },
-      "metadata": {
-        "address": "42 Avenue Ren\u00e9 Coty, 76600 Le Havre",
-        "phone_number": "+33235211010",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -915,6 +897,24 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "76",
+      "nom": "Grande Pharmacie Thiers",
+      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-thiers-le-havre",
+      "location": {
+        "longitude": 0.1117815,
+        "latitude": 49.4969659
+      },
+      "metadata": {
+        "address": "42 Avenue Ren\u00e9 Coty, 76600 Le Havre",
+        "phone_number": "+33235211010",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
       "appointment_count": 0
     },
     {

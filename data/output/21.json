@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.807355+02:00",
+  "last_updated": "2021-04-09T15:27:36.512622+02:00",
   "centres_disponibles": [
     {
       "departement": "21",
@@ -136,32 +136,6 @@
     },
     {
       "departement": "21",
-      "nom": "GENLIS - Mairie",
-      "url": "https://partners.doctolib.fr/maison-de-sante/seurre/centre-de-vaccination-pole-de-sante-rives-de-saone?pid=practice-174447&enable_cookies_consent=1",
-      "location": {
-        "longitude": "5.22259",
-        "latitude": "47.2398"
-      },
-      "metadata": {
-        "address": "18 Avenue du General de Gaulle, 21110 Genlis",
-        "phone_number": "+33380479898",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "21",
       "nom": "EPOISSES Salle communale",
       "url": "https://partners.doctolib.fr/maison-de-sante/seurre/centre-de-vaccination-pole-de-sante-rives-de-saone?pid=practice-177319&enable_cookies_consent=1",
       "location": {
@@ -177,6 +151,32 @@
           "mercredi": "ferm\u00e9",
           "jeudi": "8H45 - 17H45",
           "vendredi": "8H45 - 17H45",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "GENLIS - Mairie",
+      "url": "https://partners.doctolib.fr/maison-de-sante/seurre/centre-de-vaccination-pole-de-sante-rives-de-saone?pid=practice-174447&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.22259",
+        "latitude": "47.2398"
+      },
+      "metadata": {
+        "address": "18 Avenue du General de Gaulle, 21110 Genlis",
+        "phone_number": "+33380479898",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -572,32 +572,6 @@
     },
     {
       "departement": "21",
-      "nom": "CHENOVE Salle des f\u00eates",
-      "url": "https://partners.doctolib.fr/maison-de-sante/dijon/cpts-de-dijon-vaccination-covid-19?pid=practice-164125&enable_cookies_consent=1",
-      "location": {
-        "longitude": "5.00611",
-        "latitude": "47.2936"
-      },
-      "metadata": {
-        "address": " Place Pierre Meunier, 21300 Chen\u00f4ve",
-        "phone_number": "+33345810421",
-        "business_hours": {
-          "lundi": "09:00-17:00 ",
-          "mardi": "09:00-17:00 ",
-          "mercredi": "09:00-17:00 ",
-          "jeudi": "09:00-17:00",
-          "vendredi": "09:00-17:00 ",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "21",
       "nom": "AUXONNE - Salle \u00e9v\u00e8nementielle",
       "url": "https://partners.doctolib.fr/centre-de-sante/auxonne/centre-de-vaccination-covid-19-auxonne?pid=practice-166391&enable_cookies_consent=1",
       "location": {
@@ -613,6 +587,32 @@
           "mercredi": "10:00-15:00",
           "jeudi": "PONTAILLER SUR SAONE : 10h20-15h20 Maison des services Rue des Saucis ",
           "vendredi": "10:00-15:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "CHENOVE Salle des f\u00eates",
+      "url": "https://partners.doctolib.fr/maison-de-sante/dijon/cpts-de-dijon-vaccination-covid-19?pid=practice-164125&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.00611",
+        "latitude": "47.2936"
+      },
+      "metadata": {
+        "address": " Place Pierre Meunier, 21300 Chen\u00f4ve",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "09:00-17:00 ",
+          "mardi": "09:00-17:00 ",
+          "mercredi": "09:00-17:00 ",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00 ",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -780,24 +780,6 @@
     },
     {
       "departement": "21",
-      "nom": "Pharmacie De La Gare D'Eau",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-gare-d'eau-saint-jean-de-losne",
-      "location": {
-        "longitude": 5.262822,
-        "latitude": 47.1048084
-      },
-      "metadata": {
-        "address": "5 Avenue de la Gare d'Eau, 21170 Saint Jean de Losne",
-        "phone_number": "+33380290836",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "21",
       "nom": "Dr Marie-Christine FOLACCI-GENEVOIS",
       "url": "https://partners.doctolib.fr/medecin-generaliste/dijon/marie-christine-folacci-genevois",
       "location": {
@@ -820,6 +802,24 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "general-practitioner",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "Pharmacie De La Gare D'Eau",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-gare-d'eau-saint-jean-de-losne",
+      "location": {
+        "longitude": 5.262822,
+        "latitude": 47.1048084
+      },
+      "metadata": {
+        "address": "5 Avenue de la Gare d'Eau, 21170 Saint Jean de Losne",
+        "phone_number": "+33380290836",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
       "appointment_count": 0
     },
     {

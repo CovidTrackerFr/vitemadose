@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.811166+02:00",
+  "last_updated": "2021-04-09T15:27:36.516325+02:00",
   "centres_disponibles": [
     {
       "departement": "25",
@@ -314,32 +314,6 @@
     },
     {
       "departement": "25",
-      "nom": "Centre de vaccination de Quingey",
-      "url": "https://partners.doctolib.fr/centre-de-sante/quingey/centre-de-vaccination-covid-19-quingey?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "5.88996",
-        "latitude": "47.0984"
-      },
-      "metadata": {
-        "address": "2 Chemin de Saint-renobert, 25440 Quingey",
-        "phone_number": "0363421013",
-        "business_hours": {
-          "lundi": "13h30-17h15",
-          "mardi": "13h30-17h15",
-          "mercredi": "13h30-17h15",
-          "jeudi": "13h30-17h15",
-          "vendredi": "13h30-17h15",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "25",
       "nom": "CHU Besan\u00e7on",
       "url": "https://partners.doctolib.fr/hopital-public/besan\u00e7on/chru-besancon-centre-de-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -355,6 +329,32 @@
           "mercredi": "8:30-18:30",
           "jeudi": "8:30-18:30",
           "vendredi": "8:30-18:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "25",
+      "nom": "Centre de vaccination de Quingey",
+      "url": "https://partners.doctolib.fr/centre-de-sante/quingey/centre-de-vaccination-covid-19-quingey?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.88996",
+        "latitude": "47.0984"
+      },
+      "metadata": {
+        "address": "2 Chemin de Saint-renobert, 25440 Quingey",
+        "phone_number": "0363421013",
+        "business_hours": {
+          "lundi": "13h30-17h15",
+          "mardi": "13h30-17h15",
+          "mercredi": "13h30-17h15",
+          "jeudi": "13h30-17h15",
+          "vendredi": "13h30-17h15",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -496,32 +496,6 @@
     },
     {
       "departement": "25",
-      "nom": "CHRU Besan\u00e7on - Centre de Vaccination Covid-19",
-      "url": "https://partners.doctolib.fr/hopital-public/besancon/chru-besancon-centre-de-vaccination-covid?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": 5.963613,
-        "latitude": 47.2271814
-      },
-      "metadata": {
-        "address": "3 Boulevard Alexandre Fleming, 25000 Besan\u00e7on",
-        "phone_number": "03 63 42 10 13",
-        "business_hours": {
-          "lundi": "08:30-18:00",
-          "mardi": "08:30-18:00",
-          "mercredi": "08:30-18:00",
-          "jeudi": "08:30-18:00",
-          "vendredi": "08:30-18:00",
-          "samedi": null,
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "25",
       "nom": "Centre de vaccination Covid-19 - Doubs central",
       "url": "https://partners.doctolib.fr/centre-de-sante/baume-les-dames/centre-de-vaccination-petr-doubs-central?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
@@ -537,6 +511,32 @@
           "mercredi": "09:00-12:00",
           "jeudi": "09:00-12:00, 14:00-17:00",
           "vendredi": "09:00-12:00, 13:30-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "25",
+      "nom": "CHRU Besan\u00e7on - Centre de Vaccination Covid-19",
+      "url": "https://partners.doctolib.fr/hopital-public/besancon/chru-besancon-centre-de-vaccination-covid?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 5.963613,
+        "latitude": 47.2271814
+      },
+      "metadata": {
+        "address": "3 Boulevard Alexandre Fleming, 25000 Besan\u00e7on",
+        "phone_number": "03 63 42 10 13",
+        "business_hours": {
+          "lundi": "08:30-18:00",
+          "mardi": "08:30-18:00",
+          "mercredi": "08:30-18:00",
+          "jeudi": "08:30-18:00",
+          "vendredi": "08:30-18:00",
           "samedi": null,
           "dimanche": null
         }

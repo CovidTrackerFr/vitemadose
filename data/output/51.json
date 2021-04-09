@@ -1,7 +1,34 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.839225+02:00",
-  "centres_disponibles": [],
+  "last_updated": "2021-04-09T15:27:36.544194+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "51",
+      "nom": "Centre de vaccination de Cernay-les-Reims - Salle de La Marelle",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/reims/centres-de-vaccination-grand-reims?pid=practice-164806&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.10425",
+        "latitude": "49.264"
+      },
+      "metadata": {
+        "address": "1 Place de la Republique, 51420 Cernay-l\u00e8s-Reims",
+        "phone_number": "+33326777879",
+        "business_hours": {
+          "lundi": "09:00-13:00/14:00-18:00",
+          "mardi": "09:00-13:00/14:00-18:00",
+          "mercredi": "09:00-13:00/14:00-18:00",
+          "jeudi": "09:00-13:00/14:00-18:00",
+          "vendredi": "09:00-13:00/14:00-18:00",
+          "samedi": "09:00-13:00/14:00-18:00",
+          "dimanche": "09:00-13:00/14:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-04-21T16:00:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ],
   "centres_indisponibles": [
     {
       "departement": "51",
@@ -418,32 +445,6 @@
     },
     {
       "departement": "51",
-      "nom": "Centre de vaccination de Cernay-les-Reims - Salle de La Marelle",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/reims/centres-de-vaccination-grand-reims?pid=practice-164806&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.10425",
-        "latitude": "49.264"
-      },
-      "metadata": {
-        "address": "1 Place de la Republique, 51420 Cernay-l\u00e8s-Reims",
-        "phone_number": "+33326777879",
-        "business_hours": {
-          "lundi": "09:00-13:00/14:00-18:00",
-          "mardi": "09:00-13:00/14:00-18:00",
-          "mercredi": "09:00-13:00/14:00-18:00",
-          "jeudi": "09:00-13:00/14:00-18:00",
-          "vendredi": "09:00-13:00/14:00-18:00",
-          "samedi": "09:00-13:00/14:00-18:00",
-          "dimanche": "09:00-13:00/14:00-18:00"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "51",
       "nom": "Centre de vaccination de Sainte Menehould, salle polyvalente communale",
       "url": "https://partners.doctolib.fr/hopital-public/sainte-menehould/centre-de-vaccination-argonne-marne?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -548,24 +549,6 @@
     },
     {
       "departement": "51",
-      "nom": "Pharmacie Croix Dampierre",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-croix-dampierre-chalons-en-champagne",
-      "location": {
-        "longitude": 4.3858888,
-        "latitude": 48.9422828
-      },
-      "metadata": {
-        "address": "AV DU PRESIDENT ROOSEVELT CC CROIX DAMPIERRE, 51000 CHALONS EN CHAMPAGNE",
-        "phone_number": "+33326219000",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "51",
       "nom": "Pharmacie Talleyrand",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-talleyrand-reims",
       "location": {
@@ -631,6 +614,24 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "51",
+      "nom": "Pharmacie Croix Dampierre",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-croix-dampierre-chalons-en-champagne",
+      "location": {
+        "longitude": 4.3858888,
+        "latitude": 48.9422828
+      },
+      "metadata": {
+        "address": "AV DU PRESIDENT ROOSEVELT CC CROIX DAMPIERRE, 51000 CHALONS EN CHAMPAGNE",
+        "phone_number": "+33326219000",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     }

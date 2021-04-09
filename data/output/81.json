@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.878142+02:00",
+  "last_updated": "2021-04-09T15:27:36.582703+02:00",
   "centres_disponibles": [
     {
       "departement": "81",
@@ -49,7 +49,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-12T08:40:00.000+02:00",
+      "prochain_rdv": "2021-04-12T09:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -240,6 +240,31 @@
     },
     {
       "departement": "81",
+      "nom": "CD - US SAINT SULPICE / Centre de D\u00e9tention de Saint-Sulpice-la-Pointe",
+      "url": "",
+      "location": {
+        "longitude": "1.69325",
+        "latitude": "43.7762"
+      },
+      "metadata": {
+        "address": "17 Chemin des Pescayres, 81370 Saint-Sulpice-la-Pointe",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "81",
       "nom": "MA - US  Albi / Maison d'Arr\u00eat d'Albi",
       "url": "",
       "location": {
@@ -266,31 +291,6 @@
     {
       "departement": "81",
       "nom": "EPM - US EPM LAVAUR / Centre de D\u00e9tention de Saint-Sulpice-la-Pointe",
-      "url": "",
-      "location": {
-        "longitude": "1.69325",
-        "latitude": "43.7762"
-      },
-      "metadata": {
-        "address": "17 Chemin des Pescayres, 81370 Saint-Sulpice-la-Pointe",
-        "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "81",
-      "nom": "CD - US SAINT SULPICE / Centre de D\u00e9tention de Saint-Sulpice-la-Pointe",
       "url": "",
       "location": {
         "longitude": "1.69325",
@@ -405,7 +405,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     }

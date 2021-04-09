@@ -1,7 +1,33 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.857309+02:00",
+  "last_updated": "2021-04-09T15:27:36.561595+02:00",
   "centres_disponibles": [
+    {
+      "departement": "65",
+      "nom": "CENTRE DE VACCINATION DE LOURDES - Espace Robert Hossein",
+      "url": "https://partners.doctolib.fr/centre-de-sante/lourdes/centre-de-vaccination-covid-19-lourdes?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-0.0417883",
+        "latitude": "43.1038"
+      },
+      "metadata": {
+        "address": "19 Avenue Alexandre Marqui, 65100 Lourdes",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-17:00",
+          "mardi": "14:00-17:00",
+          "mercredi": "14:00-17:00",
+          "jeudi": "14:00-17:00",
+          "vendredi": "14:00-17:00",
+          "samedi": "09:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-21T16:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
     {
       "departement": "65",
       "nom": "CENTRE DE VACCINATION PARC DES EXPOSITIONS DE TARBES",
@@ -23,7 +49,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-29T11:35:00.000+02:00",
+      "prochain_rdv": "2021-04-29T11:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -110,31 +136,6 @@
     },
     {
       "departement": "65",
-      "nom": "MA - TARBES / Centre P\u00e9nitentiaire de Lannemezan",
-      "url": "",
-      "location": {
-        "longitude": "0.376451",
-        "latitude": "43.1087"
-      },
-      "metadata": {
-        "address": " Rue des Saligues, 65300 Lannemezan",
-        "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "65",
       "nom": "CP - H\u00f4pitaux de Lannemezan / Centre P\u00e9nitentiaire de Lannemezan",
       "url": "",
       "location": {
@@ -160,27 +161,26 @@
     },
     {
       "departement": "65",
-      "nom": "CENTRE DE VACCINATION DE LOURDES - Espace Robert Hossein",
-      "url": "https://partners.doctolib.fr/centre-de-sante/lourdes/centre-de-vaccination-covid-19-lourdes?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "MA - TARBES / Centre P\u00e9nitentiaire de Lannemezan",
+      "url": "",
       "location": {
-        "longitude": "-0.0417883",
-        "latitude": "43.1038"
+        "longitude": "0.376451",
+        "latitude": "43.1087"
       },
       "metadata": {
-        "address": "19 Avenue Alexandre Marqui, 65100 Lourdes",
-        "phone_number": "+33800541919",
+        "address": " Rue des Saligues, 65300 Lannemezan",
         "business_hours": {
-          "lundi": "14:00-17:00",
-          "mardi": "14:00-17:00",
-          "mercredi": "14:00-17:00",
-          "jeudi": "14:00-17:00",
-          "vendredi": "14:00-17:00",
-          "samedi": "09:00-12:00",
-          "dimanche": "ferm\u00e9"
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
         }
       },
       "prochain_rdv": null,
-      "plateforme": "Doctolib",
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },

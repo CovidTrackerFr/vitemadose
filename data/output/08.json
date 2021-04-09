@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.794638+02:00",
+  "last_updated": "2021-04-09T15:27:36.499517+02:00",
   "centres_disponibles": [
     {
       "departement": "08",
@@ -23,7 +23,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-14T15:35:00.000+02:00",
+      "prochain_rdv": "2021-04-14T12:40:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -58,14 +58,14 @@
     },
     {
       "departement": "08",
-      "nom": "Centre de vaccination COSEC Roger Marche VILLERS-SEMEUSE",
-      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-165006&enable_cookies_consent=1",
+      "nom": "Centre de Vaccination Salle B\u00e9r\u00e9govoy  VRIGNE-AUX-BOIS",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-165013&enable_cookies_consent=1",
       "location": {
-        "longitude": "4.73896",
-        "latitude": "49.7427"
+        "longitude": "4.85412",
+        "latitude": "49.7371"
       },
       "metadata": {
-        "address": " Route Nationale, 08000 Villers-Semeuse",
+        "address": "13 Avenue Jean Jaur\u00e8s, 08330 Vrigne aux Bois",
         "business_hours": {
           "lundi": "A pr\u00e9ciser",
           "mardi": "A pr\u00e9ciser",
@@ -83,14 +83,39 @@
     },
     {
       "departement": "08",
-      "nom": "Centre de Vaccination Salle B\u00e9r\u00e9govoy  VRIGNE-AUX-BOIS",
-      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-165013&enable_cookies_consent=1",
+      "nom": "MSP Signy-le-Petit",
+      "url": "",
       "location": {
-        "longitude": "4.85412",
-        "latitude": "49.7371"
+        "longitude": "4.27997",
+        "latitude": "49.9029"
       },
       "metadata": {
-        "address": "13 Avenue Jean Jaur\u00e8s, 08330 Vrigne aux Bois",
+        "address": "1 Rue Nicolas de Rumigny, 08380 Signy-le-Petit",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "13H-17H",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "Centre de vaccination COSEC Roger Marche VILLERS-SEMEUSE",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-165006&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.73896",
+        "latitude": "49.7427"
+      },
+      "metadata": {
+        "address": " Route Nationale, 08000 Villers-Semeuse",
         "business_hours": {
           "lundi": "A pr\u00e9ciser",
           "mardi": "A pr\u00e9ciser",
@@ -128,31 +153,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "08",
-      "nom": "MSP Signy-le-Petit",
-      "url": "",
-      "location": {
-        "longitude": "4.27997",
-        "latitude": "49.9029"
-      },
-      "metadata": {
-        "address": "1 Rue Nicolas de Rumigny, 08380 Signy-le-Petit",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "13H-17H",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.855944+02:00",
+  "last_updated": "2021-04-09T15:27:36.560403+02:00",
   "centres_disponibles": [
     {
       "departement": "64",
@@ -101,6 +101,31 @@
         }
       },
       "prochain_rdv": "2021-04-12T14:50:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "64",
+      "nom": "Centre de vaccination de Morla\u00e0s",
+      "url": "https://partners.doctolib.fr/centre-de-sante/morlaas/centre-de-vaccination-de-morlaas?pid=practice-180138&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-0.262241",
+        "latitude": "43.3419"
+      },
+      "metadata": {
+        "address": "1 Place de la Hourquie - salle polycalente , 64160 Morla\u00e0s",
+        "business_hours": {
+          "lundi": "13:00-16:30",
+          "mardi": "13:00-16:30",
+          "mercredi": "13:00-16:30",
+          "jeudi": "13:00-16:30",
+          "vendredi": "13:00-16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-14T15:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -210,6 +235,32 @@
     },
     {
       "departement": "64",
+      "nom": "Centre de vaccination de Biarritz - Casino Municipal",
+      "url": "https://partners.doctolib.fr/centre-de-sante/biarritz/centres-de-vaccination-de-la-ville-de-biarritz?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.55936",
+        "latitude": "43.4834"
+      },
+      "metadata": {
+        "address": "1 Avenue Edouard VII, 64200 Biarritz",
+        "phone_number": "+33800726064",
+        "business_hours": {
+          "lundi": "12:00-16:00",
+          "mardi": "12:00-16:00",
+          "mercredi": "12:00-16:00",
+          "jeudi": "12:00-16:00",
+          "vendredi": "12:00-16:00",
+          "samedi": "12:00-16:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-21T12:20:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "64",
       "nom": "Centre de vaccination de Bidache",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/bidache/centre-de-vaccination-covid-du-pays-de-bidache?pid=practice-181230&enable_cookies_consent=1",
       "location": {
@@ -229,7 +280,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-22T14:10:00.000+02:00",
+      "prochain_rdv": "2021-04-22T14:25:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -262,26 +313,26 @@
     },
     {
       "departement": "64",
-      "nom": "Centre de vaccination de Biarritz - Casino Municipal",
-      "url": "https://partners.doctolib.fr/centre-de-sante/biarritz/centres-de-vaccination-de-la-ville-de-biarritz?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination intercommunal de Pontacq",
+      "url": "https://partners.doctolib.fr/centre-de-sante/pontacq/centre-de-vaccination-de-pontacq?pid=practice-175786&enable_cookies_consent=1",
       "location": {
-        "longitude": "-1.55936",
-        "latitude": "43.4834"
+        "longitude": "-0.115332",
+        "latitude": "43.1852"
       },
       "metadata": {
-        "address": "1 Avenue Edouard VII, 64200 Biarritz",
-        "phone_number": "+33800726064",
+        "address": "1 Place Huningue, 64530 Pontacq",
+        "phone_number": "+33642516816",
         "business_hours": {
-          "lundi": "12:00-16:00",
-          "mardi": "12:00-16:00",
-          "mercredi": "12:00-16:00",
-          "jeudi": "12:00-16:00",
-          "vendredi": "12:00-16:00",
-          "samedi": "12:00-16:00",
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "9:00-13:00",
+          "jeudi": "9:00-13:00",
+          "vendredi": "9:00-13:00",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-29T12:40:00.000+02:00",
+      "prochain_rdv": "2021-05-06T16:40:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -419,32 +470,6 @@
     },
     {
       "departement": "64",
-      "nom": "Centre de vaccination intercommunal de Pontacq",
-      "url": "https://partners.doctolib.fr/centre-de-sante/pontacq/centre-de-vaccination-de-pontacq?pid=practice-175786&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-0.115332",
-        "latitude": "43.1852"
-      },
-      "metadata": {
-        "address": "1 Place Huningue, 64530 Pontacq",
-        "phone_number": "+33642516816",
-        "business_hours": {
-          "lundi": "14:00-18:00",
-          "mardi": "14:00-18:00",
-          "mercredi": "9:00-13:00",
-          "jeudi": "9:00-13:00",
-          "vendredi": "9:00-13:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "64",
       "nom": "Centre de Vaccination de B\u00e9n\u00e9jacq",
       "url": "https://partners.doctolib.fr/centre-de-sante/benejacq/centre-de-vaccination-de-benejacq?pid=practice-175878&enable_cookies_consent=1",
       "location": {
@@ -522,6 +547,31 @@
     },
     {
       "departement": "64",
+      "nom": "MA - US CH COTE BASQUE / Maison d'Arr\u00eat de Bayonne",
+      "url": "",
+      "location": {
+        "longitude": "-1.4633",
+        "latitude": "43.4918"
+      },
+      "metadata": {
+        "address": "44 Rue Charles Floquet, 64100 Bayonne",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "64",
       "nom": "Centre de vaccination de Monein",
       "url": "https://www.doctolib.fr/centre-de-sante/monein/centre-de-vaccination-covid-19-monein",
       "location": {
@@ -543,31 +593,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "64",
-      "nom": "MA - US CH COTE BASQUE / Maison d'Arr\u00eat de Bayonne",
-      "url": "",
-      "location": {
-        "longitude": "-1.4633",
-        "latitude": "43.4918"
-      },
-      "metadata": {
-        "address": "44 Rue Charles Floquet, 64100 Bayonne",
-        "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -825,31 +850,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "64",
-      "nom": "Centre de vaccination de Morla\u00e0s",
-      "url": "https://partners.doctolib.fr/centre-de-sante/morlaas/centre-de-vaccination-de-morlaas?pid=practice-180138&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-0.262241",
-        "latitude": "43.3419"
-      },
-      "metadata": {
-        "address": "1 Place de la Hourquie - salle polycalente , 64160 Morla\u00e0s",
-        "business_hours": {
-          "lundi": "13:00-16:30",
-          "mardi": "13:00-16:30",
-          "mercredi": "13:00-16:30",
-          "jeudi": "13:00-16:30",
-          "vendredi": "13:00-16:30",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },

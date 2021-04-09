@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.803285+02:00",
+  "last_updated": "2021-04-09T15:27:36.508785+02:00",
   "centres_disponibles": [
     {
       "departement": "17",
@@ -23,7 +23,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-13T09:50:00.000+02:00",
+      "prochain_rdv": "2021-04-12T13:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -58,31 +58,6 @@
     },
     {
       "departement": "17",
-      "nom": "CH ROCHEFORT(r\u00e9serv\u00e9 aux professionnels de sant\u00e9)",
-      "url": "https://partners.doctolib.fr/hopital-public/rochefort/centre-hospitalier-de-rochefort-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-0.963273",
-        "latitude": "45.9671"
-      },
-      "metadata": {
-        "address": "1 Avenue de Beligon, 17300 Rochefort",
-        "business_hours": {
-          "lundi": "09:00-12:30/13:30-16:50",
-          "mardi": "09:00-12:30/13:30-16:50",
-          "mercredi": "09:00-12:30/13:30-16:50",
-          "jeudi": "09:00-12:30/13:30-16:50",
-          "vendredi": "09:00-12:30/13:30-16:50",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "17",
       "nom": "CENTRE CLINIQUE PASTEUR ROYAN",
       "url": "https://partners.doctolib.fr/clinique-privee/royan/clinique-pasteur-vaccination-covid-19?pid=practice-165101&enable_cookies_consent=1",
       "location": {
@@ -98,6 +73,31 @@
           "mercredi": "09:00-13:00/14:00-18:00",
           "jeudi": "09:00-13:00/14:00-18:00",
           "vendredi": "09:00-13:00/14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "17",
+      "nom": "CH ROCHEFORT(r\u00e9serv\u00e9 aux professionnels de sant\u00e9)",
+      "url": "https://partners.doctolib.fr/hopital-public/rochefort/centre-hospitalier-de-rochefort-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-0.963273",
+        "latitude": "45.9671"
+      },
+      "metadata": {
+        "address": "1 Avenue de Beligon, 17300 Rochefort",
+        "business_hours": {
+          "lundi": "09:00-12:30/13:30-16:50",
+          "mardi": "09:00-12:30/13:30-16:50",
+          "mercredi": "09:00-12:30/13:30-16:50",
+          "jeudi": "09:00-12:30/13:30-16:50",
+          "vendredi": "09:00-12:30/13:30-16:50",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -159,14 +159,14 @@
     },
     {
       "departement": "17",
-      "nom": "MC - US Saint Martin de R\u00e9 / Maison Centrale de Saint-Martin-de-R\u00e9",
+      "nom": "CD - US de B\u00c9DENAC / Centre de D\u00e9tention de B\u00e9denac",
       "url": "",
       "location": {
-        "longitude": "-1.364",
-        "latitude": "46.2043"
+        "longitude": "-0.305804",
+        "latitude": "45.1736"
       },
       "metadata": {
-        "address": " Place des 3 Maisons, 17410 Saint-Martin-de-R\u00e9",
+        "address": " Bedenac, 17210 Bedenac",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -184,14 +184,14 @@
     },
     {
       "departement": "17",
-      "nom": "CD - US de B\u00c9DENAC / Centre de D\u00e9tention de B\u00e9denac",
+      "nom": "MC - US Saint Martin de R\u00e9 / Maison Centrale de Saint-Martin-de-R\u00e9",
       "url": "",
       "location": {
-        "longitude": "-0.305804",
-        "latitude": "45.1736"
+        "longitude": "-1.364",
+        "latitude": "46.2043"
       },
       "metadata": {
-        "address": " Bedenac, 17210 Bedenac",
+        "address": " Place des 3 Maisons, 17410 Saint-Martin-de-R\u00e9",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -625,32 +625,6 @@
     },
     {
       "departement": "17",
-      "nom": "centre de Chatelaillon",
-      "url": "https://partners.doctolib.fr/centre-de-sante/la-rochelle/centre-de-vaccination-covid-19-ville-de-la-rochelle-la-rochelle?pid=practice-165808&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-1.07948",
-        "latitude": "46.0748"
-      },
-      "metadata": {
-        "address": "9 Rue des Sulkys, 17340 Ch\u00e2telaillon-Plage",
-        "phone_number": "+33546305717",
-        "business_hours": {
-          "lundi": "09:00-12:30/13:30-16:30",
-          "mardi": "09:00-12:30/13:30-16:30",
-          "mercredi": "09:00-12:30/13:30-16:30",
-          "jeudi": "09:00-12:30/13:30-16:30",
-          "vendredi": "09:00-12:30/13:30-16:30",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "17",
       "nom": "CENTRE PONS",
       "url": "https://partners.doctolib.fr/hopital-public/haute-saintonge/centre-de-vaccination-covid-19-haute-saintonge?pid=practice-164884&enable_cookies_consent=1",
       "location": {
@@ -677,20 +651,28 @@
     },
     {
       "departement": "17",
-      "nom": "Pharmacie Chretien",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-chretien--marennes",
+      "nom": "centre de Chatelaillon",
+      "url": "https://partners.doctolib.fr/centre-de-sante/la-rochelle/centre-de-vaccination-covid-19-ville-de-la-rochelle-la-rochelle?pid=practice-165808&enable_cookies_consent=1",
       "location": {
-        "longitude": -1.1063975,
-        "latitude": 45.8236445
+        "longitude": "-1.07948",
+        "latitude": "46.0748"
       },
       "metadata": {
-        "address": "98 rue G Clemenceau, 17320 Marennes",
-        "phone_number": "+33546851413",
-        "business_hours": null
+        "address": "9 Rue des Sulkys, 17340 Ch\u00e2telaillon-Plage",
+        "phone_number": "+33546305717",
+        "business_hours": {
+          "lundi": "09:00-12:30/13:30-16:30",
+          "mardi": "09:00-12:30/13:30-16:30",
+          "mercredi": "09:00-12:30/13:30-16:30",
+          "jeudi": "09:00-12:30/13:30-16:30",
+          "vendredi": "09:00-12:30/13:30-16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
       },
       "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
       "appointment_count": 0
     },
     {
@@ -708,6 +690,42 @@
       },
       "prochain_rdv": null,
       "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "17",
+      "nom": "Pharmacie Chretien",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-chretien--marennes",
+      "location": {
+        "longitude": -1.1063975,
+        "latitude": 45.8236445
+      },
+      "metadata": {
+        "address": "98 rue G Clemenceau, 17320 Marennes",
+        "phone_number": "+33546851413",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "17",
+      "nom": "Pharmacie Des Augustins",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-augustins-st-savinien",
+      "location": {
+        "longitude": -0.6784800999999999,
+        "latitude": 45.8757735
+      },
+      "metadata": {
+        "address": "26 AV DE LA GARE, 17350 ST SAVINIEN",
+        "phone_number": "+33546902765",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -739,24 +757,6 @@
     },
     {
       "departement": "17",
-      "nom": "Pharmacie Des Augustins",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-augustins-st-savinien",
-      "location": {
-        "longitude": -0.6784800999999999,
-        "latitude": 45.8757735
-      },
-      "metadata": {
-        "address": "26 AV DE LA GARE, 17350 ST SAVINIEN",
-        "phone_number": "+33546902765",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "17",
       "nom": "Centre de vaccination Covid-19 - Castel Park",
       "url": "https://partners.doctolib.fr/centre-de-sante/surgeres/centre-de-vaccination-castel-park?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
@@ -783,31 +783,6 @@
     },
     {
       "departement": "17",
-      "nom": "Centre Hospitalier de Saintonge",
-      "url": "https://partners.doctolib.fr/hopital-public/saintes/centre-hospitalier-de-saintonge-saintes?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": -0.6558783,
-        "latitude": 45.7465621
-      },
-      "metadata": {
-        "address": "11 Boulevard Ambroise Par\u00e9, 17100 Saintes",
-        "business_hours": {
-          "lundi": null,
-          "mardi": null,
-          "mercredi": null,
-          "jeudi": null,
-          "vendredi": null,
-          "samedi": null,
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "17",
       "nom": "Centre de Vaccination Covid-19 - Ville de Saint Martin de R\u00e9",
       "url": "https://partners.doctolib.fr/centre-de-sante/saint-martin-de-re/centre-de-vaccination-covid-19-ville-de-saint-martin-de-re-saint-martin-de-re?highlight%5bspeciality_ids%5d%5b%5d=5494&pid=practice-176599",
       "location": {
@@ -823,6 +798,31 @@
           "mercredi": "08:30-12:30, 14:00-17:00",
           "jeudi": "08:30-12:30, 14:00-17:00",
           "vendredi": "08:30-16:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "17",
+      "nom": "Centre Hospitalier de Saintonge",
+      "url": "https://partners.doctolib.fr/hopital-public/saintes/centre-hospitalier-de-saintonge-saintes?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": -0.6558783,
+        "latitude": 45.7465621
+      },
+      "metadata": {
+        "address": "11 Boulevard Ambroise Par\u00e9, 17100 Saintes",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
           "samedi": null,
           "dimanche": null
         }

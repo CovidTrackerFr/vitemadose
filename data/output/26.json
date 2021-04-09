@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.812143+02:00",
+  "last_updated": "2021-04-09T15:27:36.517164+02:00",
   "centres_disponibles": [
     {
       "departement": "26",
@@ -75,7 +75,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-26T19:20:00.000+02:00",
+      "prochain_rdv": "2021-04-26T19:25:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -387,32 +387,6 @@
     },
     {
       "departement": "26",
-      "nom": "Centre de vaccination - Groupement Hospitalier Portes de Provence - Institut de formation en soins infirmiers (IFSI)",
-      "url": "https://partners.doctolib.fr/hopital-public/montelimar/centre-de-vaccination-covid-gh-portes-de-provence-montelimar?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.75184",
-        "latitude": "44.5644"
-      },
-      "metadata": {
-        "address": " 3 rue du g\u00e9n\u00e9ral Chabrillan - Institut de soins infirmiers, 26200 Mont\u00e9limar",
-        "phone_number": "+33475534100",
-        "business_hours": {
-          "lundi": "08:00-20:00",
-          "mardi": "08:00-20:00",
-          "mercredi": "08:00-20:00",
-          "jeudi": "08:00-20:00",
-          "vendredi": "08:00-20:00",
-          "samedi": "08:00-13:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "26",
       "nom": "Centre de vaccination de Romans sur Is\u00e8re - Salle des cordeliers",
       "url": "https://partners.doctolib.fr/centre-de-sante/romans-sur-isere/centre-de-vaccinations-de-romans-sur-isere-salle-des-cordeliers?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -429,6 +403,32 @@
           "jeudi": "08:30-17:30",
           "vendredi": "08:30-17:30",
           "samedi": "08:30-17:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "26",
+      "nom": "Centre de vaccination - Groupement Hospitalier Portes de Provence - Institut de formation en soins infirmiers (IFSI)",
+      "url": "https://partners.doctolib.fr/hopital-public/montelimar/centre-de-vaccination-covid-gh-portes-de-provence-montelimar?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.75184",
+        "latitude": "44.5644"
+      },
+      "metadata": {
+        "address": " 3 rue du g\u00e9n\u00e9ral Chabrillan - Institut de soins infirmiers, 26200 Mont\u00e9limar",
+        "phone_number": "+33475534100",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-13:00",
           "dimanche": "ferm\u00e9"
         }
       },

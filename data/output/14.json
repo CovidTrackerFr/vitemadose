@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.800838+02:00",
+  "last_updated": "2021-04-09T15:27:36.506039+02:00",
   "centres_disponibles": [
     {
       "departement": "14",
@@ -24,32 +24,6 @@
         }
       },
       "prochain_rdv": "2021-04-12T14:32:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "14",
-      "nom": "Centre de vaccination M\u00e9zidon Vall\u00e9e d'Auge",
-      "url": "https://partners.doctolib.fr/centre-de-sante/mezidon-vallee-d-auge/centre-de-vaccination-covid-19-mezidon-vallee-d-auge?pid=practice-179725&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-0.0674805",
-        "latitude": "49.0738"
-      },
-      "metadata": {
-        "address": "17 Rue Marcel Lemeray, 14270 M\u00e9zidon Vall\u00e9e d'Auge",
-        "phone_number": "+33279461156",
-        "business_hours": {
-          "lundi": "",
-          "mardi": "",
-          "mercredi": "",
-          "jeudi": "",
-          "vendredi": "",
-          "samedi": "",
-          "dimanche": ""
-        }
-      },
-      "prochain_rdv": "2021-04-16T15:40:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -127,7 +101,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-30T16:10:00.000+02:00",
+      "prochain_rdv": "2021-04-30T14:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -196,6 +170,32 @@
       },
       "metadata": {
         "address": " avenue C\u00f4te de Nacre, 14000 Caen",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "14",
+      "nom": "Centre de vaccination M\u00e9zidon Vall\u00e9e d'Auge",
+      "url": "https://partners.doctolib.fr/centre-de-sante/mezidon-vallee-d-auge/centre-de-vaccination-covid-19-mezidon-vallee-d-auge?pid=practice-179725&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-0.0674805",
+        "latitude": "49.0738"
+      },
+      "metadata": {
+        "address": "17 Rue Marcel Lemeray, 14270 M\u00e9zidon Vall\u00e9e d'Auge",
         "phone_number": "+33279461156",
         "business_hours": {
           "lundi": "",
@@ -497,24 +497,6 @@
     },
     {
       "departement": "14",
-      "nom": "Pharmacie Treich",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-treich-demouville-1",
-      "location": {
-        "longitude": -0.2706907,
-        "latitude": 49.1785092
-      },
-      "metadata": {
-        "address": "13 rue du Centre, 14840 D\u00e9mouville",
-        "phone_number": "+33231723626",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "14",
       "nom": "Pharmacie Mozart",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-mozart-lisieux",
       "location": {
@@ -527,25 +509,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "14",
-      "nom": "Pharmacie Ferran",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-ferran-mondeville",
-      "location": {
-        "longitude": -0.3228682,
-        "latitude": 49.1753142
-      },
-      "metadata": {
-        "address": "48 rue chapron, 14120 mondeville",
-        "phone_number": "+33231521571",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -569,15 +533,33 @@
     },
     {
       "departement": "14",
-      "nom": "Pharmacie Du Port",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-port-ouistreham",
+      "nom": "Pharmacie De La Plage",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-plage-merville-franceville",
       "location": {
-        "longitude": -0.250916,
-        "latitude": 49.2791064
+        "longitude": -0.2027435,
+        "latitude": 49.2840845
       },
       "metadata": {
-        "address": "1 place du g\u00e9n\u00e9ral de gaulle, 14150 OUISTREHAM",
-        "phone_number": "+33231962541",
+        "address": "59 avenue de Paris, 14810 Merville Franceville",
+        "phone_number": "+33231242187",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie Ferran",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-ferran-mondeville",
+      "location": {
+        "longitude": -0.3228682,
+        "latitude": 49.1753142
+      },
+      "metadata": {
+        "address": "48 rue chapron, 14120 mondeville",
+        "phone_number": "+33231521571",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -599,21 +581,39 @@
         "business_hours": null
       },
       "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie Du Port",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-port-ouistreham",
+      "location": {
+        "longitude": -0.250916,
+        "latitude": 49.2791064
+      },
+      "metadata": {
+        "address": "1 place du g\u00e9n\u00e9ral de gaulle, 14150 OUISTREHAM",
+        "phone_number": "+33231962541",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
       "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
     {
       "departement": "14",
-      "nom": "Pharmacie De La Plage",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-plage-merville-franceville",
+      "nom": "Pharmacie Treich",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-treich-demouville-1",
       "location": {
-        "longitude": -0.2027435,
-        "latitude": 49.2840845
+        "longitude": -0.2706907,
+        "latitude": 49.1785092
       },
       "metadata": {
-        "address": "59 avenue de Paris, 14810 Merville Franceville",
-        "phone_number": "+33231242187",
+        "address": "13 rue du Centre, 14840 D\u00e9mouville",
+        "phone_number": "+33231723626",
         "business_hours": null
       },
       "prochain_rdv": null,

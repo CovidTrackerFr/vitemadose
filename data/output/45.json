@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.834790+02:00",
+  "last_updated": "2021-04-09T15:27:36.539708+02:00",
   "centres_disponibles": [
     {
       "departement": "45",
@@ -23,7 +23,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-10T14:50:00.000+02:00",
+      "prochain_rdv": "2021-04-10T15:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -49,32 +49,6 @@
         }
       },
       "prochain_rdv": "2021-04-13T14:00:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "45",
-      "nom": "Grand centre de vaccination - Olivet - Centre sportif du Larry",
-      "url": "https://partners.doctolib.fr/centre-de-sante/olivet/centre-de-vaccination-covid-19-vaccinodrome-d-olivet?pid=practice-181158&enable_cookies_consent=1",
-      "location": {
-        "longitude": "1.90565",
-        "latitude": "47.8594"
-      },
-      "metadata": {
-        "address": "54 Rue des Ch\u00eanes, 45160 Olivet",
-        "phone_number": "08 05 02 14 00",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-19T16:25:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -235,6 +209,32 @@
     },
     {
       "departement": "45",
+      "nom": "Grand centre de vaccination - Olivet - Centre sportif du Larry",
+      "url": "https://partners.doctolib.fr/centre-de-sante/olivet/centre-de-vaccination-covid-19-vaccinodrome-d-olivet?pid=practice-181158&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.90565",
+        "latitude": "47.8594"
+      },
+      "metadata": {
+        "address": "54 Rue des Ch\u00eanes, 45160 Olivet",
+        "phone_number": "08 05 02 14 00",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "45",
       "nom": "Salle Carnot \u00e0 Montargis",
       "url": "https://partners.doctolib.fr/centre-de-sante/montargis/centre-de-vaccination-prefecture-du-loiret?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -287,18 +287,17 @@
     },
     {
       "departement": "45",
-      "nom": "Centre hospitalier de Beaugency - centre de vaccination public",
-      "url": "https://partners.doctolib.fr/hopital-public/beaugency/centre-de-vaccination-covid-hopital-de-beaugency?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "CH de Beaugency - r\u00e9serv\u00e9 aux professionnels en exercice",
+      "url": "https://partners.doctolib.fr/hopital-public/beaugency/centre-de-vaccination-covid-hopital-de-beaugency?pid=practice-163901&enable_cookies_consent=1",
       "location": {
-        "longitude": "1.62009",
+        "longitude": "1.62008",
         "latitude": "47.7819"
       },
       "metadata": {
         "address": "48 Avenue de Vend\u00f4me, 45190 Beaugency",
-        "phone_number": "08 05 02 14 00",
         "business_hours": {
-          "lundi": "Ouvert",
-          "mardi": "ouvert",
+          "lundi": "ouvert",
+          "mardi": "ouverte",
           "mercredi": "ouvert",
           "jeudi": "ouvert",
           "vendredi": "ouvert",
@@ -313,17 +312,18 @@
     },
     {
       "departement": "45",
-      "nom": "CH de Beaugency - r\u00e9serv\u00e9 aux professionnels en exercice",
-      "url": "https://partners.doctolib.fr/hopital-public/beaugency/centre-de-vaccination-covid-hopital-de-beaugency?pid=practice-163901&enable_cookies_consent=1",
+      "nom": "Centre hospitalier de Beaugency - centre de vaccination public",
+      "url": "https://partners.doctolib.fr/hopital-public/beaugency/centre-de-vaccination-covid-hopital-de-beaugency?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "1.62008",
+        "longitude": "1.62009",
         "latitude": "47.7819"
       },
       "metadata": {
         "address": "48 Avenue de Vend\u00f4me, 45190 Beaugency",
+        "phone_number": "08 05 02 14 00",
         "business_hours": {
-          "lundi": "ouvert",
-          "mardi": "ouverte",
+          "lundi": "Ouvert",
+          "mardi": "ouvert",
           "mercredi": "ouvert",
           "jeudi": "ouvert",
           "vendredi": "ouvert",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.863196+02:00",
+  "last_updated": "2021-04-09T15:27:36.567689+02:00",
   "centres_disponibles": [
     {
       "departement": "71",
@@ -102,32 +102,6 @@
         }
       },
       "prochain_rdv": "2021-04-29T17:12:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "71",
-      "nom": "Centre de vaccination de Cluny",
-      "url": "https://partners.doctolib.fr/centre-de-sante/cluny/centre-de-vaccination-covid-19-de-cluny?pid=practice-178061&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.66834",
-        "latitude": "46.4304"
-      },
-      "metadata": {
-        "address": " Rue des Griottons, 71250 Cluny",
-        "phone_number": "+330806030149",
-        "business_hours": {
-          "lundi": "09:00-18:00",
-          "mardi": "09:00-18:00",
-          "mercredi": "09:00-18:00",
-          "jeudi": "09:00-18:00",
-          "vendredi": "09:00-18:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-30T10:18:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -257,33 +231,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-05-05T10:42:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "71",
-      "nom": "Centre vaccination CHALON SUR SAONE - Salle Sembat",
-      "url": "https://partners.doctolib.fr/centre-de-sante/chalon-sur-saone/centre-de-vaccination-de-chalon-sur-saone?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.86013",
-        "latitude": "46.7868"
-      },
-      "metadata": {
-        "address": "1 Place Mathias, 71100 Chalon-sur-Sa\u00f4ne",
-        "phone_number": "+33806030149",
-        "business_hours": {
-          "lundi": "09:00-17:00",
-          "mardi": "09:00-17:00",
-          "mercredi": "09:00-17:00",
-          "jeudi": "09:00-17:00",
-          "vendredi": "09:00-17:00",
-          "samedi": "09:00-17:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-05-07T13:42:00.000+02:00",
+      "prochain_rdv": "2021-05-05T10:24:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -361,7 +309,33 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-05-11T10:42:00.000+02:00",
+      "prochain_rdv": "2021-05-11T10:48:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "71",
+      "nom": "Centre vaccination CHALON SUR SAONE - Salle Sembat",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chalon-sur-saone/centre-de-vaccination-de-chalon-sur-saone?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.86013",
+        "latitude": "46.7868"
+      },
+      "metadata": {
+        "address": "1 Place Mathias, 71100 Chalon-sur-Sa\u00f4ne",
+        "phone_number": "+33806030149",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-11T13:42:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -573,6 +547,32 @@
     },
     {
       "departement": "71",
+      "nom": "Centre de vaccination de Cluny",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cluny/centre-de-vaccination-covid-19-de-cluny?pid=practice-178061&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.66834",
+        "latitude": "46.4304"
+      },
+      "metadata": {
+        "address": " Rue des Griottons, 71250 Cluny",
+        "phone_number": "+330806030149",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "71",
       "nom": "Centre de vaccination AUTUN - Salle l'Hexagone",
       "url": "https://partners.doctolib.fr/centre-de-sante/autun/centre-de-vaccination-d-autun?pid=practice-164356&enable_cookies_consent=1",
       "location": {
@@ -599,19 +599,37 @@
     },
     {
       "departement": "71",
-      "nom": "Pharmacie Du G\u00e9ant",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-geant-montceau-les-mines",
+      "nom": "Pharmacie De La Saule",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-saule--saint-vallier",
       "location": {
-        "longitude": 4.3703288,
-        "latitude": 46.6778051
+        "longitude": 4.340276,
+        "latitude": 46.646648
       },
       "metadata": {
-        "address": "5 Boulevard de Lattre de Tassigny, 71300 Montceau-les-Mines",
-        "phone_number": "+33385573951",
+        "address": "Rue de la Branche, 71230 Saint-Vallier",
+        "phone_number": "+33385578855",
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "71",
+      "nom": "Pharmacie De La Pyramide",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-pyramide-macon",
+      "location": {
+        "longitude": 4.8302966,
+        "latitude": 46.30249389999999
+      },
+      "metadata": {
+        "address": "362 rue carnot, 71000 M\u00e2con",
+        "phone_number": "+33385380199",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -635,33 +653,15 @@
     },
     {
       "departement": "71",
-      "nom": "Pharmacie De La Saule",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-saule--saint-vallier",
+      "nom": "Pharmacie Du G\u00e9ant",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-geant-montceau-les-mines",
       "location": {
-        "longitude": 4.340276,
-        "latitude": 46.646648
+        "longitude": 4.3703288,
+        "latitude": 46.6778051
       },
       "metadata": {
-        "address": "Rue de la Branche, 71230 Saint-Vallier",
-        "phone_number": "+33385578855",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "71",
-      "nom": "Pharmacie De La Pyramide",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-pyramide-macon",
-      "location": {
-        "longitude": 4.8302966,
-        "latitude": 46.30249389999999
-      },
-      "metadata": {
-        "address": "362 rue carnot, 71000 M\u00e2con",
-        "phone_number": "+33385380199",
+        "address": "5 Boulevard de Lattre de Tassigny, 71300 Montceau-les-Mines",
+        "phone_number": "+33385573951",
         "business_hours": null
       },
       "prochain_rdv": null,

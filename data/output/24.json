@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.809922+02:00",
+  "last_updated": "2021-04-09T15:27:36.515177+02:00",
   "centres_disponibles": [
     {
       "departement": "24",
@@ -23,7 +23,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-11T16:42:00.000+02:00",
+      "prochain_rdv": "2021-04-11T15:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -49,7 +49,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-11T17:18:00.000+02:00",
+      "prochain_rdv": "2021-04-11T17:24:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -361,32 +361,6 @@
     },
     {
       "departement": "24",
-      "nom": "Centre de vaccination EHPAD La Madeleine",
-      "url": "https://partners.doctolib.fr/centre-de-sante/bergerac/centre-de-vaccination-covid-19-ehpad-la-madeleine?pid=practice-174840&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.478724",
-        "latitude": "44.8473"
-      },
-      "metadata": {
-        "address": "40 Rue du Mar\u00e9chal Joffre, 24100 Bergerac",
-        "phone_number": "+33638082314",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "8h30 - 12h/14h00-17h00 ",
-          "mercredi": "8h30 - 12h/14h00-17h00 ",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "24",
       "nom": "CD - Unit\u00e9 Sanitaire Niveau 1 - Centre de D\u00e9tention de MAUZAC / Centre de D\u00e9tention de Mauzac",
       "url": "",
       "location": {
@@ -462,6 +436,32 @@
     },
     {
       "departement": "24",
+      "nom": "Centre de vaccination EHPAD La Madeleine",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bergerac/centre-de-vaccination-covid-19-ehpad-la-madeleine?pid=practice-174840&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.478724",
+        "latitude": "44.8473"
+      },
+      "metadata": {
+        "address": "40 Rue du Mar\u00e9chal Joffre, 24100 Bergerac",
+        "phone_number": "+33638082314",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "8h30 - 12h/14h00-17h00 ",
+          "mercredi": "8h30 - 12h/14h00-17h00 ",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
       "nom": "Clinique Pasteur & CPTS",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/bergerac/centre-de-vaccination-covid-19-clinique-pasteur-bergerac-elsan?pid=practice-172067&enable_cookies_consent=1",
       "location": {
@@ -476,32 +476,6 @@
           "mercredi": "13:00-17:00",
           "jeudi": "13:00-17:00",
           "vendredi": "13:00-17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "24",
-      "nom": "Maison de sant\u00e9 du Pays Montponnais",
-      "url": "https://partners.doctolib.fr/centre-de-sante/montpon-menesterol/centre-de-vaccination-covid-19-montpon-menestrol?pid=practice-170938&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.159106",
-        "latitude": "45.0032"
-      },
-      "metadata": {
-        "address": "8 Rue du 19 Mars 1962, 24700 Montpon-M\u00e9nest\u00e9rol",
-        "phone_number": "05 53 80 34 30",
-        "business_hours": {
-          "lundi": "9h-13h/14h-18h",
-          "mardi": "9h-13h/14h-18h",
-          "mercredi": "9h-13h/14h-18h",
-          "jeudi": "9h-13h/14h-18h",
-          "vendredi": "9h-13h/14h-18h",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -533,6 +507,32 @@
       },
       "prochain_rdv": null,
       "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "Maison de sant\u00e9 du Pays Montponnais",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montpon-menesterol/centre-de-vaccination-covid-19-montpon-menestrol?pid=practice-170938&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.159106",
+        "latitude": "45.0032"
+      },
+      "metadata": {
+        "address": "8 Rue du 19 Mars 1962, 24700 Montpon-M\u00e9nest\u00e9rol",
+        "phone_number": "05 53 80 34 30",
+        "business_hours": {
+          "lundi": "9h-13h/14h-18h",
+          "mardi": "9h-13h/14h-18h",
+          "mercredi": "9h-13h/14h-18h",
+          "jeudi": "9h-13h/14h-18h",
+          "vendredi": "9h-13h/14h-18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },

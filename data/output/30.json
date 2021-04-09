@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.817545+02:00",
+  "last_updated": "2021-04-09T15:27:36.522748+02:00",
   "centres_disponibles": [
     {
       "departement": "30",
@@ -23,7 +23,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-11T09:25:00.000+02:00",
+      "prochain_rdv": "2021-04-11T09:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "general-practitioner",
       "appointment_count": 0
@@ -55,26 +55,25 @@
     },
     {
       "departement": "30",
-      "nom": "CHU N\u00eemes",
-      "url": "https://partners.doctolib.fr/hopital-public/nimes/chu-nimes-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre Al\u00e8s Fil",
+      "url": "https://partners.doctolib.fr/centre-de-sante/ales/centre-de-vaccination-covid-19-ales?pid=practice-165321&enable_cookies_consent=1",
       "location": {
-        "longitude": "4.32086",
-        "latitude": "43.8234"
+        "longitude": "4.08864",
+        "latitude": "44.1189"
       },
       "metadata": {
-        "address": "286 Rue du Professeur Robert Debre, 30900 N\u00eemes",
-        "phone_number": "+33800541919",
+        "address": "177 Chemin des Sports, 30100 Al\u00e8s",
         "business_hours": {
-          "lundi": "8:00-16:30",
-          "mardi": "8:00-16:30",
-          "mercredi": "8:00-16:30",
-          "jeudi": "8:00-16:30",
-          "vendredi": "8:00-16:30",
-          "samedi": "8:00-16:30",
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "13:30 - 17:00",
+          "jeudi": "13:30 - 17:00",
+          "vendredi": "13:30 - 17:00",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-18T18:00:00.000+02:00",
+      "prochain_rdv": "2021-04-20T14:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -100,32 +99,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-20T15:45:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "30",
-      "nom": "Centre Al\u00e8s Fil",
-      "url": "https://partners.doctolib.fr/centre-de-sante/ales/centre-de-vaccination-covid-19-ales?pid=practice-165321&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.08864",
-        "latitude": "44.1189"
-      },
-      "metadata": {
-        "address": "177 Chemin des Sports, 30100 Al\u00e8s",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "13:30 - 17:00",
-          "jeudi": "13:30 - 17:00",
-          "vendredi": "13:30 - 17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-20T16:15:00.000+02:00",
+      "prochain_rdv": "2021-04-20T14:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -151,7 +125,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-20T16:20:00.000+02:00",
+      "prochain_rdv": "2021-04-20T16:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -202,7 +176,33 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-21T12:45:00.000+02:00",
+      "prochain_rdv": "2021-04-21T14:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "30",
+      "nom": "CHU N\u00eemes",
+      "url": "https://partners.doctolib.fr/hopital-public/nimes/chu-nimes-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.32086",
+        "latitude": "43.8234"
+      },
+      "metadata": {
+        "address": "286 Rue du Professeur Robert Debre, 30900 N\u00eemes",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "8:00-16:30",
+          "mardi": "8:00-16:30",
+          "mercredi": "8:00-16:30",
+          "jeudi": "8:00-16:30",
+          "vendredi": "8:00-16:30",
+          "samedi": "8:00-16:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-25T09:55:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -442,6 +442,32 @@
     },
     {
       "departement": "30",
+      "nom": "CH Al\u00e8s",
+      "url": "https://partners.doctolib.fr/hopital-public/al\u00e8s/centre-de-vaccination-du-centre-hospitalier-d-ales?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.0975",
+        "latitude": "44.1471"
+      },
+      "metadata": {
+        "address": "811 avenue du Dr Jean Goubert, 30100 Al\u00e8s",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9:00-12:30",
+          "mardi": "9:00-12:30",
+          "mercredi": "9:00-12:30",
+          "jeudi": "9:00-12:30",
+          "vendredi": "9:00-12:30",
+          "samedi": "9:00-12:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "30",
       "nom": "Centre de vaccination Vauvert - Petite Camargue",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/vauvert/centre-de-vaccination-de-vauvert-petite-camargue?pid=practice-166678&enable_cookies_consent=1",
       "location": {
@@ -484,32 +510,6 @@
           "jeudi": "08:00-16:00",
           "vendredi": "08:00-16:00",
           "samedi": "",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "30",
-      "nom": "CH Al\u00e8s",
-      "url": "https://partners.doctolib.fr/hopital-public/al\u00e8s/centre-de-vaccination-du-centre-hospitalier-d-ales?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.0975",
-        "latitude": "44.1471"
-      },
-      "metadata": {
-        "address": "811 avenue du Dr Jean Goubert, 30100 Al\u00e8s",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "9:00-12:30",
-          "mardi": "9:00-12:30",
-          "mercredi": "9:00-12:30",
-          "jeudi": "9:00-12:30",
-          "vendredi": "9:00-12:30",
-          "samedi": "9:00-12:30",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -615,24 +615,6 @@
     },
     {
       "departement": "30",
-      "nom": "Grande Pharmacie Du Talabot",
-      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-du-talabot-nimes",
-      "location": {
-        "longitude": 4.372371999999999,
-        "latitude": 43.83867009999999
-      },
-      "metadata": {
-        "address": "53 rue de Beaucaire, 30000 nimes",
-        "phone_number": "+33466679942",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "30",
       "nom": "Pharmacie Agn\u00e8s Praden",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-agnes-praden-ales",
       "location": {
@@ -646,6 +628,24 @@
       },
       "prochain_rdv": null,
       "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "30",
+      "nom": "Grande Pharmacie Du Talabot",
+      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-du-talabot-nimes",
+      "location": {
+        "longitude": 4.372371999999999,
+        "latitude": 43.83867009999999
+      },
+      "metadata": {
+        "address": "53 rue de Beaucaire, 30000 nimes",
+        "phone_number": "+33466679942",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },

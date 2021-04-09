@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.793613+02:00",
+  "last_updated": "2021-04-09T15:27:36.498665+02:00",
   "centres_disponibles": [
     {
       "departement": "07",
@@ -30,6 +30,32 @@
     },
     {
       "departement": "07",
+      "nom": "Clinique Pasteur de Guilherand-Granges",
+      "url": "https://partners.doctolib.fr/clinique-privee/guilherand-granges/centre-de-vaccination-covid19-clinique-pasteur?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.88257",
+        "latitude": "44.9341"
+      },
+      "metadata": {
+        "address": "294 Boulevard Charles de Gaulle, 07500 Guilherand-Granges",
+        "phone_number": "+33800009110",
+        "business_hours": {
+          "lundi": "13:30-17:00",
+          "mardi": "08:30-12:30/13:30-17:00",
+          "mercredi": "08:30-12:30/13:30-17:00",
+          "jeudi": "08:30-12:30/13:30-17:00",
+          "vendredi": "08:30-12:30/13:30-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-15T08:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "07",
       "nom": "Centre de vaccination du CH d'Aubenas - Maison m\u00e9dicale de garde",
       "url": "https://partners.doctolib.fr/hopital-public/aubenas/centre-de-vaccination-covid-ch-d-ardeche-meridionale?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -49,7 +75,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-24T13:40:00.000+02:00",
+      "prochain_rdv": "2021-05-03T12:50:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -110,6 +136,31 @@
     },
     {
       "departement": "07",
+      "nom": "Centre de vaccination \u00e9ph\u00e9m\u00e8re du Val d'Ay",
+      "url": "",
+      "location": {
+        "longitude": "4.6247",
+        "latitude": "45.1555"
+      },
+      "metadata": {
+        "address": "160 Rue de Peyrard, 07290 Satillieu",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "07",
       "nom": "CENTRE HOSPITALIER D'ARDECHE NORD (Professionnels de sant\u00e9 uniquement)",
       "url": "https://www.maiia.com/centre-hospitalier-(ch)/07100-annonay/centre-hospitalier-d-ardeche-nord-",
       "location": {
@@ -131,31 +182,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Maiia",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "07",
-      "nom": "Centre de vaccination \u00e9ph\u00e9m\u00e8re du Val d'Ay",
-      "url": "",
-      "location": {
-        "longitude": "4.6247",
-        "latitude": "45.1555"
-      },
-      "metadata": {
-        "address": "160 Rue de Peyrard, 07290 Satillieu",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -237,32 +263,6 @@
     },
     {
       "departement": "07",
-      "nom": "Centre de Vaccination Territorial et Hospitalier de Tournon",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/tournon-sur-rhone/vaccination-covid-19-ch-tournon?pid=practice-174270&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.84544",
-        "latitude": "45.0604"
-      },
-      "metadata": {
-        "address": "49-53 Rue de Chapotte, 07300 Tournon-sur-Rh\u00f4ne",
-        "phone_number": "+33800009110",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "09:00-17:00",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "09:00-17:00",
-          "vendredi": "09:00-17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "07",
       "nom": "Centre de vaccination de Lamastre  - Centre socio-culturel",
       "url": "https://www.maiia.com/centre-de-vaccination/07270-lamastre/centre-de-vaccination-covid---lamastre",
       "location": {
@@ -284,6 +284,32 @@
       },
       "prochain_rdv": null,
       "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "07",
+      "nom": "Centre de Vaccination Territorial et Hospitalier de Tournon",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/tournon-sur-rhone/vaccination-covid-19-ch-tournon?pid=practice-174270&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.84544",
+        "latitude": "45.0604"
+      },
+      "metadata": {
+        "address": "49-53 Rue de Chapotte, 07300 Tournon-sur-Rh\u00f4ne",
+        "phone_number": "+33800009110",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "09:00-17:00",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -330,32 +356,6 @@
           "mercredi": "ouvert",
           "jeudi": "ouvert",
           "vendredi": "ouvert",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "07",
-      "nom": "Clinique Pasteur de Guilherand-Granges",
-      "url": "https://partners.doctolib.fr/clinique-privee/guilherand-granges/centre-de-vaccination-covid19-clinique-pasteur?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.88257",
-        "latitude": "44.9341"
-      },
-      "metadata": {
-        "address": "294 Boulevard Charles de Gaulle, 07500 Guilherand-Granges",
-        "phone_number": "+33800009110",
-        "business_hours": {
-          "lundi": "13:30-17:00",
-          "mardi": "08:30-12:30/13:30-17:00",
-          "mercredi": "08:30-12:30/13:30-17:00",
-          "jeudi": "08:30-12:30/13:30-17:00",
-          "vendredi": "08:30-12:30/13:30-17:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }

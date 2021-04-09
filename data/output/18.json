@@ -1,7 +1,58 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.804534+02:00",
+  "last_updated": "2021-04-09T15:27:36.510166+02:00",
   "centres_disponibles": [
+    {
+      "departement": "18",
+      "nom": "CPTS Pays de Bourges - Centre de vaccination Covid-19",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bourges/cpts-pays-de-bourge",
+      "location": {
+        "longitude": 2.3865358,
+        "latitude": 47.0826436
+      },
+      "metadata": {
+        "address": "Rue du Champ de Foire, 18000 Bourges",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-10T14:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "18",
+      "nom": "Centre de vaccination - Centre des congr\u00e8s de Vierzon",
+      "url": "https://partners.doctolib.fr/centre-de-sante/vierzon/centre-de-vaccination-de-vierzon?pid=practice-164576&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.06034",
+        "latitude": "47.2246"
+      },
+      "metadata": {
+        "address": "16 Rue de la Soci\u00e9t\u00e9 Fran\u00e7aise, 18100 Vierzon",
+        "phone_number": "08 05 02 14 00",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "10h-12h",
+          "mercredi": "10h-12h",
+          "jeudi": "10h-12h",
+          "vendredi": "10h-12h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-10T15:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
     {
       "departement": "18",
       "nom": "Centre de Vaccination Aubigny - Salle polyvalente - Les terrasses de la N\u00e8re",
@@ -23,7 +74,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-13T12:30:00.000+02:00",
+      "prochain_rdv": "2021-04-15T09:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -47,31 +98,6 @@
           "vendredi": "9h-3h/13h30-17h30",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-15T13:40:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "18",
-      "nom": "CPTS Pays de Bourges - Centre de vaccination Covid-19",
-      "url": "https://partners.doctolib.fr/centre-de-sante/bourges/cpts-pays-de-bourge",
-      "location": {
-        "longitude": 2.3865358,
-        "latitude": 47.0826436
-      },
-      "metadata": {
-        "address": "Rue du Champ de Foire, 18000 Bourges",
-        "business_hours": {
-          "lundi": null,
-          "mardi": null,
-          "mercredi": null,
-          "jeudi": null,
-          "vendredi": null,
-          "samedi": null,
-          "dimanche": null
         }
       },
       "prochain_rdv": "2021-04-19T09:00:00.000+02:00",
@@ -100,7 +126,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-23T15:52:00.000+02:00",
+      "prochain_rdv": "2021-04-21T15:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -126,7 +152,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-24T16:20:00.000+02:00",
+      "prochain_rdv": "2021-04-26T09:12:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -152,7 +178,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-26T10:48:00.000+02:00",
+      "prochain_rdv": "2021-04-26T09:12:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -261,31 +287,6 @@
     },
     {
       "departement": "18",
-      "nom": "La guerche sur l'Aubois CV \u00e9ph\u00e9m\u00e8re",
-      "url": "https://partners.doctolib.fr/centre-de-sante/la-guerche-sur-l-aubois/centre-de-vaccination-covid-la-guerche-sur-l-aubois?pid=practice-177332&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.94541",
-        "latitude": "46.9513"
-      },
-      "metadata": {
-        "address": " , 18150 La Guerche-sur-l'Aubois",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "18",
       "nom": "Trouy/Plaimpied Cv \u00e9ph\u00e9m\u00e8re",
       "url": "",
       "location": {
@@ -306,6 +307,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "18",
+      "nom": "La guerche sur l'Aubois CV \u00e9ph\u00e9m\u00e8re",
+      "url": "https://partners.doctolib.fr/centre-de-sante/la-guerche-sur-l-aubois/centre-de-vaccination-covid-la-guerche-sur-l-aubois?pid=practice-177332&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.94541",
+        "latitude": "46.9513"
+      },
+      "metadata": {
+        "address": " , 18150 La Guerche-sur-l'Aubois",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -486,14 +512,14 @@
     },
     {
       "departement": "18",
-      "nom": "CV \u00e9ph\u00e9m\u00e8re - Sancoins",
+      "nom": "Bourges Vaccinodrome",
       "url": "",
       "location": {
-        "longitude": "2.91905",
-        "latitude": "46.8308"
+        "longitude": "2.39878",
+        "latitude": "47.081"
       },
       "metadata": {
-        "address": " , 18600 Sancoins",
+        "address": " , 18000 Bourges",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -511,14 +537,14 @@
     },
     {
       "departement": "18",
-      "nom": "Bourges Vaccinodrome",
+      "nom": "CV \u00e9ph\u00e9m\u00e8re - Sancoins",
       "url": "",
       "location": {
-        "longitude": "2.39878",
-        "latitude": "47.081"
+        "longitude": "2.91905",
+        "latitude": "46.8308"
       },
       "metadata": {
-        "address": " , 18000 Bourges",
+        "address": " , 18600 Sancoins",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -661,31 +687,6 @@
     },
     {
       "departement": "18",
-      "nom": "CV \u00e9ph\u00e9m\u00e8re - Dun-sur-Auron",
-      "url": "https://partners.doctolib.fr/centre-de-sante/dun-sur-auron/centre-de-vaccination-covid-19-dun-sur-auron?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.57394",
-        "latitude": "46.8879"
-      },
-      "metadata": {
-        "address": "13 Place du Champ de Foire, 18130 Dun-sur-Auron",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "18",
       "nom": "CV \u00e9ph\u00e9m\u00e8re Henrichemont",
       "url": "",
       "location": {
@@ -736,14 +737,14 @@
     },
     {
       "departement": "18",
-      "nom": "CV \u00e9ph\u00e9m\u00e8re - Neuvy-sur-Barangeon",
-      "url": "",
+      "nom": "CV \u00e9ph\u00e9m\u00e8re - Dun-sur-Auron",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dun-sur-auron/centre-de-vaccination-covid-19-dun-sur-auron?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.2547",
-        "latitude": "47.3147"
+        "longitude": "2.57394",
+        "latitude": "46.8879"
       },
       "metadata": {
-        "address": "29 Place de la Mairie, 18330 Neuvy-sur-Barangeon",
+        "address": "13 Place du Champ de Foire, 18130 Dun-sur-Auron",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -755,7 +756,7 @@
         }
       },
       "prochain_rdv": null,
-      "plateforme": "Autre",
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -781,6 +782,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "18",
+      "nom": "CV \u00e9ph\u00e9m\u00e8re - Neuvy-sur-Barangeon",
+      "url": "",
+      "location": {
+        "longitude": "2.2547",
+        "latitude": "47.3147"
+      },
+      "metadata": {
+        "address": "29 Place de la Mairie, 18330 Neuvy-sur-Barangeon",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -1025,32 +1051,6 @@
           "mercredi": "ferm\u00e9",
           "jeudi": "ferm\u00e9",
           "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "18",
-      "nom": "Centre de vaccination - Centre des congr\u00e8s de Vierzon",
-      "url": "https://partners.doctolib.fr/centre-de-sante/vierzon/centre-de-vaccination-de-vierzon?pid=practice-164576&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.06034",
-        "latitude": "47.2246"
-      },
-      "metadata": {
-        "address": "16 Rue de la Soci\u00e9t\u00e9 Fran\u00e7aise, 18100 Vierzon",
-        "phone_number": "08 05 02 14 00",
-        "business_hours": {
-          "lundi": "",
-          "mardi": "10h-12h",
-          "mercredi": "10h-12h",
-          "jeudi": "10h-12h",
-          "vendredi": "10h-12h",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.872595+02:00",
+  "last_updated": "2021-04-09T15:27:36.577091+02:00",
   "centres_disponibles": [
     {
       "departement": "77",
@@ -23,7 +23,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-13T11:00:00.000+02:00",
+      "prochain_rdv": "2021-04-13T11:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -158,31 +158,6 @@
     },
     {
       "departement": "77",
-      "nom": "CHSSM-Site de Fontainebleau",
-      "url": "",
-      "location": {
-        "longitude": "2.6963",
-        "latitude": "48.4119"
-      },
-      "metadata": {
-        "address": "55 Boulevard du Mar\u00e9chal Joffre, 77300 Fontainebleau",
-        "business_hours": {
-          "lundi": "8H30-17H30",
-          "mardi": "8H30-17H30",
-          "mercredi": "8H30-17H30",
-          "jeudi": "8H30-17H30",
-          "vendredi": "8H30-17H30",
-          "samedi": "",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "77",
       "nom": "Centre de vaccination GHSIF MELUN - Site de Brie Comte Robert",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/brie-comte-robert/centre-de-vaccination-de-la-brie?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -204,6 +179,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "77",
+      "nom": "CHSSM-Site de Fontainebleau",
+      "url": "",
+      "location": {
+        "longitude": "2.6963",
+        "latitude": "48.4119"
+      },
+      "metadata": {
+        "address": "55 Boulevard du Mar\u00e9chal Joffre, 77300 Fontainebleau",
+        "business_hours": {
+          "lundi": "8H30-17H30",
+          "mardi": "8H30-17H30",
+          "mercredi": "8H30-17H30",
+          "jeudi": "8H30-17H30",
+          "vendredi": "8H30-17H30",
+          "samedi": "",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -310,31 +310,6 @@
     },
     {
       "departement": "77",
-      "nom": "EMV Lagny",
-      "url": "",
-      "location": {
-        "longitude": "2.71248",
-        "latitude": "48.8669"
-      },
-      "metadata": {
-        "address": "33 Rue Emmanuel Gr\u00e9vin, 77400 Lagny-sur-Marne",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "77",
       "nom": "Centre de vaccination du GHSIF Melun",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/melun-cedex-77011/groupe-hospitalier-sud-ile-de-france/centre-covid?specialty=496",
       "location": {
@@ -356,6 +331,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "77",
+      "nom": "EMV Lagny",
+      "url": "",
+      "location": {
+        "longitude": "2.71248",
+        "latitude": "48.8669"
+      },
+      "metadata": {
+        "address": "33 Rue Emmanuel Gr\u00e9vin, 77400 Lagny-sur-Marne",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -462,14 +462,14 @@
     },
     {
       "departement": "77",
-      "nom": "CP - Unit\u00e9 Sanitaire (USS + DSP) du Centre P\u00e9nitentiaire Sud Francilien / Centre de D\u00e9tention de Melun",
+      "nom": "CP - US Meaux Chauconin-Neufmontiers / Centre P\u00e9nitentiaire de Meaux-Chauconin-Neufmontiers",
       "url": "",
       "location": {
-        "longitude": "2.66195",
-        "latitude": "48.5355"
+        "longitude": "2.86414",
+        "latitude": "48.958"
       },
       "metadata": {
-        "address": "10 Quai de la Courtille, 77000 Melun",
+        "address": " Rue du Lycee, 77124 Chauconin-Neufmontiers",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -487,14 +487,14 @@
     },
     {
       "departement": "77",
-      "nom": "CP - US Meaux Chauconin-Neufmontiers / Centre P\u00e9nitentiaire de Meaux-Chauconin-Neufmontiers",
+      "nom": "CP - Unit\u00e9 Sanitaire (USS + DSP) du Centre P\u00e9nitentiaire Sud Francilien / Centre de D\u00e9tention de Melun",
       "url": "",
       "location": {
-        "longitude": "2.86414",
-        "latitude": "48.958"
+        "longitude": "2.66195",
+        "latitude": "48.5355"
       },
       "metadata": {
-        "address": " Rue du Lycee, 77124 Chauconin-Neufmontiers",
+        "address": "10 Quai de la Courtille, 77000 Melun",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -639,31 +639,6 @@
     },
     {
       "departement": "77",
-      "nom": "Centres de vaccination GHIF Melun- site de Savigny le temple",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/savigny-le-temple-77176/centre-de-vaccination-covid-ghsif-site-de-savigny-le-temple",
-      "location": {
-        "longitude": "2.58289",
-        "latitude": "48.5955"
-      },
-      "metadata": {
-        "address": "3 Place du 19 Mars 1962, 77176 Savigny-le-Temple",
-        "business_hours": {
-          "lundi": "9h-17h",
-          "mardi": "9h-17h",
-          "mercredi": "9h-17h",
-          "jeudi": "9h-17h",
-          "vendredi": "9h-17h",
-          "samedi": "9h-17h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "77",
       "nom": "Ville de Pontault Combault",
       "url": "https://partners.doctolib.fr/centre-de-sante/pontault-combault/centre-de-vaccination-mairie-de-pontault-combault?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -685,6 +660,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "77",
+      "nom": "Centres de vaccination GHIF Melun- site de Savigny le temple",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/savigny-le-temple-77176/centre-de-vaccination-covid-ghsif-site-de-savigny-le-temple",
+      "location": {
+        "longitude": "2.58289",
+        "latitude": "48.5955"
+      },
+      "metadata": {
+        "address": "3 Place du 19 Mars 1962, 77176 Savigny-le-Temple",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -768,32 +768,6 @@
     },
     {
       "departement": "77",
-      "nom": "Ville de Montereau",
-      "url": "https://partners.doctolib.fr/centre-de-sante/montereau-fault-yonne/centre-de-vaccination-covid-de-montereau-fault-yonne-reserve-personnes-plus-de-75ans?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.95463",
-        "latitude": "48.386"
-      },
-      "metadata": {
-        "address": " Place du Calvaire, 77130 Montereau-Fault-Yonne",
-        "phone_number": "+33182340025",
-        "business_hours": {
-          "lundi": "14:00-17:00 ",
-          "mardi": "14:00-17:00 ",
-          "mercredi": "14:00-17:00 ",
-          "jeudi": "14:00-17:00 ",
-          "vendredi": "14:00-17:00 ",
-          "samedi": "ouvert",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "77",
       "nom": "Ville de Nemours",
       "url": "https://partners.doctolib.fr/centre-de-sante/nemours/centre-vaccination-covid-19-msp-pays-de-nemours?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -810,6 +784,32 @@
           "jeudi": "9:00-13:00/14:00-18:00",
           "vendredi": "9:00-13:00/14:00-18:00",
           "samedi": "9:00-13:00/14:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "77",
+      "nom": "Ville de Montereau",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montereau-fault-yonne/centre-de-vaccination-covid-de-montereau-fault-yonne-reserve-personnes-plus-de-75ans?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.95463",
+        "latitude": "48.386"
+      },
+      "metadata": {
+        "address": " Place du Calvaire, 77130 Montereau-Fault-Yonne",
+        "phone_number": "+33182340025",
+        "business_hours": {
+          "lundi": "14:00-17:00 ",
+          "mardi": "14:00-17:00 ",
+          "mercredi": "14:00-17:00 ",
+          "jeudi": "14:00-17:00 ",
+          "vendredi": "14:00-17:00 ",
+          "samedi": "ouvert",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -838,24 +838,6 @@
     },
     {
       "departement": "77",
-      "nom": "Pharmacie De Saint Soupplets",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-saint-soupplets-saint-soupplets",
-      "location": {
-        "longitude": 2.802476,
-        "latitude": 49.0357062
-      },
-      "metadata": {
-        "address": "35 rue du Bourget, 77165 Saint Soupplets",
-        "phone_number": "+33160015039",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "77",
       "nom": "Grande Pharmacie De Boissenart",
       "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-de-boissenart-cesson",
       "location": {
@@ -869,6 +851,41 @@
       },
       "prochain_rdv": null,
       "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "77",
+      "nom": "Pharmacie De Saint Soupplets",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-saint-soupplets-saint-soupplets",
+      "location": {
+        "longitude": 2.802476,
+        "latitude": 49.0357062
+      },
+      "metadata": {
+        "address": "35 rue du Bourget, 77165 Saint Soupplets",
+        "phone_number": "+33160015039",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "77",
+      "nom": "Pharmacie Du Bel Air",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-bel-air-combs-la-ville",
+      "location": {
+        "longitude": 2.559098,
+        "latitude": 48.6661852
+      },
+      "metadata": {
+        "address": "30 place de l'an 2000, 77380 Combs la ville",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -999,23 +1016,6 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "general-practitioner",
-      "appointment_count": 0
-    },
-    {
-      "departement": "77",
-      "nom": "Pharmacie Du Bel Air",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-bel-air-combs-la-ville",
-      "location": {
-        "longitude": 2.559098,
-        "latitude": 48.6661852
-      },
-      "metadata": {
-        "address": "30 place de l'an 2000, 77380 Combs la ville",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
       "appointment_count": 0
     }
   ]

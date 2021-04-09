@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.843079+02:00",
+  "last_updated": "2021-04-09T15:27:36.547444+02:00",
   "centres_disponibles": [
     {
       "departement": "55",
@@ -23,7 +23,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-13T15:15:00.000+02:00",
+      "prochain_rdv": "2021-04-13T12:55:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -49,7 +49,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-13T15:15:00.000+02:00",
+      "prochain_rdv": "2021-04-13T12:55:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -162,32 +162,6 @@
     },
     {
       "departement": "55",
-      "nom": "Lieu de vaccination de COMMERCY (salle du Marlat)",
-      "url": "https://www.maiia.com/centre-de-vaccination/55200-commercy/centre-de-vaccination---commercy",
-      "location": {
-        "longitude": "5.58283",
-        "latitude": "48.7561"
-      },
-      "metadata": {
-        "address": " Rue de la Pocherie, 55200 Commercy",
-        "phone_number": "+33372850117",
-        "business_hours": {
-          "lundi": "A pr\u00e9ciser",
-          "mardi": "A pr\u00e9ciser",
-          "mercredi": "A pr\u00e9ciser",
-          "jeudi": "A pr\u00e9ciser",
-          "vendredi": "A pr\u00e9ciser",
-          "samedi": "A pr\u00e9ciser",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Maiia",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "55",
       "nom": "Lieu de vaccination de MONTMEDY (salle des f\u00eates)",
       "url": "https://www.maiia.com/centre-de-vaccination/55600-montmedy/centre-de-vaccination---montmedy-et-marville",
       "location": {
@@ -230,6 +204,32 @@
           "jeudi": "A pr\u00e9ciser",
           "vendredi": "A pr\u00e9ciser",
           "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "55",
+      "nom": "Lieu de vaccination de COMMERCY (salle du Marlat)",
+      "url": "https://www.maiia.com/centre-de-vaccination/55200-commercy/centre-de-vaccination---commercy",
+      "location": {
+        "longitude": "5.58283",
+        "latitude": "48.7561"
+      },
+      "metadata": {
+        "address": " Rue de la Pocherie, 55200 Commercy",
+        "phone_number": "+33372850117",
+        "business_hours": {
+          "lundi": "A pr\u00e9ciser",
+          "mardi": "A pr\u00e9ciser",
+          "mercredi": "A pr\u00e9ciser",
+          "jeudi": "A pr\u00e9ciser",
+          "vendredi": "A pr\u00e9ciser",
+          "samedi": "A pr\u00e9ciser",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -344,14 +344,14 @@
     },
     {
       "departement": "55",
-      "nom": "Lieu de vaccination de VIGNEULLES (Maison de sant\u00e9)",
-      "url": "https://www.maiia.com/centre-de-vaccination/55210-vigneulles-les-hattonchatel/centre-de-vaccination---vigneulles-les-hattonchatel--",
+      "nom": "Lieu de vaccination de Pierrefitte-sur-Aire",
+      "url": "https://www.maiia.com/centre-de-vaccination/55260-pierrefitte-sur-aire/centre-de-vaccination---pierrefitte-sur-aire",
       "location": {
-        "longitude": "5.71484",
-        "latitude": "48.9789"
+        "longitude": "5.32949",
+        "latitude": "48.8985"
       },
       "metadata": {
-        "address": "74 Rue Raymond Poincar\u00e9, 55210 Vigneulles-l\u00e8s-Hattonch\u00e2tel",
+        "address": "3 Rue de Cond\u00e9 (salle de la Mairie), 55260 Pierrefitte-sur-Aire",
         "phone_number": "+33372850117",
         "business_hours": {
           "lundi": "\u00e0 pr\u00e9ciser",
@@ -370,14 +370,14 @@
     },
     {
       "departement": "55",
-      "nom": "Lieu de vaccination de Pierrefitte-sur-Aire",
-      "url": "https://www.maiia.com/centre-de-vaccination/55260-pierrefitte-sur-aire/centre-de-vaccination---pierrefitte-sur-aire",
+      "nom": "Lieu de vaccination de VIGNEULLES (Maison de sant\u00e9)",
+      "url": "https://www.maiia.com/centre-de-vaccination/55210-vigneulles-les-hattonchatel/centre-de-vaccination---vigneulles-les-hattonchatel--",
       "location": {
-        "longitude": "5.32949",
-        "latitude": "48.8985"
+        "longitude": "5.71484",
+        "latitude": "48.9789"
       },
       "metadata": {
-        "address": "3 Rue de Cond\u00e9 (salle de la Mairie), 55260 Pierrefitte-sur-Aire",
+        "address": "74 Rue Raymond Poincar\u00e9, 55210 Vigneulles-l\u00e8s-Hattonch\u00e2tel",
         "phone_number": "+33372850117",
         "business_hours": {
           "lundi": "\u00e0 pr\u00e9ciser",
@@ -422,7 +422,7 @@
     },
     {
       "departement": "55",
-      "nom": "CD - US MONTMEDY / Centre de D\u00e9tention de Montm\u00e9dy",
+      "nom": "CD - US SAINT MIHIEL / Centre de D\u00e9tention de Montm\u00e9dy",
       "url": "",
       "location": {
         "longitude": "5.37153",
@@ -472,7 +472,7 @@
     },
     {
       "departement": "55",
-      "nom": "CD - US SAINT MIHIEL / Centre de D\u00e9tention de Montm\u00e9dy",
+      "nom": "CD - US MONTMEDY / Centre de D\u00e9tention de Montm\u00e9dy",
       "url": "",
       "location": {
         "longitude": "5.37153",

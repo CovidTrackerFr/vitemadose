@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.846268+02:00",
+  "last_updated": "2021-04-09T15:27:36.550619+02:00",
   "centres_disponibles": [
     {
       "departement": "58",
@@ -30,6 +30,32 @@
     },
     {
       "departement": "58",
+      "nom": "La Charit\u00e9 Sur Loire - Salle des F\u00eates",
+      "url": "https://partners.doctolib.fr/centre-de-sante/la-charite-sur-loire/centre-de-vaccination-de-la-charite-sur-loire?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.02061",
+        "latitude": "47.1766"
+      },
+      "metadata": {
+        "address": "40 Rue Sainte Anne, 58400 La Charit\u00e9-sur-Loire",
+        "phone_number": "+33345640210",
+        "business_hours": {
+          "lundi": "13:30 \u2013 17:00",
+          "mardi": "08:30\u201312:00 /13:30\u201317:00",
+          "mercredi": "13:30 \u2013 17:00",
+          "jeudi": "08:30\u201312:00 /13:30\u201317:00",
+          "vendredi": "08:30\u201312:00 /13:30\u201317:00",
+          "samedi": "08:30\u201312:00 /13:30\u201317:00",
+          "dimanche": "FERME"
+        }
+      },
+      "prochain_rdv": "2021-04-16T09:45:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "58",
       "nom": "LORMES",
       "url": "https://partners.doctolib.fr/centre-de-sante/lormes/centre-de-vaccination-de-lormes?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -50,32 +76,6 @@
         }
       },
       "prochain_rdv": "2021-04-16T13:40:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "58",
-      "nom": "La Charit\u00e9 Sur Loire - Salle des F\u00eates",
-      "url": "https://partners.doctolib.fr/centre-de-sante/la-charite-sur-loire/centre-de-vaccination-de-la-charite-sur-loire?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "3.02061",
-        "latitude": "47.1766"
-      },
-      "metadata": {
-        "address": "40 Rue Sainte Anne, 58400 La Charit\u00e9-sur-Loire",
-        "phone_number": "+33345640210",
-        "business_hours": {
-          "lundi": "13:30 \u2013 17:00",
-          "mardi": "08:30\u201312:00 /13:30\u201317:00",
-          "mercredi": "13:30 \u2013 17:00",
-          "jeudi": "08:30\u201312:00 /13:30\u201317:00",
-          "vendredi": "08:30\u201312:00 /13:30\u201317:00",
-          "samedi": "08:30\u201312:00 /13:30\u201317:00",
-          "dimanche": "FERME"
-        }
-      },
-      "prochain_rdv": "2021-04-16T15:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -127,7 +127,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-26T08:30:00.000+02:00",
+      "prochain_rdv": "2021-04-26T08:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -153,7 +153,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-05-06T17:40:00.000+02:00",
+      "prochain_rdv": "2021-05-12T13:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0

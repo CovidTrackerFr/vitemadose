@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.858460+02:00",
+  "last_updated": "2021-04-09T15:27:36.562986+02:00",
   "centres_disponibles": [
     {
       "departement": "67",
@@ -29,31 +29,6 @@
     },
     {
       "departement": "67",
-      "nom": "Centre de vaccination COVID - Gymnase du centre-ville de Wissembourg",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/wissembourg/centre-de-vaccination-covid-ch-de-wissembourg?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": 7.9469106,
-        "latitude": 49.0352711
-      },
-      "metadata": {
-        "address": "2 Rue des \u00c9coles, 67160 Wissembourg",
-        "business_hours": {
-          "lundi": null,
-          "mardi": null,
-          "mercredi": null,
-          "jeudi": null,
-          "vendredi": null,
-          "samedi": null,
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": "2021-04-13T14:20:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "67",
       "nom": "Centre de vaccination de Wissembourg",
       "url": "https://partners.doctolib.fr/hopital-public/wissembourg/centre-de-vaccination-covid-ch-de-wissembourg?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -73,7 +48,32 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-13T14:35:00.000+02:00",
+      "prochain_rdv": "2021-04-13T14:15:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination COVID - Gymnase du centre-ville de Wissembourg",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/wissembourg/centre-de-vaccination-covid-ch-de-wissembourg?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 7.9469106,
+        "latitude": 49.0352711
+      },
+      "metadata": {
+        "address": "2 Rue des \u00c9coles, 67160 Wissembourg",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-13T14:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -150,33 +150,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-30T09:40:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "67",
-      "nom": "Centre de vaccination de Wasselonne",
-      "url": "https://partners.doctolib.fr/centre-de-sante/wasselonne/centre-de-vaccination-covid-mossig-et-vignoble?pid=practice-164920&enable_cookies_consent=1",
-      "location": {
-        "longitude": "7.44354",
-        "latitude": "48.6372"
-      },
-      "metadata": {
-        "address": "1 Rue de Cosswiller, 67310 Wasselonne",
-        "phone_number": "+33970818161",
-        "business_hours": {
-          "lundi": "13:00-17:00",
-          "mardi": "13:00-17:00",
-          "mercredi": "13:00-17:00",
-          "jeudi": "13:00-17:00",
-          "vendredi": "13:00-17:00",
-          "samedi": "08:00-17:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-05-12T13:10:00.000+02:00",
+      "prochain_rdv": "2021-04-30T09:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -185,22 +159,22 @@
   "centres_indisponibles": [
     {
       "departement": "67",
-      "nom": "Centre de vaccination S\u00e9lestat -Les Tanzmatten",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/selestat/centre-de-vaccination-covid-19-ville-de-selestat?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination  La Bourse de Strasbourg",
+      "url": "https://partners.doctolib.fr/etablissement-de-prevention/strasbourg/centre-de-vaccination-covid19-de-strasbourg?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "7.45774",
-        "latitude": "48.2566"
+        "longitude": "7.75342",
+        "latitude": "48.5762"
       },
       "metadata": {
-        "address": "10 Quai des Tanneurs, 67600 S\u00e9lestat",
-        "phone_number": "09 70 81 81 61",
+        "address": "1 Place du Mar\u00e9chal de Lattre de Tassigny, 67000 Strasbourg",
+        "phone_number": "+33800609090",
         "business_hours": {
-          "lundi": "",
-          "mardi": "",
-          "mercredi": "9h-13h/14h-18h",
-          "jeudi": "",
-          "vendredi": "",
-          "samedi": "9h-13h/14h-18h",
+          "lundi": "09:00-20:00",
+          "mardi": "09:00-20:00",
+          "mercredi": "09:00-20:00",
+          "jeudi": "09:00-20:00",
+          "vendredi": "09:00-20:00",
+          "samedi": "09:00-20:00",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -237,22 +211,22 @@
     },
     {
       "departement": "67",
-      "nom": "Centre de vaccination  La Bourse de Strasbourg",
-      "url": "https://partners.doctolib.fr/etablissement-de-prevention/strasbourg/centre-de-vaccination-covid19-de-strasbourg?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination S\u00e9lestat -Les Tanzmatten",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/selestat/centre-de-vaccination-covid-19-ville-de-selestat?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "7.75342",
-        "latitude": "48.5762"
+        "longitude": "7.45774",
+        "latitude": "48.2566"
       },
       "metadata": {
-        "address": "1 Place du Mar\u00e9chal de Lattre de Tassigny, 67000 Strasbourg",
-        "phone_number": "+33800609090",
+        "address": "10 Quai des Tanneurs, 67600 S\u00e9lestat",
+        "phone_number": "09 70 81 81 61",
         "business_hours": {
-          "lundi": "09:00-20:00",
-          "mardi": "09:00-20:00",
-          "mercredi": "09:00-20:00",
-          "jeudi": "09:00-20:00",
-          "vendredi": "09:00-20:00",
-          "samedi": "09:00-20:00",
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "9h-13h/14h-18h",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "9h-13h/14h-18h",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -546,6 +520,32 @@
     },
     {
       "departement": "67",
+      "nom": "Centre de vaccination de Wasselonne",
+      "url": "https://partners.doctolib.fr/centre-de-sante/wasselonne/centre-de-vaccination-covid-mossig-et-vignoble?pid=practice-164920&enable_cookies_consent=1",
+      "location": {
+        "longitude": "7.44354",
+        "latitude": "48.6372"
+      },
+      "metadata": {
+        "address": "1 Rue de Cosswiller, 67310 Wasselonne",
+        "phone_number": "+33970818161",
+        "business_hours": {
+          "lundi": "13:00-17:00",
+          "mardi": "13:00-17:00",
+          "mercredi": "13:00-17:00",
+          "jeudi": "13:00-17:00",
+          "vendredi": "13:00-17:00",
+          "samedi": "08:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
       "nom": "Centre de vaccination de Reichshoffen",
       "url": "https://partners.doctolib.fr/centre-de-sante/reichshoffen/centre-vaccination-covid-19-du-pays-de-niederbronn-les-bains-et-de-sauer-pechelbronn?pid=practice-181029&enable_cookies_consent=1",
       "location": {
@@ -572,21 +572,22 @@
     },
     {
       "departement": "67",
-      "nom": "Centre de vaccination du CH de Saverne",
-      "url": "https://partners.doctolib.fr/hopital-public/saverne/ch-saverne-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de Lingolshein",
+      "url": "https://partners.doctolib.fr/maison-de-sante/lingolsheim/centre-de-vaccination-anti-covid-de-lingolsheim?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "7.356",
-        "latitude": "48.7447"
+        "longitude": "7.68324",
+        "latitude": "48.5617"
       },
       "metadata": {
-        "address": "19 C\u00f4te de Saverne, 67700 Saverne",
+        "address": "27 Rue du Travail, 67380 Lingolsheim",
+        "phone_number": "+33369064009",
         "business_hours": {
-          "lundi": "10h30-14h30",
-          "mardi": "10h30-14h30",
-          "mercredi": "10h30-14h30",
-          "jeudi": "10h30-14h30",
-          "vendredi": "10h30-14h30",
-          "samedi": "10h30-14h30",
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-17:00",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -623,22 +624,21 @@
     },
     {
       "departement": "67",
-      "nom": "Centre de vaccination de Lingolshein",
-      "url": "https://partners.doctolib.fr/maison-de-sante/lingolsheim/centre-de-vaccination-anti-covid-de-lingolsheim?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination du CH de Saverne",
+      "url": "https://partners.doctolib.fr/hopital-public/saverne/ch-saverne-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "7.68324",
-        "latitude": "48.5617"
+        "longitude": "7.356",
+        "latitude": "48.7447"
       },
       "metadata": {
-        "address": "27 Rue du Travail, 67380 Lingolsheim",
-        "phone_number": "+33369064009",
+        "address": "19 C\u00f4te de Saverne, 67700 Saverne",
         "business_hours": {
-          "lundi": "09:00-17:00",
-          "mardi": "09:00-17:00",
-          "mercredi": "09:00-17:00",
-          "jeudi": "09:00-17:00",
-          "vendredi": "09:00-17:00",
-          "samedi": "09:00-17:00",
+          "lundi": "10h30-14h30",
+          "mardi": "10h30-14h30",
+          "mercredi": "10h30-14h30",
+          "jeudi": "10h30-14h30",
+          "vendredi": "10h30-14h30",
+          "samedi": "10h30-14h30",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -704,7 +704,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -725,6 +725,32 @@
           "jeudi": "09:00-13:00, 14:00-19:00",
           "vendredi": "09:00-13:00, 14:00-19:00",
           "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Dr J\u00e9r\u00f4me ROTH",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/wolfisheim/jerome-roth",
+      "location": {
+        "longitude": 7.6673263,
+        "latitude": 48.5869423
+      },
+      "metadata": {
+        "address": "59 Rue du G\u00e9n\u00e9ral Leclerc, 67202 Wolfisheim",
+        "phone_number": "03 88 76 03 02",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-12:00",
           "dimanche": null
         }
       },
@@ -757,32 +783,6 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "67",
-      "nom": "Dr J\u00e9r\u00f4me ROTH",
-      "url": "https://partners.doctolib.fr/medecin-generaliste/wolfisheim/jerome-roth",
-      "location": {
-        "longitude": 7.6673263,
-        "latitude": 48.5869423
-      },
-      "metadata": {
-        "address": "59 Rue du G\u00e9n\u00e9ral Leclerc, 67202 Wolfisheim",
-        "phone_number": "03 88 76 03 02",
-        "business_hours": {
-          "lundi": "08:00-20:00",
-          "mardi": "08:00-20:00",
-          "mercredi": "08:00-20:00",
-          "jeudi": "08:00-20:00",
-          "vendredi": "08:00-20:00",
-          "samedi": "08:00-12:00",
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "general-practitioner",
       "appointment_count": 0
     },
     {

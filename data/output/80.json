@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:24:49.877110+02:00",
+  "last_updated": "2021-04-09T15:27:36.581531+02:00",
   "centres_disponibles": [
     {
       "departement": "80",
@@ -127,7 +127,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-19T11:30:00.000+02:00",
+      "prochain_rdv": "2021-04-19T13:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "drugstore",
       "appointment_count": 0
@@ -288,31 +288,6 @@
     },
     {
       "departement": "80",
-      "nom": "Centre de Vaccination - Ville de Saint-Val\u00e9ry-Sur-Somme, Entrep\u00f4t des sel",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/st-valery-sur-somme-80230/st-valery-sur-somme/centre-de-vaccination-du-st-valery-sur-somme",
-      "location": {
-        "longitude": "1.64405",
-        "latitude": "50.1809"
-      },
-      "metadata": {
-        "address": "2 Quai Lejoille, 80230 Saint-Valery-sur-Somme",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "80",
       "nom": "Centre de Vaccination - Ville de Flixecourt, Salle Le Chiffon Rouge",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/flixecourt-80420/flixecourt/centre-de-vaccination-de-flixecourt",
       "location": {
@@ -365,27 +340,52 @@
     },
     {
       "departement": "80",
-      "nom": "Centre de vaccination- CHU Amiens",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/amiens-80000/chu-amiens-picardie-site-nord?category=-1&cabinet=16656&specialty=496",
+      "nom": "Centre de Vaccination - Ville de Saint-Val\u00e9ry-Sur-Somme, Entrep\u00f4t des sel",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/st-valery-sur-somme-80230/st-valery-sur-somme/centre-de-vaccination-du-st-valery-sur-somme",
       "location": {
-        "longitude": "2.29074",
-        "latitude": "49.9073"
+        "longitude": "1.64405",
+        "latitude": "50.1809"
       },
       "metadata": {
-        "address": " Place Victor Pauchet, 80080 Amiens",
-        "phone_number": "+33392043471 ",
+        "address": "2 Quai Lejoille, 80230 Saint-Valery-sur-Somme",
         "business_hours": {
-          "lundi": "12:00-20:00",
-          "mardi": "12:00-20:00",
-          "mercredi": "12:00-20:00",
-          "jeudi": "12:00-20:00",
-          "vendredi": "12:00-20:00",
-          "samedi": "10:00-18:00",
-          "dimanche": "09:00-13:00"
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
       "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "80",
+      "nom": "Centre de vaccination - CH P\u00c9RONNE",
+      "url": "https://partners.doctolib.fr/hopital-public/peronne/ch-de-peronne?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.93133",
+        "latitude": "49.9346"
+      },
+      "metadata": {
+        "address": " Place du Jeu de Paume, 80200 P\u00e9ronne",
+        "phone_number": "03 92 04 34 71 ",
+        "business_hours": {
+          "lundi": "08:30-12:30/13:30-17:30",
+          "mardi": "08:30-12:30/13:30-17:30",
+          "mercredi": "08:30-12:30/13:30-17:30",
+          "jeudi": "08:30-12:30/14:30-17:30",
+          "vendredi": "08:30-12:30/13:30-17:30",
+          "samedi": "08:30-12:30/13:30-17:30",
+          "dimanche": "08:30-12:30/13:30-17:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -417,27 +417,27 @@
     },
     {
       "departement": "80",
-      "nom": "Centre de vaccination - CH P\u00c9RONNE",
-      "url": "https://partners.doctolib.fr/hopital-public/peronne/ch-de-peronne?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination- CHU Amiens",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/amiens-80000/chu-amiens-picardie-site-nord?category=-1&cabinet=16656&specialty=496",
       "location": {
-        "longitude": "2.93133",
-        "latitude": "49.9346"
+        "longitude": "2.29074",
+        "latitude": "49.9073"
       },
       "metadata": {
-        "address": " Place du Jeu de Paume, 80200 P\u00e9ronne",
-        "phone_number": "03 92 04 34 71 ",
+        "address": " Place Victor Pauchet, 80080 Amiens",
+        "phone_number": "+33392043471 ",
         "business_hours": {
-          "lundi": "08:30-12:30/13:30-17:30",
-          "mardi": "08:30-12:30/13:30-17:30",
-          "mercredi": "08:30-12:30/13:30-17:30",
-          "jeudi": "08:30-12:30/14:30-17:30",
-          "vendredi": "08:30-12:30/13:30-17:30",
-          "samedi": "08:30-12:30/13:30-17:30",
-          "dimanche": "08:30-12:30/13:30-17:30"
+          "lundi": "12:00-20:00",
+          "mardi": "12:00-20:00",
+          "mercredi": "12:00-20:00",
+          "jeudi": "12:00-20:00",
+          "vendredi": "12:00-20:00",
+          "samedi": "10:00-18:00",
+          "dimanche": "09:00-13:00"
         }
       },
       "prochain_rdv": null,
-      "plateforme": "Doctolib",
+      "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -573,32 +573,6 @@
     },
     {
       "departement": "80",
-      "nom": "Centre de vaccination Covid-19 - CH de P\u00e9ronne",
-      "url": "https://partners.doctolib.fr/hopital-public/peronne/centre-de-vaccination-covid-19-ch-de-peronne?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": 2.9310273,
-        "latitude": 49.9348478
-      },
-      "metadata": {
-        "address": "Place du Jeu de Paume, 80200 P\u00e9ronne",
-        "phone_number": "03 22 83 60 00",
-        "business_hours": {
-          "lundi": null,
-          "mardi": null,
-          "mercredi": null,
-          "jeudi": null,
-          "vendredi": null,
-          "samedi": null,
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "80",
       "nom": "Centre de vaccination Covid-19 de Saleux",
       "url": "https://partners.doctolib.fr/centre-de-sante/saleux/centre-de-vaccination-covid-19-de-saleux?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
@@ -615,6 +589,32 @@
           "jeudi": "09:00-19:00",
           "vendredi": "09:00-19:00",
           "samedi": "09:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "80",
+      "nom": "Centre de vaccination Covid-19 - CH de P\u00e9ronne",
+      "url": "https://partners.doctolib.fr/hopital-public/peronne/centre-de-vaccination-covid-19-ch-de-peronne?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 2.9310273,
+        "latitude": 49.9348478
+      },
+      "metadata": {
+        "address": "Place du Jeu de Paume, 80200 P\u00e9ronne",
+        "phone_number": "03 22 83 60 00",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
           "dimanche": null
         }
       },
