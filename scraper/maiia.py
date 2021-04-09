@@ -22,7 +22,6 @@ def get_availability_count(center_id, request: ScraperRequest):
     end_date = (now + timedelta(days=MAIIA_DAY_LIMIT)).strftime('%Y-%m-%dT%H:%M:%S.%f%zZ')
 
     url = f'https://www.maiia.com/api/pat-public/availabilities?centerId={center_id}&from={start_date}&to={end_date}&page=0&limit={MAIIA_LIMIT}'
-    print(url)
     req = session.get(url)
     req.raise_for_status()
     data = req.json()

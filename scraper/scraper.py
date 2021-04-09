@@ -49,7 +49,6 @@ def scrape_debug(urls):
             logger.exception(f"erreur lors du traitement")
         logger.info(f'{result.platform!s:16} {result.next_availability or ""!s:32}')
 
-
 def scrape():
     with Pool(POOL_SIZE) as pool:
         centres_cherchés = pool.imap_unordered(
@@ -219,7 +218,6 @@ def centre_iterator():
         url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"
         response = requests.get(url)
         response.raise_for_status()
-
         data = response.json()
         file = open(center_path, 'w')
         file.write(json.dumps(data, indent=2))
