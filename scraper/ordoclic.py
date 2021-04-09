@@ -57,10 +57,15 @@ def getProfile(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     return r.json()
 
 
-def parse_ordoclic_slots(availability_data):
+def parse_ordoclic_slots(request: ScraperRequest, availability_data):
     first_availability = None
     if not availability_data:
         return None
+    availabilities = availability_data.get('slots', None)
+    availability_count = 0
+    if type(availabilities) is list:
+        availability_count = len(availabilities)
+    request.update_appointment_count(availability_count)
     if 'nextAvailableSlotDate' in availability_data:
         nextAvailableSlotDate = availability_data.get('nextAvailableSlotDate', None)
         if nextAvailableSlotDate is not None:
@@ -68,7 +73,6 @@ def parse_ordoclic_slots(availability_data):
             first_availability += first_availability.replace(tzinfo=timezone('CET')).utcoffset()
             return first_availability
 
-    availabilities = availability_data.get('slots', None)
     if availabilities is None:
         return None
     for slot in availabilities:
@@ -101,7 +105,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
                 date_obj = datetime.strptime(request.get_start_date(), '%Y-%m-%d')
                 end_date = (date_obj + timedelta(days=6)).strftime('%Y-%m-%d')
                 slots = getSlots(entityId, medicalStaffId, reasonId, request.get_start_date(), end_date, client)
-                date = parse_ordoclic_slots(slots)
+                date = parse_ordoclic_slots(request, slots)
                 if date is None:
                     continue
                 if first_availability is None or date < first_availability:
