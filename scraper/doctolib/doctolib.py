@@ -1,3 +1,4 @@
+import time
 import logging
 import os
 import re
@@ -11,6 +12,7 @@ from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_pra
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 
+WAIT_SECONDS_AFTER_REQUEST = 0.100
 DOCTOLIB_SLOT_LIMIT = 50
 
 DOCTOLIB_HEADERS = {
@@ -41,7 +43,8 @@ class DoctolibSlots:
     # Permet de passer un faux client HTTP,
     # pour éviter de vraiment appeler Doctolib lors des tests.
 
-    def __init__(self, client: httpx.Client = None) -> None:
+    def __init__(self, client: httpx.Client = None, cooldown_interval=WAIT_SECONDS_AFTER_REQUEST) -> None:
+        self._cooldown_interval = cooldown_interval
         self._client = DEFAULT_CLIENT if client is None else client
 
     def fetch(self, request: ScraperRequest) -> Optional[str]:
@@ -58,6 +61,7 @@ class DoctolibSlots:
             raise BlockedByDoctolibError(centre_api_url)
 
         response.raise_for_status()
+        time.sleep(self._cooldown_interval)
         data = response.json()
         rdata = data.get('data', {})
         appointment_count = 0
@@ -90,6 +94,7 @@ class DoctolibSlots:
             raise BlockedByDoctolibError(centre_api_url)
 
         response.raise_for_status()
+        time.sleep(self._cooldown_interval)
 
         slots = response.json()
 
