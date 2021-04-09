@@ -47,7 +47,7 @@ def test_blocked_by_doctolib_par_centre():
         return httpx.Response(200, json=json.loads(path.read_text()))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    slots = DoctolibSlots(client=client)
+    slots = DoctolibSlots(client=client, cooldown_interval=0)
 
     error = None
     try:
@@ -73,7 +73,7 @@ def test_blocked_by_doctolib_par_availabilities():
         return httpx.Response(403, text="Anti dDos")
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    slots = DoctolibSlots(client=client)
+    slots = DoctolibSlots(client=client, cooldown_interval=0)
 
     error = None
     try:
@@ -112,7 +112,7 @@ def test_doctolib():
         return httpx.Response(200, json=json.loads(path.read_text()))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    slots = DoctolibSlots(client=client)
+    slots = DoctolibSlots(client=client, cooldown_interval=0)
 
     next_date = slots.fetch(scrap_request)
     assert next_date == "2021-04-10"
@@ -139,7 +139,7 @@ def test_doctolib_motive_categories():
         return httpx.Response(200, json=json.loads(path.read_text()))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    slots = DoctolibSlots(client=client)
+    slots = DoctolibSlots(client=client, cooldown_interval=0)
 
     next_date = slots.fetch(scrap_request)
     assert next_date == "2021-04-10"
@@ -166,7 +166,7 @@ def test_doctolib_next_slot():
         return httpx.Response(200, json=json.loads(path.read_text()))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    slots = DoctolibSlots(client=client)
+    slots = DoctolibSlots(client=client, cooldown_interval=0)
 
     next_date = slots.fetch(scrap_request)
     assert next_date == "2021-04-10"
