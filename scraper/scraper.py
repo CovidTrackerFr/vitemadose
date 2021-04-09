@@ -21,6 +21,8 @@ from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
 from .maiia import fetch_slots as maiia_fetch_slots
 from .ordoclic import centre_iterator as ordoclic_centre_iterator
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
+from .mapharma import centre_iterator as mapharma_centre_iterator
+from .mapharma import fetch_slots as mapharma_fetch_slots
 
 POOL_SIZE = int(os.getenv('POOL_SIZE', 15))
 
@@ -176,6 +178,7 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
             'Keldoc': keldoc_fetch_slots,
             'Maiia': maiia_fetch_slots,
             'Ordoclic': ordoclic_fetch_slots,
+            'Mapharma': mapharma_fetch_slots,
         }
 
     rdv_site_web = fix_scrap_urls(rdv_site_web)
@@ -190,6 +193,8 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
         platform = 'Maiia'
     elif rdv_site_web.startswith('https://app.ordoclic.fr/'):
         platform = 'Ordoclic'
+    elif rdv_site_web.startswith('https://mapharma.net/'):
+        platform = 'Mapharma'
     else:
         return ScraperResult(request, 'Autre', None)
 
@@ -210,6 +215,8 @@ def centre_iterator():
     for row in csvreader:
         yield row
     for centre in ordoclic_centre_iterator():
+        yield centre
+    for centre in mapharma_centre_iterator():
         yield centre
     try:
         center_path = 'data/output/doctolib-centers.json'
