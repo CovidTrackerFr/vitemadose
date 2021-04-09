@@ -25,9 +25,15 @@ def get_availability_count(center_id, request: ScraperRequest):
     req = session.get(url)
     req.raise_for_status()
     data = req.json()
-    if not data.get('total'):
-        return 0
-    return int(data.get('total', 0))
+    items = data.get('items', [])
+    slots = []
+    for item in items:
+        timeslot = item.get('timeSlotId', None)
+        if not timeslot:
+            continue
+        if timeslot not in slots:
+            slots.append(timeslot)
+    return len(slots)
 
 
 def fetch_slots(request: ScraperRequest):
