@@ -1,6 +1,6 @@
 import json
 import re
-import unidecode
+import unicodedata
 from typing import Optional
 
 from scraper.departements import to_departement_number
@@ -43,7 +43,7 @@ class CenterInfo:
 
 
 def urlify(s):
-    s = re.sub(r"[^\w\s]", '', s).lower()
+    s = re.sub(r"[^\w\s\-]", '', s).lower()
     s = re.sub(r"\s+", '-', s).lower()
     return s
 
@@ -81,7 +81,7 @@ def convert_ordoclic_to_center_info(data: dict, center: CenterInfo) -> CenterInf
     if coordinates['lon'] or coordinates['lat']:
         loc = CenterLocation(coordinates['lon'], coordinates['lat'])
         center.fill_localization(loc)
-    center.ville=urlify(unidecode.unidecode(localization["city"]))
+    center.ville=urlify(localization["city"])
     center.metadata = dict()
     center.metadata['address'] = f'{localization["address"]}, {localization["zip"]} {localization["city"]}'
     if len(data.get('phone_number', '')) > 3:
@@ -97,8 +97,7 @@ def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     url = data.get('rdv_site_web', None)
     try:
         departement = to_departement_number(data.get('com_insee', None))
-        ville = urlify(unidecode.unidecode(data.get('com_nom', '')))
-
+        ville = urlify(data.get('com_nom', ''))
     except ValueError:
         logger.error(
             f"erreur lors du traitement de la ligne avec le gid {data['gid']}, com_insee={data['com_insee']}")
