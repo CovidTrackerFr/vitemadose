@@ -1,0 +1,644 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-09T15:17:49.954227+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination \"grand public\" CHARTREXPO \u2013 Chartres",
+      "url": "https://partners.doctolib.fr/centre-examens-de-sante/chartres/centre-de-vaccination-covid-19-de-chartres-metropole?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.51648",
+        "latitude": "48.4516"
+      },
+      "metadata": {
+        "address": " Avenue Jean Mermoz, 28000 Chartres",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "9h-17h30",
+          "mardi": "9h-17h30",
+          "mercredi": "9h-17h30",
+          "jeudi": "9h-17h30",
+          "vendredi": "9h-17h30",
+          "samedi": "9h-17h30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-12T12:20:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination du Bonnevalais",
+      "url": "",
+      "location": {
+        "longitude": "1.3853",
+        "latitude": "48.1815"
+      },
+      "metadata": {
+        "address": "19 Rue Saint Roch, 28800 Bonneval",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination - r\u00e9serv\u00e9 professionnels de sant\u00e9 et assimil\u00e9s\" - CH Chartres",
+      "url": "https://partners.doctolib.fr/hopital-public/le-coudray/centre-hospitalier-chartres-le-coudray?pid=practice-162668&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.50613",
+        "latitude": "48.4232"
+      },
+      "metadata": {
+        "address": "4 Rue Claude Bernard, 28630 Le Coudray",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "9h-13h/14h-17h",
+          "mardi": "9h-13h/14h-17h",
+          "mercredi": "9h-13h/14h-17h",
+          "jeudi": "9h-13h/14h-17h",
+          "vendredi": "f9h-13h/14h-17h",
+          "samedi": "9h-13h/14h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Villages Vov\u00e9ens - Gymnase Jean Gallet",
+      "url": "",
+      "location": {
+        "longitude": "1.63062",
+        "latitude": "48.2671"
+      },
+      "metadata": {
+        "address": "4 Rue Saint-Lubin, 28150 Les Villages Vov\u00e9ens",
+        "phone_number": "08 05 02 14 00",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "9h-18h",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Toury Salle polyvalente \u00e9ph\u00e9m\u00e8re \"grand public\"",
+      "url": "",
+      "location": {
+        "longitude": "1.93684",
+        "latitude": "48.1961"
+      },
+      "metadata": {
+        "address": " , 28310 Toury",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "9h-13h / 14h-18h ",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination Courville-sur-Eure - Gymnase communal",
+      "url": "",
+      "location": {
+        "longitude": "1.23993",
+        "latitude": "48.4499"
+      },
+      "metadata": {
+        "address": " Rue des Planches, 28190 Courville-sur-Eure",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Senonches CV grand public",
+      "url": "https://partners.doctolib.fr/centre-de-sante/la-loupe/centre-de-vaccination-covid-centre-de-la-loupe?pid=practice-175297&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.03789",
+        "latitude": "48.5597"
+      },
+      "metadata": {
+        "address": " rue du four Bannal, 28250 Senonches",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "14h-18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination Epernon - Complexe sportif du Closelet",
+      "url": "",
+      "location": {
+        "longitude": "1.67234",
+        "latitude": "48.6042"
+      },
+      "metadata": {
+        "address": "5 Route de Gallardon, 28230 \u00c9pernon",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Brezolles- CV \u00e9ph\u00e9m\u00e8re - Gymnase",
+      "url": "",
+      "location": {
+        "longitude": "1.07309",
+        "latitude": "48.6904"
+      },
+      "metadata": {
+        "address": " , 28270 Brezolles",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Maintenon CV \u00e9ph\u00e9m\u00e8re",
+      "url": "",
+      "location": {
+        "longitude": "1.57765",
+        "latitude": "48.5871"
+      },
+      "metadata": {
+        "address": " , 28130 Maintenon",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination grand public - Parc des expositions",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dreux/centre-de-vaccination-covid-dreux-vernouillet-dreux?pid=practice-164914?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.35722",
+        "latitude": "48.7324"
+      },
+      "metadata": {
+        "address": "1 Impasse de la Commune, 28100 Dreux",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "9h-12h/13h30-16h30",
+          "mardi": "9h-12h/13h30-16h30",
+          "mercredi": "9h-12h/13h30-16h30",
+          "jeudi": "9h-12h/13h30-16h30",
+          "vendredi": "9h-12h/13h30-16h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "CD - Centre de D\u00e9tention de Chateaudun / Centre de D\u00e9tention de Ch\u00e2teaudun",
+      "url": "",
+      "location": {
+        "longitude": "1.31768",
+        "latitude": "48.0783"
+      },
+      "metadata": {
+        "address": " Route de Brou, 28200 Ch\u00e2teaudun",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination - r\u00e9serv\u00e9 professionnels de sant\u00e9 et assimil\u00e9s - CH Nogent-le-Rotrou",
+      "url": "https://partners.doctolib.fr/hopital-public/nogent-le-rotrou/centre-hospitalier-nogent-le-rotrou?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.838781",
+        "latitude": "48.3167"
+      },
+      "metadata": {
+        "address": " Avenue de l'Europe, 28400 Nogent-le-Rotrou",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "18h-22h",
+          "vendredi": "18h-22h",
+          "samedi": "9h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination - en attente (28)",
+      "url": "",
+      "location": {
+        "longitude": "1.48612",
+        "latitude": "48.4429"
+      },
+      "metadata": {
+        "address": " , 28000 Chartres",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination de Janville - Gymnase Michel Denise",
+      "url": "",
+      "location": {
+        "longitude": "1.87735",
+        "latitude": "48.2024"
+      },
+      "metadata": {
+        "address": "44 Rue de la Madeleine (Janville), 28310 Janville-en-Beauce",
+        "phone_number": "08 05 02 14 00",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "9h-18h",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination - Illiers-Combray - Complexe sportif Jean Moulin",
+      "url": "",
+      "location": {
+        "longitude": "1.24836",
+        "latitude": "48.3031"
+      },
+      "metadata": {
+        "address": "5 Rue de Br\u00e9hainville, 28120 Illiers-Combray",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Chateauneuf en Thymerais centre \u00e9ph\u00e9m\u00e8re",
+      "url": "",
+      "location": {
+        "longitude": "1.24213",
+        "latitude": "48.5811"
+      },
+      "metadata": {
+        "address": " , 28170 Ch\u00e2teauneuf-en-Thymerais",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Soci\u00e9t\u00e9 Delpharm",
+      "url": "",
+      "location": {
+        "longitude": "1.23878",
+        "latitude": "48.7625"
+      },
+      "metadata": {
+        "address": " Rue de L'Isle, 28380 Saint-R\u00e9my-sur-Avre",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Grand centre - en attente (28)",
+      "url": "",
+      "location": {
+        "longitude": "1.49168",
+        "latitude": "48.4418"
+      },
+      "metadata": {
+        "address": " , 28000 Chartres",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination \"grand public\" Salle Pierre Mend\u00e8s France \u2013 Nogent-le-Rotrou",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nogent-le-rotrou/centre-de-vaccination-covid-19-nogent-le-rotrou?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.820384",
+        "latitude": "48.3174"
+      },
+      "metadata": {
+        "address": "5 Avenue Camille Gat\u00e9, 28400 Nogent-le-Rotrou",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "en attente d'informations",
+          "mardi": "en attente d'informations",
+          "mercredi": "en attente d'informations",
+          "jeudi": "en attente d'informations",
+          "vendredi": "en attente d'informations",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination r\u00e9serv\u00e9 professionnels de sant\u00e9 et assimil\u00e9s - CH Ch\u00e2teaudun",
+      "url": "https://partners.doctolib.fr/hopital-public/ch\u00e2teaudun/ch-chateaudun-vaccination-covid-reserve-aux-professionnels-de-sante?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.35214",
+        "latitude": "48.0732"
+      },
+      "metadata": {
+        "address": " Route de Jallans, 28200 Ch\u00e2teaudun",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert l'apr\u00e8s-midi",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination \"grand public\" - Salle L\u00e9o Lagrange",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chateaudun/centre-de-vaccination-du-sud-28?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.33215",
+        "latitude": "48.0665"
+      },
+      "metadata": {
+        "address": " Impasse des Cordeliers, 28200 Ch\u00e2teaudun",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "9h-13h/14h-18h",
+          "mardi": "9h-13h/14h-18h",
+          "mercredi": "9h-13h/14h-18h",
+          "jeudi": "9h-13h/14h-18h",
+          "vendredi": "9h-13h/14h-18h",
+          "samedi": "9h-13h/14h-18h",
+          "dimanche": "9h-13h/14h-18h"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination \"grand public\" - La Loupe",
+      "url": "https://partners.doctolib.fr/centre-de-sante/la-loupe/centre-de-vaccination-covid-centre-de-la-loupe?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.01476",
+        "latitude": "48.4709"
+      },
+      "metadata": {
+        "address": "1 Place Vauban, 28240 La Loupe",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "9h-12h/13h30-16h30",
+          "mardi": "9h-12h/13h30-16h30",
+          "mercredi": "9h-12h/13h30-16h30",
+          "jeudi": "9h-12h/13h30-16h30",
+          "vendredi": "9h-12h/13h30-16h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination - r\u00e9serv\u00e9 professionnels de sant\u00e9 et assimil\u00e9s - CH Dreux",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/dreux/ch-dreux-centre-de-depistage-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.38595",
+        "latitude": "48.7276"
+      },
+      "metadata": {
+        "address": "44 Avenue du Pdt J Fitzgerald Kennedy, 28100 Dreux",
+        "phone_number": "02 37 51 52 22",
+        "business_hours": {
+          "lundi": "9h-11h/14h-16h",
+          "mardi": "9h-11h/14h-16h",
+          "mercredi": "9h-11h/14h-16h",
+          "jeudi": "9h-11h/14h-16h",
+          "vendredi": "9h-11h/14h-16h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "28",
+      "nom": "Centre de Vaccination Covid-19 - Voves",
+      "url": "https://partners.doctolib.fr/centre-de-sante/les-villages-voveens/centre-de-vaccination-covid-19-voves?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 1.6293773,
+        "latitude": 48.2690273
+      },
+      "metadata": {
+        "address": "4 Rue Saint-Lubin, 28150 Les Villages-Vov\u00e9ens",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

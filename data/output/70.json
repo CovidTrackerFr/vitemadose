@@ -1,0 +1,316 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-09T15:17:49.989196+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "70",
+      "nom": "Pharmacie Lafayette Vesoul - Docteur Matthieu Uhlmann",
+      "url": "https://partners.doctolib.fr/pharmacie/vesoul/pharmacie-lafayette-ulhmann-dr-matthieu-uhlmann-groupe-lafayette",
+      "location": {
+        "longitude": 6.1556038,
+        "latitude": 47.6214657
+      },
+      "metadata": {
+        "address": "7 Rue Paul Morel, 70000 Vesoul",
+        "phone_number": "03 84 75 02 61",
+        "business_hours": {
+          "lundi": "09:00-19:00",
+          "mardi": "09:00-19:00",
+          "mercredi": "09:00-19:00",
+          "jeudi": "09:00-19:00",
+          "vendredi": "09:00-19:00",
+          "samedi": "09:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-16T13:00:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "70",
+      "nom": "La Pharmacie Centrale",
+      "url": "https://partners.doctolib.fr/pharmacie/lure/la-pharmacie-centrale",
+      "location": {
+        "longitude": 6.4956568,
+        "latitude": 47.6849219
+      },
+      "metadata": {
+        "address": "27 Avenue de la R\u00e9publique, 70200 Lure",
+        "phone_number": "03 84 30 16 64",
+        "business_hours": {
+          "lundi": "08:30-12:30, 14:00-19:30",
+          "mardi": "08:30-12:30, 14:00-19:30",
+          "mercredi": "08:30-12:30, 14:00-19:30",
+          "jeudi": "08:30-12:30, 14:00-19:30",
+          "vendredi": "08:30-12:30, 14:00-19:30",
+          "samedi": "08:30-13:00, 14:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-16T18:00:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "70",
+      "nom": "Equipe mobile - CV de Vesoul",
+      "url": "https://partners.doctolib.fr/centre-de-sante/vesoul/ars-de-haute-saone?pid=practice-164262&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.16052",
+        "latitude": "47.62"
+      },
+      "metadata": {
+        "address": "32 Place Pierre Renet, 70000 Vesoul",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "70",
+      "nom": "Grand centre 70",
+      "url": "",
+      "location": {
+        "longitude": "6.15437",
+        "latitude": "47.6197"
+      },
+      "metadata": {
+        "address": "58 Rue Paul Morel, 70000 Vesoul",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "70",
+      "nom": "MA - US de Vesoul / Maison d'Arr\u00eat de Vesoul",
+      "url": "",
+      "location": {
+        "longitude": "6.15543",
+        "latitude": "47.6247"
+      },
+      "metadata": {
+        "address": "9 Place Beauchamp, 70000 Vesoul",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "70",
+      "nom": "Centre de Vaccination de Lure",
+      "url": "https://partners.doctolib.fr/centre-de-sante/vesoul/ars-de-haute-saone?pid=practice-164263&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.48935",
+        "latitude": "47.6847"
+      },
+      "metadata": {
+        "address": "22 Rue du Docteur Deubel, 70200 Lure",
+        "phone_number": "+33384756475",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "70",
+      "nom": "Centre de Vaccination de Gray",
+      "url": "https://partners.doctolib.fr/centre-de-sante/vesoul/ars-de-haute-saone?pid=practice-164265&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.59383",
+        "latitude": "47.4495"
+      },
+      "metadata": {
+        "address": "7 Rue Sauzay, 70100 Gray",
+        "phone_number": "+33384756475",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "70",
+      "nom": "Op\u00e9rations exceptionnelles",
+      "url": "",
+      "location": {
+        "longitude": "6.15144",
+        "latitude": "47.6231"
+      },
+      "metadata": {
+        "address": "25 Rue de la Pr\u00e9fecture, 70000 Vesoul",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "70",
+      "nom": "CH de Vesoul - centre pour professionnels de sant\u00e9",
+      "url": "https://partners.doctolib.fr/hopital-public/vesoul/hopital-de-vesoul?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.13852",
+        "latitude": "47.6364"
+      },
+      "metadata": {
+        "address": "2 avenue Ren\u00e9 Heymes, 70000 Vesoul",
+        "phone_number": "+33384962190",
+        "business_hours": {
+          "lundi": "09:00-12:00/13:30-16:15",
+          "mardi": "09:00-12:00",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "09:00-12:00",
+          "vendredi": "09:00-12:00/13:30-16:15",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "70",
+      "nom": "Centre de Vaccination de Luxeuil-les-Bains",
+      "url": "https://partners.doctolib.fr/centre-de-sante/vesoul/ars-de-haute-saone?pid=practice-164264&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.37467",
+        "latitude": "47.826"
+      },
+      "metadata": {
+        "address": " Complexe sportif Les Merises, Rue Marcel Donjon, 70300 Luxeuil-les-Bains",
+        "phone_number": "+33384756475",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "70",
+      "nom": "Centre de vaccination de Vesoul",
+      "url": "https://partners.doctolib.fr/centre-de-sante/vesoul/centre-de-vaccination-covid-19-de-vesoul?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.16054",
+        "latitude": "47.6199"
+      },
+      "metadata": {
+        "address": "32 z Place Pierre Renet, 70000 Vesoul",
+        "phone_number": "+33384756475",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "70",
+      "nom": "Centre de Vaccination d'H\u00e9ricourt",
+      "url": "https://partners.doctolib.fr/centre-de-sante/vesoul/ars-de-haute-saone?pid=practice-164563&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.76232",
+        "latitude": "47.5683"
+      },
+      "metadata": {
+        "address": "5 Rue Martin Niemoller, 70400 H\u00e9ricourt",
+        "phone_number": "+33384756475",
+        "business_hours": {
+          "lundi": "13:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

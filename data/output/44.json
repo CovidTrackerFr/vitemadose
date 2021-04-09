@@ -1,0 +1,719 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-09T15:17:49.968239+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "44",
+      "nom": "Grande pharmacie de Paris",
+      "url": "https://partners.doctolib.fr/pharmacie/nantes/grande-pharmacie-de-paris?pid=practice-151568",
+      "location": {
+        "longitude": -1.5565195,
+        "latitude": 47.2140336
+      },
+      "metadata": {
+        "address": "9 Rue Sainte-Catherine, 44000 Nantes",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": "09:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-12T15:18:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "[Centre de Vaccination] SOS M\u00e9decins Nantes",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nantes/centre-de-vaccination-sos-medecin-nantes?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": -1.5442909,
+        "latitude": 47.1663692
+      },
+      "metadata": {
+        "address": "Place de l'Europe, 44400 Rez\u00e9",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-19:00",
+          "mardi": "09:00-13:00, 14:00-19:00",
+          "mercredi": "09:00-13:00, 14:00-19:00",
+          "jeudi": "09:00-13:00, 14:00-19:00",
+          "vendredi": "09:00-13:00, 14:00-19:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-13T11:35:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de vaccination du SMIE de Ch\u00e2teaubriant",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chateaubriant/centre-de-vaccination-du-smie-de-chateaubriant?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": -1.381573,
+        "latitude": 47.7189871
+      },
+      "metadata": {
+        "address": "8 Rue des Tanneurs, 44110 Ch\u00e2teaubriant",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-14T10:48:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de Vaccination Covid-19 - Clisson Gorges Getign\u00e9",
+      "url": "https://partners.doctolib.fr/centre-de-sante/clisson/centre-de-vaccination-covid-19-clisson-gorges-getigne?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": -1.2911582,
+        "latitude": 47.0917534
+      },
+      "metadata": {
+        "address": "5 Rue Pasteur, 44190 Clisson",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-15T09:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de Vaccination COVID - CHATEAUBRIANT - Hall de B\u00e9r\u00e9",
+      "url": "https://partners.doctolib.fr/cabinet-medical/ch\u00e2teaubriant/centre-de-vaccination-covid-chateaubriant?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.38882",
+        "latitude": "47.72"
+      },
+      "metadata": {
+        "address": "1 Rue Brient 1er, 44110 Ch\u00e2teaubriant",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-16T10:25:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "44",
+      "nom": "Centre de vaccination - SAINT PHILBERT de GRAND LIEU - Salle des Marais",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-philbert-de-grand-lieu/centre-de-vaccination-covid-19-spgl-salle-des-marais?pid=practice-175993&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.64429",
+        "latitude": "47.0414"
+      },
+      "metadata": {
+        "address": "4 All\u00e9e des Chevrets, 44310 Saint-Philbert-de-Grand-Lieu",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "13h30 - 18 h",
+          "mardi": "13h30 - 18 h",
+          "mercredi": "13h30 - 18 h",
+          "jeudi": "13h30 - 18 h",
+          "vendredi": "13h30 - 18 h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de Vaccination - LA BAULE - Espace Jean Gaillardon",
+      "url": "https://partners.doctolib.fr/centre-de-sante/la-baule-escoublac/cap-atlantique-la-baule-escoublac?pid=practice-164467&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-2.39621",
+        "latitude": "47.2903"
+      },
+      "metadata": {
+        "address": " Place des Salines, 44500 La Baule-Escoublac",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "9h / 17h",
+          "mardi": "9h / 17h",
+          "mercredi": "9h / 17h",
+          "jeudi": "9h / 17h",
+          "vendredi": "9h / 17h",
+          "samedi": "9h/17h",
+          "dimanche": "9h/17h"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Grand centre NANTES (en cours de d\u00e9claration)",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nantes/centre-de-vaccination-covid-19-centre-d-exposition-de-la-beaujoire?pid=practice-164268&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.53135",
+        "latitude": "47.258"
+      },
+      "metadata": {
+        "address": " Avenue de Normandie, 44300 Nantes",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de vaccination - VERTOU - Salle S\u00e8vre et Maine",
+      "url": "https://partners.doctolib.fr/centre-de-sante/vertou/centre-de-vaccination-covid-19-mairie-de-vertou?pid=practice-180824&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.46876",
+        "latitude": "47.1643"
+      },
+      "metadata": {
+        "address": " Rue S\u00e8vre et Maine, 44120 Vertou",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "9h-12h / 13h-17h ",
+          "mercredi": "9h-12h / 13h-17h ",
+          "jeudi": "9h-12h / 13h-17h ",
+          "vendredi": "9h-12h / 13h-17h ",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "EPM - US EPM / Etablissement Sp\u00e9cialis\u00e9 pour mineurs d'Orvault",
+      "url": "",
+      "location": {
+        "longitude": "-1.59205",
+        "latitude": "47.2664"
+      },
+      "metadata": {
+        "address": " Avenue de la Jali\u00e8re, 44700 Orvault",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de vaccination - SAINT NAZAIRE - Base sous-marins",
+      "url": "https://www.doctolib.fr/centre-de-sante/saint-nazaire/centre-de-vaccination-covid-19-ville-de-st-nazaire",
+      "location": {
+        "longitude": "-2.20381",
+        "latitude": "47.2756"
+      },
+      "metadata": {
+        "address": "10 Boulevard de la L\u00e9gion d\u2019Honneur, 44600 Saint-Nazaire",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "8 h / 20 h",
+          "mardi": "8 h / 20 h",
+          "mercredi": "8 h / 20 h",
+          "jeudi": "8 h / 20 h",
+          "vendredi": "8 h / 20 h",
+          "samedi": "9 h / 17 h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de vaccination - SAVENAY - Couvent des Cordeliers",
+      "url": "https://partners.doctolib.fr/centre-de-sante/savenay/centre-de-vaccination-covid-19-savenay?pid=practice-179749&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.94493",
+        "latitude": "47.3594"
+      },
+      "metadata": {
+        "address": " Place Fran\u00e7ois Ledoux, 44260 Savenay",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "10h30-12h / 14h-17h",
+          "mardi": "10h30-12h / 14h-17h",
+          "mercredi": "10h30-12h / 14h-17h",
+          "jeudi": "10h30-12h / 14h-17h",
+          "vendredi": "10h30-12h / 14h-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de vaccination - St HERBLAIN - Complexe du Vigneau",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-herblain/centre-de-vaccination-de-saint-herblain-complexe-sportif-du-vigneau?pid=practice-177796&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.62093",
+        "latitude": "47.2191"
+      },
+      "metadata": {
+        "address": " Boulevard Salvador Allende, 44800 Saint-Herblain",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "10h30-12h / 14h-17h",
+          "mardi": "9h-12h / 14h-17h",
+          "mercredi": "9h-18h",
+          "jeudi": "9h-18h",
+          "vendredi": "9h-18h",
+          "samedi": "9h-18h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de vaccination - REZE - MSP Loire et S\u00e8vre",
+      "url": "https://partners.doctolib.fr/centre-de-sante/reze/centre-de-vaccination-covid-19-msp-pole-sante-loire-et-sevre?pid=practice-177634&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.5497",
+        "latitude": "47.1912"
+      },
+      "metadata": {
+        "address": "42 Avenue de la Lib\u00e9ration, 44400 Rez\u00e9",
+        "phone_number": "+330771708250",
+        "business_hours": {
+          "lundi": "9h-12h / 13h-16h",
+          "mardi": "9h-12h / 13h-16h",
+          "mercredi": "9h-12h / 13h-16h",
+          "jeudi": "9h-12h / 13h-16h",
+          "vendredi": "9h-12h / 13h-16h",
+          "samedi": "13h-18h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de Vaccination - BLAIN - Salle des f\u00eates",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/blain/centre-de-vaccination-de-la-salle-des-fetes-de-blain?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.76531",
+        "latitude": "47.4736"
+      },
+      "metadata": {
+        "address": "6b Rue Pierre Morin, 44130 Blain",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "9h-12h / 14h-17h",
+          "mardi": "9h-12h / 14h-17h",
+          "mercredi": "9h-12h / 14h-17h",
+          "jeudi": "9h-12h / 14h-17h",
+          "vendredi": "9h-12h / 14h-17h",
+          "samedi": "9h-12h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de vaccination - CHU de NANTES- R\u00e9serv\u00e9 professionnels lib\u00e9raux",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/nantes/chu-nantes-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.55152",
+        "latitude": "47.2127"
+      },
+      "metadata": {
+        "address": "7 All\u00e9e de la Maison Rouge, 44000 Nantes",
+        "phone_number": "+33244768667",
+        "business_hours": {
+          "lundi": "8h-20h",
+          "mardi": "8h-20h",
+          "mercredi": "8h-20h",
+          "jeudi": "8h-20h",
+          "vendredi": "8h-20h",
+          "samedi": "8h-20h",
+          "dimanche": "8h-20h"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de vaccination - MACHECOUL - Salle Vall\u00e9e du Tenu",
+      "url": "https://www.doctolib.fr/centre-de-sante/saint-meme-le-tenu/centre-de-vaccination-covid-machecoul-st-meme",
+      "location": {
+        "longitude": "-1.79338",
+        "latitude": "47.0191"
+      },
+      "metadata": {
+        "address": " Rue des Ch\u00eanes, 44270 Machecoul-Saint-M\u00eame",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de Vaccination - SAINT NAZAIRE - Centre d'examen de Sant\u00e9",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-nazaire/centre-de-vaccination-cpam-loire-atlantique?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-2.22307",
+        "latitude": "47.2744"
+      },
+      "metadata": {
+        "address": "16 Rue Charles Coulomb, 44600 Saint-Nazaire",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "8h-20h",
+          "mardi": "8h-20h",
+          "mercredi": "8h-20h",
+          "jeudi": "8h-20h",
+          "vendredi": "8h-20h",
+          "samedi": "8h-20h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de Vaccination - REZE - Confluent",
+      "url": "https://partners.doctolib.fr/clinique-privee/nantes/centre-de-vaccination-covid-hopital-prive-confluent?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.54743",
+        "latitude": "47.1951"
+      },
+      "metadata": {
+        "address": "2 Rue Eric Tabarly, 44200 Nantes",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "12h-18h",
+          "mercredi": "12h-18h",
+          "jeudi": "12h-18h",
+          "vendredi": "12h-18h",
+          "samedi": "12h-18h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de vaccination - ANCENIS - Salle de la Charbonni\u00e8re",
+      "url": "https://partners.doctolib.fr/centre-de-sante/ancenis/centre-de-vaccination-covid-ancenis-chel?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.18466",
+        "latitude": "47.3635"
+      },
+      "metadata": {
+        "address": " Boulevard de Kirkham, 44150 Ancenis-Saint-G\u00e9r\u00e9on",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "15h-19h",
+          "mardi": "9h30-17h",
+          "mercredi": "9h30-17h",
+          "jeudi": "9h30-17h",
+          "vendredi": "9h30-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de Vaccination - VALLET - Salle Georges Brassens - Petit Palais",
+      "url": "https://partners.doctolib.fr/cabinet-medical/vallet/centre-de-vaccination-covid-sud-loire-vignoble-site-de-vallet?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.2663",
+        "latitude": "47.1626"
+      },
+      "metadata": {
+        "address": "7 Boulevard Stephane Pusterle, 44330 Vallet",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "9h-13h / 14h-19h30",
+          "mardi": "9h-13h / 14h-19h30",
+          "mercredi": "9h-13h / 14h-19h30",
+          "jeudi": "9h-13h / 14h-19h30",
+          "vendredi": "9h-13h / 14h-19h30",
+          "samedi": "9h-13h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de vaccination - PORNIC - Salle Polyvalente B\u00e9ziers",
+      "url": "https://partners.doctolib.fr/centre-de-sante/pornic/centre-de-vaccination-ville-de-pornic?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-2.13614",
+        "latitude": "47.1164"
+      },
+      "metadata": {
+        "address": " Rue du Colonel Bezier, 44210 Pornic",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "8h30-12h-30 / 14h00-18h00",
+          "mardi": "8h30-12h-30 / 14h00-18h00",
+          "mercredi": "8h30-12h-30 / 14h00-18h00",
+          "jeudi": "8h30-12h-30 / 14h00-18h00",
+          "vendredi": "8h30-12h-30 / 14h00-18h00",
+          "samedi": "8h30-12h-30 / 14h00-18h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de Vaccination COVID - NANTES Nord - Salle Erdre",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nantes/centre-de-vaccination-metroplitain-salle-festive-nantes-erdre?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.53101",
+        "latitude": "47.2541"
+      },
+      "metadata": {
+        "address": "251 Route de Saint Joseph, 44300 Nantes",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "CP - US Centre de d\u00e9tention et SMPR niv.1 Centre de D\u00e9tention / Etablissement Sp\u00e9cialis\u00e9 pour mineurs d'Orvault",
+      "url": "",
+      "location": {
+        "longitude": "-1.59205",
+        "latitude": "47.2664"
+      },
+      "metadata": {
+        "address": " Avenue de la Jali\u00e8re, 44700 Orvault",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Pharmacie De Sevres",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-sevres-nantes",
+      "location": {
+        "longitude": -1.5271535,
+        "latitude": 47.1861956
+      },
+      "metadata": {
+        "address": "143 RTE DE VERTOU, 44200 NANTES",
+        "phone_number": "+33240343897",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "#VacciproHIPR - Vaccination Covid-19 - Personnel soignant",
+      "url": "https://partners.doctolib.fr/hopital-public/pornic/chi-pays-de-retz?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": -2.0591722,
+        "latitude": 47.1125101
+      },
+      "metadata": {
+        "address": "La Chauss\u00e9e, 44210 Pornic",
+        "business_hours": {
+          "lundi": null,
+          "mardi": "09:30-12:30, 14:00-17:00",
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Pharmacie Thiercelin",
+      "url": "https://partners.doctolib.fr/pharmacie/saint-etienne-de-montluc/pharmacie-thiercelin-jean-thiercelin-unipharm",
+      "location": {
+        "longitude": -1.7805868,
+        "latitude": 47.2766505
+      },
+      "metadata": {
+        "address": "14 Rue Fran\u00e7ois d'Orvault, 44360 Saint-\u00c9tienne-de-Montluc",
+        "phone_number": "02 40 86 90 48",
+        "business_hours": {
+          "lundi": "09:00-12:45, 14:00-19:30",
+          "mardi": "09:00-12:45, 14:00-19:30",
+          "mercredi": "09:00-12:45, 14:00-19:30",
+          "jeudi": "09:00-12:45, 14:00-19:30",
+          "vendredi": "09:00-12:45, 14:00-20:00",
+          "samedi": "09:00-12:45, 14:00-19:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "44",
+      "nom": "Vaccination Covid-19 - SDIS 44",
+      "url": "https://partners.doctolib.fr/centre-de-sante/treillieres/vaccination-covid-19-treillieres-sdis-44?highlight%5bspeciality_ids%5d%5b%5d=5494&pid=practice-179198",
+      "location": {
+        "longitude": -1.6219895,
+        "latitude": 47.3268637
+      },
+      "metadata": {
+        "address": "Rue Simone de Beauvoir, 44119 Treilli\u00e8res",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

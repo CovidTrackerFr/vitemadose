@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-09T15:17:49.973211+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "52",
+      "nom": "CH Chaumont",
+      "url": "https://partners.doctolib.fr/hopital-public/chaumont/centre-de-vaccination-du-ch-chaumont?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.1386",
+        "latitude": "48.1218"
+      },
+      "metadata": {
+        "address": "16 Rue Youri Gagarine, 52000 Chaumont",
+        "phone_number": "+33627273952",
+        "business_hours": {
+          "lundi": "09:00-12:00/13:00-17:00",
+          "mardi": "09:00-12:00/13:00-17:00",
+          "mercredi": "09:00-12:00/13:00-17:00",
+          "jeudi": "09:00-12:00/13:00-17:00",
+          "vendredi": "09:00-12:00/13:00-17:00",
+          "samedi": "09:00-12:00/13:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-15T11:45:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "52",
+      "nom": "MA - US CHAUMONT / Maison d'Arr\u00eat de Chaumont",
+      "url": "",
+      "location": {
+        "longitude": "5.13236",
+        "latitude": "48.1066"
+      },
+      "metadata": {
+        "address": "27 Rue du Val Barizien, 52000 Chaumont",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "52",
+      "nom": "Ch Langres",
+      "url": "https://partners.doctolib.fr/hopital-public/langres/centre-de-vaccination-covid-ch-langres?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.33491",
+        "latitude": "47.8564"
+      },
+      "metadata": {
+        "address": "12 Rue Jean Favre, 52200 Langres",
+        "phone_number": "+33325878942",
+        "business_hours": {
+          "lundi": "09:00-12:00/13:00-17:00",
+          "mardi": "09:00-12:00/13:00-17:00",
+          "mercredi": "09:00-12:00/13:00-17:00",
+          "jeudi": "09:00-12:00/13:00-17:00",
+          "vendredi": "09:00-12:00/13:00-17:00",
+          "samedi": "09:00-12:00/13:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "52",
+      "nom": "CH Bourbonne-les-Bains",
+      "url": "https://partners.doctolib.fr/hopital-public/bourbonne-les-bains/centre-de-vaccination-covid-ch-de-bourbonne-les-bains?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.74542",
+        "latitude": "47.9543"
+      },
+      "metadata": {
+        "address": "1 Rue Terrail Lemone, 52400 Bourbonne-les-Bains",
+        "phone_number": "+33325877007",
+        "business_hours": {
+          "lundi": "09:00-12:00/13:00-17:00",
+          "mardi": "09:00-12:00/13:00-17:00",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "09:00-12:00/13:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "52",
+      "nom": "CH Saint-Dizier",
+      "url": "https://partners.doctolib.fr/hopital-public/bettancourt-la-ferree/centre-de-vaccination-covid-19-ch-saint-dizier?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.952",
+        "latitude": "48.643"
+      },
+      "metadata": {
+        "address": "20 Avenue du General Sarrail, 52100 Saint-Dizier",
+        "phone_number": "+33325568429",
+        "business_hours": {
+          "lundi": "08:30-17:30",
+          "mardi": "08:30-17:30",
+          "mercredi": "08:30-17:30",
+          "jeudi": "08:30-17:30",
+          "vendredi": "08:30-17:30",
+          "samedi": "non pr\u00e9cis\u00e9",
+          "dimanche": "non pr\u00e9cis\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "52",
+      "nom": "Centre de vaccination Covid-19 - Saint-Dizier",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-dizier/centre-de-vaccination-covid-19-ch-saint-dizier?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 4.9535823,
+        "latitude": 48.6449473
+      },
+      "metadata": {
+        "address": "Avenue du G\u00e9n\u00e9ral Sarrail, 52100 Saint-Dizier",
+        "phone_number": "0 801 90 76 92",
+        "business_hours": {
+          "lundi": "08:30-17:30",
+          "mardi": "08:30-17:30",
+          "mercredi": "08:30-17:30",
+          "jeudi": "08:30-17:30",
+          "vendredi": "08:30-17:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

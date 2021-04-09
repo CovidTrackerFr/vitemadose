@@ -1,0 +1,394 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-09T15:17:49.985593+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "66",
+      "nom": "CH Prades",
+      "url": "https://partners.doctolib.fr/hopital-public/prades/centre-de-vaccination-covid-19-ch-de-prades?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.4173",
+        "latitude": "42.626"
+      },
+      "metadata": {
+        "address": " route de Cattlar, 66500 Prades",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-10T15:00:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "66",
+      "nom": "Centre de vaccination Covid-19 Palais des Expositions Perpignan",
+      "url": "https://partners.doctolib.fr/centre-de-sante/perpignan/centre-de-vaccination-covid-19-palais-des-expositions?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 2.9101304,
+        "latitude": 42.7129
+      },
+      "metadata": {
+        "address": "Avenue du Palais des Expositions, 66000 Perpignan",
+        "business_hours": {
+          "lundi": "09:00-20:00",
+          "mardi": "09:00-20:00",
+          "mercredi": "09:00-20:00",
+          "jeudi": "09:00-20:00",
+          "vendredi": "09:00-20:00",
+          "samedi": "09:00-20:00",
+          "dimanche": "09:00-20:00"
+        }
+      },
+      "prochain_rdv": "2021-04-13T16:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "66",
+      "nom": "Grand centre Perpignan",
+      "url": "https://www.doctolib.fr/hopital-public/perpignan/centres-de-vaccination-covid-19-du-departement-66?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": "2.89341",
+        "latitude": "42.7047"
+      },
+      "metadata": {
+        "address": "12 Avenue du Palais des Expositions, 66000 Perpignan",
+        "business_hours": {
+          "lundi": "09:00-20:00",
+          "mardi": "09:00-20:00",
+          "mercredi": "09:00-20:00",
+          "jeudi": "09:00-20:00",
+          "vendredi": "09:00-20:00",
+          "samedi": "09:00-20:00",
+          "dimanche": "09:00-20:00"
+        }
+      },
+      "prochain_rdv": "2021-04-13T18:05:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "66",
+      "nom": "GCS P\u00f4le Sanitaire Cerdan",
+      "url": "https://partners.doctolib.fr/centre-de-sante/err/vaccination-covid-19-gcs-pole-sanitaire-cerdan?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.02558",
+        "latitude": "42.4437"
+      },
+      "metadata": {
+        "address": "11  cami de la ribereta - bat la ribereta, 66800 Err",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "09:00-18:30",
+          "mardi": "09:00-18:30",
+          "mercredi": "09:00-18:30",
+          "jeudi": "09:00-18:30",
+          "vendredi": "09:00-18:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9 "
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "66",
+      "nom": "Covax Ambu - b\u00e2timent ancien service rhumatologie du CH de Perpignan",
+      "url": "https://partners.doctolib.fr/centre-de-sante/perpignan/centres-de-vaccination-covid-19-de-perpignan?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.88759",
+        "latitude": "42.7257"
+      },
+      "metadata": {
+        "address": "20  Avenue du Languedoc, 66000 Perpignan",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "9:00-17:00",
+          "jeudi": "9:00-17:00",
+          "vendredi": "9:00-17:00",
+          "samedi": "9:00-17:00",
+          "dimanche": "9:00-17:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "66",
+      "nom": "MSP Font Romeu",
+      "url": "https://partners.doctolib.fr/maison-de-sante/font-romeu/centre-de-vaccination-covid-19-msp-font-romeu?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.04082",
+        "latitude": "42.4995"
+      },
+      "metadata": {
+        "address": "28 Boulevard du Cambre d'Aze, 66120 Font-Romeu-Odeillo-Via",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "09:00-12:00/14:00-18:00",
+          "mardi": "09:00-12:00/14:00-18:00",
+          "mercredi": "09:00-12:00/14:00-18:00",
+          "jeudi": "09:00-12:00/14:00-18:00",
+          "vendredi": "09:00-12:00/14:00-18:00",
+          "samedi": "09:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "66",
+      "nom": "Centre FOCH",
+      "url": "https://partners.doctolib.fr/centre-de-sante/perpignan/centres-de-vaccination-covid-19-foch-perpignan?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.8913",
+        "latitude": "42.6965"
+      },
+      "metadata": {
+        "address": "2 Rue Dr Ludwig Lazarus Zamenhof, 66000 Perpignan",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "66",
+      "nom": "CP - USMP / Centre P\u00e9nitentiaire de Perpignan",
+      "url": "",
+      "location": {
+        "longitude": "2.86807",
+        "latitude": "42.6801"
+      },
+      "metadata": {
+        "address": " Chemin de Mailloles, 66000 Perpignan",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "66",
+      "nom": "MSP Les Angles",
+      "url": "https://partners.doctolib.fr/maison-de-sante/les-angles/maison-de-sante-capcir-haut-conflent?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.08671",
+        "latitude": "42.5856"
+      },
+      "metadata": {
+        "address": " Route de la Foret, 66210 Les Angles",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "09:00-12:00/14:00-18:00",
+          "mardi": "09:00-12:00/14:00-18:00",
+          "mercredi": "09:00-12:00/14:00-18:00",
+          "jeudi": "09:00-12:00/14:00-18:00",
+          "vendredi": "09:00-12:00/14:00-18:00",
+          "samedi": "09:00-12:00/14:00-18:00",
+          "dimanche": "09:00-12:00/14:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "66",
+      "nom": "CH de Thuir",
+      "url": "https://partners.doctolib.fr/hopital-public/thuir/centre-de-vaccination-covid-ch-thuir?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.74971",
+        "latitude": "42.6293"
+      },
+      "metadata": {
+        "address": " Avenue du Roussillon, 66300 Thuir",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "09:30-12:30/13:30-16:30",
+          "mardi": "09:30-12:30/13:30-16:30",
+          "mercredi": "09:30-12:30/13:30-16:30",
+          "jeudi": "09:30-12:30/13:30-16:30",
+          "vendredi": "09:30-12:30/13:30-16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "66",
+      "nom": "Centre de vaccination Saint Cyprien",
+      "url": "https://partners.doctolib.fr/centre-de-sante/st-cyprien/centres-de-vaccination-covid-19-st-cyprien?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.03124",
+        "latitude": "42.6051"
+      },
+      "metadata": {
+        "address": " Stade les capellans, 66750 Saint-Cyprien",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "66",
+      "nom": "Centre de vaccination de Saint Paul de fenouillet",
+      "url": "https://partners.doctolib.fr/maison-de-sante/st-paul-de-fenouillet/centres-de-vaccination-covid-19-msp-saint-paul-de-fenouillet?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.50509",
+        "latitude": "42.8113"
+      },
+      "metadata": {
+        "address": " Foyer rural place L\u00e9o Lagrange, 66220 Saint-Paul-de-Fenouillet",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "08:30-12:30/14:00-18:00",
+          "vendredi": "08:30-12:30/14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "66",
+      "nom": "Centre de vaccination de C\u00e9ret",
+      "url": "https://partners.doctolib.fr/centre-de-sante/ceret/centres-de-vaccination-covid-19-ceret?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.7492",
+        "latitude": "42.4843"
+      },
+      "metadata": {
+        "address": " Boulevard Lafayette, 66400 C\u00e9ret",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-16:30",
+          "mardi": "14:00-16:30",
+          "mercredi": "14:00-16:30",
+          "jeudi": "14:00-16:30",
+          "vendredi": "14:00-16:30",
+          "samedi": "14:00-16:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "66",
+      "nom": "Centre de vaccination Argel\u00e8s sur Mer",
+      "url": "https://partners.doctolib.fr/centre-de-sante/argeles-sur-mer/centres-de-vaccination-covid-19-argeles-sur-mer?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.02434",
+        "latitude": "42.5504"
+      },
+      "metadata": {
+        "address": "1 Allee Ferdinand Buisson, 66700 Argel\u00e8s-sur-Mer",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "66",
+      "nom": "Centre de vaccination COVID-19 - Saint-Mamet",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-esteve/centre-de-vaccination-covid-19-saint-mamet?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 2.865282,
+        "latitude": 42.7072255
+      },
+      "metadata": {
+        "address": "Route de Perpignan, 66240 Saint-Est\u00e8ve",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

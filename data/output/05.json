@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-09T15:17:49.937824+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "05",
+      "nom": "centre de vaccination du Prorel BRIANCON",
+      "url": "https://partners.doctolib.fr/hopital-public/briancon/ch-briancon-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.63131",
+        "latitude": "44.898"
+      },
+      "metadata": {
+        "address": "9 Avenue Ren\u00e9 Froger, 05100 Brian\u00e7on",
+        "phone_number": "+33492252377",
+        "business_hours": {
+          "lundi": "8h30-12h /  14h-17h",
+          "mardi": "8h30-12h /  14h-17h",
+          "mercredi": "8h30-12h /  14h-17h",
+          "jeudi": "8h30-12h /  14h-17h",
+          "vendredi": "8h30-12h /  14h-17h",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-13T11:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "05",
+      "nom": "centre de vaccination CH EMBRUN",
+      "url": "https://partners.doctolib.fr/hopital-public/embrun/ch-embrun-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.49239",
+        "latitude": "44.561"
+      },
+      "metadata": {
+        "address": "8 rue Pierre et Marie Curie, 05200 Embrun",
+        "phone_number": "04 92 43 75 49",
+        "business_hours": {
+          "lundi": "9h-13h et 14h-17h",
+          "mardi": "9h-13h et 14h-17h",
+          "mercredi": "9h-13h et 14h-17h",
+          "jeudi": "9h-13h et 14h-17h",
+          "vendredi": "9h-13h et 14h-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-15T12:05:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "05",
+      "nom": "Centre de vaccination de GAP - CMCL",
+      "url": "https://partners.doctolib.fr/hopital-public/gap/chicas-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.08431",
+        "latitude": "44.5614"
+      },
+      "metadata": {
+        "address": " Boulevard Pierre et Marie Curie, 05000 Gap",
+        "phone_number": "04 92 40 79 51",
+        "business_hours": {
+          "lundi": "8h \u00e0 20h30",
+          "mardi": "8h \u00e0 20h30",
+          "mercredi": "8h \u00e0 20h30",
+          "jeudi": "8h \u00e0 20h30",
+          "vendredi": "8h \u00e0 20h30",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "05",
+      "nom": "MA - US Gap / Maison d'Arr\u00eat de Gap",
+      "url": "",
+      "location": {
+        "longitude": "6.07759",
+        "latitude": "44.5599"
+      },
+      "metadata": {
+        "address": "1 Place Grenette, 05000 Gap",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "05",
+      "nom": "CENTRE MOBILE DE VACCINATION SDIS 05",
+      "url": "",
+      "location": {
+        "longitude": "6.06607",
+        "latitude": "44.5384"
+      },
+      "metadata": {
+        "address": "10 route de Patac, 05000 Gap",
+        "business_hours": {
+          "lundi": "ouvert",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "05",
+      "nom": "Vaccinobus des Hautes-Alpes",
+      "url": "",
+      "location": {
+        "longitude": "6.07756",
+        "latitude": "44.5578"
+      },
+      "metadata": {
+        "address": " Maison de la R\u00e9gion des Hautes-Alpes - Place Saint Arnoux, 05000 Gap",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "05",
+      "nom": "Centre de vaccination Guillestrois-Queyras",
+      "url": "MAIIA",
+      "location": {
+        "longitude": "6.65557",
+        "latitude": "44.6628"
+      },
+      "metadata": {
+        "address": " Salle du Queyron, 05600 Guillestre",
+        "phone_number": "04 92 45 42 42 ",
+        "business_hours": {
+          "lundi": "ouvert",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "05",
+      "nom": "Centre vaccination Covid Pays des Ecrins/ CPTS Grand Brian\u00e7onnais-Ecrins",
+      "url": "",
+      "location": {
+        "longitude": "6.5584",
+        "latitude": "44.792"
+      },
+      "metadata": {
+        "address": "17 avenue Charles de Gaulles - March\u00e9 couvert, 05120 L'Argenti\u00e8re-la-Bess\u00e9e",
+        "phone_number": "06 07 01 03 14",
+        "business_hours": {
+          "lundi": "ouvert",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "05",
+      "nom": "Centre de vaccination du CH-Buech Durance LARAGNE",
+      "url": "https://partners.doctolib.fr/hopital-public/laragne-mont\u00e9glin/chbd-laragne-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.8166",
+        "latitude": "44.32"
+      },
+      "metadata": {
+        "address": " rue du Docteur Provansal , 05300 Laragne-Mont\u00e9glin",
+        "phone_number": "+33492655118",
+        "business_hours": {
+          "lundi": "8h30 \u00e0 12h30 / 13h30 \u00e0 17h30",
+          "mardi": "8h30 \u00e0 12h30 / 13h30 \u00e0 17h30",
+          "mercredi": "8h30 \u00e0 12h30 / 13h30 \u00e0 17h30",
+          "jeudi": "8h30 \u00e0 12h30 / 13h30 \u00e0 17h30",
+          "vendredi": "8h30 \u00e0 12h30 / 13h30 \u00e0 17h30",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "05",
+      "nom": "CHBD Laragne - Centre de vaccination Covid-19",
+      "url": "https://partners.doctolib.fr/hopital-public/laragne-monteglin/chbd-laragne-centre-de-vaccination-covid-19?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 5.81519310857485,
+        "latitude": 44.32106
+      },
+      "metadata": {
+        "address": "Rue Docteur Provansal, 05300 Laragne-Mont\u00e9glin",
+        "phone_number": "04 92 65 51 18",
+        "business_hours": {
+          "lundi": "09:00-12:00, 14:00-17:00",
+          "mardi": "09:00-12:00, 14:00-17:00",
+          "mercredi": "09:00-12:00, 14:00-17:00",
+          "jeudi": "09:00-12:00, 14:00-17:00",
+          "vendredi": "09:00-12:00, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

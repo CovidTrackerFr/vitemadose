@@ -1,0 +1,572 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-09T15:17:49.965569+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "40",
+      "nom": "Centre de Vaccination de Mimizan",
+      "url": "https://www.maiia.com/centre-de-vaccination/40200-mimizan/centre-de-vaccination---forum-mimizan",
+      "location": {
+        "longitude": "-1.22794",
+        "latitude": "44.2015"
+      },
+      "metadata": {
+        "address": " Rue du Jardin Public, 40200 Mimizan",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "9:00-13:00/14:00-18:00",
+          "mercredi": "9:00-13:00/14:00-18h00",
+          "jeudi": "9:00-13:00/14:00-18:00",
+          "vendredi": "9:00-13:00/14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-13T09:30:00.000000Z",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "CENTRE DE VACCINATION de LABRIT",
+      "url": "https://www.maiia.com/centre-de-vaccination/40420-labrit/centre-de-vaccination-covid-19-de-labrit",
+      "location": {
+        "longitude": "-0.543485",
+        "latitude": "44.1039"
+      },
+      "metadata": {
+        "address": " Place de l\u2019Eglise - Salle des f\u00eates, 40420 Labrit",
+        "phone_number": "05 58 51 09 39 ",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "8h30 \u00e0 12h30/  13h30 \u00e0 15h30 ",
+          "mercredi": "8h30 \u00e0 12h30/  13h30 \u00e0 15h30 ",
+          "jeudi": "8h30 \u00e0 12h30/  13h30 \u00e0 15h30 ",
+          "vendredi": "8h30 \u00e0 12h30/  13h30 \u00e0 15h30 ",
+          "samedi": "8h30 \u00e0 12h30/  13h30 \u00e0 15h30 ",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-13T15:30:00.000000Z",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Centre de vaccination d'Aire sur l'Adour",
+      "url": "https://www.maiia.com/centre-de-vaccination/40800-aire-sur-l-adour/centre-de-vaccination---maison-de-sante-de-l-adour?centerId=5ffec752a400683faf1c220c",
+      "location": {
+        "longitude": "-0.2611",
+        "latitude": "43.7005"
+      },
+      "metadata": {
+        "address": "4 Rue Ren\u00e9 M\u00e9ricam, 40800 Aire-sur-l'Adour",
+        "phone_number": "07 71 24 77 63",
+        "business_hours": {
+          "lundi": "08:30-12:30/14h00-18h00",
+          "mardi": "08:30-12:30/14h00-18h00",
+          "mercredi": "08:30-12:30/14h00-18h00",
+          "jeudi": "08:30-12:30/14h00-18h00",
+          "vendredi": "08:30-12:30/14h00-18h00",
+          "samedi": "8h30-12h30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-21T10:15:00.000000Z",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "40",
+      "nom": "Centre de vaccination de Tartas",
+      "url": "https://partners.doctolib.fr/centre-de-sante/tartas/centre-de-vaccination-covid-19-tartas-annexe-morcenx-la-nouvelle?pid=practice-179373&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-0.807019",
+        "latitude": "43.8321"
+      },
+      "metadata": {
+        "address": "28 Cours Saint Jacques, 40400 Tartas",
+        "phone_number": "0762657047",
+        "business_hours": {
+          "lundi": "08:30-12:30/13:30-17:30",
+          "mardi": "08:30-12:30/13:30-17:30",
+          "mercredi": "08:30-12:30/13:30-17:30",
+          "jeudi": "08:30-12:30/13:30-17:30",
+          "vendredi": "08:30-12:30/13:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Centre de Vaccination - MAISON DE SANTE AMOU",
+      "url": "https://www.maiia.com/centre-de-vaccination/40330-amou/centre-de-vaccination---maison-de-sante-amou",
+      "location": {
+        "longitude": "-0.745461",
+        "latitude": "43.592"
+      },
+      "metadata": {
+        "address": "24 Avenue de la Digue - Salle De l'Etoile, 40330 Amou",
+        "business_hours": {
+          "lundi": " 08:30 - 12:30 / 13:30 - 17:30 ",
+          "mardi": " 08:30 - 12:30 / 13:30 - 17:30 ",
+          "mercredi": " 08:30 - 12:30 / 13:30 - 17:30 ",
+          "jeudi": " 08:30 - 12:30 / 13:30 - 17:30 ",
+          "vendredi": " 08:30 - 12:30 / 13:30 - 17:30 ",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Centre de Vaccination de Dax ville",
+      "url": "https://www.maiia.com/centre-de-vaccination/40100-dax/centre-de-vaccination---bassin-dacquois?centerId=6006a9d63b987b202a40423b",
+      "location": {
+        "longitude": "-1.04109",
+        "latitude": "43.6988"
+      },
+      "metadata": {
+        "address": "98 Avenue Francis Plant\u00e9, 40100 Dax",
+        "business_hours": {
+          "lundi": "08h30-12h30/13h30-17h30",
+          "mardi": "08h30-12h30/13h30-17h30",
+          "mercredi": "08h30-12h30/13h30-17h30",
+          "jeudi": "08h30-12h30/13h30-17h30",
+          "vendredi": "08h30-12h30/13h30-17h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Centre de vaccination de Morcenx",
+      "url": "https://partners.doctolib.fr/centre-de-sante/tartas/centre-de-vaccination-covid-19-tartas-annexe-morcenx-la-nouvelle?pid=practice-175046&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-0.911203",
+        "latitude": "44.0296"
+      },
+      "metadata": {
+        "address": "32 Boulevard Galli\u00e9ni, 40110 Morcenx-la-Nouvelle",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "09:00-12:00/14:00-17:00",
+          "mercredi": "09:00-12:00/14:00-17:00",
+          "jeudi": "09:00-12:00/14:00-17:00",
+          "vendredi": "09:00-12:00/14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Grand centre - Mont de Marsan",
+      "url": "",
+      "location": {
+        "longitude": "-0.500744",
+        "latitude": "43.8909"
+      },
+      "metadata": {
+        "address": " , 40000 Mont-de-Marsan",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "CP - centre p\u00e9nitentiaire de Mont de Marsan / Centre P\u00e9nitentiaire de Mont-De-Marsan",
+      "url": "",
+      "location": {
+        "longitude": "-0.461212",
+        "latitude": "43.8971"
+      },
+      "metadata": {
+        "address": " Chemin de P\u00e9m\u00e9gnan, 40000 Mont-de-Marsan",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Centre de vaccination de Saint Martin de Seignanx",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-martin-de-seignanx/centre-de-vaccination-du-seignanx?pid=practice-176921&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.39048",
+        "latitude": "43.5406"
+      },
+      "metadata": {
+        "address": "2 Rue du Seignanx, 40390 Saint-Martin-de-Seignanx",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "8:30-12:30/14:00-18:00",
+          "mercredi": "8:30-12:30/14:00-18:00",
+          "jeudi": "8:30-12:30/14:00-18:00",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Centre de vaccination de Soustons",
+      "url": "https://partners.doctolib.fr/centre-de-sante/soustons/centre-de-vaccination-de-soustons?pid=practice-177775&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.33281",
+        "latitude": "43.7551"
+      },
+      "metadata": {
+        "address": "12 Rue du Coll\u00e8ge, 40140 Soustons",
+        "business_hours": {
+          "lundi": "13:30-17:30",
+          "mardi": "8:30-13:30",
+          "mercredi": "8:30-13:30",
+          "jeudi": "8:30-13:30",
+          "vendredi": "8:30-13:30",
+          "samedi": "8:30-13:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "centre de vaccination de Biscarrosse",
+      "url": "https://partners.doctolib.fr/centre-de-sante/biscarrosse/centre-vaccination-covid-ville-de-biscarrosse?pid=practice-166008&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.18284",
+        "latitude": "44.3871"
+      },
+      "metadata": {
+        "address": "1500 Avenue Pierre Latecoere - Centre Lat\u00e9co\u00e8re , 40600 Biscarrosse",
+        "phone_number": "05 58 82 70 64",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "8h-12h / 13h30-17h30",
+          "mercredi": "8h-12h / 13h30-17h30",
+          "jeudi": "8h-12h / 13h30-17h30",
+          "vendredi": "8h-12h / 13h30-17h30",
+          "samedi": "8h-12h ",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Centre de vaccination \u00e9ph\u00e9m\u00e8re de Villeneuve de Marsan",
+      "url": "",
+      "location": {
+        "longitude": "-0.307362",
+        "latitude": "43.8922"
+      },
+      "metadata": {
+        "address": "60 Avenue du Marsan, 40190 Villeneuve-de-Marsan",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Equipe mobile de vaccination - op\u00e9ration Gabarret",
+      "url": "",
+      "location": {
+        "longitude": "0.0110737",
+        "latitude": "43.985"
+      },
+      "metadata": {
+        "address": "131 Rue d\u2019Armagnac, 40310 Gabarret",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Centre de vaccination du CHI de Mont de Marsan",
+      "url": "https://partners.doctolib.fr/hopital-public/mont-de-marsan/ch-de-mont-de-marsan-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-0.482295",
+        "latitude": "43.889"
+      },
+      "metadata": {
+        "address": "328  rue de l\u2019auberge landaise, 40000 Mont-de-Marsan",
+        "phone_number": "05 58 05 13 00",
+        "business_hours": {
+          "lundi": "9h00-17h00",
+          "mardi": "9h00-17h00",
+          "mercredi": "9h00-17h00",
+          "jeudi": "9h00-17h00",
+          "vendredi": "9h00-17h00",
+          "samedi": "9h00-13h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Centre de Vaccination du CH de Saint Sever",
+      "url": "https://partners.doctolib.fr/hopital-public/st-sever/ch-de-saint-sever-reserve-aux-professionnels-de-sante?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-0.57169",
+        "latitude": "43.7572"
+      },
+      "metadata": {
+        "address": "3 Rue de la Guillerie, 40500 Saint-Sever",
+        "phone_number": "+33558764545",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "9:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Centre de vaccination Covid-19 de la C\u00f4te Sud des Landes",
+      "url": "https://partners.doctolib.fr/centre-de-sante/capbreton/centre-de-vaccination-covid-19-de-la-cote-sud-des-landes?pid=practice-168037&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.44411",
+        "latitude": "43.6482"
+      },
+      "metadata": {
+        "address": " Impasse de la Savane - Parking plage Santocha, 40130 Capbreton",
+        "phone_number": "05.58.72.72.15",
+        "business_hours": {
+          "lundi": "8h30-12h30 et 13h30-17h30",
+          "mardi": "8h30-12h30 et 13h30-17h30",
+          "mercredi": "8h30-12h30 et 13h30-17h30",
+          "jeudi": "8h30-12h30 et 13h30-17h30",
+          "vendredi": "8h30-12h30 et 13h30-17h30",
+          "samedi": "8h30-12h30 et 13h30-17h30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Centre de vaccination du CH de Dax - H\u00f4pital Thermal",
+      "url": "https://partners.doctolib.fr/hopital-public/dax/centre-de-vaccination-reserve-aux-professionnels-de-sante-ch-de-dax-en-preparation?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.05077",
+        "latitude": "43.7059"
+      },
+      "metadata": {
+        "address": " Rue Saint Eutrope, 40100 Dax",
+        "phone_number": "05 58 35 24 99",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "8h30-17h30",
+          "mercredi": "8h30-17h30",
+          "jeudi": "8h30-17h30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Pharmacie Du Marensin",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-marensin-castets",
+      "location": {
+        "longitude": -1.148117,
+        "latitude": 43.8812422
+      },
+      "metadata": {
+        "address": "149 rue Saint Helene, 40260 Castets",
+        "phone_number": "+33558894043",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Pharmacie du Trinquet",
+      "url": "https://partners.doctolib.fr/pharmacie/soorts-hossegor/pharmacie-soorts",
+      "location": {
+        "longitude": -1.395226,
+        "latitude": 43.6638044
+      },
+      "metadata": {
+        "address": "214 Avenue du Centre, 40150 Soorts-Hossegor",
+        "phone_number": "05 58 43 50 39",
+        "business_hours": {
+          "lundi": "09:00-12:30, 14:15-19:30",
+          "mardi": "09:00-12:30, 14:15-19:30",
+          "mercredi": "09:00-12:30, 14:15-19:30",
+          "jeudi": "09:00-12:30, 14:15-19:30",
+          "vendredi": "09:00-12:30, 14:15-19:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Pharmacie Bougniot",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-bougniot-labouheyre",
+      "location": {
+        "longitude": -0.9197061000000001,
+        "latitude": 44.2125705
+      },
+      "metadata": {
+        "address": "97 rue Jacques Berqu\u00e9, 40210 Labouheyre",
+        "phone_number": "+33558070013",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Centre de vaccination covid-19 - Morcenx-la-Nouvelle",
+      "url": "https://partners.doctolib.fr/centre-de-sante/morcenx-la-nouvelle/centre-de-vaccination-covid-19-morcenx-la-nouvelle?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": -0.9117519,
+        "latitude": 44.0302249
+      },
+      "metadata": {
+        "address": "32 Boulevard Gallieni, 40110 Morcenx-la-Nouvelle",
+        "phone_number": "06 45 86 17 47",
+        "business_hours": {
+          "lundi": "09:00-12:00",
+          "mardi": "09:00-12:00",
+          "mercredi": "09:00-12:00",
+          "jeudi": "09:00-12:00",
+          "vendredi": "09:00-12:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
+      "nom": "Pharmacie Terral",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-terral-mont-de-marsan",
+      "location": {
+        "longitude": -0.4894305,
+        "latitude": 43.897425
+      },
+      "metadata": {
+        "address": "762 avenue du mar\u00e9chal Foch, 40000 Mont de Marsan",
+        "phone_number": "+33558857212",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    }
+  ]
+}

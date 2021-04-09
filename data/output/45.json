@@ -1,0 +1,468 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-09T15:17:49.969470+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "45",
+      "nom": "Salle Fernand Pellicer - Orl\u00e9ans La Source",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/orleans/centre-de-vaccination-covid-fernand-pellicer-d-orleans?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.93344",
+        "latitude": "47.8343"
+      },
+      "metadata": {
+        "address": " Rue Edouard Branly, 45100 Orl\u00e9ans",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "14h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "en cours de d\u00e9finition",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-10T12:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "45",
+      "nom": "CH Agglom\u00e9ration Montargoise  - r\u00e9serv\u00e9 aux professionnels de sant\u00e9 en activit\u00e9",
+      "url": "https://partners.doctolib.fr/hopital-public/amilly/centre-de-vaccination-covid-ch-de-montargis?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.77028",
+        "latitude": "47.9975"
+      },
+      "metadata": {
+        "address": "658  Rue des Bourgoins, 45200 Amilly",
+        "business_hours": {
+          "lundi": "ouvert",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-13T14:00:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "45",
+      "nom": "Centre culturel - La Passerelle \u00e0 Fleury-les-Aubrais",
+      "url": "https://partners.doctolib.fr/centre-de-sante/fleury-les-aubrais/centre-de-vaccination-fleury-les-aubrais?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.92074",
+        "latitude": "47.9249"
+      },
+      "metadata": {
+        "address": "57 Boulevard de Lamballe, 45400 Fleury-les-Aubrais",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "14h-17",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "en cours de d\u00e9finition",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "45",
+      "nom": "CP - US1 / Centre p\u00e9nitentiaire d'Orl\u00e9ans Saran",
+      "url": "",
+      "location": {
+        "longitude": "1.90416",
+        "latitude": "47.9462"
+      },
+      "metadata": {
+        "address": " Rue de Montaran, 45770 Saran",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "45",
+      "nom": "Centre de vaccination - en attente (45)",
+      "url": "",
+      "location": {
+        "longitude": "1.90846",
+        "latitude": "47.9031"
+      },
+      "metadata": {
+        "address": " , 45000 Orl\u00e9ans",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "45",
+      "nom": "CHR Orl\u00e9ans La Source - r\u00e9serv\u00e9 aux professionnels de sant\u00e9",
+      "url": "https://partners.doctolib.fr/hopital-public/orleans/centre-de-vaccination-covid-chr-orleans-la-source?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.92463",
+        "latitude": "47.8381"
+      },
+      "metadata": {
+        "address": "14 Avenue de l\u2019H\u00f4pital, 45100 Orl\u00e9ans",
+        "business_hours": {
+          "lundi": "ouvert",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "45",
+      "nom": "Centre de vaccination - Ch\u00e2teauneuf-sur-Loire - Espace Florian",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chateauneuf-sur-loire/centre-de-vaccination-chateauneuf-sur-loire?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.22114",
+        "latitude": "47.8675"
+      },
+      "metadata": {
+        "address": "11 Avenue Albert Viger, 45110 Ch\u00e2teauneuf-sur-Loire",
+        "phone_number": "08 05 02 14 00",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "45",
+      "nom": "Equipe mobile - CD 45",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/loiret/centre-de-vaccination-covid-19-centre-mobile-du-loiret?pid=practice-171026&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.91045",
+        "latitude": "47.9079"
+      },
+      "metadata": {
+        "address": "15 Rue Eugene Vignat, 45000 Orl\u00e9ans",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "45",
+      "nom": "Grand centre de vaccination - Olivet - Centre sportif du Larry",
+      "url": "https://partners.doctolib.fr/centre-de-sante/olivet/centre-de-vaccination-covid-19-vaccinodrome-d-olivet?pid=practice-181158&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.90565",
+        "latitude": "47.8594"
+      },
+      "metadata": {
+        "address": "54 Rue des Ch\u00eanes, 45160 Olivet",
+        "phone_number": "08 05 02 14 00",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "45",
+      "nom": "Salle Carnot \u00e0 Montargis",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montargis/centre-de-vaccination-prefecture-du-loiret?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.7388",
+        "latitude": "48.0033"
+      },
+      "metadata": {
+        "address": "16-18 Rue Carnot, 45200 Montargis",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "9h-12h30 / 14h30-18h",
+          "mardi": "9h-12h30 / 14h30-18h",
+          "mercredi": "9h-12h30 / 14h30-18h",
+          "jeudi": "9h-12h30 / 14h30-18h",
+          "vendredi": "9h-12h30 / 14h30-18h",
+          "samedi": "",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "45",
+      "nom": "Centre hospitalier de Pithiviers",
+      "url": "https://partners.doctolib.fr/hopital-public/pithiviers/centre-de-vaccination-covid-de-pithiviers?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.24792",
+        "latitude": "48.1707"
+      },
+      "metadata": {
+        "address": "10 Boulevard Beauvallet, 45300 Pithiviers",
+        "phone_number": "0 801 90 45 00",
+        "business_hours": {
+          "lundi": "9h-18h",
+          "mardi": "14h-18h",
+          "mercredi": "9h-18h",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "9h-18h",
+          "dimanche": "9h-18h"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "45",
+      "nom": "Centre hospitalier de Beaugency - centre de vaccination public",
+      "url": "https://partners.doctolib.fr/hopital-public/beaugency/centre-de-vaccination-covid-hopital-de-beaugency?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.62009",
+        "latitude": "47.7819"
+      },
+      "metadata": {
+        "address": "48 Avenue de Vend\u00f4me, 45190 Beaugency",
+        "phone_number": "08 05 02 14 00",
+        "business_hours": {
+          "lundi": "Ouvert",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "45",
+      "nom": "CH de Gien - r\u00e9serv\u00e9 aux professionnels de sant\u00e9",
+      "url": "https://partners.doctolib.fr/hopital-public/gien/centre-de-vaccination-covid-hopital-de-gien?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.63436",
+        "latitude": "47.6904"
+      },
+      "metadata": {
+        "address": "2 ter Avenue Jean Villejean, 45500 Gien",
+        "business_hours": {
+          "lundi": "ouvert",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "45",
+      "nom": "CH de Beaugency - r\u00e9serv\u00e9 aux professionnels en exercice",
+      "url": "https://partners.doctolib.fr/hopital-public/beaugency/centre-de-vaccination-covid-hopital-de-beaugency?pid=practice-163901&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.62008",
+        "latitude": "47.7819"
+      },
+      "metadata": {
+        "address": "48 Avenue de Vend\u00f4me, 45190 Beaugency",
+        "business_hours": {
+          "lundi": "ouvert",
+          "mardi": "ouverte",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "45",
+      "nom": "Dispensaire Porte Madeleine - r\u00e9serv\u00e9 aux professionnels de sant\u00e9",
+      "url": "https://partners.doctolib.fr/hopital-public/orleans/centre-de-vaccination-covid-chr-orleans-porte-madeleine?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.89693",
+        "latitude": "47.9017"
+      },
+      "metadata": {
+        "address": "1 Rue Porte Madeleine, 45000 Orl\u00e9ans",
+        "business_hours": {
+          "lundi": "ouvert",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "45",
+      "nom": "Salle polyvalente Cuiry de Gien",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/gien/centre-de-vaccination-de-gien?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.62321",
+        "latitude": "47.7084"
+      },
+      "metadata": {
+        "address": "32 Rue Georges Brassens, 45500 Gien",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "9h-13h/14h-18h",
+          "mardi": "9h-13h/14h-18h",
+          "mercredi": "9h-13h/14h-18h",
+          "jeudi": "9h-13h/14h-18h",
+          "vendredi": "9h-13h/14h-18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "45",
+      "nom": "Centre de vaccination - Salle Blareau de Sully-sur-Loire",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sully-sur-loire/centre-de-vaccination-covid-19-centre-social-kuypers-sully-sur-loire?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.37624",
+        "latitude": "47.7688"
+      },
+      "metadata": {
+        "address": "1 Chemin de la Salle Verte, 45600 Sully-sur-Loire",
+        "phone_number": "08 05 02 14 00",
+        "business_hours": {
+          "lundi": "ouvert",
+          "mardi": "ouvert",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "45",
+      "nom": "Pharmacie du Centre",
+      "url": "https://partners.doctolib.fr/pharmacie/chateauneuf-sur-loire/pharmacie-du-centre-chateauneuf-sur-loire",
+      "location": {
+        "longitude": 2.2207901,
+        "latitude": 47.8637596
+      },
+      "metadata": {
+        "address": "29 Grande Rue, 45110 Ch\u00e2teauneuf-sur-Loire",
+        "phone_number": "02 38 58 43 23",
+        "business_hours": {
+          "lundi": "09:00-12:15, 14:30-19:00",
+          "mardi": "09:00-12:15, 14:30-19:00",
+          "mercredi": "09:00-12:15, 14:30-19:00",
+          "jeudi": "09:00-12:15, 14:30-19:00",
+          "vendredi": "09:00-12:15, 14:30-19:00",
+          "samedi": "09:00-12:15, 14:30-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    }
+  ]
+}

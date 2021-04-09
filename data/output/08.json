@@ -1,0 +1,653 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-09T15:17:49.940390+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "08",
+      "nom": "Grand centre de vaccination",
+      "url": "https://partners.doctolib.fr/hopital-public/charleville-mezieres/centre-hospitalier-intercommunal-nord-ardennes-charleville-fumay-sedan?pid=practice-171700&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.71338",
+        "latitude": "49.7567"
+      },
+      "metadata": {
+        "address": " Rue de la Vieille Meuse, 08000 Charleville-M\u00e9zi\u00e8res",
+        "phone_number": "+33972760250 ",
+        "business_hours": {
+          "lundi": "9:00-13:00/14:00-18:00",
+          "mardi": "9:00-13:00/14:00-18:00",
+          "mercredi": "9:00-13:00/14:00-18:00",
+          "jeudi": "9:00-13:00/14:00-18:00",
+          "vendredi": "9:00-13:00/14:00-18:00",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-13T17:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "08",
+      "nom": "Centre de vaccination COSEC Roger Marche VILLERS-SEMEUSE",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-165006&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.73896",
+        "latitude": "49.7427"
+      },
+      "metadata": {
+        "address": " Route Nationale, 08000 Villers-Semeuse",
+        "business_hours": {
+          "lundi": "A pr\u00e9ciser",
+          "mardi": "A pr\u00e9ciser",
+          "mercredi": "A pr\u00e9ciser",
+          "jeudi": "A pr\u00e9ciser",
+          "vendredi": "A pr\u00e9ciser",
+          "samedi": "A pr\u00e9ciser",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "MSP CARIGNAN",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-173870&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.17018",
+        "latitude": "49.6295"
+      },
+      "metadata": {
+        "address": "23 Avenue de Blagny, 08110 Carignan",
+        "phone_number": " +33972760250",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "13:30-18:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "Centre de Vaccination Salle B\u00e9r\u00e9govoy  VRIGNE-AUX-BOIS",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-165013&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.85412",
+        "latitude": "49.7371"
+      },
+      "metadata": {
+        "address": "13 Avenue Jean Jaur\u00e8s, 08330 Vrigne aux Bois",
+        "business_hours": {
+          "lundi": "A pr\u00e9ciser",
+          "mardi": "A pr\u00e9ciser",
+          "mercredi": "A pr\u00e9ciser",
+          "jeudi": "A pr\u00e9ciser",
+          "vendredi": "A pr\u00e9ciser",
+          "samedi": "A pr\u00e9ciser",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "MSP Buzancy",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-167626&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.95336",
+        "latitude": "49.4274"
+      },
+      "metadata": {
+        "address": "2 Rue Nouvelle, 08240 Buzancy",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "13H30-17H",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "MSP Signy-le-Petit",
+      "url": "",
+      "location": {
+        "longitude": "4.27997",
+        "latitude": "49.9029"
+      },
+      "metadata": {
+        "address": "1 Rue Nicolas de Rumigny, 08380 Signy-le-Petit",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "13H-17H",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "MSP RAUCOURT-ET-FLABA",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-173876&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.95685",
+        "latitude": "49.6017"
+      },
+      "metadata": {
+        "address": "3 bis Place du Pave, 08450 Raucourt-et-Flaba",
+        "phone_number": " +33972760250",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "13:00-19:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "CHAUMONT-PORCIEN",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-173881&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.24619",
+        "latitude": "49.6491"
+      },
+      "metadata": {
+        "address": "2 Place de la Mairie, 08220 Chaumont-Porcien",
+        "phone_number": " +33972760250",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "13:00-16:00",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "13:00-16:00",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "POIX-TERRON",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-172700&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.63671",
+        "latitude": "49.6477"
+      },
+      "metadata": {
+        "address": "5 Route de Montigny, 08430 Poix-Terron",
+        "phone_number": " +33972760250",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "13:00-18:00",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "Centre de vaccination de REVIN",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-172671&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.64039",
+        "latitude": "49.937"
+      },
+      "metadata": {
+        "address": "46 Avenue Jean-Baptiste Cl\u00e9ment, 08500 Revin",
+        "phone_number": " +33324415567",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "13:30-18:30",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "MSP SAINT-GERMAINMONT",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-174613&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.1314",
+        "latitude": "49.5058"
+      },
+      "metadata": {
+        "address": "4 Rue Brennus Delaitre, 08190 Saint-Germainmont",
+        "phone_number": " +33972760250",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "MSP ASFELD",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-173996&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.11037",
+        "latitude": "49.4626"
+      },
+      "metadata": {
+        "address": "2 Rue du Docteur Landes, 08190 Asfeld",
+        "phone_number": "+33972760250",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "10:00-18:00",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "Centre de Vaccination de NOUZONVILLE (Salle des f\u00eates de Roger Maillard)",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-174989&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.74526",
+        "latitude": "49.8144"
+      },
+      "metadata": {
+        "address": "21 Place Gambetta, 08700 Nouzonville",
+        "phone_number": " +33972760250",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "MA - US Centre hospitalier de charleville m\u00e9zi\u00e8res / Maison d'Arr\u00eat de Charleville-M\u00e9zi\u00e8res",
+      "url": "",
+      "location": {
+        "longitude": "4.7225",
+        "latitude": "49.7721"
+      },
+      "metadata": {
+        "address": "21 Place Winston Churchill, 08000 Charleville-M\u00e9zi\u00e8res",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "Centre de vaccination de GIVET",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-167627&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.82581",
+        "latitude": "50.1413"
+      },
+      "metadata": {
+        "address": " Rue Berthelot, 08600 Givet",
+        "phone_number": "+33324429840",
+        "business_hours": {
+          "lundi": "9H00-12H-13h30-16H30",
+          "mardi": "9H00-12H-13h30-16H30",
+          "mercredi": "9H00-12H-13h30-16H30",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "8:00-13:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "MSP Mouzon",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-167409&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.07247",
+        "latitude": "49.6062"
+      },
+      "metadata": {
+        "address": "6 Rue Jean Claude Stoltz, 08210 Mouzon",
+        "phone_number": "+33972760250",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "Vendredi 5 f\u00e9vrier, 14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "Centre Vaccination - CHInA site SEDAN",
+      "url": "https://partners.doctolib.fr/hopital-public/charleville-mezieres/centre-hospitalier-intercommunal-nord-ardennes-charleville-fumay-sedan?pid=practice-164145&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.94014",
+        "latitude": "49.7054"
+      },
+      "metadata": {
+        "address": "2 Avenue du G\u00e9n\u00e9ral Margueritte, 08200 Sedan",
+        "phone_number": "+33972760250 ",
+        "business_hours": {
+          "lundi": "13:00-19:00",
+          "mardi": "ferm\u00e9",
+          "mercredi": "8:00-19:00",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "8:00-19:00",
+          "samedi": "8:00-12:30 uniquement le 16 janvier",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "Centre de vaccination de Douzy - MSP",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-174627&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.03722",
+        "latitude": "49.6715"
+      },
+      "metadata": {
+        "address": "74 bis Route Nationale, 08140 Douzy",
+        "phone_number": "+33972760250",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "13:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "Centre Vaccination - CHInA site FUMAY",
+      "url": "https://partners.doctolib.fr/hopital-public/charleville-mezieres/centre-hospitalier-intercommunal-nord-ardennes-charleville-fumay-sedan?pid=practice-164146&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.70948",
+        "latitude": "49.9922"
+      },
+      "metadata": {
+        "address": "30 Place du Baty, 08170 Fumay",
+        "phone_number": "09 72 76 02 50 ",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "8:00-19:00",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "8:00-19:00",
+          "vendredi": "ferm\u00e9",
+          "samedi": "08:00-12:30 uniquement le samedi 23 janvier",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "Centre Vaccination - GHSA - Site Vouziers",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-165003&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.70077",
+        "latitude": "49.3955"
+      },
+      "metadata": {
+        "address": "12 Rue Henrionnet, 08400 Vouziers",
+        "phone_number": "+33972760250",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "13:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "Centre de vaccination d'AUBRIVES",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-167628&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.75194",
+        "latitude": "50.1047"
+      },
+      "metadata": {
+        "address": " Rue Francis Poulenc, 08320 Aubrives",
+        "phone_number": "+33786318303",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "13:30-18:30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "MSP Signy L'Abbaye",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-167625&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.42296",
+        "latitude": "49.696"
+      },
+      "metadata": {
+        "address": "48 Rue de Rethel, 08460 Signy-l'Abbaye",
+        "phone_number": "+33972760250",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "Vendredi 5 f\u00e9vrier, 13:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "Centre de vaccination de ROCROI",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-167723&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.5187",
+        "latitude": "49.9251"
+      },
+      "metadata": {
+        "address": " Rue de Nevers, 08230 Rocroi",
+        "phone_number": "+33972760250",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "Jeudi 4 f\u00e9vrier, 13:30-18:30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "Centre Vaccination - GHSA - Site Rethel",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-165002&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.36376",
+        "latitude": "49.511"
+      },
+      "metadata": {
+        "address": "1 Place Hourtoule, 08300 Rethel",
+        "phone_number": "+33972760250 ",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "13h00-17h30",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "13h00-17h30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "Centre de vaccination de BOGNY-SUR-MEUSE",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-168268&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.76608",
+        "latitude": "49.8513"
+      },
+      "metadata": {
+        "address": " Place Danton, 08120 Bogny-sur-Meuse",
+        "phone_number": "+33972760250",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "vendredi 5 f\u00e9vrier, 9:00-13:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

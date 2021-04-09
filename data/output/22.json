@@ -1,0 +1,462 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-09T15:17:49.950139+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "22",
+      "nom": "LANNION - Salle des ursulines",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/lannion-22300/centre-de-vaccination-de-lannion/centre-de-vaccination-de-lannion-salle-des-ursulines",
+      "location": {
+        "longitude": "-3.45495",
+        "latitude": "48.7312"
+      },
+      "metadata": {
+        "address": " Place des Patriotes, 22300 Lannion",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "9h00-13h00 / 13h30-17h30 ",
+          "mardi": "9h00-13h00 / 13h30-17h30 ",
+          "mercredi": "9h00-13h00 / 13h30-17h30 ",
+          "jeudi": "9h00-13h00 / 13h30-17h30 ",
+          "vendredi": "9h00-13h00 / 13h30-17h30 ",
+          "samedi": "9h00-13h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-15T12:05:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "Gymnase Kerraoul 2",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/paimpol-22500/centre-de-vaccination-de-paimpol-gymnase-k2",
+      "location": {
+        "longitude": "-3.06482",
+        "latitude": "48.7833"
+      },
+      "metadata": {
+        "address": "18 Voie Communale Hent Kervig, 22500 Paimpol",
+        "phone_number": "02 57 18 00 60",
+        "business_hours": {
+          "lundi": "09:00-13:00/13:00-17:30",
+          "mardi": "09:00-13:00/13:00-17:30",
+          "mercredi": "09:00-13:00/13:00-17:30",
+          "jeudi": "09:00-13:00/13:00-17:30",
+          "vendredi": "09:00-13:00/13:00-17:30",
+          "samedi": "09:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-26T11:40:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "GUINGAMP - Centre social",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/guingamp-22200/guingamp/centre-de-vaccination-guingamp-centre-social-guingamp",
+      "location": {
+        "longitude": "-3.15965",
+        "latitude": "48.5639"
+      },
+      "metadata": {
+        "address": " Rue Hyacinthe Cheval, 22200 Guingamp",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "9h00-13h00 / 13h30-17h30",
+          "mardi": "9h00-13h00 / 13h30-17h30",
+          "mercredi": "9h00-13h00 / 13h30-17h30",
+          "jeudi": "9h00-13h00 / 13h30-17h30",
+          "vendredi": "9h00-13h00 / 13h30-17h30",
+          "samedi": "9h00-13h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-26T15:45:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "ST BRIEUC - Salle Robien",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/st-brieuc-22000/robien-saint-brieuc/centre-de-vaccination-de-robien-saint-brieuc",
+      "location": {
+        "longitude": "-2.76265",
+        "latitude": "48.5051"
+      },
+      "metadata": {
+        "address": " Place Octave Brilleaud, 22000 Saint-Brieuc",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "8h30-12h30 / 13h30-17h30",
+          "mardi": "8h30-12h30 / 13h30-17h30",
+          "mercredi": "8h30-12h30 / 13h30-17h30",
+          "jeudi": "8h30-12h30 / 13h30-17h30",
+          "vendredi": "8h30-12h30 / 13h30-17h30",
+          "samedi": "8h30-12h30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-27T16:15:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "22",
+      "nom": "CH LANNION (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
+      "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/lannion-22300/equipe-d-infectiologie?agenda=51159&motive=81356&category=-1&cabinet=16554",
+      "location": {
+        "longitude": "-3.46443",
+        "latitude": "48.7223"
+      },
+      "metadata": {
+        "address": "21 Rue de Trorozec, 22300 Lannion",
+        "business_hours": {
+          "lundi": "9h45-12h30",
+          "mardi": "9h45-12h30",
+          "mercredi": "9h-12h30 / 13h30-17h30",
+          "jeudi": "9h-12h30 / 13h30-17h30",
+          "vendredi": "9h-12h30 / 13h30-17h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "DINAN - Centre des congr\u00e8s",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-malo-et-dinan/gh-rance-emeraude-vaccination-covid?pid=practice-164881&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-2.03953",
+        "latitude": "48.4526"
+      },
+      "metadata": {
+        "address": " Rue Victor Basch, 22100 Dinan",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "9h00-13h00 / 14h00-18h00",
+          "mercredi": "9h00-13h00 / 14h00-18h00",
+          "jeudi": "9h00-13h00 / 14h00-18h00",
+          "vendredi": "9h00-13h00 / 14h00-18h00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "ROSTRENEN - Salle des f\u00eates",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/rostrenen-22110/salle-des-fetes-rostrenen/centre-de-vaccination-de-la-salle-des-fetes-rostrenen",
+      "location": {
+        "longitude": "-3.31588",
+        "latitude": "48.2352"
+      },
+      "metadata": {
+        "address": " Place du Bourk Kozh, 22110 Rostrenen",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "13h30-17h30",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "13h30-17h30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "22-Grand centre de vaccination",
+      "url": "",
+      "location": {
+        "longitude": "-2.76577",
+        "latitude": "48.5145"
+      },
+      "metadata": {
+        "address": "33 Rue Fardel, 22000 Saint-Brieuc",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "CH ST-BRIEUC (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
+      "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/st-brieuc-22000/service-de-sante-au-travail?category=-1&cabinet=16544",
+      "location": {
+        "longitude": "-2.74847",
+        "latitude": "48.4905"
+      },
+      "metadata": {
+        "address": "10 Rue Marcel Proust, 22000 Saint-Brieuc",
+        "business_hours": {
+          "lundi": "9h30-16h30",
+          "mardi": "9h30-16h30",
+          "mercredi": "9h30-16h30",
+          "jeudi": "9h30-16h30",
+          "vendredi": "9h30-16h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "LOUDEAC - Foyer municipal",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/loudeac-22600/centre-de-vaccination-loudeac-foyer-municipal",
+      "location": {
+        "longitude": "-2.75584",
+        "latitude": "48.1784"
+      },
+      "metadata": {
+        "address": "34 Rue de Moncontour, 22600 Loud\u00e9ac",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "9h30-12h30 / 13h30-17h30",
+          "mardi": "9h30-12h30 / 13h30-17h30",
+          "mercredi": "9h30-12h30 / 13h30-17h30",
+          "jeudi": "9h30-12h30 / 13h30-17h30",
+          "vendredi": "9h30-12h30 / 13h30-17h30",
+          "samedi": "9h30-13h30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "MA - US / Maison d'Arr\u00eat de Saint-Brieuc",
+      "url": "",
+      "location": {
+        "longitude": "-2.75047",
+        "latitude": "48.5083"
+      },
+      "metadata": {
+        "address": "1 Rue des Fusill\u00e9s, 22000 Saint-Brieuc",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "CH PAIMPOL (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
+      "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/paimpol-22500/equipe-d-infectiologie-2?cabinet=16557",
+      "location": {
+        "longitude": "-3.03561",
+        "latitude": "48.7733"
+      },
+      "metadata": {
+        "address": "36 Chemin de Kerpuns, 22500 Paimpol",
+        "business_hours": {
+          "lundi": "9h30-17h30",
+          "mardi": "9h30-17h30",
+          "mercredi": "9h30-17h30",
+          "jeudi": "9h30-17h30",
+          "vendredi": "9h30-17h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "LANVOLLON - Salle Armor Argoat",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/lanvollon-22290/ville-de-lanvollon/centre-de-vaccination-de-la-ville-de-lanvollon",
+      "location": {
+        "longitude": "-2.99161",
+        "latitude": "48.6371"
+      },
+      "metadata": {
+        "address": " Rue du Tregor, 22290 Lanvollon",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "9h-13h / 13h30-17h30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "GUINGAMP - Centre de sant\u00e9 (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
+      "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/pabu-22200/equipe-d-infectiologie-3?agenda=51168&motive=81341&category=-1&cabinet=16558",
+      "location": {
+        "longitude": "-3.14408",
+        "latitude": "48.5681"
+      },
+      "metadata": {
+        "address": "17 Rue de l'Armor, 22200 Pabu",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "9h30-16h30",
+          "mardi": "9h30-16h30",
+          "mercredi": "9h30-16h30",
+          "jeudi": "9h30-16h30",
+          "vendredi": "9h30-16h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "PLEUMEUR BODOU - PHOENIX",
+      "url": "https://vaccination-covid.keldoc.com/maison-de-sante/pleumeur-bodou-22560/centre-de-vaccination-ephemere-sdis-pleumeur-bodou/centre-de-vaccination-ephemere-sdis-lannion?category=-1&cabinet=17301&specialty=496",
+      "location": {
+        "longitude": "-3.52707",
+        "latitude": "48.7814"
+      },
+      "metadata": {
+        "address": " Route du Rad\u00f4me, 22560 Pleumeur-Bodou",
+        "phone_number": "+332 57 18 00 60",
+        "business_hours": {
+          "lundi": "9h-17h30",
+          "mardi": "9h-17h30",
+          "mercredi": "9h-17h30",
+          "jeudi": "9h-17h30",
+          "vendredi": "9h-17h30",
+          "samedi": "9h-17h30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "CH DINAN (r\u00e9serv\u00e9 aux professionnels des secteurs de la sant\u00e9 et du m\u00e9dico-social)",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-malo-et-dinan/gh-rance-emeraude-vaccination-covid?pid=practice-163106&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-2.04645",
+        "latitude": "48.4451"
+      },
+      "metadata": {
+        "address": "76 Rue Chateaubriand, 22100 Dinan",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "9h00-17h00",
+          "mercredi": "9h00-17h00",
+          "jeudi": "9h00-17h00",
+          "vendredi": "9h00-17h00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "LAMBALLE - Salle municipale",
+      "url": "https://vaccination-covid.keldoc.com/maison-de-sante/lamballe-22400/lamballe/centre-de-vaccination-lamballe-salle-municipale-lamballe",
+      "location": {
+        "longitude": "-2.51413",
+        "latitude": "48.4654"
+      },
+      "metadata": {
+        "address": "6 Rue mouexigne, 22400 Lamballe-Armor",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "9h-13h puis 13h30-17h30",
+          "mardi": "9h-13h puis 13h30-17h30",
+          "mercredi": "9h-13h puis 13h30-17h30",
+          "jeudi": "9h-13h puis 13h30-17h30",
+          "vendredi": "9h-13h puis 13h30-17h30",
+          "samedi": "9h-13h",
+          "dimanche": "non pr\u00e9cis\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "Pharmacie St Nicolas",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-st-nicolas-loudeac",
+      "location": {
+        "longitude": -2.7612948,
+        "latitude": 48.1925035
+      },
+      "metadata": {
+        "address": "ZAC Ker d'herv\u00e9 1 rue daniel g\u00e9my, 22600 Loudeac",
+        "phone_number": "+33296280040",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    }
+  ]
+}

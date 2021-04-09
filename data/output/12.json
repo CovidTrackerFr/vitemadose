@@ -1,0 +1,207 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-09T15:17:49.942562+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "12",
+      "nom": "Centre de Vaccination Millau",
+      "url": "https://partners.doctolib.fr/hopital-public/millau/centre-de-vaccination-millau?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.07267",
+        "latitude": "44.1105"
+      },
+      "metadata": {
+        "address": "74 Avenue Charles de Gaulle, 12100 Millau",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "13:30-17:30",
+          "jeudi": "08:30-12:30/13:30-17:30",
+          "vendredi": "08:30-12:30/13:30-17:30",
+          "samedi": "08:30-12:30",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-19T16:50:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "12",
+      "nom": "Rodez - Onet le Chateau",
+      "url": "https://partners.doctolib.fr/hopital-public/rodez/centre-de-vaccination-covid-hopital-ville-rodez?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.59829",
+        "latitude": "44.3648"
+      },
+      "metadata": {
+        "address": "34 Boulevard des Capucines, 12850 Onet-le-Ch\u00e2teau",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "08:30-18:30",
+          "mardi": "08:30-18:30",
+          "mercredi": "08:30-18:30",
+          "jeudi": "08:30-18:30",
+          "vendredi": "08:30-18:30",
+          "samedi": "08:30-18:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-22T17:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "12",
+      "nom": "CHI ESPALION",
+      "url": "https://partners.doctolib.fr/hopital-public/espalion/centre-de-vaccination-covid-chi-espalion?pid=practice-165128?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.76079",
+        "latitude": "44.5266"
+      },
+      "metadata": {
+        "address": "33 Avenue d'Estaing, 12500 Espalion",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "13:00-17:30",
+          "mardi": "08:30-17:30",
+          "mercredi": "08:30-17:30",
+          "jeudi": "08:30-17:30",
+          "vendredi": "08:30-17:30",
+          "samedi": "8:30-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "12",
+      "nom": "CH SAINT-AFFRIQUE",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-affrique/centre-hospitalier-emile-borel?pid=practice-165693&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.8756",
+        "latitude": "43.9575"
+      },
+      "metadata": {
+        "address": "88 Avenue Lucien Galtier, 12400 Saint-Affrique",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "09:00-13:00/14:00-17:00",
+          "jeudi": "09:00-13:00/14:00-17:00",
+          "vendredi": "09:00-13:00/14:00-17:00",
+          "samedi": "09:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "12",
+      "nom": "MA - US / Maison d'Arr\u00eat de Rodez / Maison d'Arr\u00eat de Rodez",
+      "url": "",
+      "location": {
+        "longitude": "2.5359",
+        "latitude": "44.3783"
+      },
+      "metadata": {
+        "address": "870 Rue des Routiers, 12510 Druelle Balsac",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "12",
+      "nom": "CH DE DECAZEVILLE",
+      "url": "https://partners.doctolib.fr/hopital-public/decazeville/centre-de-vaccination-covid-ch-decazeville?pid=practice-165118?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.26256",
+        "latitude": "44.5599"
+      },
+      "metadata": {
+        "address": "60 Rue Prosper Alfaric, 12300 Decazeville",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "08:30-12:30/13:30-17:30",
+          "mardi": "08:30-12:30/13:30-17:30",
+          "mercredi": "08:30-12:30/13:30-17:30",
+          "jeudi": "08:30-12:30/13:30-17:30",
+          "vendredi": "08:30-12:30/13:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "12",
+      "nom": "Villefrance-De-Rouergue",
+      "url": "https://partners.doctolib.fr/centre-de-sante/villefranche-de-rouergue/centre-de-vaccination-covid-villefranche-de-rouergue?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.03243",
+        "latitude": "44.344"
+      },
+      "metadata": {
+        "address": " Rue des treize pierres, 12200 Villefranche-de-Rouergue",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "13:00-17:00",
+          "mardi": "09:00-12:00/14:00-17:00",
+          "mercredi": "09:00-12:00/14:00-17:00",
+          "jeudi": "09:00-12:00/14:00-17:00",
+          "vendredi": "09:00-12:00/14:00-17:00",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "12",
+      "nom": "Pharmacie De Capdenac",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-capdenac-capdenac",
+      "location": {
+        "longitude": 2.0790584,
+        "latitude": 44.5762606
+      },
+      "metadata": {
+        "address": "14 rue de la r\u00e9publique, 12700 Capdenac",
+        "phone_number": "+33565647394",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    }
+  ]
+}

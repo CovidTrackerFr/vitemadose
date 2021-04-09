@@ -1,0 +1,413 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-09T15:17:50.000332+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "81",
+      "nom": "CH Albi",
+      "url": "https://partners.doctolib.fr/hopital-public/castres/chic-castres-mazamet-centre-de-vaccination?speciality_id=5494&pid=practice-164139&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.14272",
+        "latitude": "43.926"
+      },
+      "metadata": {
+        "address": "22 Boulevard G\u00e9n\u00e9ral Sibille, 81000 Albi",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "08:30-18:30",
+          "mardi": "08:30-18:30",
+          "mercredi": "08:30-18:30",
+          "jeudi": "08:30-18:30",
+          "vendredi": "08:30-18:30",
+          "samedi": "08:30-18:30",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-11T09:20:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "81",
+      "nom": "CH Castres",
+      "url": "https://partners.doctolib.fr/hopital-public/castres/chic-castres-mazamet-centre-de-vaccination?speciality_id=5494&pid=practice-164002&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.26272",
+        "latitude": "43.5657"
+      },
+      "metadata": {
+        "address": "6 Avenue de la Montagne Noire, 81100 Castres",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "08:30-20:30",
+          "mardi": "08:30-20:30",
+          "mercredi": "08:30-20:30",
+          "jeudi": "08:30-20:30",
+          "vendredi": "08:30-20:30",
+          "samedi": "10:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-12T08:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "81",
+      "nom": "Pharmacie Lafayette Dautezac",
+      "url": "https://partners.doctolib.fr/pharmacie/castres/pharmacie-lafayette-dautezac",
+      "location": {
+        "longitude": 2.2439062,
+        "latitude": 43.6047275
+      },
+      "metadata": {
+        "address": "17 Rue Villegoudou, 81100 Castres",
+        "phone_number": "05 63 35 40 30",
+        "business_hours": {
+          "lundi": "14:00-19:00",
+          "mardi": "08:15-19:45",
+          "mercredi": "08:15-19:45",
+          "jeudi": "08:15-19:45",
+          "vendredi": "08:15-19:45",
+          "samedi": "08:15-19:45",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-12T15:15:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "81",
+      "nom": "Centre de vaccination de l'Albigeois - Parc des Expositions",
+      "url": "https://partners.doctolib.fr/hopital-public/tarn/chic-castres-mazamet-centre-de-vaccination?pid=practice-164315&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.11465",
+        "latitude": "43.9175"
+      },
+      "metadata": {
+        "address": "1 Rue de la Baute, 81990 Le S\u00e9questre",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "09:00-17:30",
+          "jeudi": "09:00-17:30",
+          "vendredi": "09:00-17:30",
+          "samedi": "09:00-17:30",
+          "dimanche": "09:00-17:30"
+        }
+      },
+      "prochain_rdv": "2021-04-13T11:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "81",
+      "nom": "Centre de vaccination du Carmausin - Salle Fran\u00e7ois Mitterand",
+      "url": "https://partners.doctolib.fr/centre-de-sante/carmaux/centre-de-vaccination-covid-19-du-carmausin?pid=practice-165296?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.15082",
+        "latitude": "44.0503"
+      },
+      "metadata": {
+        "address": "1 Boulevard Henri Barbusse, 81400 Carmaux",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "13:30-17:00",
+          "mercredi": "13:30-17:00",
+          "jeudi": "13:30-17:00",
+          "vendredi": "13:30-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-14T15:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "81",
+      "nom": "Centre de vaccination de Lavaur - Centre Hospitalier",
+      "url": "https://partners.doctolib.fr/hopital-public/lavaur/centre-de-vaccination-ch-lavaur?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.8184",
+        "latitude": "43.7005"
+      },
+      "metadata": {
+        "address": "1 Place Vialas, 81500 Lavaur",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "8:30-13:00 & 13:30-17:00",
+          "mardi": "8:30-13:00 & 13:30-17:00",
+          "mercredi": "8:30-13:00 & 13:30-17:00",
+          "jeudi": "8:30-13:00 & 13:30-17:00",
+          "vendredi": "8:30-13:00 & 13:30-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-11T15:50:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "81",
+      "nom": "Centre de vaccination Clinique Toulouse Lautrec",
+      "url": "https://partners.doctolib.fr/hopital-public/tarn/chic-castres-mazamet-centre-de-vaccination?speciality_id=5494&pid=practice-164870&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.1801",
+        "latitude": "43.9284"
+      },
+      "metadata": {
+        "address": "2 Rue Jacques Monod, 81000 Albi",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": "09:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "81",
+      "nom": "MSP Haute Vall\u00e9e du Thor\u00e9 Labastide Rouairoux",
+      "url": "https://partners.doctolib.fr/centre-de-sante/labastide-rouairoux/centre-de-vaccination-de-labastide-rouairoux?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.6339",
+        "latitude": "43.4753"
+      },
+      "metadata": {
+        "address": "2 Avenue Marie Curie, 81270 Labastide-Rouairoux",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "13:30-19:00",
+          "mardi": "13:30-19:00",
+          "mercredi": "13:30-19:00",
+          "jeudi": "13:30-19:00",
+          "vendredi": "13:30-19:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "81",
+      "nom": "Clinique du Sidobre",
+      "url": "https://partners.doctolib.fr/hopital-public/castres/chic-castres-mazamet-centre-de-vaccination?speciality_id=5494&pid=practice-164141&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.27349",
+        "latitude": "43.5959"
+      },
+      "metadata": {
+        "address": "141 Chemin de Saint Hippolyte, 81100 Castres",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "Ferm\u00e9",
+          "samedi": "Ferm\u00e9",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "81",
+      "nom": "MA - US  Albi / Maison d'Arr\u00eat d'Albi",
+      "url": "",
+      "location": {
+        "longitude": "2.12428",
+        "latitude": "43.9175"
+      },
+      "metadata": {
+        "address": "30 Rue Andr\u00e9 Imbert, 81000 Albi",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "81",
+      "nom": "EPM - US EPM LAVAUR / Centre de D\u00e9tention de Saint-Sulpice-la-Pointe",
+      "url": "",
+      "location": {
+        "longitude": "1.69325",
+        "latitude": "43.7762"
+      },
+      "metadata": {
+        "address": "17 Chemin des Pescayres, 81370 Saint-Sulpice-la-Pointe",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "81",
+      "nom": "CD - US SAINT SULPICE / Centre de D\u00e9tention de Saint-Sulpice-la-Pointe",
+      "url": "",
+      "location": {
+        "longitude": "1.69325",
+        "latitude": "43.7762"
+      },
+      "metadata": {
+        "address": "17 Chemin des Pescayres, 81370 Saint-Sulpice-la-Pointe",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "81",
+      "nom": "CPTS du Grand Gaillacois - centre de vaccination mairie de Gaillac - salle des Mariages",
+      "url": "https://partners.doctolib.fr/hopital-public/tarn/chic-castres-mazamet-centre-de-vaccination?speciality_id=5494&pid=practice-164318&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.89691",
+        "latitude": "43.9017"
+      },
+      "metadata": {
+        "address": "68 Place d'Hautpoul, 81600 Gaillac",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9:00-13:00 & 13:30-17:30",
+          "mardi": "9:00-13:00 & 13:30-17:30",
+          "mercredi": "9:00-13:00 & 13:30-17:30",
+          "jeudi": "9:00-13:00 & 13:30-17:30",
+          "vendredi": "9:00-13:00 & 13:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "81",
+      "nom": "Centre de vaccination de Graulhet - Salle le Foulon",
+      "url": "https://partners.doctolib.fr/centre-de-sante/graulhet/centre-de-vaccination-covid-19-graulhet?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.98803",
+        "latitude": "43.7611"
+      },
+      "metadata": {
+        "address": "1 Place de la R\u00e9publique, 81300 Graulhet",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "13:30-19:00",
+          "mardi": "13:30-19:00",
+          "mercredi": "13:30-19:00",
+          "jeudi": "13:30-19:00",
+          "vendredi": "13:30-19:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "81",
+      "nom": "Centre de vaccination de Mazamet - Palais des Congr\u00e8s",
+      "url": "https://partners.doctolib.fr/centre-de-sante/mazamet/centre-de-vaccination-covid-19-centre-de-vaccination-de-mazamet?pid=practice-165219&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.37707",
+        "latitude": "43.4951"
+      },
+      "metadata": {
+        "address": " Rue Jean Assemat, 81200 Mazamet",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "8:30-12:30 & 13:30-17:30",
+          "mercredi": "8:30-12:30 & 13:30-17:30",
+          "jeudi": "8:30-12:30 & 13:30-17:30",
+          "vendredi": "8:30-12:30 & 13:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "81",
+      "nom": "Snc Pharmacie Brilleaud",
+      "url": "https://app.ordoclic.fr/app/pharmacie/snc-pharmacie-brilleaud-labastide-rouairoux",
+      "location": {
+        "longitude": 2.6400011,
+        "latitude": 43.4762366
+      },
+      "metadata": {
+        "address": "88 bis boulevard Carnot, 81270 LABASTIDE ROUAIROUX",
+        "phone_number": "+33563980115",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    }
+  ]
+}

@@ -1,0 +1,467 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-09T15:17:49.952578+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "26",
+      "nom": "Centre de vaccination - Salle de Cl\u00e9vos",
+      "url": "https://partners.doctolib.fr/centre-de-sante/etoile-sur-rhone/centre-de-vaccination-covid-19-cpts-sud-valence?pid=practice-173051&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.88421",
+        "latitude": "44.8406"
+      },
+      "metadata": {
+        "address": "390 Route de Marmans, 26800 \u00c9toile-sur-Rh\u00f4ne",
+        "phone_number": "+33673031221",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "9:00-17:00",
+          "jeudi": "9:00-17:00",
+          "vendredi": "9:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-13T19:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "26",
+      "nom": "Centre de vaccination de Saint-Jean-en-Royans",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-jean-en-royans/centre-de-vaccination-saint-jean-en-royans?pid=practice-172946&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.2895",
+        "latitude": "45.0175"
+      },
+      "metadata": {
+        "address": "3 Rue des Ecoles, 26190 Saint-Jean-en-Royans",
+        "phone_number": "+33671040154",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "14:00-17:00",
+          "mercredi": "14:00-17:00",
+          "jeudi": "14:00-17:00",
+          "vendredi": "14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-16T14:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "26",
+      "nom": "Centre de vaccination du centre hospitalier de Valence",
+      "url": "https://partners.doctolib.fr/hopital-public/valence/centre-de-vaccination-du-centre-hospitalier-de-valence?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.90593",
+        "latitude": "44.9119"
+      },
+      "metadata": {
+        "address": "179 a Boulevard Mar\u00e9chal Juin, 26000 Valence",
+        "phone_number": "+33475757700",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-26T19:15:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "26",
+      "nom": "Centre de vaccination de l'h\u00f4pital de Die",
+      "url": "https://partners.doctolib.fr/hopital-public/die/centre-de-vaccination-covid-ch-die?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.3713",
+        "latitude": "44.7544"
+      },
+      "metadata": {
+        "address": "2 Rue Bouvier, 26150 Die",
+        "phone_number": "+33475223291",
+        "business_hours": {
+          "lundi": "14:00-17:00",
+          "mardi": "09:00-13:00/14:00-18:00",
+          "mercredi": "09:00-13:00/14:00-18:00",
+          "jeudi": "09:00-13:00/14:00-18:00",
+          "vendredi": "09:00-13:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "26",
+      "nom": "Equipe mobile de vaccination Dieulefit salle de la Halle",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dieulefit/centre-de-vaccination-covid-19-mairie-dieuleufit?pid=practice-179912&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.06614",
+        "latitude": "44.5264"
+      },
+      "metadata": {
+        "address": "3 Rue Justin Jouve, 26220 Dieulefit",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "26",
+      "nom": "CP - L'US de Valence / Centre p\u00e9nitentiaire de Valence",
+      "url": "",
+      "location": {
+        "longitude": "4.88884",
+        "latitude": "44.9214"
+      },
+      "metadata": {
+        "address": " Chemin de Saint Joseph, 26000 Valence",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "26",
+      "nom": "Centre de vaccination de Saint Paul Trois Ch\u00e2teaux Espace de la Gare",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-paul-trois-chateaux/centre-de-vaccination-covid-19-tricastin-drome-sud-provence?pid=practice-179638&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.76367",
+        "latitude": "44.3457"
+      },
+      "metadata": {
+        "address": "1 Place du 14 Juillet, 26130 Saint-Paul-Trois-Ch\u00e2teaux",
+        "business_hours": {
+          "lundi": "08:00-17:30",
+          "mardi": "08:00-17:30",
+          "mercredi": "08:00-17:30",
+          "jeudi": "08:00-17:30",
+          "vendredi": "08:00-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "26",
+      "nom": "Centre de vaccination de Nyons - nouvelle maison de pays",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nyons/centre-de-vaccination-covid-19-commune-de-nyons?pid=practice-166400&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.13576",
+        "latitude": "44.3563"
+      },
+      "metadata": {
+        "address": "130 Promenade de la Digue, 26110 Nyons",
+        "phone_number": "+33475261287",
+        "business_hours": {
+          "lundi": "08:30-12:30/13:30-17:30",
+          "mardi": "08:30-12:30/13:30-17:30",
+          "mercredi": "08:30-12:30/13:30-17:30",
+          "jeudi": "08:30-12:30/13:30-17:30",
+          "vendredi": "08:30-12:30/13:30-17:30",
+          "samedi": "08:30-12:30/13:30-17:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "26",
+      "nom": "Equipe mobile de vaccination de Donz\u00e8re -La Chocolaterie",
+      "url": "https://partners.doctolib.fr/centre-de-sante/donzere/centre-de-vaccination-covid-19-ville-de-donzere?pid=practice-181148&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.70779",
+        "latitude": "44.4391"
+      },
+      "metadata": {
+        "address": "255 Rue de la Chocolaterie, 26290 Donz\u00e8re",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "26",
+      "nom": "Equipe mobile de vaccination MSP Buis les Baronnies",
+      "url": "",
+      "location": {
+        "longitude": "5.27293",
+        "latitude": "44.2738"
+      },
+      "metadata": {
+        "address": "70 Rue Ren\u00e9 Cassin, 26170 Buis-les-Baronnies",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "26",
+      "nom": "Equipe mobile de vaccination de Bourdeaux MSP",
+      "url": "",
+      "location": {
+        "longitude": "5.13385",
+        "latitude": "44.5867"
+      },
+      "metadata": {
+        "address": "30 Rue de la R\u00e9cluse, 26460 Bourdeaux",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "26",
+      "nom": "Equipe mobile de Chateauneuf de Galaure - Salle des f\u00eates",
+      "url": "",
+      "location": {
+        "longitude": "4.95555",
+        "latitude": "45.2296"
+      },
+      "metadata": {
+        "address": "16 Place des Cordeliers, 26330 Ch\u00e2teauneuf-de-Galaure",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "26",
+      "nom": "Equipe mobile de vaccination de Saint Donat",
+      "url": "",
+      "location": {
+        "longitude": "4.97346",
+        "latitude": "45.1206"
+      },
+      "metadata": {
+        "address": "32 Avenue Commandant Corlu, 26260 Saint-Donat-sur-l'Herbasse",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "14:30-18:30",
+          "vendredi": "14:30-18:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "26",
+      "nom": "Centre de vaccination de Crest Espace Soubeyran",
+      "url": "https://partners.doctolib.fr/centre-de-sante/crest/centre-de-vaccination-de-crest?pid=practice-176012&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.02374",
+        "latitude": "44.7235"
+      },
+      "metadata": {
+        "address": "154 Avenue Jean Rabot, 26400 Crest",
+        "business_hours": {
+          "lundi": "17:00-19:00",
+          "mardi": "13:00-15:00",
+          "mercredi": "15:00-18:00",
+          "jeudi": "17:00-19:00",
+          "vendredi": "13:00-15:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "26",
+      "nom": "Centre de vaccination - Groupement Hospitalier Portes de Provence - Institut de formation en soins infirmiers (IFSI)",
+      "url": "https://partners.doctolib.fr/hopital-public/montelimar/centre-de-vaccination-covid-gh-portes-de-provence-montelimar?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.75184",
+        "latitude": "44.5644"
+      },
+      "metadata": {
+        "address": " 3 rue du g\u00e9n\u00e9ral Chabrillan - Institut de soins infirmiers, 26200 Mont\u00e9limar",
+        "phone_number": "+33475534100",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "26",
+      "nom": "Centre de vaccination de Saint Vallier",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-vallier/centre-de-vaccination-de-st-vallier?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.82019",
+        "latitude": "45.1745"
+      },
+      "metadata": {
+        "address": "1 Rue de Hopital, 26240 Saint-Vallier",
+        "phone_number": "+33475683787",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": "09:00-13:00/14:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "26",
+      "nom": "Centre de vaccination de Romans sur Is\u00e8re - Salle des cordeliers",
+      "url": "https://partners.doctolib.fr/centre-de-sante/romans-sur-isere/centre-de-vaccinations-de-romans-sur-isere-salle-des-cordeliers?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.05267",
+        "latitude": "45.0443"
+      },
+      "metadata": {
+        "address": "47 Place Jules Nadi - Salle des cordeliers, 26100 Romans-sur-Is\u00e8re",
+        "phone_number": "+33475792500",
+        "business_hours": {
+          "lundi": "08:30-17:30",
+          "mardi": "08:30-17:30",
+          "mercredi": "08:30-17:30",
+          "jeudi": "08:30-17:30",
+          "vendredi": "08:30-17:30",
+          "samedi": "08:30-17:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "26",
+      "nom": "Centre de Vaccination COVID-19 - Institut de Formation des Soins Infirmiers",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montelimar/centre-de-vaccination-covid-gh-portes-de-provence-montelimar?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 4.7497843,
+        "latitude": 44.5636269
+      },
+      "metadata": {
+        "address": "2 Rue Bernard Cathelin, 26200 Mont\u00e9limar",
+        "phone_number": "04 75 53 41 00",
+        "business_hours": {
+          "lundi": "08:00-19:30",
+          "mardi": "08:00-19:30",
+          "mercredi": "08:00-19:30",
+          "jeudi": "08:00-19:30",
+          "vendredi": "08:00-19:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

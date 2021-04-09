@@ -1,0 +1,266 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-09T15:17:49.936666+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "03",
+      "nom": "Centre de vaccination COVID - CPTS Sud Allier",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sud-allier/centre-de-vaccination-covid-cpts-sud-allier?highlight%5bspeciality_ids%5d%5b%5d=5494&pid=practice-166171",
+      "location": {
+        "longitude": 3.077584,
+        "latitude": 46.2012385
+      },
+      "metadata": {
+        "address": "1b Rue du Huit Mai 1945, 03330 Bellenaves",
+        "phone_number": "04 15 40 09 04",
+        "business_hours": {
+          "lundi": "09:00-12:00, 13:30-17:00",
+          "mardi": "09:00-12:00, 13:30-17:00",
+          "mercredi": "09:00-12:00, 13:30-17:00",
+          "jeudi": "09:00-12:00, 13:30-17:00",
+          "vendredi": "09:00-12:00, 13:30-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-11T09:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "03",
+      "nom": "Centre de vaccination de Vichy - Maison des Associations",
+      "url": "https://partners.doctolib.fr/centre-de-sante/vichy/centre-de-vaccination-de-la-maison-des-associations-vichy?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.42695",
+        "latitude": "46.1245"
+      },
+      "metadata": {
+        "address": "1 Place Charles de Gaulle, 03200 Vichy",
+        "phone_number": "+33800709999",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "12:00-19:00",
+          "mercredi": "10:00-19:00",
+          "jeudi": "10:00-19:00",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-12T13:45:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "03",
+      "nom": "CP - US du Centre Hospitalier de Moulins-Yzeure / Centre P\u00e9nitentiaire de Moulins-Yzeure",
+      "url": "",
+      "location": {
+        "longitude": "3.35762",
+        "latitude": "46.5536"
+      },
+      "metadata": {
+        "address": " Boulevard Jean Moulin, 03400 Yzeure",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "03",
+      "nom": "MA - US   MONTLUCON / Maison d'Arr\u00eat de Montlu\u00e7on",
+      "url": "",
+      "location": {
+        "longitude": "2.60421",
+        "latitude": "46.3403"
+      },
+      "metadata": {
+        "address": "3 Rue du Chateau, 03100 Montlu\u00e7on",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "03",
+      "nom": "Centre de vaccination - Centre Hospitalier Moulins-Yzeure",
+      "url": "https://www.maiia.com/centre-de-vaccination/03000-moulins/centre-de-vaccination--moulins---yzeure",
+      "location": {
+        "longitude": "3.32521",
+        "latitude": "46.5703"
+      },
+      "metadata": {
+        "address": "10 Avenue du G\u00e9n\u00e9ral de Gaulle, 03000 Moulins",
+        "phone_number": "+33470461110",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-17:00",
+          "dimanche": "FERME"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "03",
+      "nom": "Communaut\u00e9 Professionnelle Territoriale de Sant\u00e9 Nord Allier",
+      "url": "https://partners.doctolib.fr/centre-de-sante/moulins/cpts-nord-allier-centre-de-vaccination?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.33256",
+        "latitude": "46.5622"
+      },
+      "metadata": {
+        "address": "1 PLACE MARECHAL DE LATTRE DE TASSIGNY, 03000 Moulins",
+        "phone_number": "+33470485000",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "12:00-14:00/16:00-20:00 ",
+          "mercredi": "12:00-14:00/16:00-20:00 ",
+          "jeudi": "12:00-14:00/16:00-20:00 ",
+          "vendredi": "ferm\u00e9",
+          "samedi": "09:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "03",
+      "nom": "Centre de vaccination de La Bourbonnette -  Conseil D\u00e9partemental Allier",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cosne-d-allier/vaccination-mobile-dans-les-cantons-de-l-allier?pid=practice-165387&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.33398",
+        "latitude": "46.5685"
+      },
+      "metadata": {
+        "address": "1 Avenue Victor Hugo, 03000 Moulins",
+        "phone_number": "+33801902446",
+        "business_hours": {
+          "lundi": "09:30-12:30/13:30-16:30",
+          "mardi": "09:30-12:30/13:30-16:30",
+          "mercredi": "09:30-12:30/13:30-16:30",
+          "jeudi": "09:30-12:30/13:30-16:30",
+          "vendredi": "09:30-12:30/13:30-16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "03",
+      "nom": "Centre de vaccination de Montlu\u00e7on - Centre ATHANOR",
+      "url": "https://partners.doctolib.fr/clinique-privee/montlucon/centre-de-vaccination-saint-francois?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.60353",
+        "latitude": "46.3469"
+      },
+      "metadata": {
+        "address": "15 Rue Pablo Picasso, 03100 Montlu\u00e7on",
+        "phone_number": "+33801902409",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "03",
+      "nom": "Communaut\u00e9 Professionnelle Territoriale de Sant\u00e9 Sud Allier",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/saint-pourcain-sur-sioule/centre-de-vaccination-covid-19-saint-pourcain-sioule?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.28717",
+        "latitude": "46.3134"
+      },
+      "metadata": {
+        "address": "3 bis Route de Moulins, 03500 Saint-Pour\u00e7ain-sur-Sioule",
+        "phone_number": "+33415400904",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "13:00-19:30",
+          "mercredi": "14:00-17:30",
+          "jeudi": "14:00-19:00",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "03",
+      "nom": "Centre de vaccination - Montlu\u00e7on - Athanor",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montlucon/centre-de-vaccination-saint-francois?highlight%5bspeciality_ids%5d%5b%5d=5494&pid=practice-178539",
+      "location": {
+        "longitude": 2.6033883,
+        "latitude": 46.3456582
+      },
+      "metadata": {
+        "address": "Rue Pablo Picasso, 03100 Montlu\u00e7on",
+        "phone_number": "04 70 05 10 30",
+        "business_hours": {
+          "lundi": "09:00-12:00, 13:00-17:00",
+          "mardi": "09:00-12:00, 13:00-17:00",
+          "mercredi": "09:00-12:00, 13:00-17:00",
+          "jeudi": "09:00-12:00, 13:00-17:00",
+          "vendredi": "09:00-12:00, 13:00-17:00",
+          "samedi": "09:00-12:00, 13:00-17:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

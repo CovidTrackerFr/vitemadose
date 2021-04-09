@@ -1,0 +1,489 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-09T15:17:49.990391+02:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "72",
+      "nom": "Grand centre LE MANS (en cours de d\u00e9claration)",
+      "url": "",
+      "location": {
+        "longitude": "0.199565",
+        "latitude": "48.0061"
+      },
+      "metadata": {
+        "address": "14 Avenue Pierre Mend\u00e8s France, 72000 Le Mans",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de Vaccination - LA FLECHE - Salle Printania",
+      "url": "https://partners.doctolib.fr/centre-de-sante/la-fleche/centre-de-vaccination-covid-msp-la-fleche?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-0.0895922",
+        "latitude": "47.6973"
+      },
+      "metadata": {
+        "address": "39 Avenue de Verdun, 72200 La Fl\u00e8che",
+        "phone_number": "+33243482300",
+        "business_hours": {
+          "lundi": "8h30-12h30 / 13h30-17h30",
+          "mardi": "8h30-12h30 / 13h30-17h30",
+          "mercredi": "8h30-12h30 / 13h30-17h30",
+          "jeudi": "8h30-12h30 / 13h30-17h30",
+          "vendredi": "8h30-12h30 / 13h30-17h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de vaccination - MONTVAL SUR LOIR",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montval-sur-loir/centre-de-vaccination-covid-19-de-montval-sur-loir?pid=practice-165981&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.420435",
+        "latitude": "47.6909"
+      },
+      "metadata": {
+        "address": "5 All\u00e9e Saint-Martin, 72500 Montval-sur-Loir",
+        "phone_number": "+33252500069",
+        "business_hours": {
+          "lundi": "8h30 - 12h30 / 13h-15H",
+          "mardi": "8h30 - 12h30 / 13h-15H",
+          "mercredi": "8h30 - 12h30 / 13h-15H",
+          "jeudi": "8h30 - 12h30 / 13h-15H",
+          "vendredi": "8h30 - 12h30 / 13h-15H",
+          "samedi": "8h30 - 12h30 / 13h-15H",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de vaccination SDIS - LE MANS - R\u00e9serv\u00e9 PS",
+      "url": "https://partners.doctolib.fr/etablissement-de-prevention/le-mans/pro-de-sante-le-mans-uniquement?pid=practice-171174&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.173251",
+        "latitude": "48.0187"
+      },
+      "metadata": {
+        "address": "3 Avenue Henri Pierre Klotz, 72000 Le Mans",
+        "business_hours": {
+          "lundi": "9h30 - 11h45",
+          "mardi": "9h30 - 11h45",
+          "mercredi": "9h30 - 11h45",
+          "jeudi": "9h30 - 11h45",
+          "vendredi": "9h30 - 11h45",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de Vaccination - SABLE SUR SARTHE - Salle Th\u00e9ophile Pl\u00e9",
+      "url": "https://www.maiia.com/centre-de-vaccination/72300-sable-sur-sarthe/centre-de-vaccination---msp-du-pays-sabolien?centerId=5fc8a456310f92465037b285",
+      "location": {
+        "longitude": "-0.330214",
+        "latitude": "47.8376"
+      },
+      "metadata": {
+        "address": " Rue Th\u00e9ophile Pl\u00e9, 72300 Sabl\u00e9-sur-Sarthe",
+        "phone_number": "+33243624737",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "9h-12h / 14h-17h ",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "9h - 12 h",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de vaccination - BEAUMONT SUR SARTHE - Maison de Sant\u00e9",
+      "url": " https://www.maiia.com/centre-de-vaccination/72170-beaumont-sur-sarthe/centre-de-vaccination---beaumont-sur-sarthe",
+      "location": {
+        "longitude": "0.133278",
+        "latitude": "48.2285"
+      },
+      "metadata": {
+        "address": "8 Avenue du Joncheray, 72170 Beaumont-sur-Sarthe",
+        "phone_number": "+33290870180",
+        "business_hours": {
+          "lundi": "14h-17h30",
+          "mardi": "14h-17h30",
+          "mercredi": "14h-17h30",
+          "jeudi": "14h-17h30",
+          "vendredi": "9h30-13 h / 14h-17h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "72",
+      "nom": "MA - US le mans / Maison d'arret du Mans - Les Croisettes",
+      "url": "",
+      "location": {
+        "longitude": "0.218664",
+        "latitude": "48.0439"
+      },
+      "metadata": {
+        "address": " Rue Cesare Beccaria, 72190 Coulaines",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de Vaccination - LE MANS- Jean Moulin",
+      "url": "https://partners.doctolib.fr/centre-de-sante/le-mans/vaccination-covid-19-ctps-le-mans-agglo?pid=practice-164815&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.219508",
+        "latitude": "47.9754"
+      },
+      "metadata": {
+        "address": "23 Rue Robert Collet, 72100 Le Mans",
+        "phone_number": "+33800710911",
+        "business_hours": {
+          "lundi": "9h00-12h30 / 13h30-17h",
+          "mardi": "9h00-12h30 / 13h30-17h",
+          "mercredi": "9h00-12h30 / 13h30-17h",
+          "jeudi": "9h00-12h30 / 13h30-17h",
+          "vendredi": "9h00-12h30 / 13h30-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de vaccination - SILLE LE GUILLAUME - Centre Maurice Termeau",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sille-le-guillaume/centre-de-vaccination-covid-du-pays-de-sille?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-0.126216",
+        "latitude": "48.1828"
+      },
+      "metadata": {
+        "address": "34 Rue du Docteur Touchard, 72140 Sill\u00e9-le-Guillaume",
+        "business_hours": {
+          "lundi": "9h-12h / 14h- 17h  ",
+          "mardi": "9h-12h / 14h- 17h  ",
+          "mercredi": "9h-12h / 14h- 17h  ",
+          "jeudi": "9h-12h / 14h- 17h  ",
+          "vendredi": "9h-12h / 14h- 17h  ",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de vaccination  - LA FERTE-BERNARD - Synergie Parc",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/la-ferte-bernard/centre-de-vaccination-covid-19-la-ferte-bernard?pid=practice-174976&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.643043",
+        "latitude": "48.1934"
+      },
+      "metadata": {
+        "address": "87 Rue Robert Surmont, 72400 La Fert\u00e9-Bernard",
+        "phone_number": "+33619528711",
+        "business_hours": {
+          "lundi": "09h00 - 12h30 / 14h00 - 18h00",
+          "mardi": "09h00 - 12h30 / 14h00 - 18h00",
+          "mercredi": "09h00 - 12h30 / 14h00 - 18h00",
+          "jeudi": "09h00 - 12h30 / 14h00 - 18h00",
+          "vendredi": "09h00 - 12h30 / 14h00 - 18h00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de Vaccination - SAINT-CALAIS - La Maladrerie",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-calais/centre-de-vaccination-covid-19-de-saint-calais?pid=practice-166974&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.752232",
+        "latitude": "47.9157"
+      },
+      "metadata": {
+        "address": " Rue de la Maladrerie, 72120 Saint-Calais",
+        "phone_number": "+33221762959",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "13h15 / 17h30",
+          "mercredi": "13h15 / 17h30",
+          "jeudi": "13h15 / 17h30",
+          "vendredi": "13h15 / 17h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de Vaccination - LE MANS- UC-IRSA",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/le-mans/centre-de-vaccination-uc-irsa?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.220022",
+        "latitude": "47.9966"
+      },
+      "metadata": {
+        "address": "178 Avenue Boll\u00e9e, 72000 Le Mans",
+        "phone_number": "+33234374000",
+        "business_hours": {
+          "lundi": "8h15-19h15",
+          "mardi": "8h15-19h15",
+          "mercredi": "8h15-19h15",
+          "jeudi": "8h15-19h15",
+          "vendredi": "8h15-19h15",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de vaccination - MAMERS - CHICAM",
+      "url": "https://partners.doctolib.fr/centre-de-sante/alencon/centres-de-vaccination-covid-departement-orne-saonois?pid=practice-164388&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.358813",
+        "latitude": "48.3608"
+      },
+      "metadata": {
+        "address": " Route de Mesle, 72600 Mamers",
+        "phone_number": "+33662489459",
+        "business_hours": {
+          "lundi": "9h-13h / 14h-17h",
+          "mardi": "9h-13h / 14h-17h",
+          "mercredi": "9h-13h / 14h-17h",
+          "jeudi": "9h-13h / 14h-17h",
+          "vendredi": "9h-13h / 14h-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de Vaccination - LE MANS- Ouest",
+      "url": "https://partners.doctolib.fr/maison-de-sante/le-mans/reseau-de-sante-le-mans-ouest?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.184251",
+        "latitude": "48.012"
+      },
+      "metadata": {
+        "address": "84 Avenue Rubillard, 72000 Le Mans",
+        "phone_number": "+33800710911",
+        "business_hours": {
+          "lundi": "8h30-12h30",
+          "mardi": "8h30-12h30",
+          "mercredi": "8h30-12h30",
+          "jeudi": "8h30-12h30",
+          "vendredi": "8h30-12h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de Vaccination - LE MANS- Courboulay",
+      "url": "https://partners.doctolib.fr/centre-de-sante/le-mans/vaccination-covid-19-ctps-le-mans-agglo?pid=practice-164814&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.192037",
+        "latitude": "48.0056"
+      },
+      "metadata": {
+        "address": "2 Rue Paul Courboulay, 72000 Le Mans",
+        "phone_number": "+33800710911",
+        "business_hours": {
+          "lundi": "9h00-12h30 / 13h30-17h",
+          "mardi": "9h00-12h30 / 13h30-17h",
+          "mercredi": "9h00-12h30 / 13h30-17h",
+          "jeudi": "9h00-12h30 / 13h30-17h",
+          "vendredi": "9h00-12h30 / 13h30-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de Vaccination - LE MANS \u2013 Centre hospitalier \u2013 Centre Covid Vaccination",
+      "url": "https://partners.doctolib.fr/hopital-public/le-mans/ch-le-mans-centre-de-vaccination?pid=practice-164583&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.177577",
+        "latitude": "48.0128"
+      },
+      "metadata": {
+        "address": "194 Avenue Rubillard, 72000 Le Mans",
+        "phone_number": "+33800710911",
+        "business_hours": {
+          "lundi": "9h-13h / 14h-17h",
+          "mardi": "9h-13h / 14h-17h",
+          "mercredi": "9h-13h / 14h-17h",
+          "jeudi": "9h-13h / 14h-17h",
+          "vendredi": "9h-13h / 14h-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de Vaccination - CHANG\u00c9- Sud-Est Manceau",
+      "url": "https://partners.doctolib.fr/centre-de-sante/change/centre-de-vaccination-covid-19-du-sud-est-manceau?pid=practice-180299&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.292",
+        "latitude": "47.988"
+      },
+      "metadata": {
+        "address": "1 All\u00e9e du Pont des Arts, 72560 Chang\u00e9",
+        "phone_number": "+33252360700",
+        "business_hours": {
+          "lundi": "9h - 17h45",
+          "mardi": "9h - 17h45",
+          "mercredi": "9h - 17h45",
+          "jeudi": "9h - 17h45",
+          "vendredi": "9h - 17h45",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de vaccination - COULAINES - Espace Culturel Henri Salvador",
+      "url": "https://partners.doctolib.fr/centre-de-sante/coulaines/centre-de-vaccination-covid-19-de-coulaines?pid=practice-181626&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.207805",
+        "latitude": "48.0257"
+      },
+      "metadata": {
+        "address": "2 place Jean-Claude Boulard, 72190 Coulaines",
+        "phone_number": "+33255310024",
+        "business_hours": {
+          "lundi": "09h-13h / 14h-18h",
+          "mardi": "09h-13h / 14h-18h",
+          "mercredi": "09h-13h / 14h-18h",
+          "jeudi": "09h-13h / 14h-18h",
+          "vendredi": "09h-13h / 14h-18h",
+          "samedi": "",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "72",
+      "nom": "Pharmacie Du Miroir",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-miroir-le-mans",
+      "location": {
+        "longitude": 0.1947337,
+        "latitude": 47.9930529
+      },
+      "metadata": {
+        "address": "18 bis Avenue Henri Lefeuvre, 72100 Le Mans",
+        "phone_number": "+33243727556",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    }
+  ]
+}

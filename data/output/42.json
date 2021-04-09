@@ -1,0 +1,651 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-09T15:17:49.967225+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "42",
+      "nom": "Vaccinodrome Salle Omnisport",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-etienne/centre-de-vaccination-covid-19-vaccinodrome-saint-etienne?pid=practice-181753&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.39357",
+        "latitude": "45.4518"
+      },
+      "metadata": {
+        "address": "22 Rue Raymond Sommet, 42000 Saint-\u00c9tienne",
+        "phone_number": "+33970771710",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": "09:00-18:00",
+          "dimanche": "09:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-04-10T13:55:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "Centre de vaccination de l'H\u00f4pital priv\u00e9 de la Loire",
+      "url": "https://partners.doctolib.fr/clinique-privee/saint-etienne/centre-de-vaccination-covid-hopital-prive-de-la-loire-saint-etienne?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.4171",
+        "latitude": "45.4279"
+      },
+      "metadata": {
+        "address": "39 Boulevard de la Palle, 42100 Saint-\u00c9tienne",
+        "phone_number": "+33970771710",
+        "business_hours": {
+          "lundi": "09:00-21:00",
+          "mardi": "09:00-21:00",
+          "mercredi": "09:00-21:00",
+          "jeudi": "09:00-21:00",
+          "vendredi": "09:00-21:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-12T15:45:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "Pharmacie Lafayette St\u00e9phanoise",
+      "url": "https://partners.doctolib.fr/pharmacie/saint-etienne/pharmacie-lafayette-stephanoise",
+      "location": {
+        "longitude": 4.3896339,
+        "latitude": 45.4368276
+      },
+      "metadata": {
+        "address": "4 Avenue de la Lib\u00e9ration, 42000 Saint-\u00c9tienne",
+        "phone_number": "04 77 43 96 70",
+        "business_hours": {
+          "lundi": "08:30-19:30",
+          "mardi": "08:30-19:30",
+          "mercredi": "08:30-19:30",
+          "jeudi": "08:30-19:30",
+          "vendredi": "08:30-19:30",
+          "samedi": "08:30-19:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-14T14:45:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "Centre de vaccination du CH de Firminy",
+      "url": "https://www.maiia.com/centre-de-vaccination/42700-firminy/centre-de-vaccination-anti-covid-19-hopital-le-corbusier-firminy",
+      "location": {
+        "longitude": "4.28891",
+        "latitude": "45.3875"
+      },
+      "metadata": {
+        "address": "2 Rue Robert Plotton RDC B\u00e2timent L, 42700 Firminy",
+        "phone_number": "+33970771710",
+        "business_hours": {
+          "lundi": "09:00-16:00",
+          "mardi": "09:00-16:00",
+          "mercredi": "09:00-16:00",
+          "jeudi": "09:00-16:00",
+          "vendredi": "09:00-16:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-15T16:35:00.000000Z",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "Ville de Montbrison - salle de l'Orangerie - Jardin d'Allard",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montbrison/centre-de-vaccination-covid-ville-de-montbrison?pid=practice-166002&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.05847",
+        "latitude": "45.6074"
+      },
+      "metadata": {
+        "address": " Avenue d'Allard, 42600 Montbrison",
+        "phone_number": "+33477962000",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-20T15:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "CMSI clinique Mutualiste",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-etienne/centre-de-vaccination-de-cmsi-42?pid=practice-179779&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.39407",
+        "latitude": "45.4146"
+      },
+      "metadata": {
+        "address": "3 Rue le Verrier, 42100 Saint-\u00c9tienne",
+        "phone_number": "04 77 12 13 14",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-22T12:25:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "Clinique du Parc",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-priest-en-jarez/centre-de-vaccination-covid-19-de-la-clinique-du-parc-de-st-priest-en-jarez?pid=practice-180664&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.36788",
+        "latitude": "45.4784"
+      },
+      "metadata": {
+        "address": "12 Rue de la Piot, 42270 Saint-Priest-en-Jarez",
+        "phone_number": "+33477922275",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-24T15:45:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "Centre de vaccination COVID-19 - Clinique du Renaison",
+      "url": "https://partners.doctolib.fr/centre-de-sante/roanne/centre-de-vaccination-covid-19-clinique-du-renaison?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 4.0519322,
+        "latitude": 46.0337336
+      },
+      "metadata": {
+        "address": "1 Rue Henri Desroches, 42153 Roanne",
+        "phone_number": "04 77 44 88 99",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-25T19:25:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "Salle de l'Eden",
+      "url": "https://partners.doctolib.fr/centre-de-sante/feurs/centre-de-vaccination-covid-ch-du-forez-site-de-feurs?pid=practice-180917&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.22453",
+        "latitude": "45.7442"
+      },
+      "metadata": {
+        "address": "8 Place de la Boaterie, 42110 Feurs",
+        "phone_number": "+33970771710",
+        "business_hours": {
+          "lundi": "\u00e0 compl\u00e9ter",
+          "mardi": "\u00e0 compl\u00e9ter",
+          "mercredi": "\u00e0 compl\u00e9ter",
+          "jeudi": "\u00e0 compl\u00e9ter",
+          "vendredi": "\u00e0 compl\u00e9ter",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-26T12:00:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "Centre de vaccination - Centre de soins non programm\u00e9s - Ville d'Andr\u00e9zieux-Bouth\u00e9on",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/andrezieux-boutheon/centre-de-vaccination-covid-19-andrezieux-boutheon?pid=practice-165752&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.25364",
+        "latitude": "45.526"
+      },
+      "metadata": {
+        "address": "14 Rue Claude Limousin, 42160 Andr\u00e9zieux-Bouth\u00e9on",
+        "phone_number": "+33477557093",
+        "business_hours": {
+          "lundi": "12:00-17:00",
+          "mardi": "12:00-17:00",
+          "mercredi": "12:00-17:00",
+          "jeudi": "12:00-17:00",
+          "vendredi": "12:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-15T17:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "42",
+      "nom": "Centre Hyg\u00e9e au CHU de Saint-Etienne",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-priest-en-jarez/chste?pid=practice-169578&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.36101",
+        "latitude": "45.4798"
+      },
+      "metadata": {
+        "address": "116 Avenue Albert Raimond, 42270 Saint-Priest-en-Jarez",
+        "phone_number": "+33970771710",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "Centre de vaccination au  CHU DE SAINT-ETIENNE - H\u00f4pital Nord - Salle de Conf\u00e9rence - Hall AB",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-priest-en-jarez/centre-de-vaccination-covid-19-chu-saint-etienne?pid=practice-168936&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.36293",
+        "latitude": "45.4817"
+      },
+      "metadata": {
+        "address": "108 bis Avenue Albert Raimond, 42270 Saint-Priest-en-Jarez",
+        "phone_number": "+33970771710",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": "09:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "CENTRE HOSPITALIER  DE ROANNE",
+      "url": "https://partners.doctolib.fr/centre-de-sante/roanne/centre-de-vaccination-covid-ch-roanne?pid=practice-177615&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.07585",
+        "latitude": "46.0416"
+      },
+      "metadata": {
+        "address": "28 Rue de Charlieu RDC du P\u00f4le Femmes Enfants, 42300 Roanne",
+        "phone_number": "+33970771710",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "antenne MSP Charlieu",
+      "url": "",
+      "location": {
+        "longitude": "4.17252",
+        "latitude": "46.1596"
+      },
+      "metadata": {
+        "address": "7 Rue Saint-Eloi, 42190 Charlieu",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "antenne MSP Ambierle",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ambierle/centre-de-vaccination-covid-19-msp-d-ambierle?pid=practice-175394&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.89567",
+        "latitude": "46.1042"
+      },
+      "metadata": {
+        "address": "15 Cr Saint Charles, 42820 Ambierle",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "CD - US centre de d\u00e9tention de roanne / Centre de d\u00e9tention de Roanne",
+      "url": "",
+      "location": {
+        "longitude": "4.09689",
+        "latitude": "46.0555"
+      },
+      "metadata": {
+        "address": " Rue Georges Mandel, 42300 Roanne",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "antenne MSP St Just en Chevalet",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-just-en-chevalet/centre-de-vaccination-covid-19-maison-de-sante-du-pays-d-urfe?pid=practice-175972&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.84584",
+        "latitude": "45.9141"
+      },
+      "metadata": {
+        "address": "28 Place du 11 Novembre, 42430 Saint-Just-en-Chevalet",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "MA - USN 1Maison d'Arr\u00eat de la Talaudi\u00e8re / Maison d'Arr\u00eat de Saint-Etienne-la-Talaudi\u00e8re",
+      "url": "",
+      "location": {
+        "longitude": "4.4165",
+        "latitude": "45.4731"
+      },
+      "metadata": {
+        "address": " Rue de la Sauvag\u00e8re, 42350 La Talaudi\u00e8re",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "antenne MSP St Bonnet le Courreau",
+      "url": "",
+      "location": {
+        "longitude": "3.94395",
+        "latitude": "45.6595"
+      },
+      "metadata": {
+        "address": "20 Route de Fraisse, 42940 Saint-Bonnet-le-Courreau",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "CH du Gier Antenne rive de gier",
+      "url": "https://www.maiia.com/?gclid=EAIaIQobChMI-4brxbmU7wIVQbDtCh1VOgFzEAAYASAAEgLEUfD_BwE",
+      "location": {
+        "longitude": "4.61922",
+        "latitude": "45.5274"
+      },
+      "metadata": {
+        "address": "19 Rue L\u00e9on Marrel, 42800 Rive-de-Gier",
+        "phone_number": "+33970771710",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "Centre de vaccination de l'H\u00f4pital du Gier",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-chamond/centre-de-vaccination-covid-19-hopital-du-gier?pid=practice-171845&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.51649",
+        "latitude": "45.4748"
+      },
+      "metadata": {
+        "address": "19 Rue Victor Hugo, 42400 Saint-Chamond",
+        "phone_number": "+33970771710",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "Clinique du renaison",
+      "url": "https://www.doctolib.fr/vaccination-covid-19",
+      "location": {
+        "longitude": "4.05089",
+        "latitude": "46.0339"
+      },
+      "metadata": {
+        "address": "9 Rue Henri Desroche, 42300 Roanne",
+        "phone_number": "+33477448899",
+        "business_hours": {
+          "lundi": "13:00-20:00",
+          "mardi": "13:00-20:00",
+          "mercredi": "13:00-20:00",
+          "jeudi": "13:00-20:00",
+          "vendredi": "13:00-20:00",
+          "samedi": "13:00-20:00",
+          "dimanche": "13:00-20:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "Pilat Rhodanien",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-pierre-de-boeuf/centre-de-vaccination-du-pilat-rhodanien?pid=practice-177622&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.74768",
+        "latitude": "45.3863"
+      },
+      "metadata": {
+        "address": "1 Avenue du Rhone, 42520 Saint-Pierre-de-B\u0153uf",
+        "phone_number": "+33427870042",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "Centre de vaccination Covid 19 - CHU Saint Etienne",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/saint-priest-en-jarez/centre-de-vaccination-covid-19-chu-saint-etienne?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 4.3678168,
+        "latitude": 45.4760329
+      },
+      "metadata": {
+        "address": "Avenue Albert Raimond, 42270 Saint-Priest-en-Jarez",
+        "phone_number": "09 70 77 17 10",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "42",
+      "nom": "Centre Hyg\u00e9e \u2013 Vaccination Moderna",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-priest-en-jarez/centre-hygee-vaccination-moderna?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 4.3604699,
+        "latitude": 45.4798076
+      },
+      "metadata": {
+        "address": "1 Chemin de la Marandi\u00e8re, 42270 Saint-Priest-en-Jarez",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": "09:00-18:00",
+          "dimanche": "09:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}
