@@ -66,6 +66,7 @@ class DoctolibSlots:
         rdata = data.get('data', {})
         appointment_count = 0
         request.update_practitioner_type(parse_practitioner_type(centre, rdata))
+        appointment_count = 0
 
         # visit_motive_categories
         # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1
@@ -98,6 +99,9 @@ class DoctolibSlots:
 
         slots = response.json()
 
+        if slots.get('total'):
+            appointment_count += int(slots.get('total', 0))
+        request.update_appointment_count(appointment_count)
         for availability in slots['availabilities']:
             slot_list = availability.get('slots', None)
             if not slot_list or len(slot_list) == 0:

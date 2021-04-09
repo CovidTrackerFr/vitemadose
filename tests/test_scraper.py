@@ -190,9 +190,17 @@ def test_fetch_centre_slots():
         return "2021-04-06"
 
     fetch_map = {
-        "Doctolib": fake_doctolib_fetch_slots,
-        "Keldoc": fake_keldoc_fetch_slots,
-        "Maiia": fake_maiia_fetch_slots,
+        'Doctolib': {'urls': [
+            'https://partners.doctolib.fr',
+            'https://www.doctolib.fr'
+        ], 'scraper_ptr': fake_doctolib_fetch_slots},
+        'Keldoc': {'urls': [
+            'https://vaccination-covid.keldoc.com',
+            'https://keldoc.com'
+        ], 'scraper_ptr': fake_keldoc_fetch_slots},
+        'Maiia': {'urls': [
+            'https://www.maiia.com'
+        ], 'scraper_ptr': fake_maiia_fetch_slots}
     }
 
     start_date = "2021-04-03"

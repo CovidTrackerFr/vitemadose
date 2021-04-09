@@ -64,27 +64,32 @@ def is_specialty_relevant(specialty):
     return False
 
 
-def parse_keldoc_availability(availability_data):
+def parse_keldoc_availability(availability_data, appointments):
     if not availability_data:
-        return None
+        return None, appointments
     if 'date' in availability_data:
         date = availability_data.get('date', None)
         date_obj = datetime.strptime(date, '%Y-%m-%dT%H:%M:%S.%f%z')
-        return date_obj
+        return date_obj, appointments
 
+    cdate = None
     availabilities = availability_data.get('availabilities', None)
     if availabilities is None:
-        return None
+        return None, appointments
     for date in availabilities:
         slots = availabilities.get(date, [])
         if not slots:
             continue
         for slot in slots:
+            if slot not in appointments:
+                appointments.append(slot)
             start_date = slot.get('start_time', None)
             if not start_date:
                 continue
-            return datetime.strptime(start_date, '%Y-%m-%dT%H:%M:%S.%f%z')
-    return None
+            tdate = datetime.strptime(start_date, '%Y-%m-%dT%H:%M:%S.%f%z')
+            if not cdate or tdate < cdate:
+                cdate = tdate
+    return cdate, appointments
 
 
 def filter_vaccine_specialties(specialties):
