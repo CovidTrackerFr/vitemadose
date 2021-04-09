@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.194453+02:00",
+  "last_updated": "2021-04-09T15:24:49.881208+02:00",
   "centres_disponibles": [
     {
       "departement": "84",
@@ -444,31 +444,6 @@
     },
     {
       "departement": "84",
-      "nom": "Centre municipal de vaccination - Entraigues",
-      "url": "Doctolib",
-      "location": {
-        "longitude": "4.92782",
-        "latitude": "44.0034"
-      },
-      "metadata": {
-        "address": " Salle des F\u00eates - Place du 8 Mai 1945, 84320 Entraigues-sur-la-Sorgue",
-        "business_hours": {
-          "lundi": "9h \u00e0 13h ",
-          "mardi": "9h \u00e0 13h ",
-          "mercredi": "9h \u00e0 13h ",
-          "jeudi": "9h \u00e0 13h ",
-          "vendredi": "9h \u00e0 13h ",
-          "samedi": "9h \u00e0 13h ",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "84",
       "nom": "Maison de la Culture et des Association",
       "url": "https://partners.doctolib.fr/centre-de-sante/pertuis/centre-de-vaccination-pertuis?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -495,27 +470,26 @@
     },
     {
       "departement": "84",
-      "nom": "MSP - SORGUES - salle Ren\u00e9 Varoqui",
-      "url": "https://partners.doctolib.fr/maison-de-sante/sorgues/centre-de-vaccination-covid-maison-de-sante-francois-rabelais?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre municipal de vaccination - Entraigues",
+      "url": "Doctolib",
       "location": {
-        "longitude": "4.87966",
-        "latitude": "43.9974"
+        "longitude": "4.92782",
+        "latitude": "44.0034"
       },
       "metadata": {
-        "address": " Chemin de Lucette, 84700 Sorgues",
-        "phone_number": "+33423100690",
+        "address": " Salle des F\u00eates - Place du 8 Mai 1945, 84320 Entraigues-sur-la-Sorgue",
         "business_hours": {
-          "lundi": "9h-13h",
-          "mardi": "9h-13h",
-          "mercredi": "9h-13h",
-          "jeudi": "9h-13h",
-          "vendredi": "9h-13h ",
-          "samedi": "ferm\u00e9",
+          "lundi": "9h \u00e0 13h ",
+          "mardi": "9h \u00e0 13h ",
+          "mercredi": "9h \u00e0 13h ",
+          "jeudi": "9h \u00e0 13h ",
+          "vendredi": "9h \u00e0 13h ",
+          "samedi": "9h \u00e0 13h ",
           "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
-      "plateforme": "Doctolib",
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -536,6 +510,32 @@
           "mercredi": "9h-13h et 14h-18h",
           "jeudi": "9h-13h et 14h-18h",
           "vendredi": "9h-13h et 14h-18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "84",
+      "nom": "MSP - SORGUES - salle Ren\u00e9 Varoqui",
+      "url": "https://partners.doctolib.fr/maison-de-sante/sorgues/centre-de-vaccination-covid-maison-de-sante-francois-rabelais?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.87966",
+        "latitude": "43.9974"
+      },
+      "metadata": {
+        "address": " Chemin de Lucette, 84700 Sorgues",
+        "phone_number": "+33423100690",
+        "business_hours": {
+          "lundi": "9h-13h",
+          "mardi": "9h-13h",
+          "mercredi": "9h-13h",
+          "jeudi": "9h-13h",
+          "vendredi": "9h-13h ",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }

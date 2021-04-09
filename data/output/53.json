@@ -1,33 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.155559+02:00",
+  "last_updated": "2021-04-09T15:24:49.840763+02:00",
   "centres_disponibles": [
-    {
-      "departement": "53",
-      "nom": "Centre de vaccination - LAVAL - Salle polyvalente",
-      "url": "https://partners.doctolib.fr/centre-de-sante/laval/centres-de-vaccination-de-la-mayenne?pid=practice-164879&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-0.772294",
-        "latitude": "48.0654"
-      },
-      "metadata": {
-        "address": "30 Place de Herce, 53000 Laval",
-        "phone_number": "+33243535300",
-        "business_hours": {
-          "lundi": "9h-14h",
-          "mardi": "9h-14h",
-          "mercredi": "9h-14h",
-          "jeudi": "9h-14h",
-          "vendredi": "9h-14h",
-          "samedi": "9h-14h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-14T13:18:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "53",
       "nom": "Lactalis Sant\u00e9 au Travail - R\u00e9serv\u00e9 aux collaborateurs Lactalis",
@@ -290,6 +264,32 @@
     },
     {
       "departement": "53",
+      "nom": "Centre de vaccination - LAVAL - Salle polyvalente",
+      "url": "https://partners.doctolib.fr/centre-de-sante/laval/centres-de-vaccination-de-la-mayenne?pid=practice-164879&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-0.772294",
+        "latitude": "48.0654"
+      },
+      "metadata": {
+        "address": "30 Place de Herce, 53000 Laval",
+        "phone_number": "+33243535300",
+        "business_hours": {
+          "lundi": "9h-14h",
+          "mardi": "9h-14h",
+          "mercredi": "9h-14h",
+          "jeudi": "9h-14h",
+          "vendredi": "9h-14h",
+          "samedi": "9h-14h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "53",
       "nom": "Pharmacie Laval Murat",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-laval-murat-laval",
       "location": {
@@ -320,7 +320,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     }

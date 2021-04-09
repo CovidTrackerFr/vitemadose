@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.128076+02:00",
+  "last_updated": "2021-04-09T15:24:49.813030+02:00",
   "centres_disponibles": [
     {
       "departement": "27",
@@ -23,7 +23,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-11T16:10:00.000+02:00",
+      "prochain_rdv": "2021-04-10T17:40:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -49,7 +49,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-28T10:10:00.000+02:00",
+      "prochain_rdv": "2021-04-28T11:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -76,6 +76,32 @@
         }
       },
       "prochain_rdv": "2021-05-07T11:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "27",
+      "nom": "Louviers : maison des sports et associations",
+      "url": "https://partners.doctolib.fr/hopital-public/evreux/ch-eure-seine-centre-de-vaccination-covid-vacci-covid-27?pid=practice-164880&?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.15292",
+        "latitude": "49.208"
+      },
+      "metadata": {
+        "address": "10 Avenue du Mar\u00e9chal Leclerc, 27400 Louviers",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-05-11T16:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -418,32 +444,6 @@
     },
     {
       "departement": "27",
-      "nom": "Louviers : maison des sports et associations",
-      "url": "https://partners.doctolib.fr/hopital-public/evreux/ch-eure-seine-centre-de-vaccination-covid-vacci-covid-27?pid=practice-164880&?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "1.15292",
-        "latitude": "49.208"
-      },
-      "metadata": {
-        "address": "10 Avenue du Mar\u00e9chal Leclerc, 27400 Louviers",
-        "phone_number": "+33279461156",
-        "business_hours": {
-          "lundi": "",
-          "mardi": "",
-          "mercredi": "",
-          "jeudi": "",
-          "vendredi": "",
-          "samedi": "",
-          "dimanche": ""
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "27",
       "nom": "BERNAY : centre ville ANNEXE CH BERNAY",
       "url": "https://partners.doctolib.fr/hopital-public/evreux/ch-eure-seine-centre-de-vaccination-covid-vacci-covid-27?pid=practice-177715&enable_cookies_consent=1",
       "location": {
@@ -495,14 +495,14 @@
     },
     {
       "departement": "27",
-      "nom": "Les Andelys : salle des f\u00eates",
-      "url": "https://partners.doctolib.fr/hopital-public/evreux/ch-eure-seine-centre-de-vaccination-covid-vacci-covid-27?pid=practice-164913&enable_cookies_consent=1",
+      "nom": "CHI Eure-seine site Evreux",
+      "url": "https://partners.doctolib.fr/hopital-public/evreux/ch-eure-seine-centre-de-vaccination-covid-vacci-covid-27?pid=practice-162965&?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "1.41987",
-        "latitude": "49.2468"
+        "longitude": "1.11602",
+        "latitude": "49.0315"
       },
       "metadata": {
-        "address": "28 Avenue du G\u00e9n\u00e9ral de Gaulle, 27700 Les Andelys",
+        "address": " L\u00e9on Schwartzenberg, 27000 \u00c9vreux",
         "phone_number": "+33279461156",
         "business_hours": {
           "lundi": "",
@@ -521,14 +521,14 @@
     },
     {
       "departement": "27",
-      "nom": "CHI Eure-seine site Evreux",
-      "url": "https://partners.doctolib.fr/hopital-public/evreux/ch-eure-seine-centre-de-vaccination-covid-vacci-covid-27?pid=practice-162965&?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Les Andelys : salle des f\u00eates",
+      "url": "https://partners.doctolib.fr/hopital-public/evreux/ch-eure-seine-centre-de-vaccination-covid-vacci-covid-27?pid=practice-164913&enable_cookies_consent=1",
       "location": {
-        "longitude": "1.11602",
-        "latitude": "49.0315"
+        "longitude": "1.41987",
+        "latitude": "49.2468"
       },
       "metadata": {
-        "address": " L\u00e9on Schwartzenberg, 27000 \u00c9vreux",
+        "address": "28 Avenue du G\u00e9n\u00e9ral de Gaulle, 27700 Les Andelys",
         "phone_number": "+33279461156",
         "business_hours": {
           "lundi": "",
@@ -610,7 +610,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     }

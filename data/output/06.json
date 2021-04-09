@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.105968+02:00",
+  "last_updated": "2021-04-09T15:24:49.791553+02:00",
   "centres_disponibles": [
     {
       "departement": "06",
@@ -126,33 +126,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-13T11:35:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "06",
-      "nom": "Hopital de Breil / MSP de la Roya",
-      "url": "https://partners.doctolib.fr/centre-de-sante/breil-sur-roya/centre-de-vaccination-hopital-de-breil-msp-de-la-roya?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "7.51483",
-        "latitude": "43.9457"
-      },
-      "metadata": {
-        "address": "2 Rue Cordier, 06540 Breil-sur-Roya",
-        "phone_number": "04 22 16 37 39",
-        "business_hours": {
-          "lundi": "ouvert",
-          "mardi": "ouvert",
-          "mercredi": "ouvert",
-          "jeudi": "ouvert",
-          "vendredi": "ouvert",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-13T16:50:00.000+02:00",
+      "prochain_rdv": "2021-04-13T11:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -180,6 +154,32 @@
       "prochain_rdv": "2021-04-19T18:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "general-practitioner",
+      "appointment_count": 0
+    },
+    {
+      "departement": "06",
+      "nom": "Hopital de Breil / MSP de la Roya",
+      "url": "https://partners.doctolib.fr/centre-de-sante/breil-sur-roya/centre-de-vaccination-hopital-de-breil-msp-de-la-roya?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "7.51483",
+        "latitude": "43.9457"
+      },
+      "metadata": {
+        "address": "2 Rue Cordier, 06540 Breil-sur-Roya",
+        "phone_number": "04 22 16 37 39",
+        "business_hours": {
+          "lundi": "ouvert",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-20T17:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
       "appointment_count": 0
     },
     {
@@ -341,14 +341,14 @@
     },
     {
       "departement": "06",
-      "nom": "MA - US GRASSE / Maison d'Arr\u00eat de Grasse",
+      "nom": "MA - Nice / Maison d'Arr\u00eat de Nice",
       "url": "",
       "location": {
-        "longitude": "6.90668",
-        "latitude": "43.6746"
+        "longitude": "7.28011",
+        "latitude": "43.7114"
       },
       "metadata": {
-        "address": "55 Route des Genets, 06130 Grasse",
+        "address": "12 Rue de la Gendarmerie, 06000 Nice",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -366,14 +366,14 @@
     },
     {
       "departement": "06",
-      "nom": "MA - Nice / Maison d'Arr\u00eat de Nice",
+      "nom": "MA - US GRASSE / Maison d'Arr\u00eat de Grasse",
       "url": "",
       "location": {
-        "longitude": "7.28011",
-        "latitude": "43.7114"
+        "longitude": "6.90668",
+        "latitude": "43.6746"
       },
       "metadata": {
-        "address": "12 Rue de la Gendarmerie, 06000 Nice",
+        "address": "55 Route des Genets, 06130 Grasse",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -751,32 +751,6 @@
     },
     {
       "departement": "06",
-      "nom": "CPTS de la Riviera Fran\u00e7aise - Site MSP de Sospel",
-      "url": "https://partners.doctolib.fr/centre-de-sante/sospel/centre-de-vaccination-covid-sospel?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "7.45135",
-        "latitude": "43.8783"
-      },
-      "metadata": {
-        "address": " Place Saint-fran\u00e7ois, 06380 Sospel",
-        "phone_number": "04 93 04 30 42 ",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "14h 17h",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "06",
       "nom": "CPTS Des Collines/ Mairie de Biot Salle Gilardi",
       "url": "https://partners.doctolib.fr/cabinet-pluridisciplinaire/le-rouret/cpts-des-collines-vaccination-covid??pid=practice-163940&enable_cookies_consent=1",
       "location": {
@@ -793,6 +767,32 @@
           "jeudi": "16h 18h",
           "vendredi": "16h 18h",
           "samedi": "16h 18h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "06",
+      "nom": "CPTS de la Riviera Fran\u00e7aise - Site MSP de Sospel",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sospel/centre-de-vaccination-covid-sospel?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "7.45135",
+        "latitude": "43.8783"
+      },
+      "metadata": {
+        "address": " Place Saint-fran\u00e7ois, 06380 Sospel",
+        "phone_number": "04 93 04 30 42 ",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "14h 17h",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -1010,15 +1010,15 @@
     },
     {
       "departement": "06",
-      "nom": "Pharmacie Hanbury",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-hanbury-menton",
+      "nom": "Grande Pharmacie Mentonnaise",
+      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-mentonnaise-menton",
       "location": {
-        "longitude": 7.521359399999999,
-        "latitude": 43.78500950000001
+        "longitude": 7.504231300000001,
+        "latitude": 43.7756553
       },
       "metadata": {
-        "address": "1 avenue Aristide Briand, 06500 MENTON",
-        "phone_number": "+33493357644",
+        "address": "32 RUE DE LA REPUBLIQUE, 06500 MENTON",
+        "phone_number": "+33493575779",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -1040,25 +1040,25 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
     {
       "departement": "06",
-      "nom": "Grande Pharmacie Mentonnaise",
-      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-mentonnaise-menton",
+      "nom": "Pharmacie Hanbury",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-hanbury-menton",
       "location": {
-        "longitude": 7.504231300000001,
-        "latitude": 43.7756553
+        "longitude": 7.521359399999999,
+        "latitude": 43.78500950000001
       },
       "metadata": {
-        "address": "32 RUE DE LA REPUBLIQUE, 06500 MENTON",
-        "phone_number": "+33493575779",
+        "address": "1 avenue Aristide Briand, 06500 MENTON",
+        "phone_number": "+33493357644",
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -1082,6 +1082,24 @@
     },
     {
       "departement": "06",
+      "nom": "Pharmacie De L'Horloge",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-l'horloge-nice",
+      "location": {
+        "longitude": 7.2526853,
+        "latitude": 43.7185431
+      },
+      "metadata": {
+        "address": "98 Boulevard DE CESSOLE, 06100 NICE",
+        "phone_number": "+33493844886",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "06",
       "nom": "Pharmacie Du Port",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-port-nice",
       "location": {
@@ -1094,7 +1112,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -1109,24 +1127,6 @@
       "metadata": {
         "address": "43 RUE DE L'HOTEL DES POSTES, 06000 NICE",
         "phone_number": "+33493854159",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "06",
-      "nom": "Pharmacie De L'Horloge",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-l'horloge-nice",
-      "location": {
-        "longitude": 7.2526853,
-        "latitude": 43.7185431
-      },
-      "metadata": {
-        "address": "98 Boulevard DE CESSOLE, 06100 NICE",
-        "phone_number": "+33493844886",
         "business_hours": null
       },
       "prochain_rdv": null,

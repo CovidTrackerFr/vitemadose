@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.167268+02:00",
+  "last_updated": "2021-04-09T15:24:49.853039+02:00",
   "centres_disponibles": [
     {
       "departement": "62",
@@ -182,6 +182,24 @@
     },
     {
       "departement": "62",
+      "nom": "Pharmacie Henin Beaumont",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-henin-beaumont-henin-beaumont",
+      "location": {
+        "longitude": 2.9487318,
+        "latitude": 50.4203365
+      },
+      "metadata": {
+        "address": "74 Place Carnot, 62110 H\u00e9nin-Beaumont",
+        "phone_number": "+33321200024",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-04-10T15:00:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "62",
       "nom": "Centre de vaccination - Commune Ardres, salle en \u00e9toile",
       "url": "https://partners.doctolib.fr/centre-de-sante/ardres/centre-de-vaccination-covid-ville-de-ardres?pid=practice-177337&enable_cookies_consent=1",
       "location": {
@@ -251,7 +269,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-12T09:50:00.000+02:00",
+      "prochain_rdv": "2021-04-12T09:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -276,7 +294,7 @@
           "dimanche": "09:00-13:00/14:00-18:00"
         }
       },
-      "prochain_rdv": "2021-04-15T15:03:00.000+02:00",
+      "prochain_rdv": "2021-04-15T14:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -564,39 +582,14 @@
     },
     {
       "departement": "62",
-      "nom": "CD - US BAPAUME / Maison d'Arr\u00eat d'Arras",
+      "nom": "CP - US du centre hospitalier de la R\u00e9gion de Saint-Omer / Centre P\u00e9nitentiaire de Longuenesse",
       "url": "",
       "location": {
-        "longitude": "2.76048",
-        "latitude": "50.293"
+        "longitude": "2.23624",
+        "latitude": "50.7305"
       },
       "metadata": {
-        "address": "12 Rue des Carabiniers d?Artois, 62000 Arras",
-        "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "62",
-      "nom": "MA - US ARRAS / Maison d'Arr\u00eat d'Arras",
-      "url": "",
-      "location": {
-        "longitude": "2.76048",
-        "latitude": "50.293"
-      },
-      "metadata": {
-        "address": "12 Rue des Carabiniers d?Artois, 62000 Arras",
+        "address": " Chemin du Plateau des Bruy\u00e8res, 62219 Longuenesse",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -639,14 +632,39 @@
     },
     {
       "departement": "62",
-      "nom": "CP - US du centre hospitalier de la R\u00e9gion de Saint-Omer / Centre P\u00e9nitentiaire de Longuenesse",
+      "nom": "CD - US BAPAUME / Maison d'Arr\u00eat d'Arras",
       "url": "",
       "location": {
-        "longitude": "2.23624",
-        "latitude": "50.7305"
+        "longitude": "2.76048",
+        "latitude": "50.293"
       },
       "metadata": {
-        "address": " Chemin du Plateau des Bruy\u00e8res, 62219 Longuenesse",
+        "address": "12 Rue des Carabiniers d?Artois, 62000 Arras",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "62",
+      "nom": "MA - US ARRAS / Maison d'Arr\u00eat d'Arras",
+      "url": "",
+      "location": {
+        "longitude": "2.76048",
+        "latitude": "50.293"
+      },
+      "metadata": {
+        "address": "12 Rue des Carabiniers d?Artois, 62000 Arras",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -1267,19 +1285,19 @@
     },
     {
       "departement": "62",
-      "nom": "Pharmacie Henin Beaumont",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-henin-beaumont-henin-beaumont",
+      "nom": "Pharmacie De La Lawe",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-lawe-houdain",
       "location": {
-        "longitude": 2.9487318,
-        "latitude": 50.4203365
+        "longitude": 2.5357028,
+        "latitude": 50.4512648
       },
       "metadata": {
-        "address": "74 Place Carnot, 62110 H\u00e9nin-Beaumont",
-        "phone_number": "+33321200024",
+        "address": "15 Rue HENRI DURANT, 62150 HOUDAIN",
+        "phone_number": "+33321658783",
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -1303,15 +1321,15 @@
     },
     {
       "departement": "62",
-      "nom": "Pharmacie De La Lawe",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-lawe-houdain",
+      "nom": "Pharmacie D'Eleu",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-d'eleu-eleu-dit-leauwette",
       "location": {
-        "longitude": 2.5357028,
-        "latitude": 50.4512648
+        "longitude": 2.8171747,
+        "latitude": 50.4161742
       },
       "metadata": {
-        "address": "15 Rue HENRI DURANT, 62150 HOUDAIN",
-        "phone_number": "+33321658783",
+        "address": "2 rue gabriel P\u00e9ri, 62300 ELEU-DIT-LEAUWETTE",
+        "phone_number": "+33321282330",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -1420,24 +1438,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "62",
-      "nom": "Pharmacie D'Eleu",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-d'eleu-eleu-dit-leauwette",
-      "location": {
-        "longitude": 2.8171747,
-        "latitude": 50.4161742
-      },
-      "metadata": {
-        "address": "2 rue gabriel P\u00e9ri, 62300 ELEU-DIT-LEAUWETTE",
-        "phone_number": "+33321282330",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },

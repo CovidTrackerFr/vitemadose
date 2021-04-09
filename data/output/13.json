@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.113048+02:00",
+  "last_updated": "2021-04-09T15:24:49.798176+02:00",
   "centres_disponibles": [
     {
       "departement": "13",
@@ -100,34 +100,8 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-12T13:30:00.000+02:00",
+      "prochain_rdv": "2021-04-12T13:45:00.000+02:00",
       "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "13",
-      "nom": "CCI ARLES/CPTS PAYS D'ARLES",
-      "url": "https://www.maiia.com/centre-de-vaccination/13200-arles/centre-de-vaccination-cci-arles",
-      "location": {
-        "longitude": "4.61833",
-        "latitude": "43.6714"
-      },
-      "metadata": {
-        "address": " Avenue de la 1\u00e8re Division France Libre, 13200 Arles",
-        "phone_number": "04 65 49 43 10",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "9h - 17h",
-          "jeudi": "9h - 17h",
-          "vendredi": "9h - 17h",
-          "samedi": "9h - 17h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-12T17:05:00.000000Z",
-      "plateforme": "Maiia",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -177,6 +151,32 @@
     },
     {
       "departement": "13",
+      "nom": "CCI ARLES/CPTS PAYS D'ARLES",
+      "url": "https://www.maiia.com/centre-de-vaccination/13200-arles/centre-de-vaccination-cci-arles",
+      "location": {
+        "longitude": "4.61833",
+        "latitude": "43.6714"
+      },
+      "metadata": {
+        "address": " Avenue de la 1\u00e8re Division France Libre, 13200 Arles",
+        "phone_number": "04 65 49 43 10",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "9h - 17h",
+          "jeudi": "9h - 17h",
+          "vendredi": "9h - 17h",
+          "samedi": "9h - 17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-13T16:45:00.000000Z",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "13",
       "nom": "Pharmacie Des Iris",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-iris-lancon-provence",
       "location": {
@@ -221,6 +221,32 @@
     },
     {
       "departement": "13",
+      "nom": "CPTS Aix Ste Victoire / Gymnase du Val de l'Arc",
+      "url": "https://partners.doctolib.fr/centre-de-sante/aix-en-provence/centre-de-vaccination-covid19-de-la-ville-d-aix-en-provence?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.46375",
+        "latitude": "43.5131"
+      },
+      "metadata": {
+        "address": "35 Avenue des Infirmeries, 13100 Aix-en-Provence",
+        "phone_number": "+33800820830",
+        "business_hours": {
+          "lundi": "En cours de pr\u00e9cision",
+          "mardi": "En cours de pr\u00e9cision",
+          "mercredi": "En cours de pr\u00e9cision",
+          "jeudi": "En cours de pr\u00e9cision",
+          "vendredi": "En cours de pr\u00e9cision",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-14T15:20:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "13",
       "nom": "Centre de vaccination COVID-19 - H\u00f4pital d'instruction des arm\u00e9es Laveran",
       "url": "https://partners.doctolib.fr/hopital-public/marseille/centre-de-vaccination-covid-19-hopital-d-instruction-des-armees-laveran?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
@@ -239,9 +265,27 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-15T09:50:00.000+02:00",
+      "prochain_rdv": "2021-04-15T10:25:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "13",
+      "nom": "Pharmacie De L'Europe Fuveau",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-l'europe-fuveau-fuveau",
+      "location": {
+        "longitude": 5.5614408,
+        "latitude": 43.4538963
+      },
+      "metadata": {
+        "address": "395 Route Departementale 96, 13710 Fuveau",
+        "phone_number": "+33442681891",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-04-16T08:00:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
       "appointment_count": 0
     },
     {
@@ -291,7 +335,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-20T14:05:00.000+02:00",
+      "prochain_rdv": "2021-04-20T14:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -319,32 +363,6 @@
       },
       "prochain_rdv": "2021-04-20T16:15:00.000000Z",
       "plateforme": "Maiia",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "13",
-      "nom": "CPTS Aix Ste Victoire / Gymnase du Val de l'Arc",
-      "url": "https://partners.doctolib.fr/centre-de-sante/aix-en-provence/centre-de-vaccination-covid19-de-la-ville-d-aix-en-provence?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "5.46375",
-        "latitude": "43.5131"
-      },
-      "metadata": {
-        "address": "35 Avenue des Infirmeries, 13100 Aix-en-Provence",
-        "phone_number": "+33800820830",
-        "business_hours": {
-          "lundi": "En cours de pr\u00e9cision",
-          "mardi": "En cours de pr\u00e9cision",
-          "mercredi": "En cours de pr\u00e9cision",
-          "jeudi": "En cours de pr\u00e9cision",
-          "vendredi": "En cours de pr\u00e9cision",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-30T12:50:00.000+02:00",
-      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -533,56 +551,6 @@
     },
     {
       "departement": "13",
-      "nom": "EPM - US US-SMPR-CSAPA Etablissement p\u00e9nitentiaire pour Mineur de la Valentine / Etablissement sp\u00e9cialis\u00e9 pour mineurs de Marseille",
-      "url": "",
-      "location": {
-        "longitude": "5.48264",
-        "latitude": "43.2898"
-      },
-      "metadata": {
-        "address": " Mont\u00e9e Commandant de Robien, 13011 Marseille",
-        "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "13",
-      "nom": "SAS - US SAS / Etablissement sp\u00e9cialis\u00e9 pour mineurs de Marseille",
-      "url": "",
-      "location": {
-        "longitude": "5.48264",
-        "latitude": "43.2898"
-      },
-      "metadata": {
-        "address": " Mont\u00e9e Commandant de Robien, 13011 Marseille",
-        "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "13",
       "nom": "CD - US de Salon-de-Provence / Centre de D\u00e9tention de Salon-de-Provence",
       "url": "",
       "location": {
@@ -591,6 +559,56 @@
       },
       "metadata": {
         "address": " Salon-de-Provence, 13300 Salon-de-Provence",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "13",
+      "nom": "MC - USMP MC Arles / Maison Centrale d'Arles",
+      "url": "",
+      "location": {
+        "longitude": "4.63679",
+        "latitude": "43.7091"
+      },
+      "metadata": {
+        "address": "2 Rue Joseph Seguin, 13200 Arles",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "13",
+      "nom": "EPM - US US-SMPR-CSAPA Etablissement p\u00e9nitentiaire pour Mineur de la Valentine / Etablissement sp\u00e9cialis\u00e9 pour mineurs de Marseille",
+      "url": "",
+      "location": {
+        "longitude": "5.48264",
+        "latitude": "43.2898"
+      },
+      "metadata": {
+        "address": " Mont\u00e9e Commandant de Robien, 13011 Marseille",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -633,14 +651,14 @@
     },
     {
       "departement": "13",
-      "nom": "MC - USMP MC Arles / Maison Centrale d'Arles",
+      "nom": "SAS - US SAS / Etablissement sp\u00e9cialis\u00e9 pour mineurs de Marseille",
       "url": "",
       "location": {
-        "longitude": "4.63679",
-        "latitude": "43.7091"
+        "longitude": "5.48264",
+        "latitude": "43.2898"
       },
       "metadata": {
-        "address": "2 Rue Joseph Seguin, 13200 Arles",
+        "address": " Mont\u00e9e Commandant de Robien, 13011 Marseille",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -838,6 +856,31 @@
     },
     {
       "departement": "13",
+      "nom": "Centre de vaccination  Vitrolles - Espace Mandela",
+      "url": "https://partners.doctolib.fr/maison-de-sante/vitrolles/vaccination-covid-19-vitrolles-espace-mandela?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.24904",
+        "latitude": "43.4472"
+      },
+      "metadata": {
+        "address": " Place de Provence, 13127 Vitrolles",
+        "business_hours": {
+          "lundi": "\u00a09h /17h",
+          "mardi": "\u00a09h /17h",
+          "mercredi": "\u00a09h /17h",
+          "jeudi": "\u00a09h /17h",
+          "vendredi": "\u00a09h /17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "13",
       "nom": "H\u00f4pital Clairval - Centre de soins urgents",
       "url": "https://partners.doctolib.fr/centre-depistage-covid/marseille/centre-de-vaccination-covid-soins-urgents-clairval?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -855,31 +898,6 @@
           "vendredi": "09 h 00 - 21 h 00",
           "samedi": "09 h 00 - 21 h 00",
           "dimanche": "09 h 00 - 21 h 00"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "13",
-      "nom": "Centre de vaccination  Vitrolles - Espace Mandela",
-      "url": "https://partners.doctolib.fr/maison-de-sante/vitrolles/vaccination-covid-19-vitrolles-espace-mandela?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "5.24904",
-        "latitude": "43.4472"
-      },
-      "metadata": {
-        "address": " Place de Provence, 13127 Vitrolles",
-        "business_hours": {
-          "lundi": "\u00a09h /17h",
-          "mardi": "\u00a09h /17h",
-          "mercredi": "\u00a09h /17h",
-          "jeudi": "\u00a09h /17h",
-          "vendredi": "\u00a09h /17h",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
@@ -941,32 +959,6 @@
     },
     {
       "departement": "13",
-      "nom": "P\u00f4le de sant\u00e9 Aubagne CD 13",
-      "url": "https://partners.doctolib.fr/centre-de-sante/aubagne/centre-de-vaccination-covid-pole-de-sante-aubagne?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "5.56603",
-        "latitude": "43.2945"
-      },
-      "metadata": {
-        "address": "10 Avenue Antide Boyer, 13400 Aubagne",
-        "phone_number": "04 13 31 38 00",
-        "business_hours": {
-          "lundi": "14H - 16H",
-          "mardi": "14H - 16H",
-          "mercredi": "14H - 16H",
-          "jeudi": "14H - 16H",
-          "vendredi": "14H - 16H",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "13",
       "nom": "Centre de vaccination CPTS VAL DURANCE",
       "url": "https://partners.doctolib.fr/centre-de-sante/senas/centre-de-vaccination-covid-cpts-val-durance?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -993,21 +985,21 @@
     },
     {
       "departement": "13",
-      "nom": "Centre de Vaccination COVID d\u2019Aubagne (R\u00e9serv\u00e9 aux professionnels de sant\u00e9 lib\u00e9raux)",
-      "url": "https://partners.doctolib.fr/hopital-public/aubagne/centre-de-vaccination-covid-ch-aubagne-espace-des-libertes?pid=practice-167096&enable_cookies_consent=1",
+      "nom": "P\u00f4le de sant\u00e9 Aubagne CD 13",
+      "url": "https://partners.doctolib.fr/centre-de-sante/aubagne/centre-de-vaccination-covid-pole-de-sante-aubagne?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "5.56354",
-        "latitude": "43.2914"
+        "longitude": "5.56603",
+        "latitude": "43.2945"
       },
       "metadata": {
-        "address": "179 Avenue des Soeurs Gastine, 13400 Aubagne",
-        "phone_number": "04 42 84 75 38",
+        "address": "10 Avenue Antide Boyer, 13400 Aubagne",
+        "phone_number": "04 13 31 38 00",
         "business_hours": {
-          "lundi": "\u00a08h30 / 17H30",
-          "mardi": "\u00a08h30 / 17H30",
-          "mercredi": "\u00a08h30 / 17H30",
-          "jeudi": "\u00a08h30 / 17H30",
-          "vendredi": "\u00a08h30 / 17H30",
+          "lundi": "14H - 16H",
+          "mardi": "14H - 16H",
+          "mercredi": "14H - 16H",
+          "jeudi": "14H - 16H",
+          "vendredi": "14H - 16H",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -1039,6 +1031,32 @@
       },
       "prochain_rdv": null,
       "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "13",
+      "nom": "Centre de Vaccination COVID d\u2019Aubagne (R\u00e9serv\u00e9 aux professionnels de sant\u00e9 lib\u00e9raux)",
+      "url": "https://partners.doctolib.fr/hopital-public/aubagne/centre-de-vaccination-covid-ch-aubagne-espace-des-libertes?pid=practice-167096&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.56354",
+        "latitude": "43.2914"
+      },
+      "metadata": {
+        "address": "179 Avenue des Soeurs Gastine, 13400 Aubagne",
+        "phone_number": "04 42 84 75 38",
+        "business_hours": {
+          "lundi": "\u00a08h30 / 17H30",
+          "mardi": "\u00a08h30 / 17H30",
+          "mercredi": "\u00a08h30 / 17H30",
+          "jeudi": "\u00a08h30 / 17H30",
+          "vendredi": "\u00a08h30 / 17H30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -1300,26 +1318,27 @@
     },
     {
       "departement": "13",
-      "nom": "Clinique de Vitrolles (R\u00e9serv\u00e9 aux professionnels de sant\u00e9 lib\u00e9raux)",
-      "url": "https://partners.doctolib.fr/clinique-privee/vitrolles/clinique-de-vitrolles-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de Ch\u00e2teaurenard",
+      "url": "https://www.maiia.com/centre-de-vaccination/13160-chateaurenard/centre-de-vaccination-covid---chateaurenard-de-provence",
       "location": {
-        "longitude": "5.26829",
-        "latitude": "43.4259"
+        "longitude": "4.85779",
+        "latitude": "43.8835"
       },
       "metadata": {
-        "address": "2 La Tuili\u00e8re, 2 Rue Bel air, 13127 Vitrolles",
+        "address": "28 Place des All\u00e9es Marcel Jullian, 13160 Ch\u00e2teaurenard",
+        "phone_number": "06 11 92 30 12",
         "business_hours": {
           "lundi": "ferm\u00e9",
-          "mardi": "9h-17h",
-          "mercredi": "9h-17h",
-          "jeudi": "9h-17h",
-          "vendredi": "9h-17h",
+          "mardi": "08h30-12h30 / 13h30-17h30",
+          "mercredi": "08h30-12h30 / 13h30-17h30",
+          "jeudi": "08h30-12h30 / 13h30-17h30",
+          "vendredi": "08h30-12h30 / 13h30-17h30",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
-      "plateforme": "Doctolib",
+      "plateforme": "Maiia",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -1350,27 +1369,26 @@
     },
     {
       "departement": "13",
-      "nom": "Centre de vaccination de Ch\u00e2teaurenard",
-      "url": "https://www.maiia.com/centre-de-vaccination/13160-chateaurenard/centre-de-vaccination-covid---chateaurenard-de-provence",
+      "nom": "Clinique de Vitrolles (R\u00e9serv\u00e9 aux professionnels de sant\u00e9 lib\u00e9raux)",
+      "url": "https://partners.doctolib.fr/clinique-privee/vitrolles/clinique-de-vitrolles-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "4.85779",
-        "latitude": "43.8835"
+        "longitude": "5.26829",
+        "latitude": "43.4259"
       },
       "metadata": {
-        "address": "28 Place des All\u00e9es Marcel Jullian, 13160 Ch\u00e2teaurenard",
-        "phone_number": "06 11 92 30 12",
+        "address": "2 La Tuili\u00e8re, 2 Rue Bel air, 13127 Vitrolles",
         "business_hours": {
           "lundi": "ferm\u00e9",
-          "mardi": "08h30-12h30 / 13h30-17h30",
-          "mercredi": "08h30-12h30 / 13h30-17h30",
-          "jeudi": "08h30-12h30 / 13h30-17h30",
-          "vendredi": "08h30-12h30 / 13h30-17h30",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
-      "plateforme": "Maiia",
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -1457,7 +1475,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -1481,23 +1499,6 @@
     },
     {
       "departement": "13",
-      "nom": "Alain Elkaim",
-      "url": "https://app.ordoclic.fr/app/pharmacie/alain-elkaim-marseille",
-      "location": {
-        "longitude": 5.369154,
-        "latitude": 43.2904849
-      },
-      "metadata": {
-        "address": "70 BOULEVARD DE LA CORDERIE, 13007 MARSEILLE",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "13",
       "nom": "Pharmacie Des 5 Avenues",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-5-avenues-marseille",
       "location": {
@@ -1507,6 +1508,23 @@
       "metadata": {
         "address": "6 Avenue des Chartreux, 13004 Marseille",
         "phone_number": "+33491497777",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "13",
+      "nom": "Alain Elkaim",
+      "url": "https://app.ordoclic.fr/app/pharmacie/alain-elkaim-marseille",
+      "location": {
+        "longitude": 5.369154,
+        "latitude": 43.2904849
+      },
+      "metadata": {
+        "address": "70 BOULEVARD DE LA CORDERIE, 13007 MARSEILLE",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -1664,15 +1682,14 @@
     },
     {
       "departement": "13",
-      "nom": "Grande Pharmacie Salon De Provence",
-      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-salon-de-provence-salon-de-provence",
+      "nom": "Pharmacie Du Centre Carry",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-centre-carry-carry-le-rouet",
       "location": {
-        "longitude": 5.1103269,
-        "latitude": 43.63915960000001
+        "longitude": 5.152161599999999,
+        "latitude": 43.3319189
       },
       "metadata": {
-        "address": "Route de Pelissanne, 13300 Salon-de-Provence",
-        "phone_number": "+33490422107",
+        "address": "22 avenue Aristide Briand, 13620 Carry-Le-Rouet",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -1708,23 +1725,6 @@
     },
     {
       "departement": "13",
-      "nom": "Pharmacie Du Centre Carry",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-centre-carry-carry-le-rouet",
-      "location": {
-        "longitude": 5.152161599999999,
-        "latitude": 43.3319189
-      },
-      "metadata": {
-        "address": "22 avenue Aristide Briand, 13620 Carry-Le-Rouet",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "13",
       "nom": "Centre de vaccination Covid - CGD13 (r\u00e9serv\u00e9 aux professionnels de sant\u00e9)",
       "url": "https://partners.doctolib.fr/centre-de-sante/marseille/centre-de-vaccination-covid-cgd13-reserve-aux-professionnels-de-sante?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
@@ -1751,15 +1751,15 @@
     },
     {
       "departement": "13",
-      "nom": "Pharmacie De L'Europe Fuveau",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-l'europe-fuveau-fuveau",
+      "nom": "Grande Pharmacie Salon De Provence",
+      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-salon-de-provence-salon-de-provence",
       "location": {
-        "longitude": 5.5614408,
-        "latitude": 43.4538963
+        "longitude": 5.1103269,
+        "latitude": 43.63915960000001
       },
       "metadata": {
-        "address": "395 Route Departementale 96, 13710 Fuveau",
-        "phone_number": "+33442681891",
+        "address": "Route de Pelissanne, 13300 Salon-de-Provence",
+        "phone_number": "+33490422107",
         "business_hours": null
       },
       "prochain_rdv": null,

@@ -1,33 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.159337+02:00",
+  "last_updated": "2021-04-09T15:24:49.844982+02:00",
   "centres_disponibles": [
-    {
-      "departement": "57",
-      "nom": "Centre de vaccination de Saint-Avold - SOS Sant\u00e9",
-      "url": "https://partners.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/st-avold/centre-de-vaccination-covid-hopital-de-saint-avold?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.72429",
-        "latitude": "49.1116"
-      },
-      "metadata": {
-        "address": " Rue Ambroise Par\u00e9, 57500 Saint-Avold",
-        "phone_number": "+33387918170 ",
-        "business_hours": {
-          "lundi": "08:00-17:00",
-          "mardi": "08:00-17:00",
-          "mercredi": "08:00-17:00",
-          "jeudi": "08:00-17:00",
-          "vendredi": "08:00-17:00",
-          "samedi": "08:00-12:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-13T13:45:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "57",
       "nom": "Centre de vaccination de Sarrebourg",
@@ -75,21 +49,21 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-21T14:20:00.000+02:00",
+      "prochain_rdv": "2021-04-20T09:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
     {
       "departement": "57",
-      "nom": "Centre de vaccination de Metz - HIA LEGOUEST - 2",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/metz/centre-de-vaccination-n-2-hia-legouest?pid=practice-172148&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de R\u00e9milly",
+      "url": "https://partners.doctolib.fr/centre-de-sante/remilly/centre-de-vaccination-covid-19-remilly-moselle-57?pid=practice-173661&enable_cookies_consent=1",
       "location": {
-        "longitude": "6.18639",
-        "latitude": "49.1133"
+        "longitude": "6.39542",
+        "latitude": "49.008"
       },
       "metadata": {
-        "address": " Rue des Fr\u00e8res Lacretelle, 57070 Metz",
+        "address": " Route de Bechy, 57580 R\u00e9milly",
         "phone_number": "+33387345345",
         "business_hours": {
           "lundi": "9:00-17:00",
@@ -101,7 +75,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-05-06T16:55:00.000+02:00",
+      "prochain_rdv": "2021-04-26T11:50:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -126,6 +100,32 @@
           "jeudi": "7:00-19:00",
           "vendredi": "7:00-19:00",
           "samedi": "7:00-19:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Metz - HIA LEGOUEST - 2",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/metz/centre-de-vaccination-n-2-hia-legouest?pid=practice-172148&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.18639",
+        "latitude": "49.1133"
+      },
+      "metadata": {
+        "address": " Rue des Fr\u00e8res Lacretelle, 57070 Metz",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "9:00-17:00",
+          "jeudi": "9:00-17:00",
+          "vendredi": "9:00-17:00",
+          "samedi": "9:00-17:00",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -256,32 +256,6 @@
           "jeudi": "8:30-11:30/14:00-17:00",
           "vendredi": "8:30-11:30/14:00-17:00",
           "samedi": "8:30-11:30/14:00-17:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "57",
-      "nom": "Centre de vaccination de R\u00e9milly",
-      "url": "https://partners.doctolib.fr/centre-de-sante/remilly/centre-de-vaccination-covid-19-remilly-moselle-57?pid=practice-173661&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.39542",
-        "latitude": "49.008"
-      },
-      "metadata": {
-        "address": " Route de Bechy, 57580 R\u00e9milly",
-        "phone_number": "+33387345345",
-        "business_hours": {
-          "lundi": "9:00-17:00",
-          "mardi": "9:00-17:00",
-          "mercredi": "9:00-17:00",
-          "jeudi": "9:00-17:00",
-          "vendredi": "9:00-17:00",
-          "samedi": "9:00-17:00",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -523,32 +497,6 @@
     },
     {
       "departement": "57",
-      "nom": "Centre de vaccination de Metz - Clinique Claude Bernard (Entr\u00e9e B)",
-      "url": "https://partners.doctolib.fr/clinique-privee/metz/centre-de-vaccination-metz-elsan?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.21111",
-        "latitude": "49.1148"
-      },
-      "metadata": {
-        "address": "97 Rue Claude Bernard, 57070 Metz",
-        "phone_number": "+33387345345",
-        "business_hours": {
-          "lundi": "8:00-17:00",
-          "mardi": "8:00-17:00",
-          "mercredi": "8:00-17:00",
-          "jeudi": "8:00-17:00",
-          "vendredi": "8:00-17:00",
-          "samedi": "8:00-12:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "57",
       "nom": "Centre de vaccination d'Hettange-Grande - Hall omnisport",
       "url": "https://partners.doctolib.fr/centre-de-sante/hettange-grande/centre-de-vaccination-d-hettange-grande?pid=practice-177585&enable_cookies_consent=1",
       "location": {
@@ -566,6 +514,32 @@
           "vendredi": "ferm\u00e9",
           "samedi": "9:00-17:00",
           "dimanche": "9:00-17:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Metz - Clinique Claude Bernard (Entr\u00e9e B)",
+      "url": "https://partners.doctolib.fr/clinique-privee/metz/centre-de-vaccination-metz-elsan?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.21111",
+        "latitude": "49.1148"
+      },
+      "metadata": {
+        "address": "97 Rue Claude Bernard, 57070 Metz",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "8:00-17:00",
+          "mardi": "8:00-17:00",
+          "mercredi": "8:00-17:00",
+          "jeudi": "8:00-17:00",
+          "vendredi": "8:00-17:00",
+          "samedi": "8:00-12:00",
+          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
@@ -695,6 +669,32 @@
           "jeudi": "09:00-17:00",
           "vendredi": "09:00-17:00",
           "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Saint-Avold - SOS Sant\u00e9",
+      "url": "https://partners.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/st-avold/centre-de-vaccination-covid-hopital-de-saint-avold?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.72429",
+        "latitude": "49.1116"
+      },
+      "metadata": {
+        "address": " Rue Ambroise Par\u00e9, 57500 Saint-Avold",
+        "phone_number": "+33387918170 ",
+        "business_hours": {
+          "lundi": "08:00-17:00",
+          "mardi": "08:00-17:00",
+          "mercredi": "08:00-17:00",
+          "jeudi": "08:00-17:00",
+          "vendredi": "08:00-17:00",
+          "samedi": "08:00-12:00",
           "dimanche": "ferm\u00e9"
         }
       },

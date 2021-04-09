@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.126334+02:00",
+  "last_updated": "2021-04-09T15:24:49.811166+02:00",
   "centres_disponibles": [
     {
       "departement": "25",
@@ -210,32 +210,6 @@
     },
     {
       "departement": "25",
-      "nom": "Espace La Cray - Voujeaucourt",
-      "url": "https://partners.doctolib.fr/centre-de-sante/voujeaucourt/centre-de-vaccination-ville-de-voujeaucourt?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.78179",
-        "latitude": "47.4827"
-      },
-      "metadata": {
-        "address": " Rue au Fol, 25420 Voujeaucourt",
-        "phone_number": "+33363421013 ",
-        "business_hours": {
-          "lundi": "13:30-17:30",
-          "mardi": "8:30-12:30/13:30-17:30",
-          "mercredi": "8:30-12:30/13:30-17:30",
-          "jeudi": "8:30-12:30/13:30-17:30",
-          "vendredi": "8:30-12:30/13:30-17:30",
-          "samedi": "13:30-17:30",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "25",
       "nom": "Centre de vaccination RESAL",
       "url": "https://partners.doctolib.fr/centre-de-sante/besan\u00e7on/cbpps-ville-besancon?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -252,6 +226,32 @@
           "jeudi": "9H00-12h15 / 14h00-17h15",
           "vendredi": "9H00-12h15 / 14h00-17h15",
           "samedi": "9H00-12h15 / 14h00-17h15",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "25",
+      "nom": "Espace La Cray - Voujeaucourt",
+      "url": "https://partners.doctolib.fr/centre-de-sante/voujeaucourt/centre-de-vaccination-ville-de-voujeaucourt?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.78179",
+        "latitude": "47.4827"
+      },
+      "metadata": {
+        "address": " Rue au Fol, 25420 Voujeaucourt",
+        "phone_number": "+33363421013 ",
+        "business_hours": {
+          "lundi": "13:30-17:30",
+          "mardi": "8:30-12:30/13:30-17:30",
+          "mercredi": "8:30-12:30/13:30-17:30",
+          "jeudi": "8:30-12:30/13:30-17:30",
+          "vendredi": "8:30-12:30/13:30-17:30",
+          "samedi": "13:30-17:30",
           "dimanche": "ferm\u00e9"
         }
       },

@@ -1,34 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.155011+02:00",
-  "centres_disponibles": [
-    {
-      "departement": "52",
-      "nom": "CH Chaumont",
-      "url": "https://partners.doctolib.fr/hopital-public/chaumont/centre-de-vaccination-du-ch-chaumont?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "5.1386",
-        "latitude": "48.1218"
-      },
-      "metadata": {
-        "address": "16 Rue Youri Gagarine, 52000 Chaumont",
-        "phone_number": "+33627273952",
-        "business_hours": {
-          "lundi": "09:00-12:00/13:00-17:00",
-          "mardi": "09:00-12:00/13:00-17:00",
-          "mercredi": "09:00-12:00/13:00-17:00",
-          "jeudi": "09:00-12:00/13:00-17:00",
-          "vendredi": "09:00-12:00/13:00-17:00",
-          "samedi": "09:00-12:00/13:00-17:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-16T14:10:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    }
-  ],
+  "last_updated": "2021-04-09T15:24:49.840290+02:00",
+  "centres_disponibles": [],
   "centres_indisponibles": [
     {
       "departement": "52",
@@ -126,6 +99,32 @@
           "vendredi": "08:30-17:30",
           "samedi": "non pr\u00e9cis\u00e9",
           "dimanche": "non pr\u00e9cis\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "52",
+      "nom": "CH Chaumont",
+      "url": "https://partners.doctolib.fr/hopital-public/chaumont/centre-de-vaccination-du-ch-chaumont?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.1386",
+        "latitude": "48.1218"
+      },
+      "metadata": {
+        "address": "16 Rue Youri Gagarine, 52000 Chaumont",
+        "phone_number": "+33627273952",
+        "business_hours": {
+          "lundi": "09:00-12:00/13:00-17:00",
+          "mardi": "09:00-12:00/13:00-17:00",
+          "mercredi": "09:00-12:00/13:00-17:00",
+          "jeudi": "09:00-12:00/13:00-17:00",
+          "vendredi": "09:00-12:00/13:00-17:00",
+          "samedi": "09:00-12:00/13:00-17:00",
+          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,

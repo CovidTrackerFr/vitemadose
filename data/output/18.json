@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.119419+02:00",
+  "last_updated": "2021-04-09T15:24:49.804534+02:00",
   "centres_disponibles": [
     {
       "departement": "18",
@@ -30,6 +30,32 @@
     },
     {
       "departement": "18",
+      "nom": "Centre de vaccination - Palais des sports du Prado",
+      "url": "https://partners.doctolib.fr/maison-de-sante/bourges/cpts-pays-de-bourge?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.38658",
+        "latitude": "47.0825"
+      },
+      "metadata": {
+        "address": " Espace VIP - Rue du Champ de Foire, 18000 Bourges",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "9h-3h/13h30-17h30",
+          "mardi": "9h-3h/13h30-17h30",
+          "mercredi": "9h-3h/13h30-17h30",
+          "jeudi": "9h-3h/13h30-17h30",
+          "vendredi": "9h-3h/13h30-17h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-15T13:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "18",
       "nom": "CPTS Pays de Bourges - Centre de vaccination Covid-19",
       "url": "https://partners.doctolib.fr/centre-de-sante/bourges/cpts-pays-de-bourge",
       "location": {
@@ -48,7 +74,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-13T17:30:00.000+02:00",
+      "prochain_rdv": "2021-04-19T09:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -74,7 +100,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-23T15:45:00.000+02:00",
+      "prochain_rdv": "2021-04-23T15:52:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -100,7 +126,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-24T14:40:00.000+02:00",
+      "prochain_rdv": "2021-04-24T16:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -126,7 +152,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-26T09:36:00.000+02:00",
+      "prochain_rdv": "2021-04-26T10:48:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -151,7 +177,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-05-01T13:55:00.000+02:00",
+      "prochain_rdv": "2021-05-01T13:40:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -685,31 +711,6 @@
     },
     {
       "departement": "18",
-      "nom": "MSP relai Baugy",
-      "url": "https://partners.doctolib.fr/centre-de-sante/avord/centre-vaccination-avord-baugy?pid=practice-169562&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.72824",
-        "latitude": "47.081"
-      },
-      "metadata": {
-        "address": "3 Rue du Chancelier, 18800 Baugy",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "18",
       "nom": "CV \u00e9ph\u00e9m\u00e8re - Ligni\u00e8res",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/lignieres/centre-covid-19-mairie-de-lignieres?pid=practice-170325&enable_cookies_consent=1",
       "location": {
@@ -755,6 +756,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "18",
+      "nom": "MSP relai Baugy",
+      "url": "https://partners.doctolib.fr/centre-de-sante/avord/centre-vaccination-avord-baugy?pid=practice-169562&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.72824",
+        "latitude": "47.081"
+      },
+      "metadata": {
+        "address": "3 Rue du Chancelier, 18800 Baugy",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -810,31 +836,6 @@
     },
     {
       "departement": "18",
-      "nom": "CV \u00e9ph\u00e9m\u00e8re Culan",
-      "url": "",
-      "location": {
-        "longitude": "2.35016",
-        "latitude": "46.5468"
-      },
-      "metadata": {
-        "address": " , 18270 Culan",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "18",
       "nom": "Centre de vaccination - MSP relai Levet",
       "url": "https://partners.doctolib.fr/centre-de-sante/levet/centre-de-vaccination-covid-19-levet?pid=practice-173070&enable_cookies_consent=1",
       "location": {
@@ -855,6 +856,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "18",
+      "nom": "CV \u00e9ph\u00e9m\u00e8re Culan",
+      "url": "",
+      "location": {
+        "longitude": "2.35016",
+        "latitude": "46.5468"
+      },
+      "metadata": {
+        "address": " , 18270 Culan",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -960,14 +986,14 @@
     },
     {
       "departement": "18",
-      "nom": "CV \u00e9ph\u00e9m\u00e8re - Les Aix d'Angillon",
-      "url": "https://partners.doctolib.fr/centre-de-sante/les-aix-d-angillon/centre-vaccination-mairie-les-aix-d-angillon-les-aix-d-angillon?pid=practice-172324&enable_cookies_consent=1",
+      "nom": "CV \u00e9ph\u00e9m\u00e8re - Sancergues",
+      "url": "https://partners.doctolib.fr/maison-de-sante/sancergues/centre-de-vaccination-covid-19-ville-de-sancergues?pid=practice-171982&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.57105",
-        "latitude": "47.1979"
+        "longitude": "2.91719",
+        "latitude": "47.156"
       },
       "metadata": {
-        "address": "1 Rue de la Republique, 18220 Les Aix-d'Angillon",
+        "address": "8 Rue Hubert Gouvernel, 18140 Sancergues",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -985,14 +1011,14 @@
     },
     {
       "departement": "18",
-      "nom": "CV \u00e9ph\u00e9m\u00e8re - Sancergues",
-      "url": "https://partners.doctolib.fr/maison-de-sante/sancergues/centre-de-vaccination-covid-19-ville-de-sancergues?pid=practice-171982&enable_cookies_consent=1",
+      "nom": "CV \u00e9ph\u00e9m\u00e8re - Les Aix d'Angillon",
+      "url": "https://partners.doctolib.fr/centre-de-sante/les-aix-d-angillon/centre-vaccination-mairie-les-aix-d-angillon-les-aix-d-angillon?pid=practice-172324&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.91719",
-        "latitude": "47.156"
+        "longitude": "2.57105",
+        "latitude": "47.1979"
       },
       "metadata": {
-        "address": "8 Rue Hubert Gouvernel, 18140 Sancergues",
+        "address": "1 Rue de la Republique, 18220 Les Aix-d'Angillon",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -1036,21 +1062,20 @@
     },
     {
       "departement": "18",
-      "nom": "Centre de vaccination - Palais des sports du Prado",
-      "url": "https://partners.doctolib.fr/maison-de-sante/bourges/cpts-pays-de-bourge?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Centre de vaccination \u00e9ph\u00e9m\u00e8re",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nerondes/centre-de-vaccination-maison-de-sante-de-nerondes?pid=practice-181277&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.38658",
-        "latitude": "47.0825"
+        "longitude": "2.81876",
+        "latitude": "46.9979"
       },
       "metadata": {
-        "address": " Espace VIP - Rue du Champ de Foire, 18000 Bourges",
-        "phone_number": "+33805021400",
+        "address": "1 Place de la Mairie, 18350 N\u00e9rondes",
         "business_hours": {
-          "lundi": "9h-3h/13h30-17h30",
-          "mardi": "9h-3h/13h30-17h30",
-          "mercredi": "9h-3h/13h30-17h30",
-          "jeudi": "9h-3h/13h30-17h30",
-          "vendredi": "9h-3h/13h30-17h30",
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -1070,31 +1095,6 @@
       },
       "metadata": {
         "address": "5 Rue Bazannerie, 18370 Ch\u00e2teaumeillant",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "18",
-      "nom": "Centre de vaccination \u00e9ph\u00e9m\u00e8re",
-      "url": "https://partners.doctolib.fr/centre-de-sante/nerondes/centre-de-vaccination-maison-de-sante-de-nerondes?pid=practice-181277&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.81876",
-        "latitude": "46.9979"
-      },
-      "metadata": {
-        "address": "1 Place de la Mairie, 18350 N\u00e9rondes",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",

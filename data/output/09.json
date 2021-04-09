@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.110373+02:00",
+  "last_updated": "2021-04-09T15:24:49.795653+02:00",
   "centres_disponibles": [
     {
       "departement": "09",
@@ -84,32 +84,6 @@
     },
     {
       "departement": "09",
-      "nom": "Centre Hospitalier Ari\u00e8ge Couserans (Pfizer / Moderna / AstraZeneca)",
-      "url": "https://partners.doctolib.fr/hopital-public/saint-lizier/centre-de-vaccination-covid-centre-hospitalier-ariege-couserans-chac?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "1.13168",
-        "latitude": "42.9997"
-      },
-      "metadata": {
-        "address": "228 Roses, 09190 Saint-Lizier",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "9:00-12:00/14:00-17:00",
-          "mardi": "9:00-12:00/14:00-17:00",
-          "mercredi": "9:00-12:00/14:00-17:00",
-          "jeudi": "9:00-12:00/14:00-17:00",
-          "vendredi": "9:00-12:00/14:00-17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "09",
       "nom": "CHIVA (Pfizer / Astra Zeneca)",
       "url": "https://partners.doctolib.fr/hopital-public/saint-jean-de-verges/centre-de-vaccination-covid-centre-hospitalier-intercommunal-des-vallees-de-l-ariege-chiva?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -127,6 +101,32 @@
           "vendredi": "9:00-13:00/14:00-18:00",
           "samedi": "9:00-13:00/14:00-18:00",
           "dimanche": "9:00-13:00/14:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "09",
+      "nom": "Centre Hospitalier Ari\u00e8ge Couserans (Pfizer / Moderna / AstraZeneca)",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-lizier/centre-de-vaccination-covid-centre-hospitalier-ariege-couserans-chac?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.13168",
+        "latitude": "42.9997"
+      },
+      "metadata": {
+        "address": "228 Roses, 09190 Saint-Lizier",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9:00-12:00/14:00-17:00",
+          "mardi": "9:00-12:00/14:00-17:00",
+          "mercredi": "9:00-12:00/14:00-17:00",
+          "jeudi": "9:00-12:00/14:00-17:00",
+          "vendredi": "9:00-12:00/14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,

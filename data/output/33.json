@@ -1,33 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.136085+02:00",
+  "last_updated": "2021-04-09T15:24:49.821135+02:00",
   "centres_disponibles": [
-    {
-      "departement": "33",
-      "nom": "Mairie d'Arcachon",
-      "url": "https://partners.doctolib.fr/centre-de-sante/arcachon/centre-municipal-de-vaccination-anti-covid-19-de-la-ville-d-arcachon?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-1.19475",
-        "latitude": "44.651"
-      },
-      "metadata": {
-        "address": "10 Avenue du Parc, 33120 Arcachon",
-        "phone_number": "+33557529880",
-        "business_hours": {
-          "lundi": "09:00-17:00",
-          "mardi": "09:00-17:00",
-          "mercredi": "09:00-17:00",
-          "jeudi": "09:00-17:00",
-          "vendredi": "09:00-17:00",
-          "samedi": "09:00-12:30",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-09T18:05:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "33",
       "nom": "Dr Olivier Donnevide",
@@ -76,6 +50,32 @@
       },
       "prochain_rdv": "2021-04-12T17:50:00.000000+0200",
       "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "33",
+      "nom": "Mairie d'Arcachon",
+      "url": "https://partners.doctolib.fr/centre-de-sante/arcachon/centre-municipal-de-vaccination-anti-covid-19-de-la-ville-d-arcachon?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.19475",
+        "latitude": "44.651"
+      },
+      "metadata": {
+        "address": "10 Avenue du Parc, 33120 Arcachon",
+        "phone_number": "+33557529880",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-12:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-13T13:35:00.000+02:00",
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -150,7 +150,7 @@
           "dimanche": "08:00-19:30"
         }
       },
-      "prochain_rdv": "2021-04-15T18:40:00.000+02:00",
+      "prochain_rdv": "2021-04-15T19:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -227,7 +227,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-21T15:50:00.000+02:00",
+      "prochain_rdv": "2021-05-11T16:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -312,32 +312,6 @@
     },
     {
       "departement": "33",
-      "nom": "CHU BORDEAUX - SITE SAINT ANDRE",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/bordeaux-33000/chu-de-bordeaux/g-h-saint-andre-centre-de-vaccination-sante-voyages?cabinet=16878&specialty=496",
-      "location": {
-        "longitude": "-0.578208",
-        "latitude": "44.8346"
-      },
-      "metadata": {
-        "address": "1 Rue Jean Burguet, 33000 Bordeaux",
-        "phone_number": "+33557820005",
-        "business_hours": {
-          "lundi": "08:30-19:30",
-          "mardi": "08:30-19:30",
-          "mercredi": "08:30-19:30",
-          "jeudi": "08:30-19:30",
-          "vendredi": "08:30-19:30",
-          "samedi": "08:30-19:30",
-          "dimanche": "08:30-19:30"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "33",
       "nom": "CHU BORDEAUX - SITE GH SUD",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/bordeaux-33000/chu-de-bordeaux/g-h-sud-centre-de-vaccination-usn?cabinet=16877&specialty=496",
       "location": {
@@ -364,26 +338,27 @@
     },
     {
       "departement": "33",
-      "nom": "Centre de vaccination Lormont Carriet",
-      "url": "",
+      "nom": "CHU BORDEAUX - SITE SAINT ANDRE",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/bordeaux-33000/chu-de-bordeaux/g-h-saint-andre-centre-de-vaccination-sante-voyages?cabinet=16878&specialty=496",
       "location": {
-        "longitude": "-0.525227",
-        "latitude": "44.8819"
+        "longitude": "-0.578208",
+        "latitude": "44.8346"
       },
       "metadata": {
-        "address": "3 Place Fran\u00e7ois Magendie, 33310 Lormont",
+        "address": "1 Rue Jean Burguet, 33000 Bordeaux",
+        "phone_number": "+33557820005",
         "business_hours": {
-          "lundi": "08:00-12:00/14:00-18:00",
-          "mardi": "08:00-12:00/14:00-18:00",
-          "mercredi": "08:00-12:00/14:00-18:00",
-          "jeudi": "08:00-12:00/14:00-18:00",
-          "vendredi": "08:00-12:00/14:00-18:00",
-          "samedi": "08:00-12:00",
-          "dimanche": "ferm\u00e9"
+          "lundi": "08:30-19:30",
+          "mardi": "08:30-19:30",
+          "mercredi": "08:30-19:30",
+          "jeudi": "08:30-19:30",
+          "vendredi": "08:30-19:30",
+          "samedi": "08:30-19:30",
+          "dimanche": "08:30-19:30"
         }
       },
       "prochain_rdv": null,
-      "plateforme": "Autre",
+      "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -410,6 +385,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination Lormont Carriet",
+      "url": "",
+      "location": {
+        "longitude": "-0.525227",
+        "latitude": "44.8819"
+      },
+      "metadata": {
+        "address": "3 Place Fran\u00e7ois Magendie, 33310 Lormont",
+        "business_hours": {
+          "lundi": "08:00-12:00/14:00-18:00",
+          "mardi": "08:00-12:00/14:00-18:00",
+          "mercredi": "08:00-12:00/14:00-18:00",
+          "jeudi": "08:00-12:00/14:00-18:00",
+          "vendredi": "08:00-12:00/14:00-18:00",
+          "samedi": "08:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -821,6 +821,32 @@
     },
     {
       "departement": "33",
+      "nom": "NOUVELLE CLINIQUE DU TONDU",
+      "url": "https://partners.doctolib.fr/centre-de-sante/floirac/centre-de-vaccination-covid-19-nouvelle-clinique-bordeaux-tondu?pid=practice-164998?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-0.529733",
+        "latitude": "44.8255"
+      },
+      "metadata": {
+        "address": "46 Avenue Jean Alfonsea, 33270 Floirac",
+        "phone_number": "+33826963963",
+        "business_hours": {
+          "lundi": "10:00-20:00",
+          "mardi": "10:00-20:00",
+          "mercredi": "10:00-20:00",
+          "jeudi": "10:00-20:00",
+          "vendredi": "10:00-20:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "33",
       "nom": "CENTRE DE SANTE MUTUALISTE GALLIENI",
       "url": "https://partners.doctolib.fr/centre-de-sante/bordeaux/centre-de-vaccination-covid-19-gallieni?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -873,32 +899,6 @@
     },
     {
       "departement": "33",
-      "nom": "NOUVELLE CLINIQUE DU TONDU",
-      "url": "https://partners.doctolib.fr/centre-de-sante/floirac/centre-de-vaccination-covid-19-nouvelle-clinique-bordeaux-tondu?pid=practice-164998?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-0.529733",
-        "latitude": "44.8255"
-      },
-      "metadata": {
-        "address": "46 Avenue Jean Alfonsea, 33270 Floirac",
-        "phone_number": "+33826963963",
-        "business_hours": {
-          "lundi": "10:00-20:00",
-          "mardi": "10:00-20:00",
-          "mercredi": "10:00-20:00",
-          "jeudi": "10:00-20:00",
-          "vendredi": "10:00-20:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "33",
       "nom": "Maison de sant\u00e9 de Blaye",
       "url": "https://partners.doctolib.fr/maison-de-sante/blaye/centre-de-vaccination-covid-msp-blaye?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -925,24 +925,6 @@
     },
     {
       "departement": "33",
-      "nom": "Pharmacie Des Dionysiens",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-dionysiens-saint-denis-de-pile",
-      "location": {
-        "longitude": -0.2011825,
-        "latitude": 44.9921997
-      },
-      "metadata": {
-        "address": "35 Avenue Francois Mitterrand, 33910 Saint-Denis-de-Pile",
-        "phone_number": "+33557550545",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "33",
       "nom": "Pharmacie De La Jalle",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-jalle-saint-medard-en-jalles",
       "location": {
@@ -955,25 +937,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "33",
-      "nom": "Lamothe-Landerron",
-      "url": "https://app.ordoclic.fr/app/pharmacie/lamothe-landerron-lamothe-landerron",
-      "location": {
-        "longitude": 0.0418304,
-        "latitude": 44.5651157
-      },
-      "metadata": {
-        "address": "3 route de Bordeaux lieu dit Les Granges Sud, 33190 Lamothe Landerron",
-        "phone_number": "+33556617126",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -991,7 +955,60 @@
         "business_hours": null
       },
       "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "33",
+      "nom": "Lamothe-Landerron",
+      "url": "https://app.ordoclic.fr/app/pharmacie/lamothe-landerron-lamothe-landerron",
+      "location": {
+        "longitude": 0.0418304,
+        "latitude": 44.5651157
+      },
+      "metadata": {
+        "address": "3 route de Bordeaux lieu dit Les Granges Sud, 33190 Lamothe Landerron",
+        "phone_number": "+33556617126",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "33",
+      "nom": "Pharmacie Des Dionysiens",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-dionysiens-saint-denis-de-pile",
+      "location": {
+        "longitude": -0.2011825,
+        "latitude": 44.9921997
+      },
+      "metadata": {
+        "address": "35 Avenue Francois Mitterrand, 33910 Saint-Denis-de-Pile",
+        "phone_number": "+33557550545",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
       "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "33",
+      "nom": "Pharmacie Delahaye Eurl",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-delahaye-eurl-saint-aubin-de-medoc",
+      "location": {
+        "longitude": -0.7228249999999999,
+        "latitude": 44.9115791
+      },
+      "metadata": {
+        "address": "15 Route de Germignan, 33160 Saint-Aubin-de-M\u00e9doc",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -1101,24 +1118,6 @@
     },
     {
       "departement": "33",
-      "nom": "Snc Dulin Guimard",
-      "url": "https://app.ordoclic.fr/app/pharmacie/snc-dulin-guimard-branne",
-      "location": {
-        "longitude": -0.1878246,
-        "latitude": 44.8292853
-      },
-      "metadata": {
-        "address": "83 rue emmanuel Roy, 33420 branne",
-        "phone_number": "+33557845132",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "33",
       "nom": "Centre de vaccination COVID -  Salle Ermitage Compostelle - Le Bouscat",
       "url": "https://partners.doctolib.fr/centre-de-sante/le-bouscat/centre-de-vaccination-covid-ermitage?highlight%5bspeciality_ids%5d%5b%5d=5494&pid=practice-164677",
       "location": {
@@ -1145,14 +1144,15 @@
     },
     {
       "departement": "33",
-      "nom": "Pharmacie Delahaye Eurl",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-delahaye-eurl-saint-aubin-de-medoc",
+      "nom": "Snc Dulin Guimard",
+      "url": "https://app.ordoclic.fr/app/pharmacie/snc-dulin-guimard-branne",
       "location": {
-        "longitude": -0.7228249999999999,
-        "latitude": 44.9115791
+        "longitude": -0.1878246,
+        "latitude": 44.8292853
       },
       "metadata": {
-        "address": "15 Route de Germignan, 33160 Saint-Aubin-de-M\u00e9doc",
+        "address": "83 rue emmanuel Roy, 33420 branne",
+        "phone_number": "+33557845132",
         "business_hours": null
       },
       "prochain_rdv": null,

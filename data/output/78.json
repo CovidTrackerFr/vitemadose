@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.188071+02:00",
+  "last_updated": "2021-04-09T15:24:49.874221+02:00",
   "centres_disponibles": [
     {
       "departement": "78",
@@ -23,7 +23,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-10T09:10:00.000+02:00",
+      "prochain_rdv": "2021-04-10T09:05:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -367,31 +367,6 @@
     },
     {
       "departement": "78",
-      "nom": "EPM - US de Porcheville / Etablissement sp\u00e9cialis\u00e9 pour mineurs de Porcheville",
-      "url": "",
-      "location": {
-        "longitude": "1.76737",
-        "latitude": "48.9888"
-      },
-      "metadata": {
-        "address": " Chemin Rouen Paris, 78440 Porcheville",
-        "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "78",
       "nom": "MC - USMP de Poissy / Maison Centrale de Poissy",
       "url": "",
       "location": {
@@ -417,7 +392,32 @@
     },
     {
       "departement": "78",
-      "nom": "MA - US MA de Bois d'Arcy / Maison d'Arr\u00eat de Versailles",
+      "nom": "EPM - US de Porcheville / Etablissement sp\u00e9cialis\u00e9 pour mineurs de Porcheville",
+      "url": "",
+      "location": {
+        "longitude": "1.76737",
+        "latitude": "48.9888"
+      },
+      "metadata": {
+        "address": " Chemin Rouen Paris, 78440 Porcheville",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "78",
+      "nom": "MA - US MA de Versailles / Maison d'Arr\u00eat de Versailles",
       "url": "",
       "location": {
         "longitude": "2.13489",
@@ -442,7 +442,7 @@
     },
     {
       "departement": "78",
-      "nom": "MA - US MA de Versailles / Maison d'Arr\u00eat de Versailles",
+      "nom": "MA - US MA de Bois d'Arcy / Maison d'Arr\u00eat de Versailles",
       "url": "",
       "location": {
         "longitude": "2.13489",
@@ -737,7 +737,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -821,6 +821,31 @@
     },
     {
       "departement": "78",
+      "nom": "Dr Audrey ATLAN-COTTIN",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/le-chesnay/audrey-atlan-cottin",
+      "location": {
+        "longitude": 2.12536019999993,
+        "latitude": 48.8264374
+      },
+      "metadata": {
+        "address": "13 Rue Pottier, 78150 Le Chesnay",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0
+    },
+    {
+      "departement": "78",
       "nom": "Pharmacie de Chennevi\u00e8res",
       "url": "https://partners.doctolib.fr/pharmacie/conflans-sainte-honorine/pharmacie-de-chennevieres",
       "location": {
@@ -843,31 +868,6 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "78",
-      "nom": "Dr Audrey ATLAN-COTTIN",
-      "url": "https://partners.doctolib.fr/medecin-generaliste/le-chesnay/audrey-atlan-cottin",
-      "location": {
-        "longitude": 2.12536019999993,
-        "latitude": 48.8264374
-      },
-      "metadata": {
-        "address": "13 Rue Pottier, 78150 Le Chesnay",
-        "business_hours": {
-          "lundi": "08:00-20:00",
-          "mardi": "08:00-20:00",
-          "mercredi": "08:00-20:00",
-          "jeudi": "08:00-20:00",
-          "vendredi": "08:00-20:00",
-          "samedi": "08:00-12:00",
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "general-practitioner",
       "appointment_count": 0
     },
     {

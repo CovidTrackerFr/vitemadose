@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.197701+02:00",
+  "last_updated": "2021-04-09T15:24:49.884685+02:00",
   "centres_disponibles": [
     {
       "departement": "88",
@@ -83,32 +83,6 @@
     },
     {
       "departement": "88",
-      "nom": "Centre de vaccination d'Epinal (Palais des congr\u00e8s)",
-      "url": "https://partners.doctolib.fr/hopital-public/epinal/ch-emile-durkheim?pid=practice-164046&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.47144",
-        "latitude": "48.1861"
-      },
-      "metadata": {
-        "address": "7 Avenue de Saint Die, 88000 \u00c9pinal",
-        "phone_number": "+33329666220",
-        "business_hours": {
-          "lundi": "14:00-18:30",
-          "mardi": "14:00-18:30",
-          "mercredi": "14:00-18:30",
-          "jeudi": "14:00-18:30",
-          "vendredi": "14:00-18:30",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "88",
       "nom": "Centre de vaccination de Gerardmer",
       "url": "https://partners.doctolib.fr/hopital-public/gerardmer/ch-de-gerardmer?pid=practice-163880&enable_cookies_consent=1",
       "location": {
@@ -124,6 +98,32 @@
           "mercredi": "9:00-12:00/13:30-17:30",
           "jeudi": "9:00-12:00/13:30-17:30",
           "vendredi": "9:00-12:00/13:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "88",
+      "nom": "Centre de vaccination d'Epinal (Palais des congr\u00e8s)",
+      "url": "https://partners.doctolib.fr/hopital-public/epinal/ch-emile-durkheim?pid=practice-164046&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.47144",
+        "latitude": "48.1861"
+      },
+      "metadata": {
+        "address": "7 Avenue de Saint Die, 88000 \u00c9pinal",
+        "phone_number": "+33329666220",
+        "business_hours": {
+          "lundi": "14:00-18:30",
+          "mardi": "14:00-18:30",
+          "mercredi": "14:00-18:30",
+          "jeudi": "14:00-18:30",
+          "vendredi": "14:00-18:30",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }

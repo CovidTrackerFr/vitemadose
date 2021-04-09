@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.156229+02:00",
+  "last_updated": "2021-04-09T15:24:49.841581+02:00",
   "centres_disponibles": [
     {
       "departement": "54",
@@ -23,7 +23,7 @@
           "dimanche": "non pr\u00e9cis\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-12T10:10:00.000+02:00",
+      "prochain_rdv": "2021-04-12T15:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -75,7 +75,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-14T17:30:00.000+02:00",
+      "prochain_rdv": "2021-04-14T17:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -101,7 +101,7 @@
           "dimanche": "non renseign\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-15T13:38:00.000+02:00",
+      "prochain_rdv": "2021-04-15T13:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -127,7 +127,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-15T15:28:00.000+02:00",
+      "prochain_rdv": "2021-04-15T16:38:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -153,39 +153,13 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-17T12:02:00.000+02:00",
+      "prochain_rdv": "2021-04-17T09:55:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     }
   ],
   "centres_indisponibles": [
-    {
-      "departement": "54",
-      "nom": "Nancy - Tour Marcel Brot",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?speciality_id=5494&pid=practice-162727&enable_cookies_consent=1",
-      "location": {
-        "longitude": "6.20247",
-        "latitude": "48.6779"
-      },
-      "metadata": {
-        "address": "1 Rue Joseph Cugnot, 54000 Nancy",
-        "phone_number": "+33383851300",
-        "business_hours": {
-          "lundi": "9:00-17:00",
-          "mardi": "9:00-17:00",
-          "mercredi": "9:00-17:00",
-          "jeudi": "9:00-17:00",
-          "vendredi": "9:00-17:00",
-          "samedi": "non pr\u00e9cis\u00e9",
-          "dimanche": "non pr\u00e9cis\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "54",
       "nom": "Laxou - CPN",
@@ -205,6 +179,32 @@
           "vendredi": "9:00-12:00/13:00-17:00",
           "samedi": "9:00-12:00/13:00-17:00",
           "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "54",
+      "nom": "Nancy - Tour Marcel Brot",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?speciality_id=5494&pid=practice-162727&enable_cookies_consent=1",
+      "location": {
+        "longitude": "6.20247",
+        "latitude": "48.6779"
+      },
+      "metadata": {
+        "address": "1 Rue Joseph Cugnot, 54000 Nancy",
+        "phone_number": "+33383851300",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "9:00-17:00",
+          "jeudi": "9:00-17:00",
+          "vendredi": "9:00-17:00",
+          "samedi": "non pr\u00e9cis\u00e9",
+          "dimanche": "non pr\u00e9cis\u00e9"
         }
       },
       "prochain_rdv": null,
@@ -419,14 +419,14 @@
     },
     {
       "departement": "54",
-      "nom": "Centre de vaccination de Jarny - Salle Jean Lur\u00e7at",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-175228&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de Dombasle - Salle polyvalente",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-173392&enable_cookies_consent=1",
       "location": {
-        "longitude": "5.88272",
-        "latitude": "49.1581"
+        "longitude": "6.35771",
+        "latitude": "48.6186"
       },
       "metadata": {
-        "address": "7 Rue Cl\u00e9ment Humbert, 54800 Jarny",
+        "address": " Avenue du L\u00e9omont, 54110 Dombasle-sur-Meurthe",
         "phone_number": "+33383851300",
         "business_hours": {
           "lundi": "En attente de pr\u00e9cisions",
@@ -445,14 +445,14 @@
     },
     {
       "departement": "54",
-      "nom": "Centre de vaccination de Dombasle - Salle polyvalente",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-173392&enable_cookies_consent=1",
+      "nom": "Centre de vaccination de Jarny - Salle Jean Lur\u00e7at",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-175228&enable_cookies_consent=1",
       "location": {
-        "longitude": "6.35771",
-        "latitude": "48.6186"
+        "longitude": "5.88272",
+        "latitude": "49.1581"
       },
       "metadata": {
-        "address": " Avenue du L\u00e9omont, 54110 Dombasle-sur-Meurthe",
+        "address": "7 Rue Cl\u00e9ment Humbert, 54800 Jarny",
         "phone_number": "+33383851300",
         "business_hours": {
           "lundi": "En attente de pr\u00e9cisions",
@@ -679,14 +679,14 @@
     },
     {
       "departement": "54",
-      "nom": "CHI de Pompey",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-163828&enable_cookies_consent=1",
+      "nom": "CH de Pont-\u00e0-Mousson",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-163827&enable_cookies_consent=1",
       "location": {
-        "longitude": "6.1201",
-        "latitude": "48.7648"
+        "longitude": "6.05115",
+        "latitude": "48.9058"
       },
       "metadata": {
-        "address": "3 Rue de l'Avant-garde, 54340 Pompey",
+        "address": "1 Place Colombe, 54700 Pont-\u00e0-Mousson",
         "phone_number": "+33383851300",
         "business_hours": {
           "lundi": "non renseign\u00e9",
@@ -705,14 +705,14 @@
     },
     {
       "departement": "54",
-      "nom": "CH de Pont-\u00e0-Mousson",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-163827&enable_cookies_consent=1",
+      "nom": "CHI de Pompey",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-163828&enable_cookies_consent=1",
       "location": {
-        "longitude": "6.05115",
-        "latitude": "48.9058"
+        "longitude": "6.1201",
+        "latitude": "48.7648"
       },
       "metadata": {
-        "address": "1 Place Colombe, 54700 Pont-\u00e0-Mousson",
+        "address": "3 Rue de l'Avant-garde, 54340 Pompey",
         "phone_number": "+33383851300",
         "business_hours": {
           "lundi": "non renseign\u00e9",

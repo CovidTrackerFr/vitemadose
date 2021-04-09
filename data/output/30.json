@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.132465+02:00",
+  "last_updated": "2021-04-09T15:24:49.817545+02:00",
   "centres_disponibles": [
     {
       "departement": "30",
@@ -74,32 +74,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-18T09:55:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "30",
-      "nom": "Centre Al\u00e8s Fil",
-      "url": "https://partners.doctolib.fr/centre-de-sante/ales/centre-de-vaccination-covid-19-ales?pid=practice-165321&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.08864",
-        "latitude": "44.1189"
-      },
-      "metadata": {
-        "address": "177 Chemin des Sports, 30100 Al\u00e8s",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "13:30 - 17:00",
-          "jeudi": "13:30 - 17:00",
-          "vendredi": "13:30 - 17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-20T15:40:00.000+02:00",
+      "prochain_rdv": "2021-04-18T18:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -132,6 +107,31 @@
     },
     {
       "departement": "30",
+      "nom": "Centre Al\u00e8s Fil",
+      "url": "https://partners.doctolib.fr/centre-de-sante/ales/centre-de-vaccination-covid-19-ales?pid=practice-165321&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.08864",
+        "latitude": "44.1189"
+      },
+      "metadata": {
+        "address": "177 Chemin des Sports, 30100 Al\u00e8s",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "13:30 - 17:00",
+          "jeudi": "13:30 - 17:00",
+          "vendredi": "13:30 - 17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-20T16:15:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "30",
       "nom": "Centre de vaccination Espace D\u00e9sir\u00e9 Rousset",
       "url": "https://www.doctolib.fr/centre-de-sante/quissac/centre-de-vaccination-covid-19-ville-de-quissac?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
@@ -151,7 +151,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-20T16:10:00.000+02:00",
+      "prochain_rdv": "2021-04-20T16:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -209,32 +209,6 @@
     },
     {
       "departement": "30",
-      "nom": "Centre de vaccination COVID BELLEGARDE - TERRE D'ARGENCE",
-      "url": "https://partners.doctolib.fr/centre-de-sante/bellegarde/centre-de-vaccination-de-bellegarde-les-cigales?pid=practice-177312&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.51584",
-        "latitude": "43.7551"
-      },
-      "metadata": {
-        "address": "1 Rue du Cadereau - Salle les Cigales, 30127 Bellegarde",
-        "phone_number": "0800541919",
-        "business_hours": {
-          "lundi": "14:00 - 17:00",
-          "mardi": "14:00 - 17:00",
-          "mercredi": "14:00 - 17:00",
-          "jeudi": "14:00 - 17:00",
-          "vendredi": "14:00 - 17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-29T14:50:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "30",
       "nom": "Centre de vaccination St Ambroix de C\u00e8ze C\u00e9vennes",
       "url": "https://partners.doctolib.fr/centre-de-sante/saint-ambroix/centre-de-vaccination-de-saint-ambroix-de-seze-sevennes?pid=practice-176832&enable_cookies_consent=1",
       "location": {
@@ -281,6 +255,32 @@
         }
       },
       "prochain_rdv": "2021-05-07T16:18:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "30",
+      "nom": "Centre de vaccination COVID BELLEGARDE - TERRE D'ARGENCE",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bellegarde/centre-de-vaccination-de-bellegarde-les-cigales?pid=practice-177312&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.51584",
+        "latitude": "43.7551"
+      },
+      "metadata": {
+        "address": "1 Rue du Cadereau - Salle les Cigales, 30127 Bellegarde",
+        "phone_number": "0800541919",
+        "business_hours": {
+          "lundi": "14:00 - 17:00",
+          "mardi": "14:00 - 17:00",
+          "mercredi": "14:00 - 17:00",
+          "jeudi": "14:00 - 17:00",
+          "vendredi": "14:00 - 17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-11T15:40:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -442,32 +442,6 @@
     },
     {
       "departement": "30",
-      "nom": "Centre de vaccination Grand Public",
-      "url": "https://partners.doctolib.fr/centre-de-sante/bagnols-sur-ceze/centre-de-vaccination-covid-19-grand-public-bagnols-sur-ceze?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.62071",
-        "latitude": "44.159"
-      },
-      "metadata": {
-        "address": " Centre culturel L\u00e9o Lagrange - salle D - Place Flora Tristan, 30200 Bagnols-sur-C\u00e8ze",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "08:00-16:00",
-          "mardi": "08:00-16:00",
-          "mercredi": "08:00-16:00",
-          "jeudi": "08:00-16:00",
-          "vendredi": "08:00-16:00",
-          "samedi": "",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "30",
       "nom": "Centre de vaccination Vauvert - Petite Camargue",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/vauvert/centre-de-vaccination-de-vauvert-petite-camargue?pid=practice-166678&enable_cookies_consent=1",
       "location": {
@@ -484,6 +458,32 @@
           "jeudi": "ferm\u00e9",
           "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "30",
+      "nom": "Centre de vaccination Grand Public",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bagnols-sur-ceze/centre-de-vaccination-covid-19-grand-public-bagnols-sur-ceze?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.62071",
+        "latitude": "44.159"
+      },
+      "metadata": {
+        "address": " Centre culturel L\u00e9o Lagrange - salle D - Place Flora Tristan, 30200 Bagnols-sur-C\u00e8ze",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "08:00-16:00",
+          "mardi": "08:00-16:00",
+          "mercredi": "08:00-16:00",
+          "jeudi": "08:00-16:00",
+          "vendredi": "08:00-16:00",
+          "samedi": "",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -597,6 +597,24 @@
     },
     {
       "departement": "30",
+      "nom": "Pharmacie Des Aires",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-aires-sommieres",
+      "location": {
+        "longitude": 4.0875267,
+        "latitude": 43.7825887
+      },
+      "metadata": {
+        "address": "845 route de Salinelles, 30250 sommieres",
+        "phone_number": "+33466777065",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "30",
       "nom": "Grande Pharmacie Du Talabot",
       "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-du-talabot-nimes",
       "location": {
@@ -627,25 +645,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "30",
-      "nom": "Pharmacie Des Aires",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-aires-sommieres",
-      "location": {
-        "longitude": 4.0875267,
-        "latitude": 43.7825887
-      },
-      "metadata": {
-        "address": "845 route de Salinelles, 30250 sommieres",
-        "phone_number": "+33466777065",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },

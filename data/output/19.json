@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.121056+02:00",
+  "last_updated": "2021-04-09T15:24:49.806296+02:00",
   "centres_disponibles": [
     {
       "departement": "19",
@@ -23,7 +23,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-11T15:25:00.000+02:00",
+      "prochain_rdv": "2021-04-11T15:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -58,32 +58,6 @@
     },
     {
       "departement": "19",
-      "nom": "Centre de vaccination - Les 3 Provinces",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/brive/centre-de-vaccination-covid-de-brive?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "1.54388",
-        "latitude": "45.1655"
-      },
-      "metadata": {
-        "address": "4 Avenue Jacques et Bernadette Chirac, 19100 Brive-la-Gaillarde",
-        "phone_number": "+33800190019",
-        "business_hours": {
-          "lundi": "10:00-16:00",
-          "mardi": "10:00-16:00",
-          "mercredi": "10:00-16:00",
-          "jeudi": "10:00-16:00",
-          "vendredi": "10: 00-16: 00",
-          "samedi": "10:00-16:00",
-          "dimanche": "10:00-16:00"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "19",
       "nom": "Centre de vaccination - Beynat",
       "url": "https://partners.doctolib.fr/centre-de-sante/beynat/centre-de-vaccination-covid-19-beynat?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -101,6 +75,32 @@
           "vendredi": "14:00-16:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "19",
+      "nom": "Centre de vaccination - Les 3 Provinces",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/brive/centre-de-vaccination-covid-de-brive?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.54388",
+        "latitude": "45.1655"
+      },
+      "metadata": {
+        "address": "4 Avenue Jacques et Bernadette Chirac, 19100 Brive-la-Gaillarde",
+        "phone_number": "+33800190019",
+        "business_hours": {
+          "lundi": "10:00-16:00",
+          "mardi": "10:00-16:00",
+          "mercredi": "10:00-16:00",
+          "jeudi": "10:00-16:00",
+          "vendredi": "10: 00-16: 00",
+          "samedi": "10:00-16:00",
+          "dimanche": "10:00-16:00"
         }
       },
       "prochain_rdv": null,
@@ -136,32 +136,6 @@
     },
     {
       "departement": "19",
-      "nom": "Centre de vaccinations d'Argentat Sur Dordogne",
-      "url": "https://partners.doctolib.fr/centre-de-sante/argentat-sur-dordogne/centre-de-vaccination-covid-19-argentat-sur-dordogne?pid=practice-173270&enable_cookies_consent=1",
-      "location": {
-        "longitude": "1.9351",
-        "latitude": "45.0941"
-      },
-      "metadata": {
-        "address": "6 Place Joseph Faure, 19400 Argentat-sur-Dordogne",
-        "phone_number": "+33800 19 00 19",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "13:00-17:00",
-          "jeudi": "13:00-17:00",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "19",
       "nom": "Centre de vaccinations d'Uzerche",
       "url": "https://partners.doctolib.fr/centre-de-sante/uzerche/centre-de-vaccination-d-uzerche?pid=practice-174423&enable_cookies_consent=1",
       "location": {
@@ -178,6 +152,32 @@
           "jeudi": "09:00-12:10/13:00-16:10",
           "vendredi": "ferm\u00e9",
           "samedi": "09:00-12:10/13:00-16:10",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "19",
+      "nom": "Centre de vaccinations d'Argentat Sur Dordogne",
+      "url": "https://partners.doctolib.fr/centre-de-sante/argentat-sur-dordogne/centre-de-vaccination-covid-19-argentat-sur-dordogne?pid=practice-173270&enable_cookies_consent=1",
+      "location": {
+        "longitude": "1.9351",
+        "latitude": "45.0941"
+      },
+      "metadata": {
+        "address": "6 Place Joseph Faure, 19400 Argentat-sur-Dordogne",
+        "phone_number": "+33800 19 00 19",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "13:00-17:00",
+          "jeudi": "13:00-17:00",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -238,32 +238,6 @@
     },
     {
       "departement": "19",
-      "nom": "Centre de vaccination - Beaulieu sur Dordogne",
-      "url": "https://www.maiia.com/centre-de-vaccination/19120-beaulieu-sur-dordogne/-centre-de-vaccination-de-beaulieu-sur-dordogne",
-      "location": {
-        "longitude": "1.83952",
-        "latitude": "44.9788"
-      },
-      "metadata": {
-        "address": "8 Bd Saint Rodolphe de Turenne, 19120 Beaulieu-sur-Dordogne",
-        "phone_number": "07 60 71 48 27 ",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "14:00-17:00",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "09:00-17:00",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Maiia",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "19",
       "nom": "Centre de vaccination - Objat",
       "url": "https://partners.doctolib.fr/centre-de-sante/objat/centre-de-vaccination-d-objat?pid=practice-175821&enable_cookies_consent=1",
       "location": {
@@ -285,6 +259,32 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "19",
+      "nom": "Centre de vaccination - Beaulieu sur Dordogne",
+      "url": "https://www.maiia.com/centre-de-vaccination/19120-beaulieu-sur-dordogne/-centre-de-vaccination-de-beaulieu-sur-dordogne",
+      "location": {
+        "longitude": "1.83952",
+        "latitude": "44.9788"
+      },
+      "metadata": {
+        "address": "8 Bd Saint Rodolphe de Turenne, 19120 Beaulieu-sur-Dordogne",
+        "phone_number": "07 60 71 48 27 ",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "14:00-17:00",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "09:00-17:00",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -559,7 +559,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     }

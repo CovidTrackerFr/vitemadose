@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.133505+02:00",
+  "last_updated": "2021-04-09T15:24:49.818598+02:00",
   "centres_disponibles": [
     {
       "departement": "31",
@@ -257,7 +257,33 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-19T08:35:00.000000+0200",
+      "prochain_rdv": "2021-04-19T08:40:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Cadours",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/cadours-31480/cadours/centre-de-vaccination-de-cadours",
+      "location": {
+        "longitude": "1.04896",
+        "latitude": "43.7282"
+      },
+      "metadata": {
+        "address": "6 Rue des Anciens Combattants, 31480 Cadours",
+        "phone_number": "0809541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "9:00-13:00 / 14:00-18:00",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "09:00-13:00 ou 14:00-18:00",
+          "vendredi": "8:00-12:00 ou 14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-20T14:30:00.000000+0200",
       "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -335,7 +361,7 @@
           "dimanche": "Ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-21T15:10:00.000000+0200",
+      "prochain_rdv": "2021-04-21T15:20:00.000000+0200",
       "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -440,32 +466,6 @@
         }
       },
       "prochain_rdv": "2021-04-26T17:05:00.000000+0200",
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "31",
-      "nom": "CDV31 Cadours",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/cadours-31480/cadours/centre-de-vaccination-de-cadours",
-      "location": {
-        "longitude": "1.04896",
-        "latitude": "43.7282"
-      },
-      "metadata": {
-        "address": "6 Rue des Anciens Combattants, 31480 Cadours",
-        "phone_number": "0809541919",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "9:00-13:00 / 14:00-18:00",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "09:00-13:00 ou 14:00-18:00",
-          "vendredi": "8:00-12:00 ou 14:00-18:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-29T12:45:00.000000+0200",
       "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -578,32 +578,6 @@
     },
     {
       "departement": "31",
-      "nom": "CDV31 Montr\u00e9jeau",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/montrejeau-31210/montrejeau/centre-de-vaccination-de-montrejeau",
-      "location": {
-        "longitude": "0.561836",
-        "latitude": "43.0843"
-      },
-      "metadata": {
-        "address": "14 bis Avenue de Maz\u00e8res, 31210 Montr\u00e9jeau",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "08:00-12:00",
-          "mardi": "ferm\u00e9",
-          "mercredi": "08:00-12:00",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "08:00-12:00",
-          "samedi": "08:00-12:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "31",
       "nom": "CDV31 Carbonne",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/carbonne-31390/carbonne/centre-de-vaccination-de-carbonne",
       "location": {
@@ -630,22 +604,22 @@
     },
     {
       "departement": "31",
-      "nom": "CDV31 Saint Gaudens",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-gaudens-31800/saint-gaudens/centre-de-vaccination-de-saint-gaudens",
+      "nom": "CDV31 Montr\u00e9jeau",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/montrejeau-31210/montrejeau/centre-de-vaccination-de-montrejeau",
       "location": {
-        "longitude": "0.724206",
-        "latitude": "43.1096"
+        "longitude": "0.561836",
+        "latitude": "43.0843"
       },
       "metadata": {
-        "address": "2 Place du Foirail, 31800 Saint-Gaudens",
+        "address": "14 bis Avenue de Maz\u00e8res, 31210 Montr\u00e9jeau",
         "phone_number": "+33800541919",
         "business_hours": {
-          "lundi": "14:00-18:00",
-          "mardi": "14:00-18:00",
-          "mercredi": "14:00-18:00",
-          "jeudi": "14:00-18:00",
-          "vendredi": "14:00-18:00",
-          "samedi": "ferm\u00e9",
+          "lundi": "08:00-12:00",
+          "mardi": "ferm\u00e9",
+          "mercredi": "08:00-12:00",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "08:00-12:00",
+          "samedi": "08:00-12:00",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -703,6 +677,32 @@
       },
       "prochain_rdv": null,
       "plateforme": null,
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Saint Gaudens",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-gaudens-31800/saint-gaudens/centre-de-vaccination-de-saint-gaudens",
+      "location": {
+        "longitude": "0.724206",
+        "latitude": "43.1096"
+      },
+      "metadata": {
+        "address": "2 Place du Foirail, 31800 Saint-Gaudens",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -838,32 +838,6 @@
     },
     {
       "departement": "31",
-      "nom": "CDV31 Saint Lys",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-lys-31470/saint-lys/centre-de-vaccination-de-saint-lys",
-      "location": {
-        "longitude": "1.18776",
-        "latitude": "43.5223"
-      },
-      "metadata": {
-        "address": "8 Rue Alain Colas, 31470 Saint-Lys",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "14:00-18:00",
-          "mardi": "14:00-18:00",
-          "mercredi": "14:00-18:00",
-          "jeudi": "14:00-18:00",
-          "vendredi": "14:00-18:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "31",
       "nom": "CDV31 CHU Toulouse La Grave",
       "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/toulouse-31059/centre-hospitalier-universitaire-toulouse-la-grave-hotel-dieu/centre-de-vaccination-du-centre-hospitalier-universitaire-toulouse-la-grave-hotel-dieu",
       "location": {
@@ -879,6 +853,32 @@
           "mercredi": "ferm\u00e9",
           "jeudi": "9:00-16:30",
           "vendredi": "9:00-16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Saint Lys",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-lys-31470/saint-lys/centre-de-vaccination-de-saint-lys",
+      "location": {
+        "longitude": "1.18776",
+        "latitude": "43.5223"
+      },
+      "metadata": {
+        "address": "8 Rue Alain Colas, 31470 Saint-Lys",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -968,32 +968,6 @@
     },
     {
       "departement": "31",
-      "nom": "CDV31 Revel",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/revel-31250/revel/centre-de-vaccination-de-revel",
-      "location": {
-        "longitude": "2.00571",
-        "latitude": "43.4623"
-      },
-      "metadata": {
-        "address": "2 Rue du Padouvenc de Castres, 31250 Revel",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "14:00-18:00",
-          "mardi": "14:00-18:00",
-          "mercredi": "14:00-18:00",
-          "jeudi": "14:00-18:00",
-          "vendredi": "14:00-18:00",
-          "samedi": "14:00-18:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "31",
       "nom": "CDV31 Gragnague",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/gragnague-31380/centre-de-vaccination-de-gragnague/centre-de-vaccination-de-gragnague",
       "location": {
@@ -1020,7 +994,33 @@
     },
     {
       "departement": "31",
-      "nom": "CP - US de la Maison d'Arret Seysses / CHU Toulouse / Centre de D\u00e9tention de Muret",
+      "nom": "CDV31 Revel",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/revel-31250/revel/centre-de-vaccination-de-revel",
+      "location": {
+        "longitude": "2.00571",
+        "latitude": "43.4623"
+      },
+      "metadata": {
+        "address": "2 Rue du Padouvenc de Castres, 31250 Revel",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "14:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CD - US du Centre de D\u00e9tention de Muret / CHU Toulouse / Centre de D\u00e9tention de Muret",
       "url": "",
       "location": {
         "longitude": "1.32001",
@@ -1045,7 +1045,7 @@
     },
     {
       "departement": "31",
-      "nom": "CD - US du Centre de D\u00e9tention de Muret / CHU Toulouse / Centre de D\u00e9tention de Muret",
+      "nom": "CP - US de la Maison d'Arret Seysses / CHU Toulouse / Centre de D\u00e9tention de Muret",
       "url": "",
       "location": {
         "longitude": "1.32001",
@@ -1120,24 +1120,6 @@
     },
     {
       "departement": "31",
-      "nom": "Pharmacie Saint O",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-saint-o-saint-orens-de-gamev",
-      "location": {
-        "longitude": 1.5188578,
-        "latitude": 43.5632919
-      },
-      "metadata": {
-        "address": "2-5 all\u00e9e des champs Pinsons, 31650 Saint Orens De Gamev",
-        "phone_number": "+33562479400",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "31",
       "nom": "Pharmacie Du Centre",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-centre-plaisance-du-touch",
       "location": {
@@ -1151,6 +1133,24 @@
       },
       "prochain_rdv": null,
       "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "Pharmacie Saint O",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-saint-o-saint-orens-de-gamev",
+      "location": {
+        "longitude": 1.5188578,
+        "latitude": 43.5632919
+      },
+      "metadata": {
+        "address": "2-5 all\u00e9e des champs Pinsons, 31650 Saint Orens De Gamev",
+        "phone_number": "+33562479400",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     }

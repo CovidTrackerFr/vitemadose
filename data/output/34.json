@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.137877+02:00",
+  "last_updated": "2021-04-09T15:24:49.823077+02:00",
   "centres_disponibles": [
     {
       "departement": "34",
@@ -23,7 +23,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-16T09:40:00.000+02:00",
+      "prochain_rdv": "2021-04-16T09:50:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -214,32 +214,6 @@
     },
     {
       "departement": "34",
-      "nom": "S\u00e8te Centre de vaccination",
-      "url": "https://partners.doctolib.fr/centre-de-sante/sete/centre-de-vaccination-cpts-du-bassin-de-thau?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "3.69848",
-        "latitude": "43.4127"
-      },
-      "metadata": {
-        "address": " Route de Cayenne (parking du Mas Coulet), 34200 S\u00e8te",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "12:00-18:00",
-          "mardi": "10:00-18:00",
-          "mercredi": "10:00-18:00",
-          "jeudi": "10:00-18:00",
-          "vendredi": "10:00-18:00",
-          "samedi": "10:00-18:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "34",
       "nom": "BEZIERS Centre Zinga Zanga (grande salle de spectacle)",
       "url": "https://partners.doctolib.fr/centre-de-sante/beziers/centre-de-vaccination-publiques-de-la-ville-de-beziers?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -266,22 +240,22 @@
     },
     {
       "departement": "34",
-      "nom": "Centre de vaccination St Martin de Londres",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-martin-de-londres/centre-de-vaccination-covid-saint-martin-de-londres?pid=practice-165713&enable_cookies_consent=1",
+      "nom": "S\u00e8te Centre de vaccination",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sete/centre-de-vaccination-cpts-du-bassin-de-thau?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "3.73291",
-        "latitude": "43.7912"
+        "longitude": "3.69848",
+        "latitude": "43.4127"
       },
       "metadata": {
-        "address": " Place de la Mairie (Salle des rencontres), 34380 Saint-Martin-de-Londres",
+        "address": " Route de Cayenne (parking du Mas Coulet), 34200 S\u00e8te",
         "phone_number": "+33800541919",
         "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "9:00-13:00 / 14:00-18:00",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
+          "lundi": "12:00-18:00",
+          "mardi": "10:00-18:00",
+          "mercredi": "10:00-18:00",
+          "jeudi": "10:00-18:00",
+          "vendredi": "10:00-18:00",
+          "samedi": "10:00-18:00",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -307,6 +281,32 @@
           "mercredi": "ferm\u00e9",
           "jeudi": "8:30-12:30",
           "vendredi": "8:30-12:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "34",
+      "nom": "Centre de vaccination St Martin de Londres",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-martin-de-londres/centre-de-vaccination-covid-saint-martin-de-londres?pid=practice-165713&enable_cookies_consent=1",
+      "location": {
+        "longitude": "3.73291",
+        "latitude": "43.7912"
+      },
+      "metadata": {
+        "address": " Place de la Mairie (Salle des rencontres), 34380 Saint-Martin-de-Londres",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "9:00-13:00 / 14:00-18:00",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -821,7 +821,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -836,6 +836,24 @@
       "metadata": {
         "address": "23 boulevard du Languedoc, 34500 BEZIERS",
         "phone_number": "+33467283812",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "34",
+      "nom": "Pharmacie Des Vignes",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-vignes-montpellier",
+      "location": {
+        "longitude": 3.8577281,
+        "latitude": 43.6143535
+      },
+      "metadata": {
+        "address": "31 avenue Ecole Agriculture G. Buchet, 34000 MONTPELLIER",
+        "phone_number": "+33467630785",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -872,24 +890,6 @@
       "metadata": {
         "address": "66 route de laverune, 34070 montpellier",
         "phone_number": "+33467426614",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "34",
-      "nom": "Pharmacie Des Vignes",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-vignes-montpellier",
-      "location": {
-        "longitude": 3.8577281,
-        "latitude": 43.6143535
-      },
-      "metadata": {
-        "address": "31 avenue Ecole Agriculture G. Buchet, 34000 MONTPELLIER",
-        "phone_number": "+33467630785",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -1001,32 +1001,6 @@
     },
     {
       "departement": "34",
-      "nom": "Maison m\u00e9dicale de garde de Montpellier",
-      "url": "https://partners.doctolib.fr/centre-de-sante/montpellier/centre-de-vaccination-covid-19-maison-de-garde-jean-bouyer?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": 3.8794365,
-        "latitude": 43.6262861
-      },
-      "metadata": {
-        "address": "2 Rue des Tourterelles, 34090 Montpellier",
-        "phone_number": "0 800 54 19 19",
-        "business_hours": {
-          "lundi": "08:00-12:00, 13:30-18:00",
-          "mardi": "08:00-12:00, 13:30-18:00",
-          "mercredi": "08:00-12:00, 13:30-18:00",
-          "jeudi": "08:00-12:00, 13:30-18:00",
-          "vendredi": "08:00-13:00",
-          "samedi": null,
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "34",
       "nom": "Centre de vaccination Covid Lunel - R\u00e9serv\u00e9 UNIQUEMENT aux professionnels de sant\u00e9",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/lunel/reserve-aux-professionnels-de-sante?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
@@ -1042,6 +1016,32 @@
           "mercredi": "09:00-17:00",
           "jeudi": "09:00-12:00",
           "vendredi": "09:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "34",
+      "nom": "Maison m\u00e9dicale de garde de Montpellier",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montpellier/centre-de-vaccination-covid-19-maison-de-garde-jean-bouyer?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 3.8794365,
+        "latitude": 43.6262861
+      },
+      "metadata": {
+        "address": "2 Rue des Tourterelles, 34090 Montpellier",
+        "phone_number": "0 800 54 19 19",
+        "business_hours": {
+          "lundi": "08:00-12:00, 13:30-18:00",
+          "mardi": "08:00-12:00, 13:30-18:00",
+          "mercredi": "08:00-12:00, 13:30-18:00",
+          "jeudi": "08:00-12:00, 13:30-18:00",
+          "vendredi": "08:00-13:00",
           "samedi": null,
           "dimanche": null
         }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.141990+02:00",
+  "last_updated": "2021-04-09T15:24:49.826806+02:00",
   "centres_disponibles": [
     {
       "departement": "37",
@@ -48,7 +48,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-14T12:30:00.000+02:00",
+      "prochain_rdv": "2021-04-16T17:40:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -109,32 +109,6 @@
     },
     {
       "departement": "37",
-      "nom": "Centre de vaccination - Gymnase Onze Arpents de Saint-Avertin",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-avertin/centre-de-vaccination-covid-19-saint-avertin?pid=practice-179340&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.750189",
-        "latitude": "47.3601"
-      },
-      "metadata": {
-        "address": "2 Avenue Nelson Mandela, 37550 Saint-Avertin",
-        "phone_number": "08 05 02 14 00",
-        "business_hours": {
-          "lundi": "ouvert",
-          "mardi": "ouvert",
-          "mercredi": "ouvert",
-          "jeudi": "ouvert",
-          "vendredi": "ouvert",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "37",
       "nom": "Salle Polyvalente - Amboise",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/amboise/vaccination-mairie-amboise?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -151,6 +125,32 @@
           "jeudi": "9h-18h",
           "vendredi": "9h-18h",
           "samedi": "9h-12h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "37",
+      "nom": "Centre de vaccination - Gymnase Onze Arpents de Saint-Avertin",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-avertin/centre-de-vaccination-covid-19-saint-avertin?pid=practice-179340&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.750189",
+        "latitude": "47.3601"
+      },
+      "metadata": {
+        "address": "2 Avenue Nelson Mandela, 37550 Saint-Avertin",
+        "phone_number": "08 05 02 14 00",
+        "business_hours": {
+          "lundi": "ouvert",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },

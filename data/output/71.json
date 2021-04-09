@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.177545+02:00",
+  "last_updated": "2021-04-09T15:24:49.863196+02:00",
   "centres_disponibles": [
     {
       "departement": "71",
@@ -23,7 +23,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-24T09:36:00.000+02:00",
+      "prochain_rdv": "2021-04-24T09:24:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -231,7 +231,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-05-04T15:42:00.000+02:00",
+      "prochain_rdv": "2021-05-04T15:48:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -258,6 +258,32 @@
         }
       },
       "prochain_rdv": "2021-05-05T10:42:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "71",
+      "nom": "Centre vaccination CHALON SUR SAONE - Salle Sembat",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chalon-sur-saone/centre-de-vaccination-de-chalon-sur-saone?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.86013",
+        "latitude": "46.7868"
+      },
+      "metadata": {
+        "address": "1 Place Mathias, 71100 Chalon-sur-Sa\u00f4ne",
+        "phone_number": "+33806030149",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-07T13:42:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -342,32 +368,6 @@
     },
     {
       "departement": "71",
-      "nom": "Centre vaccination CHALON SUR SAONE - Salle Sembat",
-      "url": "https://partners.doctolib.fr/centre-de-sante/chalon-sur-saone/centre-de-vaccination-de-chalon-sur-saone?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.86013",
-        "latitude": "46.7868"
-      },
-      "metadata": {
-        "address": "1 Place Mathias, 71100 Chalon-sur-Sa\u00f4ne",
-        "phone_number": "+33806030149",
-        "business_hours": {
-          "lundi": "09:00-17:00",
-          "mardi": "09:00-17:00",
-          "mercredi": "09:00-17:00",
-          "jeudi": "09:00-17:00",
-          "vendredi": "09:00-17:00",
-          "samedi": "09:00-17:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-05-11T13:42:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "71",
       "nom": "Centre vaccination LOUHANS/BRANGES - Salle du Marais",
       "url": "https://partners.doctolib.fr/centre-de-sante/louhans/centre-de-vaccination-de-louhans?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -413,7 +413,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-05-17T15:48:00.000+02:00",
+      "prochain_rdv": "2021-05-17T16:42:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -599,6 +599,42 @@
     },
     {
       "departement": "71",
+      "nom": "Pharmacie Du G\u00e9ant",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-geant-montceau-les-mines",
+      "location": {
+        "longitude": 4.3703288,
+        "latitude": 46.6778051
+      },
+      "metadata": {
+        "address": "5 Boulevard de Lattre de Tassigny, 71300 Montceau-les-Mines",
+        "phone_number": "+33385573951",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "71",
+      "nom": "Pharmacie Fournier Gentien",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-fournier-gentien-gueugnon",
+      "location": {
+        "longitude": 4.0678238,
+        "latitude": 46.5976922
+      },
+      "metadata": {
+        "address": "49 rue de la convention, 71130 Gueugnon",
+        "phone_number": "+33385852147",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "71",
       "nom": "Pharmacie De La Saule",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-saule--saint-vallier",
       "location": {
@@ -635,24 +671,6 @@
     },
     {
       "departement": "71",
-      "nom": "Pharmacie Du G\u00e9ant",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-geant-montceau-les-mines",
-      "location": {
-        "longitude": 4.3703288,
-        "latitude": 46.6778051
-      },
-      "metadata": {
-        "address": "5 Boulevard de Lattre de Tassigny, 71300 Montceau-les-Mines",
-        "phone_number": "+33385573951",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "71",
       "nom": "CH Chalon sur Saone - Centre de Vaccination covid 19 (R\u00e9serv\u00e9 aux professionnels de sant\u00e9)",
       "url": "https://partners.doctolib.fr/hopital-public/chalon-sur-saone/ch-chalon-sur-saone-centre-de-vaccination-covid-19?highlight%5bspeciality_ids%5d%5b%5d=5494&pid=establishment-6255",
       "location": {
@@ -674,24 +692,6 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "71",
-      "nom": "Pharmacie Fournier Gentien",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-fournier-gentien-gueugnon",
-      "location": {
-        "longitude": 4.0678238,
-        "latitude": 46.5976922
-      },
-      "metadata": {
-        "address": "49 rue de la convention, 71130 Gueugnon",
-        "phone_number": "+33385852147",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
       "appointment_count": 0
     }
   ]

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.170321+02:00",
+  "last_updated": "2021-04-09T15:24:49.855944+02:00",
   "centres_disponibles": [
     {
       "departement": "64",
@@ -23,7 +23,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-10T12:40:00.000+02:00",
+      "prochain_rdv": "2021-04-10T10:00:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -55,6 +55,32 @@
     },
     {
       "departement": "64",
+      "nom": "Centre de Vaccination du CH d'ORTHEZ",
+      "url": "https://partners.doctolib.fr/hopital-public/orthez/centre-de-vaccination-covid-ch-orthez?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-0.771674",
+        "latitude": "43.4854"
+      },
+      "metadata": {
+        "address": "0 rue du Moulin, 64300 Orthez",
+        "phone_number": "+33559697070",
+        "business_hours": {
+          "lundi": "09:00-11:45/14h-16h45",
+          "mardi": "09:00-11:45/14h-16h45",
+          "mercredi": "09:00-11:45/14h-16h45",
+          "jeudi": "09:00-11:45/14h-16h45",
+          "vendredi": "09:00-11:45/14h-16h45",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-12T09:00:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "64",
       "nom": "Centre de vaccination COVID-19 Hendaye-Bidassoa",
       "url": "https://partners.doctolib.fr/centre-de-sante/hendaye/centre-vaccination-covid-19-hendaye-bidassoa?pid=practice-175744&enable_cookies_consent=1",
       "location": {
@@ -75,32 +101,6 @@
         }
       },
       "prochain_rdv": "2021-04-12T14:50:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "64",
-      "nom": "Centre de vaccination de Bidache",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/bidache/centre-de-vaccination-covid-du-pays-de-bidache?pid=practice-181230&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-1.14052",
-        "latitude": "43.4839"
-      },
-      "metadata": {
-        "address": "1 Place du fronton , 64520 Bidache",
-        "phone_number": "+33787053598",
-        "business_hours": {
-          "lundi": "09:00-12:00/14:00-17:00",
-          "mardi": "09:00-12:00/14:00-17:00",
-          "mercredi": "09:00-12:00/14:00-17:00",
-          "jeudi": "09:00-12:00/14:00-17:00",
-          "vendredi": "09:00-12:00/14:00-17:00",
-          "samedi": "09:00-12:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-14T14:55:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -210,6 +210,32 @@
     },
     {
       "departement": "64",
+      "nom": "Centre de vaccination de Bidache",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/bidache/centre-de-vaccination-covid-du-pays-de-bidache?pid=practice-181230&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.14052",
+        "latitude": "43.4839"
+      },
+      "metadata": {
+        "address": "1 Place du fronton , 64520 Bidache",
+        "phone_number": "+33787053598",
+        "business_hours": {
+          "lundi": "09:00-12:00/14:00-17:00",
+          "mardi": "09:00-12:00/14:00-17:00",
+          "mercredi": "09:00-12:00/14:00-17:00",
+          "jeudi": "09:00-12:00/14:00-17:00",
+          "vendredi": "09:00-12:00/14:00-17:00",
+          "samedi": "09:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-22T14:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "64",
       "nom": "Maison des associations de la ville de Bayonne",
       "url": "https://partners.doctolib.fr/centre-de-sante/bayonne/centre-de-vaccination-covid-maison-des-associations-de-la-ville-de-bayonne?pid=practice-165183?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -256,32 +282,6 @@
         }
       },
       "prochain_rdv": "2021-04-29T12:40:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "64",
-      "nom": "Centre de Vaccination du CH d'ORTHEZ",
-      "url": "https://partners.doctolib.fr/hopital-public/orthez/centre-de-vaccination-covid-ch-orthez?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-0.771674",
-        "latitude": "43.4854"
-      },
-      "metadata": {
-        "address": "0 rue du Moulin, 64300 Orthez",
-        "phone_number": "+33559697070",
-        "business_hours": {
-          "lundi": "09:00-11:45/14h-16h45",
-          "mardi": "09:00-11:45/14h-16h45",
-          "mercredi": "09:00-11:45/14h-16h45",
-          "jeudi": "09:00-11:45/14h-16h45",
-          "vendredi": "09:00-11:45/14h-16h45",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-05-04T20:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -522,31 +522,6 @@
     },
     {
       "departement": "64",
-      "nom": "MA - US CH COTE BASQUE / Maison d'Arr\u00eat de Bayonne",
-      "url": "",
-      "location": {
-        "longitude": "-1.4633",
-        "latitude": "43.4918"
-      },
-      "metadata": {
-        "address": "44 Rue Charles Floquet, 64100 Bayonne",
-        "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "64",
       "nom": "Centre de vaccination de Monein",
       "url": "https://www.doctolib.fr/centre-de-sante/monein/centre-de-vaccination-covid-19-monein",
       "location": {
@@ -568,6 +543,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "64",
+      "nom": "MA - US CH COTE BASQUE / Maison d'Arr\u00eat de Bayonne",
+      "url": "",
+      "location": {
+        "longitude": "-1.4633",
+        "latitude": "43.4918"
+      },
+      "metadata": {
+        "address": "44 Rue Charles Floquet, 64100 Bayonne",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },

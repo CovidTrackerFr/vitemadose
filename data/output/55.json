@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.157485+02:00",
+  "last_updated": "2021-04-09T15:24:49.843079+02:00",
   "centres_disponibles": [
     {
       "departement": "55",
@@ -56,6 +56,32 @@
     },
     {
       "departement": "55",
+      "nom": "Centre de vaccination de Verdun (Salle Cassin) (Equipe mixte CH/m\u00e9decine de ville)",
+      "url": "https://partners.doctolib.fr/hopital-public/verdun/centre-de-vaccination-covid-19-ch-verdun?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.3799",
+        "latitude": "49.1544"
+      },
+      "metadata": {
+        "address": " Allee du Pre l'Eveque, 55100 Verdun",
+        "phone_number": "+33801908955",
+        "business_hours": {
+          "lundi": "13:00-17:30",
+          "mardi": "08:30-17:30",
+          "mercredi": "08:30-17:30",
+          "jeudi": "08:30-17:30",
+          "vendredi": "08:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-27T17:20:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "55",
       "nom": "Centre de vaccination Covid-19 - CH Verdun",
       "url": "https://partners.doctolib.fr/centre-de-sante/verdun/centre-de-vaccination-covid-19-ch-verdun?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
@@ -76,32 +102,6 @@
         }
       },
       "prochain_rdv": "2021-04-27T17:20:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "55",
-      "nom": "Centre de vaccination de Verdun (Salle Cassin) (Equipe mixte CH/m\u00e9decine de ville)",
-      "url": "https://partners.doctolib.fr/hopital-public/verdun/centre-de-vaccination-covid-19-ch-verdun?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "5.3799",
-        "latitude": "49.1544"
-      },
-      "metadata": {
-        "address": " Allee du Pre l'Eveque, 55100 Verdun",
-        "phone_number": "+33801908955",
-        "business_hours": {
-          "lundi": "13:00-17:30",
-          "mardi": "08:30-17:30",
-          "mercredi": "08:30-17:30",
-          "jeudi": "08:30-17:30",
-          "vendredi": "08:30-17:30",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-28T11:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -136,32 +136,6 @@
     },
     {
       "departement": "55",
-      "nom": "Lieu de vaccination FRESNES EN WOEVRE - MSP",
-      "url": "https://www.maiia.com/centre-de-vaccination/55160-fresnes-en-woevre/centre-de-vaccination---fresnes-en-woevre",
-      "location": {
-        "longitude": "5.62516",
-        "latitude": "49.0945"
-      },
-      "metadata": {
-        "address": "16 bis Rue des Eparges, 55160 Fresnes-en-Wo\u00ebvre",
-        "phone_number": "+33372850117",
-        "business_hours": {
-          "lundi": "A pr\u00e9ciser",
-          "mardi": "A pr\u00e9ciser",
-          "mercredi": "A pr\u00e9ciser",
-          "jeudi": "A pr\u00e9ciser",
-          "vendredi": "A pr\u00e9ciser",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Maiia",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "55",
       "nom": "Lieu de vaccination de CLERMONT EN ARGONNE",
       "url": "https://www.maiia.com/centre-de-vaccination/55120-clermont-en-argonne/centre-de-vaccination---clermont-en-argonne",
       "location": {
@@ -177,32 +151,6 @@
           "mercredi": "ferm\u00e9",
           "jeudi": "14:00-18:00",
           "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Maiia",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "55",
-      "nom": "Lieu de vaccination de MONTMEDY (salle des f\u00eates)",
-      "url": "https://www.maiia.com/centre-de-vaccination/55600-montmedy/centre-de-vaccination---montmedy-et-marville",
-      "location": {
-        "longitude": "5.36862",
-        "latitude": "49.5212"
-      },
-      "metadata": {
-        "address": " Place Eug\u00e8ne Tronville, 55600 Montm\u00e9dy",
-        "phone_number": "+33372850117",
-        "business_hours": {
-          "lundi": "A pr\u00e9ciser",
-          "mardi": "A pr\u00e9ciser",
-          "mercredi": "A pr\u00e9ciser",
-          "jeudi": "A pr\u00e9ciser",
-          "vendredi": "A pr\u00e9ciser",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -240,6 +188,58 @@
     },
     {
       "departement": "55",
+      "nom": "Lieu de vaccination de MONTMEDY (salle des f\u00eates)",
+      "url": "https://www.maiia.com/centre-de-vaccination/55600-montmedy/centre-de-vaccination---montmedy-et-marville",
+      "location": {
+        "longitude": "5.36862",
+        "latitude": "49.5212"
+      },
+      "metadata": {
+        "address": " Place Eug\u00e8ne Tronville, 55600 Montm\u00e9dy",
+        "phone_number": "+33372850117",
+        "business_hours": {
+          "lundi": "A pr\u00e9ciser",
+          "mardi": "A pr\u00e9ciser",
+          "mercredi": "A pr\u00e9ciser",
+          "jeudi": "A pr\u00e9ciser",
+          "vendredi": "A pr\u00e9ciser",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "55",
+      "nom": "Lieu de vaccination FRESNES EN WOEVRE - MSP",
+      "url": "https://www.maiia.com/centre-de-vaccination/55160-fresnes-en-woevre/centre-de-vaccination---fresnes-en-woevre",
+      "location": {
+        "longitude": "5.62516",
+        "latitude": "49.0945"
+      },
+      "metadata": {
+        "address": "16 bis Rue des Eparges, 55160 Fresnes-en-Wo\u00ebvre",
+        "phone_number": "+33372850117",
+        "business_hours": {
+          "lundi": "A pr\u00e9ciser",
+          "mardi": "A pr\u00e9ciser",
+          "mercredi": "A pr\u00e9ciser",
+          "jeudi": "A pr\u00e9ciser",
+          "vendredi": "A pr\u00e9ciser",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "55",
       "nom": "Lieu de vaccination de DAMVILLERS - MSP",
       "url": "https://www.maiia.com/centre-de-vaccination/55150-damvillers/centre-de-vaccination---damvillers",
       "location": {
@@ -257,32 +257,6 @@
           "vendredi": "A confirmer",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Maiia",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "55",
-      "nom": "Lieu de vaccination d' ETAIN (salle Brasse et Focosi)",
-      "url": "https://www.maiia.com/centre-de-vaccination/55400-etain/centre-de-vaccination-d--etain",
-      "location": {
-        "longitude": "5.63652",
-        "latitude": "49.2141"
-      },
-      "metadata": {
-        "address": "11 Rue du Contour, 55400 \u00c9tain",
-        "phone_number": "+33372850117",
-        "business_hours": {
-          "lundi": "\u00e0 pr\u00e9ciser",
-          "mardi": "\u00e0 pr\u00e9ciser",
-          "mercredi": "\u00e0 pr\u00e9ciser",
-          "jeudi": "\u00e0 pr\u00e9ciser",
-          "vendredi": "\u00e0 pr\u00e9ciser",
-          "samedi": "\u00e0 pr\u00e9ciser",
-          "dimanche": "\u00e0 pr\u00e9ciser"
         }
       },
       "prochain_rdv": null,
@@ -318,14 +292,14 @@
     },
     {
       "departement": "55",
-      "nom": "Lieu de vaccination de VIGNEULLES (Maison de sant\u00e9)",
-      "url": "https://www.maiia.com/centre-de-vaccination/55210-vigneulles-les-hattonchatel/centre-de-vaccination---vigneulles-les-hattonchatel--",
+      "nom": "Lieu de vaccination d' ETAIN (salle Brasse et Focosi)",
+      "url": "https://www.maiia.com/centre-de-vaccination/55400-etain/centre-de-vaccination-d--etain",
       "location": {
-        "longitude": "5.71484",
-        "latitude": "48.9789"
+        "longitude": "5.63652",
+        "latitude": "49.2141"
       },
       "metadata": {
-        "address": "74 Rue Raymond Poincar\u00e9, 55210 Vigneulles-l\u00e8s-Hattonch\u00e2tel",
+        "address": "11 Rue du Contour, 55400 \u00c9tain",
         "phone_number": "+33372850117",
         "business_hours": {
           "lundi": "\u00e0 pr\u00e9ciser",
@@ -352,6 +326,32 @@
       },
       "metadata": {
         "address": "6 Maison de sant\u00e9, Rue du Rattentout , 55320 Dieue-sur-Meuse",
+        "phone_number": "+33372850117",
+        "business_hours": {
+          "lundi": "\u00e0 pr\u00e9ciser",
+          "mardi": "\u00e0 pr\u00e9ciser",
+          "mercredi": "\u00e0 pr\u00e9ciser",
+          "jeudi": "\u00e0 pr\u00e9ciser",
+          "vendredi": "\u00e0 pr\u00e9ciser",
+          "samedi": "\u00e0 pr\u00e9ciser",
+          "dimanche": "\u00e0 pr\u00e9ciser"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "55",
+      "nom": "Lieu de vaccination de VIGNEULLES (Maison de sant\u00e9)",
+      "url": "https://www.maiia.com/centre-de-vaccination/55210-vigneulles-les-hattonchatel/centre-de-vaccination---vigneulles-les-hattonchatel--",
+      "location": {
+        "longitude": "5.71484",
+        "latitude": "48.9789"
+      },
+      "metadata": {
+        "address": "74 Rue Raymond Poincar\u00e9, 55210 Vigneulles-l\u00e8s-Hattonch\u00e2tel",
         "phone_number": "+33372850117",
         "business_hours": {
           "lundi": "\u00e0 pr\u00e9ciser",
@@ -447,31 +447,6 @@
     },
     {
       "departement": "55",
-      "nom": "CD - US SAINT MIHIEL / Centre de D\u00e9tention de Montm\u00e9dy",
-      "url": "",
-      "location": {
-        "longitude": "5.37153",
-        "latitude": "49.5241"
-      },
-      "metadata": {
-        "address": "18 Rue du Commandant M\u00e9nard, 55600 Montm\u00e9dy",
-        "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "55",
       "nom": "MA - US Bar le Duc / Maison d'Arr\u00eat de Bar-le-Duc",
       "url": "",
       "location": {
@@ -497,27 +472,26 @@
     },
     {
       "departement": "55",
-      "nom": "Lieu de vaccination de Revigny sur Ornain (salle multiculturelle)",
-      "url": "https://www.maiia.com/centre-de-vaccination/55800-revigny-sur-ornain/centre-de-vaccination---revigny-sur-ornain",
+      "nom": "CD - US SAINT MIHIEL / Centre de D\u00e9tention de Montm\u00e9dy",
+      "url": "",
       "location": {
-        "longitude": "4.9873",
-        "latitude": "48.8281"
+        "longitude": "5.37153",
+        "latitude": "49.5241"
       },
       "metadata": {
-        "address": " Place Pierre Gaxotte, 55800 Revigny-sur-Ornain",
-        "phone_number": "+33372850117",
+        "address": "18 Rue du Commandant M\u00e9nard, 55600 Montm\u00e9dy",
         "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "14:00-18:00",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "09:00-12:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
         }
       },
       "prochain_rdv": null,
-      "plateforme": "Maiia",
+      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -538,6 +512,32 @@
           "mercredi": "ferm\u00e9",
           "jeudi": "ferm\u00e9",
           "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "55",
+      "nom": "Lieu de vaccination de Revigny sur Ornain (salle multiculturelle)",
+      "url": "https://www.maiia.com/centre-de-vaccination/55800-revigny-sur-ornain/centre-de-vaccination---revigny-sur-ornain",
+      "location": {
+        "longitude": "4.9873",
+        "latitude": "48.8281"
+      },
+      "metadata": {
+        "address": " Place Pierre Gaxotte, 55800 Revigny-sur-Ornain",
+        "phone_number": "+33372850117",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "14:00-18:00",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "09:00-12:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }

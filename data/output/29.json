@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.130063+02:00",
+  "last_updated": "2021-04-09T15:24:49.815113+02:00",
   "centres_disponibles": [
     {
       "departement": "29",
@@ -49,7 +49,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-13T14:20:00.000000+0200",
+      "prochain_rdv": "2021-04-14T13:50:00.000000+0200",
       "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -66,6 +66,32 @@
       },
       "metadata": {
         "address": "7 Rue de Roubaix, 29200 Brest",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "29",
+      "nom": "CH DOUARNENEZ (r\u00e9serv\u00e9 aux professionnels des domaines de la sant\u00e9 et du m\u00e9dico-social)",
+      "url": "",
+      "location": {
+        "longitude": "-4.31638",
+        "latitude": "48.0839"
+      },
+      "metadata": {
+        "address": "83 Rue Laennec, 29100 Douarnenez",
+        "phone_number": "+33257180061",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -104,32 +130,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "29",
-      "nom": "CH DOUARNENEZ (r\u00e9serv\u00e9 aux professionnels des domaines de la sant\u00e9 et du m\u00e9dico-social)",
-      "url": "",
-      "location": {
-        "longitude": "-4.31638",
-        "latitude": "48.0839"
-      },
-      "metadata": {
-        "address": "83 Rue Laennec, 29100 Douarnenez",
-        "phone_number": "+33257180061",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -213,32 +213,6 @@
     },
     {
       "departement": "29",
-      "nom": "MORLAIX - LANGOLVAS",
-      "url": "https://partners.doctolib.fr/maison-de-sante/morlaix/ch-morlaix-centre-de-vaccination-covid-19?pid=practice-163107&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-3.79181",
-        "latitude": "48.5869"
-      },
-      "metadata": {
-        "address": " Langolvas, 29610 Garlan",
-        "phone_number": "+33257180061",
-        "business_hours": {
-          "lundi": "8h30-19h30",
-          "mardi": "8h30-19h30",
-          "mercredi": "8h30-19h30",
-          "jeudi": "8h30-19h30",
-          "vendredi": "8h30-19h30",
-          "samedi": "8h30-19h30",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "29",
       "nom": "LANDERNEAU - Gymnase Kergreis",
       "url": "https://www.maiia.com/centre-de-vaccination/29800-landerneau/centre-de-vaccination---landerneau---lesneven",
       "location": {
@@ -281,6 +255,32 @@
           "jeudi": "9h00-16h30",
           "vendredi": "9h00-16h30",
           "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "29",
+      "nom": "MORLAIX - LANGOLVAS",
+      "url": "https://partners.doctolib.fr/maison-de-sante/morlaix/ch-morlaix-centre-de-vaccination-covid-19?pid=practice-163107&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-3.79181",
+        "latitude": "48.5869"
+      },
+      "metadata": {
+        "address": " Langolvas, 29610 Garlan",
+        "phone_number": "+33257180061",
+        "business_hours": {
+          "lundi": "8h30-19h30",
+          "mardi": "8h30-19h30",
+          "mercredi": "8h30-19h30",
+          "jeudi": "8h30-19h30",
+          "vendredi": "8h30-19h30",
+          "samedi": "8h30-19h30",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -612,24 +612,6 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "29",
-      "nom": "Pharmacie D'Ergue-Armel C.C Casino",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-d'ergue-armel-c.c-casino-quimper",
-      "location": {
-        "longitude": -4.073479499999999,
-        "latitude": 47.9826383
-      },
-      "metadata": {
-        "address": "2 Avenue de Ty Bos, 29000 Quimper",
-        "phone_number": "+33298907810",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
       "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
@@ -645,6 +627,24 @@
       "metadata": {
         "address": "163 RTE DE BENODET, 29000 quimper",
         "phone_number": "+33298905316",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "29",
+      "nom": "Pharmacie D'Ergue-Armel C.C Casino",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-d'ergue-armel-c.c-casino-quimper",
+      "location": {
+        "longitude": -4.073479499999999,
+        "latitude": 47.9826383
+      },
+      "metadata": {
+        "address": "2 Avenue de Ty Bos, 29000 Quimper",
+        "phone_number": "+33298907810",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -680,32 +680,6 @@
     },
     {
       "departement": "29",
-      "nom": "Centre de vaccination Covid-19 - Complexe sportif de Quimperl\u00e9 (r\u00e9serv\u00e9 aux professionnels de sant\u00e9)",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/quimperle/centre-de-vaccination-covid-19-complexe-sportif-de-quimperle-reserve-aux-professionnels-de-sante?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": -3.5606725,
-        "latitude": 47.8664353
-      },
-      "metadata": {
-        "address": "Rue de Kerjouanneau, 29300 Quimperl\u00e9",
-        "phone_number": "02 57 18 00 61",
-        "business_hours": {
-          "lundi": "09:00-17:00",
-          "mardi": "09:00-17:00",
-          "mercredi": "09:00-17:00",
-          "jeudi": "09:00-17:00",
-          "vendredi": "09:00-17:00",
-          "samedi": null,
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "29",
       "nom": "Centre de vaccination HIA Brest",
       "url": "https://partners.doctolib.fr/hopital-public/brest/centre-de-vaccination-hia-brest?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
@@ -721,6 +695,32 @@
           "mercredi": "10:00-12:00, 14:00-16:00",
           "jeudi": "10:00-12:00, 14:00-16:00",
           "vendredi": "10:00-12:00, 14:00-16:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "29",
+      "nom": "Centre de vaccination Covid-19 - Complexe sportif de Quimperl\u00e9 (r\u00e9serv\u00e9 aux professionnels de sant\u00e9)",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/quimperle/centre-de-vaccination-covid-19-complexe-sportif-de-quimperle-reserve-aux-professionnels-de-sante?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": -3.5606725,
+        "latitude": 47.8664353
+      },
+      "metadata": {
+        "address": "Rue de Kerjouanneau, 29300 Quimperl\u00e9",
+        "phone_number": "02 57 18 00 61",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
           "samedi": null,
           "dimanche": null
         }

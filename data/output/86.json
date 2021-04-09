@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.196178+02:00",
+  "last_updated": "2021-04-09T15:24:49.882959+02:00",
   "centres_disponibles": [
     {
       "departement": "86",
@@ -22,7 +22,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-16T15:48:00.000+02:00",
+      "prochain_rdv": "2021-04-16T15:54:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -48,32 +48,6 @@
         }
       },
       "prochain_rdv": "2021-04-24T11:20:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "86",
-      "nom": "Centre de vaccination - CHU POITIERS - Site de CH\u00c2TELLERAULT",
-      "url": "https://partners.doctolib.fr/hopital-public/chatellerault/centre-de-vaccination-chu-poitiers-site-de-chatellerault?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.556456",
-        "latitude": "46.8316"
-      },
-      "metadata": {
-        "address": " Rue Docteur Luc Montagnier, 86100 Ch\u00e2tellerault",
-        "phone_number": "+33516604064",
-        "business_hours": {
-          "lundi": "08:00-09:00",
-          "mardi": "08:00-09:00",
-          "mercredi": "08:00-09:00",
-          "jeudi": "08:00-09:00",
-          "vendredi": "08:00-09:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-05-11T11:05:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -285,6 +259,31 @@
     },
     {
       "departement": "86",
+      "nom": "P\u00f4le de sant\u00e9 Madeleine Br\u00e8s",
+      "url": "https://partners.doctolib.fr/maison-de-sante/vouneuil-sur-vienne/centre-vaccination-msp-vouneuil-sur-vienne?pid=practice-173005&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.540811",
+        "latitude": "46.7167"
+      },
+      "metadata": {
+        "address": "09 Avenue Jean Jaur\u00e8s, 86210 Vouneuil-sur-Vienne",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "8h30-19h",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "86",
       "nom": "CHU POITIERS - Site de LA MILETRIE",
       "url": "https://partners.doctolib.fr/hopital-public/poitiers/centre-de-vaccination-chu-poitiers-la-miletrie?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -311,20 +310,21 @@
     },
     {
       "departement": "86",
-      "nom": "P\u00f4le de sant\u00e9 Madeleine Br\u00e8s",
-      "url": "https://partners.doctolib.fr/maison-de-sante/vouneuil-sur-vienne/centre-vaccination-msp-vouneuil-sur-vienne?pid=practice-173005&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - CHU POITIERS - Site de CH\u00c2TELLERAULT",
+      "url": "https://partners.doctolib.fr/hopital-public/chatellerault/centre-de-vaccination-chu-poitiers-site-de-chatellerault?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "0.540811",
-        "latitude": "46.7167"
+        "longitude": "0.556456",
+        "latitude": "46.8316"
       },
       "metadata": {
-        "address": "09 Avenue Jean Jaur\u00e8s, 86210 Vouneuil-sur-Vienne",
+        "address": " Rue Docteur Luc Montagnier, 86100 Ch\u00e2tellerault",
+        "phone_number": "+33516604064",
         "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "8h30-19h",
-          "vendredi": "ferm\u00e9",
+          "lundi": "08:00-09:00",
+          "mardi": "08:00-09:00",
+          "mercredi": "08:00-09:00",
+          "jeudi": "08:00-09:00",
+          "vendredi": "08:00-09:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -552,7 +552,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },

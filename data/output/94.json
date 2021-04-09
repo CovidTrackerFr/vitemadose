@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.206323+02:00",
+  "last_updated": "2021-04-09T15:24:49.892922+02:00",
   "centres_disponibles": [
     {
       "departement": "94",
@@ -101,7 +101,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-05-14T15:45:00.000+02:00",
+      "prochain_rdv": "2021-05-17T16:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -598,32 +598,6 @@
     },
     {
       "departement": "94",
-      "nom": "CENTRE SAINT-MANDE",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-mand\u00e9/centre-de-vaccinations-covid-saint-mande?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.42439",
-        "latitude": "48.8445"
-      },
-      "metadata": {
-        "address": "4 Avenue Pasteur, 94160 Saint-Mand\u00e9",
-        "phone_number": "+33800922100 ",
-        "business_hours": {
-          "lundi": "8h - 20h",
-          "mardi": "8h - 20h",
-          "mercredi": "8h - 20h",
-          "jeudi": "8h - 20h",
-          "vendredi": "8h - 20h",
-          "samedi": "8h - 20h",
-          "dimanche": "8h - 20h"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "94",
       "nom": "CENTRE NOGENT SUR MARNE",
       "url": "https://partners.doctolib.fr/centre-de-sante/nogent-sur-marne/accueil-ambulatoire-de-recours-ville-de-nogent-sur-marne-adp94?pid=practice-123104&enable_cookies_consent=1",
       "location": {
@@ -641,6 +615,32 @@
           "vendredi": "14:00-20:00",
           "samedi": "08:00-20:00",
           "dimanche": "08:00-20:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "94",
+      "nom": "CENTRE SAINT-MANDE",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-mand\u00e9/centre-de-vaccinations-covid-saint-mande?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.42439",
+        "latitude": "48.8445"
+      },
+      "metadata": {
+        "address": "4 Avenue Pasteur, 94160 Saint-Mand\u00e9",
+        "phone_number": "+33800922100 ",
+        "business_hours": {
+          "lundi": "8h - 20h",
+          "mardi": "8h - 20h",
+          "mercredi": "8h - 20h",
+          "jeudi": "8h - 20h",
+          "vendredi": "8h - 20h",
+          "samedi": "8h - 20h",
+          "dimanche": "8h - 20h"
         }
       },
       "prochain_rdv": null,

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.124825+02:00",
+  "last_updated": "2021-04-09T15:24:49.809922+02:00",
   "centres_disponibles": [
     {
       "departement": "24",
@@ -23,7 +23,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-11T15:30:00.000+02:00",
+      "prochain_rdv": "2021-04-11T16:42:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -49,7 +49,7 @@
           "dimanche": null
         }
       },
-      "prochain_rdv": "2021-04-11T15:48:00.000+02:00",
+      "prochain_rdv": "2021-04-11T17:18:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -77,6 +77,31 @@
       },
       "prochain_rdv": "2021-04-13T08:35:00.000000Z",
       "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "Centre de Vaccination - CH Vauclaire",
+      "url": "https://partners.doctolib.fr/hopital-public/montpon-menesterol/centre-de-vaccination-covid-19-ch-de-vauclaire?pid=practice-176882&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.184902",
+        "latitude": "45.0335"
+      },
+      "metadata": {
+        "address": "1677 Vauclaire, 24700 Montpon-M\u00e9nest\u00e9rol",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "9:00-17:00",
+          "jeudi": "9:00-17:00",
+          "vendredi": "9:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-20T08:40:00.000+02:00",
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -186,31 +211,6 @@
     },
     {
       "departement": "24",
-      "nom": "EHPAD La Madeleine",
-      "url": "https://partners.doctolib.fr/centre-de-sante/bergerac/centre-de-vaccination-covid-19-ehpad-la-madeleine?pid=practice-174840&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.478389",
-        "latitude": "44.8473"
-      },
-      "metadata": {
-        "address": "40 Rue du Mar\u00e9chal Joffre, 24100 Bergerac",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "24",
       "nom": "EHPAD de La Madeleine",
       "url": "",
       "location": {
@@ -231,6 +231,31 @@
       },
       "prochain_rdv": null,
       "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "EHPAD La Madeleine",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bergerac/centre-de-vaccination-covid-19-ehpad-la-madeleine?pid=practice-174840&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.478389",
+        "latitude": "44.8473"
+      },
+      "metadata": {
+        "address": "40 Rue du Mar\u00e9chal Joffre, 24100 Bergerac",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -387,6 +412,31 @@
     },
     {
       "departement": "24",
+      "nom": "MA - US PERIGUEUX / Maison d'Arr\u00eat de P\u00e9rigueux",
+      "url": "",
+      "location": {
+        "longitude": "0.719136",
+        "latitude": "45.1886"
+      },
+      "metadata": {
+        "address": "2 Place Beleyme, 24000 P\u00e9rigueux",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
       "nom": "CD - US CD de NEUVIC / Maison d'Arr\u00eat de P\u00e9rigueux",
       "url": "",
       "location": {
@@ -412,26 +462,26 @@
     },
     {
       "departement": "24",
-      "nom": "MA - US PERIGUEUX / Maison d'Arr\u00eat de P\u00e9rigueux",
-      "url": "",
+      "nom": "Clinique Pasteur & CPTS",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/bergerac/centre-de-vaccination-covid-19-clinique-pasteur-bergerac-elsan?pid=practice-172067&enable_cookies_consent=1",
       "location": {
-        "longitude": "0.719136",
-        "latitude": "45.1886"
+        "longitude": "0.489893",
+        "latitude": "44.8512"
       },
       "metadata": {
-        "address": "2 Place Beleyme, 24000 P\u00e9rigueux",
+        "address": "54 Rue du Professeur Pozzi, 24100 Bergerac",
         "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
+          "lundi": "13:00-17:00",
+          "mardi": "13:00-17:00",
+          "mercredi": "13:00-17:00",
+          "jeudi": "13:00-17:00",
+          "vendredi": "13:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
-      "plateforme": "Autre",
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -483,56 +533,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "24",
-      "nom": "Clinique Pasteur & CPTS",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/bergerac/centre-de-vaccination-covid-19-clinique-pasteur-bergerac-elsan?pid=practice-172067&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.489893",
-        "latitude": "44.8512"
-      },
-      "metadata": {
-        "address": "54 Rue du Professeur Pozzi, 24100 Bergerac",
-        "business_hours": {
-          "lundi": "13:00-17:00",
-          "mardi": "13:00-17:00",
-          "mercredi": "13:00-17:00",
-          "jeudi": "13:00-17:00",
-          "vendredi": "13:00-17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "24",
-      "nom": "Centre de Vaccination - CH Vauclaire",
-      "url": "https://partners.doctolib.fr/hopital-public/montpon-menesterol/centre-de-vaccination-covid-19-ch-de-vauclaire?pid=practice-176882&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.184902",
-        "latitude": "45.0335"
-      },
-      "metadata": {
-        "address": "1677 Vauclaire, 24700 Montpon-M\u00e9nest\u00e9rol",
-        "business_hours": {
-          "lundi": "9:00-17:00",
-          "mardi": "9:00-17:00",
-          "mercredi": "9:00-17:00",
-          "jeudi": "9:00-17:00",
-          "vendredi": "9:00-17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },

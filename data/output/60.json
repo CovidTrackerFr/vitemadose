@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.165108+02:00",
+  "last_updated": "2021-04-09T15:24:49.850805+02:00",
   "centres_disponibles": [
     {
       "departement": "60",
@@ -77,6 +77,24 @@
       "prochain_rdv": "2021-04-10T16:35:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "60",
+      "nom": "Chambly Pharma",
+      "url": "https://app.ordoclic.fr/app/pharmacie/chambly-pharma-chambly",
+      "location": {
+        "longitude": 2.2564365,
+        "latitude": 49.15763519999999
+      },
+      "metadata": {
+        "address": "rue francois truffaut , 60230 Chambly",
+        "phone_number": "+33134705137",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-04-23T16:40:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
       "appointment_count": 0
     },
     {
@@ -264,26 +282,27 @@
     },
     {
       "departement": "60",
-      "nom": "CP - Centre Hospitalier de Beauvais / Centre p\u00e9nitentiaire de Beauvais",
-      "url": "",
+      "nom": "Centre de vaccination - Commune de Pont Sainte Maxence,  gymnase la Salamandre rue Charles Frigaux",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/pont-sainte-maxence/centre-de-vaccination-covid-19-pont-sainte-maxence?pid=practice-175373&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.08755",
-        "latitude": "49.4179"
+        "longitude": "2.5971",
+        "latitude": "49.3004"
       },
       "metadata": {
-        "address": " Rue de Pontoise, 60000 Beauvais",
+        "address": "223 Rue Charles Frigaux, 60700 Pont-Sainte-Maxence",
+        "phone_number": "+33344562983",
         "business_hours": {
-          "lundi": "Ferm\u00e9 au public",
-          "mardi": "Ferm\u00e9 au public",
-          "mercredi": "Ferm\u00e9 au public",
-          "jeudi": "Ferm\u00e9 au public",
-          "vendredi": "Ferm\u00e9 au public",
-          "samedi": "Ferm\u00e9 au public",
-          "dimanche": "Ferm\u00e9 au public"
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
-      "plateforme": "Autre",
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -314,6 +333,31 @@
     },
     {
       "departement": "60",
+      "nom": "CP - Centre Hospitalier de Beauvais / Centre p\u00e9nitentiaire de Beauvais",
+      "url": "",
+      "location": {
+        "longitude": "2.08755",
+        "latitude": "49.4179"
+      },
+      "metadata": {
+        "address": " Rue de Pontoise, 60000 Beauvais",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "60",
       "nom": "CP - US2 / Centre P\u00e9nitentiaire de Liancourt",
       "url": "",
       "location": {
@@ -339,15 +383,14 @@
     },
     {
       "departement": "60",
-      "nom": "Centre de vaccination - Commune de Pont Sainte Maxence,  gymnase la Salamandre rue Charles Frigaux",
-      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/pont-sainte-maxence/centre-de-vaccination-covid-19-pont-sainte-maxence?pid=practice-175373&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - MSP Cr\u00e9vecoeur le Grand",
+      "url": "https://partners.doctolib.fr/centre-de-sante/crevecoeur-le-grand/centre-de-vaccination-covid-19-msp-crevecoeur-le-grand?pid=practice-176391&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.5971",
-        "latitude": "49.3004"
+        "longitude": "2.07257",
+        "latitude": "49.6053"
       },
       "metadata": {
-        "address": "223 Rue Charles Frigaux, 60700 Pont-Sainte-Maxence",
-        "phone_number": "+33344562983",
+        "address": "4 Rue du Stade, 60360 Cr\u00e8vec\u0153ur-le-Grand",
         "business_hours": {
           "lundi": "",
           "mardi": "",
@@ -390,22 +433,22 @@
     },
     {
       "departement": "60",
-      "nom": "Centre de vaccination - MSP Cr\u00e9vecoeur le Grand",
-      "url": "https://partners.doctolib.fr/centre-de-sante/crevecoeur-le-grand/centre-de-vaccination-covid-19-msp-crevecoeur-le-grand?pid=practice-176391&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - communaut\u00e9 de commune du Liancourtois, Salle Guy Lejeune",
+      "url": "https://partners.doctolib.fr/centre-de-sante/liancourt/centre-de-vaccination-covid-liancourt-liancourt?pid=practice-179037&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.07257",
-        "latitude": "49.6053"
+        "longitude": "2.4598",
+        "latitude": "49.3292"
       },
       "metadata": {
-        "address": "4 Rue du Stade, 60360 Cr\u00e8vec\u0153ur-le-Grand",
+        "address": "176 Avenue Louis Aragon, 60140 Liancourt",
         "business_hours": {
-          "lundi": "",
-          "mardi": "",
-          "mercredi": "",
-          "jeudi": "",
-          "vendredi": "",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "",
+          "dimanche": ""
         }
       },
       "prochain_rdv": null,
@@ -424,31 +467,6 @@
       "metadata": {
         "address": "31 Rue du Pr\u00e9 Martinet, 60000 Beauvais",
         "phone_number": "+33375570025",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "",
-          "dimanche": ""
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "60",
-      "nom": "Centre de vaccination - communaut\u00e9 de commune du Liancourtois, Salle Guy Lejeune",
-      "url": "https://partners.doctolib.fr/centre-de-sante/liancourt/centre-de-vaccination-covid-liancourt-liancourt?pid=practice-179037&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.4598",
-        "latitude": "49.3292"
-      },
-      "metadata": {
-        "address": "176 Avenue Louis Aragon, 60140 Liancourt",
         "business_hours": {
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
@@ -622,32 +640,6 @@
     },
     {
       "departement": "60",
-      "nom": "Centre de vaccination - Ville de CREPY",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/crepy-en-valois/centre-de-vaccination-covid-ville-de-crepy-en-valois?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "2.88914",
-        "latitude": "49.2348"
-      },
-      "metadata": {
-        "address": "3 Mail Philippe d'Alsace, 60800 Cr\u00e9py-en-Valois",
-        "phone_number": "+33344594449",
-        "business_hours": {
-          "lundi": "14:00-17:45",
-          "mardi": "09:00-12:25/14:17:45",
-          "mercredi": "09:00-12:25/14:17:45",
-          "jeudi": "09:00-12:25/14:17:45",
-          "vendredi": "09:00-12:25/14:17:45",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "60",
       "nom": "Centre de vaccination - Ville de  Nogent-sur-Oise",
       "url": "https://partners.doctolib.fr/centre-de-sante/nogent-sur-oise/centre-de-vaccination-covid-centre-municipal-de-sante-de-nogent-sur-oise?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -664,6 +656,32 @@
           "jeudi": "09:00-12:00/14:00-17:30",
           "vendredi": "09:00-12:00/14:00-17:30",
           "samedi": "09:00-12:00/14:00-17:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "60",
+      "nom": "Centre de vaccination - Ville de CREPY",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/crepy-en-valois/centre-de-vaccination-covid-ville-de-crepy-en-valois?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "2.88914",
+        "latitude": "49.2348"
+      },
+      "metadata": {
+        "address": "3 Mail Philippe d'Alsace, 60800 Cr\u00e9py-en-Valois",
+        "phone_number": "+33344594449",
+        "business_hours": {
+          "lundi": "14:00-17:45",
+          "mardi": "09:00-12:25/14:17:45",
+          "mercredi": "09:00-12:25/14:17:45",
+          "jeudi": "09:00-12:25/14:17:45",
+          "vendredi": "09:00-12:25/14:17:45",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -738,7 +756,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -765,24 +783,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "60",
-      "nom": "Chambly Pharma",
-      "url": "https://app.ordoclic.fr/app/pharmacie/chambly-pharma-chambly",
-      "location": {
-        "longitude": 2.2564365,
-        "latitude": 49.15763519999999
-      },
-      "metadata": {
-        "address": "rue francois truffaut , 60230 Chambly",
-        "phone_number": "+33134705137",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     }

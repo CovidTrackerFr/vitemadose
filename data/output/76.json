@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.184784+02:00",
+  "last_updated": "2021-04-09T15:24:49.870754+02:00",
   "centres_disponibles": [
     {
       "departement": "76",
@@ -48,7 +48,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-29T12:45:00.000+02:00",
+      "prochain_rdv": "2021-04-19T10:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -678,6 +678,24 @@
     },
     {
       "departement": "76",
+      "nom": "Pharmacie Cauchoise",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-cauchoise-rouen",
+      "location": {
+        "longitude": 1.085969,
+        "latitude": 49.446072
+      },
+      "metadata": {
+        "address": "7 Place Cauchoise, 76000 Rouen",
+        "phone_number": "+33235713020",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "76",
       "nom": "Grande Pharmacie Thiers",
       "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-thiers-le-havre",
       "location": {
@@ -691,24 +709,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "76",
-      "nom": "Pharmacie Cauchoise",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-cauchoise-rouen",
-      "location": {
-        "longitude": 1.085969,
-        "latitude": 49.446072
-      },
-      "metadata": {
-        "address": "7 Place Cauchoise, 76000 Rouen",
-        "phone_number": "+33235713020",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -919,32 +919,6 @@
     },
     {
       "departement": "76",
-      "nom": "Pharmacie de La Mairie",
-      "url": "https://partners.doctolib.fr/pharmacie/montivilliers/pharmacie-de-la-mairie-dr-guillaume-riquier",
-      "location": {
-        "longitude": 0.1919887,
-        "latitude": 49.545642
-      },
-      "metadata": {
-        "address": "16 Place Fran\u00e7ois Mitterrand, 76290 Montivilliers",
-        "phone_number": "02 35 30 23 93",
-        "business_hours": {
-          "lundi": "08:30-20:00",
-          "mardi": "08:30-20:00",
-          "mercredi": "08:30-20:00",
-          "jeudi": "08:30-20:00",
-          "vendredi": "08:30-20:00",
-          "samedi": "08:30-13:00, 14:00-19:00",
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "76",
       "nom": "CHI Elbeuf, Louviers, Val de Reuil - Centre de vaccination COVID",
       "url": "https://partners.doctolib.fr/hopital-public/saint-aubin-les-elbeuf/chi-elbeuf-louviers-val-de-reuil-centre-de-vaccination-covid-reserve-aux-professionnels-de-sante-nation-covid?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
@@ -967,6 +941,32 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "76",
+      "nom": "Pharmacie de La Mairie",
+      "url": "https://partners.doctolib.fr/pharmacie/montivilliers/pharmacie-de-la-mairie-dr-guillaume-riquier",
+      "location": {
+        "longitude": 0.1919887,
+        "latitude": 49.545642
+      },
+      "metadata": {
+        "address": "16 Place Fran\u00e7ois Mitterrand, 76290 Montivilliers",
+        "phone_number": "02 35 30 23 93",
+        "business_hours": {
+          "lundi": "08:30-20:00",
+          "mardi": "08:30-20:00",
+          "mercredi": "08:30-20:00",
+          "jeudi": "08:30-20:00",
+          "vendredi": "08:30-20:00",
+          "samedi": "08:30-13:00, 14:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
       "appointment_count": 0
     }
   ]

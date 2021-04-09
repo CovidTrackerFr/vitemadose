@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.118102+02:00",
+  "last_updated": "2021-04-09T15:24:49.803285+02:00",
   "centres_disponibles": [
     {
       "departement": "17",
@@ -23,7 +23,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-12T12:20:00.000+02:00",
+      "prochain_rdv": "2021-04-13T09:50:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -47,6 +47,31 @@
           "mercredi": "9:00-12:30/14:00-17:00",
           "jeudi": "9:00-12:30/14:00-17:00",
           "vendredi": "9:00-12:30/14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "17",
+      "nom": "CH ROCHEFORT(r\u00e9serv\u00e9 aux professionnels de sant\u00e9)",
+      "url": "https://partners.doctolib.fr/hopital-public/rochefort/centre-hospitalier-de-rochefort-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-0.963273",
+        "latitude": "45.9671"
+      },
+      "metadata": {
+        "address": "1 Avenue de Beligon, 17300 Rochefort",
+        "business_hours": {
+          "lundi": "09:00-12:30/13:30-16:50",
+          "mardi": "09:00-12:30/13:30-16:50",
+          "mercredi": "09:00-12:30/13:30-16:50",
+          "jeudi": "09:00-12:30/13:30-16:50",
+          "vendredi": "09:00-12:30/13:30-16:50",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -84,31 +109,6 @@
     },
     {
       "departement": "17",
-      "nom": "CH ROCHEFORT(r\u00e9serv\u00e9 aux professionnels de sant\u00e9)",
-      "url": "https://partners.doctolib.fr/hopital-public/rochefort/centre-hospitalier-de-rochefort-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-0.963273",
-        "latitude": "45.9671"
-      },
-      "metadata": {
-        "address": "1 Avenue de Beligon, 17300 Rochefort",
-        "business_hours": {
-          "lundi": "09:00-12:30/13:30-16:50",
-          "mardi": "09:00-12:30/13:30-16:50",
-          "mercredi": "09:00-12:30/13:30-16:50",
-          "jeudi": "09:00-12:30/13:30-16:50",
-          "vendredi": "09:00-12:30/13:30-16:50",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "17",
       "nom": "MA - US de SAINTES / Maison d'Arr\u00eat de Saintes",
       "url": "",
       "location": {
@@ -134,14 +134,14 @@
     },
     {
       "departement": "17",
-      "nom": "MC - US Saint Martin de R\u00e9 / Maison Centrale de Saint-Martin-de-R\u00e9",
+      "nom": "MA - US / Maison d'Arr\u00eat de Rochefort",
       "url": "",
       "location": {
-        "longitude": "-1.364",
-        "latitude": "46.2043"
+        "longitude": "-0.961569",
+        "latitude": "45.9417"
       },
       "metadata": {
-        "address": " Place des 3 Maisons, 17410 Saint-Martin-de-R\u00e9",
+        "address": "11 ter Rue du Mar\u00e9chal Gallieni, 17300 Rochefort",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -159,14 +159,14 @@
     },
     {
       "departement": "17",
-      "nom": "MA - US / Maison d'Arr\u00eat de Rochefort",
+      "nom": "MC - US Saint Martin de R\u00e9 / Maison Centrale de Saint-Martin-de-R\u00e9",
       "url": "",
       "location": {
-        "longitude": "-0.961569",
-        "latitude": "45.9417"
+        "longitude": "-1.364",
+        "latitude": "46.2043"
       },
       "metadata": {
-        "address": "11 ter Rue du Mar\u00e9chal Gallieni, 17300 Rochefort",
+        "address": " Place des 3 Maisons, 17410 Saint-Martin-de-R\u00e9",
         "business_hours": {
           "lundi": "Ferm\u00e9 au public",
           "mardi": "Ferm\u00e9 au public",
@@ -443,32 +443,6 @@
     },
     {
       "departement": "17",
-      "nom": "CH LA ROCHELLE (r\u00e9serv\u00e9 aux professionnels de sant\u00e9)",
-      "url": "https://partners.doctolib.fr/hopital-public/la-rochelle/centre-de-vaccination-de-la-rochelle?pid=practice-162596&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-1.14426",
-        "latitude": "46.1585"
-      },
-      "metadata": {
-        "address": " Rue du Docteur Albert Schweitzer, 17000 La Rochelle",
-        "phone_number": "+33546456666",
-        "business_hours": {
-          "lundi": "09:00-16:30",
-          "mardi": "09:00-16:30",
-          "mercredi": "09:00-16:30",
-          "jeudi": "09:00-16:30",
-          "vendredi": "09:00-16:30",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "17",
       "nom": "Centre de Vaccination Saint Jean d'Ang\u00e9ly",
       "url": "https://partners.doctolib.fr/hopital-public/saint-jean-d-angely/centre-de-vaccination-covid-19-saint-jean-d-angely?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -484,6 +458,32 @@
           "mercredi": "09:00-12:00/14:00-17:00",
           "jeudi": "09:00-12:00/14:00-17:00",
           "vendredi": "09:00-12:00/14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "17",
+      "nom": "CH LA ROCHELLE (r\u00e9serv\u00e9 aux professionnels de sant\u00e9)",
+      "url": "https://partners.doctolib.fr/hopital-public/la-rochelle/centre-de-vaccination-de-la-rochelle?pid=practice-162596&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-1.14426",
+        "latitude": "46.1585"
+      },
+      "metadata": {
+        "address": " Rue du Docteur Albert Schweitzer, 17000 La Rochelle",
+        "phone_number": "+33546456666",
+        "business_hours": {
+          "lundi": "09:00-16:30",
+          "mardi": "09:00-16:30",
+          "mercredi": "09:00-16:30",
+          "jeudi": "09:00-16:30",
+          "vendredi": "09:00-16:30",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -707,7 +707,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -751,7 +751,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },

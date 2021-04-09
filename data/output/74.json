@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.180601+02:00",
+  "last_updated": "2021-04-09T15:24:49.866296+02:00",
   "centres_disponibles": [
     {
       "departement": "74",
@@ -105,6 +105,32 @@
     },
     {
       "departement": "74",
+      "nom": "Centre de vaccination Covid-19 du Haut Chablais",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-jean-d-aulps/centre-de-vaccination-covid-19-du-haut-chablais?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 6.659384,
+        "latitude": 46.229919
+      },
+      "metadata": {
+        "address": "58 Impasse Alexis Leaud, 74430 Saint-Jean-d'Aulps",
+        "phone_number": "06 12 52 94 10",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-17:30",
+          "mardi": "09:00-13:00, 14:00-17:30",
+          "mercredi": "09:00-13:00, 14:00-17:30",
+          "jeudi": "09:00-13:00, 14:00-17:30",
+          "vendredi": "09:00-13:00, 14:00-17:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-15T15:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "74",
       "nom": "SAMOENS - Espace Le Bois aux Dames",
       "url": "https://www.doctolib.fr/centre-de-sante/samoens/centre-de-vaccination-covid-19-ville-de-samoens?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
@@ -176,7 +202,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-23T10:40:00.000+02:00",
+      "prochain_rdv": "2021-04-23T11:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -254,7 +280,7 @@
           "dimanche": "09:00-13:00/14:00-18:00"
         }
       },
-      "prochain_rdv": "2021-05-03T12:10:00.000+02:00",
+      "prochain_rdv": "2021-05-03T12:20:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -335,24 +361,6 @@
       "prochain_rdv": "2021-05-12T15:45:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "74",
-      "nom": "Pharmacie Du Mortier",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-mortier-valserhone",
-      "location": {
-        "longitude": 2.4819234,
-        "latitude": 50.5623406
-      },
-      "metadata": {
-        "address": "3 Rue Joseph Bertola, 01200 Valserh\u00f4ne",
-        "phone_number": "+33450482806",
-        "business_hours": null
-      },
-      "prochain_rdv": "2021-12-09T10:00:00+00:00",
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
       "appointment_count": 0
     }
   ],
@@ -589,32 +597,6 @@
     },
     {
       "departement": "74",
-      "nom": "Centre de vaccination de Rumilly Salle des f\u00eates municipale",
-      "url": "https://partners.doctolib.fr/hopital-public/rumilly/centre-de-vaccination-covid-ch-gabriel-deplante?pid=practice-164564&enable_cookies_consent=1",
-      "location": {
-        "longitude": "5.93889",
-        "latitude": "45.8634"
-      },
-      "metadata": {
-        "address": "1 Rue du Sophora, 74150 Rumilly",
-        "phone_number": "+33450018399",
-        "business_hours": {
-          "lundi": "14:00-18:00",
-          "mardi": "08:30-12:30/14:00-18:00",
-          "mercredi": "08:30-12:30/14:00-18:00",
-          "jeudi": "08:30-12:30/14:00-18:00",
-          "vendredi": "08:30-12:30/14:00-18:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "74",
       "nom": "Centre hospitalier Alpes L\u00e9man",
       "url": "https://partners.doctolib.fr/hopital-public/contamine-sur-arve/chal-vaccin-covid?pid=practice-165876&enable_cookies_consent=1",
       "location": {
@@ -630,6 +612,32 @@
           "mercredi": "10:00-18:00",
           "jeudi": "10:00-18:00",
           "vendredi": "10:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "74",
+      "nom": "Centre de vaccination de Rumilly Salle des f\u00eates municipale",
+      "url": "https://partners.doctolib.fr/hopital-public/rumilly/centre-de-vaccination-covid-ch-gabriel-deplante?pid=practice-164564&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.93889",
+        "latitude": "45.8634"
+      },
+      "metadata": {
+        "address": "1 Rue du Sophora, 74150 Rumilly",
+        "phone_number": "+33450018399",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "08:30-12:30/14:00-18:00",
+          "mercredi": "08:30-12:30/14:00-18:00",
+          "jeudi": "08:30-12:30/14:00-18:00",
+          "vendredi": "08:30-12:30/14:00-18:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -797,46 +805,20 @@
     },
     {
       "departement": "74",
-      "nom": "Pharmacie Du Credo",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-credo--valserhone",
+      "nom": "Pharmacie Du Mortier",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-mortier-valserhone",
       "location": {
-        "longitude": 5.8116598,
-        "latitude": 46.1256735
+        "longitude": 2.4819234,
+        "latitude": 50.5623406
       },
       "metadata": {
-        "address": "Avenue Mal de Lattre de Tassigny (Bellegarde-sur-Valserine), 01200 Valserh\u00f4ne",
-        "phone_number": "+33450482726",
+        "address": "3 Rue Joseph Bertola, 01200 Valserh\u00f4ne",
+        "phone_number": "+33450482806",
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "74",
-      "nom": "Centre de vaccination Covid-19 du Haut Chablais",
-      "url": "https://partners.doctolib.fr/centre-de-sante/saint-jean-d-aulps/centre-de-vaccination-covid-19-du-haut-chablais?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": 6.659384,
-        "latitude": 46.229919
-      },
-      "metadata": {
-        "address": "58 Impasse Alexis Leaud, 74430 Saint-Jean-d'Aulps",
-        "phone_number": "06 12 52 94 10",
-        "business_hours": {
-          "lundi": "09:00-13:00, 14:00-17:30",
-          "mardi": "09:00-13:00, 14:00-17:30",
-          "mercredi": "09:00-13:00, 14:00-17:30",
-          "jeudi": "09:00-13:00, 14:00-17:30",
-          "vendredi": "09:00-13:00, 14:00-17:30",
-          "samedi": null,
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
       "appointment_count": 0
     },
     {
@@ -888,6 +870,24 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "74",
+      "nom": "Pharmacie Du Credo",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-credo--valserhone",
+      "location": {
+        "longitude": 5.8116598,
+        "latitude": 46.1256735
+      },
+      "metadata": {
+        "address": "Avenue Mal de Lattre de Tassigny (Bellegarde-sur-Valserine), 01200 Valserh\u00f4ne",
+        "phone_number": "+33450482726",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
       "appointment_count": 0
     }
   ]

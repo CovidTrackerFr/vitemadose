@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.123308+02:00",
+  "last_updated": "2021-04-09T15:24:49.808706+02:00",
   "centres_disponibles": [
     {
       "departement": "22",
@@ -49,7 +49,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-27T16:15:00.000000+0200",
+      "prochain_rdv": "2021-04-27T16:25:00.000000+0200",
       "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -83,32 +83,6 @@
     },
     {
       "departement": "22",
-      "nom": "DINAN - Centre des congr\u00e8s",
-      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-malo-et-dinan/gh-rance-emeraude-vaccination-covid?pid=practice-164881&enable_cookies_consent=1",
-      "location": {
-        "longitude": "-2.03953",
-        "latitude": "48.4526"
-      },
-      "metadata": {
-        "address": " Rue Victor Basch, 22100 Dinan",
-        "phone_number": "+33257180060",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "9h00-13h00 / 14h00-18h00",
-          "mercredi": "9h00-13h00 / 14h00-18h00",
-          "jeudi": "9h00-13h00 / 14h00-18h00",
-          "vendredi": "9h00-13h00 / 14h00-18h00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "22",
       "nom": "ROSTRENEN - Salle des f\u00eates",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/rostrenen-22110/salle-des-fetes-rostrenen/centre-de-vaccination-de-la-salle-des-fetes-rostrenen",
       "location": {
@@ -130,6 +104,32 @@
       },
       "prochain_rdv": null,
       "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "DINAN - Centre des congr\u00e8s",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-malo-et-dinan/gh-rance-emeraude-vaccination-covid?pid=practice-164881&enable_cookies_consent=1",
+      "location": {
+        "longitude": "-2.03953",
+        "latitude": "48.4526"
+      },
+      "metadata": {
+        "address": " Rue Victor Basch, 22100 Dinan",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "9h00-13h00 / 14h00-18h00",
+          "mercredi": "9h00-13h00 / 14h00-18h00",
+          "jeudi": "9h00-13h00 / 14h00-18h00",
+          "vendredi": "9h00-13h00 / 14h00-18h00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -313,32 +313,6 @@
     },
     {
       "departement": "22",
-      "nom": "LANVOLLON - Salle Armor Argoat",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/lanvollon-22290/ville-de-lanvollon/centre-de-vaccination-de-la-ville-de-lanvollon",
-      "location": {
-        "longitude": "-2.99161",
-        "latitude": "48.6371"
-      },
-      "metadata": {
-        "address": " Rue du Tregor, 22290 Lanvollon",
-        "phone_number": "+33257180060",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "9h-13h / 13h30-17h30",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "22",
       "nom": "GUINGAMP - Centre social",
       "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/guingamp-22200/guingamp/centre-de-vaccination-guingamp-centre-social-guingamp",
       "location": {
@@ -355,6 +329,32 @@
           "jeudi": "9h00-13h00 / 13h30-17h30",
           "vendredi": "9h00-13h00 / 13h30-17h30",
           "samedi": "9h00-13h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "22",
+      "nom": "LANVOLLON - Salle Armor Argoat",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/lanvollon-22290/ville-de-lanvollon/centre-de-vaccination-de-la-ville-de-lanvollon",
+      "location": {
+        "longitude": "-2.99161",
+        "latitude": "48.6371"
+      },
+      "metadata": {
+        "address": " Rue du Tregor, 22290 Lanvollon",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "9h-13h / 13h30-17h30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },

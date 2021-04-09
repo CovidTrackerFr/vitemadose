@@ -1,7 +1,33 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.210722+02:00",
+  "last_updated": "2021-04-09T15:24:49.897373+02:00",
   "centres_disponibles": [
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID 19-Nord : Site Felix Guyon",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/saint-denis-97400/centre-hospitalier-universitaire-la-reunion-site-felix-guyon/centre-de-vaccination-du-centre-hospitalier-universitaire-la-reunion-site-felix-guyon",
+      "location": {
+        "longitude": "55.4439",
+        "latitude": "-20.8915"
+      },
+      "metadata": {
+        "address": " All\u00e9e des Topazes, 97400 Saint-Denis",
+        "phone_number": "+262262720404",
+        "business_hours": {
+          "lundi": "de 8h \u00e0 18h",
+          "mardi": "de 8h \u00e0 18h",
+          "mercredi": "de 8h \u00e0 18h",
+          "jeudi": "de 8h \u00e0 18h",
+          "vendredi": "de 8h \u00e0 18h",
+          "samedi": "de 8h \u00e0 12h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-10T11:30:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
     {
       "departement": "974",
       "nom": "centre de vaccination a\u00e9roport de Pierrefonds",
@@ -209,32 +235,6 @@
       "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
-    },
-    {
-      "departement": "974",
-      "nom": "Centre de vaccination COVID 19-Nord : Site Felix Guyon",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/saint-denis-97400/centre-hospitalier-universitaire-la-reunion-site-felix-guyon/centre-de-vaccination-du-centre-hospitalier-universitaire-la-reunion-site-felix-guyon",
-      "location": {
-        "longitude": "55.4439",
-        "latitude": "-20.8915"
-      },
-      "metadata": {
-        "address": " All\u00e9e des Topazes, 97400 Saint-Denis",
-        "phone_number": "+262262720404",
-        "business_hours": {
-          "lundi": "de 8h \u00e0 18h",
-          "mardi": "de 8h \u00e0 18h",
-          "mercredi": "de 8h \u00e0 18h",
-          "jeudi": "de 8h \u00e0 18h",
-          "vendredi": "de 8h \u00e0 18h",
-          "samedi": "de 8h \u00e0 12h",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-05-08T15:10:00.000000+0200",
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
     }
   ],
   "centres_indisponibles": [
@@ -292,32 +292,6 @@
     },
     {
       "departement": "974",
-      "nom": "Centre de vaccination COVID 19 : Site de Cilaos",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/le-tampon-97418/hopital-de-cilaos-chu?category=3107&cabinet=17204&specialty=496",
-      "location": {
-        "longitude": "55.4801",
-        "latitude": "-21.1333"
-      },
-      "metadata": {
-        "address": "5 Rue Fleurs Jaunes, 97413 Cilaos",
-        "phone_number": "+262262724720.",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "08h30 12h00  -  13h30 17h00",
-          "samedi": "08h30 12h00  -  13h30 17h00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "974",
       "nom": "Centre de vaccination COVID 19 : Site de Grand Ilet",
       "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-benoit-97437/centre-de-vaccination-ephemere-station-de-trail-grand-ilet",
       "location": {
@@ -334,6 +308,32 @@
           "jeudi": "08h30 12h - 14h 17h30",
           "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID 19 : Site de Cilaos",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/le-tampon-97418/hopital-de-cilaos-chu?category=3107&cabinet=17204&specialty=496",
+      "location": {
+        "longitude": "55.4801",
+        "latitude": "-21.1333"
+      },
+      "metadata": {
+        "address": "5 Rue Fleurs Jaunes, 97413 Cilaos",
+        "phone_number": "+262262724720.",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "08h30 12h00  -  13h30 17h00",
+          "samedi": "08h30 12h00  -  13h30 17h00",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -369,7 +369,7 @@
     },
     {
       "departement": "974",
-      "nom": "CP - US CP  Saint-Pierre / Maison d'Arr\u00eat de Saint-Pierre-de-la-R\u00e9union",
+      "nom": "CD - US Centre p\u00e9nitentiaire du Port / Maison d'Arr\u00eat de Saint-Pierre-de-la-R\u00e9union",
       "url": "",
       "location": {
         "longitude": "55.4661",
@@ -394,7 +394,7 @@
     },
     {
       "departement": "974",
-      "nom": "CD - US Centre p\u00e9nitentiaire du Port / Maison d'Arr\u00eat de Saint-Pierre-de-la-R\u00e9union",
+      "nom": "CP - US CP  Saint-Pierre / Maison d'Arr\u00eat de Saint-Pierre-de-la-R\u00e9union",
       "url": "",
       "location": {
         "longitude": "55.4661",

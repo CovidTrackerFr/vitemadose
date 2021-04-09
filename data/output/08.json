@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.109098+02:00",
+  "last_updated": "2021-04-09T15:24:49.794638+02:00",
   "centres_disponibles": [
     {
       "departement": "08",
@@ -83,31 +83,6 @@
     },
     {
       "departement": "08",
-      "nom": "MSP Buzancy",
-      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-167626&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.95336",
-        "latitude": "49.4274"
-      },
-      "metadata": {
-        "address": "2 Rue Nouvelle, 08240 Buzancy",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "13H30-17H",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "08",
       "nom": "Centre de Vaccination Salle B\u00e9r\u00e9govoy  VRIGNE-AUX-BOIS",
       "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-165013&enable_cookies_consent=1",
       "location": {
@@ -123,6 +98,31 @@
           "jeudi": "A pr\u00e9ciser",
           "vendredi": "A pr\u00e9ciser",
           "samedi": "A pr\u00e9ciser",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "08",
+      "nom": "MSP Buzancy",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sedan/centre-de-vaccination-covid-ars-ardennes?pid=practice-167626&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.95336",
+        "latitude": "49.4274"
+      },
+      "metadata": {
+        "address": "2 Rue Nouvelle, 08240 Buzancy",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "13H30-17H",
           "dimanche": "ferm\u00e9"
         }
       },

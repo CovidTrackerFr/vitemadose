@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.144713+02:00",
+  "last_updated": "2021-04-09T15:24:49.829668+02:00",
   "centres_disponibles": [
     {
       "departement": "40",
@@ -500,6 +500,24 @@
     },
     {
       "departement": "40",
+      "nom": "Pharmacie Bougniot",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-bougniot-labouheyre",
+      "location": {
+        "longitude": -0.9197061000000001,
+        "latitude": 44.2125705
+      },
+      "metadata": {
+        "address": "97 rue Jacques Berqu\u00e9, 40210 Labouheyre",
+        "phone_number": "+33558070013",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "40",
       "nom": "Pharmacie du Trinquet",
       "url": "https://partners.doctolib.fr/pharmacie/soorts-hossegor/pharmacie-soorts",
       "location": {
@@ -521,24 +539,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "40",
-      "nom": "Pharmacie Bougniot",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-bougniot-labouheyre",
-      "location": {
-        "longitude": -0.9197061000000001,
-        "latitude": 44.2125705
-      },
-      "metadata": {
-        "address": "97 rue Jacques Berqu\u00e9, 40210 Labouheyre",
-        "phone_number": "+33558070013",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.175048+02:00",
+  "last_updated": "2021-04-09T15:24:49.860614+02:00",
   "centres_disponibles": [
     {
       "departement": "69",
@@ -50,32 +50,6 @@
         }
       },
       "prochain_rdv": "2021-04-23T10:15:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "69",
-      "nom": "Centre de vaccination - Palais des sports de Gerland /Hospices Civils de Lyon",
-      "url": "https://partners.doctolib.fr/hopital-public/lyon/palais-des-sports-gerland-hcl-vaccination-covid?pid=practice-163661&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.83026",
-        "latitude": "45.724"
-      },
-      "metadata": {
-        "address": "350 Avenue Jean Jaur\u00e8s, 69007 Lyon",
-        "phone_number": "+33423101010",
-        "business_hours": {
-          "lundi": "08:30-20:00",
-          "mardi": "08:30-20:00",
-          "mercredi": "08:30-20:00",
-          "jeudi": "08:30-20:00",
-          "vendredi": "08:30-20:00",
-          "samedi": "08:30-20:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-23T17:30:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -290,7 +264,33 @@
     },
     {
       "departement": "69",
-      "nom": "MA - US Corbas / Etablissement sp\u00e9cialis\u00e9 pour mineurs du Rh\u00f4ne",
+      "nom": "Centre de vaccination de l'H\u00f4pital de Beaujeu",
+      "url": "https://partners.doctolib.fr/hopital-public/belleville-en-beaujolais/centre-de-vaccination-covid-belleville?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.58885",
+        "latitude": "46.1531"
+      },
+      "metadata": {
+        "address": " Rue du Docteur Giraud, 69430 Beaujeu",
+        "phone_number": "+33423101010",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "69",
+      "nom": "EPM - US/SMPR EPM du Rhone / Etablissement sp\u00e9cialis\u00e9 pour mineursdu Rh\u00f4ne",
       "url": "",
       "location": {
         "longitude": "4.99769",
@@ -315,7 +315,7 @@
     },
     {
       "departement": "69",
-      "nom": "EPM - US/SMPR EPM du Rhone / Etablissement sp\u00e9cialis\u00e9 pour mineursdu Rh\u00f4ne",
+      "nom": "MA - US Corbas / Etablissement sp\u00e9cialis\u00e9 pour mineurs du Rh\u00f4ne",
       "url": "",
       "location": {
         "longitude": "4.99769",
@@ -360,32 +360,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "69",
-      "nom": "Centre de vaccination de l'H\u00f4pital de Beaujeu",
-      "url": "https://partners.doctolib.fr/hopital-public/belleville-en-beaujolais/centre-de-vaccination-covid-belleville?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.58885",
-        "latitude": "46.1531"
-      },
-      "metadata": {
-        "address": " Rue du Docteur Giraud, 69430 Beaujeu",
-        "phone_number": "+33423101010",
-        "business_hours": {
-          "lundi": "",
-          "mardi": "",
-          "mercredi": "",
-          "jeudi": "",
-          "vendredi": "",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -519,6 +493,31 @@
     },
     {
       "departement": "69",
+      "nom": "Equipe mobile du CDHS",
+      "url": "",
+      "location": {
+        "longitude": "4.80186",
+        "latitude": "45.763"
+      },
+      "metadata": {
+        "address": "110 Avenue Barth\u00e9l\u00e9my Buyer, 69009 Lyon",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "69",
       "nom": "Centre de vaccination d'Arnas - Espace sportif de l'Escale",
       "url": "https://partners.doctolib.fr/centre-de-sante/arnas/centre-de-vaccination-covid-19-l-escale-arnas?pid=practice-180202&enable_cookies_consent=1",
       "location": {
@@ -540,31 +539,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "69",
-      "nom": "Equipe mobile du CDHS",
-      "url": "",
-      "location": {
-        "longitude": "4.80186",
-        "latitude": "45.763"
-      },
-      "metadata": {
-        "address": "110 Avenue Barth\u00e9l\u00e9my Buyer, 69009 Lyon",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Autre",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -933,6 +907,32 @@
     },
     {
       "departement": "69",
+      "nom": "Centre de vaccination -H\u00f4pital Pierre Wertheimer - HCL",
+      "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-pierre-wertheimer-hcl-vaccination-covid?pid=practice-163796&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.89827",
+        "latitude": "45.7493"
+      },
+      "metadata": {
+        "address": "55 Boulevard PINEL, 69500 Bron",
+        "phone_number": "+33423101010",
+        "business_hours": {
+          "lundi": "09:00-20:00",
+          "mardi": "09:00-20:00",
+          "mercredi": "09:00-20:00",
+          "jeudi": "09:00-20:00",
+          "vendredi": "09:00-20:00",
+          "samedi": "09:00-17:00",
+          "dimanche": "09:00-17:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "69",
       "nom": "Centre de vaccination -H\u00f4pital Lyon sud - HCL",
       "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-lyon-sud-hcl-vaccination-covid?pid=practice-163795&enable_cookies_consent=1",
       "location": {
@@ -959,23 +959,23 @@
     },
     {
       "departement": "69",
-      "nom": "Centre de vaccination -H\u00f4pital Pierre Wertheimer - HCL",
-      "url": "https://partners.doctolib.fr/hopital-public/lyon/hopital-pierre-wertheimer-hcl-vaccination-covid?pid=practice-163796&enable_cookies_consent=1",
+      "nom": "Centre de vaccination - Palais des sports de Gerland /Hospices Civils de Lyon",
+      "url": "https://partners.doctolib.fr/hopital-public/lyon/palais-des-sports-gerland-hcl-vaccination-covid?pid=practice-163661&enable_cookies_consent=1",
       "location": {
-        "longitude": "4.89827",
-        "latitude": "45.7493"
+        "longitude": "4.83026",
+        "latitude": "45.724"
       },
       "metadata": {
-        "address": "55 Boulevard PINEL, 69500 Bron",
+        "address": "350 Avenue Jean Jaur\u00e8s, 69007 Lyon",
         "phone_number": "+33423101010",
         "business_hours": {
-          "lundi": "09:00-20:00",
-          "mardi": "09:00-20:00",
-          "mercredi": "09:00-20:00",
-          "jeudi": "09:00-20:00",
-          "vendredi": "09:00-20:00",
-          "samedi": "09:00-17:00",
-          "dimanche": "09:00-17:00"
+          "lundi": "08:30-20:00",
+          "mardi": "08:30-20:00",
+          "mercredi": "08:30-20:00",
+          "jeudi": "08:30-20:00",
+          "vendredi": "08:30-20:00",
+          "samedi": "08:30-20:00",
+          "dimanche": "ferm\u00e9"
         }
       },
       "prochain_rdv": null,
@@ -1015,7 +1015,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": null,
+      "plateforme": "Ordoclic",
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -1125,31 +1125,6 @@
     },
     {
       "departement": "69",
-      "nom": "Pharmacie des Charmes",
-      "url": "https://partners.doctolib.fr/pharmacie/genay/pharmacie-des-charmes",
-      "location": {
-        "longitude": 4.8400705,
-        "latitude": 45.8994068
-      },
-      "metadata": {
-        "address": "92 Rue de la Gare, 69730 Genay",
-        "business_hours": {
-          "lundi": "08:30-12:15, 14:30-19:15",
-          "mardi": "08:30-12:15, 14:30-19:15",
-          "mercredi": "08:30-12:15, 14:30-19:15",
-          "jeudi": "08:30-12:15, 14:30-19:15",
-          "vendredi": "08:30-12:15, 14:30-19:15",
-          "samedi": "08:30-12:15, 14:30-18:30",
-          "dimanche": null
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "69",
       "nom": "Dr Frederic LAROCHE",
       "url": "https://partners.doctolib.fr/medecin-generaliste/corbas/frederic-laroche",
       "location": {
@@ -1172,6 +1147,31 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "general-practitioner",
+      "appointment_count": 0
+    },
+    {
+      "departement": "69",
+      "nom": "Pharmacie des Charmes",
+      "url": "https://partners.doctolib.fr/pharmacie/genay/pharmacie-des-charmes",
+      "location": {
+        "longitude": 4.8400705,
+        "latitude": 45.8994068
+      },
+      "metadata": {
+        "address": "92 Rue de la Gare, 69730 Genay",
+        "business_hours": {
+          "lundi": "08:30-12:15, 14:30-19:15",
+          "mardi": "08:30-12:15, 14:30-19:15",
+          "mercredi": "08:30-12:15, 14:30-19:15",
+          "jeudi": "08:30-12:15, 14:30-19:15",
+          "vendredi": "08:30-12:15, 14:30-19:15",
+          "samedi": "08:30-12:15, 14:30-18:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
       "appointment_count": 0
     },
     {
@@ -1228,24 +1228,6 @@
     },
     {
       "departement": "69",
-      "nom": "Pharmacie De La Mairie Limas",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-limas-limas",
-      "location": {
-        "longitude": 4.706728399999999,
-        "latitude": 45.9751681
-      },
-      "metadata": {
-        "address": "2 bis rue Pierre Ponot, 69400 Limas",
-        "phone_number": "+33474622551",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "69",
       "nom": "Centre de vaccination Covid-19 - St Priest Mions",
       "url": "https://partners.doctolib.fr/centre-de-sante/saint-priest/centre-de-vaccination-covid-19-st-priest-mions?highlight%5bspeciality_ids%5d%5b%5d=5494",
       "location": {
@@ -1268,6 +1250,24 @@
       "prochain_rdv": null,
       "plateforme": "Doctolib",
       "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "69",
+      "nom": "Pharmacie De La Mairie Limas",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-limas-limas",
+      "location": {
+        "longitude": 4.706728399999999,
+        "latitude": 45.9751681
+      },
+      "metadata": {
+        "address": "2 bis rue Pierre Ponot, 69400 Limas",
+        "phone_number": "+33474622551",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
       "appointment_count": 0
     }
   ]

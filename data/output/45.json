@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.149433+02:00",
+  "last_updated": "2021-04-09T15:24:49.834790+02:00",
   "centres_disponibles": [
     {
       "departement": "45",
@@ -23,7 +23,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-12T11:10:00.000+02:00",
+      "prochain_rdv": "2021-04-10T14:50:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -74,7 +74,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-21T13:40:00.000+02:00",
+      "prochain_rdv": "2021-04-19T16:25:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -338,14 +338,14 @@
     },
     {
       "departement": "45",
-      "nom": "Dispensaire Porte Madeleine - r\u00e9serv\u00e9 aux professionnels de sant\u00e9",
-      "url": "https://partners.doctolib.fr/hopital-public/orleans/centre-de-vaccination-covid-chr-orleans-porte-madeleine?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "CH de Gien - r\u00e9serv\u00e9 aux professionnels de sant\u00e9",
+      "url": "https://partners.doctolib.fr/hopital-public/gien/centre-de-vaccination-covid-hopital-de-gien?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "1.89693",
-        "latitude": "47.9017"
+        "longitude": "2.63436",
+        "latitude": "47.6904"
       },
       "metadata": {
-        "address": "1 Rue Porte Madeleine, 45000 Orl\u00e9ans",
+        "address": "2 ter Avenue Jean Villejean, 45500 Gien",
         "business_hours": {
           "lundi": "ouvert",
           "mardi": "ouvert",
@@ -363,14 +363,14 @@
     },
     {
       "departement": "45",
-      "nom": "CH de Gien - r\u00e9serv\u00e9 aux professionnels de sant\u00e9",
-      "url": "https://partners.doctolib.fr/hopital-public/gien/centre-de-vaccination-covid-hopital-de-gien?speciality_id=5494&enable_cookies_consent=1",
+      "nom": "Dispensaire Porte Madeleine - r\u00e9serv\u00e9 aux professionnels de sant\u00e9",
+      "url": "https://partners.doctolib.fr/hopital-public/orleans/centre-de-vaccination-covid-chr-orleans-porte-madeleine?speciality_id=5494&enable_cookies_consent=1",
       "location": {
-        "longitude": "2.63436",
-        "latitude": "47.6904"
+        "longitude": "1.89693",
+        "latitude": "47.9017"
       },
       "metadata": {
-        "address": "2 ter Avenue Jean Villejean, 45500 Gien",
+        "address": "1 Rue Porte Madeleine, 45000 Orl\u00e9ans",
         "business_hours": {
           "lundi": "ouvert",
           "mardi": "ouvert",

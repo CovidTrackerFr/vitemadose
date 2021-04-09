@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.108143+02:00",
+  "last_updated": "2021-04-09T15:24:49.793613+02:00",
   "centres_disponibles": [
     {
       "departement": "07",
@@ -50,32 +50,6 @@
         }
       },
       "prochain_rdv": "2021-04-24T13:40:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "07",
-      "nom": "Clinique Pasteur de Guilherand-Granges",
-      "url": "https://partners.doctolib.fr/clinique-privee/guilherand-granges/centre-de-vaccination-covid19-clinique-pasteur?speciality_id=5494&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.88257",
-        "latitude": "44.9341"
-      },
-      "metadata": {
-        "address": "294 Boulevard Charles de Gaulle, 07500 Guilherand-Granges",
-        "phone_number": "+33800009110",
-        "business_hours": {
-          "lundi": "13:30-17:00",
-          "mardi": "08:30-12:30/13:30-17:00",
-          "mercredi": "08:30-12:30/13:30-17:00",
-          "jeudi": "08:30-12:30/13:30-17:00",
-          "vendredi": "08:30-12:30/13:30-17:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": "2021-04-29T11:15:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -263,32 +237,6 @@
     },
     {
       "departement": "07",
-      "nom": "Centre de vaccination de Lamastre  - Centre socio-culturel",
-      "url": "https://www.maiia.com/centre-de-vaccination/07270-lamastre/centre-de-vaccination-covid---lamastre",
-      "location": {
-        "longitude": "4.57776",
-        "latitude": "44.9847"
-      },
-      "metadata": {
-        "address": "1 Place Victor Hugo, 07270 Lamastre",
-        "phone_number": "+33800009110",
-        "business_hours": {
-          "lundi": "14:00-18:00",
-          "mardi": "08:00-12:00/13:30-17:30",
-          "mercredi": "08:00-12:00/14:00-18:00",
-          "jeudi": "09:00-12:00",
-          "vendredi": "08:00-12:00",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Maiia",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "07",
       "nom": "Centre de Vaccination Territorial et Hospitalier de Tournon",
       "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/tournon-sur-rhone/vaccination-covid-19-ch-tournon?pid=practice-174270&enable_cookies_consent=1",
       "location": {
@@ -310,6 +258,32 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "07",
+      "nom": "Centre de vaccination de Lamastre  - Centre socio-culturel",
+      "url": "https://www.maiia.com/centre-de-vaccination/07270-lamastre/centre-de-vaccination-covid---lamastre",
+      "location": {
+        "longitude": "4.57776",
+        "latitude": "44.9847"
+      },
+      "metadata": {
+        "address": "1 Place Victor Hugo, 07270 Lamastre",
+        "phone_number": "+33800009110",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "08:00-12:00/13:30-17:30",
+          "mercredi": "08:00-12:00/14:00-18:00",
+          "jeudi": "09:00-12:00",
+          "vendredi": "08:00-12:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
       "type": "vaccination-center",
       "appointment_count": 0
     },
@@ -356,6 +330,32 @@
           "mercredi": "ouvert",
           "jeudi": "ouvert",
           "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "07",
+      "nom": "Clinique Pasteur de Guilherand-Granges",
+      "url": "https://partners.doctolib.fr/clinique-privee/guilherand-granges/centre-de-vaccination-covid19-clinique-pasteur?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.88257",
+        "latitude": "44.9341"
+      },
+      "metadata": {
+        "address": "294 Boulevard Charles de Gaulle, 07500 Guilherand-Granges",
+        "phone_number": "+33800009110",
+        "business_hours": {
+          "lundi": "13:30-17:00",
+          "mardi": "08:30-12:30/13:30-17:00",
+          "mercredi": "08:30-12:30/13:30-17:00",
+          "jeudi": "08:30-12:30/13:30-17:00",
+          "vendredi": "08:30-12:30/13:30-17:00",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }

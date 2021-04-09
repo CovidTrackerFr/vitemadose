@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.121941+02:00",
+  "last_updated": "2021-04-09T15:24:49.807355+02:00",
   "centres_disponibles": [
     {
       "departement": "21",
@@ -136,32 +136,6 @@
     },
     {
       "departement": "21",
-      "nom": "EPOISSES Salle communale",
-      "url": "https://partners.doctolib.fr/maison-de-sante/seurre/centre-de-vaccination-pole-de-sante-rives-de-saone?pid=practice-177319&enable_cookies_consent=1",
-      "location": {
-        "longitude": "4.17441",
-        "latitude": "47.5048"
-      },
-      "metadata": {
-        "address": "2 Rue de la Gare, 21460 \u00c9poisses",
-        "phone_number": "+33380964409",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "8H45 - 17H45",
-          "vendredi": "8H45 - 17H45",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "21",
       "nom": "GENLIS - Mairie",
       "url": "https://partners.doctolib.fr/maison-de-sante/seurre/centre-de-vaccination-pole-de-sante-rives-de-saone?pid=practice-174447&enable_cookies_consent=1",
       "location": {
@@ -177,6 +151,32 @@
           "mercredi": "ferm\u00e9",
           "jeudi": "ferm\u00e9",
           "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "EPOISSES Salle communale",
+      "url": "https://partners.doctolib.fr/maison-de-sante/seurre/centre-de-vaccination-pole-de-sante-rives-de-saone?pid=practice-177319&enable_cookies_consent=1",
+      "location": {
+        "longitude": "4.17441",
+        "latitude": "47.5048"
+      },
+      "metadata": {
+        "address": "2 Rue de la Gare, 21460 \u00c9poisses",
+        "phone_number": "+33380964409",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "8H45 - 17H45",
+          "vendredi": "8H45 - 17H45",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -676,32 +676,6 @@
     },
     {
       "departement": "21",
-      "nom": "CHU Dijon (B\u00e2timent Courtois)",
-      "url": "https://partners.doctolib.fr/hopital-public/dijon/centre-de-vaccination-covid-chu-dijon?pid=practice-169594&enable_cookies_consent=1",
-      "location": {
-        "longitude": "5.07015",
-        "latitude": "47.3222"
-      },
-      "metadata": {
-        "address": "10 Bd Mal de Lattre de Tassigny, 21000 Dijon",
-        "phone_number": "+33345810421",
-        "business_hours": {
-          "lundi": "09:00-11:45/13:00-16:45",
-          "mardi": "09:00-11:45/13:00-16:45",
-          "mercredi": "09:00-11:45/13:00-16:45",
-          "jeudi": "09:00-11:45/13:00-16:45",
-          "vendredi": "09:00-11:45/13:00-16:45",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "21",
       "nom": "BRAZEY-EN-PLAINE Salle polyvalente Georges Balme",
       "url": "https://partners.doctolib.fr/centre-de-sante/brazey-en-plaine/cpts-pays-d-or-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
       "location": {
@@ -718,6 +692,32 @@
           "jeudi": "10:00-12:00",
           "vendredi": "10:00-12:00",
           "samedi": "10:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "CHU Dijon (B\u00e2timent Courtois)",
+      "url": "https://partners.doctolib.fr/hopital-public/dijon/centre-de-vaccination-covid-chu-dijon?pid=practice-169594&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.07015",
+        "latitude": "47.3222"
+      },
+      "metadata": {
+        "address": "10 Bd Mal de Lattre de Tassigny, 21000 Dijon",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "09:00-11:45/13:00-16:45",
+          "mardi": "09:00-11:45/13:00-16:45",
+          "mercredi": "09:00-11:45/13:00-16:45",
+          "jeudi": "09:00-11:45/13:00-16:45",
+          "vendredi": "09:00-11:45/13:00-16:45",
+          "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
       },
@@ -792,7 +792,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },

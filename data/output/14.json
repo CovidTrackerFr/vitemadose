@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.115667+02:00",
+  "last_updated": "2021-04-09T15:24:49.800838+02:00",
   "centres_disponibles": [
     {
       "departement": "14",
@@ -127,7 +127,7 @@
           "dimanche": ""
         }
       },
-      "prochain_rdv": "2021-04-30T15:35:00.000+02:00",
+      "prochain_rdv": "2021-04-30T16:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -240,7 +240,7 @@
     },
     {
       "departement": "14",
-      "nom": "MA - US de la maison d'arr\u00eat de Caen / Maison d'Arr\u00eat de Caen",
+      "nom": "CP - US de Caen / Maison d'Arr\u00eat de Caen",
       "url": "",
       "location": {
         "longitude": "-0.391071",
@@ -265,7 +265,7 @@
     },
     {
       "departement": "14",
-      "nom": "CP - US de Caen / Maison d'Arr\u00eat de Caen",
+      "nom": "MA - US de la maison d'arr\u00eat de Caen / Maison d'Arr\u00eat de Caen",
       "url": "",
       "location": {
         "longitude": "-0.391071",
@@ -509,25 +509,7 @@
         "business_hours": null
       },
       "prochain_rdv": null,
-      "plateforme": "Ordoclic",
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "14",
-      "nom": "Pharmacie Ferran",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-ferran-mondeville",
-      "location": {
-        "longitude": -0.3228682,
-        "latitude": 49.1753142
-      },
-      "metadata": {
-        "address": "48 rue chapron, 14120 mondeville",
-        "phone_number": "+33231521571",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": "Ordoclic",
+      "plateforme": null,
       "type": "drugstore",
       "appointment_count": 0
     },
@@ -551,15 +533,33 @@
     },
     {
       "departement": "14",
-      "nom": "Pharmacie De La Plage",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-plage-merville-franceville",
+      "nom": "Pharmacie Ferran",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-ferran-mondeville",
       "location": {
-        "longitude": -0.2027435,
-        "latitude": 49.2840845
+        "longitude": -0.3228682,
+        "latitude": 49.1753142
       },
       "metadata": {
-        "address": "59 avenue de Paris, 14810 Merville Franceville",
-        "phone_number": "+33231242187",
+        "address": "48 rue chapron, 14120 mondeville",
+        "phone_number": "+33231521571",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie De L'Avenir",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-l'avenir-orbec",
+      "location": {
+        "longitude": 0.4058560000000001,
+        "latitude": 49.022737
+      },
+      "metadata": {
+        "address": "127 rue Grande, 14290 Orbec",
+        "phone_number": "+33231328949",
         "business_hours": null
       },
       "prochain_rdv": null,
@@ -587,24 +587,6 @@
     },
     {
       "departement": "14",
-      "nom": "Pharmacie De L'Avenir",
-      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-l'avenir-orbec",
-      "location": {
-        "longitude": 0.4058560000000001,
-        "latitude": 49.022737
-      },
-      "metadata": {
-        "address": "127 rue Grande, 14290 Orbec",
-        "phone_number": "+33231328949",
-        "business_hours": null
-      },
-      "prochain_rdv": null,
-      "plateforme": null,
-      "type": "drugstore",
-      "appointment_count": 0
-    },
-    {
-      "departement": "14",
       "nom": "Pharmacie Decoutere",
       "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-decoutere-argences",
       "location": {
@@ -614,6 +596,24 @@
       "metadata": {
         "address": "7 Boulevard Delean, 14370 Argences",
         "phone_number": "+33231236035",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie De La Plage",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-plage-merville-franceville",
+      "location": {
+        "longitude": -0.2027435,
+        "latitude": 49.2840845
+      },
+      "metadata": {
+        "address": "59 avenue de Paris, 14810 Merville Franceville",
+        "phone_number": "+33231242187",
         "business_hours": null
       },
       "prochain_rdv": null,

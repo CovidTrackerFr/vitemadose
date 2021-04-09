@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.190677+02:00",
+  "last_updated": "2021-04-09T15:24:49.877110+02:00",
   "centres_disponibles": [
     {
       "departement": "80",
@@ -288,21 +288,20 @@
     },
     {
       "departement": "80",
-      "nom": "Centre de vaccination - Ville de Poix-de-Picardie, SALLE DES F\u00caTES",
-      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/poix-de-picardie-80290/poix-de-picardie/centre-de-vaccination-de-poix-de-picardie",
+      "nom": "Centre de Vaccination - Ville de Saint-Val\u00e9ry-Sur-Somme, Entrep\u00f4t des sel",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/st-valery-sur-somme-80230/st-valery-sur-somme/centre-de-vaccination-du-st-valery-sur-somme",
       "location": {
-        "longitude": "1.98219",
-        "latitude": "49.7744"
+        "longitude": "1.64405",
+        "latitude": "50.1809"
       },
       "metadata": {
-        "address": " Place de la R\u00e9publique, 80290 Poix-de-Picardie",
-        "phone_number": "+33322410605",
+        "address": "2 Quai Lejoille, 80230 Saint-Valery-sur-Somme",
         "business_hours": {
-          "lundi": "10:00-13:00/14:00-17:30",
-          "mardi": "10:00-13:00/14:00-17:30",
-          "mercredi": "10:00-13:00/14:00-17:30",
-          "jeudi": "10:00-13:00/14:00-17:30",
-          "vendredi": "10:00-13:00/14:00-17:30",
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
         }
@@ -340,22 +339,49 @@
     },
     {
       "departement": "80",
-      "nom": "Centre de Vaccination - Ville de Saint-Val\u00e9ry-Sur-Somme, Entrep\u00f4t des sel",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/st-valery-sur-somme-80230/st-valery-sur-somme/centre-de-vaccination-du-st-valery-sur-somme",
+      "nom": "Centre de vaccination - Ville de Poix-de-Picardie, SALLE DES F\u00caTES",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/poix-de-picardie-80290/poix-de-picardie/centre-de-vaccination-de-poix-de-picardie",
       "location": {
-        "longitude": "1.64405",
-        "latitude": "50.1809"
+        "longitude": "1.98219",
+        "latitude": "49.7744"
       },
       "metadata": {
-        "address": "2 Quai Lejoille, 80230 Saint-Valery-sur-Somme",
+        "address": " Place de la R\u00e9publique, 80290 Poix-de-Picardie",
+        "phone_number": "+33322410605",
         "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
+          "lundi": "10:00-13:00/14:00-17:30",
+          "mardi": "10:00-13:00/14:00-17:30",
+          "mercredi": "10:00-13:00/14:00-17:30",
+          "jeudi": "10:00-13:00/14:00-17:30",
+          "vendredi": "10:00-13:00/14:00-17:30",
           "samedi": "ferm\u00e9",
           "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "80",
+      "nom": "Centre de vaccination- CHU Amiens",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/amiens-80000/chu-amiens-picardie-site-nord?category=-1&cabinet=16656&specialty=496",
+      "location": {
+        "longitude": "2.29074",
+        "latitude": "49.9073"
+      },
+      "metadata": {
+        "address": " Place Victor Pauchet, 80080 Amiens",
+        "phone_number": "+33392043471 ",
+        "business_hours": {
+          "lundi": "12:00-20:00",
+          "mardi": "12:00-20:00",
+          "mercredi": "12:00-20:00",
+          "jeudi": "12:00-20:00",
+          "vendredi": "12:00-20:00",
+          "samedi": "10:00-18:00",
+          "dimanche": "09:00-13:00"
         }
       },
       "prochain_rdv": null,
@@ -412,32 +438,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "80",
-      "nom": "Centre de vaccination- CHU Amiens",
-      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/amiens-80000/chu-amiens-picardie-site-nord?category=-1&cabinet=16656&specialty=496",
-      "location": {
-        "longitude": "2.29074",
-        "latitude": "49.9073"
-      },
-      "metadata": {
-        "address": " Place Victor Pauchet, 80080 Amiens",
-        "phone_number": "+33392043471 ",
-        "business_hours": {
-          "lundi": "12:00-20:00",
-          "mardi": "12:00-20:00",
-          "mercredi": "12:00-20:00",
-          "jeudi": "12:00-20:00",
-          "vendredi": "12:00-20:00",
-          "samedi": "10:00-18:00",
-          "dimanche": "09:00-13:00"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Keldoc",
       "type": "vaccination-center",
       "appointment_count": 0
     },

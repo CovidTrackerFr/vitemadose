@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.143754+02:00",
+  "last_updated": "2021-04-09T15:24:49.828621+02:00",
   "centres_disponibles": [
     {
       "departement": "39",
@@ -75,7 +75,7 @@
           "dimanche": "ferm\u00e9"
         }
       },
-      "prochain_rdv": "2021-04-23T13:38:00.000+02:00",
+      "prochain_rdv": "2021-04-23T18:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -128,6 +128,32 @@
         }
       },
       "prochain_rdv": "2021-05-03T15:28:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "39",
+      "nom": "Parc des expositions Jura Parc",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-163355&enable_cookies_consent=1",
+      "location": {
+        "longitude": "5.53949",
+        "latitude": "46.6759"
+      },
+      "metadata": {
+        "address": " Rue du 19 mars 1962, 39570 Montmorot",
+        "phone_number": "+33384868600",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "11:00-14:00/17:00-19:00",
+          "vendredi": "11:00-14:00/17:00-19:00",
+          "samedi": "10:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-05T10:44:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
@@ -286,32 +312,6 @@
       },
       "prochain_rdv": null,
       "plateforme": "Autre",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "39",
-      "nom": "Parc des expositions Jura Parc",
-      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-163355&enable_cookies_consent=1",
-      "location": {
-        "longitude": "5.53949",
-        "latitude": "46.6759"
-      },
-      "metadata": {
-        "address": " Rue du 19 mars 1962, 39570 Montmorot",
-        "phone_number": "+33384868600",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "ferm\u00e9",
-          "mercredi": "ferm\u00e9",
-          "jeudi": "11:00-14:00/17:00-19:00",
-          "vendredi": "11:00-14:00/17:00-19:00",
-          "samedi": "10:00-12:00",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
     },

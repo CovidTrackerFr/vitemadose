@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.135164+02:00",
+  "last_updated": "2021-04-09T15:24:49.820210+02:00",
   "centres_disponibles": [],
   "centres_indisponibles": [
     {
@@ -135,6 +135,32 @@
     },
     {
       "departement": "32",
+      "nom": "Salle omnisport LECTOURE",
+      "url": "https://partners.doctolib.fr/centre-de-sante/lectoure/centre-de-vaccination-covid-19-lectoure?pid=practice-166213&enable_cookies_consent=1",
+      "location": {
+        "longitude": "0.633919",
+        "latitude": "43.9347"
+      },
+      "metadata": {
+        "address": " Avenue Jacques Descamps, 32700 Lectoure",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "09:00-12:00/14:00-17:00",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "32",
       "nom": "Hall des expositions EAUZE",
       "url": "https://partners.doctolib.fr/centre-de-sante/eauze/centre-de-vaccination-covid-19-eauze?pid=practice-166214&enable_cookies_consent=1",
       "location": {
@@ -174,32 +200,6 @@
           "lundi": "ferm\u00e9",
           "mardi": "ferm\u00e9",
           "mercredi": "09:00-12:00/14:00-17:00",
-          "jeudi": "ferm\u00e9",
-          "vendredi": "ferm\u00e9",
-          "samedi": "ferm\u00e9",
-          "dimanche": "ferm\u00e9"
-        }
-      },
-      "prochain_rdv": null,
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "32",
-      "nom": "Salle omnisport LECTOURE",
-      "url": "https://partners.doctolib.fr/centre-de-sante/lectoure/centre-de-vaccination-covid-19-lectoure?pid=practice-166213&enable_cookies_consent=1",
-      "location": {
-        "longitude": "0.633919",
-        "latitude": "43.9347"
-      },
-      "metadata": {
-        "address": " Avenue Jacques Descamps, 32700 Lectoure",
-        "phone_number": "+33800541919",
-        "business_hours": {
-          "lundi": "ferm\u00e9",
-          "mardi": "09:00-12:00/14:00-17:00",
-          "mercredi": "ferm\u00e9",
           "jeudi": "ferm\u00e9",
           "vendredi": "ferm\u00e9",
           "samedi": "ferm\u00e9",

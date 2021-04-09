@@ -1,57 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2021-04-09T15:21:54.172105+02:00",
+  "last_updated": "2021-04-09T15:24:49.857723+02:00",
   "centres_disponibles": [
-    {
-      "departement": "66",
-      "nom": "Grand centre Perpignan",
-      "url": "https://www.doctolib.fr/hopital-public/perpignan/centres-de-vaccination-covid-19-du-departement-66?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": "2.89341",
-        "latitude": "42.7047"
-      },
-      "metadata": {
-        "address": "12 Avenue du Palais des Expositions, 66000 Perpignan",
-        "business_hours": {
-          "lundi": "09:00-20:00",
-          "mardi": "09:00-20:00",
-          "mercredi": "09:00-20:00",
-          "jeudi": "09:00-20:00",
-          "vendredi": "09:00-20:00",
-          "samedi": "09:00-20:00",
-          "dimanche": "09:00-20:00"
-        }
-      },
-      "prochain_rdv": "2021-04-09T16:45:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
-    {
-      "departement": "66",
-      "nom": "Centre de vaccination Covid-19 Palais des Expositions Perpignan",
-      "url": "https://partners.doctolib.fr/centre-de-sante/perpignan/centre-de-vaccination-covid-19-palais-des-expositions?highlight%5bspeciality_ids%5d%5b%5d=5494",
-      "location": {
-        "longitude": 2.9101304,
-        "latitude": 42.7129
-      },
-      "metadata": {
-        "address": "Avenue du Palais des Expositions, 66000 Perpignan",
-        "business_hours": {
-          "lundi": "09:00-20:00",
-          "mardi": "09:00-20:00",
-          "mercredi": "09:00-20:00",
-          "jeudi": "09:00-20:00",
-          "vendredi": "09:00-20:00",
-          "samedi": "09:00-20:00",
-          "dimanche": "09:00-20:00"
-        }
-      },
-      "prochain_rdv": "2021-04-09T16:45:00.000+02:00",
-      "plateforme": "Doctolib",
-      "type": "vaccination-center",
-      "appointment_count": 0
-    },
     {
       "departement": "66",
       "nom": "CH Prades",
@@ -100,6 +50,56 @@
         }
       },
       "prochain_rdv": "2021-04-12T14:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "66",
+      "nom": "Grand centre Perpignan",
+      "url": "https://www.doctolib.fr/hopital-public/perpignan/centres-de-vaccination-covid-19-du-departement-66?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": "2.89341",
+        "latitude": "42.7047"
+      },
+      "metadata": {
+        "address": "12 Avenue du Palais des Expositions, 66000 Perpignan",
+        "business_hours": {
+          "lundi": "09:00-20:00",
+          "mardi": "09:00-20:00",
+          "mercredi": "09:00-20:00",
+          "jeudi": "09:00-20:00",
+          "vendredi": "09:00-20:00",
+          "samedi": "09:00-20:00",
+          "dimanche": "09:00-20:00"
+        }
+      },
+      "prochain_rdv": "2021-04-13T18:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "66",
+      "nom": "Centre de vaccination Covid-19 Palais des Expositions Perpignan",
+      "url": "https://partners.doctolib.fr/centre-de-sante/perpignan/centre-de-vaccination-covid-19-palais-des-expositions?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 2.9101304,
+        "latitude": 42.7129
+      },
+      "metadata": {
+        "address": "Avenue du Palais des Expositions, 66000 Perpignan",
+        "business_hours": {
+          "lundi": "09:00-20:00",
+          "mardi": "09:00-20:00",
+          "mercredi": "09:00-20:00",
+          "jeudi": "09:00-20:00",
+          "vendredi": "09:00-20:00",
+          "samedi": "09:00-20:00",
+          "dimanche": "09:00-20:00"
+        }
+      },
+      "prochain_rdv": "2021-04-13T18:10:00.000+02:00",
       "plateforme": "Doctolib",
       "type": "vaccination-center",
       "appointment_count": 0
