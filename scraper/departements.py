@@ -56,3 +56,29 @@ def to_departement_number(insee_code: str) -> str:
     else:
         raise ValueError(f'Code INSEE absent de la base des codes INSEE : {insee_code}')
 
+def to_ville_name(insee_code: str) -> str:
+    """
+    Renvoie la ville correspondant au code INSEE.
+
+    Le code INSEE est un code à 5 chiffres, qui est typiquement différent du code postal,
+    mais qui commence (en général) aussi par les 2 chiffres du département.
+
+    """
+
+    if len(insee_code) == 4:
+        # Quand le CSV des centres de vaccinations est édité avec un tableur comme Excel,
+        # il est possible que le 1er zéro soit retiré si la colonne est interprétée comme
+        # un nombre (par ex 02401 devient 2401, mais on veut 02401 au complet).
+        insee_code = insee_code.zfill(5)
+
+    if len(insee_code) != 5:
+        raise ValueError(f'Code INSEE non-valide : {insee_code}')
+
+    with open("data/input/insee_to_codepostal_and_code_departement.json") as json_file:
+        insee_to_ville_table = json.load(json_file)
+
+    if insee_code in insee_to_ville_table:
+        return insee_to_ville_table[insee_code]["nom"]
+
+    else:
+        raise ValueError(f'Code INSEE absent de la base des codes INSEE : {insee_code}')

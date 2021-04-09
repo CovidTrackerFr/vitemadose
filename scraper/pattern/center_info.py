@@ -1,7 +1,11 @@
 import json
+import re
+import unidecode
 from typing import Optional
 
 from scraper.departements import to_departement_number
+from scraper.departements import to_ville_name
+
 from scraper.pattern.center_location import CenterLocation, convert_csv_data_to_location
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult
@@ -11,10 +15,11 @@ logger = get_logger()
 
 
 class CenterInfo:
-    def __init__(self, departement: str, nom: str, url: str):
+    def __init__(self, departement: str, ville: str, nom: str, url: str):
         self.departement = departement
         self.nom = nom
         self.url = url
+        self.ville = ville
         self.location = None
         self.metadata = None
         self.prochain_rdv = None
@@ -35,6 +40,13 @@ class CenterInfo:
         if type(self.location) is CenterLocation:
             self.location = self.location.default()
         return self.__dict__
+
+
+
+def urlify(s):
+    s = re.sub(r"[^\w\s]", '', s).lower()
+    s = re.sub(r"\s+", '-', s).lower()
+    return s
 
 
 def convert_csv_address(data: dict) -> str:
@@ -81,14 +93,17 @@ def convert_ordoclic_to_center_info(data: dict, center: CenterInfo) -> CenterInf
 def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     name = data.get('nom', None)
     departement = ''
+    ville=''
     url = data.get('rdv_site_web', None)
     try:
         departement = to_departement_number(data.get('com_insee', None))
+        ville = urlify(unidecode.unidecode(to_ville_name(data.get('com_insee', None))))
+
     except ValueError:
         logger.error(
             f"erreur lors du traitement de la ligne avec le gid {data['gid']}, com_insee={data['com_insee']}")
 
-    center = CenterInfo(departement, name, url)
+    center = CenterInfo(departement, ville, name, url)
     if data.get('iterator', '') == 'ordoclic':
         return convert_ordoclic_to_center_info(data, center)
     center.fill_localization(convert_csv_data_to_location(data))
