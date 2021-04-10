@@ -232,6 +232,8 @@ def test_find_visit_motive_id():
                     "id": 1,
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Moderna)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": True
                 }
             ]
         }
@@ -246,8 +248,12 @@ def test_find_visit_motive_id():
                     "id": 1,
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Pfizer/BioNTech)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": True
                 },
-                {"id": 2, "name": "1ère injection vaccin COVID-19 (Moderna)"},
+                {"id": 2, "name": "1ère injection vaccin COVID-19 (Moderna)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": True},
             ]
         }
     }
@@ -262,6 +268,8 @@ def test_find_visit_motive_id():
                     "id": 2,
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Moderna)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": True
                 },
             ]
         }
@@ -276,11 +284,15 @@ def test_find_visit_motive_id():
                     "id": 1,
                     "visit_motive_category_id": 41,
                     "name": "1ère injection vaccin COVID-19 (Moderna)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": True
                 },
                 {
                     "id": 2,
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Moderna)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": True
                 },
             ]
         }

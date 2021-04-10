@@ -14,7 +14,8 @@ DOCTOLIB_APPOINTMENT_REASON = [
 
 DOCTOLIB_CATEGORY = [
     'non professionnels de santé',
-    'patients', #  50 - 55 ans avec comoribidtés
+    'patients',
+    'vaccination covid',  # 50 - 55 ans avec comoribidtés
 ]
 
 

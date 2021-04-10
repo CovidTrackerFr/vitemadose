@@ -179,13 +179,6 @@ def _find_visit_motive_category_id(data: dict) -> Optional[str]:
     (qui correspond à la population civile).
     """
     for category in data.get('data', {}).get('visit_motive_categories', []):
-        # If this motive isn't related to vaccination
-        if not category.get('vaccination_motive'):
-            return None
-        # If it's not a first shot motive
-        # TODO: filter system
-        if not category.get('first_shot_motive'):
-            return None
         if is_category_relevant(category['name']):
             return category['id']
     return None
@@ -201,6 +194,13 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: str = None) -> O
         # On ne gère que les 1ère doses (le RDV pour la 2e dose est en général donné
         # après la 1ère dose, donc les gens n'ont pas besoin d'aide pour l'obtenir).
         if not is_appointment_relevant(visit_motive['name']):
+            continue
+        # If this motive isn't related to vaccination
+        if not visit_motive.get('vaccination_motive'):
+            continue
+        # If it's not a first shot motive
+        # TODO: filter system
+        if not visit_motive.get('first_shot_motive'):
             continue
         # Si le lieu de vaccination n'accepte pas les nouveaux patients
         # on ne considère pas comme valable.
