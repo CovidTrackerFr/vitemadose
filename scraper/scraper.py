@@ -150,10 +150,18 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         for code in import_departements()
     }
 
+    internal_ids = []
     for centre in centres_cherchés:
         centre['nom'] = centre['nom'].strip()
         compte_centres += 1
         code_departement = centre['departement']
+        if centre.get('internal_id'):
+            if centre.get('internal_id') in internal_ids:
+                logger.warning(
+                    f"le centre {centre['nom']} ({code_departement}) est un doublon (ID interne: {centre.get('internal_id')})")
+                continue
+            internal_ids.append(centre.get('internal_id'))
+
         if code_departement in par_departement:
             erreur = centre.pop('erreur', None)
             if centre['prochain_rdv'] is None:
