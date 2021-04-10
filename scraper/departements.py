@@ -59,8 +59,10 @@ def to_departement_number(insee_code: str) -> str:
 
 
 def get_city(address: str) -> str:
-    #Exemple : 2 avenue de la République, 75005 PARIS retourne PARIS
+    """
+    Récupère la ville depuis l'adresse complète    
+    >>> get_city("2 avenue de la République, 75005 PARIS")
+    'PARIS'
+    """
+    
     return re.search('(?<= \d{5} )(?P<com_nom>.*)\s*$', address).groupdict()['com_nom']
-
-
-
