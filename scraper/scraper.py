@@ -95,8 +95,8 @@ def cherche_prochain_rdv_dans_centre(centre):
         logger.info(
             f'{centre.get("gid", "")!s:>8} {center_data.plateforme!s:16} {"Erreur" or ""!s:32} {center_data.departement!s:6}')
 
-    if result and result.platform == 'Doctolib' and not center_data.url.islower():
-        center_data.url = center_data.url.lower()
+    if result is not None and result.request.url is not None:
+        center_data.url = result.request.url.lower()
 
     if 'type' in centre:
         center_data.type = centre['type']
