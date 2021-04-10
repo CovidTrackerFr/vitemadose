@@ -137,7 +137,7 @@ def set_doctolib_center_internal_id(request: ScraperRequest, data: dict, practic
     if not profile_id:
         return
     profile_id = int(profile_id)
-    practices = "-".join(str(x) for x in practice_ids)
+    practices = "-".join(str(x) for x in practice_ids) if practice_ids is not None else ""
     request.internal_id = f"{profile_id}[{practices}]"
 
 
