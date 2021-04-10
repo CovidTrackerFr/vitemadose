@@ -150,31 +150,56 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         for code in import_departements()
     }
 
+    outpath = outpath_format.format("centres_non_pris_en_compte_gouv")
+    try:
+        with open(outpath, "r") as fichier:
+            centres_fermes_gouv = json.load(fichier)
+            centres_fermes_gouv = centres_fermes_gouv["centres_fermes"].values()
+    except Exception as e:
+        centres_fermes_gouv = {}
+        logger.warning("Pas de fichier centres_non_pris_en_compte_gouv.json")
+
+    centres_fermes_dispo_gouv = {"centres_disponibles": [],"centres_indisponibles":[]}
+
     internal_ids = []
     for centre in centres_cherchés:
-        centre['nom'] = centre['nom'].strip()
-        compte_centres += 1
-        code_departement = centre['departement']
-        if centre.get('internal_id'):
-            if centre.get('internal_id') in internal_ids:
-                logger.warning(
-                    f"le centre {centre['nom']} ({code_departement}) est un doublon (ID interne: {centre.get('internal_id')})")
-                continue
-            internal_ids.append(centre.get('internal_id'))
+        if centre["url"] not in centres_fermes_gouv:
+            centre['nom'] = centre['nom'].strip()
+            compte_centres += 1
+            code_departement = centre['departement']
+            if centre.get('internal_id'):
+                if centre.get('internal_id') in internal_ids:
+                    logger.warning(
+                        f"le centre {centre['nom']} ({code_departement}) est un doublon (ID interne: {centre.get('internal_id')})")
+                    continue
+                internal_ids.append(centre.get('internal_id'))
 
-        if code_departement in par_departement:
-            erreur = centre.pop('erreur', None)
-            if centre['prochain_rdv'] is None:
-                par_departement[code_departement]['centres_indisponibles'].append(centre)
-                if isinstance(erreur, BlockedByDoctolibError):
-                    par_departement[code_departement]['doctolib_bloqué'] = True
-                    bloqués_doctolib += 1
+            if code_departement in par_departement:
+                erreur = centre.pop('erreur', None)
+                if centre['prochain_rdv'] is None:
+                    par_departement[code_departement]['centres_indisponibles'].append(centre)
+                    if isinstance(erreur, BlockedByDoctolibError):
+                        par_departement[code_departement]['doctolib_bloqué'] = True
+                        bloqués_doctolib += 1
+                else:
+                    compte_centres_avec_dispo += 1
+                    par_departement[code_departement]['centres_disponibles'].append(centre)
             else:
-                compte_centres_avec_dispo += 1
-                par_departement[code_departement]['centres_disponibles'].append(centre)
+                logger.warning(
+                    f"le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
         else:
-            logger.warning(
-                f"le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
+            if centre['prochain_rdv'] is None:
+                centres_fermes_dispo_gouv["centres_indisponibles"].append(centre)
+            else:
+                logger.info(f"le centre {centre['nom']} est fermé et a un rdv disponible")
+                centres_fermes_dispo_gouv["centres_disponibles"].append(centre)
+    
+    nb_fermes_dispos = len(centres_fermes_dispo_gouv["centres_disponibles"])
+    logger.info(f" {nb_fermes_dispos} centres sont fermés et ont un rdv disponible")
+
+    outpath = outpath_format.format("centres_fermes_dispo_gouv")
+    with open(outpath, "w") as fichier:
+        json.dump(centres_fermes_dispo_gouv, fichier, indent=2)
 
     outpath = outpath_format.format("info_centres")
     with open(outpath, "w") as info_centres:
@@ -235,14 +260,8 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
 
 
 def centre_iterator():
-    url = "https://www.data.gouv.fr/fr/datasets/r/5cb21a85-b0b0-4a65-a249-806a040ec372"
-    response = requests.get(url)
-    response.raise_for_status()
-
-    reader = io.StringIO(response.content.decode('utf8'))
-    csvreader = csv.DictReader(reader, delimiter=';')
-    for row in csvreader:
-        yield row
+    for centre in gouv_centre_iterator():
+        yield centre
     for centre in ordoclic_centre_iterator():
         yield centre
     try:
@@ -259,6 +278,45 @@ def centre_iterator():
             yield center
     except Exception as e:
         logger.warning(f"Unable to scrape doctolib centers: {e}")
+
+
+def gouv_centre_iterator(outpath_format='data/output/{}.json'):
+
+    url = "https://www.data.gouv.fr/fr/datasets/r/5cb21a85-b0b0-4a65-a249-806a040ec372"
+    response = requests.get(url)
+    response.raise_for_status()
+
+    reader = io.StringIO(response.content.decode('utf8'))
+    csvreader = csv.DictReader(reader, delimiter=';')
+
+    total = 0
+
+    centres_non_pris_en_compte = {"centres_fermes":{}, "centres_urls_vides":[]}
+
+    for row in csvreader:
+
+        row["rdv_site_web"] = fix_scrap_urls(row["rdv_site_web"])
+        if row["centre_fermeture"] == "t":
+            centres_non_pris_en_compte["centres_fermes"][row["gid"]] = row["rdv_site_web"]
+
+        if len(row["rdv_site_web"]):
+            yield row
+        else:
+            centres_non_pris_en_compte["centres_urls_vides"].append(row["gid"])            
+
+        total += 1
+    
+    nb_fermes = len(centres_non_pris_en_compte["centres_fermes"])
+    nb_urls_vides = len(centres_non_pris_en_compte["centres_urls_vides"])
+
+    logger.info(f"Il y a {nb_fermes} centres fermes dans le fichier gouv sur un total de {total}")
+
+    nb_urls_vides = len(centres_non_pris_en_compte["centres_urls_vides"])
+    logger.info(f"Il y a {nb_urls_vides} centres avec une URL vide dans le fichier gouv sur un total de {total}")
+
+    outpath = outpath_format.format("centres_non_pris_en_compte_gouv")
+    with open(outpath, "w") as fichier:
+        json.dump(centres_non_pris_en_compte, fichier, indent=2)
 
 
 if __name__ == "__main__":
