@@ -67,6 +67,8 @@ class DoctolibSlots:
         appointment_count = 0
         request.update_practitioner_type(parse_practitioner_type(centre, rdata))
 
+        if len(rdata.get('places', [])) > 1:
+            practice_id = rdata.get('places')[0].get('practice_ids', None)
         # visit_motive_categories
         # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1
         visit_motive_category_id = _find_visit_motive_category_id(data)
@@ -144,7 +146,7 @@ def _parse_centre(rdv_site_web: str) -> Optional[str]:
     return centre
 
 
-def _parse_practice_id(rdv_site_web: str) -> Optional[int]:
+def _parse_practice_id(rdv_site_web: str):
     # Doctolib fetches multiple vaccination centers sometimes
     # so if a practice id is present in query, only related agendas
     # will be selected.
@@ -172,7 +174,7 @@ def _parse_practice_id(rdv_site_web: str) -> Optional[int]:
         # May be '164984?specialty=13' due to a weird format, drop everything after '?'
         pid, _, _ = pid.partition('?')
         # -> 164984
-        return int(pid)
+        return [int(pid)]
     except (ValueError, TypeError, IndexError):
         logger.error(f'failed to parse practice ID: {pid=}')
         return None
@@ -223,7 +225,7 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: str = None):
     return relevant_motives
 
 
-def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str, practice_id_filter: int = None) -> Tuple[
+def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str, practice_id_filter: list = None) -> Tuple[
     list, list]:
     """
     Etant donné une réponse à /booking/<centre>.json, renvoie tous les
@@ -236,7 +238,7 @@ def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str, practice_id_
         if (
                 'practice_id' in agenda
                 and practice_id_filter is not None
-                and agenda['practice_id'] != practice_id_filter
+                and agenda['practice_id'] not in practice_id_filter
         ):
             continue
         if agenda['booking_disabled']:

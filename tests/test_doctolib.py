@@ -54,7 +54,8 @@ def test_blocked_by_doctolib_par_centre():
         next_date = slots.fetch(scrap_request)
     except Exception as e:
         error = e
-    assert True == isinstance(error, BlockedByDoctolibError)
+    assert True is isinstance(error, BlockedByDoctolibError)
+
 
 def test_blocked_by_doctolib_par_availabilities():
     # Cas de base.
