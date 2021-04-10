@@ -187,6 +187,9 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
             'Maiia': {'urls': [
                 'https://www.maiia.com'
             ], 'scraper_ptr': maiia_fetch_slots},
+            'Pandalab': {'urls': [
+                'https://masante.pandalab.eu/'
+            ], 'scraper_ptr': pandalab_fetch_slots},
             'Ordoclic': {'urls': [
                 'https://app.ordoclic.fr/',
             ], 'scraper_ptr': ordoclic_fetch_slots}
