@@ -21,7 +21,7 @@ insee = {}
 campagnes = {}
 
 def getName(soup):
-    name = soup.find('h3').text.strip()
+    name = soup.find(class_='pharma-block').find('h3').text.strip()
     return name
 
 def getAddress(soup):
