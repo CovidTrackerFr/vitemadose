@@ -47,14 +47,15 @@ def test_blocked_by_doctolib_par_centre():
         return httpx.Response(200, json=json.loads(path.read_text()))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    slots = DoctolibSlots(client=client)
+    slots = DoctolibSlots(client=client, cooldown_interval=0)
 
     error = None
     try:
         next_date = slots.fetch(scrap_request)
     except Exception as e:
         error = e
-    assert True == isinstance(error, BlockedByDoctolibError)
+    assert True is isinstance(error, BlockedByDoctolibError)
+
 
 def test_blocked_by_doctolib_par_availabilities():
     # Cas de base.
@@ -73,7 +74,7 @@ def test_blocked_by_doctolib_par_availabilities():
         return httpx.Response(403, text="Anti dDos")
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    slots = DoctolibSlots(client=client)
+    slots = DoctolibSlots(client=client, cooldown_interval=0)
 
     error = None
     try:
@@ -112,7 +113,7 @@ def test_doctolib():
         return httpx.Response(200, json=json.loads(path.read_text()))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    slots = DoctolibSlots(client=client)
+    slots = DoctolibSlots(client=client, cooldown_interval=0)
 
     next_date = slots.fetch(scrap_request)
     assert next_date == "2021-04-10"
@@ -139,7 +140,7 @@ def test_doctolib_motive_categories():
         return httpx.Response(200, json=json.loads(path.read_text()))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    slots = DoctolibSlots(client=client)
+    slots = DoctolibSlots(client=client, cooldown_interval=0)
 
     next_date = slots.fetch(scrap_request)
     assert next_date == "2021-04-10"
@@ -166,7 +167,7 @@ def test_doctolib_next_slot():
         return httpx.Response(200, json=json.loads(path.read_text()))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    slots = DoctolibSlots(client=client)
+    slots = DoctolibSlots(client=client, cooldown_interval=0)
 
     next_date = slots.fetch(scrap_request)
     assert next_date == "2021-04-10"
@@ -192,15 +193,15 @@ def test_parse_centre():
 def test_parse_practice_id():
     # Cas de base
     url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
-    assert _parse_practice_id(url) == 165752
+    assert _parse_practice_id(url) == [165752]
 
     # Format bizarre 1
     url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-162589&?speciality_id=5494&enable_cookies_consent=1"  # noqa
-    assert _parse_practice_id(url) == 162589
+    assert _parse_practice_id(url) == [162589]
 
     # Format bizarre 2
     url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-162589?speciality_id=5494&enable_cookies_consent=1"  # noqa
-    assert _parse_practice_id(url) == 162589
+    assert _parse_practice_id(url) == [162589]
 
     # Broken 1 : manque le numéro
     url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-&enable_cookies_consent=1"  # noqa
@@ -220,7 +221,7 @@ def test_find_visit_motive_category_id():
             ]
         }
     }
-    assert _find_visit_motive_category_id(data) == 42
+    assert _find_visit_motive_category_id(data) == [42]
 
 
 def test_find_visit_motive_id():
@@ -232,11 +233,13 @@ def test_find_visit_motive_id():
                     "id": 1,
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Moderna)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": True
                 }
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=42) == 1
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == [1]
 
     # Plusieurs motifs dispo => on choisit le 1er dans la liste.
     data = {
@@ -246,12 +249,16 @@ def test_find_visit_motive_id():
                     "id": 1,
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Pfizer/BioNTech)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": True
                 },
-                {"id": 2, "name": "1ère injection vaccin COVID-19 (Moderna)"},
+                {"id": 2, "name": "1ère injection vaccin COVID-19 (Moderna)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": True},
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=42) == 1
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == [1]
 
     # Mix avec un motif autre
     data = {
@@ -262,11 +269,13 @@ def test_find_visit_motive_id():
                     "id": 2,
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Moderna)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": True
                 },
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=42) == 2
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == [2]
 
     # Mix avec une catégorie autre
     data = {
@@ -276,16 +285,71 @@ def test_find_visit_motive_id():
                     "id": 1,
                     "visit_motive_category_id": 41,
                     "name": "1ère injection vaccin COVID-19 (Moderna)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": True
                 },
                 {
                     "id": 2,
                     "visit_motive_category_id": 42,
-                    "name": "1ère injection vaccin COVID-19 (Moderna)",
+                    "name": "1ère injection vaccin COVID-19 (AstraZeneca)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": True
                 },
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=42) == 2
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == [2]
+
+    # Plusieurs types de vaccin
+    data = {
+        "data": {
+            "visit_motives": [
+                {
+                    "id": 1,
+                    "visit_motive_category_id": 42,
+                    "name": "1ère injection vaccin COVID-19 (Moderna)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": True
+                },
+                {
+                    "id": 2,
+                    "visit_motive_category_id": 42,
+                    "name": "1ère injection vaccin COVID-19 (AstraZeneca)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": True
+                },
+                {
+                    "id": 3,
+                    "visit_motive_category_id": 42,
+                    "name": "1ère injection vaccin COVID-19 (Pfizer-BioNTech)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": True
+                },
+                {
+                    "id": 4,
+                    "visit_motive_category_id": 42,
+                    "name": "2nde injection vaccin COVID-19 (Moderna)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": False
+                },
+                {
+                    "id": 5,
+                    "visit_motive_category_id": 42,
+                    "name": "2nde injection vaccin COVID-19 (AstraZeneca)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": False
+                },
+                {
+                    "id": 6,
+                    "visit_motive_category_id": 42,
+                    "name": "2nde injection vaccin COVID-19 (Pfizer-BioNTech)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": False
+                },
+            ]
+        }
+    }
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == [1, 2, 3]
 
 
 def test_find_agenda_and_practice_ids():
@@ -321,10 +385,10 @@ def test_find_agenda_and_practice_ids():
             ],
         },
     }
-    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=1)
+    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=[1])
     assert agenda_ids == ["10", "12"]
     assert practice_ids == ["20", "21", "24"]
 
-    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=1, practice_id_filter=21)
+    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=[1], practice_id_filter=[21])
     assert agenda_ids == ["12"]
     assert practice_ids == ["21", "24"]

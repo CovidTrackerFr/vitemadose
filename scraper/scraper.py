@@ -6,6 +6,8 @@ import json
 import os
 import traceback
 from multiprocessing import Pool
+from urllib.parse import urlparse, urlencode, urlunparse, parse_qs
+
 from scraper.error import ScrapeError, BlockedByDoctolibError
 
 import pytz
@@ -22,7 +24,7 @@ from .maiia import fetch_slots as maiia_fetch_slots
 from .ordoclic import centre_iterator as ordoclic_centre_iterator
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
 
-POOL_SIZE = int(os.getenv('POOL_SIZE', 40))
+POOL_SIZE = int(os.getenv('POOL_SIZE', 15))
 
 logger = enable_logger_for_production()
 
@@ -42,13 +44,13 @@ def scrape_debug(urls):
     enable_logger_for_debug()
     start_date = get_start_date()
     for rdv_site_web in urls:
+        rdv_site_web = fix_scrap_urls(rdv_site_web)
         logger.info('scraping URL %s', rdv_site_web)
         try:
             result = fetch_centre_slots(rdv_site_web, start_date)
         except Exception as e:
             logger.exception(f"erreur lors du traitement")
         logger.info(f'{result.platform!s:16} {result.next_availability or ""!s:32}')
-
 
 def scrape():
     with Pool(POOL_SIZE) as pool:
@@ -93,21 +95,36 @@ def cherche_prochain_rdv_dans_centre(centre):
         logger.info(
             f'{centre.get("gid", "")!s:>8} {center_data.plateforme!s:16} {"Erreur" or ""!s:32} {center_data.departement!s:6}')
 
-    if result and result.platform == 'Doctolib' and not center_data.url.islower():
-        center_data.url = center_data.url.lower()
+    if result is not None and result.request.url is not None:
+        center_data.url = result.request.url.lower()
 
     if 'type' in centre:
         center_data.type = centre['type']
     if not center_data.type:
         center_data.type = VACCINATION_CENTER
+    center_data.gid = centre.get("gid", "")
+    logger.debug(center_data.default())
     return center_data.default()
 
 
 def fix_scrap_urls(url):
     url = url.strip()
+
     # Fix Keldoc
     if url.startswith("https://www.keldoc.com/"):
         url = url.replace("https://www.keldoc.com/", "https://vaccination-covid.keldoc.com/")
+    # Clean Doctolib
+    if url.startswith('https://partners.doctolib.fr') or url.startswith('https://www.doctolib.fr'):
+        u = urlparse(url)
+        query = parse_qs(u.query, keep_blank_values=True)
+        to_remove = []
+        for query_name in query:
+            if query_name.startswith('highlight') or query_name == 'enable_cookies_consent':
+                to_remove.append(query_name)
+        [query.pop(rm, None) for rm in to_remove]
+        query.pop('speciality_id', None)
+        u = u._replace(query=urlencode(query, True))
+        url = urlunparse(u)
     return url
 
 
@@ -133,10 +150,18 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         for code in import_departements()
     }
 
+    internal_ids = []
     for centre in centres_cherchés:
         centre['nom'] = centre['nom'].strip()
         compte_centres += 1
         code_departement = centre['departement']
+        if centre.get('internal_id'):
+            if centre.get('internal_id') in internal_ids:
+                logger.warning(
+                    f"le centre {centre['nom']} ({code_departement}) est un doublon (ID interne: {centre.get('internal_id')})")
+                continue
+            internal_ids.append(centre.get('internal_id'))
+
         if code_departement in par_departement:
             erreur = centre.pop('erreur', None)
             if centre['prochain_rdv'] is None:
@@ -172,29 +197,38 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
         # Map platform to implementation.
         # May be overridden for unit testing purposes.
         fetch_map = {
-            'Doctolib': doctolib_fetch_slots,
-            'Keldoc': keldoc_fetch_slots,
-            'Maiia': maiia_fetch_slots,
-            'Ordoclic': ordoclic_fetch_slots,
+            'Doctolib': {'urls': [
+                'https://partners.doctolib.fr',
+                'https://www.doctolib.fr'
+            ], 'scraper_ptr': doctolib_fetch_slots},
+            'Keldoc': {'urls': [
+                'https://vaccination-covid.keldoc.com',
+                'https://keldoc.com'
+            ], 'scraper_ptr': keldoc_fetch_slots},
+            'Maiia': {'urls': [
+                'https://www.maiia.com'
+            ], 'scraper_ptr': maiia_fetch_slots},
+            'Ordoclic': {'urls': [
+                'https://app.ordoclic.fr/',
+            ], 'scraper_ptr': ordoclic_fetch_slots}
         }
 
     rdv_site_web = fix_scrap_urls(rdv_site_web)
     request = ScraperRequest(rdv_site_web, start_date)
 
-    # Determine platform based on visit URL.
-    if rdv_site_web.startswith('https://partners.doctolib.fr') or rdv_site_web.startswith('https://www.doctolib.fr'):
-        platform = 'Doctolib'
-    elif rdv_site_web.startswith('https://vaccination-covid.keldoc.com'):
-        platform = 'Keldoc'
-    elif rdv_site_web.startswith('https://www.maiia.com'):
-        platform = 'Maiia'
-    elif rdv_site_web.startswith('https://app.ordoclic.fr/'):
-        platform = 'Ordoclic'
-    else:
-        return ScraperResult(request, 'Autre', None)
+    # Determine platform based on visit URL
+    platform = None
+    for scraper_name in fetch_map:
+        scraper = fetch_map[scraper_name]
+        scrap = sum([1 if rdv_site_web.startswith(url) else 0 for url in scraper.get('urls', [])])
+        if scrap == 0:
+            continue
+        platform = scraper_name
 
+    if not platform:
+        return ScraperResult(request, 'Autre', None)
     # Dispatch to appropriate implementation.
-    fetch_impl = fetch_map[platform]
+    fetch_impl = fetch_map[platform]['scraper_ptr']
     result = ScraperResult(request, platform, None)
     result.next_availability = fetch_impl(request)
     return result
@@ -216,7 +250,6 @@ def centre_iterator():
         url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"
         response = requests.get(url)
         response.raise_for_status()
-
         data = response.json()
         file = open(center_path, 'w')
         file.write(json.dumps(data, indent=2))

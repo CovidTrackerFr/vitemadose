@@ -8,8 +8,37 @@ DOCTOLIB_APPOINTMENT_REASON = [
     '1 ère injection',
     '1 ere injection',
     '1er injection',
-    '1ere injection'
+    '1ere injection',
+    'vaccination'
 ]
+
+DOCTOLIB_CATEGORY = [
+    'non professionnels de santé',
+    'patient',
+    'vaccination au centre',
+    '70 ans',
+    'je suis un particulier',
+    'je ne suis pas professionnel de santé',
+    'vaccination pfizer',
+    'grand public',
+    'personnes de plus de',
+    'vaccination covid',  # 50 - 55 ans avec comoribidtés
+]
+
+
+def is_category_relevant(category):
+    if not category:
+        return False
+
+    category = category.lower().strip()
+    category = re.sub(' +', ' ', category)
+    for allowed_categories in DOCTOLIB_CATEGORY:
+        if allowed_categories in category:
+            return True
+    # Weird centers. But it's vaccination related COVID-19.
+    if category == 'vaccination':
+        return True
+    return False
 
 
 # Filter by relevant appointments

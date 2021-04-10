@@ -7,6 +7,7 @@ from pytz import timezone
 
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
+from scraper.departements import cp_to_insee
 
 logger = logging.getLogger('scraper')
 
@@ -57,10 +58,15 @@ def getProfile(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     return r.json()
 
 
-def parse_ordoclic_slots(availability_data):
+def parse_ordoclic_slots(request: ScraperRequest, availability_data):
     first_availability = None
     if not availability_data:
         return None
+    availabilities = availability_data.get('slots', None)
+    availability_count = 0
+    if type(availabilities) is list:
+        availability_count = len(availabilities)
+    request.update_appointment_count(availability_count)
     if 'nextAvailableSlotDate' in availability_data:
         nextAvailableSlotDate = availability_data.get('nextAvailableSlotDate', None)
         if nextAvailableSlotDate is not None:
@@ -68,7 +74,6 @@ def parse_ordoclic_slots(availability_data):
             first_availability += first_availability.replace(tzinfo=timezone('CET')).utcoffset()
             return first_availability
 
-    availabilities = availability_data.get('slots', None)
     if availabilities is None:
         return None
     for slot in availabilities:
@@ -99,9 +104,9 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
             if reason["reasonTypeId"] == 4 and reason["canBookOnline"] == True:
                 reasonId = reason["id"]
                 date_obj = datetime.strptime(request.get_start_date(), '%Y-%m-%d')
-                end_date = (date_obj + timedelta(days=6)).strftime('%Y-%m-%d')
+                end_date = (date_obj + timedelta(days=50)).strftime('%Y-%m-%d')
                 slots = getSlots(entityId, medicalStaffId, reasonId, request.get_start_date(), end_date, client)
-                date = parse_ordoclic_slots(slots)
+                date = parse_ordoclic_slots(request, slots)
                 if date is None:
                     continue
                 if first_availability is None or date < first_availability:
@@ -109,20 +114,6 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     if first_availability is None:
         return None
     return first_availability.isoformat()
-
-
-def cp_to_insee(cp):
-    insee_com = cp  # si jamais on ne trouve pas de correspondance...
-    # on charge la table de correspondance cp/insee, une seule fois
-    global insee
-    if insee == {}:
-        with open("data/input/codepostal_to_insee.json") as json_file:
-            insee = json.load(json_file)
-    if cp in insee:
-        insee_com = insee.get(cp).get("insee")
-    else:
-        logger.warning(f'Ordoclic unable to translate cp >{cp}< to insee')
-    return insee_com
 
 
 def centre_iterator():

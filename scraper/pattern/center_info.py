@@ -24,6 +24,7 @@ class CenterInfo:
         self.plateforme = None
         self.type = None
         self.appointment_count = 0
+        self.internal_id = None
 
     def fill_localization(self, location: Optional[CenterLocation]):
         self.location = location
@@ -33,6 +34,7 @@ class CenterInfo:
         self.plateforme = result.platform
         self.type = result.request.practitioner_type
         self.appointment_count = result.request.appointment_count
+        self.internal_id = result.request.internal_id
 
     def default(self):
         if type(self.location) is CenterLocation:

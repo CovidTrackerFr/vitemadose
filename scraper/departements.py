@@ -1,7 +1,11 @@
 import csv
 import json
+import logging
 from typing import List
 import re
+
+logger = logging.getLogger('scraper')
+insee = {}
 
 
 def import_departements() -> List[str]:
@@ -64,5 +68,18 @@ def get_city(address: str) -> str:
     >>> get_city("2 avenue de la République, 75005 PARIS")
     'PARIS'
     """
-    
     return re.search('(?<= \d{5} )(?P<com_nom>.*)\s*$', address).groupdict()['com_nom']
+
+
+def cp_to_insee(cp):
+    insee_com = cp  # si jamais on ne trouve pas de correspondance...
+    # on charge la table de correspondance cp/insee, une seule fois
+    global insee
+    if insee == {}:
+        with open("data/input/codepostal_to_insee.json") as json_file:
+            insee = json.load(json_file)
+    if cp in insee:
+        insee_com = insee.get(cp).get("insee")
+    else:
+        logger.warning(f'Unable to translate cp >{cp}< to insee')
+    return insee_com
