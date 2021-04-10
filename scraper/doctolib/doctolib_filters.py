@@ -25,7 +25,7 @@ def is_category_relevant(category):
 
     category = category.lower()
     category = re.sub(' +', ' ', category)
-    for allowed_categories in DOCTOLIB_APPOINTMENT_REASON:
+    for allowed_categories in DOCTOLIB_CATEGORY:
         if allowed_categories in category:
             return True
     return False
