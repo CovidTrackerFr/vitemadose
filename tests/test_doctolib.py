@@ -193,15 +193,15 @@ def test_parse_centre():
 def test_parse_practice_id():
     # Cas de base
     url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
-    assert _parse_practice_id(url) == 165752
+    assert _parse_practice_id(url) == [165752]
 
     # Format bizarre 1
     url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-162589&?speciality_id=5494&enable_cookies_consent=1"  # noqa
-    assert _parse_practice_id(url) == 162589
+    assert _parse_practice_id(url) == [162589]
 
     # Format bizarre 2
     url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-162589?speciality_id=5494&enable_cookies_consent=1"  # noqa
-    assert _parse_practice_id(url) == 162589
+    assert _parse_practice_id(url) == [162589]
 
     # Broken 1 : manque le numéro
     url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-&enable_cookies_consent=1"  # noqa
@@ -389,6 +389,6 @@ def test_find_agenda_and_practice_ids():
     assert agenda_ids == ["10", "12"]
     assert practice_ids == ["20", "21", "24"]
 
-    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=[1], practice_id_filter=21)
+    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=[1], practice_id_filter=[21])
     assert agenda_ids == ["12"]
     assert practice_ids == ["21", "24"]
