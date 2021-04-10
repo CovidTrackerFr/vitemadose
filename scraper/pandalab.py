@@ -10,6 +10,7 @@ from urllib.parse import parse_qs
 
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
+from .departements import cp_to_insee
 
 timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
@@ -47,19 +48,6 @@ def getPractitionerId(finessGeo, client: httpx.Client = DEFAULT_CLIENT):
     r = client.get(base_url)
     r.raise_for_status()
     return r.json()
-
-def cp_to_insee(cp):
-    insee_com = cp # si jamais on ne trouve pas de correspondance...
-    # on charge la table de correspondance cp/insee, une seule fois
-    global insee
-    if insee == {}:
-        with open("data/input/codepostal_to_insee.json") as json_file:
-            insee = json.load(json_file)
-    if cp in insee:
-        insee_com = insee.get(cp).get("insee")
-    else:
-        logger.warning(f'Pandalab unable to translate cp >{cp}< to insee')
-    return insee_com
 
 # Mapping du payload json récupéré sur l'api pandalab vers le format de centre avec meta
 def ict_to_center(ict):
