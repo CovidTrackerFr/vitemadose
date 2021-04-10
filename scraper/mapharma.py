@@ -107,12 +107,10 @@ def getSlots(campagneId, optionId, start_date, client: httpx.Client = DEFAULT_CL
 
 def parseSlots(slots):
     first_availability = None
-    for key in slots.keys():
-        if 'first' not in key:
-            date = key
-            day = slots[key]
-            for slot in day:
-                time = slot['time']
+    for date, day_slots in slots.items():
+        if 'first' not in date:
+            for day_slot in day_slots:
+                time = day_slot['time']
                 timestamp = datetime.strptime(f'{date} {time}', '%Y-%m-%d %H:%M')
                 if first_availability is None or timestamp < first_availability:
                     first_availability = timestamp
@@ -129,9 +127,12 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     for reason in profile['reasons']:
         for campagne in campagnes['vaccin']:
             if campagne['campagneId'] == reason['campagneId']:
-                slots = getSlots(campagne['campagneId'], campagne['optionId'], request.start_date, client)
-                slot_counts += len(slots)
-                first_availability = parseSlots(slots)
+                day_slots = getSlots(campagne['campagneId'], campagne['optionId'], request.start_date, client)
+                day_slots.pop('first', None)
+                day_slots.pop('first_text', None)
+                for day_slot in day_slots:
+                    slot_counts += len(day_slot)
+                first_availability = parseSlots(day_slots)
     request.update_appointment_count(slot_counts)
     if first_availability is None:
         return None
@@ -142,11 +143,6 @@ def centre_iterator():
         mapharma = json.load(json_file)
         for zip in mapharma.keys():
             for profile in mapharma[zip]:
-                address = dict()
-                address["adr_num"] = ""
-                address["adr_voie"] = profile['address']
-                address["com_cp"] = ""
-                address["com_nom"] = ""
                 id = profile['id']
                 centre = { 'gid': f'{zip}-{id}', 'rdv_site_web': profile['url'], 'com_insee': cp_to_insee(zip), 'nom': profile['name'], "location": { "zip": zip }, "address": profile['address'] , 'iterator': 'mapharma', 'type': DRUG_STORE } 
                 yield centre
