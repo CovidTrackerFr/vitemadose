@@ -2,6 +2,7 @@ import csv
 import json
 import logging
 from typing import List
+import re
 
 logger = logging.getLogger('scraper')
 insee = {}
@@ -59,6 +60,15 @@ def to_departement_number(insee_code: str) -> str:
 
     else:
         raise ValueError(f'Code INSEE absent de la base des codes INSEE : {insee_code}')
+
+
+def get_city(address: str) -> str:
+    """
+    Récupère la ville depuis l'adresse complète    
+    >>> get_city("2 avenue de la République, 75005 PARIS")
+    'PARIS'
+    """
+    return re.search('(?<= \d{5} )(?P<com_nom>.*)\s*$', address).groupdict()['com_nom']
 
 
 def cp_to_insee(cp):
