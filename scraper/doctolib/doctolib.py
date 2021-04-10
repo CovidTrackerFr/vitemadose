@@ -67,7 +67,7 @@ class DoctolibSlots:
         appointment_count = 0
         request.update_practitioner_type(parse_practitioner_type(centre, rdata))
 
-        if len(rdata.get('places', [])) > 1:
+        if len(rdata.get('places', [])) > 1 and practice_id is None:
             practice_id = rdata.get('places')[0].get('practice_ids', None)
         # visit_motive_categories
         # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1
