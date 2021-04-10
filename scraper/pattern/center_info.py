@@ -1,13 +1,12 @@
 import json
-import re
-import unicodedata
 from typing import Optional
-
 from scraper.departements import to_departement_number
 
 from scraper.pattern.center_location import CenterLocation, convert_csv_data_to_location
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult
+
+from utils.vmd_utils import urlify
 from utils.vmd_logger import get_logger
 
 logger = get_logger()
@@ -39,13 +38,6 @@ class CenterInfo:
         if type(self.location) is CenterLocation:
             self.location = self.location.default()
         return self.__dict__
-
-
-
-def urlify(s):
-    s = re.sub(r"[^\w\s\-]", '', s).lower()
-    s = re.sub(r"\s+", '-', s).lower()
-    return s
 
 
 def convert_csv_address(data: dict) -> str:
