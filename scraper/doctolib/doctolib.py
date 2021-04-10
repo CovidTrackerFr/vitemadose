@@ -66,7 +66,7 @@ class DoctolibSlots:
         rdata = data.get('data', {})
         appointment_count = 0
         request.update_practitioner_type(parse_practitioner_type(centre, rdata))
-
+        set_doctolib_center_internal_id(request, rdata)
         if len(rdata.get('places', [])) > 1 and practice_id is None:
             practice_id = rdata.get('places')[0].get('practice_ids', None)
         # visit_motive_categories
@@ -126,6 +126,18 @@ class DoctolibSlots:
 
         request.update_appointment_count(appointment_count)
         return first_availability
+
+
+def set_doctolib_center_internal_id(request: ScraperRequest, data: dict):
+    profile = data.get('profile')
+
+    if not profile:
+        return
+    profile_id = profile.get('id', None)
+    if not profile_id:
+        return
+    profile_id = int(profile_id)
+    request.internal_id = profile_id
 
 
 def _parse_centre(rdv_site_web: str) -> Optional[str]:
