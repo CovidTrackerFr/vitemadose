@@ -100,7 +100,18 @@
             "zip": "06220",
             "name": "Pharmacie Des Floralies",
             "address": "41 Avenue de Cannes 06220 VALLAURIS",
-            "reasons": []
+            "reasons": [
+                {
+                    "campagneId": "113",
+                    "optionId": "1",
+                    "optionName": "vaccination  covid vendredi (10 min.)"
+                },
+                {
+                    "campagneId": "113",
+                    "optionId": "2",
+                    "optionName": "vaccination covid samedi (10 min.)"
+                }
+            ]
         }
     ],
     "08000": [
@@ -160,7 +171,13 @@
             "zip": "24750",
             "name": "Pharmacie Arnaud-Rousseau",
             "address": "215 Boulevard du Petit Change 24750 BOULAZAC",
-            "reasons": []
+            "reasons": [
+                {
+                    "campagneId": "47",
+                    "optionId": "1",
+                    "optionName": "Vaccination covid"
+                }
+            ]
         }
     ],
     "25000": [
@@ -445,7 +462,11 @@
             "name": "Pharmacie De La Gare",
             "address": "5 ESPLANADE DE LA GARE 49100 ANGERS",
             "reasons": [
-                "1\u00e8re injection vaccin Astra-Zeneca contre la Covid-19"
+                {
+                    "campagneId": "201",
+                    "optionId": "1",
+                    "optionName": "Vaccination COVID - 1\u00e8re injection (15 min.)"
+                }
             ]
         },
         {
@@ -462,7 +483,13 @@
             "zip": "49100",
             "name": "Pharmacie Des Halles",
             "address": "78 RUE BAUDRIERE 49100 ANGERS",
-            "reasons": []
+            "reasons": [
+                {
+                    "campagneId": "177",
+                    "optionId": "1",
+                    "optionName": "Vaccination covid"
+                }
+            ]
         },
         {
             "id": 8,
@@ -510,7 +537,13 @@
             "zip": "51200",
             "name": "Pharmacie Saint Vincent",
             "address": "6 rue Porte Lucas 51200 EPERNAY",
-            "reasons": []
+            "reasons": [
+                {
+                    "campagneId": "155",
+                    "optionId": "1",
+                    "optionName": "Vaccination AZ 2(25 et 26/03)"
+                }
+            ]
         }
     ],
     "51100": [
@@ -540,7 +573,13 @@
             "zip": "53100",
             "name": "Pharmacie Laval Murat",
             "address": "CENTRE COMMERCIAL MURAT 53000 LAVAL",
-            "reasons": []
+            "reasons": [
+                {
+                    "campagneId": "191",
+                    "optionId": "1",
+                    "optionName": "Vaccination anti COVID ASTRAZENECA (15 min.)"
+                }
+            ]
         }
     ],
     "53000": [
@@ -716,7 +755,13 @@
             "zip": "57730",
             "name": "Pharmacie De Monchy",
             "address": "2 avenue Foch 57730 FOLSCHVILLER",
-            "reasons": []
+            "reasons": [
+                {
+                    "campagneId": "48",
+                    "optionId": "1",
+                    "optionName": "Vaccination Covid19"
+                }
+            ]
         }
     ],
     "57320": [
@@ -846,7 +891,13 @@
             "zip": "59530",
             "name": "Pharmacie Des Remparts",
             "address": "2 rue Gambetta 59530 LE QUESNOY",
-            "reasons": []
+            "reasons": [
+                {
+                    "campagneId": "102",
+                    "optionId": "1",
+                    "optionName": "1\u00e8re injection (10 min.)"
+                }
+            ]
         }
     ],
     "59553": [
@@ -936,7 +987,18 @@
             "zip": "67000",
             "name": "Pharmacie Du Pont De L'Europe",
             "address": "9 Rue de l'Abb\u00e9 Fran\u00e7ois Xavier Scherer 67000 STRASBOURG",
-            "reasons": []
+            "reasons": [
+                {
+                    "campagneId": "120",
+                    "optionId": "1",
+                    "optionName": "Test Antig\u00e9nique (15 min.)"
+                },
+                {
+                    "campagneId": "120",
+                    "optionId": "2",
+                    "optionName": "Test S\u00e9rologique (15 min.)"
+                }
+            ]
         }
     ],
     "68000": [
@@ -974,7 +1036,13 @@
             "zip": "68200",
             "name": "Pharma 6",
             "address": "230-232 rue de Belfort 68200 MULHOUSE",
-            "reasons": []
+            "reasons": [
+                {
+                    "campagneId": "168",
+                    "optionId": "1",
+                    "optionName": "VACCINATION COVID"
+                }
+            ]
         }
     ],
     "68270": [
@@ -1014,7 +1082,18 @@
             "zip": "70300",
             "name": "Pharmacie Du Faubourg",
             "address": "30 bis rue du Faubourg 70300 CITERS",
-            "reasons": []
+            "reasons": [
+                {
+                    "campagneId": "70",
+                    "optionId": "1",
+                    "optionName": "Primo vaccination (15 min.)"
+                },
+                {
+                    "campagneId": "70",
+                    "optionId": "2",
+                    "optionName": "Rappel (15 min.)"
+                }
+            ]
         }
     ],
     "70200": [
@@ -1308,7 +1387,13 @@
             "zip": "88300",
             "name": "Pharmacie Evrard",
             "address": "1 rue Neuve 88300 NEUFCHATEAU",
-            "reasons": []
+            "reasons": [
+                {
+                    "campagneId": "131",
+                    "optionId": "1",
+                    "optionName": "Vaccination Covid 1 injection"
+                }
+            ]
         }
     ],
     "88600": [
@@ -1338,7 +1423,13 @@
             "zip": "88150",
             "name": "Pharmacie Bertrand",
             "address": "2 Rue de Lorraine 88150 THAON LES VOSGES",
-            "reasons": []
+            "reasons": [
+                {
+                    "campagneId": "128",
+                    "optionId": "1",
+                    "optionName": "Vaccination COVID 1 injection"
+                }
+            ]
         }
     ],
     "88540": [
@@ -1368,7 +1459,13 @@
             "zip": "88100",
             "name": "Pharmacie Bruelle",
             "address": "120 Rue d'Alsace 88100 SAINT DIE DES VOSGES",
-            "reasons": []
+            "reasons": [
+                {
+                    "campagneId": "96",
+                    "optionId": "1",
+                    "optionName": "COVID 1ERE INJ ASTRA ZENECA (30 min.)"
+                }
+            ]
         }
     ],
     "88160": [
@@ -1396,7 +1493,13 @@
             "zip": "88400",
             "name": "Pharmacie Des Lacs",
             "address": "158 rue de l'H\u00f4tel de Ville 88400 XONRUPT LONGEMER",
-            "reasons": []
+            "reasons": [
+                {
+                    "campagneId": "92",
+                    "optionId": "1",
+                    "optionName": "Vaccination Covid-19"
+                }
+            ]
         }
     ],
     "90100": [
@@ -1636,7 +1739,33 @@
             "zip": "97200",
             "name": "Pharmacie Gely Kst",
             "address": "angle rue Lamartine & Isambert 97200 FORT DE FRANCE",
-            "reasons": []
+            "reasons": [
+                {
+                    "campagneId": "60",
+                    "optionId": "1",
+                    "optionName": "Vaccination covid 1 injection (30 min.)"
+                },
+                {
+                    "campagneId": "81",
+                    "optionId": "1",
+                    "optionName": "Entretien di\u00e9t\u00e9tique"
+                },
+                {
+                    "campagneId": "82",
+                    "optionId": "1",
+                    "optionName": "Entretien micro nutrition aroma"
+                },
+                {
+                    "campagneId": "193",
+                    "optionId": "1",
+                    "optionName": "Test Antigeniques COVID Naso-Pharynges"
+                },
+                {
+                    "campagneId": "196",
+                    "optionId": "1",
+                    "optionName": "Test Covid TROC Sanguins"
+                }
+            ]
         }
     ],
     "97260": [
