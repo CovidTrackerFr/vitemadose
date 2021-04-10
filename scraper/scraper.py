@@ -201,7 +201,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
     with open(outpath, "w") as fichier:
         json.dump(centres_fermes_dispo_gouv, fichier, indent=2)
 
-    """outpath = outpath_format.format("info_centres")
+    outpath = outpath_format.format("info_centres")
     with open(outpath, "w") as info_centres:
         json.dump(par_departement, info_centres, indent=2)
 
@@ -212,7 +212,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         outpath = outpath_format.format(code_departement)
         logger.debug(f'writing result to {outpath} file')
         with open(outpath, "w") as outfile:
-            outfile.write(json.dumps(disponibilités, indent=2))"""
+            outfile.write(json.dumps(disponibilités, indent=2))
 
     return compte_centres, compte_centres_avec_dispo, bloqués_doctolib
 
