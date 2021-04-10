@@ -1,0 +1,515 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-10T01:21:21.008516+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "63",
+      "nom": "Pharmacie de l'Esplanade",
+      "url": "https://partners.doctolib.fr/pharmacie/clermont-ferrand/pharmacie-de-l-esplanade",
+      "location": {
+        "longitude": 3.1114393,
+        "latitude": 45.784928
+      },
+      "metadata": {
+        "address": "2 Rue Lucie et Raymond Aubrac, 63100 Clermont-Ferrand",
+        "business_hours": {
+          "lundi": "09:00-19:00",
+          "mardi": "09:00-19:00",
+          "mercredi": "09:00-19:00",
+          "jeudi": "09:00-19:00",
+          "vendredi": "09:00-19:00",
+          "samedi": "09:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-12T15:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 9
+    },
+    {
+      "departement": "63",
+      "nom": "Centre de vaccination du Centre Hospitalier Universitaire DE CLERMONT-FERRAND, site Gabriel MONTPIED",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/clermont-ferrand/chu-de-clermont-ferrand-centre-de-depistage-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 3.09131,
+        "latitude": 45.7593
+      },
+      "metadata": {
+        "address": "58 Rue Montalembert, 63000 Clermont-Ferrand",
+        "phone_number": "+33473754117",
+        "business_hours": {
+          "lundi": "07:00-20:00",
+          "mardi": "07:00-20:00",
+          "mercredi": "07:00-20:00",
+          "jeudi": "07:00-20:00",
+          "vendredi": "07:00-20:00",
+          "samedi": "07:00-20:00",
+          "dimanche": "07:00-20:00"
+        }
+      },
+      "prochain_rdv": "2021-04-18T17:50:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 4
+    },
+    {
+      "departement": "63",
+      "nom": "Pharmacie Borderie",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-borderie-clermont-fd",
+      "location": {
+        "longitude": 3.08105,
+        "latitude": 45.7715273
+      },
+      "metadata": {
+        "address": "4 av marx dormoy, 63000 clermont fd",
+        "phone_number": "+33473935677",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-04-22T11:15:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 10
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "63",
+      "nom": "Centre de vaccination d\u00e9partemental - Dispensaire Emile Roux",
+      "url": "https://partners.doctolib.fr/centre-de-sante/clermont-ferrand/centre-de-vaccination-covid-departemental-dispensaire-emile-roux?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 3.10775,
+        "latitude": 45.7867
+      },
+      "metadata": {
+        "address": "11 Rue Vaucanson, 63100 Clermont-Ferrand",
+        "phone_number": "+33473145000",
+        "business_hours": {
+          "lundi": "08:30-17:00",
+          "mardi": "08:30-17:00",
+          "mercredi": "08:30-17:00",
+          "jeudi": "08:30-17:00",
+          "vendredi": "08:30-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "63",
+      "nom": "Centre de vaccination du Centre Hospitalier du Mont Dore",
+      "url": "https://partners.doctolib.fr/hopital-public/mont-dore/ch-du-mont-dore-centre-de-vaccination?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.80829,
+        "latitude": 45.5747
+      },
+      "metadata": {
+        "address": "2 Rue du Capitaine Chazotte, 63240 Mont-Dore",
+        "phone_number": "+33473653616",
+        "business_hours": {
+          "lundi": "09:00-11:00",
+          "mardi": "09:00-11:00",
+          "mercredi": "09:00-11:00",
+          "jeudi": "09:00-11:00/13:30-17:30",
+          "vendredi": "09:00-11:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "63",
+      "nom": "Centre de vaccination  COVID RIOM Ville-H\u00f4pital Salle DUMOULIN",
+      "url": "https://partners.doctolib.fr/centre-de-sante/riom/centre-de-vaccination-covid-ch-riom?pid=practice-166271&enable_cookies_consent=1",
+      "location": {
+        "longitude": 3.11682,
+        "latitude": 45.8903
+      },
+      "metadata": {
+        "address": "33 Rue Jeanne d'Arc, 63200 Riom",
+        "phone_number": "+33805299797",
+        "business_hours": {
+          "lundi": "08:30-12:00/14:00-17:00",
+          "mardi": "08:30-12:00/14:00-17:00",
+          "mercredi": "08:30-12:00/14:00-17:00",
+          "jeudi": "08:30-12:00/14:00-17:00",
+          "vendredi": "08:30-12:00/14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "63",
+      "nom": "Grand centre de la Grande Halle d'Auvergne",
+      "url": "",
+      "location": {
+        "longitude": 3.1545,
+        "latitude": 45.7409
+      },
+      "metadata": {
+        "address": " Plaine de Sarli\u00e8ve, 63800 Cournon-d'Auvergne",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "63",
+      "nom": "Centre de vaccination des Combrailles - Maison de sant\u00e9 de Giat",
+      "url": "https://partners.doctolib.fr/centre-de-sante/pontgibaud/centre-de-vaccination-covid-des-combrailles-pontgibaud?pid=practice-173036&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.46853,
+        "latitude": 45.8005
+      },
+      "metadata": {
+        "address": "14 Place de Baschurch, 63620 Giat",
+        "phone_number": "+33788135430",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "13:00-20:00",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "08:00-14:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "63",
+      "nom": "centre de vaccination d' Ambert - Maison de sant\u00e9 pluriprofessionnelle Ambert",
+      "url": "https://partners.doctolib.fr/hopital-public/ambert/centre-hospitalier-d-ambert-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 3.7507,
+        "latitude": 45.5406
+      },
+      "metadata": {
+        "address": "Salle Coral Rue Pierre de Coubertin, 63600 Ambert",
+        "phone_number": "+33622923327",
+        "business_hours": {
+          "lundi": "13:30-17:30",
+          "mardi": "13:30-17:30",
+          "mercredi": "13:30-17:30",
+          "jeudi": "13:30-17:30",
+          "vendredi": "13:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "63",
+      "nom": "Centre de vaccination du centre hospitalier de Billom",
+      "url": "https://partners.doctolib.fr/hopital-public/billom/centre-de-vaccination-ch-de-billom?pid=practice-165650&enable_cookies_consent=1",
+      "location": {
+        "longitude": 3.34355,
+        "latitude": 45.7205
+      },
+      "metadata": {
+        "address": "3 Boulevard Saint - Roch, 63160 Billom",
+        "phone_number": "+33473604848",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "63",
+      "nom": "Centre de vaccination de VOLVIC",
+      "url": "https://partners.doctolib.fr/centre-de-sante/volvic/centre-de-vaccination-de-volvic?pid=practice-175999&enable_cookies_consent=1",
+      "location": {
+        "longitude": 3.04469,
+        "latitude": 45.8778
+      },
+      "metadata": {
+        "address": "1  ancien LEP, Route de Riom, 63530 Volvic",
+        "phone_number": "+33805299797",
+        "business_hours": {
+          "lundi": "09:00-16:30",
+          "mardi": "09:00-16:30",
+          "mercredi": "09:00-16:30",
+          "jeudi": "09:00-16:30",
+          "vendredi": "09:00-16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "63",
+      "nom": "Centre de vaccination du Centre Hospitalier d'Issoire",
+      "url": "https://partners.doctolib.fr/hopital-public/issoire/centre-de-vaccination-covid-ch-issoire?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 3.25169,
+        "latitude": 45.5412
+      },
+      "metadata": {
+        "address": "13 Rue du Docteur Sauvat, 63500 Issoire",
+        "phone_number": "+33473718858",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "63",
+      "nom": "Centre de vaccination de Thiers - Centre hospitalier - Locaux USN 2",
+      "url": "https://partners.doctolib.fr/hopital-public/thiers/centre-hospitalier-de-thiers-et-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 3.52101,
+        "latitude": 45.8563
+      },
+      "metadata": {
+        "address": " Route de Fau, 63300 Thiers",
+        "phone_number": "+33623787578",
+        "business_hours": {
+          "lundi": "09:00-12:00/13:00-17:00",
+          "mardi": "09:00-12:00/13:00-17:00",
+          "mercredi": "09:00-12:00/13:00-17:00",
+          "jeudi": "09:00-12:00/13:00-17:00",
+          "vendredi": "09:00-12:00/13:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "63",
+      "nom": "Centre de vaccination des Combrailles - Maison de sant\u00e9 de St Eloy Les Mines",
+      "url": "https://partners.doctolib.fr/centre-de-sante/st-eloy-les-mines/centre-de-vaccination-covid-des-combrailles-st-eloy-les-mines?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.82915,
+        "latitude": 46.1594
+      },
+      "metadata": {
+        "address": "44 Rue des Brandes, 63700 Saint-\u00c9loy-les-Mines",
+        "phone_number": "+33788135430",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "08:30-12:30",
+          "mercredi": "08:30-12:30",
+          "jeudi": "08:30-12:30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "63",
+      "nom": "Centre de vaccination municipal de Clermont-Ferrand - Maison des Sports de Clermont-Ferrand",
+      "url": "https://partners.doctolib.fr/centre-de-sante/clermont-ferrand/centre-de-vaccination-municipal-clermont-ferrand?pid=practice-164799?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 3.08674,
+        "latitude": 45.7859
+      },
+      "metadata": {
+        "address": " Place des Bughes, 63000 Clermont-Ferrand",
+        "phone_number": "+33473403333",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "63",
+      "nom": "Centre de vaccination des Combrailles - Maison de sant\u00e9 de Pontgibaud",
+      "url": "https://partners.doctolib.fr/centre-de-sante/pontgibaud/centre-de-vaccination-covid-des-combrailles?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.85222,
+        "latitude": 45.8319
+      },
+      "metadata": {
+        "address": "2 Place de la Republique, 63230 Pontgibaud",
+        "phone_number": "+33788135430",
+        "business_hours": {
+          "lundi": "08:30-12:30/14:00-17:00",
+          "mardi": "08:30-12:30/14:00-17:00",
+          "mercredi": "08:30-12:30/14:00-17:00",
+          "jeudi": "08:30-12:30/14:00-17:00",
+          "vendredi": "08:30-12:30/14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "63",
+      "nom": "CP - Centre p\u00e9nitentiaire de Riom / Centre de D\u00e9tention de Riom",
+      "url": "",
+      "location": {
+        "longitude": 3.11446,
+        "latitude": 45.8948
+      },
+      "metadata": {
+        "address": "17 Rue Soubrany, 63200 Riom",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "63",
+      "nom": "Service de m\u00e9decine pr\u00e9ventive CD63 - Vaccination Covid-19",
+      "url": "https://partners.doctolib.fr/centre-de-sante/clermont-ferrand/medecine-du-travail-centre-de-vaccination-covid-19-conseil-departemental-du-puy-de-dome?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 3.0851591,
+        "latitude": 45.7768733
+      },
+      "metadata": {
+        "address": "24 Rue Saint-Esprit, 63000 Clermont-Ferrand",
+        "business_hours": {
+          "lundi": null,
+          "mardi": "09:00-12:00",
+          "mercredi": "09:00-12:00",
+          "jeudi": "09:00-12:00",
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "63",
+      "nom": "Pharmacie Fontgi\u00e8ve",
+      "url": "https://partners.doctolib.fr/pharmacie/clermont-ferrand/pharmacie-fontgieve",
+      "location": {
+        "longitude": 3.0814963,
+        "latitude": 45.7808563
+      },
+      "metadata": {
+        "address": "14 Rue Fontgieve, 63000 Clermont-Ferrand",
+        "phone_number": "04 73 70 22 73",
+        "business_hours": {
+          "lundi": null,
+          "mardi": "10:00-12:30, 14:30-18:00",
+          "mercredi": "10:00-12:30, 14:30-18:00",
+          "jeudi": "10:00-12:30, 14:30-18:00",
+          "vendredi": "10:00-12:30, 14:30-18:00",
+          "samedi": "10:00-13:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "63",
+      "nom": "Dr G\u00e9raldine Bayeron",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/randan/geraldine-bayeron",
+      "location": {
+        "longitude": 3.34958649999999,
+        "latitude": 46.0155542
+      },
+      "metadata": {
+        "address": "38 Rue de Riom, 63310 Randan",
+        "business_hours": {
+          "lundi": "09:20-12:00, 14:00-17:00",
+          "mardi": "09:20-12:00, 14:00-17:00",
+          "mercredi": null,
+          "jeudi": "09:20-12:00, 14:00-17:00",
+          "vendredi": "09:20-12:00, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0
+    }
+  ]
+}

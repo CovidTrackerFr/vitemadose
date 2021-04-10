@@ -8,7 +8,7 @@ from typing import Optional, Tuple
 import httpx
 import requests
 
-from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type
+from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 
@@ -71,7 +71,6 @@ class DoctolibSlots:
         # visit_motive_categories
         # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1
         visit_motive_category_id = _find_visit_motive_category_id(data)
-
         # visit_motive_id
         visit_motive_id = _find_visit_motive_id(data, visit_motive_category_id=visit_motive_category_id)
         if visit_motive_id is None:
@@ -180,7 +179,7 @@ def _find_visit_motive_category_id(data: dict) -> Optional[str]:
     (qui correspond à la population civile).
     """
     for category in data.get('data', {}).get('visit_motive_categories', []):
-        if category['name'] == 'Non professionnels de santé':
+        if is_category_relevant(category['name']):
             return category['id']
     return None
 

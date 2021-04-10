@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-10T01:21:21.163132+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "973",
+      "nom": "CH de l'Ouest Guyanais",
+      "url": "https://www.maiia.com/centre-de-vaccination/97320-saint-laurent-du-maroni/centre-de-vaccination---ch-de-l-ouest-guyanais",
+      "location": {
+        "longitude": -54.0203,
+        "latitude": 5.48779
+      },
+      "metadata": {
+        "address": "1465 Boulevard de la Libert\u00e9, 97320 Saint-Laurent-du-Maroni",
+        "phone_number": "+594594347488",
+        "business_hours": {
+          "lundi": "Non pr\u00e9cis\u00e9",
+          "mardi": "09:00-16:00",
+          "mercredi": "09:00-16:00",
+          "jeudi": "09:00-16:00",
+          "vendredi": "09:00-16:00",
+          "samedi": "Non pr\u00e9cis\u00e9",
+          "dimanche": "Non pr\u00e9cis\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-19T21:10:00.000000Z",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 28
+    },
+    {
+      "departement": "973",
+      "nom": "CH de Kourou - d\u00e9localis\u00e9 \u00e0 la m\u00e9diath\u00e8que de Kourou",
+      "url": "https://www.maiia.com/centre-de-vaccination/97310-kourou/centre-de-vaccination---ch-de-kourou---mediatheque",
+      "location": {
+        "longitude": -52.6448,
+        "latitude": 5.16353
+      },
+      "metadata": {
+        "address": " Rue Thomas Guidiglo, 97310 Kourou",
+        "phone_number": "+594 594 32 77 46",
+        "business_hours": {
+          "lundi": "08:30-12:20/14:00-17:00",
+          "mardi": "08:30-12:20/14:00-17:00",
+          "mercredi": "08:30-12:20/14:00-17:00",
+          "jeudi": "08:30-12:20/14:00-17:00",
+          "vendredi": "08:30-12:20",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-20T16:50:00.000000Z",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 83
+    },
+    {
+      "departement": "973",
+      "nom": "CH de Cayenne - d\u00e9localis\u00e9 \u00e0 l'ENCRE",
+      "url": "https://www.maiia.com/centre-de-vaccination/97306-cayenne/centre-de-vaccination---centre-hospitalier-de-cayenne",
+      "location": {
+        "longitude": -52.3207,
+        "latitude": 4.92453
+      },
+      "metadata": {
+        "address": " Avenue des Flamboyants, 97300 Cayenne",
+        "phone_number": "+594594397333",
+        "business_hours": {
+          "lundi": "7:00-17:00",
+          "mardi": "7:00-17:00",
+          "mercredi": "7:00-17:00",
+          "jeudi": "7:00-17:00",
+          "vendredi": "7:00-17:00",
+          "samedi": "7:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-29T21:55:00.000000Z",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 35
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "973",
+      "nom": "CP - US DU CENTRE P\u00c9NITENTIAIRE DE R\u00c9MIRE-MONTJOLY / Centre P\u00e9nitentiaire de Remire-Montjoly",
+      "url": "",
+      "location": {
+        "longitude": -52.2989,
+        "latitude": 4.87544
+      },
+      "metadata": {
+        "address": "1603 bis Route de la Matourienne, 97354 Remire-Montjoly",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

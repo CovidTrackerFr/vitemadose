@@ -1,0 +1,861 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-10T01:21:20.998551+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Ch\u00e2teau-Salins - CH - CPTS du Saulnois",
+      "url": "https://partners.doctolib.fr/hopital-public/chateau-salins/centre-de-vaccination-covid-19-hopital-de-chateau-salins?pid=practice-165120&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.50599,
+        "latitude": 48.8251
+      },
+      "metadata": {
+        "address": "40 Rue de Metz, 57170 Ch\u00e2teau-Salins",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "8:30-12:30/13:30-17:30",
+          "mardi": "8:30-12:30/13:30-17:30",
+          "mercredi": "8:30-12:30/13:30-17:30",
+          "jeudi": "8:30-12:30",
+          "vendredi": "8:30-12:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-13T09:35:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 74
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Metz - HIA LEGOUEST Maison m\u00e9dicale de garde CPTS Metz",
+      "url": "https://partners.doctolib.fr/centre-de-sante/metz/cvcptsm-centre-de-vaccination-cpts-metz?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.18648,
+        "latitude": 49.1138
+      },
+      "metadata": {
+        "address": " Rue des Fr\u00e8res Lacretelle, 57070 Metz",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-13T13:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 90
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de R\u00e9milly",
+      "url": "https://partners.doctolib.fr/centre-de-sante/remilly/centre-de-vaccination-covid-19-remilly-moselle-57?pid=practice-173661&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.39542,
+        "latitude": 49.008
+      },
+      "metadata": {
+        "address": " Route de Bechy, 57580 R\u00e9milly",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "9:00-17:00",
+          "jeudi": "9:00-17:00",
+          "vendredi": "9:00-17:00",
+          "samedi": "9:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-22T09:20:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 1
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Metz - UNEOS - Site Belle Isle",
+      "url": "https://partners.doctolib.fr/centre-de-sante/metz/centre-vaccination-covid19-hbi-uneos?pid=practice-165011&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.17144,
+        "latitude": 49.1233
+      },
+      "metadata": {
+        "address": "2 Rue Belle-Isle, 57000 Metz",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "7:00-19:00",
+          "mardi": "7:00-19:00",
+          "mercredi": "7:00-19:00",
+          "jeudi": "7:00-19:00",
+          "vendredi": "7:00-19:00",
+          "samedi": "7:00-19:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-29T15:15:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 1
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Metz - HIA LEGOUEST - 2",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/metz/centre-de-vaccination-n-2-hia-legouest?pid=practice-172148&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.18639,
+        "latitude": 49.1133
+      },
+      "metadata": {
+        "address": " Rue des Fr\u00e8res Lacretelle, 57070 Metz",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "9:00-17:00",
+          "jeudi": "9:00-17:00",
+          "vendredi": "9:00-17:00",
+          "samedi": "9:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Thionville - Th\u00e9\u00e2tre municipal",
+      "url": "https://partners.doctolib.fr/centre-de-sante/thionville/centre-de-vaccination-covid-19-thionville?pid=practice-172629&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.16429,
+        "latitude": 49.3607
+      },
+      "metadata": {
+        "address": "30 Boulevard Foch, 57100 Thionville",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "9:00-17:00",
+          "jeudi": "9:00-17:00",
+          "vendredi": "9:00-17:00",
+          "samedi": "9:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Dieuze",
+      "url": "https://partners.doctolib.fr/hopital-public/chateau-salins/centre-de-vaccination-covid-19-hopital-de-chateau-salins?pid=practice-172748&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.73162,
+        "latitude": 48.8157
+      },
+      "metadata": {
+        "address": "21 Route de Loudrefing, 57260 Dieuze",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "9:00-17:00",
+          "jeudi": "9:00-17:00",
+          "vendredi": "9:00-17:00",
+          "samedi": "9:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Bitche - H\u00f4pital Saint Joseph",
+      "url": "https://partners.doctolib.fr/hopital-public/sarreguemines/centre-de-vaccination-covid-19-du-ch-de-sarreguemines?pid=practice-173166&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.42257,
+        "latitude": 49.0468
+      },
+      "metadata": {
+        "address": "1 Rue de Lebach, 57230 Bitche",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "9:00-16:30",
+          "mardi": "9:00-16:30",
+          "mercredi": "9:00-16:30",
+          "jeudi": "9:00-16:30",
+          "vendredi": "9:00-16:30",
+          "samedi": "9:00-16:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Ser\u00e9mange-Erzange",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/seremange-erzange/centre-de-vaccination-covid-19-cavf?pid=practice-173716&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.10101,
+        "latitude": 49.3188
+      },
+      "metadata": {
+        "address": "9 Rue Charles de Gaulle, 57290 Ser\u00e9mange-Erzange",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "9:00-12:00 / 14:00-17:00",
+          "mardi": "9:00-12:00 / 14:00-17:00",
+          "mercredi": "9:00-12:00 / 14:00-17:00",
+          "jeudi": "9:00-12:00 / 14:00-17:00",
+          "vendredi": "9:00-12:00 / 14:00-17:00",
+          "samedi": "9:00-12:00 / 14:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Bouzonville",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bouzonville/centre-de-vaccination-covid-ville-de-bouzonville?pid=practice-174637&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.52646,
+        "latitude": 49.299
+      },
+      "metadata": {
+        "address": " Rue Saint-Hubert, 57320 Bouzonville",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "13:30-18:30",
+          "mardi": "13:30-18:30",
+          "mercredi": "13:30-18:30",
+          "jeudi": "13:30-18:30",
+          "vendredi": "13:30-18:30",
+          "samedi": "13:30-18:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Montigny-les-Metz (Salle de la Paix, Espace Europa)",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montigny-les-metz/centre-vaccination-espace-europa?pid=practice-173038&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.15823,
+        "latitude": 49.1028
+      },
+      "metadata": {
+        "address": "73 Rue de Pont-a-Mousson, 57950 Montigny-l\u00e8s-Metz",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "8:30-11:30/14:00-17:00",
+          "mardi": "8:30-11:30/14:00-17:00",
+          "mercredi": "8:30-11:30/14:00-17:00",
+          "jeudi": "8:30-11:30/14:00-17:00",
+          "vendredi": "8:30-11:30/14:00-17:00",
+          "samedi": "8:30-11:30/14:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Freyming Merlebach - Salle Vouters",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/freyming-merlebach/centre-de-vaccination-covid-19-vouters?pid=practice-172597&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.80504,
+        "latitude": 49.1499
+      },
+      "metadata": {
+        "address": " Rue de la fronti\u00e8re, 57800 Freyming-Merlebach",
+        "phone_number": "+33387345345 ",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "9:00-17:00",
+          "jeudi": "9:00-17:00",
+          "vendredi": "9:00-17:00",
+          "samedi": "9:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Sarreguemines - CHS (salle des f\u00eates du CHS)",
+      "url": "https://partners.doctolib.fr/hopital-public/sarreguemines/ch-de-sarreguemines?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.08284,
+        "latitude": 49.0995
+      },
+      "metadata": {
+        "address": "1 Rue Calmette, 57200 Sarreguemines",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "9:00-17:30",
+          "mardi": "9:00-17:30",
+          "mercredi": "9:00-17:30",
+          "jeudi": "9:00-17:30",
+          "vendredi": "9:00-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Metz - Palais des sports",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/longeville-les-metz/centre-de-vaccination-de-metz?pid=practice-173842&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.15468,
+        "latitude": 49.1142
+      },
+      "metadata": {
+        "address": " Boulevard Saint-Symphorien, 57050 Longeville-l\u00e8s-Metz",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "8:00-18:00",
+          "dimanche": "8:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Boulay",
+      "url": "https://partners.doctolib.fr/centre-de-sante/boulay-moselle/centre-de-vaccination-de-boulay?pid=practice-177419&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.48364,
+        "latitude": 49.1845
+      },
+      "metadata": {
+        "address": " Route de Bouzonville, 57220 Boulay-Moselle",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "8:30-17:30",
+          "dimanche": "8:30-17:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination d'Amn\u00e9ville - Dojo",
+      "url": "https://partners.doctolib.fr/centre-de-sante/amneville/centre-de-vaccination-covid-19-amneville-les-thermes?pid=practice-177886&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.13531,
+        "latitude": 49.2581
+      },
+      "metadata": {
+        "address": " Rue Georges Clemenceau, 57360 Amn\u00e9ville",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "9:30-17:30",
+          "samedi": "9:30-17:30",
+          "dimanche": "9:30-17:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Courcelles-Chaussy",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/courcelles-chaussy/centre-de-vaccination-covid-19-courcelles-chaussy?pid=practice-176912&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.4037,
+        "latitude": 49.1073
+      },
+      "metadata": {
+        "address": " Rue Pierre Loeb, 57530 Courcelles-Chaussy",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "8:30-12:30 / 13:30-17:30",
+          "mercredi": "8:30-12:30 / 13:30-17:30",
+          "jeudi": "8:30-12:30 / 13:30-17:30",
+          "vendredi": "8:30-12:30 / 13:30-17:30",
+          "samedi": "8:30-12:30 / 13:30-17:30",
+          "dimanche": "8:30-12:30 / 13:30-17:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination d'Hettange-Grande - Hall omnisport",
+      "url": "https://partners.doctolib.fr/centre-de-sante/hettange-grande/centre-de-vaccination-d-hettange-grande?pid=practice-177585&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.16235,
+        "latitude": 49.4018
+      },
+      "metadata": {
+        "address": "5 Rue de Pederobba, 57330 Hettange-Grande",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "9:00-17:00",
+          "dimanche": "9:00-17:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Metz - Clinique Claude Bernard (Entr\u00e9e B)",
+      "url": "https://partners.doctolib.fr/clinique-privee/metz/centre-de-vaccination-metz-elsan?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.21111,
+        "latitude": 49.1148
+      },
+      "metadata": {
+        "address": "97 Rue Claude Bernard, 57070 Metz",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "8:00-17:00",
+          "mardi": "8:00-17:00",
+          "mercredi": "8:00-17:00",
+          "jeudi": "8:00-17:00",
+          "vendredi": "8:00-17:00",
+          "samedi": "8:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Forbach - CHIC Unisant\u00e9",
+      "url": "https://partners.doctolib.fr/hopital-public/forbach/centre-de-vaccination-covid-19-public-de-forbach?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.91123,
+        "latitude": 49.1834
+      },
+      "metadata": {
+        "address": "2 Rue Th\u00e9r\u00e8se, 57600 Forbach",
+        "phone_number": "+33387888110",
+        "business_hours": {
+          "lundi": "9:00-13:00/14:00-17:00",
+          "mardi": "9:00-13:00/14:00-17:00",
+          "mercredi": "9:00-13:00/14:00-17:00",
+          "jeudi": "9:00-13:00/14:00-17:00",
+          "vendredi": "9:00-13:00/14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Mercy - MHRMT Maison des usagers (niveau 2 zone A)",
+      "url": "https://partners.doctolib.fr/hopital-public/metz/chr-de-metz-vaccination-covid?pid=practice-163721&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.24146,
+        "latitude": 49.0832
+      },
+      "metadata": {
+        "address": "1 all\u00e9e du Ch\u00e2teau, 57530 Ars-Laquenexy",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Thionville - CHRMT Bel Air (salle polyvalente \u00e0 l\u2019entr\u00e9e de l\u2019h\u00f4pital)",
+      "url": "https://partners.doctolib.fr/hopital-public/metz/chr-de-metz-vaccination-covid?pid=practice-163720&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.14876,
+        "latitude": 49.3717
+      },
+      "metadata": {
+        "address": "3 Rue du Friscaty, 57100 Thionville",
+        "phone_number": "+33387345345 ",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Saint-Avold - SOS Sant\u00e9",
+      "url": "https://partners.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/st-avold/centre-de-vaccination-covid-hopital-de-saint-avold?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.72429,
+        "latitude": 49.1116
+      },
+      "metadata": {
+        "address": " Rue Ambroise Par\u00e9, 57500 Saint-Avold",
+        "phone_number": "+33387918170 ",
+        "business_hours": {
+          "lundi": "08:00-17:00",
+          "mardi": "08:00-17:00",
+          "mercredi": "08:00-17:00",
+          "jeudi": "08:00-17:00",
+          "vendredi": "08:00-17:00",
+          "samedi": "08:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Thionville - Clinique Notre-Dame",
+      "url": "https://partners.doctolib.fr/clinique-privee/thionville/centre-de-vaccination-thionville-elsan?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.15604,
+        "latitude": 49.3566
+      },
+      "metadata": {
+        "address": "3 Rue Paul Albert, 57100 Thionville",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "8:00-17:00",
+          "mardi": "8:00-17:00",
+          "mercredi": "8:00-17:00",
+          "jeudi": "8:00-17:00",
+          "vendredi": "8:00-17:00",
+          "samedi": "8:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Sarrebourg",
+      "url": "https://partners.doctolib.fr/hopital-public/saverne/ch-sarrebourg-centre-de-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.0504,
+        "latitude": 48.7299
+      },
+      "metadata": {
+        "address": "25 Avenue du G\u00e9n\u00e9ral de Gaulle, 57400 Sarrebourg",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "11:00-15:00",
+          "mardi": "11:00-15:00",
+          "mercredi": "11:00-15:00",
+          "jeudi": "11:00-15:00",
+          "vendredi": "11:00-15:00",
+          "samedi": "09:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Montbronn - Salle des f\u00eates",
+      "url": "https://www.doctolib.fr/centre-de-sante/montbronn/centre-de-vaccination-covid19-montbronn",
+      "location": {
+        "longitude": 7.30576,
+        "latitude": 48.9927
+      },
+      "metadata": {
+        "address": " Rue Notre-Dame, 57415 Montbronn",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "9:00-17:00",
+          "dimanche": "9:00-17:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination de Rohrbach-l\u00e8s-Bitche - Salle polyvalente Robert Schuman",
+      "url": "https://www.doctolib.fr/centre-de-sante/rohrbach-les-bitche/centre-vaccination-commune-rohrbach-les-bitche",
+      "location": {
+        "longitude": 7.27283,
+        "latitude": 49.0406
+      },
+      "metadata": {
+        "address": " Rue des Sports, 57410 Rohrbach-l\u00e8s-Bitche",
+        "phone_number": "+33387345345",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "9:00-17:00",
+          "dimanche": "9:00-17:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "CD - US d'OERMINGEN / Maison d'Arr\u00eat de Sarreguemines",
+      "url": "",
+      "location": {
+        "longitude": 7.05806,
+        "latitude": 49.1062
+      },
+      "metadata": {
+        "address": "9 Rue Victor Hugo, 57200 Sarreguemines",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "MA - US DE SARREGUEMINES / Maison d'Arr\u00eat de Sarreguemines",
+      "url": "",
+      "location": {
+        "longitude": 7.05806,
+        "latitude": 49.1062
+      },
+      "metadata": {
+        "address": "9 Rue Victor Hugo, 57200 Sarreguemines",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "CP - US / Centre P\u00e9nitentiaire de Metz",
+      "url": "",
+      "location": {
+        "longitude": 6.19126,
+        "latitude": 49.0781
+      },
+      "metadata": {
+        "address": "1 Rue de la Source, 57000 Metz",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Dr Roland MUCKA",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/fenetrange/roland-mucka",
+      "location": {
+        "longitude": 7.0222764,
+        "latitude": 48.8422319
+      },
+      "metadata": {
+        "address": "53 Rue du Mal Leclerc, 57930 F\u00e9n\u00e9trange",
+        "business_hours": {
+          "lundi": "07:30-12:00, 13:00-19:00",
+          "mardi": "07:30-12:00, 13:00-19:00",
+          "mercredi": "07:30-12:00, 13:00-19:00",
+          "jeudi": "07:30-12:00, 13:00-19:00",
+          "vendredi": "07:30-12:00, 13:00-19:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de Vaccination Covid-19 de Forbach r\u00e9serv\u00e9 aux professionnels lib\u00e9raux en activit\u00e9",
+      "url": "https://partners.doctolib.fr/hopital-public/forbach/centre-de-vaccination-covid-19-de-forbach-reserve-aux-professionnels-liberaux-en-activite?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 6.9102627,
+        "latitude": 49.1827153
+      },
+      "metadata": {
+        "address": "6 Rue Th\u00e9r\u00e8se, 57600 Forbach",
+        "phone_number": "03 87 88 81 10",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-17:00",
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "57",
+      "nom": "Centre Vaccination Commune Rohrbach- les -bitche",
+      "url": "https://partners.doctolib.fr/centre-de-sante/rohrbach-les-bitche/centre-vaccination-commune-rohrbach-les-bitche?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 7.2719096,
+        "latitude": 49.040451
+      },
+      "metadata": {
+        "address": "Rue des Sports, 57410 Rohrbach-l\u00e8s-Bitche",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

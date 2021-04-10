@@ -1,0 +1,318 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-10T01:21:20.960615+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "2B",
+      "nom": "Centre Maison de sant\u00e9 L'\u00eele Rousse",
+      "url": "https://partners.doctolib.fr/maison-de-sante/l'\u00eele-rousse/centre-de-vaccination-covid-l-ile-rousse?pid=practice-165353?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 8.92907,
+        "latitude": 42.6281
+      },
+      "metadata": {
+        "address": " Immeuble U Sognu, Route de Calvi, 20220 L'\u00cele-Rousse",
+        "phone_number": "+33640479414",
+        "business_hours": {
+          "lundi": "8:00-19:00",
+          "mardi": "8:00-19:00",
+          "mercredi": "8:00-19:00",
+          "jeudi": "8:00-19:00",
+          "vendredi": "8:00-19:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-11T09:20:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 126
+    },
+    {
+      "departement": "2B",
+      "nom": "CH Calvi Balagne",
+      "url": "https://partners.doctolib.fr/hopital-public/calvi/centre-de-vaccination-covid-19-ch-de-calvi?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 8.75981,
+        "latitude": 42.5495
+      },
+      "metadata": {
+        "address": " chemin guazzole, 20260 Calvi",
+        "phone_number": "+33750630663",
+        "business_hours": {
+          "lundi": "09:30-12:00/13:00-17:30",
+          "mardi": "09:30-12:00/13:00-17:30",
+          "mercredi": "09:30-12:00/13:00-17:30",
+          "jeudi": "09:30-12:00/13:00-17:30",
+          "vendredi": "09:30-12:00/13:00-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-16T11:20:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 25
+    },
+    {
+      "departement": "2B",
+      "nom": "Maison de sant\u00e9 Polygone Bastia",
+      "url": "https://partners.doctolib.fr/maison-de-sante/bastia/centre-de-vaccination-covid-maison-de-sante-bastia-erbajolu?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 9.42892,
+        "latitude": 42.6664
+      },
+      "metadata": {
+        "address": " Chemin d'Agliani, 20600 Bastia",
+        "phone_number": "+33767630667",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "16:00-20:00",
+          "dimanche": "16:00-20:00"
+        }
+      },
+      "prochain_rdv": "2021-04-18T12:25:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 2
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "2B",
+      "nom": "Plaine orientale Sud",
+      "url": "https://partners.doctolib.fr/centre-de-sante/prunelli-di-fiumorbo/centre-de-vaccination-covid-prunelli-prunelli-di-fiumorbo?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 9.32479,
+        "latitude": 42.0107
+      },
+      "metadata": {
+        "address": " Ancienne Pharmacie Taddei Migliacciaru, 20243 Prunelli-di-Fiumorbo",
+        "phone_number": "+33495376355",
+        "business_hours": {
+          "lundi": "09:00-12:00/15:00-18:00",
+          "mardi": "09:00-12:00/15:00-18:00",
+          "mercredi": "09:00-12:00/15:00-18:00",
+          "jeudi": "09:00-12:00/15:00-18:00",
+          "vendredi": "09:00-12:00/15:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "2B",
+      "nom": "CH Bastia",
+      "url": "",
+      "location": {
+        "longitude": 9.43569,
+        "latitude": 42.6809
+      },
+      "metadata": {
+        "address": "604 Chemin de Falconaja, 20600 Bastia",
+        "phone_number": "+33495591832",
+        "business_hours": {
+          "lundi": "8:00-17:00",
+          "mardi": "8:00-17:00",
+          "mercredi": "8:00-17:00",
+          "jeudi": "8:00-17:00",
+          "vendredi": "8:00-17:00",
+          "samedi": "8:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "2B",
+      "nom": "Centre Moriani (Plaine orientale Nord)",
+      "url": "https://www.maiia.com/centre-de-vaccination/20230-san-nicolao/centre-de-vaccination---centre-moriani--plaine-orientale-nord-",
+      "location": {
+        "longitude": 9.52806,
+        "latitude": 42.3749
+      },
+      "metadata": {
+        "address": " Le chalet moriani, 20230 San-Nicolao",
+        "phone_number": "+33495604021",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "09:00-12:00/15:00-18:00",
+          "mercredi": "09:00-12:00/15:00-18:00",
+          "jeudi": "09:00-12:00/15:00-18:00",
+          "vendredi": "09:00-12:00/15:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "2B",
+      "nom": "Centre communal Lupino",
+      "url": "",
+      "location": {
+        "longitude": 9.45088,
+        "latitude": 42.6973
+      },
+      "metadata": {
+        "address": "15 rue saint Exup\u00e9ry, 20600 Bastia",
+        "phone_number": "+33495584105",
+        "business_hours": {
+          "lundi": "A confirmer ",
+          "mardi": "A confirmer ",
+          "mercredi": "A confirmer ",
+          "jeudi": "A confirmer ",
+          "vendredi": "A confirmer ",
+          "samedi": "A confirmer ",
+          "dimanche": "A confirmer "
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "2B",
+      "nom": "CH Corte Tattone",
+      "url": "https://partners.doctolib.fr/hopital-public/corte/centre-de-vaccination-covid-ch-corte?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 9.15487,
+        "latitude": 42.3016
+      },
+      "metadata": {
+        "address": " Avenue du 9 Septembre, 20250 Corte",
+        "phone_number": "+33685956053",
+        "business_hours": {
+          "lundi": "10:00-13:00/14:00-17:00",
+          "mardi": "10:00-13:00/14:00-17:00",
+          "mercredi": "10:00-13:00/14:00-17:00",
+          "jeudi": "10:00-13:00/14:00-17:00",
+          "vendredi": "10:00-13:00/14:00-17:00",
+          "samedi": "A CONFIRMER",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "2B",
+      "nom": "Centre Communal ( P\u00e9ristyle du th\u00e9\u00e2tre) Bastia",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/bastia/centre-de-vaccination-covid-19-bastia-service-communal-d-hygiene-et-de-sante?pid=practice-164899&enable_cookies_consent=1",
+      "location": {
+        "longitude": 9.44737,
+        "latitude": 42.697
+      },
+      "metadata": {
+        "address": "6 bis Rue Favalelli, Th\u00e9\u00e2tre de Bastia, 20200 Bastia",
+        "phone_number": "+33495559767",
+        "business_hours": {
+          "lundi": "8h30 - 11h30 / 14h - 16h30",
+          "mardi": "8h30 - 11h30 / 14h - 16h30",
+          "mercredi": "8h30 - 11h30 / 14h - 16h30",
+          "jeudi": "8h30 - 11h30 / 14h - 16h30",
+          "vendredi": "8h30 - 11h30 / 14h - 16h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "2B",
+      "nom": "CD - US DE CASABIANDA / Centre de D\u00e9tention de Casabianda-Al\u00e9ria",
+      "url": "",
+      "location": {
+        "longitude": 9.49263,
+        "latitude": 42.1151
+      },
+      "metadata": {
+        "address": " Casabianda, 20270 Al\u00e9ria",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "2B",
+      "nom": "CP - US DE BORGO / Centre de D\u00e9tention de Casabianda-Al\u00e9ria",
+      "url": "",
+      "location": {
+        "longitude": 9.49263,
+        "latitude": 42.1151
+      },
+      "metadata": {
+        "address": " Casabianda, 20270 Al\u00e9ria",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "2B",
+      "nom": "Centre de vaccination Covid-19 - Service Communal d'Hygi\u00e8ne et de Sant\u00e9 de Bastia",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bastia/centre-de-vaccination-covid-19-theatre-de-bastia?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 9.4418924,
+        "latitude": 42.6795091
+      },
+      "metadata": {
+        "address": "1 Rue Saint-Exup\u00e9ry, 20600 Bastia",
+        "phone_number": "04 95 58 41 05",
+        "business_hours": {
+          "lundi": "08:00-18:00",
+          "mardi": "08:00-18:00",
+          "mercredi": "08:00-18:00",
+          "jeudi": "08:00-18:00",
+          "vendredi": "08:00-18:00",
+          "samedi": "08:30-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

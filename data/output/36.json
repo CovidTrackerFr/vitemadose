@@ -1,0 +1,467 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-10T01:21:20.971819+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "36",
+      "nom": "Centre de vaccination - Salle des f\u00eates de Levroux",
+      "url": "https://partners.doctolib.fr/centre-de-sante/levroux/centre-de-vaccination-covid-de-la-ville-de-levroux?pid=practice-165401&enable_cookies_consent=1",
+      "location": {
+        "longitude": 1.61074,
+        "latitude": 46.9794
+      },
+      "metadata": {
+        "address": "5 Rue Gambetta, 36110 Levroux",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "9h - 12h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-28T10:50:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 92
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "36",
+      "nom": "CH Ch\u00e2teauroux / P\u00f4le de soins de suite et r\u00e9adaptation",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/chateauroux/centre-de-vaccination-covid-ssr-chateauroux-36?pid=practice-164465&enable_cookies_consent=1",
+      "location": {
+        "longitude": 1.70818,
+        "latitude": 46.7943
+      },
+      "metadata": {
+        "address": "16 Rue Claude Nicolas Ledoux, 36000 Ch\u00e2teauroux",
+        "phone_number": "08 05 02 14 00",
+        "business_hours": {
+          "lundi": "10h-18h",
+          "mardi": "10h-18h",
+          "mercredi": "10h-18h",
+          "jeudi": "10h-18h",
+          "vendredi": "10h-18h",
+          "samedi": "10h-18h",
+          "dimanche": "10h-18h"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "36",
+      "nom": "Salle Barbillat Touraine de Ch\u00e2teauroux Belle-Isle",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/chateauroux/centres-vaccination-cpts-chateauroux-co?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 1.69475,
+        "latitude": 46.8222
+      },
+      "metadata": {
+        "address": " Avenue Daniel Bernardet, 36000 Ch\u00e2teauroux",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "09h-12h30 /13h30-17h",
+          "mardi": "09h-12h30 /13h30-17h",
+          "mercredi": "09h-12h30 /13h30-17h",
+          "jeudi": "09h-12h30 /13h30-17h",
+          "vendredi": "09h-12h30 /13h30-17h",
+          "samedi": "09h-12h30 /13h30-17h",
+          "dimanche": "09h-12h30 /13h30-17h"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "36",
+      "nom": "Centre de vaccination - en attente (36)",
+      "url": "",
+      "location": {
+        "longitude": 1.69174,
+        "latitude": 46.8118
+      },
+      "metadata": {
+        "address": " , 36000 Ch\u00e2teauroux",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "36",
+      "nom": "Maison M\u00e9dicale Vatan",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/valencay/centres-de-vaccination-covid-du-boischaut-nord?pid=practice-165107&enable_cookies_consent=1",
+      "location": {
+        "longitude": 1.80983,
+        "latitude": 47.0723
+      },
+      "metadata": {
+        "address": "62 avenue de la Liberation, 36150 Vatan",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "36",
+      "nom": "Salle des f\u00eates Saint Gaultier / CPTS Val de Creuse",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-gaultier/centre-de-vaccination-saint-gaultier?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 1.42309,
+        "latitude": 46.635
+      },
+      "metadata": {
+        "address": " impasse De la Plaine des Ch\u00e9zea, 36800 Saint-Gaultier",
+        "phone_number": "+33641946892",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "36",
+      "nom": "Salle des f\u00eates La Ch\u00e2tre / CPTS Boischaut Sud",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/boischaut-sud/centre-de-vaccination-covid-du-boischaut-sud?pid=practice-164853&enable_cookies_consent=1",
+      "location": {
+        "longitude": 1.98652,
+        "latitude": 46.5803
+      },
+      "metadata": {
+        "address": "4 avenue Andr\u00e9 Malraux, 36400 La Ch\u00e2tre",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "36",
+      "nom": "Espace Tivoli - Chatillon",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/chatillon-sur-indre/vaccination-covid-19-ville-de-chatillon-sur-indre-espace-tivoli?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 1.17241,
+        "latitude": 46.987
+      },
+      "metadata": {
+        "address": " rue jean Lur\u00e7at, 36700 Ch\u00e2tillon-sur-Indre",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "36",
+      "nom": "MSP Clos St Joseph Argenton sur Creuse",
+      "url": "https://partners.doctolib.fr/centre-de-sante/argenton-sur-creuse/centre-de-vaccination-d-argenton-sur-creuse?pid=practice-168762&enable_cookies_consent=1",
+      "location": {
+        "longitude": 1.51592,
+        "latitude": 46.5855
+      },
+      "metadata": {
+        "address": "1 Chemin du Clos St-Joseph, 36200 Argenton-sur-Creuse",
+        "phone_number": "+33638174143",
+        "business_hours": {
+          "lundi": "13h-17h",
+          "mardi": "13h-17h",
+          "mercredi": "13h-17h",
+          "jeudi": "13h-17h",
+          "vendredi": "13h-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "36",
+      "nom": "Grand centre - en attente (36)",
+      "url": "",
+      "location": {
+        "longitude": 1.69174,
+        "latitude": 46.8118
+      },
+      "metadata": {
+        "address": " , 36000 Ch\u00e2teauroux",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "36",
+      "nom": "CH de la Tour Blanche - Issoudun",
+      "url": "https://partners.doctolib.fr/hopital-public/issoudun/centre-de-vaccination-ch-de-la-tour-blanche-issoudun?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 1.99844,
+        "latitude": 46.9604
+      },
+      "metadata": {
+        "address": " Avenue Jean Bonnefont, 36100 Issoudun",
+        "phone_number": "08 05 02 14 00",
+        "business_hours": {
+          "lundi": "9h-16h30",
+          "mardi": "9h-16h30",
+          "mercredi": "9h-16h30",
+          "jeudi": "9h-16h30",
+          "vendredi": "9h-16h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "36",
+      "nom": "Centre de vaccination public - Salle des f\u00eates de Buzan\u00e7ais",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/buzancais/centre-de-vaccination-covid-19-du-buzancais?pid=practice-167599&enable_cookies_consent=1",
+      "location": {
+        "longitude": 1.42255,
+        "latitude": 46.8881
+      },
+      "metadata": {
+        "address": "12 Avenue de la Republique, 36500 Buzan\u00e7ais",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "14h-18h",
+          "mercredi": "14h-18h",
+          "jeudi": "14h-18h",
+          "vendredi": "14h-18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "36",
+      "nom": "Centre de vaccination public - Salle des f\u00eates Jean Moulin",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/villedieu-sur-indre/centre-de-vaccination-de-villedieu-sur-indre?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 1.53732,
+        "latitude": 46.8469
+      },
+      "metadata": {
+        "address": "10 Rue Jean Jaures, 36320 Villedieu-sur-Indre",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "9h-12h / 14h-17h",
+          "mardi": "ferm\u00e9",
+          "mercredi": "9h-12h / 14h-17h",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "14h-17h",
+          "samedi": "10h-13h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "36",
+      "nom": "P\u00f4le de sant\u00e9 de Valen\u00e7ay /CPTS Boischaut nord",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/valencay/centres-de-vaccination-covid-du-boischaut-nord?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 1.57349,
+        "latitude": 47.1625
+      },
+      "metadata": {
+        "address": "28 Rue des Princes, 36600 Valen\u00e7ay",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "36",
+      "nom": "B\u00e2timent communal \"La grange\" / CPTS Boischaut sud",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/boischaut-sud/centre-de-vaccination-covid-du-boischaut-sud?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 1.8076,
+        "latitude": 46.5958
+      },
+      "metadata": {
+        "address": "1 Place Henri de Latouche, 36230 Neuvy-Saint-S\u00e9pulchre",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "9h-13h/14h30-18h30",
+          "mardi": "9h-13h/14h30-18h30",
+          "mercredi": "9h-13h/14h30-18h30",
+          "jeudi": "9h-13h/14h30-18h30",
+          "vendredi": "9h-13h/14h30-18h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "36",
+      "nom": "Centre de vaccination public - Salle des f\u00eates - Le Blanc",
+      "url": "https://partners.doctolib.fr/centre-de-sante/le-blanc/centre-vaccination-covid-19-le-blanc-et-meziere-en-brenne?pid=practice-165262&enable_cookies_consent=1",
+      "location": {
+        "longitude": 1.06403,
+        "latitude": 46.6331
+      },
+      "metadata": {
+        "address": " Place de la Lib\u00e9ration, 36300 Le Blanc",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "8h00-12h00/13h00-17h00",
+          "mardi": "13h00-17h00",
+          "mercredi": "13h00-17h00",
+          "jeudi": "13h00-17h00",
+          "vendredi": "13h00-17h00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "36",
+      "nom": "MC - Unit\u00e9 de soins somatiques et psychiatriques de la maison centrale de SAINT-MAUR / Maison Centrale de Saint-Maur",
+      "url": "",
+      "location": {
+        "longitude": 1.63118,
+        "latitude": 46.7995
+      },
+      "metadata": {
+        "address": " Bel Air, 36250 Saint-Maur",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "36",
+      "nom": "CP - Unit\u00e9 de soins somatiques et psychiatriques du centre p\u00e9nitentiaire de CHATEAUROUX \"Le Craquelin\" / Maison Centrale de Saint-Maur",
+      "url": "",
+      "location": {
+        "longitude": 1.63118,
+        "latitude": 46.7995
+      },
+      "metadata": {
+        "address": " Bel Air, 36250 Saint-Maur",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

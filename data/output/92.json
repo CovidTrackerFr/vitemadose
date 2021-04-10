@@ -1,0 +1,1732 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-10T01:21:21.154217+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "92",
+      "nom": "Dr C\u00e9cile HENRY",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/villeneuve-la-garenne/cecile-henry-villeneuve-la-garenne",
+      "location": {
+        "longitude": 2.32583069999998,
+        "latitude": 48.933826
+      },
+      "metadata": {
+        "address": "37 Rue du Haut de la Noue, 92390 Villeneuve-la-Garenne",
+        "phone_number": "01 47 94 14 54",
+        "business_hours": {
+          "lundi": "08:30-12:30, 14:00-16:30",
+          "mardi": "08:30-12:30, 14:00-16:30",
+          "mercredi": "08:30-12:00",
+          "jeudi": "08:30-12:30, 14:00-16:30",
+          "vendredi": "08:30-12:30, 14:00-16:30",
+          "samedi": "08:30-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-10T09:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 3
+    },
+    {
+      "departement": "92",
+      "nom": "Dr Oury  ESTEGASSY",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/neuilly-sur-seine/oury-estegassy",
+      "location": {
+        "longitude": 2.27023780000002,
+        "latitude": 48.8820079
+      },
+      "metadata": {
+        "address": "88 bis Avenue Charles de Gaulle, 92200 Neuilly-sur-Seine",
+        "business_hours": {
+          "lundi": "09:30-12:00, 14:30-20:00",
+          "mardi": "09:30-12:00, 14:30-20:00",
+          "mercredi": "09:30-12:00, 14:30-20:00",
+          "jeudi": "09:30-12:00, 14:30-20:00",
+          "vendredi": "09:00-14:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-13T10:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 13
+    },
+    {
+      "departement": "92",
+      "nom": "Centre de Sant\u00e9 de la Croix-Rouge - Villeneuve-la-Garenne",
+      "url": "https://partners.doctolib.fr/centre-de-sante/villeneuve-la-garenne/centre-de-sante-de-la-croix-rouge-villeneuve-la-garenne-villeneuve-la-garenne?highlight%5bspeciality_ids%5d%5b%5d=30",
+      "location": {
+        "longitude": 2.3328383,
+        "latitude": 48.9339826
+      },
+      "metadata": {
+        "address": "196 Boulevard Gallieni, 92390 Villeneuve-la-Garenne",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-04-13T12:12:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 32
+    },
+    {
+      "departement": "92",
+      "nom": "Dr Nathaniel COHEN",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/asnieres-sur-seine/nathaniel-cohen",
+      "location": {
+        "longitude": 2.3158486,
+        "latitude": 48.9198609
+      },
+      "metadata": {
+        "address": "32 Rue Olympe de Gouges, 92600 Asni\u00e8res-sur-Seine",
+        "phone_number": "01 40 86 89 00",
+        "business_hours": {
+          "lundi": "08:00-19:00",
+          "mardi": "08:00-19:00",
+          "mercredi": "08:00-19:00",
+          "jeudi": "08:00-19:00",
+          "vendredi": "08:00-19:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-13T17:09:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 3
+    },
+    {
+      "departement": "92",
+      "nom": "Snc Pharmacie Du Centre Tchikirian - Teknetzian",
+      "url": "https://app.ordoclic.fr/app/pharmacie/snc-pharmacie-du-centre-tchikirian---teknetzian--la-garenne-colombes",
+      "location": {
+        "longitude": 2.2479974,
+        "latitude": 48.90670799999999
+      },
+      "metadata": {
+        "address": "2 Rd Pt du Souvenir Fran\u00e7ais , 92250 LA GARENNE COLOMBES",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-04-14T10:10:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 7
+    },
+    {
+      "departement": "92",
+      "nom": "Dr Caroline Alonso",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/clichy/caroline-alonso-clichy",
+      "location": {
+        "longitude": 2.31789060000006,
+        "latitude": 48.9016506
+      },
+      "metadata": {
+        "address": "104 Boulevard Victor Hugo, 92110 Clichy",
+        "business_hours": {
+          "lundi": "08:00-19:00",
+          "mardi": "08:00-19:00",
+          "mercredi": "08:00-19:00",
+          "jeudi": "08:00-19:00",
+          "vendredi": "08:00-19:00",
+          "samedi": "09:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-14T11:00:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 6
+    },
+    {
+      "departement": "92",
+      "nom": "Dr Jihane CHIKHAOUI",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/nanterre/jihane-chikhaoui?pid=practice-67632",
+      "location": {
+        "longitude": 2.2175608,
+        "latitude": 48.9012024
+      },
+      "metadata": {
+        "address": "468 Boulevard des Provinces Fran\u00e7aises, 92000 Nanterre",
+        "phone_number": "01 41 91 70 70",
+        "business_hours": {
+          "lundi": "07:30-19:00",
+          "mardi": "07:30-19:00",
+          "mercredi": "07:30-19:00",
+          "jeudi": "07:30-19:00",
+          "vendredi": "07:30-19:00",
+          "samedi": "08:00-13:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-14T16:20:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 4
+    },
+    {
+      "departement": "92",
+      "nom": "Ville de Clamart",
+      "url": "https://partners.doctolib.fr/centre-de-sante/clamart/centre-de-vaccination-covid-de-la-ville-de-clamart?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.26045,
+        "latitude": 48.7999
+      },
+      "metadata": {
+        "address": " Place Jules Hunebelle, 92140 Clamart",
+        "phone_number": "+33146623572",
+        "business_hours": {
+          "lundi": "08:00-18:00",
+          "mardi": "08:00-18:00",
+          "mercredi": "08:00-18:00",
+          "jeudi": "08:00-18:00",
+          "vendredi": "08:00-18:00",
+          "samedi": "08:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-15T09:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 23
+    },
+    {
+      "departement": "92",
+      "nom": "Dr Rebecca ZEITOUN",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/issy-les-moulineaux/rebecca-zeitoun?pid=practice-5488",
+      "location": {
+        "longitude": 2.26292280000007,
+        "latitude": 48.8267596
+      },
+      "metadata": {
+        "address": "6 All\u00e9e Gustave Eiffel, 92130 Issy-les-Moulineaux",
+        "phone_number": "01 84 19 23 00",
+        "business_hours": {
+          "lundi": "08:30-20:00",
+          "mardi": "08:30-20:00",
+          "mercredi": "08:30-20:00",
+          "jeudi": "08:30-20:00",
+          "vendredi": "08:30-20:00",
+          "samedi": "08:30-20:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-15T11:12:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 19
+    },
+    {
+      "departement": "92",
+      "nom": "Dr Thomas JACTAT",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/nanterre/thomas-jactat?pid=practice-67632",
+      "location": {
+        "longitude": 2.2175608,
+        "latitude": 48.9012024
+      },
+      "metadata": {
+        "address": "468 Boulevard des Provinces Fran\u00e7aises, 92000 Nanterre",
+        "phone_number": "01 41 91 70 70",
+        "business_hours": {
+          "lundi": "07:30-19:00",
+          "mardi": "07:30-19:00",
+          "mercredi": "07:30-19:00",
+          "jeudi": "07:30-19:00",
+          "vendredi": "07:30-19:00",
+          "samedi": "08:00-13:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-15T14:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 8
+    },
+    {
+      "departement": "92",
+      "nom": "Dr Agnes Nouvian",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/clichy/agnes-nouvian-4ad4b791-30b4-425c-80c1-75a9b6351bf5",
+      "location": {
+        "longitude": 2.31789060000006,
+        "latitude": 48.9016506
+      },
+      "metadata": {
+        "address": "104 Boulevard Victor Hugo, 92110 Clichy",
+        "business_hours": {
+          "lundi": "08:00-19:00",
+          "mardi": "08:00-19:00",
+          "mercredi": "08:00-19:00",
+          "jeudi": "08:00-19:00",
+          "vendredi": "08:00-19:00",
+          "samedi": "09:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-16T11:15:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 2
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Trincal",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-trincal-vanves",
+      "location": {
+        "longitude": 2.2900994,
+        "latitude": 48.82025789999999
+      },
+      "metadata": {
+        "address": "55 R RAYMOND MARCHERON, 92170 VANVES",
+        "phone_number": "+33146420381",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-04-16T11:30:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 14
+    },
+    {
+      "departement": "92",
+      "nom": "Dr Sandrine BERTHET",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/fontenay-aux-roses/sandrine-berthet-fontenay-aux-roses",
+      "location": {
+        "longitude": 2.28379740000003,
+        "latitude": 48.7875266
+      },
+      "metadata": {
+        "address": "40 Rue d'Estienne d'Orves, 92260 Fontenay-aux-Roses",
+        "phone_number": "09 67 06 96 38",
+        "business_hours": {
+          "lundi": "09:00-12:15, 14:00-19:00",
+          "mardi": "09:00-12:15, 14:00-19:00",
+          "mercredi": "09:00-12:15, 14:00-19:00",
+          "jeudi": "09:00-12:15, 14:00-19:00",
+          "vendredi": "09:00-12:15, 14:00-19:00",
+          "samedi": "09:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-16T11:38:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 2
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Aprium Demo",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-aprium-demo-levallois-perret",
+      "location": {
+        "longitude": 2.351883,
+        "latitude": 48.842628
+      },
+      "metadata": {
+        "address": "100 Rue de Villiers, 92300 Levallois-Perret",
+        "phone_number": "+33202020202",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-04-16T16:40:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 3
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie centrale - Leadersant\u00e9 - Boulogne-Billancourt",
+      "url": "https://partners.doctolib.fr/pharmacie/boulogne-billancourt/pharmacie-centrale-boulogne-billancourt",
+      "location": {
+        "longitude": 2.2435417,
+        "latitude": 48.8338952
+      },
+      "metadata": {
+        "address": "197 Boulevard Jean Jaur\u00e8s, 92100 Boulogne-Billancourt",
+        "phone_number": "01 46 05 05 02",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "09:00-20:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-19T10:42:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 5
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie de l'Observatoire",
+      "url": "https://partners.doctolib.fr/pharmacie/meudon/pharmacie-de-l-observatoire",
+      "location": {
+        "longitude": 2.2356115,
+        "latitude": 48.8071428
+      },
+      "metadata": {
+        "address": "38 Rue de la R\u00e9publique, 92190 Meudon",
+        "phone_number": "01 45 34 12 45",
+        "business_hours": {
+          "lundi": "09:00-20:00",
+          "mardi": "08:30-20:00",
+          "mercredi": "08:30-20:00",
+          "jeudi": "08:30-20:00",
+          "vendredi": "08:30-20:00",
+          "samedi": "09:00-20:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-23T19:06:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 2
+    },
+    {
+      "departement": "92",
+      "nom": "Ville de Garches - M\u00e9diath\u00e8que Jacques GAUTIER",
+      "url": "https://www.maiia.com/centre-de-vaccination/92380-garches/centre-de-vaccination-garches",
+      "location": {
+        "longitude": 2.18886,
+        "latitude": 48.8442
+      },
+      "metadata": {
+        "address": "86 Grande Rue, 92380 Garches",
+        "phone_number": "0147956615",
+        "business_hours": {
+          "lundi": "08:00-19:00",
+          "mardi": "08:00-19:00",
+          "mercredi": "08:00-19:00",
+          "jeudi": "08:00-19:00",
+          "vendredi": "08:00-19:00",
+          "samedi": "08:00-19:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-07-01T09:00:00.000000Z",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "92",
+      "nom": "CH Ambroise PARE",
+      "url": "rdvvaccinationcovid.lmr@aphp.fr",
+      "location": {
+        "longitude": 2.23711,
+        "latitude": 48.849
+      },
+      "metadata": {
+        "address": "9 Avenue Charles de Gaulle, 92100 Boulogne-Billancourt",
+        "phone_number": "0 800 08 33 46",
+        "business_hours": {
+          "lundi": "12h \u00e0 15h et 19h30 \u00e0 21h30",
+          "mardi": "12h \u00e0 15h et 19h30 \u00e0 21h30",
+          "mercredi": "12h \u00e0 15h et 19h30 \u00e0 21h30",
+          "jeudi": "12h \u00e0 15h et 19h30 \u00e0 21h30",
+          "vendredi": "12h \u00e0 15h et 19h30 \u00e0 21h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Equipe Mobile CD",
+      "url": "",
+      "location": {
+        "longitude": 2.22835,
+        "latitude": 48.8946
+      },
+      "metadata": {
+        "address": "57 rue des longues raies, 92000 Nanterre",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "CH Antoine B\u00e9cl\u00e8re",
+      "url": "",
+      "location": {
+        "longitude": 2.25372,
+        "latitude": 48.7899
+      },
+      "metadata": {
+        "address": "157 Rue de la Porte de Trivaux, 92140 Clamart",
+        "phone_number": "0 800 08 33 46",
+        "business_hours": {
+          "lundi": "Ouvert",
+          "mardi": "Ouvert",
+          "mercredi": "Ouvert",
+          "jeudi": "Ouvert",
+          "vendredi": "Ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "CHRDS Neuilly",
+      "url": "https://partners.doctolib.fr/hopital-public/neuilly-sur-seine/ch-rives-de-seine?speciality_id=5494?pid=practice-15560&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.26191,
+        "latitude": 48.8898
+      },
+      "metadata": {
+        "address": "56 Boulevard d\u2019Argenson, 92200 Neuilly-sur-Seine",
+        "phone_number": "01 40 88 63 00",
+        "business_hours": {
+          "lundi": "10h \u00e0 13h et de 14h \u00e0 18h",
+          "mardi": "10h \u00e0 13h et de 14h \u00e0 18h",
+          "mercredi": "10h \u00e0 13h et de 14h \u00e0 18h",
+          "jeudi": "10h \u00e0 13h et de 14h \u00e0 18h",
+          "vendredi": "10h \u00e0 13h et de 14h \u00e0 18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "CH des 4 Villes",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-cloud/ch-4-villes-centre-de-vaccination-reserve-aux-personnels-de-l-etablissement?pid=practice-163521&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.2176,
+        "latitude": 48.8447
+      },
+      "metadata": {
+        "address": "42 Rue Dailly, 92210 Saint-Cloud",
+        "phone_number": "01 77 70 73 70/71",
+        "business_hours": {
+          "lundi": "Ouvert",
+          "mardi": "ferm\u00e9",
+          "mercredi": "Ouvert",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "Ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "CH de Beaujon",
+      "url": "",
+      "location": {
+        "longitude": 2.30849,
+        "latitude": 48.9075
+      },
+      "metadata": {
+        "address": "100 Boulevard du G\u00e9n\u00e9ral Leclerc, 92110 Clichy",
+        "phone_number": "01 40 87 52 14",
+        "business_hours": {
+          "lundi": "9h \u00e0 16h",
+          "mardi": "9h \u00e0 16h",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "9h \u00e0 16h",
+          "vendredi": "9h \u00e0 16h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Ville d'Antony Bourg La Reine Sceaux",
+      "url": "https://partners.doctolib.fr/centre-de-sante/antony/centre-de-vaccination-antony-bourg-la-reine-sceaux?pid=practice-140632&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.30113,
+        "latitude": 48.7501
+      },
+      "metadata": {
+        "address": " Place des anciens combattants d'afrique du Nord, 92160 Antony",
+        "phone_number": "0140966869",
+        "business_hours": {
+          "lundi": "8h00 - 20h00",
+          "mardi": "8h00 - 20h00",
+          "mercredi": "8h00 - 20h00",
+          "jeudi": "8h00 - 20h00",
+          "vendredi": "8h00 - 20h00",
+          "samedi": "8h00 - 20h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Ville de Bagneux",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bagneux/centre-municipal-de-sante-louis-pasteur-bagneux-cms?speciality_id=5494&pid=practice-174518&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.32018,
+        "latitude": 48.7975
+      },
+      "metadata": {
+        "address": "15 Rue Charles Michels, 92220 Bagneux",
+        "phone_number": "01 45 36 13 50",
+        "business_hours": {
+          "lundi": "10h00 - 13h00 et 14h00 - 17h00",
+          "mardi": "10h00 - 13h00 et 14h00 - 17h00",
+          "mercredi": "10h00 - 13h00 et 14h00 - 17h00",
+          "jeudi": "10h00 - 13h00 et 14h00 - 17h00",
+          "vendredi": "10h00 - 13h00 et 14h00 - 17h00",
+          "samedi": "10h00 - 13h00 et 14h00 - 17h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Ville de Chatillon Malakoff",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chatillon/centre-de-vaccination-covid-19-chatillon-malakoff?pid=practice-176419&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.29925,
+        "latitude": 48.8095
+      },
+      "metadata": {
+        "address": "2 Avenue Saint-Exup\u00e9ry, 92320 Ch\u00e2tillon",
+        "phone_number": "01 58 07 24 60",
+        "business_hours": {
+          "lundi": "8H-20H",
+          "mardi": "8H-20H",
+          "mercredi": "8H-20H",
+          "jeudi": "8H-20H",
+          "vendredi": "8H-20H",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Ville de Gennevilliers",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/gennevilliers/centre-de-vaccination-covid-19-gymnase-paul-langevin?pid=practice-176133&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.29701,
+        "latitude": 48.9344
+      },
+      "metadata": {
+        "address": "16 bis Rue de la Paix, 92230 Gennevilliers",
+        "phone_number": "01 40 85 66 50",
+        "business_hours": {
+          "lundi": "8h00 - 20h00",
+          "mardi": "8h00 - 20h00",
+          "mercredi": "8h00 - 20h00",
+          "jeudi": "8h00 - 20h00",
+          "vendredi": "8h00 - 20h00",
+          "samedi": "8h00 - 20h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Ville de Levallois-Perret",
+      "url": "https://partners.doctolib.fr/centre-de-sante/levallois-perret/centre-de-vaccination-de-levallois?pid=practice-175351&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.27825,
+        "latitude": 48.8961
+      },
+      "metadata": {
+        "address": "141 Rue Danton, 92300 Levallois-Perret",
+        "phone_number": "0147157515",
+        "business_hours": {
+          "lundi": "8h00 - 20h00",
+          "mardi": "8h00 - 20h00",
+          "mercredi": "8h00 - 20h00",
+          "jeudi": "8h00 - 20h00",
+          "vendredi": "8h00 - 20h00",
+          "samedi": "8h00 - 20h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "CV CPAM92",
+      "url": "",
+      "location": {
+        "longitude": 2.20798,
+        "latitude": 48.8936
+      },
+      "metadata": {
+        "address": "130 Rue du 8 Mai 1945, 92000 Nanterre",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Ville de Chaville - Ville d'Avray - S\u00e8vres",
+      "url": "",
+      "location": {
+        "longitude": 2.19258,
+        "latitude": 48.8131
+      },
+      "metadata": {
+        "address": "925 Avenue Roger Salengro, 92370 Chaville",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Ville de Colombes",
+      "url": "",
+      "location": {
+        "longitude": 2.24639,
+        "latitude": 48.9243
+      },
+      "metadata": {
+        "address": "140 Rue Saint - Denis, 92700 Colombes",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "ville de Montrouge",
+      "url": "",
+      "location": {
+        "longitude": 2.32015,
+        "latitude": 48.8196
+      },
+      "metadata": {
+        "address": "32 Avenue de la R\u00e9publique, 92120 Montrouge",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Ville de Puteaux",
+      "url": "",
+      "location": {
+        "longitude": 2.23935,
+        "latitude": 48.885
+      },
+      "metadata": {
+        "address": "26 Rue Anatole France, 92800 Puteaux",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "H\u00f4pital des arm\u00e9es Percy",
+      "url": "https://partners.doctolib.fr/centre-de-sante/clamart/hia-percy-centre-de-vaccination-covid-19?pid=practice-176809&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.25473,
+        "latitude": 48.8156
+      },
+      "metadata": {
+        "address": "2 Rue du Lieutenant Raoul Batany, 92140 Clamart",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ouvert",
+          "dimanche": "ouvert"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "DAC 92 Nord",
+      "url": "",
+      "location": {
+        "longitude": 2.3047,
+        "latitude": 48.937
+      },
+      "metadata": {
+        "address": "9 All\u00e9e des Barbanniers, 92230 Gennevilliers",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "DAC 92 Centre",
+      "url": "",
+      "location": {
+        "longitude": 2.21905,
+        "latitude": 48.8698
+      },
+      "metadata": {
+        "address": " , 92150 Suresnes",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "DAC 92 SUD",
+      "url": "",
+      "location": {
+        "longitude": 2.26152,
+        "latitude": 48.7906
+      },
+      "metadata": {
+        "address": "4 Rue des Carnets, 92140 Clamart",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Bus Vaccination 92",
+      "url": "",
+      "location": {
+        "longitude": 2.21653,
+        "latitude": 48.9015
+      },
+      "metadata": {
+        "address": "28 All\u00e9e d\u2019Aquitaine, 92000 Nanterre",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Ville d'Issy les Moulineaux",
+      "url": "https://partners.doctolib.fr/centre-de-sante/issy-les-moulineaux/centre-de-vaccination-covid-issy-les-moulineaux?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.26482,
+        "latitude": 48.8259
+      },
+      "metadata": {
+        "address": "2 Rue du Bateau Lavoir, 92130 Issy-les-Moulineaux",
+        "phone_number": "01 41 23 80 10",
+        "business_hours": {
+          "lundi": "09:00-19:00",
+          "mardi": "09:00-19:00",
+          "mercredi": "09:00-19:00",
+          "jeudi": "09:00-19:00",
+          "vendredi": "09:00-19:00",
+          "samedi": "09:00-19:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Centre de vaccination CASH de Nanterre",
+      "url": "https://partners.doctolib.fr/etablissement-de-prevention/nanterre/cash-nanterre-vaccination-covid19-professionnels-de-sante?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.22204,
+        "latitude": 48.9137
+      },
+      "metadata": {
+        "address": "403 Avenue de la R\u00e9publique, 92000 Nanterre",
+        "phone_number": "+33147697234",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "CENTRE RUEIL-MALMAISON",
+      "url": "https://partners.doctolib.fr/centre-de-sante/rueil-malmaison/centre-de-vaccination-covid-europe-rueil-malmaison?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.16157,
+        "latitude": 48.8719
+      },
+      "metadata": {
+        "address": "312 Avenue Napol\u00e9on Bonaparte, 92500 Rueil-Malmaison",
+        "phone_number": "+33147328268",
+        "business_hours": {
+          "lundi": "8h30-17h",
+          "mardi": "8h30-17h",
+          "mercredi": "8h30-17h",
+          "jeudi": "8h30-17h",
+          "vendredi": "8h30-17h",
+          "samedi": "8h30-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Ville d'Asni\u00e8res",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/asnieres-sur-seine/centre-de-vaccination-espace-concorde-francis-delage?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.29031,
+        "latitude": 48.9129
+      },
+      "metadata": {
+        "address": "27 Rue de la Concorde, 92600 Asni\u00e8res-sur-Seine",
+        "phone_number": "0171114240",
+        "business_hours": {
+          "lundi": "09:30-13:30/14:00-18:00",
+          "mardi": "09:30-13:30/14:00-18:00",
+          "mercredi": "09:30-13:30/14:00-18:00",
+          "jeudi": "09:30-13:30/14:00-18:00",
+          "vendredi": "09:30-13:30/14:00-18:00",
+          "samedi": "09:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Tr\u00e8s grand centre 92 ARENA (en cours de cr\u00e9ation)",
+      "url": "",
+      "location": {
+        "longitude": 2.21737,
+        "latitude": 48.8969
+      },
+      "metadata": {
+        "address": "179 Avenue Fr\u00e9d\u00e9ric et Ir\u00e8ne Joliot Curie, 92000 Nanterre",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Salle des f\u00eates de Suresnes",
+      "url": "https://partners.doctolib.fr/centre-de-sante/suresnes/centre-de-vaccination-covid-suresnes?speciality_id=5494&?pid=practice-164987&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.22525,
+        "latitude": 48.8711
+      },
+      "metadata": {
+        "address": "2 Rue Carnot, 92150 Suresnes",
+        "phone_number": "+33141181818",
+        "business_hours": {
+          "lundi": "9h-18h",
+          "mardi": "9h-18h",
+          "mercredi": "9h-18h",
+          "jeudi": "9h-18h",
+          "vendredi": "9h-18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Ville de Boulogne Billancourt",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/boulogne-billancourt/centre-vaccination-ville-de-boulogne-billancourt?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.24573,
+        "latitude": 48.8443
+      },
+      "metadata": {
+        "address": "42 Rue Denfert Rochereau, 92100 Boulogne-Billancourt",
+        "phone_number": "+33155184770",
+        "business_hours": {
+          "lundi": "08:00-19:00",
+          "mardi": "08:00-19:00",
+          "mercredi": "08:00-19:00",
+          "jeudi": "08:00-19:00",
+          "vendredi": "08:00-19:00",
+          "samedi": "08:00-19:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Ville de Chatenay-Malabry",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ch\u00e2tenay-malabry/centre-de-vaccination-de-chatenay-malabry?pid=practice-164883?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.27859,
+        "latitude": 48.7636
+      },
+      "metadata": {
+        "address": "160 Avenue de la Division Leclerc, 92290 Ch\u00e2tenay-Malabry",
+        "phone_number": "+33146834683",
+        "business_hours": {
+          "lundi": "08:00-19:30",
+          "mardi": "08:00-19:30",
+          "mercredi": "08:00-19:30",
+          "jeudi": "08:00-19:30",
+          "vendredi": "08:00-19:30",
+          "samedi": "08:00-19:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Ville de Courbevoie",
+      "url": "https://partners.doctolib.fr/centre-de-sante/courbevoie/centre-de-vaccination-covid-19-de-courbevoie?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.25936,
+        "latitude": 48.9018
+      },
+      "metadata": {
+        "address": "91 Boulevard de Verdun, 92400 Courbevoie",
+        "phone_number": "01 71 05 73 58",
+        "business_hours": {
+          "lundi": "9h \u00e0 18h",
+          "mardi": "9h \u00e0 18h",
+          "mercredi": "9h \u00e0 18h",
+          "jeudi": "9h \u00e0 18h",
+          "vendredi": "9h \u00e0 18h",
+          "samedi": "9h \u00e0 18h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Ville de la Garenne Colombes",
+      "url": "https://partners.doctolib.fr/centre-de-sante/la-garenne-colombes/centre-de-vaccination-covid-19-la-garenne-colombes?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.2454,
+        "latitude": 48.9097
+      },
+      "metadata": {
+        "address": "20-22 Rue de Ch\u00e2teaudun, 92250 La Garenne-Colombes",
+        "phone_number": "01 72 42 40 28",
+        "business_hours": {
+          "lundi": "09:00-12:00/14:00-17:00",
+          "mardi": "09:00-12:00/14:00-17:00",
+          "mercredi": "09:00-12:00/14:00-17:00",
+          "jeudi": "09:00-12:00/14:00-17:00",
+          "vendredi": "09:00-12:00/14:00-17:00",
+          "samedi": "09:00-12:00/14:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Centre de vaccination Nanterre Chevreul",
+      "url": "",
+      "location": {
+        "longitude": 2.21333,
+        "latitude": 48.8911
+      },
+      "metadata": {
+        "address": "97 Avenue de la Libert\u00e9, 92000 Nanterre",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Ville de Clichy la Garenne",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/clichy/centre-de-vaccination-covid-de-clichy?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.30294,
+        "latitude": 48.9028
+      },
+      "metadata": {
+        "address": "6 Place du March\u00e9, 92110 Clichy",
+        "phone_number": "0800022000",
+        "business_hours": {
+          "lundi": "08:00-19:00",
+          "mardi": "08:00-19:00",
+          "mercredi": "08:00-19:00",
+          "jeudi": "08:00-19:00",
+          "vendredi": "08:00-19:00",
+          "samedi": "08:00-19:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Ville de Neuilly sur Seine",
+      "url": "https://partners.doctolib.fr/centre-de-sante/neuilly-sur-seine/centre-de-vaccination-covid-19-du-theatre-des-sablons?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 2.27555,
+        "latitude": 48.8831
+      },
+      "metadata": {
+        "address": "70 Avenue du Roule, 92200 Neuilly-sur-Seine",
+        "phone_number": "0800092200",
+        "business_hours": {
+          "lundi": "ouvert",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "ouvert",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Ville de Meudon",
+      "url": "",
+      "location": {
+        "longitude": 2.24607,
+        "latitude": 48.8087
+      },
+      "metadata": {
+        "address": "2 Avenue des Fosses, 92190 Meudon",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "MA - Nanterre / Maison d'Arr\u00eat de Nanterre-Hauts-de-Seine",
+      "url": "",
+      "location": {
+        "longitude": 2.20514,
+        "latitude": 48.9065
+      },
+      "metadata": {
+        "address": "133 Avenue de la Commune de Paris, 92000 Nanterre",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Du Centre Le Mont Val\u00e9rien",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-centre-le-mont-valerien-nanterre",
+      "location": {
+        "longitude": 2.2038839,
+        "latitude": 48.8836581
+      },
+      "metadata": {
+        "address": "99 RUE PAUL VAILLANT COUTURIER, 92000 Nanterre",
+        "phone_number": "+33147240194",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Des Bourguignons",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-bourguignons-bois-colombes",
+      "location": {
+        "longitude": 2.2803462,
+        "latitude": 48.9190372
+      },
+      "metadata": {
+        "address": "145 rue des bourguignons, 92270 BOIS-COLOMBES",
+        "phone_number": "+33142421223",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Des 3 Moulins",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-3-moulins-issy-les-moulineaux",
+      "location": {
+        "longitude": -1.5445787,
+        "latitude": 47.1786685
+      },
+      "metadata": {
+        "address": "CC les 3 Moulins - 3 Allee Sainte Lucie, 92130 Issy-les-Moulineaux",
+        "phone_number": "+33146422389",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Des Jardins Suresnes",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-jardins-suresnes-suresnes",
+      "location": {
+        "longitude": 2.2115501,
+        "latitude": 48.8631131
+      },
+      "metadata": {
+        "address": "28 avenue Edouard Vaillant, 92150 Suresnes",
+        "phone_number": "+33145061174",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Leonard De Vinci",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-leonard-de-vinci--courbevoie",
+      "location": {
+        "longitude": 2.2359706,
+        "latitude": 48.8961164
+      },
+      "metadata": {
+        "address": "23 Avenue L\u00e9onard de Vinci, 92400 Courbevoie",
+        "phone_number": "+33146671111",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Nouvelle",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-nouvelle-bois-colombes",
+      "location": {
+        "longitude": 2.2764167,
+        "latitude": 48.9160307
+      },
+      "metadata": {
+        "address": "81 RUE DES BOURGUIGNONS, 92279 BOIS COLOMBES",
+        "phone_number": "+33142421228",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Jean Jaures",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-jean-jaures-boulogne-billancourt",
+      "location": {
+        "longitude": 2.2477077,
+        "latitude": 48.827718
+      },
+      "metadata": {
+        "address": "247 bis Boulevard Jean Jaures, 92100 Boulogne-Billancourt",
+        "phone_number": "+33146214811",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Cottard",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-cottard-meudon",
+      "location": {
+        "longitude": 2.2344849,
+        "latitude": 48.81505809999999
+      },
+      "metadata": {
+        "address": "3 Place Stalingrad, 92190 Meudon",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Des Champs Aux Melles",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-champs-aux-melles-nanterre",
+      "location": {
+        "longitude": 2.2199417,
+        "latitude": 48.8889739
+      },
+      "metadata": {
+        "address": "82 Avenue Pablo Picasso, 92000 Nanterre",
+        "phone_number": "+33147215054",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Du Progr\u00e8s",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-progres-malakoff",
+      "location": {
+        "longitude": 2.3035016,
+        "latitude": 48.8212886
+      },
+      "metadata": {
+        "address": "10 rue B\u00e9ranger, 92240 Malakoff",
+        "phone_number": "+33142531579",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie  \u00cele Saint Germain",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie--ile-saint-germain--issy-les-moulineaux",
+      "location": {
+        "longitude": 2.2499669,
+        "latitude": 48.8229807
+      },
+      "metadata": {
+        "address": "15 Boulevard des Iles, 92130 Issy-les-Moulineaux",
+        "phone_number": "+33146422805",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Charras",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-charras-courbevoie",
+      "location": {
+        "longitude": 2.2519275,
+        "latitude": 48.8933984
+      },
+      "metadata": {
+        "address": "21 rue de Bezons, 92400 Courbevoie",
+        "phone_number": "+33147881145",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Louise Michel",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-louise-michel-levallois",
+      "location": {
+        "longitude": 2.2873793,
+        "latitude": 48.8887454
+      },
+      "metadata": {
+        "address": "33 rue Louise Michel, 92300 Levallois",
+        "phone_number": "+33147570002",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie De La Gare",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-gare-nanterre",
+      "location": {
+        "longitude": 2.1962787,
+        "latitude": 48.8949177
+      },
+      "metadata": {
+        "address": "82bis rue Maurice Thorez, 92000 Nanterre",
+        "phone_number": "+33147211223",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Dr Mathieu van dessel",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/clichy/mathieu-van-dessel",
+      "location": {
+        "longitude": 2.3170436,
+        "latitude": 48.9037211
+      },
+      "metadata": {
+        "address": "21 Rue Georges Boisseau, 92110 Clichy",
+        "phone_number": "01 84 20 04 02",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-18:00",
+          "mardi": "09:00-13:00, 14:00-18:00",
+          "mercredi": "09:00-13:00, 14:00-18:00",
+          "jeudi": "09:00-13:00, 14:00-18:00",
+          "vendredi": "09:00-13:00, 14:00-16:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Espace Sant\u00e9 Simone Veil d'Issy-les-Moulineaux",
+      "url": "https://partners.doctolib.fr/centre-de-sante/issy-les-moulineaux/centre-municipal-de-sante-d-issy-les-moulineaux?highlight%5bspeciality_ids%5d%5b%5d=2",
+      "location": {
+        "longitude": 2.26947180000002,
+        "latitude": 48.8228601
+      },
+      "metadata": {
+        "address": "27 bis Avenue Victor Cresson, 92130 Issy-les-Moulineaux",
+        "phone_number": "01 41 23 83 00",
+        "business_hours": {
+          "lundi": "08:30-19:00",
+          "mardi": "08:30-19:00",
+          "mercredi": "08:30-19:00",
+          "jeudi": "08:30-19:00",
+          "vendredi": "08:30-19:00",
+          "samedi": "08:30-12:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Grande Pharmacie de B\u00e9con",
+      "url": "https://partners.doctolib.fr/pharmacie/courbevoie/grande-pharmacie-de-becon",
+      "location": {
+        "longitude": 2.2685136,
+        "latitude": 48.9025776
+      },
+      "metadata": {
+        "address": "101 Rue Armand Silvestre, 92400 Courbevoie",
+        "phone_number": "01 43 33 11 41",
+        "business_hours": {
+          "lundi": "08:30-20:30",
+          "mardi": "08:30-20:30",
+          "mercredi": "08:30-20:30",
+          "jeudi": "08:30-20:30",
+          "vendredi": "08:30-20:30",
+          "samedi": "08:30-20:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Vaccination COVID 19 - Centre M\u00e9dico-dentaire du Nord-Ouest Parisien / CMDNOP",
+      "url": "https://partners.doctolib.fr/centre-de-sante/clichy/vaccination-centre-medico-dentaire-du-nord-ouest-parisien-cmdnop?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 2.3013727,
+        "latitude": 48.9008608
+      },
+      "metadata": {
+        "address": "39 Rue Casteres, 92110 Clichy",
+        "phone_number": "01 47 31 26 26",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Centre de vaccination COVID-19 de Ch\u00e2tenay-Malabry",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/chatenay-malabry/centre-de-vaccination-de-chatenay-malabry?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 2.2782997,
+        "latitude": 48.7636249
+      },
+      "metadata": {
+        "address": "160 Avenue de la Division Leclerc, 92290 Ch\u00e2tenay-Malabry",
+        "phone_number": "01 46 83 46 83",
+        "business_hours": {
+          "lundi": "09:00-12:00, 14:00-17:00",
+          "mardi": "09:00-12:00, 14:00-17:00",
+          "mercredi": "09:00-12:00, 14:00-17:00",
+          "jeudi": "09:00-12:00, 14:00-17:00",
+          "vendredi": "09:00-12:00, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "92",
+      "nom": "Centre vaccination Covid-19 du CMS de Bagneux",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bagneux/centre-vaccination-covid-19-du-cms-de-bagneux?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 2.3200487,
+        "latitude": 48.7972017
+      },
+      "metadata": {
+        "address": "15 Rue Charles Michels, 92220 Bagneux",
+        "business_hours": {
+          "lundi": "10:00-17:00",
+          "mardi": "10:00-17:00",
+          "mercredi": "10:00-17:00",
+          "jeudi": "10:00-17:00",
+          "vendredi": "10:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

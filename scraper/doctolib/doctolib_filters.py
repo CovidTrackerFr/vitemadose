@@ -8,8 +8,27 @@ DOCTOLIB_APPOINTMENT_REASON = [
     '1 ère injection',
     '1 ere injection',
     '1er injection',
-    '1ere injection'
+    '1ere injection',
+    'vaccination'
 ]
+
+DOCTOLIB_CATEGORY = [
+    'vaccination',
+    'non professionnels de santé',
+    'patients', #  50 - 55 ans avec comoribidtés
+]
+
+
+def is_category_relevant(category):
+    if not category:
+        return False
+
+    category = category.lower()
+    category = re.sub(' +', ' ', category)
+    for allowed_categories in DOCTOLIB_APPOINTMENT_REASON:
+        if allowed_categories in category:
+            return True
+    return False
 
 
 # Filter by relevant appointments

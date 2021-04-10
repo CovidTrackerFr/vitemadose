@@ -1,0 +1,259 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-10T01:21:20.959787+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "2A",
+      "nom": "CMA Porto Vecchio",
+      "url": "https://partners.doctolib.fr/centre-de-sante/porto-vecchio/centre-de-vaccination-covid-19-cma-porto-vecchio?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 9.2777,
+        "latitude": 41.6003
+      },
+      "metadata": {
+        "address": " Stade Claude Papi, 20137 Porto-Vecchio",
+        "phone_number": "+33778055110",
+        "business_hours": {
+          "lundi": "9:00-12:00/14:00-17:00",
+          "mardi": "9:00-12:00/14:00-17:00",
+          "mercredi": "9:00-12:00/14:00-17:00",
+          "jeudi": "9:00-12:00/14:00-17:00",
+          "vendredi": "9:00-12:00/14:00-17:00",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-19T14:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 142
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "2A",
+      "nom": "Clinisud",
+      "url": "",
+      "location": {
+        "longitude": 8.73563,
+        "latitude": 41.9232
+      },
+      "metadata": {
+        "address": "12 Avenue Napoleon III, 20090 Ajaccio",
+        "phone_number": "+33609982363",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "2A",
+      "nom": "Centre Bal\u00e9one",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sarrola-carcopino/centre-vaccination-baleone?pid=practice-170136&enable_cookies_consent=1",
+      "location": {
+        "longitude": 8.842,
+        "latitude": 42.029
+      },
+      "metadata": {
+        "address": " T22 Centre commercial, 20167 Sarrola-Carcopino",
+        "phone_number": "+33495283747",
+        "business_hours": {
+          "lundi": "08:30-17:30",
+          "mardi": "08:30-17:30",
+          "mercredi": "08:30-17:30",
+          "jeudi": "08:30-17:30",
+          "vendredi": "08:30-17:30",
+          "samedi": "08:30-17:30",
+          "dimanche": "08:30-17:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "2A",
+      "nom": "CH Ajaccio (Centre de vaccination les Salines)",
+      "url": "https://partners.doctolib.fr/hopital-public/ajaccio/centre-de-vaccination-covid-des-salines?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 8.75096,
+        "latitude": 41.938
+      },
+      "metadata": {
+        "address": " Avenue Marechal Juin, 20090 Ajaccio",
+        "phone_number": "+33495296700",
+        "business_hours": {
+          "lundi": "09:00-12:15/13:00-17:15",
+          "mardi": "09:00-12:15/13:00-17:15",
+          "mercredi": "09:00-12:15/13:00-17:15",
+          "jeudi": "09:00-12:15/13:00-17:15",
+          "vendredi": "09:00-12:15/13:00-17:15",
+          "samedi": "09:00-12:15/13:00-17:15",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "2A",
+      "nom": "CH Sart\u00e8ne",
+      "url": "https://partners.doctolib.fr/hopital-public/sartene/centre-hospitalier-de-sartene-sartene?pid=practice-163903&enable_cookies_consent=1",
+      "location": {
+        "longitude": 8.92676,
+        "latitude": 41.6004
+      },
+      "metadata": {
+        "address": "355 Cacciabello, 20100 Sart\u00e8ne",
+        "phone_number": "+33495779513",
+        "business_hours": {
+          "lundi": "A confirmer",
+          "mardi": "A confirmer",
+          "mercredi": "A confirmer",
+          "jeudi": "A confirmer",
+          "vendredi": "A confirmer",
+          "samedi": "A confirmer",
+          "dimanche": "A confirmer"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "2A",
+      "nom": "MSP Carg\u00e8se",
+      "url": "https://partners.doctolib.fr/maison-de-sante/cargese/centre-vaccination-covid-pole-sante-de-cargese?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 8.59756,
+        "latitude": 42.1396
+      },
+      "metadata": {
+        "address": " Route du Pero, 20130 Carg\u00e8se",
+        "phone_number": "+33495517800",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "09:00-11:45/13:00-16:00",
+          "mercredi": "09:00-11:45/14:00-17:00",
+          "jeudi": "09:00-11:45/14:00-17:00",
+          "vendredi": "09:00-11:45",
+          "samedi": "09:00-11:45",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "2A",
+      "nom": "Centre la Gravone",
+      "url": "https://partners.doctolib.fr/centre-de-sante/peri/gravona-centre-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 8.92073,
+        "latitude": 42.0035
+      },
+      "metadata": {
+        "address": " Plaine de Peri ustaria, 20167 Peri",
+        "phone_number": "+33495258191",
+        "business_hours": {
+          "lundi": "A CONFIRMER",
+          "mardi": "A CONFIRMER",
+          "mercredi": "A CONFIRMER",
+          "jeudi": "A CONFIRMER",
+          "vendredi": "A CONFIRMER",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "2A",
+      "nom": "Centre de vaccination Ajaccio / Espace Diamant",
+      "url": "https://partners.doctolib.fr/centre-de-sante/ajaccio/centre-de-vaccination-covid-espace-diamant?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 8.73239,
+        "latitude": 41.9168
+      },
+      "metadata": {
+        "address": " Boulevard Pascal Rossini, espace diamant, 20000 Ajaccio",
+        "phone_number": "+33495504080",
+        "business_hours": {
+          "lundi": "09:00-12:00/14:00-17:00",
+          "mardi": "09:00-12:00/14:00-17:00",
+          "mercredi": "09:00-12:00/14:00-17:00",
+          "jeudi": "09:00-12:00/14:00-17:00",
+          "vendredi": "09:00-12:00/14:00-17:00",
+          "samedi": "09:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "2A",
+      "nom": "MA - US Ajaccio / Maison d'Arr\u00eat d'Ajaccio",
+      "url": "",
+      "location": {
+        "longitude": 8.73687,
+        "latitude": 41.926
+      },
+      "metadata": {
+        "address": "9 Boulevard Masseria, 20000 Ajaccio",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "2A",
+      "nom": "Pharmacie Nouvelle",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-nouvelle-ajaccio",
+      "location": {
+        "longitude": 8.754254,
+        "latitude": 41.9383059
+      },
+      "metadata": {
+        "address": "10 AVENUE DOCTEUR NOEL FRANCHINI, 20090 AJACCIO",
+        "phone_number": "+33495221437",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    }
+  ]
+}

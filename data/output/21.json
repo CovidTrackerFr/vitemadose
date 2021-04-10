@@ -1,0 +1,878 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-10T01:21:20.950065+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "21",
+      "nom": "DIJON Salle Devosge",
+      "url": "https://partners.doctolib.fr/maison-de-sante/dijon/cpts-de-dijon-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 5.03465,
+        "latitude": 47.3245
+      },
+      "metadata": {
+        "address": "5 Rue Devosge, 21000 Dijon",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-19T12:15:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 21
+    },
+    {
+      "departement": "21",
+      "nom": "BEAUNE Gymnase des Blanches Fleurs",
+      "url": "https://partners.doctolib.fr/centre-de-sante/beaune/centre-de-vaccination-covid-19-vac21-beaune?pid=practice-165204&enable_cookies_consent=1",
+      "location": {
+        "longitude": 4.83803,
+        "latitude": 47.0355
+      },
+      "metadata": {
+        "address": "67 Rue des Blanches Fleurs, 21200 Beaune",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "08:30-17:30",
+          "mardi": "08:30-17:30",
+          "mercredi": "08:30-17:30",
+          "jeudi": "08:30-17:30",
+          "vendredi": "08:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-06T11:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 47
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "21",
+      "nom": "POUILLY-EN-AUXOIS espace Jean Claude Patriarche",
+      "url": "https://partners.doctolib.fr/maison-de-sante/pouilly-en-auxois/centre-de-vaccination-pouilly-en-auxois?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 4.55727,
+        "latitude": 47.2619
+      },
+      "metadata": {
+        "address": " Ruelle du Gu\u00e9, 21320 Pouilly-en-Auxois",
+        "phone_number": "+33380908661",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "08:00-12:00/14:00-18:00",
+          "dimanche": "08:00-12:00/14:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "EPOISSES Salle communale",
+      "url": "https://partners.doctolib.fr/maison-de-sante/seurre/centre-de-vaccination-pole-de-sante-rives-de-saone?pid=practice-177319&enable_cookies_consent=1",
+      "location": {
+        "longitude": 4.17441,
+        "latitude": 47.5048
+      },
+      "metadata": {
+        "address": "2 Rue de la Gare, 21460 \u00c9poisses",
+        "phone_number": "+33380964409",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "8H45 - 17H45",
+          "vendredi": "8H45 - 17H45",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "GENLIS - Mairie",
+      "url": "https://partners.doctolib.fr/maison-de-sante/seurre/centre-de-vaccination-pole-de-sante-rives-de-saone?pid=practice-174447&enable_cookies_consent=1",
+      "location": {
+        "longitude": 5.22259,
+        "latitude": 47.2398
+      },
+      "metadata": {
+        "address": "18 Avenue du General de Gaulle, 21110 Genlis",
+        "phone_number": "+33380479898",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "SEURRE maison de sant\u00e9 pluriprofessionnelle",
+      "url": "https://partners.doctolib.fr/maison-de-sante/seurre/centre-de-vaccination-pole-de-sante-rives-de-saone?pid=practice-167163&enable_cookies_consent=1",
+      "location": {
+        "longitude": 5.14846,
+        "latitude": 46.9975
+      },
+      "metadata": {
+        "address": "11 Rue des Foss\u00e9s, 21250 Seurre",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "09:00 - 13:00  /  14:00 - 18:00",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "09:00 - 13:00  /  14:00 - 18:00",
+          "vendredi": "09:00 - 13:00  /  14:00 - 18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "ARNAY-LE-DUC Salle Saint-Laurent",
+      "url": "",
+      "location": {
+        "longitude": 4.48283,
+        "latitude": 47.1304
+      },
+      "metadata": {
+        "address": "11 Rue Jean Moulin, 21230 Arnay-le-Duc",
+        "phone_number": "03 80 90 03 44",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "8H00 -18H00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "Chatillon-sur-Seine salle Luc Schreder (gymnase)",
+      "url": "",
+      "location": {
+        "longitude": 4.57623,
+        "latitude": 47.8499
+      },
+      "metadata": {
+        "address": "11 Rue Albert Camus, 21400 Ch\u00e2tillon-sur-Seine",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "Arnay-le-Duc salle Saint Laurent",
+      "url": "",
+      "location": {
+        "longitude": 4.4828,
+        "latitude": 47.1304
+      },
+      "metadata": {
+        "address": "11 Rue Jean Moulin, 21230 Arnay-le-Duc",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "Nuits Saint Georges - Maison de Nuits",
+      "url": "https://partners.doctolib.fr/maison-de-sante/nuits-saint-georges/centre-de-vaccination-de-la-ville-de-nuits-saint-george?pid=practice-177660&enable_cookies_consent=1",
+      "location": {
+        "longitude": 4.95179,
+        "latitude": 47.1392
+      },
+      "metadata": {
+        "address": "3 Rue de la Berch\u00e8re, 21700 Nuits-Saint-Georges",
+        "phone_number": "+33380620120",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "VENAREY-LES-LAUMES Cour de la mairie",
+      "url": "https://partners.doctolib.fr/centre-de-sante/venarey-les-laumes/vac21-venarey-les-laumes-centre-de-vaccination?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 4.44787,
+        "latitude": 47.5423
+      },
+      "metadata": {
+        "address": "18 Avenue Jean Jaur\u00e8s, 21150 Venarey-les-Laumes",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "13:30-17:30",
+          "mardi": "13:30-17:30",
+          "mercredi": "13:30-17:30",
+          "jeudi": "13:30-17:30",
+          "vendredi": "13:30-17:30",
+          "samedi": "09:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "DIJON Stade Gaston G\u00e9rard (au dessus de la boutique DFCO )",
+      "url": "https://partners.doctolib.fr/maison-de-sante/dijon/cpts-de-dijon-vaccination-covid-19?pid=practice-164619&enable_cookies_consent=1",
+      "location": {
+        "longitude": 5.06793,
+        "latitude": 47.3261
+      },
+      "metadata": {
+        "address": "1 Rue du Stade, 21000 Dijon",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "vaccinobus",
+      "url": "",
+      "location": {
+        "longitude": 5.06124,
+        "latitude": 47.2851
+      },
+      "metadata": {
+        "address": " , 21600 Longvic",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "IS-SUR-TILLE Salle des Capucins / Selongey centre culturel",
+      "url": "https://partners.doctolib.fr/centre-de-sante/is-sur-tille/centre-vaccination-is-sur-tille?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 5.10923,
+        "latitude": 47.5222
+      },
+      "metadata": {
+        "address": " Rue des Capucins, 21120 Is-sur-Tille",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "ouvert",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "ouvert matin ",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "AIGNAY-LE-DUC salle Roidot",
+      "url": "",
+      "location": {
+        "longitude": 4.73306,
+        "latitude": 47.6649
+      },
+      "metadata": {
+        "address": " , 21510 Aignay-le-Duc",
+        "phone_number": "+33380938214",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ouvert le 02/02/21 ",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "LONGVIC - Espace Jean Bouhey",
+      "url": "",
+      "location": {
+        "longitude": 5.05771,
+        "latitude": 47.2906
+      },
+      "metadata": {
+        "address": "37 bis Route de Dijon, 21600 Longvic",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "09:00-13:00/13:00-17:00",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "PONTAILLER-SUR-SAONE maison des services",
+      "url": "https://partners.doctolib.fr/centre-de-sante/auxonne/centre-de-vaccination-covid-19-auxonne?pid=practice-166590&enable_cookies_consent=1",
+      "location": {
+        "longitude": 5.40764,
+        "latitude": 47.3128
+      },
+      "metadata": {
+        "address": " Rue des Saucis, 21270 Pontailler-sur-Sa\u00f4ne",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "10:20 - 15:20",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "RECEY SUR OURCE - Salle foyer rural",
+      "url": "https://partners.doctolib.fr/centre-de-sante/recey-sur-ource/centre-de-vaccination-covid-recey-sur-ource?pid=practice-167858&enable_cookies_consent=1",
+      "location": {
+        "longitude": 4.86036,
+        "latitude": 47.7796
+      },
+      "metadata": {
+        "address": " rue magnier, 21290 Recey-sur-Ource",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "09:30-12:00/14:00-17:00",
+          "samedi": "09:30-12:00/14:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "CHENOVE Salle des f\u00eates",
+      "url": "https://partners.doctolib.fr/maison-de-sante/dijon/cpts-de-dijon-vaccination-covid-19?pid=practice-164125&enable_cookies_consent=1",
+      "location": {
+        "longitude": 5.00611,
+        "latitude": 47.2936
+      },
+      "metadata": {
+        "address": " Place Pierre Meunier, 21300 Chen\u00f4ve",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "09:00-17:00 ",
+          "mardi": "09:00-17:00 ",
+          "mercredi": "09:00-17:00 ",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00 ",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "AUXONNE - Salle \u00e9v\u00e8nementielle",
+      "url": "https://partners.doctolib.fr/centre-de-sante/auxonne/centre-de-vaccination-covid-19-auxonne?pid=practice-166391&enable_cookies_consent=1",
+      "location": {
+        "longitude": 5.38984,
+        "latitude": 47.1932
+      },
+      "metadata": {
+        "address": " Boulevard Pasteur, 21130 Auxonne",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "10:00-15:00",
+          "mardi": "10:00-15:00",
+          "mercredi": "10:00-15:00",
+          "jeudi": "PONTAILLER SUR SAONE : 10h20-15h20 Maison des services Rue des Saucis ",
+          "vendredi": "10:00-15:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "Montbard",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montbard/centre-de-vaccination-covid-commune-de-montbard?pid=practice-166114&enable_cookies_consent=1",
+      "location": {
+        "longitude": 4.33403,
+        "latitude": 47.6214
+      },
+      "metadata": {
+        "address": " Place L\u00e9on Gambetta, 21500 Montbard",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ouvert  le 27/01",
+          "jeudi": "ouvert le 28/01",
+          "vendredi": "ouvert le 30 seulement le matin ",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "SAULIEU - March\u00e9 couvert",
+      "url": "https://partners.doctolib.fr/maison-de-sante/seurre/centre-de-vaccination-pole-de-sante-rives-de-saone??pid=practice-177661&enable_cookies_consent=1",
+      "location": {
+        "longitude": 4.23048,
+        "latitude": 47.2798
+      },
+      "metadata": {
+        "address": " Rue Sallier, 21210 Saulieu",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "09:00 - 12:00 - 14:00-17:00",
+          "samedi": "09:00 - 12:00 - 14:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "BRAZEY-EN-PLAINE Salle polyvalente Georges Balme",
+      "url": "https://partners.doctolib.fr/centre-de-sante/brazey-en-plaine/cpts-pays-d-or-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 5.2137,
+        "latitude": 47.1314
+      },
+      "metadata": {
+        "address": " Rue Joseph Magnien, 21470 Brazey-en-Plaine",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "10:00-12:00",
+          "mardi": "10:00-12:00",
+          "mercredi": "10:00-12:00",
+          "jeudi": "10:00-12:00",
+          "vendredi": "10:00-12:00",
+          "samedi": "10:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "CHU Dijon (B\u00e2timent Courtois)",
+      "url": "https://partners.doctolib.fr/hopital-public/dijon/centre-de-vaccination-covid-chu-dijon?pid=practice-169594&enable_cookies_consent=1",
+      "location": {
+        "longitude": 5.07015,
+        "latitude": 47.3222
+      },
+      "metadata": {
+        "address": "10 Bd Mal de Lattre de Tassigny, 21000 Dijon",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "09:00-11:45/13:00-16:45",
+          "mardi": "09:00-11:45/13:00-16:45",
+          "mercredi": "09:00-11:45/13:00-16:45",
+          "jeudi": "09:00-11:45/13:00-16:45",
+          "vendredi": "09:00-11:45/13:00-16:45",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "CHATILLON-SUR-SEINE Salle Luc Schreder",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ch\u00e2tillon-sur-seine/centre-de-vaccination-chatillon-sur-seine?pid=practice-164745?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 4.5765,
+        "latitude": 47.85
+      },
+      "metadata": {
+        "address": "11 Rue Albert Camus, 21400 Ch\u00e2tillon-sur-Seine",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "09:00-13:00/14:00-17:00",
+          "mercredi": "09:00-13:00/14:00-17:00",
+          "jeudi": "09:00-13:00/14:00-17:00",
+          "vendredi": "09:00-13:00/14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "SEMUR-EN-AUXOIS Salle saint-Exup\u00e9ry",
+      "url": "https://partners.doctolib.fr/maison-de-sante/semur-en-auxois/centre-de-vaccination-covid-19-ville-de-semur-en-auxois?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 4.34184,
+        "latitude": 47.4913
+      },
+      "metadata": {
+        "address": "11 Rue Joseph Lambert, 21140 Semur-en-Auxois",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "09:00-13:00/14:00-17:00",
+          "mardi": "09:00-13:00/14:00-17:00",
+          "mercredi": "09:00-13:00/14:00-17:00",
+          "jeudi": "09:00-13:00/14:00-17:00",
+          "vendredi": "09:00-13:00/14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "MA - US DIJON / Maison d'Arr\u00eat de Dijon",
+      "url": "",
+      "location": {
+        "longitude": 5.05026,
+        "latitude": 47.3126
+      },
+      "metadata": {
+        "address": "72 bis Rue d?Auxonne, 21000 Dijon",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "SAINT APOLINAIRE Maison des associations Esplanade Fran\u00e7ois Mani\u00e8re",
+      "url": "https://partners.doctolib.fr/maison-de-sante/dijon/cpts-de-dijon-vaccination-covid-19?pid=practice-164123&enable_cookies_consent=1",
+      "location": {
+        "longitude": 5.08103,
+        "latitude": 47.3325
+      },
+      "metadata": {
+        "address": "129 Rue Saint Jean, 21850 Saint-Apollinaire",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "10:00-13:00/14:00-18:00",
+          "mardi": "10:00-13:00/14:00-18:00",
+          "mercredi": "10:00-13:00/14:00-18:00",
+          "jeudi": "10:00-13:00/14:00-18:00",
+          "vendredi": "10:00-13:00/14:00-18:00",
+          "samedi": "09:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "Grand centre 21",
+      "url": "",
+      "location": {
+        "longitude": 5.04141,
+        "latitude": 47.3216
+      },
+      "metadata": {
+        "address": "1 Rue Rameau, 21000 Dijon",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "Pharmacie De La Gare D'Eau",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-gare-d'eau-saint-jean-de-losne",
+      "location": {
+        "longitude": 5.262822,
+        "latitude": 47.1048084
+      },
+      "metadata": {
+        "address": "5 Avenue de la Gare d'Eau, 21170 Saint Jean de Losne",
+        "phone_number": "+33380290836",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "Dr Marie-Christine FOLACCI-GENEVOIS",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/dijon/marie-christine-folacci-genevois",
+      "location": {
+        "longitude": 5.04595019999999,
+        "latitude": 47.3215224
+      },
+      "metadata": {
+        "address": "21 Place Saint-Michel, 21000 Dijon",
+        "phone_number": "03 80 66 72 30",
+        "business_hours": {
+          "lundi": "08:00-19:30",
+          "mardi": "08:00-19:30",
+          "mercredi": "08:00-19:30",
+          "jeudi": "08:00-19:30",
+          "vendredi": "08:00-19:30",
+          "samedi": "08:00-12:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "Centre de vaccination Ch\u00e2tillon sur seine - Vaccination Covid-19",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/chatillon-sur-seine/centre-de-vaccination-chatillon-sur-seine?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 4.575829,
+        "latitude": 47.8512569
+      },
+      "metadata": {
+        "address": "Rue Albert Camus, 21400 Ch\u00e2tillon-sur-Seine",
+        "phone_number": "03 45 81 04 21",
+        "business_hours": {
+          "lundi": null,
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "Centre de vaccination Pouilly en Auxois",
+      "url": "https://partners.doctolib.fr/centre-de-sante/pouilly-en-auxois/centre-de-vaccination-pouilly-en-auxois?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 4.557574,
+        "latitude": 47.261582
+      },
+      "metadata": {
+        "address": "Ruelle du Gu\u00e9, 21320 Pouilly-en-Auxois",
+        "phone_number": "03 45 81 04 21",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": "08:00-12:00, 14:00-18:00",
+          "dimanche": "08:00-12:00, 14:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "21",
+      "nom": "Centre Vaccination Covid 19 - Selongey",
+      "url": "https://partners.doctolib.fr/centre-de-sante/selongey/centre-vaccination-covid-19-selongey?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 5.1088665,
+        "latitude": 47.5228956
+      },
+      "metadata": {
+        "address": "Rue des Capucins, 21120 Is-sur-Tille",
+        "phone_number": "03 45 81 04 21",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

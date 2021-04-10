@@ -1,0 +1,790 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-10T01:21:20.952669+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "24",
+      "nom": "Centre de Vaccination - CH Vauclaire",
+      "url": "https://partners.doctolib.fr/hopital-public/montpon-menesterol/centre-de-vaccination-covid-19-ch-de-vauclaire?pid=practice-176882&enable_cookies_consent=1",
+      "location": {
+        "longitude": 0.184902,
+        "latitude": 45.0335
+      },
+      "metadata": {
+        "address": "1677 Vauclaire, 24700 Montpon-M\u00e9nest\u00e9rol",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "9:00-17:00",
+          "jeudi": "9:00-17:00",
+          "vendredi": "9:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-10T12:00:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 1
+    },
+    {
+      "departement": "24",
+      "nom": "Maison de sant\u00e9 pluridisciplinaire du Pays de Lanouaille",
+      "url": "https://www.maiia.com/centre-de-vaccination/24270-lanouaille/centre-de-vaccination-covid---lanouaille-",
+      "location": {
+        "longitude": 1.13573,
+        "latitude": 45.3899
+      },
+      "metadata": {
+        "address": "4 All\u00e9e des Tilleuls, 24270 Lanouaille",
+        "phone_number": "+33553526066",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-13T09:45:00.000000Z",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 6
+    },
+    {
+      "departement": "24",
+      "nom": "MSP Saint Alv\u00e8re",
+      "url": "https://www.maiia.com/centre-de-vaccination/24510-val-de-louyre-et-caudeau/centre-de-vaccination-val-de-louyre-et-caudeau",
+      "location": {
+        "longitude": 0.808791,
+        "latitude": 44.9462
+      },
+      "metadata": {
+        "address": " Rue des Remparts, 24510 Val de Louyre et Caudeau",
+        "phone_number": "33757080643",
+        "business_hours": {
+          "lundi": "14h-18h",
+          "mardi": "14h-18h",
+          "mercredi": "14h-18h",
+          "jeudi": "14h-18h",
+          "vendredi": "14h-18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-22T16:00:00.000000Z",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 1
+    },
+    {
+      "departement": "24",
+      "nom": "Centre de vaccination COVID-19 Eymet",
+      "url": "https://partners.doctolib.fr/centre-de-sante/eymet/centre-de-vaccination-covid-19-eymet?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 0.4004071,
+        "latitude": 44.6671613
+      },
+      "metadata": {
+        "address": "36 Avenue Mal de Lattre de Tassigny, 24500 Eymet",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-27T11:15:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 99
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "24",
+      "nom": "Maison de sant\u00e9 pluridisciplinaire de Villefranche-du-P\u00e9rigord",
+      "url": "https://www.maiia.com/centre-de-vaccination/24550-villefranche-du-perigord/centre-de-vaccination-covid---villefranche-du-perigord",
+      "location": {
+        "longitude": 1.07845,
+        "latitude": 44.6321
+      },
+      "metadata": {
+        "address": "340 Le Colombier, 24550 Villefranche-du-P\u00e9rigord",
+        "phone_number": "05 53 29 93 79",
+        "business_hours": {
+          "lundi": "9h-13h/14h-18h",
+          "mardi": "9h-13h/14h-18h",
+          "mercredi": "9h-13h/14h-18h",
+          "jeudi": "9h-13h/14h-18h",
+          "vendredi": "9h-13h/14h-18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "Grand centre de vaccination de P\u00e9rigueux - 01 (en cours de cr\u00e9ation)",
+      "url": "",
+      "location": {
+        "longitude": 0.720627,
+        "latitude": 45.1844
+      },
+      "metadata": {
+        "address": "18 rue du 26\u00e8me r\u00e9giment d'infanterie, 24000 P\u00e9rigueux",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "EHPAD La Madeleine",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bergerac/centre-de-vaccination-covid-19-ehpad-la-madeleine?pid=practice-174840&enable_cookies_consent=1",
+      "location": {
+        "longitude": 0.478389,
+        "latitude": 44.8473
+      },
+      "metadata": {
+        "address": "40 Rue du Mar\u00e9chal Joffre, 24100 Bergerac",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "EHPAD de La Madeleine",
+      "url": "",
+      "location": {
+        "longitude": 0.478498,
+        "latitude": 44.8473
+      },
+      "metadata": {
+        "address": "40 Rue du Mar\u00e9chal Joffre, 24100 Bergerac",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "EHPAD La Madeleine",
+      "url": "",
+      "location": {
+        "longitude": 0.478761,
+        "latitude": 44.8474
+      },
+      "metadata": {
+        "address": "40 Rue du Mar\u00e9chal Joffre, 24100 Bergerac",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "EHPAD La Madeleine",
+      "url": "",
+      "location": {
+        "longitude": 0.478491,
+        "latitude": 44.8473
+      },
+      "metadata": {
+        "address": "40 Rue du Mar\u00e9chal Joffre, 24100 Bergerac",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "Maison de sant\u00e9 pluridisciplinaire de Lalinde",
+      "url": "https://www.maiia.com/centre-de-vaccination/24150-lalinde/centre-de-vaccination-covid-de-lalinde-",
+      "location": {
+        "longitude": 0.741439,
+        "latitude": 44.839
+      },
+      "metadata": {
+        "address": "15 Avenue du G\u00e9n\u00e9ral Leclerc, 24150 Lalinde",
+        "business_hours": {
+          "lundi": "8h30-12h30/14h00-18h00",
+          "mardi": "8h30-12h30/14h00-18h00",
+          "mercredi": "8h30-12h30/14h00-18h00",
+          "jeudi": "8h30-12h30/14h00-18h00",
+          "vendredi": "8h30-12h30/14h00-18h00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "Centre de Vaccination - CH Saint-Astier",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-astier/centre-de-vaccination-covid-19-ch-de-saint-astier?pid=practice-175745&enable_cookies_consent=1",
+      "location": {
+        "longitude": 0.514085,
+        "latitude": 45.1457
+      },
+      "metadata": {
+        "address": "97 Rue du Mar\u00e9chal Leclerc, 24110 Saint-Astier",
+        "business_hours": {
+          "lundi": "9:00-12:30/13:30-17:00",
+          "mardi": "9:00-12:30/13:30-17:00",
+          "mercredi": "9:00-12:30/13:30-17:00",
+          "jeudi": "9:00-12:30/13:30-17:00",
+          "vendredi": "9:00-12:30/13:30-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "Centre de vaccination EHPAD La Madeleine",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bergerac/centre-de-vaccination-covid-19-ehpad-la-madeleine?pid=practice-174840&enable_cookies_consent=1",
+      "location": {
+        "longitude": 0.478724,
+        "latitude": 44.8473
+      },
+      "metadata": {
+        "address": "40 Rue du Mar\u00e9chal Joffre, 24100 Bergerac",
+        "phone_number": "+33638082314",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "8h30 - 12h/14h00-17h00 ",
+          "mercredi": "8h30 - 12h/14h00-17h00 ",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "Maison de sant\u00e9 du Pays Montponnais",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montpon-menesterol/centre-de-vaccination-covid-19-montpon-menestrol?pid=practice-170938&enable_cookies_consent=1",
+      "location": {
+        "longitude": 0.159106,
+        "latitude": 45.0032
+      },
+      "metadata": {
+        "address": "8 Rue du 19 Mars 1962, 24700 Montpon-M\u00e9nest\u00e9rol",
+        "phone_number": "05 53 80 34 30",
+        "business_hours": {
+          "lundi": "9h-13h/14h-18h",
+          "mardi": "9h-13h/14h-18h",
+          "mercredi": "9h-13h/14h-18h",
+          "jeudi": "9h-13h/14h-18h",
+          "vendredi": "9h-13h/14h-18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "CV mobile -Perigueux- SDIS/CD",
+      "url": "",
+      "location": {
+        "longitude": 0.731938,
+        "latitude": 45.1767
+      },
+      "metadata": {
+        "address": "5 Route d\u2019Atur (Boulazac), 24750 Boulazac Isle Manoire",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "Clinique Pasteur & CPTS",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/bergerac/centre-de-vaccination-covid-19-clinique-pasteur-bergerac-elsan?pid=practice-172067&enable_cookies_consent=1",
+      "location": {
+        "longitude": 0.489893,
+        "latitude": 44.8512
+      },
+      "metadata": {
+        "address": "54 Rue du Professeur Pozzi, 24100 Bergerac",
+        "business_hours": {
+          "lundi": "13:00-17:00",
+          "mardi": "13:00-17:00",
+          "mercredi": "13:00-17:00",
+          "jeudi": "13:00-17:00",
+          "vendredi": "13:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "Maison de sant\u00e9 pluridisciplinaire D'Eymet",
+      "url": "",
+      "location": {
+        "longitude": 0.400244,
+        "latitude": 44.6667
+      },
+      "metadata": {
+        "address": "12 Rue du 6 Juin 1944, 24500 Eymet",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "09:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "Centre de Sant\u00e9 Fondation John Bost",
+      "url": "https://partners.doctolib.fr/centre-de-sante/la-force/centre-de-vaccination-covid-19-fondation-john-bost?pid=practice-174889&enable_cookies_consent=1",
+      "location": {
+        "longitude": 0.379639,
+        "latitude": 44.8689
+      },
+      "metadata": {
+        "address": "3 Rue du Parc, 24130 La Force",
+        "phone_number": "+33553222557",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "10h00-12h00",
+          "jeudi": "9h00-12h00/13h30-15h10",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "H\u00f4pital Priv\u00e9 Francheville",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/perigueux/centre-de-vaccination-covid-19-hopital-prive-francheville-perigueux?pid=practice-171077&enable_cookies_consent=1",
+      "location": {
+        "longitude": 0.717514,
+        "latitude": 45.1819
+      },
+      "metadata": {
+        "address": "4 Place Francheville, 24000 P\u00e9rigueux",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "9:00-17:00",
+          "jeudi": "9:00-17:00",
+          "vendredi": "9:00-17:00",
+          "samedi": "9:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "Filature de l'Isle",
+      "url": "https://partners.doctolib.fr/hopital-public/perigueux/vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 0.69758,
+        "latitude": 45.1995
+      },
+      "metadata": {
+        "address": "15 Chemin des Feutres de Toulon, 24000 P\u00e9rigueux",
+        "phone_number": "+33553453133",
+        "business_hours": {
+          "lundi": "08:30-12:00/13:00-18:00",
+          "mardi": "08:30-12:00/13:00-18:00",
+          "mercredi": "08:30-12:00/13:00-18:00",
+          "jeudi": "08:30-12:00/13:00-18:00",
+          "vendredi": "08:30-12:00/13:00-18:00",
+          "samedi": "08:30-12:00/13:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "Centre de vaccination - CH de Jean Leclaire de Sarlat",
+      "url": "https://partners.doctolib.fr/hopital-public/sarlat-la-caneda/vaccination-ch-jean-leclaire-sarlat?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 1.21426,
+        "latitude": 44.8936
+      },
+      "metadata": {
+        "address": "20 Rue Gaubert, 24200 Sarlat-la-Can\u00e9da",
+        "phone_number": "+33553317694  ",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "Maison de sant\u00e9 pluridisciplinaire de Salignac-Eyvigues",
+      "url": "https://partners.doctolib.fr/centre-de-sante/salignac-eyvigues/centre-de-vaccination-covid-19-salignac-eyvigues-msa-services?pid=practice-181858&enable_cookies_consent=1",
+      "location": {
+        "longitude": 1.32142,
+        "latitude": 44.9753
+      },
+      "metadata": {
+        "address": "6 pech forcou, 24590 Salignac-Eyvigues",
+        "phone_number": "+33671706441",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "Centre de Vaccination CH Rib\u00e9rac",
+      "url": "https://partners.doctolib.fr/hopital-public/riberac/centre-vaccination-ch-riberac-chicrdd?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 0.340622,
+        "latitude": 45.2452
+      },
+      "metadata": {
+        "address": "23 Rue Jean Moulin, 24600 Rib\u00e9rac",
+        "phone_number": "+33553926203 ",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "09:00-12:00/14:00-17:00",
+          "mercredi": "09:00-12:00/14:00-17:00",
+          "jeudi": "09:00-12:00/14:00-17:00",
+          "vendredi": "09:00-12:00/14:00-17:00",
+          "samedi": "09:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "Centre de vaccination - CH de Nontron",
+      "url": "https://partners.doctolib.fr/hopital-public/nontron/ch-nontron-vaccination?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 0.660027,
+        "latitude": 45.5234
+      },
+      "metadata": {
+        "address": " Place des Droits de l\u2019Homme, 24300 Nontron",
+        "phone_number": "+33553608924",
+        "business_hours": {
+          "lundi": "10:00-12:30/14:00-16:30",
+          "mardi": "10:00-12:30/14:00-16:30",
+          "mercredi": "10:00-12:30/14:00-16:30",
+          "jeudi": "10:00-12:30/14:00-16:30",
+          "vendredi": "10:00-12:30/14:00-16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "Centre hospitalier de Bergerac",
+      "url": "https://vaccination-covid.keldoc.com/redirect/?dom=centre-hospitalier&inst=bergerac-24100&user=centre-hospitalier-samuel-pozzi&specialty=144",
+      "location": {
+        "longitude": 0.496978,
+        "latitude": 44.8506
+      },
+      "metadata": {
+        "address": "9 Av du Professeur Albert Calmette, 24100 Bergerac",
+        "phone_number": "+33553638999",
+        "business_hours": {
+          "lundi": "8h30- 18h30",
+          "mardi": "8h30- 18h30",
+          "mercredi": "8h30- 18h30",
+          "jeudi": "8h30- 18h30",
+          "vendredi": "8h30- 18h30",
+          "samedi": "8h30- 16h30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "CH EXCIDEUIL",
+      "url": "https://partners.doctolib.fr/hopital-public/excideuil/centre-de-vaccination-covid-centre-hospitalier-excideuil?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 1.0516,
+        "latitude": 45.3368
+      },
+      "metadata": {
+        "address": " PLACE DU DR ACHILLE MOULINIER, 24160 Excideuil",
+        "phone_number": "+33553622512",
+        "business_hours": {
+          "lundi": "13:30-17:00",
+          "mardi": "13:30-17:00",
+          "mercredi": "13:30-17:00",
+          "jeudi": "13:30-17:00",
+          "vendredi": "09:00-12:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "CD - Unit\u00e9 Sanitaire Niveau 1 - Centre de D\u00e9tention de MAUZAC / Centre de D\u00e9tention de Mauzac",
+      "url": "",
+      "location": {
+        "longitude": 0.777159,
+        "latitude": 44.8723
+      },
+      "metadata": {
+        "address": " Route de Dautre, 24150 Mauzac-et-Grand-Castang",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "CD - US CD de NEUVIC / Maison d'Arr\u00eat de P\u00e9rigueux",
+      "url": "",
+      "location": {
+        "longitude": 0.718927,
+        "latitude": 45.1886
+      },
+      "metadata": {
+        "address": "2 Place Beleyme, 24000 P\u00e9rigueux",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "MA - US PERIGUEUX / Maison d'Arr\u00eat de P\u00e9rigueux",
+      "url": "",
+      "location": {
+        "longitude": 0.719136,
+        "latitude": 45.1886
+      },
+      "metadata": {
+        "address": "2 Place Beleyme, 24000 P\u00e9rigueux",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "Pharmacie Des Reynats",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-reynats-chancelade",
+      "location": {
+        "longitude": 0.6696451000000001,
+        "latitude": 45.2005284
+      },
+      "metadata": {
+        "address": "58 AV des Reynats, 24650 CHANCELADE",
+        "phone_number": "+33553047813",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "24",
+      "nom": "CH P\u00e9rigueux - Vaccination COVID-19",
+      "url": "https://partners.doctolib.fr/hopital-public/rendez-vous-a-la/vaccination-covid?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 0.6979976,
+        "latitude": 45.1985047
+      },
+      "metadata": {
+        "address": "15 Chemin des Feutres du Toulon, 24000 P\u00e9rigueux",
+        "phone_number": "05 53 45 31 33",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

@@ -1,0 +1,343 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-10T01:21:20.934347+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "04",
+      "nom": "Salle polyvalente de Riez",
+      "url": "https://partners.doctolib.fr/centre-de-sante/greoux-les-bains/centre-de-vaccination-cpts-verdon?pid=practice-164863&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.09538,
+        "latitude": 43.8156
+      },
+      "metadata": {
+        "address": "11 Chemin de la Rouguiere, 04500 Riez",
+        "phone_number": "06.08.94.95.50 ",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": " 14H-18H",
+          "mercredi": " 14H-18H",
+          "jeudi": " 14H-18H",
+          "vendredi": " 14H-18H",
+          "samedi": " 14H-18H",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-14T16:50:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 17
+    },
+    {
+      "departement": "04",
+      "nom": "Salle Osco Manosco",
+      "url": "https://www.maiia.com/centre-de-vaccination/04100-manosque/centre-de-vaccination---manosque",
+      "location": {
+        "longitude": 5.79673,
+        "latitude": 43.8283
+      },
+      "metadata": {
+        "address": "484 Avenue du Moulin Neuf, 04100 Manosque",
+        "phone_number": "+33492703456",
+        "business_hours": {
+          "lundi": "09h-13h  / 13h30-17h30",
+          "mardi": "09h-13h  / 13h30-17h30",
+          "mercredi": "09h-13h  / 13h30-17h30",
+          "jeudi": "09h-13h  / 13h30-17h30",
+          "vendredi": "09h-13h  / 13h30-17h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-21T10:15:00.000000Z",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 8
+    },
+    {
+      "departement": "04",
+      "nom": "Palais des Congr\u00e8s",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/digne-les-bains-04000/centre-de-vaccination-palais-des-congres-de-digne-les-bains?category=-1&cabinet=16641&specialty=496",
+      "location": {
+        "longitude": 6.22994,
+        "latitude": 44.0996
+      },
+      "metadata": {
+        "address": "1 Place de la R\u00e9publique/rue de la R\u00e9publique, 04000 Digne-les-Bains",
+        "phone_number": "+33423101175",
+        "business_hours": {
+          "lundi": "09h-13h/14h-17h30",
+          "mardi": "09h-13h/14h-17h30",
+          "mercredi": "09h-13h/14h-17h30",
+          "jeudi": "09h-13h/14h-17h30",
+          "vendredi": "09h-13h/14h-17h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-23T11:50:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 57
+    },
+    {
+      "departement": "04",
+      "nom": "Clinique le Verdon",
+      "url": "https://partners.doctolib.fr/centre-de-sante/gr\u00e9oux-les-bains/centre-de-vaccination-cpts-verdon?pid=practice-164612?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 5.89514,
+        "latitude": 43.7558
+      },
+      "metadata": {
+        "address": " Route de Riez, 04800 Gr\u00e9oux-les-Bains",
+        "phone_number": "07 89 94 22 35",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "14H-18H",
+          "mercredi": "14H-18H",
+          "jeudi": "14H-18H",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-28T09:00:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 31
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "04",
+      "nom": "CHI Digne les Bains (R\u00e9serv\u00e9 aux professionnels de sant\u00e9 lib\u00e9raux)",
+      "url": "https://vaccination-covid.keldoc.com/infirmier/digne-les-bains-04000/eeg-du-ch-de-digne?cabinet=7532",
+      "location": {
+        "longitude": 6.17575,
+        "latitude": 44.0703
+      },
+      "metadata": {
+        "address": " Quartier Saint Christophe, 04000 Digne-les-Bains",
+        "phone_number": "+33492301292",
+        "business_hours": {
+          "lundi": "ouvert",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "04",
+      "nom": "CHI Louis Raffali Manosque (R\u00e9serv\u00e9 aux professionnels de sant\u00e9 lib\u00e9raux)",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/manosque-4100/centre-hospitalier-intercommunal-de-manosque-louis-raffalli/centre-de-vaccination-du-centre-hospitalier-intercommunal-de-manosque-louis-raffalli",
+      "location": {
+        "longitude": 5.80524,
+        "latitude": 43.8271
+      },
+      "metadata": {
+        "address": "702 Chemin Auguste Girard, 04100 Manosque",
+        "phone_number": "+33492734371",
+        "business_hours": {
+          "lundi": "ouvert",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "04",
+      "nom": "Centre mobile de vaccination SDIS 04",
+      "url": "",
+      "location": {
+        "longitude": 6.22222,
+        "latitude": 44.0857
+      },
+      "metadata": {
+        "address": "93 Avenue Henri Jaubert, 04000 Digne-les-Bains",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "04",
+      "nom": "Mairie - Salle Pierre Michel",
+      "url": "https://partners.doctolib.fr/centre-de-sante/forcalquier/centre-de-vaccination-ville-de-forcalquier?pid=practice-164823?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 5.78046,
+        "latitude": 43.9598
+      },
+      "metadata": {
+        "address": "1 Place du Bourguet, 04300 Forcalquier",
+        "phone_number": "+33776150710",
+        "business_hours": {
+          "lundi": "14h30 \u2013 17h30",
+          "mardi": "9h \u2013 12h30 / 14h30 \u2013 17h30",
+          "mercredi": "9h \u2013 12h30 / 14h30 \u2013 17h30",
+          "jeudi": "9h \u2013 12h30 / 14h30 \u2013 17h30",
+          "vendredi": "9h \u2013 12h30 / 14h30 \u2013 17h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "04",
+      "nom": "Salle des f\u00eates - Castelanne",
+      "url": "https://partners.doctolib.fr/centre-de-sante/castellane/centre-de-vaccination-covid-castellane?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.51076,
+        "latitude": 43.8461
+      },
+      "metadata": {
+        "address": " Avenue Frederic Mistral, 04120 Castellane",
+        "phone_number": "+33492835949",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "9h-12h et 15h-19h30",
+          "mercredi": "9h-12h et 15h-19h30",
+          "jeudi": "9h-12h et 15h-19h30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "04",
+      "nom": "Salle de L\u2019ALCAZAR, SISTERON",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sisteron/centre-de-vaccination-de-la-ville-de-sisteron-salle-de-l-alcazar?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 5.93974,
+        "latitude": 44.1965
+      },
+      "metadata": {
+        "address": "192 Rue des Combes, 04200 Sisteron",
+        "phone_number": "+33492615841",
+        "business_hours": {
+          "lundi": "09h - 13h00 / 14h00 - 18h00",
+          "mardi": "09h - 13h00 / 14h00 - 18h00",
+          "mercredi": "09h - 13h00 / 14h00 - 18h00",
+          "jeudi": "09h - 13h00 / 14h00 - 18h00",
+          "vendredi": "09h - 13h00 / 14h00 - 18h00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "04",
+      "nom": "Barcelonnette - Salle du march\u00e9 couvert",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/barcelonnette/centre-de-vaccination-de-la-ville-de-barcelonnette?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.65172,
+        "latitude": 44.386
+      },
+      "metadata": {
+        "address": " Place Aim\u00e9 Gassier, 04400 Barcelonnette",
+        "phone_number": "+33492807900",
+        "business_hours": {
+          "lundi": " 14h-17h",
+          "mardi": "9h-12h, 14h-17h",
+          "mercredi": "9h-12h, 14h-17h",
+          "jeudi": "9h-12h, 14h-17h",
+          "vendredi": "9h-12h, 14h-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "04",
+      "nom": "Vaccinobus des  Alpes-de Haute-Provence",
+      "url": "",
+      "location": {
+        "longitude": 6.23445,
+        "latitude": 44.0927
+      },
+      "metadata": {
+        "address": "19 Rue du Docteur Honnorat, 04000 Digne-les-Bains",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "04",
+      "nom": "MA - US UF 2760 CH DIGNE / Maison d'Arr\u00eat de Digne-les-Bains",
+      "url": "",
+      "location": {
+        "longitude": 6.23476,
+        "latitude": 44.0918
+      },
+      "metadata": {
+        "address": " Mont\u00e9e Saint-Charles, 04000 Digne-les-Bains",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

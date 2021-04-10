@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-10T01:21:20.981431+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "43",
+      "nom": "Centre de vaccination du Centre hospitalier d'Yssingeaux",
+      "url": "https://partners.doctolib.fr/hopital-public/yssingeaux/centre-de-vaccination-covid-19-ch-de-yssingeaux?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 4.12994,
+        "latitude": 45.1503
+      },
+      "metadata": {
+        "address": "26 Avenue du 8 Mai 1945 - Salle de la Coupe du Monde, 43200 Yssingeaux",
+        "phone_number": "+33471657708",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-16T09:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 2
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "43",
+      "nom": "Centre de vaccination de Langeac",
+      "url": "https://partners.doctolib.fr/hopital-public/brioude/centre-de-vaccination-covid19-ch-brioude?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 3.49383,
+        "latitude": 45.0955
+      },
+      "metadata": {
+        "address": "0 Rue du 19 Mars 1962, 43300 Langeac",
+        "phone_number": "+33471508655",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "43",
+      "nom": "Centre vaccination Monistrol",
+      "url": "https://partners.doctolib.fr/hopital-public/yssingeaux/centre-de-vaccination-covid-19-ch-de-yssingeaux?pid=practice-170373&enable_cookies_consent=1",
+      "location": {
+        "longitude": 4.17262,
+        "latitude": 45.2922
+      },
+      "metadata": {
+        "address": "9 Avenue de la Lib\u00e9ration, 43120 Monistrol-sur-Loire",
+        "phone_number": "+33471657708",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "43",
+      "nom": "Centre vaccination Craponne",
+      "url": "https://partners.doctolib.fr/hopital-public/espaly-saint-marcel/centre-de-vaccination-covid-19-ch-puy-en-velay?pid=practice-170088&enable_cookies_consent=1",
+      "location": {
+        "longitude": 3.84798,
+        "latitude": 45.3288
+      },
+      "metadata": {
+        "address": "4 Rue du Stade, 43500 Craponne-sur-Arzon",
+        "phone_number": "+33188889596",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "43",
+      "nom": "Centre de vaccination du Centre Hospitalier de Brioude",
+      "url": "https://partners.doctolib.fr/hopital-public/brioude/centre-de-vaccination-covid19-ch-brioude?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 3.38231,
+        "latitude": 45.2969
+      },
+      "metadata": {
+        "address": "36 Rue Michel de l'Hospital, 43100 Brioude",
+        "phone_number": "+33471508655",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "43",
+      "nom": "MA - Unit\u00e9 de Consultations et de Soins Ambulatoires / Maison d'Arr\u00eat du Puy-en-Velay",
+      "url": "",
+      "location": {
+        "longitude": 3.896,
+        "latitude": 45.0438
+      },
+      "metadata": {
+        "address": " Boulevard Bertrand de Doue, 43000 Le Puy-en-Velay",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "43",
+      "nom": "Centre de vaccination du CH du Puy en Velay (Emile Roux)",
+      "url": "https://partners.doctolib.fr/hopital-public/espaly-saint-marcel/centre-de-vaccination-covid-19-ch-puy-en-velay?pid=practice-164904?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 3.8747,
+        "latitude": 45.0471
+      },
+      "metadata": {
+        "address": " Stade Charles MASSOT - Place de la lib\u00e9ration, 43000 Le Puy-en-Velay",
+        "phone_number": "+33471043314",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

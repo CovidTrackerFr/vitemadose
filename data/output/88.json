@@ -1,0 +1,344 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-10T01:21:21.150504+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "88",
+      "nom": "Centre de vaccination de Neufchateau",
+      "url": "https://partners.doctolib.fr/hopital-public/neufchateau/centre-de-vaccination-covid-neufchateau-et-vittel?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 5.7077,
+        "latitude": 48.3704
+      },
+      "metadata": {
+        "address": "1280 Avenue de la Division Leclerc, 88300 Neufch\u00e2teau",
+        "phone_number": "+33329948605",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "14:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-16T14:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 4
+    },
+    {
+      "departement": "88",
+      "nom": "Centre de vaccination Covid-19 - CH de la haute vall\u00e9e de la Moselle (C2HVM)",
+      "url": "https://partners.doctolib.fr/centre-de-sante/le-thillot/centre-de-vaccination-covid-19-ch-de-la-haute-vallee-de-la-moselle-c2hvm?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 6.7689544,
+        "latitude": 47.8771307
+      },
+      "metadata": {
+        "address": "60 Rue Charles de Gaulle, 88160 Le Thillot",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-05-06T11:50:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 1
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "88",
+      "nom": "Centre de vaccination de Remiremont",
+      "url": "https://partners.doctolib.fr/hopital-public/remiremont/ch-remiremont?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.59247,
+        "latitude": 48.0142
+      },
+      "metadata": {
+        "address": "1 Rue Georges Lang, 88200 Remiremont",
+        "phone_number": "+33329666221",
+        "business_hours": {
+          "lundi": "14:00-19:00",
+          "mardi": "14:00-19:00",
+          "mercredi": "14:00-19:00",
+          "jeudi": "14:00-19:00",
+          "vendredi": "14:00-19:00",
+          "samedi": "14:00-19:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "88",
+      "nom": "Centre de vaccination d'Epinal (Palais des congr\u00e8s)",
+      "url": "https://partners.doctolib.fr/hopital-public/epinal/ch-emile-durkheim?pid=practice-164046&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.47144,
+        "latitude": 48.1861
+      },
+      "metadata": {
+        "address": "7 Avenue de Saint Die, 88000 \u00c9pinal",
+        "phone_number": "+33329666220",
+        "business_hours": {
+          "lundi": "14:00-18:30",
+          "mardi": "14:00-18:30",
+          "mercredi": "14:00-18:30",
+          "jeudi": "14:00-18:30",
+          "vendredi": "14:00-18:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "88",
+      "nom": "Centre de vaccination de Gerardmer",
+      "url": "https://partners.doctolib.fr/hopital-public/gerardmer/ch-de-gerardmer?pid=practice-163880&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.87333,
+        "latitude": 48.0682
+      },
+      "metadata": {
+        "address": "16 Rue Charles de Gaulle, 88400 G\u00e9rardmer",
+        "phone_number": "+33329606075",
+        "business_hours": {
+          "lundi": "9:00-12:00/13:30-17:30",
+          "mardi": "ferm\u00e9",
+          "mercredi": "9:00-12:00/13:30-17:30",
+          "jeudi": "9:00-12:00/13:30-17:30",
+          "vendredi": "9:00-12:00/13:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "88",
+      "nom": "Centre de vaccination de Mirecourt",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?speciality_id=5494&pid=practice-163781&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.11147,
+        "latitude": 48.2965
+      },
+      "metadata": {
+        "address": "1115 Avenue Ren\u00e9 Porterat, 88500 Mirecourt",
+        "phone_number": "+33329370077",
+        "business_hours": {
+          "lundi": "08:30-16:30",
+          "mardi": "08:30-16:30",
+          "mercredi": "08:30-16:30",
+          "jeudi": "08:30-16:30",
+          "vendredi": "08:30-16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "88",
+      "nom": "Centre de vaccination de St Di\u00e9 des Vosges (Palais Omnisports)",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-die-des-vosges/mairie-saint-die-des-vosges?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.94806,
+        "latitude": 48.2879
+      },
+      "metadata": {
+        "address": "12 Rue du 12 i\u00e8me R\u00e9giment d'Artillerie prolong\u00e9e, 88100 Saint-Di\u00e9-des-Vosges",
+        "phone_number": "+33329421675",
+        "business_hours": {
+          "lundi": "08:30-12:30/13:30-17:30",
+          "mardi": "08:30-12:30/13:30-17:30",
+          "mercredi": "08:30-12:30/13:30-17:30",
+          "jeudi": "08:30-12:30/13:30-17:30",
+          "vendredi": "08:30-12:30/13:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "88",
+      "nom": "Centre de vaccination d'Epinal (CH Emile Durkheim)",
+      "url": "https://partners.doctolib.fr/hopital-public/\u00e9pinal/ch-emile-durkheim?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 6.4541,
+        "latitude": 48.1794
+      },
+      "metadata": {
+        "address": "3 Avenue Robert Schuman, 88000 \u00c9pinal",
+        "phone_number": "+33329666220",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "88",
+      "nom": "Centre de vaccination de Vittel",
+      "url": "https://partners.doctolib.fr/hopital-public/neufchateau/centre-de-vaccination-covid-neufchateau-et-vittel?pid=practice-166382&enable_cookies_consent=1",
+      "location": {
+        "longitude": 5.94169,
+        "latitude": 48.2049
+      },
+      "metadata": {
+        "address": "1 Avenue Bouloumie, 88800 Vittel",
+        "phone_number": "+33329088800",
+        "business_hours": {
+          "lundi": "13:30-18:00",
+          "mardi": "ferm\u00e9",
+          "mercredi": "13:30-18:00",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "13:30-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "88",
+      "nom": "MA - US D'EPINAL / Maison d'Arr\u00eat d'Epinal",
+      "url": "",
+      "location": {
+        "longitude": 6.46699,
+        "latitude": 48.1868
+      },
+      "metadata": {
+        "address": "13 Rue Villars, 88000 \u00c9pinal",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "88",
+      "nom": "Pharmacie Lafayette Michel",
+      "url": "https://partners.doctolib.fr/pharmacie/saint-die-des-vosges/pharmacie-lafayette-michel",
+      "location": {
+        "longitude": 6.9495328,
+        "latitude": 48.2861651
+      },
+      "metadata": {
+        "address": "18 Rue Thiers, 88100 Saint-Di\u00e9-des-Vosges",
+        "phone_number": "03 29 56 13 62",
+        "business_hours": {
+          "lundi": "08:30-12:30, 13:30-19:30",
+          "mardi": "08:30-12:30, 13:30-19:30",
+          "mercredi": "08:30-12:30, 13:30-19:30",
+          "jeudi": "08:30-12:30, 13:30-19:30",
+          "vendredi": "08:30-12:30, 13:30-19:30",
+          "samedi": "08:30-12:30, 13:30-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "88",
+      "nom": "Pharmacie du Bouchot",
+      "url": "https://partners.doctolib.fr/pharmacie/vagney/pharmacie-du-bouchot-dr-thomas-szczyrk-groupe-well-well",
+      "location": {
+        "longitude": 6.7174417,
+        "latitude": 48.0089363
+      },
+      "metadata": {
+        "address": "4 Rue Albert Jacquemin, 88120 Vagney",
+        "phone_number": "03 29 61 70 70",
+        "business_hours": {
+          "lundi": null,
+          "mardi": "08:30-12:00, 14:00-19:00",
+          "mercredi": "08:30-12:00, 14:00-19:00",
+          "jeudi": "08:30-12:00, 14:00-19:00",
+          "vendredi": "08:30-12:00, 14:00-19:00",
+          "samedi": "08:30-15:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "88",
+      "nom": "CH de Ravenel - Centre de vaccination Covid-19 de Mirecourt",
+      "url": "https://partners.doctolib.fr/hopital-public/mirecourt/mirecourt-centre-de-vaccinationcovid19?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 6.1110914,
+        "latitude": 48.296194
+      },
+      "metadata": {
+        "address": "1115 Avenue Ren\u00e9 Porterat, 88500 Mirecourt",
+        "phone_number": "03 29 81 88 78",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-19:00",
+          "mardi": "08:30-12:30, 13:00-16:30",
+          "mercredi": "08:30-12:30, 13:00-16:30",
+          "jeudi": "08:30-12:30, 13:00-16:30",
+          "vendredi": "08:30-12:30, 13:00-16:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

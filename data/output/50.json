@@ -1,0 +1,431 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-10T01:21:20.989529+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "50",
+      "nom": "Centre de vaccination Cherbourg-en-Cotentin : Salle Montecot (Octeville)",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/cherbourg-octeville-50100/chpc-centre-delocalise-salle-de-l-europe-tourlaville?cabinet=17298&specialty=496",
+      "location": {
+        "longitude": -1.645,
+        "latitude": 49.6242
+      },
+      "metadata": {
+        "address": " Place des Justes - Octeville, 50130 Cherbourg-en-Cotentin",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-12T10:15:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 2077
+    },
+    {
+      "departement": "50",
+      "nom": "CHPC  centre d\u00e9localis\u00e9 Valognes - salle Lechanoine",
+      "url": "https://vaccination-covid.keldoc.com/redirect/?dom=maison-de-sante&inst=valognes-50700&user=chpc-centre-delocalise-salle-lechanoine-valognes&cabinet=17307&specialty=496",
+      "location": {
+        "longitude": -1.47138,
+        "latitude": 49.5133
+      },
+      "metadata": {
+        "address": " All\u00e9e du Stade - salle pierre lechanoine, 50700 Valognes",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-12T11:40:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 1309
+    },
+    {
+      "departement": "50",
+      "nom": "Site de Coutances",
+      "url": "https://partners.doctolib.fr/centre-de-sante/coutances/vaccination-site-des-unelles-coutances?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": -1.43642,
+        "latitude": 49.0538
+      },
+      "metadata": {
+        "address": "17 Rue des Seringas, 50200 Coutances",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-14T14:56:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 121
+    },
+    {
+      "departement": "50",
+      "nom": "Centre de vaccination de Carentan-Les-Marais - Salle des f\u00eates",
+      "url": "https://partners.doctolib.fr/centre-de-sante/carentan-les-marais/centre-de-vaccination-covid-19-de-carentan-les-marais?pid=practice-179197&enable_cookies_consent=1",
+      "location": {
+        "longitude": -1.24269,
+        "latitude": 49.3048
+      },
+      "metadata": {
+        "address": " Rue de la Halle - salle des f\u00eates, 50500 Carentan-les-Marais",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-16T17:28:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 39
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "50",
+      "nom": "Centre de vaccination Cherbourg-en-Cotentin : Salles des f\u00eates - place centrale",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/cherbourg-octeville-50100/cpts-nord-cotentin?motive=81940&category=-1&cabinet=16689&specialty=496",
+      "location": {
+        "longitude": -1.61351,
+        "latitude": 49.6213
+      },
+      "metadata": {
+        "address": " , 50110 Cherbourg-en-Cotentin",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "50",
+      "nom": "Equipe Mobile R\u00e9sidences Autonomie et Territoire Manche",
+      "url": "",
+      "location": {
+        "longitude": -1.10408,
+        "latitude": 49.107
+      },
+      "metadata": {
+        "address": "54 Rue des Ardoisieres, 50000 Saint-L\u00f4",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "50",
+      "nom": "Granville : salle h\u00e9rel",
+      "url": "https://partners.doctolib.fr/hopital-public/avranches-granville/ch-d-avranches-granville-centre-de-vaccination-covid?pid=practice-162823&?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": -1.59604,
+        "latitude": 48.8357
+      },
+      "metadata": {
+        "address": " Bd des Amiraux Granvillais - salle h\u00e9rel, 50400 Granville",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "50",
+      "nom": "Avranches : salle omnisports roger lemoin",
+      "url": "https://partners.doctolib.fr/hopital-public/avranches-granville/ch-d-avranches-granville-centre-de-vaccination-covid?pid=practice-162761&?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": -1.35842,
+        "latitude": 48.6768
+      },
+      "metadata": {
+        "address": " Boulevard Pasteur - salle roger lemoine, 50300 Avranches",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "50",
+      "nom": "Site du CH ST Hilaire du Harcou\u00ebt",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-hilaire-du-harcouet/centre-de-vaccination-covid-19-du-ch-de-st-hilaire-du-harcouet?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": -1.09622,
+        "latitude": 48.5687
+      },
+      "metadata": {
+        "address": " Route de Saint-James, 50600 Saint-Hilaire-du-Harcou\u00ebt",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "50",
+      "nom": "Centre de vaccination de Saint-L\u00f4 : Salle Allende",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-lo/centre-de-vaccination-covid-19-ville-de-saint-lo?pid=practice-176124&enable_cookies_consent=1",
+      "location": {
+        "longitude": -1.09151,
+        "latitude": 49.1138
+      },
+      "metadata": {
+        "address": "2 Rue bis Saint-Thomas - salle salvador allende, 50000 Saint-L\u00f4",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "50",
+      "nom": "MA - US CHPC / Maison d'Arr\u00eat de Cherbourg",
+      "url": "",
+      "location": {
+        "longitude": -1.62376,
+        "latitude": 49.6372
+      },
+      "metadata": {
+        "address": "2 Rue Louis Vastel, 50100 Cherbourg-en-Cotentin",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "50",
+      "nom": "MA - US / Maison d'Arr\u00eat de Coutances",
+      "url": "",
+      "location": {
+        "longitude": -1.44173,
+        "latitude": 49.0508
+      },
+      "metadata": {
+        "address": "3 Rue de la Verjusi\u00e8re, 50200 Coutances",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "50",
+      "nom": "Pharmacie De Querqueville",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-querqueville-cherbourg-en-cotentin",
+      "location": {
+        "longitude": -1.688184,
+        "latitude": 49.6649275
+      },
+      "metadata": {
+        "address": "118 rue roger glinel, 50460 cherbourg en cotentin",
+        "phone_number": "+33233035710",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "50",
+      "nom": "Pharmacie Des Matignon",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-matignon-granville",
+      "location": {
+        "longitude": -1.5619506,
+        "latitude": 48.8376172
+      },
+      "metadata": {
+        "address": "1720 AVENUE DES MATIGNON, 50400 GRANVILLE",
+        "phone_number": "+33233617324",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "50",
+      "nom": "Pharmacie PERON",
+      "url": "https://partners.doctolib.fr/pharmacie/carentan-les-marais/pharmacie-peron",
+      "location": {
+        "longitude": -1.2446484,
+        "latitude": 49.3045088
+      },
+      "metadata": {
+        "address": "34 Place de la R\u00e9publique, 50500 Carentan les Marais",
+        "phone_number": "02 33 42 11 55",
+        "business_hours": {
+          "lundi": "09:00-12:45, 14:00-19:30",
+          "mardi": "09:00-12:30, 14:00-19:30",
+          "mercredi": "09:00-12:30, 14:00-19:30",
+          "jeudi": "09:00-12:30, 14:00-19:30",
+          "vendredi": "09:00-12:30, 14:00-19:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "50",
+      "nom": "Pharmacie du Senequet",
+      "url": "https://partners.doctolib.fr/pharmacie/gouville-sur-mer/pharmacie-senequet",
+      "location": {
+        "longitude": -1.5820477,
+        "latitude": 49.0964521
+      },
+      "metadata": {
+        "address": "16 Rue des Fr\u00e8res Lacolley, 50560 Gouville-sur-Mer",
+        "phone_number": "02 33 47 85 67",
+        "business_hours": {
+          "lundi": "09:00-12:30, 14:00-19:00",
+          "mardi": "09:00-12:30, 14:00-19:00",
+          "mercredi": "09:00-12:30, 14:00-19:00",
+          "jeudi": "09:00-12:30, 14:00-19:00",
+          "vendredi": "09:00-12:30, 14:00-19:00",
+          "samedi": "09:00-12:30, 14:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "50",
+      "nom": "Pharmacie Lamoureux",
+      "url": "https://partners.doctolib.fr/pharmacie/villedieu-les-poeles-rouffigny/pharmacie-lamoureux",
+      "location": {
+        "longitude": -1.2224425,
+        "latitude": 48.8381384
+      },
+      "metadata": {
+        "address": "1 Place de la R\u00e9publique, 50800 Villedieu-les-Po\u00eales-Rouffigny",
+        "phone_number": "02 33 61 00 13",
+        "business_hours": {
+          "lundi": "14:00-19:30",
+          "mardi": "08:30-13:00, 14:00-19:30",
+          "mercredi": "08:30-12:30, 14:00-19:30",
+          "jeudi": "08:30-12:30, 14:00-19:30",
+          "vendredi": "08:30-12:30, 14:00-19:30",
+          "samedi": "08:30-12:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-10T01:21:20.992385+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "53",
+      "nom": "Centre de vaccination - LAVAL - Salle polyvalente",
+      "url": "https://partners.doctolib.fr/centre-de-sante/laval/centres-de-vaccination-de-la-mayenne?pid=practice-164879&enable_cookies_consent=1",
+      "location": {
+        "longitude": -0.772294,
+        "latitude": 48.0654
+      },
+      "metadata": {
+        "address": "30 Place de Herce, 53000 Laval",
+        "phone_number": "+33243535300",
+        "business_hours": {
+          "lundi": "9h-14h",
+          "mardi": "9h-14h",
+          "mercredi": "9h-14h",
+          "jeudi": "9h-14h",
+          "vendredi": "9h-14h",
+          "samedi": "9h-14h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-19T09:15:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 288
+    },
+    {
+      "departement": "53",
+      "nom": "Lactalis Sant\u00e9 au Travail - R\u00e9serv\u00e9 aux collaborateurs Lactalis",
+      "url": "https://partners.doctolib.fr/centre-de-sante/laval/lactalis-sante-au-travail?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": -0.7592369,
+        "latitude": 48.0591045
+      },
+      "metadata": {
+        "address": "10 Rue Adolphe Beck, 53000 Laval",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-20T11:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 11
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "53",
+      "nom": "Centre de Vaccination - MESLAY DU MAINE - Salle Socioculturelle",
+      "url": "https://partners.doctolib.fr/etablissement-de-prevention/mayenne/centres-de-vaccination-de-la-mayenne-mayenne?pid=practice-164911&enable_cookies_consent=1",
+      "location": {
+        "longitude": -0.55258,
+        "latitude": 47.9513
+      },
+      "metadata": {
+        "address": "16 Place de la Poste, 53170 Meslay-du-Maine",
+        "phone_number": "+33243535300",
+        "business_hours": {
+          "lundi": "14h-18h",
+          "mardi": "14h-18h",
+          "mercredi": "14h-18h",
+          "jeudi": "14h-18h",
+          "vendredi": "14h-18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "53",
+      "nom": "Centre de Vaccination - EVRON",
+      "url": "https://partners.doctolib.fr/etablissement-de-prevention/mayenne/centres-de-vaccination-de-la-mayenne-mayenne?pid=practice-165417&enable_cookies_consent=1",
+      "location": {
+        "longitude": -0.403651,
+        "latitude": 48.1524
+      },
+      "metadata": {
+        "address": " Avenue des Sports, 53600 \u00c9vron",
+        "phone_number": "+33243535300",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "9h-13h / 14-17h30",
+          "mercredi": "9h-13h / 14-17h30",
+          "jeudi": "9h-13h / 14-17h30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "53",
+      "nom": "Centre de Vaccination - CRAON - Centre Hospitalier Sud Ouest Mayennais",
+      "url": "https://partners.doctolib.fr/etablissement-de-prevention/mayenne/centres-de-vaccination-de-la-mayenne-mayenne?pid=practice-164901&enable_cookies_consent=1",
+      "location": {
+        "longitude": -0.957235,
+        "latitude": 47.8489
+      },
+      "metadata": {
+        "address": "3 Route de Nantes, 53400 Craon",
+        "phone_number": "+33243535300",
+        "business_hours": {
+          "lundi": "14h - 18h",
+          "mardi": "14h - 18h",
+          "mercredi": "14h - 18h",
+          "jeudi": "14h - 18h",
+          "vendredi": "14h - 18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "53",
+      "nom": "Centre de Vaccination - VILLAINES LA JUHEL - Maison de sant\u00e9",
+      "url": "https://partners.doctolib.fr/etablissement-de-prevention/mayenne/centres-de-vaccination-de-la-mayenne-mayenne?pid=practice-165131&enable_cookies_consent=1",
+      "location": {
+        "longitude": -0.282633,
+        "latitude": 48.3408
+      },
+      "metadata": {
+        "address": "6 Rue Gaston Ramon, 53700 Villaines-la-Juhel",
+        "phone_number": "+33243535300",
+        "business_hours": {
+          "lundi": "8h30-12h30 / 14h-18h",
+          "mardi": "8h30-12h30 / 14h-18h",
+          "mercredi": "8h30-12h30 / 14h-18h",
+          "jeudi": "8h30-12h30 / 14h-18h",
+          "vendredi": "8h30-12h30 / 14h-18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "53",
+      "nom": "Centre de Vaccination - ERNEE - Espace Clair de Lune",
+      "url": "https://partners.doctolib.fr/etablissement-de-prevention/mayenne/centres-de-vaccination-de-la-mayenne-mayenne?pid=practice-164906&enable_cookies_consent=1",
+      "location": {
+        "longitude": -0.91987,
+        "latitude": 48.299
+      },
+      "metadata": {
+        "address": " Rue des Mirettes, 53500 Ern\u00e9e",
+        "phone_number": "+33243535300",
+        "business_hours": {
+          "lundi": "13h30-17h30",
+          "mardi": "13h30-17h30",
+          "mercredi": "13h30-17h30",
+          "jeudi": "13h30-17h30",
+          "vendredi": "13h30-17h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "53",
+      "nom": "Centre de vaccination anti-covid - R\u00e9serv\u00e9 aux professionnels de Sant\u00e9 CH Laval",
+      "url": "https://partners.doctolib.fr/hopital-public/laval/centre-de-vaccination-reserve-aux-professionnels-de-sante?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": -0.782253,
+        "latitude": 48.0656
+      },
+      "metadata": {
+        "address": "33 Rue du Haut Rocher, 53000 Laval",
+        "phone_number": "+33243665155",
+        "business_hours": {
+          "lundi": "9h-12h30 / 13h30-20h",
+          "mardi": "9h-12h30 / 13h30-20h",
+          "mercredi": "9h-12h30 / 13h30-20h",
+          "jeudi": "9h-12h30 / 13h30-20h",
+          "vendredi": "9h-12h30 / 13h30-20h",
+          "samedi": "9h-12h / 14h-17h",
+          "dimanche": "9h-12h"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "53",
+      "nom": "Centre de Vaccination - P\u00f4le sant\u00e9 de Mayenne",
+      "url": "https://partners.doctolib.fr/etablissement-de-prevention/mayenne/centres-de-vaccination-de-la-mayenne-mayenne?pid=practice-162561&enable_cookies_consent=1",
+      "location": {
+        "longitude": -0.623945,
+        "latitude": 48.301
+      },
+      "metadata": {
+        "address": "1  Place de l'Europe, 53100 Mayenne",
+        "phone_number": "+33243535300",
+        "business_hours": {
+          "lundi": "9h-17h ",
+          "mardi": "9h-17h ",
+          "mercredi": "9h-17h ",
+          "jeudi": "9h-17h ",
+          "vendredi": "9h-17h ",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "53",
+      "nom": "Centre de Vaccination - Ch\u00e2teau-Gontier - Saint Fiacre",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/chateau-gontier-sur-mayenne/chateaugontier-centre-de-vaccination?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": -0.698183,
+        "latitude": 47.8245
+      },
+      "metadata": {
+        "address": "28 Rue des Martyrs de la Resistance, 53200 Ch\u00e2teau-Gontier-sur-Mayenne",
+        "phone_number": "+33243535300",
+        "business_hours": {
+          "lundi": "8h-20h",
+          "mardi": "8h-20h",
+          "mercredi": "8h-20h",
+          "jeudi": "8h-20h",
+          "vendredi": "8h-20h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "53",
+      "nom": "MA - Maison d'arr\u00eat Laval / Maison d'Arr\u00eat de Laval",
+      "url": "",
+      "location": {
+        "longitude": -0.783254,
+        "latitude": 48.0662
+      },
+      "metadata": {
+        "address": "20 Boulevard Fr\u00e9d\u00e9ric Chaplet, 53000 Laval",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "53",
+      "nom": "Pharmacie Laval Murat",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-laval-murat-laval",
+      "location": {
+        "longitude": -0.7554018,
+        "latitude": 48.0619099
+      },
+      "metadata": {
+        "address": "Centre Commercial Murat, 53000 Laval",
+        "phone_number": "+33243491816",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "53",
+      "nom": "Selarl Pharmacie Adam",
+      "url": "https://app.ordoclic.fr/app/pharmacie/selarl-pharmacie-adam-vaiges",
+      "location": {
+        "longitude": -0.4757774,
+        "latitude": 48.03975190000001
+      },
+      "metadata": {
+        "address": "5 route du Mans, 53480 Vaiges",
+        "phone_number": "+33243905017",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    }
+  ]
+}

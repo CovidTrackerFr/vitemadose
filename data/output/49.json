@@ -1,0 +1,342 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-10T01:21:20.988697+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "49",
+      "nom": "Plateau de consultations du service de maladies infectieuses - ANGERS -professionnels de sant\u00e9 ext\u00e9rieurs au CHU",
+      "url": "https://partners.doctolib.fr/hopital-public/angers/chu-d-angers-centre-de-vaccination-reserve-aux-professionnels-de-sante-de-l-etablissement?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": -0.554632,
+        "latitude": 47.4816
+      },
+      "metadata": {
+        "address": "4 Rue Larrey, 49100 Angers",
+        "business_hours": {
+          "lundi": "8h45-16h00",
+          "mardi": "8h45-16h00",
+          "mercredi": "8h45-16h00",
+          "jeudi": "8h45-16h00",
+          "vendredi": "8h45-16h00",
+          "samedi": "8h45-16h00",
+          "dimanche": "8h45-16h00"
+        }
+      },
+      "prochain_rdv": "2021-04-12T09:12:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 54
+    },
+    {
+      "departement": "49",
+      "nom": "Centre de Vaccination - ANGERS- Parc des Expositions",
+      "url": "https://www.doctolib.fr/centre-de-sante/angers/centre-de-vaccination-covid-19-angers-parc-des-expositions?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": -0.493563,
+        "latitude": 47.497
+      },
+      "metadata": {
+        "address": "51 Route de Paris, 49480 Verri\u00e8res-en-Anjou",
+        "phone_number": "+33241055999",
+        "business_hours": {
+          "lundi": "8h30-12h30 / 14h30-18h30",
+          "mardi": "8h30-12h30 / 14h30-18h30",
+          "mercredi": "8h30-12h30 / 14h30-18h30",
+          "jeudi": "8h30-12h30 / 14h30-18h30",
+          "vendredi": "8h30-12h30 / 14h30-18h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-12T18:05:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 421
+    },
+    {
+      "departement": "49",
+      "nom": "Centre de Vaccination - BAUGES - Ren\u00e9 d'Anjou",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bauge-en-anjou/centre-de-vaccination-bauge-en-anjou?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": -0.100582,
+        "latitude": 47.5406
+      },
+      "metadata": {
+        "address": "1 Place Orgerie, 49150 Baug\u00e9-en-Anjou",
+        "phone_number": "+33973314975",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-14T14:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 9
+    },
+    {
+      "departement": "49",
+      "nom": "Centre de Vaccination - SAUMUR - Espace Jean Rostand",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saumur/centre-de-vaccination-covid-19-ville-de-saumur?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": -0.0674521,
+        "latitude": 47.2683
+      },
+      "metadata": {
+        "address": "404 Rue Emmanuel Clairefond, 49400 Saumur",
+        "phone_number": "+33241831288",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-19T09:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 5
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "49",
+      "nom": "Centre de vaccination - SEICHES SUR LE LOIRE - Hall de sport",
+      "url": "",
+      "location": {
+        "longitude": -0.357154,
+        "latitude": 47.5751
+      },
+      "metadata": {
+        "address": " Rue Henri Regnier, 49140 Seiches-sur-le-Loir",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "49",
+      "nom": "Centre de Vaccination - CHOLET - Salle des f\u00eates",
+      "url": "https://partners.doctolib.fr/maison-de-sante/cholet/centre-de-vaccination-covid-19-ville-de-cholet?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": -0.896104,
+        "latitude": 47.0558
+      },
+      "metadata": {
+        "address": "2 Avenue Marcel Prat, 49300 Cholet",
+        "phone_number": "+33244092533",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "49",
+      "nom": "Centre de Vaccination - SEGRE EN ANJOU - Parc des Expositions",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/segre-en-anjou-bleu/centre-de-vaccination-covid-19-segre-en-anjou-bleu?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": -0.890367,
+        "latitude": 47.689
+      },
+      "metadata": {
+        "address": "10 Route de Pouance, 49500 Segr\u00e9-en-Anjou Bleu",
+        "phone_number": "+33241612129",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "49",
+      "nom": "Centre de Vaccination - LE PIN EN MAUGES - Salle du relais du Bois",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/le-pin-en-mauges/centre-vaccination-covid-19des-mauges-49?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": -0.898037,
+        "latitude": 47.2528
+      },
+      "metadata": {
+        "address": " Avenue du Chemin Vert, 49600 Beaupr\u00e9au-en-Mauges",
+        "phone_number": "+33241717705",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "49",
+      "nom": "Centre de Vaccination - ANGERS - Les Greniers St Jean",
+      "url": "https://partners.doctolib.fr/maison-de-sante/angers/la-salle-des-greniers-saint-jean-centre-de-vaccination?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": -0.559236,
+        "latitude": 47.4776
+      },
+      "metadata": {
+        "address": "1 Place du Tertre Saint-laurent, 49100 Angers",
+        "phone_number": "+33241055999",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "49",
+      "nom": "Centre de vaccination - BRISSAC - Complexe Sportif",
+      "url": "",
+      "location": {
+        "longitude": -0.445881,
+        "latitude": 47.3536
+      },
+      "metadata": {
+        "address": " Rue du Marin, 49320 Brissac Loire Aubance",
+        "phone_number": "+33255030228",
+        "business_hours": {
+          "lundi": "12h - 20h",
+          "mardi": "12h - 20h",
+          "mercredi": "12h - 20h",
+          "jeudi": "12h - 20h",
+          "vendredi": "12h - 20h",
+          "samedi": "9h - 17 h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "49",
+      "nom": "MA - USMP / Maison d'Arr\u00eat d'Angers",
+      "url": "",
+      "location": {
+        "longitude": -0.541484,
+        "latitude": 47.4743
+      },
+      "metadata": {
+        "address": "1 Place Olivier Giran, 49100 Angers",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "49",
+      "nom": "Centre de vaccination Covid-19 - Ville de Cholet",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/cholet/centre-de-vaccination-covid-19-ville-de-cholet?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": -0.8969172,
+        "latitude": 47.0576899
+      },
+      "metadata": {
+        "address": "2 Avenue Marcel Prat, 49300 Cholet",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "49",
+      "nom": "CH de Cholet - Vaccination Covid-19 STRICTEMENT RESERVE AUX PROFESSIONNELS DE SANTE",
+      "url": "https://partners.doctolib.fr/hopital-public/cholet/centre-de-vaccination-covid-ch-cholet?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": -0.896286300000043,
+        "latitude": 47.0422344
+      },
+      "metadata": {
+        "address": "1 Rue de Marengo, 49300 Cholet",
+        "phone_number": "02 41 49 60 00",
+        "business_hours": {
+          "lundi": "09:00-11:30, 13:30-16:00",
+          "mardi": "09:00-11:30, 13:30-16:00",
+          "mercredi": "09:00-11:30, 13:30-16:00",
+          "jeudi": "09:00-11:30, 13:30-16:00",
+          "vendredi": "09:00-11:30, 13:30-16:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

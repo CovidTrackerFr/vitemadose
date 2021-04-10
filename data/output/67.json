@@ -1,0 +1,892 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-10T01:21:21.012159+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination Clinique Saint Fran\u00e7ois",
+      "url": "https://www.keldoc.com/clinique/haguenau-67500/clinique-saint-francois/centre-de-vaccination-de-la-clinique-saint-francois ",
+      "location": {
+        "longitude": 7.78698,
+        "latitude": 48.8197
+      },
+      "metadata": {
+        "address": "1 Rue Colome, 67500 Haguenau",
+        "business_hours": {
+          "lundi": "8:00-13:00/13:30-18:30",
+          "mardi": "8:00-12:30/13:30-18:00",
+          "mercredi": "8:00-12:30/13:30-18:00",
+          "jeudi": "8:00-12:30/13:30-18:00",
+          "vendredi": "8:00-12:30/13:30-18:00",
+          "samedi": "8:00-12:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-12T08:30:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 68
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination Reichstett",
+      "url": "https://partners.doctolib.fr/centre-de-sante/reichstett/centre-de-vaccination-covid-19-ville-de-reichstett?pid=practice-180903&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.75065,
+        "latitude": 48.6468
+      },
+      "metadata": {
+        "address": " , 67116 Reichstett",
+        "phone_number": "09.70.81.81.61 ",
+        "business_hours": {
+          "lundi": "17h30 \u00e0 20h30",
+          "mardi": "17h30 \u00e0 20h30",
+          "mercredi": "17h30 \u00e0 20h30",
+          "jeudi": "17h30 \u00e0 20h30",
+          "vendredi": "17h30 \u00e0 20h30",
+          "samedi": "9h00 \u00e0 12h30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-14T11:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 4
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination SOS M\u00e9decins Neuhof",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/strasbourg/centre-de-vaccination-sos-medecin-67?pid=practice-165780&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.76705,
+        "latitude": 48.5558
+      },
+      "metadata": {
+        "address": "21 b Avenue du Neuhof, 67100 Strasbourg",
+        "business_hours": {
+          "lundi": "10:00-18:00",
+          "mardi": "10:00-18:00",
+          "mercredi": "10:00-18:00",
+          "jeudi": "10:00-18:00",
+          "vendredi": "10:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-14T16:56:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 12
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination COVID-19 - SOS M\u00e9decin",
+      "url": "https://partners.doctolib.fr/centre-de-sante/strasbourg/centre-de-vaccination-sos-medecin?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 7.7226753,
+        "latitude": 48.60227
+      },
+      "metadata": {
+        "address": "98 Rue de Hochfelden, 67200 Strasbourg",
+        "business_hours": {
+          "lundi": "10:00-18:00",
+          "mardi": "10:00-18:00",
+          "mercredi": "10:00-18:00",
+          "jeudi": "10:00-18:00",
+          "vendredi": "10:00-18:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-14T16:56:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 12
+    },
+    {
+      "departement": "67",
+      "nom": "Pharmacie Des Cigognes",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-cigognes-obernai",
+      "location": {
+        "longitude": 7.49316,
+        "latitude": 48.4583123
+      },
+      "metadata": {
+        "address": "31 Rue du Marechal Koenig, 67210 Obernai",
+        "phone_number": "+33388953030",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-04-15T12:30:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 11
+    },
+    {
+      "departement": "67",
+      "nom": "Pharmacie des Vignes",
+      "url": "https://partners.doctolib.fr/pharmacie/obernai/pharmacie-des-vignes",
+      "location": {
+        "longitude": 7.4896798,
+        "latitude": 48.4648442
+      },
+      "metadata": {
+        "address": "14 Rue du G\u00e9n\u00e9ral Leclerc, 67210 Obernai",
+        "phone_number": "03 88 95 53 20",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-15T13:45:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 4
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination Truchtersheim",
+      "url": "https://partners.doctolib.fr/centre-de-sante/truchtersheim/centre-de-vaccination-covid-19-truchtersheim?pid=practice-179527&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.60533,
+        "latitude": 48.6605
+      },
+      "metadata": {
+        "address": " Place de l'ancienne Gare, 67370 Truchtersheim",
+        "phone_number": "09 70 81 81 61",
+        "business_hours": {
+          "lundi": "13:00-17:00",
+          "mardi": "13:00-17:00",
+          "mercredi": "13:00-17:00",
+          "jeudi": "13:00-17:00",
+          "vendredi": "13:00-17:00",
+          "samedi": "9:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-21T14:20:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 22
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination Drulingen",
+      "url": "https://partners.doctolib.fr/centre-de-sante/drulingen/centre-de-vaccination-d-alsace-bossue?pid=practice-173639&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.19278,
+        "latitude": 48.8669
+      },
+      "metadata": {
+        "address": "1001 Rue du G\u00e9n\u00e9ral Leclerc, 67320 Drulingen",
+        "phone_number": "09 70 81 81 61",
+        "business_hours": {
+          "lundi": "13:30-17:30",
+          "mardi": "13:30-17:30",
+          "mercredi": "13:30-17:30",
+          "jeudi": "13:30-17:30",
+          "vendredi": "13:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-24T12:00:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 1
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination UGECAM d'Illkirch-Graffenstaden",
+      "url": "https://partners.doctolib.fr/centre-de-sante/illkirch-graffenstaden/centre-de-vaccination-covid-d-illkirch?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.72465,
+        "latitude": 48.5379
+      },
+      "metadata": {
+        "address": "10 Avenue Achille Baumann, 67400 Illkirch-Graffenstaden",
+        "phone_number": "+33388668000",
+        "business_hours": {
+          "lundi": "09:00-20:00",
+          "mardi": "09:00-20:00",
+          "mercredi": "09:00-20:00",
+          "jeudi": "09:00-20:00",
+          "vendredi": "09:00-20:00",
+          "samedi": "09:00-20:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination  La Bourse de Strasbourg",
+      "url": "https://partners.doctolib.fr/etablissement-de-prevention/strasbourg/centre-de-vaccination-covid19-de-strasbourg?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.75342,
+        "latitude": 48.5762
+      },
+      "metadata": {
+        "address": "1 Place du Mar\u00e9chal de Lattre de Tassigny, 67000 Strasbourg",
+        "phone_number": "+33800609090",
+        "business_hours": {
+          "lundi": "09:00-20:00",
+          "mardi": "09:00-20:00",
+          "mercredi": "09:00-20:00",
+          "jeudi": "09:00-20:00",
+          "vendredi": "09:00-20:00",
+          "samedi": "09:00-20:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination S\u00e9lestat -Les Tanzmatten",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/selestat/centre-de-vaccination-covid-19-ville-de-selestat?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.45774,
+        "latitude": 48.2566
+      },
+      "metadata": {
+        "address": "10 Quai des Tanneurs, 67600 S\u00e9lestat",
+        "phone_number": "09 70 81 81 61",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "9h-13h/14h-18h",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "9h-13h/14h-18h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination SOS M\u00e9decins Cronembourg",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/strasbourg/centre-de-vaccination-sos-medecin-67?pid=practice-165779&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.72258,
+        "latitude": 48.6023
+      },
+      "metadata": {
+        "address": "98 Rue de Hochfelden, 67200 Strasbourg",
+        "business_hours": {
+          "lundi": "10:00-18:00",
+          "mardi": "10:00-18:00",
+          "mercredi": "10:00-18:00",
+          "jeudi": "10:00-18:00",
+          "vendredi": "10:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination Molsheim",
+      "url": "https://partners.doctolib.fr/centre-de-sante/molsheim/centre-de-vaccination-covid-19-molsheim?pid=practice-173886&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.49622,
+        "latitude": 48.5416
+      },
+      "metadata": {
+        "address": "6 Rue de la Monnaie, 67120 Molsheim",
+        "phone_number": "09 70 81 81 61",
+        "business_hours": {
+          "lundi": "8h-12h/14h-17h",
+          "mardi": "8h-12h/14h-17h",
+          "mercredi": "8h-12h/14h-17h",
+          "jeudi": "8h-12h/14h-17h",
+          "vendredi": "8h-12h/14h-17h",
+          "samedi": "8h-12h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination d'Ingwiller",
+      "url": "https://partners.doctolib.fr/centre-de-sante/ingwiller/centre-de-vaccination-covid-hanau-la-petite-pierre?pid=practice-166348&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.4777,
+        "latitude": 48.8732
+      },
+      "metadata": {
+        "address": "17 Rue de la Gare, 67340 Ingwiller",
+        "phone_number": "09 70 81 81 61",
+        "business_hours": {
+          "lundi": "9h-12h",
+          "mardi": "9h-12h",
+          "mercredi": "9h-12h",
+          "jeudi": "9h-12h",
+          "vendredi": "9h-12h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de Vaccination  Internationale des HUS",
+      "url": "https://partners.doctolib.fr/hopital-public/strasbourg/chru-strasbourg-centre-de-vaccination-aztrazeneca-reserve-aux-professionnels-de-sante?pid=practice-163584&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.74908,
+        "latitude": 48.5774
+      },
+      "metadata": {
+        "address": "1 Place de l\u2019H\u00f4pital, 67000 Strasbourg",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "9h \u00e0 12h-14h \u00e0 17h",
+          "mercredi": "9h \u00e0 12h",
+          "jeudi": "9h \u00e0 12h-14h \u00e0 17h",
+          "vendredi": "9h \u00e0 12h",
+          "samedi": "9h \u00e0 12h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination d'Obernai- Gymnase Bugeaud",
+      "url": "https://partners.doctolib.fr/centre-de-sante/obernai/centre-de-vaccination-covid-gymnase-bugeaud-obernai?pid=practice-168586&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.49162,
+        "latitude": 48.4635
+      },
+      "metadata": {
+        "address": "19 Avenue de Gail, 67210 Obernai",
+        "phone_number": "09 70 81 81 61",
+        "business_hours": {
+          "lundi": "10:00-12h30/14:00-17:30",
+          "mardi": "9:00-12:30/14:00-17:30",
+          "mercredi": "9:00-12:30/14:00-17:30",
+          "jeudi": "9:00-12:30/14:00-17:30",
+          "vendredi": "9:00-12:30/14:00-16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination de Schiltigheim",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/schiltigheim-67300/briqueterie/centre-de-vaccination-de-briqueterie",
+      "location": {
+        "longitude": 7.72863,
+        "latitude": 48.6102
+      },
+      "metadata": {
+        "address": " Avenue de la Deuxi\u00e8me Division Blind\u00e9e, 67300 Schiltigheim",
+        "phone_number": "+33388838416",
+        "business_hours": {
+          "lundi": "08:30-19:30",
+          "mardi": "08:30-19:30",
+          "mercredi": "08:30-19:30",
+          "jeudi": "08:30-19:30",
+          "vendredi": "08:30-19:30",
+          "samedi": "08:30-19:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination du SDIS",
+      "url": "",
+      "location": {
+        "longitude": 7.66769,
+        "latitude": 48.5923
+      },
+      "metadata": {
+        "address": "5 Rue du Commerce, 67202 Wolfisheim",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination IPSDE Hautepierre",
+      "url": "https://partners.doctolib.fr/centre-de-sante/strasbourg/centre-de-vaccination-covid-19-ipsde-hautepierre?pid=practice-180542&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.70926,
+        "latitude": 48.5925
+      },
+      "metadata": {
+        "address": "9 Rue Albert Calmette, 67200 Strasbourg",
+        "phone_number": "03.88.28.60.14",
+        "business_hours": {
+          "lundi": " 8h30 \u2013 11h30/13h30 \u2013 18h ",
+          "mardi": " 8h30 \u2013 11h30/13h30 \u2013 18h ",
+          "mercredi": "8h30 \u2013 13h",
+          "jeudi": " 8h30 \u2013 11h30/13h30 \u2013 18h ",
+          "vendredi": " 8h30 \u2013 11h30/13h30 \u2013 18h ",
+          "samedi": "9h30 \u2013 14h ",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination de Haguenau",
+      "url": "https://partners.doctolib.fr/hopital-public/haguenau/ch-haguenau-vaccination-covid?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.7795,
+        "latitude": 48.799
+      },
+      "metadata": {
+        "address": "64 Av du Professeur Rene Leriche, 67500 Haguenau",
+        "phone_number": "+33388063177",
+        "business_hours": {
+          "lundi": "08:30-12:00/13:30-17:00",
+          "mardi": "08:30-12:00/13:30-17:00",
+          "mercredi": "08:30-12:00/13:30-17:00",
+          "jeudi": "08:30-12:00/13:30-17:00",
+          "vendredi": "08:30-12:00/13:30-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination de Wissembourg",
+      "url": "https://partners.doctolib.fr/hopital-public/wissembourg/centre-de-vaccination-covid-ch-de-wissembourg?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.94691,
+        "latitude": 49.0353
+      },
+      "metadata": {
+        "address": "2 Rue des Ecoles, 67160 Wissembourg",
+        "phone_number": "0970818161",
+        "business_hours": {
+          "lundi": "8:30-12:30",
+          "mardi": "8:30-12:30/14:00-18:00",
+          "mercredi": "8:30-12:30/14:00-18:00",
+          "jeudi": "8:30-12:30/16:00-20:00",
+          "vendredi": "8:30-12:30/14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination Sainte Barbe du Groupe Hospitalier Saint Vincent",
+      "url": "https://partners.doctolib.fr/etablissement-de-prevention/strasbourg/gh-saint-vincent-centre-vaccination-covid?pid=practice-162415&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.73556,
+        "latitude": 48.5822
+      },
+      "metadata": {
+        "address": "29 Rue du Faubourg National, 67000 Strasbourg",
+        "phone_number": "+33970818161",
+        "business_hours": {
+          "lundi": "10:00-19:00",
+          "mardi": "10:00-19:00",
+          "mercredi": "10:00-19:00",
+          "jeudi": "10:00-19:00",
+          "vendredi": "10:00-19:00",
+          "samedi": "10:00-19:00",
+          "dimanche": "10:00-19:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination de Wasselonne",
+      "url": "https://partners.doctolib.fr/centre-de-sante/wasselonne/centre-de-vaccination-covid-mossig-et-vignoble?pid=practice-164920&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.44354,
+        "latitude": 48.6372
+      },
+      "metadata": {
+        "address": "1 Rue de Cosswiller, 67310 Wasselonne",
+        "phone_number": "+33970818161",
+        "business_hours": {
+          "lundi": "13:00-17:00",
+          "mardi": "13:00-17:00",
+          "mercredi": "13:00-17:00",
+          "jeudi": "13:00-17:00",
+          "vendredi": "13:00-17:00",
+          "samedi": "08:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination de Reichshoffen",
+      "url": "https://partners.doctolib.fr/centre-de-sante/reichshoffen/centre-vaccination-covid-19-du-pays-de-niederbronn-les-bains-et-de-sauer-pechelbronn?pid=practice-181029&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.65507,
+        "latitude": 48.9288
+      },
+      "metadata": {
+        "address": "1 Rue du Stade, 67110 Reichshoffen",
+        "phone_number": "09 70 81 81 61",
+        "business_hours": {
+          "lundi": "9:00-12:00/14:00-17:00",
+          "mardi": "9:00-12:00/14:00-17:00",
+          "mercredi": "9:00-12:00/14:00-17:00",
+          "jeudi": "9:00-12:00/14:00-17:00",
+          "vendredi": "9:00-12:00/14:00-17:00",
+          "samedi": "9:00-12:00/14:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination du CH de Saverne",
+      "url": "https://partners.doctolib.fr/hopital-public/saverne/ch-saverne-centre-de-vaccination-covid-19?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.356,
+        "latitude": 48.7447
+      },
+      "metadata": {
+        "address": "19 C\u00f4te de Saverne, 67700 Saverne",
+        "business_hours": {
+          "lundi": "10h30-14h30",
+          "mardi": "10h30-14h30",
+          "mercredi": "10h30-14h30",
+          "jeudi": "10h30-14h30",
+          "vendredi": "10h30-14h30",
+          "samedi": "10h30-14h30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination St Luc Schirmeck - antenne du groupe Saint Vincent de Strasbourg",
+      "url": "https://partners.doctolib.fr/etablissement-de-prevention/strasbourg/gh-saint-vincent-centre-vaccination-covid?pid=practice-163151&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.22369,
+        "latitude": 48.4831
+      },
+      "metadata": {
+        "address": "10 Rue des Forges, 67130 Schirmeck",
+        "phone_number": "+33970818161",
+        "business_hours": {
+          "lundi": "9:00-12:30/13:00-17:00",
+          "mardi": "9:00-12:30/13:00-17:00",
+          "mercredi": "9:00-12:30/13:00-17:00",
+          "jeudi": "9:00-12:30/16:00-20:00",
+          "vendredi": "9:00-12:30/16:00-20:00",
+          "samedi": "9:00-12:30/13:00-17:00",
+          "dimanche": "9:00-12:30/13:00-17:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination de Lingolshein",
+      "url": "https://partners.doctolib.fr/maison-de-sante/lingolsheim/centre-de-vaccination-anti-covid-de-lingolsheim?speciality_id=5494&enable_cookies_consent=1",
+      "location": {
+        "longitude": 7.68324,
+        "latitude": 48.5617
+      },
+      "metadata": {
+        "address": "27 Rue du Travail, 67380 Lingolsheim",
+        "phone_number": "+33369064009",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "MA - STRASBOURG / Maison d'Arr\u00eat de Strasbourg",
+      "url": "",
+      "location": {
+        "longitude": 7.73065,
+        "latitude": 48.5667
+      },
+      "metadata": {
+        "address": "6 Rue Engelmann, 67200 Strasbourg",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination de Bischwiller",
+      "url": "",
+      "location": {
+        "longitude": 7.84602,
+        "latitude": 48.7796
+      },
+      "metadata": {
+        "address": " Rue du Stade, 67240 Bischwiller",
+        "phone_number": "09 70 81 81 61",
+        "business_hours": {
+          "lundi": "8h30 \u00e0 12h30 / 13h30 \u00e0 17h30",
+          "mardi": "8h30 \u00e0 12h30 / 13h30 \u00e0 17h30",
+          "mercredi": "8h30 \u00e0 12h30 / 13h30 \u00e0 17h30",
+          "jeudi": "8h30 \u00e0 12h30 / 13h30 \u00e0 17h30",
+          "vendredi": "8h30 \u00e0 12h30 / 13h30 \u00e0 17h30",
+          "samedi": "8h30 \u00e0 12h30 / 13h30 \u00e0 17h30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Pharmacie De Vill\u00e9",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-ville-ville",
+      "location": {
+        "longitude": 7.311135999999999,
+        "latitude": 48.34109249999999
+      },
+      "metadata": {
+        "address": "31 Rue du Haut Koenigsbourg, 67220 Vill\u00e9",
+        "phone_number": "+33388571808",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Pharmacie Saint-Maurice - Strasbourg",
+      "url": "https://partners.doctolib.fr/pharmacie/strasbourg/pharmacie-saint-maurice-strasbourg",
+      "location": {
+        "longitude": 7.7722771,
+        "latitude": 48.5828422
+      },
+      "metadata": {
+        "address": "64 Avenue de la For\u00eat-Noire, 67000 Strasbourg",
+        "phone_number": "03 88 61 61 79",
+        "business_hours": {
+          "lundi": "08:00-19:00",
+          "mardi": "08:00-19:00",
+          "mercredi": "08:00-19:00",
+          "jeudi": "08:00-19:00",
+          "vendredi": "08:00-19:00",
+          "samedi": "08:00-17:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Dr Pascal Herbin",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/lampertheim/pascal-herbin",
+      "location": {
+        "longitude": 7.68679810000003,
+        "latitude": 48.6488602
+      },
+      "metadata": {
+        "address": "5 Rue des Lobelies, 67450 Lampertheim",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-19:00",
+          "mardi": "09:00-13:00, 14:00-19:00",
+          "mercredi": "09:00-13:00, 09:30-12:00",
+          "jeudi": "09:00-13:00, 14:00-19:00",
+          "vendredi": "09:00-13:00, 14:00-19:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Dr J\u00e9r\u00f4me ROTH",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/wolfisheim/jerome-roth",
+      "location": {
+        "longitude": 7.6673263,
+        "latitude": 48.5869423
+      },
+      "metadata": {
+        "address": "59 Rue du G\u00e9n\u00e9ral Leclerc, 67202 Wolfisheim",
+        "phone_number": "03 88 76 03 02",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Pharmacie Du Lion",
+      "url": "https://partners.doctolib.fr/pharmacie/wasselonne/pharmacie-du-lion-wasselonne",
+      "location": {
+        "longitude": 7.4458806,
+        "latitude": 48.6376061
+      },
+      "metadata": {
+        "address": "58 Rue du G\u00e9n\u00e9ral de Gaulle, 67310 Wasselonne",
+        "phone_number": "03 88 87 05 72",
+        "business_hours": {
+          "lundi": "08:30-12:00, 14:00-19:00",
+          "mardi": "08:30-12:00, 14:00-19:00",
+          "mercredi": "08:30-12:00, 14:00-19:00",
+          "jeudi": "08:30-12:00, 14:00-19:00",
+          "vendredi": "08:30-12:00, 14:00-19:00",
+          "samedi": "08:30-12:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "67",
+      "nom": "Centre de vaccination COVID - Gymnase du centre-ville de Wissembourg",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/wissembourg/centre-de-vaccination-covid-ch-de-wissembourg?highlight%5bspeciality_ids%5d%5b%5d=5494",
+      "location": {
+        "longitude": 7.9469106,
+        "latitude": 49.0352711
+      },
+      "metadata": {
+        "address": "2 Rue des \u00c9coles, 67160 Wissembourg",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

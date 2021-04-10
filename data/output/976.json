@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-10T01:21:21.164292+02:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "976",
+      "nom": "Centre Hospitalier de Mayotte",
+      "url": "",
+      "location": {
+        "longitude": 45.2283,
+        "latitude": -12.7784
+      },
+      "metadata": {
+        "address": " Rue Mariaze, 97600 Mamoudzou",
+        "business_hours": {
+          "lundi": "7h00-15h00",
+          "mardi": "7h00-15h00",
+          "mercredi": "7h00-15h00",
+          "jeudi": "7h00-15h00",
+          "vendredi": "7h00-15h00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "976",
+      "nom": "ARS Mayotte",
+      "url": "",
+      "location": {
+        "longitude": 45.2266,
+        "latitude": -12.765
+      },
+      "metadata": {
+        "address": "4006 Kaweni, 97600 Mamoudzou",
+        "business_hours": {
+          "lundi": "9h00-16h00",
+          "mardi": "9h00-16h00",
+          "mercredi": "9h00-16h00",
+          "jeudi": "9h00-16h00",
+          "vendredi": "9h00-16h00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "976",
+      "nom": "CP - Majicavo Lamir / Maison d'arr\u00eat de Majicavo Lamir",
+      "url": "",
+      "location": {
+        "longitude": 45.2303,
+        "latitude": -12.7533
+      },
+      "metadata": {
+        "address": " Majicavo Lamir, 97600 Koungou",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}

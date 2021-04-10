@@ -1,0 +1,1184 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-10T01:21:20.963210+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "31",
+      "nom": "CDV31 CHU Toulouse Purpan",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/toulouse-31059/centre-hospitalier-universitaire-toulouse-site-purpan/centre-de-vaccination-du-chu-toulouse-site-purpan",
+      "location": {
+        "longitude": 1.3978,
+        "latitude": 43.608
+      },
+      "metadata": {
+        "address": "1 Place du Docteur Joseph Baylac, 31300 Toulouse",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "9:00-17:00",
+          "jeudi": "9:00-17:00",
+          "vendredi": "9:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-12T10:00:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 159
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Saint Orens De Gameville",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/st-orens-de-gameville-31650/saint-orens-de-gameville/centre-de-vaccination-de-saint-orens-de-gameville",
+      "location": {
+        "longitude": 1.5403,
+        "latitude": 43.551
+      },
+      "metadata": {
+        "address": "42 Avenue Augustin Labouilhe, 31650 Saint-Orens-de-Gameville",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "14:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-13T09:10:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 18
+    },
+    {
+      "departement": "31",
+      "nom": "Pharmacie Lafayette M\u00e9tro Saint-Agne",
+      "url": "https://partners.doctolib.fr/pharmacie/toulouse/pharmacie-lafayette-metro-saint-agne",
+      "location": {
+        "longitude": 1.4492271,
+        "latitude": 43.5803498
+      },
+      "metadata": {
+        "address": "61 Avenue de l'U.R.S.S., 31400 Toulouse",
+        "phone_number": "05 61 52 96 78",
+        "business_hours": {
+          "lundi": "09:00-19:30",
+          "mardi": "09:00-19:30",
+          "mercredi": "09:00-19:30",
+          "jeudi": "09:00-19:30",
+          "vendredi": "09:00-19:30",
+          "samedi": "09:00-12:30, 14:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-13T14:00:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 18
+    },
+    {
+      "departement": "31",
+      "nom": "Dr Emmanuelle LOUCHEZ-BONNES",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/toulouse/emmanuelle-louchez-bonnes",
+      "location": {
+        "longitude": 1.4504155,
+        "latitude": 43.5708524
+      },
+      "metadata": {
+        "address": "130 Chemin de la Salade Ponsan, 31400 Toulouse",
+        "phone_number": "05 61 52 89 72",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-13T15:45:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 7
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Muret (Salle Agora)",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/muret-31600/muret-salle-horizon/centre-de-vaccination-de-muret-salle-horizon",
+      "location": {
+        "longitude": 1.31459,
+        "latitude": 43.4419
+      },
+      "metadata": {
+        "address": "138 Avenue des Pyr\u00e9n\u00e9es, 31600 Muret",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "Ferm\u00e9",
+          "mardi": "Ferm\u00e9",
+          "mercredi": "9:00-13:00 / 13:30-17:30",
+          "jeudi": "9:00-13:00 / 13:30-17:30",
+          "vendredi": "9:00-13:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-13T17:00:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 461
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Ramonville Saint Agne",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/ramonville-saint-agne-31520/centre-de-vaccination-ramonville-saint-agne/centre-de-vaccination-de-ramonville-saint-agne-00d84921944f81a0",
+      "location": {
+        "longitude": 1.48304,
+        "latitude": 43.5504
+      },
+      "metadata": {
+        "address": " Rue Ir\u00e8ne Joliot Curie, 31520 Ramonville-Saint-Agne",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-13T18:50:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 124
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Blagnac Androm\u00e8de",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/blagnac-31700/centre-de-vaccination-blagnac",
+      "location": {
+        "longitude": 1.38112,
+        "latitude": 43.6553
+      },
+      "metadata": {
+        "address": " chemin du ferradou, 31700 Blagnac",
+        "phone_number": "0800541919",
+        "business_hours": {
+          "lundi": "8:30-18:00",
+          "mardi": "8:30-18:00",
+          "mercredi": "8:30-18:00",
+          "jeudi": "8:30-18:00",
+          "vendredi": "8:30-18:00",
+          "samedi": "8:30-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-14T09:10:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 94
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Castanet-Tolosan",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/castanet-tolosan-31320/castanet-tolosan/centre-de-vaccination-de-castanet-tolosan",
+      "location": {
+        "longitude": 1.51232,
+        "latitude": 43.5153
+      },
+      "metadata": {
+        "address": "26 Boulevard des Campanhols, 31320 Castanet-Tolosan",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": "09:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-14T17:20:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 309
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Rieumes",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/rieumes-31370/rieumes/centre-de-vaccination-de-rieumes",
+      "location": {
+        "longitude": 1.11458,
+        "latitude": 43.4094
+      },
+      "metadata": {
+        "address": "8 Rue du Stade, 31370 Rieumes",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-15T15:05:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 15
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Clinique Moni\u00e9 Villefranche de Lauragais",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/villefranche-de-lauragais-31290/clinique-monie-villefranche-de-lauragais/centre-de-vaccination-de-clinique-monie-villefranche-de-lauragais",
+      "location": {
+        "longitude": 1.73483,
+        "latitude": 43.4104
+      },
+      "metadata": {
+        "address": "1245 Route de Revel, 31290 Villefranche-de-Lauragais",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "8:00-12:00",
+          "mardi": "8:00-12:00",
+          "mercredi": "8:00-12:00 \u00e0 partir du 25/01",
+          "jeudi": "8:00-12:00",
+          "vendredi": "8:00-12:00 \u00e0 partir du 25/01",
+          "samedi": "Ferm\u00e9",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-16T13:55:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 24
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Toulouse Niel",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/toulouse-31000/toulouse-niel/centre-de-vaccination-de-toulouse-niel",
+      "location": {
+        "longitude": 1.44696,
+        "latitude": 43.5787
+      },
+      "metadata": {
+        "address": "81 Rue Saint Roch, 31400 Toulouse",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "14:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-19T09:25:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 167
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Toulouse Limayrac",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/toulouse-31000/toulouse-limayrac/centre-de-vaccination-de-toulouse-limayrac",
+      "location": {
+        "longitude": 1.48016,
+        "latitude": 43.5896
+      },
+      "metadata": {
+        "address": "22 Rue Xavier Darasse, 31500 Toulouse",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "08:00-12:00",
+          "mardi": "08:00-12:00",
+          "mercredi": "08:00-12:00",
+          "jeudi": "08:00-12:00",
+          "vendredi": "08:00-12:00",
+          "samedi": "08:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-19T16:55:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 343
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Toulouse Bourbaki",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/toulouse-31000/toulouse-bourbaki/centre-de-vaccination-de-toulouse-bourbaki",
+      "location": {
+        "longitude": 1.43153,
+        "latitude": 43.6236
+      },
+      "metadata": {
+        "address": " place St\u00e9phane Hessel, 31200 Toulouse",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "8:00-12:00",
+          "mardi": "8:00-12:00",
+          "mercredi": "8:00-12:00",
+          "jeudi": "8:00-12:00",
+          "vendredi": "8:00-12:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-20T17:35:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 21
+    },
+    {
+      "departement": "31",
+      "nom": "Dr Marina GARCIA",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/lherm/marina-garcia",
+      "location": {
+        "longitude": 1.22118,
+        "latitude": 43.429488
+      },
+      "metadata": {
+        "address": "9 Ter Avenue de Gascogne, 31600 Lherm",
+        "phone_number": "05 61 56 11 43",
+        "business_hours": {
+          "lundi": "08:00-12:00, 15:00-18:00",
+          "mardi": "08:00-12:00, 15:00-18:00",
+          "mercredi": "08:00-12:00, 15:00-18:00",
+          "jeudi": "08:00-12:00, 15:00-18:00",
+          "vendredi": "08:00-12:00, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-22T14:45:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 1
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Saint Jory",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/st-jory-31790/saint-jory/centre-de-vaccination-de-saint-jory",
+      "location": {
+        "longitude": 1.37877,
+        "latitude": 43.7437
+      },
+      "metadata": {
+        "address": "2 Chemin de Bougeng, 31790 Saint-Jory",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": "09:00-13:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-23T12:40:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 47
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Fronton",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/fronton-31620/fronton/centre-de-vaccination-de-fronton",
+      "location": {
+        "longitude": 1.39315,
+        "latitude": 43.8395
+      },
+      "metadata": {
+        "address": "2 Rue de Balouchan, 31620 Fronton",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00 \u00e0 partir du 25/01",
+          "mardi": "8:00-12:00 (19/01 uniquement) / 14:00-18:00",
+          "mercredi": "8:00-12:00 (19/01 uniquement) / 14:00-18:00",
+          "jeudi": "14:00-18:00 \u00e0 partir du 25/01",
+          "vendredi": "14:00-18:00 \u00e0 partir du 25/01",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-23T14:40:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 286
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Cadours",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/cadours-31480/cadours/centre-de-vaccination-de-cadours",
+      "location": {
+        "longitude": 1.04896,
+        "latitude": 43.7282
+      },
+      "metadata": {
+        "address": "6 Rue des Anciens Combattants, 31480 Cadours",
+        "phone_number": "0809541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "9:00-13:00 / 14:00-18:00",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "09:00-13:00 ou 14:00-18:00",
+          "vendredi": "8:00-12:00 ou 14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-29T10:40:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 1
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 - CHU Toulouse Larrey",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/toulouse-31059/centre-hospitalier-universitaire-toulouse-larrey/centre-de-vaccination-du-centre-hospitalier-universitaire-toulouse-larrey",
+      "location": {
+        "longitude": 1.45683,
+        "latitude": 43.5532
+      },
+      "metadata": {
+        "address": "24 Chemin de Pouvourville, 31400 Toulouse",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9:00-10:00",
+          "mardi": "9:00-10:00",
+          "mercredi": "9:00-10:00",
+          "jeudi": "9:00-10:00",
+          "vendredi": "9:00-10:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-07T15:40:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 3
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "31",
+      "nom": "CDV31 Boulogne sur Gesse",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/boulogne-sur-gesse-31350/boulogne-sur-gesse/centre-de-vaccination-de-boulogne-sur-gesse",
+      "location": {
+        "longitude": 0.644903,
+        "latitude": 43.2883
+      },
+      "metadata": {
+        "address": "1 Rue du Docteur Jean Montastruc, 31350 Boulogne-sur-Gesse",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-17:00",
+          "mardi": "14:00-17:00",
+          "mercredi": "14:00-17:00",
+          "jeudi": "14:00-17:00",
+          "vendredi": "14:00-17:00",
+          "samedi": "08:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Balma",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/balma-31130/balma/centre-de-vaccination-de-balma",
+      "location": {
+        "longitude": 1.49273,
+        "latitude": 43.6152
+      },
+      "metadata": {
+        "address": "17 Avenue des Ar\u00e8nes, 31130 Balma",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Carbonne",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/carbonne-31390/carbonne/centre-de-vaccination-de-carbonne",
+      "location": {
+        "longitude": 1.22912,
+        "latitude": 43.288
+      },
+      "metadata": {
+        "address": "9bis Rue du Pila, 31390 Carbonne",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Montr\u00e9jeau",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/montrejeau-31210/montrejeau/centre-de-vaccination-de-montrejeau",
+      "location": {
+        "longitude": 0.561836,
+        "latitude": 43.0843
+      },
+      "metadata": {
+        "address": "14 bis Avenue de Maz\u00e8res, 31210 Montr\u00e9jeau",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "08:00-12:00",
+          "mardi": "ferm\u00e9",
+          "mercredi": "08:00-12:00",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "08:00-12:00",
+          "samedi": "08:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 CHU Toulouse Rangueil",
+      "url": "",
+      "location": {
+        "longitude": 1.45377,
+        "latitude": 43.5586
+      },
+      "metadata": {
+        "address": "1 Avenue du Professeur Jean Poulhes, 31400 Toulouse",
+        "phone_number": "0800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Saint Gaudens",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-gaudens-31800/saint-gaudens/centre-de-vaccination-de-saint-gaudens",
+      "location": {
+        "longitude": 0.724206,
+        "latitude": 43.1096
+      },
+      "metadata": {
+        "address": "2 Place du Foirail, 31800 Saint-Gaudens",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Toulouse Pierre Baudis",
+      "url": "https://vaccination-covid.keldoc.com/maladies-infectieuses/toulouse-31000/centre-de-vaccination-departemental-toulouse-pierre-baudis",
+      "location": {
+        "longitude": 1.43638,
+        "latitude": 43.6109
+      },
+      "metadata": {
+        "address": "11 Esplanade Compans Caffarelli, 31000 Toulouse",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "12:30-18:30",
+          "mardi": "7:30-18:00",
+          "mercredi": "9:00-18:30",
+          "jeudi": "7:30-18:00",
+          "vendredi": "10:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Bagn\u00e8res de Luchon",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/bagneres-de-luchon-31110/crf-hopitaux-luchon/centre-de-vaccination-du-crf-hopitaux-luchon",
+      "location": {
+        "longitude": 0.5944,
+        "latitude": 42.7888
+      },
+      "metadata": {
+        "address": "Pavillon Normand place Richelieu, 31110 Bagn\u00e8res-de-Luchon",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "8:00-12:00 / 14:00-18:00",
+          "vendredi": "8:00-12:00 / 14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Saint B\u00e9at",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/st-beat-31440/saint-beat/centre-de-vaccination-de-saint-beat",
+      "location": {
+        "longitude": 0.692278,
+        "latitude": 42.9128
+      },
+      "metadata": {
+        "address": "319 Avenue Gallieni, 31440 Saint-B\u00e9at-Lez",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "14:30-18:00",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "14:30-18:00",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Labarthe sur L\u00e8ze",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/labarthe-sur-leze-31860/labarthe-sur-leze/centre-de-vaccination-de-labarthe-sur-leze",
+      "location": {
+        "longitude": 1.39774,
+        "latitude": 43.4656
+      },
+      "metadata": {
+        "address": " Route du Plantaurel, 31860 Labarthe-sur-L\u00e8ze",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "08:30-12:30",
+          "mardi": "08:30-12:30",
+          "mercredi": "08:30-12:30",
+          "jeudi": "08:30-12:30",
+          "vendredi": "08:30-12:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Cornebarrieu",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/cornebarrieu-31700/cornebarrieu/centre-de-vaccination-de-cornebarrieu",
+      "location": {
+        "longitude": 1.32417,
+        "latitude": 43.6526
+      },
+      "metadata": {
+        "address": "3 Rue du Boiret, 31700 Cornebarrieu",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": "09:00-13:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Colomiers",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/colomiers-31770/colomiers/centre-de-vaccination-de-colomiers",
+      "location": {
+        "longitude": 1.34685,
+        "latitude": 43.615
+      },
+      "metadata": {
+        "address": "12 Avenue Yves Brunaud, 31770 Colomiers",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "14:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Salies du Salat",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/salies-du-salat-31260/salies-du-salat/centre-de-vaccination-de-salies-du-salat",
+      "location": {
+        "longitude": 0.955674,
+        "latitude": 43.101
+      },
+      "metadata": {
+        "address": "4 a Boulevard du Sel, 31260 Salies-du-Salat",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": "09:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 CHU Toulouse La Grave",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/toulouse-31059/centre-hospitalier-universitaire-toulouse-la-grave-hotel-dieu/centre-de-vaccination-du-centre-hospitalier-universitaire-toulouse-la-grave-hotel-dieu",
+      "location": {
+        "longitude": 1.43413,
+        "latitude": 43.6008
+      },
+      "metadata": {
+        "address": " Place Lange, 31300 Toulouse",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "9:00-16:30",
+          "vendredi": "9:00-16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Saint Lys",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-lys-31470/saint-lys/centre-de-vaccination-de-saint-lys",
+      "location": {
+        "longitude": 1.18776,
+        "latitude": 43.5223
+      },
+      "metadata": {
+        "address": "8 Rue Alain Colas, 31470 Saint-Lys",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Caz\u00e8res",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/cazeres-31220/cazeres/centre-de-vaccination-de-cazeres",
+      "location": {
+        "longitude": 1.0844,
+        "latitude": 43.2035
+      },
+      "metadata": {
+        "address": "7 Rue des Capucins, 31220 Caz\u00e8res",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Auterive",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/auterive-31190/auterive/centre-de-vaccination-de-auterive",
+      "location": {
+        "longitude": 1.48377,
+        "latitude": 43.3506
+      },
+      "metadata": {
+        "address": "8 Rue Michelet, 31190 Auterive",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "08:00-12:00",
+          "mardi": "08:00-12:00",
+          "mercredi": "08:00-12:00",
+          "jeudi": "08:00-12:00",
+          "vendredi": "08:00-12:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Labastide Saint Sernin",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/labastide-st-sernin-31620/labastide-saint-sernin/centre-de-vaccination-de-labastide-saint-sernin",
+      "location": {
+        "longitude": 1.47053,
+        "latitude": 43.7383
+      },
+      "metadata": {
+        "address": "17 Rue Jean Pascal, 31620 Labastide-Saint-Sernin",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "09:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Villemur sur Tarn",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/villemur-sur-tarn-31340/villemur-sur-tarn/centre-de-vaccination-de-villemur-sur-tarn",
+      "location": {
+        "longitude": 1.4824,
+        "latitude": 43.8594
+      },
+      "metadata": {
+        "address": "28 Chemin de la Garrigue, 31340 Villemur-sur-Tarn",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Revel",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/revel-31250/revel/centre-de-vaccination-de-revel",
+      "location": {
+        "longitude": 2.00571,
+        "latitude": 43.4623
+      },
+      "metadata": {
+        "address": "2 Rue du Padouvenc de Castres, 31250 Revel",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "14:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Gragnague",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/gragnague-31380/centre-de-vaccination-de-gragnague/centre-de-vaccination-de-gragnague",
+      "location": {
+        "longitude": 1.58398,
+        "latitude": 43.6824
+      },
+      "metadata": {
+        "address": "3 Place Bellegarde, 31380 Gragnague",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9:00-13:00",
+          "mardi": "9:00-13:00",
+          "mercredi": "9:00-13:00",
+          "jeudi": "9:00-13:00",
+          "vendredi": "9:00-13:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Equipe mobile ADIMEP",
+      "url": "",
+      "location": {
+        "longitude": 1.45674,
+        "latitude": 43.5587
+      },
+      "metadata": {
+        "address": "66 Chemin du Vallon, 31400 Toulouse",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 Equipe mobile SDIS31 Vaccibus",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/colomiers-31770/sdis-vaccibus",
+      "location": {
+        "longitude": 1.35735,
+        "latitude": 43.593
+      },
+      "metadata": {
+        "address": "49 Chemin de l\u2019Armuri\u00e9, 31770 Colomiers",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CP - US de la Maison d'Arret Seysses / CHU Toulouse / Centre de D\u00e9tention de Muret",
+      "url": "",
+      "location": {
+        "longitude": 1.32001,
+        "latitude": 43.4857
+      },
+      "metadata": {
+        "address": " Route de Seysses, 31600 Muret",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CD - US du Centre de D\u00e9tention de Muret / CHU Toulouse / Centre de D\u00e9tention de Muret",
+      "url": "",
+      "location": {
+        "longitude": 1.32001,
+        "latitude": 43.4857
+      },
+      "metadata": {
+        "address": " Route de Seysses, 31600 Muret",
+        "business_hours": {
+          "lundi": "Ferm\u00e9 au public",
+          "mardi": "Ferm\u00e9 au public",
+          "mercredi": "Ferm\u00e9 au public",
+          "jeudi": "Ferm\u00e9 au public",
+          "vendredi": "Ferm\u00e9 au public",
+          "samedi": "Ferm\u00e9 au public",
+          "dimanche": "Ferm\u00e9 au public"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "Pharmacie Saint O",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-saint-o-saint-orens-de-gamev",
+      "location": {
+        "longitude": 1.5188578,
+        "latitude": 43.5632919
+      },
+      "metadata": {
+        "address": "2-5 all\u00e9e des champs Pinsons, 31650 Saint Orens De Gamev",
+        "phone_number": "+33562479400",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "Pharmacie Du Centre",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-centre-plaisance-du-touch",
+      "location": {
+        "longitude": 1.2966655,
+        "latitude": 43.5669196
+      },
+      "metadata": {
+        "address": "6 Place Fr\u00e9d\u00e9ric Bombail, 31830 Plaisance-du-Touch",
+        "phone_number": "+33534516070",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0
+    },
+    {
+      "departement": "31",
+      "nom": "CDV31 - Grand Centre Hall 8 \u00eele Ramier",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/toulouse-31000/vaccinodrome-toulouse?motive=88503&category=3243&cabinet=18777&specialty=144",
+      "location": {
+        "longitude": 1.43162,
+        "latitude": 43.5853
+      },
+      "metadata": {
+        "address": "8 All\u00e9e Fernand Jourdant, 31400 Toulouse",
+        "phone_number": "0800541919",
+        "business_hours": {
+          "lundi": "9h-19h",
+          "mardi": "9h-19h",
+          "mercredi": "9h-19h",
+          "jeudi": "9h-19h",
+          "vendredi": "9h-19h",
+          "samedi": "9h-19h",
+          "dimanche": "9h-19h"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0
+    }
+  ]
+}
