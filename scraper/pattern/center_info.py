@@ -21,6 +21,7 @@ class CenterInfo:
         self.plateforme = None
         self.type = None
         self.appointment_count = 0
+        self.gid = None
 
     def fill_localization(self, location: Optional[CenterLocation]):
         self.location = location
