@@ -7,6 +7,7 @@ from pytz import timezone
 
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
+from scraper.departements import cp_to_insee
 
 logger = logging.getLogger('scraper')
 
@@ -113,20 +114,6 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     if first_availability is None:
         return None
     return first_availability.isoformat()
-
-
-def cp_to_insee(cp):
-    insee_com = cp  # si jamais on ne trouve pas de correspondance...
-    # on charge la table de correspondance cp/insee, une seule fois
-    global insee
-    if insee == {}:
-        with open("data/input/codepostal_to_insee.json") as json_file:
-            insee = json.load(json_file)
-    if cp in insee:
-        insee_com = insee.get(cp).get("insee")
-    else:
-        logger.warning(f'Ordoclic unable to translate cp >{cp}< to insee')
-    return insee_com
 
 
 def centre_iterator():
