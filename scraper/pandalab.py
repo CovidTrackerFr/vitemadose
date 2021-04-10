@@ -40,7 +40,7 @@ def getReasons(pharmacyId, client: httpx.Client = DEFAULT_CLIENT):
     try:
         r = client.get(base_url)
         r.raise_for_status()
-        return(r.json())
+        return r.json()
     except httpx.HTTPStatusError as hex:
         return []
 
