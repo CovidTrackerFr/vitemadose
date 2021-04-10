@@ -66,6 +66,8 @@ class DoctolibSlots:
         rdata = data.get('data', {})
         appointment_count = 0
         request.update_practitioner_type(parse_practitioner_type(centre, rdata))
+        if practice_id:
+            practice_id = link_practice_ids(practice_id, rdata)
         if len(rdata.get('places', [])) > 1 and practice_id is None:
             practice_id = rdata.get('places')[0].get('practice_ids', None)
         set_doctolib_center_internal_id(request, rdata, practice_id)
@@ -159,6 +161,30 @@ def _parse_centre(rdv_site_web: str) -> Optional[str]:
     return centre
 
 
+def link_practice_ids(practice_id: list, rdata: dict):
+    if not practice_id:
+        return practice_id
+    places = rdata.get('places')
+    if not places:
+        return practice_id
+    base_place = None
+    for place in places:
+        place_id = place.get('id', None)
+        if not place_id:
+            continue
+        if place_id == f'practice-{practice_id[0]}':
+            base_place = place
+            break
+    if not base_place:
+        return None
+    for place in places:
+        if place.get('id') == base_place.get('id'):
+            continue
+        if place.get('address') == base_place.get('address'):  # Tideous check
+            practice_id.append(int(place.get('id').replace("practice-", "")))
+    return practice_id
+
+
 def _parse_practice_id(rdv_site_web: str):
     # Doctolib fetches multiple vaccination centers sometimes
     # so if a practice id is present in query, only related agendas
@@ -193,19 +219,20 @@ def _parse_practice_id(rdv_site_web: str):
         return None
 
 
-def _find_visit_motive_category_id(data: dict) -> Optional[str]:
+def _find_visit_motive_category_id(data: dict):
     """
     Etant donnée une réponse à /booking/<centre>.json, renvoie le cas échéant
     l'ID de la catégorie de motif correspondant à 'Non professionnels de santé'
     (qui correspond à la population civile).
     """
+    categories = []
     for category in data.get('data', {}).get('visit_motive_categories', []):
         if is_category_relevant(category['name']):
-            return category['id']
-    return None
+            categories.append(category['id'])
+    return categories
 
 
-def _find_visit_motive_id(data: dict, visit_motive_category_id: str = None):
+def _find_visit_motive_id(data: dict, visit_motive_category_id: list = None):
     """
     Etant donnée une réponse à /booking/<centre>.json, renvoie le cas échéant
     l'ID du 1er motif de visite disponible correspondant à une 1ère dose pour
@@ -233,12 +260,12 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: str = None):
         # sont pas non plus rattachés à une catégorie
         # * visit_motive_category_id=<id> : filtre => on veut les motifs qui
         # correspondent à la catégorie en question.
-        if visit_motive.get('visit_motive_category_id') == visit_motive_category_id:
+        if visit_motive.get('visit_motive_category_id') in visit_motive_category_id:
             relevant_motives.append(visit_motive['id'])
     return relevant_motives
 
 
-def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str, practice_id_filter: list = None) -> Tuple[
+def _find_agenda_and_practice_ids(data: dict, visit_motive_id: list, practice_id_filter: list = None) -> Tuple[
     list, list]:
     """
     Etant donné une réponse à /booking/<centre>.json, renvoie tous les
