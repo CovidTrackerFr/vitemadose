@@ -13,7 +13,6 @@ DOCTOLIB_APPOINTMENT_REASON = [
 ]
 
 DOCTOLIB_CATEGORY = [
-    'vaccination',
     'non professionnels de santé',
     'patients', #  50 - 55 ans avec comoribidtés
 ]
@@ -23,11 +22,14 @@ def is_category_relevant(category):
     if not category:
         return False
 
-    category = category.lower()
+    category = category.lower().strip()
     category = re.sub(' +', ' ', category)
     for allowed_categories in DOCTOLIB_CATEGORY:
         if allowed_categories in category:
             return True
+    # Weird centers. But it's vaccination related COVID-19.
+    if category == 'vaccination':
+        return True
     return False
 
 

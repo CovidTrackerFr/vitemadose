@@ -179,6 +179,13 @@ def _find_visit_motive_category_id(data: dict) -> Optional[str]:
     (qui correspond à la population civile).
     """
     for category in data.get('data', {}).get('visit_motive_categories', []):
+        # If this motive isn't related to vaccination
+        if not category.get('vaccination_motive'):
+            return None
+        # If it's not a first shot motive
+        # TODO: filter system
+        if not category.get('first_shot_motive'):
+            return None
         if is_category_relevant(category['name']):
             return category['id']
     return None
