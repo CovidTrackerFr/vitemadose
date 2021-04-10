@@ -20,6 +20,7 @@ logger = logging.getLogger('scraper')
 geo = {}
 items = {}
 insee = {}
+FILTRE_VACCINS = [ 'Première injection – Vaccin covid AstraZeneca' ]
 
 def getSchedules(pharmacyId, practitionerId, reasonId, client: httpx.Client = DEFAULT_CLIENT):
     base_url = f"https://diapatient-api.diatelic.net/public/v1/appointment/schedule/{pharmacyId}"
@@ -85,7 +86,6 @@ def ict_to_center(ict):
     return center
 
 def centre_iterator():
-    filtre_vaccins = [ 'Première injection – Vaccin covid AstraZeneca' ]
     with open("data/input/pandalab.json", "r") as json_file:
         dict_ict = json.load(json_file)
         for key in dict_ict.keys():
@@ -98,7 +98,7 @@ def centre_iterator():
                 reasons = getReasons(practitionerId)
                 for reason in reasons:
                     reasonId = reason["id"]
-                    if reason["label"] in filtre_vaccins: # on ne remonte pas les 2ndes injections
+                    if reason["label"] in FILTRE_VACCINS: # on ne remonte pas les 2ndes injections
                         new_center = center
                         new_center["gid"] = key
                         new_center["rdv_site_web"] = f"https://masante.pandalab.eu/medical-team/medical-team-result-pharmacy/new/org/details/{key}?pharmacyId={pharmacyId}&practitionerId={practitionerId}&reasonId={reasonId}"
