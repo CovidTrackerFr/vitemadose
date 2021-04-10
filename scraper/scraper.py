@@ -116,6 +116,10 @@ def fix_scrap_urls(url):
     if url.startswith('https://partners.doctolib.fr') or url.startswith('https://www.doctolib.fr'):
         u = urlparse(url)
         query = parse_qs(u.query, keep_blank_values=True)
+        itr = query.iterator()
+        for dt in itr:
+            if dt.startswith('highlight'):
+                itr.remove()
         query.pop('speciality_id', None)
         u = u._replace(query=urlencode(query, True))
         url = urlunparse(u)
