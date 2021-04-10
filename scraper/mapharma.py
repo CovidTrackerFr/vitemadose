@@ -48,35 +48,35 @@ def getProfile(url, client: httpx.Client = DEFAULT_CLIENT):
     try:
         r = client.get(url)
         r.raise_for_status()
-        soup = BeautifulSoup(r.content, 'html.parser')
-        reasons = getReasons(soup)
-        if reasons != []:
-            profile['reasons'] = reasons
-        return profile
     except httpx.HTTPStatusError:
         return profile
+    soup = BeautifulSoup(r.content, 'html.parser')
+    reasons = getReasons(soup)
+    if reasons != []:
+        profile['reasons'] = reasons
+    return profile
 
 def getProfiles(zip, client: httpx.Client = DEFAULT_CLIENT):
     index = 0
-    loop = True
     result = []
     while True:
         base_url = f"https://mapharma.net/{zip}-{index}" if index > 0 else f'https://mapharma.net/{zip}'
         try:
             r = client.get(base_url)
             r.raise_for_status()
-            soup = BeautifulSoup(r.content, 'html.parser')
-            reasons = getReasons(soup)
-            name = getName(soup)
-            address = getAddress(soup)
-            payload = { 'id': index, 'url': base_url, 'zip': zip, 'id': index, 'name': name, 'address': address, 'reasons': reasons}
-            result.append(payload)
-            index += 1
         except httpx.HTTPStatusError:
-            if index == 0:
-                index = 1
-            else:
+            if index > 0:
                 return result
+            else:
+                index = 1
+                continue
+        soup = BeautifulSoup(r.content, 'html.parser')
+        reasons = getReasons(soup)
+        name = getName(soup)
+        address = getAddress(soup)
+        payload = { 'id': index, 'url': base_url, 'zip': zip, 'name': name, 'address': address, 'reasons': reasons}
+        result.append(payload)
+        index += 1
 
 def parseAllZip():
     profiles = dict()
@@ -93,24 +93,16 @@ def parseAllZip():
     with open("data/input/mapharma.json", "w") as json_file:
         json.dump(profiles, json_file, indent = 4)
 
-def bruteForce():
-    profiles = dict()
-    with open("data/input/codepostal_to_insee.json", "r") as json_file:
-        zips = json.load(json_file)
-        for zip in zips.keys():
-            for profile in getProfiles(zip):
-                if zip not in profiles:
-                    profiles[zip] = [] 
-                profiles[zip].append(profile)
-    with open("data/input/mapharma.json", "w") as json_file:
-        json.dump(profiles, json_file, indent = 4)
-
 def getSlots(campagneId, optionId, start_date, client: httpx.Client = DEFAULT_CLIENT):
     #logger.debug((f'campagneId: {campagneId}, optionId: {optionId}, start_date: {start_date}')
     base_url = f'https://mapharma.net/api/public/calendar/{campagneId}/{start_date}/{optionId}'
     client.headers.update({'referer': 'https://mapharma.net/'})
-    r = client.get(base_url)
-    r.raise_for_status()
+    try:
+        r = client.get(base_url)
+        r.raise_for_status()
+    except httpx.HTTPStatusError as hex: 
+        logger.warn(f'{base_url} returned error {hex.response.status_code}')
+        return {}
     return r.json()
 
 def parseSlots(slots):
