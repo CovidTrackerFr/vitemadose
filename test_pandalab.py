@@ -16,7 +16,7 @@ def async_pandalab_scrape(centre):
     vaccine_center = centre["nom"]
     com_insee = centre["com_insee"]
     rdv_site_web = centre["rdv_site_web"]
-    logger.info("Vaccine Center {0}: looking for an appointment".format(vaccine_center))
+    logger.info(f"Vaccine Center {vaccine_center}: looking for an appointment")
     request = ScraperRequest(rdv_site_web, today)
     date = pandalab_fetch_slots(request)
     if not date:
