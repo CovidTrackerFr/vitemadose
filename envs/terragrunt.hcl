@@ -14,6 +14,6 @@ remote_state {
 }
 
 inputs = {
-  nb_instances = 2
+  nb_instances = 1
   ovh_region = path_relative_to_include()
 }
