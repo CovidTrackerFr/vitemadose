@@ -169,15 +169,17 @@ def link_practice_ids(practice_id: list, rdata: dict):
     if not places:
         return practice_id
     base_place = None
+    place_ids = []
     for place in places:
         place_id = place.get('id', None)
         if not place_id:
             continue
+        place_ids.append(int(place_id.replace("practice-", "")))
         if place_id == f'practice-{practice_id[0]}':
             base_place = place
             break
     if not base_place:
-        return practice_id
+        return place_ids
     for place in places:
         if place.get('id') == base_place.get('id'):
             continue
