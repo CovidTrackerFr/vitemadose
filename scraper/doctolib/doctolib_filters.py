@@ -15,6 +15,12 @@ DOCTOLIB_APPOINTMENT_REASON = [
 DOCTOLIB_CATEGORY = [
     'non professionnels de santé',
     'patient',
+    'vaccination au centre',
+    '70 ans',
+    'je suis un particulier',
+    'je ne suis pas professionnel de santé',
+    'vaccination pfizer',
+    'grand public',
     'personnes de plus de',
     'vaccination covid',  # 50 - 55 ans avec comoribidtés
 ]

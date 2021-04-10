@@ -66,19 +66,17 @@ class DoctolibSlots:
         rdata = data.get('data', {})
         appointment_count = 0
         request.update_practitioner_type(parse_practitioner_type(centre, rdata))
-        appointment_count = 0
 
         # visit_motive_categories
         # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1
         visit_motive_category_id = _find_visit_motive_category_id(data)
         # visit_motive_id
-        visit_motive_id = _find_visit_motive_id(data, visit_motive_category_id=visit_motive_category_id)
-        if visit_motive_id is None:
+        visit_motive_ids = _find_visit_motive_id(data, visit_motive_category_id=visit_motive_category_id)
+        if visit_motive_ids is None:
             return None
-
         # practice_ids / agenda_ids
         agenda_ids, practice_ids = _find_agenda_and_practice_ids(
-            data, visit_motive_id, practice_id_filter=practice_id
+            data, visit_motive_ids, practice_id_filter=practice_id
         )
         if not agenda_ids or not practice_ids:
             return None
@@ -88,36 +86,44 @@ class DoctolibSlots:
         agenda_ids_q = "-".join(agenda_ids)
         practice_ids_q = "-".join(practice_ids)
         start_date = request.get_start_date()
-        slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={visit_motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={DOCTOLIB_SLOT_LIMIT}'
-        response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
-        if response.status_code == 403:
-            raise BlockedByDoctolibError(centre_api_url)
 
-        response.raise_for_status()
-        time.sleep(self._cooldown_interval)
+        first_availability = None
+        for motive_id in visit_motive_ids:
+            slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={DOCTOLIB_SLOT_LIMIT}'
+            response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
+            if response.status_code == 403:
+                raise BlockedByDoctolibError(centre_api_url)
 
-        slots = response.json()
+            response.raise_for_status()
+            time.sleep(self._cooldown_interval)
 
-        if slots.get('total'):
-            appointment_count += int(slots.get('total', 0))
+            slots = response.json()
+
+            if slots.get('total'):
+                appointment_count += int(slots.get('total', 0))
+            for availability in slots['availabilities']:
+                slot_list = availability.get('slots', None)
+                if not slot_list or len(slot_list) == 0:
+                    continue
+                if isinstance(slot_list[0], str):
+                    if not first_availability or slot_list[0] < first_availability:
+                        first_availability = slot_list[0]
+                for slot_info in slot_list:
+                    sdate = slot_info.get('start_date', None)
+                    if not sdate:
+                        continue
+                    if not first_availability or sdate < first_availability:
+                        first_availability = sdate
+
+            if type(slots) is dict:
+                next_slot = slots.get('next_slot', None)
+                if not next_slot:
+                    continue
+                if not first_availability or next_slot < first_availability:
+                    first_availability = next_slot
+
         request.update_appointment_count(appointment_count)
-        for availability in slots['availabilities']:
-            slot_list = availability.get('slots', None)
-            if not slot_list or len(slot_list) == 0:
-                continue
-            if isinstance(slot_list[0], str):
-                return slot_list[0]
-            for slot_info in slot_list:
-                sdate = slot_info.get('start_date', None)
-                return sdate
-        if slots.get('total'):
-            appointment_count += int(slots.get('total', 0))
-        request.update_appointment_count(appointment_count)
-
-        if type(slots) is dict:
-            next_slot = slots.get('next_slot', None)
-            return next_slot
-        return None
+        return first_availability
 
 
 def _parse_centre(rdv_site_web: str) -> Optional[str]:
@@ -184,12 +190,13 @@ def _find_visit_motive_category_id(data: dict) -> Optional[str]:
     return None
 
 
-def _find_visit_motive_id(data: dict, visit_motive_category_id: str = None) -> Optional[str]:
+def _find_visit_motive_id(data: dict, visit_motive_category_id: str = None):
     """
     Etant donnée une réponse à /booking/<centre>.json, renvoie le cas échéant
     l'ID du 1er motif de visite disponible correspondant à une 1ère dose pour
     la catégorie de motif attendue.
     """
+    relevant_motives = []
     for visit_motive in data.get('data', {}).get('visit_motives', []):
         # On ne gère que les 1ère doses (le RDV pour la 2e dose est en général donné
         # après la 1ère dose, donc les gens n'ont pas besoin d'aide pour l'obtenir).
@@ -212,8 +219,8 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: str = None) -> O
         # * visit_motive_category_id=<id> : filtre => on veut les motifs qui
         # correspondent à la catégorie en question.
         if visit_motive.get('visit_motive_category_id') == visit_motive_category_id:
-            return visit_motive['id']
-    return None
+            relevant_motives.append(visit_motive['id'])
+    return relevant_motives
 
 
 def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str, practice_id_filter: int = None) -> Tuple[
@@ -236,7 +243,8 @@ def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str, practice_id_
             continue
         agenda_id = str(agenda['id'])
         for pratice_id, visit_motive_list in agenda['visit_motive_ids_by_practice_id'].items():
-            if visit_motive_id in visit_motive_list:
-                practice_ids.add(str(pratice_id))
-                agenda_ids.add(agenda_id)
+            for motive in visit_motive_id:
+                if motive in visit_motive_list:
+                    practice_ids.add(str(pratice_id))
+                    agenda_ids.add(agenda_id)
     return sorted(agenda_ids), sorted(practice_ids)

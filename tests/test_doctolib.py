@@ -238,7 +238,7 @@ def test_find_visit_motive_id():
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=42) == 1
+    assert _find_visit_motive_id(data, visit_motive_category_id=42) == [1]
 
     # Plusieurs motifs dispo => on choisit le 1er dans la liste.
     data = {
@@ -257,7 +257,7 @@ def test_find_visit_motive_id():
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=42) == 1
+    assert _find_visit_motive_id(data, visit_motive_category_id=42) == [1]
 
     # Mix avec un motif autre
     data = {
@@ -274,7 +274,7 @@ def test_find_visit_motive_id():
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=42) == 2
+    assert _find_visit_motive_id(data, visit_motive_category_id=42) == [2]
 
     # Mix avec une catégorie autre
     data = {
@@ -290,14 +290,65 @@ def test_find_visit_motive_id():
                 {
                     "id": 2,
                     "visit_motive_category_id": 42,
-                    "name": "1ère injection vaccin COVID-19 (Moderna)",
+                    "name": "1ère injection vaccin COVID-19 (AstraZeneca)",
                     "vaccination_motive": True,
                     "first_shot_motive": True
                 },
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=42) == 2
+    assert _find_visit_motive_id(data, visit_motive_category_id=42) == [2]
+
+    # Plusieurs types de vaccin
+    data = {
+        "data": {
+            "visit_motives": [
+                {
+                    "id": 1,
+                    "visit_motive_category_id": 42,
+                    "name": "1ère injection vaccin COVID-19 (Moderna)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": True
+                },
+                {
+                    "id": 2,
+                    "visit_motive_category_id": 42,
+                    "name": "1ère injection vaccin COVID-19 (AstraZeneca)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": True
+                },
+                {
+                    "id": 3,
+                    "visit_motive_category_id": 42,
+                    "name": "1ère injection vaccin COVID-19 (Pfizer-BioNTech)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": True
+                },
+                {
+                    "id": 4,
+                    "visit_motive_category_id": 42,
+                    "name": "2nde injection vaccin COVID-19 (Moderna)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": False
+                },
+                {
+                    "id": 5,
+                    "visit_motive_category_id": 42,
+                    "name": "2nde injection vaccin COVID-19 (AstraZeneca)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": False
+                },
+                {
+                    "id": 6,
+                    "visit_motive_category_id": 42,
+                    "name": "2nde injection vaccin COVID-19 (Pfizer-BioNTech)",
+                    "vaccination_motive": True,
+                    "first_shot_motive": False
+                },
+            ]
+        }
+    }
+    assert _find_visit_motive_id(data, visit_motive_category_id=42) == [1, 2, 3]
 
 
 def test_find_agenda_and_practice_ids():
@@ -333,10 +384,10 @@ def test_find_agenda_and_practice_ids():
             ],
         },
     }
-    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=1)
+    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=[1])
     assert agenda_ids == ["10", "12"]
     assert practice_ids == ["20", "21", "24"]
 
-    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=1, practice_id_filter=21)
+    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=[1], practice_id_filter=21)
     assert agenda_ids == ["12"]
     assert practice_ids == ["21", "24"]
