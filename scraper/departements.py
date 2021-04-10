@@ -1,6 +1,7 @@
 import csv
 import json
 from typing import List
+import re
 
 
 def import_departements() -> List[str]:
@@ -55,3 +56,12 @@ def to_departement_number(insee_code: str) -> str:
 
     else:
         raise ValueError(f'Code INSEE absent de la base des codes INSEE : {insee_code}')
+
+
+def get_city(address: str) -> str:
+    cp=re.match('^.*(?P<zipcode>\d{5}).*$', address).groupdict()['zipcode']
+    ville=address.split(cp+" ")[1]
+    return ville
+
+
+
