@@ -72,3 +72,4 @@ def cp_to_insee(cp):
         insee_com = insee.get(cp).get("insee")
     else:
         logger.warning(f'Unable to translate cp >{cp}< to insee')
+    return insee_com
