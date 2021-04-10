@@ -101,7 +101,7 @@ def getSlots(campagneId, optionId, start_date, client: httpx.Client = DEFAULT_CL
         r = client.get(base_url)
         r.raise_for_status()
     except httpx.HTTPStatusError as hex: 
-        logger.warn(f'{base_url} returned error {hex.response.status_code}')
+        logger.warning(f'{base_url} returned error {hex.response.status_code}')
         return {}
     return r.json()
 
