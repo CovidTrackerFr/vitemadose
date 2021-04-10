@@ -7,7 +7,7 @@ import os
 import traceback
 from multiprocessing import Pool
 from urllib.parse import urlparse, urlencode, urlunparse, parse_qs
-
+from pathlib import Path
 from scraper.error import ScrapeError, BlockedByDoctolibError
 
 import pytz
@@ -150,8 +150,16 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         for code in import_departements()
     }
 
+    last_scans = get_last_scans(outpath_format)
+
     internal_ids = []
     for centre in centres_cherchés:
+
+        if centre["url"] in last_scans:
+            centre["last_scan"] = last_scans[centre["url"]]
+        else:
+            centre["last_scan"] = None
+
         centre['nom'] = centre['nom'].strip()
         compte_centres += 1
         code_departement = centre['departement']
@@ -171,6 +179,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
                     bloqués_doctolib += 1
             else:
                 compte_centres_avec_dispo += 1
+                centre["last_scan"] = dt.datetime.now(tz=pytz.timezone('Europe/Paris')).isoformat()
                 par_departement[code_departement]['centres_disponibles'].append(centre)
         else:
             logger.warning(
@@ -259,6 +268,24 @@ def centre_iterator():
             yield center
     except Exception as e:
         logger.warning(f"Unable to scrape doctolib centers: {e}")
+
+
+def get_last_scans(outpath_format):
+
+    outpath = Path(outpath_format.format("info_centres"))
+    last_scans = {}
+
+    if outpath.is_file():
+        with outpath.open() as info_centres:
+
+            centres_precedents  = json.load(info_centres)
+            for dept in centres_precedents.values():
+                for centre in dept["centres_disponibles"]:
+                    last_scans[centre["url"]] = centre["last_scan"]
+    else:
+        logger.warning(f"Le fichier info_centres.json n'existe pas")
+
+    return last_scans
 
 
 if __name__ == "__main__":

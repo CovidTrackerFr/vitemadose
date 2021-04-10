@@ -63,7 +63,7 @@ def test_export_data(tmp_path):
             "version": 1,
             "centres_disponibles": [],
             "centres_indisponibles": [],
-            "last_updated": "2021-04-04T00:00:00",
+            "last_updated": "2021-04-04T00:00:00"
         }
 
     # Departements 01 and 59 should contain expected data.
@@ -78,6 +78,7 @@ def test_export_data(tmp_path):
                 "url": "https://example.com/bugey-sud",
                 "plateforme": "Doctolib",
                 "prochain_rdv": "2021-04-10T00:00:00",
+                "last_scan": "2021-04-04T00:00:00"
             },
         ],
         "centres_indisponibles": [],
@@ -94,6 +95,7 @@ def test_export_data(tmp_path):
                 "url": "https://example.com/ch-armentieres",
                 "plateforme": "Keldoc",
                 "prochain_rdv": "2021-04-11:00:00",
+                "last_scan": "2021-04-04T00:00:00"
             },
         ],
         "centres_indisponibles": [
@@ -103,6 +105,7 @@ def test_export_data(tmp_path):
                 "url": "https://example.com/clinique-du-cambresis",
                 "plateforme": "Maiia",
                 "prochain_rdv": None,
+                "last_scan": None
             }
         ],
         "last_updated": "2021-04-04T00:00:00",
@@ -154,6 +157,7 @@ def test_export_data_when_blocked(tmp_path):
             "url": "https://example.com/hopital-magique",
             "plateforme": "Doctolib",
             "prochain_rdv": None,
+            "last_scan": None
         }],
         "last_updated": "2021-04-04T00:00:00",
     }
@@ -168,10 +172,11 @@ def test_export_data_when_blocked(tmp_path):
                 "url": "https://example.com/clinique-du-cambresis",
                 "plateforme": "Maiia",
                 "prochain_rdv": "2021-04-12:00:00",
+                "last_scan": "2021-04-04T00:00:00"
             },
         ],
         "centres_indisponibles": [],
-        "last_updated": "2021-04-04T00:00:00",
+        "last_updated": "2021-04-04T00:00:00"
     }
 
 
