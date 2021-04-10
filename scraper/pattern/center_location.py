@@ -16,4 +16,7 @@ def convert_csv_data_to_location(csv_data: dict) -> Optional[CenterLocation]:
 
     if not long or not lat:
         return None
-    return CenterLocation(long, lat)
+    try:
+        return CenterLocation(float(long), float(lat))
+    except:
+        return None

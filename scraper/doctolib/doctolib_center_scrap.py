@@ -140,13 +140,13 @@ def is_revelant_url(url):
     return True
 
 
-def get_url_path(href):
+def check_duplicate(href):
     if not href:
         return None
     return href.split('?')[0]
 
 
-def scrape_page(page_id, url_list):
+def scrape_page(page_id, url_list, gids):
     data = requests.get(BASE_URL.format(page_id))
     data.raise_for_status()
     output = data.text
@@ -160,8 +160,6 @@ def scrape_page(page_id, url_list):
         if not is_revelant_url(link):
             continue
         vp = str(link.div.string)
-        if get_url_path(href) in center_urls or get_url_path(href) in center_urls:
-            continue
         total_urls += 1
         api_name = href.split('/')[-1]
         if is_url_in_csv(href, url_list):
@@ -170,7 +168,10 @@ def scrape_page(page_id, url_list):
         center_data = get_doctolib_center_data(center_data)
         if not center_data:
             continue
+        if center_data['gid'] in gids:
+            continue
         center_data['rdv_site_web'] = f'https://partners.doctolib.fr{href}'
+        gids.append(center_data['gid'])
         center_urls.append(center_data)
     return center_urls, total_urls
 
@@ -178,12 +179,13 @@ def scrape_page(page_id, url_list):
 def main():
     logger = enable_logger_for_production()
     center_urls = []
+    gids = []
     url_list = get_doctolib_csv_urls()
     i = 1
 
     while i < 2000:
         try:
-            centr, url_count = scrape_page(i, url_list)
+            centr, url_count = scrape_page(i, url_list, gids)
             if url_count == 0:
                 logger.info("Page: {0} <-> No center on this page. Stopping.".format(i))
                 break

@@ -17,7 +17,8 @@ def generate_stats_date(centres_stats):
     stats_path = "data/output/stats_by_date.json"
     stats_data = {'dates': [],
                   'total_centres_disponibles': [],
-                  'total_centres': []
+                  'total_centres': [],
+                  'total_appointments': []
                   }
 
     try:
@@ -39,6 +40,7 @@ def generate_stats_date(centres_stats):
     stats_data['dates'].append(current_time)
     stats_data['total_centres_disponibles'].append(data_alldep['disponibles'])
     stats_data['total_centres'].append(data_alldep['total'])
+    stats_data['total_appointments'].append(data_alldep['creneaux'])
 
     with open(stats_path, "w") as stat_graph_file:
         json.dump(stats_data, stat_graph_file)
@@ -49,7 +51,8 @@ def generate_stats_dep_date(centres_stats):
     stats_path = "data/output/stats_by_date_dep.json"
     stats_data = {'dates': [],
                   'dep_centres_disponibles': {},
-                  'dep_centres': {}
+                  'dep_centres': {},
+                  'dep_appointments': {}
                   }
 
     try:
@@ -76,9 +79,12 @@ def generate_stats_dep_date(centres_stats):
             stats_data['dep_centres_disponibles'][dep] = []
         if dep not in stats_data['dep_centres']:
             stats_data['dep_centres'][dep] = []
+        if dep not in stats_data['dep_appointments']:
+            stats_data['dep_appointments'][dep] = []
         dep_data = centres_stats[dep]
         stats_data['dep_centres_disponibles'][dep].append(dep_data['disponibles'])
         stats_data['dep_centres'][dep].append(dep_data['total'])
+        stats_data['dep_appointments'][dep].append(dep_data['creneaux'])
 
     with open(stats_path, "w") as stat_graph_file:
         json.dump(stats_data, stat_graph_file)
@@ -91,6 +97,7 @@ def export_centres_stats(center_data='data/output/info_centres.json', stats_path
         "tout_departement": {
             "disponibles": 0,
             "total": 0,
+            "creneaux": 0
         }
     }
 
@@ -99,20 +106,25 @@ def export_centres_stats(center_data='data/output/info_centres.json', stats_path
     for dep_code, dep_value in centres_info.items():
         nombre_disponibles = len(dep_value["centres_disponibles"])
         count = len(dep_value["centres_indisponibles"]) + nombre_disponibles
+        creneaux = sum([center.get('appointment_count', 0) for center in dep_value["centres_disponibles"]])
+
         centres_stats[dep_code] = {
             "disponibles": nombre_disponibles,
             "total": count,
+            "creneaux": creneaux
         }
 
         tout_dep_obj["disponibles"] += nombre_disponibles
         tout_dep_obj["total"] += count
+        tout_dep_obj["creneaux"] += creneaux
 
+    print(centres_stats)  # TODO remove debug
     available_pct = (tout_dep_obj["disponibles"] / max(1, tout_dep_obj["total"])) * 100
     logger.info("Found {0}/{1} available centers. ({2}%)".format(tout_dep_obj["disponibles"],
                                                                  tout_dep_obj["total"], round(available_pct, 2)))
     with open(stats_path, "w") as stats_file:
         json.dump(centres_stats, stats_file, indent=2)
-    if stats_path is not 'data/output/stats.json':
+    if stats_path != 'data/output/stats.json':
         return
     generate_stats_date(centres_stats)
     generate_stats_dep_date(centres_stats)

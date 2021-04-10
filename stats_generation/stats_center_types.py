@@ -25,11 +25,12 @@ def compute_plateforme_data(centres_info):
                 plateforme = 'Autre'
             next_app = centre_dispo.get('prochain_rdv', None)
             if plateforme not in plateformes:
-                plateforme_data = {'disponible': 0, 'total': 0}
+                plateforme_data = {'disponible': 0, 'total': 0, 'creneaux': 0}
             else:
                 plateforme_data = plateformes[plateforme]
             plateforme_data['disponible'] += 1 if next_app else 0
             plateforme_data['total'] += 1
+            plateforme_data['creneaux'] += centre_dispo.get('appointment_count', 0)
             plateformes[plateforme] = plateforme_data
     return plateformes
 
@@ -61,12 +62,14 @@ def generate_stats_center_types(centres_info):
         if plateforme not in stats_data['plateformes']:
             stats_data['plateformes'][plateforme] = {
                 'disponible': [plateform_data['disponible']],
-                'total': [plateform_data['total']]
+                'total': [plateform_data['total']],
+                'creneaux': [plateform_data['creneaux']]
             }
             continue
         current_data = stats_data['plateformes'][plateforme]
         current_data['disponible'].append(plateform_data['disponible'])
         current_data['total'].append(plateform_data['total'])
+        current_data['creneaux'].append(plateform_data['creneaux'])
     with open(stats_path, "w") as stat_graph_file:
         json.dump(stats_data, stat_graph_file)
     logger.info(f"Updated stats file: {stats_path}")

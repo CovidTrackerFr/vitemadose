@@ -78,10 +78,10 @@ def test_keldoc_parse_center():
     assert motives == json.loads(Path("tests", "fixtures", "keldoc", "center1-motives.json").read_text())
 
     # Find first availability date
-    date = test_center_1.find_first_availability("2020-04-04", "2020-04-05")
+    date, count = test_center_1.find_first_availability("2020-04-04", "2020-04-05")
     assert not date
     test_center_1.vaccine_motives = motives
-    date = test_center_1.find_first_availability("2020-04-04", "2020-04-05")
+    date, count = test_center_1.find_first_availability("2020-04-04", "2020-04-05")
     tz = datetime.timezone(datetime.timedelta(seconds=7200))
     assert date == datetime.datetime(2021, 4, 20, 16, 55, tzinfo=tz)
 
@@ -132,26 +132,6 @@ def test_keldoc_timeout():
     with pytest.raises(TimeoutError):
         test_center_1.fetch_vaccine_cabinets()
     assert not test_center_1.vaccine_cabinets
-
-
-def test_keldoc_basicfetch():
-    with pytest.raises(httpx.HTTPStatusError):
-        scrap_request = ScraperRequest("https://vaccination-covid.keldoc.com/centre-hospitalier-regional/foo/bar", "2020-04-06")
-        fetch_slots(scrap_request)
-
-    scrap_request = ScraperRequest("https://vaccination-covid.keldoc.com", "2020-04-06")
-    date = fetch_slots(scrap_request)
-    assert not date
-
-    scrap_request = ScraperRequest("https://vaccination-covid.keldoc.com/cabinet-medical/bain-de-bretagne-35470/salle-des-fetes-de-bain-de-bretagne/centre-de-vaccination-de-la-salle-des-fetes-de-bain-de-bretagne", "2020-04-06")
-    date = fetch_slots(scrap_request)
-    assert not date
-
-    scrap_request = ScraperRequest(
-        "https://www.keldoc.com/?dom=cabinet-medical&inst=bain-de-bretagne-35470&user=salle-des-fetes-de-bain-de-bretagne",
-        "2020-04-06")
-    date = fetch_slots(scrap_request)
-    assert not date
 
 
 def test_keldoc_filters():

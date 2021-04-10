@@ -1,20 +1,15 @@
 ---
-name: Scrape And Publish
+name: Scrape And Publish (nosleep)
 
 on:
-  push:
-    branches:
-      - data-auto
-  schedule:
-    - cron: "*/5 * * * *"
   # Allow running manually
   workflow_dispatch:
 
 jobs:
 
-  scrape_and_publish:
+  scrape_and_publish_nosleep:
 
-    name: "Scrape And Publish"
+    name: "Scrape And Publish No Sleep"
 
     runs-on: "ubuntu-20.04"
 
