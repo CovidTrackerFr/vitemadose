@@ -66,9 +66,9 @@ class DoctolibSlots:
         rdata = data.get('data', {})
         appointment_count = 0
         request.update_practitioner_type(parse_practitioner_type(centre, rdata))
-        set_doctolib_center_internal_id(request, rdata)
         if len(rdata.get('places', [])) > 1 and practice_id is None:
             practice_id = rdata.get('places')[0].get('practice_ids', None)
+        set_doctolib_center_internal_id(request, rdata, practice_id)
         # visit_motive_categories
         # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1
         visit_motive_category_id = _find_visit_motive_category_id(data)
@@ -128,7 +128,7 @@ class DoctolibSlots:
         return first_availability
 
 
-def set_doctolib_center_internal_id(request: ScraperRequest, data: dict):
+def set_doctolib_center_internal_id(request: ScraperRequest, data: dict, practice_ids):
     profile = data.get('profile')
 
     if not profile:
@@ -137,7 +137,8 @@ def set_doctolib_center_internal_id(request: ScraperRequest, data: dict):
     if not profile_id:
         return
     profile_id = int(profile_id)
-    request.internal_id = profile_id
+    practices = "-".join(str(x) for x in practice_ids)
+    request.internal_id = f"{profile_id}[{practices}]"
 
 
 def _parse_centre(rdv_site_web: str) -> Optional[str]:
