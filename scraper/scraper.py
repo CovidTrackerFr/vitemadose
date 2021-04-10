@@ -6,6 +6,8 @@ import json
 import os
 import traceback
 from multiprocessing import Pool
+from urllib.parse import urlparse, urlencode, urlunparse, parse_qs
+
 from scraper.error import ScrapeError, BlockedByDoctolibError
 
 import pytz
@@ -42,6 +44,7 @@ def scrape_debug(urls):
     enable_logger_for_debug()
     start_date = get_start_date()
     for rdv_site_web in urls:
+        rdv_site_web = fix_scrap_urls(rdv_site_web)
         logger.info('scraping URL %s', rdv_site_web)
         try:
             result = fetch_centre_slots(rdv_site_web, start_date)
@@ -105,9 +108,17 @@ def cherche_prochain_rdv_dans_centre(centre):
 
 def fix_scrap_urls(url):
     url = url.strip()
+
     # Fix Keldoc
     if url.startswith("https://www.keldoc.com/"):
         url = url.replace("https://www.keldoc.com/", "https://vaccination-covid.keldoc.com/")
+    # Clean Doctolib
+    if url.startswith('https://partners.doctolib.fr') or url.startswith('https://www.doctolib.fr'):
+        u = urlparse(url)
+        query = parse_qs(u.query, keep_blank_values=True)
+        query.pop('speciality_id', None)
+        u = u._replace(query=urlencode(query, True))
+        url = urlunparse(u)
     return url
 
 
