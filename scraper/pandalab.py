@@ -33,6 +33,7 @@ def getSchedules(pharmacyId, practitionerId, reasonId, client: httpx.Client = DE
         r.raise_for_status()
         return r.json()
     except httpx.HTTPStatusError as hex:
+        logger.warn(hex)
         return []
 
 def getReasons(pharmacyId, client: httpx.Client = DEFAULT_CLIENT):
@@ -40,15 +41,23 @@ def getReasons(pharmacyId, client: httpx.Client = DEFAULT_CLIENT):
     try:
         r = client.get(base_url)
         r.raise_for_status()
-        return(r.json())
+        return r.json()
     except httpx.HTTPStatusError as hex:
+        if hex.response.status_code == 404:
+            logger.info(f'pharmacyId {pharmacyId} ne revoit aucun type de rdv')
+        else:
+            logger.warn(hex)
         return []
 
 def getPractitionerId(finessGeo, client: httpx.Client = DEFAULT_CLIENT):
     base_url = f"https://diapatient-api.diatelic.net/public/v1/appointment/ict/pharmacy/{finessGeo}"
-    r = client.get(base_url)
-    r.raise_for_status()
-    return r.json()
+    try:
+        r = client.get(base_url)
+        r.raise_for_status()
+        return r.json()
+    except httpx.HTTPStatusError as hex:
+        logger.warn(hex)
+        return []
 
 # Mapping du payload json récupéré sur l'api pandalab vers le format de centre avec meta
 def ict_to_center(ict):
