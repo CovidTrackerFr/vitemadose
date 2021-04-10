@@ -193,6 +193,9 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
             else:
                 logger.info(f"le centre {centre['nom']} est fermé et a un rdv disponible")
                 centres_fermes_dispo_gouv["centres_disponibles"].append(centre)
+    
+    nb_fermes_dispos = len(centres_fermes_dispo_gouv["centres_disponibles"])
+    logger.info(f" {nb_fermes_dispos} centres sont fermés et ont un rdv disponible")
 
     outpath = outpath_format.format("centres_fermes_dispo_gouv")
     with open(outpath, "w") as fichier:
