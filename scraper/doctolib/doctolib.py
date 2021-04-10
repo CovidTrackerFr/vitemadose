@@ -76,6 +76,7 @@ class DoctolibSlots:
         visit_motive_category_id = _find_visit_motive_category_id(data)
         # visit_motive_id
         visit_motive_ids = _find_visit_motive_id(data, visit_motive_category_id=visit_motive_category_id)
+
         if visit_motive_ids is None:
             return None
         # practice_ids / agenda_ids
@@ -176,7 +177,7 @@ def link_practice_ids(practice_id: list, rdata: dict):
             base_place = place
             break
     if not base_place:
-        return None
+        return practice_id
     for place in places:
         if place.get('id') == base_place.get('id'):
             continue
@@ -260,7 +261,7 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: list = None):
         # sont pas non plus rattachés à une catégorie
         # * visit_motive_category_id=<id> : filtre => on veut les motifs qui
         # correspondent à la catégorie en question.
-        if visit_motive.get('visit_motive_category_id') in visit_motive_category_id:
+        if visit_motive.get('visit_motive_category_id') in visit_motive_category_id or not visit_motive_category_id:
             relevant_motives.append(visit_motive['id'])
     return relevant_motives
 
