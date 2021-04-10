@@ -1,7 +1,7 @@
-from scraper.mapharma import parseAllZip
+from scraper.mapharma import parse_all_zip
 
 def main():
-    parseAllZip()
+    parse_all_zip()
 
 if __name__ == "__main__":
     main()

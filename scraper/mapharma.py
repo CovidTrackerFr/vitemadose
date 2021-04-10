@@ -20,29 +20,31 @@ logger = logging.getLogger('scraper')
 insee = {}
 campagnes = {}
 
-def getName(soup):
+def get_name(soup):
     name = soup.find(class_='pharma-block').find('h3').text.strip()
     return name
 
-def getAddress(soup):
+def get_address(soup):
     address = soup.find('div', {'class': 'mb-1 text-muted'}).text.strip()
     return address
 
-def getReasons(soup):
+def get_reasons(soup):
     reasons = []
     divs = soup.find_all('div', {'class': 'js-campagne-data'})
     for div in divs:
-        if 'data-campagne-id' in div.attrs and div.attrs['data-campagne-id'] != '0':
-            campagneId = div.attrs['data-campagne-id']
-            options = div.find_all('option')
-            for option in options:
-                if 'value' in option.attrs and option.attrs['value'] != '0':
-                    optionId = option.attrs['value']
-                    optionName = option.text.strip()
-                    reasons.append( { 'campagneId': campagneId, 'optionId': optionId, 'optionName': optionName })
+        if 'data-campagne-id' not in div.attrs or div.attrs['data-campagne-id'] == '0':
+            continue
+        campagneId = div.attrs['data-campagne-id']
+        options = div.find_all('option')
+        for option in options:
+            if 'value' not in option.attrs or option.attrs['value'] == '0':
+                continue
+            optionId = option.attrs['value']
+            optionName = option.text.strip()
+            reasons.append( { 'campagneId': campagneId, 'optionId': optionId, 'optionName': optionName })
     return reasons
 
-def getProfile(url, client: httpx.Client = DEFAULT_CLIENT):
+def get_profile(url: str, client: httpx.Client = DEFAULT_CLIENT):
     profile = {}
     profile['reasons'] = []
     try:
@@ -51,12 +53,12 @@ def getProfile(url, client: httpx.Client = DEFAULT_CLIENT):
     except httpx.HTTPStatusError:
         return profile
     soup = BeautifulSoup(r.content, 'html.parser')
-    reasons = getReasons(soup)
+    reasons = get_reasons(soup)
     if reasons != []:
         profile['reasons'] = reasons
     return profile
 
-def getProfiles(zip, client: httpx.Client = DEFAULT_CLIENT):
+def get_profiles(zip: str, client: httpx.Client = DEFAULT_CLIENT):
     index = 0
     result = []
     while True:
@@ -71,20 +73,20 @@ def getProfiles(zip, client: httpx.Client = DEFAULT_CLIENT):
                 index = 1
                 continue
         soup = BeautifulSoup(r.content, 'html.parser')
-        reasons = getReasons(soup)
-        name = getName(soup)
-        address = getAddress(soup)
-        payload = { 'id': index, 'url': base_url, 'zip': zip, 'name': name, 'address': address, 'reasons': reasons}
+        reasons = get_reasons(soup)
+        name = get_name(soup)
+        address = get_address(soup)
+        payload = {'id': index, 'url': base_url, 'zip': zip, 'name': name, 'address': address, 'reasons': reasons}
         result.append(payload)
         index += 1
 
-def parseAllZip():
+def parse_all_zip():
     profiles = dict()
     with open("data/input/codepostal_to_insee.json", "r") as json_file:
         zips = json.load(json_file)
         for zip in zips.keys():
             logger.info(f'Searching cp {zip}...')
-            for profile in getProfiles(zip, DEFAULT_CLIENT):
+            for profile in get_profiles(zip, DEFAULT_CLIENT):
                 if zip not in profiles:
                     profiles[zip] = [] 
                 profiles[zip].append(profile)
@@ -93,8 +95,7 @@ def parseAllZip():
     with open("data/input/mapharma.json", "w") as json_file:
         json.dump(profiles, json_file, indent = 4)
 
-def getSlots(campagneId, optionId, start_date, client: httpx.Client = DEFAULT_CLIENT):
-    #logger.debug((f'campagneId: {campagneId}, optionId: {optionId}, start_date: {start_date}')
+def get_slots(campagneId: str, optionId: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT):
     base_url = f'https://mapharma.net/api/public/calendar/{campagneId}/{start_date}/{optionId}'
     client.headers.update({'referer': 'https://mapharma.net/'})
     try:
@@ -105,7 +106,7 @@ def getSlots(campagneId, optionId, start_date, client: httpx.Client = DEFAULT_CL
         return {}
     return r.json()
 
-def parseSlots(slots):
+def parse_slots(slots):
     first_availability = None
     for date, day_slots in slots.items():
         if 'first' not in date:
@@ -123,16 +124,16 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
         with open('data/input/mapharma_campagnes.json') as json_file:
             campagnes = json.load(json_file)
     first_availability = None
-    profile = getProfile(request.get_url())
+    profile = get_profile(request.get_url())
     for reason in profile['reasons']:
         for campagne in campagnes['vaccin']:
             if campagne['campagneId'] == reason['campagneId']:
-                day_slots = getSlots(campagne['campagneId'], campagne['optionId'], request.start_date, client)
+                day_slots = get_slots(campagne['campagneId'], campagne['optionId'], request.start_date, client)
                 day_slots.pop('first', None)
                 day_slots.pop('first_text', None)
                 for day_slot in day_slots:
                     slot_counts += len(day_slot)
-                first_availability = parseSlots(day_slots)
+                first_availability = parse_slots(day_slots)
     request.update_appointment_count(slot_counts)
     if first_availability is None:
         return None
@@ -144,5 +145,5 @@ def centre_iterator():
         for zip in mapharma.keys():
             for profile in mapharma[zip]:
                 id = profile['id']
-                centre = { 'gid': f'{zip}-{id}', 'rdv_site_web': profile['url'], 'com_insee': cp_to_insee(zip), 'nom': profile['name'], "location": { "zip": zip }, "address": profile['address'] , 'iterator': 'mapharma', 'type': DRUG_STORE } 
+                centre = {'gid': f'{zip}-{id}', 'rdv_site_web': profile['url'], 'com_insee': cp_to_insee(zip), 'nom': profile['name'], "location": { "zip": zip }, "address": profile['address'] , 'iterator': 'mapharma', 'type': DRUG_STORE} 
                 yield centre
