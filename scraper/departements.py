@@ -59,9 +59,8 @@ def to_departement_number(insee_code: str) -> str:
 
 
 def get_city(address: str) -> str:
-    cp=re.match('^.*(?P<zipcode>\d{5}).*$', address).groupdict()['zipcode']
-    ville=address.split(cp+" ")[1]
-    return ville
+    #Exemple : 2 avenue de la République, 75005 PARIS retourne PARIS
+    return re.search('(?<= \d{5} )(?P<com_nom>.*)\s*$', address).groupdict()['com_nom']
 
 
 
