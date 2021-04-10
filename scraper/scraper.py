@@ -262,7 +262,7 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
 def centre_iterator():
     for centre in gouv_centre_iterator():
         yield centre
-    """for centre in ordoclic_centre_iterator():
+    for centre in ordoclic_centre_iterator():
         yield centre
     try:
         center_path = 'data/output/doctolib-centers.json'
@@ -277,7 +277,7 @@ def centre_iterator():
         for center in data:
             yield center
     except Exception as e:
-        logger.warning(f"Unable to scrape doctolib centers: {e}")"""
+        logger.warning(f"Unable to scrape doctolib centers: {e}")
 
 
 def gouv_centre_iterator(outpath_format='data/output/{}.json'):
