@@ -20,12 +20,13 @@ logger = logging.getLogger('scraper')
 geo = {}
 items = {}
 insee = {}
-FILTRE_VACCINS = [ 'Première injection – Vaccin covid AstraZeneca' ]
+FILTRE_VACCINS = ['Première injection – Vaccin covid AstraZeneca']
 
-def getSchedules(pharmacyId, practitionerId, reasonId, client: httpx.Client = DEFAULT_CLIENT):
+
+def get_schedules(pharmacyId, practitionerId, reasonId, client: httpx.Client = DEFAULT_CLIENT):
     base_url = f"https://diapatient-api.diatelic.net/public/v1/appointment/schedule/{pharmacyId}"
-    payload = {"serviceProvider": "ICT", 
-               "practitionerId": practitionerId, 
+    payload = {"serviceProvider": "ICT",
+               "practitionerId": practitionerId,
                "reasonId": reasonId}
     try:
         headers = {'Content-type': 'application/json', 'Accept': '*/*'}
@@ -33,10 +34,11 @@ def getSchedules(pharmacyId, practitionerId, reasonId, client: httpx.Client = DE
         r.raise_for_status()
         return r.json()
     except httpx.HTTPStatusError as hex:
-        logger.warn(hex)
+        logger.warning(hex)
         return []
 
-def getReasons(pharmacyId, client: httpx.Client = DEFAULT_CLIENT):
+
+def get_reasons(pharmacyId, client: httpx.Client = DEFAULT_CLIENT):
     base_url = f"https://diapatient-api.diatelic.net/public/v1/appointment/ict/practitioner/{pharmacyId}/reasons"
     try:
         r = client.get(base_url)
@@ -44,23 +46,26 @@ def getReasons(pharmacyId, client: httpx.Client = DEFAULT_CLIENT):
         return r.json()
     except httpx.HTTPStatusError as hex:
         if hex.response.status_code == 404:
-            logger.info(f'pharmacyId {pharmacyId} ne revoit aucun type de rdv')
+            logger.info(
+                f'pharmacyId {pharmacyId} ne renvoit aucun type de rdv')
         else:
-            logger.warn(hex)
+            logger.exception(hex)
         return []
 
-def getPractitionerId(finessGeo, client: httpx.Client = DEFAULT_CLIENT):
+
+def get_practitioner_id(finessGeo, client: httpx.Client = DEFAULT_CLIENT):
     base_url = f"https://diapatient-api.diatelic.net/public/v1/appointment/ict/pharmacy/{finessGeo}"
     try:
         r = client.get(base_url)
         r.raise_for_status()
         return r.json()
     except httpx.HTTPStatusError as hex:
-        logger.warn(hex)
+        logger.exception(hex)
         return []
 
-# Mapping du payload json récupéré sur l'api pandalab vers le format de centre avec meta
+
 def ict_to_center(ict):
+    """Mapping du payload json récupéré sur l'api pandalab vers le format de centre avec meta"""
     center = dict()
     center["nom"] = ict["name"]
     center["com_insee"] = cp_to_insee(ict["address"]["zip"].strip().zfill(5))
@@ -91,34 +96,40 @@ def ict_to_center(ict):
         business_hours["Samedi"] = schedule.get("saturday")
     if "sunday" in schedule:
         business_hours["Dimanche"] = schedule.get("sunday")
-    center["business_hours"] = ict.get("schedule") #business_hours
+    center["business_hours"] = business_hours
     return center
 
+
 def centre_iterator():
+    dict_ict = {}
     with open("data/input/pandalab.json", "r") as json_file:
         dict_ict = json.load(json_file)
-        for key in dict_ict.keys():
-            ict = dict_ict[key]
-            if ict.get("availability"): # pris de rdv en ligne possible
-                center = ict_to_center(ict)
-                pharmacyId = ict.get("id")
-                finessGeo = ict.get("finessGeo")
-                practitionerId = getPractitionerId(finessGeo).get("id")
-                reasons = getReasons(practitionerId)
-                for reason in reasons:
-                    reasonId = reason["id"]
-                    if reason["label"] in FILTRE_VACCINS: # on ne remonte pas les 2ndes injections
-                        new_center = center
-                        new_center["gid"] = key
-                        new_center["rdv_site_web"] = f"https://masante.pandalab.eu/medical-team/medical-team-result-pharmacy/new/org/details/{key}?pharmacyId={pharmacyId}&practitionerId={practitionerId}&reasonId={reasonId}"
-                        yield new_center
+    for key, ict in dict_ict.items():
+        if not ict.get("availability", False):
+            continue
+        center = ict_to_center(ict)
+        pharmacyId = ict.get("id")
+        finessGeo = ict.get("finessGeo")
+        practitionerId = get_practitioner_id(finessGeo).get("id")
+        reasons = get_reasons(practitionerId)
+        for reason in reasons:
+            reasonId = reason["id"]
+            # on ne remonte pas les 2ndes injections ou les rdv d'autre type
+            if reason["label"] not in FILTRE_VACCINS:
+                continue
+            new_center = center
+            new_center["gid"] = key
+            new_center[
+                "rdv_site_web"] = f"https://masante.pandalab.eu/medical-team/medical-team-result-pharmacy/new/org/details/{key}?pharmacyId={pharmacyId}&practitionerId={practitionerId}&reasonId={reasonId}"
+            yield new_center
+
 
 def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     parsed = urlparse.urlparse(request.get_url())
     pharmacyId = parse_qs(parsed.query)["pharmacyId"][0]
     practitionerId = parse_qs(parsed.query)["practitionerId"][0]
     reasonId = parse_qs(parsed.query)["reasonId"][0]
-    schedules = getSchedules(pharmacyId, practitionerId, reasonId)
+    schedules = get_schedules(pharmacyId, practitionerId, reasonId)
     first_slot = None
     for schedule in schedules:
         begin = datetime.strptime(schedule.get("begin"), "%Y-%m-%dT%H:%M:%S")
