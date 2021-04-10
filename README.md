@@ -7,6 +7,19 @@
 [![Licence][license-shield]][license-url]
 ![Coverage][coverage-shield]
 
+## Signaler un Problème, une idée de modification
+
+Ouvrez une [issue Github](https://github.com/CovidTrackerFr/vitemadose/issues/new) si vous souhaitez signaler un problème.
+
+## Comment Contribuer
+
+Le développement de l'application est très actif, donc envoyez un message sur [le Telegram Général de Vite Ma Dose](https://hackmd.io/YHcjKsUzQ1-cMomOUuTpXw#Cha%C3%AEnes-de-discussion) pour être sûr que personne ne travaille déjà sur ce que vous comptez faire. Si ce n'est pas le cas, quelqu'un vous aiguillera si vous avez besoin d'aide.
+Pour proposer une modification ou un ajout sur l'outil de détection, ouvrez une [Pull Request](https://github.com/CovidTrackerFr/vitemadose/pulls). 
+
+La [documentation](https://hackmd.io/YHcjKsUzQ1-cMomOUuTpXw) permet de centraliser les informations importantes relatives au développement de l'outil : comment ça marche, quelles sont les grosses tâches du moment, comment on communique ...
+
+Pour le code en Python, merci d'utiliser un linter avant de soumettre une PR.
+
 ## Plateformes supportées
 
 | Plateforme        | Lien           | Supporté  |
@@ -16,7 +29,7 @@
 | <img src="https://www.rmingenierie.net/wp-content/uploads/2019/12/logo-Maiia-vert.png" width="100" /> | https://maiia.com | <font style="color: green; font-size: 16px;">✓</font> |
 | <img src="https://www.ordoclic.fr/wp-content/uploads/2019/03/Logo.png" width="100" /> | https://ordoclic.fr | <font style="color: green; font-size: 16px;">✓</font> |
 | <img src="https://pharmagest.com/wp-content/uploads/PandaPatient2.jpg" width="100" /> | https://pharmagest.com/en/pandalab-agenda/ | <font style="color: orange; font-size: 16px;">En cours</font> |
-| <img src="https://user-images.githubusercontent.com/1408600/114279336-5d58a700-9a34-11eb-91d1-f008f191fb4d.png" width="100" /> | https://www.mapharma.net/ | <font style="color: orange; font-size: 16px;">En Cours</font> |
+| <img src="https://www.mapharma.fr/media/logo/stores/2/logo_mapharma.png" width="100" /> | https://www.mapharma.fr/ | <font style="color: orange; font-size: 16px;">En Cours</font> |
 
 ## Utilisation
 
