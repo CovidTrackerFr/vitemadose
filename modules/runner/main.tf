@@ -1,19 +1,19 @@
 locals {
   provision_script_url = "https://gitlab.com/ViteMaDose/vitemadose/-/raw/main/gitlab-runner/deploy-dev-runner.sh"
-  # C'est toujours une Debian 9 qu'on utilise
-  image_id_by_dc = {
-    "GRA5" = "7b3b7b4c-51fa-47bf-8a9b-15eeb3161a1e"
-    "GRA11" = "20d51ede-15d7-4697-9cf0-6fc9f69d92c3"
-    "SBG5" = "4eb5df99-04da-4a84-80bb-2eeae1b61093"
-  }
 }
 
+
+data "openstack_images_image_v2" "debian_9" {
+  provider    = openstack.ovh
+  name        = "Debian 9"
+  most_recent = true
+}
 
 resource "openstack_compute_instance_v2" "runner" {
   provider        = openstack.ovh
   count           = var.nb_instances
   flavor_name     = var.flavor
-  image_id        = local.image_id_by_dc[var.ovh_region]
+  image_id        = data.openstack_images_image_v2.debian_9.id
   name            = "${var.name}-${count.index}-${var.ovh_region}"
   security_groups = ["default"]
   key_pair        = openstack_compute_keypair_v2.runner_keypair.name
@@ -51,7 +51,7 @@ resource null_resource "unregister" {
 
   provisioner "remote-exec" {
     inline = [
-        "while [ ! -f /var/lib/cloud/instance/boot-finished ]; do echo -e \"\\033[1;36mWaiting for cloud-init...\"; tail -n 5 /var/log/cloud-init-output.log; sleep 10; done"
+        "while [ ! -f /var/lib/cloud/instance/boot-finished ]; do echo -e \"\\033[1;36mWaiting for cloud-init...\"; sudo tail -n 5 /var/log/cloud-init-output.log; sleep 10; done"
     ]
   }
 
@@ -67,7 +67,7 @@ resource null_resource "unregister" {
 
 resource "openstack_compute_keypair_v2" "runner_keypair" {
   provider        = openstack.ovh
-  name = random_string.key_pair_name.result
+  name            = "runners-${random_string.key_pair_name.result}"
 }
 
 resource "random_string" "key_pair_name" {
