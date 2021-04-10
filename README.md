@@ -7,19 +7,6 @@
 [![Licence][license-shield]][license-url]
 ![Coverage][coverage-shield]
 
-## Signaler un Problème, une idée de modification
-
-Ouvrez une [issue Github](https://github.com/CovidTrackerFr/vitemadose/issues/new) si vous souhaitez signaler un problème.
-
-## Comment Contribuer
-
-Le développement de l'application est très actif, donc envoyez un message sur [le Telegram Général de Vite Ma Dose](https://hackmd.io/YHcjKsUzQ1-cMomOUuTpXw#Cha%C3%AEnes-de-discussion) pour être sûr que personne ne travaille déjà sur ce que vous comptez faire. Si ce n'est pas le cas, quelqu'un vous aiguillera si vous avez besoin d'aide.
-Pour proposer une modification ou un ajout sur l'outil de détection, ouvrez une [Pull Request](https://github.com/CovidTrackerFr/vitemadose/pulls). 
-
-La [documentation](https://hackmd.io/YHcjKsUzQ1-cMomOUuTpXw) permet de centraliser les informations importantes relatives au développement de l'outil : comment ça marche, quelles sont les grosses tâches du moment, comment on communique ...
-
-Pour le code en Python, merci d'utiliser un linter avant de soumettre une PR.
-
 ## Plateformes supportées
 
 | Plateforme        | Lien           | Supporté  |
@@ -56,3 +43,14 @@ Lancer des tests unitaires :
 ```bash
 make test
 ```
+
+<!-- shield cards !-->
+[contributors-shield]: https://img.shields.io/github/contributors/CovidTrackerFr/vitemadose.svg?style=for-the-badge
+[contributors-url]: https://github.com/CovidTrackerFr/vitemadose/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/CovidTrackerFr/vitemadose.svg?style=for-the-badge
+[forks-url]: https://github.com/CovidTrackerFr/vitemadose/network/members
+[issues-shield]: https://img.shields.io/github/issues/CovidTrackerFr/vitemadose.svg?style=for-the-badge
+[issues-url]: https://github.com/CovidTrackerFr/vitemadose/issues
+[license-shield]: https://img.shields.io/github/license/CovidTrackerFr/vitemadose.svg?style=for-the-badge
+[license-url]: https://github.com/CovidTrackerFr/vitemadose/blob/master/LICENSE
+[coverage-shield]: https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/.github/coverage.svg
