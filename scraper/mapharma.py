@@ -11,6 +11,7 @@ from bs4 import BeautifulSoup
 
 from .pattern.scraper_request import ScraperRequest
 from .pattern.scraper_result import DRUG_STORE
+from .departements import cp_to_insee
 
 timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
@@ -77,6 +78,21 @@ def getProfiles(zip, client: httpx.Client = DEFAULT_CLIENT):
             else:
                 return result
 
+def parseAllZip():
+    profiles = dict()
+    with open("data/input/codepostal_to_insee.json", "r") as json_file:
+        zips = json.load(json_file)
+        for zip in zips.keys():
+            logger.info(f'Searching cp {zip}...')
+            for profile in getProfiles(zip, DEFAULT_CLIENT):
+                if zip not in profiles:
+                    profiles[zip] = [] 
+                profiles[zip].append(profile)
+            if zip in profiles and len(profiles[zip]) > 0:
+                logger.info(f'found {len(profiles[zip])} in cp {zip}')
+    with open("data/input/mapharma.json", "w") as json_file:
+        json.dump(profiles, json_file, indent = 4)
+
 def bruteForce():
     profiles = dict()
     with open("data/input/codepostal_to_insee.json", "r") as json_file:
@@ -88,19 +104,6 @@ def bruteForce():
                 profiles[zip].append(profile)
     with open("data/input/mapharma.json", "w") as json_file:
         json.dump(profiles, json_file, indent = 4)
-
-def cp_to_insee(cp):
-    insee_com = cp  # si jamais on ne trouve pas de correspondance...
-    # on charge la table de correspondance cp/insee, une seule fois
-    global insee
-    if insee == {}:
-        with open("data/input/codepostal_to_insee.json") as json_file:
-            insee = json.load(json_file)
-    if cp in insee:
-        insee_com = insee.get(cp).get("insee")
-    else:
-        logger.warning(f'Ordoclic unable to translate cp >{cp}< to insee')
-    return insee_com
 
 def getSlots(campagneId, optionId, start_date, client: httpx.Client = DEFAULT_CLIENT):
     #logger.debug((f'campagneId: {campagneId}, optionId: {optionId}, start_date: {start_date}')
