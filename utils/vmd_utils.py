@@ -92,3 +92,19 @@ class departementUtils:
 		else:
 			logger.warning(f'Unable to translate cp >{cp}< to insee')
 		return insee_com
+
+
+def format_phone_number(_phone_number: str) -> str:
+
+    phone_number = _phone_number
+    if not phone_number:
+        return ""
+
+    phone_number = phone_number.replace(" ", "")
+    phone_number = phone_number.replace(".", "")
+
+    if not phone_number[0] == '+':
+        phone_number = "+33" + phone_number[1:]
+
+
+    return phone_number
