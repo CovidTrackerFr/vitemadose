@@ -98,11 +98,9 @@ class departementUtils:
         >>> get_city("2 avenue de la République, 75005 PARIS")
         'PARIS'
         """
-        group = re.search('(?<= \d{5} )(?P<com_nom>.*)\s*$', address)
-        if not group:
-            return None
-        group = group.groupdict()
-        return group.get('com_nom')
+        if(search := re.search(r'(?<=\s\d{5}\s)(?P<com_nom>.*?)\s*$', address)):
+            return search.groupdict().get('com_nom')
+        return None
 
     @staticmethod
     def cp_to_insee(cp):
