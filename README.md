@@ -13,12 +13,13 @@ Ouvrez une [issue Github](https://github.com/CovidTrackerFr/vitemadose/issues/ne
 
 ## Comment Contribuer
 
-Le développement de l'application est très actif, donc envoyez un message sur [le Telegram Général de Vite Ma Dose](https://hackmd.io/YHcjKsUzQ1-cMomOUuTpXw#Cha%C3%AEnes-de-discussion) pour être sûr que personne ne travaille déjà sur ce que vous comptez faire. Si ce n'est pas le cas, quelqu'un vous aiguillera si vous avez besoin d'aide.
+Le développement de l'application étant tres actif nous recommendons de joindre [le Telegram Général de Vite Ma Dose](https://hackmd.io/YHcjKsUzQ1-cMomOUuTpXw#Cha%C3%AEnes-de-discussion) pour être sûr que personne ne travaille déjà sur ce que vous comptez faire. Si ce n'est pas le cas, quelqu'un vous aiguillera si vous avez besoin d'aide.
 Pour proposer une modification ou un ajout sur l'outil de détection, ouvrez une [Pull Request](https://github.com/CovidTrackerFr/vitemadose/pulls). 
 
 La [documentation](https://hackmd.io/YHcjKsUzQ1-cMomOUuTpXw) permet de centraliser les informations importantes relatives au développement de l'outil : comment ça marche, quelles sont les grosses tâches du moment, comment on communique ...
 
-Pour le code en Python, merci d'utiliser un linter avant de soumettre une PR.
+Pour le code en Python, veillez à respecter le standard PEP8 avant de soumettre une Pull-Request.
+La plupart des IDEs et éditeurs de code moderne proposent des outils permettant de mettre en page votre code en suivant ce standard automatiquement.
 
 ## Plateformes supportées
 
@@ -28,8 +29,9 @@ Pour le code en Python, merci d'utiliser un linter avant de soumettre une PR.
 | <img src="https://www.keldoc.com/keldoc-logo.nolqip.e7abaad88d1642c9c1f2.png" width="100" /> | https://keldoc.com | <font style="color: green; font-size: 16px;">✓</font> |
 | <img src="https://www.rmingenierie.net/wp-content/uploads/2019/12/logo-Maiia-vert.png" width="100" /> | https://maiia.com | <font style="color: green; font-size: 16px;">✓</font> |
 | <img src="https://www.ordoclic.fr/wp-content/uploads/2019/03/Logo.png" width="100" /> | https://ordoclic.fr | <font style="color: green; font-size: 16px;">✓</font> |
+| <img src="https://www.mapharma.fr/media/logo/stores/2/logo_mapharma.png" width="100" /> | https:/
+/www.mapharma.fr/ | <font style="color: green; font-size: 16px;">✓</font> |
 | <img src="https://pharmagest.com/wp-content/uploads/PandaPatient2.jpg" width="100" /> | https://pharmagest.com/en/pandalab-agenda/ | <font style="color: orange; font-size: 16px;">En cours</font> |
-| <img src="https://www.mapharma.fr/media/logo/stores/2/logo_mapharma.png" width="100" /> | https://www.mapharma.fr/ | <font style="color: orange; font-size: 16px;">En Cours</font> |
 
 ## Utilisation
 
