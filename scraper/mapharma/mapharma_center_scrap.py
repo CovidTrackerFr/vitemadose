@@ -1,4 +1,4 @@
-from scraper.mapharma import parse_all_zip
+from scraper.mapharma.mapharma import parse_all_zip
 
 def main():
     parse_all_zip()

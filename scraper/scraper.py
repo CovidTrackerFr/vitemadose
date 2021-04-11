@@ -21,8 +21,8 @@ from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
 from .maiia import fetch_slots as maiia_fetch_slots
 from .ordoclic import centre_iterator as ordoclic_centre_iterator
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
-from .mapharma import centre_iterator as mapharma_centre_iterator
-from .mapharma import fetch_slots as mapharma_fetch_slots
+from .mapharma.mapharma import centre_iterator as mapharma_centre_iterator
+from .mapharma.mapharma import fetch_slots as mapharma_fetch_slots
 
 POOL_SIZE = int(os.getenv('POOL_SIZE', 15))
 

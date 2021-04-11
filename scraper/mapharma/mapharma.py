@@ -9,9 +9,9 @@ from pytz import timezone
 from urllib.parse import parse_qs
 from bs4 import BeautifulSoup
 
-from .pattern.scraper_request import ScraperRequest
-from .pattern.scraper_result import DRUG_STORE
-from .departements import cp_to_insee
+from scraper.pattern.scraper_request import ScraperRequest
+from scraper.pattern.scraper_result import DRUG_STORE
+from scraper.departements import cp_to_insee
 
 timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)

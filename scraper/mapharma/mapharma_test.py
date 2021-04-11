@@ -4,8 +4,8 @@ import scraper
 from datetime import datetime
 from multiprocessing import Pool
 
-from scraper.mapharma import centre_iterator as mapharma_centre_iterator
-from scraper.mapharma import fetch_slots as mapharma_fetch_slots
+from scraper.mapharma.mapharma import centre_iterator as mapharma_centre_iterator
+from scraper.mapharma.mapharma import fetch_slots as mapharma_fetch_slots
 from scraper.pattern.scraper_result import ScraperResult
 from scraper.pattern.scraper_request import ScraperRequest
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
