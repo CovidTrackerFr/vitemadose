@@ -55,13 +55,13 @@ def is_appointment_relevant(appointment_name):
 
 
 # Parse practitioner type from Doctolib booking data.
-def parse_practitioner_type(name, data):
+def get_etablissement_type(name, specialite):
+    
     if 'pharmacie' in name.lower():
         return DRUG_STORE
-    profile = data.get('profile', {})
-    specialty = profile.get('speciality', {})
-    if specialty:
-        slug = specialty.get('slug', None)
-        if slug and slug == 'medecin-generaliste':
+    
+    if speciality:
+        slug = speciality["slug"]
+        if slug == 'medecin-generaliste':
             return GENERAL_PRACTITIONER
     return VACCINATION_CENTER

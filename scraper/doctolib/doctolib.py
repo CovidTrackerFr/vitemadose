@@ -8,7 +8,7 @@ from typing import Optional, Tuple
 import httpx
 import requests
 
-from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
+from scraper.doctolib.doctolib_filters import is_appointment_relevant, get_etablissement_type, is_category_relevant
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 
@@ -65,7 +65,7 @@ class DoctolibSlots:
         data = response.json()
         rdata = data.get('data', {})
         appointment_count = 0
-        request.update_practitioner_type(parse_practitioner_type(centre, rdata))
+        #request.update_practitioner_type(get_etablissement_type(centre, rdata))
         if practice_id:
             practice_id = link_practice_ids(practice_id, rdata)
         if len(rdata.get('places', [])) > 1 and practice_id is None:

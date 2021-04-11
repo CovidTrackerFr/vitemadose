@@ -6,7 +6,7 @@ from urllib import parse
 import requests
 from bs4 import BeautifulSoup
 
-from scraper.doctolib.doctolib_filters import parse_practitioner_type
+from scraper.doctolib.doctolib_filters import get_etablissement_type
 from utils.vmd_utils import departementUtils, format_phone_number
 from utils.vmd_logger import enable_logger_for_production
 
@@ -88,117 +88,89 @@ def parse_doctolib_business_hours(url_data, place):
     return url_data
 
 
-def get_doctolib_center_data(url_data):
-    data = requests.get(BOOKING_URL.format(url_data['internal_api_name']))
-    data.raise_for_status()
-    output = data.json().get('data', {})
+def get_infos_etablissement(url):
 
-    url_data['gid'] = f'd{output.get("profile", {}).get("id", 0)}'[:8]
-
+    etablissement = {}
+    response = requests.get(BOOKING_URL.format(url))
+    response.raise_for_status()
+    data = response.json()
+    data = data["data"]
+    
+    etablissement['gid'] = "d" + str(data["profile"]["id"])
+    etablissement["nom"] = data["profile"]["name_with_title"]
     # Parse place
-    place = output.get('places', {})
+    place = data["places"]
 
     # Parse practitioner type
-    url_data['type'] = parse_practitioner_type(url_data['nom'], output)
 
     if not place:
-        return url_data
+        return etablissement
     place = place[0]  # for the moment
 
-    # Parse place location
-    url_data['address'] = place['full_address']
-    url_data['long_coor1'] = place['longitude']
-    url_data['lat_coor1'] = place['latitude']
-    url_data["com_insee"] = departementUtils.cp_to_insee(place["zipcode"])
+    # Parse place location 
+    etablissement['address'] = place['full_address']
+    etablissement['long_coor1'] = place['longitude']
+    etablissement['lat_coor1'] = place['latitude']
+    etablissement["com_insee"] = place["zipcode"]
+    etablissement["ville"] = place["city"]
+
 
     # Parse landline number
-    if place.get('landline_number', None):
-        url_data['phone_number'] = format_phone_number(place.get('landline_number', None))
+    etablissement["phone_number"] = None
 
-    url_data = parse_doctolib_business_hours(url_data, place)
-    return url_data
-
-
-def is_revelant_url(url):
-    href = url.get('href')
-    is_center = False
-    if len(href.split('/')) < 3:
-        return False
-
-    for center_type in CENTER_TYPES:
-        if href.startswith(f'/{center_type}/'):
-            is_center = True
-            break
-
-    if not is_center or not url.contents or not url.contents[0]:
-        return False
-    if not url.div or url.img:
-        return False
-    return True
+    if "landline_number" in place:
+        etablissement['phone_number'] = place["landline_number"]
 
 
-def check_duplicate(href):
-    if not href:
-        return None
-    return href.split('?')[0]
+    specialite = data["profile"]["speciality"]
+    etablissement['type'] = get_etablissement_type(etablissement['nom'], output)
+
+    return etablissement
 
 
-def scrape_page(page_id, url_list, gids):
-    data = requests.get(BASE_URL.format(page_id))
-    data.raise_for_status()
-    output = data.text
-    soup = BeautifulSoup(output, features="html.parser")
-    center_urls = []
-    total_urls = 0  # Total url count in this page
+def scrape_page(page_id=1, liste_ids=[]):
+    response = requests.get(BASE_URL.format(page_id))
+    response.raise_for_status()
+
+    data = response.json()
+    data = data["data"]
+    etablissements = []
     # It even counts filtered URLs
 
-    for link in soup.findAll("a"):
-        href = link.get('href')
-        if not is_revelant_url(link):
-            continue
-        vp = str(link.div.string)
-        total_urls += 1
-        api_name = href.split('/')[-1]
-        if is_url_in_csv(href, url_list):
-            continue
-        center_data = {'rdv_site_web': href, 'nom': vp, 'internal_api_name': api_name}
-        center_data = get_doctolib_center_data(center_data)
-        if not center_data:
-            continue
-        if center_data['gid'] in gids:
-            continue
-        center_data['rdv_site_web'] = f'https://partners.doctolib.fr{href}'
-        gids.append(center_data['gid'])
-        center_urls.append(center_data)
-    return center_urls, total_urls
+    for doctor in data["doctors"]:
+       
+        if doctor["id"] not in liste_ids:
+            liste_ids.append(doctor["id"])
+
+            internal_api_url = doctor["link"].split('/')[-1]
+            etablissement = get_infos_etablissement(internal_api_url)
+            etablissement["rdv_site_web"] = PARTNERS_URL + doctor["link"]
+
+        etablissements.append(etablissement)
+
+    return etablissements
 
 
 def main():
-    logger = enable_logger_for_production()
-    center_urls = []
-    gids = []
-    url_list = get_doctolib_csv_urls()
-    i = 1
 
-    while i < 2000:
-        try:
-            centr, url_count = scrape_page(i, url_list, gids)
-            if url_count == 0:
-                logger.info("Page: {0} <-> No center on this page. Stopping.".format(i))
-                break
-            center_urls.extend(centr)
-            logger.info(
-                "Page: {0} <-> Found {1} centers not in data.gouv CSV.".format(i, len(center_urls)))
-        except Exception as e:
-            logger.warning("Unable to scrape Doctolib page {0}".format(i))
-            break
-        i += 1
-    if len(center_urls) == 0:
-        logger.error("No Doctolib center found. Banned?")
-        exit(1)
-    file = open('data/output/doctolib-centers.json', 'w')
-    file.write(json.dumps(center_urls, indent=2))
-    file.close()
+    liste_etablissements = []
+    liste_ids = []
+    page = 1
+
+    etablissements_trouves = True
+
+    while etablissements_trouves and page < 3:
+    
+        etablissements = scrape_page(page, liste_ids)
+        if len(etablissements) == 0:
+            etablissements_trouves = False
+        else:
+            liste_etablissements = liste_etablissements + etablissements
+            page += 1
+
+    path = Path("doctolib_etablissements.json")
+    with open(path, "w") as fichier:
+        fichier.write(json.dumps(liste_etablissements, indent=2))
 
 
 if __name__ == "__main__":
