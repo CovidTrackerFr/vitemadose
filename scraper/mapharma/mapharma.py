@@ -83,17 +83,17 @@ def get_profiles(zip: str, client: httpx.Client = DEFAULT_CLIENT):
 
 def parse_all_zip():
     profiles = dict()
-    with open("data/input/codepostal_to_insee.json", "r") as json_file:
+    with open("data/output/codepostal_to_insee.json", "r") as json_file:
         zips = json.load(json_file)
         for zip in zips.keys():
-            logger.info(f'Searching cp {zip}...')
+            logger.info(f'Searching CODE POSTAL {zip}...')
             for profile in get_profiles(zip, DEFAULT_CLIENT):
                 if zip not in profiles:
                     profiles[zip] = [] 
                 profiles[zip].append(profile)
             if zip in profiles and len(profiles[zip]) > 0:
-                logger.info(f'found {len(profiles[zip])} in cp {zip}')
-    with open("data/input/mapharma.json", "w") as json_file:
+                logger.info(f'found {len(profiles[zip])} in CODE POSTAL {zip}')
+    with open("data/output/mapharma-centers.json", "w") as json_file:
         json.dump(profiles, json_file, indent = 4)
 
 def get_slots(campagneId: str, optionId: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT):
@@ -141,7 +141,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     return first_availability.isoformat()
 
 def centre_iterator():
-    with open("data/input/mapharma.json") as json_file:
+    with open("data/output/mapharma-centers.json") as json_file:
         mapharma = json.load(json_file)
         for zip in mapharma.keys():
             for profile in mapharma[zip]:
