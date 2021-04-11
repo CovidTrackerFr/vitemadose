@@ -16,7 +16,6 @@ class CenterInfo:
         self.departement = departement
         self.nom = nom
         self.url = url
-        self.ville = ville
         self.location = None
         self.metadata = None
         self.prochain_rdv = None
@@ -93,11 +92,6 @@ def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     except ValueError:
         logger.error(
             f"erreur lors du traitement de la ligne avec le gid {data['gid']}, com_insee={data['com_insee']}")
-
-    if data.get('address', None):
-        ville = urlify(departementUtils.get_city(data.get('address')))
-    else:
-        ville = urlify(data.get('com_nom', ''))
 
     center = CenterInfo(departement, ville, name, url)
     if data.get('iterator', '') == 'ordoclic':
