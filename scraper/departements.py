@@ -3,7 +3,7 @@ import json
 import logging
 from typing import List
 
-logger = logging.getLogger('scraper')
+logger = logging.getLogger("scraper")
 insee = {}
 
 
@@ -49,7 +49,7 @@ def to_departement_number(insee_code: str) -> str:
         insee_code = insee_code.zfill(5)
 
     if len(insee_code) != 5:
-        raise ValueError(f'Code INSEE non-valide : {insee_code}')
+        raise ValueError(f"Code INSEE non-valide : {insee_code}")
 
     with open("data/input/insee_to_codepostal_and_code_departement.json") as json_file:
         insee_to_code_departement_table = json.load(json_file)
@@ -58,7 +58,7 @@ def to_departement_number(insee_code: str) -> str:
         return insee_to_code_departement_table[insee_code]["departement"]
 
     else:
-        raise ValueError(f'Code INSEE absent de la base des codes INSEE : {insee_code}')
+        raise ValueError(f"Code INSEE absent de la base des codes INSEE : {insee_code}")
 
 
 def cp_to_insee(cp):
@@ -71,5 +71,5 @@ def cp_to_insee(cp):
     if cp in insee:
         insee_com = insee.get(cp).get("insee")
     else:
-        logger.warning(f'Unable to translate cp >{cp}< to insee')
+        logger.warning(f"Unable to translate cp >{cp}< to insee")
     return insee_com

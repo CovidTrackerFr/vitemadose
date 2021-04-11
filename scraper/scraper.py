@@ -93,7 +93,7 @@ def cherche_prochain_rdv_dans_centre(centre):
         has_error = scrape_error
     except Exception as e:
         logger.error(
-            f"erreur lors du traitement de la ligne avec le gid {centre['gid']}"
+            f"erreur lors du traitement de la ligne avec le gid {centre['gid'] : {e}}"
         )
         traceback.print_exc()
 

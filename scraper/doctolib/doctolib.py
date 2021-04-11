@@ -87,14 +87,12 @@ class DoctolibSlots:
 
         # temporary_booking_disabled ??
 
-        agenda_ids_q = "-".join(agenda_ids)
-        practice_ids_q = "-".join(practice_ids)
         start_date = request.get_start_date()
 
         first_availability = None
         for motive_id in visit_motive_ids:
             slots_api_url = f"https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}"\
-            "&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}"
+            "&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}"\
             "&destroy_temporary=true&limit={DOCTOLIB_SLOT_LIMIT}"
             response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
             if response.status_code == 403:
