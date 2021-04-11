@@ -78,7 +78,7 @@ def convert_ordoclic_to_center_info(data: dict, center: CenterInfo) -> CenterInf
     center.metadata = dict()
     center.metadata['address'] = f'{localization["address"]}, {localization["zip"]} {localization["city"]}'
     if len(data.get('phone_number', '')) > 3:
-        center.metadata['phone_number'] = data.get('phone_number')
+        center.metadata['phone_number'] = format_phone_number(data.get('phone_number'))
     center.metadata['business_hours'] = None
     return center
 

@@ -16,6 +16,7 @@ insee = {}
 
 class departementUtils:
 
+
     @staticmethod
     def import_departements() -> List[str]:
         """
