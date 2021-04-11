@@ -1,4 +1,3 @@
-from datetime import datetime
 import json
 
 import requests
@@ -46,7 +45,6 @@ class TestMaiia:
         assert fetch_slots(scrap_request) is None
 
     def test_fetch_slot_with_incorrect_soup(self):
-        dt = datetime.now()
         scrap_request = ScraperRequest("http://google.com", TestMaiia.START_DATE)
         assert fetch_slots(scrap_request) is None
 
