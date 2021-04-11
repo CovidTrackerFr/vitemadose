@@ -83,7 +83,7 @@ def get_profiles(zip: str, client: httpx.Client = DEFAULT_CLIENT):
 
 def parse_all_zip():
     profiles = dict()
-    with open("data/output/codepostal_to_insee.json", "r") as json_file:
+    with open("data/input/codepostal_to_insee.json", "r") as json_file:
         zips = json.load(json_file)
         for zip in zips.keys():
             logger.info(f'Searching CODE POSTAL {zip}...')
