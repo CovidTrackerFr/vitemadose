@@ -23,6 +23,8 @@ from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
 from .maiia import fetch_slots as maiia_fetch_slots
 from .ordoclic import centre_iterator as ordoclic_centre_iterator
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
+from .mapharma.mapharma import centre_iterator as mapharma_centre_iterator
+from .mapharma.mapharma import fetch_slots as mapharma_fetch_slots
 
 POOL_SIZE = int(os.getenv('POOL_SIZE', 15))
 
@@ -233,6 +235,9 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
             'Maiia': {'urls': [
                 'https://www.maiia.com'
             ], 'scraper_ptr': maiia_fetch_slots},
+            'Mapharma': {'urls': [
+                'https://mapharma.net/',
+            ], 'scraper_ptr': mapharma_fetch_slots},
             'Ordoclic': {'urls': [
                 'https://app.ordoclic.fr/',
             ], 'scraper_ptr': ordoclic_fetch_slots}
@@ -263,6 +268,8 @@ def centre_iterator():
     for centre in gouv_centre_iterator():
         yield centre
     for centre in ordoclic_centre_iterator():
+        yield centre
+    for centre in mapharma_centre_iterator():
         yield centre
     try:
         center_path = 'data/output/doctolib-centers.json'
