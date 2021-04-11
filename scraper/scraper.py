@@ -25,8 +25,11 @@ from .ordoclic import centre_iterator as ordoclic_centre_iterator
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
 from .mapharma.mapharma import centre_iterator as mapharma_centre_iterator
 from .mapharma.mapharma import fetch_slots as mapharma_fetch_slots
+from random import random
 
 POOL_SIZE = int(os.getenv('POOL_SIZE', 15))
+PARTIAL_SCRAPE = float(os.getenv('PARTIAL_SCRAPE', 1.0))
+PARTIAL_SCRAPE = max(0, min(PARTIAL_SCRAPE, 1))
 
 logger = enable_logger_for_production()
 
@@ -56,9 +59,10 @@ def scrape_debug(urls):
 
 def scrape():
     with Pool(POOL_SIZE) as pool:
+        centre_iterator_proportion = (c for c in centre_iterator() if random() < PARTIAL_SCRAPE)
         centres_cherchés = pool.imap_unordered(
             cherche_prochain_rdv_dans_centre,
-            centre_iterator(),
+            centre_iterator_proportion,
             1
         )
         compte_centres, compte_centres_avec_dispo, compte_bloqués = export_data(centres_cherchés)
