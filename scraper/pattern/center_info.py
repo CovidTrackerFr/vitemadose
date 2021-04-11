@@ -1,7 +1,6 @@
 import json
 from typing import Optional
-from scraper.departements import to_departement_number
-from scraper.departements import get_city
+from utils.vmd_utils import departementUtils
 from scraper.pattern.center_location import CenterLocation, convert_csv_data_to_location
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult
@@ -90,13 +89,13 @@ def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     ville=''
     url = data.get('rdv_site_web', None)
     try:
-        departement = to_departement_number(data.get('com_insee', None))
+        departement = departementUtils.to_departement_number(data.get('com_insee', None))
     except ValueError:
         logger.error(
             f"erreur lors du traitement de la ligne avec le gid {data['gid']}, com_insee={data['com_insee']}")
 
     if data.get('address', None):
-        ville = urlify(get_city(data.get('address')))
+        ville = urlify(departementUtils.get_city(data.get('address')))
     else:
         ville = urlify(data.get('com_nom', ''))
 
