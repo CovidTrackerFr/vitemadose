@@ -1,7 +1,7 @@
 import datetime as dt
 import pytest
 import json
-from scraper.departements import import_departements
+from utils.vmd_utils import departementUtils
 from scraper.pattern.scraper_result import ScraperResult
 from scraper.scraper import fetch_centre_slots, export_data
 from scraper.pattern.scraper_request import ScraperRequest
@@ -55,7 +55,7 @@ def test_export_data(tmp_path):
         export_data(centres_cherchés, outpath_format=outpath_format)
 
     # All departements for which we don't have data should be empty.
-    for departement in import_departements():
+    for departement in departementUtils.import_departements():
         if departement in ("01", "59"):
             continue
         content = json.loads((out_dir / f"{departement}.json").read_text())

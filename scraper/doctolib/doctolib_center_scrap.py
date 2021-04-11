@@ -9,7 +9,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from scraper.doctolib.doctolib_filters import parse_practitioner_type
-from scraper.ordoclic import cp_to_insee
+from utils.vmd_utils import departementUtils
 from scraper.scraper import centre_iterator
 from utils.vmd_logger import enable_logger_for_production
 
@@ -112,7 +112,7 @@ def get_doctolib_center_data(url_data):
     url_data['address'] = place['full_address']
     url_data['long_coor1'] = place['longitude']
     url_data['lat_coor1'] = place['latitude']
-    url_data["com_insee"] = cp_to_insee(place["zipcode"])
+    url_data["com_insee"] = departementUtils.cp_to_insee(place["zipcode"])
 
     # Parse landline number
     if place.get('landline_number', None):
