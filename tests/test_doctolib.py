@@ -221,7 +221,7 @@ def test_find_visit_motive_category_id():
             ]
         }
     }
-    assert _find_visit_motive_category_id(data) == 42
+    assert _find_visit_motive_category_id(data) == [42]
 
 
 def test_find_visit_motive_id():
@@ -239,7 +239,7 @@ def test_find_visit_motive_id():
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=42) == [1]
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == [1]
 
     # Plusieurs motifs dispo => on choisit le 1er dans la liste.
     data = {
@@ -258,7 +258,7 @@ def test_find_visit_motive_id():
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=42) == [1]
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == [1]
 
     # Mix avec un motif autre
     data = {
@@ -275,7 +275,7 @@ def test_find_visit_motive_id():
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=42) == [2]
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == [2]
 
     # Mix avec une catégorie autre
     data = {
@@ -298,7 +298,7 @@ def test_find_visit_motive_id():
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=42) == [2]
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == [2]
 
     # Plusieurs types de vaccin
     data = {
@@ -349,7 +349,7 @@ def test_find_visit_motive_id():
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=42) == [1, 2, 3]
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == [1, 2, 3]
 
 
 def test_find_agenda_and_practice_ids():

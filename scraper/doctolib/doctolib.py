@@ -66,14 +66,17 @@ class DoctolibSlots:
         rdata = data.get('data', {})
         appointment_count = 0
         request.update_practitioner_type(parse_practitioner_type(centre, rdata))
-
-        if len(rdata.get('places', [])) > 1:
+        if practice_id:
+            practice_id = link_practice_ids(practice_id, rdata)
+        if len(rdata.get('places', [])) > 1 and practice_id is None:
             practice_id = rdata.get('places')[0].get('practice_ids', None)
+        set_doctolib_center_internal_id(request, rdata, practice_id)
         # visit_motive_categories
         # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1
         visit_motive_category_id = _find_visit_motive_category_id(data)
         # visit_motive_id
         visit_motive_ids = _find_visit_motive_id(data, visit_motive_category_id=visit_motive_category_id)
+
         if visit_motive_ids is None:
             return None
         # practice_ids / agenda_ids
@@ -128,6 +131,19 @@ class DoctolibSlots:
         return first_availability
 
 
+def set_doctolib_center_internal_id(request: ScraperRequest, data: dict, practice_ids):
+    profile = data.get('profile')
+
+    if not profile:
+        return
+    profile_id = profile.get('id', None)
+    if not profile_id:
+        return
+    profile_id = int(profile_id)
+    practices = "-".join(str(x) for x in practice_ids) if practice_ids is not None else ""
+    request.internal_id = f"{profile_id}[{practices}]"
+
+
 def _parse_centre(rdv_site_web: str) -> Optional[str]:
     """
     Etant donné l'URL de la page web correspondant au centre de vaccination,
@@ -144,6 +160,32 @@ def _parse_centre(rdv_site_web: str) -> Optional[str]:
     if centre == '':
         return None
     return centre
+
+
+def link_practice_ids(practice_id: list, rdata: dict):
+    if not practice_id:
+        return practice_id
+    places = rdata.get('places')
+    if not places:
+        return practice_id
+    base_place = None
+    place_ids = []
+    for place in places:
+        place_id = place.get('id', None)
+        if not place_id:
+            continue
+        place_ids.append(int(place_id.replace("practice-", "")))
+        if place_id == f'practice-{practice_id[0]}':
+            base_place = place
+            break
+    if not base_place:
+        return place_ids
+    for place in places:
+        if place.get('id') == base_place.get('id'):
+            continue
+        if place.get('address') == base_place.get('address'):  # Tideous check
+            practice_id.append(int(place.get('id').replace("practice-", "")))
+    return practice_id
 
 
 def _parse_practice_id(rdv_site_web: str):
@@ -180,19 +222,20 @@ def _parse_practice_id(rdv_site_web: str):
         return None
 
 
-def _find_visit_motive_category_id(data: dict) -> Optional[str]:
+def _find_visit_motive_category_id(data: dict):
     """
     Etant donnée une réponse à /booking/<centre>.json, renvoie le cas échéant
     l'ID de la catégorie de motif correspondant à 'Non professionnels de santé'
     (qui correspond à la population civile).
     """
+    categories = []
     for category in data.get('data', {}).get('visit_motive_categories', []):
         if is_category_relevant(category['name']):
-            return category['id']
-    return None
+            categories.append(category['id'])
+    return categories
 
 
-def _find_visit_motive_id(data: dict, visit_motive_category_id: str = None):
+def _find_visit_motive_id(data: dict, visit_motive_category_id: list = None):
     """
     Etant donnée une réponse à /booking/<centre>.json, renvoie le cas échéant
     l'ID du 1er motif de visite disponible correspondant à une 1ère dose pour
@@ -220,12 +263,12 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: str = None):
         # sont pas non plus rattachés à une catégorie
         # * visit_motive_category_id=<id> : filtre => on veut les motifs qui
         # correspondent à la catégorie en question.
-        if visit_motive.get('visit_motive_category_id') == visit_motive_category_id:
+        if visit_motive.get('visit_motive_category_id') in visit_motive_category_id or not visit_motive_category_id:
             relevant_motives.append(visit_motive['id'])
     return relevant_motives
 
 
-def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str, practice_id_filter: list = None) -> Tuple[
+def _find_agenda_and_practice_ids(data: dict, visit_motive_id: list, practice_id_filter: list = None) -> Tuple[
     list, list]:
     """
     Etant donné une réponse à /booking/<centre>.json, renvoie tous les

@@ -6,6 +6,8 @@ import json
 import os
 import traceback
 from multiprocessing import Pool
+from urllib.parse import urlparse, urlencode, urlunparse, parse_qs
+
 from scraper.error import ScrapeError, BlockedByDoctolibError
 
 import pytz
@@ -15,7 +17,7 @@ from scraper.pattern.center_info import convert_csv_data_to_center_info
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
-from .departements import to_departement_number, import_departements
+from utils.vmd_utils import departementUtils
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
 from .maiia import fetch_slots as maiia_fetch_slots
@@ -44,6 +46,7 @@ def scrape_debug(urls):
     enable_logger_for_debug()
     start_date = get_start_date()
     for rdv_site_web in urls:
+        rdv_site_web = fix_scrap_urls(rdv_site_web)
         logger.info('scraping URL %s', rdv_site_web)
         try:
             result = fetch_centre_slots(rdv_site_web, start_date)
@@ -94,22 +97,36 @@ def cherche_prochain_rdv_dans_centre(centre):
         logger.info(
             f'{centre.get("gid", "")!s:>8} {center_data.plateforme!s:16} {"Erreur" or ""!s:32} {center_data.departement!s:6}')
 
-    if result and result.platform == 'Doctolib' and not center_data.url.islower():
-        center_data.url = center_data.url.lower()
+    if result is not None and result.request.url is not None:
+        center_data.url = result.request.url.lower()
 
     if 'type' in centre:
         center_data.type = centre['type']
     if not center_data.type:
         center_data.type = VACCINATION_CENTER
+    center_data.gid = centre.get("gid", "")
     logger.debug(center_data.default())
     return center_data.default()
 
 
 def fix_scrap_urls(url):
     url = url.strip()
+
     # Fix Keldoc
     if url.startswith("https://www.keldoc.com/"):
         url = url.replace("https://www.keldoc.com/", "https://vaccination-covid.keldoc.com/")
+    # Clean Doctolib
+    if url.startswith('https://partners.doctolib.fr') or url.startswith('https://www.doctolib.fr'):
+        u = urlparse(url)
+        query = parse_qs(u.query, keep_blank_values=True)
+        to_remove = []
+        for query_name in query:
+            if query_name.startswith('highlight') or query_name == 'enable_cookies_consent':
+                to_remove.append(query_name)
+        [query.pop(rm, None) for rm in to_remove]
+        query.pop('speciality_id', None)
+        u = u._replace(query=urlencode(query, True))
+        url = urlunparse(u)
     return url
 
 
@@ -132,26 +149,59 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
             'centres_disponibles': [],
             'centres_indisponibles': []
         }
-        for code in import_departements()
+        for code in departementUtils.import_departements()
     }
 
+    outpath = outpath_format.format("centres_non_pris_en_compte_gouv")
+    try:
+        with open(outpath, "r") as fichier:
+            centres_fermes_gouv = json.load(fichier)
+            centres_fermes_gouv = centres_fermes_gouv["centres_fermes"].values()
+    except Exception as e:
+        centres_fermes_gouv = {}
+        logger.warning("Pas de fichier centres_non_pris_en_compte_gouv.json")
+
+    centres_fermes_dispo_gouv = {"centres_disponibles": [],"centres_indisponibles":[]}
+
+    internal_ids = []
     for centre in centres_cherchés:
-        centre['nom'] = centre['nom'].strip()
-        compte_centres += 1
-        code_departement = centre['departement']
-        if code_departement in par_departement:
-            erreur = centre.pop('erreur', None)
-            if centre['prochain_rdv'] is None:
-                par_departement[code_departement]['centres_indisponibles'].append(centre)
-                if isinstance(erreur, BlockedByDoctolibError):
-                    par_departement[code_departement]['doctolib_bloqué'] = True
-                    bloqués_doctolib += 1
+        if centre["url"] not in centres_fermes_gouv:
+            centre['nom'] = centre['nom'].strip()
+            compte_centres += 1
+            code_departement = centre['departement']
+            if centre.get('internal_id'):
+                if centre.get('internal_id') in internal_ids:
+                    logger.warning(
+                        f"le centre {centre['nom']} ({code_departement}) est un doublon (ID interne: {centre.get('internal_id')})")
+                    continue
+                internal_ids.append(centre.get('internal_id'))
+
+            if code_departement in par_departement:
+                erreur = centre.pop('erreur', None)
+                if centre['prochain_rdv'] is None:
+                    par_departement[code_departement]['centres_indisponibles'].append(centre)
+                    if isinstance(erreur, BlockedByDoctolibError):
+                        par_departement[code_departement]['doctolib_bloqué'] = True
+                        bloqués_doctolib += 1
+                else:
+                    compte_centres_avec_dispo += 1
+                    par_departement[code_departement]['centres_disponibles'].append(centre)
             else:
-                compte_centres_avec_dispo += 1
-                par_departement[code_departement]['centres_disponibles'].append(centre)
+                logger.warning(
+                    f"le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
         else:
-            logger.warning(
-                f"le centre {centre['nom']} ({code_departement}) n'a pas pu être rattaché à un département connu")
+            if centre['prochain_rdv'] is None:
+                centres_fermes_dispo_gouv["centres_indisponibles"].append(centre)
+            else:
+                logger.info(f"le centre {centre['nom']} est fermé et a un rdv disponible")
+                centres_fermes_dispo_gouv["centres_disponibles"].append(centre)
+    
+    nb_fermes_dispos = len(centres_fermes_dispo_gouv["centres_disponibles"])
+    logger.info(f" {nb_fermes_dispos} centres sont fermés et ont un rdv disponible")
+
+    outpath = outpath_format.format("centres_fermes_dispo_gouv")
+    with open(outpath, "w") as fichier:
+        json.dump(centres_fermes_dispo_gouv, fichier, indent=2)
 
     outpath = outpath_format.format("info_centres")
     with open(outpath, "w") as info_centres:
@@ -164,8 +214,6 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         outpath = outpath_format.format(code_departement)
         logger.debug(f'writing result to {outpath} file')
         with open(outpath, "w") as outfile:
-            if code_departement == "75":  # TODO remove debug
-                print(disponibilités)
             outfile.write(json.dumps(disponibilités, indent=2))
 
     return compte_centres, compte_centres_avec_dispo, bloqués_doctolib
@@ -217,14 +265,8 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
 
 
 def centre_iterator():
-    url = "https://www.data.gouv.fr/fr/datasets/r/5cb21a85-b0b0-4a65-a249-806a040ec372"
-    response = requests.get(url)
-    response.raise_for_status()
-
-    reader = io.StringIO(response.content.decode('utf8'))
-    csvreader = csv.DictReader(reader, delimiter=';')
-    for row in csvreader:
-        yield row
+    for centre in gouv_centre_iterator():
+        yield centre
     for centre in ordoclic_centre_iterator():
         yield centre
     for centre in mapharma_centre_iterator():
@@ -243,6 +285,45 @@ def centre_iterator():
             yield center
     except Exception as e:
         logger.warning(f"Unable to scrape doctolib centers: {e}")
+
+
+def gouv_centre_iterator(outpath_format='data/output/{}.json'):
+
+    url = "https://www.data.gouv.fr/fr/datasets/r/5cb21a85-b0b0-4a65-a249-806a040ec372"
+    response = requests.get(url)
+    response.raise_for_status()
+
+    reader = io.StringIO(response.content.decode('utf8'))
+    csvreader = csv.DictReader(reader, delimiter=';')
+
+    total = 0
+
+    centres_non_pris_en_compte = {"centres_fermes":{}, "centres_urls_vides":[]}
+
+    for row in csvreader:
+
+        row["rdv_site_web"] = fix_scrap_urls(row["rdv_site_web"])
+        if row["centre_fermeture"] == "t":
+            centres_non_pris_en_compte["centres_fermes"][row["gid"]] = row["rdv_site_web"]
+
+        if len(row["rdv_site_web"]):
+            yield row
+        else:
+            centres_non_pris_en_compte["centres_urls_vides"].append(row["gid"])            
+
+        total += 1
+    
+    nb_fermes = len(centres_non_pris_en_compte["centres_fermes"])
+    nb_urls_vides = len(centres_non_pris_en_compte["centres_urls_vides"])
+
+    logger.info(f"Il y a {nb_fermes} centres fermes dans le fichier gouv sur un total de {total}")
+
+    nb_urls_vides = len(centres_non_pris_en_compte["centres_urls_vides"])
+    logger.info(f"Il y a {nb_urls_vides} centres avec une URL vide dans le fichier gouv sur un total de {total}")
+
+    outpath = outpath_format.format("centres_non_pris_en_compte_gouv")
+    with open(outpath, "w") as fichier:
+        json.dump(centres_non_pris_en_compte, fichier, indent=2)
 
 
 if __name__ == "__main__":

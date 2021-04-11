@@ -1,26 +1,29 @@
 import json
 from typing import Optional
-
-from scraper.departements import to_departement_number
+from utils.vmd_utils import departementUtils
 from scraper.pattern.center_location import CenterLocation, convert_csv_data_to_location
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult
+
+from utils.vmd_utils import urlify
 from utils.vmd_logger import get_logger
 
 logger = get_logger()
 
 
 class CenterInfo:
-    def __init__(self, departement: str, nom: str, url: str):
+    def __init__(self, departement: str, ville: str, nom: str, url: str):
         self.departement = departement
         self.nom = nom
         self.url = url
+        self.ville = ville
         self.location = None
         self.metadata = None
         self.prochain_rdv = None
         self.plateforme = None
         self.type = None
         self.appointment_count = 0
+        self.internal_id = None
 
     def fill_localization(self, location: Optional[CenterLocation]):
         self.location = location
@@ -30,6 +33,7 @@ class CenterInfo:
         self.plateforme = result.platform
         self.type = result.request.practitioner_type
         self.appointment_count = result.request.appointment_count
+        self.internal_id = result.request.internal_id
 
     def default(self):
         if type(self.location) is CenterLocation:
@@ -70,6 +74,7 @@ def convert_ordoclic_to_center_info(data: dict, center: CenterInfo) -> CenterInf
     if coordinates['lon'] or coordinates['lat']:
         loc = CenterLocation(coordinates['lon'], coordinates['lat'])
         center.fill_localization(loc)
+    center.ville=urlify(localization["city"])
     center.metadata = dict()
     center.metadata['address'] = f'{localization["address"]}, {localization["zip"]} {localization["city"]}'
     if len(data.get('phone_number', '')) > 3:
@@ -81,14 +86,20 @@ def convert_ordoclic_to_center_info(data: dict, center: CenterInfo) -> CenterInf
 def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     name = data.get('nom', None)
     departement = ''
+    ville=''
     url = data.get('rdv_site_web', None)
     try:
-        departement = to_departement_number(data.get('com_insee', None))
+        departement = departementUtils.to_departement_number(data.get('com_insee', None))
     except ValueError:
         logger.error(
             f"erreur lors du traitement de la ligne avec le gid {data['gid']}, com_insee={data['com_insee']}")
 
-    center = CenterInfo(departement, name, url)
+    if data.get('address', None):
+        ville = urlify(departementUtils.get_city(data.get('address')))
+    else:
+        ville = urlify(data.get('com_nom', ''))
+
+    center = CenterInfo(departement, ville, name, url)
     if data.get('iterator', '') == 'ordoclic':
         return convert_ordoclic_to_center_info(data, center)
     center.fill_localization(convert_csv_data_to_location(data))
