@@ -17,7 +17,7 @@ from scraper.pattern.center_info import convert_csv_data_to_center_info
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
-from .departements import to_departement_number, import_departements
+from utils.vmd_utils import departementUtils
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
 from .maiia import fetch_slots as maiia_fetch_slots
@@ -149,7 +149,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
             'centres_disponibles': [],
             'centres_indisponibles': []
         }
-        for code in import_departements()
+        for code in departementUtils.import_departements()
     }
 
     outpath = outpath_format.format("centres_non_pris_en_compte_gouv")
