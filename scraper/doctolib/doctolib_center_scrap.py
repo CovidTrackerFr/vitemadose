@@ -1,8 +1,6 @@
 import csv
 import io
 import json
-import time
-import traceback
 from urllib import parse
 
 import requests
@@ -10,7 +8,6 @@ from bs4 import BeautifulSoup
 
 from scraper.doctolib.doctolib_filters import parse_practitioner_type
 from utils.vmd_utils import departementUtils
-from scraper.scraper import centre_iterator
 from utils.vmd_logger import enable_logger_for_production
 
 BASE_URL = 'https://www.doctolib.fr/vaccination-covid-19/france?page={0}'

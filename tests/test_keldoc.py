@@ -6,11 +6,9 @@ from pathlib import Path
 import httpx
 import pytest
 
-from scraper.keldoc.keldoc import fetch_slots
 from scraper.keldoc.keldoc_center import KeldocCenter
 from scraper.keldoc.keldoc_filters import filter_vaccine_specialties, filter_vaccine_motives, is_appointment_relevant, \
     is_specialty_relevant
-from scraper.pattern.scraper_request import ScraperRequest
 
 CENTER1_KELDOC = {
     "/api/patients/v2/clinics/2563/specialties/144/cabinets": "center1-cabinet",
@@ -105,7 +103,6 @@ def test_keldoc_missing_params():
 
 def test_keldoc_timeout():
     center1_url = "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/foo/bar?specialty=no"
-    center1_redirect = "https://vaccination-covid.keldoc.com/redirect/?dom=foo&user=ok&specialty=no"
 
     def app(request: httpx.Request) -> httpx.Response:
         if request.url.path == "/centre-hospitalier-regional/foo/bar":

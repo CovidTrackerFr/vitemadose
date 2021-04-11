@@ -1,8 +1,6 @@
 import datetime as dt
-import pytest
 import json
 from utils.vmd_utils import departementUtils
-from scraper.pattern.scraper_result import ScraperResult
 from scraper.scraper import fetch_centre_slots, export_data
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
