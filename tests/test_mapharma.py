@@ -1,11 +1,7 @@
 import json
-import requests
 import httpx
-from datetime import datetime
 from bs4 import BeautifulSoup
 from pathlib import Path
-
-import scraper
 
 from scraper.mapharma.mapharma import (
     get_name,
@@ -14,7 +10,6 @@ from scraper.mapharma.mapharma import (
     get_profile,
     get_profiles)
 
-from scraper.pattern.scraper_request import ScraperRequest
 
 
 def get_soup():
