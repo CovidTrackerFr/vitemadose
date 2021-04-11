@@ -100,14 +100,11 @@ def format_phone_number(_phone_number: str) -> str:
     if not phone_number:
         return ""
 
-    if phone_number[0] == '+':
-        phone_number = phone_number[3:]
-        phone_number = "0" + phone_number
-
-
     phone_number = phone_number.replace(" ", "")
     phone_number = phone_number.replace(".", "")
 
-    phone_number = " ".join(a+b for a,b in zip(phone_number[::2], phone_number[1::2]))
+    if not phone_number[0] == '+':
+        phone_number = "+33" + phone_number[1:]
+
 
     return phone_number
