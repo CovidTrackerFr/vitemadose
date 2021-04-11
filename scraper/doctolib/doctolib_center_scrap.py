@@ -7,7 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from scraper.doctolib.doctolib_filters import parse_practitioner_type
-from utils.vmd_utils import departementUtils, format_phone_number
+from utils.vmd_utils import departementUtils
 from utils.vmd_logger import enable_logger_for_production
 
 BASE_URL = 'https://www.doctolib.fr/vaccination-covid-19/france?page={0}'
@@ -113,7 +113,7 @@ def get_doctolib_center_data(url_data):
 
     # Parse landline number
     if place.get('landline_number', None):
-        url_data['phone_number'] = format_phone_number(place.get('landline_number', None))
+        url_data['phone_number'] = place.get('landline_number', None)
 
     url_data = parse_doctolib_business_hours(url_data, place)
     return url_data
