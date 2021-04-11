@@ -11,7 +11,8 @@ from bs4 import BeautifulSoup
 
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
-from scraper.departements import cp_to_insee
+from utils.vmd_utils import departementUtils
+
 
 timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
@@ -145,5 +146,5 @@ def centre_iterator():
         for zip in mapharma.keys():
             for profile in mapharma[zip]:
                 id = profile['id']
-                centre = {'gid': f'{zip}-{id}', 'rdv_site_web': profile['url'], 'com_insee': cp_to_insee(zip), 'nom': profile['name'], "location": { "zip": zip }, "address": profile['address'] , 'iterator': 'mapharma', 'type': DRUG_STORE} 
+                centre = {'gid': f'{zip}-{id}', 'rdv_site_web': profile['url'], 'com_insee': departementUtils.cp_to_insee(zip), 'nom': profile['name'], "location": { "zip": zip }, "address": profile['address'] , 'iterator': 'mapharma', 'type': DRUG_STORE} 
                 yield centre
