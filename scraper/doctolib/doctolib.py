@@ -2,7 +2,6 @@ import time
 import logging
 import os
 import re
-from datetime import date
 from typing import Optional, Tuple
 
 import httpx
@@ -94,7 +93,9 @@ class DoctolibSlots:
 
         first_availability = None
         for motive_id in visit_motive_ids:
-            slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={DOCTOLIB_SLOT_LIMIT}'
+            slots_api_url = f"https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}"\
+            "&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}"
+            "&destroy_temporary=true&limit={DOCTOLIB_SLOT_LIMIT}"
             response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
             if response.status_code == 403:
                 raise BlockedByDoctolibError(centre_api_url)
@@ -268,8 +269,7 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: list = None):
     return relevant_motives
 
 
-def _find_agenda_and_practice_ids(data: dict, visit_motive_id: list, practice_id_filter: list = None) -> Tuple[
-    list, list]:
+def _find_agenda_and_practice_ids(data: dict, visit_motive_id: list, practice_id_filter: list = None) -> Tuple[list, list]:
     """
     Etant donné une réponse à /booking/<centre>.json, renvoie tous les
     "agendas" et "pratiques" (jargon Doctolib) qui correspondent au motif de visite.

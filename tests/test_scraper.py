@@ -1,8 +1,6 @@
 import datetime as dt
-import pytest
 import json
 from scraper.departements import import_departements
-from scraper.pattern.scraper_result import ScraperResult
 from scraper.scraper import fetch_centre_slots, export_data
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
@@ -17,7 +15,7 @@ def test_export_data(tmp_path):
             "url": "https://example.com/bugey-sud",
             "plateforme": "Doctolib",
             "prochain_rdv": "2021-04-10T00:00:00",
-            "erreur": None
+            "erreur": None,
         },
         {
             "departement": "59",
@@ -25,7 +23,7 @@ def test_export_data(tmp_path):
             "url": "https://example.com/ch-armentieres",
             "plateforme": "Keldoc",
             "prochain_rdv": "2021-04-11:00:00",
-            "erreur": None
+            "erreur": None,
         },
         {
             "departement": "59",
@@ -33,7 +31,7 @@ def test_export_data(tmp_path):
             "url": "https://example.com/clinique-du-cambresis",
             "plateforme": "Maiia",
             "prochain_rdv": None,
-            "erreur": None
+            "erreur": None,
         },
         {
             # Unknown departement (edge case) => should be skipped w/o failing
@@ -42,7 +40,7 @@ def test_export_data(tmp_path):
             "url": "https://example.com/hopital-magique",
             "plateforme": "Doctolib",
             "prochain_rdv": "2021-04-12:00:00",
-            "erreur": None
+            "erreur": None,
         },
     ]
 
@@ -117,7 +115,7 @@ def test_export_data_when_blocked(tmp_path):
             "url": "https://example.com/clinique-du-cambresis",
             "plateforme": "Maiia",
             "prochain_rdv": "2021-04-12:00:00",
-            "erreur": None
+            "erreur": None,
         },
         {
             "departement": "14",
@@ -125,7 +123,7 @@ def test_export_data_when_blocked(tmp_path):
             "url": "https://example.com/hopital-magique",
             "plateforme": "Doctolib",
             "prochain_rdv": None,
-            "erreur": BlockedByDoctolibError("https://example.com/hopital-magique")
+            "erreur": BlockedByDoctolibError("https://example.com/hopital-magique"),
         },
     ]
 
@@ -135,7 +133,9 @@ def test_export_data_when_blocked(tmp_path):
 
     fake_now = dt.datetime(2021, 4, 4)
     with mock_datetime_now(fake_now):
-        total, actifs, bloqués = export_data(centres_cherchés, outpath_format=outpath_format)
+        total, actifs, bloqués = export_data(
+            centres_cherchés, outpath_format=outpath_format
+        )
 
     # les totaux doivent être bons
     assert total == 2
@@ -148,13 +148,15 @@ def test_export_data_when_blocked(tmp_path):
         "version": 1,
         "doctolib_bloqué": True,
         "centres_disponibles": [],
-        "centres_indisponibles": [{
-            "departement": "14",
-            "nom": "Hôpital magique",
-            "url": "https://example.com/hopital-magique",
-            "plateforme": "Doctolib",
-            "prochain_rdv": None,
-        }],
+        "centres_indisponibles": [
+            {
+                "departement": "14",
+                "nom": "Hôpital magique",
+                "url": "https://example.com/hopital-magique",
+                "plateforme": "Doctolib",
+                "prochain_rdv": None,
+            }
+        ],
         "last_updated": "2021-04-04T00:00:00",
     }
 
@@ -175,11 +177,11 @@ def test_export_data_when_blocked(tmp_path):
     }
 
 
-
 def test_fetch_centre_slots():
     """
     We detect which implementation to use based on the visit URL.
     """
+
     def fake_doctolib_fetch_slots(request: ScraperRequest):
         return "2021-04-04"
 
@@ -190,17 +192,18 @@ def test_fetch_centre_slots():
         return "2021-04-06"
 
     fetch_map = {
-        'Doctolib': {'urls': [
-            'https://partners.doctolib.fr',
-            'https://www.doctolib.fr'
-        ], 'scraper_ptr': fake_doctolib_fetch_slots},
-        'Keldoc': {'urls': [
-            'https://vaccination-covid.keldoc.com',
-            'https://keldoc.com'
-        ], 'scraper_ptr': fake_keldoc_fetch_slots},
-        'Maiia': {'urls': [
-            'https://www.maiia.com'
-        ], 'scraper_ptr': fake_maiia_fetch_slots}
+        "Doctolib": {
+            "urls": ["https://partners.doctolib.fr", "https://www.doctolib.fr"],
+            "scraper_ptr": fake_doctolib_fetch_slots,
+        },
+        "Keldoc": {
+            "urls": ["https://vaccination-covid.keldoc.com", "https://keldoc.com"],
+            "scraper_ptr": fake_keldoc_fetch_slots,
+        },
+        "Maiia": {
+            "urls": ["https://www.maiia.com"],
+            "scraper_ptr": fake_maiia_fetch_slots,
+        },
     }
 
     start_date = "2021-04-03"

@@ -1,8 +1,6 @@
 import csv
 import io
 import json
-import time
-import traceback
 from urllib import parse
 
 import requests
@@ -10,7 +8,6 @@ from bs4 import BeautifulSoup
 
 from scraper.doctolib.doctolib_filters import parse_practitioner_type
 from scraper.ordoclic import cp_to_insee
-from scraper.scraper import centre_iterator
 from utils.vmd_logger import enable_logger_for_production
 
 BASE_URL = 'https://www.doctolib.fr/vaccination-covid-19/france?page={0}'
@@ -193,7 +190,7 @@ def main():
             logger.info(
                 "Page: {0} <-> Found {1} centers not in data.gouv CSV.".format(i, len(center_urls)))
         except Exception as e:
-            logger.warning("Unable to scrape Doctolib page {0}".format(i))
+            logger.warning(f"Unable to scrape Doctolib page {i} : {e}")
             break
         i += 1
     if len(center_urls) == 0:

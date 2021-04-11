@@ -46,7 +46,6 @@ class TestMaiia:
         assert fetch_slots(scrap_request) is None
 
     def test_fetch_slot_with_incorrect_soup(self):
-        dt = datetime.now()
         scrap_request = ScraperRequest("http://google.com", TestMaiia.START_DATE)
         assert fetch_slots(scrap_request) is None
 
@@ -76,10 +75,14 @@ class TestMaiia:
         scraper.maiia.get_any_availibility_from = mock_get_availibility
         scrap_request = ScraperRequest("", "")
 
-        assert get_slots_from(soup.script, scrap_request) == "2021-05-04T14:00:00.000000Z"
+        assert (
+            get_slots_from(soup.script, scrap_request) == "2021-05-04T14:00:00.000000Z"
+        )
 
         del availibility["firstPhysicalStartDateTime"]
-        assert get_slots_from(soup.script, scrap_request) == "2021-05-04T14:00:00.000000Z"
+        assert (
+            get_slots_from(soup.script, scrap_request) == "2021-05-04T14:00:00.000000Z"
+        )
 
         del availibility["closestPhysicalAvailability"]
         assert get_slots_from(soup.script, scrap_request) is None

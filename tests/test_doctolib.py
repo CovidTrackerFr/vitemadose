@@ -51,7 +51,7 @@ def test_blocked_by_doctolib_par_centre():
 
     error = None
     try:
-        next_date = slots.fetch(scrap_request)
+        slots.fetch(scrap_request)
     except Exception as e:
         error = e
     assert True is isinstance(error, BlockedByDoctolibError)
@@ -78,7 +78,7 @@ def test_blocked_by_doctolib_par_availabilities():
 
     error = None
     try:
-        next_date = slots.fetch(scrap_request)
+        slots.fetch(scrap_request)
     except Exception as e:
         error = e
     assert True is isinstance(error, BlockedByDoctolibError)
@@ -86,7 +86,6 @@ def test_blocked_by_doctolib_par_availabilities():
 
 def test_doctolib():
     # Cas de base.
-
     start_date = "2021-04-03"
     base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
     scrap_request = ScraperRequest(base_url, start_date)
@@ -234,7 +233,7 @@ def test_find_visit_motive_id():
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Moderna)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 }
             ]
         }
@@ -250,11 +249,14 @@ def test_find_visit_motive_id():
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Pfizer/BioNTech)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
-                {"id": 2, "name": "1ère injection vaccin COVID-19 (Moderna)",
+                {
+                    "id": 2,
+                    "name": "1ère injection vaccin COVID-19 (Moderna)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True},
+                    "first_shot_motive": True,
+                },
             ]
         }
     }
@@ -270,7 +272,7 @@ def test_find_visit_motive_id():
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Moderna)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
             ]
         }
@@ -286,14 +288,14 @@ def test_find_visit_motive_id():
                     "visit_motive_category_id": 41,
                     "name": "1ère injection vaccin COVID-19 (Moderna)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
                 {
                     "id": 2,
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (AstraZeneca)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
             ]
         }
@@ -309,42 +311,42 @@ def test_find_visit_motive_id():
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Moderna)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
                 {
                     "id": 2,
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (AstraZeneca)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
                 {
                     "id": 3,
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Pfizer-BioNTech)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
                 {
                     "id": 4,
                     "visit_motive_category_id": 42,
                     "name": "2nde injection vaccin COVID-19 (Moderna)",
                     "vaccination_motive": True,
-                    "first_shot_motive": False
+                    "first_shot_motive": False,
                 },
                 {
                     "id": 5,
                     "visit_motive_category_id": 42,
                     "name": "2nde injection vaccin COVID-19 (AstraZeneca)",
                     "vaccination_motive": True,
-                    "first_shot_motive": False
+                    "first_shot_motive": False,
                 },
                 {
                     "id": 6,
                     "visit_motive_category_id": 42,
                     "name": "2nde injection vaccin COVID-19 (Pfizer-BioNTech)",
                     "vaccination_motive": True,
-                    "first_shot_motive": False
+                    "first_shot_motive": False,
                 },
             ]
         }
@@ -389,6 +391,8 @@ def test_find_agenda_and_practice_ids():
     assert agenda_ids == ["10", "12"]
     assert practice_ids == ["20", "21", "24"]
 
-    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=[1], practice_id_filter=[21])
+    agenda_ids, practice_ids = _find_agenda_and_practice_ids(
+        data, visit_motive_id=[1], practice_id_filter=[21]
+    )
     assert agenda_ids == ["12"]
     assert practice_ids == ["21", "24"]

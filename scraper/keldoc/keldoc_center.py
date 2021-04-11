@@ -74,7 +74,7 @@ class KeldocCenter:
         # Some vaccination centers on Keldoc do not
         # accept online appointments, so you cannot retrieve data
         for mandatory_param in mandatory_params:
-            if not mandatory_param in params_get:
+            if mandatory_param not in params_get:
                 return False
         # If the vaccination URL have several medication places,
         # we select the current cabinet, since CSV data contains subURLs

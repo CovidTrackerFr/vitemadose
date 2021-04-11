@@ -8,27 +8,32 @@ from bs4 import BeautifulSoup
 
 from scraper.pattern.scraper_request import ScraperRequest
 
-BASE_AVAILIBILITY_URL = "https://www.maiia.com/api/pat-public/availability-closests"
+BASE_AVAILIBILITY_URL_CLOSEST = (
+    "https://www.maiia.com/api/pat-public/availability-closests"
+)
+BASE_AVAILIBILITY_URL = "https://www.maiia.com/api/pat-public/availabilities"
 MAIIA_DAY_LIMIT = 50
 MAIIA_LIMIT = 10000
 
 session = requests.Session()
-logger = logging.getLogger('scraper')
+logger = logging.getLogger("scraper")
 
 
 def get_availability_count(center_id, request: ScraperRequest):
     now = datetime.now()
-    start_date = datetime.strftime(now, '%Y-%m-%dT%H:%M:%S.%f%zZ')
-    end_date = (now + timedelta(days=MAIIA_DAY_LIMIT)).strftime('%Y-%m-%dT%H:%M:%S.%f%zZ')
+    start_date = datetime.strftime(now, "%Y-%m-%dT%H:%M:%S.%f%zZ")
+    end_date = (now + timedelta(days=MAIIA_DAY_LIMIT)).strftime(
+        "%Y-%m-%dT%H:%M:%S.%f%zZ"
+    )
 
-    url = f'https://www.maiia.com/api/pat-public/availabilities?centerId={center_id}&from={start_date}&to={end_date}&page=0&limit={MAIIA_LIMIT}'
+    url = f"{BASE_AVAILIBILITY_URL}?centerId={center_id}&from={start_date}&to={end_date}&page=0&limit={MAIIA_LIMIT}"
     req = session.get(url)
     req.raise_for_status()
     data = req.json()
-    items = data.get('items', [])
+    items = data.get("items", [])
     slots = []
     for item in items:
-        timeslot = item.get('timeSlotId', None)
+        timeslot = item.get("timeSlotId", None)
         if not timeslot:
             continue
         if timeslot not in slots:
@@ -38,7 +43,7 @@ def get_availability_count(center_id, request: ScraperRequest):
 
 def fetch_slots(request: ScraperRequest):
     response = session.get(request.get_url())
-    soup = BeautifulSoup(response.text, 'html.parser')
+    soup = BeautifulSoup(response.text, "html.parser")
     try:
         response.raise_for_status()
     except requests.exceptions.HTTPError as e:
@@ -55,7 +60,7 @@ def fetch_slots(request: ScraperRequest):
 def get_slots_from(rdv_form, request: ScraperRequest):
     json_form = json.loads(rdv_form.contents[0])
 
-    rdv_form_attributes = ['props', 'initialState', 'cards', 'item', 'center']
+    rdv_form_attributes = ["props", "initialState", "cards", "item", "center"]
     tmp = json_form
 
     # Étant donné que l'arbre des attributs est assez cossu / profond, il est préférable
@@ -68,7 +73,7 @@ def get_slots_from(rdv_form, request: ScraperRequest):
             return None
 
     center_infos = tmp
-    center_id = center_infos['id']
+    center_id = center_infos["id"]
 
     availability = get_any_availibility_from(center_id, request.get_start_date())
     if not availability or availability["availabilityCount"] == 0:
@@ -78,7 +83,7 @@ def get_slots_from(rdv_form, request: ScraperRequest):
     availability_count = get_availability_count(center_id, request)
     request.update_appointment_count(availability_count)
     if "firstPhysicalStartDateTime" in availability:
-        dt = isoparse(availability['firstPhysicalStartDateTime'])
+        dt = isoparse(availability["firstPhysicalStartDateTime"])
         dt = dt + timedelta(hours=2)
         dt = dt.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
         return dt
@@ -86,10 +91,10 @@ def get_slots_from(rdv_form, request: ScraperRequest):
     # Ne sachant pas si 'firstPhysicalStartDateTime' est un attribut par défault dans
     # la réponse, je préfère faire des tests sur l'existence des attributs
     if (
-            "closestPhysicalAvailability" in availability and
-            "startDateTime" in availability["closestPhysicalAvailability"]
+        "closestPhysicalAvailability" in availability
+        and "startDateTime" in availability["closestPhysicalAvailability"]
     ):
-        dt = isoparse(availability['closestPhysicalAvailability']["startDateTime"])
+        dt = isoparse(availability["closestPhysicalAvailability"]["startDateTime"])
         dt = dt + timedelta(hours=2)
         dt = dt.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
         return dt
@@ -98,7 +103,7 @@ def get_slots_from(rdv_form, request: ScraperRequest):
 
 
 def get_any_availibility_from(center_id, start_date):
-    start_date = datetime.strptime(start_date, '%Y-%m-%d')
+    start_date = datetime.strptime(start_date, "%Y-%m-%d")
     start_date = start_date.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
     request_params = {
         "date_str": start_date,
@@ -107,5 +112,5 @@ def get_any_availibility_from(center_id, start_date):
         "page": 0,
     }
 
-    availability = session.get(BASE_AVAILIBILITY_URL, params=request_params)
+    availability = session.get(BASE_AVAILIBILITY_URL_CLOSEST, params=request_params)
     return availability.json()
