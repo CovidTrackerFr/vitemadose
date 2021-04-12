@@ -10,6 +10,19 @@ from utils.vmd_logger import get_logger
 
 logger = get_logger()
 
+VACCINES = {
+    'Pfizer-BioNTech': [
+        'pfizer',
+        'biontech'
+    ],
+    'AstraZeneca': [
+        'astrazeneca',
+        'astra-zeneca'
+    ],
+    'Moderna': [
+        'moderna'
+    ]
+}
 
 class CenterInfo:
     def __init__(self, departement: str, ville: str, nom: str, url: str):
@@ -24,6 +37,7 @@ class CenterInfo:
         self.type = None
         self.appointment_count = 0
         self.internal_id = None
+        self.vaccine_type = None
         self.erreur = None
 
     def fill_localization(self, location: Optional[CenterLocation]):
@@ -35,6 +49,7 @@ class CenterInfo:
         self.type = result.request.practitioner_type
         self.appointment_count = result.request.appointment_count
         self.internal_id = result.request.internal_id
+        self.vaccine_type = result.request.vaccine_type
 
     def default(self):
         if type(self.location) is CenterLocation:
@@ -77,7 +92,7 @@ def convert_ordoclic_to_center_info(data: dict, center: CenterInfo) -> CenterInf
     if coordinates['lon'] or coordinates['lat']:
         loc = CenterLocation(coordinates['lon'], coordinates['lat'])
         center.fill_localization(loc)
-    center.ville=urlify(localization["city"])
+    center.ville = urlify(localization["city"])
     center.metadata = dict()
     center.metadata['address'] = f'{localization["address"]}, {localization["zip"]} {localization["city"]}'
     if len(data.get('phone_number', '')) > 3:
@@ -116,6 +131,17 @@ def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     return center
 
 
+def get_vaccine_name(name):
+    if not name:
+        return None
+    name = name.lower().strip()
+    for vaccine in VACCINES:
+        vaccine_names = VACCINES[vaccine]
+        for vaccine_name in vaccine_names:
+            if vaccine_name in name:
+                return vaccine
+    return None
+          
 def dict_to_center_info(data: dict) -> CenterInfo:
     center = CenterInfo(data.get('departement'), None, data.get('nom'), data.get('url'))
     center.plateforme = data.get('plateforme')

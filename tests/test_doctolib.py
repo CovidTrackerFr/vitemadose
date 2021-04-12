@@ -239,9 +239,9 @@ def test_find_visit_motive_id():
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == [1]
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {1: 'Moderna'}
 
-    # Plusieurs motifs dispo => on choisit le 1er dans la liste.
+    # Plusieurs motifs dispo
     data = {
         "data": {
             "visit_motives": [
@@ -253,12 +253,13 @@ def test_find_visit_motive_id():
                     "first_shot_motive": True
                 },
                 {"id": 2, "name": "1ère injection vaccin COVID-19 (Moderna)",
+                    "visit_motive_category_id": 42,
                     "vaccination_motive": True,
                     "first_shot_motive": True},
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == [1]
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {1: 'Pfizer-BioNTech', 2: 'Moderna'}
 
     # Mix avec un motif autre
     data = {
@@ -275,7 +276,7 @@ def test_find_visit_motive_id():
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == [2]
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {2: 'Moderna'}
 
     # Mix avec une catégorie autre
     data = {
@@ -298,7 +299,7 @@ def test_find_visit_motive_id():
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == [2]
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {2: 'AstraZeneca'}
 
     # Plusieurs types de vaccin
     data = {
@@ -349,7 +350,7 @@ def test_find_visit_motive_id():
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == [1, 2, 3]
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {1: 'Moderna', 2: 'AstraZeneca', 3: 'Pfizer-BioNTech'}
 
 
 def test_find_agenda_and_practice_ids():

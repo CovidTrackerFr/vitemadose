@@ -94,8 +94,8 @@ def parse_all_zip():
                 profiles[zip].append(profile)
             if zip in profiles and len(profiles[zip]) > 0:
                 logger.info(f'found {len(profiles[zip])} in CODE POSTAL {zip}')
-    with open("data/output/mapharma-centers.json", "w") as json_file:
-        json.dump(profiles, json_file, indent=4)
+        with open("data/output/mapharma-centers.json", "w") as json_file:
+                json.dump(profiles, json_file, indent=4)
 
 
 def get_slots(campagneId: str, optionId: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT):
