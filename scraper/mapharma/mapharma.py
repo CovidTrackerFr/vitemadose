@@ -97,8 +97,8 @@ def parse_all_zip():
                     profiles[zip] = []
                 profiles[zip].append(profile)
             if zip in profiles and len(profiles[zip]) > 0:
-                logger.info(f'found {len(profiles[zip])} in cp {zip}')
-    with open("data/input/mapharma.json", "w") as json_file:
+                logger.info(f'found {len(profiles[zip])} in postal code {zip}')
+    with open("data/output/mapharma-centers.json", "w") as json_file:
         json.dump(profiles, json_file, indent=4)
 
 
