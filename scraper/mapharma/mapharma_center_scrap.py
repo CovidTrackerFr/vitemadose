@@ -75,6 +75,7 @@ def async_parse_zip(zip: str):
     return []
 
 
+
 def main():
     zip_count = 0
     centers_count = 0
@@ -99,6 +100,7 @@ def main():
     logger.info(f'and all I got was a loosy count of {centers_count} centers 😭')
     with open("data/output/mapharma-centers.json", "w", encoding='utf8') as json_file:
         json.dump(result, json_file, indent = 4, sort_keys=True)
+
 
 if __name__ == "__main__":
     main()
