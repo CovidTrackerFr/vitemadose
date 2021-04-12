@@ -61,6 +61,7 @@ def parse_page_centers(page_id) -> List[dict]:
     r = requests.get(BASE_URL.format(page_id))
     data = r.json()
 
+    # TODO parallelism can be put here
     centers_page = [center_from_doctor_dict(payload)
                     for payload in data["data"]["doctors"]]
     return centers_page
