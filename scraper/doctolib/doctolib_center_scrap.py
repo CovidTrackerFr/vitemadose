@@ -92,6 +92,7 @@ def get_infos_etablissement(url):
     etablissement = {}
     response = requests.get(INFO_URL.format(url))
     response.raise_for_status()
+    time.sleep(0.1)
     data = response.json()
     data = data["data"]
     
