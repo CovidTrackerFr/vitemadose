@@ -1,3 +1,4 @@
+import json
 import time
 import logging
 import os
@@ -65,7 +66,8 @@ class DoctolibSlots:
         data = response.json()
         rdata = data.get('data', {})
         appointment_count = 0
-        request.update_practitioner_type(parse_practitioner_type(centre, rdata))
+        request.update_practitioner_type(
+            parse_practitioner_type(centre, rdata))
         if practice_id:
             practice_id = link_practice_ids(practice_id, rdata)
         if len(rdata.get('places', [])) > 1 and practice_id is None:
@@ -75,7 +77,8 @@ class DoctolibSlots:
         # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1
         visit_motive_category_id = _find_visit_motive_category_id(data)
         # visit_motive_id
-        visit_motive_ids = _find_visit_motive_id(data, visit_motive_category_id=visit_motive_category_id)
+        visit_motive_ids = _find_visit_motive_id(
+            data, visit_motive_category_id=visit_motive_category_id)
 
         if visit_motive_ids is None:
             return None
@@ -95,7 +98,8 @@ class DoctolibSlots:
         first_availability = None
         for motive_id in visit_motive_ids:
             slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={DOCTOLIB_SLOT_LIMIT}'
-            response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
+            response = self._client.get(
+                slots_api_url, headers=DOCTOLIB_HEADERS)
             if response.status_code == 403:
                 raise BlockedByDoctolibError(centre_api_url)
 
@@ -140,7 +144,8 @@ def set_doctolib_center_internal_id(request: ScraperRequest, data: dict, practic
     if not profile_id:
         return
     profile_id = int(profile_id)
-    practices = "-".join(str(x) for x in practice_ids) if practice_ids is not None else ""
+    practices = "-".join(str(x)
+                         for x in practice_ids) if practice_ids is not None else ""
     request.internal_id = f"{profile_id}[{practices}]"
 
 
@@ -269,7 +274,7 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: list = None):
 
 
 def _find_agenda_and_practice_ids(data: dict, visit_motive_id: list, practice_id_filter: list = None) -> Tuple[
-    list, list]:
+        list, list]:
     """
     Etant donné une réponse à /booking/<centre>.json, renvoie tous les
     "agendas" et "pratiques" (jargon Doctolib) qui correspondent au motif de visite.
@@ -293,3 +298,20 @@ def _find_agenda_and_practice_ids(data: dict, visit_motive_id: list, practice_id
                     practice_ids.add(str(pratice_id))
                     agenda_ids.add(agenda_id)
     return sorted(agenda_ids), sorted(practice_ids)
+
+
+def center_iterator():
+    try:
+        center_path = 'data/output/doctolib-centers.json'
+        url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"
+        response = requests.get(url)
+        response.raise_for_status()
+        data = response.json()
+        file = open(center_path, 'w')
+        file.write(json.dumps(data, indent=2))
+        file.close()
+        logger.info(f"Found {len(data)} Doctolib centers (external scraper).")
+        for center in data:
+            yield center
+    except Exception as e:
+        logger.warning(f"Unable to scrape doctolib centers: {e}")
