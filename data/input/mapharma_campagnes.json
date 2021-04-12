@@ -89,6 +89,11 @@
 			"campagneId": "201",
 			"optionId": "1",
 			"optionName": "Vaccination COVID - 1ère injection (15 min.)"
+		},
+		{
+			"campagneId": "204",
+			"optionId": "1",
+			"optionName": "Vaccination covid (10 min.)"
 		}
 	],
 	"autre":
@@ -97,16 +102,6 @@
 			"campagneId": "70",
 			"optionId": "2",
 			"optionName": "Rappel (15 min.)"
-		},
-		{
-			"campagneId": "120",
-			"optionId": "1",
-			"optionName": "Test Antigénique (15 min.)"
-		},
-		{
-			"campagneId": "120",
-			"optionId": "2",
-			"optionName": "Test Sérologique (15 min.)"
 		},
 		{
 			"campagneId": "81",
@@ -119,6 +114,26 @@
 			"optionName": "Entretien micro nutrition aroma"
 		},
 		{
+			"campagneId": "106",
+			"optionId": "1",
+			"optionName": "RDV 2 Vaccin astrazeneca (15 min.)"
+		},
+		{
+			"campagneId": "120",
+			"optionId": "1",
+			"optionName": "Test Antigénique (15 min.)"
+		},
+		{
+			"campagneId": "120",
+			"optionId": "2",
+			"optionName": "Test Sérologique (15 min.)"
+		},
+		{
+			"campagneId": "155",
+			"optionId": "1",
+			"optionName": "Vaccination AZ 2(25 et 26/03)"
+		},
+		{
 			"campagneId": "193",
 			"optionId": "1",
 			"optionName": "Test Antigeniques COVID Naso-Pharynges"
@@ -127,6 +142,16 @@
 			"campagneId": "196",
 			"optionId": "1",
 			"optionName": "Test Covid TROC Sanguins"
+		},
+		{
+			"campagneId": "203",
+			"optionId": "1",
+			"optionName": "PILULIERS (30 min.)"
+		},
+		{
+			"campagneId": "210",
+			"optionId": "1",
+			"optionName": "Vaccination Covid 2eme injection (60 min.)"
 		}
 	]
 }
