@@ -17,7 +17,7 @@ from utils.vmd_logger import enable_logger_for_production
 
 INFO_URL = "https://www.doctolib.fr{}.json"
 SEARCH_URL = "https://www.doctolib.fr/vaccination-covid-19/france.json?page={}"
-BASE_URL = "https://www.doctolib.fr"
+PARTNERS_URL = "https://partners.doctolib.fr"
 
 
 DOCTOLIB_DOMAINS = [
@@ -99,7 +99,7 @@ def get_infos_etablissement(url):
     data = data["data"]
     
 
-    etablissement["rdv_site_web"] = BASE_URL + url
+    etablissement["rdv_site_web"] = PARTNERS_URL + url
     etablissement['gid'] = "d" + str(data["profile"]["id"])
     etablissement["nom"] = data["profile"]["name_with_title"]
     etablissement['type'] = data["profile"]["subtitle"]
