@@ -25,11 +25,10 @@ VACCINES = {
 }
 
 class CenterInfo:
-    def __init__(self, departement: str, ville: str, nom: str, url: str):
+    def __init__(self, departement: str, nom: str, url: str):
         self.departement = departement
         self.nom = nom
         self.url = url
-        self.ville = ville
         self.location = None
         self.metadata = None
         self.prochain_rdv = None
@@ -112,12 +111,7 @@ def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
         logger.error(
             f"erreur lors du traitement de la ligne avec le gid {data['gid']}, com_insee={data['com_insee']}")
 
-    if data.get('address', None):
-        ville = urlify(departementUtils.get_city(data.get('address')))
-    else:
-        ville = urlify(data.get('com_nom', ''))
-
-    center = CenterInfo(departement, ville, name, url)
+    center = CenterInfo(departement, name, url)
     if data.get('iterator', '') == 'ordoclic':
         return convert_ordoclic_to_center_info(data, center)
     center.fill_localization(convert_csv_data_to_location(data))
