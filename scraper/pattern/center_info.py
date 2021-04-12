@@ -24,6 +24,7 @@ class CenterInfo:
         self.type = None
         self.appointment_count = 0
         self.internal_id = None
+        self.erreur = None
 
     def fill_localization(self, location: Optional[CenterLocation]):
         self.location = location
@@ -38,6 +39,8 @@ class CenterInfo:
     def default(self):
         if type(self.location) is CenterLocation:
             self.location = self.location.default()
+        if self.erreur:
+            self.erreur = str(self.erreur)
         return self.__dict__
 
 
@@ -110,4 +113,12 @@ def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     if data.get('phone_number'):
         center.metadata['phone_number'] = format_phone_number(data.get('phone_number'))
     center.metadata['business_hours'] = convert_csv_business_hours(data)
+    return center
+
+
+def dict_to_center_info(data: dict) -> CenterInfo:
+    center = CenterInfo(data.get('departement'), None, data.get('nom'), data.get('url'))
+    center.plateforme = data.get('plateforme')
+    center.prochain_rdv = data.get('prochain_rdv')
+    center.erreur = data.get('erreur')
     return center
