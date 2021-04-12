@@ -17,7 +17,7 @@ logger = logging.getLogger('scraper')
 def get_location(center, zip: str, address: str, client: httpx.Client = DEFAULT_CLIENT):
     address = address.replace("LA VARENNE SAINT HILAIRE", "SAINT-MAUR-DES-FOSSES") # La Varenne est un quartier de St Maur
     base_url = f'https://api-adresse.data.gouv.fr/search/?q={address}&postcode='
-    center["com_insee"] = departementUtils.cp_to_insee(zip)#feature['properties'].get('citycode')
+    center["com_insee"] = departementUtils.cp_to_insee(zip)
     try:
         r = client.get(base_url)
         r.raise_for_status()
@@ -46,15 +46,15 @@ def get_profiles(zip: str, client: httpx.Client = DEFAULT_CLIENT):
     while True:
         base_url = f"https://mapharma.net/{zip}-{index}" if index > 0 else f'https://mapharma.net/{zip}'
         try:
-            r = client.get(base_url)
-            r.raise_for_status()
+            request = client.get(base_url)
+            request.raise_for_status()
         except httpx.HTTPStatusError:
             if index > 0:
                 return result
             else:
                 index = 1
                 continue
-        soup = BeautifulSoup(r.content, 'html.parser')
+        soup = BeautifulSoup(request.content, 'html.parser')
         reasons = get_reasons(soup)
         name = get_name(soup)
         address = get_address(soup)
@@ -69,7 +69,7 @@ def async_parse_zip(zip: str):
         profile['iterator'] = 'mapharma'
         profile['type'] = DRUG_STORE  
         profiles.append(profile)
-    if len(profiles) > 0:
+    if len(profiles) != 0:
         logger.info(f'Found {len(profiles)} in CODE POSTAL {zip}')
         return {zip: profiles}
     return []
@@ -82,24 +82,27 @@ def main():
     zips = {}
 
     startTime = time.time()
-    with open("data/input/codepostal_to_insee.json", "r") as json_file:
+    with open("data/output/mapharma_centers.json", "r") as json_file:
         zips = json.load(json_file)
     zip_count = len(zips)
-    pool = Pool(15)
+    pool = Pool(1)
     result_profiles = pool.map(async_parse_zip, zips.keys())
     result = {}
     # le pool renvoi un résultat mal formatté, on reconstruit le dico
     for group in result_profiles:
-        if group != []:
-            key = next(iter(group))
-            value = group[key]
-            centers_count += len(value)
-            result[key] = value
+        if not group:
+            continue
+        key = next(iter(group))
+        value = group[key]
+        centers_count += len(value)
+        result[key] = value
     elapsedTime = time.time() - startTime
+    if not centers_count:
+        logger.info('No center found, rage quit 🤬')
     logger.info(f'Scanned {zip_count} 📬 in {round(elapsedTime,1)} sec 🕜')
     logger.info(f'and all I got was a loosy count of {centers_count} centers 😭')
-    with open("data/output/mapharma-centers.json", "w", encoding='utf8') as json_file:
-        json.dump(result, json_file, indent = 4, sort_keys=True)
+    with open("data/output/mapharma_centers.json", "w", encoding='utf8') as json_file:
+        json.dump(result, json_file, indent = 2, sort_keys=True)
 
 
 if __name__ == "__main__":

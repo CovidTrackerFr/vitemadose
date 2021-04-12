@@ -2,7 +2,6 @@ import httpx
 from httpx import TimeoutException
 import json
 import logging
-import urllib.parse as urlparse
 
 from datetime import datetime, timedelta
 from pytz import timezone
@@ -23,13 +22,16 @@ logger = logging.getLogger('scraper')
 insee = {}
 campagnes = {}
 
+
 def get_name(soup):
     name = soup.find(class_='pharma-block').find('h3').text.strip()
     return name
 
+
 def get_address(soup):
     address = soup.find('div', {'class': 'mb-1 text-muted'}).text.strip()
     return address
+
 
 def get_reasons(soup):
     reasons = []
@@ -44,10 +46,11 @@ def get_reasons(soup):
                 continue
             optionId = option.attrs['value']
             optionName = option.text.strip()
-            reasons.append( { 'campagneId': campagneId, 'optionId': optionId, 'optionName': optionName })
+            reasons.append({'campagneId': campagneId,
+                           'optionId': optionId, 'optionName': optionName})
     return reasons
 
-    
+
 def get_profile(url: str, client: httpx.Client = DEFAULT_CLIENT):
     profile = {}
     profile['reasons'] = []
@@ -62,16 +65,18 @@ def get_profile(url: str, client: httpx.Client = DEFAULT_CLIENT):
         profile['reasons'] = reasons
     return profile
 
+
 def get_slots(campagneId: str, optionId: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT):
     base_url = f'https://mapharma.net/api/public/calendar/{campagneId}/{start_date}/{optionId}'
     client.headers.update({'referer': 'https://mapharma.net/'})
     try:
         r = client.get(base_url)
         r.raise_for_status()
-    except httpx.HTTPStatusError as hex: 
+    except httpx.HTTPStatusError as hex:
         logger.warning(f'{base_url} returned error {hex.response.status_code}')
         return {}
     return r.json()
+
 
 def parse_slots(slots):
     first_availability = None
@@ -79,10 +84,12 @@ def parse_slots(slots):
         if 'first' not in date:
             for day_slot in day_slots:
                 time = day_slot['time']
-                timestamp = datetime.strptime(f'{date} {time}', '%Y-%m-%d %H:%M')
+                timestamp = datetime.strptime(
+                    f'{date} {time}', '%Y-%m-%d %H:%M')
                 if first_availability is None or timestamp < first_availability:
                     first_availability = timestamp
     return first_availability
+
 
 def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     global campagnes
@@ -95,7 +102,8 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     for reason in profile['reasons']:
         for campagne in campagnes['vaccin']:
             if campagne['campagneId'] == reason['campagneId']:
-                day_slots = get_slots(campagne['campagneId'], campagne['optionId'], request.start_date, client)
+                day_slots = get_slots(
+                    campagne['campagneId'], campagne['optionId'], request.start_date, client)
                 day_slots.pop('first', None)
                 day_slots.pop('first_text', None)
                 for day_slot in day_slots:
@@ -106,9 +114,18 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
         return None
     return first_availability.isoformat()
 
+
 def centre_iterator():
-    with open("data/output/mapharma-centers.json") as json_file:
+    mapharma = {}
+    campagnes = {}
+    with open("data/output/mapharma_centers.json") as json_file:
         mapharma = json.load(json_file)
-        for zip in mapharma.keys():
-            for profile in mapharma[zip]:
-                yield(profile)
+    with open("data/input/mapharma_campagnes.json") as json_file:
+        campagnes = json.load(json_file)
+    for zip in mapharma.keys():
+        for profile in mapharma[zip]:
+            if 'reasons' not in profile:
+                continue
+            for campagne in campagnes['vaccin']:
+                if campagne in profile['reasons']:
+                    yield profile
