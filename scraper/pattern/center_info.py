@@ -24,6 +24,7 @@ VACCINES = {
     ]
 }
 
+
 class CenterInfo:
     def __init__(self, departement: str, nom: str, url: str):
         self.departement = departement
@@ -43,7 +44,7 @@ class CenterInfo:
         self.location = location
 
     def fill_result(self, result: ScraperResult):
-        self.prochain_rdv = result.next_availability # TODO change with filters
+        self.prochain_rdv = result.next_availability  # TODO change with filters
         self.plateforme = result.platform
         self.type = result.request.practitioner_type
         self.appointment_count = result.request.appointment_count
@@ -85,13 +86,13 @@ def convert_csv_business_hours(data: dict) -> str:
 
 
 def convert_ordoclic_to_center_info(data: dict, center: CenterInfo) -> CenterInfo:
-    localization = data['location']
-    coordinates = localization['coordinates']
+    localization = data.get('location')
+    coordinates = localization.get('coordinates')
 
     if coordinates['lon'] or coordinates['lat']:
-        loc = CenterLocation(coordinates['lon'], coordinates['lat'])
+        city = urlify(localization.get('city'))
+        loc = CenterLocation(coordinates['lon'], coordinates['lat'], city)
         center.fill_localization(loc)
-    center.ville = urlify(localization["city"])
     center.metadata = dict()
     center.metadata['address'] = f'{localization["address"]}, {localization["zip"]} {localization["city"]}'
     if len(data.get('phone_number', '')) > 3:
@@ -103,7 +104,7 @@ def convert_ordoclic_to_center_info(data: dict, center: CenterInfo) -> CenterInf
 def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     name = data.get('nom', None)
     departement = ''
-    ville=''
+    ville = ''
     url = data.get('rdv_site_web', None)
     try:
         departement = departementUtils.to_departement_number(data.get('com_insee', None))
@@ -135,9 +136,10 @@ def get_vaccine_name(name):
             if vaccine_name in name:
                 return vaccine
     return None
-          
+
+
 def dict_to_center_info(data: dict) -> CenterInfo:
-    center = CenterInfo(data.get('departement'), None, data.get('nom'), data.get('url'))
+    center = CenterInfo(data.get('departement'), data.get('nom'), data.get('url'))
     center.plateforme = data.get('plateforme')
     center.prochain_rdv = data.get('prochain_rdv')
     center.erreur = data.get('erreur')
