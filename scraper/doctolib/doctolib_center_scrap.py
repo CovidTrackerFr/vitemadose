@@ -9,9 +9,7 @@ from urllib import parse
 import requests
 import os
 
-from multiprocessing import Pool
-from utils.vmd_utils import departementUtils
-from scraper.doctolib.doctolib_filters import parse_practitioner_type
+from utils.vmd_utils import departementUtils, format_phone_number
 from utils.vmd_logger import enable_logger_for_production
 
 BASE_URL = 'http://www.doctolib.fr/vaccination-covid-19/france.json?page={0}'
@@ -44,7 +42,7 @@ def parse_doctolib_centers() -> List[dict]:
 
     centers = []
 
-    while page_has_centers and page_id <= 4:
+    while page_has_centers:
         logger.info(f"[Doctolib centers] Parsing page {page_id}")
         centers_page = parse_page_centers(page_id)
         centers += centers_page
@@ -97,7 +95,7 @@ def center_from_doctor_dict(doctor_dict) -> dict:
 def get_dict_infos_center_page(url_path: str) -> dict:
     internal_api_url = BOOKING_URL.format(
         parse.urlsplit(url_path).path.split("/")[-1])
-    logger.info(f"Parsing {internal_api_url}")
+    logger.info(f"> Parsing {internal_api_url}")
     data = requests.get(internal_api_url)
     data.raise_for_status()
     output = data.json().get('data', {})
@@ -110,16 +108,18 @@ def get_dict_infos_center_page(url_path: str) -> dict:
         # Parse place location
         infos_page = {}
         infos_page['address'] = place['full_address']
-        infos_page['long_coor1'] = place['longitude']
-        infos_page['lat_coor1'] = place['latitude']
+        infos_page['long_coor1'] = place.get('longitude')
+        infos_page['lat_coor1'] = place.get('latitude')
         infos_page["com_insee"] = departementUtils.cp_to_insee(
             place["zipcode"])
 
         # Parse landline number
         if place.get('landline_number'):
-            infos_page['phone_number'] = place.get('landline_number', None)
-        if place.get('phone_number'):
-            infos_page['phone_number'] = place.get('phone_number', None)
+            phone_number = place.get('landline_number')
+        else:
+            phone_number = place.get('phone_number')
+        if phone_number:
+            infos_page['phone_number'] = format_phone_number(phone_number)
 
         infos_page["business_hours"] = parse_doctolib_business_hours(place)
         return infos_page
@@ -174,7 +174,11 @@ def center_type(url_path: str, nom: str) -> str:
         return GENERAL_PRACTITIONER
     return VACCINATION_CENTER
 
+
 if __name__ == "__main__":
     centers = parse_doctolib_centers()
-    with open('data/output/doctolib-centers.json', 'w') as f:
+    path_out = 'data/output/doctolib-centers.json'
+    logger.info(f"Found {len(centers)} centers on Doctolib")
+    logger.info(f"> Writing them on {path_out}")
+    with open(path_out, 'w') as f:
         f.write(json.dumps(centers, indent=2))

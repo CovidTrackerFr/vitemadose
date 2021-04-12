@@ -59,10 +59,10 @@ def scrape_debug(urls):
             f'{result.platform!s:16} {result.next_availability or ""!s:32}')
 
 
-
 def scrape() -> None:
     with Pool(POOL_SIZE) as pool:
-        centre_iterator_proportion = (c for c in centre_iterator() if random() < PARTIAL_SCRAPE)
+        centre_iterator_proportion = (
+            c for c in centre_iterator() if random() < PARTIAL_SCRAPE)
         centres_cherchés = pool.imap_unordered(
             cherche_prochain_rdv_dans_centre,
             centre_iterator_proportion,
@@ -119,27 +119,6 @@ def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:
     return center_data
 
 
-def fix_scrap_urls(url):
-    url = url.strip()
-
-    # Fix Keldoc
-    if url.startswith("https://www.keldoc.com/"):
-        url = url.replace("https://www.keldoc.com/",
-                          "https://vaccination-covid.keldoc.com/")
-    # Clean Doctolib
-    if url.startswith('https://partners.doctolib.fr') or url.startswith('https://www.doctolib.fr'):
-        u = urlparse(url)
-        query = parse_qs(u.query, keep_blank_values=True)
-        to_remove = []
-        for query_name in query:
-            if query_name.startswith('highlight') or query_name == 'enable_cookies_consent':
-                to_remove.append(query_name)
-        [query.pop(rm, None) for rm in to_remove]
-        query.pop('speciality_id', None)
-        u = u._replace(query=urlencode(query, True))
-        url = urlunparse(u)
-    return url
-
 def sort_center(center: dict) -> str:
     if not center:
         return '-'
@@ -184,13 +163,15 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
                                                                    'location', 'appointment_count', 'erreur',
                                                                    'ville', 'type', 'vaccine_type']))
         if centre.prochain_rdv is None:
-            par_departement[code_departement]['centres_indisponibles'].append(centre.default())
+            par_departement[code_departement]['centres_indisponibles'].append(
+                centre.default())
             if isinstance(erreur, BlockedByDoctolibError):
                 par_departement[code_departement]['doctolib_bloqué'] = True
                 bloqués_doctolib += 1
         else:
             compte_centres_avec_dispo += 1
-            par_departement[code_departement]['centres_disponibles'].append(centre.default())
+            par_departement[code_departement]['centres_disponibles'].append(
+                centre.default())
 
     outpath = outpath_format.format("info_centres")
     with open(outpath, "w") as info_centres:
@@ -311,8 +292,10 @@ def gouv_centre_iterator(outpath_format='data/output/{}.json'):
     with open(outpath, "w") as fichier:
         json.dump(centres_non_pris_en_compte, fichier, indent=2)
 
+
 def copy_omit_keys(d, omit_keys):
     return {k: d[k] for k in set(list(d.keys())) - set(omit_keys)}
+
 
 if __name__ == "__main__":
     main()
