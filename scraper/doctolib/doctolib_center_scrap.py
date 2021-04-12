@@ -17,7 +17,6 @@ from utils.vmd_logger import enable_logger_for_production
 
 INFO_URL = "https://www.doctolib.fr{}.json"
 SEARCH_URL = "https://www.doctolib.fr/vaccination-covid-19/france.json?page={}"
-PARTNERS_URL = "https://partners.doctolib.fr"
 BASE_URL = "https://www.doctolib.fr"
 
 
