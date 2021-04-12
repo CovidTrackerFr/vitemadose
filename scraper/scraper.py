@@ -174,24 +174,11 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
             par_departement[code_departement]['centres_disponibles'].append(
                 centre.default())
 
-    outpath = outpath_format.format("info_centres")
-    with open(outpath, "w") as info_centres:
-        json.dump(par_departement, info_centres, indent=2)
-
     outpath = outpath_format.format("centres_open_data")
     with open(outpath, 'w') as centres_file:
         json.dump(centres_open_data, centres_file, indent=2)
 
-    for code_departement, disponibilités in par_departement.items():
-        disponibilités['last_updated'] = dt.datetime.now(
-            tz=pytz.timezone('Europe/Paris')).isoformat()
-        if 'centres_disponibles' in disponibilités:
-            disponibilités['centres_disponibles'] = sorted(
-                disponibilités['centres_disponibles'], key=sort_center)
-        outpath = outpath_format.format(code_departement)
-        logger.debug(f'writing result to {outpath} file')
-        with open(outpath, "w") as outfile:
-            outfile.write(json.dumps(disponibilités, indent=2))
+    export_dpts(par_departement, outpath)
 
     return compte_centres, compte_centres_avec_dispo, bloqués_doctolib
 
@@ -254,6 +241,24 @@ def centre_iterator():
 
 def copy_omit_keys(d, omit_keys):
     return {k: d[k] for k in set(list(d.keys())) - set(omit_keys)}
+
+
+def export_dpts(par_departement, outpath):
+
+    outpath = outpath_format.format("info_centres")
+    with open(outpath, "w") as info_centres:
+        json.dump(par_departement, info_centres, indent=2)
+
+    for code_departement, disponibilités in par_departement.items():
+        disponibilités['last_updated'] = dt.datetime.now(
+            tz=pytz.timezone('Europe/Paris')).isoformat()
+        if 'centres_disponibles' in disponibilités:
+            disponibilités['centres_disponibles'] = sorted(
+                disponibilités['centres_disponibles'], key=sort_center)
+        outpath = outpath_format.format(code_departement)
+        logger.debug(f'writing result to {outpath} file')
+        with open(outpath, "w") as outfile:
+            outfile.write(json.dumps(disponibilités, indent=2))
 
 
 if __name__ == "__main__":
