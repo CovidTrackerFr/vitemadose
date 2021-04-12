@@ -99,7 +99,7 @@ def get_infos_etablissement(url):
     data = data["data"]
     
 
-    etablissement["rdv_site_web"] = PARTNERS_URL + url
+    etablissement["rdv_site_web"] = INFO_URL.format("url")
     etablissement['gid'] = "d" + str(data["profile"]["id"])
     etablissement["nom"] = data["profile"]["name_with_title"]
     etablissement['type'] = data["profile"]["subtitle"]
