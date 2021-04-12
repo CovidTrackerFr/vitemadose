@@ -180,7 +180,7 @@ def main():
 
     etablissements_trouves = True
 
-    while etablissements_trouves and page < 3:
+    while etablissements_trouves:
     
         etablissements = scrape_page(page, liste_ids)
         if len(etablissements) == 0:
@@ -188,7 +188,7 @@ def main():
         else:
             liste_etablissements = liste_etablissements + etablissements
             page += 1
-    
+
     outpath = Path("data/output/doctolib-centers.json")
     with open(outpath, "w") as fichier:
         fichier.write(json.dumps(liste_etablissements, indent=2))
