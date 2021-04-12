@@ -131,6 +131,7 @@ def fix_scrap_urls(url):
                 to_remove.append(query_name)
         [query.pop(rm, None) for rm in to_remove]
         query.pop('speciality_id', None)
+        query.pop('pid', None)
         u = u._replace(query=urlencode(query, True))
         url = urlunparse(u)
     return url
