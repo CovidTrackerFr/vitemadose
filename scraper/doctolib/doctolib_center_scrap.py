@@ -1,17 +1,12 @@
-from scraper.pattern.center_location import CenterLocation
 from scraper.pattern.scraper_result import DRUG_STORE, GENERAL_PRACTITIONER, VACCINATION_CENTER
 from typing import List
-from scraper.pattern.center_info import CenterInfo
 import requests
 
 
-import csv
-import io
 import json
 from urllib import parse
 
 import requests
-from bs4 import BeautifulSoup
 
 from scraper.doctolib.doctolib_filters import parse_practitioner_type
 from utils.vmd_utils import departementUtils
@@ -42,7 +37,7 @@ def parse_doctolib_centers() -> List[dict]:
 
     centers = []
 
-    while page_has_centers and page_id == 1:
+    while page_has_centers:
         print(f"Parsing page {page_id}")
         centers_page = parse_page_centers(page_id)
         centers += centers_page
@@ -71,8 +66,8 @@ def center_from_doctor_dict(doctor_dict) -> dict:
     ville = doctor_dict["city"]
     code_postal = doctor_dict["zipcode"]
     addresse = f"{sub_addresse}, {code_postal} {ville}"
-    if doctor_dict['place_id']:
-        url_path = doctor_dict['link']+"?pid="+str(doctor_dict["place_id"])
+    if doctor_dict.get('place_id'):
+        url_path = f"{doctor_dict['link']}?pid={str(doctor_dict['place_id'])}"
     else:
         url_path = doctor_dict['link']
     rdv_site_web = f"https://partners.doctolib.fr{url_path}"
