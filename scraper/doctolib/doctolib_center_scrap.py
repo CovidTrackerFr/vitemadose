@@ -167,7 +167,7 @@ def scrape_page(page_id=1, liste_ids=[]):
                 etablissement = get_infos_etablissement(internal_api_url)
                 etablissement["rdv_site_web"] = PARTNERS_URL + doctor["link"]
 
-            etablissements.append(etablissement)
+                etablissements.append(etablissement)
 
     return etablissements
 
