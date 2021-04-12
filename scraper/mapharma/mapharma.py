@@ -112,18 +112,3 @@ def centre_iterator():
         for zip in mapharma.keys():
             for profile in mapharma[zip]:
                 yield(profile)
-                """
-                id = profile['id']
-                #centre = {'gid': f'{zip}-{id}', 'rdv_site_web': profile['url'], 'com_insee': departementUtils.cp_to_insee(zip), 'nom': profile['name'], 'location': profile.get('location'), "address": profile['address'] , 'iterator': 'mapharma', 'type': DRUG_STORE} 
-                #centre = profile
-                centre['gid'] = f'{zip}-{id}'
-                centre['rdv_site_web'] = profile.get('url')
-                centre['com_insee'] = profile.get('com_insee')
-                centre['nom'] = profile.get('name')
-                centre['location'] = profile.get('location')
-                centre['address'] = profile['address']
-                centre['iterator'] = 'mapharma'
-                centre['type'] = DRUG_STORE
-                print(centre)
-                yield centre
-"""
