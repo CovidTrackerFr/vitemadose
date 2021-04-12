@@ -230,13 +230,7 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
     return result
 
 
-def centre_iterator():
-    for centre in gouv_centre_iterator():
-        yield centre
-    for centre in ordoclic_centre_iterator():
-        yield centre
-    for centre in mapharma_centre_iterator():
-        yield centre
+def doctolib_center_iterator():  # TODO, temp remove with #129
     try:
         center_path = 'data/output/doctolib-centers.json'
         url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"
@@ -247,10 +241,19 @@ def centre_iterator():
         file.write(json.dumps(data, indent=2))
         file.close()
         logger.info(f"Found {len(data)} Doctolib centers (external scraper).")
-        for center in data:
-            yield center
+        return data
     except Exception as e:
         logger.warning(f"Unable to scrape doctolib centers: {e}")
+
+
+def centre_iterator():
+    visited_centers_links = set()
+    for iterator in (ordoclic_centre_iterator, mapharma_centre_iterator,
+                     doctolib_center_iterator, gouv_centre_iterator):
+        for center in iterator():
+            if center["rdv_site_web"] not in visited_centers_links:
+                visited_centers_links.add(center["rdv_site_web"])
+                yield center
 
 
 def gouv_centre_iterator(outpath_format='data/output/{}.json'):
