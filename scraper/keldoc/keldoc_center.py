@@ -7,7 +7,7 @@ from scraper.keldoc.keldoc_filters import parse_keldoc_availability
 from scraper.keldoc.keldoc_routes import API_KELDOC_CALENDAR, API_KELDOC_CENTER, API_KELDOC_CABINETS
 from scraper.pattern.scraper_request import ScraperRequest
 
-timeout = httpx.Timeout(10.0, connect=10.0)
+timeout = httpx.Timeout(20.0, connect=20.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 
 
