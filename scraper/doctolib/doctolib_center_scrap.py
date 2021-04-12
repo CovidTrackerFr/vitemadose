@@ -183,8 +183,8 @@ def main():
             liste_etablissements = liste_etablissements + etablissements
             page += 1
 
-    path = Path("doctolib_etablissements.json")
-    with open(path, "w") as fichier:
+    outpath = Path("data/output/doctolib-centers.json")
+    with open(outpath, "w") as fichier:
         fichier.write(json.dumps(liste_etablissements, indent=2))
 
 
