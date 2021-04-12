@@ -107,6 +107,7 @@ def test_export_data(tmp_path):
                 "type": None,
                 "appointment_count": 0,
                 "internal_id": None,
+                "vaccine_type": None,
                 "erreur": None
             },
         ],
@@ -130,6 +131,7 @@ def test_export_data(tmp_path):
                 "type": None,
                 "appointment_count": 0,
                 "internal_id": None,
+                "vaccine_type": None,
                 "erreur": None
             },
         ],
@@ -146,6 +148,7 @@ def test_export_data(tmp_path):
                 "type": None,
                 "appointment_count": 0,
                 "internal_id": None,
+                "vaccine_type": None,
                 "erreur": None
             }
         ],
@@ -222,6 +225,7 @@ def test_export_data_when_blocked(tmp_path):
             "plateforme": "Doctolib",
             "appointment_count": 0,
             "internal_id": None,
+            "vaccine_type": None,
             "erreur": "ERREUR DE SCRAPPING (Doctolib): Doctolib bloque nos appels: 403 https://example.com/hopital-magique"
         }],
         "doctolib_bloqué": True
@@ -243,6 +247,7 @@ def test_export_data_when_blocked(tmp_path):
                 "type": None,
                 "appointment_count": 0,
                 "internal_id": None,
+                "vaccine_type": None,
                 "erreur": None
             },
         ],

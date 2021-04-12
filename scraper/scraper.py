@@ -155,7 +155,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         erreur = centre.erreur
         centres_open_data.append(copy_omit_keys(centre.default(), ['prochain_rdv', 'internal_id', 'metadata',
                                                                    'location', 'appointment_count', 'erreur',
-                                                                   'ville', 'type']))
+                                                                   'ville', 'type', 'vaccine_type']))
         if centre.prochain_rdv is None:
             par_departement[code_departement]['centres_indisponibles'].append(centre.default())
             if isinstance(erreur, BlockedByDoctolibError):
