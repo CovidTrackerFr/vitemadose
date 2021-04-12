@@ -17,6 +17,8 @@ class ScraperRequest:
         self.appointment_count = appointment_count
 
     def add_vaccine_type(self, vaccine_name):
+        if not vaccine_name:
+            return
         if self.vaccine_type is None:
             self.vaccine_type = []
         if vaccine_name in self.vaccine_type:

@@ -5,6 +5,7 @@ from httpx import TimeoutException
 
 from scraper.keldoc.keldoc_filters import parse_keldoc_availability
 from scraper.keldoc.keldoc_routes import API_KELDOC_CALENDAR, API_KELDOC_CENTER, API_KELDOC_CABINETS
+from scraper.pattern.scraper_request import ScraperRequest
 
 timeout = httpx.Timeout(10.0, connect=10.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
@@ -12,8 +13,9 @@ DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 
 class KeldocCenter:
 
-    def __init__(self, base_url: str, client: httpx.Client = None):
-        self.base_url = base_url
+    def __init__(self, request: ScraperRequest, client: httpx.Client = None):
+        self.request = request
+        self.base_url = request.get_url()
         self.client = DEFAULT_CLIENT if client is None else client
         self.resource_params = None
         self.id = None
@@ -115,6 +117,7 @@ class KeldocCenter:
             date, appointments = parse_keldoc_availability(calendar_req.json(), appointments)
             if date is None:
                 continue
+            self.request.add_vaccine_type(relevant_motive.get('vaccine_type'))
             # Compare first available date
             if first_availability is None or date < first_availability:
                 first_availability = date

@@ -131,7 +131,6 @@ class DoctolibSlots:
             if motive_availability:
                 request.add_vaccine_type(visit_motive_ids[motive_id])
         request.update_appointment_count(appointment_count)
-        print(request.vaccine_type)
         return first_availability
 
 

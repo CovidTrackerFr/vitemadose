@@ -19,7 +19,7 @@ def fetch_slots(request: ScraperRequest):
     date_obj = datetime.strptime(request.get_start_date(), '%Y-%m-%d')
     end_date = (date_obj + timedelta(days=KELDOC_SLOT_LIMIT)).strftime('%Y-%m-%d')
 
-    center = KeldocCenter(base_url=request.get_url(), client=session)
+    center = KeldocCenter(request, client=session)
     # Unable to parse center resources (id, location)?
     if not center.parse_resource():
         return None
