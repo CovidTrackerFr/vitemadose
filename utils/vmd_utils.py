@@ -81,9 +81,10 @@ class departementUtils:
 		>>> get_city("2 avenue de la République, 75005 PARIS")
 		'PARIS'
 		"""
-        group = re.search('(?<= \d{5} )(?P<com_nom>.*)\s*$', address).groupdict()
+        group = re.search('(?<= \d{5} )(?P<com_nom>.*)\s*$', address)
         if not group:
             return None
+        group = group.groupdict()
         return group.get('com_nom')
 
     @staticmethod
