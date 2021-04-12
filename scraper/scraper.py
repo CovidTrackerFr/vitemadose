@@ -18,6 +18,7 @@ from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
 from utils.vmd_utils import departementUtils, fix_scrap_urls
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
+from .doctolib.doctolib import center_iterator as doctolib_center_iterator
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
 from .maiia import fetch_slots as maiia_fetch_slots
 from .ordoclic import centre_iterator as ordoclic_centre_iterator
@@ -54,18 +55,21 @@ def scrape_debug(urls):
             result = fetch_centre_slots(rdv_site_web, start_date)
         except Exception as e:
             logger.exception(f"erreur lors du traitement")
-        logger.info(f'{result.platform!s:16} {result.next_availability or ""!s:32}')
+        logger.info(
+            f'{result.platform!s:16} {result.next_availability or ""!s:32}')
 
 
 def scrape() -> None:
     with Pool(POOL_SIZE) as pool:
-        centre_iterator_proportion = (c for c in centre_iterator() if random() < PARTIAL_SCRAPE)
+        centre_iterator_proportion = (
+            c for c in centre_iterator() if random() < PARTIAL_SCRAPE)
         centres_cherchés = pool.imap_unordered(
             cherche_prochain_rdv_dans_centre,
             centre_iterator_proportion,
             1
         )
-        compte_centres, compte_centres_avec_dispo, compte_bloqués = export_data(centres_cherchés)
+        compte_centres, compte_centres_avec_dispo, compte_bloqués = export_data(
+            centres_cherchés)
         logger.info(
             f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
         if compte_centres_avec_dispo == 0:
@@ -88,10 +92,12 @@ def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:
         result = fetch_centre_slots(centre['rdv_site_web'], start_date)
         center_data.fill_result(result)
     except ScrapeError as scrape_error:
-        logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(scrape_error)}")
+        logger.error(
+            f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(scrape_error)}")
         has_error = scrape_error
     except Exception as e:
-        logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']}")
+        logger.error(
+            f"erreur lors du traitement de la ligne avec le gid {centre['gid']}")
         traceback.print_exc()
 
     if has_error is None:
@@ -157,13 +163,15 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
                                                                    'location', 'appointment_count', 'erreur',
                                                                    'ville', 'type', 'vaccine_type']))
         if centre.prochain_rdv is None:
-            par_departement[code_departement]['centres_indisponibles'].append(centre.default())
+            par_departement[code_departement]['centres_indisponibles'].append(
+                centre.default())
             if isinstance(erreur, BlockedByDoctolibError):
                 par_departement[code_departement]['doctolib_bloqué'] = True
                 bloqués_doctolib += 1
         else:
             compte_centres_avec_dispo += 1
-            par_departement[code_departement]['centres_disponibles'].append(centre.default())
+            par_departement[code_departement]['centres_disponibles'].append(
+                centre.default())
 
     outpath = outpath_format.format("info_centres")
     with open(outpath, "w") as info_centres:
@@ -174,9 +182,11 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         json.dump(centres_open_data, centres_file, indent=2)
 
     for code_departement, disponibilités in par_departement.items():
-        disponibilités['last_updated'] = dt.datetime.now(tz=pytz.timezone('Europe/Paris')).isoformat()
+        disponibilités['last_updated'] = dt.datetime.now(
+            tz=pytz.timezone('Europe/Paris')).isoformat()
         if 'centres_disponibles' in disponibilités:
-            disponibilités['centres_disponibles'] = sorted(disponibilités['centres_disponibles'], key=sort_center)
+            disponibilités['centres_disponibles'] = sorted(
+                disponibilités['centres_disponibles'], key=sort_center)
         outpath = outpath_format.format(code_departement)
         logger.debug(f'writing result to {outpath} file')
         with open(outpath, "w") as outfile:
@@ -216,7 +226,8 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
     platform = None
     for scraper_name in fetch_map:
         scraper = fetch_map[scraper_name]
-        scrap = sum([1 if rdv_site_web.startswith(url) else 0 for url in scraper.get('urls', [])])
+        scrap = sum([1 if rdv_site_web.startswith(url)
+                    else 0 for url in scraper.get('urls', [])])
         if scrap == 0:
             continue
         platform = scraper_name
@@ -228,22 +239,6 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
     result = ScraperResult(request, platform, None)
     result.next_availability = fetch_impl(request)
     return result
-
-
-def doctolib_center_iterator():  # TODO, temp remove with #129
-    try:
-        center_path = 'data/output/doctolib-centers.json'
-        url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"
-        response = requests.get(url)
-        response.raise_for_status()
-        data = response.json()
-        file = open(center_path, 'w')
-        file.write(json.dumps(data, indent=2))
-        file.close()
-        logger.info(f"Found {len(data)} Doctolib centers (external scraper).")
-        return data
-    except Exception as e:
-        logger.warning(f"Unable to scrape doctolib centers: {e}")
 
 
 def centre_iterator():
@@ -266,13 +261,15 @@ def gouv_centre_iterator(outpath_format='data/output/{}.json'):
 
     total = 0
 
-    centres_non_pris_en_compte = {"centres_fermes": {}, "centres_urls_vides": []}
+    centres_non_pris_en_compte = {
+        "centres_fermes": {}, "centres_urls_vides": []}
 
     for row in csvreader:
 
         row["rdv_site_web"] = fix_scrap_urls(row["rdv_site_web"])
         if row["centre_fermeture"] == "t":
-            centres_non_pris_en_compte["centres_fermes"][row["gid"]] = row["rdv_site_web"]
+            centres_non_pris_en_compte["centres_fermes"][row["gid"]
+                                                         ] = row["rdv_site_web"]
 
         if len(row["rdv_site_web"]):
             yield row
@@ -284,17 +281,21 @@ def gouv_centre_iterator(outpath_format='data/output/{}.json'):
     nb_fermes = len(centres_non_pris_en_compte["centres_fermes"])
     nb_urls_vides = len(centres_non_pris_en_compte["centres_urls_vides"])
 
-    logger.info(f"Il y a {nb_fermes} centres fermes dans le fichier gouv sur un total de {total}")
+    logger.info(
+        f"Il y a {nb_fermes} centres fermes dans le fichier gouv sur un total de {total}")
 
     nb_urls_vides = len(centres_non_pris_en_compte["centres_urls_vides"])
-    logger.info(f"Il y a {nb_urls_vides} centres avec une URL vide dans le fichier gouv sur un total de {total}")
+    logger.info(
+        f"Il y a {nb_urls_vides} centres avec une URL vide dans le fichier gouv sur un total de {total}")
 
     outpath = outpath_format.format("centres_non_pris_en_compte_gouv")
     with open(outpath, "w") as fichier:
         json.dump(centres_non_pris_en_compte, fichier, indent=2)
 
+
 def copy_omit_keys(d, omit_keys):
     return {k: d[k] for k in set(list(d.keys())) - set(omit_keys)}
+
 
 if __name__ == "__main__":
     main()
