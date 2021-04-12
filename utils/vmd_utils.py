@@ -37,9 +37,9 @@ class departementUtils:
 		>>> sorted(departements) == departements
 		True
 		"""
-    with open("data/input/departements-france.csv", newline="\n") as csvfile:
-        reader = csv.DictReader(csvfile)
-        return [str(row["code_departement"]) for row in reader]
+        with open("data/input/departements-france.csv", newline="\n") as csvfile:
+            reader = csv.DictReader(csvfile)
+            return [str(row["code_departement"]) for row in reader]
 
     @staticmethod
     def to_departement_number(insee_code: str) -> str:

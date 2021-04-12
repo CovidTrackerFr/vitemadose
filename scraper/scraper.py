@@ -113,12 +113,10 @@ def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:
     return center_data
 
 
-def sort_center(center: CenterInfo) -> str:
+def sort_center(center: dict) -> str:
     if not center:
         return '-'
-    if not center.prochain_rdv:
-        return '-'
-    return center.prochain_rdv
+    return center.get('prochain_rdv', '-')
 
 
 def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
@@ -155,6 +153,9 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
                 f"le centre {centre.nom} ({code_departement}) n'a pas pu être rattaché à un département connu")
             continue
         erreur = centre.erreur
+        centres_open_data.append(copy_omit_keys(centre.default(), ['prochain_rdv', 'internal_id', 'metadata',
+                                                                   'location', 'appointment_count', 'erreur',
+                                                                   'ville', 'type']))
         if centre.prochain_rdv is None:
             par_departement[code_departement]['centres_indisponibles'].append(centre.default())
             if isinstance(erreur, BlockedByDoctolibError):
