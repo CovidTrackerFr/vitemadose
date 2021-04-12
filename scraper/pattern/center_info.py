@@ -38,6 +38,7 @@ class CenterInfo:
         self.appointment_count = 0
         self.internal_id = None
         self.vaccine_type = None
+        self.erreur = None
 
     def fill_localization(self, location: Optional[CenterLocation]):
         self.location = location
@@ -53,6 +54,8 @@ class CenterInfo:
     def default(self):
         if type(self.location) is CenterLocation:
             self.location = self.location.default()
+        if self.erreur:
+            self.erreur = str(self.erreur)
         return self.__dict__
 
 
@@ -138,3 +141,10 @@ def get_vaccine_name(name):
             if vaccine_name in name:
                 return vaccine
     return None
+          
+def dict_to_center_info(data: dict) -> CenterInfo:
+    center = CenterInfo(data.get('departement'), None, data.get('nom'), data.get('url'))
+    center.plateforme = data.get('plateforme')
+    center.prochain_rdv = data.get('prochain_rdv')
+    center.erreur = data.get('erreur')
+    return center
