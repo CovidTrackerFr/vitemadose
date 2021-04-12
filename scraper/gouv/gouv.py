@@ -12,7 +12,7 @@ from utils.vmd_utils import fix_scrap_urls
 
 logger = enable_logger_for_production()
 
-def gouv_centre_iterator(outpath_format='data/output/{}.json'):
+def centre_iterator(outpath_format='data/output/{}.json'):
     url = "https://www.data.gouv.fr/fr/datasets/r/5cb21a85-b0b0-4a65-a249-806a040ec372"
     response = requests.get(url)
     response.raise_for_status()
@@ -27,7 +27,7 @@ def gouv_centre_iterator(outpath_format='data/output/{}.json'):
 
     for row in csvreader:
 
-        row["rdv_site_web"] = fix_scrap_urls(row["rdv_site_web"])
+        row["rdv_site_web"] = row["rdv_site_web"]
         if row["centre_fermeture"] == "t":
             centres_non_pris_en_compte["centres_fermes"][row["gid"]
                                                          ] = row["rdv_site_web"]

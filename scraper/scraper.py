@@ -25,7 +25,7 @@ from .ordoclic import centre_iterator as ordoclic_centre_iterator
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
 from .mapharma.mapharma import centre_iterator as mapharma_centre_iterator
 from .mapharma.mapharma import fetch_slots as mapharma_fetch_slots
-from .gouv.gouv import gouv_centre_iterator
+from .gouv.gouv import centre_iterator as gouv_centre_iterator
 from random import random
 
 POOL_SIZE = int(os.getenv('POOL_SIZE', 15))
@@ -174,11 +174,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
             par_departement[code_departement]['centres_disponibles'].append(
                 centre.default())
 
-    outpath = outpath_format.format("centres_open_data")
-    with open(outpath, 'w') as centres_file:
-        json.dump(centres_open_data, centres_file, indent=2)
-
-    export_dpts(par_departement, outpath)
+    save_files(centres_open_data, par_departement, outpath_format)
 
     return compte_centres, compte_centres_avec_dispo, bloqués_doctolib
 
@@ -243,7 +239,11 @@ def copy_omit_keys(d, omit_keys):
     return {k: d[k] for k in set(list(d.keys())) - set(omit_keys)}
 
 
-def export_dpts(par_departement, outpath_format):
+def save_files(centres_open_data, par_departement, outpath_format):
+
+    outpath = outpath_format.format("centres_open_data")
+    with open(outpath, 'w') as centres_file:
+        json.dump(centres_open_data, centres_file, indent=2)
 
     outpath = outpath_format.format("info_centres")
     with open(outpath, "w") as info_centres:
