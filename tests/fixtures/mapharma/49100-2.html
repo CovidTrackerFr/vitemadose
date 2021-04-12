@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>MaPharma.net</title>
+                    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+            <link rel="stylesheet" href="/build/public.42ef51e6.css">
+                <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;800&display=swap" />
+        <link rel="shortcut icon" href="/build/images/favicon.png"/>
+
+        <meta property="og:description" content="Prenez rendez-vous en ligne avec votre pharmacie">
+        <meta property="og:image" content="http://mapharma.net/build/images/Prendre_rendez-vous.jpg">
+    </head>
+    <body>
+        <div id="overlay" class="offset">
+        </div>
+        <div id="overlay-loading" class="offset">
+            <div id="loader" class="center"></div>
+        </div>
+
+                    <header>
+    <div class="top-bar" style="background-color:#50b023; height:50px;">
+        <div style="margin:auto; max-width:960px; width:100%; padding-top:4px;">
+            <div style="float:left; width:32%; margin-right:1%; text-align:center;" class="mobhide"><a href="https://www.legall-sante.com/ordonnance/" style="color:#fff; text-decoration:none;"><img src="/build/images/layout/032/click-collect.png"> Clic &amp; <strong>Collect</strong></a></div>
+            <div style="float:left; width:32%; margin:0 1%; text-align:center;" class="mobhide"><a href="https://cartepara.com/avantage.php" target="_blank" style="color:#fff; text-decoration:none;"><img src="/build/images/layout/032/carte-de-fid.png">  My <strong>Le Gall</strong></a></div>
+            <div style="float:left; width:32%; margin-left:1%; text-align:right;" class="mobsee"><a href="https://www.legall-sante.com/ordonnance/" style="color:#fff; text-decoration:none;"><img src="/build/images/layout/032/picto.png"> Votre <strong>Ordonnance</strong></a></div>
+        </div>
+        <div style="float:right;" class="account-032"><a href="https://www.legall-sante.com/my-account/" style="color:#fff; text-decoration:none; margin-right:10px;"><img src="/build/images/layout/032/picto-compte.png" width="40px;"> </a></div>&nbsp;&nbsp;
+    </div>
+    <div class="logo_032">
+        <!-- Begin logo -->
+        <a href="https://www.legall-sante.com"><img src="/build/images/layout/032/logo_032.png" /></a>
+    </div>
+</header>    
+        <div class="container content with-sticky-footer">
+            
+
+        
+            <input type="hidden" class="js-rdv-public-url" value="/49100-2" />
+        <div class="row mb-2 mt-4 justify-content-md-center">
+        <div class="col-lg-6 pharma-block mb-4 box-shadow h-md-250">
+    <div class="card h-100">
+        <div class="row pr-2">
+            <h3 class="mb-0 text-right col-md-12  mt-2">
+                Pharmacie Le Gall
+            </h3>
+        </div>
+        <div class="row pt-2 pr-3 pl-3 pb-3">
+                            <div class="col-4">
+                        <img class="pharma-logo" src="/upload/officines/resized/492015516/492015516-200c.jpg" />
+                </div>
+                        <div class="col-8 text-right mb-3 mt-3">
+
+                <div class="mb-0 bold va-middle">
+                    <span class="d-ib status-icon">
+                            <svg style="width:20px;height:20px" viewBox="0 0 20 20">
+    <path fill="#008080" d="M18.27 6C19.28 8.17 19.05 10.73 17.94 12.81C17 14.5 15.65 15.93 14.5 17.5C14 18.2 13.5 18.95 13.13 19.76C13 20.03 12.91 20.31 12.81 20.59C12.71 20.87 12.62 21.15 12.53 21.43C12.44 21.69 12.33 22 12 22H12C11.61 22 11.5 21.56 11.42 21.26C11.18 20.53 10.94 19.83 10.57 19.16C10.15 18.37 9.62 17.64 9.08 16.93L18.27 6M9.12 8.42L5.82 12.34C6.43 13.63 7.34 14.73 8.21 15.83C8.42 16.08 8.63 16.34 8.83 16.61L13 11.67L12.96 11.68C11.5 12.18 9.88 11.44 9.3 10C9.22 9.83 9.16 9.63 9.12 9.43C9.07 9.06 9.06 8.79 9.12 8.43L9.12 8.42M6.58 4.62L6.57 4.63C4.95 6.68 4.67 9.53 5.64 11.94L9.63 7.2L9.58 7.15L6.58 4.62M14.22 2.36L11 6.17L11.04 6.16C12.38 5.7 13.88 6.28 14.56 7.5C14.71 7.78 14.83 8.08 14.87 8.38C14.93 8.76 14.95 9.03 14.88 9.4L14.88 9.41L18.08 5.61C17.24 4.09 15.87 2.93 14.23 2.37L14.22 2.36M9.89 6.89L13.8 2.24L13.76 2.23C13.18 2.08 12.59 2 12 2C10.03 2 8.17 2.85 6.85 4.31L6.83 4.32L9.89 6.89Z" />
+</svg>                    </span>
+                    <span class="va-middle">Adresse</span></div>
+                <div class="mb-1 text-muted">27 RUE HOCHE ET 8 PLACE DE LA VISITATION 49100 ANGERS</div>
+                            </div>
+        </div>
+    </div>
+</div>
+                    <div id="login-block" class="col-lg-6 login-block mb-4 box-shadow h-md-250 js-rwd-login">
+    <div class="card p-2 h-100">
+        <h3 class="d-inline-block mb-2 w-100">S’identifier pour réserver ou gérer ses RDV   :</h3>
+        <div class="row">
+            <span class="col-md-6">Avec ma carte de la pharmacie (recommandé)</span>
+            <div class="col-md-6">
+                <input class="form-control w-75 mt-2 d-ib js-login-card-input" type="text" placeholder="numéro à 13 chiffres">
+                <a class="d-ib js-login-card-button" href="#">
+                    <svg style="width:40px;height:40px" viewBox="0 0 24 24">
+    <path fill="#008080" d="M19,3H5A2,2 0 0,0 3,5V19C3,20.11 3.9,21 5,21H19C20.11,21 21,20.11 21,19V5A2,2 0 0,0 19,3M19,19H5V5H19V19M8.29,16.59L12.88,12L8.29,7.41L9.71,6L15.71,12L9.71,18L8.29,16.59Z" />
+</svg>
+                </a>
+            </div>
+        </div>
+        <hr class="ml-5 mr-5 w-75">
+        <div class="row">
+            <span class="col-md-6">Avec mon n° de téléphone mobile</span>
+            <div class="col-md-6">
+                <input class="form-control w-75 d-ib js-login-phone-input" type="text" placeholder="06 00 00 00 00 ">
+                <a href="#" class="d-ib js-login-phone-button">
+                    <svg style="width:40px;height:40px" viewBox="0 0 24 24">
+    <path fill="#008080" d="M19,3H5A2,2 0 0,0 3,5V19C3,20.11 3.9,21 5,21H19C20.11,21 21,20.11 21,19V5A2,2 0 0,0 19,3M19,19H5V5H19V19M8.29,16.59L12.88,12L8.29,7.41L9.71,6L15.71,12L9.71,18L8.29,16.59Z" />
+</svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="js-login-card-dialog js-dialog d-none public-dialog" title="Connexion avec ma carte de pharmacie">
+    <input type="hidden" class="js-login-card-uri" value="/sapi/account/card_login/--CODECARTE--">
+    <div>
+        <span class="d-ib">N° de carte :</span>
+        <input type="text" class="d-ib w-50 js-login-card-card form-control ">
+    </div>
+
+    <div class="mt-4 mb-2 bold vert-eau">Saisissez l'une des 2 informations suivantes</div>
+    <div class="row mb-1 pr-3">
+        <span class="d-ib col-md-5">Date de naissance :</span>
+        <span  class="col-md-7 w-75 pl-0">
+            <input type="text" class="js-login-card-date js-input-datetext">
+        </span>
+    </div>
+    <div class="row pr-3">
+        <span class="d-ib col-md-5">Téléphone :</span>
+        <input type="text" class="col-md-7 w-75 form-control js-login-card-phone" placeholder="06 00 00 00 00 ">
+    </div>
+    <div class="d-flex flex-row-reverse mt-2" >
+        <button class="bt-vert js-login-card-validate">Se connecter</button>
+    </div>
+    <p class="js-login-card-message d-none right pt10 pr10"></p>
+</div>
+
+<div class="js-login-phone-dialog js-dialog d-none public-dialog" title="Inscription avec mon mobile">
+                    <input type="hidden" class="js-login-phone-check-uri" value="/sapi/account/checkAccountPhone/--TELEPHONE--/388">
+    <input type="hidden" class="js-login-phone-login-uri" value="/sapi/account/phone_login/--TELEPHONE--">
+    <input type="hidden" class="js-login-phone-create-uri" value="/sapi/account/createAccountPhone/--TELEPHONE--/388">
+    <input type="hidden" class="js-login-phone-account-uri" value="/sapi/account/phone_account/--TELEPHONE--/388">
+    <input type="hidden" class="js-login-phone-attach-uri" value="/sapi/account/phone_attach/--TELEPHONE--/388">
+    <input type="hidden" class="js-login-phone-forgot-password-uri" value="/sapi/account/forgotPasswordAccountPhone/--TELEPHONE--/388">
+    <input type="hidden" class="js-login-phone-update-password-uri" value="/sapi/account/updatePasswordAccountPhone/--TELEPHONE--">
+
+    <div>
+        <span class="d-ib">N° de telephone :</span>
+        <input type="text" class="d-ib w-50 js-login-phone-phone form-control " placeholder="06 00 00 00 00 ">
+    </div>
+
+    <div class="mt-2 mb-2 js-login-phone-password-container d-none">
+        <div class=" bold vert-eau">Saisissez votre mot de passe</div>
+        <div class="row mb-1 pr-3">
+            <span class="d-ib col-md-5">Mot de passe*:</span>
+            <input type="password" class="col-md-7 w-75 js-login-phone-password form-control">
+        </div>
+        <div class="d-flex flex-row-reverse mt-2" >
+            <button class="bt-vert js-login-phone-connect">Se connecter</button>
+            <a href class="js-login-forgot-password mr-5 pt-2">Mot de passe oublié</a>
+        </div>
+    </div>
+
+    <div class="mt-4 mb-2 js-login-phone-attach-container d-none">
+        <div class="bold vert-eau">Le numéro de téléphone est associé à une carte, saisissez le code reçu par SMS pour vous connecter </div>
+        <div class="row mb-1 pr-3 mt-2">
+            <span class="d-ib col-md-5">Code SMS:</span>
+            <input type="text" class="col-md-7 w-75 js-login-phone-attach-code form-control">
+        </div>
+        <div class="d-flex flex-row-reverse mt-2" >
+            <button class="bt-vert js-login-phone-attach">S'inscrire</button>
+        </div>
+    </div>
+
+    <div class="mt-4 mb-2 js-login-phone-attach-account-container d-none">
+        <div class="row mb-1 pr-3">
+            <span class="d-ib col-md-5">Mot de passe:</span>
+            <input type="password" class="col-md-7 w-75 js-login-phone-attach-mdp form-control">
+        </div>
+        <div class="row mb-1 pr-3">
+            <span class="d-ib col-md-5">Répeter mot de passe:</span>
+            <input type="password" class="col-md-7 w-75 js-login-phone-attach-mdp2 form-control">
+        </div>
+
+        <div class="bold vert-eau mt-3">Ce n° de téléphone est déjà associé à un compte, merci de sélectionner votre compte</div>
+
+        <input type="hidden" class="js-login-phone-attach-account">
+        <div class="row mb-1 pr-3 js-login-phone-attach-account-list">
+        </div>
+
+        <div class="row mt-3" >
+            <div class="col-md-6 center mt-2">
+                <button class="bt-retour  js-login-phone-attach-account-cancel">RETOUR</button>
+
+            </div>
+            <div class="col-md-6 center mt-2">
+                <button class="bt-vert js-login-phone-attach-validate">VALIDER</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4 mb-2 js-login-phone-update-password d-none">
+        <div class=" bold vert-eau">Saisissez le nouveau mot de passe et le code reçu par SMS</div>
+        <div class="row mb-4 pr-3">
+            <span class="d-ib col-md-5 pt-2">Code SMS:</span>
+            <input type="text" class="col-md-7 w-75 js-login-phone-update-password-code form-control">
+        </div>
+
+        <div class="row mb-1 pr-3">
+            <span class="d-ib col-md-5">Mot de passe:</span>
+            <input type="password" class="col-md-7 w-75 js-login-phone-update-password-mdp form-control">
+        </div>
+        <div class="row mb-1 pr-3">
+            <span class="d-ib col-md-5">Répeter mot de passe:</span>
+            <input type="password" class="col-md-7 w-75 js-login-phone-update-password-mdp2 form-control">
+        </div>
+
+        <div class="d-flex flex-row-reverse mt-2" >
+            <button class="bt-vert js-login-update-password-button">S'inscrire</button>
+        </div>
+    </div>
+
+    <div class="mt-4 mb-2 js-login-phone-create d-none">
+        <div class=" bold vert-eau">Saisissez les informations et le code reçu par SMS</div>
+        <div class="row mb-4 pr-3">
+            <span class="d-ib col-md-5 pt-2">Code SMS:</span>
+            <input type="text" class="col-md-7 w-75 js-login-phone-code form-control">
+        </div>
+
+        <div class="row mb-1 pr-3">
+            <span class="d-ib col-md-5">Nom*:</span>
+            <input type="text" class="col-md-7 w-75 js-login-phone-nom form-control">
+        </div>
+        <div class="row mb-1 pr-3">
+            <span class="d-ib col-md-5">Prénom*:</span>
+            <input type="text" class="col-md-7 w-75 js-login-phone-prenom form-control">
+        </div>
+        <div class="row mb-1 pr-3">
+            <span class="d-ib col-md-5">Date de naissance*:</span>
+            <input type="text" class="col-md-7 w-75 js-login-phone-date js-input-datetext form-control">
+        </div>
+        <div class="row mb-1 pr-3">
+            <span class="d-ib col-md-5">Mot de passe:</span>
+            <input type="password" class="col-md-7 w-75 js-login-phone-mdp form-control">
+        </div>
+        <div class="row mb-1 pr-3">
+            <span class="d-ib col-md-5">Répeter mot de passe:</span>
+            <input type="password" class="col-md-7 w-75 js-login-phone-mdp2 form-control">
+        </div>
+        <div class="d-flex flex-row-reverse mt-2" >
+            <button class="bt-vert js-login-phone-subscribe">S'inscrire</button>
+        </div>
+    </div>
+
+
+    <div class="d-flex flex-row-reverse mt-2" >
+        <button class="bt-vert js-login-phone-check">Se connecter</button>
+    </div>
+    <p class="js-login-phone-message d-none right pt10 pr10"></p>
+</div>        
+    </div>
+
+
+    <div class="row mb-2 ml-0 mr-0">
+        <div class="col-12 rdv-picker">
+            <div class="row">
+                <div class="col-md-6 pb-4 calendar-block">
+     <h3 class="mt-2 d-ib va-middle ml-4">
+         <span class="circle-icon js-step-1-ko">1</span>
+         <span class="circle-icon-checked js-step-1-ok status-icon va-top d-none">
+                <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+    <path fill="white" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" />
+</svg>        </span>
+         <label class="ml-3 bold" for="MotifSelect">Motif du RDV</label></h3>
+    <div class="form-group ml-4">
+        <select class="form-control ml-4 w-75  disabled js-rdv-select-motif" id="MotifSelect">
+            <option class="disabled" value="0">Choisissez un motif de RDV</option>
+                    </select>
+    </div>
+
+
+
+
+    <h3 class="d-ib va-middle ml-4">
+        <span class="circle-icon js-step-2-ko">2</span>
+        <span class="circle-icon-checked js-step-2-ok status-icon va-top d-none">
+                <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+    <path fill="white" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" />
+</svg>        </span>
+        <span class="ml-3 bold">Type de RDV</span>
+    </h3>
+    <div class="form-group ml-4">
+        <select class="form-control ml-4 w-75 disabled js-rdv-select-type">
+            <option class="disabled">Choisissez un type de RDV</option>
+        </select>
+    </div>
+
+    <hr class="ml-5 mr-5"/>
+
+
+    <div class="ml-4 d-none js-rdv-description-container">
+        <span class="ml-4 mb-2 d-ib bold">Présentation</span>
+        <div class="ml-4 mb-2 js-rdv-description rdv-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas orci mi, placerat ac sagittis ac, ullamcorper sit amet erat. Nullam nec libero vel ipsum lacinia lobortis ut sed nunc. Proin a libero vitae nunc suscipit placerat vitae a nunc. Vivamus magna elit, viverra in dapibus non, aliquet non nibh.
+        </div>
+        <span class="ml-4 mb-2 js-rdv-price-container">Tarif : <span class="js-rdv-price">15&euro;</span></span>
+    </div>
+
+    <div class="js-campagne-datas d-none">
+        <div class="js-campagne-data" data-campagne-id="0">
+            <select class="js-campagne-type" data-campagne-id="0">
+                <option class="disabled" value="0">Choisissez un type de RDV</option>
+            </select>
+            <div class="js-campagne-description" data-campagne-id="0">
+            </div>
+        </div>
+
+            </div>
+
+
+</div>                <div class="col-md-6 calendar-block">
+                    <h3 class="mt-2 d-ib va-middle ml-2"><span class="circle-icon">3</span><span class="ml-3 bold">Choisissez votre heure de RDV</span></h3>
+                    
+
+    
+    
+<div class="mp-search-result-calendar ml-2 mr-2 mb-4 pb-1 ">
+    <div class="js-mp-search-results-calendar"
+         style="position: relative;">
+        <div style="overflow: visible; width: 0px;">
+            <div class="mp-calendar-rwd" style="position: relative;">
+                <div style="overflow: visible; width: 0px;">
+                    <div class="mp-calendar-rwd mp-desktop-availabilities mp-desktop-availabilities-flat">
+                        <div class="mp-desktop-availabilities-inner">
+                            <div class="mp-desktop-empty-week js-calendar-empty-week mp-calendar-rwd d-none" >
+                                <span class="Tappable-inactive js-calendar-first-rdv-button mp-button-info-link mp-button mp-button-block mp-button-size-normal va-middle d-ib underline">
+                                        Prochain RDV disponible le <br/><span class="js-calendar-first-rdv"></span>
+                                </span>
+                            </div>
+                            <div class="mp-desktop-empty-week js-calendar-empty-rdv mp-calendar-rwd d-none" >
+                                <span class="va-middle d-ib">Plus de RDV disponibles, inscrivez vous aux alertes pour être prévenu d'une disponibilité</span>
+                            </div>
+                            <div class="mp-desktop-availabilities-days" style="opacity: 1;">
+                                <div class="availabilities-pagination availabilities-pagination-disabled">
+                                    <button tabindex="0"
+                                            class="Tappable-inactive mp-button mp-icon-button mp-availabilities-pagination-icon-button mp-icon-button-faded mp-icon-button-medium js-calendar-before"
+                                            role="button" type="button" aria-label="Disponibilités précédentes"
+                                            disabled="" title="Disponibilités précédentes">
+                                        <svg class="mp-icon availabilities-pagination-arrow mp-icon-large" width="16"
+                                             height="16" fill="currentColor" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M4.863 7.576l4.859-4.859a.6.6 0 01.848 0l.567.567a.6.6 0 01.001.847L7.288 8l3.85 3.869a.6.6 0 01-.001.847l-.567.567a.6.6 0 01-.848 0L4.863 8.424a.6.6 0 010-.848z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                                                    <div class="availabilities-day mp-calendar-day-1 js-calendar-day js-calendar-day-1"
+                                        data-index=0 data-day="2021-04-11">
+                                        <div class="availabilities-day-title">
+                                            <div class="availabilities-day-name js-calendar-day-name">dim.</div>
+                                            <div class="availabilities-day-date js-calendar-day-date">11 avr.</div>
+                                        </div>
+                                        <div class="availabilities-slots js-calendar-day-slots" data-day="2021-04-11">
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                    <div class="availabilities-day mp-calendar-day-2 js-calendar-day js-calendar-day-2"
+                                        data-index=1 data-day="2021-04-12">
+                                        <div class="availabilities-day-title">
+                                            <div class="availabilities-day-name js-calendar-day-name">lun.</div>
+                                            <div class="availabilities-day-date js-calendar-day-date">12 avr.</div>
+                                        </div>
+                                        <div class="availabilities-slots js-calendar-day-slots" data-day="2021-04-12">
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                    <div class="availabilities-day mp-calendar-day-3 js-calendar-day js-calendar-day-3"
+                                        data-index=2 data-day="2021-04-13">
+                                        <div class="availabilities-day-title">
+                                            <div class="availabilities-day-name js-calendar-day-name">mar.</div>
+                                            <div class="availabilities-day-date js-calendar-day-date">13 avr.</div>
+                                        </div>
+                                        <div class="availabilities-slots js-calendar-day-slots" data-day="2021-04-13">
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                    <div class="availabilities-day mp-calendar-day-4 js-calendar-day js-calendar-day-4"
+                                        data-index=3 data-day="2021-04-14">
+                                        <div class="availabilities-day-title">
+                                            <div class="availabilities-day-name js-calendar-day-name">mer.</div>
+                                            <div class="availabilities-day-date js-calendar-day-date">14 avr.</div>
+                                        </div>
+                                        <div class="availabilities-slots js-calendar-day-slots" data-day="2021-04-14">
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                    <div class="availabilities-day mp-calendar-day-5 js-calendar-day js-calendar-day-5"
+                                        data-index=4 data-day="2021-04-15">
+                                        <div class="availabilities-day-title">
+                                            <div class="availabilities-day-name js-calendar-day-name">jeu.</div>
+                                            <div class="availabilities-day-date js-calendar-day-date">15 avr.</div>
+                                        </div>
+                                        <div class="availabilities-slots js-calendar-day-slots" data-day="2021-04-15">
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                    <div class="availabilities-day mp-calendar-day-6 js-calendar-day js-calendar-day-6"
+                                        data-index=5 data-day="2021-04-16">
+                                        <div class="availabilities-day-title">
+                                            <div class="availabilities-day-name js-calendar-day-name">ven.</div>
+                                            <div class="availabilities-day-date js-calendar-day-date">16 avr.</div>
+                                        </div>
+                                        <div class="availabilities-slots js-calendar-day-slots" data-day="2021-04-16">
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                    <div class="availabilities-day mp-calendar-day-7 js-calendar-day js-calendar-day-7"
+                                        data-index=6 data-day="2021-04-17">
+                                        <div class="availabilities-day-title">
+                                            <div class="availabilities-day-name js-calendar-day-name">sam.</div>
+                                            <div class="availabilities-day-date js-calendar-day-date">17 avr.</div>
+                                        </div>
+                                        <div class="availabilities-slots js-calendar-day-slots" data-day="2021-04-17">
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                            <div class="availabilities-empty-slot">
+                                                <div class="availabilities-empty-slot-dash"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                <div class="availabilities-pagination availabilities-pagination-disabled">
+                                    <button tabindex="0"
+                                            class="Tappable-inactive mp-button mp-icon-button mp-availabilities-pagination-icon-button mp-icon-button-primary mp-icon-button-medium js-calendar-after"
+                                            role="button" type="button" aria-label="Disponibilités suivantes"
+                                            title="Disponibilités suivantes"  disabled="">
+                                        <svg class="mp-icon availabilities-pagination-arrow mp-icon-large" width="16"
+                                             height="16" fill="currentColor" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M11.137 8.424l-4.859 4.859a.6.6 0 01-.848 0l-.567-.567a.6.6 0 010-.847L8.712 8l-3.85-3.869a.6.6 0 010-.847l.567-.567a.6.6 0 01.848 0l4.859 4.859a.6.6 0 010 .848z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="Tappable-inactive js-calendar-more d-none mp-button-info-link mp-button mp-button-block mp-button-size-normal va-middle"
+                                    role="button" type="button">
+                                <span class="mp-button-label va-middle ">Voir plus</span>
+                                <span class="d-ib status-icon va-top">
+                                        <svg viewBox="0 0 24 24" class="mp-icon-large">
+    <path fill="#008080" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+</svg>                                </span>
+                            </button>
+                            <button class="float-right Tappable-inactive js-calendar-alert d-none mp-button-info-link mp-button mp-button-block mp-button-size-normal va-middle"
+                                    role="button" type="button">
+                                <span class="mp-button-label va-middle ">Alerte disponibilité</span>
+                                <span class="d-ib va-middle">
+                                    <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="mp-icon-large">
+    <path fill="#008080" d="M16,17H7V10.5C7,8 9,6 11.5,6C14,6 16,8 16,10.5M18,16V10.5C18,7.43 15.86,4.86 13,4.18V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V4.18C7.13,4.86 5,7.43 5,10.5V16L3,18V19H20V18M11.5,22A2,2 0 0,0 13.5,20H9.5A2,2 0 0,0 11.5,22Z" />
+</svg>                                </span>
+                            </button>
+                            <hr class="clear" />
+                        </div>
+                    </div>
+                </div>
+                            </div>
+        </div>
+        </div>
+</div>                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-2 mt-4 justify-content-md-center js-rwd-login-container">
+    </div>
+
+    
+
+    
+    
+
+<div class="js-book-rdv-dialog js-dialog d-none  public-dialog" title="Nouvelle réservation">
+
+    
+    <div>
+        <input type="hidden" class="js-book-rdv-creneau-id">
+        <input type="hidden" class="js-book-rdv-uri" value="/api/rdv/inscription">
+        
+        <input type="hidden" class="js-book-rdv-code-carte" value="0" >
+
+
+        <span class="js-book-rdv-creneau-campagne bold"></span><br/>
+
+        <span class="js-book-rdv-creneau-date bold"></span>&nbsp;<span class="js-book-rdv-creneau-text bold"></span><br/>
+
+        
+        
+
+
+        <div class="js-book-rdv-book-section mt10">
+            Places disponibles : <span class="js-book-rdv-creneau-places-dispo mt10 d-ib"></span><br/>
+            <span class="js-category-multi-creneaux-container">
+                                    <input type="hidden" class="js-book-rdv-creneau-length" value="1">
+                            </span>
+
+                                                <fieldset class="js-book-rdv-beneficiaire-map border p-2 pb-4 pl-4">
+                        <legend class="w-auto bold">Réservez votre RDV</legend>
+                        <div>
+                            Merci de vous identifier pour réserver le RDV.
+                            <a class="bt-vert bt-petit js-rdv-redirect-to-login">OK</a>
+                        </div>
+                    </fieldset>
+
+                
+            
+            <span class="d-none js-book-rdv-check-icon">
+                    <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+    <path fill="green" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" />
+</svg>            </span>
+            <hr class="clear">
+            <p class="js-book-rdv-message d-none right pt10 pr10"></p>
+        </div>
+    </div>
+</div>    <div class="js-alert-rdv-dialog js-dialog public-dialog dialog-alert" title="Alerte disponibilité">
+    <div class="title mb-2">
+        <span class="d-ib">
+            <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="mp-icon-large">
+    <path fill="#008080" d="M16,17H7V10.5C7,8 9,6 11.5,6C14,6 16,8 16,10.5M18,16V10.5C18,7.43 15.86,4.86 13,4.18V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V4.18C7.13,4.86 5,7.43 5,10.5V16L3,18V19H20V18M11.5,22A2,2 0 0,0 13.5,20H9.5A2,2 0 0,0 11.5,22Z" />
+</svg>        </span>
+        <span class="va-middle ">Alerte disponibilité</span>
+    </div>
+            <fieldset class="border p-2 pb-4 pl-4">
+            <legend class="w-auto bold">Créez vos alertes</legend>
+            <div>
+                Merci de vous identifier pour créer une alerte.
+                <a class="bt-vert bt-petit js-rdv-redirect-to-login">OK</a>
+            </div>
+        </fieldset>
+        <p class="js-alert-rdv-message d-none right pt10 pr10"></p>
+
+
+</div>        </div>
+
+                    
+<footer class="footer">
+    <div class="logo_032">
+        <!-- Begin logo -->
+        <a href="https://www.legall-sante.com"><img src="/build/images/layout/032/logo_032.png" /></a>
+    </div>
+</footer>    
+
+
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+            
+            <script src="/build/runtime.d94b3b43.js"></script><script src="/build/public.9b76d30b.js"></script>
+            </body>
+</html>
