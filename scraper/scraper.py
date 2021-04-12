@@ -243,7 +243,7 @@ def copy_omit_keys(d, omit_keys):
     return {k: d[k] for k in set(list(d.keys())) - set(omit_keys)}
 
 
-def export_dpts(par_departement, outpath):
+def export_dpts(par_departement, outpath_format):
 
     outpath = outpath_format.format("info_centres")
     with open(outpath, "w") as info_centres:
