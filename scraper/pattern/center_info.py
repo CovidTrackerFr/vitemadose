@@ -5,11 +5,24 @@ from scraper.pattern.center_location import CenterLocation, convert_csv_data_to_
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult
 
-from utils.vmd_utils import urlify
+from utils.vmd_utils import urlify, format_phone_number
 from utils.vmd_logger import get_logger
 
 logger = get_logger()
 
+VACCINES = {
+    'Pfizer-BioNTech': [
+        'pfizer',
+        'biontech'
+    ],
+    'AstraZeneca': [
+        'astrazeneca',
+        'astra-zeneca'
+    ],
+    'Moderna': [
+        'moderna'
+    ]
+}
 
 class CenterInfo:
     def __init__(self, departement: str, ville: str, nom: str, url: str):
@@ -24,6 +37,8 @@ class CenterInfo:
         self.type = None
         self.appointment_count = 0
         self.internal_id = None
+        self.vaccine_type = None
+        self.erreur = None
 
     def fill_localization(self, location: Optional[CenterLocation]):
         self.location = location
@@ -34,10 +49,13 @@ class CenterInfo:
         self.type = result.request.practitioner_type
         self.appointment_count = result.request.appointment_count
         self.internal_id = result.request.internal_id
+        self.vaccine_type = result.request.vaccine_type
 
     def default(self):
         if type(self.location) is CenterLocation:
             self.location = self.location.default()
+        if self.erreur:
+            self.erreur = str(self.erreur)
         return self.__dict__
 
 
@@ -74,11 +92,11 @@ def convert_ordoclic_to_center_info(data: dict, center: CenterInfo) -> CenterInf
     if coordinates['lon'] or coordinates['lat']:
         loc = CenterLocation(coordinates['lon'], coordinates['lat'])
         center.fill_localization(loc)
-    center.ville=urlify(localization["city"])
+    center.ville = urlify(localization["city"])
     center.metadata = dict()
     center.metadata['address'] = f'{localization["address"]}, {localization["zip"]} {localization["city"]}'
     if len(data.get('phone_number', '')) > 3:
-        center.metadata['phone_number'] = data.get('phone_number')
+        center.metadata['phone_number'] = format_phone_number(data.get('phone_number'))
     center.metadata['business_hours'] = None
     return center
 
@@ -106,8 +124,27 @@ def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     center.metadata = dict()
     center.metadata['address'] = convert_csv_address(data)
     if data.get('rdv_tel'):
-        center.metadata['phone_number'] = data.get('rdv_tel')
+        center.metadata['phone_number'] = format_phone_number(data.get('rdv_tel'))
     if data.get('phone_number'):
-        center.metadata['phone_number'] = data.get('phone_number')
+        center.metadata['phone_number'] = format_phone_number(data.get('phone_number'))
     center.metadata['business_hours'] = convert_csv_business_hours(data)
+    return center
+
+
+def get_vaccine_name(name):
+    if not name:
+        return None
+    name = name.lower().strip()
+    for vaccine in VACCINES:
+        vaccine_names = VACCINES[vaccine]
+        for vaccine_name in vaccine_names:
+            if vaccine_name in name:
+                return vaccine
+    return None
+          
+def dict_to_center_info(data: dict) -> CenterInfo:
+    center = CenterInfo(data.get('departement'), None, data.get('nom'), data.get('url'))
+    center.plateforme = data.get('plateforme')
+    center.prochain_rdv = data.get('prochain_rdv')
+    center.erreur = data.get('erreur')
     return center

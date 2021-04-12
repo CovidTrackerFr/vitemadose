@@ -11,6 +11,7 @@ import os
 
 from multiprocessing import Pool
 from utils.vmd_utils import departementUtils
+from scraper.doctolib.doctolib_filters import parse_practitioner_type
 from utils.vmd_logger import enable_logger_for_production
 
 BASE_URL = 'http://www.doctolib.fr/vaccination-covid-19/france.json?page={0}'
@@ -172,7 +173,6 @@ def center_type(url_path: str, nom: str) -> str:
     if "medecin" in url_path or "medecin" in nom.lower():
         return GENERAL_PRACTITIONER
     return VACCINATION_CENTER
-
 
 if __name__ == "__main__":
     centers = parse_doctolib_centers()

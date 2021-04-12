@@ -10,6 +10,7 @@ import httpx
 import requests
 
 from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
+from scraper.pattern.center_info import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 
@@ -97,6 +98,7 @@ class DoctolibSlots:
 
         first_availability = None
         for motive_id in visit_motive_ids:
+            motive_availability = False
             slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={DOCTOLIB_SLOT_LIMIT}'
             response = self._client.get(
                 slots_api_url, headers=DOCTOLIB_HEADERS)
@@ -107,7 +109,6 @@ class DoctolibSlots:
             time.sleep(self._cooldown_interval)
 
             slots = response.json()
-
             if slots.get('total'):
                 appointment_count += int(slots.get('total', 0))
             for availability in slots['availabilities']:
@@ -117,20 +118,22 @@ class DoctolibSlots:
                 if isinstance(slot_list[0], str):
                     if not first_availability or slot_list[0] < first_availability:
                         first_availability = slot_list[0]
+                        motive_availability = True
                 for slot_info in slot_list:
                     sdate = slot_info.get('start_date', None)
                     if not sdate:
                         continue
                     if not first_availability or sdate < first_availability:
                         first_availability = sdate
+                        motive_availability = True
 
             if type(slots) is dict:
                 next_slot = slots.get('next_slot', None)
-                if not next_slot:
-                    continue
-                if not first_availability or next_slot < first_availability:
+                if next_slot and (not first_availability or next_slot < first_availability):
                     first_availability = next_slot
-
+                    motive_availability = True
+            if motive_availability:
+                request.add_vaccine_type(visit_motive_ids[motive_id])
         request.update_appointment_count(appointment_count)
         return first_availability
 
@@ -246,7 +249,7 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: list = None):
     l'ID du 1er motif de visite disponible correspondant à une 1ère dose pour
     la catégorie de motif attendue.
     """
-    relevant_motives = []
+    relevant_motives = {}
     for visit_motive in data.get('data', {}).get('visit_motives', []):
         # On ne gère que les 1ère doses (le RDV pour la 2e dose est en général donné
         # après la 1ère dose, donc les gens n'ont pas besoin d'aide pour l'obtenir).
@@ -269,7 +272,7 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: list = None):
         # * visit_motive_category_id=<id> : filtre => on veut les motifs qui
         # correspondent à la catégorie en question.
         if visit_motive.get('visit_motive_category_id') in visit_motive_category_id or not visit_motive_category_id:
-            relevant_motives.append(visit_motive['id'])
+            relevant_motives[visit_motive['id']] = get_vaccine_name(visit_motive['name'])
     return relevant_motives
 
 
