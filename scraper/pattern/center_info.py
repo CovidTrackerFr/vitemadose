@@ -1,5 +1,9 @@
 import json
+from datetime import datetime, timedelta
 from typing import Optional
+
+import pytz
+
 from utils.vmd_utils import departementUtils
 from scraper.pattern.center_location import CenterLocation, convert_csv_data_to_location
 from scraper.pattern.scraper_request import ScraperRequest
@@ -51,11 +55,28 @@ class CenterInfo:
         self.internal_id = result.request.internal_id
         self.vaccine_type = result.request.vaccine_type
 
+    def handle_next_availability(self):
+        if not self.prochain_rdv:
+            return
+        try:
+            date = datetime.fromisoformat(self.prochain_rdv)
+        except (TypeError, ValueError):
+            # Invalid date
+            return
+        # Too far
+        timezone = pytz.timezone('Europe/Paris')
+        try:
+            if date - datetime.now(tz=timezone) > timedelta(days=50):
+                self.prochain_rdv = None
+        except:
+            pass
+
     def default(self):
         if type(self.location) is CenterLocation:
             self.location = self.location.default()
         if self.erreur:
             self.erreur = str(self.erreur)
+        self.handle_next_availability()
         return self.__dict__
 
 
