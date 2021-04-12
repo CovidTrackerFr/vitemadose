@@ -6,7 +6,6 @@ from pathlib import Path
 import httpx
 import pytest
 
-from scraper.keldoc.keldoc import fetch_slots
 from scraper.keldoc.keldoc_center import KeldocCenter
 from scraper.keldoc.keldoc_filters import filter_vaccine_specialties, filter_vaccine_motives, is_appointment_relevant, \
     is_specialty_relevant
