@@ -2,6 +2,7 @@ import csv
 import io
 import json
 from urllib import parse
+from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
@@ -91,62 +92,76 @@ def parse_doctolib_business_hours(url_data, place):
 def get_infos_etablissement(url):
 
     etablissement = {}
-    response = requests.get(BOOKING_URL.format(url))
-    response.raise_for_status()
-    data = response.json()
-    data = data["data"]
+
+    try:
+        response = requests.get(BOOKING_URL.format(url))
+        response.raise_for_status()
+        data = response.json()
+        
+    except Exception as e:
+            data = {}
     
-    etablissement['gid'] = "d" + str(data["profile"]["id"])
-    etablissement["nom"] = data["profile"]["name_with_title"]
-    # Parse place
-    place = data["places"]
+    if "data" in data:
+        data = data["data"]
+        
+        etablissement['gid'] = "d" + str(data["profile"]["id"])
+        etablissement["nom"] = data["profile"]["name_with_title"]
+        # Parse place
+        place = data["places"]
 
-    # Parse practitioner type
+        # Parse practitioner type
 
-    if not place:
-        return etablissement
-    place = place[0]  # for the moment
+        if not place:
+            return etablissement
+        place = place[0]  # for the moment
 
-    # Parse place location 
-    etablissement['address'] = place['full_address']
-    etablissement['long_coor1'] = place['longitude']
-    etablissement['lat_coor1'] = place['latitude']
-    etablissement["com_insee"] = place["zipcode"]
-    etablissement["ville"] = place["city"]
-
-
-    # Parse landline number
-    etablissement["phone_number"] = None
-
-    if "landline_number" in place:
-        etablissement['phone_number'] = place["landline_number"]
+        # Parse place location 
+        etablissement['address'] = place['full_address']
+        etablissement['long_coor1'] = place['longitude']
+        etablissement['lat_coor1'] = place['latitude']
+        etablissement["com_insee"] = place["zipcode"]
+        etablissement["ville"] = place["city"]
 
 
-    specialite = data["profile"]["speciality"]
-    etablissement['type'] = get_etablissement_type(etablissement['nom'], output)
+        # Parse landline number
+        etablissement["phone_number"] = None
+
+        if "landline_number" in place:
+            etablissement['phone_number'] = place["landline_number"]
+
+
+        specialite = data["profile"]["speciality"]
+        etablissement['type'] = get_etablissement_type(etablissement['nom'], specialite)
 
     return etablissement
 
 
 def scrape_page(page_id=1, liste_ids=[]):
-    response = requests.get(BASE_URL.format(page_id))
-    response.raise_for_status()
 
-    data = response.json()
-    data = data["data"]
+    try:
+        response = requests.get(BASE_URL.format(page_id))
+        response.raise_for_status()
+        data = response.json()
+        
+    except Exception as e:
+        data = {}
+
     etablissements = []
-    # It even counts filtered URLs
+    
+    if "data" in data:
+        data = data["data"]
+        # It even counts filtered URLs
 
-    for doctor in data["doctors"]:
-       
-        if doctor["id"] not in liste_ids:
-            liste_ids.append(doctor["id"])
+        for doctor in data["doctors"]:
+           
+            if doctor["id"] not in liste_ids:
+                liste_ids.append(doctor["id"])
 
-            internal_api_url = doctor["link"].split('/')[-1]
-            etablissement = get_infos_etablissement(internal_api_url)
-            etablissement["rdv_site_web"] = PARTNERS_URL + doctor["link"]
+                internal_api_url = doctor["link"].split('/')[-1]
+                etablissement = get_infos_etablissement(internal_api_url)
+                etablissement["rdv_site_web"] = PARTNERS_URL + doctor["link"]
 
-        etablissements.append(etablissement)
+            etablissements.append(etablissement)
 
     return etablissements
 
