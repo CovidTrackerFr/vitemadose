@@ -106,6 +106,29 @@ def test_export_data(tmp_path):
         "last_updated": "2021-04-04T00:00:00",
     }
 
+    # On test l'export vers le format inscrit sur la plateforme data.gouv.fr
+    content = json.loads((out_dir / "centres_open_data.json").read_text())
+    assert content == [
+        {
+            "departement": "01",
+            "nom": "Bugey Sud",
+            "url": "https://example.com/bugey-sud",
+            "plateforme": "Doctolib",
+        },
+        {
+            "departement": "59",
+            "nom": "CH Armentières",
+            "url": "https://example.com/ch-armentieres",
+            "plateforme": "Keldoc",
+        },
+        {
+            "departement": "59",
+            "nom": "Clinique du Cambresis",
+            "url": "https://example.com/clinique-du-cambresis",
+            "plateforme": "Maiia",
+        },
+    ]
+
 
 def test_export_data_when_blocked(tmp_path):
     centres_cherchés = [

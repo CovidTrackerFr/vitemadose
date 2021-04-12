@@ -103,7 +103,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
         reasons = getReasons(entityId)
         # reasonTypeId = 4 -> 1er Vaccin
         for reason in reasons["reasons"]:
-            if reason["reasonTypeId"] == 4 and reason["canBookOnline"] == True:
+            if reason["reasonTypeId"] == 4 and reason["canBookOnline"] is True:
                 reasonId = reason["id"]
                 date_obj = datetime.strptime(request.get_start_date(), '%Y-%m-%d')
                 end_date = (date_obj + timedelta(days=50)).strftime('%Y-%m-%d')
