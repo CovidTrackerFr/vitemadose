@@ -11,8 +11,6 @@ from bs4 import BeautifulSoup
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
 from utils.vmd_utils import departementUtils
-from scraper.pattern.center_location import CenterLocation
-from scraper.pattern.center_info import CenterInfo
 
 
 timeout = httpx.Timeout(30.0, connect=30.0)
