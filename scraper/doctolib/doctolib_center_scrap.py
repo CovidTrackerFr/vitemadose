@@ -7,8 +7,9 @@ import json
 from urllib import parse
 
 import requests
+import os
 
-from scraper.doctolib.doctolib_filters import parse_practitioner_type
+from multiprocessing import Pool
 from utils.vmd_utils import departementUtils
 from utils.vmd_logger import enable_logger_for_production
 
@@ -31,14 +32,19 @@ DOCTOLIB_DOMAINS = [
 ]
 
 
+POOL_SIZE = int(os.getenv('POOL_SIZE', 15))
+
+logger = enable_logger_for_production()
+
+
 def parse_doctolib_centers() -> List[dict]:
     page_id = 1
     page_has_centers = True
 
     centers = []
 
-    while page_has_centers:
-        print(f"Parsing page {page_id}")
+    while page_has_centers and page_id <= 4:
+        logger.info(f"[Doctolib centers] Parsing page {page_id}")
         centers_page = parse_page_centers(page_id)
         centers += centers_page
 
@@ -89,6 +95,7 @@ def center_from_doctor_dict(doctor_dict) -> dict:
 def get_dict_infos_center_page(url_path: str) -> dict:
     internal_api_url = BOOKING_URL.format(
         parse.urlsplit(url_path).path.split("/")[-1])
+    logger.info(f"Parsing {internal_api_url}")
     data = requests.get(internal_api_url)
     data.raise_for_status()
     output = data.json().get('data', {})
