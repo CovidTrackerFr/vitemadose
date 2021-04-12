@@ -19,7 +19,7 @@ insee = {}
 
 
 class departementUtils:
-
+  
     @staticmethod
     def import_departements() -> List[str]:
         """
@@ -37,9 +37,9 @@ class departementUtils:
 		>>> sorted(departements) == departements
 		True
 		"""
-        with open("data/input/departements-france.csv", newline="\n") as csvfile:
-            reader = csv.DictReader(csvfile)
-            return [str(row["code_departement"]) for row in reader]
+    with open("data/input/departements-france.csv", newline="\n") as csvfile:
+        reader = csv.DictReader(csvfile)
+        return [str(row["code_departement"]) for row in reader]
 
     @staticmethod
     def to_departement_number(insee_code: str) -> str:
@@ -77,10 +77,10 @@ class departementUtils:
     @staticmethod
     def get_city(address: str) -> str:
         """
-		Récupère la ville depuis l'adresse complète
-		>>> get_city("2 avenue de la République, 75005 PARIS")
-		'PARIS'
-		"""
+        Récupère la ville depuis l'adresse complète
+        >>> get_city("2 avenue de la République, 75005 PARIS")
+        'PARIS'
+        """
         return re.search('(?<= \d{5} )(?P<com_nom>.*)\s*$', address).groupdict()['com_nom']
 
     @staticmethod
@@ -105,9 +105,12 @@ def format_phone_number(_phone_number: str) -> str:
 
     phone_number = phone_number.replace(" ", "")
     phone_number = phone_number.replace(".", "")
-
-    if not phone_number[0] == '+':
-        phone_number = "+33" + phone_number[1:]
+    
+    if not phone_number[0] == "+":
+        if phone_number[0] == "0":
+            phone_number = "+33" + phone_number[1:]
+        else:
+            phone_number = "+33" + phone_number
 
     return phone_number
 

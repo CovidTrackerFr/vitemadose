@@ -24,8 +24,11 @@ from .ordoclic import centre_iterator as ordoclic_centre_iterator
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
 from .mapharma.mapharma import centre_iterator as mapharma_centre_iterator
 from .mapharma.mapharma import fetch_slots as mapharma_fetch_slots
+from random import random
 
 POOL_SIZE = int(os.getenv('POOL_SIZE', 15))
+PARTIAL_SCRAPE = float(os.getenv('PARTIAL_SCRAPE', 1.0))
+PARTIAL_SCRAPE = max(0, min(PARTIAL_SCRAPE, 1))
 
 logger = enable_logger_for_production()
 
@@ -56,9 +59,10 @@ def scrape_debug(urls):
 
 def scrape() -> None:
     with Pool(POOL_SIZE) as pool:
+        centre_iterator_proportion = (c for c in centre_iterator() if random() < PARTIAL_SCRAPE)
         centres_cherchés = pool.imap_unordered(
             cherche_prochain_rdv_dans_centre,
-            centre_iterator(),
+            centre_iterator_proportion,
             1
         )
         compte_centres, compte_centres_avec_dispo, compte_bloqués = export_data(centres_cherchés)
@@ -121,6 +125,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
     compte_centres = 0
     compte_centres_avec_dispo = 0
     bloqués_doctolib = 0
+    centres_open_data = []
     par_departement = {
         code: {
             'version': 1,
@@ -162,6 +167,10 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
     outpath = outpath_format.format("info_centres")
     with open(outpath, "w") as info_centres:
         json.dump(par_departement, info_centres, indent=2)
+
+    outpath = outpath_format.format("centres_open_data")
+    with open(outpath, 'w') as centres_file:
+        json.dump(centres_open_data, centres_file, indent=2)
 
     for code_departement, disponibilités in par_departement.items():
         disponibilités['last_updated'] = dt.datetime.now(tz=pytz.timezone('Europe/Paris')).isoformat()
@@ -280,6 +289,8 @@ def gouv_centre_iterator(outpath_format='data/output/{}.json'):
     with open(outpath, "w") as fichier:
         json.dump(centres_non_pris_en_compte, fichier, indent=2)
 
+def copy_omit_keys(d, omit_keys):
+    return {k: d[k] for k in set(list(d.keys())) - set(omit_keys)}
 
 if __name__ == "__main__":
     main()
