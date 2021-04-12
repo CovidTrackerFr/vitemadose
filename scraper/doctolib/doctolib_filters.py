@@ -60,8 +60,8 @@ def get_etablissement_type(name, specialite):
     if 'pharmacie' in name.lower():
         return DRUG_STORE
     
-    if speciality:
-        slug = speciality["slug"]
+    if specialite:
+        slug = specialite["slug"]
         if slug == 'medecin-generaliste':
             return GENERAL_PRACTITIONER
     return VACCINATION_CENTER

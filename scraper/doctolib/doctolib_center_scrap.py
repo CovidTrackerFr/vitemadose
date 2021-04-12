@@ -4,6 +4,7 @@ import json
 from urllib import parse
 from pathlib import Path
 
+import logging
 import requests
 from bs4 import BeautifulSoup
 
@@ -11,8 +12,9 @@ from scraper.doctolib.doctolib_filters import get_etablissement_type
 from utils.vmd_utils import departementUtils, format_phone_number
 from utils.vmd_logger import enable_logger_for_production
 
-BASE_URL = 'https://www.doctolib.fr/vaccination-covid-19/france?page={0}'
+BASE_URL = 'https://www.doctolib.fr/vaccination-covid-19/france.json?page={0}'
 BOOKING_URL = 'https://www.doctolib.fr/booking/{0}.json'
+PARTNERS_URL = "https://partners.doctolib.fr"
 
 CENTER_TYPES = [
     'hopital-public',
@@ -28,6 +30,8 @@ DOCTOLIB_DOMAINS = [
     'https://partners.doctolib.fr',
     'https://www.doctolib.fr'
 ]
+
+logger = logging.getLogger('scraper')
 
 
 def get_csv():
@@ -99,7 +103,8 @@ def get_infos_etablissement(url):
         data = response.json()
         
     except Exception as e:
-            data = {}
+        logger.warning("Impossible de se connecter à Doctolib")
+        data = {}
     
     if "data" in data:
         data = data["data"]
@@ -144,6 +149,7 @@ def scrape_page(page_id=1, liste_ids=[]):
         data = response.json()
         
     except Exception as e:
+        logger.warning("Impossible de se connecter à Doctolib")
         data = {}
 
     etablissements = []
@@ -168,8 +174,8 @@ def scrape_page(page_id=1, liste_ids=[]):
 
 def main():
 
-    liste_etablissements = []
     liste_ids = []
+    liste_etablissements = []
     page = 1
 
     etablissements_trouves = True
@@ -182,7 +188,7 @@ def main():
         else:
             liste_etablissements = liste_etablissements + etablissements
             page += 1
-
+    
     outpath = Path("data/output/doctolib-centers.json")
     with open(outpath, "w") as fichier:
         fichier.write(json.dumps(liste_etablissements, indent=2))
