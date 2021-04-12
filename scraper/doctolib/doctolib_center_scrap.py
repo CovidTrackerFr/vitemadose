@@ -1,18 +1,19 @@
 from scraper.pattern.scraper_result import DRUG_STORE, GENERAL_PRACTITIONER, VACCINATION_CENTER
-from typing import List
-import requests
-
-
-import json
-from urllib import parse
-
-import requests
-import os
-
 from utils.vmd_utils import departementUtils, format_phone_number
 from utils.vmd_logger import enable_logger_for_production
+from scraper.doctolib.doctolib import DOCTOLIB_HEADERS
+
+from typing import List
+import requests
+import json
+from urllib import parse
+import requests
+import os
+import re
+from unidecode import unidecode
 
 BASE_URL = 'http://www.doctolib.fr/vaccination-covid-19/france.json?page={0}'
+BASE_URL_DEPARTEMENT = "http://www.doctolib.fr/vaccination-covid-19/{0}.json?page={1}"
 BOOKING_URL = 'https://www.doctolib.fr/booking/{0}.json'
 
 CENTER_TYPES = [
@@ -31,17 +32,14 @@ DOCTOLIB_DOMAINS = [
 ]
 
 
-POOL_SIZE = int(os.getenv('POOL_SIZE', 15))
-
 logger = enable_logger_for_production()
 
 
 def parse_doctolib_centers() -> List[dict]:
-    page_id = 1
-    page_has_centers = True
-
     centers = []
 
+    page_id = 1
+    page_has_centers = True
     while page_has_centers:
         logger.info(f"[Doctolib centers] Parsing page {page_id}")
         centers_page = parse_page_centers(page_id)
@@ -51,13 +49,59 @@ def parse_doctolib_centers() -> List[dict]:
 
         if len(centers_page) == 0:
             page_has_centers = False
-        print([center["nom"] for center in centers_page])
+
+    for problematic_departement in ["gers", "jura", "var"]:
+        logger.info(
+            f"[Doctolib centers] Parsing pages of departement {problematic_departement} through department SEO link")
+        centers_departements = parse_pages_departement(
+            problematic_departement)
+        print(centers_departements)
+        centers += centers_departements
 
     return centers
 
 
+def parse_pages_departement(departement):
+    departement = doctolib_urlify(departement)
+    page_id = 1
+    page_has_centers = True
+
+    centers = []
+
+    while page_has_centers:
+        logger.info(
+            f"[Doctolib centers] Parsing page {page_id} of {departement}")
+        centers_page = parse_page_centers_departement(departement, page_id)
+        centers += centers_page
+
+        page_id += 1
+
+        if len(centers_page) == 0:
+            page_has_centers = False
+
+    return centers
+
+
+def parse_page_centers_departement(departement, page_id) -> List[dict]:
+    r = requests.get(BASE_URL_DEPARTEMENT.format(
+        doctolib_urlify(departement), page_id), headers=DOCTOLIB_HEADERS)
+    data = r.json()
+
+    # TODO parallelism can be put here
+    centers_page = [center_from_doctor_dict(payload)
+                    for payload in data["data"]["doctors"]]
+    return centers_page
+
+
+def doctolib_urlify(departement: str) -> str:
+    departement = re.sub(r"[^\w\s\-]", '-', departement)
+    departement = re.sub(r"\s+", '-', departement).lower()
+    return unidecode(departement)
+
+
 def parse_page_centers(page_id) -> List[dict]:
-    r = requests.get(BASE_URL.format(page_id))
+    print(BASE_URL.format(page_id))
+    r = requests.get(BASE_URL.format(page_id), headers=DOCTOLIB_HEADERS)
     data = r.json()
 
     # TODO parallelism can be put here
