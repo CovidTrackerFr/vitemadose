@@ -1,35 +1,29 @@
 import csv
 import io
 import json
+import os
 from urllib import parse
 from pathlib import Path
+from multiprocessing import Pool, freeze_support
 
 import logging
 import requests
 from bs4 import BeautifulSoup
 
-from scraper.doctolib.doctolib_filters import get_etablissement_type
-from utils.vmd_utils import departementUtils, format_phone_number
+from utils.vmd_utils import departementUtils
 from utils.vmd_logger import enable_logger_for_production
 
-BASE_URL = 'https://www.doctolib.fr/vaccination-covid-19/france.json?page={0}'
-BOOKING_URL = 'https://www.doctolib.fr/booking/{0}.json'
+INFO_URL = "https://www.doctolib.fr{}.json"
+SEARCH_URL = "https://www.doctolib.fr/vaccination-covid-19/france.json?page={}"
 PARTNERS_URL = "https://partners.doctolib.fr"
 
-CENTER_TYPES = [
-    'hopital-public',
-    'centre-de-vaccinations-internationales',
-    'centre-de-sante',
-    'pharmacie',
-    'medecin-generaliste',
-    'centre-de-vaccinations-internationales',
-    'centre-examens-de-sante'
-]
 
 DOCTOLIB_DOMAINS = [
     'https://partners.doctolib.fr',
     'https://www.doctolib.fr'
 ]
+
+POOL_SIZE = int(os.getenv('POOL_SIZE', 15))
 
 logger = logging.getLogger('scraper')
 
@@ -96,55 +90,46 @@ def parse_doctolib_business_hours(url_data, place):
 def get_infos_etablissement(url):
 
     etablissement = {}
-
-    try:
-        response = requests.get(BOOKING_URL.format(url))
-        response.raise_for_status()
-        data = response.json()
-        
-    except Exception as e:
-        logger.warning("Impossible de se connecter à Doctolib")
-        data = {}
+    response = requests.get(INFO_URL.format(url))
+    response.raise_for_status()
+    data = response.json()
+    data = data["data"]
     
-    if "data" in data:
-        data = data["data"]
-        
-        etablissement['gid'] = "d" + str(data["profile"]["id"])
-        etablissement["nom"] = data["profile"]["name_with_title"]
-        # Parse place
-        place = data["places"]
 
-        # Parse practitioner type
+    etablissement["rdv_site_web"] = PARTNERS_URL + url
+    etablissement['gid'] = "d" + str(data["profile"]["id"])
+    etablissement["nom"] = data["profile"]["name_with_title"]
+    etablissement['type'] = data["profile"]["subtitle"]
+    # Parse place
+    place = data["places"]
 
-        if not place:
-            return etablissement
-        place = place[0]  # for the moment
+    # Parse practitioner type
 
-        # Parse place location 
-        etablissement['address'] = place['full_address']
-        etablissement['long_coor1'] = place['longitude']
-        etablissement['lat_coor1'] = place['latitude']
-        etablissement["com_insee"] = place["zipcode"]
-        etablissement["ville"] = place["city"]
+    if not place:
+        return etablissement
+    place = place[0]  # for the moment
 
-
-        # Parse landline number
-        etablissement["phone_number"] = None
-
-        if "landline_number" in place:
-            etablissement['phone_number'] = place["landline_number"]
+    # Parse place location 
+    etablissement["address"] = place["full_address"]
+    etablissement["long_coor1"] = place["longitude"]
+    etablissement["lat_coor1"] = place["latitude"]
+    etablissement["com_insee"] = place["zipcode"]
 
 
-        specialite = data["profile"]["speciality"]
-        etablissement['type'] = get_etablissement_type(etablissement['nom'], specialite)
+    # Parse landline number
+    etablissement["phone_number"] = None
+
+    if "landline_number" in place:
+        etablissement['phone_number'] = place["landline_number"]
 
     return etablissement
 
 
-def scrape_page(page_id=1, liste_ids=[]):
 
+def scrape_page(page_id=1, liste_ids=[]):
+    liste_urls =[]
     try:
-        response = requests.get(BASE_URL.format(page_id))
+        response = requests.get(SEARCH_URL.format(page_id))
         response.raise_for_status()
         data = response.json()
         
@@ -157,42 +142,54 @@ def scrape_page(page_id=1, liste_ids=[]):
     if "data" in data:
         data = data["data"]
         # It even counts filtered URLs
-
         for doctor in data["doctors"]:
            
             if doctor["id"] not in liste_ids:
                 liste_ids.append(doctor["id"])
+                liste_urls.append(doctor["link"])
 
-                internal_api_url = doctor["link"].split('/')[-1]
-                etablissement = get_infos_etablissement(internal_api_url)
-                etablissement["rdv_site_web"] = PARTNERS_URL + doctor["link"]
+    return  liste_urls
 
-                etablissements.append(etablissement)
+def doctolib_iterator():
 
-    return etablissements
+    liste_ids = []
+    page = 1
+
+    urls = True
+
+    while urls:
+        urls = scrape_page(page, liste_ids)
+
+        for url in urls:
+            yield url
+        page += 1
+
+
+def export_data(_etablissements):
+
+    etablissements = []
+
+    for etablissement in _etablissements:
+        etablissements.append(etablissement)
+
+    outpath = Path("data/output/doctolib-centers.json")
+    with open(outpath, "w") as fichier:
+        fichier.write(json.dumps(etablissements, indent=2))
+                
 
 
 def main():
 
-    liste_ids = []
-    liste_etablissements = []
-    page = 1
+    with Pool(POOL_SIZE) as pool:
+        etablissements = pool.imap_unordered(
+            get_infos_etablissement,
+            doctolib_iterator(),
+            1
+        )
 
-    etablissements_trouves = True
-
-    while etablissements_trouves:
-    
-        etablissements = scrape_page(page, liste_ids)
-        if len(etablissements) == 0:
-            etablissements_trouves = False
-        else:
-            liste_etablissements = liste_etablissements + etablissements
-            page += 1
-
-    outpath = Path("data/output/doctolib-centers.json")
-    with open(outpath, "w") as fichier:
-        fichier.write(json.dumps(liste_etablissements, indent=2))
+        export_data(etablissements)
 
 
 if __name__ == "__main__":
+    freeze_support()
     main()

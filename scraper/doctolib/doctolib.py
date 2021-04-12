@@ -8,7 +8,7 @@ from typing import Optional, Tuple
 import httpx
 import requests
 
-from scraper.doctolib.doctolib_filters import is_appointment_relevant, get_etablissement_type, is_category_relevant
+from scraper.doctolib.doctolib_filters import is_appointment_relevant, is_category_relevant
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 

@@ -52,16 +52,3 @@ def is_appointment_relevant(appointment_name):
         if allowed_appointments in appointment_name:
             return True
     return False
-
-
-# Parse practitioner type from Doctolib booking data.
-def get_etablissement_type(name, specialite):
-    
-    if 'pharmacie' in name.lower():
-        return DRUG_STORE
-    
-    if specialite:
-        slug = specialite["slug"]
-        if slug == 'medecin-generaliste':
-            return GENERAL_PRACTITIONER
-    return VACCINATION_CENTER
