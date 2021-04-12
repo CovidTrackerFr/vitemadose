@@ -12,6 +12,8 @@ from bs4 import BeautifulSoup
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
 from utils.vmd_utils import departementUtils
+from scraper.pattern.center_location import CenterLocation
+from scraper.pattern.center_info import CenterInfo
 
 
 timeout = httpx.Timeout(30.0, connect=30.0)
@@ -45,6 +47,7 @@ def get_reasons(soup):
             reasons.append( { 'campagneId': campagneId, 'optionId': optionId, 'optionName': optionName })
     return reasons
 
+    
 def get_profile(url: str, client: httpx.Client = DEFAULT_CLIENT):
     profile = {}
     profile['reasons'] = []
@@ -58,43 +61,6 @@ def get_profile(url: str, client: httpx.Client = DEFAULT_CLIENT):
     if reasons != []:
         profile['reasons'] = reasons
     return profile
-
-def get_profiles(zip: str, client: httpx.Client = DEFAULT_CLIENT):
-    index = 0
-    result = []
-    while True:
-        base_url = f"https://mapharma.net/{zip}-{index}" if index > 0 else f'https://mapharma.net/{zip}'
-        try:
-            r = client.get(base_url)
-            r.raise_for_status()
-        except httpx.HTTPStatusError:
-            if index > 0:
-                return result
-            else:
-                index = 1
-                continue
-        soup = BeautifulSoup(r.content, 'html.parser')
-        reasons = get_reasons(soup)
-        name = get_name(soup)
-        address = get_address(soup)
-        payload = {'id': index, 'url': base_url, 'zip': zip, 'name': name, 'address': address, 'reasons': reasons}
-        result.append(payload)
-        index += 1
-
-def parse_all_zip():
-    profiles = dict()
-    with open("data/output/codepostal_to_insee.json", "r") as json_file:
-        zips = json.load(json_file)
-        for zip in zips.keys():
-            logger.info(f'Searching CODE POSTAL {zip}...')
-            for profile in get_profiles(zip, DEFAULT_CLIENT):
-                if zip not in profiles:
-                    profiles[zip] = [] 
-                profiles[zip].append(profile)
-            if zip in profiles and len(profiles[zip]) > 0:
-                logger.info(f'found {len(profiles[zip])} in CODE POSTAL {zip}')
-    with open("data/output/mapharma-centers.json", "w") as json_file:
-        json.dump(profiles, json_file, indent = 4)
 
 def get_slots(campagneId: str, optionId: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT):
     base_url = f'https://mapharma.net/api/public/calendar/{campagneId}/{start_date}/{optionId}'
@@ -145,6 +111,19 @@ def centre_iterator():
         mapharma = json.load(json_file)
         for zip in mapharma.keys():
             for profile in mapharma[zip]:
+                yield(profile)
+                """
                 id = profile['id']
-                centre = {'gid': f'{zip}-{id}', 'rdv_site_web': profile['url'], 'com_insee': departementUtils.cp_to_insee(zip), 'nom': profile['name'], "location": { "zip": zip }, "address": profile['address'] , 'iterator': 'mapharma', 'type': DRUG_STORE} 
+                #centre = {'gid': f'{zip}-{id}', 'rdv_site_web': profile['url'], 'com_insee': departementUtils.cp_to_insee(zip), 'nom': profile['name'], 'location': profile.get('location'), "address": profile['address'] , 'iterator': 'mapharma', 'type': DRUG_STORE} 
+                #centre = profile
+                centre['gid'] = f'{zip}-{id}'
+                centre['rdv_site_web'] = profile.get('url')
+                centre['com_insee'] = profile.get('com_insee')
+                centre['nom'] = profile.get('name')
+                centre['location'] = profile.get('location')
+                centre['address'] = profile['address']
+                centre['iterator'] = 'mapharma'
+                centre['type'] = DRUG_STORE
+                print(centre)
                 yield centre
+"""

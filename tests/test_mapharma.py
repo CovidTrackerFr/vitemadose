@@ -3,13 +3,12 @@ import httpx
 from bs4 import BeautifulSoup
 from pathlib import Path
 
+from scraper.mapharma.mapharma_center_scrap import get_profiles
 from scraper.mapharma.mapharma import (
     get_name,
     get_address,
     get_reasons,
-    get_profile,
-    get_profiles)
-
+    get_profile)
 
 
 def get_soup():
