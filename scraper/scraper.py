@@ -5,6 +5,7 @@ import io
 import json
 import os
 import traceback
+from collections import deque
 from multiprocessing import Pool
 from scraper.profiler import Profiling
 
@@ -243,12 +244,11 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
 
 def centre_iterator():
     visited_centers_links = set()
-    for iterator in (ordoclic_centre_iterator, mapharma_centre_iterator,
-                     doctolib_center_iterator, gouv_centre_iterator):
-        for center in iterator():
-            if center["rdv_site_web"] not in visited_centers_links:
-                visited_centers_links.add(center["rdv_site_web"])
-                yield center
+    for center in ialternate(ordoclic_centre_iterator(), mapharma_centre_iterator(),
+                     doctolib_center_iterator(), gouv_centre_iterator()):
+        if center["rdv_site_web"] not in visited_centers_links:
+            visited_centers_links.add(center["rdv_site_web"])
+            yield center
 
 
 def gouv_centre_iterator(outpath_format='data/output/{}.json'):
@@ -296,6 +296,16 @@ def gouv_centre_iterator(outpath_format='data/output/{}.json'):
 def copy_omit_keys(d, omit_keys):
     return {k: d[k] for k in set(list(d.keys())) - set(omit_keys)}
 
+
+def ialternate(*iterators):
+    queue = deque(iterators)
+    while len(queue) > 0:
+        iterator = queue.popleft()
+        try:
+            yield next(iterator)
+            queue.append(iterator)
+        except StopIteration:
+            pass
 
 if __name__ == "__main__":
     main()
