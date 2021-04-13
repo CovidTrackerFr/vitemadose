@@ -9,6 +9,7 @@ import pytest
 from scraper.keldoc.keldoc_center import KeldocCenter
 from scraper.keldoc.keldoc_filters import filter_vaccine_specialties, filter_vaccine_motives, is_appointment_relevant, \
     is_specialty_relevant
+from scraper.pattern.scraper_request import ScraperRequest
 
 CENTER1_KELDOC = {
     "/api/patients/v2/clinics/2563/specialties/144/cabinets": "center1-cabinet",
@@ -44,8 +45,9 @@ def test_keldoc_parse_center():
 
     center1_data = json.loads(Path("tests", "fixtures", "keldoc", "center1-info.json").read_text())
 
+    request = ScraperRequest(center1_url, "2020-04-04")
     client = httpx.Client(transport=httpx.MockTransport(app_center1))
-    test_center_1 = KeldocCenter(base_url=center1_url, client=client)
+    test_center_1 = KeldocCenter(request, client=client)
     assert test_center_1.parse_resource()
 
     # Check if parameters are parsed correctly
@@ -97,7 +99,8 @@ def test_keldoc_missing_params():
         return httpx.Response(200, json={})
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    test_center_1 = KeldocCenter(base_url=center1_url, client=client)
+    request = ScraperRequest(center1_url, "2020-04-04")
+    test_center_1 = KeldocCenter(request, client=client)
     assert not test_center_1.parse_resource()
 
 
@@ -111,11 +114,11 @@ def test_keldoc_timeout():
             raise TimeoutError
         if request.url.path == "/api/patients/v2/clinics/1/specialties/1/cabinets":
             raise TimeoutError
-        print(request.url.path)
         return httpx.Response(200, json={})
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    test_center_1 = KeldocCenter(base_url=center1_url, client=client)
+    request = ScraperRequest(center1_url, "2020-04-04")
+    test_center_1 = KeldocCenter(request, client=client)
 
     # Test center info TA
     with pytest.raises(TimeoutError):
