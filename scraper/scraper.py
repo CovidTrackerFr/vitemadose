@@ -5,7 +5,9 @@ import io
 import json
 import os
 import traceback
+from collections import deque
 from multiprocessing import Pool
+from scraper.profiler import Profiling, ProfiledPool
 
 from scraper.error import ScrapeError, BlockedByDoctolibError
 
@@ -60,7 +62,11 @@ def scrape_debug(urls):
 
 
 def scrape() -> None:
-    with Pool(POOL_SIZE) as pool:
+    compte_centres = 0
+    compte_centres_avec_dispo = 0
+    compte_bloqués = 0
+    profiled_pool = ProfiledPool(POOL_SIZE)
+    with profiled_pool as pool:
         centre_iterator_proportion = (
             c for c in centre_iterator() if random() < PARTIAL_SCRAPE)
         centres_cherchés = pool.imap_unordered(
@@ -70,17 +76,19 @@ def scrape() -> None:
         )
         compte_centres, compte_centres_avec_dispo, compte_bloqués = export_data(
             centres_cherchés)
-        logger.info(
-            f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
-        if compte_centres_avec_dispo == 0:
-            logger.error(
-                "Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur")
-            exit(code=1)
 
-        if compte_bloqués > 10:
-            logger.error(
-                "Notre IP a été bloquée par le CDN Doctolib plus de 10 fois. Pour éviter de pousser des données erronées, on s'arrête ici")
-            exit(code=2)
+    logger.info(
+        f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
+    profiled_pool.profiler.print_summary()
+    if compte_centres_avec_dispo == 0:
+        logger.error(
+            "Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur")
+        exit(code=1)
+
+    if compte_bloqués > 10:
+        logger.error(
+            "Notre IP a été bloquée par le CDN Doctolib plus de 10 fois. Pour éviter de pousser des données erronées, on s'arrête ici")
+        exit(code=2)
 
 
 def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:
@@ -187,6 +195,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
     return compte_centres, compte_centres_avec_dispo, bloqués_doctolib
 
 
+@Profiling.measure('Any_slot')
 def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
     if fetch_map is None:
         # Map platform to implementation.
@@ -235,12 +244,11 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
 
 def centre_iterator():
     visited_centers_links = set()
-    for iterator in (ordoclic_centre_iterator, mapharma_centre_iterator,
-                     doctolib_center_iterator, gouv_centre_iterator):
-        for center in iterator():
-            if center["rdv_site_web"] not in visited_centers_links:
-                visited_centers_links.add(center["rdv_site_web"])
-                yield center
+    for center in ialternate(ordoclic_centre_iterator(), mapharma_centre_iterator(),
+                     doctolib_center_iterator(), gouv_centre_iterator()):
+        if center["rdv_site_web"] not in visited_centers_links:
+            visited_centers_links.add(center["rdv_site_web"])
+            yield center
 
 
 def gouv_centre_iterator(outpath_format='data/output/{}.json'):
@@ -288,6 +296,16 @@ def gouv_centre_iterator(outpath_format='data/output/{}.json'):
 def copy_omit_keys(d, omit_keys):
     return {k: d[k] for k in set(list(d.keys())) - set(omit_keys)}
 
+
+def ialternate(*iterators):
+    queue = deque(iterators)
+    while len(queue) > 0:
+        iterator = queue.popleft()
+        try:
+            yield next(iterator)
+            queue.append(iterator)
+        except StopIteration:
+            pass
 
 if __name__ == "__main__":
     main()
