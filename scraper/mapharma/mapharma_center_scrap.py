@@ -14,7 +14,7 @@ timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 logger = logging.getLogger('scraper')
 
-def get_location(center, zip: str, address: str, client: httpx.Client = DEFAULT_CLIENT):
+def get_location(center: dict, zip: str, address: str, client: httpx.Client = DEFAULT_CLIENT) -> dict:
     address = address.replace("LA VARENNE SAINT HILAIRE", "SAINT-MAUR-DES-FOSSES") # La Varenne est un quartier de St Maur
     base_url = f'https://api-adresse.data.gouv.fr/search/?q={address}&postcode='
     center["com_insee"] = departementUtils.cp_to_insee(zip)
@@ -98,9 +98,9 @@ def main():
         result[key] = value
     elapsedTime = time.time() - startTime
     if not centers_count:
-        logger.info('No center found, rage quit 🤬')
-    logger.info(f'Scanned {zip_count} 📬 in {round(elapsedTime,1)} sec 🕜')
-    logger.info(f'and all I got was a loosy count of {centers_count} centers 😭')
+        logger.info('No center found, rage quit')
+    logger.info(f'Scanned {zip_count} zips in {round(elapsedTime,1)} sec')
+    logger.info(f'Found {centers_count} centers')
     with open("data/output/mapharma_centers.json", "w", encoding='utf8') as json_file:
         json.dump(result, json_file, indent = 2, sort_keys=True)
 
