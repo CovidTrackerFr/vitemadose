@@ -38,27 +38,22 @@ logger = get_logger()
 
 def parse_doctolib_centers() -> List[dict]:
     centers = []
-
-    page_id = 1
-    page_has_centers = True
-    while page_has_centers:
-        logger.info(f"[Doctolib centers] Parsing page {page_id}")
-        centers_page = parse_page_centers(page_id)
-        centers += centers_page
-
-        page_id += 1
-
-        if len(centers_page) == 0:
-            page_has_centers = False
-
-    for problematic_departement in ["gers", "jura", "var"]:
+    for departement in get_departements():
         logger.info(
-            f"[Doctolib centers] Parsing pages of departement {problematic_departement} through department SEO link")
-        centers_departements = parse_pages_departement(
-            problematic_departement)
+            f"[Doctolib centers] Parsing pages of departement {departement} through department SEO link")
+        centers_departements = parse_pages_departement(departement)
+        if centers_departements == 0:
+            raise Exception("No Value found for department {}, crashing")
         centers += centers_departements
-
     return centers
+
+
+def get_departements():
+    import csv
+
+    with open("data/input/departements-france.csv", newline="\n") as csvfile:
+        reader = csv.DictReader(csvfile)
+        return [str(row["nom_departement"]) for row in reader]
 
 
 def parse_pages_departement(departement):
@@ -150,7 +145,8 @@ def get_dict_infos_center_page(url_path: str) -> dict:
 
         # Parse place location
         infos_page = {}
-        infos_page['gid'] = 'd{0}'.format(output.get('profile', {}).get('id', ''))
+        infos_page['gid'] = 'd{0}'.format(
+            output.get('profile', {}).get('id', ''))
         infos_page['address'] = place['full_address']
         infos_page['long_coor1'] = place.get('longitude')
         infos_page['lat_coor1'] = place.get('latitude')
