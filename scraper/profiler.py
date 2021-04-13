@@ -1,6 +1,6 @@
 import time
 import statistics
-from terminaltables import SingleTable
+from terminaltables import AsciiTable
 from multiprocessing import Queue, Process
 from multiprocessing.pool import Pool
 from functools import wraps
@@ -83,7 +83,7 @@ class Profiling:
           stats['max'],
         ])
 
-      table = SingleTable(datatable)
+      table = AsciiTable(datatable)
       print (table.table)
 
     def read_profiling_result(collecting_q, result_q):
