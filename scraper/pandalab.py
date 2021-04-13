@@ -10,7 +10,7 @@ from urllib.parse import parse_qs
 
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
-from .departements import cp_to_insee
+from utils.vmd_utils import departementUtils
 
 timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
@@ -68,7 +68,7 @@ def ict_to_center(ict):
     """Mapping du payload json récupéré sur l'api pandalab vers le format de centre avec meta"""
     center = dict()
     center["nom"] = ict["name"]
-    center["com_insee"] = cp_to_insee(ict["address"]["zip"].strip().zfill(5))
+    center["com_insee"] = departementUtils.cp_to_insee(ict["address"]["zip"].strip().zfill(5))
     center["phone_number"] = ict.get("phoneNumber")
     address = dict()
     address["adr_num"] = ""
