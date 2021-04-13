@@ -78,11 +78,15 @@ class departementUtils:
     @staticmethod
     def get_city(address: str) -> str:
         """
-                Récupère la ville depuis l'adresse complète
-                >>> get_city("2 avenue de la République, 75005 PARIS")
-                'PARIS'
-                """
-        return re.search('(?<= \d{5} )(?P<com_nom>.*)\s*$', address).groupdict()['com_nom']
+        Récupère la ville depuis l'adresse complète
+        >>> get_city("2 avenue de la République, 75005 PARIS")
+        'PARIS'
+        """
+        group = re.search('(?<= \d{5} )(?P<com_nom>.*)\s*$', address)
+        if not group:
+            return None
+        group = group.groupdict()
+        return group.get('com_nom')
 
     @staticmethod
     def cp_to_insee(cp):

@@ -6,10 +6,10 @@ from scraper.keldoc.keldoc_center import KeldocCenter
 from scraper.keldoc.keldoc_filters import filter_vaccine_specialties, filter_vaccine_motives
 from scraper.pattern.scraper_request import ScraperRequest
 
-timeout = httpx.Timeout(15.0, connect=15.0)
+timeout = httpx.Timeout(60.0, connect=60.0)
 session = httpx.Client(timeout=timeout)
 
-KELDOC_SLOT_LIMIT = 50
+KELDOC_SLOT_LIMIT = 21
 
 
 def fetch_slots(request: ScraperRequest):

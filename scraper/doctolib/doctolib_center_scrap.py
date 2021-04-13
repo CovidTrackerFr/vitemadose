@@ -150,6 +150,7 @@ def get_dict_infos_center_page(url_path: str) -> dict:
 
         # Parse place location
         infos_page = {}
+        infos_page['gid'] = 'd{0}'.format(output.get('profile', {}).get('id', ''))
         infos_page['address'] = place['full_address']
         infos_page['long_coor1'] = place.get('longitude')
         infos_page['lat_coor1'] = place.get('latitude')

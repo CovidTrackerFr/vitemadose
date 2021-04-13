@@ -17,7 +17,6 @@ def test_export_data(tmp_path):
             "url": "https://example.com/bugey-sud",
             "plateforme": "Doctolib",
             "prochain_rdv": "2021-04-10T00:00:00",
-            "ville": "",
             "location": None,
             "metadata": None,
             "type": None,
@@ -31,7 +30,6 @@ def test_export_data(tmp_path):
             "plateforme": "Keldoc",
             "prochain_rdv": "2021-04-11:00:00",
             "erreur": None,
-            "ville": "",
             "location": None,
             "metadata": None,
             "type": None,
@@ -45,7 +43,6 @@ def test_export_data(tmp_path):
             "plateforme": "Maiia",
             "prochain_rdv": None,
             "erreur": None,
-            "ville": "",
             "location": None,
             "metadata": None,
             "type": None,
@@ -60,7 +57,6 @@ def test_export_data(tmp_path):
             "plateforme": "Doctolib",
             "prochain_rdv": "2021-04-12:00:00",
             "erreur": None,
-            "ville": "",
             "location": None,
             "metadata": None,
             "type": None,
@@ -101,7 +97,6 @@ def test_export_data(tmp_path):
                 "url": "https://example.com/bugey-sud",
                 "plateforme": "Doctolib",
                 "prochain_rdv": "2021-04-10T00:00:00",
-                "ville": None,
                 "location": None,
                 "metadata": None,
                 "type": None,
@@ -125,7 +120,6 @@ def test_export_data(tmp_path):
                 "url": "https://example.com/ch-armentieres",
                 "plateforme": "Keldoc",
                 "prochain_rdv": "2021-04-11:00:00",
-                "ville": None,
                 "location": None,
                 "metadata": None,
                 "type": None,
@@ -142,7 +136,6 @@ def test_export_data(tmp_path):
                 "url": "https://example.com/clinique-du-cambresis",
                 "plateforme": "Maiia",
                 "prochain_rdv": None,
-                "ville": None,
                 "location": None,
                 "metadata": None,
                 "type": None,
@@ -180,12 +173,12 @@ def test_export_data(tmp_path):
 
 
 def test_export_data_when_blocked(tmp_path):
-    center_info1 = CenterInfo("59", "", "Clinique du Cambresis", "https://example.com/clinique-du-cambresis")
+    center_info1 = CenterInfo("59", "Clinique du Cambresis", "https://example.com/clinique-du-cambresis")
     center_info1.plateforme = "Maiia"
     center_info1.prochain_rdv = "2021-04-12:00:00"
     center_info1.erreur = None
 
-    center_info2 = CenterInfo("14", "", "Hôpital magique", "https://example.com/hopital-magique")
+    center_info2 = CenterInfo("14", "Hôpital magique", "https://example.com/hopital-magique")
     center_info2.plateforme = "Doctolib"
     center_info2.prochain_rdv = None
     center_info2.erreur = BlockedByDoctolibError("https://example.com/hopital-magique")
@@ -217,7 +210,6 @@ def test_export_data_when_blocked(tmp_path):
             "departement": "14",
             "nom": "Hôpital magique",
             "url": "https://example.com/hopital-magique",
-            "ville": "",
             "location": None,
             "metadata": None,
             "prochain_rdv": None,
@@ -241,7 +233,6 @@ def test_export_data_when_blocked(tmp_path):
                 "url": "https://example.com/clinique-du-cambresis",
                 "plateforme": "Maiia",
                 "prochain_rdv": "2021-04-12:00:00",
-                "ville": "",
                 "location": None,
                 "metadata": None,
                 "type": None,
