@@ -220,7 +220,7 @@ def center_type(url_path: str, nom: str) -> str:
 
 
 if __name__ == "__main__":
-    centers = parse_doctolib_centers(1)
+    centers = parse_doctolib_centers()
     path_out = 'data/output/doctolib-centers.json'
     logger.info(f"Found {len(centers)} centers on Doctolib")
     logger.info(f"> Writing them on {path_out}")
