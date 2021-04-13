@@ -263,7 +263,7 @@ def gouv_centre_iterator(outpath_format='data/output/{}.json'):
             centres_non_pris_en_compte["centres_fermes"][row["gid"]
                                                          ] = row["rdv_site_web"]
 
-        if len(row["rdv_site_web"]):
+        if len(row["rdv_site_web"]) and "doctolib" not in row["rdv_site_web"]:
             yield row
         else:
             centres_non_pris_en_compte["centres_urls_vides"].append(row["gid"])
