@@ -8,7 +8,6 @@ test:
   image: python:3.8-alpine
   timeout: "2 minutes"
   before_script:
-    - apk add --no-cache make curl musl-dev g++
     - ./scripts/install
   script:
     - ./scripts/test
@@ -22,7 +21,7 @@ trouver_les_rdv:
   tags:
     - ovh
   before_script:
-    - apk add --no-cache make curl musl-dev g++
+    - apk add --no-cache make curl
     - ./scripts/install
     - echo IP publique de sortie du gitlab runner $(curl -s https://ifconfig.me/ip )
     - traceroute -4 -l -I partners.doctolib.fr
