@@ -1,3 +1,5 @@
+import os
+
 import httpx
 from httpx import TimeoutException
 import json
@@ -12,9 +14,12 @@ from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
 from utils.vmd_utils import departementUtils
 
+MAPHARMA_HEADERS = {
+    'User-Agent': os.environ.get('MAPHARMA_API_KEY', ''),
+}
 
 timeout = httpx.Timeout(30.0, connect=30.0)
-DEFAULT_CLIENT = httpx.Client(timeout=timeout)
+DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=MAPHARMA_HEADERS)
 logger = logging.getLogger('scraper')
 
 insee = {}
