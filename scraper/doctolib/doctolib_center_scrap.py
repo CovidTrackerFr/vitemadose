@@ -36,12 +36,12 @@ DOCTOLIB_DOMAINS = [
 logger = get_logger()
 
 
-def parse_doctolib_centers() -> List[dict]:
+def parse_doctolib_centers(page_limit=None) -> List[dict]:
     centers = []
 
     page_id = 1
     page_has_centers = True
-    while page_has_centers:
+    while (page_has_centers and not page_limit) or (page_limit and page_limit > page_id):
         logger.info(f"[Doctolib centers] Parsing page {page_id}")
         centers_page = parse_page_centers(page_id)
         centers += centers_page
@@ -220,7 +220,7 @@ def center_type(url_path: str, nom: str) -> str:
 
 
 if __name__ == "__main__":
-    centers = parse_doctolib_centers()
+    centers = parse_doctolib_centers(1)
     path_out = 'data/output/doctolib-centers.json'
     logger.info(f"Found {len(centers)} centers on Doctolib")
     logger.info(f"> Writing them on {path_out}")
