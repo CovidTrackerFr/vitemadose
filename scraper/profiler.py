@@ -33,6 +33,9 @@ class Profiling:
         def decorator(fn):
             @wraps(fn)
             def with_profiling(*args, **kwargs):
+                q = _get_profiling_queue()
+                if q is None:
+                    return fn(*args, **kwargs)
                 start_time = time.time()
                 error = None
                 try:
@@ -40,7 +43,6 @@ class Profiling:
                 except Exception as e:
                   error = e
                 elapsed_time = time.time() - start_time
-                q = _get_profiling_queue()
                 q.put((section, elapsed_time))
                 if error is None:
                   return ret
@@ -110,9 +112,12 @@ def _get_profiling_queue():
   if _profiling_queue is None:
       m = QueueManager(address=('', 12003), authkey=b'profiler')
       m.register('profiling_queue')
-      m.connect()
-      queue = m.profiling_queue()
-      _profiling_queue = queue
+      try:
+          m.connect()
+          queue = m.profiling_queue()
+          _profiling_queue = queue
+      except ConnectionRefusedError:
+          return None
 
   return _profiling_queue
 
