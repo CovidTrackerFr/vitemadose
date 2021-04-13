@@ -1,6 +1,5 @@
 import time
 import statistics
-import numpy
 from terminaltables import SingleTable
 from multiprocessing import Queue, Process
 from multiprocessing.pool import Pool
@@ -109,7 +108,7 @@ class ProfilerSink:
     def summary(self):
       summary = {}
       for section, durations in self.sections_duration.items():
-        p80, p95 = numpy.percentile(durations, [80, 95])
+        p80, p95 = self.percentiles(durations)
         summary[section] = {
             'count': len(durations),
             'min': round(min(durations) * 1000),
@@ -121,3 +120,11 @@ class ProfilerSink:
         }
 
       return summary
+
+    def percentiles(self, durations):
+        if len(durations) == 0:
+            return 0, 0
+        if len(durations) == 1:
+            return durations[0], durations[0]
+        percentiles = statistics.quantiles(durations, n=100)
+        return percentiles[80-2], percentiles[95-2]
