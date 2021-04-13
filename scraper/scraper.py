@@ -140,19 +140,11 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         for code in departementUtils.import_departements()
     }
 
-    internal_ids = []
+    # This should be duplicate free, they are already checked in
     for centre in centres_cherchés:
         centre.nom = centre.nom.strip()
         compte_centres += 1
         code_departement = centre.departement
-
-        # Check duplicates
-        if centre.internal_id:
-            if centre.internal_id in internal_ids:
-                logger.warning(
-                    f"le centre {centre.nom} ({code_departement}) est un doublon (ID interne: {centre.internal_id})")
-                continue
-            internal_ids.append(centre.internal_id)
 
         if code_departement not in par_departement:
             logger.warning(

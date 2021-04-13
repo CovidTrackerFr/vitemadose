@@ -1,6 +1,7 @@
+from time import sleep, time
 from scraper.pattern.scraper_result import DRUG_STORE, GENERAL_PRACTITIONER, VACCINATION_CENTER
 from utils.vmd_utils import departementUtils, format_phone_number
-from utils.vmd_logger import enable_logger_for_production
+from utils.vmd_logger import get_logger
 from scraper.doctolib.doctolib import DOCTOLIB_HEADERS
 
 from typing import List
@@ -32,7 +33,7 @@ DOCTOLIB_DOMAINS = [
 ]
 
 
-logger = enable_logger_for_production()
+logger = get_logger()
 
 
 def parse_doctolib_centers() -> List[dict]:
@@ -55,7 +56,6 @@ def parse_doctolib_centers() -> List[dict]:
             f"[Doctolib centers] Parsing pages of departement {problematic_departement} through department SEO link")
         centers_departements = parse_pages_departement(
             problematic_departement)
-        print(centers_departements)
         centers += centers_departements
 
     return centers
@@ -100,7 +100,6 @@ def doctolib_urlify(departement: str) -> str:
 
 
 def parse_page_centers(page_id) -> List[dict]:
-    print(BASE_URL.format(page_id))
     r = requests.get(BASE_URL.format(page_id), headers=DOCTOLIB_HEADERS)
     data = r.json()
 
