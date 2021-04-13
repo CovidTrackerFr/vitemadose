@@ -6,6 +6,7 @@ import json
 import os
 import traceback
 from multiprocessing import Pool
+from scraper.profiler import Profiling
 
 from scraper.error import ScrapeError, BlockedByDoctolibError
 
@@ -60,7 +61,11 @@ def scrape_debug(urls):
 
 
 def scrape() -> None:
-    with Pool(POOL_SIZE) as pool:
+    compte_centres = 0
+    compte_centres_avec_dispo = 0
+    compte_bloqués = 0
+    profiler = Profiling()
+    with Pool(POOL_SIZE) as pool, profiler:
         centre_iterator_proportion = (
             c for c in centre_iterator() if random() < PARTIAL_SCRAPE)
         centres_cherchés = pool.imap_unordered(
@@ -70,17 +75,19 @@ def scrape() -> None:
         )
         compte_centres, compte_centres_avec_dispo, compte_bloqués = export_data(
             centres_cherchés)
-        logger.info(
-            f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
-        if compte_centres_avec_dispo == 0:
-            logger.error(
-                "Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur")
-            exit(code=1)
 
-        if compte_bloqués > 10:
-            logger.error(
-                "Notre IP a été bloquée par le CDN Doctolib plus de 10 fois. Pour éviter de pousser des données erronées, on s'arrête ici")
-            exit(code=2)
+    logger.info(
+        f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
+    profiler.print_summary()
+    if compte_centres_avec_dispo == 0:
+        logger.error(
+            "Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur")
+        exit(code=1)
+
+    if compte_bloqués > 10:
+        logger.error(
+            "Notre IP a été bloquée par le CDN Doctolib plus de 10 fois. Pour éviter de pousser des données erronées, on s'arrête ici")
+        exit(code=2)
 
 
 def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:
@@ -187,6 +194,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
     return compte_centres, compte_centres_avec_dispo, bloqués_doctolib
 
 
+@Profiling.measure('Any_slot')
 def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
     if fetch_map is None:
         # Map platform to implementation.

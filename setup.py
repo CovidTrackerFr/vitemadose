@@ -11,6 +11,8 @@ setup(
         'pytest==6.2.2',
         'beautifulsoup4==4.9.3',
         'coverage==5.5',
+        'numpy==1.20.2',
+        'terminaltables==3.1.0',
         'python-dateutil==2.8.1',
         'coverage-badge==1.0.1',
         'unidecode==1.2.0'

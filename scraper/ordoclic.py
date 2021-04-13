@@ -8,6 +8,7 @@ from pytz import timezone
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
 from utils.vmd_utils import departementUtils
+from scraper.profiler import Profiling
 
 
 
@@ -91,6 +92,7 @@ def parse_ordoclic_slots(request: ScraperRequest, availability_data):
     return first_availability
 
 
+@Profiling.measure('ordoclic_slot')
 def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     first_availability = None
     profile = getProfile(request)

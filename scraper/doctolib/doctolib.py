@@ -13,6 +13,7 @@ from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_pra
 from scraper.pattern.center_info import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
+from scraper.profiler import Profiling
 
 WAIT_SECONDS_AFTER_REQUEST = 0.100
 DOCTOLIB_SLOT_LIMIT = 50
@@ -35,6 +36,7 @@ else:
     DEFAULT_CLIENT = httpx.Client()
 
 
+@Profiling.measure('doctolib_slot')
 def fetch_slots(request: ScraperRequest):
     # Fonction principale avec le comportement "de prod".
     doctolib = DoctolibSlots(client=DEFAULT_CLIENT)
