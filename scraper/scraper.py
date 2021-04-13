@@ -7,7 +7,7 @@ import os
 import traceback
 from collections import deque
 from multiprocessing import Pool
-from scraper.profiler import Profiling
+from scraper.profiler import Profiling, ProfiledPool
 
 from scraper.error import ScrapeError, BlockedByDoctolibError
 
@@ -65,8 +65,8 @@ def scrape() -> None:
     compte_centres = 0
     compte_centres_avec_dispo = 0
     compte_bloqués = 0
-    profiler = Profiling()
-    with Pool(POOL_SIZE) as pool, profiler:
+    profiled_pool = ProfiledPool(POOL_SIZE)
+    with profiled_pool as pool:
         centre_iterator_proportion = (
             c for c in centre_iterator() if random() < PARTIAL_SCRAPE)
         centres_cherchés = pool.imap_unordered(
@@ -79,7 +79,7 @@ def scrape() -> None:
 
     logger.info(
         f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
-    profiler.print_summary()
+    profiled_pool.profiler.print_summary()
     if compte_centres_avec_dispo == 0:
         logger.error(
             "Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur")

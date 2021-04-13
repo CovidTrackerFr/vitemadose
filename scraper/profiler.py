@@ -3,37 +3,51 @@ import statistics
 import numpy
 from terminaltables import SingleTable
 from multiprocessing import Queue, Process
-from multiprocessing.managers import BaseManager
+from multiprocessing.pool import Pool
 from functools import wraps
 
-class QueueManager(BaseManager): pass
-
-class Profiling:
-    def __init__(self):
-        self.result_q = Queue()
+class ProfiledPool(Pool):
+    def __init__(self, processes):
+        self.profiler = Profiling()
+        super().__init__(processes=processes, **self.profiler.pool_args())
 
     def __enter__(self):
-      q = Queue()
-      self.q = q
-      self.manager = QueueManager(address=('', 12003), authkey=b'profiler')
-      self.manager.register('profiling_queue', lambda:q)
-      self.manager.start()
-      self.reader = Process(target=Profiling.read_profiling_result, args=(q, self.result_q,))
+        self.profiler.__enter__()
+        super().__enter__()
+        return self
+
+    def __exit__(self, *args, **kwargs):
+        super().__exit__(*args, **kwargs)
+        self.profiler.__exit__(*args, **kwargs)
+
+class Profiling:
+    _current_queue = None
+    def pool_args(self):
+        return {
+            "initializer": Profiling.init_child,
+            "initargs": (self.collecting_q,)
+        }
+
+    def __init__(self):
+        self.result_q = Queue()
+        self.collecting_q = Queue()
+
+    def __enter__(self):
+      self.reader = Process(target=Profiling.read_profiling_result, args=(self.collecting_q, self.result_q,))
       self.reader.start()
 
     def __exit__(self, exc_type, exc_value, traceback):
-      self.q.put(None)
-      self.q.close()
+      self.collecting_q.put(None)
+      self.collecting_q.close()
       self.summary = self.result_q.get()
       self.result_q.close()
-      self.manager.shutdown()
       self.reader.join()
 
     def measure(section):
         def decorator(fn):
             @wraps(fn)
             def with_profiling(*args, **kwargs):
-                q = _get_profiling_queue()
+                q = Profiling._current_queue
                 if q is None:
                     return fn(*args, **kwargs)
                 start_time = time.time()
@@ -43,7 +57,7 @@ class Profiling:
                 except Exception as e:
                   error = e
                 elapsed_time = time.time() - start_time
-                q.put((section, elapsed_time))
+                q.put_nowait((section, elapsed_time))
                 if error is None:
                   return ret
                 else:
@@ -73,12 +87,15 @@ class Profiling:
       table = SingleTable(datatable)
       print (table.table)
 
-    def read_profiling_result(q, result_q):
+    def read_profiling_result(collecting_q, result_q):
         sink = ProfilerSink()
-        for section, duration in iter(q.get, None):
+        for section, duration in iter(collecting_q.get, None):
           sink.append(section, duration)
 
         result_q.put(sink.summary())
+
+    def init_child(queue):
+      Profiling._current_queue = queue
 
 class ProfilerSink:
     def __init__(self):
@@ -104,20 +121,3 @@ class ProfilerSink:
         }
 
       return summary
-
-
-_profiling_queue = None
-def _get_profiling_queue():
-  global _profiling_queue
-  if _profiling_queue is None:
-      m = QueueManager(address=('', 12003), authkey=b'profiler')
-      m.register('profiling_queue')
-      try:
-          m.connect()
-          queue = m.profiling_queue()
-          _profiling_queue = queue
-      except ConnectionRefusedError:
-          return None
-
-  return _profiling_queue
-
