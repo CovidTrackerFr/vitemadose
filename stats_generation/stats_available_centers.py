@@ -118,7 +118,6 @@ def export_centres_stats(center_data='data/output/info_centres.json', stats_path
         tout_dep_obj["total"] += count
         tout_dep_obj["creneaux"] += creneaux
 
-    print(centres_stats)  # TODO remove debug
     available_pct = (tout_dep_obj["disponibles"] / max(1, tout_dep_obj["total"])) * 100
     logger.info("Found {0}/{1} available centers. ({2}%)".format(tout_dep_obj["disponibles"],
                                                                  tout_dep_obj["total"], round(available_pct, 2)))

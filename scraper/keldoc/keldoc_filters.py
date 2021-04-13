@@ -4,6 +4,7 @@ from datetime import datetime
 from httpx import TimeoutException
 
 from scraper.keldoc.keldoc_routes import API_KELDOC_MOTIVES
+from scraper.pattern.center_info import get_vaccine_name
 
 KELDOC_COVID_SPECIALTIES = [
     'Maladies infectieuses'
@@ -132,6 +133,7 @@ def filter_vaccine_motives(session, selected_cabinet, id, vaccine_specialties, v
             motive_agendas = [motive_agenda.get('id', None) for motive_agenda in motive.get('agendas', {})]
             vaccine_motives.append({
                 'id': motive.get('id', None),
+                'vaccine_type': get_vaccine_name(motive_name),
                 'agendas': motive_agendas
             })
     return vaccine_motives

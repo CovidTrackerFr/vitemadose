@@ -7,7 +7,9 @@ from pytz import timezone
 
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
-from scraper.departements import cp_to_insee
+from utils.vmd_utils import departementUtils
+
+
 
 logger = logging.getLogger('scraper')
 
@@ -101,7 +103,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
         reasons = getReasons(entityId)
         # reasonTypeId = 4 -> 1er Vaccin
         for reason in reasons["reasons"]:
-            if reason["reasonTypeId"] == 4 and reason["canBookOnline"] == True:
+            if reason["reasonTypeId"] == 4 and reason["canBookOnline"] is True:
                 reasonId = reason["id"]
                 date_obj = datetime.strptime(request.get_start_date(), '%Y-%m-%d')
                 end_date = (date_obj + timedelta(days=50)).strftime('%Y-%m-%d')
@@ -127,7 +129,7 @@ def centre_iterator():
                 slug = item["publicProfile"]["slug"]
                 centre["gid"] = item["id"][:8]
                 centre["rdv_site_web"] = f"https://app.ordoclic.fr/app/pharmacie/{slug}"
-                centre["com_insee"] = cp_to_insee(item["location"]["zip"])
+                centre["com_insee"] = departementUtils.cp_to_insee(item["location"]["zip"])
                 centre["nom"] = item.get("name")
                 centre["phone_number"] = item.get("phone")
                 centre["location"] = item.get("location")

@@ -1,8 +1,8 @@
 import datetime as dt
-import pytest
 import json
-from scraper.departements import import_departements
-from scraper.pattern.scraper_result import ScraperResult
+
+from scraper.pattern.center_info import CenterInfo, dict_to_center_info
+from utils.vmd_utils import departementUtils
 from scraper.scraper import fetch_centre_slots, export_data
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
@@ -10,14 +10,18 @@ from .utils import mock_datetime_now
 
 
 def test_export_data(tmp_path):
-    centres_cherchés = [
+    centres_cherchés_dict = [
         {
             "departement": "01",
             "nom": "Bugey Sud",
             "url": "https://example.com/bugey-sud",
             "plateforme": "Doctolib",
             "prochain_rdv": "2021-04-10T00:00:00",
-            "erreur": None
+            "location": None,
+            "metadata": None,
+            "type": None,
+            "appointment_count": 0,
+            "internal_id": None
         },
         {
             "departement": "59",
@@ -25,7 +29,12 @@ def test_export_data(tmp_path):
             "url": "https://example.com/ch-armentieres",
             "plateforme": "Keldoc",
             "prochain_rdv": "2021-04-11:00:00",
-            "erreur": None
+            "erreur": None,
+            "location": None,
+            "metadata": None,
+            "type": None,
+            "appointment_count": 0,
+            "internal_id": None
         },
         {
             "departement": "59",
@@ -33,7 +42,12 @@ def test_export_data(tmp_path):
             "url": "https://example.com/clinique-du-cambresis",
             "plateforme": "Maiia",
             "prochain_rdv": None,
-            "erreur": None
+            "erreur": None,
+            "location": None,
+            "metadata": None,
+            "type": None,
+            "appointment_count": 0,
+            "internal_id": None
         },
         {
             # Unknown departement (edge case) => should be skipped w/o failing
@@ -42,10 +56,15 @@ def test_export_data(tmp_path):
             "url": "https://example.com/hopital-magique",
             "plateforme": "Doctolib",
             "prochain_rdv": "2021-04-12:00:00",
-            "erreur": None
+            "erreur": None,
+            "location": None,
+            "metadata": None,
+            "type": None,
+            "appointment_count": 0,
+            "internal_id": None
         },
     ]
-
+    centres_cherchés = [dict_to_center_info(center) for center in centres_cherchés_dict]
     out_dir = tmp_path / "out"
     out_dir.mkdir()
     outpath_format = str(out_dir / "{}.json")
@@ -55,7 +74,7 @@ def test_export_data(tmp_path):
         export_data(centres_cherchés, outpath_format=outpath_format)
 
     # All departements for which we don't have data should be empty.
-    for departement in import_departements():
+    for departement in departementUtils.import_departements():
         if departement in ("01", "59"):
             continue
         content = json.loads((out_dir / f"{departement}.json").read_text())
@@ -78,6 +97,13 @@ def test_export_data(tmp_path):
                 "url": "https://example.com/bugey-sud",
                 "plateforme": "Doctolib",
                 "prochain_rdv": "2021-04-10T00:00:00",
+                "location": None,
+                "metadata": None,
+                "type": None,
+                "appointment_count": 0,
+                "internal_id": None,
+                "vaccine_type": None,
+                "erreur": None
             },
         ],
         "centres_indisponibles": [],
@@ -94,6 +120,13 @@ def test_export_data(tmp_path):
                 "url": "https://example.com/ch-armentieres",
                 "plateforme": "Keldoc",
                 "prochain_rdv": "2021-04-11:00:00",
+                "location": None,
+                "metadata": None,
+                "type": None,
+                "appointment_count": 0,
+                "internal_id": None,
+                "vaccine_type": None,
+                "erreur": None
             },
         ],
         "centres_indisponibles": [
@@ -103,30 +136,55 @@ def test_export_data(tmp_path):
                 "url": "https://example.com/clinique-du-cambresis",
                 "plateforme": "Maiia",
                 "prochain_rdv": None,
+                "location": None,
+                "metadata": None,
+                "type": None,
+                "appointment_count": 0,
+                "internal_id": None,
+                "vaccine_type": None,
+                "erreur": None
             }
         ],
         "last_updated": "2021-04-04T00:00:00",
     }
 
-
-def test_export_data_when_blocked(tmp_path):
-    centres_cherchés = [
+    # On test l'export vers le format inscrit sur la plateforme data.gouv.fr
+    content = json.loads((out_dir / "centres_open_data.json").read_text())
+    assert content == [
+        {
+            "departement": "01",
+            "nom": "Bugey Sud",
+            "url": "https://example.com/bugey-sud",
+            "plateforme": "Doctolib"
+        },
+        {
+            "departement": "59",
+            "nom": "CH Armentières",
+            "url": "https://example.com/ch-armentieres",
+            "plateforme": "Keldoc"
+        },
         {
             "departement": "59",
             "nom": "Clinique du Cambresis",
             "url": "https://example.com/clinique-du-cambresis",
-            "plateforme": "Maiia",
-            "prochain_rdv": "2021-04-12:00:00",
-            "erreur": None
+            "plateforme": "Maiia"
         },
-        {
-            "departement": "14",
-            "nom": "Hôpital magique",
-            "url": "https://example.com/hopital-magique",
-            "plateforme": "Doctolib",
-            "prochain_rdv": None,
-            "erreur": BlockedByDoctolibError("https://example.com/hopital-magique")
-        },
+    ]
+
+
+def test_export_data_when_blocked(tmp_path):
+    center_info1 = CenterInfo("59", "Clinique du Cambresis", "https://example.com/clinique-du-cambresis")
+    center_info1.plateforme = "Maiia"
+    center_info1.prochain_rdv = "2021-04-12:00:00"
+    center_info1.erreur = None
+
+    center_info2 = CenterInfo("14", "Hôpital magique", "https://example.com/hopital-magique")
+    center_info2.plateforme = "Doctolib"
+    center_info2.prochain_rdv = None
+    center_info2.erreur = BlockedByDoctolibError("https://example.com/hopital-magique")
+    centres_cherchés = [
+        center_info1,
+        center_info2
     ]
 
     out_dir = tmp_path / "out"
@@ -146,16 +204,23 @@ def test_export_data_when_blocked(tmp_path):
     content = json.loads((out_dir / "14.json").read_text())
     assert content == {
         "version": 1,
-        "doctolib_bloqué": True,
+        "last_updated": "2021-04-04T00:00:00",
         "centres_disponibles": [],
         "centres_indisponibles": [{
             "departement": "14",
             "nom": "Hôpital magique",
             "url": "https://example.com/hopital-magique",
-            "plateforme": "Doctolib",
+            "location": None,
+            "metadata": None,
             "prochain_rdv": None,
+            "type": None,
+            "plateforme": "Doctolib",
+            "appointment_count": 0,
+            "internal_id": None,
+            "vaccine_type": None,
+            "erreur": "ERREUR DE SCRAPPING (Doctolib): Doctolib bloque nos appels: 403 https://example.com/hopital-magique"
         }],
-        "last_updated": "2021-04-04T00:00:00",
+        "doctolib_bloqué": True
     }
 
     content = json.loads((out_dir / "59.json").read_text())
@@ -168,6 +233,13 @@ def test_export_data_when_blocked(tmp_path):
                 "url": "https://example.com/clinique-du-cambresis",
                 "plateforme": "Maiia",
                 "prochain_rdv": "2021-04-12:00:00",
+                "location": None,
+                "metadata": None,
+                "type": None,
+                "appointment_count": 0,
+                "internal_id": None,
+                "vaccine_type": None,
+                "erreur": None
             },
         ],
         "centres_indisponibles": [],
