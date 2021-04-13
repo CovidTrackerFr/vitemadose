@@ -51,9 +51,13 @@ def parse_doctolib_centers() -> List[dict]:
 def get_departements():
     import csv
 
+    # Guyane uses Maiia and does not have doctolib pages
+    NOT_INCLUDED_DEPARTEMENTS = ["Guyane"]
+
     with open("data/input/departements-france.csv", newline="\n") as csvfile:
         reader = csv.DictReader(csvfile)
-        return [str(row["nom_departement"]) for row in reader]
+        departements = [str(row["nom_departement"]) for row in reader]
+        return [departement in departements if departement not in NOT_INCLUDED_DEPARTEMENTS]
 
 
 def parse_pages_departement(departement):
@@ -117,17 +121,28 @@ def center_from_doctor_dict(doctor_dict) -> dict:
     rdv_site_web = f"https://partners.doctolib.fr{url_path}"
     type = center_type(url_path, nom)
     dict_infos_center_page = get_dict_infos_center_page(url_path)
+    longitude, latitude = get_coordinates(doctor_dict)
     dict_infos_browse_page = {
         "nom": nom,
         "rdv_site_web": rdv_site_web,
         "ville": ville,
         "address": addresse,
-        "long_coor1": float(doctor_dict["position"]["lng"]),
-        "lat_coor1": float(doctor_dict["position"]["lat"]),
+        "long_coor1": longitude,
+        "lat_coor1": latitude,
         "type": type,
         "com_insee": departementUtils.cp_to_insee(code_postal)
     }
     return {**dict_infos_center_page, **dict_infos_browse_page}
+
+
+def get_coordinates(doctor_dict):
+    longitude = doctor_dict["position"]["lng"]
+    latitude = doctor_dict["position"]["lat"]
+    if longitude:
+        longitude = float(longitude)
+    if latitude:
+        latitude = float(latitude)
+    return longitude, latitude
 
 
 def get_dict_infos_center_page(url_path: str) -> dict:
