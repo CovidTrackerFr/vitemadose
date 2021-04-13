@@ -3,7 +3,7 @@ import json
 
 from scraper.pattern.center_info import CenterInfo, dict_to_center_info
 from utils.vmd_utils import departementUtils
-from scraper.scraper import fetch_centre_slots, export_data
+from scraper.scraper import fetch_centre_slots, export_data, get_start_date
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 from .utils import mock_datetime_now
@@ -70,6 +70,7 @@ def test_export_data(tmp_path):
     outpath_format = str(out_dir / "{}.json")
 
     fake_now = dt.datetime(2021, 4, 4)
+    get_start_date()
     with mock_datetime_now(fake_now):
         export_data(centres_cherchés, outpath_format=outpath_format)
 
