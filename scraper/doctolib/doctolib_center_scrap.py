@@ -36,7 +36,7 @@ DOCTOLIB_DOMAINS = [
 logger = get_logger()
 
 
-def parse_doctolib_centers() -> List[dict]:
+def parse_doctolib_centers(page_limit=None) -> List[dict]:
     centers = []
     for departement in get_departements():
         logger.info(
@@ -47,13 +47,11 @@ def parse_doctolib_centers() -> List[dict]:
         centers += centers_departements
     return centers
 
-
 def get_departements():
     import csv
 
     # Guyane uses Maiia and does not have doctolib pages
     NOT_INCLUDED_DEPARTEMENTS = ["Guyane"]
-
     with open("data/input/departements-france.csv", newline="\n") as csvfile:
         reader = csv.DictReader(csvfile)
         departements = [str(row["nom_departement"]) for row in reader]

@@ -5,6 +5,7 @@ import httpx
 from scraper.keldoc.keldoc_center import KeldocCenter
 from scraper.keldoc.keldoc_filters import filter_vaccine_specialties, filter_vaccine_motives
 from scraper.pattern.scraper_request import ScraperRequest
+from scraper.profiler import Profiling
 
 timeout = httpx.Timeout(60.0, connect=60.0)
 session = httpx.Client(timeout=timeout)
@@ -12,6 +13,7 @@ session = httpx.Client(timeout=timeout)
 KELDOC_SLOT_LIMIT = 21
 
 
+@Profiling.measure('keldoc_slot')
 def fetch_slots(request: ScraperRequest):
     # Keldoc needs an end date, but if no appointment are found,
     # it still returns the next available appointment. Bigger end date
