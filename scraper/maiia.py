@@ -5,6 +5,7 @@ import requests
 from datetime import datetime, timedelta
 from dateutil.parser import isoparse
 from bs4 import BeautifulSoup
+from scraper.profiler import Profiling
 
 from scraper.pattern.scraper_request import ScraperRequest
 
@@ -36,6 +37,7 @@ def get_availability_count(center_id, request: ScraperRequest):
     return len(slots)
 
 
+@Profiling.measure('maiia_slot')
 def fetch_slots(request: ScraperRequest):
     response = session.get(request.get_url())
     soup = BeautifulSoup(response.text, 'html.parser')

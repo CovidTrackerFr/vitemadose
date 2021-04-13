@@ -1,13 +1,32 @@
 import json
+from datetime import datetime, timedelta
 from typing import Optional
 
-from scraper.departements import to_departement_number
+import pytz
+
+from utils.vmd_utils import departementUtils
 from scraper.pattern.center_location import CenterLocation, convert_csv_data_to_location
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult
+
+from utils.vmd_utils import urlify, format_phone_number
 from utils.vmd_logger import get_logger
 
 logger = get_logger()
+
+VACCINES = {
+    'Pfizer-BioNTech': [
+        'pfizer',
+        'biontech'
+    ],
+    'AstraZeneca': [
+        'astrazeneca',
+        'astra-zeneca'
+    ],
+    'Moderna': [
+        'moderna'
+    ]
+}
 
 
 class CenterInfo:
@@ -22,20 +41,42 @@ class CenterInfo:
         self.type = None
         self.appointment_count = 0
         self.internal_id = None
+        self.vaccine_type = None
+        self.erreur = None
 
     def fill_localization(self, location: Optional[CenterLocation]):
         self.location = location
 
     def fill_result(self, result: ScraperResult):
-        self.prochain_rdv = result.next_availability # TODO change with filters
+        self.prochain_rdv = result.next_availability  # TODO change with filters
         self.plateforme = result.platform
         self.type = result.request.practitioner_type
         self.appointment_count = result.request.appointment_count
         self.internal_id = result.request.internal_id
+        self.vaccine_type = result.request.vaccine_type
+
+    def handle_next_availability(self):
+        if not self.prochain_rdv:
+            return
+        try:
+            date = datetime.fromisoformat(self.prochain_rdv)
+        except (TypeError, ValueError):
+            # Invalid date
+            return
+        # Too far
+        timezone = pytz.timezone('Europe/Paris')
+        try:
+            if date - datetime.now(tz=timezone) > timedelta(days=50):
+                self.prochain_rdv = None
+        except:
+            pass
 
     def default(self):
         if type(self.location) is CenterLocation:
             self.location = self.location.default()
+        if self.erreur:
+            self.erreur = str(self.erreur)
+        self.handle_next_availability()
         return self.__dict__
 
 
@@ -66,16 +107,17 @@ def convert_csv_business_hours(data: dict) -> str:
 
 
 def convert_ordoclic_to_center_info(data: dict, center: CenterInfo) -> CenterInfo:
-    localization = data['location']
-    coordinates = localization['coordinates']
+    localization = data.get('location')
+    coordinates = localization.get('coordinates')
 
     if coordinates['lon'] or coordinates['lat']:
-        loc = CenterLocation(coordinates['lon'], coordinates['lat'])
+        city = urlify(localization.get('city'))
+        loc = CenterLocation(coordinates['lon'], coordinates['lat'], city)
         center.fill_localization(loc)
     center.metadata = dict()
     center.metadata['address'] = f'{localization["address"]}, {localization["zip"]} {localization["city"]}'
     if len(data.get('phone_number', '')) > 3:
-        center.metadata['phone_number'] = data.get('phone_number')
+        center.metadata['phone_number'] = format_phone_number(data.get('phone_number'))
     center.metadata['business_hours'] = None
     return center
 
@@ -83,9 +125,10 @@ def convert_ordoclic_to_center_info(data: dict, center: CenterInfo) -> CenterInf
 def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     name = data.get('nom', None)
     departement = ''
+    ville = ''
     url = data.get('rdv_site_web', None)
     try:
-        departement = to_departement_number(data.get('com_insee', None))
+        departement = departementUtils.to_departement_number(data.get('com_insee', None))
     except ValueError:
         logger.error(
             f"erreur lors du traitement de la ligne avec le gid {data['gid']}, com_insee={data['com_insee']}")
@@ -97,8 +140,28 @@ def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     center.metadata = dict()
     center.metadata['address'] = convert_csv_address(data)
     if data.get('rdv_tel'):
-        center.metadata['phone_number'] = data.get('rdv_tel')
+        center.metadata['phone_number'] = format_phone_number(data.get('rdv_tel'))
     if data.get('phone_number'):
-        center.metadata['phone_number'] = data.get('phone_number')
+        center.metadata['phone_number'] = format_phone_number(data.get('phone_number'))
     center.metadata['business_hours'] = convert_csv_business_hours(data)
+    return center
+
+
+def get_vaccine_name(name):
+    if not name:
+        return None
+    name = name.lower().strip()
+    for vaccine in VACCINES:
+        vaccine_names = VACCINES[vaccine]
+        for vaccine_name in vaccine_names:
+            if vaccine_name in name:
+                return vaccine
+    return None
+
+
+def dict_to_center_info(data: dict) -> CenterInfo:
+    center = CenterInfo(data.get('departement'), data.get('nom'), data.get('url'))
+    center.plateforme = data.get('plateforme')
+    center.prochain_rdv = data.get('prochain_rdv')
+    center.erreur = data.get('erreur')
     return center
