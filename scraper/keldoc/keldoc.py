@@ -10,7 +10,7 @@ from scraper.profiler import Profiling
 
 timeout = httpx.Timeout(5.0, connect=5.0)
 KELDOC_HEADERS = {
-    'User-Agent': os.environ.get('DOCTOLIB_API_KEY', ''),
+    'User-Agent': os.environ.get('KELDOC_API_KEY', ''),
 }
 session = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
 

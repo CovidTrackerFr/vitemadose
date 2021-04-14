@@ -30,7 +30,7 @@ from .mapharma.mapharma import centre_iterator as mapharma_centre_iterator
 from .mapharma.mapharma import fetch_slots as mapharma_fetch_slots
 from random import random
 
-POOL_SIZE = int(os.getenv('POOL_SIZE', 15))
+POOL_SIZE = int(os.getenv('POOL_SIZE', 50))
 PARTIAL_SCRAPE = float(os.getenv('PARTIAL_SCRAPE', 1.0))
 PARTIAL_SCRAPE = max(0, min(PARTIAL_SCRAPE, 1))
 
