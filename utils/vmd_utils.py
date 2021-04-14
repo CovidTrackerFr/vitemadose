@@ -7,6 +7,20 @@ from urllib.parse import urlparse, urlencode, urlunparse, parse_qs, unquote
 
 from unidecode import unidecode
 
+RESERVED_CENTERS = [
+    'réservé'
+]
+
+
+def is_reserved_center(center):
+    if not center:
+        return False
+    name = center.nom.lower().strip()
+    for reserved_names in RESERVED_CENTERS:
+        if name in reserved_names:
+            return True
+    return False
+
 
 def urlify(s):
     s = re.sub(r"[^\w\s\-]", '', s)

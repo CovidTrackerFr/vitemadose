@@ -19,7 +19,7 @@ from scraper.pattern.center_info import convert_csv_data_to_center_info, CenterI
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
-from utils.vmd_utils import departementUtils, fix_scrap_urls
+from utils.vmd_utils import departementUtils, fix_scrap_urls, is_reserved_center
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
@@ -152,6 +152,9 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
     # This should be duplicate free, they are already checked in
     for centre in centres_cherchés:
         centre.nom = centre.nom.strip()
+
+        if is_reserved_center(centre):
+            continue
         compte_centres += 1
         code_departement = centre.departement
 
