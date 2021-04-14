@@ -1,0 +1,573 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-14T12:37:42.645821+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "46",
+      "nom": "MSP Souillac",
+      "url": "https://partners.doctolib.fr/centre-de-sante/souillac/cvsc?pid=practice-166374",
+      "location": {
+        "longitude": 1.4773,
+        "latitude": 44.8931,
+        "city": "Souillac"
+      },
+      "metadata": {
+        "address": "Salle Joachim du Bellay parvis Saint-\u00c9loi, 46200 Souillac",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "14H30-17H30",
+          "jeudi": "14H30-17H30",
+          "vendredi": "14H30-17H30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-22T10:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 42,
+      "internal_id": "244769[166374]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "1280"
+    },
+    {
+      "departement": "46",
+      "nom": "Centre de Vaccination COVID - CH de Saint-C\u00e9r\u00e9",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-cere/centre-de-vaccination-covid-ch-saint-jacques-saint-cere",
+      "location": {
+        "longitude": 1.8939790134378,
+        "latitude": 44.8608359954673,
+        "city": "Saint-C\u00e9r\u00e9"
+      },
+      "metadata": {
+        "address": "Avenue Pierre et Andr\u00e9 Delbost, 46400 Saint-C\u00e9r\u00e9",
+        "phone_number": "+33565104005",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-17:00",
+          "mardi": "09:00-13:00, 14:00-17:00",
+          "mercredi": "09:00-13:00, 14:00-17:00",
+          "jeudi": "09:00-13:00, 14:00-17:00",
+          "vendredi": "09:00-13:00, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-27T11:25:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 258,
+      "internal_id": "243140[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "d243140"
+    },
+    {
+      "departement": "46",
+      "nom": "Centre de vaccination Covid - MSP Les Oliviers",
+      "url": "https://partners.doctolib.fr/centre-de-sante/lamagdelaine/centre-de-vaccination-covid-msp-les-oliviers",
+      "location": {
+        "longitude": 1.4825061,
+        "latitude": 44.4690376,
+        "city": "Lamagdelaine"
+      },
+      "metadata": {
+        "address": "350 Route de Cahors, 46090 Lamagdelaine",
+        "phone_number": "+33972760070",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-05-05T08:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 1,
+      "internal_id": "242248[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "d242248"
+    },
+    {
+      "departement": "46",
+      "nom": "Centre Hospitalier de Figeac",
+      "url": "https://partners.doctolib.fr/hopital-public/figeac/ch-figeac?pid=practice-163185",
+      "location": {
+        "longitude": 2.0313351,
+        "latitude": 44.6120032,
+        "city": "Figeac"
+      },
+      "metadata": {
+        "address": "Rue du Stade, 46100 Figeac",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-05-06T15:20:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 17,
+      "internal_id": "198259[163185]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "d198259"
+    },
+    {
+      "departement": "46",
+      "nom": "CH Figeac",
+      "url": "https://partners.doctolib.fr/hopital-public/figeac/centre-hospitalier-de-figeac-reserve-aux-professionnels-de-sante",
+      "location": {
+        "longitude": 2.02997,
+        "latitude": 44.6103,
+        "city": "Figeac"
+      },
+      "metadata": {
+        "address": "Stade du Calvaire boulevard Teuli\u00e9 , 46100 Figeac",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9:00-13:00/14:00-17:00",
+          "mardi": "9:00-13:00/14:00-17:00",
+          "mercredi": "9:00-13:00/14:00-17:00",
+          "jeudi": "9:00-13:00/14:00-17:00",
+          "vendredi": "9:00-13:00/14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-06T15:20:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 17,
+      "internal_id": "240912[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "354"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "46",
+      "nom": "Centre de vaccination - Gramat",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/gramat/vaccination-covid-19-msp-gramat?pid=practice-172566",
+      "location": {
+        "longitude": 1.72749,
+        "latitude": 44.7814,
+        "city": "Gramat"
+      },
+      "metadata": {
+        "address": "15 Avenue Leon Gambetta, 46500 Gramat",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "252690[172566]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1571"
+    },
+    {
+      "departement": "46",
+      "nom": "Centre de vaccination - Cahors ville (Espace Cl\u00e9ment-Marot)",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cahors/centre-de-vaccination-covid-19-ville-de-cahors?pid=practice-173078",
+      "location": {
+        "longitude": 1.43812,
+        "latitude": 44.4513,
+        "city": "Cahors"
+      },
+      "metadata": {
+        "address": " Rue Pierre Mend\u00e8s France, 46000 Cahors",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9h-12h / 14h-20h",
+          "mardi": "9h-12h / 14h-20h",
+          "mercredi": "9h-12h / 14h-20h",
+          "jeudi": "9h-12h / 14h-20h",
+          "vendredi": "9h-12h / 14h-20h",
+          "samedi": "9h-12h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "253237[173078]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1570"
+    },
+    {
+      "departement": "46",
+      "nom": "Centre de vaccination COVID-19 - MSP de Prayssac",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/prayssac/centre-de-vaccination-msp-de-prayssac",
+      "location": {
+        "longitude": 1.1920925,
+        "latitude": 44.5042479,
+        "city": "Prayssac"
+      },
+      "metadata": {
+        "address": "Avenue des Acacias, 46220 Prayssac",
+        "business_hours": {
+          "lundi": "08:30-19:00",
+          "mardi": "08:30-19:00",
+          "mercredi": "08:30-19:00",
+          "jeudi": "08:30-19:00",
+          "vendredi": "08:30-19:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242817[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242817"
+    },
+    {
+      "departement": "46",
+      "nom": "centre de vaccination - Salviac",
+      "url": "https://partners.doctolib.fr/centre-de-sante/salviac/vaccination-covid19-centre-intercommunal-de-sante-cazals-salviac?pid=practice-171894",
+      "location": {
+        "longitude": 1.26417,
+        "latitude": 44.6816,
+        "city": "Salviac"
+      },
+      "metadata": {
+        "address": "8 Boulevard Hugon, 46340 Salviac",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "13h30-18h00",
+          "mercredi": "13h30-18h00",
+          "jeudi": "13h30-18h00",
+          "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "251729[171894]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1519"
+    },
+    {
+      "departement": "46",
+      "nom": "MSP Vayrac",
+      "url": "https://partners.doctolib.fr/centre-de-sante/vayrac/centre-de-vaccination-covid-msp-de-l-uxello",
+      "location": {
+        "longitude": 1.70526,
+        "latitude": 44.9525,
+        "city": "Vayrac"
+      },
+      "metadata": {
+        "address": " Place du 11 Novembre 1918, 46110 Vayrac",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "18H30 / 20H00",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "14H00 / 17H00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242994[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1127"
+    },
+    {
+      "departement": "46",
+      "nom": "CH Jean Coulon - Gourdon",
+      "url": "https://partners.doctolib.fr/hopital-public/gourdon/vaccination-covid-ch-gourdon",
+      "location": {
+        "longitude": 1.37941,
+        "latitude": 44.7375,
+        "city": "Gourdon"
+      },
+      "metadata": {
+        "address": "Foyer Daniel ROQUES  rue hivernerie, 46300 Gourdon",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "9:00-17:00",
+          "jeudi": "9:00-17:00",
+          "vendredi": "9:00-14:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243141[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "355"
+    },
+    {
+      "departement": "46",
+      "nom": "Centre de vaccination COVID-19 - MSP Limogne",
+      "url": "https://partners.doctolib.fr/centre-de-sante/limogne-en-quercy/centre-de-vaccination-covid-19-msp-limogne",
+      "location": {
+        "longitude": 1.769739,
+        "latitude": 44.398162,
+        "city": "Limogne-en-Quercy"
+      },
+      "metadata": {
+        "address": "Rue de l'\u00c9glise, 46260 Limogne-en-Quercy",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "246714[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d246714"
+    },
+    {
+      "departement": "46",
+      "nom": "MSP CATUS",
+      "url": "https://partners.doctolib.fr/centre-de-sante/catus/centre-de-vaccination-covid-msp-catus?pid=practice-179532",
+      "location": {
+        "longitude": 1.33644,
+        "latitude": 44.5554,
+        "city": "Catus"
+      },
+      "metadata": {
+        "address": " Quai du vert, 46150 Catus",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "262567[179532]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2029"
+    },
+    {
+      "departement": "46",
+      "nom": "Centre de vaccination COVID 19 - Montcuq All\u00e9e des Marronniers",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montcuq/centre-de-vaccination-covid-montcuq-allee-des-marronniers",
+      "location": {
+        "longitude": 1.2042608,
+        "latitude": 44.3404569,
+        "city": "Montcuq"
+      },
+      "metadata": {
+        "address": "All\u00e9e des Marronniers, 46800 Montcuq",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-17:30",
+          "vendredi": "14:00-16:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "244846[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d244846"
+    },
+    {
+      "departement": "46",
+      "nom": "MSP Labastide Murat",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/grenoble/centre-de-vaccination-msp-labastide-murat",
+      "location": {
+        "longitude": 1.56858,
+        "latitude": 44.6487,
+        "city": "C\u0153ur de Causse"
+      },
+      "metadata": {
+        "address": "8 Rue Saint Jacques, 46240 C\u0153ur de Causse",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "14H-16H",
+          "vendredi": "14H-16H",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243870[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1126"
+    },
+    {
+      "departement": "46",
+      "nom": "CH Jean Rougier - Cahors",
+      "url": "https://partners.doctolib.fr/hopital-public/cahors/centre-de-vaccination-ch-de-cahors",
+      "location": {
+        "longitude": 1.43712,
+        "latitude": 44.4447,
+        "city": "Cahors"
+      },
+      "metadata": {
+        "address": "52 Place Antonin Bergon, 46000 Cahors",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9:00-12:30/14:00-17:30",
+          "mardi": "9:00-12:30/14:00-17:30",
+          "mercredi": "9:00-12:30/14:00-17:30",
+          "jeudi": "9:00-12:30/14:00-17:30",
+          "vendredi": "9:00-12:30/14:00-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242629[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "96"
+    },
+    {
+      "departement": "46",
+      "nom": "Centre de vaccination - Limogne",
+      "url": "https://partners.doctolib.fr/centre-de-sante/limogne-en-quercy/centre-de-vaccination-covid-19-msp-limogne?pid=practice-167831",
+      "location": {
+        "longitude": 1.77037,
+        "latitude": 44.3979,
+        "city": "Limogne-en-Quercy"
+      },
+      "metadata": {
+        "address": " Place de l'\u00e9glise, 46260 Limogne-en-Quercy",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14H-18H",
+          "mardi": "14H30-17H30",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "14H-17H",
+          "vendredi": "9H-12H",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "246714[167831]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1130"
+    },
+    {
+      "departement": "46",
+      "nom": "Centre de vaccination - Montcuq",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montcuq/centre-de-vaccination-covid-montcuq-allee-des-marronniers?pid=practice-166113",
+      "location": {
+        "longitude": 1.20557,
+        "latitude": 44.3396,
+        "city": "Montcuq-en-Quercy-Blanc"
+      },
+      "metadata": {
+        "address": "Espace animation 2 rue des Marronniers, 46800 Montcuq-en-Quercy-Blanc",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "14H-16H",
+          "jeudi": "14H-16H",
+          "vendredi": "14H-16H",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "244846[166113]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1279"
+    }
+  ]
+}

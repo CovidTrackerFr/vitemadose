@@ -51,7 +51,7 @@ def parse_doctolib_centers(page_limit=None) -> List[dict]:
         if len(centers_page) == 0:
             page_has_centers = False
 
-    for problematic_departement in ["gers", "jura", "var"]:
+    for problematic_departement in ["gers", "jura", "var", "paris"]:
         logger.info(
             f"[Doctolib centers] Parsing pages of departement {problematic_departement} through department SEO link")
         centers_departements = parse_pages_departement(

@@ -1,0 +1,901 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-14T12:37:42.632326+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "38",
+      "nom": "Grand centre de vaccination - Alpexpo",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/grenoble-38000/vaccinodrome-grenoble?category=-1&cabinet=18795&specialty=144",
+      "location": {
+        "longitude": 5.73508,
+        "latitude": 45.1568,
+        "city": "Grenoble"
+      },
+      "metadata": {
+        "address": " Rue Henri Barbusse, 38100 Grenoble",
+        "phone_number": "+33476003134",
+        "business_hours": {
+          "lundi": "09:00-18:30",
+          "mardi": "09:00-18:30",
+          "mercredi": "09:00-18:30",
+          "jeudi": "09:00-18:30",
+          "vendredi": "09:00-18:30",
+          "samedi": "09:00-18:30",
+          "dimanche": "09:00-18:30"
+        }
+      },
+      "prochain_rdv": "2021-04-14T18:15:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 1885,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2248"
+    },
+    {
+      "departement": "38",
+      "nom": "Salle des f\u00eates de Voiron",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/voiron-38500/centre-hospitalier-voiron/centre-de-vaccination-du-ch-voiron",
+      "location": {
+        "longitude": 5.5885,
+        "latitude": 45.3686,
+        "city": "Voiron"
+      },
+      "metadata": {
+        "address": " Place Jacques Antoine GAU, 38500 Voiron",
+        "phone_number": "+33476003134",
+        "business_hours": {
+          "lundi": "13:00-18:00",
+          "mardi": "13:00-18:00",
+          "mercredi": "13:00-18:00",
+          "jeudi": "13:00-18:00",
+          "vendredi": "13:00-18:00",
+          "samedi": "Ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-15T12:05:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 14,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "153"
+    },
+    {
+      "departement": "38",
+      "nom": "Centre de vaccination du Gr\u00e9sivaudan - Salle polyvalente",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/le-versoud-38420/salle-polyvalente-le-versoud/centre-de-vaccination-de-la-salle-polyvalente-le-versoud",
+      "location": {
+        "longitude": 5.87468,
+        "latitude": 45.2249,
+        "city": "Le Versoud"
+      },
+      "metadata": {
+        "address": "4 Rue Paul Gauguin, 38420 Le Versoud",
+        "phone_number": "+33476003134",
+        "business_hours": {
+          "lundi": "13:00-17:30",
+          "mardi": "ferm\u00e9",
+          "mercredi": "13:00-17:30",
+          "jeudi": "13:00-17:00",
+          "vendredi": "13:00-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-16T09:40:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 206,
+      "internal_id": null,
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "1340"
+    },
+    {
+      "departement": "38",
+      "nom": "P\u00f4le de Sant\u00e9 de Tignieu-Jameyzieu",
+      "url": "https://partners.doctolib.fr/maison-de-sante/tignieu-jameyzieu/pole-de-sante-de-tignieu-jameyzieu",
+      "location": {
+        "longitude": 5.18519019999997,
+        "latitude": 45.7366675,
+        "city": "Tignieu-Jameyzieu"
+      },
+      "metadata": {
+        "address": "56b Lotissement Letrat, 38230 Tignieu-Jameyzieu",
+        "phone_number": "+33426787760",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-04-16T10:48:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 21,
+      "internal_id": "53094[]",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "erreur": null,
+      "gid": "d53094"
+    },
+    {
+      "departement": "38",
+      "nom": "Centre de vaccination - Maison des Associations  - C\u0152UR DE CHARTREUSE",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/st-laurent-du-pont-38380/centre-de-vaccination-coeur-de-chartreuse",
+      "location": {
+        "longitude": 5.73501,
+        "latitude": 45.3875,
+        "city": "Saint-Laurent-du-Pont"
+      },
+      "metadata": {
+        "address": " Place de la Mairie, 38380 Saint-Laurent-du-Pont",
+        "phone_number": "+33476003134",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "8:30-17:30",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "8:30-17:30",
+          "vendredi": "8:30-17:30",
+          "samedi": "8:30-17:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-17T12:51:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 1329,
+      "internal_id": null,
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "2246"
+    },
+    {
+      "departement": "38",
+      "nom": "Communaut\u00e9 professionnelle territoriale de sant\u00e9 (CPTS) Sud est Grenoblois - Salle des f\u00eates",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/eybens-80000/cpts-sud-est-grenoblois/centre-de-vaccination-du-cpts-sud-est-grenoblois",
+      "location": {
+        "longitude": 5.75446,
+        "latitude": 45.1495,
+        "city": "Eybens"
+      },
+      "metadata": {
+        "address": "5 Rue du Chateau, 38320 Eybens",
+        "phone_number": "+33476003134",
+        "business_hours": {
+          "lundi": "09:00-16:00",
+          "mardi": "09:00-16:00",
+          "mercredi": "09:00-16:00",
+          "jeudi": "09:00-16:00",
+          "vendredi": "09:00-16:00",
+          "samedi": "09:00-16:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-21T09:15:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 259,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "669"
+    },
+    {
+      "departement": "38",
+      "nom": "Centre hospitalier universitaire de Grenoble CHUGA (RDC du Pavillon Chatin, face au b\u00e2timent de la Direction G\u00e9n\u00e9rale)",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/la-tronche-38700/centre-hospitalier-universitaire-grenoble-nord/centre-de-vaccination-du-chu-grenoble-nord",
+      "location": {
+        "longitude": 5.74771,
+        "latitude": 45.2004,
+        "city": "La Tronche"
+      },
+      "metadata": {
+        "address": "8 Chemin Duhamel, 38700 La Tronche",
+        "phone_number": "+33476003134",
+        "business_hours": {
+          "lundi": "08:30-13:00/13:30-18:30",
+          "mardi": "08:30-13:00/13:30-18:30",
+          "mercredi": "08:30-13:00/13:30-18:30",
+          "jeudi": "08:30-13:00/13:30-18:30",
+          "vendredi": "08:30-13:00/13:30-18:30",
+          "samedi": "08:30-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-21T12:25:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 704,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "149"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "38",
+      "nom": "Pharmacie Du Centre",
+      "url": "https://mapharma.net/38290",
+      "location": null,
+      "metadata": {
+        "address": "90, place Joseph Serlin 38290 LA VERPILLIERE",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "38290-0"
+    },
+    {
+      "departement": "38",
+      "nom": "Dr Corinne AMOUROUX RICHALET",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/crolles/corinne-amouroux-richalet",
+      "location": {
+        "longitude": 5.89058850000004,
+        "latitude": 45.2712667,
+        "city": "Crolles"
+      },
+      "metadata": {
+        "address": "869 Avenue Ambroise Croizat, 38920 Crolles",
+        "phone_number": "+33476081480",
+        "business_hours": {
+          "lundi": "09:00-14:00",
+          "mardi": "09:00-14:00",
+          "mercredi": "09:00-12:20",
+          "jeudi": "09:00-14:00",
+          "vendredi": "09:00-14:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "81658[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d81658"
+    },
+    {
+      "departement": "38",
+      "nom": "Pharmacie Martin Pinel",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-martin-pinel-pont-de-cheruy",
+      "location": {
+        "longitude": 5.173681,
+        "latitude": 45.750949,
+        "city": "pont-de-cheruy"
+      },
+      "metadata": {
+        "address": "21 Rue Centrale, 38230 Pont-de-Ch\u00e9ruy",
+        "phone_number": "+33478321240",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "5f5d18ce"
+    },
+    {
+      "departement": "38",
+      "nom": "Dr Francis BRAM",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/charavines/francis-bram",
+      "location": {
+        "longitude": 5.5155168,
+        "latitude": 45.4328392,
+        "city": "Charavines"
+      },
+      "metadata": {
+        "address": "170 Rue des Bains, 38850 Charavines",
+        "business_hours": {
+          "lundi": "08:00-12:00, 14:00-16:30",
+          "mardi": "08:00-12:00",
+          "mercredi": "08:00-12:00, 14:00-16:30",
+          "jeudi": "08:00-12:00, 14:00-16:30",
+          "vendredi": "08:00-12:00, 14:00-16:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "28334[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d28334"
+    },
+    {
+      "departement": "38",
+      "nom": "Centre de vaccination COVID - Centre hospitalier de Beaurepaire  (Professionnels de sant\u00e9 uniquement)",
+      "url": "https://partners.doctolib.fr/hopital-public/beaurepaire/centre-de-vaccination-covid-ch-beaurepaire?pid=practice-165930",
+      "location": {
+        "longitude": 5.05764,
+        "latitude": 45.3391,
+        "city": "Beaurepaire"
+      },
+      "metadata": {
+        "address": "41 Avenue Louis - Michel Villaz, 38270 Beaurepaire",
+        "business_hours": {
+          "lundi": "13:00-16:00",
+          "mardi": "13:00-16:00",
+          "mercredi": "13:00-16:00",
+          "jeudi": "13:00-16:00",
+          "vendredi": "13:00-16:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "244189[165930]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1402"
+    },
+    {
+      "departement": "38",
+      "nom": "Pharmacie Acomat Saint Clair du Rh\u00f4ne",
+      "url": "https://partners.doctolib.fr/pharmacie/saint-clair-du-rhone/pharmacie-acomat",
+      "location": {
+        "longitude": 4.7677346,
+        "latitude": 45.4452832,
+        "city": "Saint-Clair-du-Rh\u00f4ne"
+      },
+      "metadata": {
+        "address": "Route de Condrieu, 38370 Saint-Clair-du-Rh\u00f4ne",
+        "phone_number": "+33474564010",
+        "business_hours": {
+          "lundi": "08:30-19:00",
+          "mardi": "08:30-19:00",
+          "mercredi": "08:30-19:00",
+          "jeudi": "08:30-19:00",
+          "vendredi": "08:30-19:00",
+          "samedi": "08:30-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "262190[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d262190"
+    },
+    {
+      "departement": "38",
+      "nom": "Grande Pharmacie De L'Avenue",
+      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-de-l'avenue-roussillon",
+      "location": {
+        "longitude": 4.8044207,
+        "latitude": 45.3646714,
+        "city": "roussillon"
+      },
+      "metadata": {
+        "address": "14 avenue Jean Jaures, 38150 Roussillon",
+        "phone_number": "+33474863365",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2b670ed9"
+    },
+    {
+      "departement": "38",
+      "nom": "Maison des Associations et du  B\u00e9n\u00e9volat (MAB)",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/la-mure/cpts-lac-et-montagne-du-sud-isere?pid=practice-165086",
+      "location": {
+        "longitude": 5.78777,
+        "latitude": 44.9003,
+        "city": "La Mure"
+      },
+      "metadata": {
+        "address": "56 Boulevard Docteur Ricard, 38350 La Mure",
+        "phone_number": "+33476003134",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "09:00-18:00",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243120[165086]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "672"
+    },
+    {
+      "departement": "38",
+      "nom": "Centre Equinoxe La Tour du Pin",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/la-tour-du-pin/centre-de-vaccination-de-la-tour-du-pin?pid=practice-173204",
+      "location": {
+        "longitude": 5.44985,
+        "latitude": 45.5615,
+        "city": "La Tour-du-Pin"
+      },
+      "metadata": {
+        "address": "9 Rue Louis Pasteur, 38110 La Tour-du-Pin",
+        "phone_number": "+33476003134",
+        "business_hours": {
+          "lundi": "8:00-16:00",
+          "mardi": "8:00-16:00",
+          "mercredi": "12:00-20:00",
+          "jeudi": "8:00-16:00",
+          "vendredi": "8:00-16:00",
+          "samedi": "8:00-16:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "253788[173204]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1523"
+    },
+    {
+      "departement": "38",
+      "nom": "Centre de vaccination de l'Isle d'Abeau",
+      "url": "https://partners.doctolib.fr/centre-de-sante/l-isle-d-abeau/centre-de-vaccination-ephemere-de-l-isle-d-abeau",
+      "location": {
+        "longitude": 5.2221312,
+        "latitude": 45.6219181,
+        "city": "L'Isle-d'Abeau"
+      },
+      "metadata": {
+        "address": "6 Rue du Triforium, 38080 L'Isle-d'Abeau",
+        "business_hours": {
+          "lundi": null,
+          "mardi": "09:00-13:00, 13:00-17:30",
+          "mercredi": "09:00-13:00, 13:30-17:30",
+          "jeudi": "09:00-13:00, 13:00-17:30",
+          "vendredi": "09:00-13:00, 13:00-18:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "256970[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d256970"
+    },
+    {
+      "departement": "38",
+      "nom": "Centre Vaccination COVID-19 de la Bi\u00e8vre",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/saint-etienne-de-saint-geoirs/centre-vaccination-de-la-bievre",
+      "location": {
+        "longitude": 5.3364419,
+        "latitude": 45.3557124,
+        "city": "Saint-\u00c9tienne-de-Saint-Geoirs"
+      },
+      "metadata": {
+        "address": "1 Avenue Roland Garros, 38590 Saint-\u00c9tienne-de-Saint-Geoirs",
+        "phone_number": "+33476939473",
+        "business_hours": {
+          "lundi": "08:30-12:00, 13:30-17:00",
+          "mardi": "08:30-12:00, 13:30-17:00",
+          "mercredi": "08:30-12:00, 13:30-17:00",
+          "jeudi": "08:30-12:00, 13:30-17:00",
+          "vendredi": "08:30-12:00, 13:30-17:00",
+          "samedi": "08:30-12:00, 13:30-17:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242219[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242219"
+    },
+    {
+      "departement": "38",
+      "nom": "Centre de vaccination de Vienne - Man\u00e8ge",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/vienne-38200/cegidd/cegidd-du-chu-grenoble",
+      "location": {
+        "longitude": 4.86576,
+        "latitude": 45.5132,
+        "city": "Vienne"
+      },
+      "metadata": {
+        "address": "30 Avenue G\u00e9n\u00e9ral Leclerc, 38200 Vienne",
+        "phone_number": "+33476003134",
+        "business_hours": {
+          "lundi": "09:00-12:00/13:30-16:30",
+          "mardi": "ferm\u00e9",
+          "mercredi": "09:00-12:00/13:30-16:30",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "09:00-15:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "681"
+    },
+    {
+      "departement": "38",
+      "nom": "Centre de vaccination Covid-19 St-Marcellin Vercors Is\u00e8re Communaut\u00e9",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-marcellin/centre-de-vaccination-covid-19-st-marcellin-vercors-isere-communaute",
+      "location": {
+        "longitude": 5.3218471,
+        "latitude": 45.1526342,
+        "city": "Saint-Marcellin"
+      },
+      "metadata": {
+        "address": "5 Boulevard Gambetta, 38160 Saint-Marcellin",
+        "phone_number": "+33476385332",
+        "business_hours": {
+          "lundi": "09:00-12:00, 13:00-16:00",
+          "mardi": "09:00-12:00, 13:00-16:00",
+          "mercredi": "09:00-12:00, 13:00-16:00",
+          "jeudi": "09:00-12:00, 13:00-16:00",
+          "vendredi": "09:00-12:00, 13:00-16:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "244112[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d244112"
+    },
+    {
+      "departement": "38",
+      "nom": "Centre de vaccination  Communaut\u00e9 professionnelle territoriale de sant\u00e9 (CPTS) Vercors",
+      "url": "https://vaccination-covid.keldoc.com/vaccination-covid19/villard-de-lans-38250/equipe-de-vaccination-centre-de-vaccination-du-vercors?agenda=51417&motive=81974&category=-1&cabinet=16698",
+      "location": {
+        "longitude": 5.55187,
+        "latitude": 45.0721,
+        "city": "Villard-de-Lans"
+      },
+      "metadata": {
+        "address": " Place M\u00fbre Ravaud, 38250 Villard-de-Lans",
+        "phone_number": "+33476003134",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "668"
+    },
+    {
+      "departement": "38",
+      "nom": "Gymnase St Hubert \u2013 Centre de vaccination",
+      "url": "https://partners.doctolib.fr/centre-de-sante/l-isle-d-abeau/centre-de-vaccination-ephemere-de-l-isle-d-abeau?pid=practice-175865",
+      "location": {
+        "longitude": 5.22178,
+        "latitude": 45.6222,
+        "city": "L'Isle-d'Abeau"
+      },
+      "metadata": {
+        "address": " Bd St Hubert, 38080 L'Isle-d'Abeau",
+        "phone_number": "+33474182060",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "09:00-17:30",
+          "mercredi": "09:00-17:30",
+          "jeudi": "09:00-17:30",
+          "vendredi": "09:00-18:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "256970[175865]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2075"
+    },
+    {
+      "departement": "38",
+      "nom": "Centre de vaccination - Clinique des C\u00f4tes du Rh\u00f4ne",
+      "url": "https://vaccination-covid.keldoc.com/clinique/roussillon-38150/clinique-des-cotes-du-rhone/centre-de-vaccination-de-la-clinique-des-cotes-du-rhone",
+      "location": {
+        "longitude": 4.81314,
+        "latitude": 45.3707,
+        "city": "Roussillon"
+      },
+      "metadata": {
+        "address": "12 Rue Fernand L\u00e9ger, 38150 Roussillon",
+        "phone_number": "+33476003134",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "09:00 - 14:00",
+          "mercredi": "09:00 - 14:00",
+          "jeudi": "09:00 - 14:00",
+          "vendredi": "09:00 - 14:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1348"
+    },
+    {
+      "departement": "38",
+      "nom": "Vaccination COVID - CPTS  Lac et Montagne du Sud Is\u00e8re",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/la-mure/cpts-lac-et-montagne-du-sud-isere",
+      "location": {
+        "longitude": 5.7882488,
+        "latitude": 44.9002771,
+        "city": "La Mure"
+      },
+      "metadata": {
+        "address": "55 Boulevard Dr Ricard, 38350 La Mure",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243120[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243120"
+    },
+    {
+      "departement": "38",
+      "nom": "Centre de vaccination de Grenoble - Centre d\u00e9partemental de sant\u00e9",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/grenoble-38000/centre-departemental-de-sante-du-chu-grenoble/centre-departemental-de-sante-du-chu-grenoble",
+      "location": {
+        "longitude": 5.73061,
+        "latitude": 45.1817,
+        "city": "Grenoble"
+      },
+      "metadata": {
+        "address": "23 Avenue Albert 1er de Belgique, 38000 Grenoble",
+        "phone_number": "+33476003134",
+        "business_hours": {
+          "lundi": "09:00-12:00/14:00-17:00",
+          "mardi": "09:00-12:00/14:00-17:00",
+          "mercredi": "09:00-12:00/14:00-17:00",
+          "jeudi": "09:00-12:00/14:00-17:00",
+          "vendredi": "09:00-12:00/14:00-17:00",
+          "samedi": "09:00-12:00/14:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "677"
+    },
+    {
+      "departement": "38",
+      "nom": "Centre de vaccination COVID - Centre hospitalier de Vienne - (Professionnels de sant\u00e9 uniquement)",
+      "url": "https://partners.doctolib.fr/hopital-public/vienne/centre-de-vaccination-covid-19-ch-vienne?pid=practice-165717",
+      "location": {
+        "longitude": 4.87999,
+        "latitude": 45.5337,
+        "city": "Vienne"
+      },
+      "metadata": {
+        "address": " Mont Salomon, 38200 Vienne",
+        "business_hours": {
+          "lundi": "13:00-16:00",
+          "mardi": "ferm\u00e913:00-16:00",
+          "mercredi": "13:00-16:00",
+          "jeudi": "13:00-16:00",
+          "vendredi": "13:00-16:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243833[165717]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1403"
+    },
+    {
+      "departement": "38",
+      "nom": "Centre de vaccinations Nationales et Internationales de la ville de Grenoble",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/grenoble-38000/centre-national-et-international-de-la-ville-de-grenoble/centre-de-vaccination-du-centre-national-et-international-de-la-ville-de-grenoble",
+      "location": {
+        "longitude": 5.73657,
+        "latitude": 45.1901,
+        "city": "Grenoble"
+      },
+      "metadata": {
+        "address": "33 Rue Joseph Chanrion, 38000 Grenoble",
+        "phone_number": "+33476003134",
+        "business_hours": {
+          "lundi": "09:00-12:20/14:00-16:30",
+          "mardi": "09:00-12:20/14:00-16:30",
+          "mercredi": "09:00-12:20/14:00-16:30",
+          "jeudi": "09:00-12:20/14:00-16:30",
+          "vendredi": "09:00-12:20/14:00-16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "678"
+    },
+    {
+      "departement": "38",
+      "nom": "Centre de vaccination de la Tour du Pin",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/la-tour-du-pin/centre-de-vaccination-de-la-tour-du-pin",
+      "location": {
+        "longitude": 5.4496794,
+        "latitude": 45.5614947,
+        "city": "La Tour-du-Pin"
+      },
+      "metadata": {
+        "address": "9 Rue Pasteur, 38110 La Tour-du-Pin",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "253788[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d253788"
+    },
+    {
+      "departement": "38",
+      "nom": "Centre de vaccination de Bourgoin-Jallieu - Salle polyvalente",
+      "url": "https://vaccination-covid.keldoc.com/clinique/bourgoin-jallieu-38300/espace-senior-bourgoin-jallieu",
+      "location": {
+        "longitude": 5.29115,
+        "latitude": 45.5875,
+        "city": "Bourgoin-Jallieu"
+      },
+      "metadata": {
+        "address": "92 Avenue Professeur Tixier, 38300 Bourgoin-Jallieu",
+        "phone_number": "+33476003134",
+        "business_hours": {
+          "lundi": "09:00-12:00/13:30-16:30",
+          "mardi": "09:00-12:00/13:30-16:30",
+          "mercredi": "09:00-12:00/13:30-16:30",
+          "jeudi": "09:00-12:00/13:30-16:30",
+          "vendredi": "09:00-15:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "680"
+    },
+    {
+      "departement": "38",
+      "nom": "Centre de vaccination \u00e0 la Maison de sant\u00e9 pluridisciplinaire (MSP) Montalieu",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montalieu-vercieu/centre-de-vaccination-msp-de-montalieu-vercieu",
+      "location": {
+        "longitude": 5.40493,
+        "latitude": 45.8144,
+        "city": "Montalieu-Vercieu"
+      },
+      "metadata": {
+        "address": "12 Rue du Besset, 38390 Montalieu-Vercieu",
+        "phone_number": "+33476003134",
+        "business_hours": {
+          "lundi": "08:00-12:30 14:00-19:00",
+          "mardi": "08:00-12:30 14:00-19:00",
+          "mercredi": "08:00-12:30 14:00-19:00",
+          "jeudi": "08:00-12:30 14:00-19:00",
+          "vendredi": "08:00-12:30 14:00-19:00",
+          "samedi": "08:00-12:30 14:00-19:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242721[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "664"
+    }
+  ]
+}

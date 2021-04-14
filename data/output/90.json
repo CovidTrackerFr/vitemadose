@@ -1,0 +1,195 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-14T12:37:42.718306+02:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "90",
+      "nom": "Pharmacie Slk",
+      "url": "https://mapharma.net/90100",
+      "location": null,
+      "metadata": {
+        "address": "20 Faubourg d'Alsace 90100 DELLE",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "90100-0"
+    },
+    {
+      "departement": "90",
+      "nom": "Pharmacie Els",
+      "url": "https://mapharma.net/90850",
+      "location": null,
+      "metadata": {
+        "address": "58B Rue du G\u00e9n\u00e9ral de Gaulle 90850 ESSERT",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "90850-0"
+    },
+    {
+      "departement": "90",
+      "nom": "H\u00f4pital Nord Franche-Comt\u00e9",
+      "url": "https://partners.doctolib.fr/hopital-public/tr\u00e9venans/hnfc-centre-de-vaccination-covid-19",
+      "location": {
+        "longitude": 6.87295,
+        "latitude": 47.5763,
+        "city": "Tr\u00e9venans"
+      },
+      "metadata": {
+        "address": "100 Route de Moval, 90400 Tr\u00e9venans",
+        "phone_number": "+33384983690",
+        "business_hours": {
+          "lundi": "08:00-18:00",
+          "mardi": "08:00-18:00",
+          "mercredi": "08:00-18:00",
+          "jeudi": "08:00-18:00",
+          "vendredi": "08:00-18:00",
+          "samedi": "08:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242584[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "393"
+    },
+    {
+      "departement": "90",
+      "nom": "Centre Vaccination du Territoire de Belfort - Giromagny",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/belfort/centre-vaccination-du-territoire-de-belfort?pid=practice-164391",
+      "location": {
+        "longitude": 6.831354,
+        "latitude": 47.732138,
+        "city": "Giromagny"
+      },
+      "metadata": {
+        "address": "Chemin Rural dit de la Grande Prairie, 90200 Giromagny",
+        "business_hours": {
+          "lundi": "08:00-18:00",
+          "mardi": "08:00-18:00",
+          "mercredi": "08:00-18:00",
+          "jeudi": "08:00-18:00",
+          "vendredi": "08:00-18:00",
+          "samedi": "09:00-12:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242098[164391]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242098"
+    },
+    {
+      "departement": "90",
+      "nom": "Centre Vaccination du Territoire de Belfort - Belfort",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/belfort/centre-vaccination-du-territoire-de-belfort",
+      "location": {
+        "longitude": 6.8485708,
+        "latitude": 47.6392458,
+        "city": "Belfort"
+      },
+      "metadata": {
+        "address": "2 Rue Paul Koepfler, 90000 Belfort",
+        "business_hours": {
+          "lundi": "08:00-18:00",
+          "mardi": "08:00-18:00",
+          "mercredi": "08:00-18:00",
+          "jeudi": "08:00-18:00",
+          "vendredi": "08:00-18:00",
+          "samedi": "09:00-12:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242098[164071]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242098"
+    },
+    {
+      "departement": "90",
+      "nom": "Salle polyvalente - Grandvillars",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/belfort/centre-vaccination-du-territoire-de-belfort?pid=practice-164077",
+      "location": {
+        "longitude": 6.97526,
+        "latitude": 47.5391,
+        "city": "Grandvillars"
+      },
+      "metadata": {
+        "address": "49 Rue des Grands Champs, 90600 Grandvillars",
+        "business_hours": {
+          "lundi": "08:00-18:00",
+          "mardi": "08:00-18:00",
+          "mercredi": "08:00-18:00",
+          "jeudi": "08:00-18:00",
+          "vendredi": "08:00-18:00",
+          "samedi": "09:00-12:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242098[164077]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "595"
+    },
+    {
+      "departement": "90",
+      "nom": "Gymnase Le Phare - Belfort",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/belfort/centre-vaccination-du-territoire-de-belfort?pid=practice-164071",
+      "location": {
+        "longitude": 6.85001,
+        "latitude": 47.6382,
+        "city": "Belfort"
+      },
+      "metadata": {
+        "address": "1 Rue Paul Koepfler, 90000 Belfort",
+        "phone_number": "+33384571626",
+        "business_hours": {
+          "lundi": "08:00-18:00",
+          "mardi": "08:00-18:00",
+          "mercredi": "08:00-18:00",
+          "jeudi": "08:00-18:00",
+          "vendredi": "08:00-18:00",
+          "samedi": "09:00-12:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242098[164071]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "462"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-14T12:37:42.676898+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "65",
+      "nom": "Centre de vaccination COVID de Tarbes - EXPO",
+      "url": "https://partners.doctolib.fr/centre-de-sante/tarbes/centre-de-vaccination-covid-de-tarbes-expo",
+      "location": {
+        "longitude": 0.0859007,
+        "latitude": 43.2194269,
+        "city": "Tarbes"
+      },
+      "metadata": {
+        "address": "Boulevard du Pr\u00e9sident Kennedy, 65000 Tarbes",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-17T12:35:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 111,
+      "internal_id": "243493[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "d243493"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "65",
+      "nom": "Site g\u00e9riatrique de l'Ayguerote CH de Bigorre",
+      "url": "https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote",
+      "location": {
+        "longitude": 0.0665153,
+        "latitude": 43.2345,
+        "city": "Tarbes"
+      },
+      "metadata": {
+        "address": "2 Rue de l'Ayguerote, 65000 Tarbes",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9:00-12h/13:00-17:00",
+          "mardi": "9:00-12h/13:00-17:00",
+          "mercredi": "9:00-12h/13:00-17:00",
+          "jeudi": "9:00-12h/13:00-17:00",
+          "vendredi": "9:00-12h/13:00-17:00",
+          "samedi": "9:00-12h/13:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242325[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "83"
+    },
+    {
+      "departement": "65",
+      "nom": "CENTRE DE VACCINATION DE VIC-EN-BIGORRE",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/vic-en-bigorre/centre-de-vaccination-covid-adour-madiran?pid=practice-165058",
+      "location": {
+        "longitude": 0.0554819,
+        "latitude": 43.3872,
+        "city": "Vic-en-Bigorre"
+      },
+      "metadata": {
+        "address": " L'Octav - Place du Corps Franc Pommies, 65500 Vic-en-Bigorre",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-17:00",
+          "mardi": "14:00-17:00",
+          "mercredi": "14:00-17:00",
+          "jeudi": "14:00-17:00",
+          "vendredi": "14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243089[165058]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "812"
+    },
+    {
+      "departement": "65",
+      "nom": "CENTRE DE VACCINATION DE BAGNERES-DE-BIGORRE",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bagneres-de-bigorre/centre-de-vaccination-covid-19-de-bagneres-de-bigorre",
+      "location": {
+        "longitude": 0.155363,
+        "latitude": 43.0674,
+        "city": "Bagn\u00e8res-de-Bigorre"
+      },
+      "metadata": {
+        "address": " Halle aux grains - Place Eug\u00e8ne Toujas, 65200 Bagn\u00e8res-de-Bigorre",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-17:00",
+          "mardi": "14:00-17:00",
+          "mercredi": "14:00-17:00",
+          "jeudi": "14:00-17:00",
+          "vendredi": "14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243044[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "362"
+    },
+    {
+      "departement": "65",
+      "nom": "CENTRE DE VACCINATION DE LOURDES - Espace Robert Hossein",
+      "url": "https://partners.doctolib.fr/centre-de-sante/lourdes/centre-de-vaccination-covid-19-lourdes",
+      "location": {
+        "longitude": -0.0417883,
+        "latitude": 43.1038,
+        "city": "Lourdes"
+      },
+      "metadata": {
+        "address": "19 Avenue Alexandre Marqui, 65100 Lourdes",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-17:00",
+          "mardi": "14:00-17:00",
+          "mercredi": "14:00-17:00",
+          "jeudi": "14:00-17:00",
+          "vendredi": "14:00-17:00",
+          "samedi": "09:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243327[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "360"
+    },
+    {
+      "departement": "65",
+      "nom": "CENTRE DE VACCINATION DE LANNEMEZAN",
+      "url": "https://partners.doctolib.fr/maison-de-sante/lannemezan/centre-de-vaccination-codi-19-mairie-lannemezan",
+      "location": {
+        "longitude": 0.384758,
+        "latitude": 43.1237,
+        "city": "Lannemezan"
+      },
+      "metadata": {
+        "address": " Salle des f\u00eates - Rue du Mar\u00e9chal Juin, 65300 Lannemezan",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-17:00",
+          "mardi": "14:00-17:00",
+          "mercredi": "14:00-17:00",
+          "jeudi": "14:00-17:00",
+          "vendredi": "14:00-17:00",
+          "samedi": "9:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242683[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "361"
+    }
+  ]
+}

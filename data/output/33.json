@@ -1,0 +1,1491 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-14T12:37:42.626025+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination du CH Sud Gironde - LANGON",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/langon-33210/centre-hospitalier-sud-gironde?category=-1&cabinet=16578&specialty=496",
+      "location": {
+        "longitude": -0.245072,
+        "latitude": 44.5558,
+        "city": "Langon"
+      },
+      "metadata": {
+        "address": " Avenue Elie Samson - Espace Nougaro, 33210 Langon",
+        "phone_number": "+33556763450",
+        "business_hours": {
+          "lundi": "08:30-12:30/13:00-17:00",
+          "mardi": "08:30-12:30/13:00-17:00",
+          "mercredi": "08:30-12:30/13:00-17:00",
+          "jeudi": "08:30-12:30/13:00-17:00",
+          "vendredi": "08:30-12:30/13:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-15T08:45:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 1,
+      "internal_id": null,
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "994"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination Covid-19 - Castillon Pujols",
+      "url": "https://partners.doctolib.fr/centre-de-sante/castillon-pujols/centre-de-vaccination-covid-19-castillon-pujols",
+      "location": {
+        "longitude": -0.0518001,
+        "latitude": 44.8526602,
+        "city": "Castillon-la-Bataille"
+      },
+      "metadata": {
+        "address": "12 Avenue de Verdun, 33350 Castillon-la-Bataille",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-15T12:40:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 584,
+      "internal_id": "263487[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "d263487"
+    },
+    {
+      "departement": "33",
+      "nom": "CH ARCACHON",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/la-teste-de-buch-33529/centre-hospitalier-arcachon/centre-de-vaccination-du-centre-hospitalier-arcachon",
+      "location": {
+        "longitude": -1.11337,
+        "latitude": 44.6135,
+        "city": "La Teste-de-Buch"
+      },
+      "metadata": {
+        "address": " AV JEAN HAMEAU, 33260 La Teste-de-Buch",
+        "phone_number": "+33557529570",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-16T14:50:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 254,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "138"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination COVID-19 du Libournais",
+      "url": "https://partners.doctolib.fr/centre-de-sante/libourne/centre-de-vaccination-du-libournais-libourne",
+      "location": {
+        "longitude": -0.2427451,
+        "latitude": 44.9025459,
+        "city": "Libourne"
+      },
+      "metadata": {
+        "address": "14 Boulevard de Quinault, 33500 Libourne",
+        "business_hours": {
+          "lundi": "09:00-20:30",
+          "mardi": "09:00-20:30",
+          "mercredi": "09:00-20:30",
+          "jeudi": "09:00-20:30",
+          "vendredi": "09:00-20:30",
+          "samedi": "09:00-20:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-21T18:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 536,
+      "internal_id": "242928[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "d242928"
+    },
+    {
+      "departement": "33",
+      "nom": "M\u00e9ga centre de vaccination Covid-19 - Bordeaux M\u00e9tropole",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/bordeaux/mega-centre-de-vaccination-covid-19-bordeaux-metropole",
+      "location": {
+        "longitude": -0.5642854,
+        "latitude": 44.8914257,
+        "city": "Bordeaux"
+      },
+      "metadata": {
+        "address": "Cours Charles Bricaud, 33300 Bordeaux",
+        "business_hours": {
+          "lundi": "08:00-19:30",
+          "mardi": "08:00-19:30",
+          "mercredi": "08:00-19:30",
+          "jeudi": "09:00-19:30",
+          "vendredi": "08:00-19:30",
+          "samedi": "08:00-19:30",
+          "dimanche": "08:00-19:30"
+        }
+      },
+      "prochain_rdv": "2021-04-22T12:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 666,
+      "internal_id": "261974[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "d261974"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination COVID-19 Margaux-Cantenac",
+      "url": "https://partners.doctolib.fr/centre-de-sante/margaux-cantenac/centre-de-vaccination-covid-19-margaux-cantenac",
+      "location": {
+        "longitude": -0.6812587,
+        "latitude": 45.039075,
+        "city": "Margaux-Cantenac"
+      },
+      "metadata": {
+        "address": "8 Cours Pey-Berland, 33460 Margaux-Cantenac",
+        "phone_number": "+33557883822",
+        "business_hours": {
+          "lundi": "09:00-13:00, 13:30-17:30",
+          "mardi": "09:00-13:00, 13:30-17:30",
+          "mercredi": "09:00-13:00, 13:30-17:30",
+          "jeudi": "09:00-13:00, 13:30-17:30",
+          "vendredi": "09:00-13:00, 13:30-17:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-27T09:35:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 322,
+      "internal_id": "264615[]",
+      "vaccine_type": [
+        "Moderna"
+      ],
+      "erreur": null,
+      "gid": "d264615"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination - Margaux-Cantenac - Salle des F\u00eates",
+      "url": "https://partners.doctolib.fr/centre-de-sante/margaux-cantenac/centre-de-vaccination-covid-19-margaux-cantenac?pid=practice-181150",
+      "location": {
+        "longitude": -0.681261,
+        "latitude": 45.0389,
+        "city": "Margaux-Cantenac"
+      },
+      "metadata": {
+        "address": "8 Cours Pey Berland, 33460 Margaux-Cantenac",
+        "business_hours": {
+          "lundi": "09:00-13:00/13:30-17:30",
+          "mardi": "09:00-13:00/13:30-17:30",
+          "mercredi": "09:00-13:00/13:30-17:30",
+          "jeudi": "09:00-13:00/13:30-17:30",
+          "vendredi": "09:00-13:00/13:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-27T09:35:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 322,
+      "internal_id": "264615[181150]",
+      "vaccine_type": [
+        "Moderna"
+      ],
+      "erreur": null,
+      "gid": "2369"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "33",
+      "nom": "Lamothe-Landerron",
+      "url": "https://app.ordoclic.fr/app/pharmacie/lamothe-landerron-lamothe-landerron",
+      "location": {
+        "longitude": 0.0418304,
+        "latitude": 44.5651157,
+        "city": "lamothe-landerron"
+      },
+      "metadata": {
+        "address": "3 route de Bordeaux lieu dit Les Granges Sud, 33190 Lamothe Landerron",
+        "phone_number": "+33556617126",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "162a0c72"
+    },
+    {
+      "departement": "33",
+      "nom": "Pharmacie Des Grands Hommes",
+      "url": "https://mapharma.net/33000",
+      "location": null,
+      "metadata": {
+        "address": "1 place des grands hommes 33000 BORDEAUX",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "33000-0"
+    },
+    {
+      "departement": "33",
+      "nom": "Dr Mathias Domenech",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/merignac/mathias-domenech-merignac",
+      "location": {
+        "longitude": -0.684829100000002,
+        "latitude": 44.8486127,
+        "city": "M\u00e9rignac"
+      },
+      "metadata": {
+        "address": "8 Rue Pierre Georges Lat\u00e9co\u00e8re, 33700 M\u00e9rignac",
+        "phone_number": "+33556550438",
+        "business_hours": {
+          "lundi": "09:00-13:00, 13:00-18:00",
+          "mardi": "09:00-13:00, 13:00-18:00",
+          "mercredi": "09:00-13:00, 13:00-18:00",
+          "jeudi": "09:00-13:00, 13:00-18:00",
+          "vendredi": "09:00-13:00, 13:00-18:00",
+          "samedi": "08:30-12:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "264475[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d264475"
+    },
+    {
+      "departement": "33",
+      "nom": "Pharmacie Delahaye Eurl",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-delahaye-eurl-saint-aubin-de-medoc",
+      "location": {
+        "longitude": -0.7228249999999999,
+        "latitude": 44.9115791,
+        "city": "saint-aubin-de-medoc"
+      },
+      "metadata": {
+        "address": "15 Route de Germignan, 33160 Saint-Aubin-de-M\u00e9doc",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "c523ce4f"
+    },
+    {
+      "departement": "33",
+      "nom": "Pharmacie De La Jalle",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-jalle-saint-medard-en-jalles",
+      "location": {
+        "longitude": -0.6973977,
+        "latitude": 44.8859084,
+        "city": "saint-medard-en-jalles"
+      },
+      "metadata": {
+        "address": "34 Avenue Descartes, 33160 Saint-M\u00e9dard-en-Jalles",
+        "phone_number": "+33556957030",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1112df05"
+    },
+    {
+      "departement": "33",
+      "nom": "CENTRE DE VACCINATION - BIGANOS",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/biganos/centre-de-vaccination-covid-19-biganos?pid=practice-171118",
+      "location": {
+        "longitude": -0.97537,
+        "latitude": 44.6416,
+        "city": "Biganos"
+      },
+      "metadata": {
+        "address": " Rue Jean Zay, 33380 Biganos",
+        "phone_number": "+3333533092845",
+        "business_hours": {
+          "lundi": "08:30-12h00/14:00-17:30",
+          "mardi": "08:30-12h00/14:00-17:30",
+          "mercredi": "08:30-12h00/14:00-17:30",
+          "jeudi": "08:30-12h00/14:00-17:30",
+          "vendredi": "08:30-12h00/14:00-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "251728[171118]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2216"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination du pays foyen",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sainte-foy-la-grande/centre-de-vaccination-covid-19-saint-foy-la-grande?pid=practice-173546",
+      "location": {
+        "longitude": 0.220543,
+        "latitude": 44.8434,
+        "city": "Sainte-Foy-la-Grande"
+      },
+      "metadata": {
+        "address": " All\u00e9e Jean Raymond GUYON, 33220 Sainte-Foy-la-Grande",
+        "business_hours": {
+          "lundi": "09:00-12:30/13:30-17:00",
+          "mardi": "09:00-12:30/13:30-17:00",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "09:00-12:30/13:30-17:00",
+          "vendredi": "09:00-12:30/13:30-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "253840[173546]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1567"
+    },
+    {
+      "departement": "33",
+      "nom": "Cabinet d'infirmier L\u00e9ognan",
+      "url": "https://partners.doctolib.fr/cabinet-medical/leognan/cabinet-d-infirmier-leognan",
+      "location": {
+        "longitude": -0.598319,
+        "latitude": 44.72838,
+        "city": "L\u00e9ognan"
+      },
+      "metadata": {
+        "address": "7 Cours du Mar\u00e9chal de Lattre de Tassigny, 33850 L\u00e9ognan",
+        "phone_number": "+33556213098",
+        "business_hours": {
+          "lundi": "08:00-19:00",
+          "mardi": "08:00-19:00",
+          "mercredi": "08:00-19:00",
+          "jeudi": "08:00-19:00",
+          "vendredi": "08:00-19:00",
+          "samedi": "08:00-19:00",
+          "dimanche": "08:00-19:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "265420[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d265420"
+    },
+    {
+      "departement": "33",
+      "nom": "Pharmacie Des Dionysiens",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-dionysiens-saint-denis-de-pile",
+      "location": {
+        "longitude": -0.2011825,
+        "latitude": 44.9921997,
+        "city": "saint-denis-de-pile"
+      },
+      "metadata": {
+        "address": "35 Avenue Francois Mitterrand, 33910 Saint-Denis-de-Pile",
+        "phone_number": "+33557550545",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "39764dba"
+    },
+    {
+      "departement": "33",
+      "nom": "Pharmacie Guillot",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-guillot-artigues-pres-bordeaux",
+      "location": {
+        "longitude": -0.4729472,
+        "latitude": 44.865377,
+        "city": "artigues-pres-bordeaux"
+      },
+      "metadata": {
+        "address": "3 AV DU PERIGORD, 33370 ARTIGUES PRES BORDEAUX",
+        "phone_number": "+33557340542",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "356fc43b"
+    },
+    {
+      "departement": "33",
+      "nom": "Snc Dulin Guimard",
+      "url": "https://app.ordoclic.fr/app/pharmacie/snc-dulin-guimard-branne",
+      "location": {
+        "longitude": -0.1878246,
+        "latitude": 44.8292853,
+        "city": "branne"
+      },
+      "metadata": {
+        "address": "83 rue emmanuel Roy, 33420 branne",
+        "phone_number": "+33557845132",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "f01a7e60"
+    },
+    {
+      "departement": "33",
+      "nom": "Dr C\u00e9line Vergne",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/lacanau/celine-vergne",
+      "location": {
+        "longitude": -1.0813958,
+        "latitude": 44.978799,
+        "city": "Lacanau"
+      },
+      "metadata": {
+        "address": "4 Rue Pierre Lavergne, 33680 Lacanau",
+        "phone_number": "+33557050618",
+        "business_hours": {
+          "lundi": "08:00-18:30",
+          "mardi": "08:00-18:30",
+          "mercredi": "08:00-18:30",
+          "jeudi": "08:00-13:00",
+          "vendredi": "08:00-16:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "120454[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d120454"
+    },
+    {
+      "departement": "33",
+      "nom": "CHU BORDEAUX - SITE GH SUD",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/bordeaux-33000/chu-de-bordeaux/g-h-sud-centre-de-vaccination-usn?cabinet=16877&specialty=496",
+      "location": {
+        "longitude": -0.659829,
+        "latitude": 44.7973,
+        "city": "Pessac"
+      },
+      "metadata": {
+        "address": " Avenue du Haut L\u00e9v\u00e8que, 33600 Pessac",
+        "phone_number": "+33557820005",
+        "business_hours": {
+          "lundi": "08:30-19:30",
+          "mardi": "08:30-19:30",
+          "mercredi": "08:30-19:30",
+          "jeudi": "08:30-19:30",
+          "vendredi": "08:30-19:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "133"
+    },
+    {
+      "departement": "33",
+      "nom": "Pharmacie Saint-Louis",
+      "url": "https://partners.doctolib.fr/pharmacie/bordeaux/pharmacie-saint-louis-dr-an-le-groupe-aprium",
+      "location": {
+        "longitude": -0.5669333,
+        "latitude": 44.8626295,
+        "city": "Bordeaux"
+      },
+      "metadata": {
+        "address": "198 Cours Saint-Louis, 33300 Bordeaux",
+        "phone_number": "+33556394841",
+        "business_hours": {
+          "lundi": "08:30-13:00, 14:00-20:00",
+          "mardi": "08:30-13:00, 14:00-20:00",
+          "mercredi": "08:30-13:00, 14:00-20:00",
+          "jeudi": "08:30-13:00, 14:00-20:00",
+          "vendredi": "08:30-13:00, 14:00-20:00",
+          "samedi": "09:00-13:00, 14:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "266174[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d266174"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination du Grand Cubzaguais",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-andre-de-cubzac/centre-de-vaccination-du-grand-cubzaguais",
+      "location": {
+        "longitude": -0.4507875,
+        "latitude": 44.988301,
+        "city": "Saint-Andr\u00e9-de-Cubzac"
+      },
+      "metadata": {
+        "address": "67 Rue Henri Grou\u00e8s, 33240 Saint-Andr\u00e9-de-Cubzac",
+        "phone_number": "+33532630142",
+        "business_hours": {
+          "lundi": "10:00-12:00, 14:00-16:00",
+          "mardi": "10:00-12:00, 14:00-16:00",
+          "mercredi": "10:00-12:00, 14:00-16:00",
+          "jeudi": "10:00-12:00, 14:00-16:00",
+          "vendredi": "10:00-12:00, 14:00-16:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "262000[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d262000"
+    },
+    {
+      "departement": "33",
+      "nom": "Pharmacie du Centre",
+      "url": "https://partners.doctolib.fr/pharmacie/leognan/pharmacie-du-centre-leognan",
+      "location": {
+        "longitude": -0.598319,
+        "latitude": 44.72838,
+        "city": "L\u00e9ognan"
+      },
+      "metadata": {
+        "address": "7 Cours du Mar\u00e9chal de Lattre de Tassigny, 33850 L\u00e9ognan",
+        "phone_number": "+33556647558",
+        "business_hours": {
+          "lundi": "09:00-12:30, 14:30-19:45",
+          "mardi": "09:00-12:30, 14:30-19:45",
+          "mercredi": "09:00-12:30, 14:30-19:45",
+          "jeudi": "09:00-12:30, 14:30-19:45",
+          "vendredi": "09:00-12:30, 14:30-19:45",
+          "samedi": "09:00-12:30, 14:30-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "264297[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d264297"
+    },
+    {
+      "departement": "33",
+      "nom": "CHU BORDEAUX - SITE SAINT ANDRE",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/bordeaux-33000/chu-de-bordeaux/g-h-saint-andre-centre-de-vaccination-sante-voyages?cabinet=16878&specialty=496",
+      "location": {
+        "longitude": -0.578208,
+        "latitude": 44.8346,
+        "city": "Bordeaux"
+      },
+      "metadata": {
+        "address": "1 Rue Jean Burguet, 33000 Bordeaux",
+        "phone_number": "+33557820005",
+        "business_hours": {
+          "lundi": "08:30-19:30",
+          "mardi": "08:30-19:30",
+          "mercredi": "08:30-19:30",
+          "jeudi": "08:30-19:30",
+          "vendredi": "08:30-19:30",
+          "samedi": "08:30-19:30",
+          "dimanche": "08:30-19:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "131"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination - Domaine des Lug\u00e9es",
+      "url": "https://partners.doctolib.fr/centre-de-sante/ares/centre-de-vaccination-covid-19-nord-bassin-ville-d-ares?pid=practice-171900",
+      "location": {
+        "longitude": -1.12632,
+        "latitude": 44.7562,
+        "city": "Ar\u00e8s"
+      },
+      "metadata": {
+        "address": "34 Allee du Domaine des Lugees, 33740 Ar\u00e8s",
+        "business_hours": {
+          "lundi": "09:00-12:15/14:00-17:15",
+          "mardi": "09:00-12:15/14:00-17:15",
+          "mercredi": "09:00-12:15/14:00-17:15",
+          "jeudi": "09:00-12:15/14:00-17:15",
+          "vendredi": "09:00-12:15/14:00-17:15",
+          "samedi": "09:00-12:15/14:00-17:15",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "251731[171900]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1615"
+    },
+    {
+      "departement": "33",
+      "nom": "CENTRE DE VACCINATION DU GRAND CUBZAGUAIS",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-andre-de-cubzac/centre-de-vaccination-du-grand-cubzaguais?pid=practice-179089",
+      "location": {
+        "longitude": -0.450703,
+        "latitude": 44.9883,
+        "city": "Saint-Andr\u00e9-de-Cubzac"
+      },
+      "metadata": {
+        "address": "67 Rue Henri Grou\u00e8s dit Abb\u00e9 Pierre, 33240 Saint-Andr\u00e9-de-Cubzac",
+        "phone_number": "+3333532630142",
+        "business_hours": {
+          "lundi": "09:00-12:30/13:30-17:00",
+          "mardi": "09:00-12:30/13:30-17:00",
+          "mercredi": "09:00-12:30/13:30-17:00",
+          "jeudi": "09:00-12:30/13:30-17:00",
+          "vendredi": "09:00-12:30/13:30-17:00",
+          "samedi": "09:00-12:30/13:30-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "262000[179089]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2221"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de Vaccination - Clinique Saint Augustin",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/bordeaux/centre-de-vaccination-clinique-saint-augustin",
+      "location": {
+        "longitude": -0.6056279,
+        "latitude": 44.8361406,
+        "city": "Bordeaux"
+      },
+      "metadata": {
+        "address": "114 Avenue d'Ar\u00e8s, 33200 Bordeaux",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243261[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243261"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination COVID-19 Bagatelle",
+      "url": "https://partners.doctolib.fr/centre-de-sante/talence/centre-de-vaccination-covid-19-bagatelle-talence",
+      "location": {
+        "longitude": -0.5761492,
+        "latitude": 44.8071186,
+        "city": "Talence"
+      },
+      "metadata": {
+        "address": "303 Rue Fr\u00e9d\u00e9ric S\u00e9v\u00e8ne, 33400 Talence",
+        "business_hours": {
+          "lundi": "13:30-19:00",
+          "mardi": "13:30-19:00",
+          "mercredi": "13:30-19:00",
+          "jeudi": "13:30-19:00",
+          "vendredi": "13:30-19:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243415[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243415"
+    },
+    {
+      "departement": "33",
+      "nom": "CHU BORDEAUX - SITE PELLEGRIN",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/bordeaux-33000/chu-de-bordeaux?cabinet=16876&specialty=496",
+      "location": {
+        "longitude": -0.603878,
+        "latitude": 44.8282,
+        "city": "Bordeaux"
+      },
+      "metadata": {
+        "address": "1 PLACE AMELIE RABA LEON, 33000 Bordeaux",
+        "phone_number": "+33557820005",
+        "business_hours": {
+          "lundi": "08:30-19:30",
+          "mardi": "08:30-19:30",
+          "mercredi": "08:30-19:30",
+          "jeudi": "08:30-19:30",
+          "vendredi": "08:30-19:30",
+          "samedi": "08:30-19:30",
+          "dimanche": "08:30-19:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "123"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination COVID-19 Lesparre",
+      "url": "https://partners.doctolib.fr/centre-de-sante/lesparre/centre-de-vaccination-covid-19-lesparre",
+      "location": {
+        "longitude": -0.9361463,
+        "latitude": 45.3043994,
+        "city": "Lesparre-M\u00e9doc"
+      },
+      "metadata": {
+        "address": "36 Cours du Mar\u00e9chal de Lattre de Tassigny, 33340 Lesparre-M\u00e9doc",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243488[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243488"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination Haute Gironde - CARS",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cars/centre-de-vaccination-de-la-haute-gironde?pid=practice-170371",
+      "location": {
+        "longitude": -0.619462,
+        "latitude": 45.1298,
+        "city": "Cars"
+      },
+      "metadata": {
+        "address": "5 Le Bourg, 33390 Cars",
+        "business_hours": {
+          "lundi": "09:00-12:30/13:00-17:00",
+          "mardi": "09:00-12:30/13:00-17:00",
+          "mercredi": "09:00-12:30/13:00-17:00",
+          "jeudi": "09:00-12:30/13:00-17:00",
+          "vendredi": "09:00-12:30/13:00-17:00",
+          "samedi": "09:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "249917[170371]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1719"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination - Mairie de Lacanau / p\u00f4le de l'aiguillonne",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/lacanau/centre-de-vaccination-covid-lacanau-lacanau?pid=practice-173292",
+      "location": {
+        "longitude": -1.07361,
+        "latitude": 44.979,
+        "city": "Lacanau"
+      },
+      "metadata": {
+        "address": "3 Rue de l\u2019Aiguillonne, 33680 Lacanau",
+        "business_hours": {
+          "lundi": "08:30-12:30/13:30-17:00",
+          "mardi": "08:30-12:30/13:30-17:00",
+          "mercredi": "08:30-12:30/13:30-17:00",
+          "jeudi": "08:30-12:30/13:30-17:00",
+          "vendredi": "08:30-12:30/13:30-17:00",
+          "samedi": "08:30-17:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "254164[173292]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1525"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de Vaccination Covid-19 Nord Bassin - Ville d'Ar\u00e8s",
+      "url": "https://partners.doctolib.fr/centre-de-sante/ares/centre-de-vaccination-covid-19-nord-bassin-ville-d-ares",
+      "location": {
+        "longitude": -1.1241633,
+        "latitude": 44.7577004,
+        "city": "Ar\u00e8s"
+      },
+      "metadata": {
+        "address": "All\u00e9e du Domaine des Lugees, 33740 Ar\u00e8s",
+        "phone_number": "+33800009110",
+        "business_hours": {
+          "lundi": "06:00-22:00",
+          "mardi": "06:00-22:00",
+          "mercredi": "06:00-22:00",
+          "jeudi": "06:00-22:00",
+          "vendredi": "06:00-22:00",
+          "samedi": "06:00-22:00",
+          "dimanche": "06:00-22:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "251731[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d251731"
+    },
+    {
+      "departement": "33",
+      "nom": "CH LIBOURNE",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/libourne-33500/centre-hospitalier-de-libourne?category=2708&specialty=144",
+      "location": {
+        "longitude": -0.229689,
+        "latitude": 44.9187,
+        "city": "Libourne"
+      },
+      "metadata": {
+        "address": "112 Rue de la Marne, 33500 Libourne",
+        "phone_number": "+33524501717",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "143"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination COVID -  Salle Ermitage Compostelle - Le Bouscat - Le Bouscat",
+      "url": "https://partners.doctolib.fr/centre-de-sante/le-bouscat/centre-de-vaccination-covid-ermitage?pid=practice-164677",
+      "location": {
+        "longitude": -0.6191779,
+        "latitude": 44.8678162,
+        "city": "Le Bouscat"
+      },
+      "metadata": {
+        "address": "97 Avenue Georges Clemenceau, 33110 Le Bouscat",
+        "phone_number": "+33556175099",
+        "business_hours": {
+          "lundi": "10:00-12:00, 14:00-17:00",
+          "mardi": "10:00-12:00, 14:00-17:00",
+          "mercredi": "10:00-12:00, 14:00-17:00",
+          "jeudi": "10:00-12:00, 14:00-17:00",
+          "vendredi": "10:00-12:00, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "262432[164677]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d262432"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination COVID-19 Galli\u00e9ni",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bordeaux/centre-de-vaccination-covid-19-gallieni",
+      "location": {
+        "longitude": -0.5912575,
+        "latitude": 44.8244568,
+        "city": "Bordeaux"
+      },
+      "metadata": {
+        "address": "45 Cours Marechal Gallieni, 33400 Bordeaux",
+        "phone_number": "+33557812410",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243487[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243487"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination de la Haute Gironde",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cars/centre-de-vaccination-de-la-haute-gironde",
+      "location": {
+        "longitude": -0.6190316,
+        "latitude": 45.1292778,
+        "city": "Cars"
+      },
+      "metadata": {
+        "address": "5 Le Bourg, 33390 Cars",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "249917[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d249917"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination - HIA Robert PICQUE",
+      "url": "https://partners.doctolib.fr/hopital-public/villenave-d-ornon/centre-de-vaccination-covid-19-hopital-robert-picque?pid=practice-176249",
+      "location": {
+        "longitude": -0.572049,
+        "latitude": 44.799,
+        "city": "Villenave-d'Ornon"
+      },
+      "metadata": {
+        "address": "351 Route de Toulouse, 33140 Villenave-d'Ornon",
+        "business_hours": {
+          "lundi": "14:00-16:30",
+          "mardi": "14:00-16:30",
+          "mercredi": "14:00-16:30",
+          "jeudi": "08:30-12:00",
+          "vendredi": "08:30-12:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "257504[176249]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1953"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre d\u00e9partemental de vaccination - Bordeaux",
+      "url": "https://partners.doctolib.fr/etablissement-de-prevention/bordeaux/centre-de-vaccination-departemental-de-gironde?pid=practice-165705",
+      "location": {
+        "longitude": -0.602619,
+        "latitude": 44.8416,
+        "city": "Bordeaux"
+      },
+      "metadata": {
+        "address": "2 Rue du Moulin Rouge, 33200 Bordeaux",
+        "phone_number": "+33557224660",
+        "business_hours": {
+          "lundi": "14:00-17:00",
+          "mardi": "09:00-12:00",
+          "mercredi": "14:00-17:00",
+          "jeudi": "09:00-12:00",
+          "vendredi": "14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243735[165705]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "995"
+    },
+    {
+      "departement": "33",
+      "nom": "CLINIQUE SAINT-AUGUSTIN",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/bordeaux/centre-de-vaccination-clinique-saint-augustin?pid=practice-165199",
+      "location": {
+        "longitude": -0.605324,
+        "latitude": 44.8365,
+        "city": "Bordeaux"
+      },
+      "metadata": {
+        "address": "114 Avenue d\u2019Ares, 33000 Bordeaux",
+        "business_hours": {
+          "lundi": "09:00-12:30/14:00-17:30",
+          "mardi": "09:00-12:30/14:00-17:30",
+          "mercredi": "09:00-12:30/14:00-17:30",
+          "jeudi": "09:00-12:30/14:00-17:30",
+          "vendredi": "09:00-12:30/14:00-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243261[165199]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1338"
+    },
+    {
+      "departement": "33",
+      "nom": "CENTRE DE VACCINATION INTERCOMMUNAL -ST-MEDARD-EN-JALLES",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-medard-en-jalles/centre-de-vaccination-covid-19-saint-medard-en-jalles?pid=practice-179381",
+      "location": {
+        "longitude": -0.704534,
+        "latitude": 44.8868,
+        "city": "Saint-M\u00e9dard-en-Jalles"
+      },
+      "metadata": {
+        "address": " Rue Charles Capsec, 33160 Saint-M\u00e9dard-en-Jalles",
+        "phone_number": "+3333800009110",
+        "business_hours": {
+          "lundi": "09:00-13h00/14:00-18:00",
+          "mardi": "09:00-13h00/14:00-18:00",
+          "mercredi": "09:00-13h00/14:00-18:00",
+          "jeudi": "09:00-13h00/14:00-18:00",
+          "vendredi": "09:00-13h00/14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "262381[179381]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2213"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination Covid-19 - Saint-M\u00e9dard-en-Jalles",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-medard-en-jalles/centre-de-vaccination-covid-19-saint-medard-en-jalles",
+      "location": {
+        "longitude": -0.704524,
+        "latitude": 44.8846901,
+        "city": "Saint-M\u00e9dard-en-Jalles"
+      },
+      "metadata": {
+        "address": "Rue Charles Capsec, 33160 Saint-M\u00e9dard-en-Jalles",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-18:00",
+          "mardi": "09:00-13:00, 14:00-18:00",
+          "mercredi": "09:00-13:00, 14:00-18:00",
+          "jeudi": "09:00-13:00, 14:00-18:00",
+          "vendredi": "09:00-13:00, 14:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "262381[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d262381"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de Vaccination du CH SUD GIRONDE - Site de LA REOLE",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/langon-33210/centre-hospitalier-sud-gironde?category=-1&cabinet=16855&specialty=496",
+      "location": {
+        "longitude": -0.0378388,
+        "latitude": 44.5863,
+        "city": "La R\u00e9ole"
+      },
+      "metadata": {
+        "address": "37 Chemin de Ronde, 33190 La R\u00e9ole",
+        "business_hours": {
+          "lundi": "09:30-13:00/13:30-17:30",
+          "mardi": "09:30-13:00/13:30-17:30",
+          "mercredi": "09:30-13:00/13:30-17:30",
+          "jeudi": "09:30-13:00/13:30-17:30",
+          "vendredi": "09:30-13:00/13:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1410"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination COVID -  Salle Ermitage Compostelle - Le Bouscat - Le Bouscat",
+      "url": "https://partners.doctolib.fr/centre-de-sante/le-bouscat/centre-de-vaccination-covid-ermitage",
+      "location": {
+        "longitude": -0.5975418,
+        "latitude": 44.8651743,
+        "city": "Le Bouscat"
+      },
+      "metadata": {
+        "address": "10 Rue Bertrand Hauret, 33110 Le Bouscat",
+        "phone_number": "+33556175099",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "262432[179472]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d262432"
+    },
+    {
+      "departement": "33",
+      "nom": "NOUVELLE CLINIQUE DU TONDU",
+      "url": "https://partners.doctolib.fr/centre-de-sante/floirac/centre-de-vaccination-covid-19-nouvelle-clinique-bordeaux-tondu?pid=practice-164998",
+      "location": {
+        "longitude": -0.529733,
+        "latitude": 44.8255,
+        "city": "Floirac"
+      },
+      "metadata": {
+        "address": "46 Avenue Jean Alfonsea, 33270 Floirac",
+        "phone_number": "+33826963963",
+        "business_hours": {
+          "lundi": "10:00-20:00",
+          "mardi": "10:00-20:00",
+          "mercredi": "10:00-20:00",
+          "jeudi": "10:00-20:00",
+          "vendredi": "10:00-20:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243041[164998]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1000"
+    },
+    {
+      "departement": "33",
+      "nom": "Mairie d'Arcachon",
+      "url": "https://partners.doctolib.fr/centre-de-sante/arcachon/centre-municipal-de-vaccination-anti-covid-19-de-la-ville-d-arcachon",
+      "location": {
+        "longitude": -1.19475,
+        "latitude": 44.651,
+        "city": "Arcachon"
+      },
+      "metadata": {
+        "address": "10 Avenue du Parc, 33120 Arcachon",
+        "phone_number": "+33557529880",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-12:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243183[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "146"
+    },
+    {
+      "departement": "33",
+      "nom": "HOPITAL SUBURBAIN DU BOUSCAT",
+      "url": "https://partners.doctolib.fr/centre-de-sante/le-bouscat/centre-de-vaccination-hopital-du-bouscat?pid=practice-164677",
+      "location": {
+        "longitude": -0.618082,
+        "latitude": 44.8675,
+        "city": "Le Bouscat"
+      },
+      "metadata": {
+        "address": "97 Avenue Georges Cl\u00e9menceau, 33110 Le Bouscat",
+        "phone_number": "+33556175099",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-20:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242675[164677]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "998"
+    },
+    {
+      "departement": "33",
+      "nom": "Maison de sant\u00e9 de Blaye",
+      "url": "https://partners.doctolib.fr/maison-de-sante/blaye/centre-de-vaccination-covid-msp-blaye",
+      "location": {
+        "longitude": -0.64516,
+        "latitude": 45.1271,
+        "city": "Blaye"
+      },
+      "metadata": {
+        "address": "1 Rue Nicole Girard-Mangin, 33390 Blaye",
+        "phone_number": "+33557944240",
+        "business_hours": {
+          "lundi": "08:00-12:00/14:00-18:00",
+          "mardi": "08:00-12:00/14:00-18:00",
+          "mercredi": "08:00-12:00/14:00-18:00",
+          "jeudi": "08:00-12:00/14:00-18:00",
+          "vendredi": "08:00-12:00/14:00-18:00",
+          "samedi": "08:00-12:00/14:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "999"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de vaccination - Cestas - Jalle-Eau Bourde",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/creon-33670/centre-de-vaccination-jalle-eau-bourde",
+      "location": {
+        "longitude": -0.682934,
+        "latitude": 44.761,
+        "city": "Cestas"
+      },
+      "metadata": {
+        "address": " Chemin de Can\u00e9jan, 33610 Cestas",
+        "business_hours": {
+          "lundi": "09:00-13:00/14:00-18:00",
+          "mardi": "09:00-13:00/14:00-18:00",
+          "mercredi": "09:00-13:00/14:00-18:00",
+          "jeudi": "09:00-13:00/14:00-18:00",
+          "vendredi": "09:00-13:00/14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2297"
+    },
+    {
+      "departement": "33",
+      "nom": "Centre de Vaccination - Salle Lucie Aubrac",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/floirac-33270/salle-lucie-aubrac",
+      "location": {
+        "longitude": -0.530839,
+        "latitude": 44.8321,
+        "city": "Floirac"
+      },
+      "metadata": {
+        "address": "35 Rue L\u00e9o Lagrange, 33270 Floirac",
+        "phone_number": "+33532923232",
+        "business_hours": {
+          "lundi": "08:30-17:30",
+          "mardi": "08:30-17:30",
+          "mercredi": "08:30-17:30",
+          "jeudi": "08:30-17:30",
+          "vendredi": "08:30-17:30",
+          "samedi": "08:30-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1721"
+    }
+  ]
+}

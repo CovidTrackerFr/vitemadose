@@ -1,0 +1,1489 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-14T12:37:42.595964+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination de Roquebrune Cap Martin - Salle Polyvalente De Augustinis",
+      "url": "https://partners.doctolib.fr/centre-de-sante/roquebrune-cap-martin/centre-de-vaccination-covid-19-roquebrune-cap-martin?pid=practice-179292",
+      "location": {
+        "longitude": 7.47863,
+        "latitude": 43.7641,
+        "city": "Roquebrune-Cap-Martin"
+      },
+      "metadata": {
+        "address": " Stade Decazes - Chemin du Vallonnet, 06190 Roquebrune-Cap-Martin",
+        "phone_number": "+33493002853",
+        "business_hours": {
+          "lundi": "9h  \u00e013h",
+          "mardi": "9h  \u00e013h",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "9h  \u00e013h",
+          "vendredi": "9h  \u00e013h",
+          "samedi": "9h  \u00e013h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-14T16:15:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 293,
+      "internal_id": "262234[179292]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "2125"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre D\u00e9partemental Vaccination Covid-19 \u2013 Puget-Th\u00e9niers",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nice/covid-19-puget-theniers",
+      "location": {
+        "longitude": 6.8970477,
+        "latitude": 43.9529861,
+        "city": "Puget-Th\u00e9niers"
+      },
+      "metadata": {
+        "address": "La Condamine, 06260 Puget-Th\u00e9niers",
+        "phone_number": "+33805016666",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": "14:00-17:00",
+          "jeudi": "14:00-17:00",
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-16T13:25:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 68,
+      "internal_id": "241190[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "d241190"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination Covid-19 - Centre des congr\u00e8s Mandelieu La Napoule",
+      "url": "https://partners.doctolib.fr/centre-de-sante/mandelieu-la-napoule/centre-de-vaccination-covid-19-centre-des-congres-mandelieu-la-napoule",
+      "location": {
+        "longitude": 6.9388239,
+        "latitude": 43.546294,
+        "city": "Mandelieu-la-Napoule"
+      },
+      "metadata": {
+        "address": "836 Boulevard des \u00c9cureuils, 06210 Mandelieu-la-Napoule",
+        "phone_number": "+33422191307",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-19T11:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 24,
+      "internal_id": "242662[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "d242662"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie De L'Horloge",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-l'horloge-nice",
+      "location": {
+        "longitude": 7.2526853,
+        "latitude": 43.7185431,
+        "city": "nice"
+      },
+      "metadata": {
+        "address": "98 Boulevard DE CESSOLE, 06100 NICE",
+        "phone_number": "+33493844886",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-04-19T14:50:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 81,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "769ad31e"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination de la ville de Nice",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nice/centre-de-vaccination-covid-hancy-reserve-aux-professionnels-de-sante?pid=practice-172330",
+      "location": {
+        "longitude": 7.26815,
+        "latitude": 43.7047,
+        "city": "Nice"
+      },
+      "metadata": {
+        "address": "10 Rue Hancy, 06000 Nice",
+        "phone_number": "+33497135604",
+        "business_hours": {
+          "lundi": "8h/20h",
+          "mardi": "8h/20h",
+          "mercredi": "8h/20h",
+          "jeudi": "8h/20h",
+          "vendredi": "8h/20h",
+          "samedi": "8h/20h",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-21T08:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 168,
+      "internal_id": "252522[172330]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "75"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination Covid-19 - M\u00e9tropole Nice C\u00f4te d'Azur - Ville de Nice",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nice/centre-de-vaccination-covid-hancy-reserve-aux-professionnels-de-sante",
+      "location": {
+        "longitude": 7.268215,
+        "latitude": 43.7046907,
+        "city": "Nice"
+      },
+      "metadata": {
+        "address": "10 Rue Hancy, 06000 Nice",
+        "phone_number": "+33497135604",
+        "business_hours": {
+          "lundi": "09:00-12:00",
+          "mardi": "09:00-12:00",
+          "mercredi": "09:00-12:00",
+          "jeudi": "09:00-12:00",
+          "vendredi": "09:00-12:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-21T08:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 168,
+      "internal_id": "252522[172330]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "d252522"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre Menton Plus Sablettes",
+      "url": "https://partners.doctolib.fr/maison-de-sante/menton/centre-de-vaccination-covid-menton-carf",
+      "location": {
+        "longitude": 7.50826,
+        "latitude": 43.7767,
+        "city": "Menton"
+      },
+      "metadata": {
+        "address": "8 Promenade de la Mer, 06500 Menton",
+        "phone_number": "+33489815204",
+        "business_hours": {
+          "lundi": "14h30 - 17h30",
+          "mardi": "14h30 - 17h30",
+          "mercredi": "14h30 - 17h30",
+          "jeudi": "14h30 - 17h30",
+          "vendredi": "14h30 - 17h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-26T11:20:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 205,
+      "internal_id": "242703[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "941"
+    },
+    {
+      "departement": "06",
+      "nom": "Dr Jean-Luc FERRET",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/nice/jean-luc-ferret",
+      "location": {
+        "longitude": 7.30701720000002,
+        "latitude": 44.0117288,
+        "city": "Roquebilli\u00e8re"
+      },
+      "metadata": {
+        "address": "13 Rue Dr Matteo, 06450 Roquebilli\u00e8re",
+        "phone_number": "+33493029110",
+        "business_hours": {
+          "lundi": "08:30-19:00",
+          "mardi": "08:30-19:00",
+          "mercredi": "08:30-19:00",
+          "jeudi": "08:30-19:00",
+          "vendredi": "08:30-18:00",
+          "samedi": "08:30-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-26T18:12:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 12,
+      "internal_id": "93126[]",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "erreur": null,
+      "gid": "d93126"
+    },
+    {
+      "departement": "06",
+      "nom": "Palais NIKAIA",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nice/centre-de-vaccination-covid-hancy-reserve-aux-professionnels-de-sante",
+      "location": {
+        "longitude": 7.19818,
+        "latitude": 43.6782,
+        "city": "Nice"
+      },
+      "metadata": {
+        "address": " Boulevard du Mercantour, 06200 Nice",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ouvert",
+          "dimanche": "ouvert"
+        }
+      },
+      "prochain_rdv": "2021-04-27T09:15:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 169,
+      "internal_id": "252522[172330]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "1946"
+    },
+    {
+      "departement": "06",
+      "nom": "Hopital de Breil / MSP de la Roya",
+      "url": "https://partners.doctolib.fr/centre-de-sante/breil-sur-roya/centre-de-vaccination-hopital-de-breil-msp-de-la-roya",
+      "location": {
+        "longitude": 7.51483,
+        "latitude": 43.9457,
+        "city": "Breil-sur-Roya"
+      },
+      "metadata": {
+        "address": "2 Rue Cordier, 06540 Breil-sur-Roya",
+        "phone_number": "+33422163739",
+        "business_hours": {
+          "lundi": "ouvert",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-27T17:25:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 12,
+      "internal_id": "242140[]",
+      "vaccine_type": [
+        "Moderna"
+      ],
+      "erreur": null,
+      "gid": "264"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "06",
+      "nom": "Pharmacie De Fabron",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-fabron-nice",
+      "location": {
+        "longitude": 7.2407192,
+        "latitude": 43.68950340000001,
+        "city": "nice"
+      },
+      "metadata": {
+        "address": "54 avenue de la Californie, 06200 Nice",
+        "phone_number": "+33493865267",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "0e9d4b2f"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Anglo-Americaine",
+      "url": "https://mapharma.net/06000-1",
+      "location": null,
+      "metadata": {
+        "address": "2 rue de France 06000 NICE",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "06000-1"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Nice Gare Du Sud",
+      "url": "https://mapharma.net/06000-2",
+      "location": null,
+      "metadata": {
+        "address": "3 all\u00e9e Philippe Seguin 06000 NICE",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "06000-2"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des Floralies",
+      "url": "https://mapharma.net/06220",
+      "location": null,
+      "metadata": {
+        "address": "41 Avenue de Cannes 06220 VALLAURIS",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "06220-0"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des 4 Chemins Antibes",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-4-chemins-antibes-antibes",
+      "location": {
+        "longitude": 7.1136716,
+        "latitude": 43.6033348,
+        "city": "antibes"
+      },
+      "metadata": {
+        "address": "828 Chemin des Quatre Chemins, 06600 Antibes",
+        "phone_number": "+33493749200",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "c07ccdaf"
+    },
+    {
+      "departement": "06",
+      "nom": "CPTS des Collines de Valbonne - Site MSP Roquefort Les Pins - Salle Charvet",
+      "url": "https://partners.doctolib.fr/cabinet-pluridisciplinaire/le-rouret/cpts-des-collines-vaccination-covid?%3fpid=practice-163943",
+      "location": {
+        "longitude": 7.05025,
+        "latitude": 43.6661,
+        "city": "Roquefort-les-Pins"
+      },
+      "metadata": {
+        "address": " Place Antoine Merle, 06330 Roquefort-les-Pins",
+        "business_hours": {
+          "lundi": "10H 12H",
+          "mardi": "10H 12H",
+          "mercredi": "10H 12H",
+          "jeudi": "10H 12H",
+          "vendredi": "10H 12H",
+          "samedi": "10H 12H",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242051[163936]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "957"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Nice Europe",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-nice-europe-nice",
+      "location": {
+        "longitude": 7.271104299999999,
+        "latitude": 43.6992431,
+        "city": "nice"
+      },
+      "metadata": {
+        "address": "43 RUE DE L'HOTEL DES POSTES, 06000 NICE",
+        "phone_number": "+33493854159",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "9fbcbe7c"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie de la R\u00e9gence - Antibes",
+      "url": "https://partners.doctolib.fr/pharmacie/antibes/pharmacie-de-la-regence-julien-cornec",
+      "location": {
+        "longitude": 7.1091266,
+        "latitude": 43.5715789,
+        "city": "Antibes"
+      },
+      "metadata": {
+        "address": "1 Avenue Amiral Courbet, 06160 Antibes",
+        "business_hours": {
+          "lundi": "08:30-12:30, 14:00-19:30",
+          "mardi": "08:30-12:30, 14:00-19:30",
+          "mercredi": "08:30-12:30, 14:00-19:30",
+          "jeudi": "08:30-12:30, 14:00-19:30",
+          "vendredi": "08:30-12:30, 14:00-19:30",
+          "samedi": "08:30-12:30, 14:00-19:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "259139[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d259139"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Du Beal",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-beal-cagnes-sur-mer",
+      "location": {
+        "longitude": 7.1547223,
+        "latitude": 43.6643829,
+        "city": "cagnes-sur-mer"
+      },
+      "metadata": {
+        "address": "13 AVENUE CYRILLE BESSET, 06800 CAGNES-SUR-MER",
+        "phone_number": "+33493206572",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "4d4a730d"
+    },
+    {
+      "departement": "06",
+      "nom": "Grande Pharmacie Mentonnaise",
+      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-mentonnaise-menton",
+      "location": {
+        "longitude": 7.504231300000001,
+        "latitude": 43.7756553,
+        "city": "menton"
+      },
+      "metadata": {
+        "address": "32 RUE DE LA REPUBLIQUE, 06500 MENTON",
+        "phone_number": "+33493575779",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "5c5146d3"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Du Port",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-port-nice",
+      "location": {
+        "longitude": 7.2837153,
+        "latitude": 43.6990443,
+        "city": "nice"
+      },
+      "metadata": {
+        "address": "17 rue Cassini, 06300 Nice",
+        "phone_number": "+33493552328",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "74786377"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Hanbury",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-hanbury-menton",
+      "location": {
+        "longitude": 7.521359399999999,
+        "latitude": 43.78500950000001,
+        "city": "menton"
+      },
+      "metadata": {
+        "address": "1 avenue Aristide Briand, 06500 MENTON",
+        "phone_number": "+33493357644",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "39b9fab6"
+    },
+    {
+      "departement": "06",
+      "nom": "Dr Val\u00e9rie Zammit",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/beausoleil/valerie-zammit",
+      "location": {
+        "longitude": 7.41490429999999,
+        "latitude": 43.7381006,
+        "city": "Beausoleil"
+      },
+      "metadata": {
+        "address": "10 Avenue Paul Doumer, 06240 Beausoleil",
+        "business_hours": {
+          "lundi": "13:00-18:00",
+          "mardi": "13:00-18:00",
+          "mercredi": null,
+          "jeudi": "13:00-18:00",
+          "vendredi": "13:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "96443[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d96443"
+    },
+    {
+      "departement": "06",
+      "nom": "Dr Emmanuelle BATTESTI",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/nice/emmanuelle-battesti",
+      "location": {
+        "longitude": 7.2764703,
+        "latitude": 43.7015362,
+        "city": "Nice"
+      },
+      "metadata": {
+        "address": "16 Rue Delille, 06000 Nice",
+        "phone_number": "+33493920691",
+        "business_hours": {
+          "lundi": "07:00-20:00",
+          "mardi": "07:00-20:00",
+          "mercredi": "07:00-20:00",
+          "jeudi": "07:00-20:00",
+          "vendredi": "07:00-20:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "182617[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d182617"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie De La Madeleine",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-madeleine-nice",
+      "location": {
+        "longitude": 7.243815799999999,
+        "latitude": 43.6937593,
+        "city": "nice"
+      },
+      "metadata": {
+        "address": "12 BOULEVARD DE LA MADELEINE, 06000 NICE",
+        "phone_number": "+33493865211",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "e0c98089"
+    },
+    {
+      "departement": "06",
+      "nom": "CPTS Tin\u00e9e V\u00e9subie - Site MSP de Roquebilli\u00e8re",
+      "url": "doctolib",
+      "location": {
+        "longitude": 7.30699,
+        "latitude": 44.0117,
+        "city": "Roquebilli\u00e8re"
+      },
+      "metadata": {
+        "address": "13 Rue Docteur Matteo, 06450 Roquebilli\u00e8re",
+        "phone_number": "+33493029110",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "10H 12H",
+          "jeudi": "10H 12H",
+          "vendredi": "10H 12H",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "869"
+    },
+    {
+      "departement": "06",
+      "nom": "Antenne de vaccination CCAS de la Trinit\u00e9",
+      "url": "https://web.nice.fr/vaccincovid19/faq.html",
+      "location": {
+        "longitude": 7.31373,
+        "latitude": 43.7435,
+        "city": "La Trinit\u00e9"
+      },
+      "metadata": {
+        "address": "106 Boulevard G\u00e9n\u00e9ral de Gaulle, 06340 La Trinit\u00e9",
+        "phone_number": "+33493276442",
+        "business_hours": {
+          "lundi": "13h30 - 17h30",
+          "mardi": "13h30 - 17h30",
+          "mercredi": "13h30 - 17h30",
+          "jeudi": "13h30 - 17h30",
+          "vendredi": "13h30 - 17h30",
+          "samedi": "13h30 - 17h30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Autre",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "924"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre D\u00e9partemental Vaccination Covid-19 \u2013 Saint Vallier de Thiey - Puget-Th\u00e9niers",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nice/covid-19-saint-vallier-de-thiey",
+      "location": {
+        "longitude": 6.8970477,
+        "latitude": 43.9529861,
+        "city": "Puget-Th\u00e9niers"
+      },
+      "metadata": {
+        "address": "La Condamine, 06260 Puget-Th\u00e9niers",
+        "phone_number": "+33805016666",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": "14:00-17:00",
+          "jeudi": "14:00-17:00",
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242457[165134]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242457"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination COVID-19 - Palais des Congr\u00e8s de Grasse",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/grasse/centre-de-vaccination-du-palais-des-congres-de-grasse",
+      "location": {
+        "longitude": 6.9207539,
+        "latitude": 43.6575109,
+        "city": "Grasse"
+      },
+      "metadata": {
+        "address": "22 Cours Honor\u00e9 Cresp, 06130 Grasse",
+        "phone_number": "+33497055369",
+        "business_hours": {
+          "lundi": "08:30-12:30, 13:15-17:00",
+          "mardi": "08:30-12:30, 13:15-17:00",
+          "mercredi": "08:30-12:30, 13:15-17:00",
+          "jeudi": "08:30-12:30, 13:15-17:00",
+          "vendredi": "08:30-12:30, 13:15-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "244639[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d244639"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination COVID - Mairie du Cannet",
+      "url": "https://partners.doctolib.fr/centre-de-sante/le-cannet/centre-de-vaccination-covid-mairie-du-cannet",
+      "location": {
+        "longitude": 6.9848437,
+        "latitude": 43.5700417,
+        "city": "Le Cannet"
+      },
+      "metadata": {
+        "address": "730 Avenue Georges Pompidou, 06110 Le Cannet",
+        "phone_number": "+33493464888",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": "09:00-13:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242309[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242309"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination COVID19 - Maison des Associations Antibes",
+      "url": "https://partners.doctolib.fr/centre-de-sante/antibes/vaccination",
+      "location": {
+        "longitude": 7.1122152,
+        "latitude": 43.5943595,
+        "city": "Antibes"
+      },
+      "metadata": {
+        "address": "288 Chemin de Saint-Claude, 06600 Antibes",
+        "phone_number": "+33492913579",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": "09:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242973[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242973"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre D\u00e9partemental Vaccination Covid-19 \u2013 Saint Vallier de Thiey - Saint-Vallier-de-Thiey",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nice/covid-19-saint-vallier-de-thiey",
+      "location": {
+        "longitude": 6.8517553,
+        "latitude": 43.6969426,
+        "city": "Saint-Vallier-de-Thiey"
+      },
+      "metadata": {
+        "address": "11 Avenue Gaston de Fontmichel, 06460 Saint-Vallier-de-Thiey",
+        "phone_number": "+33805016666",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-17:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242457[165134]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242457"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination COVID - Tende",
+      "url": "https://partners.doctolib.fr/centre-de-sante/tende/centre-de-vaccination-covid-tende",
+      "location": {
+        "longitude": 7.595064,
+        "latitude": 44.089338,
+        "city": "Tende"
+      },
+      "metadata": {
+        "address": "3 Rue Jean M\u00e9decin, 06430 Tende",
+        "phone_number": "+33422163739",
+        "business_hours": {
+          "lundi": "08:00-13:00, 14:00-20:00",
+          "mardi": "08:00-13:00, 14:00-20:00",
+          "mercredi": "08:00-13:00, 14:00-20:00",
+          "jeudi": "08:00-13:00, 14:00-20:00",
+          "vendredi": "08:00-13:00, 14:00-20:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "244070[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d244070"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination Covid-19 - M\u00e9tropole Nice C\u00f4te d'Azur - Ville de Nice",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nice/centre-de-vaccination-covid-hancy-reserve-aux-professionnels-de-sante?pid=practice-175132",
+      "location": {
+        "longitude": 7.281691,
+        "latitude": 43.7076393,
+        "city": "Nice"
+      },
+      "metadata": {
+        "address": "Parvis de l'Europe, 06000 Nice",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "252522[175132-175131]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d252522"
+    },
+    {
+      "departement": "06",
+      "nom": "Palais des festivals",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cannes/centre-de-vaccination-covid-19-mairie-de-cannes?pid=practice-170733",
+      "location": {
+        "longitude": 7.01799,
+        "latitude": 43.5513,
+        "city": "Cannes"
+      },
+      "metadata": {
+        "address": "1 Boulevard de la Croisette, 06400 Cannes",
+        "phone_number": "+33497064000",
+        "business_hours": {
+          "lundi": "7h30 \u00e0 19h30",
+          "mardi": "7h30 \u00e0 19h30",
+          "mercredi": "7h30 \u00e0 19h30",
+          "jeudi": "7h30 \u00e0 19h30",
+          "vendredi": "7h30 \u00e0 19h30",
+          "samedi": "7h30 \u00e0 18h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "250405[170733]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "102"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre D\u00e9partemental Vaccination Covid-19 \u2013 Saint Vallier de Thiey - Vence",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nice/covid-19-saint-vallier-de-thiey?pid=practice-175111",
+      "location": {
+        "longitude": 7.116466,
+        "latitude": 43.7200313,
+        "city": "Vence"
+      },
+      "metadata": {
+        "address": "Avenue Colonel Meyere, 06140 Vence",
+        "business_hours": {
+          "lundi": "08:30-12:30, 14:00-18:00",
+          "mardi": "08:30-12:30, 14:00-18:00",
+          "mercredi": "08:30-12:30, 14:00-18:00",
+          "jeudi": "08:30-12:30, 14:00-18:00",
+          "vendredi": "08:30-12:30, 14:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242457[175111]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242457"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination \u2013 Maison Pour Tous \u2013 Mairie de Contes",
+      "url": "https://partners.doctolib.fr/centre-de-sante/contes/centre-de-vaccination-de-contes",
+      "location": {
+        "longitude": 7.31544,
+        "latitude": 43.808,
+        "city": "Contes"
+      },
+      "metadata": {
+        "address": "40 chemin du Gheit, 06390 Contes",
+        "phone_number": "+33493790364",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243067[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1086"
+    },
+    {
+      "departement": "06",
+      "nom": "Mairie de l'Escar\u00e8ne",
+      "url": "https://partners.doctolib.fr/centre-de-sante/l-escarene/centre-de-vaccination-l-escarene",
+      "location": {
+        "longitude": 7.3556,
+        "latitude": 43.8339,
+        "city": "L'Escar\u00e8ne"
+      },
+      "metadata": {
+        "address": "5 Rue Henri Rostagni, 06440 L'Escar\u00e8ne",
+        "phone_number": "+33492009590",
+        "business_hours": {
+          "lundi": "9H 12H /  13H30 17H",
+          "mardi": "9H 12H /  13H30 17H",
+          "mercredi": "9H 12H /  13H30 17H",
+          "jeudi": "9H 12H /  13H30 17H",
+          "vendredi": "9H 12H /  13H30 17H",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243086[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1043"
+    },
+    {
+      "departement": "06",
+      "nom": "Polyclinique Saint Jean",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cagnes-sur-mer/pole-sante-saint-jean-vaccination-covid-19-reserve-au-personnel-de-l-etablissement",
+      "location": {
+        "longitude": 7.13797,
+        "latitude": 43.66,
+        "city": "Cagnes-sur-Mer"
+      },
+      "metadata": {
+        "address": "53 Avenue des Alpes, 06800 Cagnes-sur-Mer",
+        "phone_number": "+33497100341",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "8h30-12h",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "8h30-12h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242097[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "458"
+    },
+    {
+      "departement": "06",
+      "nom": "CPTS Valbonne Sophia Antipolis - Salle du Pr\u00e9 des Arts",
+      "url": "https://partners.doctolib.fr/cabinet-pluridisciplinaire/le-rouret/cpts-des-collines-vaccination-covid?%3fpid=practice-163938",
+      "location": {
+        "longitude": 7.00645,
+        "latitude": 43.6413,
+        "city": "Valbonne"
+      },
+      "metadata": {
+        "address": " Salle du Pr\u00e9 des Arts - Espace de la Vignasse, 06560 Valbonne",
+        "phone_number": "+33493123223",
+        "business_hours": {
+          "lundi": "14h 16h",
+          "mardi": "14h 16h",
+          "mercredi": "14h 16h",
+          "jeudi": "14h 16h",
+          "vendredi": "14h 16h",
+          "samedi": "14h 16h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242051[163936]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "958"
+    },
+    {
+      "departement": "06",
+      "nom": "Hopital priv\u00e9 Arnault Tzanck- Mougins Sophia Antipolis",
+      "url": "https://partners.doctolib.fr/centre-de-sante/mougins/centre-de-vaccination-tzanck-mougins",
+      "location": {
+        "longitude": 7.01034,
+        "latitude": 43.6089,
+        "city": "Mougins"
+      },
+      "metadata": {
+        "address": "120 Avenue du Docteur Maurice Donat, 06250 Mougins",
+        "phone_number": "+33493001560",
+        "business_hours": {
+          "lundi": "8h30 12h30",
+          "mardi": "8h30 12h30",
+          "mercredi": "8h30 12h30",
+          "jeudi": "8h30 12h30",
+          "vendredi": "8h30 12h30",
+          "samedi": "8h30 12h30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242470[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "955"
+    },
+    {
+      "departement": "06",
+      "nom": "CPTS Des Collines/ Mairie de Biot Salle Gilardi",
+      "url": "https://partners.doctolib.fr/cabinet-pluridisciplinaire/le-rouret/cpts-des-collines-vaccination-covid?%3fpid=practice-163940",
+      "location": {
+        "longitude": 7.10004,
+        "latitude": 43.6285,
+        "city": "Biot"
+      },
+      "metadata": {
+        "address": "644 Chemin des Combes, 06410 Biot",
+        "phone_number": "+33698349976",
+        "business_hours": {
+          "lundi": "16h 18h",
+          "mardi": "16h 18h",
+          "mercredi": "16h 18h",
+          "jeudi": "16h 18h",
+          "vendredi": "16h 18h",
+          "samedi": "16h 18h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242051[163936]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "959"
+    },
+    {
+      "departement": "06",
+      "nom": "CPTS de la Riviera Fran\u00e7aise - Site MSP de Sospel",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sospel/centre-de-vaccination-covid-sospel",
+      "location": {
+        "longitude": 7.45135,
+        "latitude": 43.8783,
+        "city": "Sospel"
+      },
+      "metadata": {
+        "address": " Place Saint-fran\u00e7ois, 06380 Sospel",
+        "phone_number": "+33493043042",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "14h 17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243156[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "926"
+    },
+    {
+      "departement": "06",
+      "nom": "CPTS des Collines de Valbonne - site MSP Le Rouret - Maison du Terroir",
+      "url": "https://partners.doctolib.fr/cabinet-pluridisciplinaire/le-rouret/cpts-des-collines-vaccination-covid?%3fpid=practice-163936",
+      "location": {
+        "longitude": 7.00553,
+        "latitude": 43.6739,
+        "city": "Le Rouret"
+      },
+      "metadata": {
+        "address": "9 Route d\u2019Opio, 06650 Le Rouret",
+        "phone_number": "+33493607925",
+        "business_hours": {
+          "lundi": "8h 10h",
+          "mardi": "8h 10h",
+          "mercredi": "8h 10h",
+          "jeudi": "8h 10h",
+          "vendredi": "8h 10h",
+          "samedi": "8h 10h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242051[163936]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "961"
+    },
+    {
+      "departement": "06",
+      "nom": "Jardin Albert 1er Th\u00e9atre de Verdure",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nice/centre-de-vaccination-theatre-de-verdure",
+      "location": {
+        "longitude": 7.26792,
+        "latitude": 43.6958,
+        "city": "Nice"
+      },
+      "metadata": {
+        "address": "1 promenade des Anglais, 06000 Nice",
+        "phone_number": "+33497135600",
+        "business_hours": {
+          "lundi": "En cours de pr\u00e9cisions",
+          "mardi": "En cours de pr\u00e9cisions",
+          "mercredi": "En cours de pr\u00e9cisions",
+          "jeudi": "En cours de pr\u00e9cisions",
+          "vendredi": "En cours de pr\u00e9cisions",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242352[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "435"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination Palais des Congr\u00e8s de Grasse",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/grasse/centre-de-vaccination-du-palais-des-congres-de-grasse?pid=practice-166304",
+      "location": {
+        "longitude": 6.92119,
+        "latitude": 43.6574,
+        "city": "Grasse"
+      },
+      "metadata": {
+        "address": "22 Cours Honor\u00e9 Cresp, 06130 Grasse",
+        "phone_number": "+33497055369",
+        "business_hours": {
+          "lundi": "10h-12h30 /  13h30-17h30",
+          "mardi": "10h-12h30 /  13h30-17h30",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "10h-12h30 /  13h30-17h30",
+          "vendredi": "10h-12h30 /  13h30-17h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "244639[166304]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1235"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination de Vence - Gymnase Dandreis Vence",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nice/covid-19-vence",
+      "location": {
+        "longitude": 7.11482,
+        "latitude": 43.7201,
+        "city": "Vence"
+      },
+      "metadata": {
+        "address": " Avenue Colonel Mey\u00e8re, 06140 Vence",
+        "phone_number": "+33805016666",
+        "business_hours": {
+          "lundi": "8h 18h",
+          "mardi": "8h 18h",
+          "mercredi": "8h 18h",
+          "jeudi": "8h 18h",
+          "vendredi": "8h 18h",
+          "samedi": "8h 18h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242453[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1041"
+    },
+    {
+      "departement": "06",
+      "nom": "Equipe mobile M\u00e9tropole Nice C\u00f4te d'Azur",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nice/centre-de-vaccination-theatre-de-verdure",
+      "location": {
+        "longitude": 7.25727,
+        "latitude": 43.6939,
+        "city": "Nice"
+      },
+      "metadata": {
+        "address": "38 Promenade des Anglais, 06000 Nice",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242352[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1351"
+    },
+    {
+      "departement": "06",
+      "nom": "Palais des Victoires",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cannes/centre-de-vaccination-covid-19-mairie-de-cannes?pid=practice-170734",
+      "location": {
+        "longitude": 6.96093,
+        "latitude": 43.5518,
+        "city": "Cannes"
+      },
+      "metadata": {
+        "address": "2 Avenue Maurice Chevalier, 06150 Cannes",
+        "phone_number": "+33497064000",
+        "business_hours": {
+          "lundi": "8h-18h",
+          "mardi": "8h-18h",
+          "mercredi": "8h-18h",
+          "jeudi": "8h-18h",
+          "vendredi": "8h-18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "250405[170734]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1112"
+    },
+    {
+      "departement": "06",
+      "nom": "MSP de Roquest\u00e9ron",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/nice/covid-19-roquesteron",
+      "location": {
+        "longitude": 7.00593,
+        "latitude": 43.8741,
+        "city": "Roquest\u00e9ron"
+      },
+      "metadata": {
+        "address": "13 Boulevard Georges Salvago, 06910 Roquest\u00e9ron",
+        "phone_number": "+33805016666",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "9h 17h",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "9h 17h",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242449[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1024"
+    },
+    {
+      "departement": "06",
+      "nom": "Espace Loisirs Francis Huger",
+      "url": "https://partners.doctolib.fr/maison-de-sante/vallauris/centre-de-vaccination-covid-19-ville-de-vallauris-golfejuan",
+      "location": {
+        "longitude": 7.05528,
+        "latitude": 43.578,
+        "city": "Vallauris"
+      },
+      "metadata": {
+        "address": "6 Boulevard du Docteur Jacques Ugo, 06220 Vallauris",
+        "phone_number": "+33493633560",
+        "business_hours": {
+          "lundi": "9h-12h 14h-17h",
+          "mardi": "9h-12h 14h-17h",
+          "mercredi": "9h-12h 14h-17h",
+          "jeudi": "9h-12h 14h-17h",
+          "vendredi": "9h-12h 14h-17h",
+          "samedi": "9h-12h 14h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242722[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1113"
+    }
+  ]
+}

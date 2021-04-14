@@ -1,0 +1,224 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-14T12:37:42.618236+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination Covid-19 du Sud 28",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chateaudun/centre-de-vaccination-du-sud-28",
+      "location": {
+        "longitude": 1.3309719,
+        "latitude": 48.0670413,
+        "city": "Ch\u00e2teaudun"
+      },
+      "metadata": {
+        "address": "Impasse des Cordeliers, 28200 Ch\u00e2teaudun",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-18:00",
+          "mardi": null,
+          "mercredi": "09:00-13:00, 14:00-18:00",
+          "jeudi": "09:00-13:00, 14:00-18:00",
+          "vendredi": "09:00-13:00, 14:00-18:00",
+          "samedi": "09:00-13:00, 14:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-24T15:55:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 12,
+      "internal_id": "242170[]",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "erreur": null,
+      "gid": "d242170"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination \"grand public\" CHARTREXPO \u2013 Chartres",
+      "url": "https://partners.doctolib.fr/centre-examens-de-sante/chartres/centre-de-vaccination-covid-19-de-chartres-metropole",
+      "location": {
+        "longitude": 1.51648,
+        "latitude": 48.4516,
+        "city": "Chartres"
+      },
+      "metadata": {
+        "address": " Avenue Jean Mermoz, 28000 Chartres",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "9h-17h30",
+          "mardi": "9h-17h30",
+          "mercredi": "9h-17h30",
+          "jeudi": "9h-17h30",
+          "vendredi": "9h-17h30",
+          "samedi": "9h-17h30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241910[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "685"
+    },
+    {
+      "departement": "28",
+      "nom": "Senonches CV grand public",
+      "url": "https://partners.doctolib.fr/centre-de-sante/la-loupe/centre-de-vaccination-covid-centre-de-la-loupe",
+      "location": {
+        "longitude": 1.03789,
+        "latitude": 48.5597,
+        "city": "Senonches"
+      },
+      "metadata": {
+        "address": " rue du four Bannal, 28250 Senonches",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "14h-18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242952[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1648"
+    },
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination grand public - Parc des expositions",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dreux/centre-de-vaccination-covid-dreux-vernouillet-dreux?pid=practice-164914",
+      "location": {
+        "longitude": 1.35722,
+        "latitude": 48.7324,
+        "city": "Dreux"
+      },
+      "metadata": {
+        "address": "1 Impasse de la Commune, 28100 Dreux",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "9h-12h/13h30-16h30",
+          "mardi": "9h-12h/13h30-16h30",
+          "mercredi": "9h-12h/13h30-16h30",
+          "jeudi": "9h-12h/13h30-16h30",
+          "vendredi": "9h-12h/13h30-16h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243045[164914]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "689"
+    },
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination COVID - Centre de La Loupe",
+      "url": "https://partners.doctolib.fr/centre-de-sante/la-loupe/centre-de-vaccination-covid-centre-de-la-loupe",
+      "location": {
+        "longitude": 1.014772,
+        "latitude": 48.4708799,
+        "city": "La Loupe"
+      },
+      "metadata": {
+        "address": "1 Place Vauban, 28240 La Loupe",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242952[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242952"
+    },
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination \"grand public\" Salle Pierre Mend\u00e8s France \u2013 Nogent-le-Rotrou",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nogent-le-rotrou/centre-de-vaccination-covid-19-nogent-le-rotrou",
+      "location": {
+        "longitude": 0.820384,
+        "latitude": 48.3174,
+        "city": "Nogent-le-Rotrou"
+      },
+      "metadata": {
+        "address": "5 Avenue Camille Gat\u00e9, 28400 Nogent-le-Rotrou",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "en attente d'informations",
+          "mardi": "en attente d'informations",
+          "mercredi": "en attente d'informations",
+          "jeudi": "en attente d'informations",
+          "vendredi": "en attente d'informations",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243405[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "687"
+    },
+    {
+      "departement": "28",
+      "nom": "Centre de vaccination Epernon - Complexe sportif du Closelet",
+      "url": "https://partners.doctolib.fr/centre-de-sante/epernon/centre-de-vaccination-covid-epernon?pid=practice-182385",
+      "location": {
+        "longitude": 1.67234,
+        "latitude": 48.6042,
+        "city": "\u00c9pernon"
+      },
+      "metadata": {
+        "address": "5 Route de Gallardon, 28230 \u00c9pernon",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "266231[182385]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1699"
+    }
+  ]
+}

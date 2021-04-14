@@ -1,0 +1,365 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-14T12:37:42.708034+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "82",
+      "nom": "MSP des Halles",
+      "url": "https://www.maiia.com/centre-de-vaccination/82500-beaumont-de-lomagne-/centre-de-vaccination---maison-de-sante-des-halles",
+      "location": {
+        "longitude": 0.987316,
+        "latitude": 43.8803,
+        "city": "Beaumont-de-Lomagne"
+      },
+      "metadata": {
+        "address": "15 Boulevard de Verdun, 82500 Beaumont-de-Lomagne",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "8h/12h-14h/20h",
+          "mardi": "8h/12h-14h/20h",
+          "mercredi": "ferm\u00e98h/12h-14h/20h",
+          "jeudi": "8h/12h-14h/20h",
+          "vendredi": "8h/12h-14h/20h",
+          "samedi": "8h/12h-14h/18h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-18T16:25:00.000000Z",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 4,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "563"
+    },
+    {
+      "departement": "82",
+      "nom": "Centre de vaccination - Valence d'Agen",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/valence-d-agen/centre-de-vaccination-valence-d-agen",
+      "location": {
+        "longitude": 0.8950384,
+        "latitude": 44.1081336,
+        "city": "Valence d'Agen"
+      },
+      "metadata": {
+        "address": "Avenue Jean Baylet, 82400 Valence d'Agen",
+        "phone_number": "+33809541919",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-18:00",
+          "mardi": "09:00-13:00, 14:00-18:00",
+          "mercredi": "09:00-13:00, 14:00-18:00",
+          "jeudi": "09:00-13:00, 14:00-18:00",
+          "vendredi": "09:00-13:00, 14:00-18:00",
+          "samedi": "09:00-13:00, 14:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-20T12:15:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 72,
+      "internal_id": "242967[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "d242967"
+    },
+    {
+      "departement": "82",
+      "nom": "centre de vaccination Valence d'Agen",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/valence-d'agen/centre-de-vaccination-valence-d-agen?pid=practice-165331",
+      "location": {
+        "longitude": 0.894605,
+        "latitude": 44.1082,
+        "city": "Valence"
+      },
+      "metadata": {
+        "address": "halle jean Baylet Avenue Jean Baylet, 82400 Valence",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-20T12:15:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 71,
+      "internal_id": "242967[165331]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "1167"
+    },
+    {
+      "departement": "82",
+      "nom": "Centre de vaccination COVID - CH Turenne (N\u00e8grepelisse)",
+      "url": "https://partners.doctolib.fr/hopital-public/negrepelisse/centre-de-vaccination-covid-ch-negrepelisse",
+      "location": {
+        "longitude": 1.5220896,
+        "latitude": 44.0736688,
+        "city": "N\u00e8grepelisse"
+      },
+      "metadata": {
+        "address": "40 Rue de Turenne, 82800 N\u00e8grepelisse",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-18:00",
+          "mardi": "09:00-13:00, 14:00-18:00",
+          "mercredi": "09:00-13:00, 14:00-18:00",
+          "jeudi": "09:00-13:00, 14:00-18:00",
+          "vendredi": "09:00-13:00, 14:00-18:00",
+          "samedi": "09:00-13:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-25T15:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 265,
+      "internal_id": "242473[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "d242473"
+    },
+    {
+      "departement": "82",
+      "nom": "CH Montauban vaccination Covid-19",
+      "url": "https://partners.doctolib.fr/hopital-public/montauban/ch-montauban-vaccination-covid",
+      "location": {
+        "longitude": 1.3517641,
+        "latitude": 44.0227779,
+        "city": "Montauban"
+      },
+      "metadata": {
+        "address": "100 Rue L\u00e9on Cladel, 82000 Montauban",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "08:30-18:00",
+          "mardi": "08:30-18:00",
+          "mercredi": "08:30-18:00",
+          "jeudi": "08:30-18:00",
+          "vendredi": "08:30-18:00",
+          "samedi": "08:30-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-28T13:00:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 50,
+      "internal_id": "240873[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "d240873"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "82",
+      "nom": "Centre de vaccination Covid de Caussade",
+      "url": "https://partners.doctolib.fr/centre-de-sante/caussade/centre-de-vaccination-covid-de-caussade",
+      "location": {
+        "longitude": 1.534021,
+        "latitude": 44.1601053,
+        "city": "Caussade"
+      },
+      "metadata": {
+        "address": "12 Rue de la Solidarit\u00e9, 82300 Caussade",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241844[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d241844"
+    },
+    {
+      "departement": "82",
+      "nom": "Pharmacie Du Placat",
+      "url": "https://mapharma.net/82400",
+      "location": null,
+      "metadata": {
+        "address": "1 Place Jean Baptiste Chaumeil 82400 VALENCE D AGEN",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "82400-0"
+    },
+    {
+      "departement": "82",
+      "nom": "Pierre Lancelot",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pierre-lancelot-82600---aucamville",
+      "location": {
+        "longitude": 1.2157513,
+        "latitude": 43.8026695,
+        "city": "82600---aucamville"
+      },
+      "metadata": {
+        "address": "avenue de toulouse, 82600 82600 - AUCAMVILLE",
+        "phone_number": "+33563026802",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "e6eafd26"
+    },
+    {
+      "departement": "82",
+      "nom": "Centre de vaccination Covid-19 - SDIS 82",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montauban/centre-de-vaccination-covid-19-sdis-82",
+      "location": {
+        "longitude": 1.3654851,
+        "latitude": 44.0409538,
+        "city": "Montauban"
+      },
+      "metadata": {
+        "address": "4-6 Rue Ernest P\u00e9cou, 82000 Montauban",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "265483[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d265483"
+    },
+    {
+      "departement": "82",
+      "nom": "centre de vaccination MSP Moissac",
+      "url": "https://partners.doctolib.fr/cabinet-medical/moissac/centre-covid-cosec",
+      "location": {
+        "longitude": 1.09981,
+        "latitude": 44.1085,
+        "city": "Moissac"
+      },
+      "metadata": {
+        "address": "19 Avenue du Chasselas espace confluences, 82200 Moissac",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "13:30-17:00",
+          "mardi": "13:30-17:00",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "9:00-13:00/13:30-17:30",
+          "vendredi": "9:00-13:30",
+          "samedi": "",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "515"
+    },
+    {
+      "departement": "82",
+      "nom": "centre de vaccination de Caussade",
+      "url": "https://partners.doctolib.fr/cabinet-medical/caussade/maison-medicale-de-caussade",
+      "location": {
+        "longitude": 1.53375,
+        "latitude": 44.1621,
+        "city": "Caussade"
+      },
+      "metadata": {
+        "address": "12 rue de la Solidarit\u00e9, 82300 Caussade",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9:00-13:00/14:00-18:00",
+          "mardi": "9:00-13:00/14:00-18:00",
+          "mercredi": "9:00-13:00/14:00-18:00",
+          "jeudi": "9:00-13:00/14:00-18:00",
+          "vendredi": "9:00-13:00/14:00-18:00",
+          "samedi": "9:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "85766[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "699"
+    },
+    {
+      "departement": "82",
+      "nom": "Centre \u00e9ph\u00e9m\u00e8re SDIS 82",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montauban/centre-de-vaccination-covid-19-sdis-82?pid=practice-181850",
+      "location": {
+        "longitude": 1.36535,
+        "latitude": 44.0407,
+        "city": "Montauban"
+      },
+      "metadata": {
+        "address": "4 Rue Ernest Pecou, 82000 Montauban",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "8h-12h et 14h-18h",
+          "dimanche": "8h-12h et 14h-18h"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "265483[181850]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2394"
+    }
+  ]
+}

@@ -1,0 +1,838 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-14T12:37:42.697550+02:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "77",
+      "nom": "Pharmacie du Faubourg",
+      "url": "https://partners.doctolib.fr/pharmacie/la-ferte-sous-jouarre/pharmacie-du-faubourg",
+      "location": {
+        "longitude": 3.1325947,
+        "latitude": 48.9483147,
+        "city": "La Fert\u00e9-sous-Jouarre"
+      },
+      "metadata": {
+        "address": "15 Rue du Faubourg, 77260 La Fert\u00e9-sous-Jouarre",
+        "phone_number": "+33160220043",
+        "business_hours": {
+          "lundi": "09:00-12:15, 14:30-20:00",
+          "mardi": "09:00-12:15, 14:30-20:00",
+          "mercredi": "09:00-12:15, 14:30-20:00",
+          "jeudi": "09:00-12:15, 14:30-20:00",
+          "vendredi": "09:00-12:15, 14:30-20:00",
+          "samedi": "09:00-12:15, 14:30-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "258373[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d258373"
+    },
+    {
+      "departement": "77",
+      "nom": "Grande Pharmacie De Boissenart",
+      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-de-boissenart-cesson",
+      "location": {
+        "longitude": 2.5998397,
+        "latitude": 48.5881003,
+        "city": "cesson"
+      },
+      "metadata": {
+        "address": "Centre Commercial de Boissenart, 77240 Cesson",
+        "phone_number": "+33160630503",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "859cb8ae"
+    },
+    {
+      "departement": "77",
+      "nom": "Pharmacie Principale Nangis",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-principale-nangis-nangis",
+      "location": {
+        "longitude": 3.0138937,
+        "latitude": 48.5562902,
+        "city": "nangis"
+      },
+      "metadata": {
+        "address": "1 av Du Mar\u00e9chal De Lattre De Tassigny, 77370 Nangis",
+        "phone_number": "+33164080090",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "5c383728"
+    },
+    {
+      "departement": "77",
+      "nom": "Pharmacie De Saint Soupplets",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-saint-soupplets-saint-soupplets",
+      "location": {
+        "longitude": 2.802476,
+        "latitude": 49.0357062,
+        "city": "saint-soupplets"
+      },
+      "metadata": {
+        "address": "35 rue du Bourget, 77165 Saint Soupplets",
+        "phone_number": "+33160015039",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "27db055c"
+    },
+    {
+      "departement": "77",
+      "nom": "Pharmacie De La Rochette",
+      "url": "https://mapharma.net/77000",
+      "location": null,
+      "metadata": {
+        "address": "69 rue Honor\u00e9 Daumier 77000 LA ROCHETTE",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "77000-0"
+    },
+    {
+      "departement": "77",
+      "nom": "Pharmacie De La Mairie",
+      "url": "https://mapharma.net/77550",
+      "location": null,
+      "metadata": {
+        "address": "116 Avenue Philippe Bur 77550 MOISSY CRAMAYEL",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "77550-0"
+    },
+    {
+      "departement": "77",
+      "nom": "GHEF-site CH Coulommiers",
+      "url": "https://partners.doctolib.fr/hopital-public/meaux/ghef-centre-de-vaccination-covid-reserve-aux-professionnels-de-sante-de-ville?pid=practice-162149",
+      "location": {
+        "longitude": 3.09569,
+        "latitude": 48.8273,
+        "city": "Coulommiers"
+      },
+      "metadata": {
+        "address": "4 Rue Gabriel P\u00e9ri, 77120 Coulommiers",
+        "business_hours": {
+          "lundi": "8:30-17:30",
+          "mardi": "8:30-17:30",
+          "mercredi": "8:30-17:30",
+          "jeudi": "8:30-17:30",
+          "vendredi": "8:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241093[162149]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1471"
+    },
+    {
+      "departement": "77",
+      "nom": "Pharmacie de Pontcarr\u00e9",
+      "url": "https://partners.doctolib.fr/pharmacie/pontcarre/pharmacie-de-pontcarre",
+      "location": {
+        "longitude": 2.7069598,
+        "latitude": 48.7959436,
+        "city": "Pontcarr\u00e9"
+      },
+      "metadata": {
+        "address": "85 Bis Grande Rue, 77135 Pontcarr\u00e9",
+        "phone_number": "+33164661385",
+        "business_hours": {
+          "lundi": "09:00-20:00",
+          "mardi": "09:00-20:00",
+          "mercredi": "09:00-20:00",
+          "jeudi": "09:00-20:00",
+          "vendredi": "09:00-20:00",
+          "samedi": "09:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "262516[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d262516"
+    },
+    {
+      "departement": "77",
+      "nom": "GHEF-Site de Jossigny",
+      "url": "https://partners.doctolib.fr/hopital-public/meaux/ghef-centre-de-vaccination-covid-reserve-aux-professionnels-de-sante-de-ville?pid=practice-162172",
+      "location": {
+        "longitude": 2.76969,
+        "latitude": 48.8506,
+        "city": "Jossigny"
+      },
+      "metadata": {
+        "address": "4 Cours de la Gondoire, 77600 Jossigny",
+        "business_hours": {
+          "lundi": "8H30-17H30",
+          "mardi": "8H30-17H30",
+          "mercredi": "8H30-17H30",
+          "jeudi": "8H30-17H30",
+          "vendredi": "8H30-17H30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241093[162172]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1472"
+    },
+    {
+      "departement": "77",
+      "nom": "GHEF-Site CH Meaux",
+      "url": "https://partners.doctolib.fr/hopital-public/meaux/ghef-centre-de-vaccination-covid-reserve-aux-professionnels-de-sante-de-ville?pid=practice-162173",
+      "location": {
+        "longitude": 2.8846,
+        "latitude": 48.9678,
+        "city": "Meaux"
+      },
+      "metadata": {
+        "address": "6 Rue Saint Fiacre, 77100 Meaux",
+        "business_hours": {
+          "lundi": "8H30-17H30",
+          "mardi": "8H30-17H30",
+          "mercredi": "8H30-17H30",
+          "jeudi": "8H30-17H30",
+          "vendredi": "8H30-17H30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241093[162173]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1473"
+    },
+    {
+      "departement": "77",
+      "nom": "Centre de vaccination GHSIF MELUN - Site de Brie Comte Robert",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/brie-comte-robert/centre-de-vaccination-de-la-brie",
+      "location": {
+        "longitude": 2.60671,
+        "latitude": 48.694,
+        "city": "Brie-Comte-Robert"
+      },
+      "metadata": {
+        "address": "17 Rue Petit de Beauverger, 77170 Brie-Comte-Robert",
+        "phone_number": "+33181742700",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242998[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "860"
+    },
+    {
+      "departement": "77",
+      "nom": "Pharmacie Du Bel Air",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-bel-air-combs-la-ville",
+      "location": {
+        "longitude": 2.559098,
+        "latitude": 48.6661852,
+        "city": "combs-la-ville"
+      },
+      "metadata": {
+        "address": "30 place de l'an 2000, 77380 Combs la ville",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "fa5e825c"
+    },
+    {
+      "departement": "77",
+      "nom": "Pharmacies de Combs",
+      "url": "https://partners.doctolib.fr/pharmacie/combs-la-ville/pharmacies-de-combs",
+      "location": {
+        "longitude": 2.558305,
+        "latitude": 48.6670647,
+        "city": "Combs-la-Ville"
+      },
+      "metadata": {
+        "address": "10 Rue de Verdun, 77380 Combs-la-Ville",
+        "phone_number": "+33164887887",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "255848[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d255848"
+    },
+    {
+      "departement": "77",
+      "nom": "Vaccination Covid-19 - Ville de Fontainebleau",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/fontainebleau/vaccination-covid-19-ville-de-fontainebleau",
+      "location": {
+        "longitude": 2.7033551,
+        "latitude": 48.414754,
+        "city": "Fontainebleau"
+      },
+      "metadata": {
+        "address": "3 Rue Jean Becquerel, 77300 Fontainebleau",
+        "phone_number": "+33177038180",
+        "business_hours": {
+          "lundi": "09:00-12:00, 14:00-17:00",
+          "mardi": "09:00-12:00, 14:00-17:00",
+          "mercredi": "09:00-12:00, 14:00-17:00",
+          "jeudi": "09:00-12:00, 14:00-17:00",
+          "vendredi": "09:00-12:00, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "248339[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d248339"
+    },
+    {
+      "departement": "77",
+      "nom": "Centre de Vaccination Covid-19 - Ville de Chelles",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chelles/centre-de-vaccination-ville-de-chelles",
+      "location": {
+        "longitude": 2.59450768471774,
+        "latitude": 48.8778632315647,
+        "city": "Chelles"
+      },
+      "metadata": {
+        "address": "Place des Martyrs de Ch\u00e2teaubriant, 77500 Chelles",
+        "phone_number": "+33164728535",
+        "business_hours": {
+          "lundi": "09:00-12:00, 14:00-17:00",
+          "mardi": "09:00-12:00, 14:00-17:00",
+          "mercredi": "09:00-12:00, 14:00-17:00",
+          "jeudi": "09:00-12:00, 14:00-17:00",
+          "vendredi": "09:00-12:00, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242403[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242403"
+    },
+    {
+      "departement": "77",
+      "nom": "Centre de vaccination COVID-19 - Saint-Fargeau Ponthierry",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/saint-fargeau-ponthierry/centre-de-vaccination-saint-fargeau-ponthierry",
+      "location": {
+        "longitude": 2.5282488,
+        "latitude": 48.5352157,
+        "city": "Saint-Fargeau-Ponthierry"
+      },
+      "metadata": {
+        "address": "185 Avenue de Fontainebleau, 77310 Saint-Fargeau-Ponthierry",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-13:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242704[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242704"
+    },
+    {
+      "departement": "77",
+      "nom": "Lagny Centre de vaccination du Totem",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/lagny-sur-marne-77400/cpts-liens-sante-77?motive=81620&category=-1&cabinet=16552&specialty=47",
+      "location": {
+        "longitude": 2.70773,
+        "latitude": 48.8673,
+        "city": "Lagny-sur-Marne"
+      },
+      "metadata": {
+        "address": "SALLE POLYVALENTE TOTEM Avenue ANDRE MALRAUX, 77400 Lagny-sur-Marne",
+        "phone_number": "+33800077400",
+        "business_hours": {
+          "lundi": "9:00-12:00/14:00-17:00",
+          "mardi": "9:00-12:00/14:00-17:00",
+          "mercredi": "9:00-12:00/14:00-17:00",
+          "jeudi": "9:00-12:00/14:00-17:00",
+          "vendredi": "9:00-12:00/14:00-17:00",
+          "samedi": "ouvert",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "296"
+    },
+    {
+      "departement": "77",
+      "nom": "Centre de vaccination du SDIS",
+      "url": "https://partners.doctolib.fr/centre-de-sante/melun/centre-de-vaccination-covid-19-sdis-77?pid=practice-175244",
+      "location": {
+        "longitude": 2.63188,
+        "latitude": 48.5542,
+        "city": "Melun"
+      },
+      "metadata": {
+        "address": "5 Chemin Rural Dit des Mulets, 77000 Melun",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "10h-17h ",
+          "dimanche": "10h-17h"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "256047[175244]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1686"
+    },
+    {
+      "departement": "77",
+      "nom": "Centre de vaccination de Noisiel",
+      "url": "https://partners.doctolib.fr/centre-de-sante/noisiel/centre-de-vaccination-covid-19-de-noisiel?pid=practice-175253",
+      "location": {
+        "longitude": 2.62714,
+        "latitude": 48.8439,
+        "city": "Noisiel"
+      },
+      "metadata": {
+        "address": "36 Cours du Buisson, 77186 Noisiel",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ouvert",
+          "dimanche": "ouvert"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "256061[175253]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1687"
+    },
+    {
+      "departement": "77",
+      "nom": "Ville de Fontainebleau",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/fontainebleau/vaccination-covid-19-ville-de-fontainebleau?pid=practice-168865",
+      "location": {
+        "longitude": 2.70326,
+        "latitude": 48.4147,
+        "city": "Fontainebleau"
+      },
+      "metadata": {
+        "address": "3 Rue Jean Becquerel, 77300 Fontainebleau",
+        "phone_number": "+33177038180",
+        "business_hours": {
+          "lundi": "13:00-17:00",
+          "mardi": "13:00-17:00",
+          "mercredi": "13:00-17:00",
+          "jeudi": "13:00-17:00",
+          "vendredi": "13:00-17:00",
+          "samedi": "13:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "248339[168865]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "781"
+    },
+    {
+      "departement": "77",
+      "nom": "EMV Torcy",
+      "url": "https://partners.doctolib.fr/centre-de-sante/torcy/point-de-vaccination-avance-de-torcy?pid=practice-173895",
+      "location": {
+        "longitude": 2.65243,
+        "latitude": 48.8497,
+        "city": "Torcy"
+      },
+      "metadata": {
+        "address": "5 Place de l\u2019Appel du 18 Juin 1940, 77200 Torcy",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "254257[173895]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1560"
+    },
+    {
+      "departement": "77",
+      "nom": "Ville de Meaux",
+      "url": "https://www.maiia.com/centre-de-vaccination/77100-meaux/centre-de-vaccination-du-covid-19-du-pays-de-meaux",
+      "location": {
+        "longitude": 2.89992,
+        "latitude": 48.9435,
+        "city": "Meaux"
+      },
+      "metadata": {
+        "address": "71 Avenue Henri Dunant, 77100 Meaux",
+        "phone_number": "+33160099884",
+        "business_hours": {
+          "lundi": "13:00-18:00",
+          "mardi": "13:00-18:00",
+          "mercredi": "13:00-18:00",
+          "jeudi": "13:00-18:00",
+          "vendredi": "13:00-18:00",
+          "samedi": "ouvert",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "421"
+    },
+    {
+      "departement": "77",
+      "nom": "Centre de vaccination du GHSIF Melun",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/melun-cedex-77011/groupe-hospitalier-sud-ile-de-france/centre-covid?specialty=496",
+      "location": {
+        "longitude": 2.67334,
+        "latitude": 48.5396,
+        "city": "Melun"
+      },
+      "metadata": {
+        "address": "8 Rue de Vaux, 77000 Melun",
+        "phone_number": "+33181742700",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09h00-17h00",
+          "dimanche": "ouvert"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "246"
+    },
+    {
+      "departement": "77",
+      "nom": "Centre de vaccination COVID-19 de Coulommiers",
+      "url": "https://partners.doctolib.fr/centre-de-sante/coulommiers/centre-de-vaccination-covid-19-de-coulommiers",
+      "location": {
+        "longitude": 3.0748084,
+        "latitude": 48.8130331,
+        "city": "Coulommiers"
+      },
+      "metadata": {
+        "address": "77 Rue du G\u00e9n\u00e9ral Leclerc, 77120 Coulommiers",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243085[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243085"
+    },
+    {
+      "departement": "77",
+      "nom": "Ville de Pontault Combault",
+      "url": "https://partners.doctolib.fr/centre-de-sante/pontault-combault/centre-de-vaccination-mairie-de-pontault-combault",
+      "location": {
+        "longitude": 2.61285,
+        "latitude": 48.7961,
+        "city": "Pontault-Combault"
+      },
+      "metadata": {
+        "address": "129 Rue du Plateau, 77340 Pontault-Combault",
+        "phone_number": "+33170054888",
+        "business_hours": {
+          "lundi": "9:00-12:00/14:00-17:00",
+          "mardi": "9:00-12:00/14:00-17:00",
+          "mercredi": "9:00-12:00/14:00-17:00",
+          "jeudi": "9:00-12:00/14:00-17:00",
+          "vendredi": "9:00-12:00/14:00-17:00",
+          "samedi": "9:00-12:00/14:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242176[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "859"
+    },
+    {
+      "departement": "77",
+      "nom": "Centres de vaccination GHIF Melun- site de Savigny le temple",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/savigny-le-temple-77176/centre-de-vaccination-covid-ghsif-site-de-savigny-le-temple",
+      "location": {
+        "longitude": 2.58289,
+        "latitude": 48.5955,
+        "city": "Savigny-le-Temple"
+      },
+      "metadata": {
+        "address": "3 Place du 19 Mars 1962, 77176 Savigny-le-Temple",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": null,
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2254"
+    },
+    {
+      "departement": "77",
+      "nom": "Ville de Provins",
+      "url": "https://partners.doctolib.fr/hopital-public/provins/ch-de-provins-centre-de-vaccinations-covid-19",
+      "location": {
+        "longitude": 3.30633,
+        "latitude": 48.5604,
+        "city": "Provins"
+      },
+      "metadata": {
+        "address": "10 Rue du G\u00e9n\u00e9ral Delort, 77160 Provins",
+        "phone_number": "+33164604024",
+        "business_hours": {
+          "lundi": "13:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241616[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "424"
+    },
+    {
+      "departement": "77",
+      "nom": "Ville de Montereau",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montereau-fault-yonne/centre-de-vaccination-covid-de-montereau-fault-yonne-reserve-personnes-plus-de-75ans",
+      "location": {
+        "longitude": 2.95463,
+        "latitude": 48.386,
+        "city": "Montereau-Fault-Yonne"
+      },
+      "metadata": {
+        "address": " Place du Calvaire, 77130 Montereau-Fault-Yonne",
+        "phone_number": "+33182340025",
+        "business_hours": {
+          "lundi": "14:00-17:00 ",
+          "mardi": "14:00-17:00 ",
+          "mercredi": "14:00-17:00 ",
+          "jeudi": "14:00-17:00 ",
+          "vendredi": "14:00-17:00 ",
+          "samedi": "ouvert",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242175[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "865"
+    },
+    {
+      "departement": "77",
+      "nom": "Ville de Nemours",
+      "url": "https://partners.doctolib.fr/centre-de-sante/nemours/centre-vaccination-covid-19-msp-pays-de-nemours",
+      "location": {
+        "longitude": 2.71008,
+        "latitude": 48.2663,
+        "city": "Nemours"
+      },
+      "metadata": {
+        "address": "135 route de Moret, 77140 Nemours",
+        "phone_number": "+33164787071",
+        "business_hours": {
+          "lundi": "9:00-13:00/14:00-18:00",
+          "mardi": "9:00-13:00/14:00-18:00",
+          "mercredi": "9:00-13:00/14:00-18:00",
+          "jeudi": "9:00-13:00/14:00-18:00",
+          "vendredi": "9:00-13:00/14:00-18:00",
+          "samedi": "9:00-13:00/14:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243103[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "866"
+    }
+  ]
+}

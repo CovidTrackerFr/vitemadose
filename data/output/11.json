@@ -1,0 +1,503 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-14T12:37:42.602603+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "11",
+      "nom": "Centre de vaccination - CH de Castelnaudary",
+      "url": "https://partners.doctolib.fr/hopital-public/castelnaudary/centre-de-vaccination-ch-de-castelnaudary",
+      "location": {
+        "longitude": 1.9617809,
+        "latitude": 43.3159428,
+        "city": "Castelnaudary"
+      },
+      "metadata": {
+        "address": "19 Avenue Monseigneur de Langle, 11400 Castelnaudary",
+        "phone_number": "+33809541919",
+        "business_hours": {
+          "lundi": "08:30-12:00, 13:30-17:00",
+          "mardi": "08:30-12:00, 13:30-17:00",
+          "mercredi": "08:30-12:00, 13:30-17:00",
+          "jeudi": "08:30-12:00, 13:30-17:00",
+          "vendredi": "08:30-12:00, 13:30-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-05-05T09:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 166,
+      "internal_id": "242331[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "d242331"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "11",
+      "nom": "Centre de vaccination Pyr\u00e9n\u00e9es Audoises",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/quillan/centre-de-vaccination-pyrenees-audoises-ch-quillan",
+      "location": {
+        "longitude": 2.185,
+        "latitude": 42.8814,
+        "city": "Quillan"
+      },
+      "metadata": {
+        "address": "6 Rue du Docteur Roueylou, 11500 Quillan",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "9:00 -16:30",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "9:00-16:30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "249898[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1432"
+    },
+    {
+      "departement": "11",
+      "nom": "Centre de Vaccination de Sigean",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sigean/centre-de-vaccination-covid-19-sigean?pid=practice-173770",
+      "location": {
+        "longitude": 2.98213,
+        "latitude": 43.0272,
+        "city": "Sigean"
+      },
+      "metadata": {
+        "address": "1 place de l'Octroi, 11130 Sigean",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "9:00 -13:00",
+          "jeudi": "9:00 - 13:00",
+          "vendredi": "9:00-13:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "254115[173770]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1629"
+    },
+    {
+      "departement": "11",
+      "nom": "CH Carcassonne",
+      "url": "https://partners.doctolib.fr/hopital-public/carcassonne/ch-carcassonne-centre-de-vaccination-covid-19",
+      "location": {
+        "longitude": 2.39503,
+        "latitude": 43.2215,
+        "city": "Carcassonne"
+      },
+      "metadata": {
+        "address": "60 Chemin de la Madeleine, 11000 Carcassonne",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9:00-16:40",
+          "mardi": "9:00-16:40",
+          "mercredi": "9:00-16:40",
+          "jeudi": "9:00-16:40",
+          "vendredi": "9:00-16:40",
+          "samedi": "9:00-16:40",
+          "dimanche": "9:00-16:40"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242724[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "210"
+    },
+    {
+      "departement": "11",
+      "nom": "CPTS DU CABARDES",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/conques-sur-orbiel/centre-de-vaccination-covid-19-cpts-du-carbardes?pid=practice-173587",
+      "location": {
+        "longitude": 2.28568,
+        "latitude": 43.3695,
+        "city": "Cuxac-Cabard\u00e8s"
+      },
+      "metadata": {
+        "address": "1 Allee des Platanes, 11390 Cuxac-Cabard\u00e8s",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "8:30-12:30",
+          "mardi": "8:30-12:30",
+          "mercredi": "8:30-12:30",
+          "jeudi": "8:30-12:30",
+          "vendredi": "8:30-12:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "254117[173587]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1740"
+    },
+    {
+      "departement": "11",
+      "nom": "Centre de vaccination de Trebes",
+      "url": "https://partners.doctolib.fr/cabinet-medical/trebes/centre-de-vaccination-de-trebes?pid=practice-173016",
+      "location": {
+        "longitude": 2.4448,
+        "latitude": 43.2096,
+        "city": "Tr\u00e8bes"
+      },
+      "metadata": {
+        "address": "1 Avenue Pierre Curie, 11800 Tr\u00e8bes",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "8:00-12:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "8:00-12:00",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "253172[173016]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1741"
+    },
+    {
+      "departement": "11",
+      "nom": "Centre de vaccination Covid-19 - Sigean",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sigean/centre-de-vaccination-covid-19-sigean",
+      "location": {
+        "longitude": 2.97974056143821,
+        "latitude": 43.0293266556277,
+        "city": "Sigean"
+      },
+      "metadata": {
+        "address": "Place de l'Octroi, 11130 Sigean",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "254115[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d254115"
+    },
+    {
+      "departement": "11",
+      "nom": "Centre de Vaccination Covid-19 du Narbonnais",
+      "url": "https://partners.doctolib.fr/centre-examens-de-sante/narbonne/centre-de-vaccination-du-narbonnais",
+      "location": {
+        "longitude": 3.0245907,
+        "latitude": 43.1802828,
+        "city": "Narbonne"
+      },
+      "metadata": {
+        "address": "74 Avenue Ma\u00eetre Hubert Mouly, 11100 Narbonne",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243096[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243096"
+    },
+    {
+      "departement": "11",
+      "nom": "Centre de vaccination Covid-19 - CPTS du Cabard\u00e8s",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/conques-sur-orbiel/centre-de-vaccination-covid-19-cpts-du-carbardes",
+      "location": {
+        "longitude": 2.4022181,
+        "latitude": 43.2691374,
+        "city": "Conques-sur-Orbiel"
+      },
+      "metadata": {
+        "address": "Place de la Lib\u00e9ration, 11600 Conques-sur-Orbiel",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "254117[173586]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d254117"
+    },
+    {
+      "departement": "11",
+      "nom": "CH Narbonne",
+      "url": "https://partners.doctolib.fr/hopital-public/narbonne/centre-de-vaccination-covid-19-ch-narbonne-reserve-aux-personnes-eligibles",
+      "location": {
+        "longitude": 2.99935,
+        "latitude": 43.1808,
+        "city": "Narbonne"
+      },
+      "metadata": {
+        "address": " Boulevard Dr Lacroix, 11100 Narbonne",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9:00-12:00 / 12:30-16:30",
+          "mardi": "9:00-12:00 / 12:30-16:30",
+          "mercredi": "9:00-12:00 / 12:30-16:30",
+          "jeudi": "9:00-12:00/12:30-16:30",
+          "vendredi": "9:00-12:00/12:30-16:30",
+          "samedi": "9:00-12:00 / 12:30-16:30",
+          "dimanche": "9:00-12:00 / 12:30-16:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242306[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "60"
+    },
+    {
+      "departement": "11",
+      "nom": "Maison Medicale de garde de Carcassonne",
+      "url": "https://partners.doctolib.fr/centre-de-sante/carcassonne/centre-de-vaccination-covid-19-maison-de-garde-de-carcassonne",
+      "location": {
+        "longitude": 2.34487,
+        "latitude": 43.2078,
+        "city": "Carcassonne"
+      },
+      "metadata": {
+        "address": "1 Avenue des Berges de l'Aude, 11000 Carcassonne",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:30-18:30",
+          "mardi": "14:30-18:30",
+          "mercredi": "14:30-18:30",
+          "jeudi": "14:30-18:30",
+          "vendredi": "14:30-18:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243125[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "492"
+    },
+    {
+      "departement": "11",
+      "nom": "MSP ASCLEPIOS - CAZILHAC",
+      "url": "https://partners.doctolib.fr/maison-de-sante/cazilhac/centre-vaccination-msp-asclepios",
+      "location": {
+        "longitude": 2.36395,
+        "latitude": 43.1853,
+        "city": "Cazilhac"
+      },
+      "metadata": {
+        "address": "1 Rue de la Mairie, 11570 Cazilhac",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242479[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "990"
+    },
+    {
+      "departement": "11",
+      "nom": "centre de vaccination de la Moyenne et Haute vall\u00e9e de l'Aude",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/limoux/centre-de-vaccination-de-la-moyenne-et-haute-vallee-de-l-aude",
+      "location": {
+        "longitude": 2.21413,
+        "latitude": 43.0554,
+        "city": "Limoux"
+      },
+      "metadata": {
+        "address": "9 Allee des Marronniers, 11300 Limoux",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "9:00-17:00",
+          "jeudi": "9:00-17:00",
+          "vendredi": "9:00-17:00",
+          "samedi": "9:00-17:00",
+          "dimanche": "9:00-17:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "244069[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1163"
+    },
+    {
+      "departement": "11",
+      "nom": "Maison medicale de garde de Lezignan Corbi\u00e8res",
+      "url": "https://partners.doctolib.fr/centre-de-sante/lezignan-corbieres/centre-de-vaccination-covid-mmg-lezignan-corbiere",
+      "location": {
+        "longitude": 2.75864,
+        "latitude": 43.1941,
+        "city": "L\u00e9zignan-Corbi\u00e8res"
+      },
+      "metadata": {
+        "address": "15 Boulevard Pasteur, 11200 L\u00e9zignan-Corbi\u00e8res",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "13:30-17:30",
+          "mardi": "13:30-17:30",
+          "mercredi": "13:30-17:30",
+          "jeudi": "13:30-17:30",
+          "vendredi": "13:30-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243336[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "490"
+    },
+    {
+      "departement": "11",
+      "nom": "Polyclinique Le Languedoc",
+      "url": "https://partners.doctolib.fr/clinique-privee/narbonne/polyclinique-du-languedoc-vaccination-covid",
+      "location": {
+        "longitude": 3.02732,
+        "latitude": 43.1837,
+        "city": "Narbonne"
+      },
+      "metadata": {
+        "address": "12 Avenue de la C\u00f4te des Roses, 11100 Narbonne",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "13:00-16:30",
+          "mercredi": "13:00-16:30",
+          "jeudi": "13:00-16:30",
+          "vendredi": "13:00-16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243096[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1304"
+    },
+    {
+      "departement": "11",
+      "nom": "Centre de vaccination du narbonnais",
+      "url": "https://partners.doctolib.fr/centre-examens-de-sante/narbonne/centre-de-vaccination-du-narbonnais?pid=practice-180834",
+      "location": {
+        "longitude": 3.02274,
+        "latitude": 43.1798,
+        "city": "Narbonne"
+      },
+      "metadata": {
+        "address": "74 Avenue Maitre Hubert Mouly, 11100 Narbonne",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "9h00 - 17h00",
+          "mardi": "9h00-17h00",
+          "mercredi": "9h00-17h00",
+          "jeudi": "9h00-17h00",
+          "vendredi": "9h00-17h00",
+          "samedi": "9h00-17h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243096[180834]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2193"
+    }
+  ]
+}

@@ -1,0 +1,838 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-14T12:37:42.712097+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "84",
+      "nom": "Centre Vaccination Avignon - Salle des f\u00eates Montfavet",
+      "url": "https://www.maiia.com/centre-de-vaccination/84140-avignon/centre-de-vaccination-departemental---montfavet",
+      "location": {
+        "longitude": 4.88815,
+        "latitude": 43.9173,
+        "city": "Avignon"
+      },
+      "metadata": {
+        "address": "246 Rue F\u00e9licien Florent, 84000 Avignon",
+        "phone_number": "+33432403331",
+        "business_hours": {
+          "lundi": "8h30 - 19h",
+          "mardi": "8h30 - 19h",
+          "mercredi": "8h30 - 19h",
+          "jeudi": "8h30 - 19h",
+          "vendredi": "8h30 - 19h",
+          "samedi": "8h30 - 19h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-17T16:00:00.000000Z",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 172,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2240"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre de Vaccination COVID - Maison M\u00e9dicale Rose des Vents (SOS M\u00e9decins)",
+      "url": "https://partners.doctolib.fr/centre-de-sante/le-pontet/centre-de-vaccination-covid-maison-medicale-de-la-rose-des-vents-sos-medecins",
+      "location": {
+        "longitude": 4.8435163,
+        "latitude": 43.9535961,
+        "city": "Le Pontet"
+      },
+      "metadata": {
+        "address": "1 Boulevard Rose des Vents, 84130 Le Pontet",
+        "phone_number": "+33490148023",
+        "business_hours": {
+          "lundi": "14:00-19:00",
+          "mardi": "14:00-19:00",
+          "mercredi": "14:00-19:00",
+          "jeudi": "14:00-19:00",
+          "vendredi": "14:00-19:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-05-12T15:10:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 20,
+      "internal_id": "243215[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "d243215"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "84",
+      "nom": "Centre Hospitalier d'Avignon - Vaccination COVID",
+      "url": "https://partners.doctolib.fr/hopital-public/avignon/centre-hospitalier-d-avignon-vaccination-covid-avignon",
+      "location": {
+        "longitude": 4.806588,
+        "latitude": 43.920431,
+        "city": "Avignon"
+      },
+      "metadata": {
+        "address": "305 Rue Raoul Follereau, 84000 Avignon",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "244363[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d244363"
+    },
+    {
+      "departement": "84",
+      "nom": "Pharmacie Principale",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-principale-pertuis",
+      "location": {
+        "longitude": 5.5016043,
+        "latitude": 43.6934976,
+        "city": "pertuis"
+      },
+      "metadata": {
+        "address": "114 Place Jean Jaures, 84120 PERTUIS",
+        "phone_number": "+33490097271",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "40d3f70d"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre d'examens de sant\u00e9 - CPAM de Vaucluse",
+      "url": "https://partners.doctolib.fr/centre-examens-de-sante/avignon/centre-d-examens-de-sante-cpam-du-vaucluse",
+      "location": {
+        "longitude": 4.82605269999999,
+        "latitude": 43.940881,
+        "city": "Avignon"
+      },
+      "metadata": {
+        "address": "72 Route de Montfavet, 84000 Avignon",
+        "phone_number": "+33486199320",
+        "business_hours": {
+          "lundi": "08:00-12:00, 13:00-16:30",
+          "mardi": "08:00-12:00, 13:00-16:30",
+          "mercredi": "08:00-12:00, 13:00-16:30",
+          "jeudi": "08:00-12:00, 13:00-16:30",
+          "vendredi": "08:00-12:00, 13:00-16:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "177181[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d177181"
+    },
+    {
+      "departement": "84",
+      "nom": "Pharmacie Des Rotondes",
+      "url": "https://mapharma.net/84000-1",
+      "location": null,
+      "metadata": {
+        "address": "68 Avenue Pierre S\u00e9mard 84000 AVIGNON",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "84000-1"
+    },
+    {
+      "departement": "84",
+      "nom": "Pharmacie La Courtine",
+      "url": "https://mapharma.net/84000-2",
+      "location": null,
+      "metadata": {
+        "address": "Centre Cial Carrefour ZAC La Courtine 84000 AVIGNON",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "84000-2"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre de vaccination MIN Cavaillon",
+      "url": "https://partners.doctolib.fr/hopital-public/cavaillon/centre-hospitalier-intercommunal-cavaillon-lauris-vaccination-covid-19-cavaillon",
+      "location": {
+        "longitude": 5.04147,
+        "latitude": 43.8239,
+        "city": "Cavaillon"
+      },
+      "metadata": {
+        "address": "92 Avenue Pierre Grand, 84300 Cavaillon",
+        "phone_number": "+33486552724",
+        "business_hours": {
+          "lundi": "9h-13h et 14h-18h",
+          "mardi": "9h-13h et 14h-18h",
+          "mercredi": "9h-13h et 14h-18h",
+          "jeudi": "9h-13h et 14h-18h",
+          "vendredi": "9h-13h et 14h-18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "246537[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "200"
+    },
+    {
+      "departement": "84",
+      "nom": "CPTS Grand Avignon - Ch\u00e2teau de la Barbi\u00e8re",
+      "url": "https://partners.doctolib.fr/centre-de-sante/morieres-les-avignon/centre-de-vaccination-covid-morieres-les-avignon?pid=practice-168035",
+      "location": {
+        "longitude": 4.83131,
+        "latitude": 43.9308,
+        "city": "Avignon"
+      },
+      "metadata": {
+        "address": "8 Avenue du Roi Soleil, 84000 Avignon",
+        "business_hours": {
+          "lundi": "13-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "14-17h",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243575[168035]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1517"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre Hospitalier APT",
+      "url": "https://partners.doctolib.fr/hopital-public/apt/centre-de-vaccination-covid-19-ch-pays-d-apt?pid=practice-164592",
+      "location": {
+        "longitude": 5.38271,
+        "latitude": 43.8767,
+        "city": "Apt"
+      },
+      "metadata": {
+        "address": "225 Avenue de Marseille, 84400 Apt",
+        "phone_number": "+33490043401/+330490013358",
+        "business_hours": {
+          "lundi": "13h-18h",
+          "mardi": "13h-18h",
+          "mercredi": "13h-18h",
+          "jeudi": "13h-18h",
+          "vendredi": "13h-18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242805[164592]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "525"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre Hospitalier de Vaison la Romaine - Vaccination COVID-19",
+      "url": "https://partners.doctolib.fr/hopital-public/vaison-la-romaine/centre-hospitalier-de-vaison-la-romaine-vaccination-covid-19",
+      "location": {
+        "longitude": 5.0751665,
+        "latitude": 44.2396315,
+        "city": "Vaison-la-Romaine"
+      },
+      "metadata": {
+        "address": "18 Grand Rue, 84110 Vaison-la-Romaine",
+        "phone_number": "+33490287739",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-13:00, 14:00-18:00",
+          "jeudi": "09:00-13:00, 14:00-18:00",
+          "vendredi": "09:00-17:00, 14:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "244425[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d244425"
+    },
+    {
+      "departement": "84",
+      "nom": "GHT du Vaucluse - Vaccination Covid-19 - Avignon",
+      "url": "https://partners.doctolib.fr/hopital-public/avignon/ght84-vaccination",
+      "location": {
+        "longitude": 4.806588,
+        "latitude": 43.920431,
+        "city": "Avignon"
+      },
+      "metadata": {
+        "address": "305 Rue Raoul Follereau, 84000 Avignon",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "240675[162807]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d240675"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre vaccination Covid-19 - Maison de sant\u00e9 Entraigues et Althen",
+      "url": "https://partners.doctolib.fr/centre-de-sante/entraigues-sur-la-sorgue/centre-vaccination-covid-19-maison-de-sante-entraigues-et-althen",
+      "location": {
+        "longitude": 4.9277062,
+        "latitude": 44.0035318,
+        "city": "Entraigues-sur-la-Sorgue"
+      },
+      "metadata": {
+        "address": "35 Rue du 8 Mai 1945, 84320 Entraigues-sur-la-Sorgue",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "263797[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d263797"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre Hospitalier d'Orange - Vaccination COVID-19",
+      "url": "https://partners.doctolib.fr/hopital-public/orange/centre-hospitalier-d-orange-vaccination-covid",
+      "location": {
+        "longitude": 4.8251781,
+        "latitude": 44.1510782,
+        "city": "Orange"
+      },
+      "metadata": {
+        "address": "Avenue de Lavoisier, 84100 Orange",
+        "phone_number": "+33490112323",
+        "business_hours": {
+          "lundi": "08:30-18:00",
+          "mardi": "11:30-18:00",
+          "mercredi": "08:30-18:00",
+          "jeudi": "08:30-18:00",
+          "vendredi": "08:30-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243231[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243231"
+    },
+    {
+      "departement": "84",
+      "nom": "CPTS Grand Avignon- Espace Robert Dion- Mori\u00e8res",
+      "url": "https://partners.doctolib.fr/centre-de-sante/morieres-les-avignon/centre-de-vaccination-covid-morieres-les-avignon?pid=practice-165492",
+      "location": {
+        "longitude": 4.90814,
+        "latitude": 43.9439,
+        "city": "Mori\u00e8res-l\u00e8s-Avignon"
+      },
+      "metadata": {
+        "address": "2 - 134 Chemin du Clos Neuf, 84310 Mori\u00e8res-l\u00e8s-Avignon",
+        "phone_number": "+33484512212",
+        "business_hours": {
+          "lundi": "13h \u00e0 17h ",
+          "mardi": "9h \u00e0 12h - 13h \u00e0 17h ",
+          "mercredi": "13h \u00e0 17h ",
+          "jeudi": "13h \u00e0 17h ",
+          "vendredi": "13h \u00e0 17h ",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243575[165492]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1516"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre de vaccination CH Avignon",
+      "url": "https://partners.doctolib.fr/hopital-public/avignon/centre-hospitalier-d-avignon-vaccination-covid-avignon?pid=practice-162807",
+      "location": {
+        "longitude": 4.80475,
+        "latitude": 43.921,
+        "city": "Avignon"
+      },
+      "metadata": {
+        "address": "305 Rue Raoul Follereau, 84000 Avignon",
+        "phone_number": "+33432759690",
+        "business_hours": {
+          "lundi": "9h - 17h",
+          "mardi": "9h - 17h",
+          "mercredi": "9h - 17h",
+          "jeudi": "9h - 17h",
+          "vendredi": "9h - 17h",
+          "samedi": "9h - 17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "244363[162807]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "195"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre de vaccination de Boll\u00e8ne",
+      "url": "https://www.maiia.com/centre-de-vaccination/84500-bollene/centre-intercommunal-de-vaccination-de-bollene",
+      "location": {
+        "longitude": 4.75344,
+        "latitude": 44.2916,
+        "city": "Boll\u00e8ne"
+      },
+      "metadata": {
+        "address": "2483 Avenue Jean Moulin, 84500 Boll\u00e8ne",
+        "business_hours": {
+          "lundi": "14h - 17h",
+          "mardi": "9h - 12h",
+          "mercredi": "9h - 12h",
+          "jeudi": "9h - 12h",
+          "vendredi": "9h - 12h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1138"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre de vaccination de Cavaillon - Vaccination COVID-19",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cavaillon/centre-hospitalier-intercommunal-cavaillon-lauris-vaccination-covid-19",
+      "location": {
+        "longitude": 5.042193,
+        "latitude": 43.8251966,
+        "city": "Cavaillon"
+      },
+      "metadata": {
+        "address": "15 Avenue Pierre Grand, 84300 Cavaillon",
+        "phone_number": "+33490719617",
+        "business_hours": {
+          "lundi": "08:45-18:00",
+          "mardi": "08:45-18:00",
+          "mercredi": "08:45-18:00",
+          "jeudi": "08:45-18:00",
+          "vendredi": "08:45-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "244062[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d244062"
+    },
+    {
+      "departement": "84",
+      "nom": "CPTS Synapse Comtat Venaissin / CH de Carpentras",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/carpentras/centre-de-vaccination-covid-de-carpentras",
+      "location": {
+        "longitude": 5.029,
+        "latitude": 44.0461,
+        "city": "Carpentras"
+      },
+      "metadata": {
+        "address": "24 Rond Point de l'Amitie, 84200 Carpentras",
+        "phone_number": "+33423100338",
+        "business_hours": {
+          "lundi": "9H - 17H",
+          "mardi": "9H - 17H",
+          "mercredi": "13H - 17H",
+          "jeudi": "13H - 17H",
+          "vendredi": "13H - 17H",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241848[163987]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "197"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre vaccination Covid-19 - Centre Hospitalier l'Isle-sur-la-Sorgue",
+      "url": "https://partners.doctolib.fr/hopital-public/l-isle-sur-la-sorgue/centre-de-vaccination-covid-19-l-isle-sur-la-sorgue",
+      "location": {
+        "longitude": 5.0481014,
+        "latitude": 43.920489,
+        "city": "L'Isle-sur-la-Sorgue"
+      },
+      "metadata": {
+        "address": "Quai Lices Berthelot, 84800 L'Isle-sur-la-Sorgue",
+        "phone_number": "+33490389653",
+        "business_hours": {
+          "lundi": "08:30-13:00, 14:00-19:00",
+          "mardi": "08:30-13:00, 14:00-19:00",
+          "mercredi": "08:30-13:00, 14:00-19:00",
+          "jeudi": "08:30-13:00, 14:00-19:00",
+          "vendredi": "08:30-13:00, 14:00-19:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243172[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243172"
+    },
+    {
+      "departement": "84",
+      "nom": "GHT du Vaucluse - Vaccination Covid-19 - Orange",
+      "url": "https://partners.doctolib.fr/hopital-public/avignon/ght84-vaccination?pid=practice-165180",
+      "location": {
+        "longitude": 4.8251781,
+        "latitude": 44.1510782,
+        "city": "Orange"
+      },
+      "metadata": {
+        "address": "Avenue de Lavoisier, 84100 Orange",
+        "phone_number": "+33490112323",
+        "business_hours": {
+          "lundi": "08:30-18:00",
+          "mardi": "11:30-18:00",
+          "mercredi": "08:30-18:00",
+          "jeudi": "08:30-18:00",
+          "vendredi": "08:30-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "240675[165180]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d240675"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre de vaccination - Pertuis",
+      "url": "https://partners.doctolib.fr/centre-de-sante/pertuis/centre-de-vaccination-pertuis",
+      "location": {
+        "longitude": 5.507474,
+        "latitude": 43.6949344,
+        "city": "Pertuis"
+      },
+      "metadata": {
+        "address": "168 Rue Resini, 84120 Pertuis",
+        "phone_number": "+33972502700",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "09:00-11:00, 14:00-18:00",
+          "mercredi": "09:00-13:00, 14:00-18:00",
+          "jeudi": "11:00-13:00, 14:00-18:00",
+          "vendredi": "09:00-13:00",
+          "samedi": "10:00-12:00",
+          "dimanche": "13:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242726[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242726"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre de vaccination de Valr\u00e9as",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/valreas/centre-de-vaccination-covid-19-de-valreas",
+      "location": {
+        "longitude": 4.98875,
+        "latitude": 44.3854,
+        "city": "Valr\u00e9as"
+      },
+      "metadata": {
+        "address": "44 Cours Victor Hugo, 84600 Valr\u00e9as",
+        "phone_number": "+33490353031",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "Ouvert",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "Ouvert",
+          "samedi": "Ouvert",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243035[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "891"
+    },
+    {
+      "departement": "84",
+      "nom": "CPTS SANTE LUB / LAURIS",
+      "url": "https://partners.doctolib.fr/centre-de-sante/lauris/centre-de-vaccination-lauris",
+      "location": {
+        "longitude": 5.31476,
+        "latitude": 43.7475,
+        "city": "Lauris"
+      },
+      "metadata": {
+        "address": " Foyer rural, Rue de la Mairie, 84360 Lauris",
+        "phone_number": "+33972502700",
+        "business_hours": {
+          "lundi": "13H - 15H",
+          "mardi": "13H - 15H",
+          "mercredi": "13H - 15H",
+          "jeudi": "13H - 15H",
+          "vendredi": "13H - 15H",
+          "samedi": "10H-12H",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242728[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "466"
+    },
+    {
+      "departement": "84",
+      "nom": "CPTS SANTE LUB /MSP Les glycines",
+      "url": "https://partners.doctolib.fr/centre-de-sante/pertuis/centre-de-vaccination-la-tour-d-aigues",
+      "location": {
+        "longitude": 5.54805,
+        "latitude": 43.7253,
+        "city": "La Tour-d'Aigues"
+      },
+      "metadata": {
+        "address": " Salle Polyvalente du Pays d'Aigues - Quartier St Christophe, 84240 La Tour-d'Aigues",
+        "phone_number": "+33972502700",
+        "business_hours": {
+          "lundi": "14h 18h",
+          "mardi": "9h 17h",
+          "mercredi": "9h 17h",
+          "jeudi": "9h 17h",
+          "vendredi": "9h 17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242727[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "467"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre municipal de vaccination - Entraigues",
+      "url": "https://partners.doctolib.fr/centre-de-sante/entraigues-sur-la-sorgue/centre-vaccination-covid-19-maison-de-sante-entraigues-et-althen?pid=practice-180539",
+      "location": {
+        "longitude": 4.92782,
+        "latitude": 44.0034,
+        "city": "Entraigues-sur-la-Sorgue"
+      },
+      "metadata": {
+        "address": " Salle des F\u00eates - Place du 8 Mai 1945, 84320 Entraigues-sur-la-Sorgue",
+        "business_hours": {
+          "lundi": "9h \u00e0 13h ",
+          "mardi": "9h \u00e0 13h ",
+          "mercredi": "9h \u00e0 13h ",
+          "jeudi": "9h \u00e0 13h ",
+          "vendredi": "9h \u00e0 13h ",
+          "samedi": "9h \u00e0 13h ",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "263797[180539]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2390"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre de  vaccination CH de Cavaillon",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cavaillon/centre-hospitalier-intercommunal-cavaillon-lauris-vaccination-covid-19",
+      "location": {
+        "longitude": 5.03799,
+        "latitude": 43.8401,
+        "city": "Cavaillon"
+      },
+      "metadata": {
+        "address": "119 Avenue Georges Cl\u00e9menceau, 84300 Cavaillon",
+        "phone_number": "+33490788534",
+        "business_hours": {
+          "lundi": "9h-13h et 14h-18h",
+          "mardi": "9h-13h et 14h-18h",
+          "mercredi": "9h-13h et 14h-18h",
+          "jeudi": "9h-13h et 14h-18h",
+          "vendredi": "9h-13h et 14h-18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "244062[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1582"
+    },
+    {
+      "departement": "84",
+      "nom": "MSP - SORGUES - salle Ren\u00e9 Varoqui",
+      "url": "https://partners.doctolib.fr/maison-de-sante/sorgues/centre-de-vaccination-covid-maison-de-sante-francois-rabelais",
+      "location": {
+        "longitude": 4.87966,
+        "latitude": 43.9974,
+        "city": "Sorgues"
+      },
+      "metadata": {
+        "address": " Chemin de Lucette, 84700 Sorgues",
+        "phone_number": "+33423100690",
+        "business_hours": {
+          "lundi": "9h-13h",
+          "mardi": "9h-13h",
+          "mercredi": "9h-13h",
+          "jeudi": "9h-13h",
+          "vendredi": "9h-13h ",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242388[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "527"
+    }
+  ]
+}

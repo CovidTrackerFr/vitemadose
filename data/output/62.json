@@ -1,0 +1,1885 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-14T12:37:42.671367+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - CH B\u00e9thune, Service Aire cancer",
+      "url": "https://partners.doctolib.fr/hopital-public/bethune-beuvry/centre-hospitalier-de-bethune-beuvry-vaccination-professionnel-de-sante",
+      "location": {
+        "longitude": 2.67032,
+        "latitude": 50.5163,
+        "city": "Beuvry"
+      },
+      "metadata": {
+        "address": "27 Rue Delbecque, 62660 Beuvry",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "09:00-18:00/13:00-16:30",
+          "mardi": "09:00-12:00/13:00-16:30",
+          "mercredi": "09:00-12:00/13:00-16:30",
+          "jeudi": "09:00-12:00/13:00-16:30",
+          "vendredi": "09:00-12:00/13:00-16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-15T16:50:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 4,
+      "internal_id": "242142[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "330"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Commune D'AVION, Salle des sports Roger Bl\u00e9zel",
+      "url": "https://partners.doctolib.fr/centre-de-sante/avion/centre-de-vaccination-covid-19-avion?pid=practice-179227",
+      "location": {
+        "longitude": 2.85035,
+        "latitude": 50.4128,
+        "city": "Avion"
+      },
+      "metadata": {
+        "address": " Rue Alexandre Gressier, 62210 Avion",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-17T08:35:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 94,
+      "internal_id": "262165[179227]",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "erreur": null,
+      "gid": "2142"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination COVID-19 \u00e9ph\u00e9m\u00e8re Salle de la Pyramide",
+      "url": "https://partners.doctolib.fr/centre-de-sante/etaples/centre-de-vaccination-ephemere-salle-de-la-pyramide",
+      "location": {
+        "longitude": 1.6424936,
+        "latitude": 50.5208095,
+        "city": "\u00c9taples"
+      },
+      "metadata": {
+        "address": "Rue de la Pierre Trou\u00e9e, 62630 \u00c9taples",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-17T17:20:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 32,
+      "internal_id": "259245[]",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "erreur": null,
+      "gid": "d259245"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - CPTS Lievin Pays d'Artois, Salle Gilbert R\u00e9gnier",
+      "url": "https://www.maiia.com/centre-de-vaccination/62800-lievin/centre-de-vaccination-lievin-pays-dartois",
+      "location": {
+        "longitude": 2.77861,
+        "latitude": 50.4264,
+        "city": "Li\u00e9vin"
+      },
+      "metadata": {
+        "address": " Rue Montgolfier, 62800 Li\u00e9vin",
+        "business_hours": {
+          "lundi": "12:00-20:00",
+          "mardi": "12:00-20:00",
+          "mercredi": "12:00-20:00",
+          "jeudi": "12:00-20:00",
+          "vendredi": "12:00-20:00",
+          "samedi": "12:00-16:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-17T17:40:00.000000Z",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 34,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1109"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "62",
+      "nom": "Pharmacie Du Transvaal",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-transvaal-divion",
+      "location": {
+        "longitude": 2.5027179,
+        "latitude": 50.467781,
+        "city": "divion"
+      },
+      "metadata": {
+        "address": "84 RUE ACHILLE BODELOT, 62460 DIVION",
+        "phone_number": "+33321536177",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "0a9c8360"
+    },
+    {
+      "departement": "62",
+      "nom": "Pharmacie Test",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-test-rebreuve-sur-canche",
+      "location": {
+        "longitude": 2.34151,
+        "latitude": 50.2680999,
+        "city": "rebreuve-sur-canche"
+      },
+      "metadata": {
+        "address": "Rue de L, 62270 Rebreuve-sur-Canche",
+        "phone_number": "+33631244223",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "12fcfc61"
+    },
+    {
+      "departement": "62",
+      "nom": "Pharmacie De La Lawe",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-lawe-houdain",
+      "location": {
+        "longitude": 2.5357028,
+        "latitude": 50.4512648,
+        "city": "houdain"
+      },
+      "metadata": {
+        "address": "15 Rue HENRI DURANT, 62150 HOUDAIN",
+        "phone_number": "+33321658783",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "a623e329"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - HPL CMCO Cote d'Opale",
+      "url": "https://partners.doctolib.fr/clinique-privee/saint-martin-boulogne/centre-de-vaccination-mco-groupe-hpl",
+      "location": {
+        "longitude": 1.64472,
+        "latitude": 50.7235,
+        "city": "Saint-Martin-Boulogne"
+      },
+      "metadata": {
+        "address": "173 bis Route de Desvres, 62280 Saint-Martin-Boulogne",
+        "phone_number": "+33970301701",
+        "business_hours": {
+          "lundi": "09:00-13:00/14:00-17:00",
+          "mardi": "09:00-13:00/14:00-17:00",
+          "mercredi": "09:00-13:00/14:00-17:00",
+          "jeudi": "09:00-13:00/14:00-17:00",
+          "vendredi": "09:00-13:00/14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242809[164798]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "320"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - CPTS Lens La Gohelle, Salle Bertinchamp",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/lens/centre-de-vaccination-bertinchamps-lens?pid=practice-166396",
+      "location": {
+        "longitude": 2.84361,
+        "latitude": 50.4355,
+        "city": "Lens"
+      },
+      "metadata": {
+        "address": " Rue Denis Cordonnier, 62300 Lens",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "244791[166396]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1184"
+    },
+    {
+      "departement": "62",
+      "nom": "Pharmacie Henin Beaumont",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-henin-beaumont-henin-beaumont",
+      "location": {
+        "longitude": 2.9487318,
+        "latitude": 50.4203365,
+        "city": "henin-beaumont"
+      },
+      "metadata": {
+        "address": "74 Place Carnot, 62110 H\u00e9nin-Beaumont",
+        "phone_number": "+33321200024",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "4b05eead"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - CH Carvin, Salle Le Patio",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/haut-de-france/vaccination-gh-seclin-carvin?pid=practice-165103",
+      "location": {
+        "longitude": 2.94754,
+        "latitude": 50.4972,
+        "city": "Carvin"
+      },
+      "metadata": {
+        "address": " Route de Meurchin, 62220 Carvin",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": "09:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241878[165103]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1106"
+    },
+    {
+      "departement": "62",
+      "nom": "Pharmacie Du Lycee",
+      "url": "https://mapharma.net/62700",
+      "location": null,
+      "metadata": {
+        "address": "272 rue Alfred Leroy 62700 BRUAY LA BUISSIERE",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "62700-0"
+    },
+    {
+      "departement": "62",
+      "nom": "Mme Christel DELATTRE",
+      "url": "https://partners.doctolib.fr/infirmier/montreuil/christel-delattre",
+      "location": {
+        "longitude": 1.7598194,
+        "latitude": 50.4621564,
+        "city": "Montreuil"
+      },
+      "metadata": {
+        "address": "53 Place du G\u00e9n\u00e9ral de Gaulle, 62170 Montreuil",
+        "phone_number": "+33672806285",
+        "business_hours": {
+          "lundi": "06:00-19:30",
+          "mardi": "06:00-19:30",
+          "mercredi": "06:00-19:30",
+          "jeudi": "06:00-19:30",
+          "vendredi": "06:00-19:30",
+          "samedi": "06:00-19:30",
+          "dimanche": "06:00-19:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "265513[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d265513"
+    },
+    {
+      "departement": "62",
+      "nom": "Dr Frederic Perard",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/sangatte/frederic-perard",
+      "location": {
+        "longitude": 1.814817,
+        "latitude": 50.95453,
+        "city": "Bleriot-Plage"
+      },
+      "metadata": {
+        "address": "83 All\u00e9e Gabriel Faur\u00e9, 62231 Bleriot-Plage",
+        "phone_number": "+33321979286",
+        "business_hours": {
+          "lundi": "08:00-19:00",
+          "mardi": "08:00-19:00",
+          "mercredi": "08:00-19:00",
+          "jeudi": "08:00-19:00",
+          "vendredi": "08:00-19:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "90761[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d90761"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination  - Fondation Hopale, Kursaal",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/berck-62600/fondation-hopale/centre-de-vaccination-de-la-fondation-hopale",
+      "location": {
+        "longitude": 1.5665,
+        "latitude": 50.4077,
+        "city": "Berck"
+      },
+      "metadata": {
+        "address": " Avenue du G\u00e9n\u00e9ral de Gaulle, 62600 Berck",
+        "phone_number": "+33321899051",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1183"
+    },
+    {
+      "departement": "62",
+      "nom": "Pharmacie de l'Europe",
+      "url": "https://partners.doctolib.fr/pharmacie/arques/pharmacie-de-l-europe-arques",
+      "location": {
+        "longitude": 2.2939062,
+        "latitude": 50.7277611,
+        "city": "Arques"
+      },
+      "metadata": {
+        "address": "62510 Avenue Bernard Chochoy, 62510 Arques",
+        "phone_number": "+33321983989",
+        "business_hours": {
+          "lundi": "08:30-12:30, 13:30-19:30",
+          "mardi": "08:30-12:30, 13:30-19:30",
+          "mercredi": "08:30-12:30, 13:30-19:30",
+          "jeudi": "08:30-12:30, 13:30-19:30",
+          "vendredi": "08:30-12:30, 13:30-19:30",
+          "samedi": "08:30-17:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "261300[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d261300"
+    },
+    {
+      "departement": "62",
+      "nom": "Pharmacie Du Donjon",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-donjon-bruay-la-buissiere",
+      "location": {
+        "longitude": 2.5644602,
+        "latitude": 50.4904659,
+        "city": "bruay-la-buissiere"
+      },
+      "metadata": {
+        "address": "2 rue Jean  Jaur\u00e8s, 62700 BRUAY-LA-BUISSIERE",
+        "phone_number": "+33321624076",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "f1e18603"
+    },
+    {
+      "departement": "62",
+      "nom": "Pharmacie Richet",
+      "url": "https://partners.doctolib.fr/pharmacie/hallines/pharmacie-richet",
+      "location": {
+        "longitude": 2.2051761,
+        "latitude": 50.7076689,
+        "city": "Hallines"
+      },
+      "metadata": {
+        "address": "105 Avenue Bernard Chochoy, 62570 Hallines",
+        "phone_number": "+33321956749",
+        "business_hours": {
+          "lundi": "08:30-12:15, 14:00-19:30",
+          "mardi": "08:30-12:15, 14:00-19:30",
+          "mercredi": "08:30-12:15, 14:00-19:30",
+          "jeudi": "08:30-12:15, 14:00-19:30",
+          "vendredi": "08:30-12:15, 14:00-19:30",
+          "samedi": "08:30-12:30, 14:00-17:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "257593[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d257593"
+    },
+    {
+      "departement": "62",
+      "nom": "Pharmacie D'Eleu",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-d'eleu-eleu-dit-leauwette",
+      "location": {
+        "longitude": 2.8171747,
+        "latitude": 50.4161742,
+        "city": "eleu-dit-leauwette"
+      },
+      "metadata": {
+        "address": "2 rue gabriel P\u00e9ri, 62300 ELEU-DIT-LEAUWETTE",
+        "phone_number": "+33321282330",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "e9c4990e"
+    },
+    {
+      "departement": "62",
+      "nom": "Pharmacie Mivoix",
+      "url": "https://partners.doctolib.fr/pharmacie/calais/pharmacie-hieulle-frederic",
+      "location": {
+        "longitude": 1.892595,
+        "latitude": 50.952131,
+        "city": "Calais"
+      },
+      "metadata": {
+        "address": "16 Avenue Georges Guynemer, 62100 Calais",
+        "phone_number": "+33321971686",
+        "business_hours": {
+          "lundi": "08:30-19:00",
+          "mardi": "08:30-19:00",
+          "mercredi": "08:30-19:00",
+          "jeudi": "08:30-19:00",
+          "vendredi": "08:30-19:00",
+          "samedi": "08:30-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "263620[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d263620"
+    },
+    {
+      "departement": "62",
+      "nom": "Pharmacie de la Place Isbergues",
+      "url": "https://partners.doctolib.fr/pharmacie/isbergues/pharmacie-de-la-place-isbergues",
+      "location": {
+        "longitude": 2.4710223,
+        "latitude": 50.618816,
+        "city": "Isbergues"
+      },
+      "metadata": {
+        "address": "130 Rue Roger Salengro, 62330 Isbergues",
+        "phone_number": "+33321011020",
+        "business_hours": {
+          "lundi": "08:30-12:15, 14:00-19:30",
+          "mardi": "08:30-12:15, 14:00-19:30",
+          "mercredi": "08:30-12:15, 14:00-19:30",
+          "jeudi": "08:30-12:15, 14:00-19:30",
+          "vendredi": "08:30-12:15, 14:00-19:30",
+          "samedi": "08:30-13:00",
+          "dimanche": "10:00-10:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "234784[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d234784"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination Covid-19 - Salle MJC d'Hesdin",
+      "url": "https://partners.doctolib.fr/centre-de-sante/hesdin/centre-de-vaccination-covid-19-salle-mjc-d-hesdin",
+      "location": {
+        "longitude": 2.0410512,
+        "latitude": 50.3745487,
+        "city": "Hesdin"
+      },
+      "metadata": {
+        "address": "14 Rue du Man\u00e8ge, 62140 Hesdin",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "258424[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d258424"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Clinique Saint Omer",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-saulve/centre-de-vaccination-covid-19-groupe-elsan?pid=practice-162482",
+      "location": {
+        "longitude": 2.26639,
+        "latitude": 50.7301,
+        "city": "Blendecques"
+      },
+      "metadata": {
+        "address": "71 Rue Ambroise Par\u00e9, 62575 Blendecques",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "09:00-12:00/13:00-17:30",
+          "mardi": "09:00-12:00/13:00-17:30",
+          "mercredi": "09:00-12:00/13:00-17:30",
+          "jeudi": "09:00-12:00/13:00-17:30",
+          "vendredi": "09:00-12:00/13:00-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241235[162482]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "329"
+    },
+    {
+      "departement": "62",
+      "nom": "Mme Alexandra brunet",
+      "url": "https://partners.doctolib.fr/infirmier/avesnes-le-comte/alexandra-brunet",
+      "location": {
+        "longitude": 2.5296042,
+        "latitude": 50.2779434,
+        "city": "Avesnes-le-Comte"
+      },
+      "metadata": {
+        "address": "89 Grande Rue, 62810 Avesnes-le-Comte",
+        "phone_number": "+33689573986",
+        "business_hours": {
+          "lundi": "06:00-13:00, 16:00-19:00",
+          "mardi": "06:00-13:00, 16:00-19:00",
+          "mercredi": "06:00-13:00, 16:00-19:00",
+          "jeudi": "06:00-13:00, 16:00-19:00",
+          "vendredi": "06:00-13:00, 16:00-19:00",
+          "samedi": "06:00-13:00, 16:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "240870[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d240870"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Ville de Marck, Complexe Hubert-Seban",
+      "url": "https://partners.doctolib.fr/centre-de-sante/marck/centre-de-vaccination-covid-19-ville-de-marck?pid=practice-179717",
+      "location": {
+        "longitude": 1.93553,
+        "latitude": 50.953,
+        "city": "Marck"
+      },
+      "metadata": {
+        "address": " Rue du Stade, 62730 Marck",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "262770[179717]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2176"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination Covid-19 - Commune de Vimy",
+      "url": "https://partners.doctolib.fr/centre-de-sante/vimy/centre-de-vaccination-covid-19-commune-de-vimy",
+      "location": {
+        "longitude": 2.807564,
+        "latitude": 50.379926,
+        "city": "Vimy"
+      },
+      "metadata": {
+        "address": "Rue de la Salle des F\u00eates, 62580 Vimy",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "258354[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d258354"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Ville AIRE SUR LA LYS, RESIDENCE DE LA LYS",
+      "url": "https://partners.doctolib.fr/centre-de-sante/aire-sur-la-lys/centre-de-vaccination-aire-sur-la-lys?pid=practice-177878",
+      "location": {
+        "longitude": 2.40165,
+        "latitude": 50.6421,
+        "city": "Aire-sur-la-Lys"
+      },
+      "metadata": {
+        "address": " Nouveau Quai, 62120 Aire-sur-la-Lys",
+        "phone_number": "+33786174791",
+        "business_hours": {
+          "lundi": "08:00-12:30/13:30-17:30",
+          "mardi": "08:00-12:30/13:30-17:30",
+          "mercredi": "08:00-12:30/13:30-17:30",
+          "jeudi": "08:00-12:30/13:30-17:30",
+          "vendredi": "08:00-12:30/13:30-17:30",
+          "samedi": "",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "259922[177878]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1948"
+    },
+    {
+      "departement": "62",
+      "nom": "M\u00e9ga Centre de Vaccination Covid-19 B\u00e9thune",
+      "url": "https://partners.doctolib.fr/hopital-public/beuvry/mega-centre-de-vaccination-covid-19-bethune",
+      "location": {
+        "longitude": 2.6693601,
+        "latitude": 50.5152244,
+        "city": "Beuvry"
+      },
+      "metadata": {
+        "address": "27 Rue Delbecque, 62660 Beuvry",
+        "business_hours": {
+          "lundi": "07:30-13:00, 13:45-18:30",
+          "mardi": "07:30-13:00, 13:45-18:30",
+          "mercredi": "07:30-13:00, 13:45-18:30",
+          "jeudi": "07:30-13:00, 13:45-18:30",
+          "vendredi": "07:30-13:00, 13:45-18:30",
+          "samedi": "07:30-13:00, 13:45-18:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "258280[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d258280"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination Covid - SDIS 62 - Vaccination Covid-19 - Bruay-la-Buissi\u00e8re",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bruay-la-buissiere/centre-de-vaccination-covid-pas-de-calais",
+      "location": {
+        "longitude": 2.538148,
+        "latitude": 50.4818946,
+        "city": "Bruay-la-Buissi\u00e8re"
+      },
+      "metadata": {
+        "address": "Place Marmottan, 62700 Bruay-la-Buissi\u00e8re",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "09:00-12:15, 13:30-16:30",
+          "mardi": "09:00-12:15, 13:30-16:30",
+          "mercredi": "09:00-12:15, 13:30-16:30",
+          "jeudi": "09:00-12:15, 13:30-16:30",
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242643[164608]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242643"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Palais des sports Damr\u00e9mont",
+      "url": "https://partners.doctolib.fr/centre-de-sante/boulogne-sur-mer/centre-de-vaccination-covid-19-boulogne?pid=practice-175331",
+      "location": {
+        "longitude": 1.60299,
+        "latitude": 50.7155,
+        "city": "Boulogne-sur-Mer"
+      },
+      "metadata": {
+        "address": "22 Place Leon Blum, 62200 Boulogne-sur-Mer",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "08:00-20:00",
+          "dimanche": "08:00-20:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "256165[175331]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1709"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - \"Centre Hospitalier  de Boulogne sur mer\"",
+      "url": "https://partners.doctolib.fr/hopital-public/boulogne-sur-mer/ch-boulogne-sur-mer-centre-de-vaccination-covid-19",
+      "location": {
+        "longitude": 1.63008,
+        "latitude": 50.7227,
+        "city": "Boulogne-sur-Mer"
+      },
+      "metadata": {
+        "address": " Allee Jacques Monod, 62200 Boulogne-sur-Mer",
+        "phone_number": "+33321993333",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242884[180561]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1115"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Ville de BETHUNE, Foyer Francois Albert",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bethune/centre-de-vaccination-covid-19-bethune?pid=practice-175335",
+      "location": {
+        "longitude": 2.63508,
+        "latitude": 50.5326,
+        "city": "B\u00e9thune"
+      },
+      "metadata": {
+        "address": "335 Rue Fernand Bar, 62400 B\u00e9thune",
+        "phone_number": "+33321214481",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "08:00-22:00",
+          "dimanche": "08:00-22:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "256171[175335]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1706"
+    },
+    {
+      "departement": "62",
+      "nom": "Groupe AHNAC",
+      "url": "https://partners.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/valenciennes-divion-henin-beaumont-lievin/groupe-ahnac?pid=practice-182024",
+      "location": {
+        "longitude": 2.962242,
+        "latitude": 50.410953,
+        "city": "H\u00e9nin-Beaumont"
+      },
+      "metadata": {
+        "address": "5001F Rue Ren\u00e9 Cassin, 62110 H\u00e9nin-Beaumont",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "54886[182024]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d54886"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Maison de Sant\u00e9 Pluriprofessionnelle de Fruges",
+      "url": "https://partners.doctolib.fr/centre-de-sante/fruges/centre-de-vaccination-maison-de-sante-pluriprofessionnelle-de-fruges?pid=practice-176732",
+      "location": {
+        "longitude": 2.13007,
+        "latitude": 50.5143,
+        "city": "Fruges"
+      },
+      "metadata": {
+        "address": "1 Avenue Fran\u00e7ois Mitterrand, 62310 Fruges",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "258352[176732]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1759"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre Hospitalier de B\u00e9thune Beuvry - Vaccination COVID-19",
+      "url": "https://partners.doctolib.fr/hopital-public/bethune-beuvry/centre-hospitalier-de-bethune-beuvry-vaccination-covid-bethune-beuvry",
+      "location": {
+        "longitude": 2.6693601,
+        "latitude": 50.5152244,
+        "city": "Beuvry"
+      },
+      "metadata": {
+        "address": "27 Rue Delbecque, 62660 Beuvry",
+        "phone_number": "+33321644155",
+        "business_hours": {
+          "lundi": "09:00-13:00, 13:45-17:00",
+          "mardi": "09:00-13:00, 13:45-17:00",
+          "mercredi": "09:00-13:00, 13:45-17:00",
+          "jeudi": "09:00-13:00, 13:45-17:00",
+          "vendredi": "09:00-13:00, 13:45-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242468[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242468"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination Covid-19 - Complexe culturel Capoolco",
+      "url": "https://partners.doctolib.fr/centre-de-sante/marquise/centre-de-vaccination-covid-19-complexe-culturel-capoolco",
+      "location": {
+        "longitude": 1.7047508,
+        "latitude": 50.8226632,
+        "city": "Marquise"
+      },
+      "metadata": {
+        "address": "le cardo, 62250 Marquise",
+        "phone_number": "+33321879335",
+        "business_hours": {
+          "lundi": "09:00-13:00, 13:30-17:30",
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": "09:00-13:00, 13:30-17:30",
+          "vendredi": "09:00-13:00, 13:30-17:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "258459[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d258459"
+    },
+    {
+      "departement": "62",
+      "nom": "CH R\u00e9gion St-Omer - Centre de vaccination Covid-19",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-omer/ch-region-st-omer-centre-de-vaccination-covid-19",
+      "location": {
+        "longitude": 2.2440914,
+        "latitude": 50.6995728,
+        "city": "Helfaut"
+      },
+      "metadata": {
+        "address": "Rue de Blendecques, 62570 Helfaut",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242389[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242389"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - communaut\u00e9 urbaine d'Arras, Artois Expo",
+      "url": "https://partners.doctolib.fr/hopital-public/arras/ght-artois-ternois-vaccination-covid?pid=practice-176607",
+      "location": {
+        "longitude": 2.79107,
+        "latitude": 50.2915,
+        "city": "Saint-Laurent-Blangy"
+      },
+      "metadata": {
+        "address": "50 Avenue Roger Salengro, 62223 Saint-Laurent-Blangy",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242237[176607]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1956"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Commune Le Touquet-Paris-Plage, Salle des Quatre Saisons",
+      "url": "https://partners.doctolib.fr/centre-de-sante/le-touquet-paris-plage/centre-de-vaccination-covid-19-le-touquet?pid=practice-176892",
+      "location": {
+        "longitude": 1.5982,
+        "latitude": 50.5215,
+        "city": "Le Touquet-Paris-Plage"
+      },
+      "metadata": {
+        "address": " Avenue de l\u2019Hippodrome, 62520 Le Touquet-Paris-Plage",
+        "business_hours": {
+          "lundi": "09:00-13:00/14:00-18:00",
+          "mardi": "09:00-13:00/14:00-18:00",
+          "mercredi": "09:00-13:00/14:00-18:00",
+          "jeudi": "09:00-13:00/14:00-18:00",
+          "vendredi": "09:00-13:00/14:00-18:00",
+          "samedi": "09:00-13:00/14:00-18:00",
+          "dimanche": "09:00-13:00/14:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "258546[176892]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1958"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination Covid - SDIS 62 - Vaccination Covid-19 - Lumbres",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bruay-la-buissiere/centre-de-vaccination-covid-pas-de-calais?pid=practice-164610",
+      "location": {
+        "longitude": 2.1245047,
+        "latitude": 50.7043483,
+        "city": "Lumbres"
+      },
+      "metadata": {
+        "address": "9 Rue de l'Isle, 62380 Lumbres",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242643[164610]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242643"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Commune MARQUISE, Salle Capoolco (\u00e0 c\u00f4t\u00e9 des bureaux de la CCT2C)",
+      "url": "https://partners.doctolib.fr/centre-de-sante/marquise/centre-de-vaccination-covid-19-complexe-culturel-capoolco?pid=practice-176831",
+      "location": {
+        "longitude": 1.69929,
+        "latitude": 50.8126,
+        "city": "Marquise"
+      },
+      "metadata": {
+        "address": " Avenue Ferber, 62250 Marquise",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "258459[176831]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1959"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination COVID - CHAM - COSEC 2 - Espace Bernard PION",
+      "url": "https://partners.doctolib.fr/centre-de-sante/ecuires/centre-de-vaccination-covid-cham-cosec-2-espace-bernard-pion",
+      "location": {
+        "longitude": 1.7541921,
+        "latitude": 50.4549965,
+        "city": "\u00c9cuires"
+      },
+      "metadata": {
+        "address": "Rue de Montreuil, 62170 \u00c9cuires",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "08:30-12:30, 13:30-17:30",
+          "mardi": "08:30-12:30, 13:30-17:30",
+          "mercredi": "08:30-12:30, 13:30-17:30",
+          "jeudi": "08:30-12:30, 13:30-17:30",
+          "vendredi": "08:30-12:30, 13:30-17:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "245267[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d245267"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - commune VIMY, Salle des f\u00eates",
+      "url": "https://partners.doctolib.fr/centre-de-sante/vimy/centre-de-vaccination-covid-19-commune-de-vimy?pid=practice-176735",
+      "location": {
+        "longitude": 2.80877,
+        "latitude": 50.3797,
+        "city": "Vimy"
+      },
+      "metadata": {
+        "address": " Rue de la Salle des Fetes, 62580 Vimy",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "258354[176735]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1952"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Polyclinique De la CLARENCE",
+      "url": "https://partners.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/divion/centre-de-vaccination-covid-19-polyclinique-de-la-clarence-divion-groupe-ahnac",
+      "location": {
+        "longitude": 2.48879,
+        "latitude": 50.4781,
+        "city": "Divion"
+      },
+      "metadata": {
+        "address": " Rue du Docteur Charles Legay, 62460 Divion",
+        "phone_number": "+33321549260",
+        "business_hours": {
+          "lundi": "09:00-13:00/14:00-18:00",
+          "mardi": "09:00-13:00/14:00-18:00",
+          "mercredi": "09:00-13:00/14:00-18:00",
+          "jeudi": "09:00-13:00/14:00-18:00",
+          "vendredi": "09:00-13:00/14:00-18:00",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "244018[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1954"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Commune Ardres, salle en \u00e9toile",
+      "url": "https://partners.doctolib.fr/centre-de-sante/ardres/centre-de-vaccination-covid-ville-de-ardres?pid=practice-177337",
+      "location": {
+        "longitude": 1.9776,
+        "latitude": 50.8539,
+        "city": "Ardres"
+      },
+      "metadata": {
+        "address": " Place 8 mai 1945, 62610 Ardres",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "259287[177337]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1969"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Mairie HESDIN, Maison des Jeunes et de la Cultures",
+      "url": "https://partners.doctolib.fr/centre-de-sante/hesdin/centre-de-vaccination-covid-19-salle-mjc-d-hesdin?pid=practice-176804",
+      "location": {
+        "longitude": 2.04111,
+        "latitude": 50.3745,
+        "city": "Hesdin"
+      },
+      "metadata": {
+        "address": "14 rue du manege, 62140 Hesdin",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "258424[176804]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1970"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Ville de Calais (Forum Gambetta)",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/calais/centre-de-vaccination-covid-19-forum-gambetta",
+      "location": {
+        "longitude": 1.85042,
+        "latitude": 50.9472,
+        "city": "Calais"
+      },
+      "metadata": {
+        "address": "23 Boulevard L\u00e9on Gambetta, 62100 Calais",
+        "phone_number": "+33321462056",
+        "business_hours": {
+          "lundi": "08:00-12:30/13:30-18:00",
+          "mardi": "08:00-12:30/13:30-18:00",
+          "mercredi": "08:00-12:30/13:30-18:00",
+          "jeudi": "08:00-12:30/13:30-18:00",
+          "vendredi": "08:00-12:30/13:30-18:00",
+          "samedi": "08:00-20:00",
+          "dimanche": "08:00-20:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243031[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1110"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Commune AUCHEL, SALLE ROGER COUDERC",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/auchel/centre-de-vaccination-covid-19-roger-couderc?pid=practice-176918",
+      "location": {
+        "longitude": 2.47334,
+        "latitude": 50.5035,
+        "city": "Auchel"
+      },
+      "metadata": {
+        "address": " Rue Martin Luther King, 62260 Auchel",
+        "phone_number": "+33321647900",
+        "business_hours": {
+          "lundi": "08:00-12:00/14:00-18:00",
+          "mardi": "08:00-12:00/14:00-18:00",
+          "mercredi": "08:00-12:00/14:00-18:00",
+          "jeudi": "08:00-12:00/14:00-18:00",
+          "vendredi": "08:00-12:00/14:00-18:00",
+          "samedi": "08:00-12:00/14:00-18:00",
+          "dimanche": "08:00-12:00/14:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "258577[176918]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1971"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Commune BARALLE, Salle des f\u00eates Henri Gu\u00e9ant",
+      "url": "https://partners.doctolib.fr/centre-de-sante/baralle/centre-de-vaccination-covid-19-commune-baralle-salle-des-fetes-henri-gueant?pid=practice-179636",
+      "location": {
+        "longitude": 3.0555,
+        "latitude": 50.2104,
+        "city": "Baralle"
+      },
+      "metadata": {
+        "address": "59 Grand Rue, 62860 Baralle",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "262633[179636]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1973"
+    },
+    {
+      "departement": "62",
+      "nom": "GHT Artois-Ternois - Vaccination Covid 19",
+      "url": "https://partners.doctolib.fr/hopital-public/arras/ght-artois-ternois-vaccination-covid?pid=practice-163451",
+      "location": {
+        "longitude": 2.7544433,
+        "latitude": 50.2970709,
+        "city": "Arras"
+      },
+      "metadata": {
+        "address": "57 Avenue Winston Churchill, 62000 Arras",
+        "business_hours": {
+          "lundi": "08:00-18:00",
+          "mardi": "08:00-18:00",
+          "mercredi": "08:00-18:00",
+          "jeudi": "08:00-18:00",
+          "vendredi": "08:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242237[163451]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242237"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Centre SDIS Avesnes Le Comte, Salle Jacques Nirdol",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bruay-la-buissiere/centre-de-vaccination-covid-pas-de-calais?pid=practice-164609",
+      "location": {
+        "longitude": 2.52877,
+        "latitude": 50.2758,
+        "city": "Avesnes-le-Comte"
+      },
+      "metadata": {
+        "address": "15 Rue des Fosses, 62810 Avesnes-le-Comte",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "08:00-12:30/13:30-18:00",
+          "mardi": "08:00-12:30/13:30-18:00",
+          "mercredi": "08:00-12:30/13:30-18:00",
+          "jeudi": "08:00-12:30/13:30-18:00",
+          "vendredi": "08:00-12:30/13:30-18:00",
+          "samedi": "08:00-12:30/13:30-18:00",
+          "dimanche": "08:00-12:30/13:30-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242643[164609]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "970"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - CHRSO et CPTS Audomaroise, Salle des sports du pavillon 3 \u2013 CH St Omer",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-omer/ch-region-st-omer-centre-de-vaccination-covid-19?pid=practice-164177",
+      "location": {
+        "longitude": 2.24448,
+        "latitude": 50.7001,
+        "city": "Helfaut"
+      },
+      "metadata": {
+        "address": " Rue de Blendecques, 62570 Helfaut",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242389[164177]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "396"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - CH de Bapaume",
+      "url": "https://partners.doctolib.fr/hopital-public/arras/ght-artois-ternois-vaccination-covid?pid=practice-163452",
+      "location": {
+        "longitude": 2.85692,
+        "latitude": 50.1036,
+        "city": "Bapaume"
+      },
+      "metadata": {
+        "address": "57 Rue de la R\u00e9publique, 62450 Bapaume",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "08:00-18:00",
+          "mardi": "08:00-18:00",
+          "mercredi": "08:00-18:00",
+          "jeudi": "08:00-18:00",
+          "vendredi": "08:00-18:00",
+          "samedi": "10:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242237[163452]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "317"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - MSPP L\u00e9onard de Vinci, sur site centre hospitalier Ternois",
+      "url": "https://partners.doctolib.fr/hopital-public/arras/ght-artois-ternois-vaccination-covid?pid=practice-163453",
+      "location": {
+        "longitude": 2.32167,
+        "latitude": 50.3784,
+        "city": "Gauchin-Verloingt"
+      },
+      "metadata": {
+        "address": "172 Rue d'Hesdin, 62130 Gauchin-Verloingt",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "08:00-18:00",
+          "mardi": "08:00-18:00",
+          "mercredi": "08:00-18:00",
+          "jeudi": "08:00-18:00",
+          "vendredi": "08:00-18:00",
+          "samedi": "10:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242237[163453]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "352"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination Covid - SDIS 62 - Vaccination Covid-19 - Desvres",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bruay-la-buissiere/centre-de-vaccination-covid-pas-de-calais?pid=practice-164611",
+      "location": {
+        "longitude": 1.8404798,
+        "latitude": 50.6674963,
+        "city": "Desvres"
+      },
+      "metadata": {
+        "address": "62268 Rue Claude, 62240 Desvres",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "09:00-12:15, 13:30-16:30",
+          "mardi": "09:00-12:15, 13:30-16:30",
+          "mercredi": "09:00-12:15, 13:30-16:30",
+          "jeudi": "09:00-12:15, 13:30-16:30",
+          "vendredi": "09:00-12:15, 13:30-16:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242643[164611]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242643"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - CPTS Artois Lys Laventie 1, Salle des f\u00eates",
+      "url": "https://partners.doctolib.fr/centre-de-sante/laventie/centre-de-vaccination-covid-19-flandre-lys?pid=practice-165123",
+      "location": {
+        "longitude": 2.77017,
+        "latitude": 50.6274,
+        "city": "Laventie"
+      },
+      "metadata": {
+        "address": " Rue Delphin Chavatte, 62840 Laventie",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "08:00-12:00/14:00-18:00",
+          "mardi": "08:00-12:00/14:00-18:00",
+          "mercredi": "08:00-12:00/14:00-18:00",
+          "jeudi": "08:00-12:00/14:00-18:00",
+          "vendredi": "08:00-12:00/14:00-18:00",
+          "samedi": "09:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243214[165123]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1107"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - CH LENS",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/lens/ch-de-lens-lens",
+      "location": {
+        "longitude": 2.8208,
+        "latitude": 50.4395,
+        "city": "Lens"
+      },
+      "metadata": {
+        "address": "99 Route de la Bass\u00e9e, 62300 Lens",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "09:00-12:00/13:00-17:00",
+          "mardi": "09:00-12:00/13:00-17:00",
+          "mercredi": "09:00-12:00/13:00-17:00",
+          "jeudi": "09:00-12:00/13:00-17:00",
+          "vendredi": "09:00-12:00/13:00-17:00",
+          "samedi": "09:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "240962[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "350"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Centre SDIS Bruay La Buissi\u00e8re, salle Marmottan",
+      "url": "https://partners.doctolib.fr/centre-de-sante/bruay-la-buissiere/centre-de-vaccination-covid-pas-de-calais?pid=practice-164608",
+      "location": {
+        "longitude": 2.53765,
+        "latitude": 50.4818,
+        "city": "Bruay-la-Buissi\u00e8re"
+      },
+      "metadata": {
+        "address": "10 Place Marmottan, 62700 Bruay-la-Buissi\u00e8re",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "09:00-12:30/13:30-18:00",
+          "mardi": "09:00-12:30/13:30-18:00",
+          "mercredi": "09:00-12:30/13:30-18:00",
+          "jeudi": "09:00-12:30/13:30-18:00",
+          "vendredi": "09:00-12:30/13:30-18:00",
+          "samedi": "09:00-12:30/13:30-18:00",
+          "dimanche": "09:00-12:30/13:30-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242643[164608]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "967"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - CH Calais, Salle polyvalente de l\u2019EHPAD la Roseli\u00e8re,",
+      "url": "https://partners.doctolib.fr/hopital-public/calais/ght-cote-d-opale-vaccination-covid-ch-calais-ehpad-la-roseliere",
+      "location": {
+        "longitude": 1.89115,
+        "latitude": 50.9398,
+        "city": "Calais"
+      },
+      "metadata": {
+        "address": "1601 Boulevard des Justes, 62100 Calais",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242480[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "345"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Polyclinique H\u00e9nin Beaumont (AHNAC) - CPTS Beaumont Artois",
+      "url": "https://partners.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/h\u00e9nin-beaumont/polyclinique-d-henin-baumont",
+      "location": {
+        "longitude": 2.9632,
+        "latitude": 50.41,
+        "city": "H\u00e9nin-Beaumont"
+      },
+      "metadata": {
+        "address": "5001 F Rue Ren\u00e9 Cassin, 62110 H\u00e9nin-Beaumont",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "09:00-12:00/13:30-18:30",
+          "mardi": "09:00-12:00/13:30-18:30",
+          "mercredi": "09:00-12:00/13:30-18:30",
+          "jeudi": "09:00-12:00/13:30-18:30",
+          "vendredi": "09:00-12:00/13:30-18:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "54883[30055]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "347"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - CPTS Artois-Lys, centre socioculturel Jean de la Fontaine, Lestrem",
+      "url": "https://partners.doctolib.fr/centre-de-sante/laventie/centre-de-vaccination-covid-19-flandre-lys?pid=practice-165125",
+      "location": {
+        "longitude": 2.68474,
+        "latitude": 50.6173,
+        "city": "Lestrem"
+      },
+      "metadata": {
+        "address": "301 All\u00e9e Pierre Macquart, 62136 Lestrem",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "08:00-12:00/14:00-18:00",
+          "mardi": "08:00-12:00/14:00-18:00",
+          "mercredi": "08:00-12:00/14:00-18:00",
+          "jeudi": "08:00-12:00/14:00-18:00",
+          "vendredi": "08:00-12:00/14:00-18:00",
+          "samedi": "09:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243214[165125]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1108"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - Centre Hospitalier de l'Arrondissement de Montreuil, COSEC 2",
+      "url": "https://partners.doctolib.fr/centre-de-sante/ecuires/centre-de-vaccination-covid-cham-cosec-2-espace-bernard-pion?pid=practice-166725",
+      "location": {
+        "longitude": 1.76096,
+        "latitude": 50.4549,
+        "city": "\u00c9cuires"
+      },
+      "metadata": {
+        "address": " Rue de Montreuil, 62170 \u00c9cuires",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "245267[166725]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1116"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination - MSP AUXI-LE-CHATEAU",
+      "url": "https://partners.doctolib.fr/centre-de-sante/auxi-le-chateau/centre-de-vaccination-d-auxi-le-chateau?pid=practice-178163",
+      "location": {
+        "longitude": 2.11714,
+        "latitude": 50.2281,
+        "city": "Auxi-le-Ch\u00e2teau"
+      },
+      "metadata": {
+        "address": "75 Rue du General Leclerc, 62390 Auxi-le-Ch\u00e2teau",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "260926[178163]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1972"
+    }
+  ]
+}

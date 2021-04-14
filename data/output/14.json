@@ -1,0 +1,786 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-14T12:37:42.606603+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "14",
+      "nom": "Centre de Vaccination Caen-Centre (ancienne caserne Canada)",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/caen-14000/caen-lemiere-ancienne-ecole-lemiere/centre-de-vaccination-de-caen-lemiere-ancienne-ecole-lemiere",
+      "location": {
+        "longitude": -0.372545,
+        "latitude": 49.1843,
+        "city": "Caen"
+      },
+      "metadata": {
+        "address": "14 Rue de l\u2019Academie, 14000 Caen",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-15T11:00:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 37,
+      "internal_id": null,
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "501"
+    },
+    {
+      "departement": "14",
+      "nom": "Centre de vaccination de Honfleur - site Equemauville",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/equemauville-14600/vaccination-covid-honfleur?agenda=48923&motive=81685&category=-1&cabinet=16628&specialty=496",
+      "location": {
+        "longitude": 0.202282,
+        "latitude": 49.3834,
+        "city": "\u00c9quemauville"
+      },
+      "metadata": {
+        "address": " CHEMIN DE LA PLANE, 14600 \u00c9quemauville",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-15T12:30:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 23,
+      "internal_id": null,
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "509"
+    },
+    {
+      "departement": "14",
+      "nom": "Centre de Vaccination COVID-19 - Clinique Vire",
+      "url": "https://partners.doctolib.fr/centre-de-sante/normandie/centre-de-vaccination-clinique-vire",
+      "location": {
+        "longitude": -0.896176,
+        "latitude": 48.8408359,
+        "city": "Vire"
+      },
+      "metadata": {
+        "address": "23 Rue des Acres, 14500 Vire",
+        "phone_number": "+33231663880",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-18:00",
+          "mardi": "09:00-13:00, 14:00-18:00",
+          "mercredi": "09:00-13:00, 14:00-18:00",
+          "jeudi": "09:00-13:00, 14:00-18:00",
+          "vendredi": "09:00-13:00, 14:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-18T10:25:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 317,
+      "internal_id": "241850[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "d241850"
+    },
+    {
+      "departement": "14",
+      "nom": "CPTS Axant\u00e9 - Centre de vaccination Covid-19",
+      "url": "https://partners.doctolib.fr/centre-de-sante/isigny-sur-mer/cpts-axante",
+      "location": {
+        "longitude": -1.101412,
+        "latitude": 49.320423,
+        "city": "Isigny-sur-Mer"
+      },
+      "metadata": {
+        "address": "Rue Thiers, 14230 Isigny-sur-Mer",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-29T12:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 291,
+      "internal_id": "242565[164540]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "d242565"
+    },
+    {
+      "departement": "14",
+      "nom": "Cabinet SOS de vaccination COVID",
+      "url": "https://partners.doctolib.fr/cabinet-medical/caen/cabinet-sos-de-vaccination-covid",
+      "location": {
+        "longitude": -0.3444842,
+        "latitude": 49.1639504,
+        "city": "Caen"
+      },
+      "metadata": {
+        "address": "8 Rue germaine Tillion, 14000 Caen",
+        "phone_number": "+33221002200",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-18:00",
+          "mardi": "09:00-13:00, 14:00-18:00",
+          "mercredi": "09:00-13:00, 14:00-18:00",
+          "jeudi": "09:00-13:00, 14:00-18:00",
+          "vendredi": "09:00-13:00, 14:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-05-04T10:15:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 132,
+      "internal_id": "265409[]",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "erreur": null,
+      "gid": "d265409"
+    },
+    {
+      "departement": "14",
+      "nom": "Centre de vaccination Cond\u00e9-en-Normandie",
+      "url": "https://partners.doctolib.fr/centre-de-sante/conde-en-normandie/centre-de-vaccination-covid-19-ville-de-conde?pid=practice-178178",
+      "location": {
+        "longitude": -0.55275,
+        "latitude": 48.851,
+        "city": "Cond\u00e9-en-Normandie"
+      },
+      "metadata": {
+        "address": " place du march\u00e9 couvert, 14110 Cond\u00e9-en-Normandie",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-05-06T15:52:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 59,
+      "internal_id": "260949[178178]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "2329"
+    },
+    {
+      "departement": "14",
+      "nom": "Centre de Vaccination Covid-19 - Ville de Cond\u00e9-en-Normandie",
+      "url": "https://partners.doctolib.fr/centre-de-sante/conde-en-normandie/centre-de-vaccination-covid-19-ville-de-conde",
+      "location": {
+        "longitude": -0.5511161,
+        "latitude": 48.8509857,
+        "city": "Cond\u00e9-en-Normandie"
+      },
+      "metadata": {
+        "address": "Place du March\u00e9, 14110 Cond\u00e9-en-Normandie",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-05-06T15:52:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 58,
+      "internal_id": "260949[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "d260949"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "14",
+      "nom": "Pharmacie Bleas German",
+      "url": "https://mapharma.net/14780",
+      "location": null,
+      "metadata": {
+        "address": "26 Bld Paul Doumer 14780 LION SUR MER",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "14780-0"
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie De La Plage",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-plage-merville-franceville",
+      "location": {
+        "longitude": -0.2027435,
+        "latitude": 49.2840845,
+        "city": "merville-franceville"
+      },
+      "metadata": {
+        "address": "59 avenue de Paris, 14810 Merville Franceville",
+        "phone_number": "+33231242187",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "bc9450d2"
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie Ferran",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-ferran-mondeville",
+      "location": {
+        "longitude": -0.3228682,
+        "latitude": 49.1753142,
+        "city": "mondeville"
+      },
+      "metadata": {
+        "address": "48 rue chapron, 14120 mondeville",
+        "phone_number": "+33231521571",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "66e3681c"
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie Mozart",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-mozart-lisieux",
+      "location": {
+        "longitude": 0.2545302,
+        "latitude": 49.143775,
+        "city": "lisieux"
+      },
+      "metadata": {
+        "address": "13 Place Mozart, 14100 Lisieux",
+        "phone_number": "+33231310756",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "67814501"
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie De L'Avenir",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-l'avenir-orbec",
+      "location": {
+        "longitude": 0.4058560000000001,
+        "latitude": 49.022737,
+        "city": "orbec"
+      },
+      "metadata": {
+        "address": "127 rue Grande, 14290 Orbec",
+        "phone_number": "+33231328949",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "6f564914"
+    },
+    {
+      "departement": "14",
+      "nom": "CPTS Axant\u00e9 - Centre de vaccination Covid-19",
+      "url": "https://partners.doctolib.fr/centre-de-sante/isigny-sur-mer/cpts-axante?pid=practice-178802",
+      "location": {
+        "longitude": -0.5427092,
+        "latitude": 49.2791824,
+        "city": "Creully sur Seulles"
+      },
+      "metadata": {
+        "address": "Rue Guy de Maupassant, 14480 Creully sur Seulles",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242565[178802]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242565"
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie Treich",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-treich-demouville-1",
+      "location": {
+        "longitude": -0.2706907,
+        "latitude": 49.1785092,
+        "city": "demouville"
+      },
+      "metadata": {
+        "address": "13 rue du Centre, 14840 D\u00e9mouville",
+        "phone_number": "+33231723626",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "30383026"
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie Decoutere",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-decoutere-argences",
+      "location": {
+        "longitude": -0.1650576,
+        "latitude": 49.1270886,
+        "city": "argences"
+      },
+      "metadata": {
+        "address": "7 Boulevard Delean, 14370 Argences",
+        "phone_number": "+33231236035",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "797a4682"
+    },
+    {
+      "departement": "14",
+      "nom": "CHU DE CAEN NORMANDIE",
+      "url": "https://partners.doctolib.fr/hopital-public/caen/chu-caen-vaccination-covid",
+      "location": {
+        "longitude": -0.357382,
+        "latitude": 49.2045,
+        "city": "Caen"
+      },
+      "metadata": {
+        "address": " avenue C\u00f4te de Nacre, 14000 Caen",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242029[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "17"
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie Du Port",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-port-ouistreham",
+      "location": {
+        "longitude": -0.250916,
+        "latitude": 49.2791064,
+        "city": "ouistreham"
+      },
+      "metadata": {
+        "address": "1 place du g\u00e9n\u00e9ral de gaulle, 14150 OUISTREHAM",
+        "phone_number": "+33231962541",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "da299e28"
+    },
+    {
+      "departement": "14",
+      "nom": "Centre de vaccination M\u00e9zidon Vall\u00e9e d'Auge",
+      "url": "https://partners.doctolib.fr/centre-de-sante/mezidon-vallee-d-auge/centre-de-vaccination-covid-19-mezidon-vallee-d-auge?pid=practice-179725",
+      "location": {
+        "longitude": -0.0674805,
+        "latitude": 49.0738,
+        "city": "M\u00e9zidon Vall\u00e9e d'Auge"
+      },
+      "metadata": {
+        "address": "17 Rue Marcel Lemeray, 14270 M\u00e9zidon Vall\u00e9e d'Auge",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "262762[179725]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2238"
+    },
+    {
+      "departement": "14",
+      "nom": "Centre de vaccination Covid-19 - CH de Lisieux",
+      "url": "https://partners.doctolib.fr/hopital-public/lisieux/centre-de-vaccination-covid-19-ch-de-lisieux",
+      "location": {
+        "longitude": 0.2353802,
+        "latitude": 49.1450904,
+        "city": "Lisieux"
+      },
+      "metadata": {
+        "address": "4 Rue Roger Aini, 14100 Lisieux",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "09:00-16:00",
+          "mardi": "09:00-16:00",
+          "mercredi": "09:00-16:00",
+          "jeudi": "09:00-16:00",
+          "vendredi": "09:00-16:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "240967[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d240967"
+    },
+    {
+      "departement": "14",
+      "nom": "HP Saint Martin - Vaccination Covid 19",
+      "url": "https://partners.doctolib.fr/centre-de-sante/caen/hpsmvc-reserve-aux-professionnels-de-sante",
+      "location": {
+        "longitude": -0.380574,
+        "latitude": 49.1981885,
+        "city": "Caen"
+      },
+      "metadata": {
+        "address": "18 Rue des Roquemonts, 14000 Caen",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "240965[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d240965"
+    },
+    {
+      "departement": "14",
+      "nom": "Centre de vaccination COVID-19 de Deauville - Deauville",
+      "url": "https://partners.doctolib.fr/centre-de-sante/deauville/centre-de-vaccination-covid-19-de-deauville",
+      "location": {
+        "longitude": 0.0756624,
+        "latitude": 49.3587948,
+        "city": "Deauville"
+      },
+      "metadata": {
+        "address": "29 Rue Albert Fracasse, 14800 Deauville",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "262989[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d262989"
+    },
+    {
+      "departement": "14",
+      "nom": "Atrium - Vaccination Covid-19",
+      "url": "https://partners.doctolib.fr/maison-de-sante/ifs/atrium-vaccination-covid-19",
+      "location": {
+        "longitude": -0.3496352,
+        "latitude": 49.1377403,
+        "city": "Ifs"
+      },
+      "metadata": {
+        "address": "Espl. Fran\u00e7ois Mitterrand, 14123 Ifs",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": "09:00-12:30, 13:00-17:00",
+          "vendredi": "09:00-12:30, 13:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "247080[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d247080"
+    },
+    {
+      "departement": "14",
+      "nom": "CH Falaise - Centre de vaccination Covid-19",
+      "url": "https://partners.doctolib.fr/hopital-public/falaise/ch-falaise-centre-de-vaccination-covid-19",
+      "location": {
+        "longitude": -0.1958866,
+        "latitude": 48.8964526,
+        "city": "Falaise"
+      },
+      "metadata": {
+        "address": "Rue Georges Clemenceau, 14700 Falaise",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-17:30",
+          "mardi": "09:00-13:00, 14:00-17:30",
+          "mercredi": "09:00-13:00, 14:00-17:30",
+          "jeudi": "09:00-13:00, 14:00-17:30",
+          "vendredi": "09:00-13:00, 14:00-17:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242826[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242826"
+    },
+    {
+      "departement": "14",
+      "nom": "CH Aunay-Bayeux - Vaccination COVID-19",
+      "url": "https://partners.doctolib.fr/hopital-public/bayeux/centre-vaccination-chab-bayeux",
+      "location": {
+        "longitude": -0.6990862,
+        "latitude": 49.2797648,
+        "city": "Bayeux"
+      },
+      "metadata": {
+        "address": "46 Rue Saint-Laurent, 14400 Bayeux",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242268[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242268"
+    },
+    {
+      "departement": "14",
+      "nom": "Equipe Mobile R\u00e9sidences Autonomie et Territoire Calvados",
+      "url": "https://partners.doctolib.fr/hopital-public/caen/chu-caen-vaccination-covid?pid=practice-163773",
+      "location": {
+        "longitude": -0.362889,
+        "latitude": 49.2101,
+        "city": "Caen"
+      },
+      "metadata": {
+        "address": " Avenue de la Cote de Nacre, 14000 Caen",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242029[163773]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1346"
+    },
+    {
+      "departement": "14",
+      "nom": "Polyclinique du parc - Caen - service soins externes",
+      "url": "https://partners.doctolib.fr/clinique-privee/caen/centre-de-vaccination-polyclinique-du-parc-caen",
+      "location": {
+        "longitude": -0.344052,
+        "latitude": 49.168,
+        "city": "Caen"
+      },
+      "metadata": {
+        "address": "20 AVENUE DU CAPITAINE GUYNEMER, 14000 Caen",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242312[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "505"
+    },
+    {
+      "departement": "14",
+      "nom": "Centre de vaccination COVID-19 de Deauville - Deauville",
+      "url": "https://partners.doctolib.fr/centre-de-sante/deauville/centre-de-vaccination-covid-19-de-deauville?pid=practice-179896",
+      "location": {
+        "longitude": 0.0756921,
+        "latitude": 49.3588,
+        "city": "Deauville"
+      },
+      "metadata": {
+        "address": "29 Rue Albert Fracasse, 14800 Deauville",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "262989[179896]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2239"
+    }
+  ]
+}

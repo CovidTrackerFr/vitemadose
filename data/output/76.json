@@ -1,0 +1,1106 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-14T12:37:42.694651+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "76",
+      "nom": "CHI Caux Vall\u00e9e de Seine  - Lillebonne",
+      "url": "https://partners.doctolib.fr/hopital-public/lillebonne/centre-de-vaccination-caux-vallee-de-seine",
+      "location": {
+        "longitude": 0.542715,
+        "latitude": 49.5186,
+        "city": "Lillebonne"
+      },
+      "metadata": {
+        "address": "19 Avenue Rene Coty, 76170 Lillebonne",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-27T12:05:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 436,
+      "internal_id": "242477[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "796"
+    },
+    {
+      "departement": "76",
+      "nom": "Salle des Aulnes - Parc des Aulnes de Lillebonne",
+      "url": "https://partners.doctolib.fr/hopital-public/lillebonne/centre-de-vaccination-caux-vallee-de-seine?pid=practice-164430",
+      "location": {
+        "longitude": 0.533463,
+        "latitude": 49.5215,
+        "city": "Lillebonne"
+      },
+      "metadata": {
+        "address": " Rue Thiers, 76170 Lillebonne",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-04-29T10:45:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 433,
+      "internal_id": "242477[164430]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "1025"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "76",
+      "nom": "Dr Nicolas Desoubry",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/quincampoix/nicolas-desoubry",
+      "location": {
+        "longitude": 1.186735,
+        "latitude": 49.522292,
+        "city": "Quincampoix"
+      },
+      "metadata": {
+        "address": "2 espace le Colombier, 76230 Quincampoix",
+        "phone_number": "+33235921339",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-12:30",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "98333[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d98333"
+    },
+    {
+      "departement": "76",
+      "nom": "Pharmacie de Caudebec en Caux",
+      "url": "https://partners.doctolib.fr/pharmacie/rives-en-seine/pharmacie-de-caudebec",
+      "location": {
+        "longitude": 0.7272467,
+        "latitude": 49.5246268,
+        "city": "Rives-en-Seine"
+      },
+      "metadata": {
+        "address": "7 Quai Guilbaud, 76490 Rives-en-Seine",
+        "phone_number": "+33235963444",
+        "business_hours": {
+          "lundi": "09:00-12:30, 14:00-19:30",
+          "mardi": "09:00-12:30, 14:00-19:30",
+          "mercredi": "09:00-12:30, 14:00-19:30",
+          "jeudi": "09:00-12:30, 14:00-19:30",
+          "vendredi": "09:00-12:30, 14:00-19:30",
+          "samedi": "09:00-12:30, 14:00-17:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "262421[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d262421"
+    },
+    {
+      "departement": "76",
+      "nom": "Grande Pharmacie Thiers",
+      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-thiers-le-havre",
+      "location": {
+        "longitude": 0.1117815,
+        "latitude": 49.4969659,
+        "city": "le-havre"
+      },
+      "metadata": {
+        "address": "42 Avenue Ren\u00e9 Coty, 76600 Le Havre",
+        "phone_number": "+33235211010",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "4a091c0d"
+    },
+    {
+      "departement": "76",
+      "nom": "Pharmacie de la Vatine",
+      "url": "https://partners.doctolib.fr/pharmacie/mont-saint-aignan/pharmacie-de-la-vatine",
+      "location": {
+        "longitude": 1.0928022,
+        "latitude": 49.4761803,
+        "city": "Mont-Saint-Aignan"
+      },
+      "metadata": {
+        "address": "Route d'Houppeville, 76130 Mont-Saint-Aignan",
+        "phone_number": "+33235591555",
+        "business_hours": {
+          "lundi": "09:00-19:00",
+          "mardi": "09:00-19:00",
+          "mercredi": "09:00-19:00",
+          "jeudi": "09:00-19:00",
+          "vendredi": "09:00-19:00",
+          "samedi": "09:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "263960[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d263960"
+    },
+    {
+      "departement": "76",
+      "nom": "Pharmacie Cauchoise",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-cauchoise-rouen",
+      "location": {
+        "longitude": 1.085969,
+        "latitude": 49.446072,
+        "city": "rouen"
+      },
+      "metadata": {
+        "address": "7 Place Cauchoise, 76000 Rouen",
+        "phone_number": "+33235713020",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "63a7b39a"
+    },
+    {
+      "departement": "76",
+      "nom": "Mme Ga\u00eblle MARCHAIS",
+      "url": "https://partners.doctolib.fr/infirmier/le-havre/gaelle-marchais",
+      "location": {
+        "longitude": 0.1043157,
+        "latitude": 49.4890824,
+        "city": "Le Havre"
+      },
+      "metadata": {
+        "address": "52 Rue Arthur Honegger, 76600 Le Havre",
+        "phone_number": "+33612756792",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": "09:00-18:00",
+          "dimanche": "11:00-12:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "239975[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d239975"
+    },
+    {
+      "departement": "76",
+      "nom": "Pharmacie de la Mairie",
+      "url": "https://partners.doctolib.fr/pharmacie/le-houlme/pharmacie-de-la-mairie-le-houlme",
+      "location": {
+        "longitude": 1.0402788,
+        "latitude": 49.5074087,
+        "city": "Le Houlme"
+      },
+      "metadata": {
+        "address": "104 Rue du G\u00e9n\u00e9ral de Gaulle, 76770 Le Houlme",
+        "phone_number": "+33235744514",
+        "business_hours": {
+          "lundi": "09:00-12:30, 14:00-19:30",
+          "mardi": "08:30-12:30, 14:00-19:30",
+          "mercredi": "09:00-12:30, 14:00-19:30",
+          "jeudi": "08:30-12:30, 14:00-19:30",
+          "vendredi": "08:30-12:30, 14:00-19:30",
+          "samedi": "09:00-12:30, 14:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "257756[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d257756"
+    },
+    {
+      "departement": "76",
+      "nom": "Pharmacie Duran",
+      "url": "https://partners.doctolib.fr/pharmacie/quincampoix/pharmacie-de-quincampoix",
+      "location": {
+        "longitude": 1.1853775,
+        "latitude": 49.5232377,
+        "city": "Quincampoix"
+      },
+      "metadata": {
+        "address": "188 Place de la Mairie, 76230 Quincampoix",
+        "business_hours": {
+          "lundi": "08:30-12:30, 14:00-19:30",
+          "mardi": "08:30-12:30, 14:00-19:30",
+          "mercredi": "08:30-12:30, 14:00-19:30",
+          "jeudi": "08:30-12:30, 14:00-19:30",
+          "vendredi": "08:30-12:30, 14:00-19:30",
+          "samedi": "09:00-12:30, 14:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "248477[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d248477"
+    },
+    {
+      "departement": "76",
+      "nom": "CHU - H\u00f4pital Saint Julien",
+      "url": "https://partners.doctolib.fr/hopital-public/rouen/chu-de-rouen-centre-de-vaccination?pid=practice-162660",
+      "location": {
+        "longitude": 1.05951,
+        "latitude": 49.4243,
+        "city": "Le Petit-Quevilly"
+      },
+      "metadata": {
+        "address": " Rue guillaume lecointe, 76140 Le Petit-Quevilly",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "240484[162660]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "788"
+    },
+    {
+      "departement": "76",
+      "nom": "GHH Site Flaubert",
+      "url": "https://partners.doctolib.fr/hopital-public/montivilliers/groupe-hospitalier-du-havre-centre-vaccination-covid?pid=practice-164222",
+      "location": {
+        "longitude": 0.112716,
+        "latitude": 49.4994,
+        "city": "Le Havre"
+      },
+      "metadata": {
+        "address": "55 Bis rue Gustave Flaubert, 76600 Le Havre",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241044[164222]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "786"
+    },
+    {
+      "departement": "76",
+      "nom": "Barentin \u2013 Caux Austreberthe",
+      "url": "https://partners.doctolib.fr/centre-de-sante/barentin/centre-de-vaccination-covid-19-salle-leo-lagrange?pid=practice-175753",
+      "location": {
+        "longitude": 0.951858,
+        "latitude": 49.5454,
+        "city": "Barentin"
+      },
+      "metadata": {
+        "address": "1 Rue Madeleine Vernet - salle l\u00e9o lagrange, 76360 Barentin",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "256830[175753]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2196"
+    },
+    {
+      "departement": "76",
+      "nom": "Centre de Vaccination Covid-19 - Clinique H\u00e9m\u00e9ra",
+      "url": "https://partners.doctolib.fr/clinique-privee/yvetot/centre-de-vaccination-covid-19-pole-de-sante-d-yvetot",
+      "location": {
+        "longitude": 0.7455129,
+        "latitude": 49.6184057,
+        "city": "Yvetot"
+      },
+      "metadata": {
+        "address": "14a Avenue du Mar\u00e9chal Foch, 76190 Yvetot",
+        "business_hours": {
+          "lundi": "09:00-12:00, 13:00-19:00",
+          "mardi": "09:00-12:00, 13:00-19:00",
+          "mercredi": "09:00-12:00, 13:00-19:00",
+          "jeudi": "09:00-12:00, 13:00-19:00",
+          "vendredi": "09:00-12:00, 13:00-19:00",
+          "samedi": "09:00-12:00, 13:00-19:00",
+          "dimanche": "09:00-12:00, 13:00-19:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "245650[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d245650"
+    },
+    {
+      "departement": "76",
+      "nom": "CHU de Rouen Centre de vaccination COVID-19",
+      "url": "https://partners.doctolib.fr/hopital-public/rouen/chu-de-rouen-centre-de-vaccination?pid=practice-162659",
+      "location": {
+        "longitude": 1.116977,
+        "latitude": 49.4686322,
+        "city": "Bois-Guillaume"
+      },
+      "metadata": {
+        "address": "1530 Rue de la Haie, 76230 Bois-Guillaume",
+        "phone_number": "+33232881882",
+        "business_hours": {
+          "lundi": "08:30-16:30",
+          "mardi": "08:30-16:30",
+          "mercredi": "08:30-16:30",
+          "jeudi": "08:30-16:30",
+          "vendredi": "08:30-16:30",
+          "samedi": "08:30-16:30",
+          "dimanche": "08:30-16:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "240484[162659]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d240484"
+    },
+    {
+      "departement": "76",
+      "nom": "GHH site de monod",
+      "url": "https://partners.doctolib.fr/hopital-public/montivilliers/groupe-hospitalier-du-havre-centre-vaccination-covid?pid=practice-163096",
+      "location": {
+        "longitude": 0.184985,
+        "latitude": 49.5262,
+        "city": "Montivilliers"
+      },
+      "metadata": {
+        "address": "29 Avenue Pierre Mend\u00e8s France, 76290 Montivilliers",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241044[163096]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "154"
+    },
+    {
+      "departement": "76",
+      "nom": "Centre de Vaccination Covid-19 - Mairie de Duclair",
+      "url": "https://partners.doctolib.fr/cabinet-medical/duclair/centre-de-vaccination-covid-19-duclair",
+      "location": {
+        "longitude": 0.875961,
+        "latitude": 49.482402,
+        "city": "Duclair"
+      },
+      "metadata": {
+        "address": "Place du G\u00e9n\u00e9ral de Gaulle, 76480 Duclair",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "10:00-13:00, 14:00-17:00",
+          "mardi": "10:00-13:00, 14:00-17:00",
+          "mercredi": "10:00-13:00, 14:00-17:00",
+          "jeudi": "10:00-13:00, 14:00-17:00",
+          "vendredi": "10:00-13:00, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242321[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242321"
+    },
+    {
+      "departement": "76",
+      "nom": "CH EU",
+      "url": "https://partners.doctolib.fr/hopital-public/eu/centre-de-vaccination-covid-de-eu",
+      "location": {
+        "longitude": 1.42086,
+        "latitude": 50.0502,
+        "city": "Eu"
+      },
+      "metadata": {
+        "address": "4 Rue de Cleves, 76260 Eu",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242102[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "92"
+    },
+    {
+      "departement": "76",
+      "nom": "Bray et Bresle Centre de vaccination COVID-19",
+      "url": "https://partners.doctolib.fr/cabinet-medical/neufchatel-en-bray/bray-et-bresle-centre-de-vaccination-covid-19",
+      "location": {
+        "longitude": 1.4420466,
+        "latitude": 49.7331956,
+        "city": "Neufch\u00e2tel-en-Bray"
+      },
+      "metadata": {
+        "address": "Rue Baron d'Haussez, 76270 Neufch\u00e2tel-en-Bray",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241172[163197]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d241172"
+    },
+    {
+      "departement": "76",
+      "nom": "VaccinAr\u00e9na",
+      "url": "https://partners.doctolib.fr/centre-de-sante/rouen/centre-de-vaccination-covid-vaccinarena-rouen?pid=practice-181232",
+      "location": {
+        "longitude": 1.06327,
+        "latitude": 49.4477,
+        "city": "Rouen"
+      },
+      "metadata": {
+        "address": "40 Rue de Lillebonne - KINDARENA, 76000 Rouen",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "264690[181232]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2359"
+    },
+    {
+      "departement": "76",
+      "nom": "Centre de Vaccination Covid-19 -  Sotteville-l\u00e8s-Rouen",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sotteville-les-rouen/centre-de-vaccination-sotteville-les-rouen",
+      "location": {
+        "longitude": 1.089705,
+        "latitude": 49.4146813,
+        "city": "Sotteville-l\u00e8s-Rouen"
+      },
+      "metadata": {
+        "address": "Place de l'H\u00f4tel de ville, 76300 Sotteville-l\u00e8s-Rouen",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-19:00",
+          "mardi": "09:00-13:00, 14:00-19:00",
+          "mercredi": "09:00-13:00, 14:00-19:00",
+          "jeudi": "09:00-13:00, 14:00-19:00",
+          "vendredi": "09:00-13:00, 14:00-19:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242426[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242426"
+    },
+    {
+      "departement": "76",
+      "nom": "CHI Elbeuf, Louviers, Val de Reuil - Centre de vaccination COVID",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-aubin-les-elbeuf/chi-elbeuf-louviers-val-de-reuil-centre-de-vaccination-covid-reserve-aux-professionnels-de-sante-nation-covid",
+      "location": {
+        "longitude": 1.040542,
+        "latitude": 49.305182,
+        "city": "Saint-Aubin-l\u00e8s-Elbeuf"
+      },
+      "metadata": {
+        "address": "Rue du Docteur Villers, 76410 Saint-Aubin-l\u00e8s-Elbeuf",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "240775[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d240775"
+    },
+    {
+      "departement": "76",
+      "nom": "Grand Centre de Vaccination Covid Le Havre - Stade Oc\u00e9ane",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/le-havre/grand-centre-de-vaccination-covid-le-havre-stade-oeane",
+      "location": {
+        "longitude": 0.1652901,
+        "latitude": 49.4996058,
+        "city": "Le Havre"
+      },
+      "metadata": {
+        "address": "Boulevard de Leningrad, 76600 Le Havre",
+        "business_hours": {
+          "lundi": "09:00-12:00, 13:00-16:30",
+          "mardi": "09:00-12:00, 13:00-16:30",
+          "mercredi": "09:00-12:00, 13:00-16:30",
+          "jeudi": "09:00-12:00, 13:00-16:30",
+          "vendredi": "09:00-12:00, 13:00-16:30",
+          "samedi": "09:00-12:00, 13:00-16:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "263803[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d263803"
+    },
+    {
+      "departement": "76",
+      "nom": "Centre de vaccination Covid-19 du Territoire Elbeuvien",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-aubin-les-elbeuf/centre-de-vaccination-covid-du-territoire-elbeuvien",
+      "location": {
+        "longitude": 1.010853,
+        "latitude": 49.2972948,
+        "city": "Saint-Aubin-l\u00e8s-Elbeuf"
+      },
+      "metadata": {
+        "address": "1 Rue L\u00e9on Gambetta, 76410 Saint-Aubin-l\u00e8s-Elbeuf",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242706[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242706"
+    },
+    {
+      "departement": "76",
+      "nom": "Salle des F\u00eates de Bl\u00e9ville",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/le-havre/centre-de-vaccination-covid-le-havre-agglo",
+      "location": {
+        "longitude": 0.0978097,
+        "latitude": 49.5172,
+        "city": "Le Havre"
+      },
+      "metadata": {
+        "address": "17 Rue Pierre Farcis, 76620 Le Havre",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243026[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "789"
+    },
+    {
+      "departement": "76",
+      "nom": "Centre de vaccination Covid-19 - Salle L\u00e9o Lagrange",
+      "url": "https://partners.doctolib.fr/centre-de-sante/barentin/centre-de-vaccination-covid-19-salle-leo-lagrange",
+      "location": {
+        "longitude": 0.9516986,
+        "latitude": 49.5453001,
+        "city": "Barentin"
+      },
+      "metadata": {
+        "address": "1 Rue Madeleine Vernet, 76360 Barentin",
+        "business_hours": {
+          "lundi": "09:00-12:00, 13:30-17:00",
+          "mardi": "09:00-12:00, 13:30-17:00",
+          "mercredi": "09:00-12:00, 13:30-17:00",
+          "jeudi": "09:00-12:00, 13:30-17:00",
+          "vendredi": "09:00-12:00, 13:30-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "256830[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d256830"
+    },
+    {
+      "departement": "76",
+      "nom": "CHI Elbeuf",
+      "url": "https://partners.doctolib.fr/hopital-public/saint-aubin-les-elbeuf/chi-elbeuf-louviers-centre-de-depistage-covid-19",
+      "location": {
+        "longitude": 1.04178,
+        "latitude": 49.3048,
+        "city": "Saint-Aubin-l\u00e8s-Elbeuf"
+      },
+      "metadata": {
+        "address": "4 rue du docteur villers, 76410 Saint-Aubin-l\u00e8s-Elbeuf",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "213779[143268]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "141"
+    },
+    {
+      "departement": "76",
+      "nom": "Groupe Hospitalier du Havre (GHH) - Centre vaccination Covid-19",
+      "url": "https://partners.doctolib.fr/hopital-public/montivilliers/groupe-hospitalier-du-havre-centre-vaccination-covid",
+      "location": {
+        "longitude": 0.1822439,
+        "latitude": 49.5285877,
+        "city": "Montivilliers"
+      },
+      "metadata": {
+        "address": "29 Avenue Pierre Mend\u00e8s France, 76290 Montivilliers",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241044[163096]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d241044"
+    },
+    {
+      "departement": "76",
+      "nom": "Rouen - Cabinet m\u00e9dical des Carmes",
+      "url": "https://partners.doctolib.fr/centre-de-sante/rouen/centre-vaccination-cabinet-medical-des-carnes?pid=practice-172983",
+      "location": {
+        "longitude": 1.09477,
+        "latitude": 49.4378,
+        "city": "Rouen"
+      },
+      "metadata": {
+        "address": "19 Place de la Basse Vieille Tour, 76000 Rouen",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242442[172983]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "802"
+    },
+    {
+      "departement": "76",
+      "nom": "Saint-Aubin-l\u00e8s-Elbeuf : salle des f\u00eates",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-aubin-les-elbeuf/centre-de-vaccination-covid-du-territoire-elbeuvien?pid=practice-164306",
+      "location": {
+        "longitude": 1.00974,
+        "latitude": 49.2974,
+        "city": "Saint-Aubin-l\u00e8s-Elbeuf"
+      },
+      "metadata": {
+        "address": " Rue L\u00e9on Gambetta, 76410 Saint-Aubin-l\u00e8s-Elbeuf",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242706[164306]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1031"
+    },
+    {
+      "departement": "76",
+      "nom": "CHU ROUEN - BATIMENT AUBETTE",
+      "url": "https://partners.doctolib.fr/hopital-public/rouen/chu-de-rouen-centre-de-vaccination?pid=practice-162656",
+      "location": {
+        "longitude": 1.10911,
+        "latitude": 49.4398,
+        "city": "Rouen"
+      },
+      "metadata": {
+        "address": "47 Boulevard Gambetta, 76000 Rouen",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "240484[162656]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "66"
+    },
+    {
+      "departement": "76",
+      "nom": "CH FECAMP - HALL DU RDC",
+      "url": "https://partners.doctolib.fr/hopital-public/f\u00e9camp/ch-fecamp-vaccination-covid",
+      "location": {
+        "longitude": 0.386192,
+        "latitude": 49.7461,
+        "city": "F\u00e9camp"
+      },
+      "metadata": {
+        "address": "100 Avenue du Pr\u00e9sident Fran\u00e7ois Mitterrand, 76400 F\u00e9camp",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242150[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "70"
+    },
+    {
+      "departement": "76",
+      "nom": "CH Neufch\u00e2tel",
+      "url": "https://partners.doctolib.fr/cabinet-medical/neufch\u00e2tel-en-bray/vaccination-covid-ctps-neufchatel-en-bray",
+      "location": {
+        "longitude": 1.45128,
+        "latitude": 49.7301,
+        "city": "Neufch\u00e2tel-en-Bray"
+      },
+      "metadata": {
+        "address": "4 Route de Gaillefontaine, 76270 Neufch\u00e2tel-en-Bray",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241172[163197]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "799"
+    },
+    {
+      "departement": "76",
+      "nom": "centre de vaccination Yvetot, clinique Hemera",
+      "url": "https://partners.doctolib.fr/centre-de-sante/yvetot/centre-de-vaccination-covid-19-pole-de-sante-d-yvetot",
+      "location": {
+        "longitude": 0.744011,
+        "latitude": 49.6182,
+        "city": "Yvetot"
+      },
+      "metadata": {
+        "address": "14A Avenue du Marechal Foch, 76190 Yvetot",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "245650[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1389"
+    },
+    {
+      "departement": "76",
+      "nom": "Centre de vaccination de Dieppe- MDS (Maison des sports)",
+      "url": "https://partners.doctolib.fr/hopital-public/dieppe/centre-de-vaccination-covid-public?pid=practice-181348",
+      "location": {
+        "longitude": 1.07189,
+        "latitude": 49.922,
+        "city": "Dieppe"
+      },
+      "metadata": {
+        "address": "17 Rue Montigny, 76200 Dieppe",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242080[181348]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2360"
+    },
+    {
+      "departement": "76",
+      "nom": "Grand centre de vaccination stade Oc\u00e9ane",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/le-havre/grand-centre-de-vaccination-covid-le-havre-stade-oeane?pid=practice-180035",
+      "location": {
+        "longitude": 0.169789,
+        "latitude": 49.4994,
+        "city": "Le Havre"
+      },
+      "metadata": {
+        "address": " boulevard Leningrad - stade oc\u00e9ane, 76600 Le Havre",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "263803[180035]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2363"
+    }
+  ]
+}

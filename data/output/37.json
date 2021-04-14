@@ -1,0 +1,509 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-14T12:37:42.631486+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "37",
+      "nom": "Centre de vaccination SOS M\u00e9decins 37",
+      "url": "https://partners.doctolib.fr/centre-de-sante/tours/centre-de-vaccination-covid-19-medipole-sos-medecins-de-tours-professionnels-de-sante?pid=practice-176405",
+      "location": {
+        "longitude": 0.687346,
+        "latitude": 47.3891,
+        "city": "Tours"
+      },
+      "metadata": {
+        "address": "19 Rue de la Dolve, 37000 Tours",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ouvert",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "Ouvert",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ouvert"
+        }
+      },
+      "prochain_rdv": "2021-04-16T08:35:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 14,
+      "internal_id": "257741[176405]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "1963"
+    },
+    {
+      "departement": "37",
+      "nom": "Centre de vaccination Covid-19 - MEDIPOLE SOS M\u00e9decins de Tours (professionnels de sant\u00e9 )",
+      "url": "https://partners.doctolib.fr/centre-de-sante/tours/centre-de-vaccination-covid-19-medipole-sos-medecins-de-tours-professionnels-de-sante",
+      "location": {
+        "longitude": 0.6873576,
+        "latitude": 47.3892657,
+        "city": "Tours"
+      },
+      "metadata": {
+        "address": "19 Rue de la Dolve, 37000 Tours",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-16T08:35:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 14,
+      "internal_id": "257741[]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "d257741"
+    },
+    {
+      "departement": "37",
+      "nom": "Centre de vaccination COVID-19 - CHRU Tours",
+      "url": "https://partners.doctolib.fr/hopital-public/tours/centre-de-vaccination-covid-chru-tours-reserve-aux-professionnels-de-sante",
+      "location": {
+        "longitude": 0.6682328,
+        "latitude": 47.3868449,
+        "city": "Tours"
+      },
+      "metadata": {
+        "address": "2 Boulevard Tonnell\u00e9, 37000 Tours",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-26T13:36:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 169,
+      "internal_id": "240293[162208]",
+      "vaccine_type": [
+        "Moderna"
+      ],
+      "erreur": null,
+      "gid": "d240293"
+    },
+    {
+      "departement": "37",
+      "nom": "CHRU Tours - Site de Bretonneau  - CAP Sant\u00e9 Centre de vaccination",
+      "url": "https://partners.doctolib.fr/hopital-public/tours/centre-de-vaccination-covid-chru-tours-reserve-aux-professionnels-de-sante?pid=practice-162208",
+      "location": {
+        "longitude": 0.667766,
+        "latitude": 47.3869,
+        "city": "Tours"
+      },
+      "metadata": {
+        "address": "2 Boulevard Tonnell\u00e9, 37000 Tours",
+        "phone_number": "+33247478181",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-26T13:42:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 168,
+      "internal_id": "240293[162208]",
+      "vaccine_type": [
+        "Moderna"
+      ],
+      "erreur": null,
+      "gid": "157"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "37",
+      "nom": "Centre de Vaccination Covid-19 - Saint Cyr-sur-Loire",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-cyr-sur-loire/centre-de-vaccination-covid-19-saint-cyr-sur-loire",
+      "location": {
+        "longitude": 0.6545777,
+        "latitude": 47.41901,
+        "city": "Saint-Cyr-sur-Loire"
+      },
+      "metadata": {
+        "address": "All\u00e9e Ren\u00e9 Coulon, 37540 Saint-Cyr-sur-Loire",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "09:00-14:00, 14:00-19:00",
+          "mardi": "09:00-14:00, 14:00-19:00",
+          "mercredi": "09:00-14:00, 14:00-19:00",
+          "jeudi": "09:00-14:00, 14:00-19:00",
+          "vendredi": "09:00-14:00, 14:00-19:00",
+          "samedi": "09:00-14:00, 14:00-19:00",
+          "dimanche": "09:00-14:00, 14:00-19:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "262265[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d262265"
+    },
+    {
+      "departement": "37",
+      "nom": "Centre Vaccination - CPTS Rabelaisie - Vaccination Covid-19",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/bourgueil/centre-vaccination-cpts-rabelaisie",
+      "location": {
+        "longitude": 0.1838519,
+        "latitude": 47.1980829,
+        "city": "Beaumont-en-V\u00e9ron"
+      },
+      "metadata": {
+        "address": "Rue du Parc, 37420 Beaumont-en-V\u00e9ron",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242579[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242579"
+    },
+    {
+      "departement": "37",
+      "nom": "Centre Vaccination Covid - Tours M\u00e9tropole - Jou\u00e9-l\u00e8s-Tours",
+      "url": "https://partners.doctolib.fr/centre-de-sante/tours/centre-vaccination-covid-tours-metrople",
+      "location": {
+        "longitude": 0.6567941,
+        "latitude": 47.3544917,
+        "city": "Jou\u00e9-l\u00e8s-Tours"
+      },
+      "metadata": {
+        "address": "2 Rue du Clos Neuf, 37300 Jou\u00e9-l\u00e8s-Tours",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "09:00-14:00, 14:00-18:00",
+          "mercredi": "09:00-14:00, 14:00-18:00",
+          "jeudi": "09:00-14:00, 14:00-18:00",
+          "vendredi": "09:00-14:00, 14:00-18:00",
+          "samedi": "09:00-14:00, 14:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243023[164868]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243023"
+    },
+    {
+      "departement": "37",
+      "nom": "Centre Vaccination Covid - Tours M\u00e9tropole - Tours",
+      "url": "https://partners.doctolib.fr/centre-de-sante/tours/centre-vaccination-covid-tours-metrople?pid=practice-164864",
+      "location": {
+        "longitude": 0.6801497,
+        "latitude": 47.391866,
+        "city": "Tours"
+      },
+      "metadata": {
+        "address": "1 Place Gaston Paillhou, 37000 Tours",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "09:00-14:00, 14:00-18:00",
+          "mardi": "09:00-14:00, 14:00-18:00",
+          "mercredi": "09:00-14:00, 14:00-18:00",
+          "jeudi": "09:00-14:00, 14:00-18:00",
+          "vendredi": "09:00-14:00, 14:00-18:00",
+          "samedi": "09:00-14:00, 14:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243023[164864]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243023"
+    },
+    {
+      "departement": "37",
+      "nom": "Maison des associations - Loches",
+      "url": "https://partners.doctolib.fr/centre-de-sante/loches/centre-de-vaccination-covid-cpts-sud-lochois?pid=practice-165185",
+      "location": {
+        "longitude": 1.00188,
+        "latitude": 47.1225,
+        "city": "Loches"
+      },
+      "metadata": {
+        "address": "1 Avenue Aristide Briand, 37600 Loches",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "9h-18h",
+          "mardi": "9h-18h",
+          "mercredi": "9h-18h",
+          "jeudi": "9h-18h",
+          "vendredi": "9h-18h",
+          "samedi": "9h-12h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243227[165185]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "707"
+    },
+    {
+      "departement": "37",
+      "nom": "Centre de vaccination COVID - CPTS Sud Lochois",
+      "url": "https://partners.doctolib.fr/centre-de-sante/loches/centre-de-vaccination-covid-cpts-sud-lochois",
+      "location": {
+        "longitude": 1.0029158,
+        "latitude": 47.1228202,
+        "city": "Loches"
+      },
+      "metadata": {
+        "address": "1 Avenue Aristide Briand, 37600 Loches",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-18:00",
+          "mardi": "09:00-13:00, 14:00-18:00",
+          "mercredi": "09:00-13:00, 14:00-18:00",
+          "jeudi": "09:00-13:00, 14:00-18:00",
+          "vendredi": "09:00-13:00, 14:00-18:00",
+          "samedi": "09:00-13:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243227[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243227"
+    },
+    {
+      "departement": "37",
+      "nom": "Centre de vaccination - Gymnase Onze Arpents de Saint-Avertin",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-avertin/centre-de-vaccination-covid-19-saint-avertin?pid=practice-179340",
+      "location": {
+        "longitude": 0.750189,
+        "latitude": 47.3601,
+        "city": "Saint-Avertin"
+      },
+      "metadata": {
+        "address": "2 Avenue Nelson Mandela, 37550 Saint-Avertin",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "ouvert",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "262264[179340]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2073"
+    },
+    {
+      "departement": "37",
+      "nom": "Salle Polyvalente - Amboise",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/amboise/vaccination-mairie-amboise",
+      "location": {
+        "longitude": 0.979625,
+        "latitude": 47.4112,
+        "city": "Amboise"
+      },
+      "metadata": {
+        "address": " Avenue des Martyrs de la R\u00e9sistance, 37400 Amboise",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "9h-18h sauf matin du 18",
+          "mardi": "9h-18h",
+          "mercredi": "9h-18h",
+          "jeudi": "9h-18h",
+          "vendredi": "9h-18h",
+          "samedi": "9h-12h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241731[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "710"
+    },
+    {
+      "departement": "37",
+      "nom": "Centre de vaccination Covid-19 Nord Touraine",
+      "url": "https://partners.doctolib.fr/centre-de-sante/neuille-pont-pierre/centre-de-vaccination-nord-touraine",
+      "location": {
+        "longitude": 0.53893067137726,
+        "latitude": 47.5468361582939,
+        "city": "Neuill\u00e9-Pont-Pierre"
+      },
+      "metadata": {
+        "address": "Les Nongreni\u00e8res, 37360 Neuill\u00e9-Pont-Pierre",
+        "phone_number": "+33247245139",
+        "business_hours": {
+          "lundi": "09:00-12:30, 14:00-17:30",
+          "mardi": "09:00-12:30, 14:00-17:30",
+          "mercredi": "09:00-12:30, 14:00-17:30",
+          "jeudi": "09:00-12:30, 14:00-17:30",
+          "vendredi": "09:00-12:30, 14:00-17:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242818[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242818"
+    },
+    {
+      "departement": "37",
+      "nom": "Centre de vaccination - Saint-Cyr-sur-Loire",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-cyr-sur-loire/centre-de-vaccination-covid-19-saint-cyr-sur-loire?pid=practice-179346",
+      "location": {
+        "longitude": 0.651879,
+        "latitude": 47.4185,
+        "city": "Saint-Cyr-sur-Loire"
+      },
+      "metadata": {
+        "address": " All\u00e9e Ren\u00e9 Coulon, 37540 Saint-Cyr-sur-Loire",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "ouvert",
+          "mardi": "ouvert",
+          "mercredi": "ouvert",
+          "jeudi": "ouvert",
+          "vendredi": "ouvert",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "262265[179346]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2074"
+    },
+    {
+      "departement": "37",
+      "nom": "Centre de vaccination Covid-19 - MEDIPOLE SOS M\u00e9decins de Tours",
+      "url": "https://partners.doctolib.fr/centre-de-sante/tours/centre-de-vaccination-covid-19-tours",
+      "location": {
+        "longitude": 0.6873576,
+        "latitude": 47.3892657,
+        "city": "Tours"
+      },
+      "metadata": {
+        "address": "19 Rue de la Dolve, 37000 Tours",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "253322[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d253322"
+    },
+    {
+      "departement": "37",
+      "nom": "Maison des associations - Clos neuf",
+      "url": "https://partners.doctolib.fr/centre-de-sante/tours/centre-vaccination-covid-tours-metrople?pid=practice-164868",
+      "location": {
+        "longitude": 0.657094,
+        "latitude": 47.3545,
+        "city": "Jou\u00e9-l\u00e8s-Tours"
+      },
+      "metadata": {
+        "address": "2 Rue du Clos Neuf, 37300 Jou\u00e9-l\u00e8s-Tours",
+        "phone_number": "+33805021400",
+        "business_hours": {
+          "lundi": "9h-18h",
+          "mardi": "9h-18h",
+          "mercredi": "9h-18h",
+          "jeudi": "9h-18h",
+          "vendredi": "9h-18h",
+          "samedi": "9h-12h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243023[164868]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "698"
+    }
+  ]
+}

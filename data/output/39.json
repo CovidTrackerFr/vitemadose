@@ -1,0 +1,683 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-14T12:37:42.633488+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "39",
+      "nom": "Centre de Salins les Bains",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-164598",
+      "location": {
+        "longitude": 5.87998,
+        "latitude": 46.9452,
+        "city": "Salins-les-Bains"
+      },
+      "metadata": {
+        "address": " Rampe Barbarine, 39110 Salins-les-Bains",
+        "phone_number": "+33384868600",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "08:30-12:30",
+          "jeudi": "08:30-12:30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T13:38:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 22,
+      "internal_id": "241304[164598]",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "erreur": null,
+      "gid": "1083"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "39",
+      "nom": "Centre de Vaccination Arinthod",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-171720",
+      "location": {
+        "longitude": 5.56468,
+        "latitude": 46.3935,
+        "city": "Arinthod"
+      },
+      "metadata": {
+        "address": "8 Rue des Ecoles, 39240 Arinthod",
+        "phone_number": "+33384868600",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241304[171720]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1441"
+    },
+    {
+      "departement": "39",
+      "nom": "Pharmacie Lafayette de la Rive Gauche",
+      "url": "https://partners.doctolib.fr/pharmacie/dole/pharmacie-lafayette-de-la-rive-gauche",
+      "location": {
+        "longitude": 5.488428,
+        "latitude": 47.083747,
+        "city": "Dole"
+      },
+      "metadata": {
+        "address": "Rue du G\u00e9n\u00e9ral Bethouart, 39100 Dole",
+        "phone_number": "+33384722047",
+        "business_hours": {
+          "lundi": "08:30-19:00",
+          "mardi": "08:30-19:00",
+          "mercredi": "08:30-19:00",
+          "jeudi": "08:30-19:00",
+          "vendredi": "08:30-19:00",
+          "samedi": "08:30-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "264077[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d264077"
+    },
+    {
+      "departement": "39",
+      "nom": "Centre de vaccination de Moirans",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte",
+      "location": {
+        "longitude": 5.7252,
+        "latitude": 46.4292,
+        "city": "Moirans-en-Montagne"
+      },
+      "metadata": {
+        "address": "1 rue Jean Jaures, 39260 Moirans-en-Montagne",
+        "phone_number": "+33384868600",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241304[163355]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1442"
+    },
+    {
+      "departement": "39",
+      "nom": "ARS de Bourgogne-Franche-Comt\u00e9 - Jura - Foncine-le-Haut",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-179926",
+      "location": {
+        "longitude": 6.0726161,
+        "latitude": 46.658693,
+        "city": "Foncine-le-Haut"
+      },
+      "metadata": {
+        "address": "58 Grande Rue, 39460 Foncine-le-Haut",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241304[179926]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d241304"
+    },
+    {
+      "departement": "39",
+      "nom": "ARS de Bourgogne-Franche-Comt\u00e9 - Jura - Dole",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-175398",
+      "location": {
+        "longitude": 5.4892749,
+        "latitude": 47.0880454,
+        "city": "Dole"
+      },
+      "metadata": {
+        "address": "22 Place Fr\u00e9d\u00e9ric Barberousse, 39100 Dole",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241304[175398]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d241304"
+    },
+    {
+      "departement": "39",
+      "nom": "ARS de Bourgogne-Franche-Comt\u00e9 - Jura - Poligny",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-164597",
+      "location": {
+        "longitude": 5.708736,
+        "latitude": 46.832093,
+        "city": "Poligny"
+      },
+      "metadata": {
+        "address": "Rue de la Fa\u00efencerie, 39800 Poligny",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241304[164597]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d241304"
+    },
+    {
+      "departement": "39",
+      "nom": "ARS de Bourgogne-Franche-Comt\u00e9 - Orgelet",
+      "url": "https://partners.doctolib.fr/centre-de-sante/orgelet/ars-de-bourgogne-franche-comte-orgelet",
+      "location": {
+        "longitude": 5.6132803,
+        "latitude": 46.5216757,
+        "city": "Orgelet"
+      },
+      "metadata": {
+        "address": "Place du Bourg de Merlia, 39270 Orgelet",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243078[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243078"
+    },
+    {
+      "departement": "39",
+      "nom": "ARS de Bourgogne-Franche-Comt\u00e9 - Jura - Saint-Claude",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-173190",
+      "location": {
+        "longitude": 5.8663691,
+        "latitude": 46.3885325,
+        "city": "Saint-Claude"
+      },
+      "metadata": {
+        "address": "10 Rue Rosset, 39200 Saint-Claude",
+        "business_hours": {
+          "lundi": "08:30-12:00, 13:30-16:30",
+          "mardi": "08:30-12:00, 13:30-16:30",
+          "mercredi": "08:30-13:00",
+          "jeudi": "08:30-12:00, 13:30-16:30",
+          "vendredi": "08:30-12:00, 13:30-16:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241304[173190-163822]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d241304"
+    },
+    {
+      "departement": "39",
+      "nom": "Centre de vaccination d'Orgelet",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-165027",
+      "location": {
+        "longitude": 5.61432,
+        "latitude": 46.5217,
+        "city": "Orgelet"
+      },
+      "metadata": {
+        "address": " Place du Bourg de Merlia, 39270 Orgelet",
+        "phone_number": "+33384868600",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "09:00-15:50",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241304[165027]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1089"
+    },
+    {
+      "departement": "39",
+      "nom": "ARS de Bourgogne-Franche-Comt\u00e9 - Jura - Lons-le-Saunier",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte",
+      "location": {
+        "longitude": 5.5394951,
+        "latitude": 46.6747878,
+        "city": "Lons-le-Saunier"
+      },
+      "metadata": {
+        "address": "Rue du 19 Mars 1962, 39570 Lons-le-Saunier",
+        "phone_number": "+33384868600",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241304[163355]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d241304"
+    },
+    {
+      "departement": "39",
+      "nom": "Parc des expositions Jura Parc",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-163355",
+      "location": {
+        "longitude": 5.53949,
+        "latitude": 46.6759,
+        "city": "Montmorot"
+      },
+      "metadata": {
+        "address": " Rue du 19 mars 1962, 39570 Montmorot",
+        "phone_number": "+33384868600",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "11:00-14:00/17:00-19:00",
+          "vendredi": "11:00-14:00/17:00-19:00",
+          "samedi": "10:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241304[163355]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "397"
+    },
+    {
+      "departement": "39",
+      "nom": "ARS de Bourgogne-Franche-Comt\u00e9 - Jura - Nozeroy",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-179980",
+      "location": {
+        "longitude": 6.043646,
+        "latitude": 46.776828,
+        "city": "Nozeroy"
+      },
+      "metadata": {
+        "address": "Rue de l'\u00c9tang, 39250 Nozeroy",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241304[179980]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d241304"
+    },
+    {
+      "departement": "39",
+      "nom": "Centre de vaccination des Rousses",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-164052",
+      "location": {
+        "longitude": 6.06061,
+        "latitude": 46.4849,
+        "city": "Les Rousses"
+      },
+      "metadata": {
+        "address": "281 Rue Pasteur, 39220 Les Rousses",
+        "phone_number": "+33384868600",
+        "business_hours": {
+          "lundi": "13:30-17:30",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "13:30-17:30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241304[164052]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1090"
+    },
+    {
+      "departement": "39",
+      "nom": "Centre de Dampierre",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-165291",
+      "location": {
+        "longitude": 5.74054,
+        "latitude": 47.1553,
+        "city": "Dampierre"
+      },
+      "metadata": {
+        "address": "12 rue du Grand Verger, 39700 Dampierre",
+        "phone_number": "+33384868600",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "09:00-13:00",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "13:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241304[165291]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1065"
+    },
+    {
+      "departement": "39",
+      "nom": "ARS de Bourgogne-Franche-Comt\u00e9 - Jura - Saint-Laurent-en-Grandvaux",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-180684",
+      "location": {
+        "longitude": 5.9551437,
+        "latitude": 46.5773678,
+        "city": "Saint-Laurent-en-Grandvaux"
+      },
+      "metadata": {
+        "address": "17 Rue du Coin d'Amont, 39150 Saint-Laurent-en-Grandvaux",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241304[180684]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d241304"
+    },
+    {
+      "departement": "39",
+      "nom": "ARS de Bourgogne-Franche-Comt\u00e9 - Jura - Champagnole",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-164484",
+      "location": {
+        "longitude": 5.9122389,
+        "latitude": 46.747579,
+        "city": "Champagnole"
+      },
+      "metadata": {
+        "address": "Rue de l'\u00c9galit\u00e9, 39300 Champagnole",
+        "phone_number": "+33384868600",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241304[164484]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d241304"
+    },
+    {
+      "departement": "39",
+      "nom": "Centre Hauts de Bienne - Morez",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-163395",
+      "location": {
+        "longitude": 6.02154,
+        "latitude": 46.5221,
+        "city": "Hauts de Bienne"
+      },
+      "metadata": {
+        "address": "5 Espace Lamartine, 39400 Hauts de Bienne",
+        "phone_number": "+33384868600",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241304[163395]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1385"
+    },
+    {
+      "departement": "39",
+      "nom": "ARS de Bourgogne-Franche-Comt\u00e9 - Jura - Arbois",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-164596",
+      "location": {
+        "longitude": 5.7714612,
+        "latitude": 46.9037851,
+        "city": "Arbois"
+      },
+      "metadata": {
+        "address": "Rue Notre Dame, 39600 Arbois",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241304[164596]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d241304"
+    },
+    {
+      "departement": "39",
+      "nom": "ARS de Bourgogne-Franche-Comt\u00e9 - Jura - Cousance",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte?pid=practice-171872",
+      "location": {
+        "longitude": 5.389336,
+        "latitude": 46.534474,
+        "city": "Cousance"
+      },
+      "metadata": {
+        "address": "Rue de la Gare, 39190 Cousance",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241304[171872]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d241304"
+    },
+    {
+      "departement": "39",
+      "nom": "Dole - Le man\u00e8ge de Brack",
+      "url": "https://partners.doctolib.fr/centre-de-sante/dole/ars-de-bourgogne-franche-comte",
+      "location": {
+        "longitude": 5.48916,
+        "latitude": 47.0881,
+        "city": "Dole"
+      },
+      "metadata": {
+        "address": "22 Place Frederic Barberousse, 39100 Dole",
+        "phone_number": "+33384868600",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "11:00-14:00/18:00-20:00",
+          "vendredi": "11:00-14:00/18:00-20:00",
+          "samedi": "10:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241304[163355]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "331"
+    },
+    {
+      "departement": "39",
+      "nom": "Centre de Chaussin",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chaussin/ars-de-bourgogne-franche-comte-chaussin",
+      "location": {
+        "longitude": 5.40786,
+        "latitude": 46.9675,
+        "city": "Chaussin"
+      },
+      "metadata": {
+        "address": "12 Grande rue, 39120 Chaussin",
+        "phone_number": "+33384868600",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "13:00-17:00",
+          "mercredi": "09:00-11:40",
+          "jeudi": "13:00-17:00",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "244804[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1384"
+    }
+  ]
+}

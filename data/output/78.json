@@ -1,0 +1,1039 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-14T12:37:42.699776+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "78",
+      "nom": "Centre de vaccination COVID-19 de Sartrouville",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sartrouville/centre-de-vaccination-covid-19-de-sartrouville",
+      "location": {
+        "longitude": 2.1637366,
+        "latitude": 48.9362654,
+        "city": "Sartrouville"
+      },
+      "metadata": {
+        "address": "96 Rue Louise Michel, 78500 Sartrouville",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-14T15:50:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 12,
+      "internal_id": "243204[]",
+      "vaccine_type": [
+        "Moderna"
+      ],
+      "erreur": null,
+      "gid": "d243204"
+    },
+    {
+      "departement": "78",
+      "nom": "Centre de vaccination de Sartrouville",
+      "url": "https://partners.doctolib.fr/centre-de-sante/sartrouville/centre-de-vaccination-covid-19-de-sartrouville?pid=practice-165170",
+      "location": {
+        "longitude": 2.1631,
+        "latitude": 48.9359,
+        "city": "Sartrouville"
+      },
+      "metadata": {
+        "address": "96 Rue Louise Michel, 78500 Sartrouville",
+        "phone_number": "+33800101078",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "14:00-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "14:00-18:00",
+          "vendredi": "14:00-18:00",
+          "samedi": "14:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-04-14T15:50:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 12,
+      "internal_id": "243204[165170]",
+      "vaccine_type": [
+        "Moderna"
+      ],
+      "erreur": null,
+      "gid": "1651"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "78",
+      "nom": "Pharmacie du March\u00e9 Gendron",
+      "url": "https://partners.doctolib.fr/pharmacie/houilles/pharmacie-gendron",
+      "location": {
+        "longitude": 2.187769,
+        "latitude": 48.9238186,
+        "city": "Houilles"
+      },
+      "metadata": {
+        "address": "12 Avenue Carnot, 78800 Houilles",
+        "phone_number": "+33139686348",
+        "business_hours": {
+          "lundi": "08:30-19:30",
+          "mardi": "08:30-19:30",
+          "mercredi": "08:30-19:30",
+          "jeudi": "08:30-19:30",
+          "vendredi": "08:30-19:30",
+          "samedi": "08:30-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "259632[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d259632"
+    },
+    {
+      "departement": "78",
+      "nom": "Mme Imane MAARIFI",
+      "url": "https://partners.doctolib.fr/infirmier/plaisir/imane-maarifi-plaisir",
+      "location": {
+        "longitude": 1.9389571,
+        "latitude": 48.8253589,
+        "city": "Plaisir"
+      },
+      "metadata": {
+        "address": "220 Rue Fran\u00e7ois Mansart, 78370 Plaisir",
+        "phone_number": "+33658886810",
+        "business_hours": {
+          "lundi": "14:00-15:00",
+          "mardi": "14:00-15:00",
+          "mercredi": "14:00-15:00",
+          "jeudi": "14:00-15:00",
+          "vendredi": "14:00-15:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "262206[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d262206"
+    },
+    {
+      "departement": "78",
+      "nom": "Pharmacie de Chennevi\u00e8res",
+      "url": "https://partners.doctolib.fr/pharmacie/conflans-sainte-honorine/pharmacie-de-chennevieres",
+      "location": {
+        "longitude": 2.1169026,
+        "latitude": 49.0055363,
+        "city": "Conflans-Sainte-Honorine"
+      },
+      "metadata": {
+        "address": "Place de la Libert\u00e9, 78700 Conflans-Sainte-Honorine",
+        "phone_number": "+33139197349",
+        "business_hours": {
+          "lundi": "08:30-20:00",
+          "mardi": "08:30-20:00",
+          "mercredi": "08:30-20:00",
+          "jeudi": "08:30-20:00",
+          "vendredi": "08:30-20:00",
+          "samedi": "09:00-19:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "258428[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d258428"
+    },
+    {
+      "departement": "78",
+      "nom": "Pharmacie Des Grandes Terres",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-grandes-terres-marly-le-roi",
+      "location": {
+        "longitude": 2.1012972,
+        "latitude": 48.8796553,
+        "city": "marly-le-roi"
+      },
+      "metadata": {
+        "address": "5 avenue de l'amirale Lemonnier, 78160 MARLY LE ROI",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "7d1871cf"
+    },
+    {
+      "departement": "78",
+      "nom": "Pharmacie Des Saules",
+      "url": "https://mapharma.net/78280",
+      "location": null,
+      "metadata": {
+        "address": "5 Square Camille Pissarro 78280 GUYANCOURT",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "78280-0"
+    },
+    {
+      "departement": "78",
+      "nom": "Pharmacie Du Val (menantaud)",
+      "url": "https://mapharma.net/78500",
+      "location": null,
+      "metadata": {
+        "address": "155 Bld Henri-Barbusse 78500 SARTROUVILLE",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "78500-0"
+    },
+    {
+      "departement": "78",
+      "nom": "Pharmacie De Jouars Pontchartrain",
+      "url": "https://mapharma.net/78760",
+      "location": null,
+      "metadata": {
+        "address": "4 a rue des Artisans 78760 JOUARS PONTCHARTRAIN",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "78760-0"
+    },
+    {
+      "departement": "78",
+      "nom": "CH de Rambouillet",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/rambouillet/point-prelevement-pcr-covid-19-rambouillet",
+      "location": {
+        "longitude": 1.82661,
+        "latitude": 48.6525,
+        "city": "Rambouillet"
+      },
+      "metadata": {
+        "address": "7 Rue Pierre et Marie Curie, 78120 Rambouillet",
+        "phone_number": "+33134837721",
+        "business_hours": {
+          "lundi": "13h-17h30",
+          "mardi": "13h-17h30",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "13h-17h30",
+          "vendredi": "13h-17h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "206950[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1468"
+    },
+    {
+      "departement": "78",
+      "nom": "Communaut\u00e9 d'agglom\u00e9ration Versailles Grand Parc",
+      "url": "https://partners.doctolib.fr/centre-de-sante/versailles/centre-de-vaccination-covid-de-versailles",
+      "location": {
+        "longitude": 2.14325,
+        "latitude": 48.8115,
+        "city": "Versailles"
+      },
+      "metadata": {
+        "address": "7 bis Rue Pierre Lescot, 78000 Versailles",
+        "phone_number": "+33130972930",
+        "business_hours": {
+          "lundi": "14:00-17:00",
+          "mardi": "14:00-17:00",
+          "mercredi": "14:00-17:00",
+          "jeudi": "14:00-17:00",
+          "vendredi": "14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242655[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "429"
+    },
+    {
+      "departement": "78",
+      "nom": "Dr Marianne Guirimand",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/guyancourt/marianne-guirimand-guyancourt",
+      "location": {
+        "longitude": 2.07748349999997,
+        "latitude": 48.7661906,
+        "city": "Guyancourt"
+      },
+      "metadata": {
+        "address": "15 Rue Andr\u00e9 Leroi Gourhan, 78280 Guyancourt",
+        "phone_number": "+33134527777",
+        "business_hours": {
+          "lundi": "08:00-13:00, 14:00-19:00",
+          "mardi": "08:00-13:00, 14:00-19:00",
+          "mercredi": "08:00-13:00, 14:00-19:00",
+          "jeudi": "08:00-13:00, 14:00-19:00",
+          "vendredi": "08:00-13:00, 14:00-19:00",
+          "samedi": "08:00-13:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "253974[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d253974"
+    },
+    {
+      "departement": "78",
+      "nom": "Communaut\u00e9 de communes Haute Vall\u00e9e de Chevreuse",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-remy-les-chevreuse/centre-de-vaccination-de-saint-remy-les-chevreuse",
+      "location": {
+        "longitude": 2.07253,
+        "latitude": 48.7034,
+        "city": "Saint-R\u00e9my-l\u00e8s-Chevreuse"
+      },
+      "metadata": {
+        "address": "15 Rue Ditte, 78470 Saint-R\u00e9my-l\u00e8s-Chevreuse",
+        "phone_number": "+33645796334",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "9:00-17:00",
+          "jeudi": "9:00-17:00",
+          "vendredi": "9:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242653[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "431"
+    },
+    {
+      "departement": "78",
+      "nom": "Communaut\u00e9 d'agglom\u00e9ration Rambouillet Territoires",
+      "url": "https://partners.doctolib.fr/centre-de-sante/rambouillet/centre-de-vaccination-covid-19-de-rambouillet",
+      "location": {
+        "longitude": 1.82141,
+        "latitude": 48.6493,
+        "city": "Rambouillet"
+      },
+      "metadata": {
+        "address": "64 rue Gambetta, 78120 Rambouillet",
+        "phone_number": "+33800103078",
+        "business_hours": {
+          "lundi": "09:00-12:30/14:00-17:30",
+          "mardi": "09:00-12:30/14:00-17:30",
+          "mercredi": "09:00-12:30/14:00-17:30",
+          "jeudi": "09:00-12:30/14:00-17:30",
+          "vendredi": "09:00-12:30/14:00-17:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243206[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1032"
+    },
+    {
+      "departement": "78",
+      "nom": "Centre de vaccination Covid-19 des Mesnuls",
+      "url": "https://partners.doctolib.fr/centre-de-sante/les-mesnuls/centre-de-vaccination-covid-19-des-mesnuls",
+      "location": {
+        "longitude": 1.8321192,
+        "latitude": 48.753882,
+        "city": "Les Mesnuls"
+      },
+      "metadata": {
+        "address": "Grande Rue, 78490 Les Mesnuls",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "255947[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d255947"
+    },
+    {
+      "departement": "78",
+      "nom": "CH de\u00a0Versailles\u00a0 Site\u00a0Andr\u00e9\u00a0Mignot",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/ile-de-france/ars-ile-de-france-vaccination-des-professionnels-de-sante?pid=practice-162774",
+      "location": {
+        "longitude": 2.12813,
+        "latitude": 48.8311,
+        "city": "Le Chesnay-Rocquencourt"
+      },
+      "metadata": {
+        "address": "177 Rue de Versailles, 78150 Le Chesnay-Rocquencourt",
+        "phone_number": "+33173196628",
+        "business_hours": {
+          "lundi": "13h30-16h30",
+          "mardi": "13h30-16h30",
+          "mercredi": "13h30-16h30",
+          "jeudi": "13h30-16h30",
+          "vendredi": "13h30-16h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241073[162774]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1460"
+    },
+    {
+      "departement": "78",
+      "nom": "Centre de vaccination COVID-19 de Houdan",
+      "url": "https://partners.doctolib.fr/centre-de-sante/houdan/centre-de-vaccination-covid-de-houdan",
+      "location": {
+        "longitude": 1.603032,
+        "latitude": 48.7883663,
+        "city": "Houdan"
+      },
+      "metadata": {
+        "address": "31 Rue d'Epernon, 78550 Houdan",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242656[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242656"
+    },
+    {
+      "departement": "78",
+      "nom": "Centre de vaccination de Conflans Sainte-Honorine",
+      "url": "https://partners.doctolib.fr/centre-de-sante/conflans-sainte-honorine/centre-de-vaccination-de-conflans-sainte-honorine",
+      "location": {
+        "longitude": 2.0976717,
+        "latitude": 48.9979029,
+        "city": "Conflans-Sainte-Honorine"
+      },
+      "metadata": {
+        "address": "Rue Auguste Romagne, 78700 Conflans-Sainte-Honorine",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "259420[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d259420"
+    },
+    {
+      "departement": "78",
+      "nom": "Centre de vaccination COVID-19 de Saint-Germain-en-Laye",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-germain-en-laye/centre-de-vaccination-covid-de-saint-germain-en-laye?pid=practice-182316",
+      "location": {
+        "longitude": 2.0627911,
+        "latitude": 48.8978284,
+        "city": "Saint-Germain-en-Laye"
+      },
+      "metadata": {
+        "address": "Rue du Fer \u00c0 Cheval, 78100 Saint-Germain-en-Laye",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242654[182316-164631]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242654"
+    },
+    {
+      "departement": "78",
+      "nom": "Communaut\u00e9 de communes Gally-Mauldre \u00e0 Crespi\u00e8res",
+      "url": "https://partners.doctolib.fr/centre-de-sante/le-chesnay-rocquencourt/centre-de-vaccination-de-la-communaute-de-communes-gally-mauldre-crespieres?pid=practice-174913",
+      "location": {
+        "longitude": 1.92343,
+        "latitude": 48.8822,
+        "city": "Crespi\u00e8res"
+      },
+      "metadata": {
+        "address": "11 Rue de la Sansonnerie, 78121 Crespi\u00e8res",
+        "phone_number": "+33134590163",
+        "business_hours": {
+          "lundi": "14:00-17:00",
+          "mardi": "9:00-12:00",
+          "mercredi": "14:00-17:00",
+          "jeudi": "9:00-12:00",
+          "vendredi": "14:00-17:00",
+          "samedi": "9:00-12:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "255582[174913]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1655"
+    },
+    {
+      "departement": "78",
+      "nom": "Communaut\u00e9 de communes Coeur d'Yvelines LES MESNULS",
+      "url": "https://partners.doctolib.fr/centre-de-sante/les-mesnuls/centre-de-vaccination-covid-19-des-mesnuls?pid=practice-175159",
+      "location": {
+        "longitude": 1.83585,
+        "latitude": 48.7567,
+        "city": "Les Mesnuls"
+      },
+      "metadata": {
+        "address": "13 Grande Rue, 78490 Les Mesnuls",
+        "phone_number": "+33134867542",
+        "business_hours": {
+          "lundi": "9:00-13:00/14:00-18:00",
+          "mardi": "9:00-13:00/14:00-18:00",
+          "mercredi": "9:00-13:00/14:00-18:00",
+          "jeudi": "9:00-13:00/14:00-18:00",
+          "vendredi": "9:00-13:00/14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "255947[175159]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1678"
+    },
+    {
+      "departement": "78",
+      "nom": "Dr Sabine BOUVET",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/versailles/sabine-bouvet",
+      "location": {
+        "longitude": 2.13172420000001,
+        "latitude": 48.7987156,
+        "city": "Versailles"
+      },
+      "metadata": {
+        "address": "9 Rue de Limoges, 78000 Versailles",
+        "phone_number": "+33130215118",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "22161[45078]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d22161"
+    },
+    {
+      "departement": "78",
+      "nom": "CENTRE VACCINATION CD78 (RA)",
+      "url": "https://partners.doctolib.fr/hopital-public/versailles/centre-de-vaccination-de-versailles?pid=practice-162774",
+      "location": {
+        "longitude": 2.13186,
+        "latitude": 48.8028,
+        "city": "Versailles"
+      },
+      "metadata": {
+        "address": "2 Place Andr\u00e9 MIGNOT, 78000 Versailles",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242368[162774]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1310"
+    },
+    {
+      "departement": "78",
+      "nom": "Centre de vaccination Salle des f\u00eates Saint-Cyr-l'Ecole",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-cyr-l-ecole/centre-de-vaccination-salle-des-fetes-saint-cyr-l-ecole",
+      "location": {
+        "longitude": 2.0738116,
+        "latitude": 48.7990827,
+        "city": "Saint-Cyr-l'\u00c9cole"
+      },
+      "metadata": {
+        "address": "Place Pierre Semard, 78210 Saint-Cyr-l'\u00c9cole",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "245160[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d245160"
+    },
+    {
+      "departement": "78",
+      "nom": "Centre de vaccination COVID-19 de Mantes-la-Jolie - Mantes-la-Jolie",
+      "url": "https://partners.doctolib.fr/centre-de-sante/mantes-la-jolie/centre-de-vaccination-de-mantes-la-jolie",
+      "location": {
+        "longitude": 1.693126,
+        "latitude": 48.9951344,
+        "city": "Mantes-la-Jolie"
+      },
+      "metadata": {
+        "address": "254 Boulevard du Mar\u00e9chal Juin, 78200 Mantes-la-Jolie",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242366[166972]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242366"
+    },
+    {
+      "departement": "78",
+      "nom": "Centre de vaccination COVID-19 de Mantes-la-Jolie - Mantes-la-Jolie",
+      "url": "https://partners.doctolib.fr/centre-de-sante/mantes-la-jolie/centre-de-vaccination-de-mantes-la-jolie?pid=practice-167129",
+      "location": {
+        "longitude": 1.693126,
+        "latitude": 48.9951344,
+        "city": "Mantes-la-Jolie"
+      },
+      "metadata": {
+        "address": "254 Boulevard du Mar\u00e9chal Juin, 78200 Mantes-la-Jolie",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242366[167129-166972]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242366"
+    },
+    {
+      "departement": "78",
+      "nom": "Centre  de vaccination de Conflans Sainte Honorine",
+      "url": "https://partners.doctolib.fr/centre-de-sante/conflans-sainte-honorine/centre-de-vaccination-de-conflans-sainte-honorine?pid=practice-177561",
+      "location": {
+        "longitude": 2.09813,
+        "latitude": 48.998,
+        "city": "Conflans-Sainte-Honorine"
+      },
+      "metadata": {
+        "address": "2 Place Auguste Romagne, 78700 Conflans-Sainte-Honorine",
+        "phone_number": "+33611175820",
+        "business_hours": {
+          "lundi": " 9:00-13:00/14:00-18:00",
+          "mardi": " 9:00-13:00/14:00-18:00",
+          "mercredi": " 9:00-13:00/14:00-18:00",
+          "jeudi": " 9:00-13:00/14:00-18:00",
+          "vendredi": " 9:00-13:00/14:00-18:00",
+          "samedi": " 9:00-13:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "259420[177561]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2112"
+    },
+    {
+      "departement": "78",
+      "nom": "Communaut\u00e9 Urbaine GPSO - Mantes-la-Jolie",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/ile-de-france/ars-ile-de-france-vaccination-des-professionnels-de-sante",
+      "location": {
+        "longitude": 1.69145,
+        "latitude": 48.9956,
+        "city": "Mantes-la-Jolie"
+      },
+      "metadata": {
+        "address": "254 Boulevard du Mar\u00e9chal Juin, 78200 Mantes-la-Jolie",
+        "phone_number": "+33627635141",
+        "business_hours": {
+          "lundi": "11:30-14:15",
+          "mardi": "11:30-14:15",
+          "mercredi": "14:00-17:00",
+          "jeudi": "11:30-14:15",
+          "vendredi": "11:30-14:15",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241073[162774]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "426"
+    },
+    {
+      "departement": "78",
+      "nom": "CPTS Val de Seine",
+      "url": "https://partners.doctolib.fr/centre-de-sante/les-mureaux/cpts-val-de-seine",
+      "location": {
+        "longitude": 1.91118,
+        "latitude": 48.9891,
+        "city": "Les Mureaux"
+      },
+      "metadata": {
+        "address": "44 Rue Aristide Briand, 78130 Les Mureaux",
+        "phone_number": "+33130912828",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-14:00",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "9:00-17:00",
+          "vendredi": "14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242755[164672]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "968"
+    },
+    {
+      "departement": "78",
+      "nom": "Centre  de vaccination de Chatou",
+      "url": "https://partners.doctolib.fr/centre-de-sante/chatou/apta-78-vaccination-covid-19-chatou?pid=practice-178074",
+      "location": {
+        "longitude": 2.1614,
+        "latitude": 48.8856,
+        "city": "Chatou"
+      },
+      "metadata": {
+        "address": "31 Ile des Impressionnistes, 78400 Chatou",
+        "phone_number": "+33134804958",
+        "business_hours": {
+          "lundi": "9:00-12:00/14:00-17:00",
+          "mardi": "9:00-12:00/14:00-17:00",
+          "mercredi": "9:00-12:00/14:00-17:00",
+          "jeudi": "9:00-12:00/14:00-17:00",
+          "vendredi": "9:00-12:00/14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "260818[178074]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2113"
+    },
+    {
+      "departement": "78",
+      "nom": "Centre de vaccination de SAINT CYR L'ECOLE",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-cyr-l-ecole/centre-de-vaccination-salle-des-fetes-saint-cyr-l-ecole?pid=practice-166568",
+      "location": {
+        "longitude": 2.07283,
+        "latitude": 48.7991,
+        "city": "Saint-Cyr-l'\u00c9cole"
+      },
+      "metadata": {
+        "address": "13 Place Pierre Semard, 78210 Saint-Cyr-l'\u00c9cole",
+        "business_hours": {
+          "lundi": " 9:30-12:30/13:30-18:30 ",
+          "mardi": " 9:30-12:30/13:30-18:30 ",
+          "mercredi": " 9:30-12:30/13:30-18:30 ",
+          "jeudi": " 9:30-12:30/13:30-18:30 ",
+          "vendredi": " 9:30-12:30/13:30-18:30 ",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "245160[166568]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1680"
+    },
+    {
+      "departement": "78",
+      "nom": "Communaut\u00e9 d'agglom\u00e9ration Saint-Germain Boucle de la Seine",
+      "url": "https://partners.doctolib.fr/centre-de-sante/saint-germain-en-laye/centre-de-vaccination-covid-de-saint-germain-en-laye",
+      "location": {
+        "longitude": 2.06072,
+        "latitude": 48.8943,
+        "city": "Saint-Germain-en-Laye"
+      },
+      "metadata": {
+        "address": "31 Avenue de la Ferme des H\u00e9zards, 78112 Saint-Germain-en-Laye",
+        "phone_number": "+33130872218",
+        "business_hours": {
+          "lundi": "9:00-12:00/14:00-17:00",
+          "mardi": "9:00-12:00/14:00-17:00",
+          "mercredi": "9:00-12:00/14:00-17:00",
+          "jeudi": "9:00-12:00/14:00-17:00",
+          "vendredi": "9:00-12:00/14:00-17:00",
+          "samedi": "9:00-12:00/14:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242654[164631]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "427"
+    },
+    {
+      "departement": "78",
+      "nom": "Centre de Poissy",
+      "url": "https://partners.doctolib.fr/centre-depistage-covid/ile-de-france/ars-ile-de-france-vaccination-des-professionnels-de-sante?pid=practice-163036",
+      "location": {
+        "longitude": 2.02999,
+        "latitude": 48.9243,
+        "city": "Poissy"
+      },
+      "metadata": {
+        "address": "78 Avenue Blanche de Castille, 78300 Poissy",
+        "phone_number": "+33139225688",
+        "business_hours": {
+          "lundi": "14:30-16:30",
+          "mardi": "14:30-16:30",
+          "mercredi": "14:30-16:30",
+          "jeudi": "14:30-16:30",
+          "vendredi": "14:30-16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241073[163036]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "286"
+    },
+    {
+      "departement": "78",
+      "nom": "Centre de vaccination de V\u00e9lizy-Villacoublay",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/velizy-villacoublay/apta-78-vaccination-covid-19-velizy-villacoublay?pid=practice-178458",
+      "location": {
+        "longitude": 2.18342,
+        "latitude": 48.7813,
+        "city": "V\u00e9lizy-Villacoublay"
+      },
+      "metadata": {
+        "address": "25 Avenue Louis Br\u00e9guet, 78140 V\u00e9lizy-Villacoublay",
+        "phone_number": "+3313452345",
+        "business_hours": {
+          "lundi": "8:30-17:00",
+          "mardi": "8:30-17:00",
+          "mercredi": "8:30-17:00",
+          "jeudi": "8:30-17:00",
+          "vendredi": "8:30-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "261304[178458]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "2072"
+    },
+    {
+      "departement": "78",
+      "nom": "Communaut\u00e9 d'agglom\u00e9ration de Saint-Quentin-en-Yvelines",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montigny-le-bretonneux/centre-de-vaccination-covid-19-de-montigny-le-bretonneux",
+      "location": {
+        "longitude": 2.03587,
+        "latitude": 48.7893,
+        "city": "Montigny-le-Bretonneux"
+      },
+      "metadata": {
+        "address": "1  Rue Laurent Fignon, 78180 Montigny-le-Bretonneux",
+        "phone_number": "+33130161783",
+        "business_hours": {
+          "lundi": "9:00-13:00/14:00-18:00",
+          "mardi": "9:00-13:00/14:00-18:00",
+          "mercredi": "9:00-13:00/14:00-18:00",
+          "jeudi": "9:00-13:00/14:00-18:00",
+          "vendredi": "9:00-13:00/14:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243464[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "966"
+    }
+  ]
+}

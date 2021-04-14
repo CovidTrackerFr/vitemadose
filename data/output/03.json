@@ -1,0 +1,716 @@
+{
+  "version": 1,
+  "last_updated": "2021-04-14T12:37:42.593225+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "03",
+      "nom": "Centre de vaccination Covid-19 de la maison des associations Vichy",
+      "url": "https://partners.doctolib.fr/centre-de-sante/vichy/centre-de-vaccination-de-la-maison-des-associations-vichy",
+      "location": {
+        "longitude": 3.4258555,
+        "latitude": 46.1246388,
+        "city": "Vichy"
+      },
+      "metadata": {
+        "address": "Place Charles de Gaulle, 03200 Vichy",
+        "phone_number": "+33800709999",
+        "business_hours": {
+          "lundi": "09:00-12:30, 14:00-17:00",
+          "mardi": "09:00-12:30, 14:00-17:00",
+          "mercredi": "09:00-12:30, 14:00-17:00",
+          "jeudi": "09:00-12:30, 14:00-17:00",
+          "vendredi": "09:00-12:30, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-16T10:30:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 34,
+      "internal_id": "242880[164859]",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "erreur": null,
+      "gid": "d242880"
+    },
+    {
+      "departement": "03",
+      "nom": "Dr Aur\u00e9lien GIRAUD",
+      "url": "https://partners.doctolib.fr/medecin-generaliste/saint-germain-des-fosses/aurelien-giraud",
+      "location": {
+        "longitude": 3.432487,
+        "latitude": 46.205656,
+        "city": "Saint-Germain-des-Foss\u00e9s"
+      },
+      "metadata": {
+        "address": "20 Rue Pierre Semard, 03260 Saint-Germain-des-Foss\u00e9s",
+        "phone_number": "+33470900343",
+        "business_hours": {
+          "lundi": "08:30-13:00, 14:00-18:30",
+          "mardi": "08:30-13:00",
+          "mercredi": "08:30-13:00, 14:00-18:30",
+          "jeudi": "14:00-18:30",
+          "vendredi": "08:30-13:00, 14:00-18:30",
+          "samedi": "08:30-13:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": "2021-04-22T09:18:00.000+02:00",
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 9,
+      "internal_id": "211129[]",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "erreur": null,
+      "gid": "d211129"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "03",
+      "nom": "Pharmacie Meynial",
+      "url": "https://mapharma.net/03250",
+      "location": null,
+      "metadata": {
+        "address": "50 rue Francisque Drifford 03250 LE MAYET DE MONTAGNE",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "03250-0"
+    },
+    {
+      "departement": "03",
+      "nom": "Pharmacie De La Madeleine",
+      "url": "https://mapharma.net/03000",
+      "location": null,
+      "metadata": {
+        "address": "20 avenue de la Lib\u00e9ration 03000 MOULINS",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "03000-0"
+    },
+    {
+      "departement": "03",
+      "nom": "Vaccination Covid 19 mobile dans les cantons de l'Allier - Marcillat-en-Combraille",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cosne-d-allier/vaccination-mobile-dans-les-cantons-de-l-allier?pid=practice-172833",
+      "location": {
+        "longitude": 2.6313706,
+        "latitude": 46.1672805,
+        "city": "Marcillat-en-Combraille"
+      },
+      "metadata": {
+        "address": "1 Place du Donjon, 03420 Marcillat-en-Combraille",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": "09:30-12:30, 13:30-16:30",
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243495[172833-165415]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243495"
+    },
+    {
+      "departement": "03",
+      "nom": "Centre de vaccination - Montlu\u00e7on - Athanor - Commentry",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montlucon/centre-de-vaccination-saint-francois?pid=practice-181651",
+      "location": {
+        "longitude": 2.731626,
+        "latitude": 46.297232,
+        "city": "Commentry"
+      },
+      "metadata": {
+        "address": "Rue Abel Gance, 03600 Commentry",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242556[181651]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242556"
+    },
+    {
+      "departement": "03",
+      "nom": "Centre de vaccination - Montlu\u00e7on - Athanor - La Chapelaude",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montlucon/centre-de-vaccination-saint-francois?pid=practice-182429",
+      "location": {
+        "longitude": 2.5001078,
+        "latitude": 46.4225238,
+        "city": "La Chapelaude"
+      },
+      "metadata": {
+        "address": "47 Rue du Pav\u00e9, 03380 La Chapelaude",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242556[182429]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242556"
+    },
+    {
+      "departement": "03",
+      "nom": "Vaccination Covid 19 mobile dans les cantons de l'Allier - Lapalisse",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cosne-d-allier/vaccination-mobile-dans-les-cantons-de-l-allier?pid=practice-172827",
+      "location": {
+        "longitude": 3.6403882,
+        "latitude": 46.2506475,
+        "city": "Lapalisse"
+      },
+      "metadata": {
+        "address": "1 Avenue Pasteur, 03120 Lapalisse",
+        "business_hours": {
+          "lundi": "09:30-12:30, 13:30-16:30",
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": "09:30-12:30, 13:30-16:30",
+          "samedi": "09:30-12:30, 13:30-16:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243495[172827-165388]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243495"
+    },
+    {
+      "departement": "03",
+      "nom": "Vaccination Covid 19 mobile dans les cantons de l'Allier - Dompierre-sur-Besbre",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cosne-d-allier/vaccination-mobile-dans-les-cantons-de-l-allier?pid=practice-172828",
+      "location": {
+        "longitude": 3.6760944,
+        "latitude": 46.5139098,
+        "city": "Dompierre-sur-Besbre"
+      },
+      "metadata": {
+        "address": "Route de Vichy, 03290 Dompierre-sur-Besbre",
+        "business_hours": {
+          "lundi": null,
+          "mardi": "09:30-12:30, 13:30-16:30",
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": "09:30-12:30, 13:30-16:30",
+          "samedi": "09:30-12:30, 13:30-16:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243495[172828-165391]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243495"
+    },
+    {
+      "departement": "03",
+      "nom": "Vaccination Covid 19 mobile dans les cantons de l'Allier - Montmarault",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cosne-d-allier/vaccination-mobile-dans-les-cantons-de-l-allier?pid=practice-172826",
+      "location": {
+        "longitude": 2.9543258,
+        "latitude": 46.3174937,
+        "city": "Montmarault"
+      },
+      "metadata": {
+        "address": "1 Rue Victor Hugo, 03390 Montmarault",
+        "business_hours": {
+          "lundi": null,
+          "mardi": "09:30-12:30, 13:30-16:30",
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": "09:30-12:30, 13:30-16:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243495[172826-165387]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243495"
+    },
+    {
+      "departement": "03",
+      "nom": "Vaccination Covid 19 mobile dans les cantons de l'Allier - Cosne-d'Allier",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cosne-d-allier/vaccination-mobile-dans-les-cantons-de-l-allier",
+      "location": {
+        "longitude": 2.832693,
+        "latitude": 46.477943,
+        "city": "Cosne-d'Allier"
+      },
+      "metadata": {
+        "address": "Rue George Sand, 03430 Cosne-d'Allier",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": "09:30-12:30, 13:30-16:30",
+          "vendredi": "09:30-12:30, 13:30-16:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243495[165386]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243495"
+    },
+    {
+      "departement": "03",
+      "nom": "CPTS Nord Allier - Centre de vaccination COVID-19 - Moulins",
+      "url": "https://partners.doctolib.fr/centre-de-sante/moulins/cpts-nord-allier-centre-de-vaccination",
+      "location": {
+        "longitude": 3.3299624,
+        "latitude": 46.5622173,
+        "city": "Moulins"
+      },
+      "metadata": {
+        "address": "1 Place Mar\u00e9chal de Lattre de Tassigny, 03000 Moulins",
+        "phone_number": "+33470485000",
+        "business_hours": {
+          "lundi": "16:00-20:00",
+          "mardi": "16:00-20:00",
+          "mercredi": "16:00-20:00",
+          "jeudi": "16:00-20:00",
+          "vendredi": "16:00-20:00",
+          "samedi": "09:00-13:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241619[163634]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d241619"
+    },
+    {
+      "departement": "03",
+      "nom": "Vaccination Covid 19 mobile dans les cantons de l'Allier - C\u00e9rilly",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cosne-d-allier/vaccination-mobile-dans-les-cantons-de-l-allier?pid=practice-172831",
+      "location": {
+        "longitude": 2.8220453,
+        "latitude": 46.6178181,
+        "city": "C\u00e9rilly"
+      },
+      "metadata": {
+        "address": "1 Rue Marx Dormoy, 03350 C\u00e9rilly",
+        "business_hours": {
+          "lundi": null,
+          "mardi": "09:30-12:30, 13:30-16:30",
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243495[172831-165412]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243495"
+    },
+    {
+      "departement": "03",
+      "nom": "Vaccination Covid 19 mobile dans les cantons de l'Allier - Le Montet",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cosne-d-allier/vaccination-mobile-dans-les-cantons-de-l-allier?pid=practice-172830",
+      "location": {
+        "longitude": 3.0577236,
+        "latitude": 46.4094527,
+        "city": "Le Montet"
+      },
+      "metadata": {
+        "address": "Place du G\u00e9n\u00e9ral Hoche, 03240 Le Montet",
+        "business_hours": {
+          "lundi": "09:30-12:30, 13:30-16:30",
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": "09:30-12:30, 13:30-16:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243495[172830-165407]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243495"
+    },
+    {
+      "departement": "03",
+      "nom": "Vaccination Covid 19 mobile dans les cantons de l'Allier - Le Donjon",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cosne-d-allier/vaccination-mobile-dans-les-cantons-de-l-allier?pid=practice-165392",
+      "location": {
+        "longitude": 3.7941208,
+        "latitude": 46.3525124,
+        "city": "Le Donjon"
+      },
+      "metadata": {
+        "address": "1 Lotissement le Plessis, 03130 Le Donjon",
+        "business_hours": {
+          "lundi": null,
+          "mardi": "09:30-13:30, 13:30-16:30",
+          "mercredi": "09:30-13:30, 13:30-16:30",
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243495[165392-172822]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243495"
+    },
+    {
+      "departement": "03",
+      "nom": "Centre de vaccination - Centre Hospitalier Moulins-Yzeure",
+      "url": "https://www.maiia.com/centre-de-vaccination/03000-moulins/centre-de-vaccination--moulins---yzeure",
+      "location": {
+        "longitude": 3.32521,
+        "latitude": 46.5703,
+        "city": "Moulins"
+      },
+      "metadata": {
+        "address": "10 Avenue du G\u00e9n\u00e9ral de Gaulle, 03000 Moulins",
+        "phone_number": "+33470461110",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-17:00",
+          "dimanche": "FERME"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": null,
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "87"
+    },
+    {
+      "departement": "03",
+      "nom": "Centre de vaccination - Montlu\u00e7on - Athanor - Huriel",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montlucon/centre-de-vaccination-saint-francois?pid=practice-182430",
+      "location": {
+        "longitude": 2.472166,
+        "latitude": 46.373334,
+        "city": "Huriel"
+      },
+      "metadata": {
+        "address": "Rue du Moulin de Lyon, 03380 Huriel",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242556[182430]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242556"
+    },
+    {
+      "departement": "03",
+      "nom": "Centre de vaccination - Montlu\u00e7on - Athanor - H\u00e9risson",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montlucon/centre-de-vaccination-saint-francois?pid=practice-178539",
+      "location": {
+        "longitude": 2.7121761,
+        "latitude": 46.5075362,
+        "city": "H\u00e9risson"
+      },
+      "metadata": {
+        "address": "21 Quai de l'Aumance, 03190 H\u00e9risson",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242556[178539]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242556"
+    },
+    {
+      "departement": "03",
+      "nom": "Centre de vaccination de La Bourbonnette -  Conseil D\u00e9partemental Allier",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cosne-d-allier/vaccination-mobile-dans-les-cantons-de-l-allier?pid=practice-165387",
+      "location": {
+        "longitude": 3.33398,
+        "latitude": 46.5685,
+        "city": "Moulins"
+      },
+      "metadata": {
+        "address": "1 Avenue Victor Hugo, 03000 Moulins",
+        "phone_number": "+33801902446",
+        "business_hours": {
+          "lundi": "09:30-12:30/13:30-16:30",
+          "mardi": "09:30-12:30/13:30-16:30",
+          "mercredi": "09:30-12:30/13:30-16:30",
+          "jeudi": "09:30-12:30/13:30-16:30",
+          "vendredi": "09:30-12:30/13:30-16:30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243495[165387-172826]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1187"
+    },
+    {
+      "departement": "03",
+      "nom": "Vaccination Covid 19 mobile dans les cantons de l'Allier - Commentry",
+      "url": "https://partners.doctolib.fr/centre-de-sante/cosne-d-allier/vaccination-mobile-dans-les-cantons-de-l-allier?pid=practice-172829",
+      "location": {
+        "longitude": 2.7425955,
+        "latitude": 46.2888458,
+        "city": "Commentry"
+      },
+      "metadata": {
+        "address": "Place du 14 Juillet, 03600 Commentry",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": "09:30-12:30, 13:30-16:30",
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "243495[172829-165394]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d243495"
+    },
+    {
+      "departement": "03",
+      "nom": "Centre de vaccination - Montlu\u00e7on - Athanor - Montlu\u00e7on",
+      "url": "https://partners.doctolib.fr/centre-de-sante/montlucon/centre-de-vaccination-saint-francois",
+      "location": {
+        "longitude": 2.6033883,
+        "latitude": 46.3456582,
+        "city": "Montlu\u00e7on"
+      },
+      "metadata": {
+        "address": "Rue Pablo Picasso, 03100 Montlu\u00e7on",
+        "phone_number": "+33470051030",
+        "business_hours": {
+          "lundi": "09:00-12:00, 13:00-17:00",
+          "mardi": "09:00-12:00, 13:00-17:00",
+          "mercredi": "09:00-12:00, 13:00-17:00",
+          "jeudi": "09:00-12:00, 13:00-17:00",
+          "vendredi": "09:00-12:00, 13:00-17:00",
+          "samedi": "09:00-12:00, 13:00-17:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242556[164401]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d242556"
+    },
+    {
+      "departement": "03",
+      "nom": "Communaut\u00e9 Professionnelle Territoriale de Sant\u00e9 Sud Allier",
+      "url": "https://partners.doctolib.fr/centre-de-vaccinations-internationales/saint-pourcain-sur-sioule/centre-de-vaccination-covid-19-saint-pourcain-sioule",
+      "location": {
+        "longitude": 3.28717,
+        "latitude": 46.3134,
+        "city": "Saint-Pour\u00e7ain-sur-Sioule"
+      },
+      "metadata": {
+        "address": "3 bis Route de Moulins, 03500 Saint-Pour\u00e7ain-sur-Sioule",
+        "phone_number": "+33415400904",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "13:00-19:30",
+          "mercredi": "14:00-17:30",
+          "jeudi": "14:00-19:00",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "244675[]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "1211"
+    },
+    {
+      "departement": "03",
+      "nom": "CPTS Nord Allier - Centre de vaccination COVID-19 - Ygrande",
+      "url": "https://partners.doctolib.fr/centre-de-sante/moulins/cpts-nord-allier-centre-de-vaccination?pid=practice-173644",
+      "location": {
+        "longitude": 2.943233,
+        "latitude": 46.5517365,
+        "city": "Ygrande"
+      },
+      "metadata": {
+        "address": "Rue Pierre Curie, 03160 Ygrande",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "241619[173644]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "d241619"
+    },
+    {
+      "departement": "03",
+      "nom": "Centre de vaccination de Montlu\u00e7on - Centre ATHANOR",
+      "url": "https://partners.doctolib.fr/clinique-privee/montlucon/centre-de-vaccination-saint-francois",
+      "location": {
+        "longitude": 2.60353,
+        "latitude": 46.3469,
+        "city": "Montlu\u00e7on"
+      },
+      "metadata": {
+        "address": "15 Rue Pablo Picasso, 03100 Montlu\u00e7on",
+        "phone_number": "+33801902409",
+        "business_hours": {
+          "lundi": "9:00-17:00",
+          "mardi": "9:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "9:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "242556[164401]",
+      "vaccine_type": null,
+      "erreur": null,
+      "gid": "870"
+    }
+  ]
+}
