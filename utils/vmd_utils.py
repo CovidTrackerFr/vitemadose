@@ -8,7 +8,9 @@ from urllib.parse import urlparse, urlencode, urlunparse, parse_qs, unquote
 from unidecode import unidecode
 
 RESERVED_CENTERS = [
-    'réservé'
+    'réservé',
+    'reserve',
+    'professionnel'
 ]
 
 

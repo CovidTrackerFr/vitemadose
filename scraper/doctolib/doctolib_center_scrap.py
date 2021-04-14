@@ -33,6 +33,11 @@ DOCTOLIB_DOMAINS = [
 ]
 
 
+DOCTOLIB_WEIRD_DEPARTEMENTS = {
+    'indre': 'departement-indre'
+}
+
+
 logger = get_logger()
 
 
@@ -65,8 +70,11 @@ def parse_pages_departement(departement):
     page_id = 1
     page_has_centers = True
 
+    for weird_dep in DOCTOLIB_WEIRD_DEPARTEMENTS:
+        if weird_dep == departement:
+            departement = DOCTOLIB_WEIRD_DEPARTEMENTS[weird_dep]
+            break
     centers = []
-
     while page_has_centers:
         logger.info(
             f"[Doctolib centers] Parsing page {page_id} of {departement}")
