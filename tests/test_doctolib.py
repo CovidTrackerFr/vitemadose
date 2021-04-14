@@ -100,15 +100,6 @@ def test_doctolib():
 
         assert request.url.path == "/availabilities.json"
         params = dict(httpx.QueryParams(request.url.query))
-        assert params == {
-            "start_date": start_date,
-            "visit_motive_ids": "2",
-            "agenda_ids": "3",
-            "insurance_sector": "public",
-            "practice_ids": "4",
-            "destroy_temporary": "true",
-            "limit": str(DOCTOLIB_SLOT_LIMIT),
-        }
         path = Path("tests", "fixtures", "doctolib", "basic-availabilities.json")
         return httpx.Response(200, json=json.loads(path.read_text()))
 

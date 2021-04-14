@@ -3,7 +3,7 @@ import time
 import logging
 import os
 import re
-from datetime import date
+from datetime import date, timedelta, datetime
 from typing import Optional, Tuple
 
 import httpx
@@ -16,7 +16,8 @@ from scraper.error import BlockedByDoctolibError
 from scraper.profiler import Profiling
 
 WAIT_SECONDS_AFTER_REQUEST = 0.100
-DOCTOLIB_SLOT_LIMIT = 50
+DOCTOLIB_SLOT_LIMIT = 7
+DOCTOLIB_ITERATIONS = 6
 
 DOCTOLIB_HEADERS = {
     'User-Agent': os.environ.get('DOCTOLIB_API_KEY', ''),
@@ -99,45 +100,62 @@ class DoctolibSlots:
         start_date = request.get_start_date()
 
         first_availability = None
+        start_date_tmp = start_date
         for motive_id in visit_motive_ids:
-            motive_availability = False
-            slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={DOCTOLIB_SLOT_LIMIT}'
-            response = self._client.get(
-                slots_api_url, headers=DOCTOLIB_HEADERS)
-            if response.status_code == 403:
-                raise BlockedByDoctolibError(centre_api_url)
-
-            response.raise_for_status()
-            time.sleep(self._cooldown_interval)
-
-            slots = response.json()
-            if slots.get('total'):
-                appointment_count += int(slots.get('total', 0))
-            for availability in slots['availabilities']:
-                slot_list = availability.get('slots', None)
-                if not slot_list or len(slot_list) == 0:
+            for i in range(DOCTOLIB_ITERATIONS):
+                sdate, appt = self.get_appointments(request, start_date_tmp, visit_motive_ids, motive_id,
+                                                    agenda_ids_q, practice_ids_q, DOCTOLIB_SLOT_LIMIT)
+                start_date_tmp = datetime.now() + timedelta(days=7 * i)
+                start_date_tmp = start_date_tmp.strftime("%Y-%m-%d")
+                if not sdate:
                     continue
-                if isinstance(slot_list[0], str):
-                    if not first_availability or slot_list[0] < first_availability:
-                        first_availability = slot_list[0]
-                        motive_availability = True
-                for slot_info in slot_list:
-                    sdate = slot_info.get('start_date', None)
-                    if not sdate:
-                        continue
-                    if not first_availability or sdate < first_availability:
-                        first_availability = sdate
-                        motive_availability = True
+                if not first_availability or sdate < first_availability:
+                    first_availability = sdate
+                request.update_appointment_count(request.appointment_count + appt)
 
-            if type(slots) is dict:
-                next_slot = slots.get('next_slot', None)
-                if next_slot and (not first_availability or next_slot < first_availability):
-                    first_availability = next_slot
-                    motive_availability = True
-            if motive_availability:
-                request.add_vaccine_type(visit_motive_ids[motive_id])
-        request.update_appointment_count(appointment_count)
         return first_availability
+
+    def get_appointments(self, request: ScraperRequest, start_date: str, visit_motive_ids,
+                         motive_id: str, agenda_ids_q: str, practice_ids_q: str, limit: int):
+        motive_availability = False
+        first_availability = None
+        appointment_count = 0
+        slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={limit}'
+        response = self._client.get(
+            slots_api_url, headers=DOCTOLIB_HEADERS)
+        if response.status_code == 403:
+            raise BlockedByDoctolibError(request.get_url())
+
+        response.raise_for_status()
+        time.sleep(self._cooldown_interval)
+
+        slots = response.json()
+        if slots.get('total'):
+            appointment_count += int(slots.get('total', 0))
+        for availability in slots['availabilities']:
+            slot_list = availability.get('slots', None)
+            if not slot_list or len(slot_list) == 0:
+                continue
+            if isinstance(slot_list[0], str):
+                if not first_availability or slot_list[0] < first_availability:
+                    first_availability = slot_list[0]
+                    motive_availability = True
+            for slot_info in slot_list:
+                sdate = slot_info.get('start_date', None)
+                if not sdate:
+                    continue
+                if not first_availability or sdate < first_availability:
+                    first_availability = sdate
+                    motive_availability = True
+
+        if type(slots) is dict:
+            next_slot = slots.get('next_slot', None)
+            if next_slot and (not first_availability or next_slot < first_availability):
+                first_availability = next_slot
+                motive_availability = True
+        if motive_availability:
+            request.add_vaccine_type(visit_motive_ids[motive_id])
+        return first_availability, appointment_count
 
 
 def set_doctolib_center_internal_id(request: ScraperRequest, data: dict, practice_ids):
@@ -279,7 +297,7 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: list = None):
 
 
 def _find_agenda_and_practice_ids(data: dict, visit_motive_id: list, practice_id_filter: list = None) -> Tuple[
-        list, list]:
+    list, list]:
     """
     Etant donné une réponse à /booking/<centre>.json, renvoie tous les
     "agendas" et "pratiques" (jargon Doctolib) qui correspondent au motif de visite.
