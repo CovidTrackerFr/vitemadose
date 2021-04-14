@@ -111,8 +111,10 @@ class DoctolibSlots:
         start_date_tmp = start_date
         for motive_id in visit_motive_ids:
             for i in range(DOCTOLIB_ITERATIONS):
-                sdate, appt = self.get_appointments(request, start_date_tmp, visit_motive_ids, motive_id,
+                sdate, appt, stop = self.get_appointments(request, start_date_tmp, visit_motive_ids, motive_id,
                                                     agenda_ids_q, practice_ids_q, DOCTOLIB_SLOT_LIMIT)
+                if stop:
+                    break
                 start_date_tmp = datetime.now() + timedelta(days=7 * i)
                 start_date_tmp = start_date_tmp.strftime("%Y-%m-%d")
                 if not sdate:
@@ -155,6 +157,7 @@ class DoctolibSlots:
 
     def get_appointments(self, request: ScraperRequest, start_date: str, visit_motive_ids,
                          motive_id: str, agenda_ids_q: str, practice_ids_q: str, limit: int):
+        stop = False
         motive_availability = False
         first_availability = None
         appointment_count = 0
@@ -188,7 +191,11 @@ class DoctolibSlots:
 
         if motive_availability:
             request.add_vaccine_type(visit_motive_ids[motive_id])
-        return first_availability, appointment_count
+        # Sometimes Doctolib does not allow to see slots for next weeks
+        # which is a weird move, but still, we have to stop here.
+        if not first_availability and not slots.get('next_slot', None):
+            stop = True
+        return first_availability, appointment_count, stop
 
 
 def set_doctolib_center_internal_id(request: ScraperRequest, data: dict, practice_ids):
