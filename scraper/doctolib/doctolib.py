@@ -100,6 +100,8 @@ class DoctolibSlots:
         )
         if not agenda_ids or not practice_ids:
             return None
+        all_agendas = parse_agenda_ids(rdata)
+        agenda_ids = self.sort_agenda_ids(all_agendas, agenda_ids)
 
         # temporary_booking_disabled ??
 
@@ -112,7 +114,7 @@ class DoctolibSlots:
         for motive_id in visit_motive_ids:
             for i in range(DOCTOLIB_ITERATIONS):
                 sdate, appt, stop = self.get_appointments(request, start_date_tmp, visit_motive_ids, motive_id,
-                                                    agenda_ids_q, practice_ids_q, DOCTOLIB_SLOT_LIMIT)
+                                                          agenda_ids_q, practice_ids_q, DOCTOLIB_SLOT_LIMIT)
                 if stop:
                     break
                 start_date_tmp = datetime.now() + timedelta(days=7 * i)
@@ -125,6 +127,22 @@ class DoctolibSlots:
 
         return first_availability
 
+    def sort_agenda_ids(self, all_agendas, ids):
+        """
+        On Doctolib front-side, agenda ids are sorted using the center.json order
+        so we need to use all agendas in order to sort.
+
+        Because: 429620-440654-434343-434052-434337-447048-434338-433994-415613-440655-415615
+        don't give the same result as: 440654-429620-434343-434052-447048-434338-433994-415613-440655-415615-434337
+        -> seems to be a doctolib issue
+        """
+        new_agenda_list = []
+        for agenda in all_agendas:
+            if str(agenda) in ids:
+                new_agenda_list.append(str(agenda))
+        return new_agenda_list
+
+
     def pop_practice_id(self, request: ScraperRequest):
         """
         In some cases, practice id needs to be deleted
@@ -134,7 +152,6 @@ class DoctolibSlots:
         query.pop('pid', None)
         u = u._replace(query=urlencode(query, True))
         request.url = urlunparse(u)
-
 
     def is_practice_id_valid(self, request: ScraperRequest, rdata: dict):
         """
@@ -153,7 +170,6 @@ class DoctolibSlots:
             if pid in practice_ids:
                 return True
         return False
-
 
     def get_appointments(self, request: ScraperRequest, start_date: str, visit_motive_ids,
                          motive_id: str, agenda_ids_q: str, practice_ids_q: str, limit: int):
@@ -254,6 +270,19 @@ def link_practice_ids(practice_id: list, rdata: dict):
         if place.get('address') == base_place.get('address'):  # Tideous check
             practice_id.append(int(place.get('id').replace("practice-", "")))
     return practice_id
+
+
+def parse_agenda_ids(rdata: dict):
+    agendas = rdata.get('agendas', None)
+    agenda_ids = []
+    if not agendas:
+        return None
+    for agenda in agendas:
+        agenda_id = agenda.get('id', None)
+        if not agenda_id:
+            continue
+        agenda_ids.append(int(agenda_id))
+    return agenda_ids
 
 
 def _parse_practice_id(rdv_site_web: str):
