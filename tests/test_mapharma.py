@@ -11,7 +11,6 @@ from scraper.mapharma.mapharma import (
     get_profiles)
 
 
-
 def get_soup():
     with open(Path("tests", "fixtures", "mapharma", "49100-5.html"), encoding='utf8') as html_file:
         soup = BeautifulSoup(html_file.read(), 'html.parser')
@@ -53,7 +52,6 @@ def test_get_profile():
     client = httpx.Client(transport=httpx.MockTransport(app))
 
     profile = get_profile(f'https://mapharma.net/{centre_id}', client=client)
-    print(profile)
     assert profile == profileJson
 
 

@@ -19,13 +19,15 @@ VACCINES = {
         'pfizer',
         'biontech'
     ],
-    'AstraZeneca': [
-        'astrazeneca',
-        'astra-zeneca'
-    ],
     'Moderna': [
         'moderna'
-    ]
+    ],
+    'AstraZeneca': [
+        'astrazeneca',
+        'astra-zeneca',
+        'astra zeneca',
+        'az'  # Not too sure about the reliability
+    ],
 }
 
 
@@ -147,16 +149,16 @@ def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     return center
 
 
-def get_vaccine_name(name):
+def get_vaccine_name(name, fallback=None):
     if not name:
-        return None
+        return fallback
     name = name.lower().strip()
     for vaccine in VACCINES:
         vaccine_names = VACCINES[vaccine]
         for vaccine_name in vaccine_names:
             if vaccine_name in name:
                 return vaccine
-    return None
+    return fallback
 
 
 def dict_to_center_info(data: dict) -> CenterInfo:

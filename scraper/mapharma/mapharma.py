@@ -85,7 +85,8 @@ def get_profiles(zip: str, client: httpx.Client = DEFAULT_CLIENT):
         name = get_name(soup)
         address = get_address(soup)
         payload = {'id': index, 'url': base_url, 'zip': zip, 'name': name, 'address': address, 'reasons': reasons}
-        result.append(payload)
+        if reasons:
+            result.append(payload)
         index += 1
 
 
@@ -138,8 +139,10 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
             campagnes = json.load(json_file)
     first_availability = None
     profile = get_profile(request.get_url())
-    for reason in profile['reasons']:
-        for campagne in campagnes['vaccin']:
+    if not profile.get('reasons'):
+        return None
+    for reason in profile.get('reasons'):
+        for campagne in campagnes.get('vaccin'):
             if campagne['campagneId'] == reason['campagneId']:
                 day_slots = get_slots(campagne['campagneId'], campagne['optionId'], request.start_date, client)
                 day_slots.pop('first', None)

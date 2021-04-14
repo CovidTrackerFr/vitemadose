@@ -1,3 +1,4 @@
+import os
 from datetime import datetime, timedelta
 
 import httpx
@@ -7,8 +8,11 @@ from scraper.keldoc.keldoc_filters import filter_vaccine_specialties, filter_vac
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.profiler import Profiling
 
-timeout = httpx.Timeout(60.0, connect=60.0)
-session = httpx.Client(timeout=timeout)
+timeout = httpx.Timeout(25.0, connect=25.0)
+KELDOC_HEADERS = {
+    'User-Agent': os.environ.get('KELDOC_API_KEY', ''),
+}
+session = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
 
 KELDOC_SLOT_LIMIT = 21
 

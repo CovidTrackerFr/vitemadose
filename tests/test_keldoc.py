@@ -6,6 +6,7 @@ from pathlib import Path
 import httpx
 import pytest
 
+from scraper.keldoc.keldoc import fetch_slots
 from scraper.keldoc.keldoc_center import KeldocCenter
 from scraper.keldoc.keldoc_filters import filter_vaccine_specialties, filter_vaccine_motives, is_appointment_relevant, \
     is_specialty_relevant
@@ -22,6 +23,13 @@ CENTER1_KELDOC = {
     "/api/patients/v2/timetables/82874": "center1-timetable-82874",
     "/api/patients/v2/searches/resource": "center1-info"
 }
+
+
+def online_keldoc_test():
+    request = ScraperRequest("https://www.keldoc.com/cabinet-medical/grenoble-38000/centre-de-vaccination-universite-inter-age-du-dauphine-uiad", "2021-04-13")
+
+    slots = fetch_slots(request)
+    print(slots)
 
 
 def get_test_data(file_name):
@@ -147,5 +155,6 @@ def test_keldoc_filters():
     assert not is_specialty_relevant({'name': 'Maladies infectieuses'})
     assert not is_specialty_relevant({'id': 144})
     assert is_specialty_relevant({'id': 1, 'name': 'Maladies infectieuses', 'skills': []})
-    assert is_specialty_relevant({'id': 1, 'name': 'Vaccination contre la COVID', 'skills': [{'name': 'Centre de vaccination COVID-19'}]})
+    assert is_specialty_relevant(
+        {'id': 1, 'name': 'Vaccination contre la COVID', 'skills': [{'name': 'Centre de vaccination COVID-19'}]})
     assert not is_specialty_relevant({'id': 1, 'name': 'Vaccination contre la COVID', 'skills': [{'id': 123}]})

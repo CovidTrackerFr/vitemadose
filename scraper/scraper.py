@@ -7,6 +7,7 @@ import os
 import traceback
 from collections import deque
 from multiprocessing import Pool
+from typing import Counter
 from scraper.profiler import Profiling, ProfiledPool
 
 from scraper.error import ScrapeError, BlockedByDoctolibError
@@ -18,7 +19,7 @@ from scraper.pattern.center_info import convert_csv_data_to_center_info, CenterI
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
-from utils.vmd_utils import departementUtils, fix_scrap_urls
+from utils.vmd_utils import departementUtils, fix_scrap_urls, is_reserved_center
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
@@ -29,7 +30,7 @@ from .mapharma.mapharma import centre_iterator as mapharma_centre_iterator
 from .mapharma.mapharma import fetch_slots as mapharma_fetch_slots
 from random import random
 
-POOL_SIZE = int(os.getenv('POOL_SIZE', 15))
+POOL_SIZE = int(os.getenv('POOL_SIZE', 50))
 PARTIAL_SCRAPE = float(os.getenv('PARTIAL_SCRAPE', 1.0))
 PARTIAL_SCRAPE = max(0, min(PARTIAL_SCRAPE, 1))
 
@@ -151,6 +152,9 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
     # This should be duplicate free, they are already checked in
     for centre in centres_cherchés:
         centre.nom = centre.nom.strip()
+
+        if is_reserved_center(centre):
+            continue
         compte_centres += 1
         code_departement = centre.departement
 
@@ -162,7 +166,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         centres_open_data.append(copy_omit_keys(centre.default(), ['prochain_rdv', 'internal_id', 'metadata',
                                                                    'location', 'appointment_count', 'erreur',
                                                                    'ville', 'type', 'vaccine_type']))
-        if centre.prochain_rdv is None:
+        if centre.prochain_rdv is None or centre.appointment_count == 0:
             par_departement[code_departement]['centres_indisponibles'].append(
                 centre.default())
             if isinstance(erreur, BlockedByDoctolibError):
@@ -186,7 +190,9 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
             tz=pytz.timezone('Europe/Paris')).isoformat()
         if 'centres_disponibles' in disponibilités:
             disponibilités['centres_disponibles'] = sorted(
-                disponibilités['centres_disponibles'], key=sort_center)
+                deduplicates_names(disponibilités['centres_disponibles']), key=sort_center)
+        disponibilités["centres_indisponibles"] = deduplicates_names(
+            disponibilités['centres_indisponibles'])
         outpath = outpath_format.format(code_departement)
         logger.debug(f'writing result to {outpath} file')
         with open(outpath, "w") as outfile:
@@ -245,7 +251,7 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
 def centre_iterator():
     visited_centers_links = set()
     for center in ialternate(ordoclic_centre_iterator(), mapharma_centre_iterator(),
-                     doctolib_center_iterator(), gouv_centre_iterator()):
+                             doctolib_center_iterator(), gouv_centre_iterator()):
         if center["rdv_site_web"] not in visited_centers_links:
             visited_centers_links.add(center["rdv_site_web"])
             yield center
@@ -270,7 +276,6 @@ def gouv_centre_iterator(outpath_format='data/output/{}.json'):
         if row["centre_fermeture"] == "t":
             centres_non_pris_en_compte["centres_fermes"][row["gid"]
                                                          ] = row["rdv_site_web"]
-
         if len(row["rdv_site_web"]) and "doctolib" not in row["rdv_site_web"]:
             yield row
         else:
@@ -306,6 +311,27 @@ def ialternate(*iterators):
             queue.append(iterator)
         except StopIteration:
             pass
+
+
+def deduplicates_names(departement_centers):
+    """
+    Removes unique names by appending city name
+    in par_departement
+
+    see https://github.com/CovidTrackerFr/vitemadose/issues/173
+    """
+    deduplicated_centers = []
+    departement_center_names_count = Counter([center["nom"]
+                                              for center in departement_centers])
+    names_to_remove = {departement for departement in departement_center_names_count
+                       if departement_center_names_count[departement] > 1}
+
+    for center in departement_centers:
+        if center["nom"] in names_to_remove:
+            center["nom"] = f"{center['nom']} - {departementUtils.get_city(center['metadata']['address'])}"
+        deduplicated_centers.append(center)
+    return deduplicated_centers
+
 
 if __name__ == "__main__":
     main()
