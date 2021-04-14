@@ -3,9 +3,23 @@ import csv
 import json
 import logging
 from typing import List
-from urllib.parse import urlparse, urlencode, urlunparse, parse_qs
+from urllib.parse import urlparse, urlencode, urlunparse, parse_qs, unquote
 
 from unidecode import unidecode
+
+RESERVED_CENTERS = [
+    'réservé'
+]
+
+
+def is_reserved_center(center):
+    if not center:
+        return False
+    name = center.nom.lower().strip()
+    for reserved_names in RESERVED_CENTERS:
+        if reserved_names in name:
+            return True
+    return False
 
 
 def urlify(s):
@@ -121,7 +135,7 @@ def format_phone_number(_phone_number: str) -> str:
 
 
 def fix_scrap_urls(url):
-    url = url.strip()
+    url = unquote(url.strip())
 
     # Fix Keldoc
     if url.startswith("https://www.keldoc.com/"):
@@ -129,6 +143,8 @@ def fix_scrap_urls(url):
                           "https://vaccination-covid.keldoc.com/")
     # Clean Doctolib
     if url.startswith('https://partners.doctolib.fr') or url.startswith('https://www.doctolib.fr'):
+        if '?speciality_id' in url:
+            url = "&".join(url.rsplit("?", url.count("?") - 1))
         u = urlparse(url)
         query = parse_qs(u.query, keep_blank_values=True)
         to_remove = []

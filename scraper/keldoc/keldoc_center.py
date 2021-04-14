@@ -1,3 +1,5 @@
+import logging
+import os
 from urllib.parse import urlsplit, parse_qs
 
 import httpx
@@ -7,8 +9,12 @@ from scraper.keldoc.keldoc_filters import parse_keldoc_availability
 from scraper.keldoc.keldoc_routes import API_KELDOC_CALENDAR, API_KELDOC_CENTER, API_KELDOC_CABINETS
 from scraper.pattern.scraper_request import ScraperRequest
 
-timeout = httpx.Timeout(60.0, connect=60.0)
-DEFAULT_CLIENT = httpx.Client(timeout=timeout)
+timeout = httpx.Timeout(25.0, connect=25.0)
+KELDOC_HEADERS = {
+    'User-Agent': os.environ.get('KELDOC_API_KEY', ''),
+}
+DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
+logger = logging.getLogger('scraper')
 
 
 class KeldocCenter:
@@ -34,6 +40,7 @@ class KeldocCenter:
             try:
                 cabinet_req = self.client.get(cabinet_url)
             except TimeoutException:
+                logger.warning(f"Keldoc request timed out for center: {self.base_url} (vaccine cabinets)")
                 continue
             cabinet_req.raise_for_status()
             data = cabinet_req.json()
@@ -49,6 +56,7 @@ class KeldocCenter:
         try:
             resource = self.client.get(API_KELDOC_CENTER, params=self.resource_params)
         except TimeoutException:
+            logger.warning(f"Keldoc request timed out for center: {self.base_url} (center info)")
             return False
         resource.raise_for_status()
         data = resource.json()
@@ -65,6 +73,7 @@ class KeldocCenter:
         try:
             rq = self.client.get(self.base_url)
         except TimeoutException:
+            logger.warning(f"Keldoc request timed out for center: {self.base_url} (resource)")
             return False
         rq.raise_for_status()
         new_url = rq.url._uri_reference.unsplit()
@@ -110,6 +119,7 @@ class KeldocCenter:
             try:
                 calendar_req = self.client.get(calendar_url, params=calendar_params)
             except TimeoutException:
+                logger.warning(f"Keldoc request timed out for center: {self.base_url} (calendar request)")
                 # Some requests on Keldoc are taking too much time (for few centers)
                 # and block the process completion.
                 continue

@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
 from utils.vmd_utils import departementUtils
+from scraper.profiler import Profiling
 
 MAPHARMA_HEADERS = {
     'User-Agent': os.environ.get('MAPHARMA_API_KEY', ''),
@@ -84,7 +85,8 @@ def get_profiles(zip: str, client: httpx.Client = DEFAULT_CLIENT):
         name = get_name(soup)
         address = get_address(soup)
         payload = {'id': index, 'url': base_url, 'zip': zip, 'name': name, 'address': address, 'reasons': reasons}
-        result.append(payload)
+        if reasons:
+            result.append(payload)
         index += 1
 
 
@@ -128,6 +130,7 @@ def parse_slots(slots):
     return first_availability
 
 
+@Profiling.measure('mapharma_slot')
 def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     global campagnes
     slot_counts = 0
@@ -136,8 +139,10 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
             campagnes = json.load(json_file)
     first_availability = None
     profile = get_profile(request.get_url())
-    for reason in profile['reasons']:
-        for campagne in campagnes['vaccin']:
+    if not profile.get('reasons'):
+        return None
+    for reason in profile.get('reasons'):
+        for campagne in campagnes.get('vaccin'):
             if campagne['campagneId'] == reason['campagneId']:
                 day_slots = get_slots(campagne['campagneId'], campagne['optionId'], request.start_date, client)
                 day_slots.pop('first', None)
