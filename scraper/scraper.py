@@ -7,6 +7,7 @@ import os
 import traceback
 from collections import deque
 from multiprocessing import Pool
+from typing import Counter
 from scraper.profiler import Profiling, ProfiledPool
 
 from scraper.error import ScrapeError, BlockedByDoctolibError
@@ -186,7 +187,9 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
             tz=pytz.timezone('Europe/Paris')).isoformat()
         if 'centres_disponibles' in disponibilités:
             disponibilités['centres_disponibles'] = sorted(
-                disponibilités['centres_disponibles'], key=sort_center)
+                deduplicates_names(disponibilités['centres_disponibles']), key=sort_center)
+        disponibilités["centres_indisponibles"] = deduplicates_names(
+            disponibilités['centres_indisponibles'])
         outpath = outpath_format.format(code_departement)
         logger.debug(f'writing result to {outpath} file')
         with open(outpath, "w") as outfile:
@@ -245,7 +248,7 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
 def centre_iterator():
     visited_centers_links = set()
     for center in ialternate(ordoclic_centre_iterator(), mapharma_centre_iterator(),
-                     doctolib_center_iterator(), gouv_centre_iterator()):
+                             doctolib_center_iterator(), gouv_centre_iterator()):
         if center["rdv_site_web"] not in visited_centers_links:
             visited_centers_links.add(center["rdv_site_web"])
             yield center
@@ -306,6 +309,27 @@ def ialternate(*iterators):
             queue.append(iterator)
         except StopIteration:
             pass
+
+
+def deduplicates_names(departement_centers):
+    """
+    Removes unique names by appending city name
+    in par_departement
+
+    see https://github.com/CovidTrackerFr/vitemadose/issues/173
+    """
+    deduplicated_centers = []
+    departement_center_names_count = Counter([center["nom"]
+                                              for center in departement_centers])
+    names_to_remove = {departement for departement in departement_center_names_count
+                       if departement_center_names_count[departement] > 1}
+
+    for center in departement_centers:
+        if center["nom"] in names_to_remove:
+            center["nom"] = f"{center['nom']} - {departementUtils.get_city(center['metadata']['address'])}"
+        deduplicated_centers.append(center)
+    return deduplicated_centers
+
 
 if __name__ == "__main__":
     main()
