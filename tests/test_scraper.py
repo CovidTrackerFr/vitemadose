@@ -393,3 +393,24 @@ def test_fetch_centre_slots():
     res = fetch_centre_slots(url, start_date, fetch_map=fetch_map)
     assert res.platform == "Autre"
     assert res.next_availability is None
+
+
+def test_scraper_request():
+    request = ScraperRequest("https://doctolib.fr/center/center-test", "2021-04-14")
+
+    request.update_internal_id("d739")
+    request.update_practitioner_type(GENERAL_PRACTITIONER)
+    request.update_appointment_count(42)
+    request.add_vaccine_type(get_vaccine_name("Injection pfizer 1ère dose"))
+
+    assert request is not None
+    assert request.internal_id == "d739"
+    assert request.appointment_count == 42
+    assert request.vaccine_type == ['Pfizer-BioNTech']
+
+    result = ScraperResult(request, 'Doctolib', '2021-04-14T14:00:00.0000')
+    assert result.default() == {
+        'next_availability': '2021-04-14T14:00:00.0000',
+        'platform': 'Doctolib',
+        'request': request
+    }
