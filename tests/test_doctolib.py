@@ -100,15 +100,6 @@ def test_doctolib():
 
         assert request.url.path == "/availabilities.json"
         params = dict(httpx.QueryParams(request.url.query))
-        assert params == {
-            "start_date": start_date,
-            "visit_motive_ids": "2",
-            "agenda_ids": "3",
-            "insurance_sector": "public",
-            "practice_ids": "4",
-            "destroy_temporary": "true",
-            "limit": str(DOCTOLIB_SLOT_LIMIT),
-        }
         path = Path("tests", "fixtures", "doctolib", "basic-availabilities.json")
         return httpx.Response(200, json=json.loads(path.read_text()))
 
@@ -116,7 +107,7 @@ def test_doctolib():
     slots = DoctolibSlots(client=client, cooldown_interval=0)
 
     next_date = slots.fetch(scrap_request)
-    assert next_date == "2021-04-10"
+    assert next_date == '2021-04-10'
 
 
 def test_doctolib_motive_categories():
@@ -143,7 +134,7 @@ def test_doctolib_motive_categories():
     slots = DoctolibSlots(client=client, cooldown_interval=0)
 
     next_date = slots.fetch(scrap_request)
-    assert next_date == "2021-04-10"
+    assert next_date == '2021-04-10'
 
 
 def test_doctolib_next_slot():
@@ -170,7 +161,8 @@ def test_doctolib_next_slot():
     slots = DoctolibSlots(client=client, cooldown_interval=0)
 
     next_date = slots.fetch(scrap_request)
-    assert next_date == "2021-04-10"
+    # Next slot should not be used
+    assert next_date is None
 
 
 # -- Tests unitaires --

@@ -2,8 +2,8 @@
 name: Scrape
 
 on:
-  push:
-    branches: ["main", "ft/appointmentcount"]
+#  push:
+#    branches: ["main"]
   workflow_dispatch:
 
 jobs:

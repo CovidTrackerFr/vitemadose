@@ -3,8 +3,9 @@ import time
 import logging
 import os
 import re
-from datetime import date
+from datetime import date, timedelta, datetime
 from typing import Optional, Tuple
+from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 
 import httpx
 import requests
@@ -13,9 +14,11 @@ from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_pra
 from scraper.pattern.center_info import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
+from scraper.profiler import Profiling
 
 WAIT_SECONDS_AFTER_REQUEST = 0.100
-DOCTOLIB_SLOT_LIMIT = 50
+DOCTOLIB_SLOT_LIMIT = 7
+DOCTOLIB_ITERATIONS = 6
 
 DOCTOLIB_HEADERS = {
     'User-Agent': os.environ.get('DOCTOLIB_API_KEY', ''),
@@ -35,6 +38,7 @@ else:
     DEFAULT_CLIENT = httpx.Client()
 
 
+@Profiling.measure('doctolib_slot')
 def fetch_slots(request: ScraperRequest):
     # Fonction principale avec le comportement "de prod".
     doctolib = DoctolibSlots(client=DEFAULT_CLIENT)
@@ -66,13 +70,20 @@ class DoctolibSlots:
         time.sleep(self._cooldown_interval)
         data = response.json()
         rdata = data.get('data', {})
-        appointment_count = 0
-        request.update_practitioner_type(
-            parse_practitioner_type(centre, rdata))
+
+        if not self.is_practice_id_valid(request, rdata):
+            logger.warning(f"Invalid practice ID for this Doctolib center: {request.get_url()}")
+            practice_id = None
+            self.pop_practice_id(request)
+
         if practice_id:
             practice_id = link_practice_ids(practice_id, rdata)
         if len(rdata.get('places', [])) > 1 and practice_id is None:
             practice_id = rdata.get('places')[0].get('practice_ids', None)
+
+        appointment_count = 0
+        request.update_practitioner_type(
+            parse_practitioner_type(centre, rdata))
         set_doctolib_center_internal_id(request, rdata, practice_id)
         # visit_motive_categories
         # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1
@@ -97,45 +108,94 @@ class DoctolibSlots:
         start_date = request.get_start_date()
 
         first_availability = None
+        start_date_tmp = start_date
         for motive_id in visit_motive_ids:
-            motive_availability = False
-            slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={DOCTOLIB_SLOT_LIMIT}'
-            response = self._client.get(
-                slots_api_url, headers=DOCTOLIB_HEADERS)
-            if response.status_code == 403:
-                raise BlockedByDoctolibError(centre_api_url)
-
-            response.raise_for_status()
-            time.sleep(self._cooldown_interval)
-
-            slots = response.json()
-            if slots.get('total'):
-                appointment_count += int(slots.get('total', 0))
-            for availability in slots['availabilities']:
-                slot_list = availability.get('slots', None)
-                if not slot_list or len(slot_list) == 0:
+            for i in range(DOCTOLIB_ITERATIONS):
+                sdate, appt, stop = self.get_appointments(request, start_date_tmp, visit_motive_ids, motive_id,
+                                                    agenda_ids_q, practice_ids_q, DOCTOLIB_SLOT_LIMIT)
+                if stop:
+                    break
+                start_date_tmp = datetime.now() + timedelta(days=7 * i)
+                start_date_tmp = start_date_tmp.strftime("%Y-%m-%d")
+                if not sdate:
                     continue
-                if isinstance(slot_list[0], str):
-                    if not first_availability or slot_list[0] < first_availability:
-                        first_availability = slot_list[0]
-                        motive_availability = True
-                for slot_info in slot_list:
-                    sdate = slot_info.get('start_date', None)
-                    if not sdate:
-                        continue
-                    if not first_availability or sdate < first_availability:
-                        first_availability = sdate
-                        motive_availability = True
+                if not first_availability or sdate < first_availability:
+                    first_availability = sdate
+                request.update_appointment_count(request.appointment_count + appt)
 
-            if type(slots) is dict:
-                next_slot = slots.get('next_slot', None)
-                if next_slot and (not first_availability or next_slot < first_availability):
-                    first_availability = next_slot
-                    motive_availability = True
-            if motive_availability:
-                request.add_vaccine_type(visit_motive_ids[motive_id])
-        request.update_appointment_count(appointment_count)
         return first_availability
+
+    def pop_practice_id(self, request: ScraperRequest):
+        """
+        In some cases, practice id needs to be deleted
+        """
+        u = urlparse(request.get_url())
+        query = parse_qs(u.query, keep_blank_values=True)
+        query.pop('pid', None)
+        u = u._replace(query=urlencode(query, True))
+        request.url = urlunparse(u)
+
+
+    def is_practice_id_valid(self, request: ScraperRequest, rdata: dict):
+        """
+        Some practice IDs are wrong and prevent people from booking an appointment.
+        So if the practice id is invalid, this center does not seems to exist anymore.
+        """
+        pid = _parse_practice_id(request.get_url())
+
+        # Not practice ID found
+        if not pid:
+            return True
+        pid = pid[0]
+        places = rdata.get('places', {})
+        for place in places:
+            practice_ids = place.get('practice_ids', [])
+            if pid in practice_ids:
+                return True
+        return False
+
+
+    def get_appointments(self, request: ScraperRequest, start_date: str, visit_motive_ids,
+                         motive_id: str, agenda_ids_q: str, practice_ids_q: str, limit: int):
+        stop = False
+        motive_availability = False
+        first_availability = None
+        appointment_count = 0
+        slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={limit}'
+        response = self._client.get(
+            slots_api_url, headers=DOCTOLIB_HEADERS)
+        if response.status_code == 403:
+            raise BlockedByDoctolibError(request.get_url())
+
+        response.raise_for_status()
+        time.sleep(self._cooldown_interval)
+
+        slots = response.json()
+        if slots.get('total'):
+            appointment_count += int(slots.get('total', 0))
+        for availability in slots['availabilities']:
+            slot_list = availability.get('slots', None)
+            if not slot_list or len(slot_list) == 0:
+                continue
+            if isinstance(slot_list[0], str):
+                if not first_availability or slot_list[0] < first_availability:
+                    first_availability = slot_list[0]
+                    motive_availability = True
+            for slot_info in slot_list:
+                sdate = slot_info.get('start_date', None)
+                if not sdate:
+                    continue
+                if not first_availability or sdate < first_availability:
+                    first_availability = sdate
+                    motive_availability = True
+
+        if motive_availability:
+            request.add_vaccine_type(visit_motive_ids[motive_id])
+        # Sometimes Doctolib does not allow to see slots for next weeks
+        # which is a weird move, but still, we have to stop here.
+        if not first_availability and not slots.get('next_slot', None):
+            stop = True
+        return first_availability, appointment_count, stop
 
 
 def set_doctolib_center_internal_id(request: ScraperRequest, data: dict, practice_ids):
@@ -277,7 +337,7 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: list = None):
 
 
 def _find_agenda_and_practice_ids(data: dict, visit_motive_id: list, practice_id_filter: list = None) -> Tuple[
-        list, list]:
+    list, list]:
     """
     Etant donné une réponse à /booking/<centre>.json, renvoie tous les
     "agendas" et "pratiques" (jargon Doctolib) qui correspondent au motif de visite.
