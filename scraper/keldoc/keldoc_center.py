@@ -9,7 +9,7 @@ from scraper.keldoc.keldoc_filters import parse_keldoc_availability
 from scraper.keldoc.keldoc_routes import API_KELDOC_CALENDAR, API_KELDOC_CENTER, API_KELDOC_CABINETS
 from scraper.pattern.scraper_request import ScraperRequest
 
-timeout = httpx.Timeout(5.0, connect=5.0)
+timeout = httpx.Timeout(25.0, connect=25.0)
 KELDOC_HEADERS = {
     'User-Agent': os.environ.get('KELDOC_API_KEY', ''),
 }
