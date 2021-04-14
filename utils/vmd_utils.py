@@ -17,7 +17,7 @@ def is_reserved_center(center):
         return False
     name = center.nom.lower().strip()
     for reserved_names in RESERVED_CENTERS:
-        if name in reserved_names:
+        if reserved_names in name:
             return True
     return False
 
