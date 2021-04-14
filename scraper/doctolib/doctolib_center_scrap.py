@@ -34,7 +34,10 @@ DOCTOLIB_DOMAINS = [
 
 
 DOCTOLIB_WEIRD_DEPARTEMENTS = {
-    'indre': 'departement-indre'
+    'indre': 'departement-indre',
+    'gironde': 'departement-gironde',
+    'mayenne': 'departement-mayenne',
+    'vienne': 'departement-vienne'
 }
 
 
