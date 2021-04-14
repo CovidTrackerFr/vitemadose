@@ -1,7 +1,8 @@
 import datetime as dt
 import json
 
-from scraper.pattern.center_info import CenterInfo, dict_to_center_info
+from scraper.pattern.center_info import CenterInfo, dict_to_center_info, get_vaccine_name
+from scraper.pattern.scraper_result import GENERAL_PRACTITIONER, ScraperResult
 from utils.vmd_utils import departementUtils
 from scraper.scraper import fetch_centre_slots, export_data, get_start_date
 from scraper.pattern.scraper_request import ScraperRequest
