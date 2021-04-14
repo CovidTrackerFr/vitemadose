@@ -1,8 +1,5 @@
-from scraper.mapharma.mapharma import parse_all_zip
-
-
 def main():
-    parse_all_zip()
+    return
 
 
 if __name__ == "__main__":

@@ -235,8 +235,7 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
 
 def centre_iterator():
     visited_centers_links = set()
-    for iterator in (ordoclic_centre_iterator, mapharma_centre_iterator,
-                     doctolib_center_iterator, gouv_centre_iterator):
+    for iterator in ([mapharma_centre_iterator]):#,    ordoclic_centre_iterator,                  doctolib_center_iterator, gouv_centre_iterator):
         for center in iterator():
             if center["rdv_site_web"] not in visited_centers_links:
                 visited_centers_links.add(center["rdv_site_web"])
