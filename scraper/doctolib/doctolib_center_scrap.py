@@ -56,6 +56,7 @@ def get_departements():
         reader = csv.DictReader(csvfile)
         departements = [str(row["nom_departement"]) for row in reader]
         [departements.pop(ndep) for ndep in NOT_INCLUDED_DEPARTEMENTS]
+        return departements
 
 
 def parse_pages_departement(departement):
