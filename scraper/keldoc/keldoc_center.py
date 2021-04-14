@@ -119,7 +119,6 @@ class KeldocCenter:
             try:
                 calendar_req = self.client.get(calendar_url, params=calendar_params)
             except TimeoutException:
-                print(KELDOC_HEADERS)
                 logger.warning(f"Keldoc request timed out for center: {self.base_url} (calendar request)")
                 # Some requests on Keldoc are taking too much time (for few centers)
                 # and block the process completion.
