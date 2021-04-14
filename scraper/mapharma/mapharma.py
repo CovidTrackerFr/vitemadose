@@ -15,6 +15,7 @@ from urllib import parse
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
 from utils.vmd_utils import departementUtils
+from scraper.profiler import Profiling
 
 MAPHARMA_HEADERS = {
     'User-Agent': os.environ.get('MAPHARMA_API_KEY', ''),
@@ -29,7 +30,7 @@ campagnes_inconnues = []
 opendata = []
 
 
-def campagne_to_centre(pharmacy: dict, campagne: dict) -> dict() :
+def campagne_to_centre(pharmacy: dict, campagne: dict) -> dict :
     insee = departementUtils.cp_to_insee(pharmacy.get('code_postal'))
     departement = departementUtils.to_departement_number(insee)
     centre = dict()
@@ -43,7 +44,7 @@ def campagne_to_centre(pharmacy: dict, campagne: dict) -> dict() :
     adr_nom = pharmacy.get('ville')
     centre['address'] = f'{adr_voie}, {adr_cp} {adr_nom}'
     business_hours = dict()
-    horaires = pharmacy.get('horaires')
+    horaires = pharmacy.get('horaires', '')
     days = ['lundi', 'mardi', 'mercredi',
             'jeudi', 'vendredi', 'samedi', 'dimanche']
     for day in days:
@@ -52,9 +53,9 @@ def campagne_to_centre(pharmacy: dict, campagne: dict) -> dict() :
                 continue
             business_hours[day] = line.replace(f'{day}: ', '')
     centre['business_hours'] = business_hours
-    centre['phone_number'] = pharmacy.get('telephone')
+    centre['phone_number'] = pharmacy.get('telephone', '')
     centre['rdv_site_web'] = campagne.get('url')
-    centre['com_insee'] = departementUtils.cp_to_insee(pharmacy.get('code_postal'))
+    centre['com_insee'] = departementUtils.cp_to_insee(pharmacy.get('code_postal', ''))
     centre['gid'] = campagne.get('url').encode('utf8').hex()[40:][:8]
     centre['internal_id'] = campagne.get('url').encode('utf8').hex()[40:][:8]
     centre['vaccine_type'] = 'AstraZeneca'
@@ -68,7 +69,6 @@ def get_mapharma_opendata(client: httpx.Client = DEFAULT_CLIENT) -> dict:
         request = client.get(base_url, headers=MAPHARMA_HEADERS)
         request.raise_for_status()
         return request.json()
-        return 
     except httpx.HTTPStatusError as hex:
         logger.warning(f'{base_url} returned error {hex.response.status_code}')
     try:
@@ -79,7 +79,7 @@ def get_mapharma_opendata(client: httpx.Client = DEFAULT_CLIENT) -> dict:
     return result
 
 
-def get_slots(campagneId: str, optionId: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT):
+def get_slots(campagneId: str, optionId: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT) -> dict:
     base_url = f'https://mapharma.net/api/public/calendar/{campagneId}/{start_date}/{optionId}'
     client.headers.update({'referer': 'https://mapharma.net/'})
     try:
@@ -91,7 +91,7 @@ def get_slots(campagneId: str, optionId: str, start_date: str, client: httpx.Cli
     return r.json()
 
 
-def parse_slots(slots):
+def parse_slots(slots) -> [datetime, int]:
     first_availability = None
     slot_count = 0
     for date, day_slots in slots.items():
@@ -106,7 +106,8 @@ def parse_slots(slots):
     return first_availability, slot_count
 
 
-def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
+@Profiling.measure('mapharma_slot')
+def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) -> str:
     url = request.get_url()
     # on récupère les paramètres c (id_campagne) & l (id_type)
     params = dict(parse.parse_qsl(parse.urlsplit(url).query))
