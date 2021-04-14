@@ -276,10 +276,7 @@ def gouv_centre_iterator(outpath_format='data/output/{}.json'):
         if row["centre_fermeture"] == "t":
             centres_non_pris_en_compte["centres_fermes"][row["gid"]
                                                          ] = row["rdv_site_web"]
-        # TODO: do not use doctolib? :o
-        #if row["rdv_site_web"].startswith('https://partners.doctolib.fr') or row["rdv_site_web"].startswith('https://doctolib.fr'):
-        #    continue
-        if len(row["rdv_site_web"]):
+        if len(row["rdv_site_web"]) and "doctolib" not in row["rdv_site_web"]:
             yield row
         else:
             centres_non_pris_en_compte["centres_urls_vides"].append(row["gid"])
