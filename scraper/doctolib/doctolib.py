@@ -186,11 +186,6 @@ class DoctolibSlots:
                     first_availability = sdate
                     motive_availability = True
 
-        if type(slots) is dict:
-            next_slot = slots.get('next_slot', None)
-            if next_slot and (not first_availability or next_slot < first_availability):
-                first_availability = next_slot
-                motive_availability = True
         if motive_availability:
             request.add_vaccine_type(visit_motive_ids[motive_id])
         return first_availability, appointment_count
