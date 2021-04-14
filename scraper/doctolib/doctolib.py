@@ -69,6 +69,11 @@ class DoctolibSlots:
         time.sleep(self._cooldown_interval)
         data = response.json()
         rdata = data.get('data', {})
+
+        if not self.is_practice_id_valid(request, rdata):
+            logger.warning(f"Invalid practice ID for this Doctolib center: {request.get_url()}")
+            return None
+
         appointment_count = 0
         request.update_practitioner_type(
             parse_practitioner_type(centre, rdata))
@@ -114,6 +119,24 @@ class DoctolibSlots:
                 request.update_appointment_count(request.appointment_count + appt)
 
         return first_availability
+
+    def is_practice_id_valid(self, request: ScraperRequest, rdata: dict):
+        """
+        Some practice IDs are wrong and prevent people from booking an appointment.
+        So if the practice id is invalid, this center does not seems to exist anymore.
+        """
+        pid = _parse_practice_id(request.get_url())
+
+        # Not practice ID found
+        if not pid:
+            return True
+        places = rdata.get('places', {})
+        for place in places:
+            place_ids = rdata.get('practice_ids', [])
+            if pid in place_ids:
+                return True
+        return False
+
 
     def get_appointments(self, request: ScraperRequest, start_date: str, visit_motive_ids,
                          motive_id: str, agenda_ids_q: str, practice_ids_q: str, limit: int):
