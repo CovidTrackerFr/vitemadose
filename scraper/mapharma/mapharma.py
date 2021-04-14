@@ -14,6 +14,7 @@ from urllib import parse
 
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
+from scraper.pattern.center_info import get_vaccine_name
 from utils.vmd_utils import departementUtils
 from scraper.profiler import Profiling
 
@@ -87,6 +88,19 @@ def get_mapharma_opendata(client: httpx.Client = DEFAULT_CLIENT) -> dict:
         logger.warning('Reading mapharma_open_data.json returned error {ioex}')
     return result
 
+def get_pharmacy_and_campagne(id_campagne: int, id_type: int) -> [dict, dict]:
+    opendate = list
+    try:
+        with open(Path('data', 'output', 'mapharma_open_data.json'), 'r', encoding='utf8') as f:
+            opendata = json.load(f)
+    except IOError as ioex:
+        logger.warning('Reading mapharma_open_data.json returned error {ioex}')
+    for pharmacy in opendata:
+        for campagne in pharmacy['campagnes']:
+            if id_campagne == campagne['id_campagne'] and id_type == campagne['id_type']:
+                return pharmacy, campagne
+    raise ValueError(f'Unable to find campagne (c={id_campagne}&l={id_type})')
+
 
 def get_slots(campagneId: str, optionId: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT) -> dict:
     base_url = f'https://mapharma.net/api/public/calendar/{campagneId}/{start_date}/{optionId}'
@@ -120,8 +134,8 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
     url = request.get_url()
     # on récupère les paramètres c (id_campagne) & l (id_type)
     params = dict(parse.parse_qsl(parse.urlsplit(url).query))
-    id_campagne = params.get('c')
-    id_type = params.get('l')
+    id_campagne = int(params.get('c'))
+    id_type = int(params.get('l'))
     day_slots = {}
     # l'api ne renvoie que 7 jours, on parse un peu plus loin dans le temps
     start_date = date.fromisoformat(request.get_start_date())
@@ -140,7 +154,8 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
     request.update_appointment_count(slot_count)
     request.update_practitioner_type(DRUG_STORE)
     request.update_internal_id(url.encode('utf8').hex()[40:][:8])
-    request.add_vaccine_type('AstraZeneca')
+    pharmacy, campagne = get_pharmacy_and_campagne(id_campagne, id_type)
+    request.add_vaccine_type(get_vaccine_name(campagne['nom']))
     if first_availability is None:
         return None
     return first_availability.isoformat()
