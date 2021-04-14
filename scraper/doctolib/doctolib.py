@@ -130,10 +130,11 @@ class DoctolibSlots:
         # Not practice ID found
         if not pid:
             return True
+        pid = pid[0]
         places = rdata.get('places', {})
         for place in places:
-            place_ids = rdata.get('practice_ids', [])
-            if pid in place_ids:
+            practice_ids = place.get('practice_ids', [])
+            if pid in practice_ids:
                 return True
         return False
 
