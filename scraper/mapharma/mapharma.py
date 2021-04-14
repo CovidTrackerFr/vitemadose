@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
 from utils.vmd_utils import departementUtils
+from scraper.profiler import Profiling
 
 MAPHARMA_HEADERS = {
     'User-Agent': os.environ.get('MAPHARMA_API_KEY', ''),
@@ -128,6 +129,7 @@ def parse_slots(slots):
     return first_availability
 
 
+@Profiling.measure('mapharma_slot')
 def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     global campagnes
     slot_counts = 0

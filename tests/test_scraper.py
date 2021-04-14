@@ -20,7 +20,7 @@ def test_export_data(tmp_path):
             "location": None,
             "metadata": None,
             "type": None,
-            "appointment_count": 0,
+            "appointment_count": 1,
             "internal_id": None
         },
         {
@@ -33,7 +33,7 @@ def test_export_data(tmp_path):
             "location": None,
             "metadata": None,
             "type": None,
-            "appointment_count": 0,
+            "appointment_count": 1,
             "internal_id": None
         },
         {
@@ -42,6 +42,19 @@ def test_export_data(tmp_path):
             "url": "https://example.com/clinique-du-cambresis",
             "plateforme": "Maiia",
             "prochain_rdv": None,
+            "erreur": None,
+            "location": None,
+            "metadata": None,
+            "type": None,
+            "appointment_count": 1,
+            "internal_id": None
+        },
+        {
+            "departement": "92",
+            "nom": "Médiathèque Jacques GAUTIER",
+            "url": "https://example.com/mediatheque-jacques-gautier",
+            "plateforme": "Maiia",
+            "prochain_rdv": "2021-04-11:00:00",
             "erreur": None,
             "location": None,
             "metadata": None,
@@ -60,11 +73,16 @@ def test_export_data(tmp_path):
             "location": None,
             "metadata": None,
             "type": None,
-            "appointment_count": 0,
+            "appointment_count": 1,
             "internal_id": None
         },
     ]
     centres_cherchés = [dict_to_center_info(center) for center in centres_cherchés_dict]
+
+    for center in centres_cherchés:
+        if center.nom != "Médiathèque Jacques GAUTIER":
+            center.appointment_count = 1
+
     out_dir = tmp_path / "out"
     out_dir.mkdir()
     outpath_format = str(out_dir / "{}.json")
@@ -76,7 +94,7 @@ def test_export_data(tmp_path):
 
     # All departements for which we don't have data should be empty.
     for departement in departementUtils.import_departements():
-        if departement in ("01", "59"):
+        if departement in ("01", "59", "92"):
             continue
         content = json.loads((out_dir / f"{departement}.json").read_text())
         assert content == {
@@ -101,7 +119,7 @@ def test_export_data(tmp_path):
                 "location": None,
                 "metadata": None,
                 "type": None,
-                "appointment_count": 0,
+                "appointment_count": 1,
                 "internal_id": None,
                 "vaccine_type": None,
                 "erreur": None
@@ -124,7 +142,7 @@ def test_export_data(tmp_path):
                 "location": None,
                 "metadata": None,
                 "type": None,
-                "appointment_count": 0,
+                "appointment_count": 1,
                 "internal_id": None,
                 "vaccine_type": None,
                 "erreur": None
@@ -140,7 +158,7 @@ def test_export_data(tmp_path):
                 "location": None,
                 "metadata": None,
                 "type": None,
-                "appointment_count": 0,
+                "appointment_count": 1,
                 "internal_id": None,
                 "vaccine_type": None,
                 "erreur": None
@@ -148,6 +166,30 @@ def test_export_data(tmp_path):
         ],
         "last_updated": "2021-04-04T00:00:00",
     }
+
+    content = json.loads((out_dir / "92.json").read_text())
+    assert content == {
+        "version": 1,
+        "centres_disponibles": [],
+        "centres_indisponibles": [
+            {
+                "departement": "92",
+                "nom": "Médiathèque Jacques GAUTIER",
+                "url": "https://example.com/mediatheque-jacques-gautier",
+                "location": None,
+                "metadata": None,
+                "prochain_rdv": "2021-04-11:00:00",
+                "plateforme": "Maiia",
+                "type": None,
+                "appointment_count": 0,
+                "internal_id": None,
+                "vaccine_type": None,
+                "erreur": None
+            },
+        ],
+        "last_updated": "2021-04-04T00:00:00",
+    }
+    print(content)
 
     # On test l'export vers le format inscrit sur la plateforme data.gouv.fr
     content = json.loads((out_dir / "centres_open_data.json").read_text())
@@ -170,6 +212,12 @@ def test_export_data(tmp_path):
             "url": "https://example.com/clinique-du-cambresis",
             "plateforme": "Maiia"
         },
+        {
+            "departement": "92",
+            "nom": "Médiathèque Jacques GAUTIER",
+            "url": "https://example.com/mediatheque-jacques-gautier",
+            "plateforme": "Maiia"
+        }
     ]
 
 
@@ -178,6 +226,7 @@ def test_export_data_when_blocked(tmp_path):
     center_info1.plateforme = "Maiia"
     center_info1.prochain_rdv = "2021-04-12:00:00"
     center_info1.erreur = None
+    center_info1.appointment_count = 1
 
     center_info2 = CenterInfo("14", "Hôpital magique", "https://example.com/hopital-magique")
     center_info2.plateforme = "Doctolib"
@@ -237,7 +286,7 @@ def test_export_data_when_blocked(tmp_path):
                 "location": None,
                 "metadata": None,
                 "type": None,
-                "appointment_count": 0,
+                "appointment_count": 1,
                 "internal_id": None,
                 "vaccine_type": None,
                 "erreur": None
