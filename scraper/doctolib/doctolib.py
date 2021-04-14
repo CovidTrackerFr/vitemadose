@@ -5,6 +5,7 @@ import os
 import re
 from datetime import date, timedelta, datetime
 from typing import Optional, Tuple
+from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 
 import httpx
 import requests
@@ -72,15 +73,17 @@ class DoctolibSlots:
 
         if not self.is_practice_id_valid(request, rdata):
             logger.warning(f"Invalid practice ID for this Doctolib center: {request.get_url()}")
-            return None
+            practice_id = None
+            self.pop_practice_id(request)
 
-        appointment_count = 0
-        request.update_practitioner_type(
-            parse_practitioner_type(centre, rdata))
         if practice_id:
             practice_id = link_practice_ids(practice_id, rdata)
         if len(rdata.get('places', [])) > 1 and practice_id is None:
             practice_id = rdata.get('places')[0].get('practice_ids', None)
+
+        appointment_count = 0
+        request.update_practitioner_type(
+            parse_practitioner_type(centre, rdata))
         set_doctolib_center_internal_id(request, rdata, practice_id)
         # visit_motive_categories
         # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1
@@ -119,6 +122,17 @@ class DoctolibSlots:
                 request.update_appointment_count(request.appointment_count + appt)
 
         return first_availability
+
+    def pop_practice_id(self, request: ScraperRequest):
+        """
+        In some cases, practice id needs to be deleted
+        """
+        u = urlparse(request.get_url())
+        query = parse_qs(u.query, keep_blank_values=True)
+        query.pop('pid', None)
+        u = u._replace(query=urlencode(query, True))
+        request.url = urlunparse(u)
+
 
     def is_practice_id_valid(self, request: ScraperRequest, rdata: dict):
         """
