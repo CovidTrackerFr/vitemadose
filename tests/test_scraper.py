@@ -221,6 +221,43 @@ def test_export_data(tmp_path):
     ]
 
 
+def test_export_reserved_centers(tmp_path):
+    centres_cherchés_dict = [
+        {
+            "departement": "01",
+            "nom": "Bugey Sud - Réservé aux médecins du groupe hospitalier",
+            "url": "https://example.com/bugey-sud",
+            "plateforme": "Doctolib",
+            "prochain_rdv": "2021-04-10T00:00:00",
+            "location": None,
+            "metadata": None,
+            "type": None,
+            "appointment_count": 1,
+            "internal_id": None
+        }
+    ]
+    centres_cherchés = [dict_to_center_info(center) for center in centres_cherchés_dict]
+
+    out_dir = tmp_path / "out"
+    out_dir.mkdir()
+    outpath_format = str(out_dir / "{}.json")
+
+    fake_now = dt.datetime(2021, 4, 4)
+    get_start_date()
+    with mock_datetime_now(fake_now):
+        export_data(centres_cherchés, outpath_format=outpath_format)
+
+    # Departements 01 and 59 should contain expected data.
+
+    content = json.loads((out_dir / "01.json").read_text())
+    assert content == {
+        "version": 1,
+        "centres_disponibles": [],
+        "centres_indisponibles": [],
+        "last_updated": "2021-04-04T00:00:00",
+    }
+
+
 def test_export_data_when_blocked(tmp_path):
     center_info1 = CenterInfo("59", "Clinique du Cambresis", "https://example.com/clinique-du-cambresis")
     center_info1.plateforme = "Maiia"
@@ -297,11 +334,11 @@ def test_export_data_when_blocked(tmp_path):
     }
 
 
-
 def test_fetch_centre_slots():
     """
     We detect which implementation to use based on the visit URL.
     """
+
     def fake_doctolib_fetch_slots(request: ScraperRequest):
         return "2021-04-04"
 
