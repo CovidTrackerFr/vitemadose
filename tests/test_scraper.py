@@ -1,9 +1,10 @@
 import datetime as dt
 import json
 
-from scraper.pattern.center_info import CenterInfo, dict_to_center_info
+from scraper.pattern.center_info import CenterInfo, dict_to_center_info, get_vaccine_name
+from scraper.pattern.scraper_result import GENERAL_PRACTITIONER, ScraperResult
 from utils.vmd_utils import departementUtils
-from scraper.scraper import fetch_centre_slots, export_data
+from scraper.scraper import fetch_centre_slots, export_data, get_start_date
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 from .utils import mock_datetime_now
@@ -20,7 +21,7 @@ def test_export_data(tmp_path):
             "location": None,
             "metadata": None,
             "type": None,
-            "appointment_count": 0,
+            "appointment_count": 1,
             "internal_id": None
         },
         {
@@ -33,7 +34,7 @@ def test_export_data(tmp_path):
             "location": None,
             "metadata": None,
             "type": None,
-            "appointment_count": 0,
+            "appointment_count": 1,
             "internal_id": None
         },
         {
@@ -42,6 +43,19 @@ def test_export_data(tmp_path):
             "url": "https://example.com/clinique-du-cambresis",
             "plateforme": "Maiia",
             "prochain_rdv": None,
+            "erreur": None,
+            "location": None,
+            "metadata": None,
+            "type": None,
+            "appointment_count": 1,
+            "internal_id": None
+        },
+        {
+            "departement": "92",
+            "nom": "Médiathèque Jacques GAUTIER",
+            "url": "https://example.com/mediatheque-jacques-gautier",
+            "plateforme": "Maiia",
+            "prochain_rdv": "2021-04-11:00:00",
             "erreur": None,
             "location": None,
             "metadata": None,
@@ -60,22 +74,28 @@ def test_export_data(tmp_path):
             "location": None,
             "metadata": None,
             "type": None,
-            "appointment_count": 0,
+            "appointment_count": 1,
             "internal_id": None
         },
     ]
     centres_cherchés = [dict_to_center_info(center) for center in centres_cherchés_dict]
+
+    for center in centres_cherchés:
+        if center.nom != "Médiathèque Jacques GAUTIER":
+            center.appointment_count = 1
+
     out_dir = tmp_path / "out"
     out_dir.mkdir()
     outpath_format = str(out_dir / "{}.json")
 
     fake_now = dt.datetime(2021, 4, 4)
+    get_start_date()
     with mock_datetime_now(fake_now):
         export_data(centres_cherchés, outpath_format=outpath_format)
 
     # All departements for which we don't have data should be empty.
     for departement in departementUtils.import_departements():
-        if departement in ("01", "59"):
+        if departement in ("01", "59", "92"):
             continue
         content = json.loads((out_dir / f"{departement}.json").read_text())
         assert content == {
@@ -100,7 +120,7 @@ def test_export_data(tmp_path):
                 "location": None,
                 "metadata": None,
                 "type": None,
-                "appointment_count": 0,
+                "appointment_count": 1,
                 "internal_id": None,
                 "vaccine_type": None,
                 "erreur": None
@@ -123,7 +143,7 @@ def test_export_data(tmp_path):
                 "location": None,
                 "metadata": None,
                 "type": None,
-                "appointment_count": 0,
+                "appointment_count": 1,
                 "internal_id": None,
                 "vaccine_type": None,
                 "erreur": None
@@ -139,7 +159,7 @@ def test_export_data(tmp_path):
                 "location": None,
                 "metadata": None,
                 "type": None,
-                "appointment_count": 0,
+                "appointment_count": 1,
                 "internal_id": None,
                 "vaccine_type": None,
                 "erreur": None
@@ -147,6 +167,30 @@ def test_export_data(tmp_path):
         ],
         "last_updated": "2021-04-04T00:00:00",
     }
+
+    content = json.loads((out_dir / "92.json").read_text())
+    assert content == {
+        "version": 1,
+        "centres_disponibles": [],
+        "centres_indisponibles": [
+            {
+                "departement": "92",
+                "nom": "Médiathèque Jacques GAUTIER",
+                "url": "https://example.com/mediatheque-jacques-gautier",
+                "location": None,
+                "metadata": None,
+                "prochain_rdv": "2021-04-11:00:00",
+                "plateforme": "Maiia",
+                "type": None,
+                "appointment_count": 0,
+                "internal_id": None,
+                "vaccine_type": None,
+                "erreur": None
+            },
+        ],
+        "last_updated": "2021-04-04T00:00:00",
+    }
+    print(content)
 
     # On test l'export vers le format inscrit sur la plateforme data.gouv.fr
     content = json.loads((out_dir / "centres_open_data.json").read_text())
@@ -169,7 +213,50 @@ def test_export_data(tmp_path):
             "url": "https://example.com/clinique-du-cambresis",
             "plateforme": "Maiia"
         },
+        {
+            "departement": "92",
+            "nom": "Médiathèque Jacques GAUTIER",
+            "url": "https://example.com/mediatheque-jacques-gautier",
+            "plateforme": "Maiia"
+        }
     ]
+
+
+def test_export_reserved_centers(tmp_path):
+    centres_cherchés_dict = [
+        {
+            "departement": "01",
+            "nom": "Bugey Sud - Réservé aux médecins du groupe hospitalier",
+            "url": "https://example.com/bugey-sud",
+            "plateforme": "Doctolib",
+            "prochain_rdv": "2021-04-10T00:00:00",
+            "location": None,
+            "metadata": None,
+            "type": None,
+            "appointment_count": 1,
+            "internal_id": None
+        }
+    ]
+    centres_cherchés = [dict_to_center_info(center) for center in centres_cherchés_dict]
+
+    out_dir = tmp_path / "out"
+    out_dir.mkdir()
+    outpath_format = str(out_dir / "{}.json")
+
+    fake_now = dt.datetime(2021, 4, 4)
+    get_start_date()
+    with mock_datetime_now(fake_now):
+        export_data(centres_cherchés, outpath_format=outpath_format)
+
+    # Departements 01 and 59 should contain expected data.
+
+    content = json.loads((out_dir / "01.json").read_text())
+    assert content == {
+        "version": 1,
+        "centres_disponibles": [],
+        "centres_indisponibles": [],
+        "last_updated": "2021-04-04T00:00:00",
+    }
 
 
 def test_export_data_when_blocked(tmp_path):
@@ -177,6 +264,7 @@ def test_export_data_when_blocked(tmp_path):
     center_info1.plateforme = "Maiia"
     center_info1.prochain_rdv = "2021-04-12:00:00"
     center_info1.erreur = None
+    center_info1.appointment_count = 1
 
     center_info2 = CenterInfo("14", "Hôpital magique", "https://example.com/hopital-magique")
     center_info2.plateforme = "Doctolib"
@@ -236,7 +324,7 @@ def test_export_data_when_blocked(tmp_path):
                 "location": None,
                 "metadata": None,
                 "type": None,
-                "appointment_count": 0,
+                "appointment_count": 1,
                 "internal_id": None,
                 "vaccine_type": None,
                 "erreur": None
@@ -247,11 +335,11 @@ def test_export_data_when_blocked(tmp_path):
     }
 
 
-
 def test_fetch_centre_slots():
     """
     We detect which implementation to use based on the visit URL.
     """
+
     def fake_doctolib_fetch_slots(request: ScraperRequest):
         return "2021-04-04"
 
@@ -306,3 +394,24 @@ def test_fetch_centre_slots():
     res = fetch_centre_slots(url, start_date, fetch_map=fetch_map)
     assert res.platform == "Autre"
     assert res.next_availability is None
+
+
+def test_scraper_request():
+    request = ScraperRequest("https://doctolib.fr/center/center-test", "2021-04-14")
+
+    request.update_internal_id("d739")
+    request.update_practitioner_type(GENERAL_PRACTITIONER)
+    request.update_appointment_count(42)
+    request.add_vaccine_type(get_vaccine_name("Injection pfizer 1ère dose"))
+
+    assert request is not None
+    assert request.internal_id == "d739"
+    assert request.appointment_count == 42
+    assert request.vaccine_type == ['Pfizer-BioNTech']
+
+    result = ScraperResult(request, 'Doctolib', '2021-04-14T14:00:00.0000')
+    assert result.default() == {
+        'next_availability': '2021-04-14T14:00:00.0000',
+        'platform': 'Doctolib',
+        'request': request
+    }

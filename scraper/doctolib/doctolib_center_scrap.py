@@ -38,27 +38,26 @@ logger = get_logger()
 
 def parse_doctolib_centers(page_limit=None) -> List[dict]:
     centers = []
-
-    page_id = 1
-    page_has_centers = True
-    while (page_has_centers and not page_limit) or (page_limit and page_limit > page_id):
-        logger.info(f"[Doctolib centers] Parsing page {page_id}")
-        centers_page = parse_page_centers(page_id)
-        centers += centers_page
-
-        page_id += 1
-
-        if len(centers_page) == 0:
-            page_has_centers = False
-
-    for problematic_departement in ["gers", "jura", "var"]:
+    for departement in get_departements():
         logger.info(
-            f"[Doctolib centers] Parsing pages of departement {problematic_departement} through department SEO link")
-        centers_departements = parse_pages_departement(
-            problematic_departement)
+            f"[Doctolib centers] Parsing pages of departement {departement} through department SEO link")
+        centers_departements = parse_pages_departement(departement)
+        if centers_departements == 0:
+            raise Exception("No Value found for department {}, crashing")
         centers += centers_departements
-
     return centers
+
+
+def get_departements():
+    import csv
+
+    # Guyane uses Maiia and does not have doctolib pages
+    NOT_INCLUDED_DEPARTEMENTS = ["Guyane"]
+    with open("data/input/departements-france.csv", newline="\n") as csvfile:
+        reader = csv.DictReader(csvfile)
+        departements = [str(row["nom_departement"]) for row in reader]
+        [departements.remove(ndep) for ndep in NOT_INCLUDED_DEPARTEMENTS]
+        return departements
 
 
 def parse_pages_departement(departement):
@@ -122,17 +121,28 @@ def center_from_doctor_dict(doctor_dict) -> dict:
     rdv_site_web = f"https://partners.doctolib.fr{url_path}"
     type = center_type(url_path, nom)
     dict_infos_center_page = get_dict_infos_center_page(url_path)
+    longitude, latitude = get_coordinates(doctor_dict)
     dict_infos_browse_page = {
         "nom": nom,
         "rdv_site_web": rdv_site_web,
         "ville": ville,
         "address": addresse,
-        "long_coor1": float(doctor_dict["position"]["lng"]),
-        "lat_coor1": float(doctor_dict["position"]["lat"]),
+        "long_coor1": longitude,
+        "lat_coor1": latitude,
         "type": type,
         "com_insee": departementUtils.cp_to_insee(code_postal)
     }
     return {**dict_infos_center_page, **dict_infos_browse_page}
+
+
+def get_coordinates(doctor_dict):
+    longitude = doctor_dict["position"]["lng"]
+    latitude = doctor_dict["position"]["lat"]
+    if longitude:
+        longitude = float(longitude)
+    if latitude:
+        latitude = float(latitude)
+    return longitude, latitude
 
 
 def get_dict_infos_center_page(url_path: str) -> dict:
@@ -150,7 +160,8 @@ def get_dict_infos_center_page(url_path: str) -> dict:
 
         # Parse place location
         infos_page = {}
-        infos_page['gid'] = 'd{0}'.format(output.get('profile', {}).get('id', ''))
+        infos_page['gid'] = 'd{0}'.format(
+            output.get('profile', {}).get('id', ''))
         infos_page['address'] = place['full_address']
         infos_page['long_coor1'] = place.get('longitude')
         infos_page['lat_coor1'] = place.get('latitude')
