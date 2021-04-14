@@ -21,6 +21,14 @@ MAPHARMA_HEADERS = {
     'User-Agent': os.environ.get('MAPHARMA_API_KEY', ''),
 }
 
+MAPHARMA_CAMPAGNES_VALIDES = [
+    'vaccination covid19',
+    'vaccination covid-19',
+    'vaccination covid (vaccination covid - 1ère injection)',
+    'vaccination covid 1 injection',
+    'covid 1ère injection'
+]
+
 timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=MAPHARMA_HEADERS)
 logger = logging.getLogger('scraper')
@@ -30,7 +38,9 @@ campagnes_inconnues = []
 opendata = []
 
 
-def campagne_to_centre(pharmacy: dict, campagne: dict) -> dict :
+def campagne_to_centre(pharmacy: dict, campagne: dict) -> dict:
+    if not pharmacy.get('code_postal'):
+        raise ValueError('Absence de code postal')
     insee = departementUtils.cp_to_insee(pharmacy.get('code_postal'))
     departement = departementUtils.to_departement_number(insee)
     centre = dict()
@@ -55,10 +65,9 @@ def campagne_to_centre(pharmacy: dict, campagne: dict) -> dict :
     centre['business_hours'] = business_hours
     centre['phone_number'] = pharmacy.get('telephone', '')
     centre['rdv_site_web'] = campagne.get('url')
-    centre['com_insee'] = departementUtils.cp_to_insee(pharmacy.get('code_postal', ''))
+    centre['com_insee'] = insee
     centre['gid'] = campagne.get('url').encode('utf8').hex()[40:][:8]
     centre['internal_id'] = campagne.get('url').encode('utf8').hex()[40:][:8]
-    centre['vaccine_type'] = 'AstraZeneca'
     return centre
 
 
@@ -136,11 +145,14 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
         return None
     return first_availability.isoformat()
 
+
 def is_campagne_valid(campagne: dict) -> bool:
     global campagnes_inconnues
     global campagnes_valides
     if not campagne.get('url'):
         return False
+    if campagne.get('nom', 'erreur').lower() in MAPHARMA_CAMPAGNES_VALIDES:
+        return True
     if not campagnes_valides:
         # on charge la liste des campagnes valides (vaccination)
         with open(Path('data', 'input', 'mapharma_campagnes_valides.json'), 'r', encoding='utf8') as f:
