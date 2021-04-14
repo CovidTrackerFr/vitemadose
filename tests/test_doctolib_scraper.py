@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from scraper.doctolib.doctolib_center_scrap import parse_doctolib_centers
+from scraper.doctolib.doctolib_center_scrap import parse_doctolib_centers, get_departements, doctolib_urlify
 from scraper.error import BlockedByDoctolibError
 
 import httpx
@@ -15,11 +15,15 @@ from scraper.doctolib.doctolib import (
     DOCTOLIB_SLOT_LIMIT,
 )
 
-
 # -- Tests de l'API (offline) --
 from scraper.pattern.scraper_request import ScraperRequest
 
 
-def test_doctolib_scraper():
-    data = parse_doctolib_centers(page_limit=1)
-    assert len(data) > 0
+def test_doctolib_departements():
+    dep = get_departements()
+    assert len(dep) == 100
+
+
+def test_doctolib_urlify():
+    url = 'FooBar 42'
+    assert doctolib_urlify(url) == 'foobar-42'

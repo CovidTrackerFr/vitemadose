@@ -47,6 +47,7 @@ def parse_doctolib_centers(page_limit=None) -> List[dict]:
         centers += centers_departements
     return centers
 
+
 def get_departements():
     import csv
 
@@ -55,7 +56,7 @@ def get_departements():
     with open("data/input/departements-france.csv", newline="\n") as csvfile:
         reader = csv.DictReader(csvfile)
         departements = [str(row["nom_departement"]) for row in reader]
-        [departements.pop(ndep) for ndep in NOT_INCLUDED_DEPARTEMENTS]
+        [departements.remove(ndep) for ndep in NOT_INCLUDED_DEPARTEMENTS]
         return departements
 
 
