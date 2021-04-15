@@ -24,6 +24,3 @@ stats: ## Run the statistic scripts
 
 doctoscrap: ## Run the statistiques scripts
 	venv/bin/python -m scraper.doctolib.doctolib_center_scrap
-
-mapharmascrap: ## Refresh mapharma centers list
-	venv/bin/python -m scraper.mapharma.mapharma_center_scrap
