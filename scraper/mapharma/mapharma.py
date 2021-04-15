@@ -23,6 +23,7 @@ MAPHARMA_HEADERS = {
 }
 
 MAPHARMA_CAMPAGNES_VALIDES = [
+    'vaccination covid',
     'vaccination covid19',
     'vaccination covid-19',
     'vaccination covid (vaccination covid - 1ère injection)',
