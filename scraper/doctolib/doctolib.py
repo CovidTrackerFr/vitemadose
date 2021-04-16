@@ -326,7 +326,11 @@ def _find_visit_motive_category_id(data: dict):
     (qui correspond à la population civile).
     """
     categories = []
-    for category in data.get('data', {}).get('visit_motive_categories', []):
+    rdata = data.get('data', {})
+
+    if not rdata.get('visit_motive_categories'):
+        return None
+    for category in rdata.get('visit_motive_categories', []):
         if is_category_relevant(category['name']):
             categories.append(category['id'])
     return categories
@@ -360,7 +364,7 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: list = None):
         # sont pas non plus rattachés à une catégorie
         # * visit_motive_category_id=<id> : filtre => on veut les motifs qui
         # correspondent à la catégorie en question.
-        if visit_motive.get('visit_motive_category_id') in visit_motive_category_id or not visit_motive_category_id:
+        if visit_motive_category_id is None or visit_motive.get('visit_motive_category_id') in visit_motive_category_id:
             relevant_motives[visit_motive['id']] = get_vaccine_name(visit_motive['name'])
     return relevant_motives
 
