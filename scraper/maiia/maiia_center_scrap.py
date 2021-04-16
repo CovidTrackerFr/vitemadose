@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 from dateutil.parser import isoparse
 from pathlib import Path
 from utils.vmd_utils import departementUtils, format_phone_number
+from scraper.pattern.scraper_result import DRUG_STORE, GENERAL_PRACTITIONER, VACCINATION_CENTER
 from .maiia_utils import get_paged, MAIIA_LIMIT
 
 timeout = httpx.Timeout(30.0, connect=30.0)
@@ -47,6 +48,10 @@ def maiia_center_to_csv(center: dict, root_center: dict) -> dict:
     csv['gid'] = center['id'][:8]
     csv['nom'] = center['name']
     csv['rdv_site_web'] = f'{MAIIA_URL}{center["url"]}?centerid={center["id"]}'
+    if 'pharmacie' in center['url']:
+        csv['type'] = DRUG_STORE
+    else:
+        csv['type'] = VACCINATION_CENTER
     if 'publicInformation' in center:
         if 'address' in center['publicInformation']:
             insee = center['publicInformation']['address'].get('inseeCode', '')
