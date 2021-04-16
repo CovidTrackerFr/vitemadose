@@ -276,7 +276,7 @@ def gouv_centre_iterator(outpath_format='data/output/{}.json'):
         if row["centre_fermeture"] == "t":
             centres_non_pris_en_compte["centres_fermes"][row["gid"]
                                                          ] = row["rdv_site_web"]
-        if should_use_opendata_row(row["rdv_site_web"]):
+        if should_use_opendata_csv(row["rdv_site_web"]):
             yield row
         else:
             centres_non_pris_en_compte["centres_urls_vides"].append(row["gid"])
@@ -298,7 +298,7 @@ def gouv_centre_iterator(outpath_format='data/output/{}.json'):
         json.dump(centres_non_pris_en_compte, fichier, indent=2)
 
 
-def should_use_opendata_row(rdv_site_web: str) -> bool:
+def should_use_opendata_csv(rdv_site_web: str) -> bool:
     plateformes_hors_csv = ['doctolib']
     if any(p in rdv_site_web for p in plateformes_hors_csv):
         return False
