@@ -24,7 +24,7 @@ class MockBeautifulSoup:
         pass
 
     def find(self, id):
-        with open("tests/fixtures/maiia/maiia_test_rdv_form.html", "r") as f:
+        with open("tests/fixtures/maiia/maiia_test_rdv_form.html", "r", encoding='utf8') as f:
             return BeautifulSoup(f.read(), "html.parser").find(id=id)
 
 
@@ -51,7 +51,7 @@ class TestMaiia:
     def test_fetch_slot(self):
         scraper.maiia.BeautifulSoup = MockBeautifulSoup
         scrap_request = ScraperRequest("http://google.com", TestMaiia.START_DATE)
-        assert fetch_slots(scrap_request) is None
+        assert fetch_slots(scrap_request) is not None
 
     def test_get_slots_from(self):
         # Testing the None return if rdv_form doesn't have a correct shape
