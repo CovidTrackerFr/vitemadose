@@ -28,6 +28,9 @@ VACCINES = {
         'astra zeneca',
         'az'  # Not too sure about the reliability
     ],
+    'ARNm': [
+        'arn'
+    ]
 }
 
 
