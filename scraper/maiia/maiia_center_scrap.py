@@ -12,6 +12,7 @@ from .maiia_utils import get_paged, MAIIA_LIMIT
 timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 logger = logging.getLogger('scraper')
+
 MAIIA_URL = 'https://www.maiia.com'
 MAIIA_DAY_LIMIT = 50
 CENTER_TYPES = ['centre-de-vaccination',
@@ -45,29 +46,34 @@ def maiia_center_to_csv(center: dict, root_center: dict) -> dict:
     if 'url' not in center:
         logger.warning(f'url not found - {center}')
     csv = dict()
-    csv['gid'] = center['id'][:8]
-    csv['nom'] = center['name']
+    csv['gid'] = center.get('id')[:8]
+    csv['nom'] = center.get('name')
     csv['rdv_site_web'] = f'{MAIIA_URL}{center["url"]}?centerid={center["id"]}'
     if 'pharmacie' in center['url']:
         csv['type'] = DRUG_STORE
     else:
         csv['type'] = VACCINATION_CENTER
-    if 'publicInformation' in center:
-        if 'address' in center['publicInformation']:
-            insee = center['publicInformation']['address'].get('inseeCode', '')
-            csv['com_insee'] = center['publicInformation']['address']['inseeCode']
-            if len(insee) < 5:
-                zip = center['publicInformation']['address']['zipCode']
-                csv['com_insee'] = departementUtils.cp_to_insee(zip)
-            csv['address'] = center['publicInformation']['address']['fullAddress']
-            if 'location' in center['publicInformation']['address']:
-                csv['long_coor1'] = center['publicInformation']['address']['location']['coordinates'][0]
-                csv['lat_coor1'] = center['publicInformation']['address']['location']['coordinates'][1]
-        if 'officeInformation' in center['publicInformation']:
-            csv['phone_number'] = format_phone_number(center['publicInformation']['officeInformation'].get('phoneNumber', ''))
-            if 'openingSchedules' in center['publicInformation']['officeInformation']:
-                csv['business_hours'] = maiia_schedule_to_business_hours(
-                    center['publicInformation']['officeInformation']['openingSchedules'])
+
+    if 'publicInformation' not in center:
+        return csv
+
+    if 'address' in center['publicInformation']:
+        csv['com_insee'] = center['publicInformation']['address'].get('inseeCode', '')
+        if len(csv['com_insee']) < 5:
+            zip = center['publicInformation']['address'].get('zipCode')
+            csv['com_insee'] = departementUtils.cp_to_insee(zip)
+        csv['address'] = center['publicInformation']['address'].get(
+            'fullAddress')
+        if 'location' in center['publicInformation']['address']:
+            csv['long_coor1'] = center['publicInformation']['address']['location']['coordinates'][0]
+            csv['lat_coor1'] = center['publicInformation']['address']['location']['coordinates'][1]
+
+    if 'officeInformation' in center['publicInformation']:
+        csv['phone_number'] = format_phone_number(
+            center['publicInformation']['officeInformation'].get('phoneNumber', ''))
+        if 'openingSchedules' in center['publicInformation']['officeInformation']:
+            csv['business_hours'] = maiia_schedule_to_business_hours(
+                center['publicInformation']['officeInformation']['openingSchedules'])
     return csv
 
 
@@ -101,7 +107,6 @@ def main():
     with open(output_path, 'w', encoding='utf8') as f:
         json.dump(centers, f, indent=2)
     logger.info(f'Saved {len(centers)} centers to {output_path}')
-    return
 
 
 if __name__ == "__main__":

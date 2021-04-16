@@ -13,7 +13,8 @@ def get_paged(url: str, limit: MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIEN
     result['items'] = []
     result['total'] = 0
     page = 0
-    while True:
+    loops = 0
+    while loops <= result['total']:
         base_url = f'{url}&limit={limit}&page={page}'
         try:
             r = client.get(base_url)
@@ -31,6 +32,7 @@ def get_paged(url: str, limit: MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIEN
         if len(result['items']) >= result['total']:
             break
         page += 1
+        loops += 1
     return result
 
 
