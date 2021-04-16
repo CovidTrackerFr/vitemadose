@@ -5,7 +5,7 @@ import logging
 from datetime import datetime, timedelta
 from dateutil.parser import isoparse
 from pathlib import Path
-from utils.vmd_utils import departementUtils
+from utils.vmd_utils import departementUtils, format_phone_number
 from .maiia_utils import get_paged, MAIIA_LIMIT
 
 timeout = httpx.Timeout(30.0, connect=30.0)
@@ -13,9 +13,9 @@ DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 logger = logging.getLogger('scraper')
 MAIIA_URL = 'https://www.maiia.com'
 MAIIA_DAY_LIMIT = 50
-MAIIA_SPECIALITIES = ['centre-de-vaccination',
-                      'pharmacie',
-                      'centre-hospitalier-(ch)']
+CENTER_TYPES = ['centre-de-vaccination',
+                'pharmacie',
+                'centre-hospitalier-(ch)']
 
 
 def get_centers(speciality: str) -> list:
@@ -59,8 +59,7 @@ def maiia_center_to_csv(center: dict, root_center: dict) -> dict:
                 csv['long_coor1'] = center['publicInformation']['address']['location']['coordinates'][0]
                 csv['lat_coor1'] = center['publicInformation']['address']['location']['coordinates'][1]
         if 'officeInformation' in center['publicInformation']:
-            csv['phone_number'] = center['publicInformation']['officeInformation'].get(
-                'phoneNumber', '')
+            csv['phone_number'] = format_phone_number(center['publicInformation']['officeInformation'].get('phoneNumber', ''))
             if 'openingSchedules' in center['publicInformation']['officeInformation']:
                 csv['business_hours'] = maiia_schedule_to_business_hours(
                     center['publicInformation']['officeInformation']['openingSchedules'])
@@ -72,7 +71,7 @@ def main():
     centers_ids = list()
     logger.info('Starting Maiia centers download')
 
-    for speciality in MAIIA_SPECIALITIES:
+    for speciality in CENTER_TYPES:
         logger.info(f'Fetching speciality {speciality}')
         result = get_centers(speciality)
         all_centers = list()
@@ -89,9 +88,7 @@ def main():
                 centers.append(maiia_center_to_csv(center['center'], center))
                 centers_ids.append(center['center']['id'])
             for child_center in center['center']['childCenters']:
-                if child_center['speciality']['code'] == 'VAC01' and 'url' in child_center:
-                    if child_center['id'] in centers_ids:
-                        continue
+                if child_center['speciality']['code'] == 'VAC01' and 'url' in child_center and child_center['id'] not in centers_ids:
                     centers.append(maiia_center_to_csv(child_center, center))
                     centers_ids.append(child_center['id'])
 
