@@ -203,7 +203,7 @@ def centre_iterator():
         json.dump(opendata, f, indent=2)
     for pharmacy in opendata:
         for campagne in pharmacy.get('campagnes'):
-            if not is_campagne_valid(campagne):
+            if not is_campagne_valid(campagne) or not campagne.get('total_libres', 0):
                 continue
             centre = campagne_to_centre(pharmacy, campagne)
             yield centre
