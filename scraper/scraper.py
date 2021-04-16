@@ -300,6 +300,7 @@ def gouv_centre_iterator(outpath_format='data/output/{}.json'):
 
 def should_use_opendata_csv(rdv_site_web: str) -> bool:
     plateformes_hors_csv = ['doctolib']
+    
     if any(p in rdv_site_web for p in plateformes_hors_csv):
         return False
     return True
