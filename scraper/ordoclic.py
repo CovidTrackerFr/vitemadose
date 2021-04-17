@@ -99,14 +99,14 @@ def parse_ordoclic_slots(request: ScraperRequest, availability_data):
 @Profiling.measure('ordoclic_slot')
 def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     first_availability = None
-    profile = getProfile(request)
+    profile = getProfile(request, client)
     slug = profile["profileSlug"]
     entityId = profile["entityId"]
     for professional in profile["publicProfessionals"]:
         medicalStaffId = professional["id"]
         name = professional["fullName"]
         zip = professional["zip"]
-        reasons = getReasons(entityId)
+        reasons = getReasons(entityId, client)
         # reasonTypeId = 4 -> 1er Vaccin
         for reason in reasons["reasons"]:
             if reason["reasonTypeId"] == 4 and reason["canBookOnline"] is True:
@@ -124,8 +124,8 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     return first_availability.isoformat()
 
 
-def centre_iterator():
-    items = search()
+def centre_iterator(client: httpx.Client = DEFAULT_CLIENT):
+    items = search(client)
     for item in items["items"]:
         # plusieur types possibles (pharmacie, maison mediacle, pharmacien, medecin, ...), pour l'instant on filtre juste les pharmacies
         if 'type' in item:
