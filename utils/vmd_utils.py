@@ -128,7 +128,7 @@ class departementUtils:
 
 
 def format_cp(cp: str) -> str:
-    formatted_cp = cp.split()[0].strip()
+    formatted_cp = str(cp).strip().split()[0]
     if len(formatted_cp) == 4:
         return f"0{formatted_cp}"
     return formatted_cp
