@@ -23,6 +23,7 @@ from utils.vmd_utils import departementUtils, fix_scrap_urls, is_reserved_center
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
+from .maiia.maiia import centre_iterator as maiia_centre_iterator
 from .maiia.maiia import fetch_slots as maiia_fetch_slots
 from .ordoclic import centre_iterator as ordoclic_centre_iterator
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
@@ -251,7 +252,8 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
 def centre_iterator():
     visited_centers_links = set()
     for center in ialternate(ordoclic_centre_iterator(), mapharma_centre_iterator(),
-                             doctolib_center_iterator(), gouv_centre_iterator()):
+                             maiia_centre_iterator(), doctolib_center_iterator(), 
+                             gouv_centre_iterator()):
         if center["rdv_site_web"] not in visited_centers_links:
             visited_centers_links.add(center["rdv_site_web"])
             yield center
@@ -299,7 +301,7 @@ def gouv_centre_iterator(outpath_format='data/output/{}.json'):
 
 
 def should_use_opendata_csv(rdv_site_web: str) -> bool:
-    plateformes_hors_csv = ['doctolib']
+    plateformes_hors_csv = ['doctolib', 'maiia']
     
     if any(p in rdv_site_web for p in plateformes_hors_csv):
         return False

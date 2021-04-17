@@ -787,6 +787,29 @@
     }
   },
   {
+    "gid": "600015a3",
+    "nom": "Centre de vaccination - REVIGNY SUR ORNAIN",
+    "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/55800-revigny-sur-ornain/centre-de-vaccination---revigny-sur-ornain?centerid=600015a379dfd27ec2d189f7",
+    "type": "vaccination-center",
+    "vaccine_type": [
+      "Pfizer-BioNTech"
+    ],
+    "com_insee": "55427",
+    "address": "1 Place Pierre Gaxotte 55800 Revigny-sur-Ornain",
+    "long_coor1": 4.98718,
+    "lat_coor1": 48.828244,
+    "phone_number": "",
+    "business_hours": {
+      "Lundi": "08:00-12:00 14:00-18:00",
+      "Mardi": "08:00-12:00 14:00-18:00",
+      "Mercredi": "08:00-12:00 14:00-18:00",
+      "Jeudi": "08:00-12:00 14:00-18:00",
+      "Vendredi": "08:00-12:00 14:00-18:00",
+      "Samedi": "08:00-12:00 14:00-18:00",
+      "Dimanche": "08:00-12:00 14:00-18:00"
+    }
+  },
+  {
     "gid": "60001f28",
     "nom": "Centre de vaccination La luna (Espace Sculfort)",
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/59600-maubeuge/centre-de-vaccination-la-luna--espace-sculfort-?centerid=60001f2879dfd27ec2d18a27",
@@ -858,7 +881,9 @@
     "nom": "CENTRE DE VACCINATION COVID - VILLE DE COLOMBES",
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/92700-colombes/centre-de-vaccination-covid---ville-de-colombes?centerid=6000660219fa1c60a4ff65e9",
     "type": "vaccination-center",
-    "vaccine_type": [],
+    "vaccine_type": [
+      "ARNm"
+    ],
     "com_insee": "92025",
     "address": "GYMNASE AMBROISE PARE 140 rue Saint Denis 92700 COLOMBES",
     "phone_number": "+33805119395",
@@ -900,7 +925,9 @@
     "nom": "Centre de vaccination - rue Louis Astruc - Ville de Marseille",
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/13005-marseille/centre-de-vaccination---rue-louis-astruc---ville-de-marseille?centerid=60019d5f08fa3a60d6d25fe5",
     "type": "vaccination-center",
-    "vaccine_type": [],
+    "vaccine_type": [
+      "ARNm"
+    ],
     "com_insee": "13205",
     "address": "23 Rue Louis Astruc 13005 Marseille",
     "long_coor1": 5.395833,
@@ -921,7 +948,9 @@
     "nom": "Centre de vaccination - Centre de Carry Le Rouet",
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/13620-carry-le-rouet/centre-de-vaccination---centre-de-carry-le-rouet?centerid=6002d0aadeaeb0749c699479",
     "type": "vaccination-center",
-    "vaccine_type": [],
+    "vaccine_type": [
+      "ARNm"
+    ],
     "com_insee": "13021",
     "address": "Avenue Blanche Calvet 13620 Carry-le-Rouet",
     "long_coor1": 5.177081,
@@ -935,25 +964,6 @@
       "Vendredi": "09:00-12:00",
       "Samedi": "08:00-12:00 14:00-18:00",
       "Dimanche": "08:00-12:00 14:00-18:00"
-    }
-  },
-  {
-    "gid": "60058639",
-    "nom": "Centre de Vaccination - MAISON DE SANTE AMOU",
-    "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/40330-amou/centre-de-vaccination---maison-de-sante-amou?centerid=60058639e4e80549d8cb9d3e",
-    "type": "vaccination-center",
-    "vaccine_type": [],
-    "com_insee": "\t40002",
-    "address": "Salle De l'Etoile 24 Avenue De La Digue 40330 AMOU",
-    "phone_number": "",
-    "business_hours": {
-      "Lundi": "08:30-12:30 13:30-17:30",
-      "Mardi": "08:30-12:30 13:30-17:30",
-      "Mercredi": "08:30-12:30 13:30-17:30",
-      "Jeudi": "08:30-12:30 13:30-17:30",
-      "Vendredi": "08:30-12:30 13:30-17:30",
-      "Samedi": "08:30-12:30 13:30-17:30",
-      "Dimanche": "08:30-12:30 13:30-17:30"
     }
   },
   {
@@ -1003,24 +1013,24 @@
     }
   },
   {
-    "gid": "60068610",
-    "nom": "Centre de vaccination - LESNEVEN",
-    "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/29260-lesneven/centre-de-vaccination---lesneven?centerid=600686103b987b202a404143",
+    "gid": "6006a9d6",
+    "nom": "Centre de vaccination - BASSIN DACQUOIS",
+    "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/40100-dax/centre-de-vaccination---bassin-dacquois?centerid=6006a9d63b987b202a40423b",
     "type": "vaccination-center",
     "vaccine_type": [
-      "Pfizer-BioNTech"
+      "ARNm"
     ],
-    "com_insee": "29124",
-    "address": "L'atelier Rue Jeanne d'Arc  29260 LESNEVEN",
+    "com_insee": "40088",
+    "address": "98 Avenue Francis Plant\u00e9 40100 dax",
     "phone_number": "",
     "business_hours": {
-      "Lundi": "08:30-19:00",
-      "Mardi": "08:30-19:00",
-      "Mercredi": "08:30-19:00",
-      "Jeudi": "08:30-19:00",
-      "Vendredi": "08:30-19:00",
-      "Samedi": "08:30-19:00",
-      "Dimanche": "08:30-19:00"
+      "Lundi": "09:00-12:00 14:00-17:00",
+      "Mardi": "09:00-12:00 14:00-17:00",
+      "Mercredi": "09:00-12:00 14:00-17:00",
+      "Jeudi": "09:00-12:00 14:00-17:00",
+      "Vendredi": "09:00-12:00 14:00-17:00",
+      "Samedi": "09:00-12:00 14:00-17:00",
+      "Dimanche": "09:00-12:00 14:00-17:00"
     }
   },
   {
@@ -1158,6 +1168,27 @@
     }
   },
   {
+    "gid": "60068610",
+    "nom": "Centre de vaccination - LESNEVEN",
+    "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/29260-lesneven/centre-de-vaccination---lesneven?centerid=600686103b987b202a404143",
+    "type": "vaccination-center",
+    "vaccine_type": [
+      "Pfizer-BioNTech"
+    ],
+    "com_insee": "29124",
+    "address": "L'atelier Rue Jeanne d'Arc  29260 LESNEVEN",
+    "phone_number": "",
+    "business_hours": {
+      "Lundi": "08:00-12:00 14:00-18:00",
+      "Mardi": "08:00-12:00 14:00-18:00",
+      "Mercredi": "08:00-12:00 14:00-18:00",
+      "Jeudi": "08:00-12:00 14:00-18:00",
+      "Vendredi": "08:00-12:00 14:00-18:00",
+      "Samedi": "08:00-12:00 14:00-18:00",
+      "Dimanche": "08:00-12:00 14:00-18:00"
+    }
+  },
+  {
     "gid": "600c422a",
     "nom": "Centre de Vaccination CCI Arles",
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/13200-arles/centre-de-vaccination-cci-arles?centerid=600c422a9ddc145c9ed23b7f",
@@ -1225,27 +1256,6 @@
       "Vendredi": "09:30-12:30 13:00-16:00",
       "Samedi": "09:30-12:30 13:00-16:00",
       "Dimanche": "09:30-12:30 13:00-16:00"
-    }
-  },
-  {
-    "gid": "6027954d",
-    "nom": "Centre de Vaccination Val de Louyre et Caudeau",
-    "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/24510-val-de-louyre-et-caudeau/centre-de-vaccination-val-de-louyre-et-caudeau?centerid=6027954d14e3173a0cf089cb",
-    "type": "vaccination-center",
-    "vaccine_type": [],
-    "com_insee": "24362",
-    "address": "24510 Val de Louyre et Caudeau",
-    "long_coor1": 0.808571,
-    "lat_coor1": 44.944988,
-    "phone_number": "",
-    "business_hours": {
-      "Lundi": "08:30-12:00 14:00-17:20",
-      "Mardi": "08:30-12:00 14:00-17:20",
-      "Mercredi": "08:30-12:00 14:00-17:20",
-      "Jeudi": "08:30-12:00 14:00-17:20",
-      "Vendredi": "08:30-12:00 14:00-17:20",
-      "Samedi": "08:30-12:00 14:00-17:20",
-      "Dimanche": "08:30-12:00 14:00-17:20"
     }
   },
   {
@@ -1358,7 +1368,9 @@
     "nom": "Centre de vaccination COVID - Stade V\u00e9lodrome - Ville de Marseille",
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/13008-marseille/centre-de-vaccination-covid---stade-velodrome---ville-de-marseille?centerid=6048822b87f983173a70cdc5",
     "type": "vaccination-center",
-    "vaccine_type": [],
+    "vaccine_type": [
+      "ARNm"
+    ],
     "com_insee": "13208",
     "address": "all\u00e9e ray grassi 13008 Marseille",
     "long_coor1": 5.39703,
@@ -1419,34 +1431,13 @@
     }
   },
   {
-    "gid": "60618728",
-    "nom": "VACCINATION MODERNA - Maison de sant\u00e9 de l\u2019Adour",
-    "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/40800-aire-sur-l-adour/vaccination-moderna---maison-de-sante-de-l-adour?centerid=606187286a4ba23f95fc3a91",
-    "type": "vaccination-center",
-    "vaccine_type": [
-      "AstraZeneca"
-    ],
-    "com_insee": "40001",
-    "address": "Rue Pascal Duprat 40800 Aire-sur-l'Adour",
-    "long_coor1": -0.263435,
-    "lat_coor1": 43.700722,
-    "phone_number": "",
-    "business_hours": {
-      "Lundi": "08:00-12:00 14:00-18:00",
-      "Mardi": "08:00-12:00 14:00-18:00",
-      "Mercredi": "08:00-12:00 14:00-18:00",
-      "Jeudi": "08:00-12:00 14:00-18:00",
-      "Vendredi": "08:00-12:00 14:00-18:00",
-      "Samedi": "08:00-12:00 14:00-18:00",
-      "Dimanche": "08:00-12:00 14:00-18:00"
-    }
-  },
-  {
     "gid": "606c1317",
     "nom": "Centre de vaccination d\u00e9partemental - Montfavet",
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/84140-avignon/centre-de-vaccination-departemental---montfavet?centerid=606c1317c3c4ff5db63884a1",
     "type": "vaccination-center",
-    "vaccine_type": [],
+    "vaccine_type": [
+      "ARNm"
+    ],
     "com_insee": "84007",
     "address": "246 Rue Felicien Florent Mft 84140 Avignon",
     "long_coor1": 4.887078,
@@ -1511,7 +1502,9 @@
     "nom": "Centre de vaccination PERCY",
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/92140-clamart/centre-de-vaccination-percy?centerid=6076b154ad24f57239de0c4a",
     "type": "vaccination-center",
-    "vaccine_type": [],
+    "vaccine_type": [
+      "ARNm"
+    ],
     "com_insee": "92023",
     "address": "101 avenue Henri Barbusse 92140 CLAMART",
     "phone_number": "",
@@ -2653,6 +2646,52 @@
       "Jeudi": "08:30-12:30 14:30-19:30",
       "Vendredi": "08:30-12:30 14:30-19:30",
       "Samedi": "08:30-12:30 14:30-19:30"
+    }
+  },
+  {
+    "gid": "605858f0",
+    "nom": "Pharmacie l'Epinette",
+    "rdv_site_web": "https://www.maiia.com/pharmacie/74300-cluses/pharmacie-l-epinette?centerid=605858f0153df929721cb77b",
+    "type": "drugstore",
+    "vaccine_type": [
+      "AstraZeneca"
+    ],
+    "com_insee": "74081",
+    "address": "10 Av des Alpes 74300 Cluses",
+    "long_coor1": 6.57997,
+    "lat_coor1": 46.066156,
+    "phone_number": "+33450897661",
+    "business_hours": {
+      "Lundi": "08:30-12:15 14:00-19:00",
+      "Mardi": "08:30-12:15 14:00-19:00",
+      "Mercredi": "08:30-12:15 14:00-19:00",
+      "Jeudi": "08:30-12:15 14:00-19:00",
+      "Vendredi": "08:30-12:15 14:00-19:00",
+      "Samedi": "08:30-12:15 14:00-19:00",
+      "Dimanche": "08:30-12:15 14:00-19:00"
+    }
+  },
+  {
+    "gid": "60585b39",
+    "nom": "Pharmacie des Promenades",
+    "rdv_site_web": "https://www.maiia.com/pharmacie/42300-roanne/pharmacie-des-promenades?centerid=60585b39153df929721cb7a2",
+    "type": "drugstore",
+    "vaccine_type": [
+      "AstraZeneca"
+    ],
+    "com_insee": "42187",
+    "address": "39 Place des Promenades Populle 42300 Roanne",
+    "long_coor1": 4.067822,
+    "lat_coor1": 46.036359,
+    "phone_number": "+33477712277",
+    "business_hours": {
+      "Lundi": "14:00-19:00",
+      "Mardi": "08:45-12:15 14:00-19:00",
+      "Mercredi": "08:45-12:15 14:00-19:00",
+      "Jeudi": "08:45-12:15 14:00-19:00",
+      "Vendredi": "08:45-12:15 14:00-19:00",
+      "Samedi": "09:00-12:00 14:00-18:00",
+      "Dimanche": "08:00-12:00 14:00-18:00"
     }
   },
   {
