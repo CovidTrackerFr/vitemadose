@@ -92,3 +92,4 @@ def test_cp_to_insee():
 def test_cp_to_insee_with_cedex():
     cedex_st_michel = "16959"
     assert departementUtils.cp_to_insee(cedex_st_michel) == "16341"
+    assert departementUtils.cp_to_insee(f"{cedex_st_michel} CEDEX") == "16341"

@@ -116,7 +116,7 @@ class departementUtils:
     @staticmethod
     def cp_to_insee(cp: str) -> str:
         # Split for when when CP is like 'XXXX CEDEX'
-        cp = str(cp).strip().split()[0]
+        cp = format_cp(cp)
         if cp in insee:
             return insee[cp]["insee"]
         elif cp in cedex_to_insee:
@@ -125,6 +125,13 @@ class departementUtils:
         else:
             logger.warning(f'Unable to translate cp >{cp}< to insee')
             return cp
+
+
+def format_cp(cp: str) -> str:
+    formatted_cp = cp.split()[0].strip()
+    if len(formatted_cp) == 4:
+        return f"0{formatted_cp}"
+    return formatted_cp
 
 def format_phone_number(_phone_number: str) -> str:
     phone_number = _phone_number
