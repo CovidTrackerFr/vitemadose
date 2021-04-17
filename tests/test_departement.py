@@ -63,7 +63,6 @@ def test_cp_to_insee():
     insee_ajaccio = "2A004"
     assert departementUtils.cp_to_insee(cp_ajaccio_1) == insee_ajaccio
     assert departementUtils.cp_to_insee(cp_ajaccio_2) == insee_ajaccio
-    # assert departementUtils.cp_to_insee(cp_ajaccio_3) == insee_ajaccio ==> faux, renvoie 2A351 (VILLANOVA)
 
     # Paray-Vieille-Poste
     cp_paray_vieille_poste = "94390"
