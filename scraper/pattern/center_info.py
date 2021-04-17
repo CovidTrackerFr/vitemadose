@@ -28,6 +28,9 @@ VACCINES = {
         'astra zeneca',
         'az'  # Not too sure about the reliability
     ],
+    'ARNm': [
+        'arn'
+    ]
 }
 
 
@@ -131,9 +134,9 @@ def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     url = data.get('rdv_site_web', None)
     try:
         departement = departementUtils.to_departement_number(data.get('com_insee', None))
-    except ValueError:
+    except ValueError as e :
         logger.error(
-            f"erreur lors du traitement de la ligne avec le gid {data['gid']}, com_insee={data['com_insee']}")
+            f"erreur lors du traitement de la ligne avec le gid {data['gid']}, com_insee={data['com_insee']} : {e}")
 
     center = CenterInfo(departement, name, url)
     if data.get('iterator', '') == 'ordoclic':

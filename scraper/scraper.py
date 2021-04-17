@@ -23,7 +23,8 @@ from utils.vmd_utils import departementUtils, fix_scrap_urls, is_reserved_center
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
-from .maiia import fetch_slots as maiia_fetch_slots
+from .maiia.maiia import centre_iterator as maiia_centre_iterator
+from .maiia.maiia import fetch_slots as maiia_fetch_slots
 from .ordoclic import centre_iterator as ordoclic_centre_iterator
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
 from .mapharma.mapharma import centre_iterator as mapharma_centre_iterator
@@ -251,7 +252,8 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
 def centre_iterator():
     visited_centers_links = set()
     for center in ialternate(ordoclic_centre_iterator(), mapharma_centre_iterator(),
-                             doctolib_center_iterator(), gouv_centre_iterator()):
+                             maiia_centre_iterator(), doctolib_center_iterator(), 
+                             gouv_centre_iterator()):
         if center["rdv_site_web"] not in visited_centers_links:
             visited_centers_links.add(center["rdv_site_web"])
             yield center
@@ -276,7 +278,7 @@ def gouv_centre_iterator(outpath_format='data/output/{}.json'):
         if row["centre_fermeture"] == "t":
             centres_non_pris_en_compte["centres_fermes"][row["gid"]
                                                          ] = row["rdv_site_web"]
-        if len(row["rdv_site_web"]) and "doctolib" not in row["rdv_site_web"]:
+        if should_use_opendata_csv(row["rdv_site_web"]):
             yield row
         else:
             centres_non_pris_en_compte["centres_urls_vides"].append(row["gid"])
@@ -296,6 +298,14 @@ def gouv_centre_iterator(outpath_format='data/output/{}.json'):
     outpath = outpath_format.format("centres_non_pris_en_compte_gouv")
     with open(outpath, "w") as fichier:
         json.dump(centres_non_pris_en_compte, fichier, indent=2)
+
+
+def should_use_opendata_csv(rdv_site_web: str) -> bool:
+    plateformes_hors_csv = ['doctolib', 'maiia']
+    
+    if any(p in rdv_site_web for p in plateformes_hors_csv):
+        return False
+    return True
 
 
 def copy_omit_keys(d, omit_keys):

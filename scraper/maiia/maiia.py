@@ -4,6 +4,7 @@ import logging
 import requests
 from datetime import datetime, timedelta
 from dateutil.parser import isoparse
+from pathlib import Path
 from bs4 import BeautifulSoup
 from scraper.profiler import Profiling
 
@@ -111,3 +112,11 @@ def get_any_availibility_from(center_id, start_date):
 
     availability = session.get(BASE_AVAILIBILITY_URL, params=request_params)
     return availability.json()
+
+
+def centre_iterator():
+    path = Path('data', 'output', 'maiia_centers.json')
+    with open(path, 'r', encoding='utf8') as f:
+        centres = json.load(f)
+    for centre in centres:
+        yield centre

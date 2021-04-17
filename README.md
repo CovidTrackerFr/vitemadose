@@ -14,7 +14,7 @@ Ouvrez une [issue Github](https://github.com/CovidTrackerFr/vitemadose/issues/ne
 
 ## Comment Contribuer
 
-Le développement de l'application étant tres actif nous recommendons de joindre [le Telegram Général de Vite Ma Dose](https://hackmd.io/YHcjKsUzQ1-cMomOUuTpXw#Cha%C3%AEnes-de-discussion) pour être sûr que personne ne travaille déjà sur ce que vous comptez faire. Si ce n'est pas le cas, quelqu'un vous aiguillera si vous avez besoin d'aide.
+Le développement de l'application étant tres actif nous recommendons de joindre [le Mattermost Général de Vite Ma Dose](https://mattermost.covidtracker.fr/covidtracker/channels/town-square) pour être sûr que personne ne travaille déjà sur ce que vous comptez faire. Si ce n'est pas le cas, quelqu'un vous aiguillera si vous avez besoin d'aide.
 Pour proposer une modification, un ajout, ou decrire un bug sur l'outil de détection, vous pouvez ouvrir une [issue](https://github.com/CovidTrackerFr/vitemadose/issues/new) ou une [Pull Request](https://github.com/CovidTrackerFr/vitemadose/pulls) avec vos modifications. 
 
 La [documentation](https://hackmd.io/YHcjKsUzQ1-cMomOUuTpXw) permet de centraliser les informations importantes relatives au développement de l'outil : comment ça marche, quelles sont les grosses tâches du moment, comment on communique ...
