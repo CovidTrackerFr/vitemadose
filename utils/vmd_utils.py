@@ -104,12 +104,11 @@ class departementUtils:
 
     @staticmethod
     def cp_to_insee(cp : str) -> str:
-        cp = cp.strip()
         if cp in insee:
             return insee[cp]["insee"]
         else:
             logger.warning(f'Unable to translate cp >{cp}< to insee')
-            return cp
+            return cp.strip().split()[0] # Split for when when CP is like 'XXXX CEDEX'
 
 
 def format_phone_number(_phone_number: str) -> str:
