@@ -97,7 +97,8 @@ def get_first_availability(center_id: str, request_date: str, reasons: dict, cli
 def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) -> str:
     url = request.get_url()
     start_date = request.get_start_date()
-    if '?centerid=' not in url:
+    url_query = parse_qs(urlparse.urlparse(url).query)
+    if 'centerid' not in url_query:
         logger.warning(f'No centerId in fetch url: {url}')
         return
     center_id = url.split('?centerid=')[1]
