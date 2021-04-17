@@ -25,5 +25,5 @@ stats: ## Run the statistic scripts
 doctoscrap: ## Run the statistiques scripts
 	venv/bin/python -m scraper.doctolib.doctolib_center_scrap
 
-maiiacrap: ## Retrieve maiia centers from API
+maiiascrap: ## Retrieve maiia centers from API
 	venv/bin/python -m scraper.maiia.maiia_center_scrap
