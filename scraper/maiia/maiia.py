@@ -105,7 +105,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
 
     reasons = reasons = get_reasons(center_id, client=client)
     if not reasons:
-        return
+        return None
 
     first_availability, slots_count = get_first_availability(center_id, start_date, reasons, client=client)
     if first_availability == None:
