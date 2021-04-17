@@ -31,7 +31,7 @@ def urlify(s):
 
 
 logger = logging.getLogger('scraper')
-insee = {}
+insee = load_insee()
 
 
 class departementUtils:
@@ -103,18 +103,12 @@ class departementUtils:
         return None
 
     @staticmethod
-    def cp_to_insee(cp):
-        insee_com = cp  # si jamais on ne trouve pas de correspondance...
-        # on charge la table de correspondance cp/insee, une seule fois
-        global insee
-        if insee == {}:
-            with open("data/input/codepostal_to_insee.json") as json_file:
-                insee = json.load(json_file)
+    def cp_to_insee(cp) -> str:
         if cp in insee:
-            insee_com = insee.get(cp).get("insee")
+            return insee[cp]["insee"]
         else:
             logger.warning(f'Unable to translate cp >{cp}< to insee')
-        return insee_com
+            return cp
 
 
 def format_phone_number(_phone_number: str) -> str:
@@ -156,3 +150,7 @@ def fix_scrap_urls(url):
         u = u._replace(query=urlencode(query, True))
         url = urlunparse(u)
     return url
+
+def load_insee() -> dict:
+    with open("data/input/codepostal_to_insee.json") as json_file:
+        return json.load(json_file)
