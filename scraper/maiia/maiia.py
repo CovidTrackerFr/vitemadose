@@ -42,7 +42,7 @@ def get_next_slot_date(center_id: str, consultation_reason_name: str, start_date
     result = r.json()
     if 'firstPhysicalStartDateTime' in result:
         return result['firstPhysicalStartDateTime']
-    return
+    return None
 
 
 def get_slots(center_id: str, consultation_reason_name: str, start_date: str, end_date: str, limit=MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIENT) -> list:
