@@ -14,6 +14,21 @@ RESERVED_CENTERS = [
 ]
 
 
+def load_insee() -> dict:
+    with open("data/input/codepostal_to_insee.json") as json_file:
+        return json.load(json_file)
+
+
+def load_cedex_to_insee() -> dict:
+    with open("data/input/cedex_to_insee.json") as json_file:
+        return json.load(json_file)
+
+
+logger = logging.getLogger('scraper')
+insee = load_insee()
+cedex_to_insee = load_cedex_to_insee()
+
+
 def is_reserved_center(center):
     if not center:
         return False
@@ -28,10 +43,6 @@ def urlify(s):
     s = re.sub(r"[^\w\s\-]", '', s)
     s = re.sub(r"\s+", '-', s).lower()
     return unidecode(s)
-
-
-logger = logging.getLogger('scraper')
-insee = load_insee()
 
 
 class departementUtils:
@@ -103,13 +114,17 @@ class departementUtils:
         return None
 
     @staticmethod
-    def cp_to_insee(cp : str) -> str:
+    def cp_to_insee(cp: str) -> str:
+        # Split for when when CP is like 'XXXX CEDEX'
+        cp = str(cp).strip().split()[0]
         if cp in insee:
             return insee[cp]["insee"]
+        elif cp in cedex_to_insee:
+            cedex = cp
+            return cedex_to_insee[cedex]["insee"]
         else:
             logger.warning(f'Unable to translate cp >{cp}< to insee')
-            return cp.strip().split()[0] # Split for when when CP is like 'XXXX CEDEX'
-
+            return cp
 
 def format_phone_number(_phone_number: str) -> str:
     phone_number = _phone_number
@@ -150,7 +165,3 @@ def fix_scrap_urls(url):
         u = u._replace(query=urlencode(query, True))
         url = urlunparse(u)
     return url
-
-def load_insee() -> dict:
-    with open("data/input/codepostal_to_insee.json") as json_file:
-        return json.load(json_file)

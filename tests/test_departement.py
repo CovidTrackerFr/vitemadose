@@ -60,16 +60,10 @@ def test_cp_to_insee():
     # Ajaccio
     cp_ajaccio_1 = "20090"
     cp_ajaccio_2 = "20090"
-    cp_ajaccio_3 = "20167"
     insee_ajaccio = "2A004"
     assert departementUtils.cp_to_insee(cp_ajaccio_1) == insee_ajaccio
     assert departementUtils.cp_to_insee(cp_ajaccio_2) == insee_ajaccio
     # assert departementUtils.cp_to_insee(cp_ajaccio_3) == insee_ajaccio ==> faux, renvoie 2A351 (VILLANOVA)
-
-    # Saint-Pierre-Laval
-    cp_saint_pierre_laval = "42620"
-    insee_saint_pierre_laval = "03250"
-    # assert departementUtils.cp_to_insee(cp_saint_pierre_laval) == insee_saint_pierre_laval ==> faux, renvoie 42257 (ST MARTIN D ESTREAUX)
 
     # Paray-Vieille-Poste
     cp_paray_vieille_poste = "94390"
@@ -93,4 +87,9 @@ def test_cp_to_insee():
     # Cholet entier
     cp_cholet_int = 49300  # => invalide
     insee_cholet = "49099"
-    assert departementUtils.cp_to_insee(cp_cholet_int) == cp_cholet_int
+    assert departementUtils.cp_to_insee(cp_cholet_int) == insee_cholet
+
+
+def test_cp_to_insee_with_cedx():
+    cedex_st_michel = "16959"
+    assert departementUtils.cp_to_insee(cedex_st_michel) == "16341"
