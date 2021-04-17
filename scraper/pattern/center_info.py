@@ -1,7 +1,6 @@
 import json
 from datetime import datetime, timedelta
 from typing import Optional
-from pathlib import Path
 
 import pytz
 
