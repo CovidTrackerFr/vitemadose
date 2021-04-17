@@ -81,12 +81,18 @@ def test_cp_to_insee():
 
     # CP invalide
     invalid_cp = "1234"
-    assert departementUtils.cp_to_insee(invalid_cp) == invalid_cp
+    assert departementUtils.cp_to_insee(invalid_cp) == f"0{invalid_cp}"
 
     # Cholet entier
     cp_cholet_int = 49300  # => invalide
     insee_cholet = "49099"
     assert departementUtils.cp_to_insee(cp_cholet_int) == insee_cholet
+
+    # Cholet entier
+    cp_st_maurice_remens_int = 1500  # => invalide
+    insee_st_maurice_remens = "01379"
+    assert departementUtils.cp_to_insee(cp_st_maurice_remens_int) == insee_st_maurice_remens
+
 
 
 def test_cp_to_insee_with_cedex():
