@@ -90,6 +90,6 @@ def test_cp_to_insee():
     assert departementUtils.cp_to_insee(cp_cholet_int) == insee_cholet
 
 
-def test_cp_to_insee_with_cedx():
+def test_cp_to_insee_with_cedex():
     cedex_st_michel = "16959"
     assert departementUtils.cp_to_insee(cedex_st_michel) == "16341"
