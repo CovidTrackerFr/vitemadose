@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 from dateutil.parser import isoparse
 from pathlib import Path
 from utils.vmd_utils import departementUtils, format_phone_number
+from scraper.pattern.center_info import get_vaccine_name
 from scraper.pattern.scraper_result import DRUG_STORE, GENERAL_PRACTITIONER, VACCINATION_CENTER
 from .maiia_utils import get_paged, MAIIA_LIMIT
 
@@ -54,6 +55,12 @@ def maiia_center_to_csv(center: dict, root_center: dict) -> dict:
     else:
         csv['type'] = VACCINATION_CENTER
 
+    csv['vaccine_type'] = []
+    for consultation_reason in root_center['consultationReasons']:
+        vaccine_name = get_vaccine_name(consultation_reason.get('name'))
+        if vaccine_name and vaccine_name not in csv['vaccine_type']:
+            csv['vaccine_type'].append(vaccine_name)
+
     if 'publicInformation' not in center:
         return csv
 
@@ -86,21 +93,17 @@ def main():
         logger.info(f'Fetching speciality {speciality}')
         result = get_centers(speciality)
         all_centers = list()
-        for center in result:
-            if center.get('type') != "CENTER":
+        for root_center in result:
+            if root_center.get('type') != "CENTER":
                 continue
-            has_vaccinne_reason = False
-            for consultation_reason in center['consultationReasons']:
-                if 'injectionType' in consultation_reason and consultation_reason['injectionType'] in ['FIRST', 'SECOND']:
-                    has_vaccinne_reason = True
-            if has_vaccinne_reason:
-                if center['center']['id'] in centers_ids:
-                    continue
-                centers.append(maiia_center_to_csv(center['center'], center))
-                centers_ids.append(center['center']['id'])
-            for child_center in center['center']['childCenters']:
+            center = root_center['center']
+            if not any(consultation_reason.get('injectionType') in ['FIRST', 'SECOND'] for consultation_reason in root_center['consultationReasons']):
+                continue
+            centers.append(maiia_center_to_csv(center, root_center))
+            centers_ids.append(center['id'])
+            for child_center in center['childCenters']:
                 if child_center['speciality']['code'] == 'VAC01' and 'url' in child_center and child_center['id'] not in centers_ids:
-                    centers.append(maiia_center_to_csv(child_center, center))
+                    centers.append(maiia_center_to_csv(child_center, root_center))
                     centers_ids.append(child_center['id'])
 
     output_path = Path('data', 'output', 'maiia_centers.json')
