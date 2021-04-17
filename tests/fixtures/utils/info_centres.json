@@ -1,0 +1,91 @@
+{
+  "01": {
+    "version": 1,
+    "last_updated": "2021-04-16T18:44:43.303624+02:00",
+    "centres_disponibles": [
+      {
+        "departement": "01",
+        "nom": "Centre 1",
+        "url": "https://example1.fr",
+        "location": {
+          "longitude": 5.601759,
+          "latitude": 45.977509,
+          "city": "Plateau d'Hauteville"
+        },
+        "metadata": {
+          "address": "Rue de la R\u00e9publique, 01110 Plateau d'Hauteville",
+          "business_hours": {
+            "lundi": null,
+            "mardi": null,
+            "mercredi": null,
+            "jeudi": null,
+            "vendredi": null,
+            "samedi": null,
+            "dimanche": null
+          }
+        },
+        "prochain_rdv": "2021-05-14T12:30:00.000+02:00",
+        "plateforme": "Doctolib",
+        "type": "vaccination-center",
+        "appointment_count": 35,
+        "internal_id": "264639[]",
+        "vaccine_type": [
+          "Pfizer-BioNTech"
+        ],
+        "erreur": null,
+        "gid": "d264639",
+        "last_scan": "2021-04-04T00:00:00"
+      }
+    ],
+    "centres_indisponibles":[
+      {
+        "departement": "01",
+        "nom": "Centre 2",
+        "url": "https://example2.fr",
+        "location": {
+          "longitude": 5.606802999999999,
+          "latitude": 46.153488,
+          "city": "nantua"
+        },
+        "metadata": {
+          "address": "19 rue du Coll\u00e8ge, 01130 Nantua",
+          "phone_number": "+33474750042",
+          "business_hours": null
+        },
+        "prochain_rdv": "2021-04-19T09:00:00+00:00",
+        "plateforme": "Ordoclic",
+        "type": "drugstore",
+        "appointment_count": 46,
+        "internal_id": null,
+        "vaccine_type": null,
+        "erreur": null,
+        "gid": "feb094ba",
+        "last_scan": null
+      },
+      {
+        "departement": "01",
+        "nom": "Centre 3",
+        "url": "https://example3.fr",
+        "location": {
+          "longitude": 5.606802999999999,
+          "latitude": 46.153488,
+          "city": "nantua"
+        },
+        "metadata": {
+          "address": "19 rue du Coll\u00e8ge, 01130 Nantua",
+          "phone_number": "+33474750042",
+          "business_hours": null
+        },
+        "prochain_rdv": "2021-04-19T09:00:00+00:00",
+        "plateforme": "Ordoclic",
+        "type": "drugstore",
+        "appointment_count": 46,
+        "internal_id": null,
+        "vaccine_type": null,
+        "erreur": null,
+        "gid": "feb094ba",
+        "last_scan": "2021-03-03T00:00:00"
+      }
+    ]
+  }
+}

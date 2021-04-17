@@ -1,6 +1,7 @@
 import json
 from datetime import datetime, timedelta
 from typing import Optional
+from pathlib import Path
 
 import pytz
 
@@ -48,6 +49,7 @@ class CenterInfo:
         self.internal_id = None
         self.vaccine_type = None
         self.erreur = None
+        self.last_scan = None
 
     def fill_localization(self, location: Optional[CenterLocation]):
         self.location = location

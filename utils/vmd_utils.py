@@ -2,8 +2,11 @@ import re
 import csv
 import json
 import logging
+import datetime as dt
+import pytz
 from typing import List
 from urllib.parse import urlparse, urlencode, urlunparse, parse_qs, unquote
+from pathlib import Path
 
 from unidecode import unidecode
 
@@ -156,3 +159,26 @@ def fix_scrap_urls(url):
         u = u._replace(query=urlencode(query, True))
         url = urlunparse(u)
     return url
+
+
+def get_last_scans(centres, outpath_format='data/output/{}.json'):
+    path = Path(outpath_format.format("info_centres"))
+    last_scans = {}
+
+    if path:
+        with open(path) as fichier:
+            info_centres = json.load(fichier)
+
+        for last_centres in info_centres.values():
+            for centre in last_centres["centres_disponibles"] + last_centres["centres_indisponibles"]:
+                if "last_scan" in centre:
+                    last_scans[centre["url"]]  = centre["last_scan"]
+
+        for centre in centres:
+            if not centre.prochain_rdv:
+                if centre.url in last_scans:
+                    centre.last_scan = last_scans[centre.url] 
+            else:
+                centre.last_scan = dt.datetime.now(tz=pytz.timezone('Europe/Paris')).isoformat()
+
+    return centres
