@@ -1,84 +1,55 @@
 import json
 
-import requests
-from bs4 import BeautifulSoup
+import httpx
+
+from pathlib import Path
 
 import scraper
 from scraper.maiia.maiia import (
     fetch_slots,
-    get_slots_from,
+    get_slots,
+    parse_slots,
+    centre_iterator,
+    MAIIA_LIMIT
 )
 from scraper.pattern.scraper_request import ScraperRequest
 
-
-class MockResponse:
-    text = ""
-
-    @staticmethod
-    def raise_for_status():
-        raise requests.exceptions.HTTPError
-
-
-class MockBeautifulSoup:
-    def __init__(self, *args):
-        pass
-
-    def find(self, id):
-        with open("tests/fixtures/maiia/maiia_test_rdv_form.html", "r", encoding='utf8') as f:
-            return BeautifulSoup(f.read(), "html.parser").find(id=id)
+def app(request: httpx.Request) -> httpx.Response:
+    try:
+        slug = request.url.path.split('/')[-1]
+        endpoint = slug.split('?')[0]
+        path = Path('tests', 'fixtures', 'maiia', f'{endpoint}.json')
+        with open(path, encoding='utf8') as f:
+            return httpx.Response(200, content=f.read())
+    except IOError:
+        return httpx.Response(404, content='')
 
 
-class TestMaiia:
-    """Quelques tests pour le scrape de  Maiia"""
-
-    START_DATE = "2021-04-05"
-
-    def test_fetch_slot_raise_HTTPError(self, monkeypatch):
-        scraper.maiia.maiia.session = requests
-
-        def mock_get(*args, **kwargs):
-            return MockResponse()
-
-        # On applique la fonction pour "mockée" pour la levée d'exception :
-        monkeypatch.setattr(requests, "get", mock_get)
-        scrap_request = ScraperRequest("http://dummy_website.com", TestMaiia.START_DATE)
-        assert fetch_slots(scrap_request) is None
-
-    def test_fetch_slot_with_incorrect_soup(self):
-        scrap_request = ScraperRequest("http://google.com", TestMaiia.START_DATE)
-        assert fetch_slots(scrap_request) is None
-
-    def test_fetch_slot(self):
-        scraper.maiia.maiia.BeautifulSoup = MockBeautifulSoup
-        scrap_request = ScraperRequest("http://google.com", TestMaiia.START_DATE)
-        #assert fetch_slots(scrap_request) is None
+client = httpx.Client(transport=httpx.MockTransport(app))
 
 
-    def test_get_slots_from(self):
-        # Testing the None return if rdv_form doesn't have a correct shape
-        # RdvForm = make_dataclass("RdvForm",
-        #                          [("contents", list, field(default_factory=list))])
-        # rdv_form = RdvForm()
-        # rdv_form.contents = ['{}']
-        # assert get_slots_from(rdv_form, "", "") is None
+def test_parse_slots():
+    slots = get_slots('5ffc744c68dedf073a5b87a2', 'Première injection vaccin anti covid-19 ( +50 ans avec comorbidité)', '2021-04-16T00:00:00+00:00', '2021-06-30T00:00:00+00:00', limit=MAIIA_LIMIT, client=client)
+    result = parse_slots(slots)
+    assert result.isoformat() == '2021-05-13T13:40:00+00:00'
 
-        # Testing with correct data rdv_form
-        with open("tests/fixtures/maiia/maiia_script_response.html", "r") as html_file:
-            soup = BeautifulSoup(html_file, "html.parser")
 
-        with open("tests/fixtures/maiia/availability.json", "r") as json_file:
-            availibility = json.load(json_file)
+def test_fetch_slots():
 
-        def mock_get_availibility(*args):
-            return availibility
+    # Oops I forgot centerid
+    request = ScraperRequest(
+        'https://www.maiia.com/centre-de-vaccination/42400-saint-chamond/centre-de-vaccination-covid---hopital-du-gier-', '2021-04-16')
+    first_availability = fetch_slots(request, client=client)
+    assert first_availability == None
 
-        scraper.maiia.maiia.get_any_availibility_from = mock_get_availibility
-        scrap_request = ScraperRequest("", "")
+    request = ScraperRequest(
+        'https://www.maiia.com/centre-de-vaccination/42400-saint-chamond/centre-de-vaccination-covid---hopital-du-gier-?centerid=5ffc744c68dedf073a5b87a2', '2021-04-16')
+    first_availability = fetch_slots(request, client=client)
+    assert first_availability == "2021-05-13T13:40:00+00:00"
 
-        assert get_slots_from(soup.script, scrap_request) == "2021-05-04T14:00:00.000000Z"
 
-        del availibility["firstPhysicalStartDateTime"]
-        assert get_slots_from(soup.script, scrap_request) == "2021-05-04T14:00:00.000000Z"
-
-        del availibility["closestPhysicalAvailability"]
-        assert get_slots_from(soup.script, scrap_request) is None
+def test_centre_iterator():
+    centres = []
+    for centre in centre_iterator():
+        centres.append(centre)
+    assert len(centres) > 0
