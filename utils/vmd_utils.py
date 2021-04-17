@@ -103,7 +103,8 @@ class departementUtils:
         return None
 
     @staticmethod
-    def cp_to_insee(cp) -> str:
+    def cp_to_insee(cp : str) -> str:
+        cp = cp.strip()
         if cp in insee:
             return insee[cp]["insee"]
         else:
