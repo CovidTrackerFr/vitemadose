@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 
 import scraper
-from scraper.maiia import (
+from scraper.maiia.maiia import (
     fetch_slots,
     get_slots_from,
 )
@@ -34,7 +34,7 @@ class TestMaiia:
     START_DATE = "2021-04-05"
 
     def test_fetch_slot_raise_HTTPError(self, monkeypatch):
-        scraper.maiia.session = requests
+        scraper.maiia.maiia.session = requests
 
         def mock_get(*args, **kwargs):
             return MockResponse()
@@ -49,7 +49,7 @@ class TestMaiia:
         assert fetch_slots(scrap_request) is None
 
     def test_fetch_slot(self):
-        scraper.maiia.BeautifulSoup = MockBeautifulSoup
+        scraper.maiia.maiia.BeautifulSoup = MockBeautifulSoup
         scrap_request = ScraperRequest("http://google.com", TestMaiia.START_DATE)
         #assert fetch_slots(scrap_request) is None
 
@@ -72,7 +72,7 @@ class TestMaiia:
         def mock_get_availibility(*args):
             return availibility
 
-        scraper.maiia.get_any_availibility_from = mock_get_availibility
+        scraper.maiia.maiia.get_any_availibility_from = mock_get_availibility
         scrap_request = ScraperRequest("", "")
 
         assert get_slots_from(soup.script, scrap_request) == "2021-05-04T14:00:00.000000Z"
