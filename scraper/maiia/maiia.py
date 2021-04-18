@@ -83,7 +83,7 @@ def get_first_availability(center_id: str, request_date: str, reasons: [dict], c
 
     for consultation_reason in reasons:
         consultation_reason_name_quote = quote(consultation_reason.get('name'), '')
-        if 'injectionType' in consultation_reason and consultation_reason['injectionType'] in ['FIRST', 'SECOND']:
+        if 'injectionType' in consultation_reason and consultation_reason['injectionType'] in ['FIRST']:
             slots = get_slots(center_id, consultation_reason_name_quote, start_date, end_date, client=client)
             slot_availability = parse_slots(slots)
             if slot_availability == None:
