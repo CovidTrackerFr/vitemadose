@@ -1,0 +1,3316 @@
+{
+    "page": 1,
+    "per_page": 10000,
+    "page_count": 1,
+    "total_count": 63,
+    "items": [
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-15T15:11:35.290Z",
+            "name": "Maison Médicale De Garde De Tourcoing",
+            "professionals": [
+                "3db2fbb1-d943-4322-b7c2-43a4eef87c48",
+                "3db2fbb1-d943-4322-b7c2-43a4eef87c48",
+                "3db2fbb1-d943-4322-b7c2-43a4eef87c48",
+                "3db2fbb1-d943-4322-b7c2-43a4eef87c48",
+                "3db2fbb1-d943-4322-b7c2-43a4eef87c48"
+            ],
+            "@timestamp": "2021-04-18T14:20:19.508Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "59200",
+                "address": "1 Quai du Havre",
+                "coordinates": {
+                    "lon": 3.1566917,
+                    "lat": 50.716327
+                },
+                "city": "Tourcoing"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "maison-medicale-de-garde-de-tourcoing-tourcoing",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2020-01-09T14:18:43.552Z",
+            "type": "Maison médicale",
+            "id": "13ae578b-adde-471c-83b5-4efed977995d",
+            "phone": "+33116117000",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-15T15:11:35.290Z",
+            "name": "Cabinet Du Dr Guillaume Gobert Et Benjamin Leitz",
+            "professionals": [
+                "5bf1d7f3-2f50-48ed-968d-650d7ebb91ce",
+                "5bf1d7f3-2f50-48ed-968d-650d7ebb91ce",
+                "5bf1d7f3-2f50-48ed-968d-650d7ebb91ce",
+                "5bf1d7f3-2f50-48ed-968d-650d7ebb91ce",
+                "5bf1d7f3-2f50-48ed-968d-650d7ebb91ce",
+                "5bf1d7f3-2f50-48ed-968d-650d7ebb91ce",
+                "5bf1d7f3-2f50-48ed-968d-650d7ebb91ce",
+                "5bf1d7f3-2f50-48ed-968d-650d7ebb91ce",
+                "5bf1d7f3-2f50-48ed-968d-650d7ebb91ce",
+                "5bf1d7f3-2f50-48ed-968d-650d7ebb91ce",
+                "5bf1d7f3-2f50-48ed-968d-650d7ebb91ce",
+                "5bf1d7f3-2f50-48ed-968d-650d7ebb91ce",
+                "5bf1d7f3-2f50-48ed-968d-650d7ebb91ce",
+                "5bf1d7f3-2f50-48ed-968d-650d7ebb91ce",
+                "5bf1d7f3-2f50-48ed-968d-650d7ebb91ce",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669"
+            ],
+            "@timestamp": "2021-04-18T14:20:47.308Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "59192",
+                "address": "116 Rue Jean Jaurès",
+                "coordinates": {
+                    "lon": 3.5107927,
+                    "lat": 50.3810961
+                },
+                "city": "Beuvrages"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "cabinet-du-dr-guillaume-gobert-et-benjamin-leitz-beuvrages",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "externalUrl": "https://www.doctolib.fr/medecin-generaliste/beuvrages/guillaume-gobert?pid=practice-3375",
+                "option": "external"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2019-09-06T02:12:59.304Z",
+            "type": "Cabinet de groupe",
+            "id": "283663c7-34dc-480d-a123-d988b9aa1767",
+            "phone": "+33327278148",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-15T15:11:35.290Z",
+            "name": "Laboratoire Mine Lemmens Site De Raismes",
+            "professionals": [
+                "8d23118d-8652-48dd-b87a-2034a9d479c8",
+                "8d23118d-8652-48dd-b87a-2034a9d479c8",
+                "8d23118d-8652-48dd-b87a-2034a9d479c8",
+                "8d23118d-8652-48dd-b87a-2034a9d479c8",
+                "8d23118d-8652-48dd-b87a-2034a9d479c8",
+                "8d23118d-8652-48dd-b87a-2034a9d479c8",
+                "8d23118d-8652-48dd-b87a-2034a9d479c8",
+                "8d23118d-8652-48dd-b87a-2034a9d479c8",
+                "8d23118d-8652-48dd-b87a-2034a9d479c8",
+                "8d23118d-8652-48dd-b87a-2034a9d479c8",
+                "8d23118d-8652-48dd-b87a-2034a9d479c8",
+                "8d23118d-8652-48dd-b87a-2034a9d479c8",
+                "8d23118d-8652-48dd-b87a-2034a9d479c8"
+            ],
+            "@timestamp": "2021-04-18T14:21:54.124Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "59590",
+                "address": "157 Rue Henri Durre",
+                "coordinates": {
+                    "lon": 3.4906186,
+                    "lat": 50.3851966
+                },
+                "city": "Raismes"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "laboratoire-mine-lemmens-site-de-raismes-raismes",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2019-11-07T13:01:46.315Z",
+            "type": "Laboratoire d’analyse",
+            "id": "84046eb3-aef7-4ddf-b6c4-094c692571cb",
+            "phone": "+33327369031",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-15T15:11:35.290Z",
+            "name": "Clinique Follow",
+            "professionals": [
+                "779f7522-c52e-43d0-80de-ed744273951a",
+                "ccf79c74-0c92-4971-af18-d8ac05283dfd",
+                "ccf79c74-0c92-4971-af18-d8ac05283dfd",
+                "ccf79c74-0c92-4971-af18-d8ac05283dfd",
+                "ccf79c74-0c92-4971-af18-d8ac05283dfd",
+                "ccf79c74-0c92-4971-af18-d8ac05283dfd",
+                "779f7522-c52e-43d0-80de-ed744273951a",
+                "779f7522-c52e-43d0-80de-ed744273951a",
+                "779f7522-c52e-43d0-80de-ed744273951a",
+                "779f7522-c52e-43d0-80de-ed744273951a",
+                "53331c4d-fd19-4d8c-a578-84a1ae0096d7",
+                "53331c4d-fd19-4d8c-a578-84a1ae0096d7",
+                "53331c4d-fd19-4d8c-a578-84a1ae0096d7",
+                "53331c4d-fd19-4d8c-a578-84a1ae0096d7",
+                "53331c4d-fd19-4d8c-a578-84a1ae0096d7",
+                "2d180a5c-fee3-4620-9468-b809c9792eeb",
+                "2d180a5c-fee3-4620-9468-b809c9792eeb",
+                "2d180a5c-fee3-4620-9468-b809c9792eeb",
+                "2d180a5c-fee3-4620-9468-b809c9792eeb",
+                "2d180a5c-fee3-4620-9468-b809c9792eeb"
+            ],
+            "@timestamp": "2021-04-18T14:21:59.908Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "59800",
+                "address": "33 Rue du Molinel (Lille)",
+                "coordinates": {
+                    "lon": 3.0697381,
+                    "lat": 50.63470090000001
+                },
+                "city": "Lille"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "clinique-follow-lille",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2020-07-29T13:14:17.055Z",
+            "type": "Clinique",
+            "id": "906a90d0-b895-4096-b0c8-e7880c711366",
+            "phone": "+33362020650",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": true,
+            "activated": true,
+            "updatedAt": "2021-04-15T15:11:35.290Z",
+            "name": "Hugo Gallet 1",
+            "professionals": [
+                "cee02cc1-8c17-411e-85e6-091055a2eb77",
+                "cee02cc1-8c17-411e-85e6-091055a2eb77",
+                "99eec2ca-2e09-4a49-8032-c6e18bf1a38c",
+                "2934589d-9c81-4ea1-a84e-89fb8389ca46",
+                "99eec2ca-2e09-4a49-8032-c6e18bf1a38c",
+                "cee02cc1-8c17-411e-85e6-091055a2eb77",
+                "2934589d-9c81-4ea1-a84e-89fb8389ca46",
+                "cee02cc1-8c17-411e-85e6-091055a2eb77",
+                "99eec2ca-2e09-4a49-8032-c6e18bf1a38c",
+                "99eec2ca-2e09-4a49-8032-c6e18bf1a38c",
+                "cee02cc1-8c17-411e-85e6-091055a2eb77",
+                "cee02cc1-8c17-411e-85e6-091055a2eb77",
+                "cee02cc1-8c17-411e-85e6-091055a2eb77",
+                "2934589d-9c81-4ea1-a84e-89fb8389ca46",
+                "99eec2ca-2e09-4a49-8032-c6e18bf1a38c",
+                "99eec2ca-2e09-4a49-8032-c6e18bf1a38c",
+                "2934589d-9c81-4ea1-a84e-89fb8389ca46",
+                "2934589d-9c81-4ea1-a84e-89fb8389ca46",
+                "99eec2ca-2e09-4a49-8032-c6e18bf1a38c",
+                "2934589d-9c81-4ea1-a84e-89fb8389ca46",
+                "2934589d-9c81-4ea1-a84e-89fb8389ca46"
+            ],
+            "@timestamp": "2021-04-18T14:22:17.411Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "75015",
+                "address": "47 Rue Lecourbe",
+                "coordinates": {
+                    "lon": 2.3072703,
+                    "lat": 48.8436169
+                },
+                "city": "Paris"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "hugo-gallet-1-paris",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2019-10-31T10:04:49.886Z",
+            "type": "Clinique",
+            "id": "ad05c61d-4075-4655-893a-0072b415c669",
+            "phone": "+33676916157",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-15T15:11:35.290Z",
+            "name": "Mmg De Valenciennes",
+            "professionals": [
+                "aecbc287-df67-4c4f-9dba-a75b8f662224",
+                "e2b48c20-ddab-494f-9749-e12fec79e604",
+                "e2b48c20-ddab-494f-9749-e12fec79e604",
+                "e2b48c20-ddab-494f-9749-e12fec79e604",
+                "e2b48c20-ddab-494f-9749-e12fec79e604",
+                "e2b48c20-ddab-494f-9749-e12fec79e604",
+                "d2f3f19d-6e2d-4c2a-9f94-d123f27c4125",
+                "d2f3f19d-6e2d-4c2a-9f94-d123f27c4125",
+                "d2f3f19d-6e2d-4c2a-9f94-d123f27c4125",
+                "d2f3f19d-6e2d-4c2a-9f94-d123f27c4125",
+                "f15dac1b-a948-4a9a-ae61-049cfafe9358",
+                "d2f3f19d-6e2d-4c2a-9f94-d123f27c4125",
+                "d1bd6108-1433-47ab-9436-6179d56e967b",
+                "d1bd6108-1433-47ab-9436-6179d56e967b",
+                "f15dac1b-a948-4a9a-ae61-049cfafe9358",
+                "d1bd6108-1433-47ab-9436-6179d56e967b",
+                "d1bd6108-1433-47ab-9436-6179d56e967b",
+                "d1bd6108-1433-47ab-9436-6179d56e967b",
+                "d050196a-2d47-4144-8ff9-e9eba24f8cad",
+                "f15dac1b-a948-4a9a-ae61-049cfafe9358",
+                "d050196a-2d47-4144-8ff9-e9eba24f8cad",
+                "f15dac1b-a948-4a9a-ae61-049cfafe9358",
+                "d050196a-2d47-4144-8ff9-e9eba24f8cad",
+                "d050196a-2d47-4144-8ff9-e9eba24f8cad",
+                "d050196a-2d47-4144-8ff9-e9eba24f8cad",
+                "cd36bf48-2fce-4b85-898b-b731a3a836b8",
+                "cd36bf48-2fce-4b85-898b-b731a3a836b8",
+                "cd36bf48-2fce-4b85-898b-b731a3a836b8",
+                "cd36bf48-2fce-4b85-898b-b731a3a836b8",
+                "cd36bf48-2fce-4b85-898b-b731a3a836b8",
+                "ca474e19-8f3f-4e1e-bd86-cd46c7ffcb1b",
+                "ca474e19-8f3f-4e1e-bd86-cd46c7ffcb1b",
+                "f3baa87c-73a9-469b-9797-578dd323598e",
+                "ca474e19-8f3f-4e1e-bd86-cd46c7ffcb1b",
+                "ca474e19-8f3f-4e1e-bd86-cd46c7ffcb1b",
+                "ca474e19-8f3f-4e1e-bd86-cd46c7ffcb1b",
+                "c71af3f1-9a9b-407d-a9b5-8cff396083d5",
+                "c71af3f1-9a9b-407d-a9b5-8cff396083d5",
+                "f3baa87c-73a9-469b-9797-578dd323598e",
+                "f3baa87c-73a9-469b-9797-578dd323598e",
+                "c71af3f1-9a9b-407d-a9b5-8cff396083d5",
+                "c71af3f1-9a9b-407d-a9b5-8cff396083d5",
+                "c71af3f1-9a9b-407d-a9b5-8cff396083d5",
+                "f3baa87c-73a9-469b-9797-578dd323598e",
+                "c4226e37-c36e-4eb5-af7f-e179d469706b",
+                "c4226e37-c36e-4eb5-af7f-e179d469706b",
+                "c4226e37-c36e-4eb5-af7f-e179d469706b",
+                "c4226e37-c36e-4eb5-af7f-e179d469706b",
+                "c4226e37-c36e-4eb5-af7f-e179d469706b",
+                "f3baa87c-73a9-469b-9797-578dd323598e",
+                "c01e6e93-b47c-4f1b-b373-e23073dc9926",
+                "c01e6e93-b47c-4f1b-b373-e23073dc9926",
+                "c01e6e93-b47c-4f1b-b373-e23073dc9926",
+                "c01e6e93-b47c-4f1b-b373-e23073dc9926",
+                "fb192c34-c185-46ec-a021-dbc3011af9d0",
+                "c01e6e93-b47c-4f1b-b373-e23073dc9926",
+                "b676a4cb-ecb9-48d3-abd6-297f4513736d",
+                "b676a4cb-ecb9-48d3-abd6-297f4513736d",
+                "b676a4cb-ecb9-48d3-abd6-297f4513736d",
+                "fb192c34-c185-46ec-a021-dbc3011af9d0",
+                "b676a4cb-ecb9-48d3-abd6-297f4513736d",
+                "fb192c34-c185-46ec-a021-dbc3011af9d0",
+                "fb192c34-c185-46ec-a021-dbc3011af9d0",
+                "fb192c34-c185-46ec-a021-dbc3011af9d0",
+                "b676a4cb-ecb9-48d3-abd6-297f4513736d",
+                "aecbc287-df67-4c4f-9dba-a75b8f662224",
+                "fec9354a-eca5-4e48-88f1-f30e86e00ef7",
+                "aecbc287-df67-4c4f-9dba-a75b8f662224",
+                "fec9354a-eca5-4e48-88f1-f30e86e00ef7",
+                "aecbc287-df67-4c4f-9dba-a75b8f662224",
+                "aecbc287-df67-4c4f-9dba-a75b8f662224",
+                "add35c41-e515-45d9-8ffd-ed37e7978f70",
+                "fec9354a-eca5-4e48-88f1-f30e86e00ef7",
+                "add35c41-e515-45d9-8ffd-ed37e7978f70",
+                "add35c41-e515-45d9-8ffd-ed37e7978f70",
+                "add35c41-e515-45d9-8ffd-ed37e7978f70",
+                "fec9354a-eca5-4e48-88f1-f30e86e00ef7",
+                "add35c41-e515-45d9-8ffd-ed37e7978f70",
+                "a727837e-5616-4336-8b37-7783d86387ad",
+                "a727837e-5616-4336-8b37-7783d86387ad",
+                "a727837e-5616-4336-8b37-7783d86387ad",
+                "fec9354a-eca5-4e48-88f1-f30e86e00ef7",
+                "a727837e-5616-4336-8b37-7783d86387ad",
+                "a727837e-5616-4336-8b37-7783d86387ad",
+                "a36ebb90-885b-4eee-9a14-e0ffdcf786c2",
+                "a36ebb90-885b-4eee-9a14-e0ffdcf786c2",
+                "a36ebb90-885b-4eee-9a14-e0ffdcf786c2",
+                "a36ebb90-885b-4eee-9a14-e0ffdcf786c2",
+                "a36ebb90-885b-4eee-9a14-e0ffdcf786c2",
+                "a32df01a-999c-40c1-890a-974e06f7bfe6",
+                "a32df01a-999c-40c1-890a-974e06f7bfe6",
+                "a32df01a-999c-40c1-890a-974e06f7bfe6",
+                "a32df01a-999c-40c1-890a-974e06f7bfe6",
+                "a32df01a-999c-40c1-890a-974e06f7bfe6",
+                "a16c9bcf-a0fd-44dc-81e9-2b89261ab826",
+                "a16c9bcf-a0fd-44dc-81e9-2b89261ab826",
+                "a16c9bcf-a0fd-44dc-81e9-2b89261ab826",
+                "a16c9bcf-a0fd-44dc-81e9-2b89261ab826",
+                "a16c9bcf-a0fd-44dc-81e9-2b89261ab826",
+                "9ea9d857-5986-48be-8cad-6726112efa7a",
+                "9ea9d857-5986-48be-8cad-6726112efa7a",
+                "9ea9d857-5986-48be-8cad-6726112efa7a",
+                "9ea9d857-5986-48be-8cad-6726112efa7a",
+                "9ea9d857-5986-48be-8cad-6726112efa7a",
+                "96d1395a-03a2-4990-af95-324807f41a66",
+                "96d1395a-03a2-4990-af95-324807f41a66",
+                "96d1395a-03a2-4990-af95-324807f41a66",
+                "96d1395a-03a2-4990-af95-324807f41a66",
+                "96d1395a-03a2-4990-af95-324807f41a66",
+                "8e1474b6-7288-4b60-83ba-e959bafb9f06",
+                "8e1474b6-7288-4b60-83ba-e959bafb9f06",
+                "8e1474b6-7288-4b60-83ba-e959bafb9f06",
+                "8e1474b6-7288-4b60-83ba-e959bafb9f06",
+                "8e1474b6-7288-4b60-83ba-e959bafb9f06",
+                "89d171d9-67e1-4932-a49a-b7eeeec40184",
+                "89d171d9-67e1-4932-a49a-b7eeeec40184",
+                "89d171d9-67e1-4932-a49a-b7eeeec40184",
+                "89d171d9-67e1-4932-a49a-b7eeeec40184",
+                "89d171d9-67e1-4932-a49a-b7eeeec40184",
+                "869a1cab-dcfc-4f0f-974b-a7f761570c83",
+                "869a1cab-dcfc-4f0f-974b-a7f761570c83",
+                "869a1cab-dcfc-4f0f-974b-a7f761570c83",
+                "869a1cab-dcfc-4f0f-974b-a7f761570c83",
+                "869a1cab-dcfc-4f0f-974b-a7f761570c83",
+                "8381ea51-ec33-4f22-9d7b-407db8a8e05d",
+                "8381ea51-ec33-4f22-9d7b-407db8a8e05d",
+                "8381ea51-ec33-4f22-9d7b-407db8a8e05d",
+                "8381ea51-ec33-4f22-9d7b-407db8a8e05d",
+                "8381ea51-ec33-4f22-9d7b-407db8a8e05d",
+                "7f59fae2-43c8-4415-8757-ebf8de473ff7",
+                "7f59fae2-43c8-4415-8757-ebf8de473ff7",
+                "7f59fae2-43c8-4415-8757-ebf8de473ff7",
+                "7f59fae2-43c8-4415-8757-ebf8de473ff7",
+                "7f59fae2-43c8-4415-8757-ebf8de473ff7",
+                "7de64b67-3ef1-4dae-b3be-c238e66d50dc",
+                "7de64b67-3ef1-4dae-b3be-c238e66d50dc",
+                "7de64b67-3ef1-4dae-b3be-c238e66d50dc",
+                "7de64b67-3ef1-4dae-b3be-c238e66d50dc",
+                "7de64b67-3ef1-4dae-b3be-c238e66d50dc",
+                "7712e511-5ff4-4748-a454-e5612e4bd0de",
+                "7712e511-5ff4-4748-a454-e5612e4bd0de",
+                "7712e511-5ff4-4748-a454-e5612e4bd0de",
+                "7712e511-5ff4-4748-a454-e5612e4bd0de",
+                "7712e511-5ff4-4748-a454-e5612e4bd0de",
+                "6e33a62f-70c8-46f0-a708-f40305743214",
+                "6e33a62f-70c8-46f0-a708-f40305743214",
+                "6e33a62f-70c8-46f0-a708-f40305743214",
+                "6e33a62f-70c8-46f0-a708-f40305743214",
+                "6e33a62f-70c8-46f0-a708-f40305743214",
+                "67a2d96a-4c83-427f-8a5f-421ef53bb3b6",
+                "67a2d96a-4c83-427f-8a5f-421ef53bb3b6",
+                "67a2d96a-4c83-427f-8a5f-421ef53bb3b6",
+                "67a2d96a-4c83-427f-8a5f-421ef53bb3b6",
+                "67a2d96a-4c83-427f-8a5f-421ef53bb3b6",
+                "6619eee2-7b59-4992-a351-a8835fd33c43",
+                "6619eee2-7b59-4992-a351-a8835fd33c43",
+                "6619eee2-7b59-4992-a351-a8835fd33c43",
+                "6619eee2-7b59-4992-a351-a8835fd33c43",
+                "6619eee2-7b59-4992-a351-a8835fd33c43",
+                "5e7aeb3a-a1c6-4694-8f78-139d0d99610a",
+                "5e7aeb3a-a1c6-4694-8f78-139d0d99610a",
+                "5e7aeb3a-a1c6-4694-8f78-139d0d99610a",
+                "5e7aeb3a-a1c6-4694-8f78-139d0d99610a",
+                "5e7aeb3a-a1c6-4694-8f78-139d0d99610a",
+                "5e6b3a21-8324-4a66-8af4-3707ba2177ef",
+                "5e6b3a21-8324-4a66-8af4-3707ba2177ef",
+                "5e6b3a21-8324-4a66-8af4-3707ba2177ef",
+                "5e6b3a21-8324-4a66-8af4-3707ba2177ef",
+                "5e6b3a21-8324-4a66-8af4-3707ba2177ef",
+                "59b69a8c-5bdd-472e-a1b6-4e9e9c1143d8",
+                "59b69a8c-5bdd-472e-a1b6-4e9e9c1143d8",
+                "59b69a8c-5bdd-472e-a1b6-4e9e9c1143d8",
+                "59b69a8c-5bdd-472e-a1b6-4e9e9c1143d8",
+                "59b69a8c-5bdd-472e-a1b6-4e9e9c1143d8",
+                "4cd44133-12fa-4593-ac08-6e064ed19ffd",
+                "4cd44133-12fa-4593-ac08-6e064ed19ffd",
+                "4cd44133-12fa-4593-ac08-6e064ed19ffd",
+                "4cd44133-12fa-4593-ac08-6e064ed19ffd",
+                "4cd44133-12fa-4593-ac08-6e064ed19ffd",
+                "48c4d0c7-2fd4-4fcf-b33e-14604d55a687",
+                "48c4d0c7-2fd4-4fcf-b33e-14604d55a687",
+                "48c4d0c7-2fd4-4fcf-b33e-14604d55a687",
+                "48c4d0c7-2fd4-4fcf-b33e-14604d55a687",
+                "48c4d0c7-2fd4-4fcf-b33e-14604d55a687",
+                "4859dad5-384b-4085-9869-d01514c3a771",
+                "4859dad5-384b-4085-9869-d01514c3a771",
+                "4859dad5-384b-4085-9869-d01514c3a771",
+                "4859dad5-384b-4085-9869-d01514c3a771",
+                "4859dad5-384b-4085-9869-d01514c3a771",
+                "47c1743a-aea7-401a-a03c-c501b288ae0f",
+                "47c1743a-aea7-401a-a03c-c501b288ae0f",
+                "47c1743a-aea7-401a-a03c-c501b288ae0f",
+                "47c1743a-aea7-401a-a03c-c501b288ae0f",
+                "47c1743a-aea7-401a-a03c-c501b288ae0f",
+                "44656fe1-1e83-4db6-96d9-09664471ebce",
+                "44656fe1-1e83-4db6-96d9-09664471ebce",
+                "44656fe1-1e83-4db6-96d9-09664471ebce",
+                "44656fe1-1e83-4db6-96d9-09664471ebce",
+                "44656fe1-1e83-4db6-96d9-09664471ebce",
+                "42b8174d-d1d2-4cab-aacb-b5a195a0e956",
+                "42b8174d-d1d2-4cab-aacb-b5a195a0e956",
+                "42b8174d-d1d2-4cab-aacb-b5a195a0e956",
+                "42b8174d-d1d2-4cab-aacb-b5a195a0e956",
+                "42b8174d-d1d2-4cab-aacb-b5a195a0e956",
+                "3ee97b83-599e-4896-b766-c7121bc523a7",
+                "3ee97b83-599e-4896-b766-c7121bc523a7",
+                "3ee97b83-599e-4896-b766-c7121bc523a7",
+                "3ee97b83-599e-4896-b766-c7121bc523a7",
+                "3ee97b83-599e-4896-b766-c7121bc523a7",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669",
+                "2c49c505-6ae3-4bf3-a116-887ff2699669",
+                "23e74bea-c3bc-498d-a642-8ab55101b76b",
+                "23e74bea-c3bc-498d-a642-8ab55101b76b",
+                "23e74bea-c3bc-498d-a642-8ab55101b76b",
+                "23e74bea-c3bc-498d-a642-8ab55101b76b",
+                "23e74bea-c3bc-498d-a642-8ab55101b76b",
+                "22014e74-1f6a-446b-ab65-8cd7f17cd9a1",
+                "22014e74-1f6a-446b-ab65-8cd7f17cd9a1",
+                "22014e74-1f6a-446b-ab65-8cd7f17cd9a1",
+                "22014e74-1f6a-446b-ab65-8cd7f17cd9a1",
+                "22014e74-1f6a-446b-ab65-8cd7f17cd9a1",
+                "20904602-adac-4c74-a0f9-84d1f8f4c2d6",
+                "20904602-adac-4c74-a0f9-84d1f8f4c2d6",
+                "20904602-adac-4c74-a0f9-84d1f8f4c2d6",
+                "20904602-adac-4c74-a0f9-84d1f8f4c2d6",
+                "20904602-adac-4c74-a0f9-84d1f8f4c2d6",
+                "19780456-95ec-49d2-9153-c15f92021d98",
+                "19780456-95ec-49d2-9153-c15f92021d98",
+                "19780456-95ec-49d2-9153-c15f92021d98",
+                "19780456-95ec-49d2-9153-c15f92021d98",
+                "19780456-95ec-49d2-9153-c15f92021d98",
+                "0eeb9d0e-3e78-4716-914d-1dfdbc5aa230",
+                "0eeb9d0e-3e78-4716-914d-1dfdbc5aa230",
+                "0eeb9d0e-3e78-4716-914d-1dfdbc5aa230",
+                "0eeb9d0e-3e78-4716-914d-1dfdbc5aa230",
+                "0eeb9d0e-3e78-4716-914d-1dfdbc5aa230",
+                "05e67651-faf8-41cf-a097-472e54c1d264",
+                "05e67651-faf8-41cf-a097-472e54c1d264",
+                "05e67651-faf8-41cf-a097-472e54c1d264",
+                "05e67651-faf8-41cf-a097-472e54c1d264",
+                "05e67651-faf8-41cf-a097-472e54c1d264",
+                "f15dac1b-a948-4a9a-ae61-049cfafe9358"
+            ],
+            "@timestamp": "2021-04-18T14:22:24.015Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "59300",
+                "address": "120 avenue désandrouin",
+                "coordinates": {
+                    "lon": 3.4979388,
+                    "lat": 50.3608968
+                },
+                "city": "Valenciennes"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "mmg-de-valenciennes-valenciennes",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2019-09-06T02:12:59.304Z",
+            "type": "Maison médicale",
+            "id": "bb9a3b42-2148-43e2-b3d6-fc94f0977795",
+            "phone": null,
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-15T15:11:35.290Z",
+            "name": "Dr Rodolphe Brun Médecin Esthétique",
+            "professionals": [
+                "edb487c2-8bcb-43a5-bd9c-e841ee847966",
+                "edb487c2-8bcb-43a5-bd9c-e841ee847966",
+                "edb487c2-8bcb-43a5-bd9c-e841ee847966",
+                "edb487c2-8bcb-43a5-bd9c-e841ee847966",
+                "edb487c2-8bcb-43a5-bd9c-e841ee847966",
+                "edb487c2-8bcb-43a5-bd9c-e841ee847966",
+                "edb487c2-8bcb-43a5-bd9c-e841ee847966",
+                "edb487c2-8bcb-43a5-bd9c-e841ee847966"
+            ],
+            "@timestamp": "2021-04-18T14:22:28.209Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "06000",
+                "address": "134 Avenue des Arènes de Cimiez",
+                "coordinates": {
+                    "lon": 7.2748747,
+                    "lat": 43.7163297
+                },
+                "city": "Nice"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "dr-rodolphe-brun-medecin-esthetique-nice",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2020-06-16T13:20:22.782Z",
+            "type": "Centre de soins",
+            "id": "c3c40f7f-590a-4e09-8a9b-ddcb1cbab91b",
+            "phone": "+33422135995",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:15.162Z",
+            "name": "Pharmacie De La Mairie Méru",
+            "professionals": [
+                "8a9cc4c0-d17d-4eba-8f65-e59302ac8fb3",
+                "8a9cc4c0-d17d-4eba-8f65-e59302ac8fb3",
+                "8a9cc4c0-d17d-4eba-8f65-e59302ac8fb3",
+                "8a9cc4c0-d17d-4eba-8f65-e59302ac8fb3",
+                "8a9cc4c0-d17d-4eba-8f65-e59302ac8fb3",
+                "8a9cc4c0-d17d-4eba-8f65-e59302ac8fb3",
+                "8a9cc4c0-d17d-4eba-8f65-e59302ac8fb3",
+                "8a9cc4c0-d17d-4eba-8f65-e59302ac8fb3",
+                "8a9cc4c0-d17d-4eba-8f65-e59302ac8fb3",
+                "8a9cc4c0-d17d-4eba-8f65-e59302ac8fb3",
+                "8a9cc4c0-d17d-4eba-8f65-e59302ac8fb3",
+                "8a9cc4c0-d17d-4eba-8f65-e59302ac8fb3",
+                "8a9cc4c0-d17d-4eba-8f65-e59302ac8fb3"
+            ],
+            "@timestamp": "2021-04-18T14:30:30.308Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "60110",
+                "address": "4 PLACE DE L HOTEL DE VILLE",
+                "coordinates": {
+                    "lon": 2.1355473,
+                    "lat": 49.2364028
+                },
+                "city": "MERU"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-de-la-mairie-meru-meru",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2021-03-10T20:17:22.504Z",
+            "type": "Pharmacie",
+            "id": "0318b49d-0da6-4304-8ac0-43f131e553f5",
+            "phone": "+33344224157",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:15.178Z",
+            "name": "Pharmacie Oceane",
+            "professionals": [
+                "5c8fc562-d836-4aed-84d6-225e5af8075e",
+                "5c8fc562-d836-4aed-84d6-225e5af8075e",
+                "5c8fc562-d836-4aed-84d6-225e5af8075e",
+                "5c8fc562-d836-4aed-84d6-225e5af8075e",
+                "5c8fc562-d836-4aed-84d6-225e5af8075e",
+                "5c8fc562-d836-4aed-84d6-225e5af8075e"
+            ],
+            "@timestamp": "2021-04-18T14:30:30.308Z",
+            "antigenicTestDate": "2021-04-19T07:00:00.000Z",
+            "location": {
+                "zip": "75015",
+                "address": "19 rue Lourmel ",
+                "coordinates": {
+                    "lon": 2.2914519,
+                    "lat": 48.84922659999999
+                },
+                "city": "Paris"
+            },
+            "covidVaccineInjectionDate": "2021-05-05T13:50:00.000Z",
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-oceane-paris",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-10T20:17:13.394Z",
+            "type": "Pharmacie",
+            "id": "03674d71-b200-4682-8e0a-3ab9687b2b59",
+            "phone": "+33145788618",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": false,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:16.858Z",
+            "name": "Pharmacie Porte Sud",
+            "professionals": [
+                "efd5f610-b24f-4d01-a720-daced518dd34",
+                "efd5f610-b24f-4d01-a720-daced518dd34",
+                "efd5f610-b24f-4d01-a720-daced518dd34",
+                "efd5f610-b24f-4d01-a720-daced518dd34",
+                "efd5f610-b24f-4d01-a720-daced518dd34"
+            ],
+            "@timestamp": "2021-04-18T14:30:30.308Z",
+            "antigenicTestDate": "2021-04-19T11:50:00.000Z",
+            "location": {
+                "zip": "86100",
+                "address": "6 AV CAMILLE PAGE",
+                "coordinates": {
+                    "lon": 0.5293911000000001,
+                    "lat": 46.7983394
+                },
+                "city": "CHATELLERAULT"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-porte-sud-chatellerault",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-04T08:19:47.317Z",
+            "type": "Pharmacie",
+            "id": "07d3b6f9-3cd4-47dc-bb87-330750dc682b",
+            "phone": "+33549215709",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:17.051Z",
+            "name": "Pharmacie Des Aires",
+            "professionals": [
+                "75f2f9fa-1749-4fb4-95cb-966040d7f96e",
+                "75f2f9fa-1749-4fb4-95cb-966040d7f96e",
+                "75f2f9fa-1749-4fb4-95cb-966040d7f96e",
+                "75f2f9fa-1749-4fb4-95cb-966040d7f96e",
+                "75f2f9fa-1749-4fb4-95cb-966040d7f96e"
+            ],
+            "@timestamp": "2021-04-18T14:30:30.308Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "30250",
+                "address": "845 route de Salinelles",
+                "coordinates": {
+                    "lon": 4.0875267,
+                    "lat": 43.7825887
+                },
+                "city": "sommieres"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-des-aires-sommieres",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-22T08:34:24.703Z",
+            "type": "Pharmacie",
+            "id": "09129543-699b-44e2-91cf-c39eb99e0d35",
+            "phone": "+33466777065",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": false
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:17.127Z",
+            "name": "Pharmacie Des Deux Rives",
+            "professionals": [
+                "ca4cbea4-a29e-418d-8afd-d98cc9e0f309",
+                "ca4cbea4-a29e-418d-8afd-d98cc9e0f309",
+                "ca4cbea4-a29e-418d-8afd-d98cc9e0f309",
+                "ca4cbea4-a29e-418d-8afd-d98cc9e0f309",
+                "ca4cbea4-a29e-418d-8afd-d98cc9e0f309"
+            ],
+            "@timestamp": "2021-04-18T14:30:30.309Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "01460",
+                "address": "15 avenue de Bresse",
+                "coordinates": {
+                    "lon": 5.5744149,
+                    "lat": 46.1711369
+                },
+                "city": "Montréal-la-Cluse"
+            },
+            "covidVaccineInjectionDate": "2021-04-20T06:30:00.000Z",
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-des-deux-rives-montreal-la-cluse",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2021-03-10T20:17:41.422Z",
+            "type": "Pharmacie",
+            "id": "0b066c1c-4e43-46a9-a347-6b6f9bb02d8d",
+            "phone": "+33474760666",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": false
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:17.259Z",
+            "name": "Pharmacie De Fabron",
+            "professionals": [
+                "aea4e31f-c95c-46a4-ba51-3cf6d585d094",
+                "aea4e31f-c95c-46a4-ba51-3cf6d585d094",
+                "aea4e31f-c95c-46a4-ba51-3cf6d585d094",
+                "aea4e31f-c95c-46a4-ba51-3cf6d585d094",
+                "aea4e31f-c95c-46a4-ba51-3cf6d585d094"
+            ],
+            "@timestamp": "2021-04-18T14:30:30.309Z",
+            "antigenicTestDate": "2021-04-19T07:30:00.000Z",
+            "location": {
+                "zip": "06200",
+                "address": "54 avenue de la Californie",
+                "coordinates": {
+                    "lon": 7.2407192,
+                    "lat": 43.68950340000001
+                },
+                "city": "Nice"
+            },
+            "covidVaccineInjectionDate": "2021-05-28T08:45:00.000Z",
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-de-fabron-nice",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-19T08:09:00.746Z",
+            "type": "Pharmacie",
+            "id": "0e9d4b2f-6f12-49d5-b00b-84197cf2dcad",
+            "phone": "+33493865267",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:19.464Z",
+            "name": "Pharmacie Veux",
+            "professionals": [
+                "4b8a1dbd-8972-4edc-b855-97a71ce887a4",
+                "4b8a1dbd-8972-4edc-b855-97a71ce887a4",
+                "4b8a1dbd-8972-4edc-b855-97a71ce887a4",
+                "4b8a1dbd-8972-4edc-b855-97a71ce887a4",
+                "4b8a1dbd-8972-4edc-b855-97a71ce887a4"
+            ],
+            "@timestamp": "2021-04-18T14:30:30.310Z",
+            "antigenicTestDate": "2021-04-19T06:30:00.000Z",
+            "location": {
+                "zip": "41700",
+                "address": "69 Route de Cheverny (Contres)",
+                "coordinates": {
+                    "lon": 1.4363524,
+                    "lat": 47.4294989
+                },
+                "city": "Le Controis-en-Sologne"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "-pharmacie-veux-le-controis-en-sologne",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2020-11-13T15:30:30.871Z",
+            "type": "Pharmacie",
+            "id": "1cf1add5-91d8-45f4-85c0-d56f9ebd192b",
+            "phone": "+33254795024",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:22.076Z",
+            "name":"Pharmacie De L'Europe Fuveau",
+            "professionals": [
+                "db6c9d5c-7b16-44be-857b-c237593f47a2",
+                "db6c9d5c-7b16-44be-857b-c237593f47a2",
+                "db6c9d5c-7b16-44be-857b-c237593f47a2",
+                "db6c9d5c-7b16-44be-857b-c237593f47a2",
+                "db6c9d5c-7b16-44be-857b-c237593f47a2"
+            ],
+            "@timestamp": "2021-04-18T14:30:30.311Z",
+            "antigenicTestDate": "2021-04-19T12:35:00.000Z",
+            "location": {
+                "zip": "13710",
+                "address": "395 Route Departementale 96",
+                "coordinates": {
+                    "lon": 5.5614408,
+                    "lat": 43.4538963
+                },
+                "city": "Fuveau"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug":"pharmacie-de-l'europe-fuveau-fuveau",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-23T08:53:41.511Z",
+            "type": "Pharmacie",
+            "id": "219c4eb7-9560-4c77-a19c-e78142ee810e",
+            "phone": "+33442681891",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": false,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:22.914Z",
+            "name": "Pharmacie Tournamy",
+            "professionals": [
+                "50d2871d-5579-48e8-ade3-5e3fd82fdb13",
+                "50d2871d-5579-48e8-ade3-5e3fd82fdb13",
+                "50d2871d-5579-48e8-ade3-5e3fd82fdb13",
+                "50d2871d-5579-48e8-ade3-5e3fd82fdb13",
+                "50d2871d-5579-48e8-ade3-5e3fd82fdb13",
+                "50d2871d-5579-48e8-ade3-5e3fd82fdb13",
+                "50d2871d-5579-48e8-ade3-5e3fd82fdb13",
+                "50d2871d-5579-48e8-ade3-5e3fd82fdb13",
+                "50d2871d-5579-48e8-ade3-5e3fd82fdb13",
+                "50d2871d-5579-48e8-ade3-5e3fd82fdb13",
+                "50d2871d-5579-48e8-ade3-5e3fd82fdb13",
+                "50d2871d-5579-48e8-ade3-5e3fd82fdb13",
+                "50d2871d-5579-48e8-ade3-5e3fd82fdb13"
+            ],
+            "@timestamp": "2021-04-18T14:30:30.311Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "6250",
+                "address": "762 avenue de Tournamy",
+                "coordinates": {
+                    "lon": 6.987608,
+                    "lat": 43.604383
+                },
+                "city": "Mougins"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-tournamy-mougins",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-10T07:45:15.967Z",
+            "type": "Pharmacie",
+            "id": "277041f1-cbe1-490c-9a92-5714130804b9",
+            "phone": "+33493752955",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": false,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:24.418Z",
+            "name": "Pharmacie Guillot",
+            "professionals": [
+                "37931cc6-d252-4a88-bbb8-7a537011c487",
+                "37931cc6-d252-4a88-bbb8-7a537011c487",
+                "37931cc6-d252-4a88-bbb8-7a537011c487",
+                "37931cc6-d252-4a88-bbb8-7a537011c487",
+                "37931cc6-d252-4a88-bbb8-7a537011c487"
+            ],
+            "@timestamp": "2021-04-18T14:30:30.312Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "33370",
+                "address": "3 AV DU PERIGORD",
+                "coordinates": {
+                    "lon": -0.4729472,
+                    "lat": 44.865377
+                },
+                "city": "ARTIGUES PRES BORDEAUX"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-guillot-artigues-pres-bordeaux",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2021-03-12T17:04:37.474Z",
+            "type": "Pharmacie",
+            "id": "356fc43b-3fef-4d65-8259-117e708f1266",
+            "phone": "+33557340542",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:25.019Z",
+            "name": "Pharmacie De La Trinité",
+            "professionals": [
+                "5c065024-1aac-4830-a23d-c5fdeeedb93f",
+                "5c065024-1aac-4830-a23d-c5fdeeedb93f",
+                "5c065024-1aac-4830-a23d-c5fdeeedb93f",
+                "5c065024-1aac-4830-a23d-c5fdeeedb93f",
+                "5c065024-1aac-4830-a23d-c5fdeeedb93f",
+                "5c065024-1aac-4830-a23d-c5fdeeedb93f"
+            ],
+            "@timestamp": "2021-04-18T14:30:30.312Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "75009",
+                "address": "57 rue de Châteaudun",
+                "coordinates": {
+                    "lon": 2.33262,
+                    "lat": 48.8761741
+                },
+                "city": "Paris"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-de-la-trinite-paris",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-18T07:59:48.350Z",
+            "type": "Pharmacie",
+            "id": "38614689-25d9-46c3-a0f5-a851e1c863f6",
+            "phone": "+33148741313",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": false
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:25.430Z",
+            "name": "Pharmacie Principale",
+            "professionals": [
+                "d1c0688a-8acb-4433-8456-2e12184ed155",
+                "d1c0688a-8acb-4433-8456-2e12184ed155",
+                "d1c0688a-8acb-4433-8456-2e12184ed155",
+                "d1c0688a-8acb-4433-8456-2e12184ed155",
+                "d1c0688a-8acb-4433-8456-2e12184ed155",
+                "d1c0688a-8acb-4433-8456-2e12184ed155",
+                "d1c0688a-8acb-4433-8456-2e12184ed155"
+            ],
+            "@timestamp": "2021-04-18T14:30:30.313Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "84120",
+                "address": "114 Place Jean Jaures",
+                "coordinates": {
+                    "lon": 5.5016043,
+                    "lat": 43.6934976
+                },
+                "city": "PERTUIS"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-principale-pertuis",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-10T20:17:31.357Z",
+            "type": "Pharmacie",
+            "id": "40d3f70d-946a-4cb9-8fc7-0d993a436a7c",
+            "phone": "+33490097271",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:25.548Z",
+            "name": "Herboristerie Petit",
+            "professionals": [
+                "47f10884-109e-44d9-a0a2-7033ad2acfcf",
+                "47f10884-109e-44d9-a0a2-7033ad2acfcf",
+                "47f10884-109e-44d9-a0a2-7033ad2acfcf",
+                "47f10884-109e-44d9-a0a2-7033ad2acfcf",
+                "47f10884-109e-44d9-a0a2-7033ad2acfcf",
+                "47f10884-109e-44d9-a0a2-7033ad2acfcf"
+            ],
+            "@timestamp": "2021-04-18T14:30:30.314Z",
+            "antigenicTestDate": "2021-04-19T08:00:00.000Z",
+            "location": {
+                "zip": "13001",
+                "address": "24 Cours Joseph Thierry",
+                "coordinates": {
+                    "lon": 5.3866736,
+                    "lat": 43.3002622
+                },
+                "city": "Marseille"
+            },
+            "covidVaccineInjectionDate": "2021-04-20T14:35:00.000Z",
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "herboristerie-petit-marseille",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-12T10:26:19.123Z",
+            "type": "Pharmacie",
+            "id": "41b5a8e4-75d8-4338-b5a0-0d8b131b340f",
+            "phone": "+33491623303",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:26.447Z",
+            "name": "Pharmacie Flandre Littorale",
+            "professionals": [
+                "64bdae53-dc4f-4d2f-9193-8588e59e730b",
+                "64bdae53-dc4f-4d2f-9193-8588e59e730b",
+                "64bdae53-dc4f-4d2f-9193-8588e59e730b",
+                "64bdae53-dc4f-4d2f-9193-8588e59e730b",
+                "64bdae53-dc4f-4d2f-9193-8588e59e730b",
+                "64bdae53-dc4f-4d2f-9193-8588e59e730b"
+            ],
+            "@timestamp": "2021-04-18T14:30:30.314Z",
+            "antigenicTestDate": "2021-04-19T07:00:00.000Z",
+            "location": {
+                "zip": "59760",
+                "address": "Chemin Communal Centre Commercial Ouest",
+                "coordinates": {
+                    "lon": 2.294963,
+                    "lat": 51.0159309
+                },
+                "city": "Grande-Synthe"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-flandre-littorale-grande-synthe",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2020-05-27T08:40:02.007Z",
+            "type": "Pharmacie",
+            "id": "4621e706-d214-4de9-9371-fac215df3956",
+            "phone": "+33328279280",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": false,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:28.637Z",
+            "name": "Pharmacie Henin Beaumont",
+            "professionals": [
+                "14f2cfc3-a74b-43f9-a66d-161bcade7dd5",
+                "14f2cfc3-a74b-43f9-a66d-161bcade7dd5",
+                "14f2cfc3-a74b-43f9-a66d-161bcade7dd5",
+                "14f2cfc3-a74b-43f9-a66d-161bcade7dd5",
+                "14f2cfc3-a74b-43f9-a66d-161bcade7dd5"
+            ],
+            "@timestamp": "2021-04-18T14:30:30.314Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "62110",
+                "address": "74 Place Carnot",
+                "coordinates": {
+                    "lon": 2.9487318,
+                    "lat": 50.4203365
+                },
+                "city": "Hénin-Beaumont"
+            },
+            "covidVaccineInjectionDate": "2021-04-22T12:00:00.000Z",
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-henin-beaumont-henin-beaumont",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2021-03-12T08:53:52.106Z",
+            "type": "Pharmacie",
+            "id": "4b05eead-e615-458c-b413-9328ff89e69e",
+            "phone": "+33321200024",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:28.857Z",
+            "name": "Pharmacie De La Place",
+            "professionals": [
+                "e97b712c-aa8a-45b0-b439-b001ed1f2f27",
+                "e97b712c-aa8a-45b0-b439-b001ed1f2f27",
+                "e97b712c-aa8a-45b0-b439-b001ed1f2f27",
+                "e97b712c-aa8a-45b0-b439-b001ed1f2f27",
+                "e97b712c-aa8a-45b0-b439-b001ed1f2f27"
+            ],
+            "@timestamp": "2021-04-18T14:30:30.315Z",
+            "antigenicTestDate": "2021-04-19T07:30:00.000Z",
+            "location": {
+                "zip": "59410",
+                "address": "177 AV ANATOLE FRANCE",
+                "coordinates": {
+                    "lon": 3.5032477,
+                    "lat": 50.3712165
+                },
+                "city": "ANZIN"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-de-la-place-anzin",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2020-03-06T09:20:23.501Z",
+            "type": "Pharmacie",
+            "id": "503c8516-f33a-4f8c-a776-ca2470646753",
+            "phone": "+33327469350",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:29.521Z",
+            "name": "Pharmacie Croix Dampierre",
+            "professionals": [
+                "84df930a-d2eb-450e-baf3-19deefdfed51",
+                "84df930a-d2eb-450e-baf3-19deefdfed51",
+                "84df930a-d2eb-450e-baf3-19deefdfed51",
+                "84df930a-d2eb-450e-baf3-19deefdfed51",
+                "84df930a-d2eb-450e-baf3-19deefdfed51"
+            ],
+            "@timestamp": "2021-04-18T14:30:30.315Z",
+            "antigenicTestDate": "2021-04-22T07:00:00.000Z",
+            "location": {
+                "zip": "51000",
+                "address": "AV DU PRESIDENT ROOSEVELT CC CROIX DAMPIERRE",
+                "coordinates": {
+                    "lon": 4.3858888,
+                    "lat": 48.9422828
+                },
+                "city": "CHALONS EN CHAMPAGNE"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-croix-dampierre-chalons-en-champagne",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-25T07:08:31.301Z",
+            "type": "Pharmacie",
+            "id": "51142bd5-7789-4c82-9ba4-3b5271c6daee",
+            "phone": "+33326219000",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": false,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:30.086Z",
+            "name": "Pharmacie Manin Des Buttes Chaumont",
+            "professionals": [
+                "da15ffad-3aff-43e2-a289-44166b39deef",
+                "da15ffad-3aff-43e2-a289-44166b39deef",
+                "da15ffad-3aff-43e2-a289-44166b39deef",
+                "da15ffad-3aff-43e2-a289-44166b39deef",
+                "da15ffad-3aff-43e2-a289-44166b39deef"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.509Z",
+            "antigenicTestDate": "2021-04-19T07:00:00.000Z",
+            "location": {
+                "zip": "75019",
+                "address": "105 Rue Manin",
+                "coordinates": {
+                    "lon": 2.3792098,
+                    "lat": 48.8849421
+                },
+                "city": "Paris"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-manin-des-buttes-chaumont-paris",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-04-15T07:38:58.150Z",
+            "type": "Pharmacie",
+            "id": "5ce05910-da81-4a0d-a3ce-9e74b4d7b3a6",
+            "phone": "+33142065481",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:30.871Z",
+            "name": "Pharmacie Martin Pinel",
+            "professionals": [
+                "377d192b-ca55-48fd-a260-0849e16a5990",
+                "377d192b-ca55-48fd-a260-0849e16a5990",
+                "377d192b-ca55-48fd-a260-0849e16a5990",
+                "377d192b-ca55-48fd-a260-0849e16a5990",
+                "377d192b-ca55-48fd-a260-0849e16a5990",
+                "377d192b-ca55-48fd-a260-0849e16a5990"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.509Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "38230",
+                "address": "21 Rue Centrale",
+                "coordinates": {
+                    "lon": 5.173681,
+                    "lat": 45.750949
+                },
+                "city": "Pont-de-Chéruy"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-martin-pinel-pont-de-cheruy",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "any"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2020-12-14T10:28:59.023Z",
+            "type": "Pharmacie",
+            "id": "5f5d18ce-25d0-49b5-97cb-341b6bf61843",
+            "phone": "+33478321240",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:31.230Z",
+            "name": "Pharmacie De Montorgueil",
+            "professionals": [
+                "d700d82a-cd98-4db1-9b3d-a69892a41245",
+                "d700d82a-cd98-4db1-9b3d-a69892a41245",
+                "d700d82a-cd98-4db1-9b3d-a69892a41245",
+                "d700d82a-cd98-4db1-9b3d-a69892a41245",
+                "d700d82a-cd98-4db1-9b3d-a69892a41245"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.510Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "75002",
+                "address": "67 Rue Montorgueil",
+                "coordinates": {
+                    "lon": 2.3469134,
+                    "lat": 48.8659579
+                },
+                "city": "Paris"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-de-montorgueil-paris",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2020-05-27T08:23:03.545Z",
+            "type": "Pharmacie",
+            "id": "61d1c8dd-d745-4639-8ff7-542c7b830dd3",
+            "phone": "+33142368100",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": false
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:31.255Z",
+            "name": "Pharmacie Cauchoise",
+            "professionals": [
+                "c35196bb-d75c-436b-b536-2e4e685dc045",
+                "c35196bb-d75c-436b-b536-2e4e685dc045",
+                "c35196bb-d75c-436b-b536-2e4e685dc045",
+                "c35196bb-d75c-436b-b536-2e4e685dc045",
+                "c35196bb-d75c-436b-b536-2e4e685dc045"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.510Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "76000",
+                "address": "7 Place Cauchoise",
+                "coordinates": {
+                    "lon": 1.085969,
+                    "lat": 49.446072
+                },
+                "city": "Rouen"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-cauchoise-rouen",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2021-03-03T13:21:50.906Z",
+            "type": "Pharmacie",
+            "id": "63a7b39a-9c8f-4150-ae19-485358dd3b84",
+            "phone": "+33235713020",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": false
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:31.267Z",
+            "name": "Pharmacie Des Allees",
+            "professionals": [
+                "a46a0c91-e742-4ee3-8f8c-ae669077c9c4",
+                "a46a0c91-e742-4ee3-8f8c-ae669077c9c4",
+                "a46a0c91-e742-4ee3-8f8c-ae669077c9c4",
+                "a46a0c91-e742-4ee3-8f8c-ae669077c9c4",
+                "a46a0c91-e742-4ee3-8f8c-ae669077c9c4",
+                "a46a0c91-e742-4ee3-8f8c-ae669077c9c4"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.510Z",
+            "antigenicTestDate": "2021-04-20T10:00:00.000Z",
+            "location": {
+                "zip": "13160",
+                "address": "32 Avenue Marx Dormoy",
+                "coordinates": {
+                    "lon": 4.858182999999999,
+                    "lat": 43.8834182
+                },
+                "city": "Châteaurenard"
+            },
+            "covidVaccineInjectionDate": "2021-06-03T07:20:00.000Z",
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "-pharmacie-des-allees--chateaurenard",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-05T10:18:29.494Z",
+            "type": "Pharmacie",
+            "id": "6402aea8-5c53-4439-8d77-b39cc36ca0f0",
+            "phone": "+33490944341",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:31.647Z",
+            "name": "Grande Pharmacie De Wazemmes",
+            "professionals": [
+                "510220d5-5298-4dbc-a120-cab69dd8721f",
+                "510220d5-5298-4dbc-a120-cab69dd8721f",
+                "510220d5-5298-4dbc-a120-cab69dd8721f",
+                "510220d5-5298-4dbc-a120-cab69dd8721f",
+                "510220d5-5298-4dbc-a120-cab69dd8721f"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.511Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "59000",
+                "address": "Rue Leon Gambetta",
+                "coordinates": {
+                    "lon": 3.0483095,
+                    "lat": 50.6269412
+                },
+                "city": "Lille"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "grande-pharmacie-de-wazemmes-lille",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": true,
+            "isAntigenicSupported": true,
+            "activatedAt": "2019-11-07T13:50:19.010Z",
+            "type": "Pharmacie",
+            "id": "648515b0-141d-471f-9840-0d93e8ea0432",
+            "phone": "+33320573995",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": false
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:31.664Z",
+            "name": "Pharmacie Amandiers",
+            "professionals": [
+                "7fa97635-4b1f-44dd-8a67-3541f40e1ea2",
+                "7fa97635-4b1f-44dd-8a67-3541f40e1ea2",
+                "7fa97635-4b1f-44dd-8a67-3541f40e1ea2",
+                "7fa97635-4b1f-44dd-8a67-3541f40e1ea2",
+                "7fa97635-4b1f-44dd-8a67-3541f40e1ea2"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.511Z",
+            "antigenicTestDate": "2021-04-19T07:00:00.000Z",
+            "location": {
+                "zip": "92000",
+                "address": "25 rue Sadi Carnot ",
+                "coordinates": {
+                    "lon": 2.2025588,
+                    "lat": 48.8894482
+                },
+                "city": "Nanterre "
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-amandiers--nanterre",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-04-11T23:38:42.977Z",
+            "type": "Pharmacie",
+            "id": "662646d8-5608-4f44-b2b5-460d3a167911",
+            "phone": "+33147213294",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:35.628Z",
+            "name": "Pharmacie Nationale Du Square",
+            "professionals": [
+                "f5b1bb3c-39dc-42da-aa3d-2705c9c6d2b6",
+                "f5b1bb3c-39dc-42da-aa3d-2705c9c6d2b6",
+                "f5b1bb3c-39dc-42da-aa3d-2705c9c6d2b6",
+                "f5b1bb3c-39dc-42da-aa3d-2705c9c6d2b6",
+                "f5b1bb3c-39dc-42da-aa3d-2705c9c6d2b6",
+                "f5b1bb3c-39dc-42da-aa3d-2705c9c6d2b6"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.512Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "59800",
+                "address": "103 Rue Nationale",
+                "coordinates": {
+                    "lon": 3.057356,
+                    "lat": 50.6346208
+                },
+                "city": "Lille"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-nationale-du-square-lille",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": true,
+            "isAntigenicSupported": true,
+            "activatedAt": "2019-09-06T02:12:59.304Z",
+            "type": "Pharmacie",
+            "id": "6d667799-e3db-4a76-9c52-691b89586ad1",
+            "phone": "+33650889307",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": false,
+                "covidInjection1": true,
+                "antigenic": false
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:35.707Z",
+            "name":"Pharmacie De L'Avenir",
+            "professionals": [
+                "dc72af11-42ff-45b0-baa2-dd6b4233ca45",
+                "dc72af11-42ff-45b0-baa2-dd6b4233ca45",
+                "dc72af11-42ff-45b0-baa2-dd6b4233ca45",
+                "dc72af11-42ff-45b0-baa2-dd6b4233ca45",
+                "dc72af11-42ff-45b0-baa2-dd6b4233ca45"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.512Z",
+            "antigenicTestDate": "2021-04-20T12:00:00.000Z",
+            "location": {
+                "zip": "14290",
+                "address": "127 rue Grande",
+                "coordinates": {
+                    "lon": 0.4058560000000001,
+                    "lat": 49.022737
+                },
+                "city": "Orbec"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug":"pharmacie-de-l'avenir-orbec",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-31T09:42:59.152Z",
+            "type": "Pharmacie",
+            "id": "6f564914-5708-4d77-98d6-3562448887be",
+            "phone": "+33231328949",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:35.884Z",
+            "name": "Pharmacie Des 5 Avenues",
+            "professionals": [
+                "f9c9d78a-c3f1-44d6-8dbe-84baed8267a4",
+                "f9c9d78a-c3f1-44d6-8dbe-84baed8267a4",
+                "f9c9d78a-c3f1-44d6-8dbe-84baed8267a4",
+                "f9c9d78a-c3f1-44d6-8dbe-84baed8267a4",
+                "f9c9d78a-c3f1-44d6-8dbe-84baed8267a4"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.513Z",
+            "antigenicTestDate": "2021-04-19T08:00:00.000Z",
+            "location": {
+                "zip": "13004",
+                "address": "6 Avenue des Chartreux",
+                "coordinates": {
+                    "lon": 5.3973302,
+                    "lat": 43.3029135
+                },
+                "city": "Marseille"
+            },
+            "covidVaccineInjectionDate": "2021-04-20T08:30:00.000Z",
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-des-5-avenues-marseille",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-10T20:17:52.449Z",
+            "type": "Pharmacie",
+            "id": "72665b64-bd1d-4e02-b9b5-ecae4e000c3e",
+            "phone": "+33491497777",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:36.589Z",
+            "name":"Pharmacie De L'Horloge",
+            "professionals": [
+                "94043934-9085-47b1-ab70-49fb6dbdefd1",
+                "94043934-9085-47b1-ab70-49fb6dbdefd1",
+                "94043934-9085-47b1-ab70-49fb6dbdefd1",
+                "94043934-9085-47b1-ab70-49fb6dbdefd1",
+                "94043934-9085-47b1-ab70-49fb6dbdefd1"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.513Z",
+            "antigenicTestDate": "2021-04-19T07:30:00.000Z",
+            "location": {
+                "zip": "06100",
+                "address": "98 Boulevard DE CESSOLE",
+                "coordinates": {
+                    "lon": 7.2526853,
+                    "lat": 43.7185431
+                },
+                "city": "NICE"
+            },
+            "covidVaccineInjectionDate": "2021-04-23T11:40:00.000Z",
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug":"pharmacie-de-l'horloge-nice",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-15T19:03:24.123Z",
+            "type": "Pharmacie",
+            "id": "769ad31e-ff6d-4a8d-9b14-431d4a468b13",
+            "phone": "+33493844886",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:36.879Z",
+            "name": "Alain Elkaim",
+            "professionals": [
+                "8be388ba-b875-42b8-b58c-93ac9d0cd887",
+                "8be388ba-b875-42b8-b58c-93ac9d0cd887",
+                "8be388ba-b875-42b8-b58c-93ac9d0cd887",
+                "8be388ba-b875-42b8-b58c-93ac9d0cd887",
+                "8be388ba-b875-42b8-b58c-93ac9d0cd887"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.513Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "13007",
+                "address": "70 BOULEVARD DE LA CORDERIE",
+                "coordinates": {
+                    "lon": 5.369154,
+                    "lat": 43.2904849
+                },
+                "city": "MARSEILLE"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "alain-elkaim-marseille",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2021-03-12T17:04:31.067Z",
+            "type": "Pharmacie",
+            "id": "794ddec7-95ef-467f-8877-dbecabd0958b",
+            "phone": "",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:38.039Z",
+            "name": "Pharmacie Du Port",
+            "professionals": [
+                "6cdc3ccb-912b-4f10-a77b-64f8f63f1bf1",
+                "6cdc3ccb-912b-4f10-a77b-64f8f63f1bf1",
+                "6cdc3ccb-912b-4f10-a77b-64f8f63f1bf1",
+                "6cdc3ccb-912b-4f10-a77b-64f8f63f1bf1",
+                "6cdc3ccb-912b-4f10-a77b-64f8f63f1bf1"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.515Z",
+            "antigenicTestDate": "2021-04-19T07:30:00.000Z",
+            "location": {
+                "zip": "17410",
+                "address": "7 rue de Sully",
+                "coordinates": {
+                    "lon": -1.3683235,
+                    "lat": 46.20429920000001
+                },
+                "city": "Saint Martin de Ré"
+            },
+            "covidVaccineInjectionDate": "2021-06-21T09:20:00.000Z",
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-du-port-saint-martin-de-re",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-04-01T09:20:04.690Z",
+            "type": "Pharmacie",
+            "id": "836ca4db-f4da-484e-a5df-392146194f59",
+            "phone": "+33546092043",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:39.428Z",
+            "name": "Pharmacie Du Miroir",
+            "professionals": [
+                "2e8274d6-5b90-408d-b011-15888ecb35c6",
+                "2e8274d6-5b90-408d-b011-15888ecb35c6",
+                "2e8274d6-5b90-408d-b011-15888ecb35c6",
+                "2e8274d6-5b90-408d-b011-15888ecb35c6",
+                "2e8274d6-5b90-408d-b011-15888ecb35c6"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.515Z",
+            "antigenicTestDate": "2021-04-20T09:20:00.000Z",
+            "location": {
+                "zip": "72100",
+                "address": "18 bis Avenue Henri Lefeuvre",
+                "coordinates": {
+                    "lon": 0.1947337,
+                    "lat": 47.9930529
+                },
+                "city": "Le Mans"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-du-miroir-le-mans",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-08T15:00:21.791Z",
+            "type": "Pharmacie",
+            "id": "881d85f9-693e-4dc3-ada4-3890498e4237",
+            "phone": "+33243727556",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": false,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:40.611Z",
+            "name": "Pharmacie De La Pyramide",
+            "professionals": [
+                "0694632b-8a1c-44f7-92d5-d59938ce85b5",
+                "0694632b-8a1c-44f7-92d5-d59938ce85b5",
+                "0694632b-8a1c-44f7-92d5-d59938ce85b5",
+                "0694632b-8a1c-44f7-92d5-d59938ce85b5",
+                "0694632b-8a1c-44f7-92d5-d59938ce85b5",
+                "0694632b-8a1c-44f7-92d5-d59938ce85b5"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.516Z",
+            "antigenicTestDate": "2021-04-19T14:00:00.000Z",
+            "location": {
+                "zip": "71000",
+                "address": "362 rue carnot",
+                "coordinates": {
+                    "lon": 4.8302966,
+                    "lat": 46.30249389999999
+                },
+                "city": "Mâcon"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-de-la-pyramide-macon",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-18T07:59:46.667Z",
+            "type": "Pharmacie",
+            "id": "8ea9a675-355a-443b-a733-b5951e4b9c6f",
+            "phone": "+33385380199",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": false,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:41.532Z",
+            "name": "Pharmacie Borderie",
+            "professionals": [
+                "0aa0ed70-95eb-4e25-8251-5b7cc4283b83",
+                "0aa0ed70-95eb-4e25-8251-5b7cc4283b83",
+                "0aa0ed70-95eb-4e25-8251-5b7cc4283b83",
+                "0aa0ed70-95eb-4e25-8251-5b7cc4283b83",
+                "0aa0ed70-95eb-4e25-8251-5b7cc4283b83"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.516Z",
+            "antigenicTestDate": "2021-04-19T07:30:00.000Z",
+            "location": {
+                "zip": "63000",
+                "address": "4 av marx dormoy",
+                "coordinates": {
+                    "lon": 3.08105,
+                    "lat": 45.7715273
+                },
+                "city": "clermont fd"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-borderie-clermont-fd",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-26T07:22:11.969Z",
+            "type": "Pharmacie",
+            "id": "919a33ad-46a1-4106-a404-12dcedd850ab",
+            "phone": "+33473935677",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": false,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:41.647Z",
+            "name": "Olivier Sanchez",
+            "professionals": [
+                "a5d73932-97d1-42f1-a7b3-5ab4da03fa40",
+                "a5d73932-97d1-42f1-a7b3-5ab4da03fa40",
+                "a5d73932-97d1-42f1-a7b3-5ab4da03fa40",
+                "a5d73932-97d1-42f1-a7b3-5ab4da03fa40",
+                "a5d73932-97d1-42f1-a7b3-5ab4da03fa40"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.516Z",
+            "antigenicTestDate": "2021-04-19T13:00:00.000Z",
+            "location": {
+                "zip": "95530",
+                "address": "123 TER BD DE PONTOISE",
+                "coordinates": {
+                    "lon": 2.1826285,
+                    "lat": 48.980173
+                },
+                "city": "LA FRETTE SUR SEINE"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "olivier-sanchez-la-frette-sur-seine",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-04-06T00:42:40.904Z",
+            "type": "Pharmacie",
+            "id": "91dc764f-d872-40a4-9c08-b417cf00a24c",
+            "phone": "+33134508844",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": false,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:42.448Z",
+            "name": "Pharmacie  Île Saint Germain",
+            "professionals": [
+                "bdd2f2e9-7079-4c9d-9f8b-e5d997baa0b4",
+                "bdd2f2e9-7079-4c9d-9f8b-e5d997baa0b4",
+                "bdd2f2e9-7079-4c9d-9f8b-e5d997baa0b4",
+                "bdd2f2e9-7079-4c9d-9f8b-e5d997baa0b4",
+                "bdd2f2e9-7079-4c9d-9f8b-e5d997baa0b4",
+                "bdd2f2e9-7079-4c9d-9f8b-e5d997baa0b4",
+                "bdd2f2e9-7079-4c9d-9f8b-e5d997baa0b4"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.517Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "92130",
+                "address": "15 Boulevard des Iles",
+                "coordinates": {
+                    "lon": 2.2499669,
+                    "lat": 48.8229807
+                },
+                "city": "Issy-les-Moulineaux"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie--ile-saint-germain--issy-les-moulineaux",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2020-07-21T07:53:49.735Z",
+            "type": "Pharmacie",
+            "id": "9852634b-1f90-47ee-8193-97d1f7cc2434",
+            "phone": "+33146422805",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": false
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:42.692Z",
+            "name": "Pharmacie De La Gare",
+            "professionals": [
+                "574dc11a-1bbc-4793-9a31-785e690ee7a8",
+                "574dc11a-1bbc-4793-9a31-785e690ee7a8",
+                "574dc11a-1bbc-4793-9a31-785e690ee7a8",
+                "574dc11a-1bbc-4793-9a31-785e690ee7a8",
+                "574dc11a-1bbc-4793-9a31-785e690ee7a8"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.518Z",
+            "antigenicTestDate": "2021-04-19T07:30:00.000Z",
+            "location": {
+                "zip": "92000",
+                "address": "82bis rue Maurice Thorez",
+                "coordinates": {
+                    "lon": 2.1962787,
+                    "lat": 48.8949177
+                },
+                "city": "Nanterre"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-de-la-gare-nanterre",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-15T19:03:23.090Z",
+            "type": "Pharmacie",
+            "id": "9eaace69-fca1-4c3d-81f9-a15328fb8e79",
+            "phone": "+33147211223",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:44.057Z",
+            "name": "Snc Pharmacie Du Centre Tchikirian - Teknetzian",
+            "professionals": [
+                "f2a7e06a-4cba-47d1-8825-3b06cf47b163",
+                "f2a7e06a-4cba-47d1-8825-3b06cf47b163",
+                "f2a7e06a-4cba-47d1-8825-3b06cf47b163",
+                "f2a7e06a-4cba-47d1-8825-3b06cf47b163",
+                "f2a7e06a-4cba-47d1-8825-3b06cf47b163",
+                "f2a7e06a-4cba-47d1-8825-3b06cf47b163"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.519Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "92250",
+                "address": "2 Rd Pt du Souvenir Français ",
+                "coordinates": {
+                    "lon": 2.2479974,
+                    "lat": 48.90670799999999
+                },
+                "city": "LA GARENNE COLOMBES"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "snc-pharmacie-du-centre-tchikirian---teknetzian--la-garenne-colombes",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2021-03-10T20:17:49.388Z",
+            "type": "Pharmacie",
+            "id": "a65cf6f8-7c1c-4804-a669-49b414d3f12f",
+            "phone": "",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": false
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:44.125Z",
+            "name": "Pharmacie Des Iris",
+            "professionals": [
+                "7a8db1e5-05c2-473e-ac26-69d114a1ceaa",
+                "7a8db1e5-05c2-473e-ac26-69d114a1ceaa",
+                "7a8db1e5-05c2-473e-ac26-69d114a1ceaa",
+                "7a8db1e5-05c2-473e-ac26-69d114a1ceaa",
+                "7a8db1e5-05c2-473e-ac26-69d114a1ceaa"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.519Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "13680",
+                "address": "6 place de la republique",
+                "coordinates": {
+                    "lon": 5.1248605,
+                    "lat": 43.5902136
+                },
+                "city": "lancon provence"
+            },
+            "covidVaccineInjectionDate": "2021-04-22T09:15:00.000Z",
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-des-iris-lancon-provence",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2021-03-15T19:03:28.683Z",
+            "type": "Pharmacie",
+            "id": "a7c109b2-b50c-4c25-be00-959f78b90484",
+            "phone": "+33490427607",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:44.429Z",
+            "name": "Pharmacie La Galerie",
+            "professionals": [
+                "bf9b4e35-52af-47e7-907d-c2537755bb3e",
+                "bf9b4e35-52af-47e7-907d-c2537755bb3e",
+                "bf9b4e35-52af-47e7-907d-c2537755bb3e",
+                "bf9b4e35-52af-47e7-907d-c2537755bb3e",
+                "bf9b4e35-52af-47e7-907d-c2537755bb3e"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.519Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "29000",
+                "address": "163 RTE DE BENODET",
+                "coordinates": {
+                    "lon": -4.094823,
+                    "lat": 47.9747201
+                },
+                "city": "quimper"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-la-galerie-quimper",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2021-03-25T07:08:26.942Z",
+            "type": "Pharmacie",
+            "id": "a8adb3b4-737d-4361-8a45-71d718ece032",
+            "phone": "+33298905316",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:45.560Z",
+            "name": "Pharmacie De La Mairie",
+            "professionals": [
+                "2fdd2b2d-1191-4d26-8d07-0a2e11de4c2e",
+                "2fdd2b2d-1191-4d26-8d07-0a2e11de4c2e",
+                "2fdd2b2d-1191-4d26-8d07-0a2e11de4c2e",
+                "2fdd2b2d-1191-4d26-8d07-0a2e11de4c2e",
+                "2fdd2b2d-1191-4d26-8d07-0a2e11de4c2e"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.519Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "95580",
+                "address": "9 place louis jean finot",
+                "coordinates": {
+                    "lon": 2.2988758,
+                    "lat": 49.0048594
+                },
+                "city": "andilly"
+            },
+            "covidVaccineInjectionDate": "2021-05-29T11:00:00.000Z",
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-de-la-mairie-andilly",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2021-04-06T00:42:42.487Z",
+            "type": "Pharmacie",
+            "id": "ace3c632-77ee-4a06-bb1a-ba2d2103197b",
+            "phone": "+33139592168",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:45.684Z",
+            "name": "Pharmacie Des Vignes",
+            "professionals": [
+                "f93a0547-32b6-43c1-a65e-443d9956f562",
+                "f93a0547-32b6-43c1-a65e-443d9956f562",
+                "f93a0547-32b6-43c1-a65e-443d9956f562",
+                "f93a0547-32b6-43c1-a65e-443d9956f562",
+                "f93a0547-32b6-43c1-a65e-443d9956f562"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.519Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "34000",
+                "address": "31 avenue Ecole Agriculture G. Buchet",
+                "coordinates": {
+                    "lon": 3.8577281,
+                    "lat": 43.6143535
+                },
+                "city": "MONTPELLIER"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-des-vignes-montpellier",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-19T08:08:56.775Z",
+            "type": "Pharmacie",
+            "id": "b07ad721-c668-4bb2-9870-1701cc62d241",
+            "phone": "+33467630785",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:45.938Z",
+            "name": "Pharmacie Des Reynats",
+            "professionals": [
+                "0f4e7430-81ce-47f8-8486-e8c03f98ffee",
+                "0f4e7430-81ce-47f8-8486-e8c03f98ffee",
+                "0f4e7430-81ce-47f8-8486-e8c03f98ffee",
+                "0f4e7430-81ce-47f8-8486-e8c03f98ffee",
+                "0f4e7430-81ce-47f8-8486-e8c03f98ffee",
+                "0f4e7430-81ce-47f8-8486-e8c03f98ffee",
+                "0f4e7430-81ce-47f8-8486-e8c03f98ffee"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.520Z",
+            "antigenicTestDate": "2021-04-19T08:50:00.000Z",
+            "location": {
+                "zip": "24650",
+                "address": "58 AV des Reynats",
+                "coordinates": {
+                    "lon": 0.6696451000000001,
+                    "lat": 45.2005284
+                },
+                "city": "CHANCELADE"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-des-reynats-chancelade",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-04T08:46:18.545Z",
+            "type": "Pharmacie",
+            "id": "b9f0bf5a-87c6-4857-8ee8-04aaea47e40e",
+            "phone": "+33553047813",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": false,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:47.218Z",
+            "name": "Pharmacie Des Cigognes",
+            "professionals": [
+                "83c2f75f-db5d-476e-9609-2b818a929a68",
+                "83c2f75f-db5d-476e-9609-2b818a929a68",
+                "83c2f75f-db5d-476e-9609-2b818a929a68",
+                "83c2f75f-db5d-476e-9609-2b818a929a68",
+                "83c2f75f-db5d-476e-9609-2b818a929a68"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.608Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "67210",
+                "address": "31 Rue du Marechal Koenig",
+                "coordinates": {
+                    "lon": 7.49316,
+                    "lat": 48.4583123
+                },
+                "city": "Obernai"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-des-cigognes-obernai",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2021-03-12T11:15:57.933Z",
+            "type": "Pharmacie",
+            "id": "bd16eeaf-2542-4c41-aedc-fcd85a38189f",
+            "phone": "+33388953030",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:47.747Z",
+            "name": "Pharmacie Delahaye Eurl",
+            "professionals": [
+                "c2d56742-70d6-4de5-822f-48655dba0bcd",
+                "c2d56742-70d6-4de5-822f-48655dba0bcd",
+                "c2d56742-70d6-4de5-822f-48655dba0bcd",
+                "c2d56742-70d6-4de5-822f-48655dba0bcd",
+                "c2d56742-70d6-4de5-822f-48655dba0bcd"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.609Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "33160",
+                "address": "15 Route de Germignan",
+                "coordinates": {
+                    "lon": -0.7228249999999999,
+                    "lat": 44.9115791
+                },
+                "city": "Saint-Aubin-de-Médoc"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-delahaye-eurl-saint-aubin-de-medoc",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "any"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2021-03-15T07:58:34.152Z",
+            "type": "Pharmacie",
+            "id": "c523ce4f-d491-4d28-b781-8e77dfafa89a",
+            "phone": "",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:47.791Z",
+            "name":"Pharmacie D'Ergue-Armel C.C Casino",
+            "professionals": [
+                "fd8dd309-dc0e-4f49-9321-0042a195fb82",
+                "fd8dd309-dc0e-4f49-9321-0042a195fb82",
+                "fd8dd309-dc0e-4f49-9321-0042a195fb82",
+                "fd8dd309-dc0e-4f49-9321-0042a195fb82",
+                "fd8dd309-dc0e-4f49-9321-0042a195fb82"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.609Z",
+            "antigenicTestDate": "2021-04-20T08:10:00.000Z",
+            "location": {
+                "zip": "29000",
+                "address": "2 Avenue de Ty Bos",
+                "coordinates": {
+                    "lon": -4.073479499999999,
+                    "lat": 47.9826383
+                },
+                "city": "Quimper"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug":"pharmacie-d'ergue-armel-c.c-casino-quimper",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-09T10:51:57.180Z",
+            "type": "Pharmacie",
+            "id": "c6dbd33f-51f9-454c-b7a6-f0fc73c577e4",
+            "phone": "+33298907810",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": false,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:48.446Z",
+            "name": "Pharmacie De La Sambre",
+            "professionals": [
+                "fcebd7a7-31d6-4a61-bb2b-dfdd9a97eeb0",
+                "fcebd7a7-31d6-4a61-bb2b-dfdd9a97eeb0",
+                "fcebd7a7-31d6-4a61-bb2b-dfdd9a97eeb0",
+                "fcebd7a7-31d6-4a61-bb2b-dfdd9a97eeb0",
+                "fcebd7a7-31d6-4a61-bb2b-dfdd9a97eeb0"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.610Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "59460",
+                "address": "27 Rue Jean Jaurès",
+                "coordinates": {
+                    "lon": 4.102241999999999,
+                    "lat": 50.29707430000001
+                },
+                "city": "Jeumont"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-de-la-sambre-jeumont",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "any"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-30T07:27:14.933Z",
+            "type": "Pharmacie",
+            "id": "cfa2beff-732a-4d9a-8466-464e00a2daf1",
+            "phone": "+33327396187",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:48.464Z",
+            "name": "Pharmacie Trincal",
+            "professionals": [
+                "15d1ac13-9d98-4e7f-bd5c-25ba51d2e596",
+                "15d1ac13-9d98-4e7f-bd5c-25ba51d2e596",
+                "15d1ac13-9d98-4e7f-bd5c-25ba51d2e596",
+                "15d1ac13-9d98-4e7f-bd5c-25ba51d2e596",
+                "15d1ac13-9d98-4e7f-bd5c-25ba51d2e596"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.610Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "92170",
+                "address": "55 R RAYMOND MARCHERON",
+                "coordinates": {
+                    "lon": 2.2900994,
+                    "lat": 48.82025789999999
+                },
+                "city": "VANVES"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-trincal-vanves",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2021-03-09T14:16:17.917Z",
+            "type": "Pharmacie",
+            "id": "cfb2dc09-c46d-4bf4-92ab-256dbc232d79",
+            "phone": "+33146420381",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": false
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:48.826Z",
+            "name": "Pharmacie Du Mortier",
+            "professionals": [
+                "c4a10b0d-86a1-4b36-995a-f0487ad2661b",
+                "c4a10b0d-86a1-4b36-995a-f0487ad2661b",
+                "c4a10b0d-86a1-4b36-995a-f0487ad2661b",
+                "c4a10b0d-86a1-4b36-995a-f0487ad2661b",
+                "c4a10b0d-86a1-4b36-995a-f0487ad2661b"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.611Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "01200",
+                "address": "3 Rue Joseph Bertola",
+                "coordinates": {
+                    "lon": 2.4819234,
+                    "lat": 50.5623406
+                },
+                "city": "Valserhône"
+            },
+            "covidVaccineInjectionDate": "2021-12-09T09:00:00.000Z",
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-du-mortier-valserhone",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2021-03-08T14:16:56.393Z",
+            "type": "Pharmacie",
+            "id": "d958b43b-28e2-479d-a0d9-9b15501f9842",
+            "phone": "+33450482806",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": false
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:49.871Z",
+            "name": "Pharmacie Ponthieux",
+            "professionals": [
+                "c717e0d2-b340-430a-9186-f7b1a60d3404",
+                "c717e0d2-b340-430a-9186-f7b1a60d3404",
+                "c717e0d2-b340-430a-9186-f7b1a60d3404",
+                "c717e0d2-b340-430a-9186-f7b1a60d3404",
+                "c717e0d2-b340-430a-9186-f7b1a60d3404"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.612Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "02300",
+                "address": "10 rue de la république",
+                "coordinates": {
+                    "lon": 3.218973,
+                    "lat": 49.6147741
+                },
+                "city": "Chauny"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-ponthieux-chauny",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2021-03-10T20:17:47.817Z",
+            "type": "Pharmacie",
+            "id": "e009c904-5b49-4c2f-85a2-bf19005a9426",
+            "phone": "",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:50.691Z",
+            "name": "Pierre Lancelot",
+            "professionals": [
+                "65140462-7ad2-40d8-bd3f-dc6240df209f",
+                "65140462-7ad2-40d8-bd3f-dc6240df209f",
+                "65140462-7ad2-40d8-bd3f-dc6240df209f",
+                "65140462-7ad2-40d8-bd3f-dc6240df209f",
+                "65140462-7ad2-40d8-bd3f-dc6240df209f",
+                "65140462-7ad2-40d8-bd3f-dc6240df209f"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.809Z",
+            "antigenicTestDate": "2021-04-19T07:50:00.000Z",
+            "location": {
+                "zip": "82600",
+                "address": "avenue de toulouse",
+                "coordinates": {
+                    "lon": 1.2157513,
+                    "lat": 43.8026695
+                },
+                "city": "82600 - AUCAMVILLE"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pierre-lancelot-82600---aucamville",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-12T17:04:32.811Z",
+            "type": "Pharmacie",
+            "id": "e6eafd26-a6bc-497e-a1fe-045a1c771ad8",
+            "phone": "+33563026802",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:51.309Z",
+            "name":"Pharmacie D'Eleu",
+            "professionals": [
+                "20898dcf-27b0-4826-b958-7e39755e24b7",
+                "20898dcf-27b0-4826-b958-7e39755e24b7",
+                "20898dcf-27b0-4826-b958-7e39755e24b7",
+                "20898dcf-27b0-4826-b958-7e39755e24b7",
+                "20898dcf-27b0-4826-b958-7e39755e24b7",
+                "20898dcf-27b0-4826-b958-7e39755e24b7",
+                "20898dcf-27b0-4826-b958-7e39755e24b7"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.810Z",
+            "antigenicTestDate": "2021-04-19T07:00:00.000Z",
+            "location": {
+                "zip": "62300",
+                "address": "2 rue gabriel Péri",
+                "coordinates": {
+                    "lon": 2.8171747,
+                    "lat": 50.4161742
+                },
+                "city": "ELEU-DIT-LEAUWETTE"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug":"pharmacie-d'eleu-eleu-dit-leauwette",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-03-16T19:15:51.319Z",
+            "type": "Pharmacie",
+            "id": "e9c4990e-711f-4af6-aee2-354de59c9e4e",
+            "phone": "+33321282330",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:52.543Z",
+            "name": "Pharmacie De La Place De La République",
+            "professionals": [
+                "2f86e7f6-9318-4ccf-a4e8-81ad905b0119",
+                "2f86e7f6-9318-4ccf-a4e8-81ad905b0119",
+                "2f86e7f6-9318-4ccf-a4e8-81ad905b0119",
+                "2f86e7f6-9318-4ccf-a4e8-81ad905b0119",
+                "2f86e7f6-9318-4ccf-a4e8-81ad905b0119"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.810Z",
+            "antigenicTestDate": "2021-04-19T06:00:00.000Z",
+            "location": {
+                "zip": "75003",
+                "address": "5 Place de la République",
+                "coordinates": {
+                    "lon": 2.364274,
+                    "lat": 48.8664485
+                },
+                "city": "Paris"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-de-la-place-de-la-republique-paris",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": true,
+            "activatedAt": "2021-04-02T10:03:04.993Z",
+            "type": "Pharmacie",
+            "id": "ebd27a8b-4ca8-4fd4-910f-c397635e0301",
+            "phone": "+33147001808",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": false,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:53.134Z",
+            "name": "Chambly Pharma",
+            "professionals": [
+                "298c1f63-3229-41da-94b2-30e48434439d",
+                "298c1f63-3229-41da-94b2-30e48434439d",
+                "298c1f63-3229-41da-94b2-30e48434439d",
+                "298c1f63-3229-41da-94b2-30e48434439d",
+                "298c1f63-3229-41da-94b2-30e48434439d"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.810Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "60230",
+                "address": "rue francois truffaut ",
+                "coordinates": {
+                    "lon": 2.2564365,
+                    "lat": 49.15763519999999
+                },
+                "city": "Chambly"
+            },
+            "covidVaccineInjectionDate": "2021-05-07T16:10:00.000Z",
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "chambly-pharma-chambly",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2021-03-10T20:17:19.608Z",
+            "type": "Pharmacie",
+            "id": "ec0e1678-f1fb-42b3-8199-b78b834236bf",
+            "phone": "+33134705137",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:54.813Z",
+            "name": "Snc Dulin Guimard",
+            "professionals": [
+                "40cef292-3931-4a6d-8262-94f9d392de36",
+                "40cef292-3931-4a6d-8262-94f9d392de36",
+                "40cef292-3931-4a6d-8262-94f9d392de36",
+                "40cef292-3931-4a6d-8262-94f9d392de36",
+                "40cef292-3931-4a6d-8262-94f9d392de36"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.811Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "33420",
+                "address": "83 rue emmanuel Roy",
+                "coordinates": {
+                    "lon": -0.1878246,
+                    "lat": 44.8292853
+                },
+                "city": "branne"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "snc-dulin-guimard-branne",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "any"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2021-03-12T17:04:22.220Z",
+            "type": "Pharmacie",
+            "id": "f01a7e60-015a-47a6-8f90-2f81945bdcfa",
+            "phone": "+33557845132",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:30:55.321Z",
+            "name": "Pharmacie Du Collège",
+            "professionals": [
+                "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+                "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+                "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+                "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+                "6d4f80ba-fa78-4ce3-a04b-99716d36bd73"
+            ],
+            "@timestamp": "2021-04-18T14:31:00.812Z",
+            "antigenicTestDate": null,
+            "location": {
+                "zip": "01130",
+                "address": "19 rue du Collège",
+                "coordinates": {
+                    "lon": 5.606802999999999,
+                    "lat": 46.153488
+                },
+                "city": "Nantua"
+            },
+            "covidVaccineInjectionDate": "2021-04-19T15:00:00.000Z",
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "pharmacie-du-college",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": false,
+            "isAntigenicSupported": false,
+            "activatedAt": "2021-03-10T20:17:39.767Z",
+            "type": "Pharmacie",
+            "id": "feb094ba-7941-4301-8952-5a68ba3e04f5",
+            "phone": "+33474750042",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        },
+        {
+            "isRTPCRSupported": false,
+            "activated": true,
+            "updatedAt": "2021-04-18T14:35:26.001Z",
+            "name": "Grande Pharmacie Des Halles",
+            "professionals": [
+                "54484860-013c-4290-973c-2805688a4f98",
+                "54484860-013c-4290-973c-2805688a4f98",
+                "54484860-013c-4290-973c-2805688a4f98",
+                "54484860-013c-4290-973c-2805688a4f98",
+                "54484860-013c-4290-973c-2805688a4f98",
+                "5a959423-3211-4d52-ae38-0d769443a2c1",
+                "5a959423-3211-4d52-ae38-0d769443a2c1",
+                "5a959423-3211-4d52-ae38-0d769443a2c1",
+                "5a959423-3211-4d52-ae38-0d769443a2c1",
+                "5a959423-3211-4d52-ae38-0d769443a2c1"
+            ],
+            "@timestamp": "2021-04-18T14:35:30.508Z",
+            "antigenicTestDate": "2021-04-18T14:40:00.000Z",
+            "location": {
+                "zip": "59000",
+                "address": "99 Rue de Solferino",
+                "coordinates": {
+                    "lon": 3.054965,
+                    "lat": 50.6312977
+                },
+                "city": "Lille"
+            },
+            "covidVaccineInjectionDate": null,
+            "isPublicProfile": true,
+            "isCovidVaccineSupported": true,
+            "@version": "1",
+            "publicProfile": {
+                "slug": "grande-pharmacie-des-halles-lille",
+                "publishedAt": true
+            },
+            "deleted": false,
+            "bookingSettings": {
+                "option": "internal"
+            },
+            "isCncActivated": true,
+            "isAntigenicSupported": true,
+            "activatedAt": "2019-09-06T02:12:59.304Z",
+            "type": "Pharmacie",
+            "id": "0662342e-d199-45ee-b778-64eb9ea99c74",
+            "phone": "+33320540274",
+            "covidOnlineBookingAvailabilities": {
+                "covidInjection2": true,
+                "covidInjection1": true,
+                "antigenic": true
+            }
+        }
+    ]
+}
