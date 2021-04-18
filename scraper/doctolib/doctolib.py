@@ -81,7 +81,6 @@ class DoctolibSlots:
         if len(rdata.get('places', [])) > 1 and practice_id is None:
             practice_id = rdata.get('places')[0].get('practice_ids', None)
 
-        appointment_count = 0
         request.update_practitioner_type(
             parse_practitioner_type(centre, rdata))
         set_doctolib_center_internal_id(request, rdata, practice_id)
@@ -94,26 +93,25 @@ class DoctolibSlots:
 
         if visit_motive_ids is None:
             return None
-        # practice_ids / agenda_ids
-        agenda_ids, practice_ids = _find_agenda_and_practice_ids(
-            data, visit_motive_ids, practice_id_filter=practice_id
-        )
-        if not agenda_ids or not practice_ids:
-            return None
+
         all_agendas = parse_agenda_ids(rdata)
-        agenda_ids = self.sort_agenda_ids(all_agendas, agenda_ids)
-
-        # temporary_booking_disabled ??
-
-        agenda_ids_q = "-".join(agenda_ids)
-        practice_ids_q = "-".join(practice_ids)
-        start_date = request.get_start_date()
 
         first_availability = None
-        start_date_tmp = start_date
-        for motive_id in visit_motive_ids:
+        for visit_motive_id in visit_motive_ids:
+            agenda_ids, practice_ids = _find_agenda_and_practice_ids(
+                data, visit_motive_id, practice_id_filter=practice_id
+            )
+            agenda_ids = self.sort_agenda_ids(all_agendas, agenda_ids)
+
+            # temporary_booking_disabled ??
+
+            agenda_ids_q = "-".join(agenda_ids)
+            practice_ids_q = "-".join(practice_ids)
+            start_date = request.get_start_date()
+
+            start_date_tmp = start_date
             for i in range(DOCTOLIB_ITERATIONS):
-                sdate, appt, stop = self.get_appointments(request, start_date_tmp, visit_motive_ids, motive_id,
+                sdate, appt, stop = self.get_appointments(request, start_date_tmp, visit_motive_ids, visit_motive_id,
                                                           agenda_ids_q, practice_ids_q, DOCTOLIB_SLOT_LIMIT)
                 if stop:
                     break
@@ -369,7 +367,7 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: list = None):
     return relevant_motives
 
 
-def _find_agenda_and_practice_ids(data: dict, visit_motive_id: list, practice_id_filter: list = None) -> Tuple[
+def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str, practice_id_filter: list = None) -> Tuple[
     list, list]:
     """
     Etant donné une réponse à /booking/<centre>.json, renvoie tous les
@@ -388,11 +386,10 @@ def _find_agenda_and_practice_ids(data: dict, visit_motive_id: list, practice_id
         if agenda['booking_disabled']:
             continue
         agenda_id = str(agenda['id'])
-        for pratice_id, visit_motive_list in agenda['visit_motive_ids_by_practice_id'].items():
-            for motive in visit_motive_id:
-                if motive in visit_motive_list:
-                    practice_ids.add(str(pratice_id))
-                    agenda_ids.add(agenda_id)
+        for pratice_id_agenda, visit_motive_list_agenda in agenda['visit_motive_ids_by_practice_id'].items():
+            if visit_motive_id in visit_motive_list_agenda:
+                practice_ids.add(str(pratice_id_agenda))
+                agenda_ids.add(agenda_id)
     return sorted(agenda_ids), sorted(practice_ids)
 
 
