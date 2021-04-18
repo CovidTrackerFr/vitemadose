@@ -171,14 +171,14 @@ def get_last_scans(centres, outpath_format='data/output/{}.json'):
 
         for last_centres in info_centres.values():
             for centre in last_centres["centres_disponibles"] + last_centres["centres_indisponibles"]:
-                if "last_scan" in centre:
-                    last_scans[centre["url"]]  = centre["last_scan"]
+                if "last_scan_with_availabilities" in centre:
+                    last_scans[centre["url"]]  = centre["last_scan_with_availabilities"]
 
         for centre in centres:
             if not centre.prochain_rdv:
                 if centre.url in last_scans:
-                    centre.last_scan = last_scans[centre.url] 
+                    centre.last_scan_with_availabilities = last_scans[centre.url] 
             else:
-                centre.last_scan = dt.datetime.now(tz=pytz.timezone('Europe/Paris')).isoformat()
+                centre.last_scan_with_availabilities = dt.datetime.now(tz=pytz.timezone('Europe/Paris')).isoformat()
 
     return centres

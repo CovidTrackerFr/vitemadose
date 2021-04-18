@@ -44,7 +44,7 @@ def test_get_last_scans():
     with mock_datetime_now(fake_now):
         centres_cherchés = get_last_scans(centres_cherchés, outpath_format)
 
-    assert centres_cherchés[0].last_scan == "2021-04-04T00:00:00"
-    assert centres_cherchés[1].last_scan == None
-    assert centres_cherchés[2].last_scan == "2021-03-03T00:00:00"
-    assert centres_cherchés[3].last_scan == "2021-05-05T00:00:00"
+    assert centres_cherchés[0].last_scan_with_availabilities == "2021-04-04T00:00:00"
+    assert centres_cherchés[1].last_scan_with_availabilities == None
+    assert centres_cherchés[2].last_scan_with_availabilities == "2021-03-03T00:00:00"
+    assert centres_cherchés[3].last_scan_with_availabilities == "2021-05-05T00:00:00"
