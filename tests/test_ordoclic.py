@@ -3,6 +3,9 @@ from pathlib import Path
 import httpx
 from datetime import datetime
 from dateutil.parser import isoparse
+from jsonschema import validate
+from jsonschema.exceptions import ValidationError
+import pytest
 
 from scraper.ordoclic import (
     search,
@@ -18,7 +21,32 @@ from scraper.pattern.scraper_request import ScraperRequest
 
 
 def test_search():
-    pass
+    # Test offline
+    def app(request: httpx.Request) -> httpx.Response:
+        assert request.url.path == '/v1/public/search'
+        assert dict(httpx.QueryParams(request.url.query)) == {'page': '1', 'per_page': '10000', 'in.isPublicProfile': 'true', 'in.isCovidVaccineSupported': 'true', 'in.covidOnlineBookingAvailabilities.covidInjection1': 'true' }
+
+        path = Path('tests/fixtures/ordoclic/search.json')
+        return httpx.Response(200, json=json.loads(path.read_text()))
+
+    client = httpx.Client(transport=httpx.MockTransport(app))
+    data_file = Path('tests/fixtures/ordoclic/search.json')
+    data = json.loads(data_file.read_text())
+    assert search(client) == data
+
+    # Test erreur HTTP
+    def app(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(403, json={})
+
+    client = httpx.Client(transport=httpx.MockTransport(app))
+    with pytest.raises(httpx.HTTPStatusError):
+        search(client)
+
+    # Test online
+    schema_file = Path('tests/fixtures/ordoclic/search.schema')
+    schema = json.loads(schema_file.read_text())
+    live_data = search()
+    validate(instance=live_data, schema=schema)
 
 
 def test_getReasons():

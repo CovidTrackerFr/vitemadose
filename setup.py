@@ -14,6 +14,7 @@ setup(
         'terminaltables==3.1.0',
         'python-dateutil==2.8.1',
         'coverage-badge==1.0.1',
-        'unidecode==1.2.0'
+        'unidecode==1.2.0',
+        'jsonschema==3.2.0'
     ],
 )
