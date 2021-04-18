@@ -1,122 +1,128 @@
 import json
 import logging
+import httpx
 
-import requests
 from datetime import datetime, timedelta
 from dateutil.parser import isoparse
 from pathlib import Path
-from bs4 import BeautifulSoup
+from urllib import parse as urlparse
+from urllib.parse import quote, parse_qs
+from typing import Optional
+
 from scraper.profiler import Profiling
-
+from scraper.pattern.center_info import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
+from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT
 
-BASE_AVAILIBILITY_URL = "https://www.maiia.com/api/pat-public/availability-closests"
-MAIIA_DAY_LIMIT = 50
-MAIIA_LIMIT = 10000
-
-session = requests.Session()
+timeout = httpx.Timeout(30.0, connect=30.0)
+DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 logger = logging.getLogger('scraper')
 
+MAIIA_URL = 'https://www.maiia.com'
+MAIIA_DAY_LIMIT = 50
 
-def get_availability_count(center_id, request: ScraperRequest):
-    now = datetime.now()
-    start_date = datetime.strftime(now, '%Y-%m-%dT%H:%M:%S.%f%zZ')
-    end_date = (now + timedelta(days=MAIIA_DAY_LIMIT)).strftime('%Y-%m-%dT%H:%M:%S.%f%zZ')
 
-    url = f'https://www.maiia.com/api/pat-public/availabilities?centerId={center_id}&from={start_date}&to={end_date}&page=0&limit={MAIIA_LIMIT}'
-    req = session.get(url)
-    req.raise_for_status()
-    data = req.json()
-    items = data.get('items', [])
-    slots = []
-    for item in items:
-        timeslot = item.get('timeSlotId', None)
-        if not timeslot:
-            continue
-        if timeslot not in slots:
-            slots.append(timeslot)
-    return len(slots)
+def parse_slots(slots: list) -> Optional[datetime]:
+    if not slots:
+        return None
+    first_availability = None
+    for slot in slots:
+        start_date_time = isoparse(slot['startDateTime'])
+        if first_availability == None or start_date_time < first_availability:
+            first_availability = start_date_time
+    return first_availability
+
+
+def get_next_slot_date(center_id: str, consultation_reason_name: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT) -> Optional[str]:
+    url = f'{MAIIA_URL}/api/pat-public/availability-closests?centerId={center_id}&consultationReasonName={consultation_reason_name}&from={start_date}'
+    try:
+        r = client.get(url)
+        r.raise_for_status()
+    except httpx.HTTPStatusError as hex:
+        logger.warning(f'{url} returned error {hex.response.status_code}')
+        return None
+    result = r.json()
+    if 'firstPhysicalStartDateTime' in result:
+        return result['firstPhysicalStartDateTime']
+    return None
+
+
+def get_slots(center_id: str, consultation_reason_name: str, start_date: str, end_date: str, limit=MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
+    url = f'{MAIIA_URL}/api/pat-public/availabilities?centerId={center_id}&consultationReasonName={consultation_reason_name}&from={start_date}&to={end_date}'
+    availabilities = get_paged(url, limit=limit, client=client)['items']
+    if not availabilities:
+        next_slot_date = get_next_slot_date(
+            center_id, consultation_reason_name, start_date, client=client)
+        if not next_slot_date:
+            return None
+        next_date = datetime.strptime(next_slot_date, '%Y-%m-%dT%H:%M:%S.%fZ')
+        start_date = datetime.strftime(next_date, '%Y-%m-%dT%H:%M:%S.%f%zZ')
+        end_date = (next_date + timedelta(days=MAIIA_DAY_LIMIT)
+                    ).strftime('%Y-%m-%dT%H:%M:%S.%f%zZ')
+        url = f'{MAIIA_URL}/api/pat-public/availabilities?centerId={center_id}&consultationReasonName={consultation_reason_name}&from={start_date}&to={end_date}'
+        availabilities = get_paged(url, limit=limit, client=client)['items']
+    if availabilities:
+        return availabilities
+    return None
+
+
+def get_reasons(center_id: str, limit=MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIENT) -> list:
+    url = f'{MAIIA_URL}/api/pat-public/consultation-reason-hcd?rootCenterId={center_id}'
+    result = get_paged(url, limit=limit, client=client)
+    if not result['total']:
+        return []
+    return result.get('items', [])
+
+
+def get_first_availability(center_id: str, request_date: str, reasons: [dict], client: httpx.Client = DEFAULT_CLIENT) -> [Optional[datetime], int]:
+    date = isoparse(request_date)
+    start_date = datetime.strftime(date, '%Y-%m-%dT%H:%M:%S.%f%zZ')
+    end_date = (date + timedelta(days=MAIIA_DAY_LIMIT)).strftime('%Y-%m-%dT%H:%M:%S.%f%zZ')
+    first_availability = None
+    slots_count = 0
+
+    for consultation_reason in reasons:
+        consultation_reason_name_quote = quote(consultation_reason.get('name'), '')
+        if 'injectionType' in consultation_reason and consultation_reason['injectionType'] in ['FIRST', 'SECOND']:
+            slots = get_slots(center_id, consultation_reason_name_quote, start_date, end_date, client=client)
+            slot_availability = parse_slots(slots)
+            if slot_availability == None:
+                continue
+            slots_count += len(slots)
+            if first_availability == None or slot_availability < first_availability:
+                first_availability = slot_availability
+
+    return first_availability, slots_count
 
 
 @Profiling.measure('maiia_slot')
-def fetch_slots(request: ScraperRequest):
-    response = session.get(request.get_url())
-    soup = BeautifulSoup(response.text, 'html.parser')
-    try:
-        response.raise_for_status()
-    except requests.exceptions.HTTPError as e:
-        logger.error(f"Requête pour {request.get_url()} a levé une erreur : {e}")
+def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) -> Optional[str]:
+    url = request.get_url()
+    start_date = request.get_start_date()
+    url_query = parse_qs(urlparse.urlparse(url).query)
+    if 'centerid' not in url_query:
+        logger.warning(f'No centerId in fetch url: {url}')
+        return None
+    center_id = url_query['centerid'][0]
+
+    reasons = get_reasons(center_id, client=client)
+    if not reasons:
         return None
 
-    rdv_form = soup.find(id="__NEXT_DATA__")
-    if rdv_form:
-        return get_slots_from(rdv_form, request)
-
-    return None
-
-
-def get_slots_from(rdv_form, request: ScraperRequest):
-    json_form = json.loads(rdv_form.contents[0])
-
-    rdv_form_attributes = ['props', 'initialState', 'cards', 'item', 'center']
-    tmp = json_form
-
-    # Étant donné que l'arbre des attributs est assez cossu / profond, il est préférable
-    # d'itérer et de vérifier à chaque fois que les attributs recherchés sont bien
-    # présents dans l'arbre afin de ne pas avoir d'erreurs inattendues.
-    for attr in rdv_form_attributes:
-        if tmp is not None and attr in tmp:
-            tmp = tmp[attr]
-        else:
-            return None
-
-    center_infos = tmp
-    center_id = center_infos['id']
-
-    availability = get_any_availibility_from(center_id, request.get_start_date())
-    if not availability or availability["availabilityCount"] == 0:
+    first_availability, slots_count = get_first_availability(center_id, start_date, reasons, client=client)
+    if first_availability == None:
         return None
 
-    # Update availability count
-    availability_count = get_availability_count(center_id, request)
-    request.update_appointment_count(availability_count)
-    if "firstPhysicalStartDateTime" in availability:
-        dt = isoparse(availability['firstPhysicalStartDateTime'])
-        dt = dt + timedelta(hours=2)
-        dt = dt.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
-        return dt
-
-    # Ne sachant pas si 'firstPhysicalStartDateTime' est un attribut par défault dans
-    # la réponse, je préfère faire des tests sur l'existence des attributs
-    if (
-            "closestPhysicalAvailability" in availability and
-            "startDateTime" in availability["closestPhysicalAvailability"]
-    ):
-        dt = isoparse(availability['closestPhysicalAvailability']["startDateTime"])
-        dt = dt + timedelta(hours=2)
-        dt = dt.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
-        return dt
-
-    return None
-
-
-def get_any_availibility_from(center_id, start_date):
-    start_date = datetime.strptime(start_date, '%Y-%m-%d')
-    start_date = start_date.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
-    request_params = {
-        "date_str": start_date,
-        "centerId": center_id,
-        "limit": 200,
-        "page": 0,
-    }
-
-    availability = session.get(BASE_AVAILIBILITY_URL, params=request_params)
-    return availability.json()
+    for reason in reasons:
+        request.add_vaccine_type(get_vaccine_name(reason['name']))
+    request.update_internal_id(center_id)
+    request.update_appointment_count(slots_count)
+    return first_availability.isoformat()
 
 
 def centre_iterator():
     path = Path('data', 'output', 'maiia_centers.json')
-    with open(path, 'r', encoding='utf8') as f:
+    with open(path, 'r', encoding='utf-8') as f:
         centres = json.load(f)
     for centre in centres:
         yield centre
