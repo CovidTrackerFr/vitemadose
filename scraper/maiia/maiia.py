@@ -3,6 +3,8 @@ import logging
 import httpx
 
 from datetime import datetime, timedelta
+
+import requests
 from dateutil.parser import isoparse
 from pathlib import Path
 from urllib import parse as urlparse
@@ -121,8 +123,17 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
 
 
 def centre_iterator():
-    path = Path('data', 'output', 'maiia_centers.json')
-    with open(path, 'r', encoding='utf-8') as f:
-        centres = json.load(f)
-    for centre in centres:
-        yield centre
+    try:
+        center_path = 'data/output/maiia_centers.json'
+        url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"
+        response = requests.get(url)
+        response.raise_for_status()
+        data = response.json()
+        file = open(center_path, 'w')
+        file.write(json.dumps(data, indent=2))
+        file.close()
+        logger.info(f"Found {len(data)} Maiia centers (external scraper).")
+        for center in data:
+            yield center
+    except Exception as e:
+        logger.warning(f"Unable to scrape Maiia centers: {e}")
