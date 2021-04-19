@@ -11,6 +11,7 @@ DOCTOLIB_APPOINTMENT_REASON = [
     '1ere injection',
     'vaccination'
 ]
+DOCTOLIB_APPOINTMENT_REASON = [c.lower().strip() for c in DOCTOLIB_APPOINTMENT_REASON]
 
 DOCTOLIB_CATEGORY = [
     'non professionnels de santé',
@@ -26,6 +27,7 @@ DOCTOLIB_CATEGORY = [
     'Pfizer',
     'Astra Zeneca',
 ]
+DOCTOLIB_CATEGORY = [c.lower().strip() for c in DOCTOLIB_CATEGORY]
 
 
 def is_category_relevant(category):
