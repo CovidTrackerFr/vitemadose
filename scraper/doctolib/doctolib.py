@@ -101,27 +101,26 @@ class DoctolibSlots:
             agenda_ids, practice_ids = _find_agenda_and_practice_ids(
                 data, visit_motive_id, practice_id_filter=practice_id
             )
-            agenda_ids = self.sort_agenda_ids(all_agendas, agenda_ids)
+            if agenda_ids != [] and practice_ids != []:
+                agenda_ids = self.sort_agenda_ids(all_agendas, agenda_ids)
 
-            # temporary_booking_disabled ??
+                agenda_ids_q = "-".join(agenda_ids)
+                practice_ids_q = "-".join(practice_ids)
+                start_date = request.get_start_date()
 
-            agenda_ids_q = "-".join(agenda_ids)
-            practice_ids_q = "-".join(practice_ids)
-            start_date = request.get_start_date()
-
-            start_date_tmp = start_date
-            for i in range(DOCTOLIB_ITERATIONS):
-                sdate, appt, stop = self.get_appointments(request, start_date_tmp, visit_motive_ids, visit_motive_id,
-                                                          agenda_ids_q, practice_ids_q, DOCTOLIB_SLOT_LIMIT)
-                if stop:
-                    break
-                start_date_tmp = datetime.now() + timedelta(days=7 * i)
-                start_date_tmp = start_date_tmp.strftime("%Y-%m-%d")
-                if not sdate:
-                    continue
-                if not first_availability or sdate < first_availability:
-                    first_availability = sdate
-                request.update_appointment_count(request.appointment_count + appt)
+                start_date_tmp = start_date
+                for i in range(DOCTOLIB_ITERATIONS):
+                    sdate, appt, stop = self.get_appointments(request, start_date_tmp, visit_motive_ids, visit_motive_id,
+                                                            agenda_ids_q, practice_ids_q, DOCTOLIB_SLOT_LIMIT)
+                    if stop:
+                        break
+                    start_date_tmp = datetime.now() + timedelta(days=7 * i)
+                    start_date_tmp = start_date_tmp.strftime("%Y-%m-%d")
+                    if not sdate:
+                        continue
+                    if not first_availability or sdate < first_availability:
+                        first_availability = sdate
+                    request.update_appointment_count(request.appointment_count + appt)
 
         return first_availability
 
