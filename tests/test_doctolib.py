@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from scraper.doctolib.doctolib_filters import is_category_relevant
 from scraper.error import BlockedByDoctolibError
 
 import httpx
@@ -385,3 +386,10 @@ def test_find_agenda_and_practice_ids():
     agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=1, practice_id_filter=[21])
     assert agenda_ids == ["12"]
     assert practice_ids == ["21", "24"]
+
+
+def test_category_relevant():
+    assert is_category_relevant("Pfizer")
+    assert is_category_relevant("Astra Zeneca")
+
+test_category_relevant()
