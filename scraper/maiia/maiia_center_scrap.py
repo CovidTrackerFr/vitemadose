@@ -19,6 +19,8 @@ MAIIA_DAY_LIMIT = 50
 CENTER_TYPES = ['centre-de-vaccination',
                 'pharmacie',
                 'centre-hospitalier-(ch)']
+MAIIA_DO_NOT_SCRAP_ID = ['603e4fae8c512e753fc49ba1']
+MAIIA_DO_NOT_SCRAP_NAME = ['test', 'antigenique', 'antigénique']
 
 
 def get_centers(speciality: str) -> list:
@@ -97,7 +99,9 @@ def main():
             if root_center.get('type') != "CENTER":
                 continue
             center = root_center['center']
-            if not any(consultation_reason.get('injectionType') in ['FIRST', 'SECOND'] for consultation_reason in root_center['consultationReasons']):
+            if center['id'] in MAIIA_DO_NOT_SCRAP_ID:
+                continue
+            if not any(consultation_reason.get('injectionType') in ['FIRST'] and not any(keyword in consultation_reason.get('name').lower() for keyword in MAIIA_DO_NOT_SCRAP_NAME) for consultation_reason in root_center['consultationReasons']):
                 continue
             centers.append(maiia_center_to_csv(center, root_center))
             centers_ids.append(center['id'])
