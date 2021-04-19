@@ -14,6 +14,21 @@ RESERVED_CENTERS = [
 ]
 
 
+def load_insee() -> dict:
+    with open("data/input/codepostal_to_insee.json") as json_file:
+        return json.load(json_file)
+
+
+def load_cedex_to_insee() -> dict:
+    with open("data/input/cedex_to_insee.json") as json_file:
+        return json.load(json_file)
+
+
+logger = logging.getLogger('scraper')
+insee = load_insee()
+cedex_to_insee = load_cedex_to_insee()
+
+
 def is_reserved_center(center):
     if not center:
         return False
@@ -28,10 +43,6 @@ def urlify(s):
     s = re.sub(r"[^\w\s\-]", '', s)
     s = re.sub(r"\s+", '-', s).lower()
     return unidecode(s)
-
-
-logger = logging.getLogger('scraper')
-insee = {}
 
 
 class departementUtils:
@@ -103,19 +114,24 @@ class departementUtils:
         return None
 
     @staticmethod
-    def cp_to_insee(cp):
-        insee_com = cp  # si jamais on ne trouve pas de correspondance...
-        # on charge la table de correspondance cp/insee, une seule fois
-        global insee
-        if insee == {}:
-            with open("data/input/codepostal_to_insee.json") as json_file:
-                insee = json.load(json_file)
+    def cp_to_insee(cp: str) -> str:
+        # Split for when when CP is like 'XXXX CEDEX'
+        cp = format_cp(cp)
         if cp in insee:
-            insee_com = insee.get(cp).get("insee")
+            return insee[cp]["insee"]
+        elif cp in cedex_to_insee:
+            cedex = cp
+            return cedex_to_insee[cedex]["insee"]
         else:
             logger.warning(f'Unable to translate cp >{cp}< to insee')
-        return insee_com
+            return cp
 
+
+def format_cp(cp: str) -> str:
+    formatted_cp = str(cp).strip().split()[0]
+    if len(formatted_cp) == 4:
+        return f"0{formatted_cp}"
+    return formatted_cp
 
 def format_phone_number(_phone_number: str) -> str:
     phone_number = _phone_number
