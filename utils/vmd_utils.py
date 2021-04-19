@@ -4,7 +4,10 @@ import json
 import logging
 from typing import List
 from urllib.parse import urlparse, urlencode, urlunparse, parse_qs, unquote
+import datetime as dt
+import pytz
 
+from pathlib import Path
 from unidecode import unidecode
 
 RESERVED_CENTERS = [
@@ -172,3 +175,26 @@ def fix_scrap_urls(url):
         u = u._replace(query=urlencode(query, True))
         url = urlunparse(u)
     return url
+
+
+def get_last_scans(centres, outpath_format='https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/{}.json'):
+    path = Path(outpath_format.format("info_centres"))
+    last_scans = {}
+
+    if path.is_file():
+        with open(path) as fichier:
+            info_centres = json.load(fichier)
+
+        for last_centres in info_centres.values():
+            for centre in last_centres["centres_disponibles"] + last_centres["centres_indisponibles"]:
+                if "last_scan_with_availabilities" in centre:
+                    last_scans[centre["url"]]  = centre["last_scan_with_availabilities"]
+
+        for centre in centres:
+            if not centre.prochain_rdv:
+                if centre.url in last_scans:
+                    centre.last_scan_with_availabilities = last_scans[centre.url] 
+            else:
+                centre.last_scan_with_availabilities = dt.datetime.now(tz=pytz.timezone('Europe/Paris')).isoformat()
+
+    return centres
