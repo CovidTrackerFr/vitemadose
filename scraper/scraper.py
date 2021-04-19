@@ -19,10 +19,11 @@ from scraper.pattern.center_info import convert_csv_data_to_center_info, CenterI
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
-from utils.vmd_utils import departementUtils, fix_scrap_urls, is_reserved_center, get_last_scans
+from utils.vmd_utils import departementUtils, fix_scrap_urls, is_reserved_center
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
+from .maiia.maiia import centre_iterator as maiia_centre_iterator
 from .maiia.maiia import fetch_slots as maiia_fetch_slots
 from .ordoclic import centre_iterator as ordoclic_centre_iterator
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
@@ -75,8 +76,6 @@ def scrape() -> None:
             centre_iterator_proportion,
             1
         )
-
-        centres_cherchés = get_last_scans(centres_cherchés)
         compte_centres, compte_centres_avec_dispo, compte_bloqués = export_data(
             centres_cherchés)
 
@@ -167,7 +166,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         erreur = centre.erreur
         centres_open_data.append(copy_omit_keys(centre.default(), ['prochain_rdv', 'internal_id', 'metadata',
                                                                    'location', 'appointment_count', 'erreur',
-                                                                   'ville', 'type', 'vaccine_type', 'last_scan_with_availabilities']))
+                                                                   'ville', 'type', 'vaccine_type']))
         if centre.prochain_rdv is None or centre.appointment_count == 0:
             par_departement[code_departement]['centres_indisponibles'].append(
                 centre.default())
@@ -253,7 +252,8 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
 def centre_iterator():
     visited_centers_links = set()
     for center in ialternate(ordoclic_centre_iterator(), mapharma_centre_iterator(),
-                             doctolib_center_iterator(), gouv_centre_iterator()):
+                             maiia_centre_iterator(), doctolib_center_iterator(), 
+                             gouv_centre_iterator()):
         if center["rdv_site_web"] not in visited_centers_links:
             visited_centers_links.add(center["rdv_site_web"])
             yield center
@@ -301,7 +301,7 @@ def gouv_centre_iterator(outpath_format='data/output/{}.json'):
 
 
 def should_use_opendata_csv(rdv_site_web: str) -> bool:
-    plateformes_hors_csv = ['doctolib']
+    plateformes_hors_csv = ['doctolib', 'maiia']
     
     if any(p in rdv_site_web for p in plateformes_hors_csv):
         return False

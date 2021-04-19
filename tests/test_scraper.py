@@ -123,8 +123,7 @@ def test_export_data(tmp_path):
                 "appointment_count": 1,
                 "internal_id": None,
                 "vaccine_type": None,
-                "erreur": None,
-                "last_scan_with_availabilities": None
+                "erreur": None
             },
         ],
         "centres_indisponibles": [],
@@ -147,8 +146,7 @@ def test_export_data(tmp_path):
                 "appointment_count": 1,
                 "internal_id": None,
                 "vaccine_type": None,
-                "erreur": None,
-                "last_scan_with_availabilities": None
+                "erreur": None
             },
         ],
         "centres_indisponibles": [
@@ -164,8 +162,7 @@ def test_export_data(tmp_path):
                 "appointment_count": 1,
                 "internal_id": None,
                 "vaccine_type": None,
-                "erreur": None,
-                "last_scan_with_availabilities": None
+                "erreur": None
             }
         ],
         "last_updated": "2021-04-04T00:00:00",
@@ -188,8 +185,7 @@ def test_export_data(tmp_path):
                 "appointment_count": 0,
                 "internal_id": None,
                 "vaccine_type": None,
-                "erreur": None,
-                "last_scan_with_availabilities": None
+                "erreur": None
             },
         ],
         "last_updated": "2021-04-04T00:00:00",
@@ -310,8 +306,7 @@ def test_export_data_when_blocked(tmp_path):
             "appointment_count": 0,
             "internal_id": None,
             "vaccine_type": None,
-            "erreur": "ERREUR DE SCRAPPING (Doctolib): Doctolib bloque nos appels: 403 https://example.com/hopital-magique",
-            "last_scan_with_availabilities": None
+            "erreur": "ERREUR DE SCRAPPING (Doctolib): Doctolib bloque nos appels: 403 https://example.com/hopital-magique"
         }],
         "doctolib_bloqué": True
     }
@@ -332,8 +327,7 @@ def test_export_data_when_blocked(tmp_path):
                 "appointment_count": 1,
                 "internal_id": None,
                 "vaccine_type": None,
-                "erreur": None,
-                "last_scan_with_availabilities": None
+                "erreur": None
             },
         ],
         "centres_indisponibles": [],
