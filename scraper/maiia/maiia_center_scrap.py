@@ -76,7 +76,10 @@ def maiia_center_to_csv(center: dict, root_center: dict) -> dict:
         if 'location' in center['publicInformation']['address']:
             csv['long_coor1'] = center['publicInformation']['address']['location']['coordinates'][0]
             csv['lat_coor1'] = center['publicInformation']['address']['location']['coordinates'][1]
-
+        elif 'locality' in center['publicInformation']['address'] \
+                and 'location' in center['publicInformation']['address']['locality']:
+            csv['long_coor1'] = center['publicInformation']['address']['locality']['location']['x']
+            csv['lat_coor1'] = center['publicInformation']['address']['locality']['location']['y']
     if 'officeInformation' in center['publicInformation']:
         csv['phone_number'] = format_phone_number(
             center['publicInformation']['officeInformation'].get('phoneNumber', ''))
