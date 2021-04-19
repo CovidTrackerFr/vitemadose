@@ -161,7 +161,7 @@ def fix_scrap_urls(url):
     return url
 
 
-def get_last_scans(centres, outpath_format="https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{}"):
+def get_last_scans(centres, outpath_format="https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{}.json"):
     path = Path(outpath_format.format("info_centres"))
     last_scans = {}
 
