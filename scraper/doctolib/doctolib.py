@@ -84,6 +84,12 @@ class DoctolibSlots:
         request.update_practitioner_type(
             parse_practitioner_type(centre, rdata))
         set_doctolib_center_internal_id(request, rdata, practice_id)
+
+        # Check if  appointments are allowed
+        if not is_allowing_online_appointments(rdata):
+            request.set_appointments_only_by_phone(True)
+            return None
+
         # visit_motive_categories
         # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1
         visit_motive_category_id = _find_visit_motive_category_id(data)
@@ -390,6 +396,19 @@ def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str, practice_id_
                 practice_ids.add(str(pratice_id_agenda))
                 agenda_ids.add(agenda_id)
     return sorted(agenda_ids), sorted(practice_ids)
+
+
+def is_allowing_online_appointments(rdata):
+    """
+    Check if online appointments are allowed for this center
+    """
+    agendas = rdata.get('agendas', None)
+    if not agendas:
+        return False
+    for agenda in agendas:
+        if not agenda.get('booking_disabled', False):
+            return True
+    return False
 
 
 def center_iterator():
