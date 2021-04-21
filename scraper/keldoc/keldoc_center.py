@@ -3,7 +3,6 @@ import os
 from urllib.parse import urlsplit, parse_qs
 
 import httpx
-from httpx import TimeoutException
 
 from scraper.keldoc.keldoc_filters import parse_keldoc_availability
 from scraper.keldoc.keldoc_routes import API_KELDOC_CALENDAR, API_KELDOC_CENTER, API_KELDOC_CABINETS
@@ -39,10 +38,14 @@ class KeldocCenter:
             cabinet_url = API_KELDOC_CABINETS.format(self.id, specialty)
             try:
                 cabinet_req = self.client.get(cabinet_url)
-            except TimeoutException:
+                cabinet_req.raise_for_status()
+            except httpx.TimeoutException as hex:
                 logger.warning(f"Keldoc request timed out for center: {self.base_url} (vaccine cabinets)")
                 continue
-            cabinet_req.raise_for_status()
+            except httpx.HTTPStatusError as hex:
+                logger.warning(f"Keldoc request returned error {hex.response.status_code} "
+                               f"for center: {self.base_url} (vaccine cabinets)")
+                continue
             data = cabinet_req.json()
             if not data:
                 continue
@@ -55,10 +58,14 @@ class KeldocCenter:
         # Fetch center id
         try:
             resource = self.client.get(API_KELDOC_CENTER, params=self.resource_params)
-        except TimeoutException:
+            resource.raise_for_status()
+        except httpx.TimeoutException as hex:
             logger.warning(f"Keldoc request timed out for center: {self.base_url} (center info)")
             return False
-        resource.raise_for_status()
+        except httpx.HTTPStatusError as hex:
+            logger.warning(f"Keldoc request returned error {hex.response.status_code} "
+                           f"for center: {self.base_url} (center info)")
+            return False
         data = resource.json()
 
         self.id = data.get('id', None)
@@ -72,10 +79,14 @@ class KeldocCenter:
         # Fetch new URL after redirection
         try:
             rq = self.client.get(self.base_url)
-        except TimeoutException:
+            rq.raise_for_status()
+        except httpx.TimeoutException as hex:
             logger.warning(f"Keldoc request timed out for center: {self.base_url} (resource)")
             return False
-        rq.raise_for_status()
+        except httpx.HTTPStatusError as hex:
+            logger.warning(f"Keldoc request returned error {hex.response.status_code} "
+                           f"for center: {self.base_url} (resource)")
+            return False
         new_url = rq.url._uri_reference.unsplit()
 
         # Parse relevant GET params for Keldoc API requests
@@ -118,12 +129,14 @@ class KeldocCenter:
             }
             try:
                 calendar_req = self.client.get(calendar_url, params=calendar_params)
-            except TimeoutException:
+                calendar_req.raise_for_status()
+            except httpx.TimeoutException as hex:
                 logger.warning(f"Keldoc request timed out for center: {self.base_url} (calendar request)")
-                # Some requests on Keldoc are taking too much time (for few centers)
-                # and block the process completion.
                 continue
-            calendar_req.raise_for_status()
+            except httpx.HTTPStatusError as hex:
+                logger.warning(f"Keldoc request returned error {hex.response.status_code} "
+                               f"for center: {self.base_url} (calendar request)")
+                continue
             date, appointments = parse_keldoc_availability(calendar_req.json(), appointments)
             if date is None:
                 continue

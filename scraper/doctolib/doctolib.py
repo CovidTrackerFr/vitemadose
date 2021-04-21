@@ -84,6 +84,12 @@ class DoctolibSlots:
         request.update_practitioner_type(
             parse_practitioner_type(centre, rdata))
         set_doctolib_center_internal_id(request, rdata, practice_id)
+
+        # Check if  appointments are allowed
+        if not is_allowing_online_appointments(rdata):
+            request.set_appointments_only_by_phone(True)
+            return None
+
         # visit_motive_categories
         # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1
         visit_motive_category_id = _find_visit_motive_category_id(data)
@@ -101,27 +107,26 @@ class DoctolibSlots:
             agenda_ids, practice_ids = _find_agenda_and_practice_ids(
                 data, visit_motive_id, practice_id_filter=practice_id
             )
-            agenda_ids = self.sort_agenda_ids(all_agendas, agenda_ids)
+            if agenda_ids != [] and practice_ids != []:
+                agenda_ids = self.sort_agenda_ids(all_agendas, agenda_ids)
 
-            # temporary_booking_disabled ??
+                agenda_ids_q = "-".join(agenda_ids)
+                practice_ids_q = "-".join(practice_ids)
+                start_date = request.get_start_date()
 
-            agenda_ids_q = "-".join(agenda_ids)
-            practice_ids_q = "-".join(practice_ids)
-            start_date = request.get_start_date()
-
-            start_date_tmp = start_date
-            for i in range(DOCTOLIB_ITERATIONS):
-                sdate, appt, stop = self.get_appointments(request, start_date_tmp, visit_motive_ids, visit_motive_id,
-                                                          agenda_ids_q, practice_ids_q, DOCTOLIB_SLOT_LIMIT)
-                if stop:
-                    break
-                start_date_tmp = datetime.now() + timedelta(days=7 * i)
-                start_date_tmp = start_date_tmp.strftime("%Y-%m-%d")
-                if not sdate:
-                    continue
-                if not first_availability or sdate < first_availability:
-                    first_availability = sdate
-                request.update_appointment_count(request.appointment_count + appt)
+                start_date_tmp = start_date
+                for i in range(DOCTOLIB_ITERATIONS):
+                    sdate, appt, stop = self.get_appointments(request, start_date_tmp, visit_motive_ids, visit_motive_id,
+                                                            agenda_ids_q, practice_ids_q, DOCTOLIB_SLOT_LIMIT)
+                    if stop:
+                        break
+                    start_date_tmp = datetime.now() + timedelta(days=7 * i)
+                    start_date_tmp = start_date_tmp.strftime("%Y-%m-%d")
+                    if not sdate:
+                        continue
+                    if not first_availability or sdate < first_availability:
+                        first_availability = sdate
+                    request.update_appointment_count(request.appointment_count + appt)
 
         return first_availability
 
@@ -391,6 +396,19 @@ def _find_agenda_and_practice_ids(data: dict, visit_motive_id: str, practice_id_
                 practice_ids.add(str(pratice_id_agenda))
                 agenda_ids.add(agenda_id)
     return sorted(agenda_ids), sorted(practice_ids)
+
+
+def is_allowing_online_appointments(rdata):
+    """
+    Check if online appointments are allowed for this center
+    """
+    agendas = rdata.get('agendas', None)
+    if not agendas:
+        return False
+    for agenda in agendas:
+        if not agenda.get('booking_disabled', False):
+            return True
+    return False
 
 
 def center_iterator():

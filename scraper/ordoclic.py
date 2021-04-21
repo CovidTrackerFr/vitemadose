@@ -102,6 +102,11 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     profile = getProfile(request)
     slug = profile["profileSlug"]
     entityId = profile["entityId"]
+    attributes = profile.get('attributeValues')
+    for settings in attributes:
+        if settings['label'] == 'booking_settings' and settings['value'].get('option', 'any') == 'any':
+            request.set_appointments_only_by_phone(True)
+            return None
     for professional in profile["publicProfessionals"]:
         medicalStaffId = professional["id"]
         name = professional["fullName"]

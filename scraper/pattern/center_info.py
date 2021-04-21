@@ -47,6 +47,7 @@ class CenterInfo:
         self.appointment_count = 0
         self.internal_id = None
         self.vaccine_type = None
+        self.appointment_by_phone_only = False
         self.erreur = None
         self.last_scan_with_availabilities = None
 
@@ -60,6 +61,7 @@ class CenterInfo:
         self.appointment_count = result.request.appointment_count
         self.internal_id = result.request.internal_id
         self.vaccine_type = result.request.vaccine_type
+        self.appointment_by_phone_only = result.request.appointment_by_phone_only
 
     def handle_next_availability(self):
         if not self.prochain_rdv:

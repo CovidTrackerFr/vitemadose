@@ -120,8 +120,10 @@ def test_export_data(tmp_path):
                 "location": None,
                 "metadata": None,
                 "type": None,
+                "appointment_by_phone_only": False,
                 "appointment_count": 1,
                 "internal_id": None,
+                "appointment_by_phone_only": False,
                 "vaccine_type": None,
                 "erreur": None,
                 "last_scan_with_availabilities": None
@@ -143,6 +145,7 @@ def test_export_data(tmp_path):
                 "prochain_rdv": "2021-04-11:00:00",
                 "location": None,
                 "metadata": None,
+                "appointment_by_phone_only": False,
                 "type": None,
                 "appointment_count": 1,
                 "internal_id": None,
@@ -163,6 +166,7 @@ def test_export_data(tmp_path):
                 "type": None,
                 "appointment_count": 1,
                 "internal_id": None,
+                "appointment_by_phone_only": False,
                 "vaccine_type": None,
                 "erreur": None,
                 "last_scan_with_availabilities": None
@@ -185,6 +189,7 @@ def test_export_data(tmp_path):
                 "prochain_rdv": "2021-04-11:00:00",
                 "plateforme": "Maiia",
                 "type": None,
+                "appointment_by_phone_only": False,
                 "appointment_count": 0,
                 "internal_id": None,
                 "vaccine_type": None,
@@ -237,6 +242,7 @@ def test_export_reserved_centers(tmp_path):
             "location": None,
             "metadata": None,
             "type": None,
+            "appointment_by_phone_only": False,
             "appointment_count": 1,
             "internal_id": None
         }
@@ -310,6 +316,7 @@ def test_export_data_when_blocked(tmp_path):
             "appointment_count": 0,
             "internal_id": None,
             "vaccine_type": None,
+            "appointment_by_phone_only": False,
             "erreur": "ERREUR DE SCRAPPING (Doctolib): Doctolib bloque nos appels: 403 https://example.com/hopital-magique",
             "last_scan_with_availabilities": None
         }],
@@ -331,6 +338,7 @@ def test_export_data_when_blocked(tmp_path):
                 "type": None,
                 "appointment_count": 1,
                 "internal_id": None,
+                "appointment_by_phone_only": False,
                 "vaccine_type": None,
                 "erreur": None,
                 "last_scan_with_availabilities": None

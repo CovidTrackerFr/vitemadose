@@ -6,6 +6,7 @@ class ScraperRequest:
         self.practitioner_type = None
         self.appointment_count = 0
         self.vaccine_type = None
+        self.appointment_by_phone_only = False
 
     def update_internal_id(self, internal_id):
         self.internal_id = internal_id
@@ -30,3 +31,6 @@ class ScraperRequest:
 
     def get_start_date(self) -> str:
         return self.start_date
+
+    def set_appointments_only_by_phone(self, only_by_phone: bool) -> None:
+        self.appointment_by_phone_only = only_by_phone
