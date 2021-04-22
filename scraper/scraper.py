@@ -19,7 +19,7 @@ from scraper.pattern.center_info import convert_csv_data_to_center_info, CenterI
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
-from utils.vmd_utils import departementUtils, fix_scrap_urls, is_reserved_center
+from utils.vmd_utils import departementUtils, fix_scrap_urls, is_reserved_center, get_last_scans
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
@@ -76,6 +76,8 @@ def scrape() -> None:
             centre_iterator_proportion,
             1
         )
+
+        centres_cherchés = get_last_scans(centres_cherchés)
         compte_centres, compte_centres_avec_dispo, compte_bloqués = export_data(
             centres_cherchés)
 
