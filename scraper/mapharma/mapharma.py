@@ -24,11 +24,16 @@ MAPHARMA_HEADERS = {
 
 MAPHARMA_CAMPAGNES_VALIDES = [
     'vaccination covid',
-    'vaccination covid19',
-    'vaccination covid-19',
-    'vaccination covid (vaccination covid - 1ère injection)',
-    'vaccination covid 1 injection',
     'covid 1ère injection'
+]
+
+MAPHARMA_CAMPAGNES_INVALIDES = [
+    'test antigenique',
+    'test antigénique',
+    'test sérologique',
+    'pilulier',
+    'diététique',
+    'nutrition'
 ]
 
 timeout = httpx.Timeout(30.0, connect=30.0)
@@ -167,7 +172,11 @@ def is_campagne_valid(campagne: dict) -> bool:
     global campagnes_valides
     if not campagne.get('url'):
         return False
-    if campagne.get('nom', 'erreur').lower() in MAPHARMA_CAMPAGNES_VALIDES:
+    if 'vaccination_covid' in campagne:
+        return campagne.get('vaccination_covid')
+    if any(keyword in campagne.get('nom', 'erreur').lower() for keyword in MAPHARMA_CAMPAGNES_INVALIDES):
+        return False
+    if any(keyword in campagne.get('nom', 'erreur').lower() for keyword in MAPHARMA_CAMPAGNES_VALIDES):
         return True
     if not campagnes_valides:
         # on charge la liste des campagnes valides (vaccination)
