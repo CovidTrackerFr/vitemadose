@@ -49,7 +49,6 @@ class CenterInfo:
         self.vaccine_type = None
         self.appointment_by_phone_only = False
         self.erreur = None
-        self.last_scan_with_availabilities = None
 
     def fill_localization(self, location: Optional[CenterLocation]):
         self.location = location
