@@ -125,7 +125,8 @@ def test_export_data(tmp_path):
                 "internal_id": None,
                 "appointment_by_phone_only": False,
                 "vaccine_type": None,
-                "erreur": None
+                "erreur": None,
+                "last_scan_with_availabilities": None
             },
         ],
         "centres_indisponibles": [],
@@ -149,7 +150,8 @@ def test_export_data(tmp_path):
                 "appointment_count": 1,
                 "internal_id": None,
                 "vaccine_type": None,
-                "erreur": None
+                "erreur": None,
+                "last_scan_with_availabilities": None
             },
         ],
         "centres_indisponibles": [
@@ -166,7 +168,8 @@ def test_export_data(tmp_path):
                 "internal_id": None,
                 "appointment_by_phone_only": False,
                 "vaccine_type": None,
-                "erreur": None
+                "erreur": None,
+                "last_scan_with_availabilities": None
             }
         ],
         "last_updated": "2021-04-04T00:00:00",
@@ -190,7 +193,8 @@ def test_export_data(tmp_path):
                 "appointment_count": 0,
                 "internal_id": None,
                 "vaccine_type": None,
-                "erreur": None
+                "erreur": None,
+                "last_scan_with_availabilities": None
             },
         ],
         "last_updated": "2021-04-04T00:00:00",
@@ -313,7 +317,8 @@ def test_export_data_when_blocked(tmp_path):
             "internal_id": None,
             "vaccine_type": None,
             "appointment_by_phone_only": False,
-            "erreur": "ERREUR DE SCRAPPING (Doctolib): Doctolib bloque nos appels: 403 https://example.com/hopital-magique"
+            "erreur": "ERREUR DE SCRAPPING (Doctolib): Doctolib bloque nos appels: 403 https://example.com/hopital-magique",
+            "last_scan_with_availabilities": None
         }],
         "doctolib_bloqué": True
     }
@@ -335,7 +340,8 @@ def test_export_data_when_blocked(tmp_path):
                 "internal_id": None,
                 "appointment_by_phone_only": False,
                 "vaccine_type": None,
-                "erreur": None
+                "erreur": None,
+                "last_scan_with_availabilities": None
             },
         ],
         "centres_indisponibles": [],
