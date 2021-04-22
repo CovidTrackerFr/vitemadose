@@ -22,7 +22,8 @@ KELDOC_APPOINTMENT_REASON = [
     'inj. 1',
     'première injection',
     'covid19 - vaccination',
-    'inj1'
+    'inj1',
+    '1ère injection'
 ]
 
 KELDOC_COVID_SKILLS = [
