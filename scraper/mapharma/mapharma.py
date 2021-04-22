@@ -172,6 +172,8 @@ def is_campagne_valid(campagne: dict) -> bool:
     global campagnes_valides
     if not campagne.get('url'):
         return False
+    if 'vaccination_covid' in campagne:
+        return campagne.get('vaccination_covid')
     if any(keyword in campagne.get('nom', 'erreur').lower() for keyword in MAPHARMA_CAMPAGNES_INVALIDES):
         return False
     if any(keyword in campagne.get('nom', 'erreur').lower() for keyword in MAPHARMA_CAMPAGNES_VALIDES):
