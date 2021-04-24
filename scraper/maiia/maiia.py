@@ -58,9 +58,8 @@ def get_slots(center_id: str, consultation_reason_name: str, start_date: str, en
         if not next_slot_date:
             return None
         next_date = datetime.strptime(next_slot_date, '%Y-%m-%dT%H:%M:%S.%fZ')
-        start_date = datetime.strftime(next_date, '%Y-%m-%dT%H:%M:%S.%f%zZ')
-        end_date = (next_date + timedelta(days=MAIIA_DAY_LIMIT)
-                    ).strftime('%Y-%m-%dT%H:%M:%S.%f%zZ')
+        start_date = next_date.isoformat()
+        end_date = (next_date + timedelta(days=MAIIA_DAY_LIMIT)).isoformat()
         url = f'{MAIIA_URL}/api/pat-public/availabilities?centerId={center_id}&consultationReasonName={consultation_reason_name}&from={start_date}&to={end_date}'
         availabilities = get_paged(url, limit=limit, client=client)['items']
     if availabilities:
@@ -78,8 +77,8 @@ def get_reasons(center_id: str, limit=MAIIA_LIMIT, client: httpx.Client = DEFAUL
 
 def get_first_availability(center_id: str, request_date: str, reasons: [dict], client: httpx.Client = DEFAULT_CLIENT) -> [Optional[datetime], int]:
     date = isoparse(request_date)
-    start_date = datetime.strftime(date, '%Y-%m-%dT%H:%M:%S.%f%zZ')
-    end_date = (date + timedelta(days=MAIIA_DAY_LIMIT)).strftime('%Y-%m-%dT%H:%M:%S.%f%zZ')
+    start_date = date.isoformat()
+    end_date = (date + timedelta(days=MAIIA_DAY_LIMIT)).isoformat()
     first_availability = None
     slots_count = 0
 
