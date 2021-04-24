@@ -1,6 +1,6 @@
 import json
 import logging
-from datetime import datetime
+from datetime import date, datetime
 
 import pytz
 import requests
@@ -122,7 +122,7 @@ def export_centres_stats(center_data='data/output/info_centres.json', stats_path
     logger.info("Found {0}/{1} available centers. ({2}%)".format(tout_dep_obj["disponibles"],
                                                                  tout_dep_obj["total"], round(available_pct, 2)))
     with open(stats_path, "w") as stats_file:
-        json.dump(centres_stats, stats_file, indent=2)
+        json.dump(plus_metadata(centres_stats), stats_file, indent=2)
     if stats_path != 'data/output/stats.json':
         return
     generate_stats_date(centres_stats)
@@ -134,6 +134,13 @@ def get_centres_info(center_data):
     with open(center_data, "r") as f:
         return json.load(f)
 
+
+def plus_metadata(stats : dict) -> dict:
+    stats_with_metadata = dict(stats)
+    stats_with_metadata["metadata"] = {
+        "last_edit_date":datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    }
+    return stats_with_metadata
 
 if __name__ == '__main__':
     enable_logger_for_production()
