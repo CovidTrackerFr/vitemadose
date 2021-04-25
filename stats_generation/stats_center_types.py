@@ -9,7 +9,7 @@ from utils.vmd_logger import enable_logger_for_production
 
 logger = logging.getLogger('scraper')
 
-DATA_AUTO = 'https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/'
+DATA_AUTO = 'https://vitemadose.gitlab.io/vitemadose/'
 
 
 def compute_plateforme_data(centres_info):
