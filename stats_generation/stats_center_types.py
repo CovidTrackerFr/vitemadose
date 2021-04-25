@@ -9,7 +9,7 @@ from utils.vmd_logger import enable_logger_for_production
 
 logger = logging.getLogger('scraper')
 
-DATA_AUTO = 'https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/'
+DATA_AUTO = 'https://vitemadose.gitlab.io/vitemadose/'
 
 
 def compute_plateforme_data(centres_info):
@@ -36,7 +36,7 @@ def compute_plateforme_data(centres_info):
 
 
 def generate_stats_center_types(centres_info):
-    stats_path = "data/output/stats_center_types.json"
+    stats_path = "stats_center_types.json"
     stats_data = {'dates': [], 'plateformes': {}}
 
     try:
@@ -50,7 +50,7 @@ def generate_stats_center_types(centres_info):
     ctz = pytz.timezone('Europe/Paris')
     current_time = datetime.now(tz=ctz).strftime("%Y-%m-%d %H:00:00")
     if current_time in stats_data['dates']:
-        with open(stats_path, "w") as stat_graph_file:
+        with open(f"data/output/{stats_path}", "w") as stat_graph_file:
             json.dump(stats_data, stat_graph_file)
         logger.info(f"Stats file already updated: {stats_path}")
         return
@@ -70,6 +70,6 @@ def generate_stats_center_types(centres_info):
         current_data['disponible'].append(plateform_data['disponible'])
         current_data['total'].append(plateform_data['total'])
         current_data['creneaux'].append(plateform_data['creneaux'])
-    with open(stats_path, "w") as stat_graph_file:
+    with open(f"data/output/{stats_path}", "w") as stat_graph_file:
         json.dump(stats_data, stat_graph_file)
     logger.info(f"Updated stats file: {stats_path}")

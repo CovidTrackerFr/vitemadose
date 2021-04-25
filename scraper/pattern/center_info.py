@@ -31,11 +31,14 @@ VACCINES = {
     'Janssen': [
         'janssen',
         'jansen',
+        'jansenn',
+        'jannsen',
         'jenssen',
         'jensen',
         'jonson',
         'johnson',
-        'johnnson'
+        'johnnson',
+        'j&j'
     ],
     'ARNm': [
         'arn'
