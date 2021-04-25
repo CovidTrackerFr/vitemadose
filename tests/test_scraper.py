@@ -1,7 +1,7 @@
 import datetime as dt
 import json
 
-from scraper.pattern.center_info import CenterInfo, dict_to_center_info, get_vaccine_name
+from scraper.pattern.center_info import CenterInfo, Vaccine, dict_to_center_info, get_vaccine_name
 from scraper.pattern.scraper_result import GENERAL_PRACTITIONER, ScraperResult
 from utils.vmd_utils import departementUtils
 from scraper.scraper import fetch_centre_slots, export_data, get_start_date
@@ -421,7 +421,7 @@ def test_scraper_request():
     assert request is not None
     assert request.internal_id == "d739"
     assert request.appointment_count == 42
-    assert request.vaccine_type == ['Pfizer-BioNTech']
+    assert request.vaccine_type == [Vaccine.PFIZER]
 
     result = ScraperResult(request, 'Doctolib', '2021-04-14T14:00:00.0000')
     assert result.default() == {
