@@ -6,7 +6,7 @@ from stats_generation.stats_available_centers import export_centres_stats
 
 
 def test_stat_count():
-    output_file_name = 'data/output/stats_test.json'
+    output_file_name = 'stats_test.json'
     export_centres_stats('tests/fixtures/stats/info-centres.json', output_file_name)
 
     assert os.path.exists(output_file_name)
