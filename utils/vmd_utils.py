@@ -179,7 +179,7 @@ def fix_scrap_urls(url):
 
 
 def get_last_scans(centres):
-    url ='https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/info_centres.json'
+    url ='https://vitemadose.gitlab.io/vitemadose/info_centres.json'
     last_scans = {}
     liste_centres = []
 
