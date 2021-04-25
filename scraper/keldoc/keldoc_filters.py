@@ -117,7 +117,8 @@ def filter_vaccine_motives(session, selected_cabinet, id, vaccine_specialties, v
             if selected_cabinet is not None and cabinet != selected_cabinet:
                 continue
             try:
-                motive_req = session.get(API_KELDOC_MOTIVES.format(id, specialty, cabinet))
+                motive_req = session.get(
+                    API_KELDOC_MOTIVES.format(id, specialty, cabinet))
             except TimeoutException:
                 continue
             motive_req.raise_for_status()
@@ -130,7 +131,8 @@ def filter_vaccine_motives(session, selected_cabinet, id, vaccine_specialties, v
             motive_name = motive.get('name', None)
             if not motive_name or not is_appointment_relevant(motive_name):
                 continue
-            motive_agendas = [motive_agenda.get('id', None) for motive_agenda in motive.get('agendas', {})]
+            motive_agendas = [motive_agenda.get(
+                'id', None) for motive_agenda in motive.get('agendas', {})]
             vaccine_motives.append({
                 'id': motive.get('id', None),
                 'vaccine_type': get_vaccine_name(motive_name),
