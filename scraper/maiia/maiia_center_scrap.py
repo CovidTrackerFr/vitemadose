@@ -106,6 +106,8 @@ def main():
                 continue
             if not any(consultation_reason.get('injectionType') in ['FIRST'] and not any(keyword in consultation_reason.get('name').lower() for keyword in MAIIA_DO_NOT_SCRAP_NAME) for consultation_reason in root_center['consultationReasons']):
                 continue
+            if center['childCenters']:
+                continue
             centers.append(maiia_center_to_csv(center, root_center))
             centers_ids.append(center['id'])
             for child_center in center['childCenters']:
