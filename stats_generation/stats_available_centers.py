@@ -121,15 +121,9 @@ def export_centres_stats(center_data='data/output/info_centres.json', stats_path
     available_pct = (tout_dep_obj["disponibles"] / max(1, tout_dep_obj["total"])) * 100
     logger.info("Found {0}/{1} available centers. ({2}%)".format(tout_dep_obj["disponibles"],
                                                                  tout_dep_obj["total"], round(available_pct, 2)))
-<<<<<<< HEAD
     with open(f"data/output/{stats_path}", "w") as stats_file:
         json.dump(centres_stats, stats_file, indent=2)
     if stats_path != 'stats.json':
-=======
-    with open(stats_path, "w") as stats_file:
-        json.dump(plus_metadata(centres_stats), stats_file, indent=2)
-    if stats_path != 'data/output/stats.json':
->>>>>>> 3502cf7... Added metadata
         return
     generate_stats_date(centres_stats)
     generate_stats_dep_date(centres_stats)
@@ -141,17 +135,10 @@ def get_centres_info(center_data):
         return json.load(f)
 
 
-<<<<<<< HEAD
 def plus_metadata(stats: dict) -> dict:
     stats_with_metadata = dict(stats)
     stats_with_metadata["metadata"] = {
         "last_edit_date": datetime.now().isoformat()
-=======
-def plus_metadata(stats : dict) -> dict:
-    stats_with_metadata = dict(stats)
-    stats_with_metadata["metadata"] = {
-        "last_edit_date":datetime.now().strftime("%Y-%m-%d %H:%M:%S")
->>>>>>> 3502cf7... Added metadata
     }
     return stats_with_metadata
 
