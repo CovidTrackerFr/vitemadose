@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 import httpx
 from datetime import datetime
@@ -50,7 +51,34 @@ def test_search():
 
 
 def test_getReasons():
-    pass
+    # Test offline
+    def app(request: httpx.Request) -> httpx.Response:
+        assert re.match(
+            r"/v1/solar/entities/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/reasons",
+            request.url.path,
+        ) != None
+
+        path = Path("tests/fixtures/ordoclic/reasons.json")
+        return httpx.Response(200, json=json.loads(path.read_text()))
+
+    client = httpx.Client(transport=httpx.MockTransport(app))
+    data_file = Path("tests/fixtures/ordoclic/reasons.json")
+    data = json.loads(data_file.read_text())
+    assert getReasons("e9c4990e-711f-4af6-aee2-354de59c9e4e", client) == data
+
+    # Test erreur HTTP
+    def app(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(403, json={})
+
+    client = httpx.Client(transport=httpx.MockTransport(app))
+    with pytest.raises(httpx.HTTPStatusError):
+        getReasons("e9c4990e-711f-4af6-aee2-354de59c9e4e", client)
+
+    # Test online
+    schema_file = Path("tests/fixtures/ordoclic/reasons.schema")
+    schema = json.loads(schema_file.read_text())
+    live_data = getReasons("e9c4990e-711f-4af6-aee2-354de59c9e4e")
+    validate(instance=live_data, schema=schema)
 
 
 def test_getSlots():
