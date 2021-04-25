@@ -30,41 +30,6 @@ KELDOC_COVID_SKILLS = [
 ]
 
 
-# Filter by relevant appointments
-def is_appointment_relevant(appointment_name):
-    if not appointment_name:
-        return False
-
-    appointment_name = appointment_name.lower()
-    appointment_name = re.sub(' +', ' ', appointment_name)
-    for allowed_appointments in KELDOC_APPOINTMENT_REASON:
-        if allowed_appointments in appointment_name:
-            return True
-    return False
-
-
-# Filter by relevant specialties
-def is_specialty_relevant(specialty):
-    if not specialty:
-        return False
-
-    id = specialty.get('id', None)
-    name = specialty.get('name', None)
-    skills = specialty.get('skills', {})
-    if not id or not name:
-        return False
-    for skill in skills:
-        skill_name = skill.get('name', None)
-        if not skill_name:
-            continue
-        if skill_name in KELDOC_COVID_SKILLS:
-            return True
-    for allowed_specialties in KELDOC_COVID_SPECIALTIES:
-        if allowed_specialties == name:
-            return True
-    return False
-
-
 def parse_keldoc_availability(availability_data, appointments):
     if not availability_data:
         return None, appointments
@@ -93,17 +58,8 @@ def parse_keldoc_availability(availability_data, appointments):
     return cdate, appointments
 
 
-def filter_vaccine_specialties(specialties):
-    if not specialties:
-        return False
-    # Put relevant specialty & cabinet IDs in lists
-    vaccine_specialties = []
-    for specialty in specialties:
-        if not is_specialty_relevant(specialty):
-            continue
-        vaccine_specialties.append(specialty.get('id', None))
-    return vaccine_specialties
-
+def get_relevant_vaccine_specialties_id(specialties: dict) -> list:
+    return [specialty_data.get("id") for specialty_data in specialties if is_specialty_relevant(specialty_data)]
 
 def filter_vaccine_motives(session, selected_cabinet, id, vaccine_specialties, vaccine_cabinets):
     if not id or not vaccine_specialties or not vaccine_cabinets:
@@ -139,3 +95,37 @@ def filter_vaccine_motives(session, selected_cabinet, id, vaccine_specialties, v
                 'agendas': motive_agendas
             })
     return vaccine_motives
+
+# Filter by relevant appointments
+def is_appointment_relevant(appointment_name: str) -> bool:
+    if not appointment_name:
+        return False
+
+    appointment_name = appointment_name.lower()
+    appointment_name = re.sub(' +', ' ', appointment_name)
+    for allowed_appointments in KELDOC_APPOINTMENT_REASON:
+        if allowed_appointments in appointment_name:
+            return True
+    return False
+
+
+# Filter by relevant specialties
+def is_specialty_relevant(specialty_data: dict) -> bool:
+    if not specialty_data:
+        return False
+
+    id = specialty_data.get('id', None)
+    name = specialty_data.get('name', None)
+    skills = specialty_data.get('skills', {})
+    if not id or not name:
+        return False
+    for skill in skills:
+        skill_name = skill.get('name', None)
+        if not skill_name:
+            continue
+        if skill_name in KELDOC_COVID_SKILLS:
+            return True
+    for allowed_specialties in KELDOC_COVID_SPECIALTIES:
+        if allowed_specialties == name:
+            return True
+    return False
