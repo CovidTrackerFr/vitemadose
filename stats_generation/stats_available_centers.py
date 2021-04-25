@@ -138,10 +138,10 @@ def get_centres_info(center_data):
         return json.load(f)
 
 
-def plus_metadata(stats : dict) -> dict:
+def plus_metadata(stats: dict) -> dict:
     stats_with_metadata = dict(stats)
     stats_with_metadata["metadata"] = {
-        "last_edit_date":datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        "last_edit_date": datetime.now().isoformat()
     }
     return stats_with_metadata
 
