@@ -23,6 +23,7 @@ DOCTOLIB_CATEGORY = [
     'vaccination pfizer',
     'grand public',
     'personnes de plus de',
+    'personnes de 60 ans et plus',
     'vaccination covid',  # 50 - 55 ans avec comoribidtés
     'Pfizer',
     'Astra Zeneca',
