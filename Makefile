@@ -1,7 +1,7 @@
 
 .DEFAULT_GOAL := help
 
-URL =
+URL = https://partners.doctolib.fr/centre-de-sante/mirande/centre-de-vaccination-covid-19-cd-32-gers?pid=practice-16621
 
 .PHONY: help test install
 help: ## provides cli help for this makefile (default) 📖
