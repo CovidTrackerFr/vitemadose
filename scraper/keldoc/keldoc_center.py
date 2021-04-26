@@ -113,7 +113,10 @@ class KeldocCenter:
         return True
 
     
-    def get_timetables(self, start_date, end_date, motive_id, agenda_id):
+    def get_timetables(self, start_date, motive_id, agenda_id):
+        # Keldoc needs an end date, but if no appointment are found,
+        # it still returns the next available appointment. Bigger end date
+        # makes Keldoc responses slower.
         calendar_url = API_KELDOC_CALENDAR.format(motive_id)
         calendar_params = {
             'from': start_date,
@@ -136,7 +139,7 @@ class KeldocCenter:
         if 'date' in calendar_json:
             new_date = isoparse(calendar_json['date'])
             start_date = new_date.strftime('%Y-%m-%d')
-            end_date = (new_date + timedelta(days=KELDOC_SLOT_LIMIT)).strftime('%Y-%m-%d')
+        end_date = (isoparse(start_date) + timedelta(days=KELDOC_SLOT_LIMIT)).strftime('%Y-%m-%d')
         calendar_params = {
             'from': start_date,
             'to': end_date,
@@ -157,7 +160,7 @@ class KeldocCenter:
         return calendar_req.json()
 
 
-    def find_first_availability(self, start_date, end_date):
+    def find_first_availability(self, start_date):
         if not self.vaccine_motives:
             return None, 0
 
@@ -171,7 +174,7 @@ class KeldocCenter:
             calendar_url = API_KELDOC_CALENDAR.format(motive_id)
 
             for agenda_id in relevant_motive.get('agendas', []):
-                timetables = self.get_timetables(start_date, end_date, motive_id, agenda_id)
+                timetables = self.get_timetables(start_date, motive_id, agenda_id)
                 date, appointments = parse_keldoc_availability(timetables, appointments)
                 if date is None:
                     continue
