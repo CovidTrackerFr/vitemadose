@@ -36,6 +36,10 @@ MAPHARMA_CAMPAGNES_INVALIDES = [
     'nutrition'
 ]
 
+MAPHARMA_OPEN_DATA_FILE = Path('data', 'output', 'mapharma_open_data.json')
+MAPHARMA_OPEN_DATA_URL = 'https://mapharma.net/opendata/rdv'
+MAPHARMA_OPEN_DATA_URL_FALLBACK = 'https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/mapharma_open_data.json'
+
 timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=MAPHARMA_HEADERS)
 logger = logging.getLogger('scraper')
@@ -78,26 +82,25 @@ def campagne_to_centre(pharmacy: dict, campagne: dict) -> dict:
     return centre
 
 
-def get_mapharma_opendata(client: httpx.Client = DEFAULT_CLIENT) -> dict:
-    base_url = 'https://mapharma.net/opendata/rdv'
-    result = dict()
+def get_mapharma_opendata(client: httpx.Client = DEFAULT_CLIENT, opendata_url: str = MAPHARMA_OPEN_DATA_URL, opendata_url_fallback: str = MAPHARMA_OPEN_DATA_URL_FALLBACK) -> dict:
     try:
-        request = client.get(base_url, headers=MAPHARMA_HEADERS)
+        request = client.get(opendata_url, headers=MAPHARMA_HEADERS)
         request.raise_for_status()
         return request.json()
     except httpx.HTTPStatusError as hex:
         logger.warning(f'{base_url} returned error {hex.response.status_code}')
     try:
-        with open(Path('data', 'output', 'mapharma_open_data.json'), 'r', encoding='utf8') as f:
-            result = json.load(f)
-    except IOError as ioex:
-        logger.warning('Reading mapharma_open_data.json returned error {ioex}')
-    return result
+        request = client.get(MAPHARMA_OPEN_DATA_URL_FALLBACK, headers=MAPHARMA_HEADERS)
+        request.raise_for_status()
+        return request.json()
+    except httpx.HTTPStatusError as hex:
+        logger.warning(f'{base_url} returned error {hex.response.status_code}')
+    return None
 
-def get_pharmacy_and_campagne(id_campagne: int, id_type: int) -> [dict, dict]:
+def get_pharmacy_and_campagne(id_campagne: int, id_type: int, opendata_file: str = MAPHARMA_OPEN_DATA_FILE) -> [dict, dict]:
     opendate = list
     try:
-        with open(Path('data', 'output', 'mapharma_open_data.json'), 'r', encoding='utf8') as f:
+        with open(opendata_file, 'r', encoding='utf8') as f:
             opendata = json.load(f)
     except IOError as ioex:
         logger.warning('Reading mapharma_open_data.json returned error {ioex}')
@@ -136,7 +139,7 @@ def parse_slots(slots) -> [datetime, int]:
 
 
 @Profiling.measure('mapharma_slot')
-def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) -> str:
+def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT, opendata_file: str = MAPHARMA_OPEN_DATA_FILE) -> str:
     url = request.get_url()
     # on récupère les paramètres c (id_campagne) & l (id_type)
     params = dict(parse.parse_qsl(parse.urlsplit(url).query))
@@ -160,7 +163,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
     request.update_appointment_count(slot_count)
     request.update_practitioner_type(DRUG_STORE)
     request.update_internal_id(url.encode('utf8').hex()[40:][:8])
-    pharmacy, campagne = get_pharmacy_and_campagne(id_campagne, id_type)
+    pharmacy, campagne = get_pharmacy_and_campagne(id_campagne, id_type, opendata_file)
     request.add_vaccine_type(get_vaccine_name(campagne['nom']))
     if first_availability is None:
         return None
@@ -208,7 +211,7 @@ def centre_iterator():
         logger.error('Mapharma unable to get centre list')
         return
     # on sauvegarde le payload json reçu si jamais panne du endpoint
-    with open(Path('data', 'output', 'mapharma_open_data.json'), 'w', encoding='utf8') as f:
+    with open(MAPHARMA_OPEN_DATA_FILE, 'w', encoding='utf8') as f:
         json.dump(opendata, f, indent=2)
     for pharmacy in opendata:
         for campagne in pharmacy.get('campagnes'):
