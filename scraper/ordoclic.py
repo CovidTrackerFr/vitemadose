@@ -31,7 +31,6 @@ def search(client: httpx.Client = DEFAULT_CLIENT):
     # toutes les pharmacies faisant du Pfizer ou de l'AstraZeneca
     payload = {'page': '1', 'per_page': '10000', 'in.isPublicProfile': 'true', 
                'in.isCovidVaccineSupported': 'true', 
-               'in.covidOnlineBookingAvailabilities.covidInjection1': 'true', 
                'or.covidOnlineBookingAvailabilities.Vaccinarion Pfizer': 'true', 
                'or.covidOnlineBookingAvailabilities.Vaccination AstraZeneca': 'true' }
     r = client.get(base_url, params=payload)
