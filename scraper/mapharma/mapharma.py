@@ -89,7 +89,7 @@ def get_mapharma_opendata(
         request = client.get(opendata_url, headers=MAPHARMA_HEADERS)
         request.raise_for_status()
         return request.json()
-    except TimeoutException as hex:
+    except httpx.TimeoutException as hex:
         logger.warning(f"{opendata_url} timed out {hex}")
     except httpx.HTTPStatusError as hex:
         logger.warning(f'{opendata_url} returned error {hex.response.status_code}')
@@ -107,7 +107,7 @@ def get_pharmacy_and_campagne(
     id_campagne: int, 
     id_type: int, 
     opendata_file: str = MAPHARMA_OPEN_DATA_FILE) -> [dict, dict]:
-    opendate = list
+    opendata = list() 
     try:
         with open(opendata_file, 'r', encoding='utf8') as f:
             opendata = json.load(f)
