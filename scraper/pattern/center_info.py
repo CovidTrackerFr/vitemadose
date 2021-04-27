@@ -66,7 +66,7 @@ class CenterInfo:
         self.type = None
         self.appointment_count = 0
         self.internal_id = None
-        self.vaccine_type = None
+        self.vaccine_type : List[Vaccine] = None
         self.appointment_by_phone_only = False
         self.erreur = None
         self.last_scan_with_availabilities = None
@@ -104,6 +104,8 @@ class CenterInfo:
             self.location = self.location.default()
         if self.erreur:
             self.erreur = str(self.erreur)
+        if self.vaccine_type:
+            self.vaccine_type = [(vaccine.value if isinstance(vaccine, Vaccine) else vaccine) for vaccine in self.vaccine_type]
         self.handle_next_availability()
         return self.__dict__
 
