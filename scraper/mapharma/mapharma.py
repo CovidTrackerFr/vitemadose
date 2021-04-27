@@ -38,7 +38,8 @@ MAPHARMA_CAMPAGNES_INVALIDES = [
 
 MAPHARMA_OPEN_DATA_FILE = Path('data', 'output', 'mapharma_open_data.json')
 MAPHARMA_OPEN_DATA_URL = 'https://mapharma.net/opendata/rdv'
-MAPHARMA_OPEN_DATA_URL_FALLBACK = 'https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/mapharma_open_data.json'
+MAPHARMA_OPEN_DATA_URL_FALLBACK = 
+    'https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/mapharma_open_data.json'
 
 timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=MAPHARMA_HEADERS)
@@ -82,22 +83,34 @@ def campagne_to_centre(pharmacy: dict, campagne: dict) -> dict:
     return centre
 
 
-def get_mapharma_opendata(client: httpx.Client = DEFAULT_CLIENT, opendata_url: str = MAPHARMA_OPEN_DATA_URL, opendata_url_fallback: str = MAPHARMA_OPEN_DATA_URL_FALLBACK) -> dict:
+def get_mapharma_opendata(
+    client: httpx.Client = DEFAULT_CLIENT, 
+    opendata_url: str = MAPHARMA_OPEN_DATA_URL, 
+    opendata_url_fallback: str = MAPHARMA_OPEN_DATA_URL_FALLBACK) -> dict:
     try:
         request = client.get(opendata_url, headers=MAPHARMA_HEADERS)
         request.raise_for_status()
         return request.json()
+    except httpx.TimeoutException as hex:
+        logger.warning(f"{opendata_url} timed out {hex}"
     except httpx.HTTPStatusError as hex:
-        logger.warning(f'{base_url} returned error {hex.response.status_code}')
+        logger.warning(
+            f'{opendata_url} returned error {hex.response.status_code}')
     try:
-        request = client.get(MAPHARMA_OPEN_DATA_URL_FALLBACK, headers=MAPHARMA_HEADERS)
+        request = client.get(opendata_url_fallback, headers=MAPHARMA_HEADERS)
         request.raise_for_status()
         return request.json()
+    except httpx.TimeoutException as hex:
+        logger.warning(f"{opendata_url_fallback} timed out {hex}"
     except httpx.HTTPStatusError as hex:
-        logger.warning(f'{base_url} returned error {hex.response.status_code}')
+        logger.warning(
+            f'{opendata_url_fallback} returned error {hex.response.status_code}')
     return None
 
-def get_pharmacy_and_campagne(id_campagne: int, id_type: int, opendata_file: str = MAPHARMA_OPEN_DATA_FILE) -> [dict, dict]:
+def get_pharmacy_and_campagne(
+    id_campagne: int, 
+    id_type: int, 
+    opendata_file: str = MAPHARMA_OPEN_DATA_FILE) -> [dict, dict]:
     opendate = list
     try:
         with open(opendata_file, 'r', encoding='utf8') as f:
@@ -111,12 +124,16 @@ def get_pharmacy_and_campagne(id_campagne: int, id_type: int, opendata_file: str
     raise ValueError(f'Unable to find campagne (c={id_campagne}&l={id_type})')
 
 
-def get_slots(campagneId: str, optionId: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT) -> dict:
+def get_slots(
+    campagneId: str, optionId: str, start_date: str, 
+    client: httpx.Client = DEFAULT_CLIENT) -> dict:
     base_url = f'https://mapharma.net/api/public/calendar/{campagneId}/{start_date}/{optionId}'
     client.headers.update({'referer': 'https://mapharma.net/'})
     try:
         r = client.get(base_url)
         r.raise_for_status()
+    except httpx.TimeoutException as hex:
+        logger.warning(f"{base_url} timed out {hex}"
     except httpx.HTTPStatusError as hex:
         logger.warning(f'{base_url} returned error {hex.response.status_code}')
         return {}
@@ -139,7 +156,9 @@ def parse_slots(slots) -> [datetime, int]:
 
 
 @Profiling.measure('mapharma_slot')
-def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT, opendata_file: str = MAPHARMA_OPEN_DATA_FILE) -> str:
+def fetch_slots(
+    request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT, 
+    opendata_file: str = MAPHARMA_OPEN_DATA_FILE) -> str:
     url = request.get_url()
     # on récupère les paramètres c (id_campagne) & l (id_type)
     params = dict(parse.parse_qsl(parse.urlsplit(url).query))
@@ -163,7 +182,8 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT, 
     request.update_appointment_count(slot_count)
     request.update_practitioner_type(DRUG_STORE)
     request.update_internal_id(url.encode('utf8').hex()[40:][:8])
-    pharmacy, campagne = get_pharmacy_and_campagne(id_campagne, id_type, opendata_file)
+    pharmacy, campagne = get_pharmacy_and_campagne(
+        id_campagne, id_type, opendata_file)
     request.add_vaccine_type(get_vaccine_name(campagne['nom']))
     if first_availability is None:
         return None

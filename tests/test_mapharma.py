@@ -22,7 +22,6 @@ def test_parse_slots():
 
 def test_fetch_slots():
     def app(request: httpx.Request) -> httpx.Response:
-        print(request.url)
         try:
             with open(Path('tests', 'fixtures', 'mapharma', 'slots.json'), encoding='utf8') as f:
                 return httpx.Response(200, content=f.read())
