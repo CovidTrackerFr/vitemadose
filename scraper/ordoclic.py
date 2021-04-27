@@ -27,7 +27,12 @@ def search(client: httpx.Client = DEFAULT_CLIENT):
     # toutes les pharmacies faisant des vaccins
     # payload = {'page': '1', 'per_page': '10000', 'in.isPublicProfile': 'true', 'in.isCovidVaccineSupported': 'true'}
     # toutes les pharmacies faisant des vaccins avec des calendriers en ligne
-    payload = {'page': '1', 'per_page': '10000', 'in.isPublicProfile': 'true', 'in.isCovidVaccineSupported': 'true', 'in.covidOnlineBookingAvailabilities.covidInjection1': 'true' }
+    # payload = {'page': '1', 'per_page': '10000', 'in.isPublicProfile': 'true', 'in.isCovidVaccineSupported': 'true', 'in.covidOnlineBookingAvailabilities.covidInjection1': 'true' }
+    # toutes les pharmacies faisant du Pfizer ou de l'AstraZeneca
+    payload = {'page': '1', 'per_page': '10000', 'in.isPublicProfile': 'true', 
+               'in.isCovidVaccineSupported': 'true', 
+               'or.covidOnlineBookingAvailabilities.Vaccination Pfizer': 'true', 
+               'or.covidOnlineBookingAvailabilities.Vaccination AstraZeneca': 'true' }
     r = client.get(base_url, params=payload)
     r.raise_for_status()
     return r.json()
