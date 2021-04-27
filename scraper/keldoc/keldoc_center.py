@@ -1,7 +1,8 @@
 import logging
 import os
 from urllib.parse import urlsplit, parse_qs
-
+from datetime import datetime, timedelta
+from dateutil.parser import isoparse
 import httpx
 
 from scraper.keldoc.keldoc_filters import parse_keldoc_availability
@@ -12,6 +13,7 @@ timeout = httpx.Timeout(25.0, connect=25.0)
 KELDOC_HEADERS = {
     'User-Agent': os.environ.get('KELDOC_API_KEY', ''),
 }
+KELDOC_SLOT_LIMIT = 7
 DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
 logger = logging.getLogger('scraper')
 
@@ -110,7 +112,55 @@ class KeldocCenter:
         }
         return True
 
-    def find_first_availability(self, start_date, end_date):
+    
+    def get_timetables(self, start_date, motive_id, agenda_id):
+        # Keldoc needs an end date, but if no appointment are found,
+        # it still returns the next available appointment. Bigger end date
+        # makes Keldoc responses slower.
+        calendar_url = API_KELDOC_CALENDAR.format(motive_id)
+        calendar_params = {
+            'from': start_date,
+            'to': start_date,
+            'agenda_ids[]': agenda_id
+        }
+        try:
+            calendar_req = self.client.get(calendar_url, params=calendar_params)
+            calendar_req.raise_for_status()
+        except httpx.TimeoutException as hex:
+            logger.warning(f"Keldoc request timed out for center: {self.base_url} (calendar request)"
+                f' calendar_url: {calendar_url}'
+                f' calendar_params: {calendar_params}')
+            return None
+        except httpx.HTTPStatusError as hex:
+            logger.warning(f"Keldoc request returned error {hex.response.status_code} "
+                        f"for center: {self.base_url} (calendar request)")
+            return None
+        calendar_json = calendar_req.json()
+        if 'date' in calendar_json:
+            new_date = isoparse(calendar_json['date'])
+            start_date = new_date.strftime('%Y-%m-%d')
+        end_date = (isoparse(start_date) + timedelta(days=KELDOC_SLOT_LIMIT)).strftime('%Y-%m-%d')
+        calendar_params = {
+            'from': start_date,
+            'to': end_date,
+            'agenda_ids[]': agenda_id
+        }
+        try:
+            calendar_req = self.client.get(calendar_url, params=calendar_params)
+            calendar_req.raise_for_status()
+        except httpx.TimeoutException as hex:
+            logger.warning(f"Keldoc request timed out for center: {self.base_url} (calendar request)"
+                f' celendar_url: {calendar_url}'
+                f' calendar_params: {calendar_params}')
+            return None
+        except httpx.HTTPStatusError as hex:
+            logger.warning(f"Keldoc request returned error {hex.response.status_code} "
+                        f"for center: {self.base_url} (calendar request)")
+            return None
+        return calendar_req.json()
+
+
+    def find_first_availability(self, start_date):
         if not self.vaccine_motives:
             return None, 0
 
@@ -122,26 +172,14 @@ class KeldocCenter:
                 continue
             motive_id = relevant_motive.get('id', None)
             calendar_url = API_KELDOC_CALENDAR.format(motive_id)
-            calendar_params = {
-                'from': start_date,
-                'to': end_date,
-                'agenda_ids[]': relevant_motive.get('agendas', [])
-            }
-            try:
-                calendar_req = self.client.get(calendar_url, params=calendar_params)
-                calendar_req.raise_for_status()
-            except httpx.TimeoutException as hex:
-                logger.warning(f"Keldoc request timed out for center: {self.base_url} (calendar request)")
-                continue
-            except httpx.HTTPStatusError as hex:
-                logger.warning(f"Keldoc request returned error {hex.response.status_code} "
-                               f"for center: {self.base_url} (calendar request)")
-                continue
-            date, appointments = parse_keldoc_availability(calendar_req.json(), appointments)
-            if date is None:
-                continue
-            self.request.add_vaccine_type(relevant_motive.get('vaccine_type'))
-            # Compare first available date
-            if first_availability is None or date < first_availability:
-                first_availability = date
+
+            for agenda_id in relevant_motive.get('agendas', []):
+                timetables = self.get_timetables(start_date, motive_id, agenda_id)
+                date, appointments = parse_keldoc_availability(timetables, appointments)
+                if date is None:
+                    continue
+                self.request.add_vaccine_type(relevant_motive.get('vaccine_type'))
+                # Compare first available date
+                if first_availability is None or date < first_availability:
+                    first_availability = date
         return first_availability, len(appointments)
