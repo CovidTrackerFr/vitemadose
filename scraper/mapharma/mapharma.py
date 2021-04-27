@@ -1,7 +1,6 @@
 import os
 
 import httpx
-from httpx import TimeoutException
 import json
 import logging
 
@@ -38,8 +37,7 @@ MAPHARMA_CAMPAGNES_INVALIDES = [
 
 MAPHARMA_OPEN_DATA_FILE = Path('data', 'output', 'mapharma_open_data.json')
 MAPHARMA_OPEN_DATA_URL = 'https://mapharma.net/opendata/rdv'
-MAPHARMA_OPEN_DATA_URL_FALLBACK = 
-    'https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/mapharma_open_data.json'
+MAPHARMA_OPEN_DATA_URL_FALLBACK = 'https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/mapharma_open_data.json'
 
 timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=MAPHARMA_HEADERS)
@@ -91,20 +89,18 @@ def get_mapharma_opendata(
         request = client.get(opendata_url, headers=MAPHARMA_HEADERS)
         request.raise_for_status()
         return request.json()
-    except httpx.TimeoutException as hex:
-        logger.warning(f"{opendata_url} timed out {hex}"
+    except TimeoutException as hex:
+        logger.warning(f"{opendata_url} timed out {hex}")
     except httpx.HTTPStatusError as hex:
-        logger.warning(
-            f'{opendata_url} returned error {hex.response.status_code}')
+        logger.warning(f'{opendata_url} returned error {hex.response.status_code}')
     try:
         request = client.get(opendata_url_fallback, headers=MAPHARMA_HEADERS)
         request.raise_for_status()
         return request.json()
     except httpx.TimeoutException as hex:
-        logger.warning(f"{opendata_url_fallback} timed out {hex}"
+        logger.warning(f"{opendata_url_fallback} timed out {hex}")
     except httpx.HTTPStatusError as hex:
-        logger.warning(
-            f'{opendata_url_fallback} returned error {hex.response.status_code}')
+        logger.warning(f'{opendata_url_fallback} returned error {hex.response.status_code}')
     return None
 
 def get_pharmacy_and_campagne(
@@ -133,7 +129,8 @@ def get_slots(
         r = client.get(base_url)
         r.raise_for_status()
     except httpx.TimeoutException as hex:
-        logger.warning(f"{base_url} timed out {hex}"
+        logger.warning(f"{base_url} timed out {hex}")
+        return {}
     except httpx.HTTPStatusError as hex:
         logger.warning(f'{base_url} returned error {hex.response.status_code}')
         return {}
