@@ -269,6 +269,13 @@ def test_export_reserved_centers(tmp_path):
     }
 
 
+def test_get_vaccine_name():
+    assert get_vaccine_name("Vaccination Covid -55ans suite à une première injection d'AZ (ARNm)") == Vaccine.ARNM
+    assert get_vaccine_name("Vaccination Covid +55ans AZ") == Vaccine.ASTRAZENECA
+    assert get_vaccine_name("Vaccination Covid Pfizer") == Vaccine.PFIZER
+    assert get_vaccine_name("Vaccination Covid Moderna") == Vaccine.MODERNA
+
+
 def test_export_data_when_blocked(tmp_path):
     center_info1 = CenterInfo("59", "Clinique du Cambresis", "https://example.com/clinique-du-cambresis")
     center_info1.plateforme = "Maiia"
