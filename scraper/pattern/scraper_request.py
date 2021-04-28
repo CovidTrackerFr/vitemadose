@@ -18,8 +18,8 @@ class ScraperRequest:
     def update_appointment_count(self, appointment_count):
         self.appointment_count = appointment_count
 
-    def update_appointment_schedules(self, count_next_appt):
-        self.appointment_schedules=count_next_appt
+    def update_appointment_schedules(self, appointment_schedules):
+        self.appointment_schedules=appointment_schedules
 
 
     def add_vaccine_type(self, vaccine_name):
