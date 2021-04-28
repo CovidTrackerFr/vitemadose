@@ -14,19 +14,21 @@ DOCTOLIB_APPOINTMENT_REASON = [
 DOCTOLIB_APPOINTMENT_REASON = [c.lower().strip() for c in DOCTOLIB_APPOINTMENT_REASON]
 
 DOCTOLIB_CATEGORY = [
+    '70 ans',
+    'astra Zeneca',
+    'je ne suis pas professionnel de santé',
+    'je suis un particulier',
     'non professionnels de santé',
     'patient',
-    'vaccination au centre',
-    '70 ans',
-    'je suis un particulier',
-    'je ne suis pas professionnel de santé',
-    'vaccination pfizer',
-    'grand public',
-    'personnes de plus de',
+    'personnes à très haut risque',
+    'personnes âgées de 60 ans ou plus',
     'personnes de 60 ans et plus',
+    'personnes de plus de',
+    'pfizer',
+    'public',
+    'vaccination au centre',
     'vaccination covid',  # 50 - 55 ans avec comoribidtés
-    'Pfizer',
-    'Astra Zeneca',
+    'vaccination pfizer',
 ]
 DOCTOLIB_CATEGORY = [c.lower().strip() for c in DOCTOLIB_CATEGORY]
 
