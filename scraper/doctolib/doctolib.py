@@ -15,6 +15,8 @@ from scraper.pattern.center_info import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 from scraper.profiler import Profiling
+from utils.vmd_utils import date_next_n_days
+
 
 WAIT_SECONDS_AFTER_REQUEST = 0.100
 DOCTOLIB_SLOT_LIMIT = 7
@@ -37,6 +39,8 @@ if os.getenv('WITH_TOR', 'no') == 'yes':
 else:
     DEFAULT_CLIENT = httpx.Client()
 
+
+COUNT_BEFORE=[1,7]
 
 @Profiling.measure('doctolib_slot')
 def fetch_slots(request: ScraperRequest):
@@ -116,7 +120,7 @@ class DoctolibSlots:
 
                 start_date_tmp = start_date
                 for i in range(DOCTOLIB_ITERATIONS):
-                    sdate, appt, stop = self.get_appointments(request, start_date_tmp, visit_motive_ids, visit_motive_id,
+                    sdate, appt, count_next_appt, stop = self.get_appointments(request, start_date_tmp, visit_motive_ids, visit_motive_id,
                                                             agenda_ids_q, practice_ids_q, DOCTOLIB_SLOT_LIMIT)
                     if stop:
                         break
@@ -127,6 +131,7 @@ class DoctolibSlots:
                     if not first_availability or sdate < first_availability:
                         first_availability = sdate
                     request.update_appointment_count(request.appointment_count + appt)
+                    request.update_next_appointments(count_next_appt)
 
         return first_availability
 
@@ -180,6 +185,11 @@ class DoctolibSlots:
         motive_availability = False
         first_availability = None
         appointment_count = 0
+        count_next_appointments={}
+
+        for n in COUNT_BEFORE:
+            count_next_appointments[str(n)+"_days"] = 0
+
         slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={limit}'
         response = self._client.get(
             slots_api_url, headers=DOCTOLIB_HEADERS)
@@ -192,6 +202,7 @@ class DoctolibSlots:
         slots = response.json()
         if slots.get('total'):
             appointment_count += int(slots.get('total', 0))
+          
         for availability in slots['availabilities']:
             slot_list = availability.get('slots', None)
             if not slot_list or len(slot_list) == 0:
@@ -200,6 +211,11 @@ class DoctolibSlots:
                 if not first_availability or slot_list[0] < first_availability:
                     first_availability = slot_list[0]
                     motive_availability = True
+
+            for n in COUNT_BEFORE:
+                if availability.get('date') <= date_next_n_days(start_date,n):
+                        count_next_appointments[str(n)+"_days"] += len(availability.get('slots', None))
+    
             for slot_info in slot_list:
                 sdate = slot_info.get('start_date', None)
                 if not sdate:
@@ -214,7 +230,7 @@ class DoctolibSlots:
         # which is a weird move, but still, we have to stop here.
         if not first_availability and not slots.get('next_slot', None):
             stop = True
-        return first_availability, appointment_count, stop
+        return first_availability, appointment_count, count_next_appointments, stop
 
 
 def set_doctolib_center_internal_id(request: ScraperRequest, data: dict, practice_ids):

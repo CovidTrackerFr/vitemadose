@@ -57,6 +57,7 @@ class CenterInfo:
         self.plateforme = None
         self.type = None
         self.appointment_count = 0
+        self.appointment_schedules={}
         self.internal_id = None
         self.vaccine_type = None
         self.appointment_by_phone_only = False
@@ -71,6 +72,7 @@ class CenterInfo:
         self.plateforme = result.platform
         self.type = result.request.practitioner_type
         self.appointment_count = result.request.appointment_count
+        self.appointment_schedules=result.request.appointment_schedules
         self.internal_id = result.request.internal_id
         self.vaccine_type = result.request.vaccine_type
         self.appointment_by_phone_only = result.request.appointment_by_phone_only
