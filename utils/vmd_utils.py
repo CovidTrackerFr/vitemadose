@@ -212,7 +212,7 @@ def get_last_scans(centres):
 
     return liste_centres
 
-def date_next_n_days(day,n):
+def date_plus_day(day,n):
     day=time.strptime(day,'%Y-%m-%d')
     newdate=date(day.tm_year,day.tm_mon,day.tm_mday)+timedelta(n)
     newdate=newdate.strftime('%Y-%m-%d')

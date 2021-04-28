@@ -15,7 +15,7 @@ from scraper.pattern.center_info import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 from scraper.profiler import Profiling
-from utils.vmd_utils import date_next_n_days
+from utils.vmd_utils import date_plus_day
 
 
 WAIT_SECONDS_AFTER_REQUEST = 0.100
@@ -40,7 +40,7 @@ else:
     DEFAULT_CLIENT = httpx.Client()
 
 
-COUNT_BEFORE=[1,7]
+INTERVAL_SPLIT_DAYS=[1,7]
 
 @Profiling.measure('doctolib_slot')
 def fetch_slots(request: ScraperRequest):
@@ -122,8 +122,10 @@ class DoctolibSlots:
                 for i in range(DOCTOLIB_ITERATIONS):
                     sdate, appt, count_next_appt, stop = self.get_appointments(request, start_date_tmp, visit_motive_ids, visit_motive_id,
                                                             agenda_ids_q, practice_ids_q, DOCTOLIB_SLOT_LIMIT)
+                  
                     if stop:
                         break
+
                     start_date_tmp = datetime.now() + timedelta(days=7 * i)
                     start_date_tmp = start_date_tmp.strftime("%Y-%m-%d")
                     if not sdate:
@@ -185,10 +187,10 @@ class DoctolibSlots:
         motive_availability = False
         first_availability = None
         appointment_count = 0
-        count_next_appointments={}
+        count_next_appointments = {}
 
-        for n in COUNT_BEFORE:
-            count_next_appointments[str(n)+"_days"] = 0
+        for interval in INTERVAL_SPLIT_DAYS:
+            count_next_appointments[f"{interval}_days"] = 0
 
         slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={limit}'
         response = self._client.get(
@@ -212,9 +214,9 @@ class DoctolibSlots:
                     first_availability = slot_list[0]
                     motive_availability = True
 
-            for n in COUNT_BEFORE:
-                if availability.get('date') <= date_next_n_days(start_date,n):
-                        count_next_appointments[str(n)+"_days"] += len(availability.get('slots', None))
+            for interval in INTERVAL_SPLIT_DAYS:
+                if availability.get('date') <= date_plus_day(start_date,interval):
+                        count_next_appointments[f"{interval}_days"] += len(availability.get('slots', None))
     
             for slot_info in slot_list:
                 sdate = slot_info.get('start_date', None)
