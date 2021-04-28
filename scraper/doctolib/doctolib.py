@@ -131,7 +131,7 @@ class DoctolibSlots:
                     if not first_availability or sdate < first_availability:
                         first_availability = sdate
                     request.update_appointment_count(request.appointment_count + appt)
-                    request.update_next_appointments(count_next_appt)
+                    request.update_appointment_schedules(count_next_appt)
 
         return first_availability
 

@@ -18,7 +18,7 @@ class ScraperRequest:
     def update_appointment_count(self, appointment_count):
         self.appointment_count = appointment_count
 
-    def update_next_appointments(self, count_next_appt):
+    def update_appointment_schedules(self, count_next_appt):
         self.appointment_schedules=count_next_appt
 
 
