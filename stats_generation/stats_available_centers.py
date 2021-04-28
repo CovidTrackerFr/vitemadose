@@ -5,7 +5,9 @@ from datetime import datetime
 import pytz
 import requests
 
+from pathlib import Path
 from stats_generation.stats_center_types import generate_stats_center_types
+from stats_generation.stats_map import make_maps
 from utils.vmd_logger import enable_logger_for_production
 
 logger = logging.getLogger('scraper')
@@ -32,7 +34,7 @@ def generate_stats_date(centres_stats):
     ctz = pytz.timezone('Europe/Paris')
     current_time = datetime.now(tz=ctz).strftime("%Y-%m-%d %H:00:00")
     if current_time in stats_data['dates']:
-        with open(f"data/output/{stats_path}", "w") as stat_graph_file:
+        with open(Path('data', 'output', stats_path), "w") as stat_graph_file:
             json.dump(stats_data, stat_graph_file)
         logger.info(f"Stats file already updated: {stats_path}")
         return
@@ -42,7 +44,7 @@ def generate_stats_date(centres_stats):
     stats_data['total_centres'].append(data_alldep['total'])
     stats_data['total_appointments'].append(data_alldep['creneaux'])
 
-    with open(f"data/output/{stats_path}", "w") as stat_graph_file:
+    with open(Path('data', 'output', stats_path), "w") as stat_graph_file:
         json.dump(stats_data, stat_graph_file)
     logger.info(f"Updated stats file: {stats_path}")
 
@@ -66,7 +68,7 @@ def generate_stats_dep_date(centres_stats):
     ctz = pytz.timezone('Europe/Paris')
     current_time = datetime.now(tz=ctz).strftime("%Y-%m-%d %H:00:00")
     if current_time in stats_data['dates']:
-        with open(f"data/output/{stats_path}", "w") as stat_graph_file:
+        with open(Path('data', 'output', stats_path), "w") as stat_graph_file:
             json.dump(stats_data, stat_graph_file)
         logger.info(f"Stats file already updated: {stats_path}")
         return
@@ -86,12 +88,12 @@ def generate_stats_dep_date(centres_stats):
         stats_data['dep_centres'][dep].append(dep_data['total'])
         stats_data['dep_appointments'][dep].append(dep_data['creneaux'])
 
-    with open(f"data/output/{stats_path}", "w") as stat_graph_file:
+    with open(Path('data', 'output', stats_path), "w") as stat_graph_file:
         json.dump(stats_data, stat_graph_file)
     logger.info(f"Updated stats file: {stats_path}")
 
 
-def export_centres_stats(center_data='data/output/info_centres.json', stats_path='stats.json'):
+def export_centres_stats(center_data=Path('data', 'output', 'info_centres.json'), stats_path='stats.json'):
     centres_info = get_centres_info(center_data)
     centres_stats = {
         "tout_departement": {
@@ -121,13 +123,14 @@ def export_centres_stats(center_data='data/output/info_centres.json', stats_path
     available_pct = (tout_dep_obj["disponibles"] / max(1, tout_dep_obj["total"])) * 100
     logger.info("Found {0}/{1} available centers. ({2}%)".format(tout_dep_obj["disponibles"],
                                                                  tout_dep_obj["total"], round(available_pct, 2)))
-    with open(f"data/output/{stats_path}", "w") as stats_file:
+    with open(Path('data', 'output', stats_path), "w") as stats_file:
         json.dump(centres_stats, stats_file, indent=2)
     if stats_path != 'stats.json':
         return
     generate_stats_date(centres_stats)
     generate_stats_dep_date(centres_stats)
     generate_stats_center_types(centres_info)
+    make_maps(centres_info)
 
 
 def get_centres_info(center_data):
