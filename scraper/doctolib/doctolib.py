@@ -215,9 +215,10 @@ class DoctolibSlots:
                     motive_availability = True
 
             for interval in INTERVAL_SPLIT_DAYS:
-                if availability.get('date') <= date_plus_day(start_date,interval):
-                        count_next_appointments[f"{interval}_days"] += len(availability.get('slots', None))
-    
+                if availability.get('date') is not None:
+                    if availability.get('date') <= date_plus_day(start_date,interval):
+                            count_next_appointments[f"{interval}_days"] += len(availability.get('slots', None))
+        
             for slot_info in slot_list:
                 sdate = slot_info.get('start_date', None)
                 if not sdate:
@@ -433,7 +434,7 @@ def center_iterator():
     try:
         center_path = 'data/output/doctolib-centers.json'
         url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"
-        response = requests.get(url)
+        response = requests.get(url)x²
         response.raise_for_status()
         data = response.json()
         file = open(center_path, 'w')
