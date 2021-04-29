@@ -57,7 +57,6 @@ class CenterInfo:
         self.plateforme = None
         self.type = None
         self.appointment_count = 0
-        self.appointment_schedules = None
         self.internal_id = None
         self.vaccine_type = None
         self.appointment_by_phone_only = False

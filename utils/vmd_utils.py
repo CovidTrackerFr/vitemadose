@@ -212,8 +212,13 @@ def get_last_scans(centres):
 
     return liste_centres
 
-def date_plus_day(day,n):
-    day=time.strptime(day,'%Y-%m-%d')
-    newdate=date(day.tm_year,day.tm_mon,day.tm_mday)+timedelta(n)
-    newdate=newdate.strftime('%Y-%m-%d')
-    return newdate
+def date_plus_day(mydate, days):
+    mydate = date.fromisoformat(mydate)
+    newdate = mydate + timedelta(days = days)
+    return newdate.isoformat()
+
+def number_of_days_between(date1, date2):
+    date1 = date.fromisoformat(date1)
+    date2 = date.fromisoformat(date2)
+    difference = abs(date1 - date2)
+    return difference.days
