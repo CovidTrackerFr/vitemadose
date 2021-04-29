@@ -122,11 +122,12 @@ def test_export_data(tmp_path):
                 "type": None,
                 "appointment_by_phone_only": False,
                 "appointment_count": 1,
+                "count_next_appointments": None,
                 "internal_id": None,
                 "appointment_by_phone_only": False,
                 "vaccine_type": None,
                 "erreur": None,
-                "last_scan_with_availabilities": None
+                "last_scan_with_availabilities": None;
             },
         ],
         "centres_indisponibles": [],
@@ -314,6 +315,7 @@ def test_export_data_when_blocked(tmp_path):
             "type": None,
             "plateforme": "Doctolib",
             "appointment_count": 0,
+            "count_next_appointments": None,
             "internal_id": None,
             "vaccine_type": None,
             "appointment_by_phone_only": False,
