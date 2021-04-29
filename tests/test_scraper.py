@@ -127,7 +127,7 @@ def test_export_data(tmp_path):
                 "appointment_by_phone_only": False,
                 "vaccine_type": None,
                 "erreur": None,
-                "last_scan_with_availabilities": None;
+                "last_scan_with_availabilities": None
             },
         ],
         "centres_indisponibles": [],
