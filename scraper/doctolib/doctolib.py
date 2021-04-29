@@ -291,8 +291,8 @@ def link_practice_ids(practice_id: list, rdata: dict):
         place_id = place.get('id', None)
         if not place_id:
             continue
-        place_ids.append(int(place_id.replace("practice-", "")))
-        if place_id == f'practice-{practice_id[0]}':
+        place_ids.append(int(re.findall(r'\d+', place_id)[0]))
+        if re.findall(r'\d+', place_id) == practice_id[0]:
             base_place = place
             break
     if not base_place:
@@ -301,7 +301,7 @@ def link_practice_ids(practice_id: list, rdata: dict):
         if place.get('id') == base_place.get('id'):
             continue
         if place.get('address') == base_place.get('address'):  # Tideous check
-            practice_id.append(int(place.get('id').replace("practice-", "")))
+            practice_id.append(int(re.findall(r'\d+',place.get('id')[0])))
     return practice_id
 
 
