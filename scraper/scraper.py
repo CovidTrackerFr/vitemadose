@@ -166,7 +166,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
             continue
         erreur = centre.erreur
         centres_open_data.append(copy_omit_keys(centre.default(), ['prochain_rdv', 'internal_id', 'metadata',
-                                                                   'location', 'appointment_count', 'appointment_schedules', 'erreur',
+                                                                   'location', 'appointment_count', 'erreur',
                                                                    'ville', 'type', 'vaccine_type',
                                                                    'appointment_by_phone_only', 'last_scan_with_availabilities']))
         if centre.prochain_rdv is None or centre.appointment_count == 0:
