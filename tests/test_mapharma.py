@@ -8,10 +8,12 @@ from datetime import datetime
 from scraper.mapharma.mapharma import parse_slots, fetch_slots
 from scraper.pattern.scraper_request import ScraperRequest
 
+TEST_OPEN_DATA_FILE = Path('tests', 'fixtures', 'mapharma', 'mapharma_open_data.json')
+TEST_SLOT_FILE = Path('tests', 'fixtures', 'mapharma', 'slots.json')
 
 def test_parse_slots():
     slots = dict()
-    with open(Path('tests', 'fixtures', 'mapharma', 'slots.json'), 'r', encoding='utf8') as f:
+    with open(TEST_SLOT_FILE, 'r', encoding='utf8') as f:
         slots = json.load(f)
     first_availability, slots_count = parse_slots(slots)
     assert first_availability == datetime(2021, 4, 19, 17, 15)
@@ -30,5 +32,5 @@ def test_fetch_slots():
 
     request = ScraperRequest(
         'https://mapharma.net/97200?c=60&l=1', '2021-04-14')
-    first_availability = fetch_slots(request, client)
+    first_availability = fetch_slots(request, client, opendata_file = TEST_OPEN_DATA_FILE)
     assert first_availability == "2021-04-19T17:15:00"

@@ -86,10 +86,10 @@ def test_keldoc_parse_center():
     assert motives == json.loads(Path("tests", "fixtures", "keldoc", "center1-motives.json").read_text())
 
     # Find first availability date
-    date, count = test_center_1.find_first_availability("2020-04-04", "2020-04-05")
+    date, count = test_center_1.find_first_availability("2020-04-04")
     assert not date
     test_center_1.vaccine_motives = motives
-    date, count = test_center_1.find_first_availability("2020-04-04", "2020-04-05")
+    date, count = test_center_1.find_first_availability("2020-04-04")
     tz = datetime.timezone(datetime.timedelta(seconds=7200))
     assert date == datetime.datetime(2021, 4, 20, 16, 55, tzinfo=tz)
 
