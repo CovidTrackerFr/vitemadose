@@ -1,4 +1,4 @@
-import json
+from enum import Enum
 from datetime import datetime, timedelta
 from typing import Optional
 
@@ -14,21 +14,29 @@ from utils.vmd_logger import get_logger
 
 logger = get_logger()
 
-VACCINES = {
-    'Pfizer-BioNTech': [
+
+class Vaccine(Enum):
+    PFIZER = "Pfizer-BioNTech" 
+    MODERNA = "Moderna"
+    ASTRAZENECA = "AstraZeneca"
+    JANSSEN = "Janssen"
+    ARNM = "arn"
+
+VACCINES_NAMES = {
+    Vaccine.PFIZER: [
         'pfizer',
         'biontech'
     ],
-    'Moderna': [
+    Vaccine.MODERNA: [
         'moderna'
     ],
-    'AstraZeneca': [
+    Vaccine.ASTRAZENECA: [
         'astrazeneca',
         'astra-zeneca',
         'astra zeneca',
         'az'  # Not too sure about the reliability
     ],
-    'Janssen': [
+    Vaccine.JANSSEN: [
         'janssen',
         'jansen',
         'jansenn',
@@ -40,7 +48,7 @@ VACCINES = {
         'johnnson',
         'j&j'
     ],
-    'ARNm': [
+    Vaccine.ARNM: [
         'arn'
     ]
 }
@@ -58,7 +66,7 @@ class CenterInfo:
         self.type = None
         self.appointment_count = 0
         self.internal_id = None
-        self.vaccine_type = None
+        self.vaccine_type : List[Vaccine] = None
         self.appointment_by_phone_only = False
         self.erreur = None
         self.last_scan_with_availabilities = None
@@ -96,6 +104,8 @@ class CenterInfo:
             self.location = self.location.default()
         if self.erreur:
             self.erreur = str(self.erreur)
+        if self.vaccine_type:
+            self.vaccine_type = [(vaccine.value if isinstance(vaccine, Vaccine) else vaccine) for vaccine in self.vaccine_type]
         self.handle_next_availability()
         return self.__dict__
 
@@ -167,17 +177,23 @@ def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     return center
 
 
-def get_vaccine_name(name, fallback=None):
+def get_vaccine_name(name: str, fallback: Vaccine = None) -> Vaccine:
     if not name:
         return fallback
     name = name.lower().strip()
-    for vaccine in VACCINES:
-        vaccine_names = VACCINES[vaccine]
+    for vaccine in VACCINES_NAMES:
+        vaccine_names = VACCINES_NAMES[vaccine]
         for vaccine_name in vaccine_names:
             if vaccine_name in name:
+                if vaccine == Vaccine.ASTRAZENECA:
+                    return get_vaccine_astrazeneca_minus_55_edgecase(name) 
                 return vaccine
     return fallback
 
+def get_vaccine_astrazeneca_minus_55_edgecase(name: str) -> Vaccine:
+    if "-" in name and "55" in name and "suite" in name:
+        return Vaccine.ARNM
+    return Vaccine.ASTRAZENECA
 
 def dict_to_center_info(data: dict) -> CenterInfo:
     center = CenterInfo(data.get('departement'), data.get('nom'), data.get('url'))
