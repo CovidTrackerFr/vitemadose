@@ -8,7 +8,7 @@ import pytest
 
 from scraper.keldoc.keldoc import fetch_slots
 from scraper.keldoc.keldoc_center import KeldocCenter
-from scraper.keldoc.keldoc_filters import get_relevant_vaccine_specialties_id, filter_vaccine_motives, is_appointment_relevant, \
+from scraper.keldoc.keldoc_filters import filter_vaccine_specialties, filter_vaccine_motives, is_appointment_relevant, \
     is_specialty_relevant
 from scraper.pattern.scraper_request import ScraperRequest
 
@@ -71,7 +71,7 @@ def test_keldoc_parse_center():
     assert test_center_1.specialties == center1_data['specialties']
 
     # Filter center specialties
-    filtered_specialties = get_relevant_vaccine_specialties_id(test_center_1.specialties)
+    filtered_specialties = filter_vaccine_specialties(test_center_1.specialties)
     assert filtered_specialties == [144]
 
     # Fetch vaccine cabinets

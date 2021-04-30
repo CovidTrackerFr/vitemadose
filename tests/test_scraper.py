@@ -1,7 +1,7 @@
 import datetime as dt
 import json
 
-from scraper.pattern.center_info import CenterInfo, Vaccine, dict_to_center_info, get_vaccine_name
+from scraper.pattern.center_info import CenterInfo, dict_to_center_info, get_vaccine_name
 from scraper.pattern.scraper_result import GENERAL_PRACTITIONER, ScraperResult
 from utils.vmd_utils import departementUtils
 from scraper.scraper import fetch_centre_slots, export_data, get_start_date
@@ -269,13 +269,6 @@ def test_export_reserved_centers(tmp_path):
     }
 
 
-def test_get_vaccine_name():
-    assert get_vaccine_name("Vaccination Covid -55ans suite à une première injection d'AZ (ARNm)") == Vaccine.ARNM
-    assert get_vaccine_name("Vaccination Covid +55ans AZ") == Vaccine.ASTRAZENECA
-    assert get_vaccine_name("Vaccination Covid Pfizer") == Vaccine.PFIZER
-    assert get_vaccine_name("Vaccination Covid Moderna") == Vaccine.MODERNA
-
-
 def test_export_data_when_blocked(tmp_path):
     center_info1 = CenterInfo("59", "Clinique du Cambresis", "https://example.com/clinique-du-cambresis")
     center_info1.plateforme = "Maiia"
@@ -428,7 +421,7 @@ def test_scraper_request():
     assert request is not None
     assert request.internal_id == "d739"
     assert request.appointment_count == 42
-    assert request.vaccine_type == [Vaccine.PFIZER]
+    assert request.vaccine_type == ['Pfizer-BioNTech']
 
     result = ScraperResult(request, 'Doctolib', '2021-04-14T14:00:00.0000')
     assert result.default() == {
