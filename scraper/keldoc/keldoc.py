@@ -8,7 +8,7 @@ from scraper.keldoc.keldoc_filters import filter_vaccine_specialties, filter_vac
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.profiler import Profiling
 
-timeout = httpx.Timeout(25.0, connect=25.0)
+timeout = httpx.Timeout(10.0, connect=10.0)
 KELDOC_HEADERS = {
     'User-Agent': os.environ.get('KELDOC_API_KEY', ''),
 }
