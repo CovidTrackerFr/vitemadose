@@ -20,7 +20,7 @@ class Vaccine(Enum):
     MODERNA = "Moderna"
     ASTRAZENECA = "AstraZeneca"
     JANSSEN = "Janssen"
-    ARNM = "arn"
+    ARNM = "ARNm"
 
 VACCINES_NAMES = {
     Vaccine.PFIZER: [
