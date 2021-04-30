@@ -4,7 +4,8 @@ import httpx
 import logging
 import time
 
-from datetime import datetime, date
+from datetime import datetime
+import pytz
 from pathlib import Path
 from utils.vmd_logger import enable_logger_for_production
 
@@ -47,11 +48,12 @@ def get_json(url: str, client: httpx.Client = DEFAULT_CLIENT):
 def make_svg(style: str, filename: str, echelle: list, title: str = 'vitemadose.covidtracker.fr'):
     logger.info(f'making {filename}...')
     map_svg = ''
+    paris_tz = pytz.timezone("Europe/Paris")
     with open(MAP_SRC_PATH, 'r', encoding='utf-8') as f:
         map_svg = f.read()
     map_svg = map_svg.replace('/*@@@STYLETAG@@@*/', style)
     map_svg = map_svg.replace('@@@TITRETAG@@@', title)
-    map_svg = map_svg.replace('@@@UPDATETAG@@@', f'Dernière mise à jour: {datetime.now().strftime("%d/%m/%Y %H:%M")}')
+    map_svg = map_svg.replace('@@@UPDATETAG@@@', f'Dernière mise à jour: {datetime.now().astimezone(paris_tz).strftime("%d/%m/%Y %H:%M")}')
     for i in range(0, 10):
         echelle_title = ''
         if i < len(echelle):
