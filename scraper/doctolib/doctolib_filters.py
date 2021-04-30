@@ -3,12 +3,13 @@ import re
 from scraper.pattern.scraper_result import DRUG_STORE, GENERAL_PRACTITIONER, VACCINATION_CENTER
 
 DOCTOLIB_APPOINTMENT_REASON = [
-    '1ère injection',
-    '1ere dose',
-    '1 ère injection',
     '1 ere injection',
+    '1 ère injection',
     '1er injection',
+    '1ere dose',
     '1ere injection',
+    '1ère injection',
+    '1re injection',
     'vaccination'
 ]
 DOCTOLIB_APPOINTMENT_REASON = [c.lower().strip() for c in DOCTOLIB_APPOINTMENT_REASON]
