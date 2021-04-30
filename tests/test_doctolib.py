@@ -2,7 +2,6 @@ import json
 from pathlib import Path
 from scraper.doctolib.doctolib_filters import is_category_relevant
 from scraper.error import BlockedByDoctolibError
-from scraper.pattern.center_info import Vaccine
 
 import httpx
 from scraper.doctolib.doctolib import (
@@ -233,7 +232,7 @@ def test_find_visit_motive_id():
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {1: Vaccine.MODERNA}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {1: 'Moderna'}
 
     # Plusieurs motifs dispo
     data = {
@@ -253,7 +252,7 @@ def test_find_visit_motive_id():
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {1: Vaccine.PFIZER, 2: Vaccine.MODERNA}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {1: 'Pfizer-BioNTech', 2: 'Moderna'}
 
     # Mix avec un motif autre
     data = {
@@ -270,7 +269,7 @@ def test_find_visit_motive_id():
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {2: Vaccine.MODERNA}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {2: 'Moderna'}
 
     # Mix avec une catégorie autre
     data = {
@@ -293,7 +292,7 @@ def test_find_visit_motive_id():
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {2: Vaccine.ASTRAZENECA}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {2: 'AstraZeneca'}
 
     # Plusieurs types de vaccin
     data = {
@@ -344,7 +343,7 @@ def test_find_visit_motive_id():
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {1: Vaccine.MODERNA, 2: Vaccine.ASTRAZENECA, 3: Vaccine.PFIZER}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {1: 'Moderna', 2: 'AstraZeneca', 3: 'Pfizer-BioNTech'}
 
 
 def test_find_agenda_and_practice_ids():

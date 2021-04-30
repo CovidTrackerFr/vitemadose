@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 import httpx
 
 from scraper.keldoc.keldoc_center import KeldocCenter
-from scraper.keldoc.keldoc_filters import get_relevant_vaccine_specialties_id, filter_vaccine_motives
+from scraper.keldoc.keldoc_filters import filter_vaccine_specialties, filter_vaccine_motives
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.profiler import Profiling
 
@@ -29,7 +29,7 @@ def fetch_slots(request: ScraperRequest):
         return None
 
     # Filter specialties, cabinets & motives
-    center.vaccine_specialties = get_relevant_vaccine_specialties_id(center.specialties)
+    center.vaccine_specialties = filter_vaccine_specialties(center.specialties)
     center.fetch_vaccine_cabinets()
     center.vaccine_motives = filter_vaccine_motives(session, center.selected_cabinet, center.id,
                                                     center.vaccine_specialties, center.vaccine_cabinets)
