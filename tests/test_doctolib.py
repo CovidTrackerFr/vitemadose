@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from typing import DefaultDict
 from scraper.doctolib.doctolib_filters import is_category_relevant
 from scraper.error import BlockedByDoctolibError
 from scraper.pattern.center_info import Vaccine

@@ -30,6 +30,11 @@ VACCINES_NAMES = {
     Vaccine.MODERNA: [
         'moderna'
     ],
+        Vaccine.ARNM: [
+        "arn",
+        "arnm",
+        "arn-m"
+    ],
     Vaccine.ASTRAZENECA: [
         'astrazeneca',
         'astra-zeneca',
@@ -47,9 +52,6 @@ VACCINES_NAMES = {
         'johnson',
         'johnnson',
         'j&j'
-    ],
-    Vaccine.ARNM: [
-        'arn'
     ]
 }
 
@@ -181,7 +183,7 @@ def get_vaccine_name(name: str, fallback: Vaccine = None) -> Vaccine:
     if not name:
         return fallback
     name = name.lower().strip()
-    for vaccine in VACCINES_NAMES:
+    for vaccine in (Vaccine.MODERNA, Vaccine.PFIZER, Vaccine.ARNM, Vaccine.ASTRAZENECA, Vaccine.JANSSEN) :
         vaccine_names = VACCINES_NAMES[vaccine]
         for vaccine_name in vaccine_names:
             if vaccine_name in name:
@@ -191,7 +193,8 @@ def get_vaccine_name(name: str, fallback: Vaccine = None) -> Vaccine:
     return fallback
 
 def get_vaccine_astrazeneca_minus_55_edgecase(name: str) -> Vaccine:
-    if "-" in name and "55" in name and "suite" in name:
+    has_minus =  "-" in name or "moins" in name
+    if has_minus and "55" in name and "suite" in name:
         return Vaccine.ARNM
     return Vaccine.ASTRAZENECA
 
