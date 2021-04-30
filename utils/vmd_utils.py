@@ -8,6 +8,9 @@ import datetime as dt
 import pytz
 import requests
 
+import time
+from datetime import date, timedelta, datetime
+
 from pathlib import Path
 from unidecode import unidecode
 
@@ -208,3 +211,8 @@ def get_last_scans(centres):
             centre.last_scan_with_availabilities = dt.datetime.now(tz=pytz.timezone('Europe/Paris')).isoformat()
 
     return liste_centres
+
+def date_plus_day(mydate, days):
+    mydate = date.fromisoformat(mydate)
+    newdate = mydate + timedelta(days = days)
+    return newdate.isoformat()

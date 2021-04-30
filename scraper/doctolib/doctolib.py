@@ -9,12 +9,15 @@ from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 
 import httpx
 import requests
+from collections import Counter
+from collections import defaultdict
 
 from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
 from scraper.pattern.center_info import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 from scraper.profiler import Profiling
+from utils.vmd_utils import date_plus_day
 
 WAIT_SECONDS_AFTER_REQUEST = 0.100
 DOCTOLIB_SLOT_LIMIT = 7
@@ -36,6 +39,12 @@ if os.getenv('WITH_TOR', 'no') == 'yes':
     DEFAULT_CLIENT = session  # type: ignore
 else:
     DEFAULT_CLIENT = httpx.Client()
+
+# Attention à ne pas mettre de valeur supérieure à DOCTOLIB_SLOT_LIMIT*(DOCTOLIB_ITERATIONS+1)
+INTERVAL_SPLIT_DAYS=[1,7,28,49]
+
+if not all(i <= (DOCTOLIB_SLOT_LIMIT*(DOCTOLIB_ITERATIONS+1)) for i in INTERVAL_SPLIT_DAYS):
+    logger.error(f"DOCTOLIB - Incorrect value for INTERVAL_SPLIT_DAYS in doctolib.py")
 
 
 @Profiling.measure('doctolib_slot')
@@ -116,10 +125,12 @@ class DoctolibSlots:
 
                 start_date_tmp = start_date
                 for i in range(DOCTOLIB_ITERATIONS):
-                    sdate, appt, stop = self.get_appointments(request, start_date_tmp, visit_motive_ids, visit_motive_id,
-                                                            agenda_ids_q, practice_ids_q, DOCTOLIB_SLOT_LIMIT)
+                    sdate, appt, count_next_appt, stop = self.get_appointments(request, start_date_tmp, visit_motive_ids, visit_motive_id,
+                                                            agenda_ids_q, practice_ids_q, DOCTOLIB_SLOT_LIMIT, start_date)
+                  
                     if stop:
                         break
+
                     start_date_tmp = datetime.now() + timedelta(days=7 * i)
                     start_date_tmp = start_date_tmp.strftime("%Y-%m-%d")
                     if not sdate:
@@ -127,7 +138,15 @@ class DoctolibSlots:
                     if not first_availability or sdate < first_availability:
                         first_availability = sdate
                     request.update_appointment_count(request.appointment_count + appt)
+   
+                    updated_dict = dict(Counter(request.appointment_schedules) + Counter(count_next_appt))
+                  
+                    for interval in INTERVAL_SPLIT_DAYS:
+                        if (f"{interval}_days") not in updated_dict.keys():
+                            updated_dict[f"{interval}_days"] = 0
 
+                    request.update_appointment_schedules(updated_dict)
+        
         return first_availability
 
     def sort_agenda_ids(self, all_agendas, ids):
@@ -175,11 +194,13 @@ class DoctolibSlots:
         return False
 
     def get_appointments(self, request: ScraperRequest, start_date: str, visit_motive_ids,
-                         motive_id: str, agenda_ids_q: str, practice_ids_q: str, limit: int):
+                         motive_id: str, agenda_ids_q: str, practice_ids_q: str, limit: int, start_date_original: str):
         stop = False
         motive_availability = False
         first_availability = None
         appointment_count = 0
+        count_next_appointments = defaultdict(int)
+
         slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={limit}'
         response = self._client.get(
             slots_api_url, headers=DOCTOLIB_HEADERS)
@@ -192,6 +213,7 @@ class DoctolibSlots:
         slots = response.json()
         if slots.get('total'):
             appointment_count += int(slots.get('total', 0))
+          
         for availability in slots['availabilities']:
             slot_list = availability.get('slots', None)
             if not slot_list or len(slot_list) == 0:
@@ -200,6 +222,13 @@ class DoctolibSlots:
                 if not first_availability or slot_list[0] < first_availability:
                     first_availability = slot_list[0]
                     motive_availability = True
+
+            for interval in INTERVAL_SPLIT_DAYS:
+                if start_date <= date_plus_day(start_date_original, interval):
+                    if availability.get('date') is not None:
+                        if availability.get('date') <= date_plus_day(start_date_original,interval):
+                            count_next_appointments[f"{interval}_days"] += len(availability.get('slots', []))
+                
             for slot_info in slot_list:
                 sdate = slot_info.get('start_date', None)
                 if not sdate:
@@ -214,7 +243,7 @@ class DoctolibSlots:
         # which is a weird move, but still, we have to stop here.
         if not first_availability and not slots.get('next_slot', None):
             stop = True
-        return first_availability, appointment_count, stop
+        return first_availability, appointment_count, count_next_appointments, stop
 
 
 def set_doctolib_center_internal_id(request: ScraperRequest, data: dict, practice_ids):
@@ -261,8 +290,8 @@ def link_practice_ids(practice_id: list, rdata: dict):
         place_id = place.get('id', None)
         if not place_id:
             continue
-        place_ids.append(int(place_id.replace("practice-", "")))
-        if place_id == f'practice-{practice_id[0]}':
+        place_ids.append(int(re.findall(r'\d+', place_id)[0]))
+        if re.findall(r'\d+', place_id) == practice_id[0]:
             base_place = place
             break
     if not base_place:
@@ -271,7 +300,7 @@ def link_practice_ids(practice_id: list, rdata: dict):
         if place.get('id') == base_place.get('id'):
             continue
         if place.get('address') == base_place.get('address'):  # Tideous check
-            practice_id.append(int(place.get('id').replace("practice-", "")))
+            practice_id.append(int(re.findall(r'\d+',place.get('id')[0])))
     return practice_id
 
 
