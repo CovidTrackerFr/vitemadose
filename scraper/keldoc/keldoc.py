@@ -8,7 +8,7 @@ from scraper.keldoc.keldoc_filters import filter_vaccine_specialties, filter_vac
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.profiler import Profiling
 
-timeout = httpx.Timeout(25.0, connect=25.0)
+timeout = httpx.Timeout(10.0, connect=10.0)
 KELDOC_HEADERS = {
     'User-Agent': os.environ.get('KELDOC_API_KEY', ''),
 }
@@ -17,6 +17,9 @@ session = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
 
 @Profiling.measure('keldoc_slot')
 def fetch_slots(request: ScraperRequest):
+    if 'www.keldoc.com' in request.url:
+        logger.debug(f'Fixing wrong hostname in request: {request.url}')
+        request.url = request.url.replace('www.keldoc.com', 'vaccination-covid.keldoc.com')
     center = KeldocCenter(request, client=session)
     # Unable to parse center resources (id, location)?
     if not center.parse_resource():
