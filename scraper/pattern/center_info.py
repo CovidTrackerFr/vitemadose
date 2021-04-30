@@ -177,7 +177,7 @@ def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     return center
 
 
-def get_vaccine_name(name : str, fallback: Vaccine = None) -> Vaccine :
+def get_vaccine_name(name: str, fallback: Vaccine = None) -> Vaccine:
     if not name:
         return fallback
     name = name.lower().strip()
