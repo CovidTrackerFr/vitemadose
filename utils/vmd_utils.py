@@ -212,7 +212,9 @@ def get_last_scans(centres):
 
     return liste_centres
 
-def date_plus_day(mydate, days):
+def append_date_days(mydate: str, days: int):
+    if not mydate or not days:
+        return
     mydate = date.fromisoformat(mydate)
     newdate = mydate + timedelta(days = days)
     return newdate.isoformat()

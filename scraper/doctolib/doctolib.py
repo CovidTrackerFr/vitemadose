@@ -17,7 +17,7 @@ from scraper.pattern.center_info import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 from scraper.profiler import Profiling
-from utils.vmd_utils import date_plus_day
+from utils.vmd_utils import append_date_days
 
 WAIT_SECONDS_AFTER_REQUEST = 0.100
 DOCTOLIB_SLOT_LIMIT = 7
@@ -40,10 +40,10 @@ if os.getenv('WITH_TOR', 'no') == 'yes':
 else:
     DEFAULT_CLIENT = httpx.Client()
 
-# Attention à ne pas mettre de valeur supérieure à DOCTOLIB_SLOT_LIMIT*(DOCTOLIB_ITERATIONS+1)
 INTERVAL_SPLIT_DAYS=[1,7,28,49]
 
-if not all(i <= (DOCTOLIB_SLOT_LIMIT*(DOCTOLIB_ITERATIONS+1)) for i in INTERVAL_SPLIT_DAYS):
+# Vérifie qu'aucun des intervalles de calcul de dépasse l'intervalle globale de recherche des dispos 
+if not all(i <= (DOCTOLIB_SLOT_LIMIT * (DOCTOLIB_ITERATIONS + 1)) for i in INTERVAL_SPLIT_DAYS):
     logger.error(f"DOCTOLIB - Incorrect value for INTERVAL_SPLIT_DAYS in doctolib.py")
 
 
@@ -140,11 +140,9 @@ class DoctolibSlots:
                     request.update_appointment_count(request.appointment_count + appt)
    
                     updated_dict = dict(Counter(request.appointment_schedules) + Counter(count_next_appt))
-                  
                     for interval in INTERVAL_SPLIT_DAYS:
-                        if (f"{interval}_days") not in updated_dict.keys():
+                        if f"{interval}_days" not in updated_dict.keys():
                             updated_dict[f"{interval}_days"] = 0
-
                     request.update_appointment_schedules(updated_dict)
         
         return first_availability
@@ -199,7 +197,7 @@ class DoctolibSlots:
         motive_availability = False
         first_availability = None
         appointment_count = 0
-        count_next_appointments = defaultdict(int)
+        next_appointment_timetables = defaultdict(int)
 
         slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={limit}'
         response = self._client.get(
@@ -224,10 +222,10 @@ class DoctolibSlots:
                     motive_availability = True
 
             for interval in INTERVAL_SPLIT_DAYS:
-                if start_date <= date_plus_day(start_date_original, interval):
-                    if availability.get('date') is not None:
-                        if availability.get('date') <= date_plus_day(start_date_original,interval):
-                            count_next_appointments[f"{interval}_days"] += len(availability.get('slots', []))
+                if start_date <= append_date_days(start_date_original, interval):
+                    if availability.get('date'):
+                        if availability.get('date') <= append_date_days(start_date_original, interval):
+                            next_appointment_timetables[f"{interval}_days"] += len(availability.get('slots', []))
                 
             for slot_info in slot_list:
                 sdate = slot_info.get('start_date', None)
@@ -243,7 +241,7 @@ class DoctolibSlots:
         # which is a weird move, but still, we have to stop here.
         if not first_availability and not slots.get('next_slot', None):
             stop = True
-        return first_availability, appointment_count, count_next_appointments, stop
+        return first_availability, appointment_count, next_appointment_timetables, stop
 
 
 def set_doctolib_center_internal_id(request: ScraperRequest, data: dict, practice_ids):
