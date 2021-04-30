@@ -40,7 +40,12 @@ if os.getenv('WITH_TOR', 'no') == 'yes':
 else:
     DEFAULT_CLIENT = httpx.Client()
 
+<<<<<<< HEAD
 INTERVAL_SPLIT_DAYS=[1,7,28,49]
+=======
+# Attention à ne pas mettre de valeur supérieure à DOCTOLIB_SLOT_LIMIT*(DOCTOLIB_ITERATIONS+1)
+INTERVAL_SPLIT_DAYS = [1, 7, 28, 49]
+>>>>>>> 43a6d4d36898441f8f07b2963c3be22551878cba
 
 # Vérifie qu'aucun des intervalles de calcul de dépasse l'intervalle globale de recherche des dispos 
 if not all(i <= (DOCTOLIB_SLOT_LIMIT * (DOCTOLIB_ITERATIONS + 1)) for i in INTERVAL_SPLIT_DAYS):
