@@ -18,7 +18,6 @@ from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 from scraper.profiler import Profiling
 from utils.vmd_utils import date_plus_day
-from utils.vmd_utils import number_of_days_between
 
 WAIT_SECONDS_AFTER_REQUEST = 0.100
 DOCTOLIB_SLOT_LIMIT = 7
@@ -143,8 +142,8 @@ class DoctolibSlots:
                     updated_dict = dict(Counter(request.appointment_schedules) + Counter(count_next_appt))
                   
                     for interval in INTERVAL_SPLIT_DAYS:
-                        if (str(interval)+"_days") not in updated_dict.keys():
-                            updated_dict[str(interval)+"_days"] = 0
+                        if (f"{interval}_days") not in updated_dict.keys():
+                            updated_dict[f"{interval}_days"] = 0
 
                     request.update_appointment_schedules(updated_dict)
         
@@ -228,7 +227,7 @@ class DoctolibSlots:
                 if start_date <= date_plus_day(start_date_original, interval):
                     if availability.get('date') is not None:
                         if availability.get('date') <= date_plus_day(start_date_original,interval):
-                            count_next_appointments[f"{interval}_days"] += len(availability.get('slots', None))
+                            count_next_appointments[f"{interval}_days"] += len(availability.get('slots', []))
                 
             for slot_info in slot_list:
                 sdate = slot_info.get('start_date', None)

@@ -216,9 +216,3 @@ def date_plus_day(mydate, days):
     mydate = date.fromisoformat(mydate)
     newdate = mydate + timedelta(days = days)
     return newdate.isoformat()
-
-def number_of_days_between(date1, date2):
-    date1 = date.fromisoformat(date1)
-    date2 = date.fromisoformat(date2)
-    difference = abs(date1 - date2)
-    return difference.days
