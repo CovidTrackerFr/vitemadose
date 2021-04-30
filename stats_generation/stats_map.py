@@ -2,8 +2,11 @@ import io
 import csv
 import httpx
 import logging
+import time
 
+from datetime import datetime, date
 from pathlib import Path
+from utils.vmd_logger import enable_logger_for_production
 
 timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
@@ -48,6 +51,7 @@ def make_svg(style: str, filename: str, echelle: list, title: str = 'vitemadose.
         map_svg = f.read()
     map_svg = map_svg.replace('/*@@@STYLETAG@@@*/', style)
     map_svg = map_svg.replace('@@@TITRETAG@@@', title)
+    map_svg = map_svg.replace('@@@UPDATETAG@@@', f'Dernière mise à jour: {datetime.now().strftime("%d/%m/%Y %H:%M")}')
     for i in range(0, 10):
         echelle_title = ''
         if i < len(echelle):
@@ -71,12 +75,12 @@ def make_style(depts: dict, filename: str, palette: list, echelle: list,
         dept_style = f'.departement{dept.lower()} {{ fill: {color}; }}\n'
         style += dept_style
 
-    style += f'.echelle {{ stroke:{ECHELLE_STROKE}; }}\n'
+    style += f'.echelle {{ stroke:{ECHELLE_STROKE}; stroke-width:0.5;}}\n'
     style += f'.echelle-font {{ fill:{ECHELLE_FONT}; }}\n'
 
     for i in range(0, 10):
-        color = '#ffffff'
-        stroke = '#ffffff'
+        color = 'none'
+        stroke = 'none'
         if i < len(palette):
             color = palette[i]
             stroke = ECHELLE_STROKE
@@ -149,6 +153,7 @@ def make_maps(info_centres: dict):
 
 
 def main():
+    enable_logger_for_production()
     info_centres = get_json('https://vitemadose.gitlab.io/vitemadose/info_centres.json')
     make_maps(info_centres)
 
