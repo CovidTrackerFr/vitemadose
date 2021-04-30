@@ -277,6 +277,7 @@ def test_get_vaccine_name():
     assert get_vaccine_name("Vaccination Covid de moins de 55ans (vaccin ARNm) suite à une 1ère injection d'AZ") == Vaccine.ARNM
 
 
+
 def test_export_data_when_blocked(tmp_path):
     center_info1 = CenterInfo("59", "Clinique du Cambresis", "https://example.com/clinique-du-cambresis")
     center_info1.plateforme = "Maiia"
