@@ -41,7 +41,7 @@ else:
     DEFAULT_CLIENT = httpx.Client()
 
 # Attention à ne pas mettre de valeur supérieure à DOCTOLIB_SLOT_LIMIT*(DOCTOLIB_ITERATIONS+1)
-INTERVAL_SPLIT_DAYS=[1,7,28,49]
+INTERVAL_SPLIT_DAYS = [1, 7, 28, 49]
 
 if not all(i <= (DOCTOLIB_SLOT_LIMIT*(DOCTOLIB_ITERATIONS+1)) for i in INTERVAL_SPLIT_DAYS):
     logger.error(f"DOCTOLIB - Incorrect value for INTERVAL_SPLIT_DAYS in doctolib.py")
