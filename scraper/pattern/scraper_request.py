@@ -5,6 +5,7 @@ class ScraperRequest:
         self.internal_id = None
         self.practitioner_type = None
         self.appointment_count = 0
+        self.appointment_schedules = None
         self.vaccine_type = None
         self.appointment_by_phone_only = False
 
@@ -16,6 +17,12 @@ class ScraperRequest:
 
     def update_appointment_count(self, appointment_count):
         self.appointment_count = appointment_count
+
+    def update_appointment_schedules(self, appointment_schedules : dict):
+        self.appointment_schedules = appointment_schedules
+
+    def get_appointment_schedules(self) -> list:
+        return self.appointment_schedules
 
     def add_vaccine_type(self, vaccine_name):
         if not vaccine_name:
