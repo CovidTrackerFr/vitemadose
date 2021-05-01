@@ -40,7 +40,6 @@ if os.getenv('WITH_TOR', 'no') == 'yes':
 else:
     DEFAULT_CLIENT = httpx.Client()
 
-INTERVAL_SPLIT_DAYS=[1,7,28,49]
 # Attention à ne pas mettre de valeur supérieure à DOCTOLIB_SLOT_LIMIT*(DOCTOLIB_ITERATIONS+1)
 INTERVAL_SPLIT_DAYS = [1, 7, 28, 49]
 
@@ -130,7 +129,6 @@ class DoctolibSlots:
 
                 start_date_tmp = start_date
 
-
                 for i in range(DOCTOLIB_ITERATIONS):
                     sdate, appt, count_next_appt, stop = self.get_appointments(request, start_date_tmp, visit_motive_ids, visit_motive_id,
                                                             agenda_ids_q, practice_ids_q, DOCTOLIB_SLOT_LIMIT, start_date)
@@ -152,7 +150,7 @@ class DoctolibSlots:
                             updated_dict[f"{interval}_days"] = 0
                     request.update_appointment_schedules(updated_dict)
 
-        if not request.print_appointment_schedules():
+        if not request.get_appointment_schedules():
             next_appointment_timetables={}
             for interval in INTERVAL_SPLIT_DAYS:
                 next_appointment_timetables[f"{interval}_days"] = 0
