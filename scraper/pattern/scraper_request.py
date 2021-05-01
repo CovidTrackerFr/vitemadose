@@ -21,6 +21,8 @@ class ScraperRequest:
     def update_appointment_schedules(self, appointment_schedules : dict) -> None:
         self.appointment_schedules = appointment_schedules
 
+    def print_appointment_schedules(self) -> list:
+        return self.appointment_schedules
 
     def add_vaccine_type(self, vaccine_name):
         if not vaccine_name:

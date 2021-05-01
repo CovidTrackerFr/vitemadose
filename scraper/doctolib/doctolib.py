@@ -65,6 +65,7 @@ class DoctolibSlots:
         self._client = DEFAULT_CLIENT if client is None else client
 
     def fetch(self, request: ScraperRequest) -> Optional[str]:
+         
         centre = _parse_centre(request.get_url())
 
         # Doctolib fetches multiple vaccination centers sometimes
@@ -113,7 +114,9 @@ class DoctolibSlots:
 
         all_agendas = parse_agenda_ids(rdata)
 
+
         first_availability = None
+        
         for visit_motive_id in visit_motive_ids:
             agenda_ids, practice_ids = _find_agenda_and_practice_ids(
                 data, visit_motive_id, practice_id_filter=practice_id
@@ -126,6 +129,8 @@ class DoctolibSlots:
                 start_date = request.get_start_date()
 
                 start_date_tmp = start_date
+
+
                 for i in range(DOCTOLIB_ITERATIONS):
                     sdate, appt, count_next_appt, stop = self.get_appointments(request, start_date_tmp, visit_motive_ids, visit_motive_id,
                                                             agenda_ids_q, practice_ids_q, DOCTOLIB_SLOT_LIMIT, start_date)
@@ -146,7 +151,13 @@ class DoctolibSlots:
                         if f"{interval}_days" not in updated_dict.keys():
                             updated_dict[f"{interval}_days"] = 0
                     request.update_appointment_schedules(updated_dict)
-        
+
+        if not request.print_appointment_schedules():
+            next_appointment_timetables={}
+            for interval in INTERVAL_SPLIT_DAYS:
+                next_appointment_timetables[f"{interval}_days"] = 0
+            request.update_appointment_schedules(next_appointment_timetables)
+
         return first_availability
 
     def sort_agenda_ids(self, all_agendas, ids):
@@ -192,6 +203,7 @@ class DoctolibSlots:
             if pid in practice_ids:
                 return True
         return False
+        
 
     def get_appointments(self, request: ScraperRequest, start_date: str, visit_motive_ids,
                          motive_id: str, agenda_ids_q: str, practice_ids_q: str, limit: int, start_date_original: str):
@@ -291,7 +303,7 @@ def link_practice_ids(practice_id: list, rdata: dict):
         if not place_id:
             continue
         place_ids.append(int(re.findall(r'\d+', place_id)[0]))
-        if re.findall(r'\d+', place_id) == practice_id[0]:
+        if int(re.findall(r'\d+', place_id)[0]) == int(practice_id[0]):
             base_place = place
             break
     if not base_place:
@@ -300,7 +312,7 @@ def link_practice_ids(practice_id: list, rdata: dict):
         if place.get('id') == base_place.get('id'):
             continue
         if place.get('address') == base_place.get('address'):  # Tideous check
-            practice_id.append(int(re.findall(r'\d+',place.get('id')[0])))
+            practice_id.append(int(re.findall(r'\d+',place.get('id'))[0]))
     return practice_id
 
 
