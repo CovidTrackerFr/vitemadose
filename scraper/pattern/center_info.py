@@ -193,7 +193,7 @@ def get_vaccine_name(name: str, fallback: Vaccine = None) -> Vaccine:
     return fallback
 
 def get_vaccine_astrazeneca_minus_55_edgecase(name: str) -> Vaccine:
-    has_minus =  "-" in name or "moins" in name
+    has_minus =  "-" in name or "–" in name or "–" in name or "moins" in name
     if has_minus and "55" in name and "suite" in name:
         return Vaccine.ARNM
     return Vaccine.ASTRAZENECA
