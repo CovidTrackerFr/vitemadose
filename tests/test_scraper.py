@@ -271,10 +271,11 @@ def test_export_reserved_centers(tmp_path):
 
 def test_get_vaccine_name():
     assert get_vaccine_name("Vaccination Covid -55ans suite à une première injection d'AZ (ARNm)") == Vaccine.ARNM
+    assert get_vaccine_name("Vaccination ARN suite à une 1ere injection Astra Zeneca") == Vaccine.ARNM
+    assert get_vaccine_name("Vaccination Covid de moins de 55ans (vaccin ARNm) suite à une 1ère injection d'AZ") == Vaccine.ARNM
     assert get_vaccine_name("Vaccination Covid +55ans AZ") == Vaccine.ASTRAZENECA
     assert get_vaccine_name("Vaccination Covid Pfizer") == Vaccine.PFIZER
     assert get_vaccine_name("Vaccination Covid Moderna") == Vaccine.MODERNA
-    assert get_vaccine_name("Vaccination Covid de moins de 55ans (vaccin ARNm) suite à une 1ère injection d'AZ") == Vaccine.ARNM
 
 
 def test_export_data_when_blocked(tmp_path):
