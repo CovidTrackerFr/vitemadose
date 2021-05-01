@@ -145,6 +145,7 @@ def plus_metadata(stats: dict) -> dict:
     }
     return stats_with_metadata
 
+
 if __name__ == '__main__':
     enable_logger_for_production()
     export_centres_stats()
