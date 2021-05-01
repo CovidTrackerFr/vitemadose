@@ -165,7 +165,7 @@ def make_maps(info_centres: dict):
         dept_pop[row['dep']] = row['departmentPopulation']
 
     dept_rdv = {}
-    csv_rdv = get_csv(CSV_RDV_URL, header=True, delimiter=',', encoding='ansi')
+    csv_rdv = get_csv(CSV_RDV_URL, header=True, delimiter=',', encoding='windows-1252')
 
     for row in csv_rdv:
         date_debut_semaine = row['date_debut_semaine']
