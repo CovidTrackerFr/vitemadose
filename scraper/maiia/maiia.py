@@ -3,6 +3,7 @@ import logging
 import httpx
 
 from datetime import datetime, timedelta
+from pytz import timezone
 
 import requests
 from dateutil.parser import isoparse
@@ -14,6 +15,7 @@ from typing import Optional
 from scraper.profiler import Profiling
 from scraper.pattern.center_info import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
+from scraper.pattern.scraper_result import INTERVAL_SPLIT_DAYS
 from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT
 
 timeout = httpx.Timeout(30.0, connect=30.0)
@@ -33,6 +35,23 @@ def parse_slots(slots: list) -> Optional[datetime]:
         if first_availability == None or start_date_time < first_availability:
             first_availability = start_date_time
     return first_availability
+
+
+def count_slots(slots: list, start_date:str, end_date:str) -> int:
+    logger.debug(f'couting slots from {start_date} to {end_date}')
+    paris_tz = timezone("Europe/Paris")
+    start_dt = isoparse(start_date).astimezone(paris_tz)
+    end_dt = isoparse(end_date).astimezone(paris_tz)
+    count = 0
+
+    for slot in slots:
+        if 'startDateTime' not in slot:
+            continue
+        slot_dt = isoparse(slot['startDateTime']).astimezone(paris_tz)
+        if slot_dt > start_dt and slot_dt < end_dt:
+            count += 1
+            
+    return count
 
 
 def get_next_slot_date(center_id: str, consultation_reason_name: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT) -> Optional[str]:
@@ -58,8 +77,9 @@ def get_slots(center_id: str, consultation_reason_name: str, start_date: str, en
         if not next_slot_date:
             return None
         next_date = datetime.strptime(next_slot_date, '%Y-%m-%dT%H:%M:%S.%fZ')
+        if next_date - isoparse(start_date) > timedelta(days=MAIIA_DAY_LIMIT) :
+            return None
         start_date = next_date.isoformat()
-        end_date = (next_date + timedelta(days=MAIIA_DAY_LIMIT)).isoformat()
         url = f'{MAIIA_URL}/api/pat-public/availabilities?centerId={center_id}&consultationReasonName={consultation_reason_name}&from={start_date}&to={end_date}'
         availabilities = get_paged(url, limit=limit, client=client)['items']
     if availabilities:
@@ -75,13 +95,15 @@ def get_reasons(center_id: str, limit=MAIIA_LIMIT, client: httpx.Client = DEFAUL
     return result.get('items', [])
 
 
-def get_first_availability(center_id: str, request_date: str, reasons: [dict], client: httpx.Client = DEFAULT_CLIENT) -> [Optional[datetime], int]:
+def get_first_availability(center_id: str, request_date: str, reasons: [dict], client: httpx.Client = DEFAULT_CLIENT) -> [Optional[datetime], int, dict]:
     date = isoparse(request_date)
     start_date = date.isoformat()
     end_date = (date + timedelta(days=MAIIA_DAY_LIMIT)).isoformat()
     first_availability = None
     slots_count = 0
-
+    appointment_schedules = {}
+    for n in INTERVAL_SPLIT_DAYS:
+        appointment_schedules[f'{n}_days'] = 0
     for consultation_reason in reasons:
         consultation_reason_name_quote = quote(consultation_reason.get('name'), '')
         if 'injectionType' in consultation_reason and consultation_reason['injectionType'] in ['FIRST']:
@@ -89,11 +111,14 @@ def get_first_availability(center_id: str, request_date: str, reasons: [dict], c
             slot_availability = parse_slots(slots)
             if slot_availability == None:
                 continue
+            for n in (INTERVAL_SPLIT_DAY for INTERVAL_SPLIT_DAY in INTERVAL_SPLIT_DAYS if INTERVAL_SPLIT_DAY <= MAIIA_DAY_LIMIT):
+                n_date = (isoparse(start_date) + timedelta(days=n)).isoformat()
+                appointment_schedules[f'{n}_days'] += count_slots(slots, start_date, n_date)
             slots_count += len(slots)
             if first_availability == None or slot_availability < first_availability:
                 first_availability = slot_availability
-
-    return first_availability, slots_count
+    logger.info(f'appointment_schedules: {appointment_schedules}')
+    return first_availability, slots_count, appointment_schedules
 
 
 @Profiling.measure('maiia_slot')
@@ -110,7 +135,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
     if not reasons:
         return None
 
-    first_availability, slots_count = get_first_availability(center_id, start_date, reasons, client=client)
+    first_availability, slots_count, appointment_schedules = get_first_availability(center_id, start_date, reasons, client=client)
     if first_availability == None:
         return None
 
@@ -118,6 +143,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
         request.add_vaccine_type(get_vaccine_name(reason['name']))
     request.update_internal_id(center_id)
     request.update_appointment_count(slots_count)
+    request.update_appointment_schedules(appointment_schedules)
     return first_availability.isoformat()
 
 
