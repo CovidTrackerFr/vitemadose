@@ -30,7 +30,7 @@ VACCINES_NAMES = {
     Vaccine.MODERNA: [
         'moderna'
     ],
-        Vaccine.ARNM: [
+    Vaccine.ARNM: [
         "arn",
         "arnm",
         "arn-m"
