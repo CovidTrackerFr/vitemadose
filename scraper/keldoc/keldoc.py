@@ -1,4 +1,5 @@
 import os
+import logging
 from datetime import datetime, timedelta
 
 import httpx
@@ -13,7 +14,7 @@ KELDOC_HEADERS = {
     'User-Agent': os.environ.get('KELDOC_API_KEY', ''),
 }
 session = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
-
+logger = logging.getLogger('scraper')
 
 @Profiling.measure('keldoc_slot')
 def fetch_slots(request: ScraperRequest):
@@ -34,9 +35,11 @@ def fetch_slots(request: ScraperRequest):
     center.vaccine_motives = filter_vaccine_motives(session, center.selected_cabinet, center.id,
                                                     center.vaccine_specialties, center.vaccine_cabinets)
     # Find the first availability
-    date, count = center.find_first_availability(request.get_start_date())
+    date, count, appointment_schedules = center.find_first_availability(request.get_start_date())
     if not date:
         request.update_appointment_count(0)
         return None
     request.update_appointment_count(count)
+    if appointment_schedules:
+        request.update_appointment_schedules(appointment_schedules)
     return date.strftime('%Y-%m-%dT%H:%M:%S.%f%z')

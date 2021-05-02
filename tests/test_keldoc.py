@@ -34,7 +34,7 @@ def online_keldoc_test():
 
 def get_test_data(file_name):
     path = Path("tests", "fixtures", "keldoc", f"{file_name}.json")
-    return json.loads(path.read_text())
+    return json.loads(path.read_text(encoding='utf-8'))
 
 
 def app_center1(request: httpx.Request) -> httpx.Response:
@@ -81,17 +81,19 @@ def test_keldoc_parse_center():
     assert cabinets == [18780, 16913, 16910, 16571, 16579]
 
     # Fetch motives
+    print(f'selected cabinet: {test_center_1.selected_cabinet}')
     motives = filter_vaccine_motives(client, test_center_1.selected_cabinet, test_center_1.id,
                                      test_center_1.vaccine_specialties, test_center_1.vaccine_cabinets)
     assert motives == json.loads(Path("tests", "fixtures", "keldoc", "center1-motives.json").read_text())
 
     # Find first availability date
-    date, count = test_center_1.find_first_availability("2020-04-04")
+    date, count, appointment_schedules = test_center_1.find_first_availability("2020-04-04")
     assert not date
     test_center_1.vaccine_motives = motives
-    date, count = test_center_1.find_first_availability("2020-04-04")
+    date, count, appointment_schedules = test_center_1.find_first_availability("2020-04-04")
     tz = datetime.timezone(datetime.timedelta(seconds=7200))
     assert date == datetime.datetime(2021, 4, 20, 16, 55, tzinfo=tz)
+    assert appointment_schedules == {'1_days': 0, '28_days': 0, '49_days': 0, '7_days': 0}
 
 
 def test_keldoc_missing_params():

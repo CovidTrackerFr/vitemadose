@@ -3,17 +3,19 @@ import os
 from urllib.parse import urlsplit, parse_qs
 from datetime import datetime, timedelta
 from dateutil.parser import isoparse
+from pytz import timezone
 import httpx
 
 from scraper.keldoc.keldoc_filters import parse_keldoc_availability
 from scraper.keldoc.keldoc_routes import API_KELDOC_CALENDAR, API_KELDOC_CENTER, API_KELDOC_CABINETS
 from scraper.pattern.scraper_request import ScraperRequest
+from scraper.pattern.scraper_result import INTERVAL_SPLIT_DAYS
 
 timeout = httpx.Timeout(10.0, connect=10.0)
 KELDOC_HEADERS = {
     'User-Agent': os.environ.get('KELDOC_API_KEY', ''),
 }
-KELDOC_SLOT_LIMIT = 7
+KELDOC_SLOT_LIMIT = 50
 DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
 logger = logging.getLogger('scraper')
 
@@ -117,6 +119,7 @@ class KeldocCenter:
         # Keldoc needs an end date, but if no appointment are found,
         # it still returns the next available appointment. Bigger end date
         # makes Keldoc responses slower.
+        logger.debug(f'get_timetables -> start_date: {start_date} motive: {motive_id} agenda: {agenda_id}')
         calendar_url = API_KELDOC_CALENDAR.format(motive_id)
         calendar_params = {
             'from': start_date,
@@ -159,14 +162,31 @@ class KeldocCenter:
             return None
         return calendar_req.json()
 
+    def count_appointements(self, appointments: list, start_date: str, end_date: str) -> int:
+        paris_tz = timezone("Europe/Paris")
+        start_dt = isoparse(start_date).astimezone(paris_tz)
+        end_dt = isoparse(end_date).astimezone(paris_tz)
+        count = 0
 
-    def find_first_availability(self, start_date):
+        for appointment in appointments:
+            slot_dt = isoparse(appointment['start_time']).astimezone(paris_tz)
+            if slot_dt >= start_dt and slot_dt < end_dt:
+                count += 1
+
+        logger.debug(f'Slots count from {start_date} to {end_date}: {count}')
+        return count
+
+
+    def find_first_availability(self, start_date: str):
         if not self.vaccine_motives:
-            return None, 0
+            return None, 0, None
 
         # Find next availabilities
         first_availability = None
         appointments = []
+        appointment_schedules = {}
+        for n in INTERVAL_SPLIT_DAYS:
+            appointment_schedules[f'{n}_days'] = 0
         for relevant_motive in self.vaccine_motives:
             if 'id' not in relevant_motive or 'agendas' not in relevant_motive:
                 continue
@@ -182,4 +202,10 @@ class KeldocCenter:
                 # Compare first available date
                 if first_availability is None or date < first_availability:
                     first_availability = date
-        return first_availability, len(appointments)
+                #update appointment_schedules
+                if not timetables or 'availabilities' not in timetables:
+                    continue
+        for n in INTERVAL_SPLIT_DAYS:
+            n_date = (isoparse(start_date) + timedelta(days=n)).isoformat()
+            appointment_schedules[f'{n}_days'] += self.count_appointements(appointments, start_date, n_date)
+        return first_availability, len(appointments), appointment_schedules
