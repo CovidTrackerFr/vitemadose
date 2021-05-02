@@ -73,3 +73,40 @@ def parse_practitioner_type(name, data):
         if slug and slug == 'medecin-generaliste':
             return GENERAL_PRACTITIONER
     return VACCINATION_CENTER
+
+
+def is_vaccination_center(center_dict):
+    """ Determine if a center provide COVID19 vaccinations.
+        See: https://github.com/CovidTrackerFr/vitemadose/issues/271
+
+        Parameters
+        ----------
+        center_dict : "Center" dict
+            Center dict, output by the doctolib_center_scrap.center_from_doctor_dict
+
+        Returns
+        ----------
+        bool
+            True if if we think the center provide COVID19 vaccination
+
+        Example
+        ----------
+        >>> center_exemple = get_dict_infos_center_page('https://partners.doctolib.fr/pharmacie/saint-etienne-de-montluc/pharmacie-thiercelin-jean-thiercelin-unipharm')
+        >>> is_vaccination_center(center_exemple)
+        False
+    """
+
+    motives = center_dict.get('visit_motives', [])
+
+    # We don't have any motiv
+    # so this criteria isn't relevant to determine if a center is a vaccination center
+    # considering it as a vaccination one to prevent mass filtering
+    # see https://github.com/CovidTrackerFr/vitemadose/issues/271
+    if len(motives) == 0:
+        return True
+
+    for motive in motives:
+        if is_appointment_relevant(motive): # first vaccine motive, it's a vaccination center
+            return True
+    
+    return False # No vaccination motives found

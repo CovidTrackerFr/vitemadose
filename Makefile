@@ -22,7 +22,7 @@ scrape: ## runs the full scraping experience
 stats: ## Run the statistic scripts
 	venv/bin/python -m stats_generation.stats_available_centers
 
-doctoscrap: ## Run the statistiques scripts
+doctoscrap: ## Scrap all doctolib centers, output : data/output/doctolib-centers.json
 	venv/bin/python -m scraper.doctolib.doctolib_center_scrap
 
 maiiascrap: ## Retrieve maiia centers from API

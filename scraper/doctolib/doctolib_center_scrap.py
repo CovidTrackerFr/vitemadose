@@ -3,6 +3,7 @@ from scraper.pattern.scraper_result import DRUG_STORE, GENERAL_PRACTITIONER, VAC
 from utils.vmd_utils import departementUtils, format_phone_number
 from utils.vmd_logger import get_logger
 from scraper.doctolib.doctolib import DOCTOLIB_HEADERS
+from scraper.doctolib.doctolib_filters import is_vaccination_center
 
 from typing import List
 import requests
@@ -53,6 +54,9 @@ def parse_doctolib_centers(page_limit=None) -> List[dict]:
         if centers_departements == 0:
             raise Exception("No Value found for department {}, crashing")
         centers += centers_departements
+
+    centers = list(filter(is_vaccination_center, centers)) # Filter vaccination centers
+
     return centers
 
 
@@ -188,6 +192,11 @@ def get_dict_infos_center_page(url_path: str) -> dict:
             infos_page['phone_number'] = format_phone_number(phone_number)
 
         infos_page["business_hours"] = parse_doctolib_business_hours(place)
+
+        # Parse visit motives, not sure it's the right place to do it, maybe this function should be refactored
+        extrated_visit_motives = output.get('visit_motives', [])
+        infos_page["visit_motives"] = list(map(lambda vm: vm.get('name'), extrated_visit_motives))
+
         return infos_page
     else:
         return {}
