@@ -76,8 +76,7 @@ def campagne_to_centre(pharmacy: dict, campagne: dict) -> dict:
     centre['phone_number'] = pharmacy.get('telephone', '')
     centre['rdv_site_web'] = campagne.get('url')
     centre['com_insee'] = insee
-    centre['gid'] = campagne.get('url').encode('utf8').hex()[40:][:8]
-    centre['internal_id'] = campagne.get('url').encode('utf8').hex()[40:][:8]
+    centre['gid'] = campagne.get('url').encode('utf8').hex()[52:][:23]
     return centre
 
 
@@ -178,7 +177,6 @@ def fetch_slots(
     first_availability, slot_count = parse_slots(day_slots)
     request.update_appointment_count(slot_count)
     request.update_practitioner_type(DRUG_STORE)
-    request.update_internal_id(url.encode('utf8').hex()[40:][:8])
     pharmacy, campagne = get_pharmacy_and_campagne(
         id_campagne, id_type, opendata_file)
     request.add_vaccine_type(get_vaccine_name(campagne['nom']))

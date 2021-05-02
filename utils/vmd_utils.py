@@ -90,6 +90,7 @@ class departementUtils:
                 >>> to_departement_number('97701')  # Saint-Barthélémy
                 '971'
                 """
+        insee_code=insee_code.strip()
         if len(insee_code) == 4:
             # Quand le CSV des centres de vaccinations est édité avec un tableur comme Excel,
             # il est possible que le 1er zéro soit retiré si la colonne est interprétée comme
@@ -135,7 +136,12 @@ class departementUtils:
 
 
 def format_cp(cp: str) -> str:
-    formatted_cp = str(cp).strip().split()[0]
+    # Permet le cas du CP sous form 75 005 au lieu de 75005
+    if len(str(cp).strip().split()[0]) < 4:
+        formatted_cp = str(cp).strip().split()[0] + str(cp).strip().split()[1]
+    else:
+        formatted_cp = str(cp).strip().split()[0]
+        
     if len(formatted_cp) == 4:
         return f"0{formatted_cp}"
     return formatted_cp

@@ -72,6 +72,8 @@ class DoctolibSlots:
         # should be selected.
         practice_id = _parse_practice_id(request.get_url())
 
+        practice_same_adress = False
+        
         centre_api_url = f'https://partners.doctolib.fr/booking/{centre}.json'
         response = self._client.get(centre_api_url, headers=DOCTOLIB_HEADERS)
         if response.status_code == 403:
@@ -88,13 +90,13 @@ class DoctolibSlots:
             self.pop_practice_id(request)
 
         if practice_id:
-            practice_id = link_practice_ids(practice_id, rdata)
+            practice_id, practice_same_adress= link_practice_ids(practice_id, rdata)
         if len(rdata.get('places', [])) > 1 and practice_id is None:
             practice_id = rdata.get('places')[0].get('practice_ids', None)
-
+            
         request.update_practitioner_type(
             parse_practitioner_type(centre, rdata))
-        set_doctolib_center_internal_id(request, rdata, practice_id)
+        set_doctolib_center_internal_id(request, rdata, practice_id, practice_same_adress)
 
         # Check if  appointments are allowed
         if not is_allowing_online_appointments(rdata):
@@ -194,11 +196,11 @@ class DoctolibSlots:
         # Not practice ID found
         if not pid:
             return True
-        pid = pid[0]
-        places = rdata.get('places', {})
+        pid = int(pid[0])
+        places = rdata.get("places", {})
         for place in places:
-            practice_ids = place.get('practice_ids', [])
-            if pid in practice_ids:
+            practice_id = int(re.findall(r"\d+", place.get("id", None))[0])
+            if pid == practice_id:
                 return True
         return False
         
@@ -256,7 +258,7 @@ class DoctolibSlots:
         return first_availability, appointment_count, next_appointment_timetables, stop
 
 
-def set_doctolib_center_internal_id(request: ScraperRequest, data: dict, practice_ids):
+def set_doctolib_center_internal_id(request: ScraperRequest, data: dict, practice_ids, practice_same_adress : bool):
     profile = data.get('profile')
 
     if not profile:
@@ -265,9 +267,20 @@ def set_doctolib_center_internal_id(request: ScraperRequest, data: dict, practic
     if not profile_id:
         return
     profile_id = int(profile_id)
-    practices = "-".join(str(x)
-                         for x in practice_ids) if practice_ids is not None else ""
-    request.internal_id = f"{profile_id}[{practices}]"
+
+    if not practice_ids or len(practice_ids) == 0:
+        request.internal_id = f"doctolib{profile_id}"
+
+    if practice_ids and len(practice_ids) == 1:
+        request.internal_id = f"doctolib{profile_id}pid{practice_ids[0]}"
+
+    if practice_ids and len(practice_ids) > 1:
+        if practice_same_adress == True:
+            request.internal_id = f"doctolib{profile_id}pid{practice_ids[0]}"
+        else:
+            request.internal_id = f"doctolib{profile_id}"
+
+
 
 
 def _parse_centre(rdv_site_web: str) -> Optional[str]:
@@ -289,11 +302,12 @@ def _parse_centre(rdv_site_web: str) -> Optional[str]:
 
 
 def link_practice_ids(practice_id: list, rdata: dict):
+    same_adress = False
     if not practice_id:
-        return practice_id
+        return practice_id, same_adress
     places = rdata.get('places')
     if not places:
-        return practice_id
+        return practice_id, same_adress
     base_place = None
     place_ids = []
     for place in places:
@@ -302,16 +316,23 @@ def link_practice_ids(practice_id: list, rdata: dict):
             continue
         place_ids.append(int(re.findall(r'\d+', place_id)[0]))
         if int(re.findall(r'\d+', place_id)[0]) == int(practice_id[0]):
+            # Indispensable pour eviter une erreur si le pid est en establishment-xxx
+            # En effet, dans ce cas le pid change dans practice_ids et c'est lui qui est correct
+            if practice_id[0] not in place.get("practice_ids", []):
+                practice_id.clear()
+                practice_id.append(int(place.get("practice_ids", [])[0]))
             base_place = place
             break
     if not base_place:
-        return place_ids
+        return place_ids, same_adress
+
     for place in places:
         if place.get('id') == base_place.get('id'):
             continue
         if place.get('address') == base_place.get('address'):  # Tideous check
             practice_id.append(int(re.findall(r'\d+',place.get('id'))[0]))
-    return practice_id
+            same_adress = True
+    return practice_id, same_adress
 
 
 def parse_agenda_ids(rdata: dict):

@@ -120,6 +120,9 @@ def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:
 
     if result is not None and result.request.url is not None:
         center_data.url = result.request.url.lower()
+        if result.request.internal_id is None:
+            center_data.internal_id = f'{result.platform.lower()}{centre.get("gid", "")}'
+
 
     if 'type' in centre:
         center_data.type = centre['type']
