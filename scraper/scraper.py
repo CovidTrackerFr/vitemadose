@@ -162,7 +162,7 @@ def export_data(centres_cherchés : Iterator[CenterInfo], outpath_format='data/o
     exported_centers = [center for center in centres_cherchés if not is_blocked_center(center)]
 
     for centre in blocked_centers:
-        if centre.has_available_appointments() == 0:
+        if centre.has_available_appointments():
             logger.warn(f"{centre.nom} {centre.internal_id} has available appointments but is blocked")
 
     for centre in exported_centers:
