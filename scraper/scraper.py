@@ -67,8 +67,8 @@ def scrape() -> None:
     compte_centres = 0
     compte_centres_avec_dispo = 0
     compte_bloqués = 0
-    profiled_pool = ProfiledPool(POOL_SIZE)
-    with profiled_pool as pool:
+    profiler = Profiling()
+    with profiler, Pool(POOL_SIZE, **profiler.pool_args()) as pool:
         centre_iterator_proportion = (
             c for c in centre_iterator() if random() < PARTIAL_SCRAPE)
         centres_cherchés = pool.imap_unordered(
@@ -83,7 +83,7 @@ def scrape() -> None:
 
     logger.info(
         f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés")
-    profiled_pool.profiler.print_summary()
+    logger.info(profiler.print_summary())
     if compte_centres_avec_dispo == 0:
         logger.error(
             "Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur")
