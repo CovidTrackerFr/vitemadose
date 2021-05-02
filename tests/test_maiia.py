@@ -69,11 +69,12 @@ def test_get_reasons():
 
 def test_get_first_availability():
     reasons = get_reasons('5ffc744c68dedf073a5b87a2', limit=MAIIA_LIMIT, client=client)
-    first_availability, slots_count = get_first_availability(
+    first_availability, slots_count, appointment_schedules = get_first_availability(
         '5ffc744c68dedf073a5b87a2', 
         '2021-04-29', 
         reasons, 
         client=client)
+    assert appointment_schedules == {'1_days': 0, '28_days': 6570, '49_days': 7980, '7_days': 0}
     assert slots_count == 7980
     assert first_availability.isoformat() == '2021-05-13T13:40:00+00:00'
 
