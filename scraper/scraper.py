@@ -260,7 +260,7 @@ def centre_iterator():
     for center in ialternate(ordoclic_centre_iterator(), mapharma_centre_iterator(),
                              maiia_centre_iterator(), doctolib_center_iterator(), 
                              gouv_centre_iterator()):
-        if center["rdv_site_web"] == "https://partners.doctolib.fr/centre-de-sante/lembeye/centre-de-vaccination-vacci-vic-bilh":
+        if center["rdv_site_web"] not in visited_centers_links:
             visited_centers_links.add(center["rdv_site_web"])
             yield center
 
