@@ -117,7 +117,7 @@ def get_first_availability(center_id: str, request_date: str, reasons: [dict], c
             slots_count += len(slots)
             if first_availability == None or slot_availability < first_availability:
                 first_availability = slot_availability
-    logger.info(f'appointment_schedules: {appointment_schedules}')
+    logger.debug(f'appointment_schedules: {appointment_schedules}')
     return first_availability, slots_count, appointment_schedules
 
 
