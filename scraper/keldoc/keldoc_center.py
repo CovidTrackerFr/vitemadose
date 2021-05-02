@@ -119,30 +119,9 @@ class KeldocCenter:
         # Keldoc needs an end date, but if no appointment are found,
         # it still returns the next available appointment. Bigger end date
         # makes Keldoc responses slower.
-        logger.debug(f'get_timetables -> start_date: {start_date} motive: {motive_id} agenda: {agenda_id}')
         calendar_url = API_KELDOC_CALENDAR.format(motive_id)
-        calendar_params = {
-            'from': start_date,
-            'to': start_date,
-            'agenda_ids[]': agenda_id
-        }
-        try:
-            calendar_req = self.client.get(calendar_url, params=calendar_params)
-            calendar_req.raise_for_status()
-        except httpx.TimeoutException as hex:
-            logger.warning(f"Keldoc request timed out for center: {self.base_url} (calendar request)"
-                f' calendar_url: {calendar_url}'
-                f' calendar_params: {calendar_params}')
-            return None
-        except httpx.HTTPStatusError as hex:
-            logger.warning(f"Keldoc request returned error {hex.response.status_code} "
-                        f"for center: {self.base_url} (calendar request)")
-            return None
-        calendar_json = calendar_req.json()
-        if 'date' in calendar_json:
-            new_date = isoparse(calendar_json['date'])
-            start_date = new_date.strftime('%Y-%m-%d')
         end_date = (isoparse(start_date) + timedelta(days=KELDOC_SLOT_LIMIT)).strftime('%Y-%m-%d')
+        logger.debug(f'get_timetables -> start_date: {start_date} end_date: {end_date} motive: {motive_id} agenda: {agenda_id}')
         calendar_params = {
             'from': start_date,
             'to': end_date,
