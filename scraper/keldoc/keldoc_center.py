@@ -11,7 +11,7 @@ from scraper.keldoc.keldoc_routes import API_KELDOC_CALENDAR, API_KELDOC_CENTER,
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import INTERVAL_SPLIT_DAYS
 
-timeout = httpx.Timeout(10.0, connect=10.0)
+timeout = httpx.Timeout(25.0, connect=25.0)
 KELDOC_HEADERS = {
     'User-Agent': os.environ.get('KELDOC_API_KEY', ''),
 }
@@ -115,17 +115,17 @@ class KeldocCenter:
         return True
 
     
-    def get_timetables(self, start_date, motive_id, agenda_id):
+    def get_timetables(self, start_date, motive_id, agenda_ids):
         # Keldoc needs an end date, but if no appointment are found,
         # it still returns the next available appointment. Bigger end date
         # makes Keldoc responses slower.
         calendar_url = API_KELDOC_CALENDAR.format(motive_id)
         end_date = (isoparse(start_date) + timedelta(days=KELDOC_SLOT_LIMIT)).strftime('%Y-%m-%d')
-        logger.debug(f'get_timetables -> start_date: {start_date} end_date: {end_date} motive: {motive_id} agenda: {agenda_id}')
+        logger.debug(f'get_timetables -> start_date: {start_date} end_date: {end_date} motive: {motive_id} agenda: {agenda_ids}')
         calendar_params = {
             'from': start_date,
             'to': end_date,
-            'agenda_ids[]': agenda_id
+            'agenda_ids[]': '&agenda_ids[]'.join(str(agenda_id) for agenda_id in agenda_ids)
         }
         try:
             calendar_req = self.client.get(calendar_url, params=calendar_params)
@@ -172,18 +172,20 @@ class KeldocCenter:
             motive_id = relevant_motive.get('id', None)
             calendar_url = API_KELDOC_CALENDAR.format(motive_id)
 
-            for agenda_id in relevant_motive.get('agendas', []):
-                timetables = self.get_timetables(start_date, motive_id, agenda_id)
-                date, appointments = parse_keldoc_availability(timetables, appointments)
-                if date is None:
-                    continue
-                self.request.add_vaccine_type(relevant_motive.get('vaccine_type'))
-                # Compare first available date
-                if first_availability is None or date < first_availability:
-                    first_availability = date
-                #update appointment_schedules
-                if not timetables or 'availabilities' not in timetables:
-                    continue
+            agenda_ids = relevant_motive.get('agendas', None)
+            if not agenda_ids:
+                continue
+            timetables = self.get_timetables(start_date, motive_id, agenda_ids)
+            date, appointments = parse_keldoc_availability(timetables, appointments)
+            if date is None:
+                continue
+            self.request.add_vaccine_type(relevant_motive.get('vaccine_type'))
+            # Compare first available date
+            if first_availability is None or date < first_availability:
+                first_availability = date
+            if not timetables or 'availabilities' not in timetables:
+                continue
+        #update appointment_schedules
         for n in INTERVAL_SPLIT_DAYS:
             n_date = (isoparse(start_date) + timedelta(days=n)).isoformat()
             appointment_schedules[f'{n}_days'] += self.count_appointements(appointments, start_date, n_date)
