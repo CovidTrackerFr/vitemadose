@@ -15,7 +15,7 @@ from utils.vmd_logger import get_logger
 logger = get_logger()
 
 
-class Vaccine(Enum):
+class Vaccine(str, Enum):
     PFIZER = "Pfizer-BioNTech" 
     MODERNA = "Moderna"
     ASTRAZENECA = "AstraZeneca"
