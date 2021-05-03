@@ -10,7 +10,8 @@ DOCTOLIB_APPOINTMENT_REASON = [
     '1ere injection',
     '1ère injection',
     '1re injection',
-    'vaccination'
+    'vaccination',
+    'Vaccin COVID-19',
 ]
 DOCTOLIB_APPOINTMENT_REASON = [c.lower().strip() for c in DOCTOLIB_APPOINTMENT_REASON]
 
@@ -51,6 +52,17 @@ def is_category_relevant(category):
 
 # Filter by relevant appointments
 def is_appointment_relevant(appointment_name):
+    """ Tell if an appointment name is related to COVID-19 vaccination
+
+        Example
+        ----------
+        >>> is_appointment_relevant("Vaccin COVID-19 - AstraZeneca (55 ans et plus)")
+        True
+        >>> is_appointment_relevant("Injection unique vaccin COVID-19 (Janssen)")
+        True
+        >>> is_appointment_relevant("consultation pré-vaccinale Pfizer-Moderna")
+        False
+    """
     if not appointment_name:
         return False
 
