@@ -141,7 +141,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
 
     for reason in reasons:
         request.add_vaccine_type(get_vaccine_name(reason['name']))
-    request.update_internal_id(center_id)
+    request.update_internal_id(f"maiia{center_id}")
     request.update_appointment_count(slots_count)
     request.update_appointment_schedules(appointment_schedules)
     return first_availability.isoformat()

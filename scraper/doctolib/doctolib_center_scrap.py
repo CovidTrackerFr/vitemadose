@@ -61,7 +61,7 @@ def get_departements():
 
     # Guyane uses Maiia and does not have doctolib pages
     NOT_INCLUDED_DEPARTEMENTS = ["Guyane"]
-    with open("data/input/departements-france.csv", newline="\n") as csvfile:
+    with open("data/input/departements-france.csv", encoding="utf8", newline="\n") as csvfile:
         reader = csv.DictReader(csvfile)
         departements = [str(row["nom_departement"]) for row in reader]
         [departements.remove(ndep) for ndep in NOT_INCLUDED_DEPARTEMENTS]
@@ -123,7 +123,7 @@ def center_from_doctor_dict(doctor_dict) -> dict:
     nom = doctor_dict['name_with_title']
     sub_addresse = doctor_dict["address"]
     ville = doctor_dict["city"]
-    code_postal = doctor_dict["zipcode"]
+    code_postal = doctor_dict["zipcode"].replace(" ","").strip()
     addresse = f"{sub_addresse}, {code_postal} {ville}"
     if doctor_dict.get('place_id'):
         url_path = f"{doctor_dict['link']}?pid={str(doctor_dict['place_id'])}"
@@ -177,7 +177,7 @@ def get_dict_infos_center_page(url_path: str) -> dict:
         infos_page['long_coor1'] = place.get('longitude')
         infos_page['lat_coor1'] = place.get('latitude')
         infos_page["com_insee"] = departementUtils.cp_to_insee(
-            place["zipcode"])
+            place["zipcode"].replace(" ","").strip())
 
         # Parse landline number
         if place.get('landline_number'):

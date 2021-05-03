@@ -47,7 +47,7 @@ def test_blocked_by_doctolib_par_centre():
             "limit": str(DOCTOLIB_SLOT_LIMIT),
         }
         path = Path("tests", "fixtures", "doctolib", "basic-availabilities.json")
-        return httpx.Response(200, json=json.loads(path.read_text()))
+        return httpx.Response(200, json=json.loads(path.read_text(encoding='utf-8')))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client, cooldown_interval=0)
@@ -72,7 +72,7 @@ def test_blocked_by_doctolib_par_availabilities():
 
         if request.url.path == "/booking/centre1.json":
             path = Path("tests", "fixtures", "doctolib", "basic-booking.json")
-            return httpx.Response(200, json=json.loads(path.read_text()))
+            return httpx.Response(200, json=json.loads(path.read_text(encoding='utf-8')))
 
         return httpx.Response(403, text="Anti dDos")
 
@@ -99,12 +99,12 @@ def test_doctolib():
 
         if request.url.path == "/booking/centre1.json":
             path = Path("tests", "fixtures", "doctolib", "basic-booking.json")
-            return httpx.Response(200, json=json.loads(path.read_text()))
+            return httpx.Response(200, json=json.loads(path.read_text(encoding='utf-8')))
 
         assert request.url.path == "/availabilities.json"
         params = dict(httpx.QueryParams(request.url.query))
         path = Path("tests", "fixtures", "doctolib", "basic-availabilities.json")
-        return httpx.Response(200, json=json.loads(path.read_text()))
+        return httpx.Response(200, json=json.loads(path.read_text(encoding='utf-8')))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client, cooldown_interval=0)
@@ -127,11 +127,11 @@ def test_doctolib_motive_categories():
 
         if request.url.path == "/booking/centre1.json":
             path = Path("tests", "fixtures", "doctolib", "category-booking.json")
-            return httpx.Response(200, json=json.loads(path.read_text()))
+            return httpx.Response(200, json=json.loads(path.read_text(encoding='utf-8')))
 
         assert request.url.path == "/availabilities.json"
         path = Path("tests", "fixtures", "doctolib", "category-availabilities.json")
-        return httpx.Response(200, json=json.loads(path.read_text()))
+        return httpx.Response(200, json=json.loads(path.read_text(encoding='utf-8')))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client, cooldown_interval=0)
@@ -154,11 +154,11 @@ def test_doctolib_next_slot():
 
         if request.url.path == "/booking/centre1.json":
             path = Path("tests", "fixtures", "doctolib", "next-slot-booking.json")
-            return httpx.Response(200, json=json.loads(path.read_text()))
+            return httpx.Response(200, json=json.loads(path.read_text(encoding='utf-8')))
 
         assert request.url.path == "/availabilities.json"
         path = Path("tests", "fixtures", "doctolib", "next-slot-availabilities.json")
-        return httpx.Response(200, json=json.loads(path.read_text()))
+        return httpx.Response(200, json=json.loads(path.read_text(encoding='utf-8')))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client, cooldown_interval=0)
