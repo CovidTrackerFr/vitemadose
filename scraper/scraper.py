@@ -264,14 +264,12 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
 
 def centre_iterator():
     visited_centers_links = set()
-    for i, center in enumerate(ialternate(ordoclic_centre_iterator(), mapharma_centre_iterator(),
+    for center in ialternate(ordoclic_centre_iterator(), mapharma_centre_iterator(),
                              maiia_centre_iterator(), doctolib_center_iterator(), 
-                             gouv_centre_iterator())):
+                             gouv_centre_iterator()) :
         if center["rdv_site_web"] not in visited_centers_links:
             visited_centers_links.add(center["rdv_site_web"])
             yield center
-        if i > 5 :
-            break
 
 
 def gouv_centre_iterator(outpath_format='data/output/{}.json'):
