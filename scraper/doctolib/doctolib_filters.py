@@ -91,9 +91,12 @@ def is_vaccination_center(center_dict):
 
         Example
         ----------
-        >>> center_exemple = get_dict_infos_center_page('https://partners.doctolib.fr/pharmacie/saint-etienne-de-montluc/pharmacie-thiercelin-jean-thiercelin-unipharm')
-        >>> is_vaccination_center(center_exemple)
+        >>> center_without_vaccination = {'gid': 'd258630', 'visit_motives': ['Dépistage COVID-19 test antigénique (prélèvement naso-pharyngé)', 'Dépistage COVID-19 test par ponction capillaire (goutte de sang)']}
+        >>> is_vaccination_center(center_without_vaccination)
         False
+        >>> center_with_vaccination = {'gid': 'd257554', 'visit_motives': ['1re injection vaccin COVID-19 (Pfizer-BioNTech)', '2de injection vaccin COVID-19 (Pfizer-BioNTech)', '1re injection vaccin COVID-19 (Moderna)', '2de injection vaccin COVID-19 (Moderna)']}
+        >>> is_vaccination_center(center_with_vaccination)
+        True
     """
 
     motives = center_dict.get('visit_motives', [])

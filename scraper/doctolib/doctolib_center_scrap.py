@@ -56,6 +56,7 @@ def parse_doctolib_centers(page_limit=None) -> List[dict]:
         centers += centers_departements
 
     centers = list(filter(is_vaccination_center, centers)) # Filter vaccination centers
+    centers = list(map(center_reducer, centers)) # Remove fields irrelevant to the front
 
     return centers
 
@@ -194,8 +195,8 @@ def get_dict_infos_center_page(url_path: str) -> dict:
         infos_page["business_hours"] = parse_doctolib_business_hours(place)
 
         # Parse visit motives, not sure it's the right place to do it, maybe this function should be refactored
-        extrated_visit_motives = output.get('visit_motives', [])
-        infos_page["visit_motives"] = list(map(lambda vm: vm.get('name'), extrated_visit_motives))
+        extracted_visit_motives = output.get('visit_motives', [])
+        infos_page["visit_motives"] = list(map(lambda vm: vm.get('name'), extracted_visit_motives))
 
         return infos_page
     else:
@@ -248,6 +249,30 @@ def center_type(url_path: str, nom: str) -> str:
     if "medecin" in url_path or "medecin" in nom.lower():
         return GENERAL_PRACTITIONER
     return VACCINATION_CENTER
+
+
+def center_reducer(center: dict) -> dict:
+    """ This function should be used to remove fields that are irrelevant to the front,
+        such as fields used to filter centers during scraping process.
+        Removes following fields : visit_motives
+
+        Parameters
+        ----------
+        center_dict : "Center" dict
+            Center dict, output by the doctolib_center_scrap.center_from_doctor_dict
+
+        Returns
+        ----------
+        center dict, without irrelevant fields to the front
+
+        Example
+        ----------
+        >>> center_reducer({'gid': 'd257554', 'visit_motives': ['1re injection vaccin COVID-19 (Pfizer-BioNTech)', '2de injection vaccin COVID-19 (Pfizer-BioNTech)', '1re injection vaccin COVID-19 (Moderna)', '2de injection vaccin COVID-19 (Moderna)']})
+        {'gid': 'd257554'}
+    """
+    center.pop("visit_motives")
+
+    return center
 
 
 if __name__ == "__main__":
