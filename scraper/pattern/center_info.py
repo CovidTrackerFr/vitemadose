@@ -112,6 +112,9 @@ class CenterInfo:
         self.handle_next_availability()
         return self.__dict__
 
+    def has_available_appointments(self) -> bool:
+        return self.prochain_rdv is not None and self.appointment_count > 0
+
 
 def convert_csv_address(data: dict) -> str:
     if data.get('address', None):

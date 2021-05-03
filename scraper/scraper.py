@@ -7,7 +7,7 @@ import os
 import traceback
 from collections import deque
 from multiprocessing import Pool
-from typing import Counter
+from typing import Counter, Iterator
 from scraper.profiler import Profiling, ProfiledPool
 
 from scraper.error import ScrapeError, BlockedByDoctolibError
@@ -36,7 +36,6 @@ PARTIAL_SCRAPE = float(os.getenv('PARTIAL_SCRAPE', 1.0))
 PARTIAL_SCRAPE = max(0, min(PARTIAL_SCRAPE, 1))
 
 logger = enable_logger_for_production()
-
 
 def main():
     if len(sys.argv) == 1:
@@ -140,7 +139,7 @@ def sort_center(center: dict) -> str:
     return center.get('prochain_rdv', '-')
 
 
-def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
+def export_data(centres_cherchés : Iterator[CenterInfo], outpath_format='data/output/{}.json'):
     compte_centres = 0
     compte_centres_avec_dispo = 0
     bloqués_doctolib = 0
@@ -155,18 +154,27 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
         for code in departementUtils.import_departements()
     }
 
+
+    blocklist = get_blocklist_urls()
+
     # This should be duplicate free, they are already checked in
-    for centre in centres_cherchés:
-        centre.nom = centre.nom.strip()
 
-        if is_reserved_center(centre):
-            continue
+    is_blocked_center = lambda center : (is_reserved_center(center) or 
+                            is_in_blocklist(center, blocklist))
+    blocked_centers = [center for center in centres_cherchés if is_blocked_center(center)]
+    exported_centers = [center for center in centres_cherchés if not is_blocked_center(center)]
+
+    for centre in blocked_centers:
+        if centre.has_available_appointments():
+            logger.warn(f"{centre.nom} {centre.internal_id} has available appointments but is blocked")
+
+    for centre in exported_centers:
         compte_centres += 1
-        code_departement = centre.departement
 
-        if code_departement not in par_departement:
+        centre.nom = centre.nom.strip()
+        if centre.departement not in par_departement:
             logger.warning(
-                f"le centre {centre.nom} ({code_departement}) n'a pas pu être rattaché à un département connu")
+                f"le centre {centre.nom} ({centre.departement}) n'a pas pu être rattaché à un département connu")
             continue
         erreur = centre.erreur
         skipped_keys = ['prochain_rdv', 'internal_id', 'metadata', 
@@ -174,17 +182,17 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
                         'erreur', 'ville', 'type', 
                         'vaccine_type', 'appointment_by_phone_only','last_scan_with_availabilities']
         centres_open_data.append(copy_omit_keys(centre.default(), skipped_keys))
-       
-        if centre.prochain_rdv is None or centre.appointment_count == 0:
-            par_departement[code_departement]['centres_indisponibles'].append(
+    
+        if centre.has_available_appointments():
+            compte_centres_avec_dispo += 1
+            par_departement[centre.departement]['centres_disponibles'].append(
+                centre.default())
+        else:
+            par_departement[centre.departement]['centres_indisponibles'].append(
                 centre.default())
             if isinstance(erreur, BlockedByDoctolibError):
-                par_departement[code_departement]['doctolib_bloqué'] = True
+                par_departement[centre.departement]['doctolib_bloqué'] = True
                 bloqués_doctolib += 1
-        else:
-            compte_centres_avec_dispo += 1
-            par_departement[code_departement]['centres_disponibles'].append(
-                centre.default())
 
     outpath = outpath_format.format("info_centres")
     with open(outpath, "w") as info_centres:
@@ -194,7 +202,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
     with open(outpath, 'w') as centres_file:
         json.dump(centres_open_data, centres_file, indent=2)
 
-    for code_departement, disponibilités in par_departement.items():
+    for centre.departement, disponibilités in par_departement.items():
         disponibilités['last_updated'] = dt.datetime.now(
             tz=pytz.timezone('Europe/Paris')).isoformat()
         if 'centres_disponibles' in disponibilités:
@@ -202,7 +210,7 @@ def export_data(centres_cherchés, outpath_format='data/output/{}.json'):
                 deduplicates_names(disponibilités['centres_disponibles']), key=sort_center)
         disponibilités["centres_indisponibles"] = deduplicates_names(
             disponibilités['centres_indisponibles'])
-        outpath = outpath_format.format(code_departement)
+        outpath = outpath_format.format(centre.departement)
         logger.debug(f'writing result to {outpath} file')
         with open(outpath, "w") as outfile:
             outfile.write(json.dumps(disponibilités, indent=2))
@@ -330,7 +338,6 @@ def ialternate(*iterators):
         except StopIteration:
             pass
 
-
 def deduplicates_names(departement_centers):
     """
     Removes unique names by appending city name
@@ -350,6 +357,13 @@ def deduplicates_names(departement_centers):
         deduplicated_centers.append(center)
     return deduplicated_centers
 
+def is_in_blocklist(center : CenterInfo, blocklist_urls) -> bool:
+    return center.url in blocklist_urls
+
+def get_blocklist_urls() -> set:
+    path_blocklist = "data/input/centers_blocklist.json"
+    centers_blocklist_urls = set([center["url"] for center in json.load(open(path_blocklist))["centers_not_displayed"]])
+    return centers_blocklist_urls
 
 if __name__ == "__main__":
     main()
