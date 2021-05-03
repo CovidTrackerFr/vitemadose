@@ -124,7 +124,7 @@ def export_centres_stats(center_data=Path('data', 'output', 'info_centres.json')
     logger.info("Found {0}/{1} available centers. ({2}%)".format(tout_dep_obj["disponibles"],
                                                                  tout_dep_obj["total"], round(available_pct, 2)))
     with open(Path('data', 'output', stats_path), "w") as stats_file:
-        json.dump(plus_metadata(centres_stats), stats_file, indent=2)
+        json.dump(centres_stats, stats_file, indent=2)
     if stats_path != 'stats.json':
         return
     generate_stats_date(centres_stats)
@@ -136,14 +136,6 @@ def export_centres_stats(center_data=Path('data', 'output', 'info_centres.json')
 def get_centres_info(center_data):
     with open(center_data, "r") as f:
         return json.load(f)
-
-
-def plus_metadata(stats: dict) -> dict:
-    stats_with_metadata = dict(stats)
-    stats_with_metadata["metadata"] = {
-        "last_edit_date": datetime.now().isoformat()
-    }
-    return stats_with_metadata
 
 
 if __name__ == '__main__':
