@@ -15,6 +15,7 @@ from collections import defaultdict
 from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
 from scraper.pattern.center_info import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
+from scraper.pattern.scraper_result import INTERVAL_SPLIT_DAYS
 from scraper.error import BlockedByDoctolibError
 from scraper.profiler import Profiling
 from utils.vmd_utils import append_date_days
@@ -39,9 +40,6 @@ if os.getenv('WITH_TOR', 'no') == 'yes':
     DEFAULT_CLIENT = session  # type: ignore
 else:
     DEFAULT_CLIENT = httpx.Client()
-
-# Attention à ne pas mettre de valeur supérieure à DOCTOLIB_SLOT_LIMIT*(DOCTOLIB_ITERATIONS+1)
-INTERVAL_SPLIT_DAYS = [1, 7, 28, 49]
 
 # Vérifie qu'aucun des intervalles de calcul de dépasse l'intervalle globale de recherche des dispos 
 if not all(i <= (DOCTOLIB_SLOT_LIMIT * (DOCTOLIB_ITERATIONS + 1)) for i in INTERVAL_SPLIT_DAYS):
@@ -199,7 +197,7 @@ class DoctolibSlots:
         pid = int(pid[0])
         places = rdata.get("places", {})
         for place in places:
-            practice_id = int(re.findall(r"\d+", place.get("id", None))[0])
+            practice_id = int(re.findall(r"\d+", place.get("id", ""))[0])
             if pid == practice_id:
                 return True
         return False
