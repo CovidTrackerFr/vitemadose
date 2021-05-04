@@ -11,6 +11,7 @@ import httpx
 import requests
 from collections import Counter
 from collections import defaultdict
+from dateutil.parser import isoparse
 
 from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
 from scraper.pattern.center_info import get_vaccine_name
@@ -142,6 +143,7 @@ class DoctolibSlots:
                         continue
                     if not first_availability or sdate < first_availability:
                         first_availability = sdate
+                        continue
                     request.update_appointment_count(request.appointment_count + appt)
    
                     updated_dict = dict(Counter(request.appointment_schedules) + Counter(count_next_appt))
@@ -212,6 +214,10 @@ class DoctolibSlots:
         next_appointment_timetables = defaultdict(int)
 
         slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={limit}'
+        
+        logger.info(f'url attaquée pour centre {request.internal_id}: {slots_api_url}')
+
+
         response = self._client.get(
             slots_api_url, headers=DOCTOLIB_HEADERS)
         if response.status_code == 403:
@@ -236,7 +242,7 @@ class DoctolibSlots:
             for interval in INTERVAL_SPLIT_DAYS:
                 if start_date <= append_date_days(start_date_original, interval):
                     if availability.get('date'):
-                        if availability.get('date') <= append_date_days(start_date_original, interval):
+                        if availability.get('date') < append_date_days(start_date_original, interval):
                             next_appointment_timetables[f"{interval}_days"] += len(availability.get('slots', []))
                 
             for slot_info in slot_list:
