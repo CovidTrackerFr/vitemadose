@@ -19,6 +19,9 @@ timeout = httpx.Timeout(15.0, connect=15.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 insee = {}
 
+ # Filtre pour le rang d'injection
+ # Il faut rajouter 2 à la liste si l'on veut les 2èmes injections
+ORDOCLIC_VALID_INJECTION = [ 1 ]
 
 # get all slugs
 def search(client: httpx.Client = DEFAULT_CLIENT):
@@ -69,6 +72,14 @@ def getProfile(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     r = client.get(base_url)
     r.raise_for_status()
     return r.json()
+
+
+def is_reason_valid(reason: dict) -> bool:
+    if reason.get('canBookOnline', False) is False:
+        return False
+    if reason.get('vaccineInjectionDose', -1) not in ORDOCLIC_VALID_INJECTION:
+        return False
+    return True
 
 
 def count_appointements(appointments: list, start_date: str, end_date: str) -> int:
@@ -144,16 +155,17 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
         reasons = getReasons(entityId)
         # reasonTypeId = 4 -> 1er Vaccin
         for reason in reasons["reasons"]:
-            if reason["reasonTypeId"] == 4 and reason["canBookOnline"] is True:
-                reasonId = reason["id"]
-                date_obj = datetime.strptime(request.get_start_date(), '%Y-%m-%d')
-                end_date = (date_obj + timedelta(days=50)).strftime('%Y-%m-%d')
-                slots = getSlots(entityId, medicalStaffId, reasonId, request.get_start_date(), end_date, client)
-                date = parse_ordoclic_slots(request, slots)
-                if date is None:
-                    continue
-                if first_availability is None or date < first_availability:
-                    first_availability = date
+            if not is_reason_valid(reason):
+                continue
+            reasonId = reason["id"]
+            date_obj = datetime.strptime(request.get_start_date(), '%Y-%m-%d')
+            end_date = (date_obj + timedelta(days=50)).strftime('%Y-%m-%d')
+            slots = getSlots(entityId, medicalStaffId, reasonId, request.get_start_date(), end_date, client)
+            date = parse_ordoclic_slots(request, slots)
+            if date is None:
+                continue
+            if first_availability is None or date < first_availability:
+                first_availability = date
     if first_availability is None:
         return None
     return first_availability.isoformat()
