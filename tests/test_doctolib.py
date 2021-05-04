@@ -1,7 +1,8 @@
 import json
 from pathlib import Path
 from typing import DefaultDict
-from scraper.doctolib.doctolib_filters import is_category_relevant
+from scraper.doctolib.doctolib_filters import is_category_relevant, is_vaccination_center, is_appointment_relevant, \
+    parse_practitioner_type
 from scraper.error import BlockedByDoctolibError
 from scraper.pattern.center_info import Vaccine
 
@@ -19,6 +20,7 @@ from scraper.doctolib.doctolib import (
 
 # -- Tests de l'API (offline) --
 from scraper.pattern.scraper_request import ScraperRequest
+from scraper.pattern.scraper_result import DRUG_STORE, GENERAL_PRACTITIONER
 
 
 def test_blocked_by_doctolib_par_centre():
@@ -402,4 +404,31 @@ def test_category_relevant():
     assert is_category_relevant("Astra Zeneca")
 
 
-test_category_relevant()
+def test_is_vaccination_center():
+    data = {
+        "visit_motives": []
+    }
+    assert is_vaccination_center(data)
+
+
+def test_is_category_relevant():
+    assert not is_category_relevant(None)
+    assert is_category_relevant("vaccination")
+
+
+def test_is_appointment_relevant():
+    assert not is_appointment_relevant(None)
+
+
+def test_parse_practitioner_type():
+    name = parse_practitioner_type("Pharmacie de la Gare", {})
+    assert name == DRUG_STORE
+    data = {
+        'profile': {
+            'speciality': {
+                'slug': 'medecin-generaliste'
+            }
+        }
+    }
+    name = parse_practitioner_type("Dr Coq", data)
+    assert name == GENERAL_PRACTITIONER

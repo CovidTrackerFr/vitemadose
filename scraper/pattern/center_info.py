@@ -76,18 +76,15 @@ class CenterInfo:
     def handle_next_availability(self):
         if not self.prochain_rdv:
             return
+        timezone = pytz.timezone("Europe/Paris")
         try:
-            date = datetime.fromisoformat(self.prochain_rdv)
+            date = pytz.utc.localize(datetime.fromisoformat(self.prochain_rdv))
         except (TypeError, ValueError):
             # Invalid date
             return
         # Too far
-        timezone = pytz.timezone("Europe/Paris")
-        try:
-            if date - datetime.now(tz=timezone) > timedelta(days=50):
-                self.prochain_rdv = None
-        except:
-            pass
+        if date - datetime.now(tz=timezone) > timedelta(days=50):
+            self.prochain_rdv = None
 
     def default(self):
         if type(self.location) is CenterLocation:
