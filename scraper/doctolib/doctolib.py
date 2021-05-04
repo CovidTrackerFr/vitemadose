@@ -23,7 +23,7 @@ from utils.vmd_utils import append_date_days
 
 WAIT_SECONDS_AFTER_REQUEST = 0.100
 DOCTOLIB_SLOT_LIMIT = 7
-DOCTOLIB_ITERATIONS = 6
+DOCTOLIB_ITERATIONS = 7
 
 DOCTOLIB_HEADERS = {
     'User-Agent': os.environ.get('DOCTOLIB_API_KEY', ''),
@@ -43,7 +43,7 @@ else:
     DEFAULT_CLIENT = httpx.Client()
 
 # Vérifie qu'aucun des intervalles de calcul de dépasse l'intervalle globale de recherche des dispos 
-if not all(i <= (DOCTOLIB_SLOT_LIMIT * (DOCTOLIB_ITERATIONS + 1)) for i in INTERVAL_SPLIT_DAYS):
+if not all(i <= (DOCTOLIB_SLOT_LIMIT * DOCTOLIB_ITERATIONS) for i in INTERVAL_SPLIT_DAYS):
     logger.error(f"DOCTOLIB - Incorrect value for INTERVAL_SPLIT_DAYS in doctolib.py")
 
 
@@ -128,22 +128,23 @@ class DoctolibSlots:
                 practice_ids_q = "-".join(practice_ids)
                 start_date = request.get_start_date()
 
-                start_date_tmp = start_date
-
                 for i in range(DOCTOLIB_ITERATIONS):
+
+                    start_date_tmp = datetime.now() + timedelta(days=7 * i)
+                    start_date_tmp = start_date_tmp.strftime("%Y-%m-%d")
+                    
+
                     sdate, appt, count_next_appt, stop = self.get_appointments(request, start_date_tmp, visit_motive_ids, visit_motive_id,
                                                             agenda_ids_q, practice_ids_q, DOCTOLIB_SLOT_LIMIT, start_date)
                   
                     if stop:
                         break
 
-                    start_date_tmp = datetime.now() + timedelta(days=7 * i)
-                    start_date_tmp = start_date_tmp.strftime("%Y-%m-%d")
                     if not sdate:
                         continue
                     if not first_availability or sdate < first_availability:
                         first_availability = sdate
-                        continue
+                    
                     request.update_appointment_count(request.appointment_count + appt)
    
                     updated_dict = dict(Counter(request.appointment_schedules) + Counter(count_next_appt))
@@ -215,7 +216,6 @@ class DoctolibSlots:
 
         slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={limit}'
         
-        logger.info(f'url attaquée pour centre {request.internal_id}: {slots_api_url}')
 
 
         response = self._client.get(
