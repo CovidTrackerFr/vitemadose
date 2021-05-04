@@ -9,7 +9,6 @@ from scraper.pattern.center_info import get_vaccine_name
 KELDOC_COVID_SPECIALTIES = ["Maladies infectieuses"]
 
 KELDOC_APPOINTMENT_REASON = [
-    "ARN messager PFIZER/MODERNA",
     "1 er inj",
     "1 ere inj",
     "1 ère inj",
