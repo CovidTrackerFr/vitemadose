@@ -5,7 +5,7 @@
 [![Contributeurs][contributors-shield]][contributors-url]
 [![Issues][issues-shield]][issues-url]
 [![Licence][license-shield]][license-url]
-![Coverage][coverage-shield]
+[![codecov](https://codecov.io/gh/CovidTrackerFr/vitemadose/branch/main/graph/badge.svg?token=UQEI3UXY67)](https://codecov.io/gh/CovidTrackerFr/vitemadose)
 
 ## Signaler un Problème, une idée de modification
 
@@ -68,4 +68,3 @@ make test
 [issues-url]: https://github.com/CovidTrackerFr/vitemadose/issues
 [license-shield]: https://img.shields.io/github/license/CovidTrackerFr/vitemadose.svg?style=for-the-badge
 [license-url]: https://github.com/CovidTrackerFr/vitemadose/blob/master/LICENSE
-[coverage-shield]: https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/.github/coverage.svg
