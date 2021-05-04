@@ -23,3 +23,7 @@ jobs:
         run: pip install pytest coverage coverage-badge
       - name: "Generate coverage badge"
         run: coverage-badge
+      - name: "Upload coverage to Codecov"
+        uses: codecov/codecov-action@v1
+        with:
+          fail_ci_if_error: true
