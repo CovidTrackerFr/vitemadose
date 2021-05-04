@@ -1,12 +1,13 @@
 import json
 import logging
-from datetime import datetime, timedelta
-
 import httpx
+
+from datetime import datetime, timedelta
+from dateutil.parser import isoparse
 from pytz import timezone
 
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.pattern.scraper_result import DRUG_STORE
+from scraper.pattern.scraper_result import DRUG_STORE, INTERVAL_SPLIT_DAYS
 from utils.vmd_utils import departementUtils
 from scraper.profiler import Profiling
 
@@ -70,7 +71,23 @@ def getProfile(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     return r.json()
 
 
+def count_appointements(appointments: list, start_date: str, end_date: str) -> int:
+    paris_tz = timezone("Europe/Paris")
+    start_dt = isoparse(start_date).astimezone(paris_tz)
+    end_dt = isoparse(end_date).astimezone(paris_tz)
+    count = 0
+
+    for appointment in appointments:
+        slot_dt = isoparse(appointment['timeStart']).astimezone(paris_tz)
+        if slot_dt >= start_dt and slot_dt < end_dt:
+            count += 1
+
+    logger.debug(f'Slots count from {start_date} to {end_date}: {count}')
+    return count
+
+
 def parse_ordoclic_slots(request: ScraperRequest, availability_data):
+    start_date = request.get_start_date()
     first_availability = None
     if not availability_data:
         return None
@@ -79,6 +96,14 @@ def parse_ordoclic_slots(request: ScraperRequest, availability_data):
     if type(availabilities) is list:
         availability_count = len(availabilities)
     request.update_appointment_count(availability_count)
+    appointment_schedules = {}
+    for n in INTERVAL_SPLIT_DAYS:
+        appointment_schedules[f'{n}_days'] = 0
+    for n in INTERVAL_SPLIT_DAYS:
+        n_date = (isoparse(start_date) + timedelta(days=n)).isoformat()
+        appointment_schedules[f'{n}_days'] += count_appointements(availabilities, start_date, n_date)
+    request.update_appointment_schedules(appointment_schedules)
+    logger.debug(f'appointment_schedules: {appointment_schedules}')
     if 'nextAvailableSlotDate' in availability_data:
         nextAvailableSlotDate = availability_data.get('nextAvailableSlotDate', None)
         if nextAvailableSlotDate is not None:
@@ -141,6 +166,8 @@ def centre_iterator():
         if 'type' in item:
             t = item.get("type")
             if t == "Pharmacie":
+                if not item.get('covidVaccineInjectionDate', None):
+                    continue
                 centre = {}
                 slug = item["publicProfile"]["slug"]
                 centre["gid"] = item["id"][:8]
