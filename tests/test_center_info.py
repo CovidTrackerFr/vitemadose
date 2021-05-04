@@ -6,7 +6,8 @@ from scraper.pattern.scraper_result import ScraperResult, DRUG_STORE
 from utils.vmd_utils import format_phone_number, get_last_scans
 from .utils import mock_datetime_now
 from scraper.pattern.center_info import CenterInfo, convert_csv_address, Vaccine, convert_csv_business_hours, \
-    convert_ordoclic_to_center_info, convert_csv_data_to_center_info
+    convert_ordoclic_to_center_info, convert_csv_data_to_center_info, get_vaccine_name, \
+    get_vaccine_astrazeneca_minus_55_edgecase
 
 
 def test_center_info_fill():
@@ -143,6 +144,30 @@ def test_convert_ordoclic():
     assert center.metadata['business_hours'] is None
 
 
+def test_convert_ordoclic_second():
+    data = {
+        'nom': 'Centre 2',
+        'com_insee': '35238',
+        'rdv_site_web': 'https://site.fr/',
+        'iterator': 'ordoclic',
+        'location': {
+            'coordinates': {
+                'lon': 1.1281,
+                'lat': 93.182,
+            },
+            'city': 'Foobar',
+            'address': '12 Avenue de la ville',
+            'zip': '22000'
+        },
+        'phone_number': '06 06 06 06 06'
+    }
+    center = convert_csv_data_to_center_info(data)
+    assert center.nom == 'Centre 2'
+    assert center.metadata['address'] == '12 Avenue de la ville, 22000 Foobar'
+    assert center.metadata['phone_number'] == '+33606060606'
+    assert center.metadata['business_hours'] is None
+
+
 def test_convert_centerinfo():
     data = {
         'nom': 'Centre 1',
@@ -179,3 +204,57 @@ def test_convert_centerinfo():
             'samedi': '09:00-10:20',
             'dimanche': 'Fermé'
         }
+
+
+def test_convert_centerinfo_invalid():
+    data = {
+        'nom': 'Centre 1',
+        'gid': 'd001',
+        'rdv_site_web': 'https://site.fr',
+        'com_insee': '0095238',
+        'rdv_tel': '06 06 06 06 06',
+        'phone_number': '06 06 06 06 07',
+        "adr_num": "1",
+        "adr_voie": "Rue de la Fraise",
+        "com_cp": "75016",
+        "com_nom": "Paris",
+        'business_hours':  {
+            'lundi': '09:50-10:10',
+            'mardi': '09:10-10:10',
+            'mercredi': '10:00-10:10',
+            'jeudi': '10:20-10:40',
+            'vendredi': '09:50-10:10',
+            'samedi': '09:00-10:20',
+            'dimanche': 'Fermé'
+        }
+    }
+
+    center = convert_csv_data_to_center_info(data)
+    assert center.departement == ""
+    assert center.url == 'https://site.fr'
+    assert center.metadata['address'] == '1 Rue de la Fraise, 75016 Paris'
+    assert center.metadata['phone_number'] == '+33606060607'
+    assert center.metadata['business_hours'] == {
+            'lundi': '09:50-10:10',
+            'mardi': '09:10-10:10',
+            'mercredi': '10:00-10:10',
+            'jeudi': '10:20-10:40',
+            'vendredi': '09:50-10:10',
+            'samedi': '09:00-10:20',
+            'dimanche': 'Fermé'
+        }
+
+
+def test_vaccine_name():
+    name = get_vaccine_name("", Vaccine.PFIZER)
+    assert name == 'Pfizer-BioNTech'
+
+
+def test_minus_edgecase():
+    name = "2ème injection pour moins de 55 ans suite à première injection AstraAzeneca"
+    vaccine = get_vaccine_astrazeneca_minus_55_edgecase(name)
+
+    assert vaccine == Vaccine.ARNM
+    name = "2ème injection AstraZeneca ---"
+    vaccine = get_vaccine_astrazeneca_minus_55_edgecase(name)
+    assert vaccine == Vaccine.ASTRAZENECA

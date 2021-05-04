@@ -23,29 +23,6 @@
     }
   },
   {
-    "gid": "5fc8a456",
-    "nom": "CENTRE DE VACCINATION - MSP DU PAYS SABOLIEN",
-    "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/72300-sable-sur-sarthe/centre-de-vaccination---msp-du-pays-sabolien?centerid=5fc8a456310f92465037b285",
-    "type": "vaccination-center",
-    "vaccine_type": [
-      "Pfizer-BioNTech"
-    ],
-    "com_insee": "72336",
-    "address": "rue Th\u00e9ophile Pl\u00e9  72300 SABLE SUR SARTHE",
-    "long_coor1": 0.3325081,
-    "lat_coor1": 47.8375297,
-    "phone_number": "+33243624737",
-    "business_hours": {
-      "Lundi": "08:00-12:00 14:00-18:00",
-      "Mardi": "08:00-12:00 14:00-18:00",
-      "Mercredi": "08:00-12:00 14:00-18:00",
-      "Jeudi": "08:00-12:00 14:00-18:00",
-      "Vendredi": "08:00-12:00 14:00-18:00",
-      "Samedi": "08:00-12:00 14:00-18:00",
-      "Dimanche": "08:00-12:00 14:00-18:00"
-    }
-  },
-  {
     "gid": "5ffc21a0",
     "nom": "Centre de vaccination - MSP de Guise",
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/02120-guise/centre-de-vaccination---msp-de-guise?centerid=5ffc21a0fabad2432c9bd0df",
@@ -439,6 +416,29 @@
       "Jeudi": "08:00-12:00 14:00-18:00",
       "Vendredi": "08:00-12:00 14:00-18:00",
       "Samedi": "08:00-12:00 14:00-18:00",
+      "Dimanche": "08:00-12:00 14:00-18:00"
+    }
+  },
+  {
+    "gid": "60002a50",
+    "nom": "Centre de vaccination - Foyer Timmermans ",
+    "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/59460-jeumont/centre-de-vaccination---foyer-timmermans-?centerid=60002a507f9ff61ee1d5d0b7",
+    "type": "vaccination-center",
+    "vaccine_type": [
+      "AstraZeneca"
+    ],
+    "com_insee": "59324",
+    "address": "boulevard de lessines 59460 Jeumont",
+    "long_coor1": 4.101479,
+    "lat_coor1": 50.297517,
+    "phone_number": "",
+    "business_hours": {
+      "Lundi": "08:00-12:00 14:00-18:00",
+      "Mardi": "08:00-12:00 14:00-18:00",
+      "Mercredi": "09:00-12:00 14:00-17:00",
+      "Jeudi": "14:00-17:00",
+      "Vendredi": "08:00-12:00 14:00-18:00",
+      "Samedi": "14:00-17:00",
       "Dimanche": "08:00-12:00 14:00-18:00"
     }
   },
@@ -872,6 +872,29 @@
     }
   },
   {
+    "gid": "6024fd17",
+    "nom": "Centre de vaccination VAUCOULEURS",
+    "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/52000-chaumont/centre-de-vaccination-vaucouleurs?centerid=6024fd171dc0b7275b739f10",
+    "type": "vaccination-center",
+    "vaccine_type": [
+      "Pfizer-BioNTech"
+    ],
+    "com_insee": "52121",
+    "address": "3 Rue des Tanneries 52000 Chaumont",
+    "long_coor1": 5.136952,
+    "lat_coor1": 48.111951,
+    "phone_number": "",
+    "business_hours": {
+      "Lundi": "08:00-12:00 14:00-18:00",
+      "Mardi": "08:00-12:00 14:00-18:00",
+      "Mercredi": "08:00-12:00 14:00-18:00",
+      "Jeudi": "08:00-12:00 14:00-18:00",
+      "Vendredi": "08:00-12:00 14:00-18:00",
+      "Samedi": "08:00-12:00 14:00-18:00",
+      "Dimanche": "08:00-12:00 14:00-18:00"
+    }
+  },
+  {
     "gid": "602ff4cc",
     "nom": "Centre de Vaccination \u2013 Gymnase Saint Roch, Bourg en Bresse",
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/01000-bourg-en-bresse/centre-de-vaccination---gymnase-saint-roch--bourg-en-bresse?centerid=602ff4cc423df27f1cb576f0",
@@ -930,6 +953,29 @@
       "Vendredi": "08:00-12:00 14:00-18:00",
       "Samedi": "08:00-12:00 14:00-18:00",
       "Dimanche": "08:00-12:00 14:00-18:00"
+    }
+  },
+  {
+    "gid": "603cca76",
+    "nom": "Centre de Vaccination - Beaumont Sur Sarthe",
+    "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/72170-beaumont-sur-sarthe/centre-de-vaccination---beaumont-sur-sarthe?centerid=603cca7668359b1abff14c7b",
+    "type": "vaccination-center",
+    "vaccine_type": [
+      "ARNm"
+    ],
+    "com_insee": "72029",
+    "address": "8 Avenue du Joncheray 72170 Beaumont-sur-Sarthe",
+    "long_coor1": 0.132621,
+    "lat_coor1": 48.228417,
+    "phone_number": "+33290870180",
+    "business_hours": {
+      "Lundi": "14:00-17:30",
+      "Mardi": "14:00-17:30",
+      "Mercredi": "14:00-17:30",
+      "Jeudi": "14:00-17:30",
+      "Vendredi": "09:30-13:00 14:00-17:30",
+      "Samedi": "14:00-17:30",
+      "Dimanche": "14:00-17:30"
     }
   },
   {
@@ -1113,6 +1159,29 @@
       "Vendredi": "08:00-12:00 14:00-18:00",
       "Samedi": "08:00-12:00 14:00-18:00",
       "Dimanche": "08:00-12:00 14:00-18:00"
+    }
+  },
+  {
+    "gid": "6091338e",
+    "nom": "Centre de vaccination - SDIS PROGT",
+    "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/97351--matoury/centre-de-vaccination---sdis-progt?centerid=6091338ea8637a3a5d932dc1",
+    "type": "vaccination-center",
+    "vaccine_type": [
+      "ARNm"
+    ],
+    "com_insee": "97302",
+    "address": "Palais R\u00e9gional Omnisport Georges Theolade Balata Abriba 97351  Matoury",
+    "long_coor1": -52.323087,
+    "lat_coor1": 4.931755,
+    "phone_number": "+33594397333",
+    "business_hours": {
+      "Lundi": "07:30-16:00",
+      "Mardi": "07:30-16:00",
+      "Mercredi": "07:30-16:00",
+      "Jeudi": "07:30-16:00",
+      "Vendredi": "07:30-16:00",
+      "Samedi": "07:30-16:00",
+      "Dimanche": "07:30-16:00"
     }
   },
   {
@@ -1367,6 +1436,30 @@
       "Vendredi": "08:30-19:30",
       "Samedi": "08:30-19:30",
       "Dimanche": "08:30-19:30"
+    }
+  },
+  {
+    "gid": "601d2b7a",
+    "nom": "Pharmacie Fran\u00e7ois Catherine",
+    "rdv_site_web": "https://www.maiia.com/pharmacie/35760-montgermont/pharmacie-francois-catherine?centerid=601d2b7a26b6634fdf1b3bc0",
+    "type": "drugstore",
+    "vaccine_type": [
+      "Janssen",
+      "AstraZeneca"
+    ],
+    "com_insee": "35189",
+    "address": "Place Jane Beusnel 35760 Montgermont",
+    "long_coor1": -1.715901,
+    "lat_coor1": 48.155585,
+    "phone_number": "+33299689661",
+    "business_hours": {
+      "Lundi": "08:30-12:30 14:00-19:30",
+      "Mardi": "08:30-12:30 14:00-19:30",
+      "Mercredi": "08:30-12:30 14:00-19:30",
+      "Jeudi": "08:30-12:30 14:00-19:30",
+      "Vendredi": "08:30-12:30 14:00-19:30",
+      "Samedi": "09:00-12:30",
+      "Dimanche": "08:30-12:30 14:00-19:30"
     }
   },
   {
@@ -1692,6 +1785,28 @@
       "Vendredi": "08:30-13:00 14:30-19:00",
       "Samedi": "08:30-13:00 14:30-19:00",
       "Dimanche": "08:30-13:00 14:30-19:00"
+    }
+  },
+  {
+    "gid": "6034d799",
+    "nom": "Pharmacie du 8\u00e8me ",
+    "rdv_site_web": "https://www.maiia.com/pharmacie/69008-lyon/pharmacie-du-8eme-?centerid=6034d799ec418369f59f0703",
+    "type": "drugstore",
+    "vaccine_type": [
+      "AstraZeneca"
+    ],
+    "com_insee": "69388",
+    "address": "74 Rue Marius Berliet 69008 Lyon",
+    "long_coor1": 4.862218,
+    "lat_coor1": 45.740972,
+    "phone_number": "+33478775045",
+    "business_hours": {
+      "Lundi": "08:45-12:30 14:00-19:00",
+      "Mardi": "08:45-12:30 14:00-19:00",
+      "Mercredi": "08:45-12:30 14:00-19:00",
+      "Jeudi": "08:45-12:30 14:00-19:00",
+      "Vendredi": "08:45-12:30 14:00-19:00",
+      "Samedi": "09:00-12:30"
     }
   },
   {
@@ -2242,6 +2357,29 @@
       "Vendredi": "08:30-19:30",
       "Samedi": "08:30-12:30",
       "Dimanche": "08:30-19:30"
+    }
+  },
+  {
+    "gid": "605069e7",
+    "nom": "Pharmacie Leger",
+    "rdv_site_web": "https://www.maiia.com/pharmacie/74300-cluses/pharmacie-leger?centerid=605069e734862e2a69944647",
+    "type": "drugstore",
+    "vaccine_type": [
+      "AstraZeneca"
+    ],
+    "com_insee": "74081",
+    "address": "20 Av de la Liberation 74300 Cluses",
+    "long_coor1": 6.577602,
+    "lat_coor1": 46.060117,
+    "phone_number": "+33450980212",
+    "business_hours": {
+      "Lundi": "08:15-12:15 14:00-19:00",
+      "Mardi": "08:15-12:15 14:00-19:00",
+      "Mercredi": "08:15-12:15 14:00-19:00",
+      "Jeudi": "08:15-12:15 14:00-19:00",
+      "Vendredi": "08:15-12:15 14:00-19:00",
+      "Samedi": "08:15-12:15 14:00-19:00",
+      "Dimanche": "08:15-12:15 14:00-19:00"
     }
   },
   {
