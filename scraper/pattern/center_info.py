@@ -26,7 +26,7 @@ class Vaccine(str, Enum):
 VACCINES_NAMES = {
     Vaccine.PFIZER: ["pfizer", "biontech"],
     Vaccine.MODERNA: ["moderna"],
-    Vaccine.ARNM: ["arn", "arnm", "arn-m"],
+    Vaccine.ARNM: ["arn", "arnm", "arn-m", "arn m"],
     Vaccine.ASTRAZENECA: ["astrazeneca", "astra-zeneca", "astra zeneca", "az"],  # Not too sure about the reliability
     Vaccine.JANSSEN: [
         "janssen",
@@ -177,7 +177,7 @@ def get_vaccine_name(name: str, fallback: Vaccine = None) -> Vaccine:
     if not name:
         return fallback
     name = name.lower().strip()
-    for vaccine in (Vaccine.MODERNA, Vaccine.PFIZER, Vaccine.ARNM, Vaccine.ASTRAZENECA, Vaccine.JANSSEN):
+    for vaccine in (Vaccine.ARNM, Vaccine.MODERNA, Vaccine.PFIZER, Vaccine.ASTRAZENECA, Vaccine.JANSSEN):
         vaccine_names = VACCINES_NAMES[vaccine]
         for vaccine_name in vaccine_names:
             if vaccine_name in name:
