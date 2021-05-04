@@ -87,7 +87,6 @@ class DoctolibSlots:
             logger.warning(f"Invalid practice ID for this Doctolib center: {request.get_url()}")
             practice_id = None
             self.pop_practice_id(request)
-
         if practice_id:
             practice_id, practice_same_adress= link_practice_ids(practice_id, rdata)
         if len(rdata.get('places', [])) > 1 and practice_id is None:
@@ -96,7 +95,6 @@ class DoctolibSlots:
         request.update_practitioner_type(
             parse_practitioner_type(centre, rdata))
         set_doctolib_center_internal_id(request, rdata, practice_id, practice_same_adress)
-
         # Check if  appointments are allowed
         if not is_allowing_online_appointments(rdata):
             request.set_appointments_only_by_phone(True)
@@ -108,15 +106,11 @@ class DoctolibSlots:
         # visit_motive_id
         visit_motive_ids = _find_visit_motive_id(
             data, visit_motive_category_id=visit_motive_category_id)
-
         if visit_motive_ids is None:
             return None
 
         all_agendas = parse_agenda_ids(rdata)
-
-
         first_availability = None
-        
         for visit_motive_id in visit_motive_ids:
             agenda_ids, practice_ids = _find_agenda_and_practice_ids(
                 data, visit_motive_id, practice_id_filter=practice_id
@@ -129,24 +123,18 @@ class DoctolibSlots:
                 start_date = request.get_start_date()
 
                 for i in range(DOCTOLIB_ITERATIONS):
-
                     start_date_tmp = datetime.now() + timedelta(days=7 * i)
                     start_date_tmp = start_date_tmp.strftime("%Y-%m-%d")
-                    
-
                     sdate, appt, count_next_appt, stop = self.get_appointments(request, start_date_tmp, visit_motive_ids, visit_motive_id,
                                                             agenda_ids_q, practice_ids_q, DOCTOLIB_SLOT_LIMIT, start_date)
-                  
                     if stop:
                         break
-
                     if not sdate:
                         continue
                     if not first_availability or sdate < first_availability:
                         first_availability = sdate
-                    
+
                     request.update_appointment_count(request.appointment_count + appt)
-   
                     updated_dict = dict(Counter(request.appointment_schedules) + Counter(count_next_appt))
                     for interval in INTERVAL_SPLIT_DAYS:
                         if f"{interval}_days" not in updated_dict.keys():
@@ -213,11 +201,7 @@ class DoctolibSlots:
         first_availability = None
         appointment_count = 0
         next_appointment_timetables = defaultdict(int)
-
         slots_api_url = f'https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={limit}'
-        
-
-
         response = self._client.get(
             slots_api_url, headers=DOCTOLIB_HEADERS)
         if response.status_code == 403:
@@ -283,8 +267,6 @@ def set_doctolib_center_internal_id(request: ScraperRequest, data: dict, practic
             request.internal_id = f"doctolib{profile_id}pid{practice_ids[0]}"
         else:
             request.internal_id = f"doctolib{profile_id}"
-
-
 
 
 def _parse_centre(rdv_site_web: str) -> Optional[str]:
