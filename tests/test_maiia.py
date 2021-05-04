@@ -74,7 +74,7 @@ def test_get_first_availability():
         '2021-04-29', 
         reasons, 
         client=client)
-    assert appointment_schedules == {'1_days': 0, '28_days': 6570, '49_days': 7980, '7_days': 0}
+    assert appointment_schedules == {'1_days': 0, '2_days': 0, '28_days': 6570, '49_days': 7980, '7_days': 0}
     assert slots_count == 7980
     assert first_availability.isoformat() == '2021-05-13T13:40:00+00:00'
 
