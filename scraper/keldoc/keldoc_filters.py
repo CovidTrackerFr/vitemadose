@@ -9,18 +9,19 @@ from scraper.pattern.center_info import get_vaccine_name
 KELDOC_COVID_SPECIALTIES = ["Maladies infectieuses"]
 
 KELDOC_APPOINTMENT_REASON = [
-    "1ère inj",
-    "1 ère inj",
-    "1 ere inj",
-    "1ere inj",
-    "1ère dose",
-    "1ere dose",
+    "ARN messager PFIZER/MODERNA",
     "1 er inj",
+    "1 ere inj",
+    "1 ère inj",
+    "1ere dose",
+    "1ère dose",
+    "1ere inj",
+    "1ère inj",
+    "covid19 - vaccination",
     "inj 1",
     "inj. 1",
-    "première injection",
-    "covid19 - vaccination",
     "inj1",
+    "première injection",
 ]
 
 KELDOC_COVID_SKILLS = ["Centre de vaccination COVID-19"]
