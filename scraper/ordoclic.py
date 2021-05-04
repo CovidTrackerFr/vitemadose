@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 from dateutil.parser import isoparse
 from pytz import timezone
 
+from scraper.pattern.center_info import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE, INTERVAL_SPLIT_DAYS
 from utils.vmd_utils import departementUtils
@@ -37,19 +38,33 @@ def search(client: httpx.Client = DEFAULT_CLIENT):
                'in.isCovidVaccineSupported': 'true', 
                'or.covidOnlineBookingAvailabilities.Vaccination Pfizer': 'true', 
                'or.covidOnlineBookingAvailabilities.Vaccination AstraZeneca': 'true' }
-    r = client.get(base_url, params=payload)
-    r.raise_for_status()
+    try:
+        r = client.get(base_url, params=payload)
+        r.raise_for_status()
+    except httpx.TimeoutException as hex:
+        logger.warning(f"request timed out for center: {base_url} (search)")
+        return False
+    except httpx.HTTPStatusError as hex:
+        logger.warning(f'{url} returned error {hex.response.status_code}')
+        return None
     return r.json()
 
 
-def getReasons(entityId, client: httpx.Client = DEFAULT_CLIENT):
+def get_reasons(entityId, client: httpx.Client = DEFAULT_CLIENT):
     base_url = f'https://api.ordoclic.fr/v1/solar/entities/{entityId}/reasons'
-    r = client.get(base_url)
-    r.raise_for_status()
+    try:
+        r = client.get(base_url)
+        r.raise_for_status()
+    except httpx.TimeoutException as hex:
+        logger.warning(f"request timed out for center: {base_url}")
+        return False
+    except httpx.HTTPStatusError as hex:
+        logger.warning(f'{url} returned error {hex.response.status_code}')
+        return None
     return r.json()
 
 
-def getSlots(entityId, medicalStaffId, reasonId, start_date, end_date, client: httpx.Client = DEFAULT_CLIENT):
+def get_slots(entityId, medicalStaffId, reasonId, start_date, end_date, client: httpx.Client = DEFAULT_CLIENT):
     base_url = 'https://api.ordoclic.fr/v1/solar/slots/availableSlots'
     payload = {"entityId": entityId,
                "medicalStaffId": medicalStaffId,
@@ -57,20 +72,34 @@ def getSlots(entityId, medicalStaffId, reasonId, start_date, end_date, client: h
                "dateEnd": f"{end_date}T00:00:00.000Z",
                "dateStart": f"{start_date}T23:59:59.000Z"}
     headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-    r = client.post(base_url, data=json.dumps(payload), headers=headers)
-    r.raise_for_status()
+    try:
+        r = client.post(base_url, data=json.dumps(payload), headers=headers)
+        r.raise_for_status()
+    except httpx.TimeoutException as hex:
+        logger.warning(f"request timed out for center: {base_url}")
+        return False
+    except httpx.HTTPStatusError as hex:
+        logger.warning(f'{url} returned error {hex.response.status_code}')
+        return None
     return r.json()
 
 
-def getProfile(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
+def get_profile(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     slug = request.get_url().rsplit('/', 1)[-1]
     prof = request.get_url().rsplit('/', 2)[-2]
     if prof in ['pharmacien', 'medecin']:
         base_url = f'https://api.ordoclic.fr/v1/professionals/profile/{slug}'
     else:
         base_url = f'https://api.ordoclic.fr/v1/public/entities/profile/{slug}'
-    r = client.get(base_url)
-    r.raise_for_status()
+    try:
+        r = client.get(base_url)
+        r.raise_for_status()
+    except httpx.TimeoutException as hex:
+        logger.warning(f"request timed out for center: {base_url}")
+        return False
+    except httpx.HTTPStatusError as hex:
+        logger.warning(f'{url} returned error {hex.response.status_code}')
+        return None
     return r.json()
 
 
@@ -107,9 +136,7 @@ def parse_ordoclic_slots(request: ScraperRequest, availability_data):
     if type(availabilities) is list:
         availability_count = len(availabilities)
     request.update_appointment_count(availability_count)
-    appointment_schedules = {}
-    for n in INTERVAL_SPLIT_DAYS:
-        appointment_schedules[f'{n}_days'] = 0
+    appointment_schedules = request.appointment_schedules
     for n in INTERVAL_SPLIT_DAYS:
         n_date = (isoparse(start_date) + timedelta(days=n)).isoformat()
         appointment_schedules[f'{n}_days'] += count_appointements(availabilities, start_date, n_date)
@@ -140,7 +167,7 @@ def parse_ordoclic_slots(request: ScraperRequest, availability_data):
 @Profiling.measure('ordoclic_slot')
 def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     first_availability = None
-    profile = getProfile(request)
+    profile = get_profile(request)
     slug = profile["profileSlug"]
     entityId = profile["entityId"]
     attributes = profile.get('attributeValues')
@@ -148,19 +175,23 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
         if settings['label'] == 'booking_settings' and settings['value'].get('option', 'any') == 'any':
             request.set_appointments_only_by_phone(True)
             return None
+    appointment_schedules = {}
+    for n in INTERVAL_SPLIT_DAYS:
+        appointment_schedules[f'{n}_days'] = 0
+        request.update_appointment_schedules(appointment_schedules)
     for professional in profile["publicProfessionals"]:
         medicalStaffId = professional["id"]
         name = professional["fullName"]
         zip = professional["zip"]
-        reasons = getReasons(entityId)
-        # reasonTypeId = 4 -> 1er Vaccin
+        reasons = get_reasons(entityId)
         for reason in reasons["reasons"]:
             if not is_reason_valid(reason):
                 continue
+            request.add_vaccine_type(get_vaccine_name(reason.get('name', '')))
             reasonId = reason["id"]
             date_obj = datetime.strptime(request.get_start_date(), '%Y-%m-%d')
             end_date = (date_obj + timedelta(days=50)).strftime('%Y-%m-%d')
-            slots = getSlots(entityId, medicalStaffId, reasonId, request.get_start_date(), end_date, client)
+            slots = get_slots(entityId, medicalStaffId, reasonId, request.get_start_date(), end_date, client)
             date = parse_ordoclic_slots(request, slots)
             if date is None:
                 continue
@@ -168,6 +199,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
                 first_availability = date
     if first_availability is None:
         return None
+    logger.debug(f'appointment_schedules: {request.appointment_schedules}')
     return first_availability.isoformat()
 
 
@@ -178,8 +210,6 @@ def centre_iterator():
         if 'type' in item:
             t = item.get("type")
             if t == "Pharmacie":
-                if not item.get('covidVaccineInjectionDate', None):
-                    continue
                 centre = {}
                 slug = item["publicProfile"]["slug"]
                 centre["gid"] = item["id"][:8]
