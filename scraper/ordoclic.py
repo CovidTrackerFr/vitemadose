@@ -45,7 +45,7 @@ def search(client: httpx.Client = DEFAULT_CLIENT):
         logger.warning(f"request timed out for center: {base_url} (search)")
         return False
     except httpx.HTTPStatusError as hex:
-        logger.warning(f'{url} returned error {hex.response.status_code}')
+        logger.warning(f'{base_url} returned error {hex.response.status_code}')
         return None
     return r.json()
 
@@ -59,7 +59,7 @@ def get_reasons(entityId, client: httpx.Client = DEFAULT_CLIENT):
         logger.warning(f"request timed out for center: {base_url}")
         return False
     except httpx.HTTPStatusError as hex:
-        logger.warning(f'{url} returned error {hex.response.status_code}')
+        logger.warning(f'{base_url} returned error {hex.response.status_code}')
         return None
     return r.json()
 
@@ -79,7 +79,7 @@ def get_slots(entityId, medicalStaffId, reasonId, start_date, end_date, client: 
         logger.warning(f"request timed out for center: {base_url}")
         return False
     except httpx.HTTPStatusError as hex:
-        logger.warning(f'{url} returned error {hex.response.status_code}')
+        logger.warning(f'{base_url} returned error {hex.response.status_code}')
         return None
     return r.json()
 
@@ -98,7 +98,7 @@ def get_profile(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
         logger.warning(f"request timed out for center: {base_url}")
         return False
     except httpx.HTTPStatusError as hex:
-        logger.warning(f'{url} returned error {hex.response.status_code}')
+        logger.warning(f'{base_url} returned error {hex.response.status_code}')
         return None
     return r.json()
 
