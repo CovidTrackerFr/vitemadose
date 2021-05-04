@@ -12,7 +12,7 @@ from pathlib import Path
 from urllib import parse
 
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.pattern.scraper_result import DRUG_STORE
+from scraper.pattern.scraper_result import DRUG_STORE, INTERVAL_SPLIT_DAYS
 from scraper.pattern.center_info import get_vaccine_name
 from utils.vmd_utils import departementUtils
 from scraper.profiler import Profiling
@@ -38,6 +38,7 @@ MAPHARMA_CAMPAGNES_INVALIDES = [
 MAPHARMA_OPEN_DATA_FILE = Path('data', 'output', 'mapharma_open_data.json')
 MAPHARMA_OPEN_DATA_URL = 'https://mapharma.net/opendata/rdv'
 MAPHARMA_OPEN_DATA_URL_FALLBACK = 'https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/mapharma_open_data.json'
+MAPHARMA_SLOT_LIMIT = 50
 
 timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=MAPHARMA_HEADERS)
@@ -151,6 +152,18 @@ def parse_slots(slots) -> [datetime, int]:
     return first_availability, slot_count
 
 
+def count_appointements(slots: dict, start_date: date, end_date: date) -> int:
+    count = 0
+
+    for day, day_slots in slots.items():
+        day_date = date.fromisoformat(day)
+        if day_date >= start_date and day_date < end_date:
+            count += len(day_slots)
+
+    logger.debug(f'Slots count from {start_date} to {end_date}: {count}')
+    return count
+
+
 @Profiling.measure('mapharma_slot')
 def fetch_slots(
     request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT, 
@@ -163,7 +176,7 @@ def fetch_slots(
     day_slots = {}
     # l'api ne renvoie que 7 jours, on parse un peu plus loin dans le temps
     start_date = date.fromisoformat(request.get_start_date())
-    for delta in range(0, 30, 6):
+    for delta in range(0, MAPHARMA_SLOT_LIMIT, 6):
         new_date = start_date + timedelta(days=delta)
         slots = get_slots(id_campagne, id_type, new_date.isoformat(), client)
         for day, day_slot in slots.items():
@@ -180,6 +193,14 @@ def fetch_slots(
     pharmacy, campagne = get_pharmacy_and_campagne(
         id_campagne, id_type, opendata_file)
     request.add_vaccine_type(get_vaccine_name(campagne['nom']))
+
+    appointment_schedules = {}
+    for n in INTERVAL_SPLIT_DAYS:
+        n_date = start_date + timedelta(days=n)
+        appointment_schedules[f'{n}_days'] = count_appointements(day_slots, start_date, n_date)
+    logger.debug(f'appointment_schedules: {appointment_schedules}')
+    request.update_appointment_schedules(appointment_schedules)
+
     if first_availability is None:
         return None
     return first_availability.isoformat()

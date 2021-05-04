@@ -3,13 +3,25 @@ import httpx
 
 from bs4 import BeautifulSoup
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, date
 
-from scraper.mapharma.mapharma import parse_slots, fetch_slots
+from scraper.mapharma.mapharma import parse_slots, fetch_slots, count_appointements
 from scraper.pattern.scraper_request import ScraperRequest
 
 TEST_OPEN_DATA_FILE = Path('tests', 'fixtures', 'mapharma', 'mapharma_open_data.json')
 TEST_SLOT_FILE = Path('tests', 'fixtures', 'mapharma', 'slots.json')
+
+
+def test_count_appointements():
+    slots = dict()
+    with open(TEST_SLOT_FILE, 'r', encoding='utf8') as f:
+        slots = json.load(f)
+    start_date = date(2021, 4, 1)
+    end_date = date(2021, 4, 19)
+    assert count_appointements(slots, start_date, end_date) == 0
+    end_date = date(2021, 5, 14)
+    assert count_appointements(slots, start_date, end_date) == 72
+
 
 def test_parse_slots():
     slots = dict()
