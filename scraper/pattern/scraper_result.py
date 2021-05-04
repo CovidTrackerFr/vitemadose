@@ -5,12 +5,13 @@ from scraper.pattern.scraper_request import ScraperRequest
 
 
 # Practitioner type enum
-GENERAL_PRACTITIONER = 'general-practitioner'
-VACCINATION_CENTER = 'vaccination-center'
-DRUG_STORE = 'drugstore'
+GENERAL_PRACTITIONER = "general-practitioner"
+VACCINATION_CENTER = "vaccination-center"
+DRUG_STORE = "drugstore"
 
 # Schedules array for appointments by interval
 INTERVAL_SPLIT_DAYS = [1, 2, 7, 28, 49]
+
 
 class ScraperResult:
     def __init__(self, request: ScraperRequest, platform, next_availability):

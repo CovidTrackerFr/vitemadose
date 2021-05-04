@@ -47,7 +47,7 @@ def test_blocked_by_doctolib_par_centre():
             "limit": str(DOCTOLIB_SLOT_LIMIT),
         }
         path = Path("tests", "fixtures", "doctolib", "basic-availabilities.json")
-        return httpx.Response(200, json=json.loads(path.read_text(encoding='utf-8')))
+        return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client, cooldown_interval=0)
@@ -72,7 +72,7 @@ def test_blocked_by_doctolib_par_availabilities():
 
         if request.url.path == "/booking/centre1.json":
             path = Path("tests", "fixtures", "doctolib", "basic-booking.json")
-            return httpx.Response(200, json=json.loads(path.read_text(encoding='utf-8')))
+            return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
         return httpx.Response(403, text="Anti dDos")
 
@@ -99,18 +99,18 @@ def test_doctolib():
 
         if request.url.path == "/booking/centre1.json":
             path = Path("tests", "fixtures", "doctolib", "basic-booking.json")
-            return httpx.Response(200, json=json.loads(path.read_text(encoding='utf-8')))
+            return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
         assert request.url.path == "/availabilities.json"
         params = dict(httpx.QueryParams(request.url.query))
         path = Path("tests", "fixtures", "doctolib", "basic-availabilities.json")
-        return httpx.Response(200, json=json.loads(path.read_text(encoding='utf-8')))
+        return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client, cooldown_interval=0)
 
     next_date = slots.fetch(scrap_request)
-    assert next_date == '2021-04-10'
+    assert next_date == "2021-04-10"
 
 
 def test_doctolib_motive_categories():
@@ -127,17 +127,17 @@ def test_doctolib_motive_categories():
 
         if request.url.path == "/booking/centre1.json":
             path = Path("tests", "fixtures", "doctolib", "category-booking.json")
-            return httpx.Response(200, json=json.loads(path.read_text(encoding='utf-8')))
+            return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
         assert request.url.path == "/availabilities.json"
         path = Path("tests", "fixtures", "doctolib", "category-availabilities.json")
-        return httpx.Response(200, json=json.loads(path.read_text(encoding='utf-8')))
+        return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client, cooldown_interval=0)
 
     next_date = slots.fetch(scrap_request)
-    assert next_date == '2021-04-10'
+    assert next_date == "2021-04-10"
 
 
 def test_doctolib_next_slot():
@@ -154,11 +154,11 @@ def test_doctolib_next_slot():
 
         if request.url.path == "/booking/centre1.json":
             path = Path("tests", "fixtures", "doctolib", "next-slot-booking.json")
-            return httpx.Response(200, json=json.loads(path.read_text(encoding='utf-8')))
+            return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
         assert request.url.path == "/availabilities.json"
         path = Path("tests", "fixtures", "doctolib", "next-slot-availabilities.json")
-        return httpx.Response(200, json=json.loads(path.read_text(encoding='utf-8')))
+        return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client, cooldown_interval=0)
@@ -229,7 +229,7 @@ def test_find_visit_motive_id():
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Moderna)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 }
             ]
         }
@@ -245,12 +245,15 @@ def test_find_visit_motive_id():
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Pfizer/BioNTech)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
-                {"id": 2, "name": "1ère injection vaccin COVID-19 (Moderna)",
+                {
+                    "id": 2,
+                    "name": "1ère injection vaccin COVID-19 (Moderna)",
                     "visit_motive_category_id": 42,
                     "vaccination_motive": True,
-                    "first_shot_motive": True},
+                    "first_shot_motive": True,
+                },
             ]
         }
     }
@@ -266,7 +269,7 @@ def test_find_visit_motive_id():
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Moderna)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
             ]
         }
@@ -282,14 +285,14 @@ def test_find_visit_motive_id():
                     "visit_motive_category_id": 41,
                     "name": "1ère injection vaccin COVID-19 (Moderna)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
                 {
                     "id": 2,
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (AstraZeneca)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
             ]
         }
@@ -305,47 +308,51 @@ def test_find_visit_motive_id():
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Moderna)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
                 {
                     "id": 2,
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (AstraZeneca)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
                 {
                     "id": 3,
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Pfizer-BioNTech)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
                 {
                     "id": 4,
                     "visit_motive_category_id": 42,
                     "name": "2nde injection vaccin COVID-19 (Moderna)",
                     "vaccination_motive": True,
-                    "first_shot_motive": False
+                    "first_shot_motive": False,
                 },
                 {
                     "id": 5,
                     "visit_motive_category_id": 42,
                     "name": "2nde injection vaccin COVID-19 (AstraZeneca)",
                     "vaccination_motive": True,
-                    "first_shot_motive": False
+                    "first_shot_motive": False,
                 },
                 {
                     "id": 6,
                     "visit_motive_category_id": 42,
                     "name": "2nde injection vaccin COVID-19 (Pfizer-BioNTech)",
                     "vaccination_motive": True,
-                    "first_shot_motive": False
+                    "first_shot_motive": False,
                 },
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {1: Vaccine.MODERNA, 2: Vaccine.ASTRAZENECA, 3: Vaccine.PFIZER}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {
+        1: Vaccine.MODERNA,
+        2: Vaccine.ASTRAZENECA,
+        3: Vaccine.PFIZER,
+    }
 
 
 def test_find_agenda_and_practice_ids():
@@ -393,5 +400,6 @@ def test_find_agenda_and_practice_ids():
 def test_category_relevant():
     assert is_category_relevant("Pfizer")
     assert is_category_relevant("Astra Zeneca")
+
 
 test_category_relevant()
