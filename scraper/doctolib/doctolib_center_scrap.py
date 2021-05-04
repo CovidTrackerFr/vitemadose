@@ -3,6 +3,7 @@ from scraper.pattern.scraper_result import DRUG_STORE, GENERAL_PRACTITIONER, VAC
 from utils.vmd_utils import departementUtils, format_phone_number
 from utils.vmd_logger import get_logger
 from scraper.doctolib.doctolib import DOCTOLIB_HEADERS
+from scraper.doctolib.doctolib_filters import is_vaccination_center
 
 from typing import List
 import requests
@@ -53,6 +54,10 @@ def parse_doctolib_centers(page_limit=None) -> List[dict]:
         if centers_departements == 0:
             raise Exception("No Value found for department {}, crashing")
         centers += centers_departements
+
+    centers = list(filter(is_vaccination_center, centers)) # Filter vaccination centers
+    centers = list(map(center_reducer, centers)) # Remove fields irrelevant to the front
+
     return centers
 
 
@@ -188,6 +193,11 @@ def get_dict_infos_center_page(url_path: str) -> dict:
             infos_page['phone_number'] = format_phone_number(phone_number)
 
         infos_page["business_hours"] = parse_doctolib_business_hours(place)
+
+        # Parse visit motives, not sure it's the right place to do it, maybe this function should be refactored
+        extracted_visit_motives = output.get('visit_motives', [])
+        infos_page["visit_motives"] = list(map(lambda vm: vm.get('name'), extracted_visit_motives))
+
         return infos_page
     else:
         return {}
@@ -239,6 +249,30 @@ def center_type(url_path: str, nom: str) -> str:
     if "medecin" in url_path or "medecin" in nom.lower():
         return GENERAL_PRACTITIONER
     return VACCINATION_CENTER
+
+
+def center_reducer(center: dict) -> dict:
+    """ This function should be used to remove fields that are irrelevant to the front,
+        such as fields used to filter centers during scraping process.
+        Removes following fields : visit_motives
+
+        Parameters
+        ----------
+        center_dict : "Center" dict
+            Center dict, output by the doctolib_center_scrap.center_from_doctor_dict
+
+        Returns
+        ----------
+        center dict, without irrelevant fields to the front
+
+        Example
+        ----------
+        >>> center_reducer({'gid': 'd257554', 'visit_motives': ['1re injection vaccin COVID-19 (Pfizer-BioNTech)', '2de injection vaccin COVID-19 (Pfizer-BioNTech)', '1re injection vaccin COVID-19 (Moderna)', '2de injection vaccin COVID-19 (Moderna)']})
+        {'gid': 'd257554'}
+    """
+    center.pop("visit_motives")
+
+    return center
 
 
 if __name__ == "__main__":
