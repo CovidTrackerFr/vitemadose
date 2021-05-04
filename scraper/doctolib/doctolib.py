@@ -32,16 +32,6 @@ DOCTOLIB_HEADERS = {
 DEFAULT_CLIENT: httpx.Client
 logger = logging.getLogger("scraper")
 
-if os.getenv("WITH_TOR", "no") == "yes":
-    session = requests.Session()
-    session.proxies = {  # type: ignore
-        "http": "socks5://127.0.0.1:9050",
-        "https": "socks5://127.0.0.1:9050",
-    }
-    DEFAULT_CLIENT = session  # type: ignore
-else:
-    DEFAULT_CLIENT = httpx.Client()
-
 # Vérifie qu'aucun des intervalles de calcul de dépasse l'intervalle globale de recherche des dispos
 if not all(i <= (DOCTOLIB_SLOT_LIMIT * DOCTOLIB_ITERATIONS) for i in INTERVAL_SPLIT_DAYS):
     logger.error(f"DOCTOLIB - Incorrect value for INTERVAL_SPLIT_DAYS in doctolib.py")
