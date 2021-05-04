@@ -13,16 +13,17 @@ timeout = httpx.Timeout(25.0, connect=25.0)
 # change KELDOC_KILL_SWITCH to True to bypass Keldoc scraping
 KELDOC_KILL_SWITCH = False
 KELDOC_HEADERS = {
-    'User-Agent': os.environ.get('KELDOC_API_KEY', ''),
+    "User-Agent": os.environ.get("KELDOC_API_KEY", ""),
 }
 session = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
-logger = logging.getLogger('scraper')
+logger = logging.getLogger("scraper")
 
-@Profiling.measure('keldoc_slot')
+
+@Profiling.measure("keldoc_slot")
 def fetch_slots(request: ScraperRequest):
-    if 'www.keldoc.com' in request.url:
-        logger.debug(f'Fixing wrong hostname in request: {request.url}')
-        request.url = request.url.replace('www.keldoc.com', 'vaccination-covid.keldoc.com')
+    if "www.keldoc.com" in request.url:
+        logger.debug(f"Fixing wrong hostname in request: {request.url}")
+        request.url = request.url.replace("www.keldoc.com", "vaccination-covid.keldoc.com")
     if KELDOC_KILL_SWITCH:
         return None
     center = KeldocCenter(request, client=session)
@@ -36,8 +37,9 @@ def fetch_slots(request: ScraperRequest):
     # Filter specialties, cabinets & motives
     center.vaccine_specialties = get_relevant_vaccine_specialties_id(center.specialties)
     center.fetch_vaccine_cabinets()
-    center.vaccine_motives = filter_vaccine_motives(session, center.selected_cabinet, center.id,
-                                                    center.vaccine_specialties, center.vaccine_cabinets)
+    center.vaccine_motives = filter_vaccine_motives(
+        session, center.selected_cabinet, center.id, center.vaccine_specialties, center.vaccine_cabinets
+    )
     # Find the first availability
     date, count, appointment_schedules = center.find_first_availability(request.get_start_date())
     if not date:
@@ -46,4 +48,4 @@ def fetch_slots(request: ScraperRequest):
     request.update_appointment_count(count)
     if appointment_schedules:
         request.update_appointment_schedules(appointment_schedules)
-    return date.strftime('%Y-%m-%dT%H:%M:%S.%f%z')
+    return date.strftime("%Y-%m-%dT%H:%M:%S.%f%z")
