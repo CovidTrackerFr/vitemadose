@@ -144,6 +144,7 @@ def export_data(centres_cherchés : Iterator[CenterInfo], outpath_format='data/o
     compte_centres_avec_dispo = 0
     bloqués_doctolib = 0
     centres_open_data = []
+    internal_ids = []
     par_departement = {
         code: {
             'version': 1,
@@ -154,11 +155,8 @@ def export_data(centres_cherchés : Iterator[CenterInfo], outpath_format='data/o
         for code in departementUtils.import_departements()
     }
 
-
     blocklist = get_blocklist_urls()
-
     # This should be duplicate free, they are already checked in
-
     is_blocked_center = lambda center : (is_reserved_center(center) or 
                             is_in_blocklist(center, blocklist))
     blocked_centers = [center for center in centres_cherchés if is_blocked_center(center)]
@@ -174,9 +172,14 @@ def export_data(centres_cherchés : Iterator[CenterInfo], outpath_format='data/o
         centre.nom = centre.nom.strip()
         if centre.departement not in par_departement:
             logger.warning(
-                f"le centre {centre.nom} ({centre.departement}) n'a pas pu être rattaché à un département connu")
+                f"Center {centre.nom} ({centre.departement}) could not be attached to a valid department")
             continue
         erreur = centre.erreur
+        if centre.internal_id and centre.internal_id in internal_ids:
+            logger.warning(
+                f"Found a duplicated internal_id: {centre.nom} ({centre.departement}) -> {centre.internal_id}")
+            continue
+        internal_ids.append(centre.internal_id)
         skipped_keys = ['prochain_rdv', 'internal_id', 'metadata', 
                         'location', 'appointment_count', 'appointment_schedules', 
                         'erreur', 'ville', 'type', 

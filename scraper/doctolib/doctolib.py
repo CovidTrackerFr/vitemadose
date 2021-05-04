@@ -257,16 +257,16 @@ def set_doctolib_center_internal_id(request: ScraperRequest, data: dict, practic
     profile_id = int(profile_id)
 
     if not practice_ids or len(practice_ids) == 0:
-        request.internal_id = f"doctolib{profile_id}"
+        request.update_internal_id(f"doctolib{profile_id}")
 
     if practice_ids and len(practice_ids) == 1:
-        request.internal_id = f"doctolib{profile_id}pid{practice_ids[0]}"
+        request.update_internal_id(f"doctolib{profile_id}pid{practice_ids[0]}")
 
     if practice_ids and len(practice_ids) > 1:
         if practice_same_adress == True:
-            request.internal_id = f"doctolib{profile_id}pid{practice_ids[0]}"
+            request.update_internal_id(f"doctolib{profile_id}pid{practice_ids[0]}")
         else:
-            request.internal_id = f"doctolib{profile_id}"
+            request.update_internal_id(f"doctolib{profile_id}")
 
 
 def _parse_centre(rdv_site_web: str) -> Optional[str]:
