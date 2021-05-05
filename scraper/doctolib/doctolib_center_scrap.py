@@ -3,6 +3,7 @@ from scraper.pattern.scraper_result import DRUG_STORE, GENERAL_PRACTITIONER, VAC
 from utils.vmd_utils import departementUtils, format_phone_number
 from utils.vmd_logger import get_logger
 from scraper.doctolib.doctolib import DOCTOLIB_HEADERS
+from scraper.doctolib.doctolib_filters import is_vaccination_center
 
 from typing import List
 import requests
@@ -13,31 +14,28 @@ import os
 import re
 from unidecode import unidecode
 
-BASE_URL = 'http://www.doctolib.fr/vaccination-covid-19/france.json?page={0}'
+BASE_URL = "http://www.doctolib.fr/vaccination-covid-19/france.json?page={0}"
 BASE_URL_DEPARTEMENT = "http://www.doctolib.fr/vaccination-covid-19/{0}.json?page={1}"
-BOOKING_URL = 'https://www.doctolib.fr/booking/{0}.json'
+BOOKING_URL = "https://www.doctolib.fr/booking/{0}.json"
 
 CENTER_TYPES = [
-    'hopital-public',
-    'centre-de-vaccinations-internationales',
-    'centre-de-sante',
-    'pharmacie',
-    'medecin-generaliste',
-    'centre-de-vaccinations-internationales',
-    'centre-examens-de-sante'
+    "hopital-public",
+    "centre-de-vaccinations-internationales",
+    "centre-de-sante",
+    "pharmacie",
+    "medecin-generaliste",
+    "centre-de-vaccinations-internationales",
+    "centre-examens-de-sante",
 ]
 
-DOCTOLIB_DOMAINS = [
-    'https://partners.doctolib.fr',
-    'https://www.doctolib.fr'
-]
+DOCTOLIB_DOMAINS = ["https://partners.doctolib.fr", "https://www.doctolib.fr"]
 
 
 DOCTOLIB_WEIRD_DEPARTEMENTS = {
-    'indre': 'departement-indre',
-    'gironde': 'departement-gironde',
-    'mayenne': 'departement-mayenne',
-    'vienne': 'departement-vienne'
+    "indre": "departement-indre",
+    "gironde": "departement-gironde",
+    "mayenne": "departement-mayenne",
+    "vienne": "departement-vienne",
 }
 
 
@@ -47,12 +45,15 @@ logger = get_logger()
 def parse_doctolib_centers(page_limit=None) -> List[dict]:
     centers = []
     for departement in get_departements():
-        logger.info(
-            f"[Doctolib centers] Parsing pages of departement {departement} through department SEO link")
+        logger.info(f"[Doctolib centers] Parsing pages of departement {departement} through department SEO link")
         centers_departements = parse_pages_departement(departement)
         if centers_departements == 0:
             raise Exception("No Value found for department {}, crashing")
         centers += centers_departements
+
+    centers = list(filter(is_vaccination_center, centers))  # Filter vaccination centers
+    centers = list(map(center_reducer, centers))  # Remove fields irrelevant to the front
+
     return centers
 
 
@@ -61,7 +62,7 @@ def get_departements():
 
     # Guyane uses Maiia and does not have doctolib pages
     NOT_INCLUDED_DEPARTEMENTS = ["Guyane"]
-    with open("data/input/departements-france.csv", newline="\n") as csvfile:
+    with open("data/input/departements-france.csv", encoding="utf8", newline="\n") as csvfile:
         reader = csv.DictReader(csvfile)
         departements = [str(row["nom_departement"]) for row in reader]
         [departements.remove(ndep) for ndep in NOT_INCLUDED_DEPARTEMENTS]
@@ -79,8 +80,7 @@ def parse_pages_departement(departement):
             break
     centers = []
     while page_has_centers:
-        logger.info(
-            f"[Doctolib centers] Parsing page {page_id} of {departement}")
+        logger.info(f"[Doctolib centers] Parsing page {page_id} of {departement}")
         centers_page = parse_page_centers_departement(departement, page_id)
         centers += centers_page
 
@@ -93,19 +93,17 @@ def parse_pages_departement(departement):
 
 
 def parse_page_centers_departement(departement, page_id) -> List[dict]:
-    r = requests.get(BASE_URL_DEPARTEMENT.format(
-        doctolib_urlify(departement), page_id), headers=DOCTOLIB_HEADERS)
+    r = requests.get(BASE_URL_DEPARTEMENT.format(doctolib_urlify(departement), page_id), headers=DOCTOLIB_HEADERS)
     data = r.json()
 
     # TODO parallelism can be put here
-    centers_page = [center_from_doctor_dict(payload)
-                    for payload in data["data"]["doctors"]]
+    centers_page = [center_from_doctor_dict(payload) for payload in data["data"]["doctors"]]
     return centers_page
 
 
 def doctolib_urlify(departement: str) -> str:
-    departement = re.sub(r"[^\w\s\-]", '-', departement)
-    departement = re.sub(r"\s+", '-', departement).lower()
+    departement = re.sub(r"[^\w\s\-]", "-", departement)
+    departement = re.sub(r"\s+", "-", departement).lower()
     return unidecode(departement)
 
 
@@ -114,21 +112,20 @@ def parse_page_centers(page_id) -> List[dict]:
     data = r.json()
 
     # TODO parallelism can be put here
-    centers_page = [center_from_doctor_dict(payload)
-                    for payload in data["data"]["doctors"]]
+    centers_page = [center_from_doctor_dict(payload) for payload in data["data"]["doctors"]]
     return centers_page
 
 
 def center_from_doctor_dict(doctor_dict) -> dict:
-    nom = doctor_dict['name_with_title']
+    nom = doctor_dict["name_with_title"]
     sub_addresse = doctor_dict["address"]
     ville = doctor_dict["city"]
-    code_postal = doctor_dict["zipcode"]
+    code_postal = doctor_dict["zipcode"].replace(" ", "").strip()
     addresse = f"{sub_addresse}, {code_postal} {ville}"
-    if doctor_dict.get('place_id'):
+    if doctor_dict.get("place_id"):
         url_path = f"{doctor_dict['link']}?pid={str(doctor_dict['place_id'])}"
     else:
-        url_path = doctor_dict['link']
+        url_path = doctor_dict["link"]
     rdv_site_web = f"https://partners.doctolib.fr{url_path}"
     type = center_type(url_path, nom)
     dict_infos_center_page = get_dict_infos_center_page(url_path)
@@ -141,7 +138,7 @@ def center_from_doctor_dict(doctor_dict) -> dict:
         "long_coor1": longitude,
         "lat_coor1": latitude,
         "type": type,
-        "com_insee": departementUtils.cp_to_insee(code_postal)
+        "com_insee": departementUtils.cp_to_insee(code_postal),
     }
     return {**dict_infos_center_page, **dict_infos_browse_page}
 
@@ -157,37 +154,39 @@ def get_coordinates(doctor_dict):
 
 
 def get_dict_infos_center_page(url_path: str) -> dict:
-    internal_api_url = BOOKING_URL.format(
-        parse.urlsplit(url_path).path.split("/")[-1])
+    internal_api_url = BOOKING_URL.format(parse.urlsplit(url_path).path.split("/")[-1])
     logger.info(f"> Parsing {internal_api_url}")
     data = requests.get(internal_api_url)
     data.raise_for_status()
-    output = data.json().get('data', {})
+    output = data.json().get("data", {})
 
     # Parse place
-    places = output.get('places', {})
+    places = output.get("places", {})
     if places:
         place = find_place(places, url_path)
 
         # Parse place location
         infos_page = {}
-        infos_page['gid'] = 'd{0}'.format(
-            output.get('profile', {}).get('id', ''))
-        infos_page['address'] = place['full_address']
-        infos_page['long_coor1'] = place.get('longitude')
-        infos_page['lat_coor1'] = place.get('latitude')
-        infos_page["com_insee"] = departementUtils.cp_to_insee(
-            place["zipcode"])
+        infos_page["gid"] = "d{0}".format(output.get("profile", {}).get("id", ""))
+        infos_page["address"] = place["full_address"]
+        infos_page["long_coor1"] = place.get("longitude")
+        infos_page["lat_coor1"] = place.get("latitude")
+        infos_page["com_insee"] = departementUtils.cp_to_insee(place["zipcode"].replace(" ", "").strip())
 
         # Parse landline number
-        if place.get('landline_number'):
-            phone_number = place.get('landline_number')
+        if place.get("landline_number"):
+            phone_number = place.get("landline_number")
         else:
-            phone_number = place.get('phone_number')
+            phone_number = place.get("phone_number")
         if phone_number:
-            infos_page['phone_number'] = format_phone_number(phone_number)
+            infos_page["phone_number"] = format_phone_number(phone_number)
 
         infos_page["business_hours"] = parse_doctolib_business_hours(place)
+
+        # Parse visit motives, not sure it's the right place to do it, maybe this function should be refactored
+        extracted_visit_motives = output.get("visit_motives", [])
+        infos_page["visit_motives"] = list(map(lambda vm: vm.get("name"), extracted_visit_motives))
+
         return infos_page
     else:
         return {}
@@ -213,21 +212,20 @@ def get_pid(url_path) -> str:
 def parse_doctolib_business_hours(place) -> dict:
     # Opening hours
     business_hours = dict()
-    keys = ["lundi", "mardi", "mercredi",
-            "jeudi", "vendredi", "samedi", "dimanche"]
-    if not place['opening_hours']:
+    keys = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+    if not place["opening_hours"]:
         return None
 
-    for opening_hour in place['opening_hours']:
-        format_hours = ''
-        key_name = keys[opening_hour['day'] - 1]
-        if not opening_hour.get('enabled', False):
+    for opening_hour in place["opening_hours"]:
+        format_hours = ""
+        key_name = keys[opening_hour["day"] - 1]
+        if not opening_hour.get("enabled", False):
             business_hours[key_name] = None
             continue
-        for range in opening_hour['ranges']:
+        for range in opening_hour["ranges"]:
             if len(format_hours) > 0:
-                format_hours += ', '
-            format_hours += f'{range[0]}-{range[1]}'
+                format_hours += ", "
+            format_hours += f"{range[0]}-{range[1]}"
         business_hours[key_name] = format_hours
 
     return business_hours
@@ -241,10 +239,34 @@ def center_type(url_path: str, nom: str) -> str:
     return VACCINATION_CENTER
 
 
+def center_reducer(center: dict) -> dict:
+    """This function should be used to remove fields that are irrelevant to the front,
+    such as fields used to filter centers during scraping process.
+    Removes following fields : visit_motives
+
+    Parameters
+    ----------
+    center_dict : "Center" dict
+        Center dict, output by the doctolib_center_scrap.center_from_doctor_dict
+
+    Returns
+    ----------
+    center dict, without irrelevant fields to the front
+
+    Example
+    ----------
+    >>> center_reducer({'gid': 'd257554', 'visit_motives': ['1re injection vaccin COVID-19 (Pfizer-BioNTech)', '2de injection vaccin COVID-19 (Pfizer-BioNTech)', '1re injection vaccin COVID-19 (Moderna)', '2de injection vaccin COVID-19 (Moderna)']})
+    {'gid': 'd257554'}
+    """
+    center.pop("visit_motives")
+
+    return center
+
+
 if __name__ == "__main__":
     centers = parse_doctolib_centers()
-    path_out = 'data/output/doctolib-centers.json'
+    path_out = "data/output/doctolib-centers.json"
     logger.info(f"Found {len(centers)} centers on Doctolib")
     logger.info(f"> Writing them on {path_out}")
-    with open(path_out, 'w') as f:
+    with open(path_out, "w") as f:
         f.write(json.dumps(centers, indent=2))

@@ -1,3 +1,7 @@
+import hashlib
+from typing import Optional
+
+
 class ScraperRequest:
     def __init__(self, url: str, start_date: str):
         self.url = url
@@ -9,16 +13,19 @@ class ScraperRequest:
         self.vaccine_type = None
         self.appointment_by_phone_only = False
 
-    def update_internal_id(self, internal_id):
+    def update_internal_id(self, internal_id: str) -> Optional[str]:
         self.internal_id = internal_id
+        return self.internal_id
 
-    def update_practitioner_type(self, practitioner_type):
+    def update_practitioner_type(self, practitioner_type: str) -> Optional[str]:
         self.practitioner_type = practitioner_type
+        return self.practitioner_type
 
-    def update_appointment_count(self, appointment_count):
+    def update_appointment_count(self, appointment_count: int) -> Optional[int]:
         self.appointment_count = appointment_count
+        return self.appointment_count
 
-    def update_appointment_schedules(self, appointment_schedules : dict):
+    def update_appointment_schedules(self, appointment_schedules: dict):
         self.appointment_schedules = appointment_schedules
 
     def get_appointment_schedules(self) -> list:

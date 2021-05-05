@@ -6,10 +6,11 @@ from scraper.mapharma.mapharma import centre_iterator as mapharma_centre_iterato
 from scraper.mapharma.mapharma import fetch_slots as mapharma_fetch_slots
 from scraper.pattern.scraper_request import ScraperRequest
 
-logger = logging.getLogger('scraper')
-today = datetime.now().strftime('%Y-%m-%d')
+logger = logging.getLogger("scraper")
+today = datetime.now().strftime("%Y-%m-%d")
 centres_scannes = 0
 centres_trouves = 0
+
 
 def mapharma_scrape(centre):
     global centres_scannes
@@ -32,7 +33,7 @@ def main():
     centres = mapharma_centre_iterator()
     for centre in centres:
         mapharma_scrape(centre)
-    logger.info(f'{centres_scannes} centres scannés, {centres_trouves} avec des dispos')
+    logger.info(f"{centres_scannes} centres scannés, {centres_trouves} avec des dispos")
 
 
 if __name__ == "__main__":

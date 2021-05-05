@@ -14,11 +14,7 @@ from datetime import date, timedelta, datetime
 from pathlib import Path
 from unidecode import unidecode
 
-RESERVED_CENTERS = [
-    'réservé',
-    'reserve',
-    'professionnel'
-]
+RESERVED_CENTERS = ["réservé", "reserve", "professionnel"]
 
 
 def load_insee() -> dict:
@@ -31,7 +27,7 @@ def load_cedex_to_insee() -> dict:
         return json.load(json_file)
 
 
-logger = logging.getLogger('scraper')
+logger = logging.getLogger("scraper")
 insee = load_insee()
 cedex_to_insee = load_cedex_to_insee()
 
@@ -47,30 +43,29 @@ def is_reserved_center(center):
 
 
 def urlify(s):
-    s = re.sub(r"[^\w\s\-]", '', s)
-    s = re.sub(r"\s+", '-', s).lower()
+    s = re.sub(r"[^\w\s\-]", "", s)
+    s = re.sub(r"\s+", "-", s).lower()
     return unidecode(s)
 
 
 class departementUtils:
-
     @staticmethod
     def import_departements() -> List[str]:
         """
-                Renvoie la liste des codes départements.
+        Renvoie la liste des codes départements.
 
-                >>> departements = import_departements()
-                >>> len(departements)
-                101
-                >>> departements[:3]
-                ['01', '02', '03']
-                >>> departements[83]
-                '83'
-                >>> departements.index('2A')
-                28
-                >>> sorted(departements) == departements
-                True
-                """
+        >>> departements = import_departements()
+        >>> len(departements)
+        101
+        >>> departements[:3]
+        ['01', '02', '03']
+        >>> departements[83]
+        '83'
+        >>> departements.index('2A')
+        28
+        >>> sorted(departements) == departements
+        True
+        """
         with open("data/input/departements-france.csv", newline="\n") as csvfile:
             reader = csv.DictReader(csvfile)
             return [str(row["code_departement"]) for row in reader]
@@ -78,18 +73,19 @@ class departementUtils:
     @staticmethod
     def to_departement_number(insee_code: str) -> str:
         """
-                Renvoie le numéro de département correspondant au code INSEE d'une commune.
+        Renvoie le numéro de département correspondant au code INSEE d'une commune.
 
-                Le code INSEE est un code à 5 chiffres, qui est typiquement différent du code postal,
-                mais qui commence (en général) aussi par les 2 chiffres du département.
+        Le code INSEE est un code à 5 chiffres, qui est typiquement différent du code postal,
+        mais qui commence (en général) aussi par les 2 chiffres du département.
 
-                >>> to_departement_number('59350')  # Lille
-                '59'
-                >>> to_departement_number('75106')  # Paris 6e arr
-                '75'
-                >>> to_departement_number('97701')  # Saint-Barthélémy
-                '971'
-                """
+        >>> to_departement_number('59350')  # Lille
+        '59'
+        >>> to_departement_number('75106')  # Paris 6e arr
+        '75'
+        >>> to_departement_number('97701')  # Saint-Barthélémy
+        '971'
+        """
+        insee_code = insee_code.strip()
         if len(insee_code) == 4:
             # Quand le CSV des centres de vaccinations est édité avec un tableur comme Excel,
             # il est possible que le 1er zéro soit retiré si la colonne est interprétée comme
@@ -97,7 +93,7 @@ class departementUtils:
             insee_code = insee_code.zfill(5)
 
         if len(insee_code) != 5:
-            raise ValueError(f'Code INSEE non-valide : {insee_code}')
+            raise ValueError(f"Code INSEE non-valide : {insee_code}")
 
         with open("data/input/insee_to_codepostal_and_code_departement.json") as json_file:
             insee_to_code_departement_table = json.load(json_file)
@@ -106,8 +102,7 @@ class departementUtils:
             return insee_to_code_departement_table[insee_code]["departement"]
 
         else:
-            raise ValueError(
-                f'Code INSEE absent de la base des codes INSEE : {insee_code}')
+            raise ValueError(f"Code INSEE absent de la base des codes INSEE : {insee_code}")
 
     @staticmethod
     def get_city(address: str) -> str:
@@ -116,13 +111,15 @@ class departementUtils:
         >>> get_city("2 avenue de la République, 75005 PARIS")
         'PARIS'
         """
-        if(search := re.search(r'(?<=\s\d{5}\s)(?P<com_nom>.*?)\s*$', address)):
-            return search.groupdict().get('com_nom')
+        if search := re.search(r"(?<=\s\d{5}\s)(?P<com_nom>.*?)\s*$", address):
+            return search.groupdict().get("com_nom")
         return None
 
     @staticmethod
     def cp_to_insee(cp: str) -> str:
         # Split for when when CP is like 'XXXX CEDEX'
+        if not isinstance(cp,str):
+            cp=str(cp)
         cp = format_cp(cp)
         if cp in insee:
             return insee[cp]["insee"]
@@ -130,15 +127,20 @@ class departementUtils:
             cedex = cp
             return cedex_to_insee[cedex]["insee"]
         else:
-            logger.warning(f'Unable to translate cp >{cp}< to insee')
+            logger.warning(f"Unable to translate cp >{cp}< to insee")
             return cp
 
 
 def format_cp(cp: str) -> str:
-    formatted_cp = str(cp).strip().split()[0]
+    # Permet le cas du CP sous form 75 005 au lieu de 75005
+    if len(re.findall(r'\d+', cp))>0:
+        formatted_cp=re.findall(r'\d+', cp)[0]
+    else:
+        logger.warning(f"postcode {cp} is incorrect")
     if len(formatted_cp) == 4:
         return f"0{formatted_cp}"
     return formatted_cp
+
 
 def format_phone_number(_phone_number: str) -> str:
     phone_number = _phone_number
@@ -162,27 +164,26 @@ def fix_scrap_urls(url):
 
     # Fix Keldoc
     if url.startswith("https://www.keldoc.com/"):
-        url = url.replace("https://www.keldoc.com/",
-                          "https://vaccination-covid.keldoc.com/")
+        url = url.replace("https://www.keldoc.com/", "https://vaccination-covid.keldoc.com/")
     # Clean Doctolib
-    if url.startswith('https://partners.doctolib.fr') or url.startswith('https://www.doctolib.fr'):
-        if '?speciality_id' in url:
+    if url.startswith("https://partners.doctolib.fr") or url.startswith("https://www.doctolib.fr"):
+        if "?speciality_id" in url:
             url = "&".join(url.rsplit("?", url.count("?") - 1))
         u = urlparse(url)
         query = parse_qs(u.query, keep_blank_values=True)
         to_remove = []
         for query_name in query:
-            if query_name.startswith('highlight') or query_name == 'enable_cookies_consent':
+            if query_name.startswith("highlight") or query_name == "enable_cookies_consent":
                 to_remove.append(query_name)
         [query.pop(rm, None) for rm in to_remove]
-        query.pop('speciality_id', None)
+        query.pop("speciality_id", None)
         u = u._replace(query=urlencode(query, True))
         url = urlunparse(u)
     return url
 
 
 def get_last_scans(centres):
-    url ='https://vitemadose.gitlab.io/vitemadose/info_centres.json'
+    url = "https://vitemadose.gitlab.io/vitemadose/info_centres.json"
     last_scans = {}
     liste_centres = []
 
@@ -201,20 +202,21 @@ def get_last_scans(centres):
     for last_centres in info_centres.values():
         for centre in last_centres["centres_disponibles"] + last_centres["centres_indisponibles"]:
             if "last_scan_with_availabilities" in centre:
-                last_scans[centre["url"]]  = centre["last_scan_with_availabilities"]
+                last_scans[centre["url"]] = centre["last_scan_with_availabilities"]
 
     for centre in liste_centres:
         if not centre.prochain_rdv:
             if centre.url in last_scans:
-                centre.last_scan_with_availabilities = last_scans[centre.url] 
+                centre.last_scan_with_availabilities = last_scans[centre.url]
         else:
-            centre.last_scan_with_availabilities = dt.datetime.now(tz=pytz.timezone('Europe/Paris')).isoformat()
+            centre.last_scan_with_availabilities = dt.datetime.now(tz=pytz.timezone("Europe/Paris")).isoformat()
 
     return liste_centres
+
 
 def append_date_days(mydate: str, days: int):
     if not mydate or not days:
         return
     mydate = date.fromisoformat(mydate)
-    newdate = mydate + timedelta(days = days)
+    newdate = mydate + timedelta(days=days)
     return newdate.isoformat()

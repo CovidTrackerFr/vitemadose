@@ -14,7 +14,7 @@ class CustomFormatter(logging.Formatter):
         logging.INFO: grey + format + reset,
         logging.WARNING: yellow + format + reset,
         logging.ERROR: red + format + reset,
-        logging.CRITICAL: bold_red + format + reset
+        logging.CRITICAL: bold_red + format + reset,
     }
 
     def format(self, record):
@@ -25,11 +25,11 @@ class CustomFormatter(logging.Formatter):
 
 def get_logger():
     # create logger
-    return logging.getLogger('scraper')
+    return logging.getLogger("scraper")
 
 
 def enable_logger_for_production():
-    logger = logging.getLogger('scraper')
+    logger = logging.getLogger("scraper")
     logger.setLevel(logging.INFO)
 
     ch = logging.StreamHandler()

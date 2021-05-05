@@ -7,20 +7,20 @@ from scraper.pattern.center_info import CenterInfo
 
 def test_format_phone_number():
 
-	phone_number = "+331204312"
-	assert format_phone_number(phone_number) == "+331204312"
+    phone_number = "+331204312"
+    assert format_phone_number(phone_number) == "+331204312"
 
-	phone_number = "+569492392"
-	assert format_phone_number(phone_number) == "+569492392"
-	
-	phone_number = "0123456789"
-	assert format_phone_number(phone_number) == "+33123456789"
+    phone_number = "+569492392"
+    assert format_phone_number(phone_number) == "+569492392"
 
-	phone_number = "01.20.43.12"
-	assert format_phone_number(phone_number) == "+331204312"
+    phone_number = "0123456789"
+    assert format_phone_number(phone_number) == "+33123456789"
 
-	phone_number = "3975"
-	assert format_phone_number(phone_number) == "+333975"
+    phone_number = "01.20.43.12"
+    assert format_phone_number(phone_number) == "+331204312"
+
+    phone_number = "3975"
+    assert format_phone_number(phone_number) == "+333975"
 
 
 def test_get_last_scans():
@@ -30,10 +30,7 @@ def test_get_last_scans():
 
     center_info2.prochain_rdv = "2021-06-06T00:00:00"
 
-    centres_cherchés = [
-        center_info1,
-        center_info2
-    ]
+    centres_cherchés = [center_info1, center_info2]
 
     fake_now = dt.datetime(2021, 5, 5)
     with mock_datetime_now(fake_now):
