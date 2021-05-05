@@ -131,11 +131,10 @@ class departementUtils:
 
 def format_cp(cp: str) -> str:
     # Permet le cas du CP sous form 75 005 au lieu de 75005
-    if len(str(cp).strip().split()[0]) < 4:
-        formatted_cp = str(cp).strip().split()[0] + str(cp).strip().split()[1]
+    if len(re.findall(r'\d+', cp))>0:
+        formatted_cp=re.findall(r'\d+', cp)[0]
     else:
-        formatted_cp = str(cp).strip().split()[0]
-
+        logger.warning(f"postcode {cp} is incorrect")
     if len(formatted_cp) == 4:
         return f"0{formatted_cp}"
     return formatted_cp
