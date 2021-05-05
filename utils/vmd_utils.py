@@ -118,6 +118,8 @@ class departementUtils:
     @staticmethod
     def cp_to_insee(cp: str) -> str:
         # Split for when when CP is like 'XXXX CEDEX'
+        if not isinstance(cp,str):
+            cp=str(cp)
         cp = format_cp(cp)
         if cp in insee:
             return insee[cp]["insee"]
