@@ -5,7 +5,7 @@ import logging
 timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 logger = logging.getLogger("scraper")
-MAIIA_LIMIT = 1000
+MAIIA_LIMIT = 100
 
 
 def get_paged(url: str, limit: MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIENT) -> dict:
@@ -22,7 +22,11 @@ def get_paged(url: str, limit: MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIEN
         except httpx.HTTPStatusError as hex:
             logger.warning(f"{base_url} returned error {hex.response.status_code}")
             break
-        payload = r.json()
+        try:
+            payload = r.json()
+        except json.decoder.JSONDecodeError as jde:
+            logger.warning(f'{base_url} raised {jde}')
+            break
         result["total"] = payload["total"]
         if not payload["items"]:
             break
