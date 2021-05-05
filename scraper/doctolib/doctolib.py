@@ -29,7 +29,7 @@ DOCTOLIB_HEADERS = {
     "User-Agent": os.environ.get("DOCTOLIB_API_KEY", ""),
 }
 
-DEFAULT_CLIENT: httpx.Client
+DEFAULT_CLIENT = httpx.Client()
 logger = logging.getLogger("scraper")
 
 # Vérifie qu'aucun des intervalles de calcul de dépasse l'intervalle globale de recherche des dispos
