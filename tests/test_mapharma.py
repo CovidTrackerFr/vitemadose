@@ -79,3 +79,15 @@ def test_campaign_to_center():
         "com_insee": "35238",
         "gid": "6369652d64752d63656e747"
     }
+
+def test_mapharma_fetch_slots():
+    def app(request: httpx.Request) -> httpx.Response:
+        try:
+            with open(Path("tests", "fixtures", "mapharma", "slots.json"), encoding="utf8") as f:
+                return httpx.Response(200, content=f.read())
+        except IOError:
+            return httpx.Response(404, content="")
+
+    client = httpx.Client(transport=httpx.MockTransport(app))
+    request = ScraperRequest("https://mapharma.net/97200?c=60&l=1", "2021-04-14")
+    mapharma_scrape
