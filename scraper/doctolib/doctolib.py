@@ -232,6 +232,8 @@ class DoctolibSlots:
                             next_appointment_timetables[f"{interval}_days"] += len(availability.get("slots", []))
 
             for slot_info in slot_list:
+                if isinstance(slot_info, str):
+                    continue
                 sdate = slot_info.get("start_date", None)
                 if not sdate:
                     continue
