@@ -4,4 +4,4 @@ BIN="venv/bin/"
 
 set -x
 
-${BIN}coverage report --show-missing --skip-covered --fail-under=65
+${BIN}coverage report --show-missing --skip-covered --fail-under=75

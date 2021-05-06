@@ -14,7 +14,7 @@ from collections import defaultdict
 from dateutil.parser import isoparse
 
 from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
-from scraper.pattern.center_info import get_vaccine_name
+from scraper.pattern.center_info import get_vaccine_name, Vaccine
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import INTERVAL_SPLIT_DAYS
 from scraper.error import BlockedByDoctolibError
@@ -232,6 +232,8 @@ class DoctolibSlots:
                             next_appointment_timetables[f"{interval}_days"] += len(availability.get("slots", []))
 
             for slot_info in slot_list:
+                if isinstance(slot_info, str):
+                    continue
                 sdate = slot_info.get("start_date", None)
                 if not sdate:
                     continue
@@ -399,12 +401,13 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: list = None):
         # après la 1ère dose, donc les gens n'ont pas besoin d'aide pour l'obtenir).
         if not is_appointment_relevant(visit_motive["name"]):
             continue
+        vaccine_name = get_vaccine_name(visit_motive["name"])
         # If this motive isn't related to vaccination
         if not visit_motive.get("vaccination_motive"):
             continue
         # If it's not a first shot motive
         # TODO: filter system
-        if not visit_motive.get("first_shot_motive"):
+        if not visit_motive.get("first_shot_motive") and vaccine_name != Vaccine.JANSSEN:
             continue
         # Si le lieu de vaccination n'accepte pas les nouveaux patients
         # on ne considère pas comme valable.
@@ -416,7 +419,7 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: list = None):
         # * visit_motive_category_id=<id> : filtre => on veut les motifs qui
         # correspondent à la catégorie en question.
         if visit_motive_category_id is None or visit_motive.get("visit_motive_category_id") in visit_motive_category_id:
-            relevant_motives[visit_motive["id"]] = get_vaccine_name(visit_motive["name"])
+            relevant_motives[visit_motive["id"]] = vaccine_name
     return relevant_motives
 
 

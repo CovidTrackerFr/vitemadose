@@ -37,7 +37,8 @@ PARTIAL_SCRAPE = max(0, min(PARTIAL_SCRAPE, 1))
 
 logger = enable_logger_for_production()
 
-def main():
+
+def main():  # pragma: no cover
     if len(sys.argv) == 1:
         scrape()
     else:
@@ -48,7 +49,7 @@ def get_start_date():
     return dt.date.today().isoformat()
 
 
-def scrape_debug(urls):
+def scrape_debug(urls):  # pragma: no cover
     enable_logger_for_debug()
     start_date = get_start_date()
     for rdv_site_web in urls:
@@ -61,7 +62,7 @@ def scrape_debug(urls):
         logger.info(f'{result.platform!s:16} {result.next_availability or ""!s:32}')
 
 
-def scrape() -> None:
+def scrape() -> None:  # pragma: no cover
     compte_centres = 0
     compte_centres_avec_dispo = 0
     compte_bloqués = 0
@@ -90,7 +91,7 @@ def scrape() -> None:
         exit(code=2)
 
 
-def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:
+def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:  # pragma: no cover
     center_data = convert_csv_data_to_center_info(centre)
     start_date = get_start_date()
     has_error = None
@@ -129,9 +130,7 @@ def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:
 
 
 def sort_center(center: dict) -> str:
-    if not center:
-        return "-"
-    return center.get("prochain_rdv", "-")
+    return center.get("prochain_rdv", "-") if center else "-"
 
 
 def export_data(centres_cherchés: Iterator[CenterInfo], outpath_format="data/output/{}.json"):
@@ -157,7 +156,7 @@ def export_data(centres_cherchés: Iterator[CenterInfo], outpath_format="data/ou
     exported_centers = [center for center in centres_cherchés if not is_blocked_center(center)]
 
     for centre in blocked_centers:
-        if centre.has_available_appointments():
+        if centre.has_available_appointments():  # pragma: no cover
             logger.warn(f"{centre.nom} {centre.internal_id} has available appointments but is blocked")
 
     for centre in exported_centers:
@@ -168,7 +167,7 @@ def export_data(centres_cherchés: Iterator[CenterInfo], outpath_format="data/ou
             logger.warning(f"Center {centre.nom} ({centre.departement}) could not be attached to a valid department")
             continue
         erreur = centre.erreur
-        if centre.internal_id and centre.internal_id in internal_ids:
+        if centre.internal_id and centre.internal_id in internal_ids:  # pragma: no cover
             logger.warning(
                 f"Found a duplicated internal_id: {centre.nom} ({centre.departement}) -> {centre.internal_id}"
             )
@@ -272,7 +271,7 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
     return result
 
 
-def centre_iterator():
+def centre_iterator():  # pragma: no cover
     visited_centers_links = set()
     for center in ialternate(
         ordoclic_centre_iterator(),
@@ -335,7 +334,7 @@ def copy_omit_keys(d, omit_keys):
     return {k: d[k] for k in set(list(d.keys())) - set(omit_keys)}
 
 
-def ialternate(*iterators):
+def ialternate(*iterators):  # pragma: no cover
     queue = deque(iterators)
     while len(queue) > 0:
         iterator = queue.popleft()
@@ -382,5 +381,5 @@ def get_blocklist_urls() -> set:
     return centers_blocklist_urls
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()
