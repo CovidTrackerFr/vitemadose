@@ -8,7 +8,7 @@ import pytest
 
 from scraper.keldoc import keldoc
 from scraper.keldoc.keldoc import fetch_slots
-from scraper.keldoc.keldoc_center import KeldocCenter
+from scraper.keldoc.keldoc_center import KeldocCenter, DEFAULT_CLIENT
 from scraper.keldoc.keldoc_filters import (
     get_relevant_vaccine_specialties_id,
     filter_vaccine_motives,
@@ -296,3 +296,15 @@ def test_keldoc_parse_complex():
     }
     availability, new_count = parse_keldoc_availability(data, appointments)
     assert availability.isoformat() == "2021-04-20T16:50:00+02:00"
+
+
+def test_null_motives():
+    client = DEFAULT_CLIENT
+    motives = filter_vaccine_motives(
+        client,
+        4233,
+        1,
+        None,
+        None
+    )
+    assert not motives
