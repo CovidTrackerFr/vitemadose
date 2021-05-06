@@ -90,4 +90,3 @@ def test_mapharma_fetch_slots():
 
     client = httpx.Client(transport=httpx.MockTransport(app))
     request = ScraperRequest("https://mapharma.net/97200?c=60&l=1", "2021-04-14")
-    mapharma_scrape

@@ -13,7 +13,7 @@ from scraper.keldoc.keldoc_filters import (
     get_relevant_vaccine_specialties_id,
     filter_vaccine_motives,
     is_appointment_relevant,
-    is_specialty_relevant,
+    is_specialty_relevant, parse_keldoc_availability,
 )
 from scraper.pattern.scraper_request import ScraperRequest
 
@@ -226,3 +226,73 @@ def test_keldoc_scrape_nodate():
 
     date = fetch_slots(request)
     assert not date
+
+
+def test_keldoc_parse_simple():
+    appointments = []
+    data = {
+        "date": "2021-04-20T16:55:00.000000+0200"
+    }
+    availability, new_count = parse_keldoc_availability(data, appointments)
+    assert availability.isoformat() == "2021-04-20T16:55:00+02:00"
+
+
+def test_keldoc_parse_complex():
+    appointments = []
+    data = {
+        "availabilities": {
+            "2021-04-20": [
+                {
+                    "start_time": "2021-04-20T16:53:00.000000+0200"
+                },
+                {
+                    "start_time": "2021-04-20T16:50:00.000000+0200"
+                },
+                {
+                    "start_time": "2021-04-20T18:59:59.000000+0200"
+                }
+            ],
+            "2021-04-21": [
+                {
+                    "start_time": "2021-04-21T08:12:12.000000+0200"
+                }
+            ]
+        }
+    }
+    availability, new_count = parse_keldoc_availability(data, appointments)
+    assert availability.isoformat() == "2021-04-20T16:50:00+02:00"
+
+
+def test_keldoc_parse_complex():
+    appointments = []
+    data = {
+        "availabilities": {
+            "2021-04-15": [],
+            "2021-04-16": [],
+            "2021-04-17": [],
+            "2021-04-18": [],
+            "2021-04-19": [
+                {
+                    "agenda_id": None
+                }
+            ],
+            "2021-04-20": [
+                {
+                    "start_time": "2021-04-20T16:53:00.000000+0200"
+                },
+                {
+                    "start_time": "2021-04-20T16:50:00.000000+0200"
+                },
+                {
+                    "start_time": "2021-04-20T18:59:59.000000+0200"
+                }
+            ],
+            "2021-04-21": [
+                {
+                    "start_time": "2021-04-21T08:12:12.000000+0200"
+                }
+            ]
+        }
+    }
+    availability, new_count = parse_keldoc_availability(data, appointments)
+    assert availability.isoformat() == "2021-04-20T16:50:00+02:00"
