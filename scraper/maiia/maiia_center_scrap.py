@@ -21,11 +21,11 @@ MAIIA_DO_NOT_SCRAP_ID = ["603e4fae8c512e753fc49ba1"]
 MAIIA_DO_NOT_SCRAP_NAME = ["test", "antigenique", "antigénique"]
 
 
-def get_centers(speciality: str) -> list:
+def get_centers(speciality: str, client: httpx.Client = DEFAULT_CLIENT) -> list:
     result = get_paged(
         f"{MAIIA_URL}/api/pat-public/hcd?distanceMax=10000&AllVaccinationPlaces=true&speciality.shortName={speciality}",
         limit=50,
-        client=DEFAULT_CLIENT,
+        client=client,
     )
     if "items" not in result:
         return []
