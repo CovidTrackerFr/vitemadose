@@ -263,7 +263,7 @@ def center_reducer(center: dict) -> dict:
     return center
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     centers = parse_doctolib_centers()
     path_out = "data/output/doctolib-centers.json"
     logger.info(f"Found {len(centers)} centers on Doctolib")
