@@ -6,13 +6,14 @@ from pathlib import Path
 import httpx
 import pytest
 
+from scraper.keldoc import keldoc
 from scraper.keldoc.keldoc import fetch_slots
-from scraper.keldoc.keldoc_center import KeldocCenter
+from scraper.keldoc.keldoc_center import KeldocCenter, DEFAULT_CLIENT
 from scraper.keldoc.keldoc_filters import (
     get_relevant_vaccine_specialties_id,
     filter_vaccine_motives,
     is_appointment_relevant,
-    is_specialty_relevant,
+    is_specialty_relevant, parse_keldoc_availability,
 )
 from scraper.pattern.scraper_request import ScraperRequest
 
@@ -46,8 +47,8 @@ def get_test_data(file_name):
 
 def app_center1(request: httpx.Request) -> httpx.Response:
     if (
-        request.url.path
-        == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
+            request.url.path
+            == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
     ):
         return httpx.Response(
             302,
@@ -97,7 +98,6 @@ def test_keldoc_parse_center():
     assert cabinets == [18780, 16913, 16910, 16571, 16579]
 
     # Fetch motives
-    print(f"selected cabinet: {test_center_1.selected_cabinet}")
     motives = filter_vaccine_motives(
         client,
         test_center_1.selected_cabinet,
@@ -180,3 +180,131 @@ def test_keldoc_filters():
         {"id": 1, "name": "Vaccination contre la COVID", "skills": [{"name": "Centre de vaccination COVID-19"}]}
     )
     assert not is_specialty_relevant({"id": 1, "name": "Vaccination contre la COVID", "skills": [{"id": 123}]})
+
+
+def test_keldoc_scrape():
+    center1_url = (
+        "https://www.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier"
+        "-bretagne-sud-lorient-hopital-du-scorff?specialty=144 "
+    )
+    request = ScraperRequest(center1_url, "2020-04-04")
+    keldoc.session = httpx.Client(transport=httpx.MockTransport(app_center1))
+
+    date = fetch_slots(request)
+    assert date == "2021-04-20T16:55:00.000000+0200"
+    keldoc.KELDOC_KILL_SWITCH = True
+    test_killswitch = fetch_slots(request)
+    assert not test_killswitch
+
+
+def test_keldoc_scrape_nodate():
+    center1_url = (
+        "https://www.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier"
+        "-bretagne-sud-lorient-hopital-du-scorff?specialty=144 "
+    )
+
+    keldoc.KELDOC_KILL_SWITCH = False
+    def app_center2(request: httpx.Request) -> httpx.Response:
+        if 'timetables/' in request.url.path:
+            return httpx.Response(200, json={})
+        if (
+                request.url.path
+                == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
+        ):
+            return httpx.Response(
+                302,
+                headers={
+                    "Location": "https://vaccination-covid.keldoc.com/redirect/?dom=centre-hospitalier-regional&inst=lorient-56100&user=groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff&specialty=144 "
+                },
+            )
+        for path in CENTER1_KELDOC:
+            if request.url.path == path:
+                return httpx.Response(200, json=get_test_data(CENTER1_KELDOC[path]))
+        return httpx.Response(200, json={})
+    request = ScraperRequest(center1_url, "2099-12-12")
+    keldoc.session = httpx.Client(transport=httpx.MockTransport(app_center2))
+
+    date = fetch_slots(request)
+    assert not date
+
+
+def test_keldoc_parse_simple():
+    appointments = []
+    data = {
+        "date": "2021-04-20T16:55:00.000000+0200"
+    }
+    availability, new_count = parse_keldoc_availability(data, appointments)
+    assert availability.isoformat() == "2021-04-20T16:55:00+02:00"
+
+
+def test_keldoc_parse_complex():
+    appointments = []
+    data = {
+        "availabilities": {
+            "2021-04-20": [
+                {
+                    "start_time": "2021-04-20T16:53:00.000000+0200"
+                },
+                {
+                    "start_time": "2021-04-20T16:50:00.000000+0200"
+                },
+                {
+                    "start_time": "2021-04-20T18:59:59.000000+0200"
+                }
+            ],
+            "2021-04-21": [
+                {
+                    "start_time": "2021-04-21T08:12:12.000000+0200"
+                }
+            ]
+        }
+    }
+    availability, new_count = parse_keldoc_availability(data, appointments)
+    assert availability.isoformat() == "2021-04-20T16:50:00+02:00"
+
+
+def test_keldoc_parse_complex():
+    appointments = []
+    data = {
+        "availabilities": {
+            "2021-04-15": [],
+            "2021-04-16": [],
+            "2021-04-17": [],
+            "2021-04-18": [],
+            "2021-04-19": [
+                {
+                    "agenda_id": None
+                }
+            ],
+            "2021-04-20": [
+                {
+                    "start_time": "2021-04-20T16:53:00.000000+0200"
+                },
+                {
+                    "start_time": "2021-04-20T16:50:00.000000+0200"
+                },
+                {
+                    "start_time": "2021-04-20T18:59:59.000000+0200"
+                }
+            ],
+            "2021-04-21": [
+                {
+                    "start_time": "2021-04-21T08:12:12.000000+0200"
+                }
+            ]
+        }
+    }
+    availability, new_count = parse_keldoc_availability(data, appointments)
+    assert availability.isoformat() == "2021-04-20T16:50:00+02:00"
+
+
+def test_null_motives():
+    client = DEFAULT_CLIENT
+    motives = filter_vaccine_motives(
+        client,
+        4233,
+        1,
+        None,
+        None
+    )
+    assert not motives
