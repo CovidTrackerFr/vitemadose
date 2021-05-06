@@ -29,12 +29,12 @@ def mapharma_scrape(centre):
     centres_trouves += 1
 
 
-def main():
+def main():  # pragma: no cover
     centres = mapharma_centre_iterator()
     for centre in centres:
         mapharma_scrape(centre)
     logger.info(f"{centres_scannes} centres scannés, {centres_trouves} avec des dispos")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()
