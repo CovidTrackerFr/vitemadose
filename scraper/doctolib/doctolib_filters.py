@@ -16,8 +16,11 @@ DOCTOLIB_APPOINTMENT_REASON = [
 DOCTOLIB_APPOINTMENT_REASON = [c.lower().strip() for c in DOCTOLIB_APPOINTMENT_REASON]
 
 DOCTOLIB_CATEGORY = [
+    "18 à 54",
+    "55 ans",
     "70 ans",
     "astra Zeneca",
+    "femmes enceintes",
     "injection unique",
     "janssen",
     "je ne suis pas professionnel de santé",
