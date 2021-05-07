@@ -3,10 +3,13 @@ import logging
 import httpx
 
 from pathlib import Path
+from scraper.pattern.center_info import Vaccine
 
 import scraper
 from scraper.maiia.maiia import (
     parse_slots,
+    count_slots,
+    get_appointment_schedule,
     get_next_slot_date,
     get_slots,
     get_reasons,
@@ -39,7 +42,7 @@ scraper.maiia.maiia.DEFAULT_CLIENT = client
 def test_parse_slots():
     slots = get_slots(
         "5ffc744c68dedf073a5b87a2",
-        "Premi%C3%A8re%20injection%20vaccin%20anti%20covid-19%20(%20%2B50%20ans%20avec%20comorbidit%C3%A9)",
+        "no_need_for_test",
         "2021-04-16T00:00:00+00:00",
         "2021-06-30T00:00:00+00:00",
         limit=MAIIA_LIMIT,
@@ -48,6 +51,65 @@ def test_parse_slots():
     result = parse_slots(slots)
     assert result.isoformat() == "2021-05-13T13:40:00+00:00"
 
+
+def test_count_slots():
+    slots = get_slots(
+        "5ffc744c68dedf073a5b87a2",
+        "no_need_for_test",
+        "2021-04-16T00:00:00+00:00",
+        "2021-06-30T00:00:00+00:00",
+        limit=MAIIA_LIMIT,
+        client=client,
+    )
+    assert count_slots(
+        slots,
+        "605dc40ddcb2f83f2c77fc2f",
+        "2021-04-16T00:00:00+00:00",
+        "2021-05-13T23:59:59+00:00"
+    ) == 42
+
+
+def test_get_appointment_schedule():
+    reasons = get_reasons("5ffc744c68dedf073a5b87a2", limit=MAIIA_LIMIT, client=client)
+    slots = get_slots(
+        "5ffc744c68dedf073a5b87a2",
+        "no_need_for_test",
+        "2021-04-16T00:00:00+00:00",
+        "2021-06-30T00:00:00+00:00",
+        limit=MAIIA_LIMIT,
+        client=client,
+    )
+    assert get_appointment_schedule(
+        slots, 
+        reasons, 
+        "2021-04-16T00:00:00+00:00", 
+        "2021-05-13T23:59:59+00:00",
+        "test"
+    ) ==  {
+        'from': '2021-04-16T00:00:00+00:00',
+        'name': 'test',
+        'to': '2021-05-13T23:59:59+00:00',
+        'total': 42,
+        "appointments_per_vaccine": [
+            {"appointements": 42, "vaccine_type": Vaccine.ASTRAZENECA}
+        ],
+    }
+    assert get_appointment_schedule(
+        slots, 
+        reasons, 
+        "2021-04-16T00:00:00+00:00", 
+        "2021-05-28T23:59:59+00:00",
+        "test"
+    ) ==  {
+        'from': '2021-04-16T00:00:00+00:00',
+        'name': 'test',
+        'to': '2021-05-28T23:59:59+00:00',
+        'total': 798,
+        "appointments_per_vaccine": [
+            {"appointements": 754, "vaccine_type": Vaccine.ASTRAZENECA},
+            {"appointements": 44, "vaccine_type": Vaccine.PFIZER}
+        ],
+    }
 
 def test_get_next_slots():
     next_slot_date = get_next_slot_date(
@@ -62,7 +124,7 @@ def test_get_next_slots():
 def test_get_slots():
     slots = get_slots(
         "5ffc744c68dedf073a5b87a2",
-        "Premi%C3%A8re%20injection%20vaccin%20anti%20covid-19%20(%20%2B50%20ans%20avec%20comorbidit%C3%A9)",
+        "no_need_for_test",
         "2021-04-16T00:00:00+00:00",
         "2021-06-30T00:00:00+00:00",
         limit=MAIIA_LIMIT,
@@ -83,9 +145,62 @@ def test_get_first_availability():
     first_availability, slots_count, appointment_schedules = get_first_availability(
         "5ffc744c68dedf073a5b87a2", "2021-04-29", reasons, client=client
     )
-    assert appointment_schedules == {"1_days": 0, "2_days": 0, "28_days": 6570, "49_days": 7980, "7_days": 0}
     assert slots_count == 7980
     assert first_availability.isoformat() == "2021-05-13T13:40:00+00:00"
+    assert appointment_schedules == [
+        {
+            "appointments_per_vaccine": [],
+            "from": "2021-04-29T00:00:00+02:00",
+            "name": "1_days",
+            "to": "2021-04-29T23:59:59+02:00",
+            "total": 0
+        }, 
+        {
+            "appointments_per_vaccine": [],
+            "from": "2021-04-29T00:00:00+02:00",
+            "name": "2_days",
+            "to": "2021-04-30T23:59:59+02:00",
+            "total": 0
+        }, 
+        {
+            "appointments_per_vaccine": [],
+            "from": "2021-04-29T00:00:00+02:00",
+            "name": "7_days",
+            "to": "2021-05-05T23:59:59+02:00",
+            "total": 0
+        }, 
+        {
+            "appointments_per_vaccine": [
+                {
+                    "appointements": 6130,
+                    "vaccine_type": Vaccine.ASTRAZENECA
+                }, {
+                    "appointements": 440,
+                    "vaccine_type": Vaccine.PFIZER
+                }
+            ],
+            "from": "2021-04-29T00:00:00+02:00",
+            "name": "28_days",
+            "to": "2021-05-26T23:59:59+02:00",
+            "total": 6570
+        }, 
+        {
+            "appointments_per_vaccine": [
+                {
+                    "appointements": 7540,
+                    "vaccine_type": Vaccine.ASTRAZENECA
+                },
+                {
+                    "appointements": 440,
+                    "vaccine_type": Vaccine.PFIZER
+                }
+            ],
+            "from": "2021-04-29T00:00:00+02:00",
+            "name": "49_days",
+            "to": "2021-06-16T23:59:59+02:00",
+            "total": 7980
+        },
+    ]
 
 
 def test_fetch_slots():
