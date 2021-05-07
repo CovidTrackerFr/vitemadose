@@ -3,6 +3,8 @@ import logging
 import httpx
 
 from pathlib import Path
+from dateutil.parser import isoparse
+from pytz import timezone, utc
 from scraper.pattern.center_info import Vaccine
 
 import scraper
@@ -146,7 +148,7 @@ def test_get_first_availability():
         "5ffc744c68dedf073a5b87a2", "2021-04-29", reasons, client=client
     )
     assert slots_count == 7980
-    assert first_availability.isoformat() == "2021-05-13T13:40:00+00:00"
+    assert first_availability.astimezone(utc).isoformat() == "2021-05-13T13:40:00+00:00"
     assert appointment_schedules == [
         {
             "name": "1_days",
@@ -217,7 +219,7 @@ def test_fetch_slots():
         "https://www.maiia.com/centre-de-vaccination/42400-saint-chamond/centre-de-vaccination-covid---hopital-du-gier-?centerid=5ffc744c68dedf073a5b87a2",
         "2021-04-16",
     )
-    first_availability = fetch_slots(request, client=client)
+    first_availability = isoparse(fetch_slots(request, client=client)).astimezone(utc).isoformat()
     assert first_availability == "2021-05-13T13:40:00+00:00"
 
 

@@ -21,6 +21,7 @@ from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT
 timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 logger = logging.getLogger("scraper")
+paris_tz = timezone("Europe/Paris")
 
 MAIIA_URL = "https://www.maiia.com"
 MAIIA_DAY_LIMIT = 50
@@ -39,9 +40,8 @@ def parse_slots(slots: list) -> Optional[datetime]:
 
 def count_slots(slots: list, reason_id: str, start_date: str, end_date: str) -> int:
     logger.debug(f"couting slots from {start_date} to {end_date}")
-    paris_tz = timezone("Europe/Paris")
-    start_dt = isoparse(start_date).astimezone(paris_tz)
-    end_dt = isoparse(end_date).astimezone(paris_tz)
+    start_dt = isoparse(start_date)
+    end_dt = isoparse(end_date)
     count = 0
 
     for slot in slots:
@@ -138,8 +138,7 @@ def get_reasons(center_id: str, limit=MAIIA_LIMIT, client: httpx.Client = DEFAUL
 def get_first_availability(
     center_id: str, request_date: str, reasons: [dict], client: httpx.Client = DEFAULT_CLIENT
 ) -> [Optional[datetime], int, dict]:
-    paris_tz = timezone("Europe/Paris")
-    date = isoparse(request_date)
+    date = isoparse(request_date).replace(tzinfo=None)
     start_date = date.isoformat()
     end_date = (date + timedelta(days=MAIIA_DAY_LIMIT)).isoformat()
     first_availability = None
@@ -158,13 +157,15 @@ def get_first_availability(
                 total_slots.append(slot)
             if first_availability == None or slot_availability < first_availability:
                 first_availability = slot_availability
+    if first_availability:
+        first_availability = first_availability.astimezone(paris_tz)
     for n in (
         INTERVAL_SPLIT_DAY
         for INTERVAL_SPLIT_DAY in INTERVAL_SPLIT_DAYS
         if INTERVAL_SPLIT_DAY <= MAIIA_DAY_LIMIT
     ):
-        s_date = (isoparse(start_date)).astimezone(paris_tz).isoformat()
-        n_date = (isoparse(start_date) + timedelta(days=n, seconds=-1)).astimezone(paris_tz).isoformat()
+        s_date = (paris_tz.localize(isoparse(start_date))).isoformat()
+        n_date = (paris_tz.localize(isoparse(start_date) + timedelta(days=n, seconds=-1))).isoformat()
         appointment_schedule = get_appointment_schedule(total_slots, reasons, s_date, n_date, f"{n}_days")
         appointment_schedules.append(appointment_schedule)
     logger.debug(f"appointment_schedules: {appointment_schedules}")
