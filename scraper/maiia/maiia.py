@@ -37,7 +37,7 @@ def parse_slots(slots: list) -> Optional[datetime]:
     return first_availability
 
 
-def count_slots(slots: list, start_date: str, end_date: str) -> int:
+def count_slots(slots: list, reason_id: str, start_date: str, end_date: str) -> int:
     logger.debug(f"couting slots from {start_date} to {end_date}")
     paris_tz = timezone("Europe/Paris")
     start_dt = isoparse(start_date).astimezone(paris_tz)
@@ -45,13 +45,45 @@ def count_slots(slots: list, start_date: str, end_date: str) -> int:
     count = 0
 
     for slot in slots:
-        if "startDateTime" not in slot:
+        if "startDateTime" not in slot or reason_id != slot.get("consultationReasonId", ""):
             continue
         slot_dt = isoparse(slot["startDateTime"]).astimezone(paris_tz)
         if slot_dt > start_dt and slot_dt < end_dt:
             count += 1
 
     return count
+
+
+def get_appointment_schedule(slots: list, reasons: list, start_date: str, end_date: str, schedule_name: str) -> dict:
+    appointment_schedule = {
+        "name": schedule_name,
+        "from": start_date,
+        "to": end_date,
+        "total": 0,
+        "appointments_per_vaccine": []
+    }
+    vaccines_count = {}
+    appointments_per_vaccine = []
+    for reason in reasons:
+        reason_id = reason.get("id", "<n/a>")
+        reason_vaccine_name = get_vaccine_name(reason.get("name", "<n/a>"))
+        reason_count = count_slots(slots, reason_id, start_date, end_date)
+        #if reason_vaccine_name is None:
+        #    reason_vaccine_name = 'inconnu'
+        if reason_vaccine_name not in vaccines_count:
+            vaccines_count[reason_vaccine_name] = 0
+        vaccines_count[reason_vaccine_name] += reason_count
+    for vaccine_name, vaccine_count in vaccines_count.items():
+        if not vaccine_count:
+            continue
+        appointment_per_vaccine = {
+            "vaccine_type": vaccine_name,
+            "appointements": vaccine_count
+        }
+        appointments_per_vaccine.append(appointment_per_vaccine)
+        appointment_schedule["appointments_per_vaccine"] = appointments_per_vaccine
+        appointment_schedule["total"] += vaccine_count
+    return appointment_schedule
 
 
 def get_next_slot_date(
@@ -106,14 +138,14 @@ def get_reasons(center_id: str, limit=MAIIA_LIMIT, client: httpx.Client = DEFAUL
 def get_first_availability(
     center_id: str, request_date: str, reasons: [dict], client: httpx.Client = DEFAULT_CLIENT
 ) -> [Optional[datetime], int, dict]:
+    paris_tz = timezone("Europe/Paris")
     date = isoparse(request_date)
     start_date = date.isoformat()
     end_date = (date + timedelta(days=MAIIA_DAY_LIMIT)).isoformat()
     first_availability = None
     slots_count = 0
-    appointment_schedules = {}
-    for n in INTERVAL_SPLIT_DAYS:
-        appointment_schedules[f"{n}_days"] = 0
+    total_slots = []
+    appointment_schedules = []
     for consultation_reason in reasons:
         consultation_reason_name_quote = quote(consultation_reason.get("name"), "")
         if "injectionType" in consultation_reason and consultation_reason["injectionType"] in ["FIRST"]:
@@ -121,16 +153,20 @@ def get_first_availability(
             slot_availability = parse_slots(slots)
             if slot_availability == None:
                 continue
-            for n in (
-                INTERVAL_SPLIT_DAY
-                for INTERVAL_SPLIT_DAY in INTERVAL_SPLIT_DAYS
-                if INTERVAL_SPLIT_DAY <= MAIIA_DAY_LIMIT
-            ):
-                n_date = (isoparse(start_date) + timedelta(days=n)).isoformat()
-                appointment_schedules[f"{n}_days"] += count_slots(slots, start_date, n_date)
             slots_count += len(slots)
+            for slot in slots:
+                total_slots.append(slot)
             if first_availability == None or slot_availability < first_availability:
                 first_availability = slot_availability
+    for n in (
+        INTERVAL_SPLIT_DAY
+        for INTERVAL_SPLIT_DAY in INTERVAL_SPLIT_DAYS
+        if INTERVAL_SPLIT_DAY <= MAIIA_DAY_LIMIT
+    ):
+        s_date = (isoparse(start_date)).astimezone(paris_tz).isoformat()
+        n_date = (isoparse(start_date) + timedelta(days=n, seconds=-1)).astimezone(paris_tz).isoformat()
+        appointment_schedule = get_appointment_schedule(total_slots, reasons, s_date, n_date, f"{n}_days")
+        appointment_schedules.append(appointment_schedule)
     logger.debug(f"appointment_schedules: {appointment_schedules}")
     return first_availability, slots_count, appointment_schedules
 
