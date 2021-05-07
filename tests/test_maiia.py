@@ -86,8 +86,8 @@ def test_get_appointment_schedule():
         "2021-05-13T23:59:59+00:00",
         "test"
     ) ==  {
-        'from': '2021-04-16T00:00:00+00:00',
         'name': 'test',
+        'from': '2021-04-16T00:00:00+00:00',
         'to': '2021-05-13T23:59:59+00:00',
         'total': 42,
         "appointments_per_vaccine": [
@@ -101,8 +101,8 @@ def test_get_appointment_schedule():
         "2021-05-28T23:59:59+00:00",
         "test"
     ) ==  {
-        'from': '2021-04-16T00:00:00+00:00',
         'name': 'test',
+        'from': '2021-04-16T00:00:00+00:00',
         'to': '2021-05-28T23:59:59+00:00',
         'total': 798,
         "appointments_per_vaccine": [
@@ -149,27 +149,31 @@ def test_get_first_availability():
     assert first_availability.isoformat() == "2021-05-13T13:40:00+00:00"
     assert appointment_schedules == [
         {
-            "appointments_per_vaccine": [],
-            "from": "2021-04-29T00:00:00+02:00",
             "name": "1_days",
+            "from": "2021-04-29T00:00:00+02:00",
             "to": "2021-04-29T23:59:59+02:00",
-            "total": 0
+            "total": 0,
+            "appointments_per_vaccine": []
         }, 
         {
-            "appointments_per_vaccine": [],
-            "from": "2021-04-29T00:00:00+02:00",
             "name": "2_days",
-            "to": "2021-04-30T23:59:59+02:00",
-            "total": 0
-        }, 
-        {
-            "appointments_per_vaccine": [],
             "from": "2021-04-29T00:00:00+02:00",
-            "name": "7_days",
-            "to": "2021-05-05T23:59:59+02:00",
-            "total": 0
+            "to": "2021-04-30T23:59:59+02:00",
+            "total": 0,
+            "appointments_per_vaccine": []
         }, 
         {
+            "name": "7_days",
+            "from": "2021-04-29T00:00:00+02:00",
+            "to": "2021-05-05T23:59:59+02:00",
+            "total": 0,
+            "appointments_per_vaccine": []
+        }, 
+        {
+            "name": "28_days",
+            "from": "2021-04-29T00:00:00+02:00",
+            "to": "2021-05-26T23:59:59+02:00",
+            "total": 6570,
             "appointments_per_vaccine": [
                 {
                     "appointements": 6130,
@@ -178,13 +182,13 @@ def test_get_first_availability():
                     "appointements": 440,
                     "vaccine_type": Vaccine.PFIZER
                 }
-            ],
-            "from": "2021-04-29T00:00:00+02:00",
-            "name": "28_days",
-            "to": "2021-05-26T23:59:59+02:00",
-            "total": 6570
+            ]
         }, 
         {
+            "name": "49_days",
+            "from": "2021-04-29T00:00:00+02:00",
+            "to": "2021-06-16T23:59:59+02:00",
+            "total": 7980,
             "appointments_per_vaccine": [
                 {
                     "appointements": 7540,
@@ -194,12 +198,8 @@ def test_get_first_availability():
                     "appointements": 440,
                     "vaccine_type": Vaccine.PFIZER
                 }
-            ],
-            "from": "2021-04-29T00:00:00+02:00",
-            "name": "49_days",
-            "to": "2021-06-16T23:59:59+02:00",
-            "total": 7980
-        },
+            ]
+        }
     ]
 
 
