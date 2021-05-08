@@ -10,7 +10,7 @@ import pytest
 
 from scraper.ordoclic import (
     search,
-    getReasons,
+    get_reasons,
     getSlots,
     getProfile,
     parse_ordoclic_slots,
@@ -64,7 +64,7 @@ def test_getReasons():
     client = httpx.Client(transport=httpx.MockTransport(app))
     data_file = Path("tests/fixtures/ordoclic/reasons.json")
     data = json.loads(data_file.read_text())
-    assert getReasons("e9c4990e-711f-4af6-aee2-354de59c9e4e", client) == data
+    assert get_reasons("e9c4990e-711f-4af6-aee2-354de59c9e4e", client) == data
 
     # Test erreur HTTP
     def app(request: httpx.Request) -> httpx.Response:
@@ -72,12 +72,12 @@ def test_getReasons():
 
     client = httpx.Client(transport=httpx.MockTransport(app))
     with pytest.raises(httpx.HTTPStatusError):
-        getReasons("e9c4990e-711f-4af6-aee2-354de59c9e4e", client)
+        get_reasons("e9c4990e-711f-4af6-aee2-354de59c9e4e", client)
 
     # Test online
     schema_file = Path("tests/fixtures/ordoclic/reasons.schema")
     schema = json.loads(schema_file.read_text())
-    live_data = getReasons("e9c4990e-711f-4af6-aee2-354de59c9e4e")
+    live_data = get_reasons("e9c4990e-711f-4af6-aee2-354de59c9e4e")
     validate(instance=live_data, schema=schema)
 
 
