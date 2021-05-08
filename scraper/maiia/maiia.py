@@ -13,7 +13,7 @@ from urllib.parse import quote, parse_qs
 from typing import Optional
 
 from scraper.profiler import Profiling
-from scraper.pattern.center_info import get_vaccine_name
+from scraper.pattern.center_info import get_vaccine_name, is_vaccine_chronodose
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import INTERVAL_SPLIT_DAYS
 from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT
@@ -54,12 +54,13 @@ def count_slots(slots: list, reason_id: str, start_date: str, end_date: str) -> 
     return count
 
 
-def get_appointment_schedule(slots: list, reasons: list, start_date: str, end_date: str, schedule_name: str) -> dict:
+def get_appointment_schedule(slots: list, reasons: list, start_date: str, end_date: str, schedule_name: str, chronodose: bool) -> dict:
     appointment_schedule = {
         "name": schedule_name,
         "from": start_date,
         "to": end_date,
         "total": 0,
+        "chronodose_appointments": 0,
         "appointments_per_vaccine": []
     }
     vaccines_count = {}
@@ -78,11 +79,14 @@ def get_appointment_schedule(slots: list, reasons: list, start_date: str, end_da
             continue
         appointment_per_vaccine = {
             "vaccine_type": vaccine_name,
-            "appointements": vaccine_count
+            "appointements": vaccine_count,
+            "chronodose": (chronodose and is_vaccine_chronodose(vaccine_name))
         }
         appointments_per_vaccine.append(appointment_per_vaccine)
         appointment_schedule["appointments_per_vaccine"] = appointments_per_vaccine
         appointment_schedule["total"] += vaccine_count
+        if is_vaccine_chronodose(vaccine_name) and chronodose:
+            appointment_schedule["chronodose_appointments"] += vaccine_count
     return appointment_schedule
 
 
@@ -166,7 +170,8 @@ def get_first_availability(
     ):
         s_date = (paris_tz.localize(isoparse(start_date))).isoformat()
         n_date = (paris_tz.localize(isoparse(start_date) + timedelta(days=n, seconds=-1))).isoformat()
-        appointment_schedule = get_appointment_schedule(total_slots, reasons, s_date, n_date, f"{n}_days")
+        chronodose = (n == 2)
+        appointment_schedule = get_appointment_schedule(total_slots, reasons, s_date, n_date, f"{n}_days", chronodose)
         appointment_schedules.append(appointment_schedule)
     logger.debug(f"appointment_schedules: {appointment_schedules}")
     return first_availability, slots_count, appointment_schedules

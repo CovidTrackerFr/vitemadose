@@ -42,6 +42,11 @@ VACCINES_NAMES = {
     ],
 }
 
+CHRONODOSE_VACCINES = {
+    Vaccine.ARNM,
+    Vaccine.PFIZER,
+    Vaccine.MODERNA
+}
 
 class CenterInfo:
     def __init__(self, departement: str, nom: str, url: str):
@@ -189,6 +194,12 @@ def get_vaccine_astrazeneca_minus_55_edgecase(name: str) -> Vaccine:
     if has_minus and "55" in name and "suite" in name:
         return Vaccine.ARNM
     return Vaccine.ASTRAZENECA
+
+
+def is_vaccine_chronodose(vaccine: str):
+    if vaccine in CHRONODOSE_VACCINES:
+        return True
+    return False
 
 
 def dict_to_center_info(data: dict) -> CenterInfo:

@@ -86,14 +86,16 @@ def test_get_appointment_schedule():
         reasons, 
         "2021-04-16T00:00:00+00:00", 
         "2021-05-13T23:59:59+00:00",
-        "test"
+        "test",
+        False
     ) ==  {
         'name': 'test',
         'from': '2021-04-16T00:00:00+00:00',
         'to': '2021-05-13T23:59:59+00:00',
         'total': 42,
+        "chronodose_appointments": 0,
         "appointments_per_vaccine": [
-            {"appointements": 42, "vaccine_type": Vaccine.ASTRAZENECA}
+            {"appointements": 42, "vaccine_type": Vaccine.ASTRAZENECA, "chronodose": False}
         ],
     }
     assert get_appointment_schedule(
@@ -101,15 +103,17 @@ def test_get_appointment_schedule():
         reasons, 
         "2021-04-16T00:00:00+00:00", 
         "2021-05-28T23:59:59+00:00",
-        "test"
+        "test",
+        False
     ) ==  {
         'name': 'test',
         'from': '2021-04-16T00:00:00+00:00',
         'to': '2021-05-28T23:59:59+00:00',
         'total': 798,
+        "chronodose_appointments": 0,
         "appointments_per_vaccine": [
-            {"appointements": 754, "vaccine_type": Vaccine.ASTRAZENECA},
-            {"appointements": 44, "vaccine_type": Vaccine.PFIZER}
+            {"appointements": 754, "vaccine_type": Vaccine.ASTRAZENECA, "chronodose": False},
+            {"appointements": 44, "vaccine_type": Vaccine.PFIZER, "chronodose": False}
         ],
     }
 
@@ -155,6 +159,7 @@ def test_get_first_availability():
             "from": "2021-04-29T00:00:00+02:00",
             "to": "2021-04-29T23:59:59+02:00",
             "total": 0,
+            "chronodose_appointments": 0,
             "appointments_per_vaccine": []
         }, 
         {
@@ -162,6 +167,7 @@ def test_get_first_availability():
             "from": "2021-04-29T00:00:00+02:00",
             "to": "2021-04-30T23:59:59+02:00",
             "total": 0,
+            "chronodose_appointments": 0,
             "appointments_per_vaccine": []
         }, 
         {
@@ -169,6 +175,7 @@ def test_get_first_availability():
             "from": "2021-04-29T00:00:00+02:00",
             "to": "2021-05-05T23:59:59+02:00",
             "total": 0,
+            "chronodose_appointments": 0,
             "appointments_per_vaccine": []
         }, 
         {
@@ -176,13 +183,16 @@ def test_get_first_availability():
             "from": "2021-04-29T00:00:00+02:00",
             "to": "2021-05-26T23:59:59+02:00",
             "total": 6570,
+            "chronodose_appointments": 0,
             "appointments_per_vaccine": [
                 {
                     "appointements": 6130,
-                    "vaccine_type": Vaccine.ASTRAZENECA
+                    "vaccine_type": Vaccine.ASTRAZENECA,
+                    "chronodose": False
                 }, {
                     "appointements": 440,
-                    "vaccine_type": Vaccine.PFIZER
+                    "vaccine_type": Vaccine.PFIZER,
+                    "chronodose": False
                 }
             ]
         }, 
@@ -191,14 +201,17 @@ def test_get_first_availability():
             "from": "2021-04-29T00:00:00+02:00",
             "to": "2021-06-16T23:59:59+02:00",
             "total": 7980,
+            "chronodose_appointments": 0,
             "appointments_per_vaccine": [
                 {
                     "appointements": 7540,
-                    "vaccine_type": Vaccine.ASTRAZENECA
+                    "vaccine_type": Vaccine.ASTRAZENECA,
+                    "chronodose": False
                 },
                 {
                     "appointements": 440,
-                    "vaccine_type": Vaccine.PFIZER
+                    "vaccine_type": Vaccine.PFIZER,
+                    "chronodose": False
                 }
             ]
         }
