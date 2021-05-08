@@ -206,3 +206,21 @@ def test_center_iterator():
     result_path = Path('tests/fixtures/ordoclic/search-result.json')
     expected = json.loads(result_path.read_text())
     assert generated == expected
+
+def test_fetch_slots():
+    def app(request: httpx.Request) -> httpx.Response:
+        if request.url.path == '/v1/public/entities/profile/pharmacie-oceane-paris':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-profile.json').
+                                                       read_text()))
+        if request.url.path == '/v1/solar/entities/03674d71-b200-4682-8e0a-3ab9687b2b59/reasons':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-reasons.json').
+                                                       read_text()))
+        if request.url.path == '/v1/solar/slots/availableSlots':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-slots.json').
+                                                       read_text()))
+        return httpx.Response(403, json={})
+
+    client = httpx.Client(transport=httpx.MockTransport(app))
+    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-meru-meru", "2021-05-08")
+    res = fetch_slots(request, client)
+    assert res == "2021-05-12T16:00:00+00:00"
