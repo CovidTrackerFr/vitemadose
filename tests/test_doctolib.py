@@ -1,6 +1,10 @@
 import json
 from pathlib import Path
+from typing import DefaultDict
+from scraper.doctolib.doctolib_filters import is_category_relevant, is_vaccination_center, is_appointment_relevant, \
+    parse_practitioner_type
 from scraper.error import BlockedByDoctolibError
+from scraper.pattern.center_info import Vaccine
 
 import httpx
 from scraper.doctolib.doctolib import (
@@ -16,6 +20,7 @@ from scraper.doctolib.doctolib import (
 
 # -- Tests de l'API (offline) --
 from scraper.pattern.scraper_request import ScraperRequest
+from scraper.pattern.scraper_result import DRUG_STORE, GENERAL_PRACTITIONER
 
 
 def test_blocked_by_doctolib_par_centre():
@@ -44,7 +49,7 @@ def test_blocked_by_doctolib_par_centre():
             "limit": str(DOCTOLIB_SLOT_LIMIT),
         }
         path = Path("tests", "fixtures", "doctolib", "basic-availabilities.json")
-        return httpx.Response(200, json=json.loads(path.read_text()))
+        return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client, cooldown_interval=0)
@@ -69,7 +74,7 @@ def test_blocked_by_doctolib_par_availabilities():
 
         if request.url.path == "/booking/centre1.json":
             path = Path("tests", "fixtures", "doctolib", "basic-booking.json")
-            return httpx.Response(200, json=json.loads(path.read_text()))
+            return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
         return httpx.Response(403, text="Anti dDos")
 
@@ -96,18 +101,18 @@ def test_doctolib():
 
         if request.url.path == "/booking/centre1.json":
             path = Path("tests", "fixtures", "doctolib", "basic-booking.json")
-            return httpx.Response(200, json=json.loads(path.read_text()))
+            return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
         assert request.url.path == "/availabilities.json"
         params = dict(httpx.QueryParams(request.url.query))
         path = Path("tests", "fixtures", "doctolib", "basic-availabilities.json")
-        return httpx.Response(200, json=json.loads(path.read_text()))
+        return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client, cooldown_interval=0)
 
     next_date = slots.fetch(scrap_request)
-    assert next_date == '2021-04-10'
+    assert next_date == "2021-04-10"
 
 
 def test_doctolib_motive_categories():
@@ -124,17 +129,17 @@ def test_doctolib_motive_categories():
 
         if request.url.path == "/booking/centre1.json":
             path = Path("tests", "fixtures", "doctolib", "category-booking.json")
-            return httpx.Response(200, json=json.loads(path.read_text()))
+            return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
         assert request.url.path == "/availabilities.json"
         path = Path("tests", "fixtures", "doctolib", "category-availabilities.json")
-        return httpx.Response(200, json=json.loads(path.read_text()))
+        return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client, cooldown_interval=0)
 
     next_date = slots.fetch(scrap_request)
-    assert next_date == '2021-04-10'
+    assert next_date == "2021-04-10"
 
 
 def test_doctolib_next_slot():
@@ -151,11 +156,11 @@ def test_doctolib_next_slot():
 
         if request.url.path == "/booking/centre1.json":
             path = Path("tests", "fixtures", "doctolib", "next-slot-booking.json")
-            return httpx.Response(200, json=json.loads(path.read_text()))
+            return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
         assert request.url.path == "/availabilities.json"
         path = Path("tests", "fixtures", "doctolib", "next-slot-availabilities.json")
-        return httpx.Response(200, json=json.loads(path.read_text()))
+        return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client, cooldown_interval=0)
@@ -226,12 +231,12 @@ def test_find_visit_motive_id():
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Moderna)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 }
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {1: 'Moderna'}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {1: Vaccine.MODERNA}
 
     # Plusieurs motifs dispo
     data = {
@@ -242,16 +247,19 @@ def test_find_visit_motive_id():
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Pfizer/BioNTech)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
-                {"id": 2, "name": "1ère injection vaccin COVID-19 (Moderna)",
+                {
+                    "id": 2,
+                    "name": "1ère injection vaccin COVID-19 (Moderna)",
                     "visit_motive_category_id": 42,
                     "vaccination_motive": True,
-                    "first_shot_motive": True},
+                    "first_shot_motive": True,
+                },
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {1: 'Pfizer-BioNTech', 2: 'Moderna'}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {1: Vaccine.PFIZER, 2: Vaccine.MODERNA}
 
     # Mix avec un motif autre
     data = {
@@ -263,12 +271,12 @@ def test_find_visit_motive_id():
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Moderna)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {2: 'Moderna'}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {2: Vaccine.MODERNA}
 
     # Mix avec une catégorie autre
     data = {
@@ -279,19 +287,19 @@ def test_find_visit_motive_id():
                     "visit_motive_category_id": 41,
                     "name": "1ère injection vaccin COVID-19 (Moderna)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
                 {
                     "id": 2,
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (AstraZeneca)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {2: 'AstraZeneca'}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {2: Vaccine.ASTRAZENECA}
 
     # Plusieurs types de vaccin
     data = {
@@ -302,47 +310,51 @@ def test_find_visit_motive_id():
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Moderna)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
                 {
                     "id": 2,
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (AstraZeneca)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
                 {
                     "id": 3,
                     "visit_motive_category_id": 42,
                     "name": "1ère injection vaccin COVID-19 (Pfizer-BioNTech)",
                     "vaccination_motive": True,
-                    "first_shot_motive": True
+                    "first_shot_motive": True,
                 },
                 {
                     "id": 4,
                     "visit_motive_category_id": 42,
                     "name": "2nde injection vaccin COVID-19 (Moderna)",
                     "vaccination_motive": True,
-                    "first_shot_motive": False
+                    "first_shot_motive": False,
                 },
                 {
                     "id": 5,
                     "visit_motive_category_id": 42,
                     "name": "2nde injection vaccin COVID-19 (AstraZeneca)",
                     "vaccination_motive": True,
-                    "first_shot_motive": False
+                    "first_shot_motive": False,
                 },
                 {
                     "id": 6,
                     "visit_motive_category_id": 42,
                     "name": "2nde injection vaccin COVID-19 (Pfizer-BioNTech)",
                     "vaccination_motive": True,
-                    "first_shot_motive": False
+                    "first_shot_motive": False,
                 },
             ]
         }
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {1: 'Moderna', 2: 'AstraZeneca', 3: 'Pfizer-BioNTech'}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {
+        1: Vaccine.MODERNA,
+        2: Vaccine.ASTRAZENECA,
+        3: Vaccine.PFIZER,
+    }
 
 
 def test_find_agenda_and_practice_ids():
@@ -378,10 +390,45 @@ def test_find_agenda_and_practice_ids():
             ],
         },
     }
-    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=[1])
+    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=1)
     assert agenda_ids == ["10", "12"]
     assert practice_ids == ["20", "21", "24"]
 
-    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=[1], practice_id_filter=[21])
+    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=1, practice_id_filter=[21])
     assert agenda_ids == ["12"]
     assert practice_ids == ["21", "24"]
+
+
+def test_category_relevant():
+    assert is_category_relevant("Pfizer")
+    assert is_category_relevant("Astra Zeneca")
+
+
+def test_is_vaccination_center():
+    data = {
+        "visit_motives": []
+    }
+    assert is_vaccination_center(data)
+
+
+def test_is_category_relevant():
+    assert not is_category_relevant(None)
+    assert is_category_relevant("vaccination")
+
+
+def test_is_appointment_relevant():
+    assert not is_appointment_relevant(None)
+
+
+def test_parse_practitioner_type():
+    name = parse_practitioner_type("Pharmacie de la Gare", {})
+    assert name == DRUG_STORE
+    data = {
+        'profile': {
+            'speciality': {
+                'slug': 'medecin-generaliste'
+            }
+        }
+    }
+    name = parse_practitioner_type("Dr Coq", data)
+    assert name == GENERAL_PRACTITIONER

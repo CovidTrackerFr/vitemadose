@@ -1,10 +1,10 @@
 import datetime as dt
 import json
 
-from scraper.pattern.center_info import CenterInfo, dict_to_center_info, get_vaccine_name
+from scraper.pattern.center_info import CenterInfo, Vaccine, dict_to_center_info, get_vaccine_name
 from scraper.pattern.scraper_result import GENERAL_PRACTITIONER, ScraperResult
 from utils.vmd_utils import departementUtils
-from scraper.scraper import fetch_centre_slots, export_data, get_start_date
+from scraper.scraper import fetch_centre_slots, export_data, get_start_date, gouv_centre_iterator, ialternate
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 from .utils import mock_datetime_now
@@ -22,7 +22,7 @@ def test_export_data(tmp_path):
             "metadata": None,
             "type": None,
             "appointment_count": 1,
-            "internal_id": None
+            "internal_id": None,
         },
         {
             "departement": "59",
@@ -35,7 +35,7 @@ def test_export_data(tmp_path):
             "metadata": None,
             "type": None,
             "appointment_count": 1,
-            "internal_id": None
+            "internal_id": None,
         },
         {
             "departement": "59",
@@ -48,7 +48,7 @@ def test_export_data(tmp_path):
             "metadata": None,
             "type": None,
             "appointment_count": 1,
-            "internal_id": None
+            "internal_id": None,
         },
         {
             "departement": "92",
@@ -61,7 +61,7 @@ def test_export_data(tmp_path):
             "metadata": None,
             "type": None,
             "appointment_count": 0,
-            "internal_id": None
+            "internal_id": None,
         },
         {
             # Unknown departement (edge case) => should be skipped w/o failing
@@ -75,7 +75,7 @@ def test_export_data(tmp_path):
             "metadata": None,
             "type": None,
             "appointment_count": 1,
-            "internal_id": None
+            "internal_id": None,
         },
     ]
     centres_cherchés = [dict_to_center_info(center) for center in centres_cherchés_dict]
@@ -120,10 +120,13 @@ def test_export_data(tmp_path):
                 "location": None,
                 "metadata": None,
                 "type": None,
+                "appointment_by_phone_only": False,
                 "appointment_count": 1,
                 "internal_id": None,
+                "appointment_by_phone_only": False,
                 "vaccine_type": None,
-                "erreur": None
+                "erreur": None,
+                "last_scan_with_availabilities": None,
             },
         ],
         "centres_indisponibles": [],
@@ -142,11 +145,13 @@ def test_export_data(tmp_path):
                 "prochain_rdv": "2021-04-11:00:00",
                 "location": None,
                 "metadata": None,
+                "appointment_by_phone_only": False,
                 "type": None,
                 "appointment_count": 1,
                 "internal_id": None,
                 "vaccine_type": None,
-                "erreur": None
+                "erreur": None,
+                "last_scan_with_availabilities": None,
             },
         ],
         "centres_indisponibles": [
@@ -161,8 +166,10 @@ def test_export_data(tmp_path):
                 "type": None,
                 "appointment_count": 1,
                 "internal_id": None,
+                "appointment_by_phone_only": False,
                 "vaccine_type": None,
-                "erreur": None
+                "erreur": None,
+                "last_scan_with_availabilities": None,
             }
         ],
         "last_updated": "2021-04-04T00:00:00",
@@ -182,10 +189,12 @@ def test_export_data(tmp_path):
                 "prochain_rdv": "2021-04-11:00:00",
                 "plateforme": "Maiia",
                 "type": None,
+                "appointment_by_phone_only": False,
                 "appointment_count": 0,
                 "internal_id": None,
                 "vaccine_type": None,
-                "erreur": None
+                "erreur": None,
+                "last_scan_with_availabilities": None,
             },
         ],
         "last_updated": "2021-04-04T00:00:00",
@@ -195,30 +204,25 @@ def test_export_data(tmp_path):
     # On test l'export vers le format inscrit sur la plateforme data.gouv.fr
     content = json.loads((out_dir / "centres_open_data.json").read_text())
     assert content == [
-        {
-            "departement": "01",
-            "nom": "Bugey Sud",
-            "url": "https://example.com/bugey-sud",
-            "plateforme": "Doctolib"
-        },
+        {"departement": "01", "nom": "Bugey Sud", "url": "https://example.com/bugey-sud", "plateforme": "Doctolib"},
         {
             "departement": "59",
             "nom": "CH Armentières",
             "url": "https://example.com/ch-armentieres",
-            "plateforme": "Keldoc"
+            "plateforme": "Keldoc",
         },
         {
             "departement": "59",
             "nom": "Clinique du Cambresis",
             "url": "https://example.com/clinique-du-cambresis",
-            "plateforme": "Maiia"
+            "plateforme": "Maiia",
         },
         {
             "departement": "92",
             "nom": "Médiathèque Jacques GAUTIER",
             "url": "https://example.com/mediatheque-jacques-gautier",
-            "plateforme": "Maiia"
-        }
+            "plateforme": "Maiia",
+        },
     ]
 
 
@@ -233,8 +237,9 @@ def test_export_reserved_centers(tmp_path):
             "location": None,
             "metadata": None,
             "type": None,
+            "appointment_by_phone_only": False,
             "appointment_count": 1,
-            "internal_id": None
+            "internal_id": None,
         }
     ]
     centres_cherchés = [dict_to_center_info(center) for center in centres_cherchés_dict]
@@ -259,6 +264,18 @@ def test_export_reserved_centers(tmp_path):
     }
 
 
+def test_get_vaccine_name():
+    assert get_vaccine_name("Vaccination Covid -55ans suite à une première injection d'AZ (ARNm)") == Vaccine.ARNM
+    assert get_vaccine_name("Vaccination ARN suite à une 1ere injection Astra Zeneca") == Vaccine.ARNM
+    assert (
+        get_vaccine_name("Vaccination Covid de moins de 55ans (vaccin ARNm) suite à une 1ère injection d'AZ")
+        == Vaccine.ARNM
+    )
+    assert get_vaccine_name("Vaccination Covid +55ans AZ") == Vaccine.ASTRAZENECA
+    assert get_vaccine_name("Vaccination Covid Pfizer") == Vaccine.PFIZER
+    assert get_vaccine_name("Vaccination Covid Moderna") == Vaccine.MODERNA
+
+
 def test_export_data_when_blocked(tmp_path):
     center_info1 = CenterInfo("59", "Clinique du Cambresis", "https://example.com/clinique-du-cambresis")
     center_info1.plateforme = "Maiia"
@@ -270,10 +287,7 @@ def test_export_data_when_blocked(tmp_path):
     center_info2.plateforme = "Doctolib"
     center_info2.prochain_rdv = None
     center_info2.erreur = BlockedByDoctolibError("https://example.com/hopital-magique")
-    centres_cherchés = [
-        center_info1,
-        center_info2
-    ]
+    centres_cherchés = [center_info1, center_info2]
 
     out_dir = tmp_path / "out"
     out_dir.mkdir()
@@ -294,21 +308,25 @@ def test_export_data_when_blocked(tmp_path):
         "version": 1,
         "last_updated": "2021-04-04T00:00:00",
         "centres_disponibles": [],
-        "centres_indisponibles": [{
-            "departement": "14",
-            "nom": "Hôpital magique",
-            "url": "https://example.com/hopital-magique",
-            "location": None,
-            "metadata": None,
-            "prochain_rdv": None,
-            "type": None,
-            "plateforme": "Doctolib",
-            "appointment_count": 0,
-            "internal_id": None,
-            "vaccine_type": None,
-            "erreur": "ERREUR DE SCRAPPING (Doctolib): Doctolib bloque nos appels: 403 https://example.com/hopital-magique"
-        }],
-        "doctolib_bloqué": True
+        "centres_indisponibles": [
+            {
+                "departement": "14",
+                "nom": "Hôpital magique",
+                "url": "https://example.com/hopital-magique",
+                "location": None,
+                "metadata": None,
+                "prochain_rdv": None,
+                "type": None,
+                "plateforme": "Doctolib",
+                "appointment_count": 0,
+                "internal_id": None,
+                "vaccine_type": None,
+                "appointment_by_phone_only": False,
+                "erreur": "ERREUR DE SCRAPPING (Doctolib): Doctolib bloque nos appels: 403 https://example.com/hopital-magique",
+                "last_scan_with_availabilities": None,
+            }
+        ],
+        "doctolib_bloqué": True,
     }
 
     content = json.loads((out_dir / "59.json").read_text())
@@ -326,8 +344,10 @@ def test_export_data_when_blocked(tmp_path):
                 "type": None,
                 "appointment_count": 1,
                 "internal_id": None,
+                "appointment_by_phone_only": False,
                 "vaccine_type": None,
-                "erreur": None
+                "erreur": None,
+                "last_scan_with_availabilities": None,
             },
         ],
         "centres_indisponibles": [],
@@ -350,17 +370,15 @@ def test_fetch_centre_slots():
         return "2021-04-06"
 
     fetch_map = {
-        'Doctolib': {'urls': [
-            'https://partners.doctolib.fr',
-            'https://www.doctolib.fr'
-        ], 'scraper_ptr': fake_doctolib_fetch_slots},
-        'Keldoc': {'urls': [
-            'https://vaccination-covid.keldoc.com',
-            'https://keldoc.com'
-        ], 'scraper_ptr': fake_keldoc_fetch_slots},
-        'Maiia': {'urls': [
-            'https://www.maiia.com'
-        ], 'scraper_ptr': fake_maiia_fetch_slots}
+        "Doctolib": {
+            "urls": ["https://partners.doctolib.fr", "https://www.doctolib.fr"],
+            "scraper_ptr": fake_doctolib_fetch_slots,
+        },
+        "Keldoc": {
+            "urls": ["https://vaccination-covid.keldoc.com", "https://keldoc.com"],
+            "scraper_ptr": fake_keldoc_fetch_slots,
+        },
+        "Maiia": {"urls": ["https://www.maiia.com"], "scraper_ptr": fake_maiia_fetch_slots},
     }
 
     start_date = "2021-04-03"
@@ -407,11 +425,16 @@ def test_scraper_request():
     assert request is not None
     assert request.internal_id == "d739"
     assert request.appointment_count == 42
-    assert request.vaccine_type == ['Pfizer-BioNTech']
+    assert request.vaccine_type == [Vaccine.PFIZER]
 
-    result = ScraperResult(request, 'Doctolib', '2021-04-14T14:00:00.0000')
+    result = ScraperResult(request, "Doctolib", "2021-04-14T14:00:00.0000")
     assert result.default() == {
-        'next_availability': '2021-04-14T14:00:00.0000',
-        'platform': 'Doctolib',
-        'request': request
+        "next_availability": "2021-04-14T14:00:00.0000",
+        "platform": "Doctolib",
+        "request": request,
     }
+
+
+def test_has_gouv_centers():
+    itr = gouv_centre_iterator()
+    assert sum(1 for center in itr) > 0
