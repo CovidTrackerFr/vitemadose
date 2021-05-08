@@ -81,7 +81,7 @@ def generate_stats_center_types(centres_info):
 
     stats_data["dates"].append(current_time)
     current_calc = compute_plateforme_data(centres_info)
-    for plateforme, center_type in zip(current_calc[0], current_calc[1]):
+    for plateforme in current_calc[0]:
         plateform_data = current_calc[0][plateforme]
         center_type_data = current_calc[1][center_type]
         if plateforme not in stats_data["plateformes"]:
@@ -90,23 +90,24 @@ def generate_stats_center_types(centres_info):
                 "total": [plateform_data["total"]],
                 "creneaux": [plateform_data["creneaux"]],
             }
-        else:
-            current_data = stats_data["plateformes"][plateforme]
-            current_data["disponible"].append(plateform_data["disponible"])
-            current_data["total"].append(plateform_data["total"])
-            current_data["creneaux"].append(plateform_data["creneaux"])
+            continue
+        current_data = stats_data["plateformes"][plateforme]
+        current_data["disponible"].append(plateform_data["disponible"])
+        current_data["total"].append(plateform_data["total"])
+        current_data["creneaux"].append(plateform_data["creneaux"])
 
+    for center_type in current_calc[1]:
         if center_type not in stats_data["center_types"]:
             stats_data["center_types"][center_type] = {
                 "disponible": [center_type_data["disponible"]],
                 "total": [center_type_data["total"]],
                 "creneaux": [center_type_data["creneaux"]],
             }
-        else:
-            current_data = stats_data["center_types"][center_type]
-            current_data["disponible"].append(center_type_data["disponible"])
-            current_data["total"].append(center_type_data["total"])
-            current_data["creneaux"].append(center_type_data["creneaux"])
+            continue
+        current_data = stats_data["center_types"][center_type]
+        current_data["disponible"].append(center_type_data["disponible"])
+        current_data["total"].append(center_type_data["total"])
+        current_data["creneaux"].append(center_type_data["creneaux"])
 
     with open(f"data/output/{stats_path}", "w") as stat_graph_file:
         json.dump(stats_data, stat_graph_file)
