@@ -114,7 +114,38 @@ def test_keldoc_parse_center():
     date, count, appointment_schedules = test_center_1.find_first_availability("2020-04-04")
     tz = datetime.timezone(datetime.timedelta(seconds=7200))
     assert date == datetime.datetime(2021, 4, 20, 16, 55, tzinfo=tz)
-    assert appointment_schedules == {"1_days": 0, "2_days": 0, "28_days": 0, "49_days": 0, "7_days": 0}
+    assert appointment_schedules == [
+        {
+            'name': '1_days',
+            'from': '2020-04-04T00:00:00+02:00',
+            'to': '2020-04-04T23:59:59+02:00',
+            'total': 0
+        },
+        {
+            'name': 'chronodose',
+            'from': '2020-04-04T00:00:00+02:00',
+            'to': '2020-04-05T23:59:59+02:00',
+            'total': 0
+        },
+        {
+            'name': '7_days',
+            'from': '2020-04-04T00:00:00+02:00',
+            'to': '2020-04-10T23:59:59+02:00',
+            'total': 0
+        },
+        {
+            'name': '28_days',
+            'from': '2020-04-04T00:00:00+02:00',
+            'to': '2020-05-01T23:59:59+02:00',
+            'total': 0
+        },
+        {
+            'name': '49_days',
+            'from': '2020-04-04T00:00:00+02:00',
+            'to': '2020-05-22T23:59:59+02:00',
+            'total': 0
+        }
+    ]
 
 
 def test_keldoc_missing_params():
