@@ -27,8 +27,6 @@ def get_centers(speciality: str, client: httpx.Client = DEFAULT_CLIENT) -> list:
         limit=50,
         client=client,
     )
-    if "items" not in result:
-        return []
     return result["items"]
 
 
@@ -84,8 +82,8 @@ def maiia_center_to_csv(center: dict, root_center: dict) -> dict:
             csv["long_coor1"] = center["publicInformation"]["address"]["location"]["coordinates"][0]
             csv["lat_coor1"] = center["publicInformation"]["address"]["location"]["coordinates"][1]
         elif (
-            "locality" in center["publicInformation"]["address"]
-            and "location" in center["publicInformation"]["address"]["locality"]
+                "locality" in center["publicInformation"]["address"]
+                and "location" in center["publicInformation"]["address"]["locality"]
         ):
             csv["long_coor1"] = center["publicInformation"]["address"]["locality"]["location"]["x"]
             csv["lat_coor1"] = center["publicInformation"]["address"]["locality"]["location"]["y"]
@@ -100,15 +98,14 @@ def maiia_center_to_csv(center: dict, root_center: dict) -> dict:
     return csv
 
 
-def main():
+def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
     centers = list()
     centers_ids = list()
     logger.info("Starting Maiia centers download")
 
     for speciality in CENTER_TYPES:
         logger.info(f"Fetching speciality {speciality}")
-        result = get_centers(speciality)
-        all_centers = list()
+        result = get_centers(speciality, client)
         for root_center in result:
             if root_center.get("type") != "CENTER":
                 continue
@@ -116,9 +113,10 @@ def main():
             if center["id"] in MAIIA_DO_NOT_SCRAP_ID:
                 continue
             if not any(
-                consultation_reason.get("injectionType") in ["FIRST"]
-                and not any(keyword in consultation_reason.get("name").lower() for keyword in MAIIA_DO_NOT_SCRAP_NAME)
-                for consultation_reason in root_center["consultationReasons"]
+                    consultation_reason.get("injectionType") in ["FIRST"]
+                    and not any(
+                        keyword in consultation_reason.get("name").lower() for keyword in MAIIA_DO_NOT_SCRAP_NAME)
+                    for consultation_reason in root_center["consultationReasons"]
             ):
                 continue
             if center["childCenters"]:
@@ -127,17 +125,25 @@ def main():
             centers_ids.append(center["id"])
             for child_center in center["childCenters"]:
                 if (
-                    child_center["speciality"]["code"] == "VAC01"
-                    and "url" in child_center
-                    and child_center["id"] not in centers_ids
+                        child_center["speciality"]["code"] == "VAC01"
+                        and "url" in child_center
+                        and child_center["id"] not in centers_ids
                 ):
                     centers.append(maiia_center_to_csv(child_center, root_center))
                     centers_ids.append(child_center["id"])
-
+    print(centers)
+    if not save:
+        return centers
+    # pragma: no cover
     output_path = Path("data", "output", "maiia_centers.json")
     with open(output_path, "w", encoding="utf8") as f:
         json.dump(centers, f, indent=2)
     logger.info(f"Saved {len(centers)} centers to {output_path}")
+    return centers
+
+
+def main():
+    maiia_scrap(save=True)
 
 
 if __name__ == "__main__":
