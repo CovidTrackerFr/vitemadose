@@ -90,11 +90,11 @@ def generate_stats_center_types(centres_info):
                 "total": [plateform_data["total"]],
                 "creneaux": [plateform_data["creneaux"]],
             }
-            continue
-        current_data = stats_data["plateformes"][plateforme]
-        current_data["disponible"].append(plateform_data["disponible"])
-        current_data["total"].append(plateform_data["total"])
-        current_data["creneaux"].append(plateform_data["creneaux"])
+        else:
+            current_data = stats_data["plateformes"][plateforme]
+            current_data["disponible"].append(plateform_data["disponible"])
+            current_data["total"].append(plateform_data["total"])
+            current_data["creneaux"].append(plateform_data["creneaux"])
 
         if center_type not in stats_data["center_types"]:
             stats_data["center_types"][center_type] = {
@@ -102,11 +102,11 @@ def generate_stats_center_types(centres_info):
                 "total": [center_type_data["total"]],
                 "creneaux": [center_type_data["creneaux"]],
             }
-            continue
-        current_data = stats_data["center_types"][center_type]
-        current_data["disponible"].append(center_type_data["disponible"])
-        current_data["total"].append(center_type_data["total"])
-        current_data["creneaux"].append(center_type_data["creneaux"])
+        else:
+            current_data = stats_data["center_types"][center_type]
+            current_data["disponible"].append(center_type_data["disponible"])
+            current_data["total"].append(center_type_data["total"])
+            current_data["creneaux"].append(center_type_data["creneaux"])
 
     with open(f"data/output/{stats_path}", "w") as stat_graph_file:
         json.dump(stats_data, stat_graph_file)
