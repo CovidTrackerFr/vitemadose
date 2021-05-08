@@ -1,0 +1,2063 @@
+{
+    "slots": [
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-19T15:00:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-19T15:45:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-19T15:45:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-19T16:30:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-23T13:30:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-23T14:15:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-22T14:15:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-22T15:00:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-22T16:30:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-22T17:00:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "83fec9cd-b410-4481-994e-9fb3e6d01d6b",
+            "rrule": "DTSTART:20210419T070000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210423T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T07:00:00Z",
+            "until": "2021-04-23T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-23T09:15:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-23T10:00:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:02.461145Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-21T16:30:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-21T17:00:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "83fec9cd-b410-4481-994e-9fb3e6d01d6b",
+            "rrule": "DTSTART:20210419T070000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210423T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T07:00:00Z",
+            "until": "2021-04-23T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-22T07:45:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-22T08:30:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:02.461145Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-22T15:45:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-22T16:30:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-21T12:45:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-21T13:30:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-23T15:00:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-23T15:45:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-19T14:15:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-19T15:00:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-20T15:00:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-20T15:45:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "83fec9cd-b410-4481-994e-9fb3e6d01d6b",
+            "rrule": "DTSTART:20210419T070000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210423T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T07:00:00Z",
+            "until": "2021-04-23T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-21T07:00:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-21T07:45:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:02.461145Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-20T16:30:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-20T17:00:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-21T13:30:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-21T14:15:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-22T13:30:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-22T14:15:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-22T15:00:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-22T15:45:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-20T14:15:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-20T15:00:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-21T12:00:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-21T12:45:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "83fec9cd-b410-4481-994e-9fb3e6d01d6b",
+            "rrule": "DTSTART:20210419T070000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210423T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T07:00:00Z",
+            "until": "2021-04-23T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-22T09:15:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-22T10:00:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:02.461145Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-19T16:30:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-19T17:00:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-21T15:00:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-21T15:45:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "83fec9cd-b410-4481-994e-9fb3e6d01d6b",
+            "rrule": "DTSTART:20210419T070000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210423T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T07:00:00Z",
+            "until": "2021-04-23T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-21T07:45:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-21T08:30:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:02.461145Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "83fec9cd-b410-4481-994e-9fb3e6d01d6b",
+            "rrule": "DTSTART:20210419T070000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210423T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T07:00:00Z",
+            "until": "2021-04-23T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-20T09:15:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-20T10:00:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:02.461145Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "83fec9cd-b410-4481-994e-9fb3e6d01d6b",
+            "rrule": "DTSTART:20210419T070000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210423T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T07:00:00Z",
+            "until": "2021-04-23T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-23T07:45:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-23T08:30:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:02.461145Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-20T12:00:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-20T12:45:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-23T12:45:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-23T13:30:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "83fec9cd-b410-4481-994e-9fb3e6d01d6b",
+            "rrule": "DTSTART:20210419T070000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210423T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T07:00:00Z",
+            "until": "2021-04-23T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-22T08:30:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-22T09:15:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:02.461145Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-20T15:45:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-20T16:30:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-21T14:15:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-21T15:00:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-22T12:00:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-22T12:45:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-23T12:00:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-23T12:45:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "83fec9cd-b410-4481-994e-9fb3e6d01d6b",
+            "rrule": "DTSTART:20210419T070000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210423T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T07:00:00Z",
+            "until": "2021-04-23T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-21T08:30:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-21T09:15:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:02.461145Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-22T12:45:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-22T13:30:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-23T14:15:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-23T15:00:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-21T15:45:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-21T16:30:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "83fec9cd-b410-4481-994e-9fb3e6d01d6b",
+            "rrule": "DTSTART:20210419T070000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210423T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T07:00:00Z",
+            "until": "2021-04-23T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-23T07:00:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-23T07:45:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:02.461145Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "8aa96734-4309-4342-9c1b-14d259308c1b",
+            "rrule": "DTSTART:20210419T120000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210424T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T12:00:00Z",
+            "until": "2021-04-24T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-20T12:45:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-20T13:30:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:56.218554Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "83fec9cd-b410-4481-994e-9fb3e6d01d6b",
+            "rrule": "DTSTART:20210419T070000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210423T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T07:00:00Z",
+            "until": "2021-04-23T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-21T09:15:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-21T10:00:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:02.461145Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "83fec9cd-b410-4481-994e-9fb3e6d01d6b",
+            "rrule": "DTSTART:20210419T070000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210423T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T07:00:00Z",
+            "until": "2021-04-23T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-22T07:00:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-22T07:45:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:02.461145Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        },
+        {
+            "id": "83fec9cd-b410-4481-994e-9fb3e6d01d6b",
+            "rrule": "DTSTART:20210419T070000Z\\nRRULE:INTERVAL=1;FREQ=WEEKLY;WKST=MO;UNTIL=20210423T215900Z;BYDAY=MO,TU,WE,TH,FR",
+            "base": "2021-04-19T07:00:00Z",
+            "until": "2021-04-23T21:59:00Z",
+            "freq": "WEEKLY",
+            "isRepeated": true,
+            "isFullDay": false,
+            "eventTypeID": 2,
+            "eventTypeName": "",
+            "eventWeight": 0,
+            "timeStart": "2021-04-23T08:30:00Z",
+            "timeStartUtcOffset": 120,
+            "timeEnd": "2021-04-23T09:15:00Z",
+            "timeEndUtcOffset": 120,
+            "tzId": "Europe/Paris",
+            "name": "VACCINATION COVID-19",
+            "color": "rgb(255, 111, 111)",
+            "reasonIDs": [
+                "ad6a6372-3795-4a3b-ab58-6a9f9c68387b"
+            ],
+            "status": {
+                "eventID": "00000000-0000-0000-0000-000000000000",
+                "statusID": 0
+            },
+            "overlapped": false,
+            "calendarId": "74558f0c-8a42-49c8-a5a4-e79b0e93b8ab",
+            "medicalStaffID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "medicalStaffTypeID": 1,
+            "creatorID": "6d4f80ba-fa78-4ce3-a04b-99716d36bd73",
+            "creatorTypeID": 1,
+            "createdAt": "2021-04-15T16:43:02.461145Z",
+            "updatedAt": "0001-01-01T00:00:00Z",
+            "notifySubstitute": false,
+            "attachedDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": "ad6a6372-3795-4a3b-ab58-6a9f9c68387b",
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 24,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ]
+        }
+    ],
+    "nextAvailableSlotDate": null
+}

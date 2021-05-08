@@ -1,0 +1,206 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "page": {
+        "type": "integer"
+      },
+      "per_page": {
+        "type": "integer"
+      },
+      "page_count": {
+        "type": "integer"
+      },
+      "total_count": {
+        "type": "integer" 
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "isRTPCRSupported": {
+              "type": "boolean"
+            },
+            "activated": {
+              "type": "boolean"
+            },
+            "updatedAt": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "professionals": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "@timestamp": {
+              "type": "string"
+            },
+            "antigenicTestDate": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "location": {
+              "type": "object",
+              "properties": {
+                "zip": {
+                  "type": "string"
+                },
+                "address": {
+                  "type": "string"
+                },
+                "coordinates": {
+                  "type": "object",
+                  "properties": {
+                    "lon": {
+                      "type": "number"
+                    },
+                    "lat": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "lon",
+                    "lat"
+                  ]
+                },
+                "city": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "zip",
+                "address",
+                "coordinates",
+                "city"
+              ]
+            },
+            "covidVaccineInjectionDate": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "isPublicProfile": {
+              "type": "boolean"
+            },
+            "isCovidVaccineSupported": {
+              "type": "boolean"
+            },
+            "@version": {
+              "type": "string"
+            },
+            "publicProfile": {
+              "type": "object",
+              "properties": {
+                "slug": {
+                  "type": "string"
+                },
+                "publishedAt": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "slug",
+                "publishedAt"
+              ]
+            },
+            "deleted": {
+              "type": "boolean"
+            },
+            "bookingSettings": {
+              "type": "object",
+              "properties": {
+                "option": {
+                  "type": "string"
+                },
+                "externalUrl": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "option"
+              ]
+            },
+            "isCncActivated": {
+              "type": "boolean"
+            },
+            "isAntigenicSupported": {
+              "type": "boolean"
+            },
+            "activatedAt": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "phone": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "covidOnlineBookingAvailabilities": {
+              "type": "object",
+              "properties": {
+                "Vaccination AstraZeneca": {
+                  "type": "boolean"
+                },
+                "Vaccination Pfizer": {
+                  "type": "boolean"
+                },
+                "antigenic": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "Vaccination AstraZeneca",
+                "Vaccination Pfizer",
+                "antigenic"
+              ]
+            }
+          },
+          "required": [
+            "isRTPCRSupported",
+            "activated",
+            "updatedAt",
+            "name",
+            "professionals",
+            "@timestamp",
+            "antigenicTestDate",
+            "location",
+            "covidVaccineInjectionDate",
+            "isPublicProfile",
+            "isCovidVaccineSupported",
+            "@version",
+            "publicProfile",
+            "deleted",
+            "bookingSettings",
+            "isCncActivated",
+            "isAntigenicSupported",
+            "activatedAt",
+            "type",
+            "id",
+            "phone",
+            "covidOnlineBookingAvailabilities"
+          ]
+        }
+      }
+    },
+    "required": [
+      "page",
+      "per_page",
+      "page_count",
+      "total_count",
+      "items"
+    ]
+  }

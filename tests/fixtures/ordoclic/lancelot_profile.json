@@ -1,0 +1,180 @@
+{
+    "profileSlug": "pierre-lancelot-82600---aucamville",
+    "entityId": "e6eafd26-a6bc-497e-a1fe-045a1c771ad8",
+    "name": "Pierre lancelot",
+    "type": "Pharmacie",
+    "typeId": 1,
+    "phone": "+33563026802",
+    "address": "avenue de toulouse",
+    "city": "82600 - AUCAMVILLE",
+    "zip": "82600",
+    "listAddress": [
+        {
+            "id": "dd9cf43f-c61c-41c0-b886-409da79144d5",
+            "lat": 43.8026695,
+            "lng": 1.2157513,
+            "address": "avenue de toulouse",
+            "city": "82600 - AUCAMVILLE",
+            "zip": "82600",
+            "createdAt": "2021-03-15T12:30:10.079785+01:00",
+            "lastUpdate": "2021-03-15T12:30:10.079785+01:00",
+            "activated": true,
+            "isMainAddress": true
+        }
+    ],
+    "seoPublishedAt": "2021-03-15T12:36:04.774583+01:00",
+    "imagesIds": [
+        "4b22ce1f-38c9-4b19-bf97-55d9e1bb5700",
+        "07501689-f3f2-4467-9cc9-b92f5cdefdd8",
+        "2d784a04-0f1a-486e-aac5-b897bb66ebe9"
+    ],
+    "timeBlocks": [
+        {
+            "id": 4223,
+            "day": "1",
+            "opening": "09:30:00",
+            "closing": "12:30:00",
+            "isFullDay": false
+        },
+        {
+            "id": 4224,
+            "day": "1",
+            "opening": "14:30:00",
+            "closing": "19:30:00",
+            "isFullDay": false
+        },
+        {
+            "id": 4225,
+            "day": "2",
+            "opening": "09:00:00",
+            "closing": "12:30:00",
+            "isFullDay": false
+        },
+        {
+            "id": 4226,
+            "day": "2",
+            "opening": "14:30:00",
+            "closing": "19:30:00",
+            "isFullDay": false
+        },
+        {
+            "id": 4227,
+            "day": "3",
+            "opening": "09:00:00",
+            "closing": "12:30:00",
+            "isFullDay": false
+        },
+        {
+            "id": 4228,
+            "day": "3",
+            "opening": "14:30:00",
+            "closing": "19:30:00",
+            "isFullDay": false
+        },
+        {
+            "id": 4229,
+            "day": "4",
+            "opening": "09:00:00",
+            "closing": "12:30:00",
+            "isFullDay": false
+        },
+        {
+            "id": 4230,
+            "day": "4",
+            "opening": "14:30:00",
+            "closing": "19:30:00",
+            "isFullDay": false
+        },
+        {
+            "id": 4231,
+            "day": "5",
+            "opening": "09:00:00",
+            "closing": "12:30:00",
+            "isFullDay": false
+        },
+        {
+            "id": 4232,
+            "day": "5",
+            "opening": "14:30:00",
+            "closing": "19:30:00",
+            "isFullDay": false
+        },
+        {
+            "id": 4233,
+            "day": "6",
+            "opening": "09:30:00",
+            "closing": "12:30:00",
+            "isFullDay": false
+        }
+    ],
+    "publicProfessionals": [
+        {
+            "id": "65140462-7ad2-40d8-bd3f-dc6240df209f",
+            "fullName": "Pierre LANCELOT",
+            "firstName": "Pierre",
+            "lastName": "LANCELOT",
+            "title": "Monsieur",
+            "jobId": 1,
+            "job": "Pharmacien",
+            "specialty": "",
+            "address": "",
+            "city": "",
+            "zip": "",
+            "activatedAt": "2021-03-12T18:10:52.349258Z",
+            "entities": "Pierre lancelot",
+            "publicProfileSlug": "pierre-lancelot"
+        }
+    ],
+    "attributeValues": [
+        {
+            "label": "introduction",
+            "value": ""
+        },
+        {
+            "label": "service_price",
+            "value": []
+        },
+        {
+            "label": "keywords",
+            "value": [
+                "Covid 19",
+                "Test antigénique",
+                "vaccin covid 19",
+                "Pfizer",
+                "Moderna",
+                "Astra zeneca ",
+                "Grenade",
+                "Verdun sur garonne",
+                "Grisolles",
+                "Beaumont de lomagne",
+                "Mas grenier",
+                "Saint cezert",
+                "Le Burgaud ",
+                "Montauban",
+                "Saint sardos ",
+                "Canals "
+            ]
+        },
+        {
+            "label": "public_pro",
+            "value": [
+                "65140462-7ad2-40d8-bd3f-dc6240df209f"
+            ]
+        },
+        {
+            "label": "waiting_room_link",
+            "value": {
+                "url": "",
+                "enabled": true
+            }
+        },
+        {
+            "label": "booking_settings",
+            "value": {
+                "option": "internal"
+            }
+        }
+    ],
+    "showPublicProfileDocument": true,
+    "partnerId": "7abf929e-bb55-4434-9676-24231c6571d4"
+}
