@@ -81,9 +81,8 @@ def generate_stats_center_types(centres_info):
 
     stats_data["dates"].append(current_time)
     current_calc = compute_plateforme_data(centres_info)
-    for plateforme, center_type in zip(current_calc[0], current_calc[1]):
+    for plateforme in current_calc[0]:
         plateform_data = current_calc[0][plateforme]
-        center_type_data = current_calc[1][center_type]
         if plateforme not in stats_data["plateformes"]:
             stats_data["plateformes"][plateforme] = {
                 "disponible": [plateform_data["disponible"]],
@@ -96,6 +95,8 @@ def generate_stats_center_types(centres_info):
         current_data["total"].append(plateform_data["total"])
         current_data["creneaux"].append(plateform_data["creneaux"])
 
+    for center_type in current_calc[1]:
+        center_type_data = current_calc[1][center_type]
         if center_type not in stats_data["center_types"]:
             stats_data["center_types"][center_type] = {
                 "disponible": [center_type_data["disponible"]],
