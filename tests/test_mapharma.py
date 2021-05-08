@@ -4,6 +4,7 @@ import httpx
 from bs4 import BeautifulSoup
 from pathlib import Path
 from datetime import datetime, date
+from pytz import timezone
 
 from scraper.mapharma.mapharma import parse_slots, fetch_slots, count_appointements, campagne_to_centre
 from scraper.pattern.scraper_request import ScraperRequest
@@ -17,10 +18,10 @@ def test_count_appointements():
     slots = dict()
     with open(TEST_SLOT_FILE, "r", encoding="utf8") as f:
         slots = json.load(f)
-    start_date = date(2021, 4, 1)
-    end_date = date(2021, 4, 19)
-    assert count_appointements(slots, start_date, end_date) == 0
-    end_date = date(2021, 5, 14)
+    start_date = timezone("Europe/Paris").localize(datetime(2021, 4, 1, 0, 0, 0))
+    end_date = timezone("Europe/Paris").localize(datetime(2021, 4, 19, 23, 59, 59))
+    assert count_appointements(slots, start_date, end_date) == 1
+    end_date = timezone("Europe/Paris").localize(datetime(2021, 5, 14, 23, 59, 59))
     assert count_appointements(slots, start_date, end_date) == 72
 
 
