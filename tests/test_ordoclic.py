@@ -11,7 +11,7 @@ import pytest
 from scraper.ordoclic import (
     search,
     get_reasons,
-    getSlots,
+    get_slots,
     getProfile,
     parse_ordoclic_slots,
     fetch_slots,
