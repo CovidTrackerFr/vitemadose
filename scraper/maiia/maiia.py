@@ -13,7 +13,7 @@ from urllib.parse import quote, parse_qs
 from typing import Optional
 
 from scraper.profiler import Profiling
-from scraper.pattern.center_info import get_vaccine_name
+from scraper.pattern.center_info import get_vaccine_name, Vaccine
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import INTERVAL_SPLIT_DAYS
 from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT
@@ -21,10 +21,15 @@ from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT
 timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 logger = logging.getLogger("scraper")
+paris_tz = timezone("Europe/Paris")
 
 MAIIA_URL = "https://www.maiia.com"
 MAIIA_DAY_LIMIT = 50
-
+CHRONODOSE_VACCINES = {
+    Vaccine.ARNM,
+    Vaccine.PFIZER,
+    Vaccine.MODERNA
+}
 
 def parse_slots(slots: list) -> Optional[datetime]:
     if not slots:
@@ -106,14 +111,16 @@ def get_reasons(center_id: str, limit=MAIIA_LIMIT, client: httpx.Client = DEFAUL
 def get_first_availability(
     center_id: str, request_date: str, reasons: [dict], client: httpx.Client = DEFAULT_CLIENT
 ) -> [Optional[datetime], int, dict]:
-    date = isoparse(request_date)
+    date = isoparse(request_date).replace(tzinfo=None)
     start_date = date.isoformat()
     end_date = (date + timedelta(days=MAIIA_DAY_LIMIT)).isoformat()
     first_availability = None
     slots_count = 0
-    appointment_schedules = {}
+    appointment_schedules = []
+    counts = {}
+    counts["chronodose"] = 0
     for n in INTERVAL_SPLIT_DAYS:
-        appointment_schedules[f"{n}_days"] = 0
+        counts[f"{n}_days"] = 0
     for consultation_reason in reasons:
         consultation_reason_name_quote = quote(consultation_reason.get("name"), "")
         if "injectionType" in consultation_reason and consultation_reason["injectionType"] in ["FIRST"]:
@@ -126,11 +133,30 @@ def get_first_availability(
                 for INTERVAL_SPLIT_DAY in INTERVAL_SPLIT_DAYS
                 if INTERVAL_SPLIT_DAY <= MAIIA_DAY_LIMIT
             ):
-                n_date = (isoparse(start_date) + timedelta(days=n)).isoformat()
-                appointment_schedules[f"{n}_days"] += count_slots(slots, start_date, n_date)
+                n_date = (isoparse(start_date) + timedelta(days=n, seconds=-1)).isoformat()
+                counts[f"{n}_days"] += count_slots(slots, start_date, n_date)
             slots_count += len(slots)
+            if get_vaccine_name(consultation_reason["name"]) in CHRONODOSE_VACCINES:
+                n_date = (isoparse(start_date) + timedelta(days=2, seconds=-1)).isoformat()
+                counts["chronodose"] += count_slots(slots, start_date, n_date)
             if first_availability == None or slot_availability < first_availability:
                 first_availability = slot_availability
+    start_date = (paris_tz.localize(date)).isoformat()
+    n_date = (paris_tz.localize(date + timedelta(days=2, seconds=-1))).isoformat()
+    appointment_schedules.append({
+        "name": "chronodose",
+        "from": start_date,
+        "to": n_date,
+        "total": counts["chronodose"]
+    })
+    for n in INTERVAL_SPLIT_DAYS:
+        n_date = (paris_tz.localize(date + timedelta(days=n, seconds=-1))).isoformat()
+        appointment_schedules.append({
+            "name": f'{n}_days',
+            "from": start_date,
+            "to": n_date,
+            "total": counts[f'{n}_days']
+        })
     logger.debug(f"appointment_schedules: {appointment_schedules}")
     return first_availability, slots_count, appointment_schedules
 
