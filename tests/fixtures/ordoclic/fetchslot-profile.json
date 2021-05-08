@@ -1,1 +1,120 @@
-{"profileSlug":"pharmacie-oceane-paris","entityId":"03674d71-b200-4682-8e0a-3ab9687b2b59","name":"Pharmacie Oceane","type":"Pharmacie","typeId":1,"phone":"+33145788618","address":"19 rue Lourmel ","city":"Paris","zip":"75015","listAddress":[{"id":"b7fd84f8-86d9-4bbe-b8f0-93b2191e7a72","lat":48.84922659999999,"lng":2.2914519,"address":"19 rue Lourmel ","city":"Paris","zip":"75015","createdAt":"2021-03-17T14:00:01.406087Z","lastUpdate":"2021-04-14T08:29:23.138829Z","activated":true,"isMainAddress":true}],"seoPublishedAt":"2021-03-17T14:00:19.998659Z","imagesIds":[],"timeBlocks":[{"id":6422,"day":"1","opening":"08:00:00","closing":"20:00:00","isFullDay":false},{"id":6423,"day":"2","opening":"08:00:00","closing":"20:00:00","isFullDay":false},{"id":6424,"day":"3","opening":"08:00:00","closing":"20:00:00","isFullDay":false},{"id":6425,"day":"4","opening":"08:00:00","closing":"20:00:00","isFullDay":false},{"id":6426,"day":"5","opening":"08:00:00","closing":"20:00:00","isFullDay":false},{"id":6427,"day":"6","opening":"08:00:00","closing":"20:00:00","isFullDay":false},{"id":6428,"day":"7","opening":"09:00:00","closing":"19:00:00","isFullDay":false}],"publicProfessionals":[{"id":"5c8fc562-d836-4aed-84d6-225e5af8075e","fullName":"Laurent HALWANI","firstName":"Laurent","lastName":"HALWANI","title":"Monsieur","jobId":1,"job":"Pharmacien","specialty":"","address":"","city":"","zip":"","activatedAt":"2021-03-11T10:11:48.656562Z","entities":"Pharmacie Oceane","publicProfileSlug":"laurent-halwani"}],"attributeValues":[{"label":"introduction","value":"/!\\ Vaccin actuellement disponible : ASTRAZENECA /!\\ \nNOTE IMPORTANTE : La Pharmacie se réserve le droit de modifier ou d'annuler les rendez-vous selon les disponibilités d'approvisionnement\n        \n"},{"label":"service_price","value":[]},{"label":"keywords","value":["Rendez-Vous","Covid-19"]},{"label":"public_pro","value":["5c8fc562-d836-4aed-84d6-225e5af8075e"]},{"label":"waiting_room_link","value":{"url":"","enabled":true}},{"label":"booking_settings","value":{"option":"internal"}}],"showPublicProfileDocument":true,"partnerId":"b0d54363-04ce-4c43-88d4-7f61889f6c02","lobbyRoom":{"id":"615d47f8-108b-41bf-82e4-0dfd10c6a511","entityId":"03674d71-b200-4682-8e0a-3ab9687b2b59","accessCode":"LDFK2GLKM6","activatedAt":null,"entityAdminActivatedAt":null,"insuranceRequirementId":2,"reasonRequirementId":3,"paymentMean":false}}
+{
+	"profileSlug": "pharmacie-oceane-paris",
+	"entityId": "03674d71-b200-4682-8e0a-3ab9687b2b59",
+	"name": "Pharmacie Oceane",
+	"type": "Pharmacie",
+	"typeId": 1,
+	"phone": "+33145788618",
+	"address": "19 rue Lourmel ",
+	"city": "Paris",
+	"zip": "75015",
+	"listAddress": [{
+		"id": "b7fd84f8-86d9-4bbe-b8f0-93b2191e7a72",
+		"lat": 48.84922659999999,
+		"lng": 2.2914519,
+		"address": "19 rue Lourmel ",
+		"city": "Paris",
+		"zip": "75015",
+		"createdAt": "2021-03-17T14:00:01.406087Z",
+		"lastUpdate": "2021-04-14T08:29:23.138829Z",
+		"activated": true,
+		"isMainAddress": true
+	}],
+	"seoPublishedAt": "2021-03-17T14:00:19.998659Z",
+	"imagesIds": [],
+	"timeBlocks": [{
+		"id": 6422,
+		"day": "1",
+		"opening": "08:00:00",
+		"closing": "20:00:00",
+		"isFullDay": false
+	}, {
+		"id": 6423,
+		"day": "2",
+		"opening": "08:00:00",
+		"closing": "20:00:00",
+		"isFullDay": false
+	}, {
+		"id": 6424,
+		"day": "3",
+		"opening": "08:00:00",
+		"closing": "20:00:00",
+		"isFullDay": false
+	}, {
+		"id": 6425,
+		"day": "4",
+		"opening": "08:00:00",
+		"closing": "20:00:00",
+		"isFullDay": false
+	}, {
+		"id": 6426,
+		"day": "5",
+		"opening": "08:00:00",
+		"closing": "20:00:00",
+		"isFullDay": false
+	}, {
+		"id": 6427,
+		"day": "6",
+		"opening": "08:00:00",
+		"closing": "20:00:00",
+		"isFullDay": false
+	}, {
+		"id": 6428,
+		"day": "7",
+		"opening": "09:00:00",
+		"closing": "19:00:00",
+		"isFullDay": false
+	}],
+	"publicProfessionals": [{
+		"id": "5c8fc562-d836-4aed-84d6-225e5af8075e",
+		"fullName": "Laurent HALWANI",
+		"firstName": "Laurent",
+		"lastName": "HALWANI",
+		"title": "Monsieur",
+		"jobId": 1,
+		"job": "Pharmacien",
+		"specialty": "",
+		"address": "",
+		"city": "",
+		"zip": "",
+		"activatedAt": "2021-03-11T10:11:48.656562Z",
+		"entities": "Pharmacie Oceane",
+		"publicProfileSlug": "laurent-halwani"
+	}],
+	"attributeValues": [{
+		"label": "introduction",
+		"value": "/!\\ Vaccin actuellement disponible : ASTRAZENECA /!\\ \nNOTE IMPORTANTE : La Pharmacie se réserve le droit de modifier ou d'annuler les rendez-vous selon les disponibilités d'approvisionnement\n        \n"
+	}, {
+		"label": "service_price",
+		"value": []
+	}, {
+		"label": "keywords",
+		"value": ["Rendez-Vous", "Covid-19"]
+	}, {
+		"label": "public_pro",
+		"value": ["5c8fc562-d836-4aed-84d6-225e5af8075e"]
+	}, {
+		"label": "waiting_room_link",
+		"value": {
+			"url": "",
+			"enabled": true
+		}
+	}, {
+		"label": "booking_settings",
+		"value": {
+			"option": "internal"
+		}
+	}],
+	"showPublicProfileDocument": true,
+	"partnerId": "b0d54363-04ce-4c43-88d4-7f61889f6c02",
+	"lobbyRoom": {
+		"id": "615d47f8-108b-41bf-82e4-0dfd10c6a511",
+		"entityId": "03674d71-b200-4682-8e0a-3ab9687b2b59",
+		"accessCode": "LDFK2GLKM6",
+		"activatedAt": null,
+		"entityAdminActivatedAt": null,
+		"insuranceRequirementId": 2,
+		"reasonRequirementId": 3,
+		"paymentMean": false
+	}
+}
