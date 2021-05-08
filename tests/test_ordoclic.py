@@ -101,12 +101,36 @@ def test_getReasons():
     validate(instance=live_data, schema=schema)
 
 
-def test_getSlots():
-    pass
+def test_get_slots():
+    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-meru-meru", "2021-05-08")
+    fill_appointment_schedule(request)
+    data = {'id': 1}
+    assert not parse_ordoclic_slots(request, data)
+
+    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-meru-meru", "2021-05-08")
+    fill_appointment_schedule(request)
+    data = {'slots': [{'timeEnd': '2021-05-09'}]}
+    assert not parse_ordoclic_slots(request, data)
 
 
-def test_getProfile():
-    pass
+def test_get_profile():
+    # Timeout test (profile)
+    def app4(request: httpx.Request) -> httpx.Response:
+        raise httpx.TimeoutException(message="Timeout", request=request)
+
+    client = httpx.Client(transport=httpx.MockTransport(app4))
+    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-meru-meru", "2021-05-08")
+    res = get_profile(request, client)
+    assert not res
+
+    # HTTP error test (profile)
+    def app5(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(403, json={})
+
+    client = httpx.Client(transport=httpx.MockTransport(app5))
+    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-meru-meru", "2021-05-08")
+    res = get_profile(request, client)
+    assert not res
 
 
 def fill_appointment_schedule(request: ScraperRequest):
@@ -207,7 +231,9 @@ def test_center_iterator():
     expected = json.loads(result_path.read_text())
     assert generated == expected
 
+
 def test_fetch_slots():
+    # Basic full working test
     def app(request: httpx.Request) -> httpx.Response:
         if request.url.path == '/v1/public/entities/profile/pharmacie-oceane-paris':
             return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-profile.json').
@@ -221,6 +247,65 @@ def test_fetch_slots():
         return httpx.Response(403, json={})
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-meru-meru", "2021-05-08")
+    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08")
     res = fetch_slots(request, client)
     assert res == "2021-05-12T16:00:00+00:00"
+
+    # Timeout test
+    def app2(request: httpx.Request) -> httpx.Response:
+        if request.url.path == '/v1/public/entities/profile/pharmacie-oceane-paris':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-profile.json').
+                                                       read_text()))
+        if request.url.path == '/v1/solar/entities/03674d71-b200-4682-8e0a-3ab9687b2b59/reasons':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-reasons.json').
+                                                       read_text()))
+        if request.url.path == '/v1/solar/slots/availableSlots':
+            raise httpx.TimeoutException(message="Timeout", request=request)
+        return httpx.Response(403, json={})
+
+    client = httpx.Client(transport=httpx.MockTransport(app2))
+    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08")
+    res = fetch_slots(request, client)
+    assert res is None
+
+    # HTTP error test (available slots)
+    def app3(request: httpx.Request) -> httpx.Response:
+        if request.url.path == '/v1/public/entities/profile/pharmacie-oceane-paris':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-profile.json').
+                                                       read_text()))
+        if request.url.path == '/v1/solar/entities/03674d71-b200-4682-8e0a-3ab9687b2b59/reasons':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-reasons.json').
+                                                       read_text()))
+        return httpx.Response(403, json={})
+
+    client = httpx.Client(transport=httpx.MockTransport(app3))
+    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08")
+    res = fetch_slots(request, client)
+    assert res is None
+
+    # HTTP error test (profile)
+    def app4(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(403, json={})
+
+    client = httpx.Client(transport=httpx.MockTransport(app4))
+    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08")
+    res = fetch_slots(request, client)
+    assert res is None
+
+    # Only appointments by phone test
+    def app5(request: httpx.Request) -> httpx.Response:
+        if request.url.path == '/v1/public/entities/profile/pharmacie-oceane-paris':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-profile2.json').
+                                                       read_text()))
+        if request.url.path == '/v1/solar/entities/03674d71-b200-4682-8e0a-3ab9687b2b59/reasons':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-reasons.json').
+                                                       read_text()))
+        if request.url.path == '/v1/solar/slots/availableSlots':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-slots.json').
+                                                       read_text()))
+        return httpx.Response(403, json={})
+
+    client = httpx.Client(transport=httpx.MockTransport(app5))
+    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08")
+    res = fetch_slots(request, client)
+    assert res is None
