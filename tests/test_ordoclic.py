@@ -202,6 +202,7 @@ def test_center_iterator():
         return httpx.Response(200, json=json.loads(path.read_text()))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    dt = list(centre_iterator(client))
-
-    assert dt == {'oui': 'bon'}
+    generated = list(centre_iterator(client))
+    result_path = Path('tests/fixtures/ordoclic/search-result.json')
+    expected = json.loads(result_path.read_text())
+    assert generated == expected
