@@ -17,7 +17,12 @@ DATA_AUTO = "https://vitemadose.gitlab.io/vitemadose/"
 
 def generate_stats_date(centres_stats):
     stats_path = "stats_by_date.json"
-    stats_data = {"dates": [], "total_centres_disponibles": [], "total_centres": [], "total_appointments": []}
+    stats_data = {
+        "dates": [],
+        "total_centres_disponibles": [],
+        "total_centres": [],
+        "total_appointments": [],
+    }
 
     try:
         history_rq = requests.get(f"{DATA_AUTO}{stats_path}")
@@ -25,7 +30,9 @@ def generate_stats_date(centres_stats):
         if data:
             stats_data = data
     except Exception as e:
-        logger.warning(f"Unable to fetch {DATA_AUTO}{stats_path}: generating a template file.")
+        logger.warning(
+            f"Unable to fetch {DATA_AUTO}{stats_path}: generating a template file."
+        )
         pass
     ctz = pytz.timezone("Europe/Paris")
     current_time = datetime.now(tz=ctz).strftime("%Y-%m-%d %H:00:00")
@@ -47,7 +54,12 @@ def generate_stats_date(centres_stats):
 
 def generate_stats_dep_date(centres_stats):
     stats_path = "stats_by_date_dep.json"
-    stats_data = {"dates": [], "dep_centres_disponibles": {}, "dep_centres": {}, "dep_appointments": {}}
+    stats_data = {
+        "dates": [],
+        "dep_centres_disponibles": {},
+        "dep_centres": {},
+        "dep_appointments": {},
+    }
 
     try:
         history_rq = requests.get(f"{DATA_AUTO}{stats_path}")
@@ -55,7 +67,9 @@ def generate_stats_dep_date(centres_stats):
         if data:
             stats_data = data
     except Exception as e:
-        logger.warning(f"Unable to fetch {DATA_AUTO}{stats_path}: generating a template file.")
+        logger.warning(
+            f"Unable to fetch {DATA_AUTO}{stats_path}: generating a template file."
+        )
         pass
     ctz = pytz.timezone("Europe/Paris")
     current_time = datetime.now(tz=ctz).strftime("%Y-%m-%d %H:00:00")
@@ -85,37 +99,56 @@ def generate_stats_dep_date(centres_stats):
     logger.info(f"Updated stats file: {stats_path}")
 
 
-def export_centres_stats(center_data=Path("data", "output", "info_centres.json"), stats_path="stats.json"):
-    centres_info = get_centres_info(center_data)
-    centres_stats = {"tout_departement": {"disponibles": 0, "total": 0, "creneaux": 0}}
+def export_centres_stats(
+    center_data=Path("data", "output", "info_centres.json"), stats_path="stats.json"
+):
 
-    tout_dep_obj = centres_stats["tout_departement"]
+    if center_data.exists():
+        centres_info = get_centres_info(center_data)
+        centres_stats = {
+            "tout_departement": {"disponibles": 0, "total": 0, "creneaux": 0}
+        }
 
-    for dep_code, dep_value in centres_info.items():
-        nombre_disponibles = len(dep_value["centres_disponibles"])
-        count = len(dep_value["centres_indisponibles"]) + nombre_disponibles
-        creneaux = sum([center.get("appointment_count", 0) for center in dep_value["centres_disponibles"]])
+        tout_dep_obj = centres_stats["tout_departement"]
 
-        centres_stats[dep_code] = {"disponibles": nombre_disponibles, "total": count, "creneaux": creneaux}
+        for dep_code, dep_value in centres_info.items():
+            nombre_disponibles = len(dep_value["centres_disponibles"])
+            count = len(dep_value["centres_indisponibles"]) + nombre_disponibles
+            creneaux = sum(
+                [
+                    center.get("appointment_count", 0)
+                    for center in dep_value["centres_disponibles"]
+                ]
+            )
 
-        tout_dep_obj["disponibles"] += nombre_disponibles
-        tout_dep_obj["total"] += count
-        tout_dep_obj["creneaux"] += creneaux
+            centres_stats[dep_code] = {
+                "disponibles": nombre_disponibles,
+                "total": count,
+                "creneaux": creneaux,
+            }
 
-    available_pct = (tout_dep_obj["disponibles"] / max(1, tout_dep_obj["total"])) * 100
-    logger.info(
-        "Found {0}/{1} available centers. ({2}%)".format(
-            tout_dep_obj["disponibles"], tout_dep_obj["total"], round(available_pct, 2)
+            tout_dep_obj["disponibles"] += nombre_disponibles
+            tout_dep_obj["total"] += count
+            tout_dep_obj["creneaux"] += creneaux
+
+        available_pct = (
+            tout_dep_obj["disponibles"] / max(1, tout_dep_obj["total"])
+        ) * 100
+        logger.info(
+            "Found {0}/{1} available centers. ({2}%)".format(
+                tout_dep_obj["disponibles"],
+                tout_dep_obj["total"],
+                round(available_pct, 2),
+            )
         )
-    )
-    with open(Path("data", "output", stats_path), "w") as stats_file:
-        json.dump(centres_stats, stats_file, indent=2)
-    if stats_path != "stats.json":
-        return
-    generate_stats_date(centres_stats)
-    generate_stats_dep_date(centres_stats)
-    generate_stats_center_types(centres_info)
-    make_maps(centres_info)
+        with open(Path("data", "output", stats_path), "w") as stats_file:
+            json.dump(centres_stats, stats_file, indent=2)
+        if stats_path != "stats.json":
+            return
+        generate_stats_date(centres_stats)
+        generate_stats_dep_date(centres_stats)
+        generate_stats_center_types(centres_info)
+        make_maps(centres_info)
 
 
 def get_centres_info(center_data):

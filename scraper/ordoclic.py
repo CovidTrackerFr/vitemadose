@@ -208,8 +208,8 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     return first_availability.isoformat()
 
 
-def centre_iterator():
-    items = search()
+def centre_iterator(client: httpx.Client = DEFAULT_CLIENT):
+    items = search(client)
     for item in items["items"]:
         # plusieur types possibles (pharmacie, maison mediacle, pharmacien, medecin, ...), pour l'instant on filtre juste les pharmacies
         if "type" in item:

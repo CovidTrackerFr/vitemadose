@@ -191,7 +191,11 @@ def test_keldoc_scrape():
     keldoc.session = httpx.Client(transport=httpx.MockTransport(app_center1))
 
     date = fetch_slots(request)
-    assert date == "2021-04-20T16:55:00.000000+0200"
+    # When it's already killed
+    if keldoc.KELDOC_KILL_SWITCH:
+        assert date is None
+    else:
+        assert date == "2021-04-20T16:55:00.000000+0200"
     keldoc.KELDOC_KILL_SWITCH = True
     test_killswitch = fetch_slots(request)
     assert not test_killswitch

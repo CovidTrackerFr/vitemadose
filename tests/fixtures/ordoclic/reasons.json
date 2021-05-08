@@ -1,0 +1,99 @@
+{
+    "reasons": [
+        {
+            "id": "05e43802-bc40-4c0f-8e0f-6ce502d92732",
+            "name": "Urgence",
+            "duration": 10,
+            "color": "rgba(255, 0, 0)",
+            "canBookOnline": false,
+            "professionalId": "00000000-0000-0000-0000-000000000000",
+            "reasonTypeId": 1,
+            "reasonType": "",
+            "isAcceptNewPatient": true,
+            "advice": "[\"Les créneaux urgents sont réservés aux urgences médicalement justifiées. Ils ne sont pas prévus pour les urgences administratives, certificats, arrêts de travail, renouvellements d’ordonnances…\"]",
+            "entityId": null,
+            "isTcsMode": false,
+            "defaultDocuments": [],
+            "documentNotificationCondition": 0,
+            "documentNotificationTimeValueInHours": 1
+        },
+        {
+            "id": "3a2fae54-9569-4e39-bff0-875e31d9a0f1",
+            "name": "Téléconsultation",
+            "duration": 15,
+            "color": "#cde8ff",
+            "canBookOnline": false,
+            "professionalId": "00000000-0000-0000-0000-000000000000",
+            "reasonTypeId": 2,
+            "reasonType": "",
+            "isAcceptNewPatient": false,
+            "advice": "[\"Connectez-vous à la salle d'attente 10 minutes à l'avance pour remplir les informations nécessaires\",\"Avant de commencer la téléconsultation, vous devrez renseigner votre numéro de sécurité sociale et votre caisse d'assurance maladie (présente sur votre attestation d'assurance maladie).\",\"Une fois prêt, faites-le savoir à votre médecin en cliquant sur \\\"Je suis prêt\\\"\"]",
+            "entityId": null,
+            "isTcsMode": true,
+            "defaultDocuments": [],
+            "documentNotificationCondition": 0,
+            "documentNotificationTimeValueInHours": 1
+        },
+        {
+            "id": "95c9a0bc-d5c2-46e8-89ed-e998b8a606aa",
+            "name": "Vaccination COVID - Injection 1",
+            "duration": 20,
+            "color": "#ffcc3d",
+            "canBookOnline": true,
+            "professionalId": "00000000-0000-0000-0000-000000000000",
+            "reasonTypeId": 4,
+            "reasonType": "",
+            "isAcceptNewPatient": true,
+            "advice": "[\"Le vaccin injecté est le ASTRAZENECA. Vérifiez votre éligibilité sur https://covid-pharma.fr/eligibilite-vaccin-pharmacie/\", \"Vous avez choisi le motif de rendez-vous \\\"Vaccination COVID injection 1\\\". Avant de valider, veuillez vérifier que vous êtes éligible à la vaccination.\", \"Nous vous remercions de vous présenter en pharmacie 5 minutes avant l'heure de votre rendez vous, et dans le cas où vous ne pourriez être présent, d'annuler en ligne votre rendez vous.\"]",
+            "entityId": null,
+            "isTcsMode": false,
+            "defaultDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": null,
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 0,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ],
+            "documentNotificationCondition": 0,
+            "documentNotificationTimeValueInHours": 24
+        },
+        {
+            "id": "9e9f3688-3b31-4212-8465-c06ae6006ec8",
+            "name": "Vaccination COVID - Injection 2",
+            "duration": 20,
+            "color": "#ffebb1",
+            "canBookOnline": true,
+            "professionalId": "00000000-0000-0000-0000-000000000000",
+            "reasonTypeId": 5,
+            "reasonType": "",
+            "isAcceptNewPatient": true,
+            "advice": "[\"Le vaccin injecté est le ASTRAZENECA. Vérifiez votre éligibilité sur https://covid-pharma.fr/eligibilite-vaccin-pharmacie/\", \"Vous avez choisi le motif de rendez-vous \\\"Vaccination COVID injection 2\\\". Avant de valider, veuillez vérifier que vous êtes éligible à la deuxième injection de vaccination.\", \"Nous vous remercions de vous présenter en pharmacie 5 minutes avant l'heure de votre rendez vous, et dans le cas où vous ne pourriez être présent, d'annuler en ligne votre rendez vous.\"]",
+            "entityId": null,
+            "isTcsMode": false,
+            "defaultDocuments": [
+                {
+                    "documentId": "00000000-0000-0000-0000-000000000000",
+                    "typeId": 17,
+                    "favoriteLabel": "",
+                    "permanentAccessCode": "",
+                    "notifiedAt": null,
+                    "reasonId": null,
+                    "documentNotificationCondition": 0,
+                    "documentNotificationTimeValueInHours": 0,
+                    "multiFormType": "covid19_vaccination",
+                    "needPatientSignature": false
+                }
+            ],
+            "documentNotificationCondition": 0,
+            "documentNotificationTimeValueInHours": 24
+        }
+    ],
+    "limitedMode": false
+}

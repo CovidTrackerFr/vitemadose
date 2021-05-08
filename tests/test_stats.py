@@ -2,12 +2,14 @@
 import json
 import os
 
+from pathlib import Path
 from stats_generation.stats_available_centers import export_centres_stats
 
 
 def test_stat_count():
     output_file_name = "stats_test.json"
-    export_centres_stats("tests/fixtures/stats/info-centres.json", output_file_name)
+    center_data = Path("tests", "fixtures", "stats", "info-centres.json")
+    export_centres_stats(center_data, output_file_name)
 
     assert os.path.exists(f"data/output/{output_file_name}")
 
