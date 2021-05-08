@@ -204,11 +204,10 @@ class KeldocCenter:
             if not timetables or "availabilities" not in timetables:
                 continue
         # update appointment_schedules
+        s_date = (paris_tz.localize(isoparse(start_date) + timedelta(days=0))).isoformat()
+        n_date = (paris_tz.localize(isoparse(start_date) + timedelta(days=2, seconds=-1))).isoformat()
+        appointment_schedules.append(self.get_appointment_schedule(appointments, s_date, n_date, "chronodose"))
         for n in INTERVAL_SPLIT_DAYS:
-            s_date = (paris_tz.localize(isoparse(start_date) + timedelta(days=0))).isoformat()
             n_date = (paris_tz.localize(isoparse(start_date) + timedelta(days=n, seconds=-1))).isoformat()
-            if n == 2:
-                appointment_schedules.append(self.get_appointment_schedule(appointments, s_date, n_date, "chronodose"))
-            else:
-                appointment_schedules.append(self.get_appointment_schedule(appointments, s_date, n_date, f"{n}_days"))
+            appointment_schedules.append(self.get_appointment_schedule(appointments, s_date, n_date, f"{n}_days"))
         return first_availability, len(appointments), appointment_schedules

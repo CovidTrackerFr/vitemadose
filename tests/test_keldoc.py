@@ -26,6 +26,7 @@ CENTER1_KELDOC = {
     "/api/patients/v2/timetables/81486": "center1-timetable-81486",
     "/api/patients/v2/timetables/81466": "center1-timetable-81466",
     "/api/patients/v2/timetables/82874": "center1-timetable-82874",
+    "/api/patients/v2/timetables/89798": "center1-timetable-89798",
     "/api/patients/v2/searches/resource": "center1-info",
 }
 
@@ -116,13 +117,19 @@ def test_keldoc_parse_center():
     assert date == datetime.datetime(2021, 4, 20, 16, 55, tzinfo=tz)
     assert appointment_schedules == [
         {
+            'name': 'chronodose',
+            'from': '2020-04-04T00:00:00+02:00',
+            'to': '2020-04-05T23:59:59+02:00',
+            'total': 0
+        },
+        {
             'name': '1_days',
             'from': '2020-04-04T00:00:00+02:00',
             'to': '2020-04-04T23:59:59+02:00',
             'total': 0
         },
         {
-            'name': 'chronodose',
+            'name': '2_days',
             'from': '2020-04-04T00:00:00+02:00',
             'to': '2020-04-05T23:59:59+02:00',
             'total': 0
