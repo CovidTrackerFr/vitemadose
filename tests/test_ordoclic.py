@@ -12,7 +12,7 @@ from scraper.ordoclic import (
     search,
     get_reasons,
     get_slots,
-    getProfile,
+    get_profile,
     parse_ordoclic_slots,
     fetch_slots,
     centre_iterator
