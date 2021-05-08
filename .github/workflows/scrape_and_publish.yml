@@ -2,12 +2,11 @@
 name: Scrape And Publish
 
 on:
-## Disabled. Enable if emergency
-#  push:
-#    branches:
-#      - data-auto
-#  schedule:
-#    - cron: "*/5 * * * *"
+  push:
+    branches:
+      - data-auto
+  schedule:
+    - cron: "*/5 * * * *"
   # Allow running manually
   workflow_dispatch:
 
