@@ -84,7 +84,44 @@ def test_get_first_availability():
     first_availability, slots_count, appointment_schedules = get_first_availability(
         "5ffc744c68dedf073a5b87a2", "2021-04-29", reasons, client=client
     )
-    assert appointment_schedules == {"1_days": 0, "2_days": 0, "28_days": 6570, "49_days": 7980, "7_days": 0}
+    assert appointment_schedules == [
+        {
+            "from": "2021-04-29T00:00:00+02:00",
+            "name": "chronodose",
+            "to": "2021-04-30T23:59:59+02:00",
+            "total": 0
+        },
+        {
+            "from": "2021-04-29T00:00:00+02:00",
+            "name": "1_days",
+            "to": "2021-04-29T23:59:59+02:00",
+            "total": 0
+        },
+        {
+            "from": "2021-04-29T00:00:00+02:00",
+            "name": "2_days",
+            "to": "2021-04-30T23:59:59+02:00",
+            "total": 0
+        },
+        {
+            "from": "2021-04-29T00:00:00+02:00",
+            "name": "7_days",
+            "to": "2021-05-05T23:59:59+02:00",
+            "total": 0
+        },
+        {
+            "from": "2021-04-29T00:00:00+02:00",
+            "name": "28_days",
+            "to": "2021-05-26T23:59:59+02:00",
+            "total": 6570
+        },
+        {
+            "from": "2021-04-29T00:00:00+02:00",
+            "name": "49_days",
+            "to": "2021-06-16T23:59:59+02:00",
+            "total": 7980
+        },
+    ]
     assert slots_count == 7980
     assert first_availability.isoformat() == "2021-05-13T13:40:00+00:00"
 
