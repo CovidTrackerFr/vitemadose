@@ -15,7 +15,7 @@ from scraper.ordoclic import (
     get_profile,
     parse_ordoclic_slots,
     fetch_slots,
-    centre_iterator
+    centre_iterator, is_reason_valid
 )
 
 from scraper.pattern.scraper_request import ScraperRequest
@@ -50,6 +50,13 @@ def test_search():
     client = httpx.Client(transport=httpx.MockTransport(app))
     assert search(client) is None
 
+    # Test timeout
+    def app2(request: httpx.Request) -> httpx.Response:
+        raise httpx.TimeoutException(message="Timeout", request=request)
+
+    client = httpx.Client(transport=httpx.MockTransport(app2))
+    assert search(client) is None
+
     # Test online
     schema_file = Path('tests/fixtures/ordoclic/search.schema')
     schema = json.loads(schema_file.read_text())
@@ -80,6 +87,13 @@ def test_getReasons():
     client = httpx.Client(transport=httpx.MockTransport(app))
     assert get_reasons("e9c4990e-711f-4af6-aee2-354de59c9e4e", client) is None
 
+    # Test timeout
+    def app2(request: httpx.Request) -> httpx.Response:
+        raise httpx.TimeoutException(message="Timeout", request=request)
+
+    client = httpx.Client(transport=httpx.MockTransport(app2))
+    assert get_reasons("e9c4990e-711f-4af6-aee2-354de59c9e4e", client) is None
+
     # Test online
     schema_file = Path("tests/fixtures/ordoclic/reasons.schema")
     schema = json.loads(schema_file.read_text())
@@ -94,12 +108,14 @@ def test_getSlots():
 def test_getProfile():
     pass
 
+
 def fill_appointment_schedule(request: ScraperRequest):
     appointment_schedules = {}
     for n in INTERVAL_SPLIT_DAYS:
         appointment_schedules[f"{n}_days"] = 0
         request.update_appointment_schedules(appointment_schedules)
     return appointment_schedules
+
 
 def test_parse_ordoclic_slots():
     # Test availability_data vide
@@ -136,3 +152,35 @@ def test_fetch_slots():
 
 def test_centre_iterator():
     pass
+
+
+def test_is_reason_valid():
+    # Can't book online
+    data = {
+        "canBookOnline": False
+    }
+    assert not is_reason_valid(data)
+
+    # Can't book online
+    data = {
+        "canBookOnline": True,
+        "vaccineInjectionDose": 2
+    }
+    assert not is_reason_valid(data)
+
+    # First injection
+    data = {
+        "canBookOnline": True,
+        "vaccineInjectionDose": 1
+    }
+    assert is_reason_valid(data)
+
+    # Mix-up
+    data = {
+        "vaccineInjectionDose": 1,
+        "canBookOnline": False
+    }
+    assert not is_reason_valid(data)
+
+    # No data
+    assert not is_reason_valid({})
