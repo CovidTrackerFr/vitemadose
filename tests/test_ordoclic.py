@@ -184,3 +184,24 @@ def test_is_reason_valid():
 
     # No data
     assert not is_reason_valid({})
+
+
+def test_center_iterator():
+    def app(request: httpx.Request) -> httpx.Response:
+        assert request.url.path == '/v1/public/search'
+        assert dict(httpx.QueryParams(request.url.query)) == {
+            'page': '1',
+            'per_page': '10000',
+            'in.isPublicProfile': 'true',
+            'in.isCovidVaccineSupported': 'true',
+            'or.covidOnlineBookingAvailabilities.Vaccination AstraZeneca': 'true',
+            'or.covidOnlineBookingAvailabilities.Vaccination Pfizer': 'true',
+        }
+
+        path = Path('tests/fixtures/ordoclic/search.json')
+        return httpx.Response(200, json=json.loads(path.read_text()))
+
+    client = httpx.Client(transport=httpx.MockTransport(app))
+    dt = list(centre_iterator(client))
+
+    assert dt == {'oui': 'bon'}
