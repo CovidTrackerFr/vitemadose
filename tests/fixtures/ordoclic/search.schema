@@ -152,10 +152,10 @@
             "covidOnlineBookingAvailabilities": {
               "type": "object",
               "properties": {
-                "covidInjection2": {
+                "Vaccination AstraZeneca": {
                   "type": "boolean"
                 },
-                "covidInjection1": {
+                "Vaccination Pfizer": {
                   "type": "boolean"
                 },
                 "antigenic": {
@@ -163,8 +163,8 @@
                 }
               },
               "required": [
-                "covidInjection2",
-                "covidInjection1",
+                "Vaccination AstraZeneca",
+                "Vaccination Pfizer",
                 "antigenic"
               ]
             }

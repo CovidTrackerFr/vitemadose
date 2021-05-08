@@ -46,7 +46,7 @@ def search(client: httpx.Client = DEFAULT_CLIENT):
         r.raise_for_status()
     except httpx.TimeoutException as hex:
         logger.warning(f"request timed out for center: {base_url} (search)")
-        return False
+        return None
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{base_url} returned error {hex.response.status_code}")
         return None
@@ -60,7 +60,7 @@ def get_reasons(entityId, client: httpx.Client = DEFAULT_CLIENT):
         r.raise_for_status()
     except httpx.TimeoutException as hex:
         logger.warning(f"request timed out for center: {base_url}")
-        return False
+        return None
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{base_url} returned error {hex.response.status_code}")
         return None
