@@ -11,7 +11,7 @@ from scraper.profiler import Profiling
 
 timeout = httpx.Timeout(25.0, connect=25.0)
 # change KELDOC_KILL_SWITCH to True to bypass Keldoc scraping
-KELDOC_KILL_SWITCH = False
+KELDOC_KILL_SWITCH = True
 KELDOC_HEADERS = {
     "User-Agent": os.environ.get("KELDOC_API_KEY", ""),
 }
