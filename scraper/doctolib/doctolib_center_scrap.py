@@ -49,18 +49,14 @@ logger = get_logger()
 def parse_doctolib_centers(page_limit=None) -> List[dict]:
     centers = []
     for departement in get_departements():
-        logger.info(
-            f"[Doctolib centers] Parsing pages of departement {departement} through department SEO link"
-        )
+        logger.info(f"[Doctolib centers] Parsing pages of departement {departement} through department SEO link")
         centers_departements = parse_pages_departement(departement)
         if centers_departements == 0:
             raise Exception("No Value found for department {}, crashing")
         centers += centers_departements
 
     centers = list(filter(is_vaccination_center, centers))  # Filter vaccination centers
-    centers = list(
-        map(center_reducer, centers)
-    )  # Remove fields irrelevant to the front
+    centers = list(map(center_reducer, centers))  # Remove fields irrelevant to the front
 
     return centers
 
@@ -70,9 +66,7 @@ def get_departements():
 
     # Guyane uses Maiia and does not have doctolib pages
     NOT_INCLUDED_DEPARTEMENTS = ["Guyane"]
-    with open(
-        "data/input/departements-france.csv", encoding="utf8", newline="\n"
-    ) as csvfile:
+    with open("data/input/departements-france.csv", encoding="utf8", newline="\n") as csvfile:
         reader = csv.DictReader(csvfile)
         departements = [str(row["nom_departement"]) for row in reader]
         [departements.remove(ndep) for ndep in NOT_INCLUDED_DEPARTEMENTS]
@@ -110,9 +104,7 @@ def parse_page_centers_departement(departement, page_id) -> List[dict]:
     data = r.json()
 
     # TODO parallelism can be put here
-    centers_page = [
-        center_from_doctor_dict(payload) for payload in data["data"]["doctors"]
-    ]
+    centers_page = [center_from_doctor_dict(payload) for payload in data["data"]["doctors"]]
     return centers_page
 
 
@@ -127,9 +119,7 @@ def parse_page_centers(page_id) -> List[dict]:
     data = r.json()
 
     # TODO parallelism can be put here
-    centers_page = [
-        center_from_doctor_dict(payload) for payload in data["data"]["doctors"]
-    ]
+    centers_page = [center_from_doctor_dict(payload) for payload in data["data"]["doctors"]]
     return centers_page
 
 
@@ -144,7 +134,7 @@ def center_from_doctor_dict(doctor_dict) -> dict:
     else:
         url_path = doctor_dict["link"]
     _type = center_type(url_path, nom)
-    if _type == "vaccination-center":
+    if _type == VACCINATION_CENTER:
         rdv_site_web = f"https://partners.doctolib.fr{url_path}"
     else:
         rdv_site_web = f"https://www.doctolib.fr{url_path}"
@@ -192,9 +182,7 @@ def get_dict_infos_center_page(url_path: str) -> dict:
         infos_page["address"] = place["full_address"]
         infos_page["long_coor1"] = place.get("longitude")
         infos_page["lat_coor1"] = place.get("latitude")
-        infos_page["com_insee"] = departementUtils.cp_to_insee(
-            place["zipcode"].replace(" ", "").strip()
-        )
+        infos_page["com_insee"] = departementUtils.cp_to_insee(place["zipcode"].replace(" ", "").strip())
 
         # Parse landline number
         if place.get("landline_number"):
@@ -208,9 +196,7 @@ def get_dict_infos_center_page(url_path: str) -> dict:
 
         # Parse visit motives, not sure it's the right place to do it, maybe this function should be refactored
         extracted_visit_motives = output.get("visit_motives", [])
-        infos_page["visit_motives"] = list(
-            map(lambda vm: vm.get("name"), extracted_visit_motives)
-        )
+        infos_page["visit_motives"] = list(map(lambda vm: vm.get("name"), extracted_visit_motives))
 
         return infos_page
     else:
