@@ -121,30 +121,32 @@ def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:  # pragma: no 
     logger.debug(center_data.default())
     return center_data
 
+
 def get_default_fetch_map():
     return {
-            "Doctolib": {
-                "urls": ["https://partners.doctolib.fr", "https://www.doctolib.fr"],
-                "scraper_ptr": doctolib_fetch_slots,
-            },
-            "Keldoc": {
-                "urls": ["https://vaccination-covid.keldoc.com", "https://keldoc.com"],
-                "scraper_ptr": keldoc_fetch_slots,
-            },
-            "Maiia": {"urls": ["https://www.maiia.com"], "scraper_ptr": maiia_fetch_slots},
-            "Mapharma": {
-                "urls": [
-                    "https://mapharma.net/",
-                ],
-                "scraper_ptr": mapharma_fetch_slots,
-            },
-            "Ordoclic": {
-                "urls": [
-                    "https://app.ordoclic.fr/",
-                ],
-                "scraper_ptr": ordoclic_fetch_slots,
-            },
-        }
+        "Doctolib": {
+            "urls": ["https://partners.doctolib.fr", "https://www.doctolib.fr"],
+            "scraper_ptr": doctolib_fetch_slots,
+        },
+        "Keldoc": {
+            "urls": ["https://vaccination-covid.keldoc.com", "https://keldoc.com"],
+            "scraper_ptr": keldoc_fetch_slots,
+        },
+        "Maiia": {"urls": ["https://www.maiia.com"], "scraper_ptr": maiia_fetch_slots},
+        "Mapharma": {
+            "urls": [
+                "https://mapharma.net/",
+            ],
+            "scraper_ptr": mapharma_fetch_slots,
+        },
+        "Ordoclic": {
+            "urls": [
+                "https://app.ordoclic.fr/",
+            ],
+            "scraper_ptr": ordoclic_fetch_slots,
+        },
+    }
+
 
 def get_center_platform(center_url: str, fetch_map: dict = None):
     # Determine platform based on visit URL
@@ -159,6 +161,7 @@ def get_center_platform(center_url: str, fetch_map: dict = None):
             continue
         platform = scraper_name
     return platform
+
 
 @Profiling.measure("Any_slot")
 def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
@@ -183,11 +186,11 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
 def centre_iterator(platforms=None):  # pragma: no cover
     visited_centers_links = set()
     for center in ialternate(
-            ordoclic_centre_iterator(),
-            mapharma_centre_iterator(),
-            maiia_centre_iterator(),
-            doctolib_center_iterator(),
-            gouv_centre_iterator(),
+        ordoclic_centre_iterator(),
+        mapharma_centre_iterator(),
+        maiia_centre_iterator(),
+        doctolib_center_iterator(),
+        gouv_centre_iterator()
     ):
         platform = get_center_platform(center["rdv_site_web"], get_default_fetch_map())
         if platforms and platform and platform.lower() not in platforms:
