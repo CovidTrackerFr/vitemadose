@@ -63,24 +63,11 @@ def scrape(platforms=None) -> None:  # pragma: no cover
                 logger.info(
                     f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés"
                 )
-                logger.info(profiler.print_summary())
-                if compte_centres_avec_dispo == 0:
-                    logger.error(
-                        "Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur"
-                    )
-                    exit(code=1)
-
-                if compte_bloqués > 10:
-                    logger.error(
-                        "Notre IP a été bloquée par le CDN Doctolib plus de 10 fois. Pour éviter de pousser des données erronées, on s'arrête ici"
-                    )
-                    exit(code=2)
         else:
             compte_centres, compte_centres_avec_dispo, compte_bloqués = export_data(centres_cherchés)
             logger.info(
                 f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés"
             )
-            logger.info(profiler.print_summary())
             if compte_centres_avec_dispo == 0:
                 logger.error(
                     "Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur"
@@ -93,6 +80,7 @@ def scrape(platforms=None) -> None:  # pragma: no cover
                 )
                 exit(code=2)
 
+    logger.info(profiler.print_summary())
 
 def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:  # pragma: no cover
     center_data = convert_csv_data_to_center_info(centre)
