@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from dateutil.parser import isoparse
 from pytz import timezone
 
-from scraper.pattern.center_info import get_vaccine_name
+from scraper.pattern.center_info import get_vaccine_name, Vaccine
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE, INTERVAL_SPLIT_DAYS
 from utils.vmd_utils import departementUtils
@@ -18,10 +18,17 @@ logger = logging.getLogger("scraper")
 timeout = httpx.Timeout(15.0, connect=15.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 insee = {}
+paris_tz = timezone("Europe/Paris")
 
 # Filtre pour le rang d'injection
 # Il faut rajouter 2 à la liste si l'on veut les 2èmes injections
 ORDOCLIC_VALID_INJECTION = [1]
+
+CHRONODOSE_VACCINES = {
+    Vaccine.ARNM,
+    Vaccine.PFIZER,
+    Vaccine.MODERNA
+}
 
 # get all slugs
 def search(client: httpx.Client = DEFAULT_CLIENT):
@@ -116,10 +123,7 @@ def is_reason_valid(reason: dict) -> bool:
     return True
 
 
-def count_appointements(appointments: list, start_date: str, end_date: str) -> int:
-    paris_tz = timezone("Europe/Paris")
-    start_dt = isoparse(start_date).astimezone(paris_tz)
-    end_dt = isoparse(end_date).astimezone(paris_tz)
+def count_appointements(appointments: list, start_date: datetime, end_date: datetime) -> int:
     count = 0
 
     if not appointments:
@@ -128,7 +132,7 @@ def count_appointements(appointments: list, start_date: str, end_date: str) -> i
         if not "timeStart" in appointment:
             continue
         slot_dt = isoparse(appointment["timeStart"]).astimezone(paris_tz)
-        if slot_dt >= start_dt and slot_dt < end_dt:
+        if slot_dt >= start_date and slot_dt < end_date:
             count += 1
 
     logger.debug(f"Slots count from {start_date} to {end_date}: {count}")
@@ -136,7 +140,6 @@ def count_appointements(appointments: list, start_date: str, end_date: str) -> i
 
 
 def parse_ordoclic_slots(request: ScraperRequest, availability_data):
-    start_date = request.get_start_date()
     first_availability = None
     if not availability_data:
         return None
@@ -145,12 +148,7 @@ def parse_ordoclic_slots(request: ScraperRequest, availability_data):
     if type(availabilities) is list:
         availability_count = len(availabilities)
     request.update_appointment_count(availability_count)
-    appointment_schedules = request.appointment_schedules
-    for n in INTERVAL_SPLIT_DAYS:
-        n_date = (isoparse(start_date) + timedelta(days=n)).isoformat()
-        appointment_schedules[f"{n}_days"] += count_appointements(availabilities, start_date, n_date)
-    request.update_appointment_schedules(appointment_schedules)
-    logger.debug(f"appointment_schedules: {appointment_schedules}")
+
     if "nextAvailableSlotDate" in availability_data:
         nextAvailableSlotDate = availability_data.get("nextAvailableSlotDate", None)
         if nextAvailableSlotDate is not None:
@@ -186,10 +184,24 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
         if settings["label"] == "booking_settings" and settings["value"].get("option", "any") == "any":
             request.set_appointments_only_by_phone(True)
             return None
-    appointment_schedules = {}
+    # create appointment_schedules array with names and dates
+    appointment_schedules = []
+    start_date = paris_tz.localize(isoparse(request.get_start_date()) + timedelta(days=0))
+    end_date = start_date + timedelta(days=2, seconds=-1)
+    appointment_schedules.append({
+        "name": "chronodose",
+        "from": start_date.isoformat(),
+        "to": end_date.isoformat(),
+        "total": 0
+    })
     for n in INTERVAL_SPLIT_DAYS:
-        appointment_schedules[f"{n}_days"] = 0
-        request.update_appointment_schedules(appointment_schedules)
+        end_date = start_date + timedelta(days=n, seconds=-1)
+        appointment_schedules.append({
+            "name": f"{n}_days",
+            "from": start_date.isoformat(),
+            "to": end_date.isoformat(),
+            "total": 0
+        })
     for professional in profile["publicProfessionals"]:
         medicalStaffId = professional["id"]
         name = professional["fullName"]
@@ -206,8 +218,21 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
             date = parse_ordoclic_slots(request, slots)
             if date is None:
                 continue
+            # add counts to appointment_schedules
+            availabilities = slots.get("slots", None)
+            for i in range(0, len(appointment_schedules)):
+                start_date = isoparse(appointment_schedules[i]["from"])
+                end_date = isoparse(appointment_schedules[i]["to"])
+                # do not count chronodose if wrong vaccine
+                if (appointment_schedules[i]["name"] == "chronodose" and 
+                    get_vaccine_name(reason.get("name", "")) not in CHRONODOSE_VACCINES):
+                    continue
+                appointment_schedules[i]["total"] += count_appointements(availabilities, start_date, end_date)
+            request.update_appointment_schedules(appointment_schedules)
+            logger.debug(f"appointment_schedules: {appointment_schedules}")
             if first_availability is None or date < first_availability:
                 first_availability = date
+    request.update_appointment_schedules(appointment_schedules)
     if first_availability is None:
         return None
     logger.debug(f"appointment_schedules: {request.appointment_schedules}")
