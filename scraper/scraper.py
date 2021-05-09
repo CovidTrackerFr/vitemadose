@@ -315,7 +315,7 @@ def deduplicates_names(departement_centers):
         deduplicated_centers.append(center)
     return deduplicated_centers
 
-def is_in_blocklist(center : CenterInfo, blocklist_urls) -> bool:
+def is_in_blocklist(center: CenterInfo, blocklist_urls) -> bool:
     return center.url in blocklist_urls
 
 def get_blocklist_urls() -> set:
