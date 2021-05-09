@@ -30,7 +30,7 @@ PARTIAL_SCRAPE = max(0, min(PARTIAL_SCRAPE, 1))
 logger = enable_logger_for_production()
 
 
-def export_pool(centres_cherchés: Iterator[CenterInfo], platform: str, outpath_format="data/output/pool_{}.json"):
+def export_pool(centres_cherchés: Iterator[CenterInfo], platform: str, outpath_format="data/output/pool/{}.json"):
     compte_centres = 0
     compte_centres_avec_dispo = 0
     bloqués_doctolib = 0
