@@ -1,38 +1,18 @@
-import sys
-import csv
 import datetime as dt
-import io
 import json
 import os
-import traceback
-from collections import deque
-from multiprocessing import Pool
-from typing import Counter, Iterator, List
-from scraper.profiler import Profiling, ProfiledPool
-
-from scraper.error import ScrapeError, BlockedByDoctolibError
+from typing import Iterator
 
 import pytz
-import requests
 
-from scraper.pattern.center_info import convert_csv_data_to_center_info, CenterInfo
-from scraper.pattern.scraper_request import ScraperRequest
-from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
+from scraper.error import BlockedByDoctolibError
+from scraper.pattern.center_info import CenterInfo
 from utils.vmd_blocklist import get_blocklist_urls, is_in_blocklist
-from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
-from utils.vmd_utils import departementUtils, fix_scrap_urls, is_reserved_center, get_last_scans
-from scraper.doctolib.doctolib import fetch_slots as doctolib_fetch_slots
-from scraper.doctolib.doctolib import center_iterator as doctolib_center_iterator
-from scraper.keldoc.keldoc import fetch_slots as keldoc_fetch_slots
-from scraper.maiia.maiia import centre_iterator as maiia_centre_iterator
-from scraper.maiia.maiia import fetch_slots as maiia_fetch_slots
-from scraper.ordoclic import centre_iterator as ordoclic_centre_iterator
-from scraper.ordoclic import fetch_slots as ordoclic_fetch_slots
-from scraper.mapharma.mapharma import centre_iterator as mapharma_centre_iterator
-from scraper.mapharma.mapharma import fetch_slots as mapharma_fetch_slots
-from random import random
-
-from scraper.scraper import copy_omit_keys, deduplicates_names, sort_center
+from utils.vmd_center_sort import sort_center
+from utils.vmd_duplicated import deduplicates_names
+from utils.vmd_logger import enable_logger_for_production
+from utils.vmd_opendata import copy_omit_keys
+from utils.vmd_utils import departementUtils, is_reserved_center
 
 POOL_SIZE = int(os.getenv("POOL_SIZE", 50))
 PARTIAL_SCRAPE = float(os.getenv("PARTIAL_SCRAPE", 1.0))
