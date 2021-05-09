@@ -31,5 +31,5 @@ jobs:
         run: scripts/install
       - name: "Scraping Keldoc..."
         run: scripts/scrape -p keldoc
-      - name: "Run git status (debug)
+      - name: Run git status (debug)
         run: git status

@@ -31,5 +31,5 @@ jobs:
         run: scripts/install
       - name: "Scraping Doctolib..."
         run: scripts/scrape -p doctolib
-      - name: "Run git status (debug)
+      - name: Run git status (debug)
         run: git status
