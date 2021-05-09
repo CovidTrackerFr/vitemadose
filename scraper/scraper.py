@@ -29,6 +29,7 @@ from .mapharma.mapharma import centre_iterator as mapharma_centre_iterator
 from .mapharma.mapharma import fetch_slots as mapharma_fetch_slots
 from .opendata.opendata import center_iterator as gouv_centre_iterator
 from random import random
+from requests import requests
 
 POOL_SIZE = int(os.getenv("POOL_SIZE", 50))
 PARTIAL_SCRAPE = float(os.getenv("PARTIAL_SCRAPE", 1.0))
