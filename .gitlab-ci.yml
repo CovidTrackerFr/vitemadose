@@ -45,7 +45,7 @@ pages:
     - ovh
   script:
     - mkdir -p public
-    - cp data/output/* public/
+    - cp -r data/output/* public/
     - gzip -k -6 $(find public -type f)
   only:
     - main
