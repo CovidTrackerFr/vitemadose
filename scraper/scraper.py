@@ -241,5 +241,17 @@ def should_use_opendata_csv(rdv_site_web: str) -> bool:
         return False
     return True
 
+
+def ialternate(*iterators):  # pragma: no cover
+    queue = deque(iterators)
+    while len(queue) > 0:
+        iterator = queue.popleft()
+        try:
+            yield next(iterator)
+            queue.append(iterator)
+        except StopIteration:
+            pass
+
+
 if __name__ == "__main__":  # pragma: no cover
     main()
