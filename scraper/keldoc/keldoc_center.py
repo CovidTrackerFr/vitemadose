@@ -18,7 +18,7 @@ KELDOC_HEADERS = {
 KELDOC_SLOT_LIMIT = 50
 DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
 logger = logging.getLogger("scraper")
-
+paris_tz = timezone("Europe/Paris")
 
 class KeldocCenter:
     def __init__(self, request: ScraperRequest, client: httpx.Client = None):
@@ -164,6 +164,18 @@ class KeldocCenter:
         logger.debug(f"Slots count from {start_date} to {end_date}: {count}")
         return count
 
+
+    def get_appointment_schedule(self, appointments: list, start_date: str, end_date: str, schedule_name: str) -> dict:
+        count = self.count_appointements(appointments, start_date, end_date)
+        appointment_schedule = {
+            "name": schedule_name,
+            "from": start_date,
+            "to": end_date,
+            "total": count
+        }
+        return appointment_schedule
+
+
     def find_first_availability(self, start_date: str):
         if not self.vaccine_motives:
             return None, 0, None
@@ -171,9 +183,7 @@ class KeldocCenter:
         # Find next availabilities
         first_availability = None
         appointments = []
-        appointment_schedules = {}
-        for n in INTERVAL_SPLIT_DAYS:
-            appointment_schedules[f"{n}_days"] = 0
+        appointment_schedules = []
         for relevant_motive in self.vaccine_motives:
             if "id" not in relevant_motive or "agendas" not in relevant_motive:
                 continue
@@ -194,7 +204,10 @@ class KeldocCenter:
             if not timetables or "availabilities" not in timetables:
                 continue
         # update appointment_schedules
+        s_date = (paris_tz.localize(isoparse(start_date) + timedelta(days=0))).isoformat()
+        n_date = (paris_tz.localize(isoparse(start_date) + timedelta(days=2, seconds=-1))).isoformat()
+        appointment_schedules.append(self.get_appointment_schedule(appointments, s_date, n_date, "chronodose"))
         for n in INTERVAL_SPLIT_DAYS:
-            n_date = (isoparse(start_date) + timedelta(days=n)).isoformat()
-            appointment_schedules[f"{n}_days"] += self.count_appointements(appointments, start_date, n_date)
+            n_date = (paris_tz.localize(isoparse(start_date) + timedelta(days=n, seconds=-1))).isoformat()
+            appointment_schedules.append(self.get_appointment_schedule(appointments, s_date, n_date, f"{n}_days"))
         return first_availability, len(appointments), appointment_schedules
