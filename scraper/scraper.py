@@ -7,7 +7,7 @@ import os
 import traceback
 from collections import deque
 from multiprocessing import Pool
-from typing import Counter, Iterator
+from typing import Counter, Iterator, List
 from scraper.profiler import Profiling, ProfiledPool
 
 from scraper.error import ScrapeError, BlockedByDoctolibError
@@ -37,14 +37,6 @@ PARTIAL_SCRAPE = max(0, min(PARTIAL_SCRAPE, 1))
 
 logger = enable_logger_for_production()
 
-
-def main():  # pragma: no cover
-    if len(sys.argv) == 1:
-        scrape()
-    else:
-        scrape_debug(sys.argv[1:])
-
-
 def get_start_date():
     return dt.date.today().isoformat()
 
@@ -62,14 +54,15 @@ def scrape_debug(urls):  # pragma: no cover
         logger.info(f'{result.platform!s:16} {result.next_availability or ""!s:32}')
 
 
-def scrape() -> None:  # pragma: no cover
+def scrape(platforms=None) -> None:  # pragma: no cover
     compte_centres = 0
     compte_centres_avec_dispo = 0
     compte_bloqués = 0
     profiler = Profiling()
     with profiler, Pool(POOL_SIZE, **profiler.pool_args()) as pool:
-        centre_iterator_proportion = (c for c in centre_iterator() if random() < PARTIAL_SCRAPE)
-        centres_cherchés = pool.imap_unordered(cherche_prochain_rdv_dans_centre, centre_iterator_proportion, 1)
+        centre_iterator_proportion = (c for c in centre_iterator(platforms=platforms) if random() < PARTIAL_SCRAPE)
+        centres_cherchés = pool.imap_unordered(cherche_prochain_rdv_dans_centre, centre_iterator_proportion,
+                                               1)
 
         centres_cherchés = get_last_scans(centres_cherchés)
         compte_centres, compte_centres_avec_dispo, compte_bloqués = export_data(centres_cherchés)
@@ -220,13 +213,8 @@ def export_data(centres_cherchés: Iterator[CenterInfo], outpath_format="data/ou
 
     return compte_centres, compte_centres_avec_dispo, bloqués_doctolib
 
-
-@Profiling.measure("Any_slot")
-def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
-    if fetch_map is None:
-        # Map platform to implementation.
-        # May be overridden for unit testing purposes.
-        fetch_map = {
+def get_default_fetch_map():
+    return {
             "Doctolib": {
                 "urls": ["https://partners.doctolib.fr", "https://www.doctolib.fr"],
                 "scraper_ptr": doctolib_fetch_slots,
@@ -250,17 +238,30 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
             },
         }
 
-    rdv_site_web = fix_scrap_urls(rdv_site_web)
-    request = ScraperRequest(rdv_site_web, start_date)
-
+def get_center_platform(center_url: str, fetch_map: dict = None):
     # Determine platform based on visit URL
     platform = None
+
+    if not fetch_map:
+        return None
     for scraper_name in fetch_map:
         scraper = fetch_map[scraper_name]
-        scrap = sum([1 if rdv_site_web.startswith(url) else 0 for url in scraper.get("urls", [])])
+        scrap = sum([1 if center_url.startswith(url) else 0 for url in scraper.get("urls", [])])
         if scrap == 0:
             continue
         platform = scraper_name
+    return platform
+
+@Profiling.measure("Any_slot")
+def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
+    if fetch_map is None:
+        # Map platform to implementation.
+        # May be overridden for unit testing purposes.
+        fetch_map = get_default_fetch_map()
+
+    rdv_site_web = fix_scrap_urls(rdv_site_web)
+    request = ScraperRequest(rdv_site_web, start_date)
+    platform = get_center_platform(rdv_site_web, fetch_map=fetch_map)
 
     if not platform:
         return ScraperResult(request, "Autre", None)
@@ -271,15 +272,18 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
     return result
 
 
-def centre_iterator():  # pragma: no cover
+def centre_iterator(platforms=None):  # pragma: no cover
     visited_centers_links = set()
     for center in ialternate(
-        ordoclic_centre_iterator(),
-        mapharma_centre_iterator(),
-        maiia_centre_iterator(),
-        doctolib_center_iterator(),
-        gouv_centre_iterator(),
+            ordoclic_centre_iterator(),
+            mapharma_centre_iterator(),
+            maiia_centre_iterator(),
+            doctolib_center_iterator(),
+            gouv_centre_iterator(),
     ):
+        platform = get_center_platform(center["rdv_site_web"], get_default_fetch_map())
+        if platforms and platform and platform.lower() not in platforms:
+            continue
         if center["rdv_site_web"] not in visited_centers_links:
             visited_centers_links.add(center["rdv_site_web"])
             yield center
@@ -373,7 +377,3 @@ def get_blocklist_urls() -> set:
     path_blocklist = "data/input/centers_blocklist.json"
     centers_blocklist_urls = set([center["url"] for center in json.load(open(path_blocklist))["centers_not_displayed"]])
     return centers_blocklist_urls
-
-
-if __name__ == "__main__":  # pragma: no cover
-    main()
