@@ -5,6 +5,7 @@ import json
 import logging
 
 from datetime import date, datetime, timedelta
+from dateutil.parser import isoparse
 from pytz import timezone
 from urllib.parse import parse_qs
 from bs4 import BeautifulSoup
@@ -13,7 +14,7 @@ from urllib import parse
 
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE, INTERVAL_SPLIT_DAYS
-from scraper.pattern.center_info import get_vaccine_name
+from scraper.pattern.center_info import get_vaccine_name, Vaccine
 from utils.vmd_utils import departementUtils
 from scraper.profiler import Profiling
 
@@ -39,9 +40,16 @@ MAPHARMA_OPEN_DATA_URL_FALLBACK = (
 )
 MAPHARMA_SLOT_LIMIT = 50
 
+CHRONODOSE_VACCINES = {
+    Vaccine.ARNM,
+    Vaccine.PFIZER,
+    Vaccine.MODERNA
+}
+
 timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=MAPHARMA_HEADERS)
 logger = logging.getLogger("scraper")
+paris_tz = timezone("Europe/Paris")
 
 campagnes_valides = []
 campagnes_inconnues = []
@@ -148,15 +156,15 @@ def parse_slots(slots) -> [datetime, int]:
     return first_availability, slot_count
 
 
-def count_appointements(slots: dict, start_date: date, end_date: date) -> int:
+def count_appointements(slots: dict, start_date: datetime, end_date: datetime) -> int:
     count = 0
 
     for day, day_slots in slots.items():
-        day_date = date.fromisoformat(day)
+        day_date = (paris_tz.localize(isoparse(day) + timedelta(days=0)))
         if day_date >= start_date and day_date < end_date:
             count += len(day_slots)
 
-    logger.debug(f"Slots count from {start_date} to {end_date}: {count}")
+    logger.debug(f"Slots count from {start_date.isoformat()} to {end_date.isoformat()}: {count}")
     return count
 
 
@@ -189,10 +197,27 @@ def fetch_slots(
     pharmacy, campagne = get_pharmacy_and_campagne(id_campagne, id_type, opendata_file)
     request.add_vaccine_type(get_vaccine_name(campagne["nom"]))
 
-    appointment_schedules = {}
+    appointment_schedules = []
+    s_date  = (paris_tz.localize(isoparse(request.get_start_date()) + timedelta(days=0)))
+    n_date = s_date + timedelta(days=2, seconds=-1)
+    chronodoses = 0
+    if get_vaccine_name(campagne["nom"]) in CHRONODOSE_VACCINES:
+        chronodoses = count_appointements(day_slots, s_date, n_date)
+    appointment_schedules.append({
+        "name": "chronodose",
+        "from": s_date.isoformat(),
+        "to": n_date.isoformat(),
+        "total": chronodoses
+    })
     for n in INTERVAL_SPLIT_DAYS:
-        n_date = start_date + timedelta(days=n)
-        appointment_schedules[f"{n}_days"] = count_appointements(day_slots, start_date, n_date)
+        n_date = s_date + timedelta(days=n, seconds=-1)
+        appointment_schedules.append({
+            "name": f'{n}_days',
+            "from": s_date.isoformat(),
+            "to": n_date.isoformat(),
+            "total": count_appointements(day_slots, s_date, n_date)
+        })
+
     logger.debug(f"appointment_schedules: {appointment_schedules}")
     request.update_appointment_schedules(appointment_schedules)
 
@@ -246,7 +271,7 @@ def centre_iterator():
         json.dump(opendata, f, indent=2)
     for pharmacy in opendata:
         for campagne in pharmacy.get("campagnes"):
-            if not is_campagne_valid(campagne) or not campagne.get("total_libres", 0):
+            if not is_campagne_valid(campagne):
                 continue
             centre = campagne_to_centre(pharmacy, campagne)
             yield centre
