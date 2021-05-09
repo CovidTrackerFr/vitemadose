@@ -31,8 +31,8 @@ jobs:
         run: scripts/install
       - name: "Scraping Keldoc..."
         run: scripts/scrape -p keldoc
-      - name: Run git status (debug)
-        run: git status
+      - name: Switch to data-auto
+        run: git switch data-auto
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
             commit_message: Automatic Update
