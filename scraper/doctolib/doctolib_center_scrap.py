@@ -1,5 +1,9 @@
 from time import sleep, time
-from scraper.pattern.scraper_result import DRUG_STORE, GENERAL_PRACTITIONER, VACCINATION_CENTER
+from scraper.pattern.scraper_result import (
+    DRUG_STORE,
+    GENERAL_PRACTITIONER,
+    VACCINATION_CENTER,
+)
 from utils.vmd_utils import departementUtils, format_phone_number
 from utils.vmd_logger import get_logger
 from scraper.doctolib.doctolib import DOCTOLIB_HEADERS
@@ -93,7 +97,10 @@ def parse_pages_departement(departement):
 
 
 def parse_page_centers_departement(departement, page_id) -> List[dict]:
-    r = requests.get(BASE_URL_DEPARTEMENT.format(doctolib_urlify(departement), page_id), headers=DOCTOLIB_HEADERS)
+    r = requests.get(
+        BASE_URL_DEPARTEMENT.format(doctolib_urlify(departement), page_id),
+        headers=DOCTOLIB_HEADERS,
+    )
     data = r.json()
 
     # TODO parallelism can be put here
@@ -126,8 +133,12 @@ def center_from_doctor_dict(doctor_dict) -> dict:
         url_path = f"{doctor_dict['link']}?pid={str(doctor_dict['place_id'])}"
     else:
         url_path = doctor_dict["link"]
-    rdv_site_web = f"https://www.doctolib.fr{url_path}"
-    type = center_type(url_path, nom)
+    _type = center_type(url_path, nom)
+    if _type == VACCINATION_CENTER:
+        rdv_site_web = f"https://partners.doctolib.fr{url_path}"
+    else:
+        rdv_site_web = f"https://www.doctolib.fr{url_path}"
+
     dict_infos_center_page = get_dict_infos_center_page(url_path)
     longitude, latitude = get_coordinates(doctor_dict)
     dict_infos_browse_page = {
@@ -137,7 +148,7 @@ def center_from_doctor_dict(doctor_dict) -> dict:
         "address": addresse,
         "long_coor1": longitude,
         "lat_coor1": latitude,
-        "type": type,
+        "type": _type,
         "com_insee": departementUtils.cp_to_insee(code_postal),
     }
     return {**dict_infos_center_page, **dict_infos_browse_page}
