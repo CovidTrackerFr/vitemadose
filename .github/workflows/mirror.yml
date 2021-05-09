@@ -24,5 +24,5 @@ jobs:
         env:
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
         run: |
-          git push "https://vitemadose-github:${GITLAB_TOKEN}@gitlab.com/ViteMaDose/vitemadose.git" main
+          git push "https://vitemadose-github:${GITLAB_TOKEN}@gitlab.com/ViteMaDose/vitemadose.git" main --force
 
