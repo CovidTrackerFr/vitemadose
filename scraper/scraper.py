@@ -1,35 +1,28 @@
-import sys
-import datetime as dt
-import json
+import os
 import os
 import traceback
 from collections import deque
 from multiprocessing import Pool
-from typing import Counter, Iterator, List
-from scraper.profiler import Profiling, ProfiledPool
+from random import random
 
-from scraper.error import ScrapeError, BlockedByDoctolibError
-
-import pytz
-
+from scraper.error import ScrapeError
 from scraper.pattern.center_info import convert_csv_data_to_center_info, CenterInfo
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
+from scraper.profiler import Profiling
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
-from utils.vmd_utils import departementUtils, fix_scrap_urls, is_reserved_center, get_last_scans, get_start_date
-from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
+from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
+from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .export.export_pool import export_pool
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
 from .maiia.maiia import centre_iterator as maiia_centre_iterator
 from .maiia.maiia import fetch_slots as maiia_fetch_slots
-from .ordoclic import centre_iterator as ordoclic_centre_iterator
-from .ordoclic import fetch_slots as ordoclic_fetch_slots
 from .mapharma.mapharma import centre_iterator as mapharma_centre_iterator
 from .mapharma.mapharma import fetch_slots as mapharma_fetch_slots
 from .opendata.opendata import center_iterator as gouv_centre_iterator
-from random import random
-from requests import requests
+from .ordoclic import centre_iterator as ordoclic_centre_iterator
+from .ordoclic import fetch_slots as ordoclic_fetch_slots
 
 POOL_SIZE = int(os.getenv("POOL_SIZE", 50))
 PARTIAL_SCRAPE = float(os.getenv("PARTIAL_SCRAPE", 1.0))
@@ -198,50 +191,6 @@ def centre_iterator(platforms=None):  # pragma: no cover
             visited_centers_links.add(center["rdv_site_web"])
             yield center
 
-def gouv_centre_iterator(outpath_format="data/output/{}.json"):
-    url = "https://www.data.gouv.fr/fr/datasets/r/5cb21a85-b0b0-4a65-a249-806a040ec372"
-    response = requests.get(url)
-    response.raise_for_status()
-
-    reader = io.StringIO(response.content.decode("utf8"))
-    csvreader = csv.DictReader(reader, delimiter=";")
-
-    total = 0
-
-    centres_non_pris_en_compte = {"centres_fermes": {}, "centres_urls_vides": []}
-
-    for row in csvreader:
-
-        row["rdv_site_web"] = fix_scrap_urls(row["rdv_site_web"])
-        if row["centre_fermeture"] == "t":
-            centres_non_pris_en_compte["centres_fermes"][row["gid"]] = row["rdv_site_web"]
-        if should_use_opendata_csv(row["rdv_site_web"]):
-            yield row
-        else:
-            centres_non_pris_en_compte["centres_urls_vides"].append(row["gid"])
-
-        total += 1
-
-    nb_fermes = len(centres_non_pris_en_compte["centres_fermes"])
-    nb_urls_vides = len(centres_non_pris_en_compte["centres_urls_vides"])
-
-    logger.info(f"Il y a {nb_fermes} centres fermes dans le fichier gouv sur un total de {total}")
-
-    nb_urls_vides = len(centres_non_pris_en_compte["centres_urls_vides"])
-    logger.info(f"Il y a {nb_urls_vides} centres avec une URL vide dans le fichier gouv sur un total de {total}")
-
-    outpath = outpath_format.format("centres_non_pris_en_compte_gouv")
-    with open(outpath, "w") as fichier:
-        json.dump(centres_non_pris_en_compte, fichier, indent=2)
-
-
-def should_use_opendata_csv(rdv_site_web: str) -> bool:
-    plateformes_hors_csv = ["doctolib", "maiia"]
-
-    if any(p in rdv_site_web for p in plateformes_hors_csv):
-        return False
-    return True
-
 
 def ialternate(*iterators):  # pragma: no cover
     queue = deque(iterators)
@@ -252,7 +201,3 @@ def ialternate(*iterators):  # pragma: no cover
             queue.append(iterator)
         except StopIteration:
             pass
-
-
-if __name__ == "__main__":  # pragma: no cover
-    main()
