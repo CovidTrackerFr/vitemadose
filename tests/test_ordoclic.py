@@ -103,12 +103,10 @@ def test_getReasons():
 
 def test_get_slots():
     request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-meru-meru", "2021-05-08")
-    fill_appointment_schedule(request)
     data = {'id': 1}
     assert not parse_ordoclic_slots(request, data)
 
     request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-meru-meru", "2021-05-08")
-    fill_appointment_schedule(request)
     data = {'slots': [{'timeEnd': '2021-05-09'}]}
     assert not parse_ordoclic_slots(request, data)
 
@@ -132,15 +130,6 @@ def test_get_profile():
     res = get_profile(request, client)
     assert not res
 
-
-def fill_appointment_schedule(request: ScraperRequest):
-    appointment_schedules = {}
-    for n in INTERVAL_SPLIT_DAYS:
-        appointment_schedules[f"{n}_days"] = 0
-        request.update_appointment_schedules(appointment_schedules)
-    return appointment_schedules
-
-
 def test_parse_ordoclic_slots():
     # Test availability_data vide
     request = ScraperRequest("", "2021-04-05")
@@ -150,21 +139,18 @@ def test_parse_ordoclic_slots():
     empty_slots_file = Path('tests/fixtures/ordoclic/empty_slots.json')
     empty_slots = json.loads(empty_slots_file.read_text())
     request = ScraperRequest("", "2021-04-05")
-    fill_appointment_schedule(request)
     assert parse_ordoclic_slots(request, empty_slots) == None
 
     # Test nextAvailableSlotDate
     nextavailable_slots_file = Path('tests/fixtures/ordoclic/nextavailable_slots.json')
     nextavailable_slots = json.loads(nextavailable_slots_file.read_text())
     request = ScraperRequest("", "2021-04-05")
-    fill_appointment_schedule(request)
     assert parse_ordoclic_slots(request, nextavailable_slots) == isoparse("2021-06-12T11:30:00Z")  # timezone CET
 
     # Test slots disponibles
     full_slots_file = Path('tests/fixtures/ordoclic/full_slots.json')
     full_slots = json.loads(full_slots_file.read_text())
     request = ScraperRequest("", "2021-04-05")
-    fill_appointment_schedule(request)
     first_availability = parse_ordoclic_slots(request, full_slots)
     assert first_availability == isoparse("2021-04-19T16:15:00Z")  # timezone CET
     assert request.appointment_count == 42
@@ -223,7 +209,7 @@ def test_center_iterator():
         }
 
         path = Path('tests/fixtures/ordoclic/search.json')
-        return httpx.Response(200, json=json.loads(path.read_text()))
+        return httpx.Response(200, json=json.loads(path.read_text(encoding='utf8')))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
     generated = list(centre_iterator(client))
