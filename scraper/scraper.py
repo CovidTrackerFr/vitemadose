@@ -1,50 +1,34 @@
-import sys
-import datetime as dt
-import json
+import os
 import os
 import traceback
 from collections import deque
 from multiprocessing import Pool
-from typing import Counter, Iterator
-from scraper.profiler import Profiling
+from random import random
 
-from scraper.error import ScrapeError, BlockedByDoctolibError
-
-import pytz
-
+from scraper.error import ScrapeError
 from scraper.pattern.center_info import convert_csv_data_to_center_info, CenterInfo
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
+from scraper.profiler import Profiling
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
-from utils.vmd_utils import departementUtils, fix_scrap_urls, is_reserved_center, get_last_scans
-from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
+from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
+from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
+from .export.export_pool import export_pool
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
 from .maiia.maiia import centre_iterator as maiia_centre_iterator
 from .maiia.maiia import fetch_slots as maiia_fetch_slots
-from .ordoclic import centre_iterator as ordoclic_centre_iterator
-from .ordoclic import fetch_slots as ordoclic_fetch_slots
 from .mapharma.mapharma import centre_iterator as mapharma_centre_iterator
 from .mapharma.mapharma import fetch_slots as mapharma_fetch_slots
 from .opendata.opendata import center_iterator as gouv_centre_iterator
-from random import random
+from .ordoclic import centre_iterator as ordoclic_centre_iterator
+from .ordoclic import fetch_slots as ordoclic_fetch_slots
 
 POOL_SIZE = int(os.getenv("POOL_SIZE", 50))
 PARTIAL_SCRAPE = float(os.getenv("PARTIAL_SCRAPE", 1.0))
 PARTIAL_SCRAPE = max(0, min(PARTIAL_SCRAPE, 1))
 
 logger = enable_logger_for_production()
-
-
-def main():  # pragma: no cover
-    if len(sys.argv) == 1:
-        scrape()
-    else:
-        scrape_debug(sys.argv[1:])
-
-
-def get_start_date():
-    return dt.date.today().isoformat()
 
 
 def scrape_debug(urls):  # pragma: no cover
@@ -60,33 +44,36 @@ def scrape_debug(urls):  # pragma: no cover
         logger.info(f'{result.platform!s:16} {result.next_availability or ""!s:32}')
 
 
-def scrape() -> None:  # pragma: no cover
+def scrape(platforms=None) -> None:  # pragma: no cover
     compte_centres = 0
     compte_centres_avec_dispo = 0
     compte_bloqués = 0
     profiler = Profiling()
     with profiler, Pool(POOL_SIZE, **profiler.pool_args()) as pool:
-        centre_iterator_proportion = (c for c in centre_iterator() if random() < PARTIAL_SCRAPE)
-        centres_cherchés = pool.imap_unordered(cherche_prochain_rdv_dans_centre, centre_iterator_proportion, 1)
+        centre_iterator_proportion = (c for c in centre_iterator(platforms=platforms) if random() < PARTIAL_SCRAPE)
+        centres_cherchés = pool.imap_unordered(cherche_prochain_rdv_dans_centre, centre_iterator_proportion,
+                                               1)
 
         centres_cherchés = get_last_scans(centres_cherchés)
-        compte_centres, compte_centres_avec_dispo, compte_bloqués = export_data(centres_cherchés)
+        if platforms:
+            for platform in platforms:
+                compte_centres, compte_centres_avec_dispo, compte_bloqués = export_pool(centres_cherchés, platform)
 
-    logger.info(
-        f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés"
-    )
-    logger.info(profiler.print_summary())
-    if compte_centres_avec_dispo == 0:
-        logger.error(
-            "Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur"
-        )
-        exit(code=1)
+                logger.info(
+                    f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés"
+                )
+                logger.info(profiler.print_summary())
+                if compte_centres_avec_dispo == 0:
+                    logger.error(
+                        "Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur"
+                    )
+                    exit(code=1)
 
-    if compte_bloqués > 10:
-        logger.error(
-            "Notre IP a été bloquée par le CDN Doctolib plus de 10 fois. Pour éviter de pousser des données erronées, on s'arrête ici"
-        )
-        exit(code=2)
+                if compte_bloqués > 10:
+                    logger.error(
+                        "Notre IP a été bloquée par le CDN Doctolib plus de 10 fois. Pour éviter de pousser des données erronées, on s'arrête ici"
+                    )
+                    exit(code=2)
 
 
 def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:  # pragma: no cover
@@ -127,96 +114,45 @@ def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:  # pragma: no 
     return center_data
 
 
-def sort_center(center: dict) -> str:
-    return center.get("prochain_rdv", "-") if center else "-"
-
-
-def export_data(centres_cherchés: Iterator[CenterInfo], outpath_format="data/output/{}.json"):
-    compte_centres = 0
-    compte_centres_avec_dispo = 0
-    bloqués_doctolib = 0
-    centres_open_data = []
-    internal_ids = []
-    par_departement = {
-        code: {
-            "version": 1,
-            "last_updated": dt.datetime.now(tz=pytz.timezone("Europe/Paris")).isoformat(),
-            "centres_disponibles": [],
-            "centres_indisponibles": [],
-        }
-        for code in departementUtils.import_departements()
+def get_default_fetch_map():
+    return {
+        "Doctolib": {
+            "urls": ["https://partners.doctolib.fr", "https://www.doctolib.fr"],
+            "scraper_ptr": doctolib_fetch_slots,
+        },
+        "Keldoc": {
+            "urls": ["https://vaccination-covid.keldoc.com", "https://keldoc.com"],
+            "scraper_ptr": keldoc_fetch_slots,
+        },
+        "Maiia": {"urls": ["https://www.maiia.com"], "scraper_ptr": maiia_fetch_slots},
+        "Mapharma": {
+            "urls": [
+                "https://mapharma.net/",
+            ],
+            "scraper_ptr": mapharma_fetch_slots,
+        },
+        "Ordoclic": {
+            "urls": [
+                "https://app.ordoclic.fr/",
+            ],
+            "scraper_ptr": ordoclic_fetch_slots,
+        },
     }
 
-    blocklist = get_blocklist_urls()
-    # This should be duplicate free, they are already checked in
-    is_blocked_center = lambda center: (is_reserved_center(center) or is_in_blocklist(center, blocklist))
-    blocked_centers = [center for center in centres_cherchés if is_blocked_center(center)]
-    exported_centers = [center for center in centres_cherchés if not is_blocked_center(center)]
 
-    for centre in blocked_centers:
-        if centre.has_available_appointments():  # pragma: no cover
-            logger.warn(f"{centre.nom} {centre.internal_id} has available appointments but is blocked")
+def get_center_platform(center_url: str, fetch_map: dict = None):
+    # Determine platform based on visit URL
+    platform = None
 
-    for centre in exported_centers:
-        compte_centres += 1
-
-        centre.nom = centre.nom.strip()
-        if centre.departement not in par_departement:
-            logger.warning(f"Center {centre.nom} ({centre.departement}) could not be attached to a valid department")
+    if not fetch_map:
+        return None
+    for scraper_name in fetch_map:
+        scraper = fetch_map[scraper_name]
+        scrap = sum([1 if center_url.startswith(url) else 0 for url in scraper.get("urls", [])])
+        if scrap == 0:
             continue
-        erreur = centre.erreur
-        if centre.internal_id and centre.internal_id in internal_ids:  # pragma: no cover
-            logger.warning(
-                f"Found a duplicated internal_id: {centre.nom} ({centre.departement}) -> {centre.internal_id}"
-            )
-            continue
-        internal_ids.append(centre.internal_id)
-        skipped_keys = [
-            "prochain_rdv",
-            "internal_id",
-            "metadata",
-            "location",
-            "appointment_count",
-            "appointment_schedules",
-            "erreur",
-            "ville",
-            "type",
-            "vaccine_type",
-            "appointment_by_phone_only",
-            "last_scan_with_availabilities",
-        ]
-        centres_open_data.append(copy_omit_keys(centre.default(), skipped_keys))
-
-        if centre.has_available_appointments():
-            compte_centres_avec_dispo += 1
-            par_departement[centre.departement]["centres_disponibles"].append(centre.default())
-        else:
-            par_departement[centre.departement]["centres_indisponibles"].append(centre.default())
-            if isinstance(erreur, BlockedByDoctolibError):
-                par_departement[centre.departement]["doctolib_bloqué"] = True
-                bloqués_doctolib += 1
-
-    outpath = outpath_format.format("info_centres")
-    with open(outpath, "w") as info_centres:
-        json.dump(par_departement, info_centres, indent=2)
-
-    outpath = outpath_format.format("centres_open_data")
-    with open(outpath, "w") as centres_file:
-        json.dump(centres_open_data, centres_file, indent=2)
-
-    for centre.departement, disponibilités in par_departement.items():
-        disponibilités["last_updated"] = dt.datetime.now(tz=pytz.timezone("Europe/Paris")).isoformat()
-        if "centres_disponibles" in disponibilités:
-            disponibilités["centres_disponibles"] = sorted(
-                deduplicates_names(disponibilités["centres_disponibles"]), key=sort_center
-            )
-        disponibilités["centres_indisponibles"] = deduplicates_names(disponibilités["centres_indisponibles"])
-        outpath = outpath_format.format(centre.departement)
-        logger.debug(f"writing result to {outpath} file")
-        with open(outpath, "w") as outfile:
-            outfile.write(json.dumps(disponibilités, indent=2))
-
-    return compte_centres, compte_centres_avec_dispo, bloqués_doctolib
+        platform = scraper_name
+    return platform
 
 
 @Profiling.measure("Any_slot")
@@ -224,41 +160,11 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
     if fetch_map is None:
         # Map platform to implementation.
         # May be overridden for unit testing purposes.
-        fetch_map = {
-            "Doctolib": {
-                "urls": ["https://partners.doctolib.fr", "https://www.doctolib.fr"],
-                "scraper_ptr": doctolib_fetch_slots,
-            },
-            "Keldoc": {
-                "urls": ["https://vaccination-covid.keldoc.com", "https://keldoc.com"],
-                "scraper_ptr": keldoc_fetch_slots,
-            },
-            "Maiia": {"urls": ["https://www.maiia.com"], "scraper_ptr": maiia_fetch_slots},
-            "Mapharma": {
-                "urls": [
-                    "https://mapharma.net/",
-                ],
-                "scraper_ptr": mapharma_fetch_slots,
-            },
-            "Ordoclic": {
-                "urls": [
-                    "https://app.ordoclic.fr/",
-                ],
-                "scraper_ptr": ordoclic_fetch_slots,
-            },
-        }
+        fetch_map = get_default_fetch_map()
 
     rdv_site_web = fix_scrap_urls(rdv_site_web)
     request = ScraperRequest(rdv_site_web, start_date)
-
-    # Determine platform based on visit URL
-    platform = None
-    for scraper_name in fetch_map:
-        scraper = fetch_map[scraper_name]
-        scrap = sum([1 if rdv_site_web.startswith(url) else 0 for url in scraper.get("urls", [])])
-        if scrap == 0:
-            continue
-        platform = scraper_name
+    platform = get_center_platform(rdv_site_web, fetch_map=fetch_map)
 
     if not platform:
         return ScraperResult(request, "Autre", None)
@@ -269,21 +175,21 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
     return result
 
 
-def centre_iterator():  # pragma: no cover
+def centre_iterator(platforms=None):  # pragma: no cover
     visited_centers_links = set()
     for center in ialternate(
         ordoclic_centre_iterator(),
         mapharma_centre_iterator(),
         maiia_centre_iterator(),
         doctolib_center_iterator(),
-        gouv_centre_iterator(),
+        gouv_centre_iterator()
     ):
+        platform = get_center_platform(center["rdv_site_web"], get_default_fetch_map())
+        if platforms and platform and platform.lower() not in platforms:
+            continue
         if center["rdv_site_web"] not in visited_centers_links:
             visited_centers_links.add(center["rdv_site_web"])
             yield center
-
-def copy_omit_keys(d, omit_keys):
-    return {k: d[k] for k in set(list(d.keys())) - set(omit_keys)}
 
 
 def ialternate(*iterators):  # pragma: no cover
@@ -295,33 +201,3 @@ def ialternate(*iterators):  # pragma: no cover
             queue.append(iterator)
         except StopIteration:
             pass
-
-def deduplicates_names(departement_centers):
-    """
-    Removes unique names by appending city name
-    in par_departement
-
-    see https://github.com/CovidTrackerFr/vitemadose/issues/173
-    """
-    deduplicated_centers = []
-    departement_center_names_count = Counter([center["nom"] for center in departement_centers])
-    names_to_remove = {
-        departement for departement in departement_center_names_count if departement_center_names_count[departement] > 1
-    }
-
-    for center in departement_centers:
-        if center["nom"] in names_to_remove:
-            center["nom"] = f"{center['nom']} - {departementUtils.get_city(center['metadata']['address'])}"
-        deduplicated_centers.append(center)
-    return deduplicated_centers
-
-def is_in_blocklist(center: CenterInfo, blocklist_urls) -> bool:
-    return center.url in blocklist_urls
-
-def get_blocklist_urls() -> set:
-    path_blocklist = "data/input/centers_blocklist.json"
-    centers_blocklist_urls = set([center["url"] for center in json.load(open(path_blocklist))["centers_not_displayed"]])
-    return centers_blocklist_urls
-
-if __name__ == "__main__":  # pragma: no cover
-    main()

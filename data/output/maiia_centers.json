@@ -786,29 +786,6 @@
     }
   },
   {
-    "gid": "6006bebd",
-    "nom": "Centre de vaccination Covid-19 de Labrit",
-    "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/40420-labrit/centre-de-vaccination-covid-19-de-labrit?centerid=6006bebd3b987b202a4042fe",
-    "type": "vaccination-center",
-    "vaccine_type": [
-      "ARNm"
-    ],
-    "com_insee": "40135",
-    "address": "salle de f\u00eates 40420 Labrit",
-    "long_coor1": -0.546164,
-    "lat_coor1": 44.104913,
-    "phone_number": "",
-    "business_hours": {
-      "Lundi": "08:30-12:30 13:30-17:30",
-      "Mardi": "08:30-12:30 13:30-17:30",
-      "Mercredi": "08:30-12:30 13:30-17:30",
-      "Jeudi": "08:30-12:30 13:30-17:30",
-      "Vendredi": "08:30-12:30 13:30-17:30",
-      "Samedi": "08:30-12:30 13:30-17:30",
-      "Dimanche": "08:30-12:30 13:30-17:30"
-    }
-  },
-  {
     "gid": "6006f901",
     "nom": "Centre intercommunal de vaccination de Boll\u00e8ne",
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/84500-bollene/centre-intercommunal-de-vaccination-de-bollene?centerid=6006f901cd19c5464610ec42",
@@ -1126,6 +1103,7 @@
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/01330-villars-les-dombes/centre-de-vaccination-de-dombes?centerid=605a0b7ed254f158baffc4d7",
     "type": "vaccination-center",
     "vaccine_type": [
+      "ARNm",
       "Pfizer-BioNTech"
     ],
     "com_insee": "01443",
@@ -1262,7 +1240,7 @@
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/97351--matoury/centre-de-vaccination---sdis-progt?centerid=6091338ea8637a3a5d932dc1",
     "type": "vaccination-center",
     "vaccine_type": [
-      "ARNm"
+      "Pfizer-BioNTech"
     ],
     "com_insee": "97302",
     "address": "Palais R\u00e9gional Omnisport Georges Theolade Balata Abriba 97351  Matoury",
@@ -1909,7 +1887,6 @@
     "rdv_site_web": "https://www.maiia.com/pharmacie/40800-aire-sur-l-adour/pharmacie-lemarquis?centerid=6034d800698e2a173a312183",
     "type": "drugstore",
     "vaccine_type": [
-      "Janssen",
       "AstraZeneca"
     ],
     "com_insee": "40001",
@@ -1970,6 +1947,28 @@
       "Vendredi": "09:00-12:30 14:00-18:00",
       "Samedi": "09:00-12:30 14:00-18:00",
       "Dimanche": "09:00-12:30 14:00-18:00"
+    }
+  },
+  {
+    "gid": "603cbb8f",
+    "nom": "Pharmacie Couderc",
+    "rdv_site_web": "https://www.maiia.com/pharmacie/69008-lyon/pharmacie-couderc?centerid=603cbb8f68359b1abff14ae3",
+    "type": "drugstore",
+    "vaccine_type": [
+      "AstraZeneca"
+    ],
+    "com_insee": "69388",
+    "address": "76 Boulevard des Etats-Unis 69008 Lyon",
+    "long_coor1": 4.864881,
+    "lat_coor1": 45.732396,
+    "phone_number": "+33478740520",
+    "business_hours": {
+      "Lundi": "08:30-12:15 14:30-19:00",
+      "Mardi": "08:30-12:15 14:30-19:00",
+      "Mercredi": "08:30-12:15 14:30-19:00",
+      "Jeudi": "08:30-12:15 14:30-19:00",
+      "Vendredi": "08:30-12:15 14:30-19:00",
+      "Samedi": "08:30-12:15 15:00-18:00"
     }
   },
   {
@@ -2268,28 +2267,6 @@
       "Jeudi": "09:00-12:15 14:00-19:30",
       "Vendredi": "09:00-12:15 14:00-19:30",
       "Samedi": "09:00-12:00 14:00-19:00"
-    }
-  },
-  {
-    "gid": "60472599",
-    "nom": "Pharmacie Blanchard",
-    "rdv_site_web": "https://www.maiia.com/pharmacie/29200-brest/pharmacie-blanchard?centerid=6047259987f983173a7095c1",
-    "type": "drugstore",
-    "vaccine_type": [
-      "AstraZeneca"
-    ],
-    "com_insee": "29019",
-    "address": "Place Napol\u00e9on II 29200 Brest",
-    "long_coor1": -4.507644,
-    "lat_coor1": 48.404232,
-    "phone_number": "+33298034197",
-    "business_hours": {
-      "Lundi": "08:30-19:30",
-      "Mardi": "08:30-19:30",
-      "Mercredi": "08:30-19:30",
-      "Jeudi": "08:30-19:30",
-      "Vendredi": "08:30-19:30",
-      "Samedi": "08:30-19:00"
     }
   },
   {

@@ -2,6 +2,7 @@
   {
     "nom": "Pharmacie De Saint Quentin",
     "adresse": "4 rue de la Chauss\u00e9e Romaine",
+    "timezone": "Europe/Paris",
     "code_postal": "02100",
     "ville": "SAINT QUENTIN",
     "latitude": 49.844111,
@@ -12,29 +13,138 @@
     "campagnes": [
       {
         "id_campagne": 93,
-        "id_type": 1,
-        "nom": "VACCINATION COVID",
+        "id_type": 0,
+        "nom": "VACCINATION COVID (VACCINATION COVID)",
         "debut": "2021-03-23",
         "fin": "2021-08-11",
-        "prochain_libre": "2021-04-14 09:00",
-        "total_libres": 7,
-        "url": "https://mapharma.net/02100-2?c=93&l=1"
+        "prochain_libre": null,
+        "url": "https://mapharma.net/02100-2?c=93&l=0",
+        "total_libres": 0,
+        "vaccination_covid": true,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 0
+          }
+        ]
       },
       {
         "id_campagne": 217,
-        "id_type": 1,
-        "nom": "Test Antig\u00e9nique COVID19",
+        "id_type": 0,
+        "nom": "Test Antig\u00e9nique COVID19 (Test Antig\u00e9nique COVID19)",
         "debut": "2021-04-14",
         "fin": "2021-08-31",
-        "prochain_libre": "2021-04-18 10:19",
+        "prochain_libre": null,
+        "url": "https://mapharma.net/02100-2?c=217&l=0",
         "total_libres": 0,
-        "url": "https://mapharma.net/02100-2?c=217&l=1"
+        "vaccination_covid": false,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nom": "Pharmacie Des Floralies",
+    "adresse": "41 Avenue de Cannes",
+    "timezone": "Europe/Paris",
+    "code_postal": "06220",
+    "ville": "VALLAURIS",
+    "latitude": 43.57604,
+    "longitude": 7.05004,
+    "telephone": "",
+    "horaires": "lundi: 08:15 \u2013 12:30, 14:30 \u2013 20:00\nmardi: 08:15 \u2013 12:30, 14:30 \u2013 20:00\nmercredi: 08:15 \u2013 12:30, 14:30 \u2013 20:00\njeudi: 08:15 \u2013 12:30, 14:30 \u2013 20:00\nvendredi: 08:15 \u2013 12:30, 14:30 \u2013 20:00\nsamedi: 08:15 \u2013 12:30, 14:30 \u2013 19:30\ndimanche: Ferm\u00e9",
+    "url": "https://mapharma.net/06220",
+    "campagnes": [
+      {
+        "id_campagne": 268,
+        "id_type": 0,
+        "nom": "Astra zeneca (Astra zeneca)",
+        "debut": "2021-05-12",
+        "fin": "2021-05-12",
+        "prochain_libre": "2021-05-12 19:00",
+        "url": "https://mapharma.net/06220?c=268&l=0",
+        "total_libres": 3,
+        "vaccination_covid": false,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 3
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 3
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 3
+          }
+        ]
       }
     ]
   },
   {
     "nom": "Pharmacie Bleas German",
     "adresse": "26 Bld Paul Doumer",
+    "timezone": "Europe/Paris",
     "code_postal": "14780",
     "ville": "LION SUR MER",
     "latitude": 49.301801,
@@ -45,19 +155,332 @@
     "campagnes": [
       {
         "id_campagne": 106,
-        "id_type": 1,
-        "nom": "RDV 2 Vaccin astrazeneca",
+        "id_type": 0,
+        "nom": "RDV 2 Vaccin astrazeneca (RDV 2 Vaccin astrazeneca)",
         "debut": "2021-05-10",
         "fin": "2021-12-31",
-        "prochain_libre": "2021-04-14 14:00",
-        "total_libres": 355,
-        "url": "https://mapharma.net/14780?c=106&l=1"
+        "prochain_libre": "2021-06-08 15:00",
+        "url": "https://mapharma.net/14780?c=106&l=0",
+        "total_libres": 210,
+        "vaccination_covid": false,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nom": "Pharmacie Le Gall",
+    "adresse": "27 RUE HOCHE ET 8 PLACE DE LA VISITATION",
+    "timezone": "Europe/Paris",
+    "code_postal": "49100",
+    "ville": "ANGERS",
+    "latitude": 47.466778,
+    "longitude": -0.557354,
+    "telephone": "",
+    "horaires": "",
+    "url": "https://mapharma.net/49100-2",
+    "campagnes": [
+      {
+        "id_campagne": 231,
+        "id_type": 0,
+        "nom": "Vaccination COVID (AstraZeneca) (Injection (AstraZeneca))",
+        "debut": "2021-04-19",
+        "fin": "2021-05-16",
+        "prochain_libre": "2021-05-10 09:05",
+        "url": "https://mapharma.net/49100-2?c=231&l=0",
+        "total_libres": 76,
+        "vaccination_covid": true,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 16
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 76
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 76
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 76
+          }
+        ]
+      },
+      {
+        "id_campagne": 250,
+        "id_type": 0,
+        "nom": "Vaccination COVID (Janssen) (Injection (Janssen))",
+        "debut": "2021-04-28",
+        "fin": "2021-05-29",
+        "prochain_libre": null,
+        "url": "https://mapharma.net/49100-2?c=250&l=0",
+        "total_libres": 0,
+        "vaccination_covid": true,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nom": "Pharmacie Grand Maine",
+    "adresse": "CENTRE CIAL GRAND MAINE RUE DU GRAND LAUNAY",
+    "timezone": "Europe/Paris",
+    "code_postal": "49100",
+    "ville": "ANGERS",
+    "latitude": 47.468377,
+    "longitude": -0.595416,
+    "telephone": "",
+    "horaires": "",
+    "url": "https://mapharma.net/49100-3",
+    "campagnes": [
+      {
+        "id_campagne": 259,
+        "id_type": 0,
+        "nom": "VACCINATION COVID ASTRAZENECA (VACCINATION COVID ASTRAZENECA)",
+        "debut": "2021-05-03",
+        "fin": "2021-06-20",
+        "prochain_libre": "2021-05-11 10:40",
+        "url": "https://mapharma.net/49100-3?c=259&l=0",
+        "total_libres": 110,
+        "vaccination_covid": true,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 11
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 68
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 110
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nom": "Pharmacie De La Gare",
+    "adresse": "5 ESPLANADE DE LA GARE",
+    "timezone": "Europe/Paris",
+    "code_postal": "49100",
+    "ville": "ANGERS",
+    "latitude": 47.464515,
+    "longitude": -0.557994,
+    "telephone": "",
+    "horaires": "",
+    "url": "https://mapharma.net/49100-5",
+    "campagnes": [
+      {
+        "id_campagne": 201,
+        "id_type": 0,
+        "nom": "Vaccination COVID (AstraZeneca) (1\u00e8re injection (AstraZeneca))",
+        "debut": "2021-04-13",
+        "fin": "2021-05-16",
+        "prochain_libre": "2021-05-10 10:45",
+        "url": "https://mapharma.net/49100-5?c=201&l=0",
+        "total_libres": 17,
+        "vaccination_covid": true,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 8
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 17
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 17
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 17
+          }
+        ]
+      },
+      {
+        "id_campagne": 241,
+        "id_type": 0,
+        "nom": "Vaccination COVID (Janssen) (Injection unique (Janssen))",
+        "debut": "2021-04-26",
+        "fin": "2021-05-09",
+        "prochain_libre": null,
+        "url": "https://mapharma.net/49100-5?c=241&l=0",
+        "total_libres": 0,
+        "vaccination_covid": true,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nom": "Pharmacie Des Halles",
+    "adresse": "78 RUE BAUDRIERE",
+    "timezone": "Europe/Paris",
+    "code_postal": "49100",
+    "ville": "ANGERS",
+    "latitude": 47.47116,
+    "longitude": -0.554808,
+    "telephone": "",
+    "horaires": "",
+    "url": "https://mapharma.net/49100-7",
+    "campagnes": [
+      {
+        "id_campagne": 237,
+        "id_type": 0,
+        "nom": "Vaccination COVID AstraZeneca (Vaccination COVID AstraZeneca)",
+        "debut": "2021-04-27",
+        "fin": "2021-05-15",
+        "prochain_libre": "2021-05-10 10:30",
+        "url": "https://mapharma.net/49100-7?c=237&l=0",
+        "total_libres": 18,
+        "vaccination_covid": true,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 7
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 18
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 18
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 18
+          }
+        ]
       }
     ]
   },
   {
     "nom": "Pharmacie Saint Vincent",
     "adresse": "6 rue Porte Lucas",
+    "timezone": "Europe/Paris",
     "code_postal": "51200",
     "ville": "EPERNAY",
     "latitude": 49.045056,
@@ -72,15 +495,328 @@
         "nom": "Vaccination AZ 2(25 et 26/03)",
         "debut": "2021-06-17",
         "fin": "2021-06-18",
-        "prochain_libre": "2021-06-17",
+        "prochain_libre": "2021-06-17 14:00",
         "total_libres": 24,
-        "url": "https://mapharma.net/51200?c=155&l=1"
+        "url": "https://mapharma.net/51200?c=155&l=1",
+        "vaccination_covid": false,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 24
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nom": "Pharmacie Du Plateau",
+    "adresse": "85 route de Longwy",
+    "timezone": "Europe/Paris",
+    "code_postal": "54350",
+    "ville": "MONT SAINT MARTIN",
+    "latitude": 49.53313,
+    "longitude": 5.764833,
+    "telephone": "",
+    "horaires": "lundi: 08:30 \u2013 12:00, 14:00 \u2013 19:00\nmardi: 08:30 \u2013 12:00, 14:00 \u2013 19:00\nmercredi: 08:30 \u2013 12:00, 14:00 \u2013 19:00\njeudi: 08:30 \u2013 12:00, 14:00 \u2013 19:00\nvendredi: 08:30 \u2013 12:00, 14:00 \u2013 19:00\nsamedi: 08:30 \u2013 12:00, 14:00 \u2013 19:00\ndimanche: Ferm\u00e9",
+    "url": "https://mapharma.net/54350",
+    "campagnes": [
+      {
+        "id_campagne": 71,
+        "id_type": 0,
+        "nom": "1er injection COVID",
+        "debut": "2021-03-08",
+        "fin": "2021-12-31",
+        "prochain_libre": "2021-05-11 09:30",
+        "url": "https://mapharma.net/54350?c=71&l=0",
+        "total_libres": 0,
+        "vaccination_covid": false,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 0
+          }
+        ]
+      },
+      {
+        "id_campagne": 72,
+        "id_type": 0,
+        "nom": "2\u00e9me injection COVID",
+        "debut": "2021-03-08",
+        "fin": "2021-12-31",
+        "prochain_libre": "2021-05-11 09:30",
+        "url": "https://mapharma.net/54350?c=72&l=0",
+        "total_libres": 0,
+        "vaccination_covid": false,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nom": "Pharmacie Gambetta",
+    "adresse": "1 rue Gambetta",
+    "timezone": "Europe/Paris",
+    "code_postal": "54200",
+    "ville": "TOUL",
+    "latitude": 48.674089,
+    "longitude": 5.889575,
+    "telephone": "",
+    "horaires": "lundi: 08:00 \u2013 20:00\nmardi: 08:00 \u2013 20:00\nmercredi: 08:00 \u2013 20:00\njeudi: 08:00 \u2013 20:00\nvendredi: 08:00 \u2013 20:00\nsamedi: 08:00 \u2013 18:00\ndimanche: Ferm\u00e9",
+    "url": "https://mapharma.net/54200",
+    "campagnes": [
+      {
+        "id_campagne": 225,
+        "id_type": 0,
+        "nom": "2\u00e8ME INJ ASTRA 1er et 2\u00e8me groupe (2\u00e8ME INJ ASTRA 1er et 2\u00e8me groupe)",
+        "debut": "2021-06-10",
+        "fin": "2021-06-10",
+        "prochain_libre": "2021-06-10 10:00",
+        "url": "https://mapharma.net/54200?c=225&l=0",
+        "total_libres": 19,
+        "vaccination_covid": false,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 19
+          }
+        ]
+      },
+      {
+        "id_campagne": 226,
+        "id_type": 0,
+        "nom": "2\u00e8me INJ ASTRA 3\u00e8me groupe",
+        "debut": "2021-07-08",
+        "fin": "2021-07-08",
+        "prochain_libre": "2021-07-08 11:45",
+        "url": "https://mapharma.net/54200?c=226&l=0",
+        "total_libres": 0,
+        "vaccination_covid": false,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nom": "Pharmacie De La Dermoyse",
+    "adresse": "12 rue Adrien Michaut",
+    "timezone": "Europe/Paris",
+    "code_postal": "54120",
+    "ville": "BACCARAT",
+    "latitude": 48.448753,
+    "longitude": 6.73713,
+    "telephone": "",
+    "horaires": "lundi: 08:30 \u2013 12:30, 14:00 \u2013 19:00\nmardi: 08:30 \u2013 12:30, 14:00 \u2013 19:00\nmercredi: 08:30 \u2013 12:30, 14:00 \u2013 19:00\njeudi: 08:30 \u2013 12:30, 14:00 \u2013 19:00\nvendredi: 08:30 \u2013 12:30, 14:00 \u2013 19:00\nsamedi: 08:30 \u2013 18:00\ndimanche: Ferm\u00e9",
+    "url": "https://mapharma.net/54120",
+    "campagnes": [
+      {
+        "id_campagne": 242,
+        "id_type": 0,
+        "nom": "Vaccination AstraZeneca 2eme Dose",
+        "debut": "2021-06-12",
+        "fin": "2021-06-12",
+        "prochain_libre": "2021-06-12 12:10",
+        "url": "https://mapharma.net/54120?c=242&l=0",
+        "total_libres": 0,
+        "vaccination_covid": false,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nom": "Pharmacie De La Maison Rouge",
+    "adresse": "21 avenue de la R\u00e9publique",
+    "timezone": "Europe/Paris",
+    "code_postal": "56700",
+    "ville": "HENNEBONT",
+    "latitude": 47.800415,
+    "longitude": -3.285628,
+    "telephone": "",
+    "horaires": "lundi: 09:00 \u2013 12:15, 14:00 \u2013 19:15\nmardi: 09:00 \u2013 12:15, 14:00 \u2013 19:15\nmercredi: 09:00 \u2013 12:15, 14:00 \u2013 19:15\njeudi: 09:00 \u2013 12:15, 14:00 \u2013 19:15\nvendredi: 09:00 \u2013 12:15, 14:00 \u2013 19:15\nsamedi: 09:00 \u2013 12:30\ndimanche: Ferm\u00e9",
+    "url": "https://mapharma.net/56700",
+    "campagnes": [
+      {
+        "id_campagne": 176,
+        "id_type": 0,
+        "nom": "Vaccination covid",
+        "debut": "2021-03-29",
+        "fin": "2021-12-31",
+        "prochain_libre": "2021-05-10 13:30",
+        "url": "https://mapharma.net/56700?c=176&l=0",
+        "total_libres": 0,
+        "vaccination_covid": true,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 0
+          }
+        ]
       }
     ]
   },
   {
     "nom": "Pharmacie De Monchy",
     "adresse": "2 avenue Foch",
+    "timezone": "Europe/Paris",
     "code_postal": "57730",
     "ville": "FOLSCHVILLER",
     "latitude": 49.070592,
@@ -90,20 +826,153 @@
     "url": "https://mapharma.net/57730",
     "campagnes": [
       {
-        "id_campagne": 48,
-        "id_type": 1,
+        "id_campagne": 228,
+        "id_type": 0,
+        "nom": "TEST ANTIGENIQUE (TEST ANTIGENIQUE )",
+        "debut": "2021-04-16",
+        "fin": "2021-05-30",
+        "prochain_libre": "2021-05-14 14:00",
+        "url": "https://mapharma.net/57730?c=228&l=0",
+        "total_libres": 24,
+        "vaccination_covid": false,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 8
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 24
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 24
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nom": "Pharmacie Des Remparts",
+    "adresse": "2 rue Gambetta",
+    "timezone": "Europe/Paris",
+    "code_postal": "59530",
+    "ville": "LE QUESNOY",
+    "latitude": 50.247392,
+    "longitude": 3.637413,
+    "telephone": "",
+    "horaires": "lundi: 13:30 \u2013 19:30\nmardi: 08:30 \u2013 12:15, 13:45 \u2013 19:30\nmercredi: 08:30 \u2013 12:15, 13:45 \u2013 19:30\njeudi: 08:30 \u2013 12:15, 13:45 \u2013 19:30\nvendredi: 08:30 \u2013 12:15, 13:45 \u2013 19:30\nsamedi: 08:30 \u2013 12:30\ndimanche: Ferm\u00e9",
+    "url": "https://mapharma.net/59530",
+    "campagnes": [
+      {
+        "id_campagne": 102,
+        "id_type": 0,
+        "nom": "Vaccination covid19",
+        "debut": "2021-03-12",
+        "fin": "2021-10-12",
+        "prochain_libre": "2021-05-10 17:00",
+        "url": "https://mapharma.net/59530?c=102&l=0",
+        "total_libres": 0,
+        "vaccination_covid": true,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nom": "Pharmacie De L'Eglise",
+    "adresse": "6 Place de l'Eglise",
+    "timezone": "Europe/Paris",
+    "code_postal": "60550",
+    "ville": "VERNEUIL EN HALATTE",
+    "latitude": 49.274876,
+    "longitude": 2.517184,
+    "telephone": "",
+    "horaires": "",
+    "url": "https://mapharma.net/60550",
+    "campagnes": [
+      {
+        "id_campagne": 64,
+        "id_type": 0,
         "nom": "Vaccination Covid19",
-        "debut": "2021-03-22",
-        "fin": "2021-06-10",
-        "prochain_libre": "2021-04-18 00:00",
-        "total_libres": 158,
-        "url": "https://mapharma.net/57730?c=48&l=1"
+        "debut": "2021-03-19",
+        "fin": "2021-07-19",
+        "prochain_libre": "2021-05-10 09:00",
+        "url": "https://mapharma.net/60550?c=64&l=0",
+        "total_libres": 0,
+        "vaccination_covid": true,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 0
+          }
+        ]
       }
     ]
   },
   {
     "nom": "Pharmacie Du Pont De L'Europe",
     "adresse": "9 Rue de l'Abb\u00e9 Fran\u00e7ois Xavier Scherer",
+    "timezone": "Europe/Paris",
     "code_postal": "67000",
     "ville": "STRASBOURG",
     "latitude": 48.571632,
@@ -114,29 +983,138 @@
     "campagnes": [
       {
         "id_campagne": 120,
-        "id_type": 1,
-        "nom": "Tests Covid19 (Test Antig\u00e9nique)",
+        "id_type": 0,
+        "nom": "Tests Covid19 (Test Antig\u00e9nique, Test S\u00e9rologique)",
         "debut": "2021-03-15",
         "fin": "2021-12-31",
-        "prochain_libre": "2021-04-14 09:30",
-        "total_libres": 2119,
-        "url": "https://mapharma.net/67000?c=120&l=1"
+        "prochain_libre": "2021-05-10 09:30",
+        "url": "https://mapharma.net/67000?c=120&l=0",
+        "total_libres": 2140,
+        "vaccination_covid": false,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 48
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 240
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 972
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 1704
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nom": "Pharmacie Du Centre",
+    "adresse": "97 route de Neuf-Brisach",
+    "timezone": "Europe/Paris",
+    "code_postal": "68000",
+    "ville": "COLMAR",
+    "latitude": 48.080143,
+    "longitude": 7.379882,
+    "telephone": "",
+    "horaires": "lundi: 08:00 \u2013 20:00\nmardi: 08:00 \u2013 20:00\nmercredi: 08:00 \u2013 20:00\njeudi: 08:00 \u2013 20:00\nvendredi: 08:00 \u2013 20:00\nsamedi: 08:00 \u2013 20:00\ndimanche: Ferm\u00e9",
+    "url": "https://mapharma.net/68000-1",
+    "campagnes": [
+      {
+        "id_campagne": 222,
+        "id_type": 0,
+        "nom": "Di\u00e9t\u00e9tique (Di\u00e9t\u00e9tique BILAN)",
+        "debut": "2021-04-15",
+        "fin": "2022-04-15",
+        "prochain_libre": "2021-05-10 09:00",
+        "url": "https://mapharma.net/68000-1?c=222&l=0",
+        "total_libres": 1377,
+        "vaccination_covid": false,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 24
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 108
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 407
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 625
+          }
+        ]
       },
       {
-        "id_campagne": 120,
-        "id_type": 2,
-        "nom": "Tests Covid19 (Test S\u00e9rologique)",
-        "debut": "2021-03-15",
-        "fin": "2021-12-31",
-        "prochain_libre": "2021-04-14 09:30",
-        "total_libres": 2119,
-        "url": "https://mapharma.net/67000?c=120&l=2"
+        "id_campagne": 270,
+        "id_type": 0,
+        "nom": "CAUDALIE (CAUDALIE)",
+        "debut": "2021-05-20",
+        "fin": "2021-05-20",
+        "prochain_libre": "2021-05-20 09:00",
+        "url": "https://mapharma.net/68000-1?c=270&l=0",
+        "total_libres": 14,
+        "vaccination_covid": false,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 14
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 14
+          }
+        ]
       }
     ]
   },
   {
     "nom": "Pharma 6",
     "adresse": "230-232 rue de Belfort",
+    "timezone": "Europe/Paris",
     "code_postal": "68200",
     "ville": "MULHOUSE",
     "latitude": 47.738914,
@@ -146,43 +1124,191 @@
     "url": "https://mapharma.net/68200",
     "campagnes": [
       {
-        "id_campagne": 210,
-        "id_type": 1,
-        "nom": "Vaccination Covid 2eme injection",
-        "debut": "2021-05-11",
-        "fin": "2021-05-11",
+        "id_campagne": 168,
+        "id_type": 0,
+        "nom": "VACCINATION COVID",
+        "debut": "2021-04-02",
+        "fin": "2021-09-30",
         "prochain_libre": "2021-05-11 10:00",
-        "total_libres": 12,
-        "url": "https://mapharma.net/68200?c=210&l=1"
+        "url": "https://mapharma.net/68200?c=168&l=0",
+        "total_libres": 0,
+        "vaccination_covid": true,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 0
+          }
+        ]
+      },
+      {
+        "id_campagne": 227,
+        "id_type": 0,
+        "nom": "Vaccin",
+        "debut": "2021-06-14",
+        "fin": "2021-06-20",
+        "prochain_libre": "2021-06-18 10:30",
+        "url": "https://mapharma.net/68200?c=227&l=0",
+        "total_libres": 0,
+        "vaccination_covid": false,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 0
+          }
+        ]
       }
     ]
   },
   {
-    "nom": "Pharmacie Des Lacs",
-    "adresse": "158 rue de l'H\u00f4tel de Ville",
-    "code_postal": "88400",
-    "ville": "XONRUPT LONGEMER",
-    "latitude": 48.083113,
-    "longitude": 6.9266,
+    "nom": "Pharmacie Saint Joseph",
+    "adresse": "2 Avenue d'Haouza",
+    "timezone": "Europe/Paris",
+    "code_postal": "72100",
+    "ville": "LE MANS",
+    "latitude": 47.985448,
+    "longitude": 0.223431,
     "telephone": "",
-    "horaires": "lundi: 09:00 \u2013 12:00, 14:00 \u2013 18:00\nmardi: 09:00 \u2013 12:00, 14:00 \u2013 18:00\nmercredi: 09:00 \u2013 12:00, 14:00 \u2013 18:00\njeudi: 09:00 \u2013 12:00, 14:00 \u2013 18:00\nvendredi: 09:00 \u2013 12:00, 14:00 \u2013 18:00\nsamedi: 09:00 \u2013 12:00\ndimanche: Ferm\u00e9",
-    "url": "https://mapharma.net/88400",
+    "horaires": "lundi: 08:00 \u2013 20:30\nmardi: 08:00 \u2013 20:30\nmercredi: 08:00 \u2013 20:30\njeudi: 08:00 \u2013 20:30\nvendredi: 08:00 \u2013 20:30\nsamedi: 08:00 \u2013 13:00\ndimanche: Ferm\u00e9",
+    "url": "https://mapharma.net/72100",
     "campagnes": [
       {
-        "id_campagne": 92,
-        "id_type": 1,
-        "nom": "Vaccination Covid-19",
-        "debut": "2021-03-22",
-        "fin": "2021-04-30",
-        "prochain_libre": "2021-04-18",
+        "id_campagne": 185,
+        "id_type": 0,
+        "nom": "Vaccination covid",
+        "debut": "2021-03-31",
+        "fin": "2021-12-31",
+        "prochain_libre": "2021-05-10 10:00",
+        "url": "https://mapharma.net/72100?c=185&l=0",
         "total_libres": 0,
-        "url": "https://mapharma.net/88400?c=92&l=1"
+        "vaccination_covid": true,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nom": "Pharmacie St Nicolas",
+    "adresse": "Centre Leclerc",
+    "timezone": "Europe/Paris",
+    "code_postal": "86500",
+    "ville": "MONTMORILLON",
+    "latitude": 46.418192,
+    "longitude": 0.850924,
+    "telephone": "",
+    "horaires": "lundi: 08:30 \u2013 20:00\nmardi: 08:30 \u2013 20:00\nmercredi: 08:30 \u2013 20:00\njeudi: 08:30 \u2013 20:00\nvendredi: 08:30 \u2013 20:00\nsamedi: 08:30 \u2013 20:00\ndimanche: Ferm\u00e9",
+    "url": "https://mapharma.net/86500",
+    "campagnes": [
+      {
+        "id_campagne": 163,
+        "id_type": 0,
+        "nom": "Vaccination covid",
+        "debut": "2021-03-25",
+        "fin": "2021-12-31",
+        "prochain_libre": "2021-05-13 13:30",
+        "url": "https://mapharma.net/86500?c=163&l=0",
+        "total_libres": 0,
+        "vaccination_covid": true,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 0
+          }
+        ]
       }
     ]
   },
   {
     "nom": "Pharmacie Gely Kst",
     "adresse": "angle rue Lamartine & Isambert",
+    "timezone": "America/Martinique",
     "code_postal": "97200",
     "ville": "FORT DE FRANCE",
     "latitude": 14.606159,
@@ -193,13 +1319,41 @@
     "campagnes": [
       {
         "id_campagne": 60,
-        "id_type": 1,
-        "nom": "Vaccination covid 1 injection",
+        "id_type": 0,
+        "nom": "Vaccination covid 1 injection (Vaccination covid 1 injection)",
         "debut": "2021-03-29",
         "fin": "2021-05-15",
-        "prochain_libre": "2021-04-14 08:00",
-        "total_libres": 216,
-        "url": "https://mapharma.net/97200?c=60&l=1"
+        "prochain_libre": "2021-05-12 08:00",
+        "url": "https://mapharma.net/97200?c=60&l=0",
+        "total_libres": 48,
+        "vaccination_covid": true,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 48
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 48
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 48
+          }
+        ]
       },
       {
         "id_campagne": 81,
@@ -207,9 +1361,37 @@
         "nom": "Entretien di\u00e9t\u00e9tique",
         "debut": "2021-03-11",
         "fin": "2022-12-31",
-        "prochain_libre": "2021-04-14",
-        "total_libres": 320,
-        "url": "https://mapharma.net/97200?c=81&l=1"
+        "prochain_libre": "2021-05-12 10:00",
+        "total_libres": 310,
+        "url": "https://mapharma.net/97200?c=81&l=1",
+        "vaccination_covid": false,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 18
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 72
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 126
+          }
+        ]
       },
       {
         "id_campagne": 82,
@@ -217,9 +1399,37 @@
         "nom": "Entretien micro nutrition aroma",
         "debut": "2021-03-12",
         "fin": "2022-12-30",
-        "prochain_libre": "2021-04-16",
-        "total_libres": 503,
-        "url": "https://mapharma.net/97200?c=82&l=1"
+        "prochain_libre": "2021-05-14 09:00",
+        "total_libres": 1344,
+        "url": "https://mapharma.net/97200?c=82&l=1",
+        "vaccination_covid": false,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 28
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 112
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 196
+          }
+        ]
       },
       {
         "id_campagne": 193,
@@ -227,9 +1437,37 @@
         "nom": "Test Antigeniques COVID Naso-Pharynges",
         "debut": "2021-04-01",
         "fin": "2021-12-31",
-        "prochain_libre": "2021-04-14",
-        "total_libres": 2627,
-        "url": "https://mapharma.net/97200?c=193&l=1"
+        "prochain_libre": "2021-05-10 08:00",
+        "total_libres": 2698,
+        "url": "https://mapharma.net/97200?c=193&l=1",
+        "vaccination_covid": false,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 38
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 152
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 608
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 1064
+          }
+        ]
       },
       {
         "id_campagne": 196,
@@ -237,19 +1475,179 @@
         "nom": "Test Covid TROC Sanguins",
         "debut": "2021-04-01",
         "fin": "2021-12-31",
-        "prochain_libre": "2021-04-14",
-        "total_libres": 2512,
-        "url": "https://mapharma.net/97200?c=196&l=1"
+        "prochain_libre": "2021-05-10 08:00",
+        "total_libres": 2528,
+        "url": "https://mapharma.net/97200?c=196&l=1",
+        "vaccination_covid": false,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 32
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 144
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 576
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 1008
+          }
+        ]
       },
       {
         "id_campagne": 203,
-        "id_type": 1,
-        "nom": "PILULIERS",
+        "id_type": 0,
+        "nom": "PILULIERS (PILULIERS)",
         "debut": "2021-04-01",
         "fin": "2021-12-31",
-        "prochain_libre": "2021-04-14 08:00",
-        "total_libres": 6620,
-        "url": "https://mapharma.net/97200?c=203&l=1"
+        "prochain_libre": "2021-05-10 08:00",
+        "url": "https://mapharma.net/97200?c=203&l=0",
+        "total_libres": 6688,
+        "vaccination_covid": false,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 76
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 380
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 1520
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 2660
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nom": "Pharmacie Du Petit Bazar",
+    "adresse": "1631 Avenue \u00cele-de-France",
+    "timezone": "Indian/Reunion",
+    "code_postal": "97440",
+    "ville": "SAINT ANDRE",
+    "latitude": -20.945999,
+    "longitude": 55.647806,
+    "telephone": "",
+    "horaires": "",
+    "url": "https://mapharma.net/97440-2",
+    "campagnes": [
+      {
+        "id_campagne": 162,
+        "id_type": 0,
+        "nom": "Vaccination covid",
+        "debut": "2021-04-04",
+        "fin": "2021-12-31",
+        "prochain_libre": "2021-05-10 10:00",
+        "url": "https://mapharma.net/97440-2?c=162&l=0",
+        "total_libres": 0,
+        "vaccination_covid": true,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nom": "Pharmacie De L'Ocean Indien",
+    "adresse": "133 Avenue du Mahatma Gandhi",
+    "timezone": "Indian/Reunion",
+    "code_postal": "97441",
+    "ville": "SAINTE SUZANNE",
+    "latitude": -20.932197,
+    "longitude": 55.641358,
+    "telephone": "",
+    "horaires": "lundi: 08:30 \u2013 19:30\nmardi: 08:30 \u2013 19:30\nmercredi: 08:30 \u2013 19:30\njeudi: 08:30 \u2013 19:30\nvendredi: 08:30 \u2013 19:30\nsamedi: 08:30 \u2013 18:30\ndimanche: Ferm\u00e9",
+    "url": "https://mapharma.net/97441-1",
+    "campagnes": [
+      {
+        "id_campagne": 277,
+        "id_type": 0,
+        "nom": "Vaccin Covid19 (Vaccin Covid19)",
+        "debut": "2021-05-17",
+        "fin": "2021-06-13",
+        "prochain_libre": "2021-05-18 09:00",
+        "url": "https://mapharma.net/97441-1?c=277&l=0",
+        "total_libres": 63,
+        "vaccination_covid": true,
+        "libres_details": [
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-09",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-10",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-05-15",
+            "libres": 0
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-05",
+            "libres": 42
+          },
+          {
+            "debut": "2021-05-09",
+            "fin": "2021-06-26",
+            "libres": 63
+          }
+        ]
       }
     ]
   }
