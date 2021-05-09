@@ -126,7 +126,7 @@ def center_from_doctor_dict(doctor_dict) -> dict:
         url_path = f"{doctor_dict['link']}?pid={str(doctor_dict['place_id'])}"
     else:
         url_path = doctor_dict["link"]
-    rdv_site_web = f"https://partners.doctolib.fr{url_path}"
+    rdv_site_web = f"https://www.doctolib.fr{url_path}"
     type = center_type(url_path, nom)
     dict_infos_center_page = get_dict_infos_center_page(url_path)
     longitude, latitude = get_coordinates(doctor_dict)
@@ -263,7 +263,7 @@ def center_reducer(center: dict) -> dict:
     return center
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     centers = parse_doctolib_centers()
     path_out = "data/output/doctolib-centers.json"
     logger.info(f"Found {len(centers)} centers on Doctolib")

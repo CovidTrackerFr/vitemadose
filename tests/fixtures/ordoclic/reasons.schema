@@ -1,0 +1,130 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "integer"
+          },
+          "color": {
+            "type": "string"
+          },
+          "canBookOnline": {
+            "type": "boolean"
+          },
+          "professionalId": {
+            "type": "string"
+          },
+          "reasonTypeId": {
+            "type": "integer"
+          },
+          "reasonType": {
+            "type": "string"
+          },
+          "isAcceptNewPatient": {
+            "type": "boolean"
+          },
+          "advice": {
+            "type": "string"
+          },
+          "entityId": {
+            "type": "null"
+          },
+          "isTcsMode": {
+            "type": "boolean"
+          },
+          "defaultDocuments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "documentId": {
+                  "type": "string"
+                },
+                "typeId": {
+                  "type": "integer"
+                },
+                "favoriteLabel": {
+                  "type": "string"
+                },
+                "permanentAccessCode": {
+                  "type": "string"
+                },
+                "notifiedAt": {
+                  "type": "null"
+                },
+                "reasonId": {
+                  "type": "null"
+                },
+                "documentNotificationCondition": {
+                  "type": "integer"
+                },
+                "documentNotificationTimeValueInHours": {
+                  "type": "integer"
+                },
+                "multiFormType": {
+                  "type": "string"
+                },
+                "needPatientSignature": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "documentId",
+                "typeId",
+                "favoriteLabel",
+                "permanentAccessCode",
+                "notifiedAt",
+                "reasonId",
+                "documentNotificationCondition",
+                "documentNotificationTimeValueInHours",
+                "multiFormType",
+                "needPatientSignature"
+              ]
+            }
+          },
+          "documentNotificationCondition": {
+            "type": "integer"
+          },
+          "documentNotificationTimeValueInHours": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "duration",
+          "color",
+          "canBookOnline",
+          "professionalId",
+          "reasonTypeId",
+          "reasonType",
+          "isAcceptNewPatient",
+          "advice",
+          "entityId",
+          "isTcsMode",
+          "defaultDocuments",
+          "documentNotificationCondition",
+          "documentNotificationTimeValueInHours"
+        ]
+      }
+    },
+    "limitedMode": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "reasons",
+    "limitedMode"
+  ]
+}

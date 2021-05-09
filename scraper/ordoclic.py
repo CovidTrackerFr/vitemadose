@@ -46,7 +46,7 @@ def search(client: httpx.Client = DEFAULT_CLIENT):
         r.raise_for_status()
     except httpx.TimeoutException as hex:
         logger.warning(f"request timed out for center: {base_url} (search)")
-        return False
+        return None
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{base_url} returned error {hex.response.status_code}")
         return None
@@ -60,7 +60,7 @@ def get_reasons(entityId, client: httpx.Client = DEFAULT_CLIENT):
         r.raise_for_status()
     except httpx.TimeoutException as hex:
         logger.warning(f"request timed out for center: {base_url}")
-        return False
+        return None
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{base_url} returned error {hex.response.status_code}")
         return None
@@ -92,7 +92,7 @@ def get_slots(entityId, medicalStaffId, reasonId, start_date, end_date, client: 
 def get_profile(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     slug = request.get_url().rsplit("/", 1)[-1]
     prof = request.get_url().rsplit("/", 2)[-2]
-    if prof in ["pharmacien", "medecin"]:
+    if prof in ["pharmacien", "medecin"]:  # pragma: no cover
         base_url = f"https://api.ordoclic.fr/v1/professionals/profile/{slug}"
     else:
         base_url = f"https://api.ordoclic.fr/v1/public/entities/profile/{slug}"
@@ -122,7 +122,11 @@ def count_appointements(appointments: list, start_date: str, end_date: str) -> i
     end_dt = isoparse(end_date).astimezone(paris_tz)
     count = 0
 
+    if not appointments:
+        return count
     for appointment in appointments:
+        if not "timeStart" in appointment:
+            continue
         slot_dt = isoparse(appointment["timeStart"]).astimezone(paris_tz)
         if slot_dt >= start_dt and slot_dt < end_dt:
             count += 1
@@ -172,7 +176,9 @@ def parse_ordoclic_slots(request: ScraperRequest, availability_data):
 @Profiling.measure("ordoclic_slot")
 def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     first_availability = None
-    profile = get_profile(request)
+    profile = get_profile(request, client)
+    if not profile:
+        return None
     slug = profile["profileSlug"]
     entityId = profile["entityId"]
     attributes = profile.get("attributeValues")
@@ -208,8 +214,8 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     return first_availability.isoformat()
 
 
-def centre_iterator():
-    items = search()
+def centre_iterator(client: httpx.Client = DEFAULT_CLIENT):
+    items = search(client)
     for item in items["items"]:
         # plusieur types possibles (pharmacie, maison mediacle, pharmacien, medecin, ...), pour l'instant on filtre juste les pharmacies
         if "type" in item:

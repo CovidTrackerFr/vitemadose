@@ -130,7 +130,7 @@ class KeldocCenter:
         calendar_params = {
             "from": start_date,
             "to": end_date,
-            "agenda_ids[]": "&agenda_ids[]".join(str(agenda_id) for agenda_id in agenda_ids),
+            "agenda_ids[]": agenda_ids,
         }
         try:
             calendar_req = self.client.get(calendar_url, params=calendar_params)
