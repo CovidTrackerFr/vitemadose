@@ -1,7 +1,5 @@
 import sys
-import csv
 import datetime as dt
-import io
 import json
 import os
 import traceback
@@ -13,7 +11,6 @@ from scraper.profiler import Profiling, ProfiledPool
 from scraper.error import ScrapeError, BlockedByDoctolibError
 
 import pytz
-import requests
 
 from scraper.pattern.center_info import convert_csv_data_to_center_info, CenterInfo
 from scraper.pattern.scraper_request import ScraperRequest
@@ -30,6 +27,7 @@ from .ordoclic import centre_iterator as ordoclic_centre_iterator
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
 from .mapharma.mapharma import centre_iterator as mapharma_centre_iterator
 from .mapharma.mapharma import fetch_slots as mapharma_fetch_slots
+from .opendata.opendata import center_iterator as gouv_centre_iterator
 from random import random
 
 POOL_SIZE = int(os.getenv("POOL_SIZE", 50))
@@ -199,7 +197,6 @@ def centre_iterator(platforms=None):  # pragma: no cover
             visited_centers_links.add(center["rdv_site_web"])
             yield center
 
-
 def gouv_centre_iterator(outpath_format="data/output/{}.json"):
     url = "https://www.data.gouv.fr/fr/datasets/r/5cb21a85-b0b0-4a65-a249-806a040ec372"
     response = requests.get(url)
@@ -244,13 +241,5 @@ def should_use_opendata_csv(rdv_site_web: str) -> bool:
         return False
     return True
 
-
-def ialternate(*iterators):  # pragma: no cover
-    queue = deque(iterators)
-    while len(queue) > 0:
-        iterator = queue.popleft()
-        try:
-            yield next(iterator)
-            queue.append(iterator)
-        except StopIteration:
-            pass
+if __name__ == "__main__":  # pragma: no cover
+    main()
