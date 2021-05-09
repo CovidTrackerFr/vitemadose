@@ -73,6 +73,8 @@ class Profiling:
         return decorator
 
     def print_summary(self, keys=None):
+        if not hasattr(self, 'summary'):
+            return
         summary = self.summary
         keys = keys if keys is not None else sorted(summary.keys())
         datatable = [["Section", "Count", "Min", "Avg", "50%", "80%", "95%", "Max"]]

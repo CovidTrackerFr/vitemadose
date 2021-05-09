@@ -220,3 +220,7 @@ def append_date_days(mydate: str, days: int):
     mydate = date.fromisoformat(mydate)
     newdate = mydate + timedelta(days=days)
     return newdate.isoformat()
+
+
+def get_start_date():
+    return dt.date.today().isoformat()
