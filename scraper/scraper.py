@@ -1,5 +1,4 @@
 import os
-import os
 import traceback
 from collections import deque
 from multiprocessing import Pool
@@ -52,8 +51,7 @@ def scrape(platforms=None) -> None:  # pragma: no cover
     profiler = Profiling()
     with profiler, Pool(POOL_SIZE, **profiler.pool_args()) as pool:
         centre_iterator_proportion = (c for c in centre_iterator(platforms=platforms) if random() < PARTIAL_SCRAPE)
-        centres_cherchés = pool.imap_unordered(cherche_prochain_rdv_dans_centre, centre_iterator_proportion,
-                                               1)
+        centres_cherchés = pool.imap_unordered(cherche_prochain_rdv_dans_centre, centre_iterator_proportion, 1)
 
         centres_cherchés = get_last_scans(centres_cherchés)
         if platforms:
