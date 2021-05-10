@@ -33,7 +33,7 @@ jobs:
       - name: "Download platform files..."
         run: |
           cd /tmp
-          git clone --branch https://github.com/CovidTrackerFr/vitemadose repo/
+          git clone --branch data-auto https://github.com/CovidTrackerFr/vitemadose repo/
           cp repo/data/output/pool/* data/output/pool/
       - name: "Merge scrapers..."
         run: |
