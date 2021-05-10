@@ -154,7 +154,7 @@ class DoctolibSlots:
                         first_availability = sdate
 
                     request.update_appointment_count(request.appointment_count + appt)
-                if appointment_schedules is not None:
+                if appointment_schedules:
                     request.update_appointment_schedules(appointment_schedules)
 
         return first_availability
