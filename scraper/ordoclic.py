@@ -24,11 +24,7 @@ paris_tz = timezone("Europe/Paris")
 # Il faut rajouter 2 à la liste si l'on veut les 2èmes injections
 ORDOCLIC_VALID_INJECTION = [1]
 
-CHRONODOSE_VACCINES = {
-    Vaccine.ARNM,
-    Vaccine.PFIZER,
-    Vaccine.MODERNA
-}
+CHRONODOSE_VACCINES = {Vaccine.ARNM, Vaccine.PFIZER, Vaccine.MODERNA}
 
 # get all slugs
 def search(client: httpx.Client = DEFAULT_CLIENT):
@@ -188,20 +184,14 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     appointment_schedules = []
     start_date = paris_tz.localize(isoparse(request.get_start_date()) + timedelta(days=0))
     end_date = start_date + timedelta(days=2, seconds=-1)
-    appointment_schedules.append({
-        "name": "chronodose",
-        "from": start_date.isoformat(),
-        "to": end_date.isoformat(),
-        "total": 0
-    })
+    appointment_schedules.append(
+        {"name": "chronodose", "from": start_date.isoformat(), "to": end_date.isoformat(), "total": 0}
+    )
     for n in INTERVAL_SPLIT_DAYS:
         end_date = start_date + timedelta(days=n, seconds=-1)
-        appointment_schedules.append({
-            "name": f"{n}_days",
-            "from": start_date.isoformat(),
-            "to": end_date.isoformat(),
-            "total": 0
-        })
+        appointment_schedules.append(
+            {"name": f"{n}_days", "from": start_date.isoformat(), "to": end_date.isoformat(), "total": 0}
+        )
     for professional in profile["publicProfessionals"]:
         medicalStaffId = professional["id"]
         name = professional["fullName"]
@@ -224,8 +214,10 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
                 start_date = isoparse(appointment_schedules[i]["from"])
                 end_date = isoparse(appointment_schedules[i]["to"])
                 # do not count chronodose if wrong vaccine
-                if (appointment_schedules[i]["name"] == "chronodose" and 
-                    get_vaccine_name(reason.get("name", "")) not in CHRONODOSE_VACCINES):
+                if (
+                    appointment_schedules[i]["name"] == "chronodose"
+                    and get_vaccine_name(reason.get("name", "")) not in CHRONODOSE_VACCINES
+                ):
                     continue
                 appointment_schedules[i]["total"] += count_appointements(availabilities, start_date, end_date)
             request.update_appointment_schedules(appointment_schedules)
