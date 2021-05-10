@@ -4,6 +4,7 @@ from scraper.doctolib.doctolib_center_scrap import (
     get_coordinates,
     center_type,
     parse_doctolib_business_hours,
+    get_pid,
 )
 
 
@@ -51,3 +52,9 @@ def test_doctolib_coordinates():
     long, lat = get_coordinates(docto)
     assert long == 1.381
     assert lat == 8.192
+
+def test_doctolib_get_pid():
+    urlWithPid = "someURL?pid=somePid"
+    urlWithoutPid = "someURL"
+    assert get_pid(urlWithPid) == "somePid"
+    assert get_pid(urlWithoutPid) == ""
