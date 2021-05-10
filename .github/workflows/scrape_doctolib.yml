@@ -32,12 +32,12 @@ jobs:
         run: scripts/install
       - name: "Scraping Doctolib..."
         run: |
-        scripts/scrape -p doctolib
-        cp data/output/pool/doctolib.json /tmp/doctolib.json
+          scripts/scrape -p doctolib
+          cp data/output/pool/doctolib.json /tmp/doctolib.json
       - name: Switch to data-auto
         run: |
-        git switch origin data-auto
-        cp /tmp/doctolib.json data/output/pool/doctolib.json
+          git switch origin data-auto
+          cp /tmp/doctolib.json data/output/pool/doctolib.json
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
             commit_message: Automatic Update
