@@ -42,8 +42,9 @@ def export_data(centres_cherchés: Iterator[CenterInfo], outpath_format="data/ou
     is_blocked_center = lambda center: (is_reserved_center(center) or is_in_blocklist(center, blocklist))
 
     for centre in centres_cherchés:
-        if is_blocked_center(centre) and centre.has_available_appointments():
-            logger.warn(f"{centre.nom} {centre.internal_id} has available appointments but is blocked")
+        if is_blocked_center(centre):
+            if centre.has_available_appointments():
+                logger.warn(f"{centre.nom} {centre.internal_id} has available appointments but is blocked")
             continue
 
         compte_centres += 1
