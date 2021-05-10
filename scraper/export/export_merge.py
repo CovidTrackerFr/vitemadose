@@ -40,14 +40,12 @@ def export_data(centres_cherchés: Iterator[CenterInfo], outpath_format="data/ou
     blocklist = get_blocklist_urls()
     # This should be duplicate free, they are already checked in
     is_blocked_center = lambda center: (is_reserved_center(center) or is_in_blocklist(center, blocklist))
-    blocked_centers = [center for center in centres_cherchés if is_blocked_center(center)]
-    exported_centers = [center for center in centres_cherchés if not is_blocked_center(center)]
 
-    for centre in blocked_centers:
-        if centre.has_available_appointments():  # pragma: no cover
+    for centre in centres_cherchés:
+        if is_blocked_center(centre) and centre.has_available_appointments():
             logger.warn(f"{centre.nom} {centre.internal_id} has available appointments but is blocked")
+            continue
 
-    for centre in exported_centers:
         compte_centres += 1
 
         centre.nom = centre.nom.strip()
@@ -94,14 +92,14 @@ def export_data(centres_cherchés: Iterator[CenterInfo], outpath_format="data/ou
     with open(outpath, "w") as centres_file:
         json.dump(centres_open_data, centres_file, indent=2)
 
-    for centre.departement, disponibilités in par_departement.items():
+    for departement, disponibilités in par_departement.items():
         disponibilités["last_updated"] = dt.datetime.now(tz=pytz.timezone("Europe/Paris")).isoformat()
         if "centres_disponibles" in disponibilités:
             disponibilités["centres_disponibles"] = sorted(
                 deduplicates_names(disponibilités["centres_disponibles"]), key=sort_center
             )
         disponibilités["centres_indisponibles"] = deduplicates_names(disponibilités["centres_indisponibles"])
-        outpath = outpath_format.format(centre.departement)
+        outpath = outpath_format.format(departement)
         logger.debug(f"writing result to {outpath} file")
         with open(outpath, "w") as outfile:
             outfile.write(json.dumps(disponibilités, indent=2))
