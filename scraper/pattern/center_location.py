@@ -9,7 +9,7 @@ class CenterLocation:
         self.latitude = latitude
         self.city = city
 
-    def default(self):
+    def default(self) -> dict:
         return self.__dict__
 
 
