@@ -2,7 +2,8 @@ import re
 import csv
 import json
 import logging
-from typing import List
+from typing import List, Dict,  Optional
+from scraper.pattern.center_info import CenterInfo
 from urllib.parse import urlparse, urlencode, urlunparse, parse_qs, unquote
 import datetime as dt
 import pytz
@@ -14,15 +15,15 @@ from datetime import date, timedelta, datetime
 from pathlib import Path
 from unidecode import unidecode
 
-RESERVED_CENTERS = ["réservé", "reserve", "professionnel"]
+RESERVED_CENTERS: List[str] = ["réservé", "reserve", "professionnel"]
 
 
-def load_insee() -> dict:
+def load_insee() -> Dict:
     with open("data/input/codepostal_to_insee.json") as json_file:
         return json.load(json_file)
 
 
-def load_cedex_to_insee() -> dict:
+def load_cedex_to_insee() -> Dict:
     with open("data/input/cedex_to_insee.json") as json_file:
         return json.load(json_file)
 
@@ -32,7 +33,7 @@ insee = load_insee()
 cedex_to_insee = load_cedex_to_insee()
 
 
-def is_reserved_center(center):
+def is_reserved_center(center: Optional[CenterInfo]) -> bool:
     if not center:
         return False
     name = center.nom.lower().strip()
@@ -42,7 +43,7 @@ def is_reserved_center(center):
     return False
 
 
-def urlify(s):
+def urlify(s: str) -> str:
     s = re.sub(r"[^\w\s\-]", "", s)
     s = re.sub(r"\s+", "-", s).lower()
     return unidecode(s)
@@ -105,7 +106,7 @@ class departementUtils:
             raise ValueError(f"Code INSEE absent de la base des codes INSEE : {insee_code}")
 
     @staticmethod
-    def get_city(address: str) -> str:
+    def get_city(address: str) -> Optional[str]:
         """
         Récupère la ville depuis l'adresse complète
         >>> get_city("2 avenue de la République, 75005 PARIS")
@@ -142,7 +143,7 @@ def format_cp(cp: str) -> str:
     return formatted_cp
 
 
-def format_phone_number(_phone_number: str) -> str:
+def format_phone_number(_phone_number: Optional[str]) -> str:
     phone_number = _phone_number
     if not phone_number:
         return ""
@@ -159,7 +160,7 @@ def format_phone_number(_phone_number: str) -> str:
     return phone_number
 
 
-def fix_scrap_urls(url):
+def fix_scrap_urls(url: str) -> str:
     url = unquote(url.strip())
 
     # Fix Keldoc
@@ -182,7 +183,7 @@ def fix_scrap_urls(url):
     return url
 
 
-def get_last_scans(centres):
+def get_last_scans(centres: List[CenterInfo]) -> List:
     url = "https://vitemadose.gitlab.io/vitemadose/info_centres.json"
     last_scans = {}
     liste_centres = []
@@ -214,9 +215,9 @@ def get_last_scans(centres):
     return liste_centres
 
 
-def append_date_days(mydate: str, days: int, seconds=0):
+def append_date_days(mydate: str, days: int, seconds: int = 0) -> Optional[str]:
     if not mydate:
-        return
+        return None
 
     mydate = date.fromisoformat(mydate)
     mydate = datetime.combine(mydate, datetime.min.time())
@@ -228,5 +229,5 @@ def append_date_days(mydate: str, days: int, seconds=0):
     return newdate.isoformat()
 
 
-def get_start_date():
+def get_start_date() -> str:
     return dt.date.today().isoformat()
