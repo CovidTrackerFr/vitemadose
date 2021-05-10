@@ -1,34 +1,35 @@
 import logging
+from typing import Dict
 
 
 class CustomFormatter(logging.Formatter):
-    grey = "\x1b[38;21m"
-    yellow = "\x1b[33;21m"
-    red = "\x1b[31;21m"
-    bold_red = "\x1b[31;1m"
-    reset = "\x1b[0m"
-    format = "%(asctime)s | [%(levelname)s] %(message)s"
+    grey: str = "\x1b[38;21m"
+    yellow: str = "\x1b[33;21m"
+    red: str = "\x1b[31;21m"
+    bold_red: str = "\x1b[31;1m"
+    reset: str = "\x1b[0m"
+    format_pattern: str = "%(asctime)s | [%(levelname)s] %(message)s"
 
-    FORMATS = {
-        logging.DEBUG: grey + format + reset,
-        logging.INFO: grey + format + reset,
-        logging.WARNING: yellow + format + reset,
-        logging.ERROR: red + format + reset,
-        logging.CRITICAL: bold_red + format + reset,
+    FORMATS: Dict[int, str] = {
+        logging.DEBUG: grey + format_pattern + reset,
+        logging.INFO: grey + format_pattern + reset,
+        logging.WARNING: yellow + format_pattern + reset,
+        logging.ERROR: red + format_pattern + reset,
+        logging.CRITICAL: bold_red + format_pattern + reset,
     }
 
-    def format(self, record):
+    def format(self, record: logging.LogRecord) -> str:
         log_fmt = self.FORMATS.get(record.levelno)
         formatter = logging.Formatter(log_fmt)
         return formatter.format(record)
 
 
-def get_logger():
+def get_logger() -> logging.Logger:
     # create logger
     return logging.getLogger("scraper")
 
 
-def enable_logger_for_production():
+def enable_logger_for_production() -> logging.Logger:
     logger = get_logger()
     logger.setLevel(logging.INFO)
 
