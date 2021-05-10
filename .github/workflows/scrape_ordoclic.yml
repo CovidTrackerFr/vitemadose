@@ -9,7 +9,7 @@ on:
     branches: ["main", "data-auto"]
   workflow_dispatch:
   workflow_run:
-    workflows: ["Scrap Ordoclic"]
+    workflows: ["Scrap merge"]
     types:
       - completed
 

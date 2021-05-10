@@ -8,6 +8,10 @@ on:
   push:
     branches: ["main", "data-auto"]
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Scrap merge"]
+    types:
+      - completed
 
 jobs:
 
