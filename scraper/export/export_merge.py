@@ -18,7 +18,7 @@ POOL_SIZE = int(os.getenv("POOL_SIZE", 50))
 PARTIAL_SCRAPE = float(os.getenv("PARTIAL_SCRAPE", 1.0))
 PARTIAL_SCRAPE = max(0, min(PARTIAL_SCRAPE, 1))
 
-logger = enable_logger_for_production()
+logger = get_logger()
 
 
 def export_data(centres_cherchés: Iterator[CenterInfo], outpath_format="data/output/{}.json"):

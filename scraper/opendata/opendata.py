@@ -7,7 +7,7 @@ import requests
 from utils.vmd_logger import enable_logger_for_production
 from utils.vmd_utils import fix_scrap_urls
 
-logger = enable_logger_for_production()
+logger = get_logger()
 
 
 def center_iterator(outpath_format="data/output/{}.json") -> Iterator[dict]:

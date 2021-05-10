@@ -19,7 +19,7 @@ from scraper.pattern.center_info import convert_csv_data_to_center_info, CenterI
 from utils.vmd_blocklist import is_in_blocklist, get_blocklist_urls
 from utils.vmd_center_sort import sort_center
 from utils.vmd_duplicated import deduplicates_names
-from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
+from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug, get_logger
 from utils.vmd_opendata import copy_omit_keys
 from utils.vmd_utils import departementUtils, fix_scrap_urls, is_reserved_center, get_last_scans
 
@@ -27,7 +27,7 @@ POOL_SIZE = int(os.getenv("POOL_SIZE", 50))
 PARTIAL_SCRAPE = float(os.getenv("PARTIAL_SCRAPE", 1.0))
 PARTIAL_SCRAPE = max(0, min(PARTIAL_SCRAPE, 1))
 
-logger = enable_logger_for_production()
+logger = get_logger()
 
 
 def export_pool(centres_cherchés: Iterator[CenterInfo], platform: str, outpath_format="data/output/pool/{}.json"):
