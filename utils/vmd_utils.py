@@ -186,10 +186,7 @@ def fix_scrap_urls(url: str) -> str:
 def get_last_scans(centres: List[CenterInfo]) -> List:
     url = "https://vitemadose.gitlab.io/vitemadose/info_centres.json"
     last_scans = {}
-    liste_centres = []
-
-    for centre in centres:
-        liste_centres.append(centre)
+    liste_centres = centres.copy()
 
     try:
         response = requests.get(url)
