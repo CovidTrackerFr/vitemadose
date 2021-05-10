@@ -43,6 +43,14 @@ VACCINES_NAMES = {
 }
 
 
+# Schedules array for appointments by interval
+INTERVAL_SPLIT_DAYS = [1, 2, 7, 28, 49]
+
+# Array for CHRONODOSES parameters
+CHRONODOSES = {"Vaccine": [Vaccine.ARNM, Vaccine.PFIZER, Vaccine.MODERNA], "Interval": 2}
+
+
+
 class CenterInfo:
     def __init__(self, departement: str, nom: str, url: str):
         self.departement = departement

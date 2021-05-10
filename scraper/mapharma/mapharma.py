@@ -13,8 +13,8 @@ from pathlib import Path
 from urllib import parse
 
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.pattern.scraper_result import DRUG_STORE, INTERVAL_SPLIT_DAYS
-from scraper.pattern.center_info import get_vaccine_name, Vaccine
+from scraper.pattern.scraper_result import DRUG_STORE
+from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
 from utils.vmd_utils import departementUtils
 from scraper.profiler import Profiling
 
@@ -40,11 +40,6 @@ MAPHARMA_OPEN_DATA_URL_FALLBACK = (
 )
 MAPHARMA_SLOT_LIMIT = 50
 
-CHRONODOSE_VACCINES = {
-    Vaccine.ARNM,
-    Vaccine.PFIZER,
-    Vaccine.MODERNA
-}
 
 timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=MAPHARMA_HEADERS)
@@ -160,7 +155,7 @@ def count_appointements(slots: dict, start_date: datetime, end_date: datetime) -
     count = 0
 
     for day, day_slots in slots.items():
-        day_date = (paris_tz.localize(isoparse(day) + timedelta(days=0)))
+        day_date = paris_tz.localize(isoparse(day) + timedelta(days=0))
         if day_date >= start_date and day_date < end_date:
             count += len(day_slots)
 
@@ -198,25 +193,24 @@ def fetch_slots(
     request.add_vaccine_type(get_vaccine_name(campagne["nom"]))
 
     appointment_schedules = []
-    s_date  = (paris_tz.localize(isoparse(request.get_start_date()) + timedelta(days=0)))
-    n_date = s_date + timedelta(days=2, seconds=-1)
+    s_date = paris_tz.localize(isoparse(request.get_start_date()) + timedelta(days=0))
+    n_date = s_date + timedelta(days=CHRONODOSES["Interval"], seconds=-1)
     chronodoses = 0
-    if get_vaccine_name(campagne["nom"]) in CHRONODOSE_VACCINES:
+    if get_vaccine_name(campagne["nom"]) in CHRONODOSES["Vaccine"]:
         chronodoses = count_appointements(day_slots, s_date, n_date)
-    appointment_schedules.append({
-        "name": "chronodose",
-        "from": s_date.isoformat(),
-        "to": n_date.isoformat(),
-        "total": chronodoses
-    })
+    appointment_schedules.append(
+        {"name": "chronodose", "from": s_date.isoformat(), "to": n_date.isoformat(), "total": chronodoses}
+    )
     for n in INTERVAL_SPLIT_DAYS:
         n_date = s_date + timedelta(days=n, seconds=-1)
-        appointment_schedules.append({
-            "name": f'{n}_days',
-            "from": s_date.isoformat(),
-            "to": n_date.isoformat(),
-            "total": count_appointements(day_slots, s_date, n_date)
-        })
+        appointment_schedules.append(
+            {
+                "name": f"{n}_days",
+                "from": s_date.isoformat(),
+                "to": n_date.isoformat(),
+                "total": count_appointements(day_slots, s_date, n_date),
+            }
+        )
 
     logger.debug(f"appointment_schedules: {appointment_schedules}")
     request.update_appointment_schedules(appointment_schedules)

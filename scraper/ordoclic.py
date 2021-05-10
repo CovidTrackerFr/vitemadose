@@ -6,9 +6,9 @@ from datetime import datetime, timedelta
 from dateutil.parser import isoparse
 from pytz import timezone
 
-from scraper.pattern.center_info import get_vaccine_name, Vaccine
+from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.pattern.scraper_result import DRUG_STORE, INTERVAL_SPLIT_DAYS
+from scraper.pattern.scraper_result import DRUG_STORE
 from utils.vmd_utils import departementUtils
 from scraper.profiler import Profiling
 
@@ -24,7 +24,6 @@ paris_tz = timezone("Europe/Paris")
 # Il faut rajouter 2 à la liste si l'on veut les 2èmes injections
 ORDOCLIC_VALID_INJECTION = [1]
 
-CHRONODOSE_VACCINES = {Vaccine.ARNM, Vaccine.PFIZER, Vaccine.MODERNA}
 
 # get all slugs
 def search(client: httpx.Client = DEFAULT_CLIENT):
@@ -183,7 +182,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     # create appointment_schedules array with names and dates
     appointment_schedules = []
     start_date = paris_tz.localize(isoparse(request.get_start_date()) + timedelta(days=0))
-    end_date = start_date + timedelta(days=2, seconds=-1)
+    end_date = start_date + timedelta(days=CHRONODOSES["Interval"], seconds=-1)
     appointment_schedules.append(
         {"name": "chronodose", "from": start_date.isoformat(), "to": end_date.isoformat(), "total": 0}
     )
@@ -216,7 +215,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
                 # do not count chronodose if wrong vaccine
                 if (
                     appointment_schedules[i]["name"] == "chronodose"
-                    and get_vaccine_name(reason.get("name", "")) not in CHRONODOSE_VACCINES
+                    and get_vaccine_name(reason.get("name", "")) not in CHRONODOSES["Vaccine"]
                 ):
                     continue
                 appointment_schedules[i]["total"] += count_appointements(availabilities, start_date, end_date)
