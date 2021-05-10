@@ -2,6 +2,7 @@ import os
 import traceback
 from collections import deque
 from multiprocessing import Pool
+from pprint import pformat
 from random import random
 
 from scraper.error import ScrapeError
@@ -42,6 +43,8 @@ def scrape_debug(urls):  # pragma: no cover
         except Exception as e:
             logger.exception(f"erreur lors du traitement")
         logger.info(f'{result.platform!s:16} {result.next_availability or ""!s:32}')
+        if result.request.appointment_count:
+            logger.debug(f'appointments: {result.request.appointment_count}:\n{pformat(result.request.appointment_schedules)}')
 
 
 def scrape(platforms=None) -> None:  # pragma: no cover
