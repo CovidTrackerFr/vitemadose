@@ -3,6 +3,7 @@ import csv
 import httpx
 import logging
 import time
+from typing import Optional, List, Dict
 
 from datetime import date, datetime, timedelta
 import pytz
@@ -23,7 +24,9 @@ CSV_RDV_URL = "https://www.data.gouv.fr/fr/datasets/r/b7bd49cd-904c-4c5d-b60f-01
 JSON_INFO_CENTRES_URL = "https://vitemadose.gitlab.io/vitemadose/info_centres.json"
 
 
-def get_csv(url: str, header=True, delimiter=";", encoding="utf-8", client: httpx.Client = DEFAULT_CLIENT):
+def get_csv(
+    url: str, header: bool = True, delimiter: str = ";", encoding: str = "utf-8", client: httpx.Client = DEFAULT_CLIENT
+) -> Optional[csv.DictReader]:
     try:
         r = client.get(url)
         r.raise_for_status()
@@ -36,7 +39,7 @@ def get_csv(url: str, header=True, delimiter=";", encoding="utf-8", client: http
     return csvreader
 
 
-def get_json(url: str, client: httpx.Client = DEFAULT_CLIENT):
+def get_json(url: str, client: httpx.Client = DEFAULT_CLIENT) -> List:
     try:
         r = client.get(url)
         r.raise_for_status()
@@ -104,7 +107,7 @@ def make_style(
     make_svg(style, filename, echelle, echelle_labels, title)
 
 
-def make_stats_creneaux(stats):
+def make_stats_creneaux(stats: dict):
     echelle = [0, 100, 500, 2000]
     labels = ["-", "100", "500", "2000", ">"]
     depts = {}
@@ -185,7 +188,7 @@ def make_maps(info_centres: dict):
     for row in csv_pop:
         dept_pop[row["dep"]] = row["departmentPopulation"]
 
-    dept_rdv = {}
+    dept_rdv: Dict[str, Dict[str, Dict]] = {}
     csv_rdv = get_csv(CSV_RDV_URL, header=True, delimiter=",", encoding="windows-1252")
 
     for row in csv_rdv:
@@ -200,7 +203,7 @@ def make_maps(info_centres: dict):
         dept_rdv[code_departement][date_debut_semaine]["doses_allouees"] += doses_allouees
         dept_rdv[code_departement][date_debut_semaine]["rdv_pris"] += rdv_pris
 
-    stats = {}
+    stats: Dict[str, Dict] = {}
 
     for dept, info_centres_dept in info_centres.items():
         stats[dept] = {}
