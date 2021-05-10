@@ -40,6 +40,7 @@ jobs:
           git switch data-auto
           cp /tmp/keldoc.json data/output/pool/keldoc.json
       - uses: stefanzweifel/git-auto-commit-action@v4
+        continue-on-error: true
         with:
             commit_message: "Updated scraper data: keldoc (pool/keldoc.json)"
             file_pattern: data/output/pool/keldoc.json
