@@ -10,7 +10,7 @@ from scraper.pattern.center_info import CenterInfo
 from utils.vmd_blocklist import get_blocklist_urls, is_in_blocklist
 from utils.vmd_center_sort import sort_center
 from utils.vmd_duplicated import deduplicates_names
-from utils.vmd_logger import enable_logger_for_production
+from utils.vmd_logger import enable_logger_for_production, get_logger
 from utils.vmd_opendata import copy_omit_keys
 from utils.vmd_utils import departementUtils, is_reserved_center
 
