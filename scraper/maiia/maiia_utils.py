@@ -8,7 +8,7 @@ logger = logging.getLogger("scraper")
 MAIIA_LIMIT = 100
 
 
-def get_paged(url: str, limit: MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIENT) -> dict:
+def get_paged(url: str, limit: int = MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIENT) -> dict:
     result = dict()
     result["items"] = []
     result["total"] = 0
