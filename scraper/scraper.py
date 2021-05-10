@@ -62,7 +62,7 @@ def scrape(platforms=None) -> None:  # pragma: no cover
                     f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés"
                 )
         else:
-            compte_centres, compte_centres_avec_dispo, compte_bloqués = export_data(centres_cherchés)
+            compte_centres, compte_centres_avec_dispo, compte_bloqués = export_data(centres_cherchés, [])
             logger.info(
                 f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés"
             )
