@@ -8,7 +8,7 @@ Usage:
 python3 -m stats_generation.chronodoses \
     --input="some/file.json" # Optional (should follow the same structure as data/output/info_centres.json.)\
     --output="put/it/here.json" # Optional \
-    --with_national # Optional: Whether or not to add a summary national statistic.
+    --national # Optional: Whether or not to add a summary national statistic.
 ```
 
 """
@@ -30,10 +30,8 @@ def count_departments_chronodoses(data: dict) -> Dict[str, int]:
     }
 
 
-def _national_stats(per_department: Dict[str, int]) -> dict:
-    return {
-        "national": sum(per_department.values()),
-    }
+def _national_doses(per_department: Dict[str, int]) -> dict:
+    return sum(per_department.values())
 
 
 def _department_chronodoses(department_data: dict) -> int:
@@ -84,7 +82,7 @@ def parse_args(args: List[str]) -> argparse.Namespace:
         help="Where to put the resulting statistics.",
     )
     parser.add_argument(
-        "--with_national",
+        "--national",
         action="store_true",
         default=False,
     )
@@ -95,8 +93,8 @@ def main(argv):
     args = parse_args(argv[1:])
     with open(args.input) as f:
         doses = {"departments": count_departments_chronodoses(json.load(f))}
-    if args.with_national:
-        doses.update(_national_stats(doses["departments"]))
+    if args.national:
+        doses.update({"national": _national_doses(doses["departments"])})
     with open(args.output, "w") as f:
         json.dump(doses, f)
 
