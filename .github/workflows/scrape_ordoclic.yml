@@ -38,5 +38,5 @@ jobs:
           cp /tmp/ordoclic.json data/output/pool/ordoclic.json
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-            commit_message: Automatic Update
+            commit_message: "Updated scraper data: ordoclic (pool/ordoclic.json)"
             file_pattern: data/output/pool/ordoclic.json

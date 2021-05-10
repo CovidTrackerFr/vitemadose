@@ -38,5 +38,5 @@ jobs:
           cp /tmp/doctolib.json data/output/pool/doctolib.json
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-            commit_message: Automatic Update
+            commit_message: "Updated scraper data: doctolib (pool/doctolib.json)"
             file_pattern: data/output/pool/doctolib.json

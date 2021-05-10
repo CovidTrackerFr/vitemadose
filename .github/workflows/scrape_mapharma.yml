@@ -37,5 +37,5 @@ jobs:
           cp /tmp/mapharma.json data/output/pool/mapharma.json
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-            commit_message: Automatic Update
+            commit_message: "Updated scraper data: mapharma (pool/mapharma.json)"
             file_pattern: data/output/pool/mapharma.json
