@@ -29,7 +29,16 @@ DOCTOLIB_HEADERS = {
     "User-Agent": os.environ.get("DOCTOLIB_API_KEY", ""),
 }
 
-DEFAULT_CLIENT = httpx.Client()
+if os.getenv('WITH_TOR', 'no') == 'yes':
+    session = requests.Session()
+    session.proxies = {  # type: ignore
+        'http': 'socks5://127.0.0.1:9050',
+        'https': 'socks5://127.0.0.1:9050',
+    }
+    DEFAULT_CLIENT = session  # type: ignore
+else:
+    DEFAULT_CLIENT = httpx.Client()
+
 logger = logging.getLogger("scraper")
 
 # Vérifie qu'aucun des intervalles de calcul de dépasse l'intervalle globale de recherche des dispos
