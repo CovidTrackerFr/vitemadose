@@ -1,0 +1,18 @@
+
+---
+name: Cron Doctolib
+
+on:
+  workflow_run:
+    workflows: ["Scrap Doctolib"]
+    types:
+      - completed
+
+jobs:
+  sleep:
+    name: "Sleep"
+    runs-on: "ubuntu-20.04"
+
+    steps:
+      - name: "Sleep 120s"
+        run: sleep 120
