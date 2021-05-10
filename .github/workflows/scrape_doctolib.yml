@@ -36,8 +36,7 @@ jobs:
           cp data/output/pool/doctolib.json /tmp/doctolib.json
       - name: "Switch to data-auto"
         run: |
-          git reset --hard data-auto
-          git fetch --all --prune
+          git fetch --all --prune --force
           git checkout data-auto
           cp /tmp/doctolib.json data/output/pool/doctolib.json
       - uses: stefanzweifel/git-auto-commit-action@v4
