@@ -277,7 +277,7 @@ class DoctolibSlots:
                                 interval,
                                 append_date_days(start_date_original, 0),
                                 append_date_days(start_date_original, interval, 1),
-                                int(len(availability.get("slots", []))),
+                                len(availability.get("slots", [])),
                                 appointment_schedules,
                                 chronodose,
                             )
