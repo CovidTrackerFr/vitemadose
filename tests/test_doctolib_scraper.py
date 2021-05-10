@@ -41,11 +41,18 @@ def test_business_hours():
                     ["12:00", "15:00"],
                     ["16:00", "17:00"],
                 ],
-            }
+            },
+            {
+                "day": 2,
+                "enabled": False,
+            },
         ]
     }
-    assert parse_doctolib_business_hours(place) == {"lundi": "12:00-15:00, 16:00-17:00"}
-
+    emptyPlace = {
+        "opening_hours": []
+    }
+    assert parse_doctolib_business_hours(place) == {"lundi": "12:00-15:00, 16:00-17:00", "mardi": None}
+    assert parse_doctolib_business_hours(emptyPlace) == None
 
 def test_doctolib_coordinates():
     docto = {"position": {"lng": 1.381, "lat": 8.192}}
