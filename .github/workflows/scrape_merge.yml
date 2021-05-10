@@ -32,9 +32,8 @@ jobs:
         run: scripts/install
       - name: "Download platform files..."
         run: |
-          cd /tmp
-          git clone --branch data-auto https://github.com/CovidTrackerFr/vitemadose repo/
-          cp repo/data/output/pool/* data/output/pool/
+          git clone --branch data-auto https://github.com/CovidTrackerFr/vitemadose /tmp/repo/
+          cp /tmp/repo/data/output/pool/* data/output/pool
       - name: "Merge scrapers..."
         run: |
           scripts/scrape -m
