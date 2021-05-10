@@ -147,7 +147,7 @@ def parse_ordoclic_slots(request: ScraperRequest, availability_data):
     availability_count = 0
     if type(availabilities) is list:
         availability_count = len(availabilities)
-    request.update_appointment_count(availability_count)
+    request.update_appointment_count(request.appointment_count + availability_count)
 
     if "nextAvailableSlotDate" in availability_data:
         nextAvailableSlotDate = availability_data.get("nextAvailableSlotDate", None)
