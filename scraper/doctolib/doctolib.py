@@ -490,7 +490,7 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: list = None):
             continue
         # If it's not a first shot motive
         # TODO: filter system
-        if not visit_motive.get("first_shot_motive"):
+        if not visit_motive.get("first_shot_motive") and vaccine_name != Vaccine.JANSSEN:
             continue
         # Si le lieu de vaccination n'accepte pas les nouveaux patients
         # on ne considère pas comme valable.

@@ -1,6 +1,6 @@
 from enum import Enum
 from datetime import datetime, timedelta
-from typing import Optional
+from typing import Optional, List
 
 import pytz
 
