@@ -36,6 +36,7 @@ jobs:
           cp data/output/pool/doctolib.json /tmp/doctolib.json
       - name: "Switch to data-auto"
         run: |
+          git reset --hard origin data-auto
           git fetch --all --prune
           git checkout data-auto
           cp /tmp/doctolib.json data/output/pool/doctolib.json
