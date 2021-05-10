@@ -1,6 +1,6 @@
 from enum import Enum
 from datetime import datetime, timedelta
-from typing import Optional, List
+from typing import Optional, List, Dict
 
 import pytz
 
@@ -23,7 +23,7 @@ class Vaccine(str, Enum):
     ARNM = "ARNm"
 
 
-VACCINES_NAMES = {
+VACCINES_NAMES: Dict[Vaccine, List[str]] = {
     Vaccine.PFIZER: ["pfizer", "biontech"],
     Vaccine.MODERNA: ["moderna"],
     Vaccine.ARNM: ["arn", "arnm", "arn-m", "arn m"],
@@ -52,20 +52,20 @@ CHRONODOSES = {"Vaccine": [Vaccine.ARNM, Vaccine.PFIZER, Vaccine.MODERNA], "Inte
 
 class CenterInfo:
     def __init__(self, departement: str, nom: str, url: str):
-        self.departement = departement
-        self.nom = nom
-        self.url = url
-        self.location = None
-        self.metadata = None
-        self.prochain_rdv = None
-        self.plateforme = None
-        self.type = None
-        self.appointment_count = 0
-        self.internal_id = None
-        self.vaccine_type: List[Vaccine] = None
-        self.appointment_by_phone_only = False
-        self.erreur = None
-        self.last_scan_with_availabilities = None
+        self.departement: str = departement
+        self.nom: str = nom
+        self.url: str = url
+        self.location: Optional[CenterLocation] = None
+        self.metadata: Optional[dict] = None
+        self.prochain_rdv: Optional[str]= None
+        self.plateforme: Optional[str] = None
+        self.type: Optional[str] = None
+        self.appointment_count: int = 0
+        self.internal_id: Optional[str] = None
+        self.vaccine_type: Optional[List[Vaccine]] = None
+        self.appointment_by_phone_only: bool = False
+        self.erreur: Optional[str] = None
+        self.last_scan_with_availabilities: Optional[str] = None
 
     def fill_localization(self, location: Optional[CenterLocation]):
         self.location = location
@@ -93,7 +93,7 @@ class CenterInfo:
         if date - datetime.now(tz=timezone) > timedelta(days=50):
             self.prochain_rdv = None
 
-    def default(self):
+    def default(self) -> dict:
         if type(self.location) is CenterLocation:
             self.location = self.location.default()
         if self.erreur:
@@ -119,7 +119,7 @@ def convert_csv_address(data: dict) -> str:
     return f"{adr_num} {adr_voie}, {adr_cp} {adr_nom}"
 
 
-def convert_csv_business_hours(data: dict) -> str:
+def convert_csv_business_hours(data: dict) -> Optional[dict]:
     if data.get("business_hours"):
         return data.get("business_hours")
     keys = ["rdv_lundi", "rdv_mardi", "rdv_mercredi", "rdv_jeudi", "rdv_vendredi", "rdv_samedi", "rdv_dimanche"]
@@ -177,7 +177,7 @@ def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     return center
 
 
-def get_vaccine_name(name: str, fallback: Vaccine = None) -> Vaccine:
+def get_vaccine_name(name: str, fallback: Optional[Vaccine] = None) -> Optional[Vaccine]:
     if not name:
         return fallback
     name = name.lower().strip()
