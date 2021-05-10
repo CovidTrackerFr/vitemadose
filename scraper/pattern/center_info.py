@@ -197,3 +197,10 @@ def dict_to_center_info(data: dict) -> CenterInfo:
     center.prochain_rdv = data.get("prochain_rdv")
     center.erreur = data.get("erreur")
     return center
+
+
+def full_dict_to_center(data: dict) -> CenterInfo:
+    center = CenterInfo("", "", "")
+    for key in data:
+        setattr(center, key, data.get(key))
+    return center

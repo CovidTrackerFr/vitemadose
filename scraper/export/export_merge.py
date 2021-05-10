@@ -6,11 +6,11 @@ from typing import Iterator
 import pytz
 
 from scraper.error import BlockedByDoctolibError
-from scraper.pattern.center_info import CenterInfo
+from scraper.pattern.center_info import CenterInfo, full_dict_to_center
 from utils.vmd_blocklist import get_blocklist_urls, is_in_blocklist
 from utils.vmd_center_sort import sort_center
 from utils.vmd_duplicated import deduplicates_names
-from utils.vmd_logger import enable_logger_for_production, get_logger
+from utils.vmd_logger import get_logger
 from utils.vmd_opendata import copy_omit_keys
 from utils.vmd_utils import departementUtils, is_reserved_center
 
@@ -21,7 +21,7 @@ PARTIAL_SCRAPE = max(0, min(PARTIAL_SCRAPE, 1))
 logger = get_logger()
 
 
-def export_data(centres_cherchés: Iterator[CenterInfo], outpath_format="data/output/{}.json"):
+def export_data(centres_cherchés: Iterator[CenterInfo], last_scrap, outpath_format="data/output/{}.json"):
     compte_centres = 0
     compte_centres_avec_dispo = 0
     bloqués_doctolib = 0
@@ -31,6 +31,7 @@ def export_data(centres_cherchés: Iterator[CenterInfo], outpath_format="data/ou
         code: {
             "version": 1,
             "last_updated": dt.datetime.now(tz=pytz.timezone("Europe/Paris")).isoformat(),
+            "last_scrap": last_scrap,
             "centres_disponibles": [],
             "centres_indisponibles": [],
         }
@@ -106,3 +107,42 @@ def export_data(centres_cherchés: Iterator[CenterInfo], outpath_format="data/ou
             outfile.write(json.dumps(disponibilités, indent=2))
 
     return compte_centres, compte_centres_avec_dispo, bloqués_doctolib
+
+
+def merge_centers(centers: list, center_dicts):
+    for center_dict in center_dicts:
+        centers.append(full_dict_to_center(center_dict))
+    return centers
+
+
+def merge_platforms():
+    platforms = [
+        "doctolib",
+        "ordoclic",
+        "keldoc",
+        "maiia",
+        "mapharma"
+    ]
+    platform_path = "data/output/pool/{}.json"
+    centers = []
+    last_scrap = {}
+    for platform in platforms:
+        fpath = platform_path.format(platform)
+        if not os.path.exists(fpath):
+            logger.error(f"Unable to find file: {fpath}")
+            exit(1)
+        file = open(fpath, "r")
+        if not file:
+            logger.error(f"Unable to open file: {fpath}")
+            exit(1)
+        data = json.load(file)
+        center_count = len(data["centres_disponibles"]) + len(data["centres_indisponibles"])
+        last_scrap[platform] = data["last_updated"]
+        logger.info(f"[{platform}] found {center_count} centers. (last updated: {data['last_updated']})")
+        centers = merge_centers(centers, data["centres_disponibles"])
+        centers = merge_centers(centers, data["centres_indisponibles"])
+        file.close()
+    logger.info(f"Total: found {len(centers)} centers.")
+    total, available, blocked = export_data(centers, last_scrap)
+    logger.info(f"Exported {total} vaccination locations ({available} available, {blocked} blocked)")
+    logger.info(f"Availabilities: {round(available / total * 100, 2)}%")
