@@ -118,8 +118,8 @@ class departementUtils:
     @staticmethod
     def cp_to_insee(cp: str) -> str:
         # Split for when when CP is like 'XXXX CEDEX'
-        if not isinstance(cp,str):
-            cp=str(cp)
+        if not isinstance(cp, str):
+            cp = str(cp)
         cp = format_cp(cp)
         if cp in insee:
             return insee[cp]["insee"]
@@ -133,8 +133,8 @@ class departementUtils:
 
 def format_cp(cp: str) -> str:
     # Permet le cas du CP sous form 75 005 au lieu de 75005
-    if len(re.findall(r'\d+', cp))>0:
-        formatted_cp=re.findall(r'\d+', cp)[0]
+    if len(re.findall(r"\d+", cp)) > 0:
+        formatted_cp = re.findall(r"\d+", cp)[0]
     else:
         logger.warning(f"postcode {cp} is incorrect")
     if len(formatted_cp) == 4:
@@ -214,11 +214,17 @@ def get_last_scans(centres):
     return liste_centres
 
 
-def append_date_days(mydate: str, days: int):
-    if not mydate or not days:
+def append_date_days(mydate: str, days: int, seconds=0):
+    if not mydate:
         return
+
     mydate = date.fromisoformat(mydate)
-    newdate = mydate + timedelta(days=days)
+    mydate = datetime.combine(mydate, datetime.min.time())
+    newdate = mydate + timedelta(days=days, seconds=-seconds)
+
+    paris_tz = pytz.timezone("Europe/Paris")
+    newdate = paris_tz.localize(newdate)
+
     return newdate.isoformat()
 
 
