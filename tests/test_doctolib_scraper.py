@@ -5,8 +5,8 @@ from scraper.doctolib.doctolib_center_scrap import (
     center_type,
     parse_doctolib_business_hours,
     get_pid,
+    find_place,
 )
-
 
 # -- Tests de l'API (offline) --
 from scraper.pattern.scraper_result import GENERAL_PRACTITIONER, DRUG_STORE, VACCINATION_CENTER
@@ -53,8 +53,27 @@ def test_doctolib_coordinates():
     assert long == 1.381
     assert lat == 8.192
 
+
 def test_doctolib_get_pid():
     urlWithPid = "someURL?pid=somePid"
     urlWithoutPid = "someURL"
     assert get_pid(urlWithPid) == "somePid"
     assert get_pid(urlWithoutPid) == ""
+
+
+def test_doctolib_find_place():
+    places = [
+            {
+                "id": "0",
+                "name": "someone"
+            },
+            {
+                "id": "1",
+                "name": "like you"
+            },
+        ]
+    urlWithPid = f"someURL?pid=1"
+    urlWithoutPid = "someURL"
+
+    assert find_place(places, urlWithoutPid)["name"] == "someone";
+    assert find_place(places, urlWithPid)["name"] == "like you";
