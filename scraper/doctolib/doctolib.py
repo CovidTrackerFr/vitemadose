@@ -549,9 +549,13 @@ def is_allowing_online_appointments(rdata):
 def center_iterator():
     try:
         center_path = "data/output/doctolib-centers.json"
-
-        with open(center_path) as jsonfile:
-            data = json.load(jsonfile)
+        url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"
+        response = requests.get(url)
+        response.raise_for_status()
+        data = response.json()
+        file = open(center_path, "w")
+        file.write(json.dumps(data, indent=2))
+        file.close()
         logger.info(f"Found {len(data)} Doctolib centers (external scraper).")
         for center in data:
             yield center
