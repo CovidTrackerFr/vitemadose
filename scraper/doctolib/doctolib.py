@@ -29,11 +29,11 @@ DOCTOLIB_HEADERS = {
     "User-Agent": os.environ.get("DOCTOLIB_API_KEY", ""),
 }
 
-if os.getenv('WITH_TOR', 'no') == 'yes':
+if os.getenv("WITH_TOR", "no") == "yes":
     session = requests.Session()
     session.proxies = {  # type: ignore
-        'http': 'socks5://127.0.0.1:9050',
-        'https': 'socks5://127.0.0.1:9050',
+        "http": "socks5://127.0.0.1:9050",
+        "https": "socks5://127.0.0.1:9050",
     }
     DEFAULT_CLIENT = session  # type: ignore
 else:
@@ -117,7 +117,9 @@ class DoctolibSlots:
         start_date = request.get_start_date()
 
         for interval in INTERVAL_SPLIT_DAYS:
-            chronodose = True
+            chronodose = False
+            if interval == CHRONODOSES["Interval"]:
+                chronodose = True
 
             appointment_schedules = build_appointment_schedules(
                 request,
