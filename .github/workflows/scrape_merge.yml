@@ -1,0 +1,55 @@
+
+---
+name: Scrap merge
+
+on:
+## Disabled. Enable if emergency
+ #  push:
+ #    branches:
+ #      - data-auto
+ #  schedule:
+ #    - cron: "*/5 * * * *"
+  push:
+    branches:
+      - ft/merge
+  workflow_dispatch:
+
+jobs:
+
+  scrape_merge:
+
+    name: "Scrape merge"
+    runs-on: "ubuntu-20.04"
+
+    steps:
+      - uses: "actions/checkout@v2"
+        with:
+            token: ${{ secrets.PAT_GRZ }}
+      - uses: "actions/setup-python@v2"
+        with:
+          python-version: "3.8"
+      - name: "Install"
+        run: scripts/install
+      - name: "Download platform files..."
+        run: |
+          git clone --branch data-auto https://github.com/CovidTrackerFr/vitemadose /tmp/repo/
+          cp /tmp/repo/data/output/pool/* data/output/pool
+      - name: "Merge scrapers..."
+        run: |
+          scripts/scrape -m
+      - name: "Copy output files..."
+        run: |
+          mkdir /tmp/output
+          cp `find data/output -type f -exec basename '{}' ';' | egrep '^.{1,3}.json$' | sed 's/.*/data\/output\/&/'` /tmp/output
+          cp data/output/centres_open_data.json /tmp/output
+          cp data/output/info_centres.json /tmp/output
+      - name: "Switch to data-auto"
+        run: |
+          git fetch --all --prune --force
+          git reset --hard origin/data-auto
+          git switch data-auto
+          cp /tmp/output/* data/output/
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+            commit_message: Automatic Update
+            file_pattern: data/output/*.json

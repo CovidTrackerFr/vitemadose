@@ -3,15 +3,11 @@
 name: Scrap Ordoclic
 
 on:
-## Disabled. Enable if emergency
- #  push:
- #    branches:
- #      - data-auto
- #  schedule:
- #    - cron: "*/5 * * * *"
+  schedule:
+    - cron: "*/5 * * * *"
   push:
     branches:
-      - main
+      - data-auto
   workflow_dispatch:
 
 jobs:

@@ -92,7 +92,7 @@ def test_export_data(tmp_path):
     fake_now = dt.datetime(2021, 4, 4)
     get_start_date()
     with mock_datetime_now(fake_now):
-        export_data(centres_cherchés, outpath_format=outpath_format)
+        export_data(centres_cherchés, [], outpath_format=outpath_format)
 
     # All departements for which we don't have data should be empty.
     for departement in departementUtils.import_departements():
@@ -101,6 +101,7 @@ def test_export_data(tmp_path):
         content = json.loads((out_dir / f"{departement}.json").read_text())
         assert content == {
             "version": 1,
+            "last_scrap": [],
             "centres_disponibles": [],
             "centres_indisponibles": [],
             "last_updated": "2021-04-04T00:00:00",
@@ -131,6 +132,7 @@ def test_export_data(tmp_path):
             },
         ],
         "centres_indisponibles": [],
+        "last_scrap": [],
         "last_updated": "2021-04-04T00:00:00",
     }
 
@@ -173,6 +175,7 @@ def test_export_data(tmp_path):
                 "last_scan_with_availabilities": None,
             }
         ],
+        "last_scrap": [],
         "last_updated": "2021-04-04T00:00:00",
     }
 
@@ -198,9 +201,9 @@ def test_export_data(tmp_path):
                 "last_scan_with_availabilities": None,
             },
         ],
+        "last_scrap": [],
         "last_updated": "2021-04-04T00:00:00",
     }
-    print(content)
 
     # On test l'export vers le format inscrit sur la plateforme data.gouv.fr
     content = json.loads((out_dir / "centres_open_data.json").read_text())
@@ -251,7 +254,7 @@ def test_export_reserved_centers(tmp_path):
     fake_now = dt.datetime(2021, 4, 4)
     get_start_date()
     with mock_datetime_now(fake_now):
-        export_data(centres_cherchés, outpath_format=outpath_format)
+        export_data(centres_cherchés, [], outpath_format=outpath_format)
 
     # Departements 01 and 59 should contain expected data.
 
@@ -260,6 +263,7 @@ def test_export_reserved_centers(tmp_path):
         "version": 1,
         "centres_disponibles": [],
         "centres_indisponibles": [],
+        "last_scrap": [],
         "last_updated": "2021-04-04T00:00:00",
     }
 
@@ -295,7 +299,7 @@ def test_export_data_when_blocked(tmp_path):
 
     fake_now = dt.datetime(2021, 4, 4)
     with mock_datetime_now(fake_now):
-        total, actifs, bloqués = export_data(centres_cherchés, outpath_format=outpath_format)
+        total, actifs, bloqués = export_data(centres_cherchés, [], outpath_format=outpath_format)
 
     # les totaux doivent être bons
     assert total == 2
@@ -307,6 +311,7 @@ def test_export_data_when_blocked(tmp_path):
     assert content == {
         "version": 1,
         "last_updated": "2021-04-04T00:00:00",
+        "last_scrap": [],
         "centres_disponibles": [],
         "centres_indisponibles": [
             {
@@ -332,6 +337,7 @@ def test_export_data_when_blocked(tmp_path):
     content = json.loads((out_dir / "59.json").read_text())
     assert content == {
         "version": 1,
+        "last_scrap": [],
         "centres_disponibles": [
             {
                 "departement": "59",
