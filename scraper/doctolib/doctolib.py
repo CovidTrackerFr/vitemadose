@@ -14,7 +14,7 @@ from collections import defaultdict
 from dateutil.parser import isoparse
 
 from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
-from scraper.pattern.center_info import get_vaccine_name
+from scraper.pattern.center_info import get_vaccine_name, Vaccine
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import INTERVAL_SPLIT_DAYS
 from scraper.error import BlockedByDoctolibError
@@ -31,6 +31,9 @@ DOCTOLIB_HEADERS = {
 
 DEFAULT_CLIENT = httpx.Client()
 logger = logging.getLogger("scraper")
+
+CHRONODOSES = {"Vaccine": [Vaccine.ARNM, Vaccine.PFIZER, Vaccine.MODERNA], "Interval": 2}
+
 
 # Vérifie qu'aucun des intervalles de calcul de dépasse l'intervalle globale de recherche des dispos
 if not all(i <= (DOCTOLIB_SLOT_LIMIT * DOCTOLIB_ITERATIONS) for i in INTERVAL_SPLIT_DAYS):
@@ -99,6 +102,25 @@ class DoctolibSlots:
 
         all_agendas = parse_agenda_ids(rdata)
         first_availability = None
+
+        appointment_schedules = request.get_appointment_schedules()
+
+        start_date = request.get_start_date()
+
+        for interval in INTERVAL_SPLIT_DAYS:
+            chronodose = True
+
+            appointment_schedules = build_appointment_schedules(
+                request,
+                interval,
+                append_date_days(start_date, 0),
+                append_date_days(start_date, interval, 1),
+                0,
+                appointment_schedules,
+                chronodose,
+            )
+        request.update_appointment_schedules(appointment_schedules)
+
         for visit_motive_id in visit_motive_ids:
             agenda_ids, practice_ids = _find_agenda_and_practice_ids(
                 data, visit_motive_id, practice_id_filter=practice_id
@@ -108,12 +130,11 @@ class DoctolibSlots:
 
                 agenda_ids_q = "-".join(agenda_ids)
                 practice_ids_q = "-".join(practice_ids)
-                start_date = request.get_start_date()
 
                 for i in range(DOCTOLIB_ITERATIONS):
                     start_date_tmp = datetime.now() + timedelta(days=7 * i)
                     start_date_tmp = start_date_tmp.strftime("%Y-%m-%d")
-                    sdate, appt, count_next_appt, stop = self.get_appointments(
+                    sdate, appt, appointment_schedules, stop = self.get_appointments(
                         request,
                         start_date_tmp,
                         visit_motive_ids,
@@ -122,7 +143,9 @@ class DoctolibSlots:
                         practice_ids_q,
                         DOCTOLIB_SLOT_LIMIT,
                         start_date,
+                        appointment_schedules,
                     )
+
                     if stop:
                         break
                     if not sdate:
@@ -131,17 +154,8 @@ class DoctolibSlots:
                         first_availability = sdate
 
                     request.update_appointment_count(request.appointment_count + appt)
-                    updated_dict = dict(Counter(request.appointment_schedules) + Counter(count_next_appt))
-                    for interval in INTERVAL_SPLIT_DAYS:
-                        if f"{interval}_days" not in updated_dict.keys():
-                            updated_dict[f"{interval}_days"] = 0
-                    request.update_appointment_schedules(updated_dict)
-
-        if not request.get_appointment_schedules():
-            next_appointment_timetables = {}
-            for interval in INTERVAL_SPLIT_DAYS:
-                next_appointment_timetables[f"{interval}_days"] = 0
-            request.update_appointment_schedules(next_appointment_timetables)
+                if appointment_schedules is not None:
+                    request.update_appointment_schedules(appointment_schedules)
 
         return first_availability
 
@@ -198,12 +212,13 @@ class DoctolibSlots:
         practice_ids_q: str,
         limit: int,
         start_date_original: str,
+        appointment_schedules: list,
     ):
         stop = False
         motive_availability = False
         first_availability = None
         appointment_count = 0
-        next_appointment_timetables = defaultdict(int)
+        appointment_schedules_updated = None
         slots_api_url = f"https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={limit}"
         response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
         if response.status_code == 403:
@@ -211,7 +226,6 @@ class DoctolibSlots:
 
         response.raise_for_status()
         time.sleep(self._cooldown_interval)
-
         slots = response.json()
         if slots.get("total"):
             appointment_count += int(slots.get("total", 0))
@@ -225,12 +239,6 @@ class DoctolibSlots:
                     first_availability = slot_list[0]
                     motive_availability = True
 
-            for interval in INTERVAL_SPLIT_DAYS:
-                if start_date <= append_date_days(start_date_original, interval):
-                    if availability.get("date"):
-                        if availability.get("date") < append_date_days(start_date_original, interval):
-                            next_appointment_timetables[f"{interval}_days"] += len(availability.get("slots", []))
-
             for slot_info in slot_list:
                 if isinstance(slot_info, str):
                     continue
@@ -241,13 +249,46 @@ class DoctolibSlots:
                     first_availability = sdate
                     motive_availability = True
 
+            if visit_motive_ids[motive_id]:
+                visite_motive_vaccine = visit_motive_ids[motive_id]
+            else:
+                visite_motive_vaccine = None
+
+            for interval in INTERVAL_SPLIT_DAYS:
+                chronodose = False
+                if visite_motive_vaccine in CHRONODOSES["Vaccine"] and interval == CHRONODOSES["Interval"]:
+                    chronodose = True
+                appointment_schedules = build_appointment_schedules(
+                    request,
+                    interval,
+                    append_date_days(start_date_original, 0),
+                    append_date_days(start_date_original, interval, 1),
+                    0,
+                    appointment_schedules,
+                    chronodose,
+                )
+                if append_date_days(start_date_original, 0) <= append_date_days(start_date_original, interval):
+                    if availability.get("date"):
+                        if append_date_days(availability.get("date"), 0) < append_date_days(
+                            start_date_original, interval
+                        ):
+                            appointment_schedules = build_appointment_schedules(
+                                request,
+                                interval,
+                                append_date_days(start_date_original, 0),
+                                append_date_days(start_date_original, interval, 1),
+                                int(len(availability.get("slots", []))),
+                                appointment_schedules,
+                                chronodose,
+                            )
+
         if motive_availability:
             request.add_vaccine_type(visit_motive_ids[motive_id])
         # Sometimes Doctolib does not allow to see slots for next weeks
         # which is a weird move, but still, we have to stop here.
         if not first_availability and not slots.get("next_slot", None):
             stop = True
-        return first_availability, appointment_count, next_appointment_timetables, stop
+        return first_availability, appointment_count, appointment_schedules, stop
 
 
 def set_doctolib_center_internal_id(request: ScraperRequest, data: dict, practice_ids, practice_same_adress: bool):
@@ -372,6 +413,45 @@ def _parse_practice_id(rdv_site_web: str):
         return None
 
 
+def build_appointment_schedules(
+    request, interval, start_date, end_date, count, appointment_schedules, chronodose=False
+):
+    if appointment_schedules is None:
+        appointment_schedules = []
+    if isinstance(appointment_schedules, list) and len(appointment_schedules) > 0:
+        for appointment in appointment_schedules:
+            if appointment["name"] == f"{interval}_days":
+                appointment["total"] += count
+
+    if not any(appointment["name"] == f"{interval}_days" for appointment in appointment_schedules):
+        appointment_schedules.append(
+            {
+                "name": f"{interval}_days",
+                "from": start_date,
+                "to": end_date,
+                "total": count,
+            }
+        )
+
+    if chronodose:
+        if isinstance(appointment_schedules, list) and len(appointment_schedules) > 0:
+            for appointment in appointment_schedules:
+                if appointment["name"] == "chronodose":
+                    appointment["total"] += count
+
+        if not any(appointment["name"] == "chronodose" for appointment in appointment_schedules):
+            appointment_schedules.append(
+                {
+                    "name": "chronodose",
+                    "from": start_date,
+                    "to": end_date,
+                    "total": count,
+                }
+            )
+
+    return appointment_schedules
+
+
 def _find_visit_motive_category_id(data: dict):
     """
     Etant donnée une réponse à /booking/<centre>.json, renvoie le cas échéant
@@ -397,12 +477,16 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: list = None):
     """
     relevant_motives = {}
     for visit_motive in data.get("data", {}).get("visit_motives", []):
+        vaccine_name = repr(get_vaccine_name(visit_motive["name"]))
         # On ne gère que les 1ère doses (le RDV pour la 2e dose est en général donné
         # après la 1ère dose, donc les gens n'ont pas besoin d'aide pour l'obtenir).
         if not is_appointment_relevant(visit_motive["name"]):
             continue
+
+        vaccine_name = get_vaccine_name(visit_motive["name"])
+
         # If this motive isn't related to vaccination
-        if not visit_motive.get("vaccination_motive"):
+        if not visit_motive.get("first_shot_motive") and vaccine_name != Vaccine.JANSSEN:
             continue
         # If it's not a first shot motive
         # TODO: filter system
@@ -418,7 +502,7 @@ def _find_visit_motive_id(data: dict, visit_motive_category_id: list = None):
         # * visit_motive_category_id=<id> : filtre => on veut les motifs qui
         # correspondent à la catégorie en question.
         if visit_motive_category_id is None or visit_motive.get("visit_motive_category_id") in visit_motive_category_id:
-            relevant_motives[visit_motive["id"]] = get_vaccine_name(visit_motive["name"])
+            relevant_motives[visit_motive["id"]] = vaccine_name
     return relevant_motives
 
 
@@ -465,13 +549,9 @@ def is_allowing_online_appointments(rdata):
 def center_iterator():
     try:
         center_path = "data/output/doctolib-centers.json"
-        url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"
-        response = requests.get(url)
-        response.raise_for_status()
-        data = response.json()
-        file = open(center_path, "w")
-        file.write(json.dumps(data, indent=2))
-        file.close()
+
+        with open(center_path) as jsonfile:
+            data = json.load(jsonfile)
         logger.info(f"Found {len(data)} Doctolib centers (external scraper).")
         for center in data:
             yield center
