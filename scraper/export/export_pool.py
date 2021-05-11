@@ -99,6 +99,6 @@ def export_pool(centres_cherchés: Iterator[CenterInfo], platform: str, outpath_
     global_data["centres_indisponibles"] = deduplicates_names(global_data["centres_indisponibles"])
     outpath = outpath_format.format(platform)
     with open(outpath, "w") as info_centres:
-        json.dump(global_data, info_centres, indent=2)
+        json.dump(global_data, info_centres)
 
     return compte_centres, compte_centres_avec_dispo, bloqués_doctolib

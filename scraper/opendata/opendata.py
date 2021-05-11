@@ -44,7 +44,7 @@ def center_iterator(outpath_format="data/output/{}.json") -> Iterator[dict]:
 
     outpath = outpath_format.format("centres_non_pris_en_compte_gouv")
     with open(outpath, "w") as fichier:
-        json.dump(centres_non_pris_en_compte, fichier, indent=2)
+        json.dump(centres_non_pris_en_compte, fichier)
 
 
 def should_use_opendata_csv(rdv_site_web: str) -> bool:

@@ -565,7 +565,7 @@ def center_iterator():
         response.raise_for_status()
         data = response.json()
         file = open(center_path, "w")
-        file.write(json.dumps(data, indent=2))
+        file.write(json.dumps(data))
         file.close()
         logger.info(f"Found {len(data)} Doctolib centers (external scraper).")
         for center in data:

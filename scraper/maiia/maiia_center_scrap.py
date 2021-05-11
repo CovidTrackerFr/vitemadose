@@ -137,7 +137,7 @@ def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
     # pragma: no cover
     output_path = Path("data", "output", "maiia_centers.json")
     with open(output_path, "w", encoding="utf8") as f:
-        json.dump(centers, f, indent=2)
+        json.dump(centers, f)
     logger.info(f"Saved {len(centers)} centers to {output_path}")
     return centers
 

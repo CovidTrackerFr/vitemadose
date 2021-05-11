@@ -268,7 +268,7 @@ def centre_iterator():
         return
     # on sauvegarde le payload json reçu si jamais panne du endpoint
     with open(MAPHARMA_OPEN_DATA_FILE, "w", encoding="utf8") as f:
-        json.dump(opendata, f, indent=2)
+        json.dump(opendata, f)
     for pharmacy in opendata:
         for campagne in pharmacy.get("campagnes"):
             if not is_campagne_valid(campagne):
@@ -277,4 +277,4 @@ def centre_iterator():
             yield centre
     # on sauvegarde la liste des campagnes inconnues pour review
     with open(Path("data", "output", "mapharma_campagnes_inconnues.json"), "w", encoding="utf8") as f:
-        json.dump(campagnes_inconnues, f, indent=2)
+        json.dump(campagnes_inconnues, f)

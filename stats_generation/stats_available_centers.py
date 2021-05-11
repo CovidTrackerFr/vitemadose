@@ -142,7 +142,7 @@ def export_centres_stats(
             )
         )
         with open(Path("data", "output", stats_path), "w") as stats_file:
-            json.dump(centres_stats, stats_file, indent=2)
+            json.dump(centres_stats, stats_file)
         if stats_path != "stats.json":
             return
         generate_stats_date(centres_stats)

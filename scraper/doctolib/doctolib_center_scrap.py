@@ -278,4 +278,4 @@ if __name__ == "__main__":  # pragma: no cover
     logger.info(f"Found {len(centers)} centers on Doctolib")
     logger.info(f"> Writing them on {path_out}")
     with open(path_out, "w") as f:
-        f.write(json.dumps(centers, indent=2))
+        f.write(json.dumps(centers))

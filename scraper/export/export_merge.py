@@ -88,11 +88,11 @@ def export_data(centres_cherchés: Iterator[CenterInfo], last_scrap, outpath_for
 
     outpath = outpath_format.format("info_centres")
     with open(outpath, "w") as info_centres:
-        json.dump(par_departement, info_centres, indent=2)
+        json.dump(par_departement, info_centres)
 
     outpath = outpath_format.format("centres_open_data")
     with open(outpath, "w") as centres_file:
-        json.dump(centres_open_data, centres_file, indent=2)
+        json.dump(centres_open_data, centres_file)
 
     for departement, disponibilités in par_departement.items():
         disponibilités["last_updated"] = dt.datetime.now(tz=pytz.timezone("Europe/Paris")).isoformat()
@@ -104,7 +104,7 @@ def export_data(centres_cherchés: Iterator[CenterInfo], last_scrap, outpath_for
         outpath = outpath_format.format(departement)
         logger.debug(f"writing result to {outpath} file")
         with open(outpath, "w") as outfile:
-            outfile.write(json.dumps(disponibilités, indent=2))
+            outfile.write(json.dumps(disponibilités))
 
     return compte_centres, compte_centres_avec_dispo, bloqués_doctolib
 
