@@ -9,9 +9,9 @@ on:
     branches: ["main", "data-auto"]
   workflow_dispatch:
   workflow_run:
-    workflows: ["Scrap Doctolib", "Scrap Keldoc", "Scrap Maiia", "Scrap Mapharma", "Scrap Ordoclic"]
-    types:
-      - completed
+    workflows: ["CI build"]
+        types:
+          - completed
 
 jobs:
 
