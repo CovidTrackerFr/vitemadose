@@ -6,7 +6,7 @@ on:
   schedule:
     - cron: "*/5 * * * *"
   push:
-    branches: ["main", "data-auto"]
+    branches: ["main"]
   workflow_dispatch:
   workflow_run:
     workflows: ["Cron Maiia"]
