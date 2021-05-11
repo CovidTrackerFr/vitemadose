@@ -12,4 +12,4 @@ jobs:
 
     steps:
       - name: Cancel Workflow Runs
-      uses: potiuk/cancel-workflow-runs@v4_7
+        uses: potiuk/cancel-workflow-runs@v4_7
