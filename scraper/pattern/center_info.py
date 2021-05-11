@@ -62,6 +62,7 @@ class CenterInfo:
         self.type: Optional[str] = None
         self.appointment_count: int = 0
         self.internal_id: Optional[str] = None
+        self.gid: Optional[str] = None
         self.vaccine_type: Optional[List[Vaccine]] = None
         self.appointment_by_phone_only: bool = False
         self.erreur: Optional[str] = None
