@@ -160,10 +160,6 @@ def test_parse_ordoclic_slots():
     assert request.appointment_count == 42
 
 
-def test_fetch_slots():
-    pass
-
-
 def test_centre_iterator():
     pass
 
