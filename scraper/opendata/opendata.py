@@ -1,7 +1,7 @@
 import csv
 import io
 import json
-from typing import Iterator
+from typing import Iterator, Dict, Union, List
 import requests
 
 from utils.vmd_logger import enable_logger_for_production, get_logger
@@ -10,7 +10,7 @@ from utils.vmd_utils import fix_scrap_urls
 logger = get_logger()
 
 
-def center_iterator(outpath_format="data/output/{}.json") -> Iterator[dict]:
+def center_iterator(outpath_format: str = "data/output/{}.json") -> Iterator[dict]:
     url = "https://www.data.gouv.fr/fr/datasets/r/5cb21a85-b0b0-4a65-a249-806a040ec372"
     response = requests.get(url)
     response.raise_for_status()
