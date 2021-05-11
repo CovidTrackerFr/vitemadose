@@ -1,6 +1,6 @@
 <!-- 
 En bref :
-* Le titre du PR doit être en majuscule et concis.
+* Le titre du PR doit commencer par une majuscule et être concis.
 * Suivre le style de codage, ajouter des tests
 -->
 
