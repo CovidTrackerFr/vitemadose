@@ -2,6 +2,7 @@ import json
 
 from scraper.pattern.center_info import CenterInfo
 
+
 def is_in_blocklist(center: CenterInfo, blocklist_urls) -> bool:
     return center.url in blocklist_urls
 

@@ -50,6 +50,7 @@ def test_get_city():
     assert departementUtils.get_city(address_5) == "Basse-Terre"
     assert departementUtils.get_city(address_6) == None
 
+
 def test_get_cp():
     address_1 = "2 avenue de la République, 75005 PARIS"
     address_2 = " 24 Rue de la Brèche, 91740 Pussay "

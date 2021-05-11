@@ -73,7 +73,7 @@ class Profiling:
         return decorator
 
     def print_summary(self, keys=None):
-        if not hasattr(self, 'summary'):
+        if not hasattr(self, "summary"):
             return
         summary = self.summary
         keys = keys if keys is not None else sorted(summary.keys())

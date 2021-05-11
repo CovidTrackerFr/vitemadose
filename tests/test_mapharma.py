@@ -58,11 +58,9 @@ def test_campaign_to_center():
         "ville": "Rennes",
         "adresse": "1 Rue de la Gare",
         "horaires": "lundi: 09:00-12:00\nmardi: 09:00-11:00",
-        "telephone": "06 06 06 06 06"
+        "telephone": "06 06 06 06 06",
     }
-    campaign = {
-        "url": "https://mapharma.fr/pharmacie-du-centre"
-    }
+    campaign = {"url": "https://mapharma.fr/pharmacie-du-centre"}
     center = campagne_to_centre(pharma, campaign)
     assert center == {
         "nom": "Pharmacie du centre",
@@ -72,15 +70,13 @@ def test_campaign_to_center():
         "com_nom": "Rennes",
         "com_cp": "35000",
         "address": "1 Rue de la Gare, 35000 Rennes",
-        "business_hours": {
-            "lundi": "09:00-12:00",
-            "mardi": "09:00-11:00"
-        },
+        "business_hours": {"lundi": "09:00-12:00", "mardi": "09:00-11:00"},
         "phone_number": "06 06 06 06 06",
         "rdv_site_web": "https://mapharma.fr/pharmacie-du-centre",
         "com_insee": "35238",
-        "gid": "6369652d64752d63656e747"
+        "gid": "6369652d64752d63656e747",
     }
+
 
 def test_mapharma_fetch_slots():
     def app(request: httpx.Request) -> httpx.Response:

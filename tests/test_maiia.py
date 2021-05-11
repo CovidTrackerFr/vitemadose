@@ -85,42 +85,12 @@ def test_get_first_availability():
         "5ffc744c68dedf073a5b87a2", "2021-04-29", reasons, client=client
     )
     assert appointment_schedules == [
-        {
-            "from": "2021-04-29T00:00:00+02:00",
-            "name": "chronodose",
-            "to": "2021-04-30T23:59:59+02:00",
-            "total": 0
-        },
-        {
-            "from": "2021-04-29T00:00:00+02:00",
-            "name": "1_days",
-            "to": "2021-04-29T23:59:59+02:00",
-            "total": 0
-        },
-        {
-            "from": "2021-04-29T00:00:00+02:00",
-            "name": "2_days",
-            "to": "2021-04-30T23:59:59+02:00",
-            "total": 0
-        },
-        {
-            "from": "2021-04-29T00:00:00+02:00",
-            "name": "7_days",
-            "to": "2021-05-05T23:59:59+02:00",
-            "total": 0
-        },
-        {
-            "from": "2021-04-29T00:00:00+02:00",
-            "name": "28_days",
-            "to": "2021-05-26T23:59:59+02:00",
-            "total": 6570
-        },
-        {
-            "from": "2021-04-29T00:00:00+02:00",
-            "name": "49_days",
-            "to": "2021-06-16T23:59:59+02:00",
-            "total": 7980
-        },
+        {"from": "2021-04-29T00:00:00+02:00", "name": "chronodose", "to": "2021-04-30T23:59:59+02:00", "total": 0},
+        {"from": "2021-04-29T00:00:00+02:00", "name": "1_days", "to": "2021-04-29T23:59:59+02:00", "total": 0},
+        {"from": "2021-04-29T00:00:00+02:00", "name": "2_days", "to": "2021-04-30T23:59:59+02:00", "total": 0},
+        {"from": "2021-04-29T00:00:00+02:00", "name": "7_days", "to": "2021-05-05T23:59:59+02:00", "total": 0},
+        {"from": "2021-04-29T00:00:00+02:00", "name": "28_days", "to": "2021-05-26T23:59:59+02:00", "total": 6570},
+        {"from": "2021-04-29T00:00:00+02:00", "name": "49_days", "to": "2021-06-16T23:59:59+02:00", "total": 7980},
     ]
     assert slots_count == 7980
     assert first_availability.isoformat() == "2021-05-13T13:40:00+00:00"
@@ -152,18 +122,17 @@ def test_centre_iterator():
 
 
 def test_maiia_center_scrap():
-    url = '/api/pat-public/hcd'
+    url = "/api/pat-public/hcd"
 
     def app_mock(request: httpx.Request) -> httpx.Response:
 
-        if request.url.path == url and 'pharmacie' in request.url.query.decode("utf-8"):
-            return httpx.Response(200, json=json.loads(Path('tests/fixtures/maiia/scrap-center.json').
-                                                       read_text()))
-        if request.url.path == url and 'centre-de-vaccination' in request.url.query.decode("utf-8"):
-            return httpx.Response(200, json={'total': 0, 'items': []})
+        if request.url.path == url and "pharmacie" in request.url.query.decode("utf-8"):
+            return httpx.Response(200, json=json.loads(Path("tests/fixtures/maiia/scrap-center.json").read_text()))
+        if request.url.path == url and "centre-de-vaccination" in request.url.query.decode("utf-8"):
+            return httpx.Response(200, json={"total": 0, "items": []})
         return httpx.Response(403)
 
     client = httpx.Client(transport=httpx.MockTransport(app_mock))
     centers = maiia_scrap(client, save=False)
 
-    assert centers == json.loads(Path('tests/fixtures/maiia/scrap-center-result.json').read_text())
+    assert centers == json.loads(Path("tests/fixtures/maiia/scrap-center-result.json").read_text())
