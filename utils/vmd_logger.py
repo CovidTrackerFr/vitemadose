@@ -29,18 +29,32 @@ def get_logger():
 
 
 def enable_logger_for_production():
-    logger = logging.getLogger("scraper")
+    logger = get_logger()
     logger.setLevel(logging.INFO)
 
-    ch = logging.StreamHandler()
-    ch.setLevel(logging.DEBUG)
-    ch.setFormatter(CustomFormatter())
-    logger.addHandler(ch)
+    if not logger.handlers:
+        ch = logging.StreamHandler()
+        ch.setLevel(logging.DEBUG)
+        ch.setFormatter(CustomFormatter())
+        logger.addHandler(ch)
+
     return logger
 
 
 def enable_logger_for_debug():
-    ch = logging.StreamHandler()
-    ch.setLevel(logging.DEBUG)
-    ch.setFormatter(CustomFormatter())
-    logging.basicConfig(level=logging.DEBUG, handlers=[ch])
+    # must be called after enable_logger_for_production(), otherwise it'll be partially overridden by it
+    logger = get_logger()
+    logger.setLevel(logging.DEBUG)
+
+    # disable production "scraper" logger handler: all will be handled on root logger
+    if logger.handlers:
+        logger.handlers = []
+
+    root_logger = logging.root
+    root_logger.setLevel(logging.DEBUG)
+
+    if not root_logger.handlers:
+        ch = logging.StreamHandler()
+        ch.setLevel(logging.DEBUG)
+        ch.setFormatter(CustomFormatter())
+        root_logger.addHandler(ch)
