@@ -245,21 +245,6 @@ def test_convert_centerinfo_invalid():
         }
 
 
-def test_vaccine_name():
-    name = get_vaccine_name("", Vaccine.PFIZER)
-    assert name == 'Pfizer-BioNTech'
-
-
-def test_minus_edgecase():
-    name = "2ème injection pour moins de 55 ans suite à première injection AstraAzeneca"
-    vaccine = get_vaccine_astrazeneca_minus_55_edgecase(name)
-
-    assert vaccine == Vaccine.ARNM
-    name = "2ème injection AstraZeneca ---"
-    vaccine = get_vaccine_astrazeneca_minus_55_edgecase(name)
-    assert vaccine == Vaccine.ASTRAZENECA
-
-
 def test_get_last_scans():
 
     center_info1 = CenterInfo("01", "Centre 1", "https://example1.fr")
