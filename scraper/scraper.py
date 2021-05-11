@@ -163,7 +163,7 @@ def get_center_platform(center_url: str, fetch_map: dict = None):
 
 
 @Profiling.measure("Any_slot")
-def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
+def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None) -> ScraperResult:
     if fetch_map is None:
         # Map platform to implementation.
         # May be overridden for unit testing purposes.
