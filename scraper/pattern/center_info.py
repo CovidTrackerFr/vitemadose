@@ -3,6 +3,7 @@ from datetime import datetime, timedelta
 from typing import Optional, List, Dict
 
 import pytz
+import requests
 
 from utils.vmd_utils import departementUtils
 from scraper.pattern.center_location import CenterLocation, convert_csv_data_to_location
@@ -41,6 +42,9 @@ VACCINES_NAMES: Dict[Vaccine, List[str]] = {
         "j&j",
     ],
 }
+
+
+RESERVED_CENTERS: List[str] = ["réservé", "reserve", "professionnel"]
 
 
 # Schedules array for appointments by interval
@@ -212,3 +216,42 @@ def full_dict_to_center(data: dict) -> CenterInfo:
     for key in data:
         setattr(center, key, data.get(key))
     return center
+
+
+def is_reserved_center(center: Optional[CenterInfo]) -> bool:
+    if not center:
+        return False
+    name = center.nom.lower().strip()
+    for reserved_names in RESERVED_CENTERS:
+        if reserved_names in name:
+            return True
+    return False
+
+
+def get_last_scans(centres: List[CenterInfo]) -> List:
+    url = "https://vitemadose.gitlab.io/vitemadose/info_centres.json"
+    last_scans = {}
+    liste_centres = centres.copy()
+
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        info_centres = response.json()
+
+    except Exception as e:
+        logger.warning(f"Impossible de récupérer le fichier info_centres: {e}")
+        info_centres = {}
+
+    for last_centres in info_centres.values():
+        for centre in last_centres["centres_disponibles"] + last_centres["centres_indisponibles"]:
+            if "last_scan_with_availabilities" in centre:
+                last_scans[centre["url"]] = centre["last_scan_with_availabilities"]
+
+    for centre in liste_centres:
+        if not centre.prochain_rdv:
+            if centre.url in last_scans:
+                centre.last_scan_with_availabilities = last_scans[centre.url]
+        else:
+            centre.last_scan_with_availabilities = datetime.datetime.now(tz=pytz.timezone("Europe/Paris")).isoformat()
+
+    return liste_centres

@@ -3,11 +3,11 @@ import datetime as dt
 from scraper.pattern.center_location import convert_csv_data_to_location, CenterLocation
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, DRUG_STORE
-from utils.vmd_utils import format_phone_number, get_last_scans
+from utils.vmd_utils import format_phone_number
 from .utils import mock_datetime_now
 from scraper.pattern.center_info import CenterInfo, convert_csv_address, Vaccine, convert_csv_business_hours, \
     convert_ordoclic_to_center_info, convert_csv_data_to_center_info, get_vaccine_name, \
-    get_vaccine_astrazeneca_minus_55_edgecase
+    get_vaccine_astrazeneca_minus_55_edgecase, get_last_scans
 
 
 def test_center_info_fill():
@@ -258,3 +258,20 @@ def test_minus_edgecase():
     name = "2ème injection AstraZeneca ---"
     vaccine = get_vaccine_astrazeneca_minus_55_edgecase(name)
     assert vaccine == Vaccine.ASTRAZENECA
+
+
+def test_get_last_scans():
+
+    center_info1 = CenterInfo("01", "Centre 1", "https://example1.fr")
+    center_info2 = CenterInfo("01", "Centre 2", "https://example2.fr")
+
+    center_info2.prochain_rdv = "2021-06-06T00:00:00"
+
+    centres_cherchés = [center_info1, center_info2]
+
+    fake_now = dt.datetime(2021, 5, 5)
+    with mock_datetime_now(fake_now):
+        centres_cherchés = get_last_scans(centres_cherchés)
+
+    assert centres_cherchés[0].last_scan_with_availabilities == None
+    assert centres_cherchés[1].last_scan_with_availabilities == "2021-05-05T00:00:00"

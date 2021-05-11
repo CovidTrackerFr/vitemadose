@@ -2,20 +2,16 @@ import re
 import csv
 import json
 import logging
-from typing import List, Dict,  Optional
-from scraper.pattern.center_info import CenterInfo
+from typing import List, Dict, Optional
 from urllib.parse import urlparse, urlencode, urlunparse, parse_qs, unquote
 import datetime as dt
 import pytz
-import requests
 
 import time
 from datetime import date, timedelta, datetime
 
 from pathlib import Path
 from unidecode import unidecode
-
-RESERVED_CENTERS: List[str] = ["réservé", "reserve", "professionnel"]
 
 
 def load_insee() -> Dict:
@@ -31,16 +27,6 @@ def load_cedex_to_insee() -> Dict:
 logger = logging.getLogger("scraper")
 insee = load_insee()
 cedex_to_insee = load_cedex_to_insee()
-
-
-def is_reserved_center(center: Optional[CenterInfo]) -> bool:
-    if not center:
-        return False
-    name = center.nom.lower().strip()
-    for reserved_names in RESERVED_CENTERS:
-        if reserved_names in name:
-            return True
-    return False
 
 
 def urlify(s: str) -> str:
@@ -181,35 +167,6 @@ def fix_scrap_urls(url: str) -> str:
         u = u._replace(query=urlencode(query, True))
         url = urlunparse(u)
     return url
-
-
-def get_last_scans(centres: List[CenterInfo]) -> List:
-    url = "https://vitemadose.gitlab.io/vitemadose/info_centres.json"
-    last_scans = {}
-    liste_centres = centres.copy()
-
-    try:
-        response = requests.get(url)
-        response.raise_for_status()
-        info_centres = response.json()
-
-    except Exception as e:
-        logger.warning(f"Impossible de récupérer le fichier info_centres: {e}")
-        info_centres = {}
-
-    for last_centres in info_centres.values():
-        for centre in last_centres["centres_disponibles"] + last_centres["centres_indisponibles"]:
-            if "last_scan_with_availabilities" in centre:
-                last_scans[centre["url"]] = centre["last_scan_with_availabilities"]
-
-    for centre in liste_centres:
-        if not centre.prochain_rdv:
-            if centre.url in last_scans:
-                centre.last_scan_with_availabilities = last_scans[centre.url]
-        else:
-            centre.last_scan_with_availabilities = dt.datetime.now(tz=pytz.timezone("Europe/Paris")).isoformat()
-
-    return liste_centres
 
 
 def append_date_days(mydate: str, days: int, seconds: int = 0) -> Optional[str]:

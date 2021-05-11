@@ -15,13 +15,13 @@ from scraper.error import ScrapeError, BlockedByDoctolibError
 import pytz
 import requests
 
-from scraper.pattern.center_info import convert_csv_data_to_center_info, CenterInfo
+from scraper.pattern.center_info import convert_csv_data_to_center_info, CenterInfo, is_reserved_center, get_last_scans
 from utils.vmd_blocklist import is_in_blocklist, get_blocklist_urls
 from utils.vmd_center_sort import sort_center
 from utils.vmd_duplicated import deduplicates_names
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug, get_logger
 from utils.vmd_opendata import copy_omit_keys
-from utils.vmd_utils import departementUtils, fix_scrap_urls, is_reserved_center, get_last_scans
+from utils.vmd_utils import departementUtils, fix_scrap_urls
 
 POOL_SIZE = int(os.getenv("POOL_SIZE", 50))
 PARTIAL_SCRAPE = float(os.getenv("PARTIAL_SCRAPE", 1.0))

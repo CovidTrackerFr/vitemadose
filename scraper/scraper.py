@@ -6,12 +6,12 @@ from pprint import pformat
 from random import random
 
 from scraper.error import ScrapeError
-from scraper.pattern.center_info import convert_csv_data_to_center_info, CenterInfo
+from scraper.pattern.center_info import convert_csv_data_to_center_info, CenterInfo, get_last_scans
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from scraper.profiler import Profiling
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
-from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date
+from utils.vmd_utils import fix_scrap_urls, get_start_date
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .export.export_merge import export_data
