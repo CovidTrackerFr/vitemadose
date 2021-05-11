@@ -8,6 +8,7 @@ from scraper.doctolib.doctolib_center_scrap import (
     find_place,
     get_dict_infos_center_page,
     parse_page_centers,
+    parse_page_centers_departement,
 )
 
 import requests
@@ -183,4 +184,6 @@ def test_parse_page_centers(mock_get):
         }]
     mock_get.return_value.json.return_value = doctors
     mockedResponse = parse_page_centers(0)
+    assert mockedResponse == expectedCentersPage
+    mockedResponse = parse_page_centers_departement("75000",1)
     assert mockedResponse == expectedCentersPage
