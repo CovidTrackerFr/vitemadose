@@ -228,8 +228,12 @@ class DoctolibSlots:
         appointment_count = 0
         appointment_schedules_updated = None
         slots_api_url = f"https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={limit}"
-        response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
-        if response.status_code == 403:
+        try:
+            response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
+        except httpx.ReadTimeout as hex:
+            logger.warning(f"Doctolib returned error ReadTimeout for url {request.get_url()}")
+            raise BlockedByDoctolibError(request.get_url())
+        if response.status_code == 403 or response.status_code == 400:
             raise BlockedByDoctolibError(request.get_url())
 
         response.raise_for_status()
