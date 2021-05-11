@@ -50,6 +50,21 @@ def test_get_city():
     assert departementUtils.get_city(address_5) == "Basse-Terre"
     assert departementUtils.get_city(address_6) == None
 
+def test_get_cp():
+    address_1 = "2 avenue de la République, 75005 PARIS"
+    address_2 = " 24 Rue de la Brèche, 91740 Pussay "
+    address_3 = "Centre Cial du Bois des Roches 91240 SAINT MICHEL SUR ORGE"
+    address_4 = " , 83700 Saint-Raphaël "
+    address_5 = "1171 Avenue Gaston Feuillard\n97100 Basse-Terre"
+    address_6 = "Rue de la République"
+
+    assert departementUtils.get_cp(address_1) == "75005"
+    assert departementUtils.get_cp(address_2) == "91740"
+    assert departementUtils.get_cp(address_3) == "91240"
+    assert departementUtils.get_cp(address_4) == "83700"
+    assert departementUtils.get_cp(address_5) == "97100"
+    assert departementUtils.get_cp(address_6) == None
+
 
 def test_cp_to_insee():
     # Paris 15

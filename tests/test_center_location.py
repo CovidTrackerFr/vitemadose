@@ -59,5 +59,6 @@ def test_location_callback():
     assert center_location.default() == {
         "longitude": 1.231,
         "latitude": -1.23,
-        "city": "Foo2bar"
+        "city": "Foo2bar",
+        "cp": "35000"
     }

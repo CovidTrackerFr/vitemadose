@@ -141,7 +141,8 @@ def convert_ordoclic_to_center_info(data: dict, center: CenterInfo) -> CenterInf
 
     if coordinates["lon"] or coordinates["lat"]:
         city = urlify(localization.get("city"))
-        loc = CenterLocation(coordinates["lon"], coordinates["lat"], city)
+        zip = localization.get("zip")
+        loc = CenterLocation(coordinates["lon"], coordinates["lat"], city, zip)
         center.fill_localization(loc)
     center.metadata = dict()
     center.metadata["address"] = f'{localization["address"]}, {localization["zip"]} {localization["city"]}'

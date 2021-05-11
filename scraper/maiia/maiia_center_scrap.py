@@ -73,9 +73,10 @@ def maiia_center_to_csv(center: dict, root_center: dict) -> dict:
         return csv
 
     if "address" in center["publicInformation"]:
+        zip = center["publicInformation"]["address"].get("zipCode")
+        csv["com_cp"] = zip
         csv["com_insee"] = center["publicInformation"]["address"].get("inseeCode", "")
         if len(csv["com_insee"]) < 5:
-            zip = center["publicInformation"]["address"].get("zipCode")
             csv["com_insee"] = departementUtils.cp_to_insee(zip)
         csv["address"] = center["publicInformation"]["address"].get("fullAddress")
         if "location" in center["publicInformation"]["address"]:
