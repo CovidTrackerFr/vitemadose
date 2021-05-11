@@ -15,7 +15,8 @@ timeout = httpx.Timeout(25.0, connect=25.0)
 KELDOC_HEADERS = {
     "User-Agent": os.environ.get("KELDOC_API_KEY", ""),
 }
-KELDOC_SLOT_LIMIT = 50
+KELDOC_SLOT_PAGES = 7
+KELDOC_DAYS_PER_PAGE = 4
 DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
@@ -123,33 +124,52 @@ class KeldocCenter:
         # Keldoc needs an end date, but if no appointment are found,
         # it still returns the next available appointment. Bigger end date
         # makes Keldoc responses slower.
+        timetable = {}
+        current_start_date = isoparse(start_date)
+
         calendar_url = API_KELDOC_CALENDAR.format(motive_id)
-        end_date = (isoparse(start_date) + timedelta(days=KELDOC_SLOT_LIMIT)).strftime("%Y-%m-%d")
-        logger.debug(
-            f"get_timetables -> start_date: {start_date} end_date: {end_date} motive: {motive_id} agenda: {agenda_ids}"
-        )
-        calendar_params = {
-            "from": start_date,
-            "to": end_date,
-            "agenda_ids[]": agenda_ids,
-        }
-        try:
-            calendar_req = self.client.get(calendar_url, params=calendar_params)
-            calendar_req.raise_for_status()
-        except httpx.TimeoutException as hex:
-            logger.warning(
-                f"Keldoc request timed out for center: {self.base_url} (calendar request)"
-                f" celendar_url: {calendar_url}"
-                f" calendar_params: {calendar_params}"
+
+        for i in range(0, KELDOC_DAYS_PER_PAGE):
+            end_date = (current_start_date + timedelta(days=KELDOC_DAYS_PER_PAGE)).strftime("%Y-%m-%d")
+            logger.debug(
+                f"get_timetables -> start_date: {current_start_date} end_date: {end_date} motive: {motive_id} agenda: {agenda_ids}"
             )
-            return None
-        except httpx.HTTPStatusError as hex:
-            logger.warning(
-                f"Keldoc request returned error {hex.response.status_code} "
-                f"for center: {self.base_url} (calendar request)"
-            )
-            return None
-        return calendar_req.json()
+            calendar_params = {
+                "from": current_start_date.strftime('%Y-%m-%d'),
+                "to": end_date,
+                "agenda_ids[]": agenda_ids,
+            }
+            try:
+                calendar_req = self.client.get(calendar_url, params=calendar_params)
+                calendar_req.raise_for_status()
+            except httpx.TimeoutException as hex:
+                logger.warning(
+                    f"Keldoc request timed out for center: {self.base_url} (calendar request)"
+                    f" celendar_url: {calendar_url}"
+                    f" calendar_params: {calendar_params}"
+                )
+                return None
+            except httpx.HTTPStatusError as hex:
+                logger.warning(
+                    f"Keldoc request returned error {hex.response.status_code} "
+                    f"for center: {self.base_url} (calendar request)"
+                )
+                return None
+            current_start_date += timedelta(days=KELDOC_DAYS_PER_PAGE)
+            current_timetable = calendar_req.json()
+
+            if not current_timetable:
+                break
+            if "date" in current_timetable and "date" not in timetable:
+                timetable["date"] = current_timetable.get("date")
+            if "availabilities" in current_timetable:
+                if "availabilities" not in timetable:
+                    timetable["availabilities"] = current_timetable.get("availabilities")
+                else:
+                    timetable["availabilities"].update(current_timetable.get("availabilities"))
+        if timetable.get("availabilities"):
+            timetable.pop("date")
+        return timetable
 
     def count_appointements(self, appointments: list, start_date: str, end_date: str) -> int:
         paris_tz = timezone("Europe/Paris")
