@@ -20,7 +20,6 @@ from scraper.ordoclic import (
 )
 
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS
 
 
 def test_search():
