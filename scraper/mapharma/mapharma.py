@@ -15,7 +15,8 @@ from urllib import parse
 
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
-from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
+from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
+from scraper.pattern.vaccine import Vaccine, get_vaccine_name
 from utils.vmd_utils import departementUtils
 from scraper.profiler import Profiling
 

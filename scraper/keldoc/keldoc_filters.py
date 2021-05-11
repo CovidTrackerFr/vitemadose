@@ -4,7 +4,7 @@ from datetime import datetime
 from httpx import TimeoutException
 
 from scraper.keldoc.keldoc_routes import API_KELDOC_MOTIVES
-from scraper.pattern.center_info import get_vaccine_name
+from scraper.pattern.vaccine import get_vaccine_name
 
 KELDOC_COVID_SPECIALTIES = ["Maladies infectieuses"]
 

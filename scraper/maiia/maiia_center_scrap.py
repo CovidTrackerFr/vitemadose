@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from dateutil.parser import isoparse
 from pathlib import Path
 from utils.vmd_utils import departementUtils, format_phone_number
-from scraper.pattern.center_info import get_vaccine_name
+from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_result import DRUG_STORE, GENERAL_PRACTITIONER, VACCINATION_CENTER
 from .maiia_utils import get_paged, MAIIA_LIMIT
 

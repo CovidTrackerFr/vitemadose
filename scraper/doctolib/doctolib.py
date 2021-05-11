@@ -14,7 +14,8 @@ from collections import defaultdict
 from dateutil.parser import isoparse
 
 from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
-from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
+from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
+from scraper.pattern.vaccine import Vaccine, get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 from scraper.profiler import Profiling

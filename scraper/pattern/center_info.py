@@ -1,4 +1,3 @@
-from enum import Enum
 from datetime import datetime, timedelta
 from typing import Optional, List, Dict
 
@@ -9,39 +8,12 @@ from utils.vmd_utils import departementUtils
 from scraper.pattern.center_location import CenterLocation, convert_csv_data_to_location
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult
+from scraper.pattern.vaccine import Vaccine
 
 from utils.vmd_utils import urlify, format_phone_number
 from utils.vmd_logger import get_logger
 
 logger = get_logger()
-
-
-class Vaccine(str, Enum):
-    PFIZER = "Pfizer-BioNTech"
-    MODERNA = "Moderna"
-    ASTRAZENECA = "AstraZeneca"
-    JANSSEN = "Janssen"
-    ARNM = "ARNm"
-
-
-VACCINES_NAMES: Dict[Vaccine, List[str]] = {
-    Vaccine.PFIZER: ["pfizer", "biontech"],
-    Vaccine.MODERNA: ["moderna"],
-    Vaccine.ARNM: ["arn", "arnm", "arn-m", "arn m"],
-    Vaccine.ASTRAZENECA: ["astrazeneca", "astra-zeneca", "astra zeneca", "az"],  # Not too sure about the reliability
-    Vaccine.JANSSEN: [
-        "janssen",
-        "jansen",
-        "jansenn",
-        "jannsen",
-        "jenssen",
-        "jensen",
-        "jonson",
-        "johnson",
-        "johnnson",
-        "j&j",
-    ],
-}
 
 
 RESERVED_CENTERS: List[str] = ["réservé", "reserve", "professionnel"]
@@ -180,27 +152,6 @@ def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
         center.metadata["phone_number"] = format_phone_number(data.get("phone_number"))
     center.metadata["business_hours"] = convert_csv_business_hours(data)
     return center
-
-
-def get_vaccine_name(name: str, fallback: Optional[Vaccine] = None) -> Optional[Vaccine]:
-    if not name:
-        return fallback
-    name = name.lower().strip()
-    for vaccine in (Vaccine.ARNM, Vaccine.MODERNA, Vaccine.PFIZER, Vaccine.ASTRAZENECA, Vaccine.JANSSEN):
-        vaccine_names = VACCINES_NAMES[vaccine]
-        for vaccine_name in vaccine_names:
-            if vaccine_name in name:
-                if vaccine == Vaccine.ASTRAZENECA:
-                    return get_vaccine_astrazeneca_minus_55_edgecase(name)
-                return vaccine
-    return fallback
-
-
-def get_vaccine_astrazeneca_minus_55_edgecase(name: str) -> Vaccine:
-    has_minus = "-" in name or "–" in name or "–" in name or "moins" in name
-    if has_minus and "55" in name and "suite" in name:
-        return Vaccine.ARNM
-    return Vaccine.ASTRAZENECA
 
 
 def dict_to_center_info(data: dict) -> CenterInfo:

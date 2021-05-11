@@ -4,7 +4,7 @@ from typing import DefaultDict
 from scraper.doctolib.doctolib_filters import is_category_relevant, is_vaccination_center, is_appointment_relevant, \
     parse_practitioner_type
 from scraper.error import BlockedByDoctolibError
-from scraper.pattern.center_info import Vaccine
+from scraper.pattern.vaccine import Vaccine
 
 import httpx
 from scraper.doctolib.doctolib import (

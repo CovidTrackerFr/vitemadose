@@ -1,6 +1,6 @@
 import hashlib
 from typing import Optional, List
-from scraper.center_info import Vaccine
+from scraper.pattern.vaccine import Vaccine
 
 
 class ScraperRequest:

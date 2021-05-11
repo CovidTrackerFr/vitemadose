@@ -13,7 +13,8 @@ from urllib.parse import quote, parse_qs
 from typing import Optional, Tuple, Iterator, List
 
 from scraper.profiler import Profiling
-from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
+from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
+from scraper.pattern.vaccine import Vaccine, get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT
 
