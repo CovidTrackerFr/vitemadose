@@ -10,7 +10,7 @@ from dateutil.parser import isoparse
 from pathlib import Path
 from urllib import parse as urlparse
 from urllib.parse import quote, parse_qs
-from typing import Optional
+from typing import Optional, Tuple, Iterator, List
 
 from scraper.profiler import Profiling
 from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
@@ -75,7 +75,7 @@ def get_slots(
     consultation_reason_name: str,
     start_date: str,
     end_date: str,
-    limit=MAIIA_LIMIT,
+    limit: int = MAIIA_LIMIT,
     client: httpx.Client = DEFAULT_CLIENT,
 ) -> Optional[list]:
     url = f"{MAIIA_URL}/api/pat-public/availabilities?centerId={center_id}&consultationReasonName={consultation_reason_name}&from={start_date}&to={end_date}"
@@ -95,7 +95,7 @@ def get_slots(
     return None
 
 
-def get_reasons(center_id: str, limit=MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIENT) -> list:
+def get_reasons(center_id: str, limit: int = MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIENT) -> list:
     url = f"{MAIIA_URL}/api/pat-public/consultation-reason-hcd?rootCenterId={center_id}"
     result = get_paged(url, limit=limit, client=client)
     if not result["total"]:
@@ -104,8 +104,8 @@ def get_reasons(center_id: str, limit=MAIIA_LIMIT, client: httpx.Client = DEFAUL
 
 
 def get_first_availability(
-    center_id: str, request_date: str, reasons: [dict], client: httpx.Client = DEFAULT_CLIENT
-) -> [Optional[datetime], int, dict]:
+    center_id: str, request_date: str, reasons: List[dict], client: httpx.Client = DEFAULT_CLIENT
+) -> Tuple[Optional[datetime], int, List[dict]]:
     date = isoparse(request_date).replace(tzinfo=None)
     start_date = date.isoformat()
     end_date = (date + timedelta(days=MAIIA_DAY_LIMIT)).isoformat()
@@ -178,7 +178,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
     return first_availability.isoformat()
 
 
-def centre_iterator():
+def centre_iterator() -> Iterator[dict]:
     try:
         center_path = "data/output/maiia_centers.json"
         url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"
