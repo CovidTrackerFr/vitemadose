@@ -6,8 +6,10 @@ from scraper.doctolib.doctolib_center_scrap import (
     parse_doctolib_business_hours,
     get_pid,
     find_place,
+    get_dict_infos_center_page,
 )
 
+import requests
 # -- Tests de l'API (offline) --
 from scraper.pattern.scraper_result import GENERAL_PRACTITIONER, DRUG_STORE, VACCINATION_CENTER
 
@@ -79,8 +81,48 @@ def test_doctolib_find_place():
                 "name": "like you"
             },
         ]
-    urlWithPid = f"someURL?pid=1"
+    urlWithPid = "someURL?pid=1"
     urlWithoutPid = "someURL"
-
     assert find_place(places, urlWithoutPid)["name"] == "someone";
     assert find_place(places, urlWithPid)["name"] == "like you";
+
+from unittest.mock import Mock, patch
+
+@patch('requests.get')
+def test_get_dict_infos_center_page(mock_get):
+    import json
+
+    with open("tests/fixtures/doctolib/booking.json", "r") as file:
+        booking = json.load(file)
+
+    expectedInfosCenterPage = {
+        "gid": "d1",
+        "address": "11 Rue d'Orléans, 92200 Neuilly-sur-Seine",
+        "long_coor1": 2.27230770000006,
+        "lat_coor1": 48.8814861,
+        "com_insee": "92051",
+        "phone_number": "+33638952553",
+        "business_hours": {
+            "lundi": None,
+            "mardi": None,
+            "mercredi": None,
+            "jeudi": None,
+            "vendredi": None,
+            "samedi": None,
+            "dimanche": None,
+        },
+        "visit_motives": [
+            "Consultation de suivi spécialiste",
+            "Première consultation de neurochirurgie"
+        ]
+    }
+
+    mock_get.return_value.json.return_value = booking
+    mockedResponse = get_dict_infos_center_page('someURL?pid=practice-86656')
+    assert mockedResponse == expectedInfosCenterPage
+
+    mock_get.return_value.json.return_value = {
+        "data": {}
+    }
+    mockedResponse = get_dict_infos_center_page('someURL')
+    assert mockedResponse == {}
