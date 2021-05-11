@@ -3,6 +3,7 @@ import os
 import httpx
 import json
 import logging
+from typing import Tuple, Optional, Iterator
 
 from datetime import date, datetime, timedelta
 from dateutil.parser import isoparse
@@ -86,7 +87,7 @@ def get_mapharma_opendata(
     client: httpx.Client = DEFAULT_CLIENT,
     opendata_url: str = MAPHARMA_OPEN_DATA_URL,
     opendata_url_fallback: str = MAPHARMA_OPEN_DATA_URL_FALLBACK,
-) -> dict:
+) -> Optional[dict]:
     try:
         request = client.get(opendata_url, headers=MAPHARMA_HEADERS)
         request.raise_for_status()
@@ -108,7 +109,7 @@ def get_mapharma_opendata(
 
 def get_pharmacy_and_campagne(
     id_campagne: int, id_type: int, opendata_file: str = MAPHARMA_OPEN_DATA_FILE
-) -> [dict, dict]:
+) -> Tuple[dict, dict]:
     opendata = list()
     try:
         with open(opendata_file, "r", encoding="utf8") as f:
@@ -137,7 +138,7 @@ def get_slots(campagneId: str, optionId: str, start_date: str, client: httpx.Cli
     return r.json()
 
 
-def parse_slots(slots) -> [datetime, int]:
+def parse_slots(slots) -> Tuple[datetime, int]:
     first_availability = None
     slot_count = 0
     for date, day_slots in slots.items():
@@ -166,7 +167,7 @@ def count_appointements(slots: dict, start_date: datetime, end_date: datetime) -
 @Profiling.measure("mapharma_slot")
 def fetch_slots(
     request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT, opendata_file: str = MAPHARMA_OPEN_DATA_FILE
-) -> str:
+) -> Optional[str]:
     url = request.get_url()
     # on récupère les paramètres c (id_campagne) & l (id_type)
     params = dict(parse.parse_qsl(parse.urlsplit(url).query))
@@ -183,7 +184,7 @@ def fetch_slots(
                 continue
             day_slots[day] = day_slot
     if not day_slots:
-        return
+        return None
     day_slots.pop("first", None)
     day_slots.pop("first_text", None)
     first_availability, slot_count = parse_slots(day_slots)
@@ -252,7 +253,7 @@ def is_campagne_valid(campagne: dict) -> bool:
     return False
 
 
-def centre_iterator():
+def centre_iterator() -> Iterator[dict]:
     global opendata
     global campagnes_inconnues
     campagnes = []
