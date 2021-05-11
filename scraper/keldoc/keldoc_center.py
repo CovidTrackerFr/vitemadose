@@ -9,7 +9,7 @@ import httpx
 from scraper.keldoc.keldoc_filters import parse_keldoc_availability
 from scraper.keldoc.keldoc_routes import API_KELDOC_CALENDAR, API_KELDOC_CENTER, API_KELDOC_CABINETS
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.pattern.scraper_result import INTERVAL_SPLIT_DAYS
+from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
 
 timeout = httpx.Timeout(25.0, connect=25.0)
 KELDOC_HEADERS = {
@@ -19,6 +19,7 @@ KELDOC_SLOT_LIMIT = 50
 DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
+
 
 class KeldocCenter:
     def __init__(self, request: ScraperRequest, client: httpx.Client = None):
@@ -164,17 +165,10 @@ class KeldocCenter:
         logger.debug(f"Slots count from {start_date} to {end_date}: {count}")
         return count
 
-
     def get_appointment_schedule(self, appointments: list, start_date: str, end_date: str, schedule_name: str) -> dict:
         count = self.count_appointements(appointments, start_date, end_date)
-        appointment_schedule = {
-            "name": schedule_name,
-            "from": start_date,
-            "to": end_date,
-            "total": count
-        }
+        appointment_schedule = {"name": schedule_name, "from": start_date, "to": end_date, "total": count}
         return appointment_schedule
-
 
     def find_first_availability(self, start_date: str):
         if not self.vaccine_motives:
@@ -205,7 +199,9 @@ class KeldocCenter:
                 continue
         # update appointment_schedules
         s_date = (paris_tz.localize(isoparse(start_date) + timedelta(days=0))).isoformat()
-        n_date = (paris_tz.localize(isoparse(start_date) + timedelta(days=2, seconds=-1))).isoformat()
+        n_date = (
+            paris_tz.localize(isoparse(start_date) + timedelta(days=CHRONODOSES["Interval"], seconds=-1))
+        ).isoformat()
         appointment_schedules.append(self.get_appointment_schedule(appointments, s_date, n_date, "chronodose"))
         for n in INTERVAL_SPLIT_DAYS:
             n_date = (paris_tz.localize(isoparse(start_date) + timedelta(days=n, seconds=-1))).isoformat()

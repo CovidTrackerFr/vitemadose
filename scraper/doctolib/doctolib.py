@@ -14,9 +14,8 @@ from collections import defaultdict
 from dateutil.parser import isoparse
 
 from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
-from scraper.pattern.center_info import get_vaccine_name, Vaccine
+from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.pattern.scraper_result import INTERVAL_SPLIT_DAYS
 from scraper.error import BlockedByDoctolibError
 from scraper.profiler import Profiling
 from utils.vmd_utils import append_date_days
@@ -40,8 +39,6 @@ else:
     DEFAULT_CLIENT = httpx.Client()
 
 logger = logging.getLogger("scraper")
-
-CHRONODOSES = {"Vaccine": [Vaccine.ARNM, Vaccine.PFIZER, Vaccine.MODERNA], "Interval": 2}
 
 
 # Vérifie qu'aucun des intervalles de calcul de dépasse l'intervalle globale de recherche des dispos
@@ -125,7 +122,7 @@ class DoctolibSlots:
                 request,
                 interval,
                 append_date_days(start_date, 0),
-                append_date_days(start_date, interval, 1),
+                append_date_days(start_date, days=interval, seconds=-1),
                 0,
                 appointment_schedules,
                 chronodose,
@@ -273,7 +270,7 @@ class DoctolibSlots:
                     request,
                     interval,
                     append_date_days(start_date_original, 0),
-                    append_date_days(start_date_original, interval, 1),
+                    append_date_days(start_date_original, days=interval, seconds=-1),
                     0,
                     appointment_schedules,
                     chronodose,
@@ -287,7 +284,7 @@ class DoctolibSlots:
                                 request,
                                 interval,
                                 append_date_days(start_date_original, 0),
-                                append_date_days(start_date_original, interval, 1),
+                                append_date_days(start_date_original, days=interval, seconds=-1),
                                 len(availability.get("slots", [])),
                                 appointment_schedules,
                                 chronodose,

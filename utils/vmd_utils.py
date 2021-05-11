@@ -220,7 +220,7 @@ def append_date_days(mydate: str, days: int, seconds=0):
 
     mydate = date.fromisoformat(mydate)
     mydate = datetime.combine(mydate, datetime.min.time())
-    newdate = mydate + timedelta(days=days, seconds=-seconds)
+    newdate = mydate + timedelta(days=days, seconds=seconds)
 
     paris_tz = pytz.timezone("Europe/Paris")
     newdate = paris_tz.localize(newdate)

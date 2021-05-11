@@ -13,9 +13,8 @@ from urllib.parse import quote, parse_qs
 from typing import Optional
 
 from scraper.profiler import Profiling
-from scraper.pattern.center_info import get_vaccine_name, Vaccine
+from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.pattern.scraper_result import INTERVAL_SPLIT_DAYS
 from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT
 
 timeout = httpx.Timeout(30.0, connect=30.0)
@@ -25,11 +24,7 @@ paris_tz = timezone("Europe/Paris")
 
 MAIIA_URL = "https://www.maiia.com"
 MAIIA_DAY_LIMIT = 50
-CHRONODOSE_VACCINES = {
-    Vaccine.ARNM,
-    Vaccine.PFIZER,
-    Vaccine.MODERNA
-}
+
 
 def parse_slots(slots: list) -> Optional[datetime]:
     if not slots:
@@ -136,27 +131,21 @@ def get_first_availability(
                 n_date = (isoparse(start_date) + timedelta(days=n, seconds=-1)).isoformat()
                 counts[f"{n}_days"] += count_slots(slots, start_date, n_date)
             slots_count += len(slots)
-            if get_vaccine_name(consultation_reason["name"]) in CHRONODOSE_VACCINES:
-                n_date = (isoparse(start_date) + timedelta(days=2, seconds=-1)).isoformat()
+            if get_vaccine_name(consultation_reason["name"]) in CHRONODOSES["Vaccine"]:
+                n_date = (isoparse(start_date) + timedelta(days=CHRONODOSES["Interval"], seconds=-1)).isoformat()
                 counts["chronodose"] += count_slots(slots, start_date, n_date)
             if first_availability == None or slot_availability < first_availability:
                 first_availability = slot_availability
     start_date = (paris_tz.localize(date)).isoformat()
     n_date = (paris_tz.localize(date + timedelta(days=2, seconds=-1))).isoformat()
-    appointment_schedules.append({
-        "name": "chronodose",
-        "from": start_date,
-        "to": n_date,
-        "total": counts["chronodose"]
-    })
+    appointment_schedules.append(
+        {"name": "chronodose", "from": start_date, "to": n_date, "total": counts["chronodose"]}
+    )
     for n in INTERVAL_SPLIT_DAYS:
         n_date = (paris_tz.localize(date + timedelta(days=n, seconds=-1))).isoformat()
-        appointment_schedules.append({
-            "name": f'{n}_days',
-            "from": start_date,
-            "to": n_date,
-            "total": counts[f'{n}_days']
-        })
+        appointment_schedules.append(
+            {"name": f"{n}_days", "from": start_date, "to": n_date, "total": counts[f"{n}_days"]}
+        )
     logger.debug(f"appointment_schedules: {appointment_schedules}")
     return first_availability, slots_count, appointment_schedules
 
