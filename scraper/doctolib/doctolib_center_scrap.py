@@ -77,6 +77,7 @@ def parse_pages_departement(departement):
     departement = doctolib_urlify(departement)
     page_id = 1
     page_has_centers = True
+    liste_urls = []
 
     for weird_dep in DOCTOLIB_WEIRD_DEPARTEMENTS:
         if weird_dep == departement:
@@ -85,7 +86,7 @@ def parse_pages_departement(departement):
     centers = []
     while page_has_centers:
         logger.info(f"[Doctolib centers] Parsing page {page_id} of {departement}")
-        centers_page = parse_page_centers_departement(departement, page_id)
+        centers_page = parse_page_centers_departement(departement, page_id, liste_urls)
         centers += centers_page
 
         page_id += 1
@@ -96,15 +97,22 @@ def parse_pages_departement(departement):
     return centers
 
 
-def parse_page_centers_departement(departement, page_id) -> List[dict]:
+def parse_page_centers_departement(departement, page_id, liste_urls) -> List[dict]:
     r = requests.get(
         BASE_URL_DEPARTEMENT.format(doctolib_urlify(departement), page_id),
         headers=DOCTOLIB_HEADERS,
     )
     data = r.json()
+    centers_page = []
 
     # TODO parallelism can be put here
-    centers_page = [center_from_doctor_dict(payload) for payload in data["data"]["doctors"]]
+    for payload in data["data"]["doctors"]:
+        # If the "doctor" hasn't already been checked
+        if payload["link"] not in liste_urls:
+            liste_urls.append(payload["link"])
+            # One "doctor" can have multiple places, hence center_from_doctor_dict returns a list
+            centers_page += center_from_doctor_dict(payload)
+
     return centers_page
 
 
@@ -118,30 +126,28 @@ def parse_page_centers(page_id) -> List[dict]:
     r = requests.get(BASE_URL.format(page_id), headers=DOCTOLIB_HEADERS)
     data = r.json()
 
+    centers_page = []
     # TODO parallelism can be put here
-    centers_page = [center_from_doctor_dict(payload) for payload in data["data"]["doctors"]]
+    for payload in data["data"]["doctors"]:
+        centers_page += center_from_doctor_dict(payload)
     return centers_page
 
 
 def center_from_doctor_dict(doctor_dict) -> dict:
+
+    liste_centres = []
     nom = doctor_dict["name_with_title"]
     sub_addresse = doctor_dict["address"]
     ville = doctor_dict["city"]
     code_postal = doctor_dict["zipcode"].replace(" ", "").strip()
     addresse = f"{sub_addresse}, {code_postal} {ville}"
-    if doctor_dict.get("place_id"):
-        url_path = f"{doctor_dict['link']}?pid={str(doctor_dict['place_id'])}"
-    else:
-        url_path = doctor_dict["link"]
-
+    url_path = doctor_dict["link"]
     _type = center_type(url_path, nom)
-    rdv_site_web = f"https://www.doctolib.fr{url_path}"
 
-    dict_infos_center_page = get_dict_infos_center_page(url_path)
+    dict_infos_centers_page = get_dict_infos_center_page(url_path)
     longitude, latitude = get_coordinates(doctor_dict)
     dict_infos_browse_page = {
         "nom": nom,
-        "rdv_site_web": rdv_site_web,
         "ville": ville,
         "address": addresse,
         "long_coor1": longitude,
@@ -149,7 +155,12 @@ def center_from_doctor_dict(doctor_dict) -> dict:
         "type": _type,
         "com_insee": departementUtils.cp_to_insee(code_postal),
     }
-    return {**dict_infos_center_page, **dict_infos_browse_page}
+
+    for info_center in dict_infos_centers_page:
+        info_center["rdv_site_web"] = f"https://www.doctolib.fr{url_path}?pid={info_center['place_id']}"
+        liste_centres.append({**info_center, **dict_infos_browse_page})
+
+    return liste_centres
 
 
 def get_coordinates(doctor_dict):
@@ -171,12 +182,12 @@ def get_dict_infos_center_page(url_path: str) -> dict:
 
     # Parse place
     places = output.get("places", {})
-    if places:
-        place = find_place(places, url_path)
-
-        # Parse place location
+    liste_infos_page = []
+    for place in places:
         infos_page = {}
+        # Parse place location
         infos_page["gid"] = "d{0}".format(output.get("profile", {}).get("id", ""))
+        infos_page["place_id"] = place["id"]
         infos_page["address"] = place["full_address"]
         infos_page["long_coor1"] = place.get("longitude")
         infos_page["lat_coor1"] = place.get("latitude")
@@ -195,27 +206,10 @@ def get_dict_infos_center_page(url_path: str) -> dict:
         # Parse visit motives, not sure it's the right place to do it, maybe this function should be refactored
         extracted_visit_motives = output.get("visit_motives", [])
         infos_page["visit_motives"] = list(map(lambda vm: vm.get("name"), extracted_visit_motives))
+        liste_infos_page.append(infos_page)
 
-        return infos_page
-    else:
-        return {}
-
-
-def find_place(places, url_path):
-    pid = get_pid(url_path)
-    if pid:
-        for place in places:
-            if place["id"] == pid:
-                return place
-    return places[0]
-
-
-def get_pid(url_path) -> str:
-    split = url_path.split("?pid=")
-    if len(split) == 1:
-        return ""
-    else:
-        return split[1]
+    # Returns a list with data for each place
+    return liste_infos_page
 
 
 def parse_doctolib_business_hours(place) -> dict:
@@ -267,7 +261,7 @@ def center_reducer(center: dict) -> dict:
     >>> center_reducer({'gid': 'd257554', 'visit_motives': ['1re injection vaccin COVID-19 (Pfizer-BioNTech)', '2de injection vaccin COVID-19 (Pfizer-BioNTech)', '1re injection vaccin COVID-19 (Moderna)', '2de injection vaccin COVID-19 (Moderna)']})
     {'gid': 'd257554'}
     """
-    center.pop("visit_motives")
+    center.pop("visit_motives", "place_id")
 
     return center
 
