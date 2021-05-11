@@ -13,3 +13,7 @@ jobs:
     steps:
       - name: Cancel Workflow Runs
         uses: potiuk/cancel-workflow-runs@v4_7
+        with:
+          cancelMode: allDuplicates
+          token: ${{ secrets.GITHUB_TOKEN }}
+          selfPreservation: true
