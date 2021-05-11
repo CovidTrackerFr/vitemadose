@@ -176,13 +176,18 @@ def get_coordinates(doctor_dict):
 def get_dict_infos_center_page(url_path: str) -> dict:
     internal_api_url = BOOKING_URL.format(parse.urlsplit(url_path).path.split("/")[-1])
     logger.info(f"> Parsing {internal_api_url}")
-    data = requests.get(internal_api_url)
-    data.raise_for_status()
-    output = data.json().get("data", {})
+    liste_infos_page = []
+
+    try:
+        data = requests.get(internal_api_url)
+        data.raise_for_status()
+        output = data.json().get("data", {})
+    except:
+        logger.warning(f"> Could not retrieve data from {internal_api_url}")
+        return liste_infos_page
 
     # Parse place
     places = output.get("places", {})
-    liste_infos_page = []
     for place in places:
         infos_page = {}
         # Parse place location
