@@ -1,0 +1,15 @@
+
+---
+name: Cancel
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sleep:
+    name: "cancel"
+    runs-on: "ubuntu-20.04"
+
+    steps:
+      - name: Cancel Workflow Runs
+      uses: potiuk/cancel-workflow-runs@v4_7
