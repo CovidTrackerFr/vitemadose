@@ -107,8 +107,10 @@ def parse_page_centers_departement(departement, page_id, liste_urls) -> List[dic
 
     # TODO parallelism can be put here
     for payload in data["data"]["doctors"]:
+        # If the "doctor" hasn't already been checked
         if payload["link"] not in liste_urls:
             liste_urls.append(payload["link"])
+            # One "doctor" can have multiple places, hence center_from_doctor_dict returns a list
             centers_page += center_from_doctor_dict(payload)
 
     return centers_page
@@ -206,6 +208,7 @@ def get_dict_infos_center_page(url_path: str) -> dict:
         infos_page["visit_motives"] = list(map(lambda vm: vm.get("name"), extracted_visit_motives))
         liste_infos_page.append(infos_page)
 
+    # Returns a list with data for each place
     return liste_infos_page
 
 
