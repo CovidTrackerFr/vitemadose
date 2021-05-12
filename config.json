@@ -4,6 +4,7 @@
   },
   "inputs": {
     "centers_gouv": "https://www.data.gouv.fr/fr/datasets/r/5cb21a85-b0b0-4a65-a249-806a040ec372",
+    "rdv_gouv": "https://www.data.gouv.fr/fr/datasets/r/b7bd49cd-904c-4c5d-b60f-018b51df9b0e",
     "departements": "data/input/departements-france.csv",
     "blocklist": "data/input/centers_blocklist.json",
     "postalcode_to_insee": "data/input/codepostal_to_insee.json",
@@ -21,7 +22,8 @@
       "by_date_dep": "stats_by_date_dep.json",
       "center_types": "stats_center_types.json",
       "global": "stats.json"
-    }
+    },
+    "last_scans": "data/output/info_centres.json"
   },
   "scrape": {
     "pool_size": 50,
