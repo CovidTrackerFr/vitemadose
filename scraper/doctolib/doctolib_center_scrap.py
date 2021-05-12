@@ -233,7 +233,7 @@ def parse_doctolib_business_hours(place) -> dict:
 def center_type(url_path: str, nom: str) -> str:
     ctypes = SCRAPER_CONF.get("center_types", [])
     for key in ctypes:
-        if key in (nom.lower(), url_path):
+        if key in nom.lower() or key in url_path:
             return ctypes[key]
     return ctypes.get("*", VACCINATION_CENTER)
 
