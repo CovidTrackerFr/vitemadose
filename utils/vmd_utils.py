@@ -133,6 +133,7 @@ class departementUtils:
 
 def format_cp(cp: str) -> str:
     # Permet le cas du CP sous form 75 005 au lieu de 75005
+    formatted_cp = cp
     if len(re.findall(r"\d+", cp)) > 0:
         formatted_cp = re.findall(r"\d+", cp)[0]
     else:
