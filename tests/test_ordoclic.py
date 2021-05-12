@@ -15,31 +15,33 @@ from scraper.ordoclic import (
     get_profile,
     parse_ordoclic_slots,
     fetch_slots,
-    centre_iterator,
-    is_reason_valid,
+    centre_iterator, is_reason_valid
 )
 
 from scraper.pattern.scraper_request import ScraperRequest
+from scraper.pattern.scraper_result import INTERVAL_SPLIT_DAYS
 
 
 def test_search():
     # Test offline
     def app(request: httpx.Request) -> httpx.Response:
-        assert request.url.path == "/v1/public/search"
+        assert request.url.path == '/v1/public/search'
         assert dict(httpx.QueryParams(request.url.query)) == {
             "page": "1",
             "per_page": "10000",
             "in.isPublicProfile": "true",
             "in.isCovidVaccineSupported": "true",
-            "or.covidOnlineBookingAvailabilities.Vaccination AstraZeneca": "true",
-            "or.covidOnlineBookingAvailabilities.Vaccination Pfizer": "true",
+            "or.covidOnlineBookingAvailabilities.vaccineAstraZeneca1": "true",
+            "or.covidOnlineBookingAvailabilities.vaccineJanssen1": "true",
+            "or.covidOnlineBookingAvailabilities.vaccinePfizer1": "true",
+            "or.covidOnlineBookingAvailabilities.vaccineModerna1": "true",
         }
 
-        path = Path("tests/fixtures/ordoclic/search.json")
+        path = Path('tests/fixtures/ordoclic/search.json')
         return httpx.Response(200, json=json.loads(path.read_text()))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    data_file = Path("tests/fixtures/ordoclic/search.json")
+    data_file = Path('tests/fixtures/ordoclic/search.json')
     data = json.loads(data_file.read_text())
     assert search(client) == data
 
@@ -58,7 +60,7 @@ def test_search():
     assert search(client) is None
 
     # Test online
-    schema_file = Path("tests/fixtures/ordoclic/search.schema")
+    schema_file = Path('tests/fixtures/ordoclic/search.schema')
     schema = json.loads(schema_file.read_text())
     live_data = search()
     validate(instance=live_data, schema=schema)
@@ -67,13 +69,10 @@ def test_search():
 def test_getReasons():
     # Test offline
     def app(request: httpx.Request) -> httpx.Response:
-        assert (
-            re.match(
-                r"/v1/solar/entities/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/reasons",
-                request.url.path,
-            )
-            != None
-        )
+        assert re.match(
+            r"/v1/solar/entities/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/reasons",
+            request.url.path,
+        ) != None
 
         path = Path("tests/fixtures/ordoclic/reasons.json")
         return httpx.Response(200, json=json.loads(path.read_text()))
@@ -106,11 +105,11 @@ def test_getReasons():
 
 def test_get_slots():
     request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-meru-meru", "2021-05-08")
-    data = {"id": 1}
+    data = {'id': 1}
     assert not parse_ordoclic_slots(request, data)
 
     request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-meru-meru", "2021-05-08")
-    data = {"slots": [{"timeEnd": "2021-05-09"}]}
+    data = {'slots': [{'timeEnd': '2021-05-09'}]}
     assert not parse_ordoclic_slots(request, data)
 
 
@@ -133,26 +132,25 @@ def test_get_profile():
     res = get_profile(request, client)
     assert not res
 
-
 def test_parse_ordoclic_slots():
     # Test availability_data vide
     request = ScraperRequest("", "2021-04-05")
     assert parse_ordoclic_slots(request, {}) == None
 
     # Test pas de slots disponibles
-    empty_slots_file = Path("tests/fixtures/ordoclic/empty_slots.json")
+    empty_slots_file = Path('tests/fixtures/ordoclic/empty_slots.json')
     empty_slots = json.loads(empty_slots_file.read_text())
     request = ScraperRequest("", "2021-04-05")
     assert parse_ordoclic_slots(request, empty_slots) == None
 
     # Test nextAvailableSlotDate
-    nextavailable_slots_file = Path("tests/fixtures/ordoclic/nextavailable_slots.json")
+    nextavailable_slots_file = Path('tests/fixtures/ordoclic/nextavailable_slots.json')
     nextavailable_slots = json.loads(nextavailable_slots_file.read_text())
     request = ScraperRequest("", "2021-04-05")
     assert parse_ordoclic_slots(request, nextavailable_slots) == isoparse("2021-06-12T11:30:00Z")  # timezone CET
 
     # Test slots disponibles
-    full_slots_file = Path("tests/fixtures/ordoclic/full_slots.json")
+    full_slots_file = Path('tests/fixtures/ordoclic/full_slots.json')
     full_slots = json.loads(full_slots_file.read_text())
     request = ScraperRequest("", "2021-04-05")
     first_availability = parse_ordoclic_slots(request, full_slots)
@@ -170,19 +168,30 @@ def test_centre_iterator():
 
 def test_is_reason_valid():
     # Can't book online
-    data = {"canBookOnline": False}
+    data = {
+        "canBookOnline": False
+    }
     assert not is_reason_valid(data)
 
     # Can't book online
-    data = {"canBookOnline": True, "vaccineInjectionDose": 2}
+    data = {
+        "canBookOnline": True,
+        "vaccineInjectionDose": 2
+    }
     assert not is_reason_valid(data)
 
     # First injection
-    data = {"canBookOnline": True, "vaccineInjectionDose": 1}
+    data = {
+        "canBookOnline": True,
+        "vaccineInjectionDose": 1
+    }
     assert is_reason_valid(data)
 
     # Mix-up
-    data = {"vaccineInjectionDose": 1, "canBookOnline": False}
+    data = {
+        "vaccineInjectionDose": 1,
+        "canBookOnline": False
+    }
     assert not is_reason_valid(data)
 
     # No data
@@ -191,22 +200,24 @@ def test_is_reason_valid():
 
 def test_center_iterator():
     def app(request: httpx.Request) -> httpx.Response:
-        assert request.url.path == "/v1/public/search"
+        assert request.url.path == '/v1/public/search'
         assert dict(httpx.QueryParams(request.url.query)) == {
-            "page": "1",
-            "per_page": "10000",
-            "in.isPublicProfile": "true",
-            "in.isCovidVaccineSupported": "true",
-            "or.covidOnlineBookingAvailabilities.Vaccination AstraZeneca": "true",
-            "or.covidOnlineBookingAvailabilities.Vaccination Pfizer": "true",
+            'page': '1',
+            'per_page': '10000',
+            'in.isPublicProfile': 'true',
+            'in.isCovidVaccineSupported': 'true',
+            "or.covidOnlineBookingAvailabilities.vaccineAstraZeneca1": "true",
+            "or.covidOnlineBookingAvailabilities.vaccineJanssen1": "true",
+            "or.covidOnlineBookingAvailabilities.vaccinePfizer1": "true",
+            "or.covidOnlineBookingAvailabilities.vaccineModerna1": "true",
         }
 
-        path = Path("tests/fixtures/ordoclic/search.json")
-        return httpx.Response(200, json=json.loads(path.read_text(encoding="utf8")))
+        path = Path('tests/fixtures/ordoclic/search.json')
+        return httpx.Response(200, json=json.loads(path.read_text(encoding='utf8')))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
     generated = list(centre_iterator(client))
-    result_path = Path("tests/fixtures/ordoclic/search-result.json")
+    result_path = Path('tests/fixtures/ordoclic/search-result.json')
     expected = json.loads(result_path.read_text())
     assert generated == expected
 
@@ -214,18 +225,15 @@ def test_center_iterator():
 def test_fetch_slots():
     # Basic full working test
     def app(request: httpx.Request) -> httpx.Response:
-        if request.url.path == "/v1/public/entities/profile/pharmacie-oceane-paris":
-            return httpx.Response(
-                200, json=json.loads(Path("tests/fixtures/ordoclic/fetchslot-profile.json").read_text())
-            )
-        if request.url.path == "/v1/solar/entities/03674d71-b200-4682-8e0a-3ab9687b2b59/reasons":
-            return httpx.Response(
-                200, json=json.loads(Path("tests/fixtures/ordoclic/fetchslot-reasons.json").read_text())
-            )
-        if request.url.path == "/v1/solar/slots/availableSlots":
-            return httpx.Response(
-                200, json=json.loads(Path("tests/fixtures/ordoclic/fetchslot-slots.json").read_text())
-            )
+        if request.url.path == '/v1/public/entities/profile/pharmacie-oceane-paris':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-profile.json').
+                                                       read_text()))
+        if request.url.path == '/v1/solar/entities/03674d71-b200-4682-8e0a-3ab9687b2b59/reasons':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-reasons.json').
+                                                       read_text()))
+        if request.url.path == '/v1/solar/slots/availableSlots':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-slots.json').
+                                                       read_text()))
         return httpx.Response(403, json={})
 
     client = httpx.Client(transport=httpx.MockTransport(app))
@@ -235,15 +243,13 @@ def test_fetch_slots():
 
     # Timeout test
     def app2(request: httpx.Request) -> httpx.Response:
-        if request.url.path == "/v1/public/entities/profile/pharmacie-oceane-paris":
-            return httpx.Response(
-                200, json=json.loads(Path("tests/fixtures/ordoclic/fetchslot-profile.json").read_text())
-            )
-        if request.url.path == "/v1/solar/entities/03674d71-b200-4682-8e0a-3ab9687b2b59/reasons":
-            return httpx.Response(
-                200, json=json.loads(Path("tests/fixtures/ordoclic/fetchslot-reasons.json").read_text())
-            )
-        if request.url.path == "/v1/solar/slots/availableSlots":
+        if request.url.path == '/v1/public/entities/profile/pharmacie-oceane-paris':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-profile.json').
+                                                       read_text()))
+        if request.url.path == '/v1/solar/entities/03674d71-b200-4682-8e0a-3ab9687b2b59/reasons':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-reasons.json').
+                                                       read_text()))
+        if request.url.path == '/v1/solar/slots/availableSlots':
             raise httpx.TimeoutException(message="Timeout", request=request)
         return httpx.Response(403, json={})
 
@@ -254,14 +260,12 @@ def test_fetch_slots():
 
     # HTTP error test (available slots)
     def app3(request: httpx.Request) -> httpx.Response:
-        if request.url.path == "/v1/public/entities/profile/pharmacie-oceane-paris":
-            return httpx.Response(
-                200, json=json.loads(Path("tests/fixtures/ordoclic/fetchslot-profile.json").read_text())
-            )
-        if request.url.path == "/v1/solar/entities/03674d71-b200-4682-8e0a-3ab9687b2b59/reasons":
-            return httpx.Response(
-                200, json=json.loads(Path("tests/fixtures/ordoclic/fetchslot-reasons.json").read_text())
-            )
+        if request.url.path == '/v1/public/entities/profile/pharmacie-oceane-paris':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-profile.json').
+                                                       read_text()))
+        if request.url.path == '/v1/solar/entities/03674d71-b200-4682-8e0a-3ab9687b2b59/reasons':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-reasons.json').
+                                                       read_text()))
         return httpx.Response(403, json={})
 
     client = httpx.Client(transport=httpx.MockTransport(app3))
@@ -280,18 +284,15 @@ def test_fetch_slots():
 
     # Only appointments by phone test
     def app5(request: httpx.Request) -> httpx.Response:
-        if request.url.path == "/v1/public/entities/profile/pharmacie-oceane-paris":
-            return httpx.Response(
-                200, json=json.loads(Path("tests/fixtures/ordoclic/fetchslot-profile2.json").read_text())
-            )
-        if request.url.path == "/v1/solar/entities/03674d71-b200-4682-8e0a-3ab9687b2b59/reasons":
-            return httpx.Response(
-                200, json=json.loads(Path("tests/fixtures/ordoclic/fetchslot-reasons.json").read_text())
-            )
-        if request.url.path == "/v1/solar/slots/availableSlots":
-            return httpx.Response(
-                200, json=json.loads(Path("tests/fixtures/ordoclic/fetchslot-slots.json").read_text())
-            )
+        if request.url.path == '/v1/public/entities/profile/pharmacie-oceane-paris':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-profile2.json').
+                                                       read_text()))
+        if request.url.path == '/v1/solar/entities/03674d71-b200-4682-8e0a-3ab9687b2b59/reasons':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-reasons.json').
+                                                       read_text()))
+        if request.url.path == '/v1/solar/slots/availableSlots':
+            return httpx.Response(200, json=json.loads(Path('tests/fixtures/ordoclic/fetchslot-slots.json').
+                                                       read_text()))
         return httpx.Response(403, json={})
 
     client = httpx.Client(transport=httpx.MockTransport(app5))
