@@ -145,6 +145,7 @@ def center_from_doctor_dict(doctor_dict) -> dict:
         "lat_coor1": latitude,
         "type": _type,
         "com_insee": departementUtils.cp_to_insee(code_postal),
+        "com_cp": code_postal,
     }
 
     for info_center in dict_infos_centers_page:
