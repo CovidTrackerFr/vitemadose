@@ -234,7 +234,16 @@
           "test",
           "antigenique",
           "antigénique"
-        ]
+        ],
+        "business_days": {
+          "Lundi": "MONDAY",
+          "Mardi": "TUESDAY",
+          "Mercredi": "WEDNESDAY",
+          "Jeudi": "THURSDAY",
+          "Vendredi": "FRIDAY",
+          "Samedi": "SATURDAY",
+          "Dimanche": "SUNDAY"
+        }
       },
       "filters": {
         "injection_type": [
