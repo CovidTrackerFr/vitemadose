@@ -10,6 +10,7 @@ from scraper.pattern.center_info import convert_csv_data_to_center_info, CenterI
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from scraper.profiler import Profiling
+from utils.vmd_config import get_conf_platform
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
 from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
@@ -131,7 +132,7 @@ def get_default_fetch_map():
             "scraper_ptr": doctolib_fetch_slots,
         },
         "Keldoc": {
-            "urls": ["https://vaccination-covid.keldoc.com", "https://keldoc.com"],
+            "urls": get_conf_platform("keldoc").get("recognized_urls", []),
             "scraper_ptr": keldoc_fetch_slots,
         },
         "Maiia": {"urls": ["https://www.maiia.com"], "scraper_ptr": maiia_fetch_slots},
