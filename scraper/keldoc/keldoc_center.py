@@ -253,7 +253,6 @@ class KeldocCenter:
             if not agenda_ids:
                 continue
             timetables = self.get_timetables(isoparse(start_date), motive_id, agenda_ids)
-            print(timetables)
             date, appointments = parse_keldoc_availability(timetables, appointments)
             if date is None:
                 continue
