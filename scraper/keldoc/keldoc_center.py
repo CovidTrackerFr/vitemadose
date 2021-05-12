@@ -13,15 +13,17 @@ from scraper.keldoc.keldoc_filters import parse_keldoc_availability
 from scraper.keldoc.keldoc_routes import API_KELDOC_CALENDAR, API_KELDOC_CENTER, API_KELDOC_CABINETS
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
+from utils.vmd_config import get_conf_platform
 
-timeout = httpx.Timeout(25.0, connect=25.0)
+KELDOC_CONF = get_conf_platform("keldoc")
+timeout = httpx.Timeout(KELDOC_CONF.get('timeout', 25), connect=KELDOC_CONF.get('timeout', 25))
 KELDOC_HEADERS = {
     "User-Agent": os.environ.get("KELDOC_API_KEY", ""),
 }
 # 16 days is enough for now, due to recent issues with Keldoc API
-KELDOC_SLOT_PAGES = 2
-KELDOC_DAYS_PER_PAGE = 4
-KELDOC_SLOT_TIMEOUT = 20
+KELDOC_SLOT_PAGES = KELDOC_CONF.get('pagination', {}).get('pages', 2)
+KELDOC_DAYS_PER_PAGE = KELDOC_CONF.get('pagination', {}).get('days', 4)
+KELDOC_SLOT_TIMEOUT = KELDOC_CONF.get('timeout', 20)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
@@ -233,7 +235,7 @@ class KeldocCenter:
 
         for appointment in appointments:
             slot_dt = isoparse(appointment["start_time"]).astimezone(paris_tz)
-            if slot_dt >= start_dt and slot_dt < end_dt:
+            if start_dt <= slot_dt < end_dt:
                 count += 1
 
         logger.debug(f"Slots count from {start_date} to {end_date}: {count}")

@@ -159,7 +159,7 @@
     },
     "keldoc": {
       "enabled": true,
-      "timeout": 30,
+      "timeout": 20,
       "recognized_urls": [
         "https://vaccination-covid.keldoc.com",
         "https://keldoc.com"
@@ -171,7 +171,7 @@
         "slots": "https://www.keldoc.com/api/patients/v2/timetables/{0}"
       },
       "pagination": {
-        "pages": 7,
+        "pages": 2,
         "days": 4
       },
       "filters": {

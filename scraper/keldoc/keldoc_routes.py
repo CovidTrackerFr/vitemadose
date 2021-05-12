@@ -1,13 +1,16 @@
+from utils.vmd_config import get_conf_platform
+
+KELDOC_CONF = get_conf_platform("keldoc")
+KELDOC_API = KELDOC_CONF.get("api")
+
 # Center info route
-API_KELDOC_CENTER = "https://booking.keldoc.com/api/patients/v2/searches/resource"
+API_KELDOC_CENTER = KELDOC_API.get("booking")
 
 # Motive list route
-API_KELDOC_MOTIVES = (
-    "https://booking.keldoc.com/api/patients/v2/clinics/{0}/specialties/{1}/cabinets/{2}/motive_categories"
-)
+API_KELDOC_MOTIVES = KELDOC_API.get("motives")
 
 # Cabinet list route
-API_KELDOC_CABINETS = "https://booking.keldoc.com/api/patients/v2/clinics/{0}/specialties/{1}/cabinets"
+API_KELDOC_CABINETS = KELDOC_API.get("cabinets")
 
 # Calendar details route
-API_KELDOC_CALENDAR = "https://www.keldoc.com/api/patients/v2/timetables/{0}"
+API_KELDOC_CALENDAR = KELDOC_API.get("slots")
