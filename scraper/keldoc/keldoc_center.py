@@ -1,5 +1,6 @@
 import logging
 import os
+from math import floor
 from urllib.parse import urlsplit, parse_qs
 from datetime import datetime, timedelta
 from dateutil.parser import isoparse
@@ -144,7 +145,8 @@ class KeldocCenter:
 
         end_date = (start_date + timedelta(days=KELDOC_DAYS_PER_PAGE)).strftime("%Y-%m-%d")
         logger.debug(
-            f"get_timetables -> start_date: {start_date} end_date: {end_date} motive: {motive_id} agenda: {agenda_ids}"
+            f"get_timetables -> start_date: {start_date} end_date: {end_date} "
+            f"motive: {motive_id} agenda: {agenda_ids} (page: {page})"
         )
         calendar_params = {
             "from": start_date.strftime("%Y-%m-%d"),
@@ -175,10 +177,28 @@ class KeldocCenter:
         # No fresh timetable
         if not current_timetable:
             return timetable
-
         # Get the first date only
-        if "date" in current_timetable and "date" not in timetable:
-            timetable["date"] = current_timetable.get("date")
+        if "date" in current_timetable:
+            if "date" not in timetable:
+                timetable["date"] = current_timetable.get("date")
+            """
+            Optimize query count by jumping directly to the first availability date by using ’date’ key
+            Checks for the presence of the ’availabilities’ attribute, even if it's not supposed to be set
+            """
+            if "availabilities" not in current_timetable:
+                next_expected_date = start_date + timedelta(days=KELDOC_DAYS_PER_PAGE)
+                next_fetch_date = isoparse(current_timetable["date"])
+                diff = next_fetch_date.replace(tzinfo=None) - next_expected_date.replace(tzinfo=None)
+
+                if page >= KELDOC_SLOT_PAGES:
+                    return timetable
+                return self.get_timetables(
+                    next_fetch_date,
+                    motive_id,
+                    agenda_ids,
+                    1 + max(0, floor(diff.days / KELDOC_DAYS_PER_PAGE)) + page,
+                    timetable,
+                )
 
         # Insert availabilities
         if "availabilities" in current_timetable:
@@ -193,7 +213,7 @@ class KeldocCenter:
         if page >= KELDOC_SLOT_PAGES:
             return timetable
         return self.get_timetables(
-            start_date + timedelta(days=KELDOC_DAYS_PER_PAGE), motive_id, agenda_ids, page=1 + page, timetable=timetable
+            start_date + timedelta(days=KELDOC_DAYS_PER_PAGE), motive_id, agenda_ids, 1 + page, timetable
         )
 
     def count_appointements(self, appointments: list, start_date: str, end_date: str) -> int:
@@ -233,6 +253,7 @@ class KeldocCenter:
             if not agenda_ids:
                 continue
             timetables = self.get_timetables(isoparse(start_date), motive_id, agenda_ids)
+            print(timetables)
             date, appointments = parse_keldoc_availability(timetables, appointments)
             if date is None:
                 continue
