@@ -30,9 +30,7 @@ def generate_stats_date(centres_stats):
         if data:
             stats_data = data
     except Exception as e:
-        logger.warning(
-            f"Unable to fetch {DATA_AUTO}{stats_path}: generating a template file."
-        )
+        logger.warning(f"Unable to fetch {DATA_AUTO}{stats_path}: generating a template file.")
         pass
     ctz = pytz.timezone("Europe/Paris")
     current_time = datetime.now(tz=ctz).strftime("%Y-%m-%d %H:00:00")
@@ -67,9 +65,7 @@ def generate_stats_dep_date(centres_stats):
         if data:
             stats_data = data
     except Exception as e:
-        logger.warning(
-            f"Unable to fetch {DATA_AUTO}{stats_path}: generating a template file."
-        )
+        logger.warning(f"Unable to fetch {DATA_AUTO}{stats_path}: generating a template file.")
         pass
     ctz = pytz.timezone("Europe/Paris")
     current_time = datetime.now(tz=ctz).strftime("%Y-%m-%d %H:00:00")
@@ -99,27 +95,18 @@ def generate_stats_dep_date(centres_stats):
     logger.info(f"Updated stats file: {stats_path}")
 
 
-def export_centres_stats(
-    center_data=Path("data", "output", "info_centres.json"), stats_path="stats.json"
-):
+def export_centres_stats(center_data=Path("data", "output", "info_centres.json"), stats_path="stats.json"):
 
     if center_data.exists():
         centres_info = get_centres_info(center_data)
-        centres_stats = {
-            "tout_departement": {"disponibles": 0, "total": 0, "creneaux": 0}
-        }
+        centres_stats = {"tout_departement": {"disponibles": 0, "total": 0, "creneaux": 0}}
 
         tout_dep_obj = centres_stats["tout_departement"]
 
         for dep_code, dep_value in centres_info.items():
             nombre_disponibles = len(dep_value["centres_disponibles"])
             count = len(dep_value["centres_indisponibles"]) + nombre_disponibles
-            creneaux = sum(
-                [
-                    center.get("appointment_count", 0)
-                    for center in dep_value["centres_disponibles"]
-                ]
-            )
+            creneaux = sum([center.get("appointment_count", 0) for center in dep_value["centres_disponibles"]])
 
             centres_stats[dep_code] = {
                 "disponibles": nombre_disponibles,
@@ -131,9 +118,7 @@ def export_centres_stats(
             tout_dep_obj["total"] += count
             tout_dep_obj["creneaux"] += creneaux
 
-        available_pct = (
-            tout_dep_obj["disponibles"] / max(1, tout_dep_obj["total"])
-        ) * 100
+        available_pct = (tout_dep_obj["disponibles"] / max(1, tout_dep_obj["total"])) * 100
         logger.info(
             "Found {0}/{1} available centers. ({2}%)".format(
                 tout_dep_obj["disponibles"],

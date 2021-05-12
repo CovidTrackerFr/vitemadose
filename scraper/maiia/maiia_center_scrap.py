@@ -82,8 +82,8 @@ def maiia_center_to_csv(center: dict, root_center: dict) -> dict:
             csv["long_coor1"] = center["publicInformation"]["address"]["location"]["coordinates"][0]
             csv["lat_coor1"] = center["publicInformation"]["address"]["location"]["coordinates"][1]
         elif (
-                "locality" in center["publicInformation"]["address"]
-                and "location" in center["publicInformation"]["address"]["locality"]
+            "locality" in center["publicInformation"]["address"]
+            and "location" in center["publicInformation"]["address"]["locality"]
         ):
             csv["long_coor1"] = center["publicInformation"]["address"]["locality"]["location"]["x"]
             csv["lat_coor1"] = center["publicInformation"]["address"]["locality"]["location"]["y"]
@@ -113,10 +113,9 @@ def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
             if center["id"] in MAIIA_DO_NOT_SCRAP_ID:
                 continue
             if not any(
-                    consultation_reason.get("injectionType") in ["FIRST"]
-                    and not any(
-                        keyword in consultation_reason.get("name").lower() for keyword in MAIIA_DO_NOT_SCRAP_NAME)
-                    for consultation_reason in root_center["consultationReasons"]
+                consultation_reason.get("injectionType") in ["FIRST"]
+                and not any(keyword in consultation_reason.get("name").lower() for keyword in MAIIA_DO_NOT_SCRAP_NAME)
+                for consultation_reason in root_center["consultationReasons"]
             ):
                 continue
             if center["childCenters"]:
@@ -125,9 +124,9 @@ def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
             centers_ids.append(center["id"])
             for child_center in center["childCenters"]:
                 if (
-                        child_center["speciality"]["code"] == "VAC01"
-                        and "url" in child_center
-                        and child_center["id"] not in centers_ids
+                    child_center["speciality"]["code"] == "VAC01"
+                    and "url" in child_center
+                    and child_center["id"] not in centers_ids
                 ):
                     centers.append(maiia_center_to_csv(child_center, root_center))
                     centers_ids.append(child_center["id"])

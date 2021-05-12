@@ -229,6 +229,7 @@ def test_export_data(tmp_path):
         },
     ]
 
+
 def test_export_reserved_centers(tmp_path):
     centres_cherchés_dict = [
         {

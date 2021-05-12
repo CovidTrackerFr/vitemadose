@@ -24,10 +24,7 @@ _default_output = Path("data", "output", "stats_chronodoses.json")
 
 
 def count_departments_chronodoses(data: dict) -> Dict[str, int]:
-    return {
-        department_id: _department_chronodoses(department_data)
-        for department_id, department_data in data.items()
-    }
+    return {department_id: _department_chronodoses(department_data) for department_id, department_data in data.items()}
 
 
 def _national_doses(per_department: Dict[str, int]) -> dict:

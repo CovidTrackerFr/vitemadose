@@ -64,9 +64,7 @@ def generate_stats_center_types(centres_info):
         if data:
             stats_data = data
     except Exception as e:
-        logger.warning(
-            f"Unable to fetch {DATA_AUTO}{stats_path}: generating a template file."
-        )
+        logger.warning(f"Unable to fetch {DATA_AUTO}{stats_path}: generating a template file.")
         pass
     ctz = pytz.timezone("Europe/Paris")
     current_time = datetime.now(tz=ctz).strftime("%Y-%m-%d %H:00:00")

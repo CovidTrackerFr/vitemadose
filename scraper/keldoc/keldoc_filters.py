@@ -86,7 +86,7 @@ def filter_vaccine_motives(session, selected_cabinet, id, vaccine_specialties, v
             motive_agendas = [motive_agenda.get("id", None) for motive_agenda in motive.get("agendas", {})]
             vaccine_type = get_vaccine_name(motive_name)
             if vaccine_type is None:
-                vaccine_type = get_vaccine_name(motive_cat.get('name'))
+                vaccine_type = get_vaccine_name(motive_cat.get("name"))
             vaccine_motives.append(
                 {"id": motive.get("id", None), "vaccine_type": vaccine_type, "agendas": motive_agendas}
             )

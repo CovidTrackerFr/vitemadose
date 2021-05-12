@@ -44,7 +44,9 @@ def scrape_debug(urls):  # pragma: no cover
             logger.exception(f"erreur lors du traitement")
         logger.info(f'{result.platform!s:16} {result.next_availability or ""!s:32}')
         if result.request.appointment_count:
-            logger.debug(f'appointments: {result.request.appointment_count}:\n{pformat(result.request.appointment_schedules)}')
+            logger.debug(
+                f"appointments: {result.request.appointment_count}:\n{pformat(result.request.appointment_schedules)}"
+            )
 
 
 def scrape(platforms=None) -> None:  # pragma: no cover
@@ -82,6 +84,7 @@ def scrape(platforms=None) -> None:  # pragma: no cover
                 exit(code=2)
 
     logger.info(profiler.print_summary())
+
 
 def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:  # pragma: no cover
     center_data = convert_csv_data_to_center_info(centre)
@@ -189,7 +192,7 @@ def centre_iterator(platforms=None):  # pragma: no cover
         mapharma_centre_iterator(),
         maiia_centre_iterator(),
         doctolib_center_iterator(),
-        gouv_centre_iterator()
+        gouv_centre_iterator(),
     ):
         platform = get_center_platform(center["rdv_site_web"], get_default_fetch_map())
         if platforms and platform and platform.lower() not in platforms:

@@ -25,7 +25,7 @@ def get_paged(url: str, limit: MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIEN
         try:
             payload = r.json()
         except json.decoder.JSONDecodeError as jde:
-            logger.warning(f'{base_url} raised {jde}')
+            logger.warning(f"{base_url} raised {jde}")
             break
         result["total"] = payload["total"]
         if not payload["items"]:
