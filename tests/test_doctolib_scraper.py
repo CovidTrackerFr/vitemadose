@@ -7,6 +7,8 @@ from scraper.doctolib.doctolib_center_scrap import (
     get_dict_infos_center_page,
     parse_page_centers,
     parse_page_centers_departement,
+    parse_pages_departement,
+    parse_doctolib_centers,
 )
 
 import requests
@@ -131,7 +133,7 @@ def test_get_dict_infos_center_page(mock_get):
 
 
 @patch('requests.get')
-def test_parse_page_centers(mock_get):
+def test_centers_parsing(mock_get):
     with open("tests/fixtures/doctolib/booking-with-doctors.json", "r") as file:
         doctors = json.load(file)
 
@@ -232,7 +234,12 @@ def test_parse_page_centers(mock_get):
 
 
     mock_get.return_value.json.return_value = doctors
+
     mockedResponse = parse_page_centers(0)
     assert mockedResponse == expectedCentersPage
+
     mockedResponse = parse_page_centers_departement("", 1, [])
+    assert mockedResponse == expectedCentersPage
+
+    mockedResponse = parse_pages_departement("indre")
     assert mockedResponse == expectedCentersPage
