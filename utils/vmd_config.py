@@ -9,7 +9,7 @@ CONFIG_DATA = {}
 logger = get_logger()
 
 
-def get_config() -> Optional[dict]:
+def get_config() -> dict:
     global CONFIG_DATA
     if not CONFIG_DATA:
         file = open("config.json")
