@@ -135,19 +135,18 @@ def get_default_fetch_map():
             "urls": get_conf_platform("keldoc").get("recognized_urls", []),
             "scraper_ptr": keldoc_fetch_slots,
         },
-        "Maiia": {"urls": ["https://www.maiia.com"], "scraper_ptr": maiia_fetch_slots},
+        "Maiia": {
+            "urls": get_conf_platform("maiia").get("recognized_urls", []),
+            "scraper_ptr": maiia_fetch_slots
+        },
         "Mapharma": {
-            "urls": [
-                "https://mapharma.net/",
-            ],
+            "urls": get_conf_platform("mapharma").get("recognized_urls", []),
             "scraper_ptr": mapharma_fetch_slots,
         },
         "Ordoclic": {
-            "urls": [
-                "https://app.ordoclic.fr/",
-            ],
+            "urls": get_conf_platform("ordoclic").get("recognized_urls", []),
             "scraper_ptr": ordoclic_fetch_slots,
-        },
+        }
     }
 
 
