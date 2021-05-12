@@ -177,10 +177,9 @@ class KeldocCenter:
         # No fresh timetable
         if not current_timetable:
             return timetable
-
         # Get the first date only
         if "date" in current_timetable:
-            if not "date" not in timetable:
+            if "date" not in timetable:
                 timetable["date"] = current_timetable.get("date")
             """
             Optimize query count by jumping directly to the first availability date by using ’date’ key
@@ -190,11 +189,14 @@ class KeldocCenter:
                 next_expected_date = start_date + timedelta(days=KELDOC_DAYS_PER_PAGE)
                 next_fetch_date = isoparse(current_timetable["date"])
                 diff = next_fetch_date.replace(tzinfo=None) - next_expected_date.replace(tzinfo=None)
+
+                if page >= KELDOC_SLOT_PAGES:
+                    return timetable
                 return self.get_timetables(
                     next_fetch_date,
                     motive_id,
                     agenda_ids,
-                    1 + floor(diff.days / KELDOC_DAYS_PER_PAGE) + page,
+                    1 + max(0, floor(diff.days / KELDOC_DAYS_PER_PAGE)) + page,
                     timetable,
                 )
 
@@ -251,6 +253,7 @@ class KeldocCenter:
             if not agenda_ids:
                 continue
             timetables = self.get_timetables(isoparse(start_date), motive_id, agenda_ids)
+            print(timetables)
             date, appointments = parse_keldoc_availability(timetables, appointments)
             if date is None:
                 continue
