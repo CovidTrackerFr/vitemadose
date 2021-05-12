@@ -199,7 +199,7 @@ class KeldocCenter:
                 diff = next_fetch_date.replace(tzinfo=None) - next_expected_date.replace(tzinfo=None)
 
                 if page >= KELDOC_SLOT_PAGES or run >= KELDOC_SLOT_TIMEOUT:
-                    return timetable
+                    return timetable, run
                 return self.get_timetables(
                     next_fetch_date,
                     motive_id,

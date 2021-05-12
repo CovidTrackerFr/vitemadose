@@ -903,29 +903,6 @@
     }
   },
   {
-    "gid": "600e81e6",
-    "nom": "Centre de vaccination - SAINT MIHIEL",
-    "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/55300-saint-mihiel/centre-de-vaccination---saint-mihiel?centerid=600e81e69ddc145c9ed23c14",
-    "type": "vaccination-center",
-    "vaccine_type": [
-      "Pfizer-BioNTech"
-    ],
-    "com_insee": "55463",
-    "address": "Place des moines 55300 Saint-Mihiel",
-    "long_coor1": 5.542235,
-    "lat_coor1": 48.888369,
-    "phone_number": "",
-    "business_hours": {
-      "Lundi": "08:00-12:00 14:00-18:00",
-      "Mardi": "08:00-12:00 14:00-18:00",
-      "Mercredi": "08:00-12:00 14:00-18:00",
-      "Jeudi": "08:00-12:00 14:00-18:00",
-      "Vendredi": "08:00-12:00 14:00-18:00",
-      "Samedi": "08:00-12:00 14:00-18:00",
-      "Dimanche": "08:00-12:00 14:00-18:00"
-    }
-  },
-  {
     "gid": "6012bfc4",
     "nom": "Centre de vaccination - Mairie 15 et 16 ville de Marseille",
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/13015-marseille/centre-de-vaccination---mairie-15-et-16-ville-de-marseille?centerid=6012bfc4df9dd7231a1dbbbe",
@@ -1542,28 +1519,6 @@
     }
   },
   {
-    "gid": "601a7ea3",
-    "nom": "Pharmacie des Corsaires",
-    "rdv_site_web": "https://www.maiia.com/pharmacie/17000-la-rochelle/pharmacie-des-corsaires?centerid=601a7ea39e90dc786d6eb3b6",
-    "type": "drugstore",
-    "vaccine_type": [
-      "AstraZeneca"
-    ],
-    "com_insee": "17300",
-    "address": "146 Avenue des Corsaires 17000 La Rochelle",
-    "long_coor1": -1.170364,
-    "lat_coor1": 46.169328,
-    "phone_number": "+33546427142",
-    "business_hours": {
-      "Lundi": "09:00-12:30 14:30-19:30",
-      "Mardi": "09:00-12:30 14:30-19:30",
-      "Mercredi": "09:00-12:30 14:30-19:30",
-      "Jeudi": "09:00-12:30 14:30-19:30",
-      "Vendredi": "09:00-12:30 14:30-19:30",
-      "Samedi": "09:00-12:30 14:30-19:00"
-    }
-  },
-  {
     "gid": "601ad358",
     "nom": "Pharmacie Gilles",
     "rdv_site_web": "https://www.maiia.com/pharmacie/86180-buxerolles/pharmacie-gilles?centerid=601ad35822db2c1d7435fe39",
@@ -1608,30 +1563,6 @@
       "Vendredi": "08:30-19:30",
       "Samedi": "08:30-19:30",
       "Dimanche": "08:30-19:30"
-    }
-  },
-  {
-    "gid": "601d2b7a",
-    "nom": "Pharmacie Fran\u00e7ois Catherine",
-    "rdv_site_web": "https://www.maiia.com/pharmacie/35760-montgermont/pharmacie-francois-catherine?centerid=601d2b7a26b6634fdf1b3bc0",
-    "type": "drugstore",
-    "vaccine_type": [
-      "Janssen",
-      "AstraZeneca"
-    ],
-    "com_insee": "35189",
-    "address": "Place Jane Beusnel 35760 Montgermont",
-    "long_coor1": -1.715901,
-    "lat_coor1": 48.155585,
-    "phone_number": "+33299689661",
-    "business_hours": {
-      "Lundi": "08:30-12:30 14:00-19:30",
-      "Mardi": "08:30-12:30 14:00-19:30",
-      "Mercredi": "08:30-12:30 14:00-19:30",
-      "Jeudi": "08:30-12:30 14:00-19:30",
-      "Vendredi": "08:30-12:30 14:00-19:30",
-      "Samedi": "09:00-12:30",
-      "Dimanche": "08:30-12:30 14:00-19:30"
     }
   },
   {
@@ -1888,29 +1819,6 @@
     }
   },
   {
-    "gid": "602cf98a",
-    "nom": "Pharmacie de l'Aquarius",
-    "rdv_site_web": "https://www.maiia.com/pharmacie/75019-paris/pharmacie-de-l-aquarius?centerid=602cf98a236ce7156a7603e5",
-    "type": "drugstore",
-    "vaccine_type": [
-      "AstraZeneca"
-    ],
-    "com_insee": "75119",
-    "address": "14 Rue de Thionville 75019 Paris",
-    "long_coor1": 2.38192,
-    "lat_coor1": 48.888485,
-    "phone_number": "+33142022009",
-    "business_hours": {
-      "Lundi": "09:00-13:00 14:00-19:00",
-      "Mardi": "09:00-13:00 14:00-19:00",
-      "Mercredi": "09:00-13:00 14:00-19:00",
-      "Jeudi": "09:00-13:00 14:00-19:00",
-      "Vendredi": "09:00-13:00 14:00-19:00",
-      "Samedi": "09:00-13:00 14:00-19:00",
-      "Dimanche": "09:00-13:00 14:00-19:00"
-    }
-  },
-  {
     "gid": "602cfa04",
     "nom": "Pharmacie de Camargue",
     "rdv_site_web": "https://www.maiia.com/pharmacie/13200-arles/pharmacie-de-camargue?centerid=602cfa0437219034c307a7e1",
@@ -2024,51 +1932,6 @@
       "Jeudi": "09:00-12:15 14:00-19:30",
       "Vendredi": "09:00-12:15 14:00-19:30",
       "Samedi": "09:00-13:00"
-    }
-  },
-  {
-    "gid": "6037947a",
-    "nom": "Pharmacie Balan",
-    "rdv_site_web": "https://www.maiia.com/pharmacie/22370-pleneuf-val-andre/pharmacie-balan?centerid=6037947a4fe0fe5a7a4dacac",
-    "type": "drugstore",
-    "vaccine_type": [
-      "AstraZeneca"
-    ],
-    "com_insee": "22186",
-    "address": "4 Rue de l\u2019Eglise 22370 Pl\u00e9neuf-Val-Andr\u00e9",
-    "long_coor1": -2.536509,
-    "lat_coor1": 48.583982,
-    "phone_number": "+33296729930",
-    "business_hours": {
-      "Lundi": "09:00-12:30 14:00-18:00",
-      "Mardi": "09:00-12:30 14:00-18:00",
-      "Mercredi": "09:00-12:30 14:00-18:00",
-      "Jeudi": "09:00-12:30 14:00-18:00",
-      "Vendredi": "09:00-12:30 14:00-18:00",
-      "Samedi": "09:00-12:30 14:00-18:00",
-      "Dimanche": "09:00-12:30 14:00-18:00"
-    }
-  },
-  {
-    "gid": "603cbb8f",
-    "nom": "Pharmacie Couderc",
-    "rdv_site_web": "https://www.maiia.com/pharmacie/69008-lyon/pharmacie-couderc?centerid=603cbb8f68359b1abff14ae3",
-    "type": "drugstore",
-    "vaccine_type": [
-      "AstraZeneca"
-    ],
-    "com_insee": "69388",
-    "address": "76 Boulevard des Etats-Unis 69008 Lyon",
-    "long_coor1": 4.864881,
-    "lat_coor1": 45.732396,
-    "phone_number": "+33478740520",
-    "business_hours": {
-      "Lundi": "08:30-12:15 14:30-19:00",
-      "Mardi": "08:30-12:15 14:30-19:00",
-      "Mercredi": "08:30-12:15 14:30-19:00",
-      "Jeudi": "08:30-12:15 14:30-19:00",
-      "Vendredi": "08:30-12:15 14:30-19:00",
-      "Samedi": "08:30-12:15 15:00-18:00"
     }
   },
   {
@@ -2802,6 +2665,29 @@
       "Jeudi": "08:30-12:00 14:00-19:15",
       "Vendredi": "08:30-12:00 14:00-19:15",
       "Samedi": "08:30-13:00"
+    }
+  },
+  {
+    "gid": "608ac7bf",
+    "nom": "Pharmacie Centrale",
+    "rdv_site_web": "https://www.maiia.com/pharmacie/44240-suce-sur-erdre/pharmacie-centrale?centerid=608ac7bf8713d30717a399dd",
+    "type": "drugstore",
+    "vaccine_type": [
+      "AstraZeneca"
+    ],
+    "com_insee": "44201",
+    "address": "37 Place Aristide Briand 44240 Suc\u00e9-sur-Erdre",
+    "long_coor1": -1.526633,
+    "lat_coor1": 47.341805,
+    "phone_number": "+33240777016",
+    "business_hours": {
+      "Lundi": "08:30-13:00 14:30-19:00",
+      "Mardi": "08:30-13:00 14:30-19:00",
+      "Mercredi": "08:30-13:00 14:30-19:00",
+      "Jeudi": "08:30-13:00 14:30-19:00",
+      "Vendredi": "08:30-13:00 14:30-19:00",
+      "Samedi": "08:30-13:00 14:30-19:00",
+      "Dimanche": "08:30-13:00"
     }
   },
   {
