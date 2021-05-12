@@ -6,7 +6,10 @@ from httpx import TimeoutException
 from scraper.keldoc.keldoc_routes import API_KELDOC_MOTIVES
 from scraper.pattern.center_info import get_vaccine_name
 
-KELDOC_COVID_SPECIALTIES = ["Maladies infectieuses"]
+KELDOC_COVID_SPECIALTIES = [
+    "Maladies infectieuses",
+    "COVID19 - Vaccination"
+]
 
 KELDOC_APPOINTMENT_REASON = [
     "1 er inj",
@@ -20,6 +23,9 @@ KELDOC_APPOINTMENT_REASON = [
     "inj 1",
     "inj. 1",
     "inj1",
+    "1 injection",
+    "première dose",
+    "1° injection",
     "première injection",
 ]
 
