@@ -23,6 +23,7 @@ from utils.vmd_utils import append_date_days
 
 DOCTOLIB_CONF = get_conf_platform("doctolib")
 DOCTOLIB_API = DOCTOLIB_CONF.get("api", {})
+DOCTOLIB_ENABLED = DOCTOLIB_CONF.get("enabled", False)
 
 timeout = httpx.Timeout(DOCTOLIB_CONF.get("timeout", 25), connect=DOCTOLIB_CONF.get("timeout", 25))
 WAIT_SECONDS_AFTER_REQUEST = DOCTOLIB_CONF.get("request_sleep", 0.1)
@@ -53,6 +54,8 @@ if not all(i <= (DOCTOLIB_SLOT_LIMIT * DOCTOLIB_ITERATIONS) for i in INTERVAL_SP
 
 @Profiling.measure("doctolib_slot")
 def fetch_slots(request: ScraperRequest):
+    if not DOCTOLIB_ENABLED:
+        return None
     # Fonction principale avec le comportement "de prod".
     doctolib = DoctolibSlots(client=DEFAULT_CLIENT)
     return doctolib.fetch(request)
@@ -570,6 +573,8 @@ def is_allowing_online_appointments(rdata):
 
 
 def center_iterator():
+    if not DOCTOLIB_ENABLED:
+        return
     try:
         center_path = "data/output/doctolib-centers.json"
         url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"

@@ -263,9 +263,13 @@ def center_reducer(center: dict) -> dict:
 
 
 if __name__ == "__main__":  # pragma: no cover
-    centers = parse_doctolib_centers()
-    path_out = SCRAPER_CONF.get("result_path")
-    logger.info(f"Found {len(centers)} centers on Doctolib")
-    logger.info(f"> Writing them on {path_out}")
-    with open(path_out, "w") as f:
-        f.write(json.dumps(centers, indent=2))
+    if DOCTOLIB_CONF.get("enabled", False):
+        centers = parse_doctolib_centers()
+        path_out = SCRAPER_CONF.get("result_path")
+        logger.info(f"Found {len(centers)} centers on Doctolib")
+        logger.info(f"> Writing them on {path_out}")
+        with open(path_out, "w") as f:
+            f.write(json.dumps(centers, indent=2))
+    else:
+        logger.error(f"Doctolib scraper is disabled in configuration file.")
+        exit(1)
