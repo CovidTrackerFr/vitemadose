@@ -23,9 +23,9 @@ MAIIA_API = MAIIA_CONF.get("api", {})
 MAIIA_ENABLED = MAIIA_CONF.get("enabled", False)
 MAIIA_SCRAPER = MAIIA_CONF.get("center_scraper", {})
 
-timeout = httpx.Timeout(MAIIA_CONF.get("timeout", 25), connect=MAIIA_CONF.get("timeout", 25))
+#timeout = httpx.Timeout(MAIIA_CONF.get("timeout", 25), connect=MAIIA_CONF.get("timeout", 25))
 
-DEFAULT_CLIENT = httpx.Client(timeout=timeout)
+DEFAULT_CLIENT = httpx.Client()
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
 
