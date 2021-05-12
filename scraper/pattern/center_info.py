@@ -40,7 +40,7 @@ VACCINES_NAMES = {
 INTERVAL_SPLIT_DAYS = get_config().get('appointment_split_days', [])
 
 # Array for CHRONODOSES parameters
-CHRONODOSES = {"Vaccine": [Vaccine.ARNM, Vaccine.PFIZER, Vaccine.MODERNA], "Interval": 2}
+CHRONODOSES = {"Vaccine": get_config().get('chronodoses', {}).get('vaccine', []), "Interval": 2}
 
 
 class CenterInfo:
