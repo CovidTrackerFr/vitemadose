@@ -62,11 +62,11 @@ def count_slots(slots: list, start_date: str, end_date: str) -> int:
 
 
 def get_next_slot_date(
-        center_id: str, consultation_reason_name: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT
+    center_id: str, consultation_reason_name: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT
 ) -> Optional[str]:
-    url = MAIIA_API.get("next_slot").format(center_id=center_id,
-                                            consultation_reason_name=consultation_reason_name,
-                                            start_date=start_date)
+    url = MAIIA_API.get("next_slot").format(
+        center_id=center_id, consultation_reason_name=consultation_reason_name, start_date=start_date
+    )
     try:
         r = client.get(url)
         r.raise_for_status()
@@ -80,15 +80,16 @@ def get_next_slot_date(
 
 
 def get_slots(
-        center_id: str,
-        consultation_reason_name: str,
-        start_date: str,
-        end_date: str,
-        limit=MAIIA_LIMIT,
-        client: httpx.Client = DEFAULT_CLIENT,
+    center_id: str,
+    consultation_reason_name: str,
+    start_date: str,
+    end_date: str,
+    limit=MAIIA_LIMIT,
+    client: httpx.Client = DEFAULT_CLIENT,
 ) -> Optional[list]:
-    url = MAIIA_API.get("slots").format(center_id=center_id, consultation_reason_name=consultation_reason_name,
-                                        start_date=start_date, end_date=end_date)
+    url = MAIIA_API.get("slots").format(
+        center_id=center_id, consultation_reason_name=consultation_reason_name, start_date=start_date, end_date=end_date
+    )
     availabilities = get_paged(url, limit=limit, client=client)["items"]
     if not availabilities:
         next_slot_date = get_next_slot_date(center_id, consultation_reason_name, start_date, client=client)
@@ -98,8 +99,12 @@ def get_slots(
         if next_date - isoparse(start_date) > timedelta(days=MAIIA_DAY_LIMIT):
             return None
         start_date = next_date.isoformat()
-        url = MAIIA_API.get("slots").format(center_id=center_id, consultation_reason_name=consultation_reason_name,
-                                            start_date=start_date, end_date=end_date)
+        url = MAIIA_API.get("slots").format(
+            center_id=center_id,
+            consultation_reason_name=consultation_reason_name,
+            start_date=start_date,
+            end_date=end_date,
+        )
         availabilities = get_paged(url, limit=limit, client=client)["items"]
     if availabilities:
         return availabilities
@@ -115,7 +120,7 @@ def get_reasons(center_id: str, limit=MAIIA_LIMIT, client: httpx.Client = DEFAUL
 
 
 def get_first_availability(
-        center_id: str, request_date: str, reasons: [dict], client: httpx.Client = DEFAULT_CLIENT
+    center_id: str, request_date: str, reasons: [dict], client: httpx.Client = DEFAULT_CLIENT
 ) -> [Optional[datetime], int, dict]:
     date = isoparse(request_date).replace(tzinfo=None)
     start_date = date.isoformat()
@@ -135,9 +140,9 @@ def get_first_availability(
             if slot_availability == None:
                 continue
             for n in (
-                    INTERVAL_SPLIT_DAY
-                    for INTERVAL_SPLIT_DAY in INTERVAL_SPLIT_DAYS
-                    if INTERVAL_SPLIT_DAY <= MAIIA_DAY_LIMIT
+                INTERVAL_SPLIT_DAY
+                for INTERVAL_SPLIT_DAY in INTERVAL_SPLIT_DAYS
+                if INTERVAL_SPLIT_DAY <= MAIIA_DAY_LIMIT
             ):
                 n_date = (isoparse(start_date) + timedelta(days=n, seconds=-1)).isoformat()
                 counts[f"{n}_days"] += count_slots(slots, start_date, n_date)

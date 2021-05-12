@@ -135,10 +135,7 @@ def get_default_fetch_map():
             "urls": get_conf_platform("keldoc").get("recognized_urls", []),
             "scraper_ptr": keldoc_fetch_slots,
         },
-        "Maiia": {
-            "urls": get_conf_platform("maiia").get("recognized_urls", []),
-            "scraper_ptr": maiia_fetch_slots
-        },
+        "Maiia": {"urls": get_conf_platform("maiia").get("recognized_urls", []), "scraper_ptr": maiia_fetch_slots},
         "Mapharma": {
             "urls": get_conf_platform("mapharma").get("recognized_urls", []),
             "scraper_ptr": mapharma_fetch_slots,
@@ -146,7 +143,7 @@ def get_default_fetch_map():
         "Ordoclic": {
             "urls": get_conf_platform("ordoclic").get("recognized_urls", []),
             "scraper_ptr": ordoclic_fetch_slots,
-        }
+        },
     }
 
 
