@@ -113,7 +113,7 @@ def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
             if center["id"] in MAIIA_DO_NOT_SCRAP_ID:
                 continue
             if not any(
-                consultation_reason.get("injectionType") in [MAIIA_FILTERS.get("injection_type")]
+                consultation_reason.get("injectionType") in MAIIA_FILTERS.get("injection_type")
                 and not any(keyword in consultation_reason.get("name").lower() for keyword in MAIIA_DO_NOT_SCRAP_NAME)
                 for consultation_reason in root_center["consultationReasons"]
             ):
