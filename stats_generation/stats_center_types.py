@@ -5,11 +5,12 @@ from datetime import datetime
 import pytz
 import requests
 
+from utils.vmd_config import get_conf_outstats
 from utils.vmd_logger import enable_logger_for_production
 
 logger = logging.getLogger("scraper")
 
-DATA_AUTO = "https://vitemadose.gitlab.io/vitemadose/"
+DATA_AUTO = get_conf_outstats().get("data-auto")
 
 
 def compute_plateforme_data(centres_info):
@@ -55,7 +56,7 @@ def compute_plateforme_data(centres_info):
 
 
 def generate_stats_center_types(centres_info):
-    stats_path = "stats_center_types.json"
+    stats_path = get_conf_outstats().get("center_types")
     stats_data = {"dates": [], "plateformes": {}, "center_types": {}}
 
     try:

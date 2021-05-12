@@ -4,6 +4,7 @@
   },
   "inputs": {
     "centers_gouv": "https://www.data.gouv.fr/fr/datasets/r/5cb21a85-b0b0-4a65-a249-806a040ec372",
+    "rdv_gouv": "https://www.data.gouv.fr/fr/datasets/r/b7bd49cd-904c-4c5d-b60f-018b51df9b0e",
     "departements": "data/input/departements-france.csv",
     "blocklist": "data/input/centers_blocklist.json",
     "postalcode_to_insee": "data/input/codepostal_to_insee.json",
@@ -21,7 +22,8 @@
       "by_date_dep": "stats_by_date_dep.json",
       "center_types": "stats_center_types.json",
       "global": "stats.json"
-    }
+    },
+    "last_scans": "data/output/info_centres.json"
   },
   "scrape": {
     "pool_size": 50,
@@ -138,7 +140,7 @@
         "center_types": {
           "pharmacie": "drugstore",
           "medecin": "general-practitioner",
-          "*": "vaccination_center"
+          "*": "vaccination-center"
         },
         "categories": [
           "hopital-public",
@@ -159,7 +161,7 @@
     },
     "keldoc": {
       "enabled": true,
-      "timeout": 30,
+      "timeout": 20,
       "recognized_urls": [
         "https://vaccination-covid.keldoc.com",
         "https://keldoc.com"
@@ -171,7 +173,7 @@
         "slots": "https://www.keldoc.com/api/patients/v2/timetables/{0}"
       },
       "pagination": {
-        "pages": 7,
+        "pages": 2,
         "days": 4
       },
       "filters": {
@@ -232,7 +234,16 @@
           "test",
           "antigenique",
           "antigénique"
-        ]
+        ],
+        "business_days": {
+          "Lundi": "MONDAY",
+          "Mardi": "TUESDAY",
+          "Mercredi": "WEDNESDAY",
+          "Jeudi": "THURSDAY",
+          "Vendredi": "FRIDAY",
+          "Samedi": "SATURDAY",
+          "Dimanche": "SUNDAY"
+        }
       },
       "filters": {
         "injection_type": [
@@ -252,12 +263,24 @@
         "opendata_fallback": "https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/mapharma_open_data.json",
         "slots": "https://mapharma.net/api/public/calendar/{campagneId}/{start_date}/{optionId}"
       },
+      "headers": {
+        "referer": "https://mapharma.net/"
+      },
       "paths": {
         "opendata": "data/output/mapharma_open_data.json",
         "valid_campaigns": "data/input/mapharma_campagnes_valides.json",
         "invalid_campaigns": "data/input/mapharma_campagnes_inconnues.json"
       },
       "slot_limit": 50,
+      "business_days": [
+        "lundi",
+        "mardi",
+        "mercredi",
+        "jeudi",
+        "vendredi",
+        "samedi",
+        "dimanche"
+      ],
       "filters": {
         "valid_campaigns": [
           "vaccination covid",
@@ -297,8 +320,10 @@
         "per_page": "10000",
         "in.isPublicProfile": "true",
         "in.isCovidVaccineSupported": "true",
-        "or.covidOnlineBookingAvailabilities.Vaccination Pfizer": "true",
-        "or.covidOnlineBookingAvailabilities.Vaccination AstraZeneca": "true"
+        "or.covidOnlineBookingAvailabilities.vaccineAstraZeneca1": "true",
+        "or.covidOnlineBookingAvailabilities.vaccineJanssen1": "true",
+        "or.covidOnlineBookingAvailabilities.vaccinePfizer1": "true",
+        "or.covidOnlineBookingAvailabilities.vaccineModerna1": "true"
       }
     }
   }

@@ -5,26 +5,34 @@ import logging
 from datetime import datetime, timedelta
 from dateutil.parser import isoparse
 from pathlib import Path
+
+from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import departementUtils, format_phone_number
 from scraper.pattern.center_info import get_vaccine_name
 from scraper.pattern.scraper_result import DRUG_STORE, GENERAL_PRACTITIONER, VACCINATION_CENTER
 from .maiia_utils import get_paged, MAIIA_LIMIT
 
-timeout = httpx.Timeout(30.0, connect=30.0)
+MAIIA_CONF = get_conf_platform("maiia")
+MAIIA_API = MAIIA_CONF.get("api", {})
+MAIIA_ENABLED = MAIIA_CONF.get("enabled", False)
+MAIIA_SCRAPER = MAIIA_CONF.get("center_scraper", {})
+MAIIA_FILTERS = MAIIA_CONF.get("filters", {})
+
+timeout = httpx.Timeout(MAIIA_CONF.get("timeout", 25), connect=MAIIA_CONF.get("timeout", 25))
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 logger = logging.getLogger("scraper")
 
-MAIIA_URL = "https://www.maiia.com"
-MAIIA_DAY_LIMIT = 50
-CENTER_TYPES = ["centre-de-vaccination", "pharmacie", "centre-hospitalier-(ch)"]
-MAIIA_DO_NOT_SCRAP_ID = ["603e4fae8c512e753fc49ba1"]
-MAIIA_DO_NOT_SCRAP_NAME = ["test", "antigenique", "antigénique"]
+MAIIA_URL = MAIIA_CONF.get("base_url")
+MAIIA_DAY_LIMIT = MAIIA_CONF.get("calendar_limit")
+CENTER_TYPES = MAIIA_SCRAPER.get("categories")
+MAIIA_DO_NOT_SCRAP_ID = MAIIA_SCRAPER.get("excluded_ids", [])
+MAIIA_DO_NOT_SCRAP_NAME = MAIIA_SCRAPER.get("excluded_names", [])
 
 
 def get_centers(speciality: str, client: httpx.Client = DEFAULT_CLIENT) -> list:
     result = get_paged(
-        f"{MAIIA_URL}/api/pat-public/hcd?distanceMax=10000&AllVaccinationPlaces=true&speciality.shortName={speciality}",
-        limit=50,
+        MAIIA_API.get("scraper").format(speciality=speciality),
+        limit=MAIIA_DAY_LIMIT,
         client=client,
     )
     return result["items"]
@@ -32,15 +40,7 @@ def get_centers(speciality: str, client: httpx.Client = DEFAULT_CLIENT) -> list:
 
 def maiia_schedule_to_business_hours(opening_schedules) -> dict:
     business_hours = dict()
-    days = {
-        "Lundi": "MONDAY",
-        "Mardi": "TUESDAY",
-        "Mercredi": "WEDNESDAY",
-        "Jeudi": "THURSDAY",
-        "Vendredi": "FRIDAY",
-        "Samedi": "SATURDAY",
-        "Dimanche": "SUNDAY",
-    }
+    days = MAIIA_SCRAPER.get("business_days")
     for key, value in days.items():
         schedules = opening_schedules[value]["schedules"]
         creneaux = list()
@@ -113,7 +113,7 @@ def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
             if center["id"] in MAIIA_DO_NOT_SCRAP_ID:
                 continue
             if not any(
-                consultation_reason.get("injectionType") in ["FIRST"]
+                consultation_reason.get("injectionType") in MAIIA_FILTERS.get("injection_type")
                 and not any(keyword in consultation_reason.get("name").lower() for keyword in MAIIA_DO_NOT_SCRAP_NAME)
                 for consultation_reason in root_center["consultationReasons"]
             ):
@@ -124,17 +124,16 @@ def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
             centers_ids.append(center["id"])
             for child_center in center["childCenters"]:
                 if (
-                    child_center["speciality"]["code"] == "VAC01"
+                    child_center["speciality"]["code"] == MAIIA_SCRAPER.get("specialities")[0]
                     and "url" in child_center
                     and child_center["id"] not in centers_ids
                 ):
                     centers.append(maiia_center_to_csv(child_center, root_center))
                     centers_ids.append(child_center["id"])
-    print(centers)
     if not save:
         return centers
     # pragma: no cover
-    output_path = Path("data", "output", "maiia_centers.json")
+    output_path = Path(MAIIA_SCRAPER.get("result_path"))
     with open(output_path, "w", encoding="utf8") as f:
         json.dump(centers, f, indent=2)
     logger.info(f"Saved {len(centers)} centers to {output_path}")
@@ -142,6 +141,9 @@ def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
 
 
 def main():
+    if not MAIIA_ENABLED:
+        logger.error("Maiia scraper is disabled in configuration file.")
+        return
     maiia_scrap(save=True)
 
 

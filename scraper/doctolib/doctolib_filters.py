@@ -1,42 +1,15 @@
 import re
 
 from scraper.pattern.scraper_result import DRUG_STORE, GENERAL_PRACTITIONER, VACCINATION_CENTER
+from utils.vmd_config import get_conf_platform
 
-DOCTOLIB_APPOINTMENT_REASON = [
-    "1 ere injection",
-    "1 ère injection",
-    "1er injection",
-    "1ere dose",
-    "1ere injection",
-    "1ère injection",
-    "1re injection",
-    "vaccination",
-    "Vaccin COVID-19",
-]
+DOCTOLIB_CONF = get_conf_platform("doctolib")
+DOCTOLIB_FILTERS = DOCTOLIB_CONF.get("filters", {})
+
+DOCTOLIB_APPOINTMENT_REASON = DOCTOLIB_FILTERS.get("appointment_reason", [])
 DOCTOLIB_APPOINTMENT_REASON = [c.lower().strip() for c in DOCTOLIB_APPOINTMENT_REASON]
 
-DOCTOLIB_CATEGORY = [
-    "18 à 54",
-    "55 ans",
-    "70 ans",
-    "astra Zeneca",
-    "femmes enceintes",
-    "injection unique",
-    "janssen",
-    "je ne suis pas professionnel de santé",
-    "je suis un particulier",
-    "non professionnels de santé",
-    "patient",
-    "personnes à très haut risque",
-    "personnes âgées de 60 ans ou plus",
-    "personnes de 60 ans et plus",
-    "personnes de plus de",
-    "pfizer",
-    "public",
-    "vaccination au centre",
-    "vaccination covid",  # 50 - 55 ans avec comoribidtés
-    "vaccination pfizer",
-]
+DOCTOLIB_CATEGORY = DOCTOLIB_FILTERS.get("appointment_category", [])
 DOCTOLIB_CATEGORY = [c.lower().strip() for c in DOCTOLIB_CATEGORY]
 
 

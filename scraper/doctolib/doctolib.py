@@ -18,11 +18,17 @@ from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLI
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 from scraper.profiler import Profiling
+from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import append_date_days
 
-WAIT_SECONDS_AFTER_REQUEST = 0.100
-DOCTOLIB_SLOT_LIMIT = 7
-DOCTOLIB_ITERATIONS = 7
+DOCTOLIB_CONF = get_conf_platform("doctolib")
+DOCTOLIB_API = DOCTOLIB_CONF.get("api", {})
+DOCTOLIB_ENABLED = DOCTOLIB_CONF.get("enabled", False)
+
+timeout = httpx.Timeout(DOCTOLIB_CONF.get("timeout", 25), connect=DOCTOLIB_CONF.get("timeout", 25))
+WAIT_SECONDS_AFTER_REQUEST = DOCTOLIB_CONF.get("request_sleep", 0.1)
+DOCTOLIB_SLOT_LIMIT = DOCTOLIB_CONF.get("pagination", {}).get("days", 7)
+DOCTOLIB_ITERATIONS = DOCTOLIB_CONF.get("pagination", {}).get("pages", 7)
 
 DOCTOLIB_HEADERS = {
     "User-Agent": os.environ.get("DOCTOLIB_API_KEY", ""),
@@ -36,7 +42,7 @@ if os.getenv("WITH_TOR", "no") == "yes":
     }
     DEFAULT_CLIENT = session  # type: ignore
 else:
-    DEFAULT_CLIENT = httpx.Client()
+    DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 
 logger = logging.getLogger("scraper")
 
@@ -48,6 +54,8 @@ if not all(i <= (DOCTOLIB_SLOT_LIMIT * DOCTOLIB_ITERATIONS) for i in INTERVAL_SP
 
 @Profiling.measure("doctolib_slot")
 def fetch_slots(request: ScraperRequest):
+    if not DOCTOLIB_ENABLED:
+        return None
     # Fonction principale avec le comportement "de prod".
     doctolib = DoctolibSlots(client=DEFAULT_CLIENT)
     return doctolib.fetch(request)
@@ -72,7 +80,7 @@ class DoctolibSlots:
 
         practice_same_adress = False
 
-        centre_api_url = f"https://partners.doctolib.fr/booking/{centre}.json"
+        centre_api_url = DOCTOLIB_API.get("booking", "").format(centre=centre)
         response = self._client.get(centre_api_url, headers=DOCTOLIB_HEADERS)
         if response.status_code == 403:
             raise BlockedByDoctolibError(centre_api_url)
@@ -140,7 +148,7 @@ class DoctolibSlots:
                 practice_ids_q = "-".join(practice_ids)
 
                 for i in range(DOCTOLIB_ITERATIONS):
-                    start_date_tmp = datetime.now() + timedelta(days=7 * i)
+                    start_date_tmp = datetime.now() + timedelta(days=DOCTOLIB_SLOT_LIMIT * i)
                     start_date_tmp = start_date_tmp.strftime("%Y-%m-%d")
                     sdate, appt, appointment_schedules, stop = self.get_appointments(
                         request,
@@ -227,7 +235,13 @@ class DoctolibSlots:
         first_availability = None
         appointment_count = 0
         appointment_schedules_updated = None
-        slots_api_url = f"https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={limit}"
+        slots_api_url = DOCTOLIB_API.get("slots", "").format(
+            start_date=start_date,
+            motive_id=motive_id,
+            agenda_ids_q=agenda_ids_q,
+            practice_ids_q=practice_ids_q,
+            limit=limit,
+        )
         try:
             response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
         except httpx.ReadTimeout as hex:
@@ -559,6 +573,8 @@ def is_allowing_online_appointments(rdata):
 
 
 def center_iterator():
+    if not DOCTOLIB_ENABLED:
+        return
     try:
         center_path = "data/output/doctolib-centers.json"
         url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"

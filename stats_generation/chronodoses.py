@@ -18,9 +18,10 @@ import sys
 from pathlib import Path
 from typing import Dict, List
 
+from utils.vmd_config import get_conf_outputs, get_conf_outstats
 
-_default_input = Path("data", "output", "info_centres.json")
-_default_output = Path("data", "output", "stats_chronodoses.json")
+_default_input = Path(get_conf_outputs().get("last_scans"))
+_default_output = Path(get_conf_outstats().get("chronodoses"))
 
 
 def count_departments_chronodoses(data: dict) -> Dict[str, int]:
