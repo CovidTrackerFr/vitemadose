@@ -87,9 +87,9 @@ def get_profile(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     slug = request.get_url().rsplit("/", 1)[-1]
     prof = request.get_url().rsplit("/", 2)[-2]
     if prof in ["pharmacien", "medecin"]:  # pragma: no cover
-        base_url = ORDOCLIC_API.get("profile_professionals")
+        base_url = ORDOCLIC_API.get("profile_professionals").format(slug=slug)
     else:
-        base_url = ORDOCLIC_API.get("profile_public_entities")
+        base_url = ORDOCLIC_API.get("profile_public_entities").format(slug=slug)
     try:
         r = client.get(base_url)
         r.raise_for_status()
@@ -226,6 +226,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
 
 def centre_iterator(client: httpx.Client = DEFAULT_CLIENT):
     if not ORDOCLIC_ENABLED:
+        logger.warning("Ordoclic scrap is disabled in configuration file.")
         return []
     items = search(client)
     if items is None:
@@ -238,7 +239,7 @@ def centre_iterator(client: httpx.Client = DEFAULT_CLIENT):
                 centre = {}
                 slug = item["publicProfile"]["slug"]
                 centre["gid"] = item["id"][:8]
-                centre["rdv_site_web"] = ORDOCLIC_CONF.get("build_url").format(build_url=slug)
+                centre["rdv_site_web"] = ORDOCLIC_CONF.get("build_url").format(slug=slug)
                 centre["com_insee"] = departementUtils.cp_to_insee(item["location"]["zip"])
                 centre["nom"] = item.get("name")
                 centre["phone_number"] = item.get("phone")
