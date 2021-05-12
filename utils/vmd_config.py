@@ -24,7 +24,15 @@ def get_config() -> Optional[dict]:
 
 
 def get_conf_inputs() -> Optional[dict]:
-    return get_config().get("inputs")
+    return get_config().get("inputs", {})
+
+
+def get_conf_outputs() -> Optional[dict]:
+    return get_config().get("outputs", {})
+
+
+def get_conf_outstats() -> Optional[dict]:
+    return get_conf_outputs().get("stats", {})
 
 
 def get_conf_platform(platform: str) -> Optional[dict]:
