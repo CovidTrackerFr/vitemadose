@@ -60,6 +60,7 @@ class CenterInfo:
         self.appointment_by_phone_only = False
         self.erreur = None
         self.last_scan_with_availabilities = None
+        self.request_counts = None
 
     def fill_localization(self, location: Optional[CenterLocation]):
         self.location = location
@@ -73,6 +74,7 @@ class CenterInfo:
         self.internal_id = result.request.internal_id
         self.vaccine_type = result.request.vaccine_type
         self.appointment_by_phone_only = result.request.appointment_by_phone_only
+        self.request_counts = result.request.requests
 
     def handle_next_availability(self):
         if not self.prochain_rdv:

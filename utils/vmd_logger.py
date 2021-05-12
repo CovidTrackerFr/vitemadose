@@ -1,4 +1,7 @@
 import logging
+from typing import List
+
+from terminaltables import AsciiTable
 
 from scraper.pattern.scraper_request import ScraperRequest
 
@@ -62,7 +65,7 @@ def enable_logger_for_debug():
         root_logger.addHandler(ch)
 
 
-def log_requests(request: ScraperRequest = None):
+def log_requests(request: ScraperRequest = None) -> None:
     logger = get_logger()
     if not request or not request.requests:
         logger.debug(f"{request.internal_id} requests -> No requests made.")
@@ -73,3 +76,41 @@ def log_requests(request: ScraperRequest = None):
         requests += f", {type}({value})"
         total_requests += value
     logger.debug(f"{request.internal_id} requests -> Total({total_requests}){requests}")
+
+
+def log_platform_requests(centers) -> None:
+    logger = get_logger()
+    platforms = {}
+
+    print("Requests count:")
+    # Not fan of the way I do this
+    # maybe python has builtin ways to do this in an easier way
+    if not centers:
+        logger.info(f"No centers found.")
+        return
+    for center in centers:
+        platform = center.plateforme
+        if platform not in platforms:
+            platforms[platform] = {}
+        if not center.request_counts:
+            continue
+        for request_type, request_count in center.request_counts.items():
+            if request_type not in platforms[platform]:
+                platforms[platform][request_type] = 0
+            platforms[platform][request_type] += request_count
+    if not platforms:
+        logger.info("No platforms found.")
+    datatable_keys = ["Platform", "Total"]
+    datatable_keys.extend(list(set([subkey for sdict in platforms.values() for subkey in sdict])))
+    datatable = [datatable_keys]
+    for platform, requests in platforms.items():
+        data = [platform]
+        for key in datatable_keys:
+            if key == "Total":
+                data.append(sum([req_count for req_count in requests.values()]))
+            elif key != "Platform":
+                data.append(requests.get(key, 0))
+        datatable.append(data)
+
+    table = AsciiTable(datatable)
+    print(table.table)

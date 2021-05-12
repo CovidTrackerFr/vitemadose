@@ -74,6 +74,7 @@ def export_data(centres_cherchés: Iterator[CenterInfo], last_scrap, outpath_for
             "vaccine_type",
             "appointment_by_phone_only",
             "last_scan_with_availabilities",
+            "request_counts"
         ]
         centres_open_data.append(copy_omit_keys(centre.default(), skipped_keys))
 
