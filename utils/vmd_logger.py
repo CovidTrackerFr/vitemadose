@@ -1,5 +1,7 @@
 import logging
 
+from scraper.pattern.scraper_request import ScraperRequest
+
 
 class CustomFormatter(logging.Formatter):
     grey = "\x1b[38;21m"
@@ -58,3 +60,16 @@ def enable_logger_for_debug():
         ch.setLevel(logging.DEBUG)
         ch.setFormatter(CustomFormatter())
         root_logger.addHandler(ch)
+
+
+def log_requests(request: ScraperRequest = None):
+    logger = get_logger()
+    if not request or not request.requests:
+        logger.debug(f"{request.internal_id} requests -> No requests made.")
+        return
+    requests = ""
+    total_requests = 0
+    for type, value in request.requests.items():
+        requests += f", {type}({value})"
+        total_requests += value
+    logger.debug(f"{request.internal_id} requests -> Total({total_requests}){requests}")

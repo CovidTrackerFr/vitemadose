@@ -81,6 +81,7 @@ class DoctolibSlots:
         practice_same_adress = False
 
         centre_api_url = DOCTOLIB_API.get("booking", "").format(centre=centre)
+        request.increase_request_count("booking")
         response = self._client.get(centre_api_url, headers=DOCTOLIB_HEADERS)
         if response.status_code == 403:
             raise BlockedByDoctolibError(centre_api_url)
@@ -242,6 +243,7 @@ class DoctolibSlots:
             practice_ids_q=practice_ids_q,
             limit=limit,
         )
+        request.increase_request_count("slots")
         try:
             response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
         except httpx.ReadTimeout as hex:

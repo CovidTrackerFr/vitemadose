@@ -47,8 +47,10 @@ def search(client: httpx.Client = DEFAULT_CLIENT):
     return r.json()
 
 
-def get_reasons(entityId, client: httpx.Client = DEFAULT_CLIENT):
+def get_reasons(entityId, client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None):
     base_url = ORDOCLIC_API.get("motives").format(entityId=entityId)
+    if request:
+        request.increase_request_count("motives")
     try:
         r = client.get(base_url)
         r.raise_for_status()
@@ -61,7 +63,8 @@ def get_reasons(entityId, client: httpx.Client = DEFAULT_CLIENT):
     return r.json()
 
 
-def get_slots(entityId, medicalStaffId, reasonId, start_date, end_date, client: httpx.Client = DEFAULT_CLIENT):
+def get_slots(entityId, medicalStaffId, reasonId, start_date, end_date,
+              client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None):
     base_url = ORDOCLIC_API.get("slots")
     payload = {
         "entityId": entityId,
@@ -71,6 +74,8 @@ def get_slots(entityId, medicalStaffId, reasonId, start_date, end_date, client: 
         "dateStart": f"{start_date}T23:59:59.000Z",
     }
     headers = {"Content-type": "application/json", "Accept": "text/plain"}
+    if request:
+        request.increase_request_count("slots")
     try:
         r = client.post(base_url, data=json.dumps(payload), headers=headers)
         r.raise_for_status()
@@ -90,6 +95,7 @@ def get_profile(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
         base_url = ORDOCLIC_API.get("profile_professionals").format(slug=slug)
     else:
         base_url = ORDOCLIC_API.get("profile_public_entities").format(slug=slug)
+    request.increase_request_count("booking")
     try:
         r = client.get(base_url)
         r.raise_for_status()
@@ -189,7 +195,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
         medicalStaffId = professional["id"]
         name = professional["fullName"]
         zip = professional["zip"]
-        reasons = get_reasons(entityId)
+        reasons = get_reasons(entityId, request=request)
         for reason in reasons["reasons"]:
             if not is_reason_valid(reason):
                 continue
@@ -197,7 +203,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
             reasonId = reason["id"]
             date_obj = datetime.strptime(request.get_start_date(), "%Y-%m-%d")
             end_date = (date_obj + timedelta(days=50)).strftime("%Y-%m-%d")
-            slots = get_slots(entityId, medicalStaffId, reasonId, request.get_start_date(), end_date, client)
+            slots = get_slots(entityId, medicalStaffId, reasonId, request.get_start_date(), end_date, client, request)
             date = parse_ordoclic_slots(request, slots)
             if date is None:
                 continue
