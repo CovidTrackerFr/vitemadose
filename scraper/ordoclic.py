@@ -40,8 +40,10 @@ def search(client: httpx.Client = DEFAULT_CLIENT):
         "per_page": "10000",
         "in.isPublicProfile": "true",
         "in.isCovidVaccineSupported": "true",
-        "or.covidOnlineBookingAvailabilities.Vaccination Pfizer": "true",
-        "or.covidOnlineBookingAvailabilities.Vaccination AstraZeneca": "true",
+        "or.covidOnlineBookingAvailabilities.vaccineAstraZeneca1": "true",
+        "or.covidOnlineBookingAvailabilities.vaccineJanssen1": "true",
+        "or.covidOnlineBookingAvailabilities.vaccinePfizer1": "true",
+        "or.covidOnlineBookingAvailabilities.vaccineModerna1": "true",
     }
     try:
         r = client.get(base_url, params=payload)
