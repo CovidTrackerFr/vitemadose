@@ -147,9 +147,9 @@ class KeldocCenter:
             f"get_timetables -> start_date: {start_date} end_date: {end_date} motive: {motive_id} agenda: {agenda_ids}"
         )
         calendar_params = {
-                "from": start_date.strftime('%Y-%m-%d'),
-                "to": end_date,
-                "agenda_ids[]": agenda_ids,
+            "from": start_date.strftime('%Y-%m-%d'),
+            "to": end_date,
+            "agenda_ids[]": agenda_ids,
         }
         try:
             calendar_req = self.client.get(calendar_url, params=calendar_params)
