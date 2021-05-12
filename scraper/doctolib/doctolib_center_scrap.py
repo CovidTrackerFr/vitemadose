@@ -22,7 +22,7 @@ from unidecode import unidecode
 DOCTOLIB_CONF = get_conf_platform("doctolib")
 DOCTOLIB_API = DOCTOLIB_CONF.get("api", {})
 BASE_URL = DOCTOLIB_API.get("scraper")
-BASE_URL_DEPARTEMENT =DOCTOLIB_API.get("scraper_dep")
+BASE_URL_DEPARTEMENT = DOCTOLIB_API.get("scraper_dep")
 BOOKING_URL = DOCTOLIB_API.get("booking")
 
 SCRAPER_CONF = DOCTOLIB_CONF.get("center_scraper", {})

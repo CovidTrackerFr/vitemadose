@@ -24,10 +24,10 @@ from utils.vmd_utils import append_date_days
 DOCTOLIB_CONF = get_conf_platform("doctolib")
 DOCTOLIB_API = DOCTOLIB_CONF.get("api", {})
 
-timeout = httpx.Timeout(DOCTOLIB_CONF.get('timeout', 25), connect=DOCTOLIB_CONF.get('timeout', 25))
-WAIT_SECONDS_AFTER_REQUEST = DOCTOLIB_CONF.get('request_sleep', 0.1)
-DOCTOLIB_SLOT_LIMIT = DOCTOLIB_CONF.get('pagination', {}).get('days', 7)
-DOCTOLIB_ITERATIONS = DOCTOLIB_CONF.get('pagination', {}).get('pages', 7)
+timeout = httpx.Timeout(DOCTOLIB_CONF.get("timeout", 25), connect=DOCTOLIB_CONF.get("timeout", 25))
+WAIT_SECONDS_AFTER_REQUEST = DOCTOLIB_CONF.get("request_sleep", 0.1)
+DOCTOLIB_SLOT_LIMIT = DOCTOLIB_CONF.get("pagination", {}).get("days", 7)
+DOCTOLIB_ITERATIONS = DOCTOLIB_CONF.get("pagination", {}).get("pages", 7)
 
 DOCTOLIB_HEADERS = {
     "User-Agent": os.environ.get("DOCTOLIB_API_KEY", ""),
@@ -232,11 +232,13 @@ class DoctolibSlots:
         first_availability = None
         appointment_count = 0
         appointment_schedules_updated = None
-        slots_api_url = DOCTOLIB_API.get("slots", "").format(start_date=start_date,
-                                                             motive_id=motive_id,
-                                                             agenda_ids_q=agenda_ids_q,
-                                                             practice_ids_q=practice_ids_q,
-                                                             limit=limit)
+        slots_api_url = DOCTOLIB_API.get("slots", "").format(
+            start_date=start_date,
+            motive_id=motive_id,
+            agenda_ids_q=agenda_ids_q,
+            practice_ids_q=practice_ids_q,
+            limit=limit,
+        )
         try:
             response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
         except httpx.ReadTimeout as hex:

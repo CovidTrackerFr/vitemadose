@@ -19,10 +19,10 @@ PALETTE_FB = ["#ffffff", "#eaeaea", "#cecece", "#80bdf4", "#2d8dfe"]
 PALETTE_FB_RDV = ["#eaeaea", "#F44848", "#FF9255", "#FFD84F", "#FEE487", "#7DF0AE", "#27DF76", "#00B94F"]
 ECHELLE_STROKE = "#797979"
 ECHELLE_FONT = "#424242"
-MAP_SRC_PATH = Path(get_conf_inputs().get('map'))
-CSV_POP_URL = get_conf_inputs().get('dep_pop')
-CSV_RDV_URL = get_conf_inputs().get('rdv_gouv')
-JSON_INFO_CENTRES_URL = get_conf_inputs().get('last_scans')
+MAP_SRC_PATH = Path(get_conf_inputs().get("map"))
+CSV_POP_URL = get_conf_inputs().get("dep_pop")
+CSV_RDV_URL = get_conf_inputs().get("rdv_gouv")
+JSON_INFO_CENTRES_URL = get_conf_inputs().get("last_scans")
 
 
 def get_csv(url: str, header=True, delimiter=";", encoding="utf-8", client: httpx.Client = DEFAULT_CLIENT):

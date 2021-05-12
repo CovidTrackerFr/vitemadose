@@ -96,8 +96,9 @@ def generate_stats_dep_date(centres_stats):
     logger.info(f"Updated stats file: {stats_path}")
 
 
-def export_centres_stats(center_data=Path(get_conf_outputs().get("last_scans")),
-                         stats_path=get_conf_outstats().get("global")):
+def export_centres_stats(
+    center_data=Path(get_conf_outputs().get("last_scans")), stats_path=get_conf_outstats().get("global")
+):
 
     if center_data.exists():
         centres_info = get_centres_info(center_data)

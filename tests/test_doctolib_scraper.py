@@ -13,6 +13,7 @@ from scraper.doctolib.doctolib_center_scrap import (
 
 import requests
 import json
+
 # -- Tests de l'API (offline) --
 from scraper.pattern.scraper_result import GENERAL_PRACTITIONER, DRUG_STORE, VACCINATION_CENTER
 
@@ -53,9 +54,7 @@ def test_business_hours():
             },
         ]
     }
-    emptyPlace = {
-        "opening_hours": []
-    }
+    emptyPlace = {"opening_hours": []}
     assert parse_doctolib_business_hours(place) == {"lundi": "12:00-15:00, 16:00-17:00", "mardi": None}
     assert parse_doctolib_business_hours(emptyPlace) == None
 
@@ -70,7 +69,7 @@ def test_doctolib_coordinates():
 from unittest.mock import Mock, patch
 
 
-@patch('requests.get')
+@patch("requests.get")
 def test_get_dict_infos_center_page(mock_get):
     with open("tests/fixtures/doctolib/booking-with-doctors.json", "r") as file:
         booking = json.load(file)
@@ -93,10 +92,7 @@ def test_get_dict_infos_center_page(mock_get):
                 "samedi": None,
                 "dimanche": None,
             },
-            "visit_motives": [
-                "Consultation de suivi spécialiste",
-                "Première consultation de neurochirurgie"
-            ]
+            "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
         },
         {
             "gid": "d1",
@@ -115,123 +111,117 @@ def test_get_dict_infos_center_page(mock_get):
                 "samedi": None,
                 "dimanche": None,
             },
-            "visit_motives": [
-                "Consultation de suivi spécialiste",
-                "Première consultation de neurochirurgie"
-            ]
-        }
+            "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
+        },
     ]
     mock_get.return_value.json.return_value = booking
-    mockedResponse = get_dict_infos_center_page('someURL?pid=practice-86656')
+    mockedResponse = get_dict_infos_center_page("someURL?pid=practice-86656")
     assert mockedResponse == expectedInfosCenterPageWithLandlineNumber
 
-    mock_get.return_value.json.return_value = {
-        "data": {}
-    }
-    mockedResponse = get_dict_infos_center_page('someURL')
+    mock_get.return_value.json.return_value = {"data": {}}
+    mockedResponse = get_dict_infos_center_page("someURL")
     assert mockedResponse == []
 
 
-@patch('requests.get')
+@patch("requests.get")
 def test_centers_parsing(mock_get):
     with open("tests/fixtures/doctolib/booking-with-doctors.json", "r") as file:
         doctors = json.load(file)
 
     expectedCentersPage = [
-        {   'address': '22b Rue Jean Jaurès, 94800 Villejuif',
-            'business_hours': {
-                'dimanche': None,
-                'jeudi': None,
-                'lundi': None,
-                'mardi': None,
-                'mercredi': None,
-                'samedi': None,
-                'vendredi': None
+        {
+            "address": "22b Rue Jean Jaurès, 94800 Villejuif",
+            "business_hours": {
+                "dimanche": None,
+                "jeudi": None,
+                "lundi": None,
+                "mardi": None,
+                "mercredi": None,
+                "samedi": None,
+                "vendredi": None,
             },
-            'com_insee': '94076',
-            'gid': 'd1',
-            'lat_coor1': 48.7951181,
-            'long_coor1': 2.3662778,
-            'nom': 'Pharmacie des écoles - Leadersanté - Villejuif',
-            'phone_number': '+33600000000',
-            'place_id': 'practice-37157',
-            'rdv_site_web': 'https://www.doctolib.fr/pharmacie/villejuif/pharmacie-des-ecoles?pid=practice-37157',
-            'type': 'drugstore',
-            'ville': 'Villejuif',
-            'visit_motives': ['Consultation de suivi spécialiste',
-                'Première consultation de neurochirurgie'
-                              ]
-         },
-        {   'address': '22b Rue Jean Jaurès, 94800 Villejuif',
-            'business_hours': {
-                'dimanche': None,
-                'jeudi': None,
-                'lundi': None,
-                'mardi': None,
-                'mercredi': None,
-                'samedi': None,
-                'vendredi': None
-            },
-            'com_insee': '94076',
-            'gid': 'd1',
-            'lat_coor1': 48.7951181,
-            'long_coor1': 2.3662778,
-            'nom': 'Pharmacie des écoles - Leadersanté - Villejuif',
-            'phone_number': '+33638952553',
-            'place_id': 'practice-86656',
-            'rdv_site_web': 'https://www.doctolib.fr/pharmacie/villejuif/pharmacie-des-ecoles?pid=practice-86656',
-            'type': 'drugstore',
-            'ville': 'Villejuif',
-            'visit_motives': ['Consultation de suivi spécialiste',
-                'Première consultation de neurochirurgie']
-        },
-        {'address': '96 Avenue Jean Jaurès, 76140 Le Petit-Quevilly',
-            'business_hours': {
-                'dimanche': None,
-                'jeudi': None,
-                'lundi': None,
-                'mardi': None,
-                'mercredi': None,
-                'samedi': None,
-                'vendredi': None},
-            'com_insee': '76498',
-            'gid': 'd1',
-            'lat_coor1': 49.4269181,
-            'long_coor1': 1.0627287,
-            'nom': 'Vaccinodrome Jean Jaurès',
-            'phone_number': '+33600000000',
-            'place_id': 'practice-37157',
-            'rdv_site_web': 'https://www.doctolib.fr/vaccinodrome/le-petit-quevilly/dubois?pid=practice-37157',
-            'type': 'vaccination-center',
-            'ville': 'Le Petit-Quevilly',
-            'visit_motives': ['Consultation de suivi spécialiste',
-                'Première consultation de neurochirurgie']
+            "com_insee": "94076",
+            "gid": "d1",
+            "lat_coor1": 48.7951181,
+            "long_coor1": 2.3662778,
+            "nom": "Pharmacie des écoles - Leadersanté - Villejuif",
+            "phone_number": "+33600000000",
+            "place_id": "practice-37157",
+            "rdv_site_web": "https://www.doctolib.fr/pharmacie/villejuif/pharmacie-des-ecoles?pid=practice-37157",
+            "type": "drugstore",
+            "ville": "Villejuif",
+            "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
         },
         {
-            'address': '96 Avenue Jean Jaurès, 76140 Le Petit-Quevilly',
-            'business_hours': {
-                'dimanche': None,
-                'jeudi': None,
-                'lundi': None,
-                'mardi': None,
-                'mercredi': None,
-                'samedi': None,
-                'vendredi': None},
-            'com_insee': '76498',
-            'gid': 'd1',
-            'lat_coor1': 49.4269181,
-            'long_coor1': 1.0627287,
-            'nom': 'Vaccinodrome Jean Jaurès',
-            'phone_number': '+33638952553',
-            'place_id': 'practice-86656',
-            'rdv_site_web': 'https://www.doctolib.fr/vaccinodrome/le-petit-quevilly/dubois?pid=practice-86656',
-            'type': 'vaccination-center',
-            'ville': 'Le Petit-Quevilly',
-            'visit_motives': ['Consultation de suivi spécialiste',
-                'Première consultation de neurochirurgie']
+            "address": "22b Rue Jean Jaurès, 94800 Villejuif",
+            "business_hours": {
+                "dimanche": None,
+                "jeudi": None,
+                "lundi": None,
+                "mardi": None,
+                "mercredi": None,
+                "samedi": None,
+                "vendredi": None,
+            },
+            "com_insee": "94076",
+            "gid": "d1",
+            "lat_coor1": 48.7951181,
+            "long_coor1": 2.3662778,
+            "nom": "Pharmacie des écoles - Leadersanté - Villejuif",
+            "phone_number": "+33638952553",
+            "place_id": "practice-86656",
+            "rdv_site_web": "https://www.doctolib.fr/pharmacie/villejuif/pharmacie-des-ecoles?pid=practice-86656",
+            "type": "drugstore",
+            "ville": "Villejuif",
+            "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
+        },
+        {
+            "address": "96 Avenue Jean Jaurès, 76140 Le Petit-Quevilly",
+            "business_hours": {
+                "dimanche": None,
+                "jeudi": None,
+                "lundi": None,
+                "mardi": None,
+                "mercredi": None,
+                "samedi": None,
+                "vendredi": None,
+            },
+            "com_insee": "76498",
+            "gid": "d1",
+            "lat_coor1": 49.4269181,
+            "long_coor1": 1.0627287,
+            "nom": "Vaccinodrome Jean Jaurès",
+            "phone_number": "+33600000000",
+            "place_id": "practice-37157",
+            "rdv_site_web": "https://www.doctolib.fr/vaccinodrome/le-petit-quevilly/dubois?pid=practice-37157",
+            "type": "vaccination-center",
+            "ville": "Le Petit-Quevilly",
+            "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
+        },
+        {
+            "address": "96 Avenue Jean Jaurès, 76140 Le Petit-Quevilly",
+            "business_hours": {
+                "dimanche": None,
+                "jeudi": None,
+                "lundi": None,
+                "mardi": None,
+                "mercredi": None,
+                "samedi": None,
+                "vendredi": None,
+            },
+            "com_insee": "76498",
+            "gid": "d1",
+            "lat_coor1": 49.4269181,
+            "long_coor1": 1.0627287,
+            "nom": "Vaccinodrome Jean Jaurès",
+            "phone_number": "+33638952553",
+            "place_id": "practice-86656",
+            "rdv_site_web": "https://www.doctolib.fr/vaccinodrome/le-petit-quevilly/dubois?pid=practice-86656",
+            "type": "vaccination-center",
+            "ville": "Le Petit-Quevilly",
+            "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
         },
     ]
-
 
     mock_get.return_value.json.return_value = doctors
 

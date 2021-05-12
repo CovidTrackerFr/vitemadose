@@ -24,7 +24,7 @@ class Vaccine(str, Enum):
     ARNM = "ARNm"
 
 
-VACCINE_CONF = get_config().get('vaccines', {})
+VACCINE_CONF = get_config().get("vaccines", {})
 
 
 VACCINES_NAMES = {
@@ -37,11 +37,11 @@ VACCINES_NAMES = {
 
 
 # Schedules array for appointments by interval
-INTERVAL_SPLIT_DAYS = get_config().get('appointment_split_days', [])
+INTERVAL_SPLIT_DAYS = get_config().get("appointment_split_days", [])
 
 # Array for CHRONODOSES parameters
-CHRONODOSE_CONF = get_config().get('chronodoses', {})
-CHRONODOSES = {"Vaccine": CHRONODOSE_CONF.get('vaccine', []), "Interval": CHRONODOSE_CONF.get('interval', 0)}
+CHRONODOSE_CONF = get_config().get("chronodoses", {})
+CHRONODOSES = {"Vaccine": CHRONODOSE_CONF.get("vaccine", []), "Interval": CHRONODOSE_CONF.get("interval", 0)}
 
 
 class CenterInfo:

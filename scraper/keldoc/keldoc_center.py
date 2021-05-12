@@ -16,14 +16,14 @@ from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLI
 from utils.vmd_config import get_conf_platform
 
 KELDOC_CONF = get_conf_platform("keldoc")
-timeout = httpx.Timeout(KELDOC_CONF.get('timeout', 25), connect=KELDOC_CONF.get('timeout', 25))
+timeout = httpx.Timeout(KELDOC_CONF.get("timeout", 25), connect=KELDOC_CONF.get("timeout", 25))
 KELDOC_HEADERS = {
     "User-Agent": os.environ.get("KELDOC_API_KEY", ""),
 }
 # 16 days is enough for now, due to recent issues with Keldoc API
-KELDOC_SLOT_PAGES = KELDOC_CONF.get('pagination', {}).get('pages', 2)
-KELDOC_DAYS_PER_PAGE = KELDOC_CONF.get('pagination', {}).get('days', 4)
-KELDOC_SLOT_TIMEOUT = KELDOC_CONF.get('timeout', 20)
+KELDOC_SLOT_PAGES = KELDOC_CONF.get("pagination", {}).get("pages", 2)
+KELDOC_DAYS_PER_PAGE = KELDOC_CONF.get("pagination", {}).get("days", 4)
+KELDOC_SLOT_TIMEOUT = KELDOC_CONF.get("timeout", 20)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
@@ -136,8 +136,9 @@ class KeldocCenter:
         }
         return True
 
-    def get_timetables(self, start_date: datetime, motive_id: str, agenda_ids: List[int], page: int = 1,
-                       timetable=None, run: float = 0) -> Iterable[Union[Optional[dict], float]]:
+    def get_timetables(
+        self, start_date: datetime, motive_id: str, agenda_ids: List[int], page: int = 1, timetable=None, run: float = 0
+    ) -> Iterable[Union[Optional[dict], float]]:
         """
         Get timetables recursively with KELDOC_DAYS_PER_PAGE as the number of days to query.
         Recursively limited by KELDOC_SLOT_PAGES and appends new availabilities to a ’timetable’,
@@ -208,7 +209,7 @@ class KeldocCenter:
                     agenda_ids,
                     1 + max(0, floor(diff.days / KELDOC_DAYS_PER_PAGE)) + page,
                     timetable,
-                    run
+                    run,
                 )
 
         # Insert availabilities

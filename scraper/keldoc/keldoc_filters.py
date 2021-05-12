@@ -8,13 +8,13 @@ from scraper.pattern.center_info import get_vaccine_name
 from utils.vmd_config import get_conf_platform
 
 KELDOC_CONF = get_conf_platform("keldoc")
-KELDOC_FILTERS = KELDOC_CONF.get('filters', {})
+KELDOC_FILTERS = KELDOC_CONF.get("filters", {})
 
-KELDOC_COVID_SPECIALTIES = KELDOC_FILTERS.get('appointment_speciality', [])
+KELDOC_COVID_SPECIALTIES = KELDOC_FILTERS.get("appointment_speciality", [])
 
-KELDOC_APPOINTMENT_REASON = KELDOC_FILTERS.get('appointment_reason', [])
+KELDOC_APPOINTMENT_REASON = KELDOC_FILTERS.get("appointment_reason", [])
 
-KELDOC_COVID_SKILLS = KELDOC_FILTERS.get('appointment_skill', [])
+KELDOC_COVID_SKILLS = KELDOC_FILTERS.get("appointment_skill", [])
 
 
 def parse_keldoc_availability(availability_data, appointments):
