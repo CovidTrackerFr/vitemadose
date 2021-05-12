@@ -128,7 +128,7 @@ def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:  # pragma: no 
 def get_default_fetch_map():
     return {
         "Doctolib": {
-            "urls": ["https://partners.doctolib.fr", "https://www.doctolib.fr"],
+            "urls": get_conf_platform("doctolib").get("recognized_urls", []),
             "scraper_ptr": doctolib_fetch_slots,
         },
         "Keldoc": {
