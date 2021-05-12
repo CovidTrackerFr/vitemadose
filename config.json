@@ -254,12 +254,24 @@
         "opendata_fallback": "https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/mapharma_open_data.json",
         "slots": "https://mapharma.net/api/public/calendar/{campagneId}/{start_date}/{optionId}"
       },
+      "headers": {
+        "referer": "https://mapharma.net/"
+      },
       "paths": {
         "opendata": "data/output/mapharma_open_data.json",
         "valid_campaigns": "data/input/mapharma_campagnes_valides.json",
         "invalid_campaigns": "data/input/mapharma_campagnes_inconnues.json"
       },
       "slot_limit": 50,
+      "business_days": [
+        "lundi",
+        "mardi",
+        "mercredi",
+        "jeudi",
+        "vendredi",
+        "samedi",
+        "dimanche"
+      ],
       "filters": {
         "valid_campaigns": [
           "vaccination covid",
