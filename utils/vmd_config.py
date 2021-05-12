@@ -8,6 +8,7 @@ CONFIG_DATA = {}
 
 logger = get_logger()
 
+
 def get_config() -> Optional[dict]:
     global CONFIG_DATA
     if not CONFIG_DATA:

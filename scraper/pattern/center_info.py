@@ -4,6 +4,7 @@ from typing import Optional, List
 
 import pytz
 
+from utils.vmd_config import get_config
 from utils.vmd_utils import departementUtils
 from scraper.pattern.center_location import CenterLocation, convert_csv_data_to_location
 from scraper.pattern.scraper_request import ScraperRequest
@@ -23,28 +24,20 @@ class Vaccine(str, Enum):
     ARNM = "ARNm"
 
 
+VACCINE_CONF = get_config().get('vaccines', {})
+
+
 VACCINES_NAMES = {
-    Vaccine.PFIZER: ["pfizer", "biontech"],
-    Vaccine.MODERNA: ["moderna"],
-    Vaccine.ARNM: ["arn", "arnm", "arn-m", "arn m"],
-    Vaccine.ASTRAZENECA: ["astrazeneca", "astra-zeneca", "astra zeneca", "az"],  # Not too sure about the reliability
-    Vaccine.JANSSEN: [
-        "janssen",
-        "jansen",
-        "jansenn",
-        "jannsen",
-        "jenssen",
-        "jensen",
-        "jonson",
-        "johnson",
-        "johnnson",
-        "j&j",
-    ],
+    Vaccine.PFIZER: VACCINE_CONF.get(Vaccine.PFIZER, []),
+    Vaccine.MODERNA: VACCINE_CONF.get(Vaccine.MODERNA, []),
+    Vaccine.ARNM: VACCINE_CONF.get(Vaccine.ARNM, []),
+    Vaccine.ASTRAZENECA: VACCINE_CONF.get(Vaccine.ASTRAZENECA, []),
+    Vaccine.JANSSEN: VACCINE_CONF.get(Vaccine.JANSSEN, []),
 }
 
 
 # Schedules array for appointments by interval
-INTERVAL_SPLIT_DAYS = [1, 2, 7, 28, 49]
+INTERVAL_SPLIT_DAYS = get_config().get('appointment_split_days', [])
 
 # Array for CHRONODOSES parameters
 CHRONODOSES = {"Vaccine": [Vaccine.ARNM, Vaccine.PFIZER, Vaccine.MODERNA], "Interval": 2}
