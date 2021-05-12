@@ -15,7 +15,9 @@ timeout = httpx.Timeout(25.0, connect=25.0)
 KELDOC_HEADERS = {
     "User-Agent": os.environ.get("KELDOC_API_KEY", ""),
 }
-KELDOC_SLOT_LIMIT = 50
+# 28 days is enough for now, due to recent issues with Keldoc API
+KELDOC_SLOT_PAGES = 7
+KELDOC_DAYS_PER_PAGE = 4
 DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
@@ -128,17 +130,24 @@ class KeldocCenter:
         }
         return True
 
-    def get_timetables(self, start_date, motive_id, agenda_ids):
-        # Keldoc needs an end date, but if no appointment are found,
-        # it still returns the next available appointment. Bigger end date
-        # makes Keldoc responses slower.
+    def get_timetables(self, start_date: datetime, motive_id, agenda_ids, page: int = 1, timetable=None):
+        """
+        Get timetables recursively with KELDOC_DAYS_PER_PAGE as the number of days to query.
+        Recursively limited by KELDOC_SLOT_PAGES and appends new availabilities to a ’timetable’,
+        freshly initialized at the beginning.
+        Uses date as a reference for next availability and in order to avoid useless requests when
+        we already know if a timetable is empty.
+        """
+        if timetable is None:
+            timetable = {}
         calendar_url = API_KELDOC_CALENDAR.format(motive_id)
-        end_date = (isoparse(start_date) + timedelta(days=KELDOC_SLOT_LIMIT)).strftime("%Y-%m-%d")
+
+        end_date = (start_date + timedelta(days=KELDOC_DAYS_PER_PAGE)).strftime("%Y-%m-%d")
         logger.debug(
             f"get_timetables -> start_date: {start_date} end_date: {end_date} motive: {motive_id} agenda: {agenda_ids}"
         )
         calendar_params = {
-            "from": start_date,
+            "from": start_date.strftime("%Y-%m-%d"),
             "to": end_date,
             "agenda_ids[]": agenda_ids,
         }
@@ -161,7 +170,31 @@ class KeldocCenter:
         except (httpx.RemoteProtocolError, httpx.ConnectError) as hex:
             logger.warning(f"Keldoc raise error {hex} for center: {self.base_url} (calendar request)")
             return None
-        return calendar_req.json()
+
+        current_timetable = calendar_req.json()
+        # No fresh timetable
+        if not current_timetable:
+            return timetable
+
+        # Get the first date only
+        if "date" in current_timetable and "date" not in timetable:
+            timetable["date"] = current_timetable.get("date")
+
+        # Insert availabilities
+        if "availabilities" in current_timetable:
+            if "availabilities" not in timetable:
+                timetable["availabilities"] = current_timetable.get("availabilities")
+            else:
+                timetable["availabilities"].update(current_timetable.get("availabilities"))
+        # Pop date because it prevents availability count
+        if timetable.get("availabilities") and timetable.get("date"):
+            timetable.pop("date")
+
+        if page >= KELDOC_SLOT_PAGES:
+            return timetable
+        return self.get_timetables(
+            start_date + timedelta(days=KELDOC_DAYS_PER_PAGE), motive_id, agenda_ids, page=1 + page, timetable=timetable
+        )
 
     def count_appointements(self, appointments: list, start_date: str, end_date: str) -> int:
         paris_tz = timezone("Europe/Paris")
@@ -199,7 +232,7 @@ class KeldocCenter:
             agenda_ids = relevant_motive.get("agendas", None)
             if not agenda_ids:
                 continue
-            timetables = self.get_timetables(start_date, motive_id, agenda_ids)
+            timetables = self.get_timetables(isoparse(start_date), motive_id, agenda_ids)
             date, appointments = parse_keldoc_availability(timetables, appointments)
             if date is None:
                 continue
