@@ -1,9 +1,6 @@
 import logging
-from typing import List
 
 from terminaltables import AsciiTable
-
-from scraper.pattern.scraper_request import ScraperRequest
 
 
 class CustomFormatter(logging.Formatter):
@@ -65,7 +62,7 @@ def enable_logger_for_debug():
         root_logger.addHandler(ch)
 
 
-def log_requests(request: ScraperRequest = None) -> None:
+def log_requests(request) -> None:
     logger = get_logger()
     if not request or not request.requests:
         logger.debug(f"{request.internal_id} requests -> No requests made.")
