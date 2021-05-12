@@ -78,13 +78,13 @@
     "lat_coor1": 46.570295,
     "phone_number": "+33470461110",
     "business_hours": {
-      "Lundi": "08:00-12:00 14:00-18:00",
-      "Mardi": "08:00-12:00 14:00-18:00",
-      "Mercredi": "08:00-12:00 14:00-18:00",
-      "Jeudi": "08:00-12:00 14:00-18:00",
-      "Vendredi": "08:00-12:00 14:00-18:00",
-      "Samedi": "08:00-12:00 14:00-18:00",
-      "Dimanche": "08:00-12:00 14:00-18:00"
+      "Lundi": "09:00-14:00 14:10-17:00",
+      "Mardi": "09:00-14:00 14:10-17:00",
+      "Mercredi": "09:00-14:00 14:10-17:00",
+      "Jeudi": "09:00-14:00 14:10-17:00",
+      "Vendredi": "09:00-14:00 14:10-17:00",
+      "Samedi": "09:00-14:00 14:10-17:00",
+      "Dimanche": "09:00-14:00 14:10-17:00"
     }
   },
   {
@@ -246,7 +246,9 @@
     "nom": "Centre De Vaccination - Maison De Sant\u00e9 De L'Adour",
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/-40800--aire-sur-l-adour/centre-de-vaccination---maison-de-sante-de-l-adour?centerid=5ffec752a400683faf1c220c",
     "type": "vaccination-center",
-    "vaccine_type": [],
+    "vaccine_type": [
+      "Pfizer-BioNTech"
+    ],
     "com_insee": "40001",
     "address": "4  Rue Ren\u00e9 M\u00e9ricam,Salle de L'Orangerie  40800  Aire-sur-l'Adour",
     "long_coor1": -0.265145513574,
@@ -268,6 +270,7 @@
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/59570-bavay/centre-de-vaccination---maison-medicale-de-bavay?centerid=5ffed203a400683faf1c2237",
     "type": "vaccination-center",
     "vaccine_type": [
+      "ARNm",
       "AstraZeneca"
     ],
     "com_insee": "59053",
@@ -380,7 +383,9 @@
     "nom": "Centre de vaccination - CENTRE HOSPITALIER DE CAYENNE",
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/97306-cayenne/centre-de-vaccination---centre-hospitalier-de-cayenne?centerid=5fff697eb1a1aa1cc204f378",
     "type": "vaccination-center",
-    "vaccine_type": [],
+    "vaccine_type": [
+      "Pfizer-BioNTech"
+    ],
     "com_insee": "97302",
     "address": "Route de Montabo L\u2019ENCRE (EPCC Les Trois Fleuves) 97306 Cayenne",
     "long_coor1": -52.32041,
@@ -446,7 +451,6 @@
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/59600-maubeuge/centre-de-vaccination-la-luna--espace-sculfort-?centerid=60001f2879dfd27ec2d18a27",
     "type": "vaccination-center",
     "vaccine_type": [
-      "Moderna",
       "AstraZeneca",
       "ARNm",
       "Pfizer-BioNTech"
@@ -472,6 +476,7 @@
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/59460-jeumont/centre-de-vaccination---foyer-timmermans-?centerid=60002a507f9ff61ee1d5d0b7",
     "type": "vaccination-center",
     "vaccine_type": [
+      "ARNm",
       "AstraZeneca"
     ],
     "com_insee": "59324",
@@ -500,29 +505,6 @@
     "long_coor1": 2.439625,
     "lat_coor1": 48.886182,
     "phone_number": "+33141831785",
-    "business_hours": {
-      "Lundi": "08:00-12:00 14:00-18:00",
-      "Mardi": "08:00-12:00 14:00-18:00",
-      "Mercredi": "08:00-12:00 14:00-18:00",
-      "Jeudi": "08:00-12:00 14:00-18:00",
-      "Vendredi": "08:00-12:00 14:00-18:00",
-      "Samedi": "08:00-12:00 14:00-18:00",
-      "Dimanche": "08:00-12:00 14:00-18:00"
-    }
-  },
-  {
-    "gid": "600056f4",
-    "nom": "Centre de vaccination - MONTMEDY et MARVILLE",
-    "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/55600-montmedy/centre-de-vaccination---montmedy-et-marville?centerid=600056f47f9ff61ee1d5d2ce",
-    "type": "vaccination-center",
-    "vaccine_type": [
-      "Pfizer-BioNTech"
-    ],
-    "com_insee": "55351",
-    "address": "Salle des f\u00eates, Place Eiug\u00e8ne Tronville 55600 Montm\u00e9dy",
-    "long_coor1": 5.368532,
-    "lat_coor1": 49.521134,
-    "phone_number": "",
     "business_hours": {
       "Lundi": "08:00-12:00 14:00-18:00",
       "Mardi": "08:00-12:00 14:00-18:00",
@@ -763,6 +745,29 @@
     }
   },
   {
+    "gid": "6006a9d6",
+    "nom": "Centre de vaccination - BASSIN DACQUOIS",
+    "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/40100-dax/centre-de-vaccination---bassin-dacquois?centerid=6006a9d63b987b202a40423b",
+    "type": "vaccination-center",
+    "vaccine_type": [
+      "ARNm"
+    ],
+    "com_insee": "40088",
+    "address": "98 Avenue Francis Plant\u00e9 40100 dax",
+    "long_coor1": -1.06014429759,
+    "lat_coor1": 43.7006746973,
+    "phone_number": "",
+    "business_hours": {
+      "Lundi": "09:00-12:00 14:00-17:00",
+      "Mardi": "09:00-12:00 14:00-17:00",
+      "Mercredi": "09:00-12:00 14:00-17:00",
+      "Jeudi": "09:00-12:00 14:00-17:00",
+      "Vendredi": "09:00-12:00 14:00-17:00",
+      "Samedi": "09:00-12:00 14:00-17:00",
+      "Dimanche": "09:00-12:00 14:00-17:00"
+    }
+  },
+  {
     "gid": "6006b050",
     "nom": "Centre de Vaccination - Rillieux la Pape",
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/69140-rillieux-la-pape/centre-de-vaccination---rillieux-la-pape?centerid=6006b05090cb277506450ee4",
@@ -783,6 +788,29 @@
       "Vendredi": "10:00-14:00 14:01-18:00",
       "Samedi": "10:00-14:00 14:01-18:00",
       "Dimanche": "09:00-14:00 14:01-18:00"
+    }
+  },
+  {
+    "gid": "6006bebd",
+    "nom": "Centre de vaccination Covid-19 de Labrit",
+    "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/40420-labrit/centre-de-vaccination-covid-19-de-labrit?centerid=6006bebd3b987b202a4042fe",
+    "type": "vaccination-center",
+    "vaccine_type": [
+      "ARNm"
+    ],
+    "com_insee": "40135",
+    "address": "salle de f\u00eates 40420 Labrit",
+    "long_coor1": -0.546164,
+    "lat_coor1": 44.104913,
+    "phone_number": "",
+    "business_hours": {
+      "Lundi": "08:30-12:30 13:30-17:30",
+      "Mardi": "08:30-12:30 13:30-17:30",
+      "Mercredi": "08:30-12:30 13:30-17:30",
+      "Jeudi": "08:30-12:30 13:30-17:30",
+      "Vendredi": "08:30-12:30 13:30-17:30",
+      "Samedi": "08:30-12:30 13:30-17:30",
+      "Dimanche": "08:30-12:30 13:30-17:30"
     }
   },
   {
@@ -921,6 +949,29 @@
     }
   },
   {
+    "gid": "6024fc7c",
+    "nom": "Centre de vaccination d\u2019 ETAIN",
+    "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/55400-etain/centre-de-vaccination-d--etain?centerid=6024fc7c1dc0b7275b739f0c",
+    "type": "vaccination-center",
+    "vaccine_type": [
+      "Pfizer-BioNTech"
+    ],
+    "com_insee": "55181",
+    "address": "Centre de vaccination d\u2019 ETAIN  salle Brasse et Focosi  place du march\u00e9 (derri\u00e8re la mairie) 55400 \u00c9tain",
+    "long_coor1": 5.636335,
+    "lat_coor1": 49.212896,
+    "phone_number": "",
+    "business_hours": {
+      "Lundi": "08:00-12:00 14:00-18:00",
+      "Mardi": "08:00-12:00 14:00-18:00",
+      "Mercredi": "08:00-12:00 14:00-18:00",
+      "Jeudi": "08:00-12:00 14:00-18:00",
+      "Vendredi": "08:00-12:00 14:00-18:00",
+      "Samedi": "08:00-12:00 14:00-18:00",
+      "Dimanche": "08:00-12:00 14:00-18:00"
+    }
+  },
+  {
     "gid": "602ff4cc",
     "nom": "Centre de Vaccination \u2013 Gymnase Saint Roch, Bourg en Bresse",
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/01000-bourg-en-bresse/centre-de-vaccination---gymnase-saint-roch--bourg-en-bresse?centerid=602ff4cc423df27f1cb576f0",
@@ -1033,6 +1084,7 @@
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/13008-marseille/centre-de-vaccination-covid---stade-velodrome---ville-de-marseille?centerid=6048822b87f983173a70cdc5",
     "type": "vaccination-center",
     "vaccine_type": [
+      "ARNm",
       "Moderna",
       "Pfizer-BioNTech"
     ],
@@ -1125,6 +1177,7 @@
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/40800-aire-sur-l-adour/vaccination-moderna---astrazeneca-msp-de-l-adour-?centerid=606187286a4ba23f95fc3a91",
     "type": "vaccination-center",
     "vaccine_type": [
+      "AstraZeneca",
       "Moderna"
     ],
     "com_insee": "40001",
@@ -1258,6 +1311,29 @@
     }
   },
   {
+    "gid": "60955381",
+    "nom": "Maison M\u00e9dicale - Bar le Duc",
+    "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/55000-bar-le-duc/maison-medicale---bar-le-duc?centerid=609553811ff26778bbe89cb0",
+    "type": "vaccination-center",
+    "vaccine_type": [
+      "Pfizer-BioNTech"
+    ],
+    "com_insee": "55029",
+    "address": "44 Rue Andr\u00e9 Theuriet 55000 Bar-le-Duc",
+    "long_coor1": 5.166123,
+    "lat_coor1": 48.77214,
+    "phone_number": "",
+    "business_hours": {
+      "Lundi": "08:00-12:00 14:00-18:00",
+      "Mardi": "08:00-12:00 14:00-18:00",
+      "Mercredi": "08:00-12:00 14:00-18:00",
+      "Jeudi": "08:00-12:00 14:00-18:00",
+      "Vendredi": "08:00-12:00 14:00-18:00",
+      "Samedi": "08:00-12:00 14:00-18:00",
+      "Dimanche": "08:00-12:00 14:00-18:00"
+    }
+  },
+  {
     "gid": "609643a2",
     "nom": "Centre de vaccination de Jaunay Marigny",
     "rdv_site_web": "https://www.maiia.com/centre-de-vaccination/86130-jaunay-marigny/centre-de-vaccination-de-jaunay-marigny?centerid=609643a280372e1852d57ed3",
@@ -1301,6 +1377,28 @@
       "Vendredi": "09:00-19:30",
       "Samedi": "09:00-12:00",
       "Dimanche": "09:00-19:30"
+    }
+  },
+  {
+    "gid": "5fa28ced",
+    "nom": "Pharmacie Guildo",
+    "rdv_site_web": "https://www.maiia.com/pharmacie/22380-saint-cast-le-guildo/pharmacie-guildo?centerid=5fa28cedbaf1175842a308f3",
+    "type": "drugstore",
+    "vaccine_type": [
+      "AstraZeneca"
+    ],
+    "com_insee": "22282",
+    "address": "22 Rue de la Croix aux Merles 22380 Saint-Cast-le-Guildo",
+    "long_coor1": -2.234704,
+    "lat_coor1": 48.582536,
+    "phone_number": "+33296411726",
+    "business_hours": {
+      "Lundi": "09:00-12:15 14:00-19:00",
+      "Mardi": "09:00-12:15 14:00-19:00",
+      "Mercredi": "09:00-12:15 14:00-19:00",
+      "Jeudi": "09:00-12:15 14:00-19:00",
+      "Vendredi": "09:00-12:15 14:00-19:00",
+      "Samedi": "09:00-12:15"
     }
   },
   {
@@ -1378,7 +1476,8 @@
     "rdv_site_web": "https://www.maiia.com/pharmacie/01000-saint-denis-les-bourg/pharmacie-du-printemps?centerid=601029e312d6094f0d3f595b",
     "type": "drugstore",
     "vaccine_type": [
-      "AstraZeneca"
+      "AstraZeneca",
+      "Janssen"
     ],
     "com_insee": "01344",
     "address": "348 Avenue de Trevoux 01000 Saint-Denis-l\u00e8s-Bourg",
@@ -1417,6 +1516,29 @@
       "Vendredi": "08:30-12:15 14:00-19:15",
       "Samedi": "08:30-12:15",
       "Dimanche": "08:30-12:15 14:00-19:15"
+    }
+  },
+  {
+    "gid": "6019508f",
+    "nom": "Pharmacie Bonnefond",
+    "rdv_site_web": "https://www.maiia.com/pharmacie/26200-montelimar/pharmacie-bonnefond?centerid=6019508f2a67bd089438fe06",
+    "type": "drugstore",
+    "vaccine_type": [
+      "Pfizer-BioNTech"
+    ],
+    "com_insee": "26198",
+    "address": "3 Rue Sainte Croix 26200 Mont\u00e9limar",
+    "long_coor1": 4.749963,
+    "lat_coor1": 44.558129,
+    "phone_number": "+33475012905",
+    "business_hours": {
+      "Lundi": "09:00-12:00 14:00-19:00",
+      "Mardi": "08:45-12:15 13:45-19:00",
+      "Mercredi": "08:30-12:30 13:46-19:00",
+      "Jeudi": "08:45-12:15 13:45-19:00",
+      "Vendredi": "08:45-12:15 13:45-18:00",
+      "Samedi": "08:30-12:30 13:45-19:00",
+      "Dimanche": "08:00-12:00 14:00-18:00"
     }
   },
   {
@@ -1721,49 +1843,26 @@
     }
   },
   {
-    "gid": "602aa1e5",
-    "nom": "Pharmacie Bourgeois-Michel",
-    "rdv_site_web": "https://www.maiia.com/pharmacie/35480-guipry-messac/pharmacie-bourgeois-michel?centerid=602aa1e5686ae26d44030f3c",
+    "gid": "602a760d",
+    "nom": "Pharmacie du Pr\u00e9 Saint Jean",
+    "rdv_site_web": "https://www.maiia.com/pharmacie/34120-pezenas/pharmacie-du-pre-saint-jean?centerid=602a760d55b9e56c26810b89",
     "type": "drugstore",
     "vaccine_type": [
-      "AstraZeneca",
-      "Janssen"
+      "AstraZeneca"
     ],
-    "com_insee": "35176",
-    "address": "35 Avenue du Port (Guipry) 35480 Guipry-Messac",
-    "long_coor1": -1.837294,
-    "lat_coor1": 47.823551,
-    "phone_number": "+33299346334",
+    "com_insee": "34199",
+    "address": "12 Avenue du Marechal Leclerc 34120 P\u00e9zenas",
+    "long_coor1": 3.426278,
+    "lat_coor1": 43.460036,
+    "phone_number": "+33467981442",
     "business_hours": {
       "Lundi": "09:00-12:30 14:00-19:30",
       "Mardi": "09:00-12:30 14:00-19:30",
       "Mercredi": "09:00-12:30 14:00-19:30",
       "Jeudi": "09:00-12:30 14:00-19:30",
-      "Vendredi": "09:00-19:30",
-      "Samedi": "09:00-19:00"
-    }
-  },
-  {
-    "gid": "602bd6f8",
-    "nom": "Pharmacie Mutualiste de Roubaix",
-    "rdv_site_web": "https://www.maiia.com/pharmacie/59100-roubaix/pharmacie-mutualiste-de-roubaix?centerid=602bd6f8f19d417a4a2475c5",
-    "type": "drugstore",
-    "vaccine_type": [
-      "AstraZeneca"
-    ],
-    "com_insee": "59512",
-    "address": "34 boulevard Gambetta 59100 Roubaix",
-    "long_coor1": 3.185435,
-    "lat_coor1": 50.692295,
-    "phone_number": "+33320894100",
-    "business_hours": {
-      "Lundi": "09:00-19:30",
-      "Mardi": "09:00-19:30",
-      "Mercredi": "09:00-19:30",
-      "Jeudi": "09:00-19:30",
-      "Vendredi": "09:00-19:30",
-      "Samedi": "09:00-12:30 13:30-17:00",
-      "Dimanche": "09:00-19:30"
+      "Vendredi": "09:00-12:30 14:00-19:30",
+      "Samedi": "09:00-12:30 14:00-19:30",
+      "Dimanche": "09:00-12:30 14:00-19:30"
     }
   },
   {
@@ -1841,6 +1940,7 @@
     "rdv_site_web": "https://www.maiia.com/pharmacie/69310-pierre-benite/pharmacie-voltaire?centerid=602f7dff9d292b087327a867",
     "type": "drugstore",
     "vaccine_type": [
+      "Moderna",
       "AstraZeneca",
       "Janssen"
     ],
@@ -2085,29 +2185,6 @@
     }
   },
   {
-    "gid": "60408dc1",
-    "nom": "Pharmacie du Pont de Neuilly",
-    "rdv_site_web": "https://www.maiia.com/pharmacie/92200-neuilly-sur-seine/pharmacie-du-pont-de-neuilly?centerid=60408dc1484c650ca0a454b0",
-    "type": "drugstore",
-    "vaccine_type": [
-      "AstraZeneca"
-    ],
-    "com_insee": "92051",
-    "address": "174 Avenue Charles de Gaulle 92200 Neuilly-sur-Seine",
-    "long_coor1": 2.25946,
-    "lat_coor1": 48.885429,
-    "phone_number": "+33146247532",
-    "business_hours": {
-      "Lundi": "08:30-19:00",
-      "Mardi": "08:30-19:00",
-      "Mercredi": "08:30-19:00",
-      "Jeudi": "08:30-19:00",
-      "Vendredi": "08:30-19:00",
-      "Samedi": "09:00-13:00",
-      "Dimanche": "08:30-19:00"
-    }
-  },
-  {
     "gid": "60409120",
     "nom": "Pharmacie du Vexin",
     "rdv_site_web": "https://www.maiia.com/pharmacie/95420-magny-en-vexin/pharmacie-du-vexin?centerid=60409120484c650ca0a4550f",
@@ -2270,26 +2347,50 @@
     }
   },
   {
-    "gid": "60478b64",
-    "nom": "Pharmacie Chaminant",
-    "rdv_site_web": "https://www.maiia.com/pharmacie/44220-coueron/pharmacie-chaminant?centerid=60478b640aaa8b3252cfcd86",
+    "gid": "60472625",
+    "nom": "Pharmacie Boulant Dusonchet",
+    "rdv_site_web": "https://www.maiia.com/pharmacie/69360-saint-symphorien-d-ozon/pharmacie-boulant-dusonchet?centerid=6047262587f983173a7095d9",
     "type": "drugstore",
     "vaccine_type": [
       "AstraZeneca"
     ],
-    "com_insee": "44047",
-    "address": "16 Rue de la Marne 44220 Cou\u00ebron",
-    "long_coor1": -1.729274,
-    "lat_coor1": 47.211152,
-    "phone_number": "",
+    "com_insee": "69291",
+    "address": "2 Avenue Claude de la Colombi\u00e8re 69360 Saint-Symphorien-d'Ozon",
+    "long_coor1": 4.855393,
+    "lat_coor1": 45.632327,
+    "phone_number": "+33478027144",
     "business_hours": {
-      "Lundi": "09:00-12:30 14:30-19:00",
-      "Mardi": "09:00-12:30 14:30-19:00",
-      "Mercredi": "09:00-12:30 14:30-19:00",
-      "Jeudi": "09:00-12:30 14:30-19:00",
-      "Vendredi": "09:00-12:30 14:30-19:00",
-      "Samedi": "09:00-12:15",
-      "Dimanche": "09:00-12:30 14:30-19:00"
+      "Lundi": "08:30-12:30 14:15-19:30",
+      "Mardi": "08:30-12:30 14:15-19:30",
+      "Mercredi": "08:30-12:30 14:15-19:30",
+      "Jeudi": "08:30-12:30 14:15-19:30",
+      "Vendredi": "08:30-12:30 14:15-19:30",
+      "Samedi": "08:30-12:30 14:15-18:00",
+      "Dimanche": "08:30-12:30 14:15-19:30"
+    }
+  },
+  {
+    "gid": "60472912",
+    "nom": "Pharmacie Palomba",
+    "rdv_site_web": "https://www.maiia.com/pharmacie/13270-fos-sur-mer/pharmacie-palomba?centerid=6047291287f983173a709653",
+    "type": "drugstore",
+    "vaccine_type": [
+      "AstraZeneca",
+      "Janssen"
+    ],
+    "com_insee": "13039",
+    "address": "Avenue Rene Cassin 13270 Fos-sur-Mer",
+    "long_coor1": 4.943705,
+    "lat_coor1": 43.454636,
+    "phone_number": "+33442051510",
+    "business_hours": {
+      "Lundi": "08:30-12:30 14:30-19:30",
+      "Mardi": "08:30-12:30 14:30-19:30",
+      "Mercredi": "08:30-12:30 14:30-19:30",
+      "Jeudi": "08:30-12:30 14:30-19:30",
+      "Vendredi": "08:30-12:30 14:30-19:30",
+      "Samedi": "08:30-12:30",
+      "Dimanche": "08:30-12:30 14:30-19:30"
     }
   },
   {
@@ -2336,6 +2437,29 @@
       "Vendredi": "08:30-12:15 14:30-19:15",
       "Samedi": "09:00-12:00 15:00-18:00",
       "Dimanche": "08:30-12:15 14:30-19:15"
+    }
+  },
+  {
+    "gid": "604a3f4f",
+    "nom": "Pharmacie Saint Philibert",
+    "rdv_site_web": "https://www.maiia.com/pharmacie/42190-charlieu/pharmacie-saint-philibert?centerid=604a3f4f65d8f5139d42db0a",
+    "type": "drugstore",
+    "vaccine_type": [
+      "AstraZeneca"
+    ],
+    "com_insee": "42052",
+    "address": "6 b Rue de l\u2019Industrie 42190 Charlieu",
+    "long_coor1": 4.167847,
+    "lat_coor1": 46.157024,
+    "phone_number": "+33477690302",
+    "business_hours": {
+      "Lundi": "08:30-12:15 14:00-19:15",
+      "Mardi": "08:30-12:15 14:00-19:15",
+      "Mercredi": "08:30-12:15 14:00-19:15",
+      "Jeudi": "08:30-12:15 14:00-19:15",
+      "Vendredi": "08:30-12:15 14:00-19:15",
+      "Samedi": "08:30-12:15 14:00-19:00",
+      "Dimanche": "08:30-12:15 14:00-19:15"
     }
   },
   {
@@ -2453,28 +2577,6 @@
     }
   },
   {
-    "gid": "604f1f13",
-    "nom": "Pharmacie Gauthier",
-    "rdv_site_web": "https://www.maiia.com/pharmacie/80800-corbie/pharmacie-gauthier?centerid=604f1f13a842b64c5ef0058b",
-    "type": "drugstore",
-    "vaccine_type": [
-      "AstraZeneca"
-    ],
-    "com_insee": "80212",
-    "address": "25 Place de la R\u00e9publique 80800 Corbie",
-    "long_coor1": 2.512174,
-    "lat_coor1": 49.908967,
-    "phone_number": "+33322480217",
-    "business_hours": {
-      "Lundi": "09:00-12:30 14:00-19:30",
-      "Mardi": "09:00-12:30 14:00-19:30",
-      "Mercredi": "09:00-12:30 14:00-19:30",
-      "Jeudi": "09:00-12:30 14:00-19:30",
-      "Vendredi": "09:00-12:30 14:00-19:30",
-      "Samedi": "09:00-12:30 14:00-17:00"
-    }
-  },
-  {
     "gid": "605069e7",
     "nom": "Pharmacie Leger",
     "rdv_site_web": "https://www.maiia.com/pharmacie/74300-cluses/pharmacie-leger?centerid=605069e734862e2a69944647",
@@ -2486,7 +2588,7 @@
     "address": "20 Av de la Liberation 74300 Cluses",
     "long_coor1": 6.577602,
     "lat_coor1": 46.060117,
-    "phone_number": "+33450980212",
+    "phone_number": "+33450475544",
     "business_hours": {
       "Lundi": "08:15-12:15 14:00-19:00",
       "Mardi": "08:15-12:15 14:00-19:00",
@@ -2563,6 +2665,53 @@
       "Jeudi": "08:30-12:30 14:30-19:30",
       "Vendredi": "08:30-12:30 14:30-19:30",
       "Samedi": "08:30-12:30 14:30-19:30"
+    }
+  },
+  {
+    "gid": "6058b3ab",
+    "nom": "Pharmacie Calvaire Saint Pierre",
+    "rdv_site_web": "https://www.maiia.com/pharmacie/14000-caen/pharmacie-calvaire-saint-pierre?centerid=6058b3abd254f158baffc107",
+    "type": "drugstore",
+    "vaccine_type": [
+      "AstraZeneca"
+    ],
+    "com_insee": "14118",
+    "address": "17 Avenue Professeur Horatio Smith 14000 Caen",
+    "long_coor1": -0.364154,
+    "lat_coor1": 49.197721,
+    "phone_number": "+33231931019",
+    "business_hours": {
+      "Lundi": "09:00-12:30 14:00-19:30",
+      "Mardi": "09:00-12:30 14:00-19:30",
+      "Mercredi": "09:00-12:30 14:00-19:30",
+      "Jeudi": "09:00-12:30 14:00-19:30",
+      "Vendredi": "09:00-12:30 14:00-19:30",
+      "Samedi": "09:00-12:30",
+      "Dimanche": "09:30-12:30 14:00-19:30"
+    }
+  },
+  {
+    "gid": "6058b41c",
+    "nom": "Pharmacie de la Mer",
+    "rdv_site_web": "https://www.maiia.com/pharmacie/14530-luc-sur-mer/pharmacie-de-la-mer?centerid=6058b41cd254f158baffc121",
+    "type": "drugstore",
+    "vaccine_type": [
+      "AstraZeneca",
+      "Janssen"
+    ],
+    "com_insee": "14384",
+    "address": "Place de l'Etoile 14530 Luc-sur-Mer",
+    "long_coor1": -0.357268,
+    "lat_coor1": 49.316601,
+    "phone_number": "+33231973210",
+    "business_hours": {
+      "Lundi": "09:00-12:15 14:30-19:15",
+      "Mardi": "09:00-12:15 14:30-19:15",
+      "Mercredi": "09:00-12:15 14:30-19:15",
+      "Jeudi": "09:00-12:15 14:30-19:15",
+      "Vendredi": "09:00-12:15 14:30-19:15",
+      "Samedi": "09:00-12:15 14:30-19:15",
+      "Dimanche": "09:00-12:15 14:30-19:15"
     }
   },
   {
@@ -2678,32 +2827,9 @@
     }
   },
   {
-    "gid": "608fbac7",
-    "nom": "Pharmacie de la Galarne",
-    "rdv_site_web": "https://www.maiia.com/pharmacie/44200-nantes/pharmacie-de-la-galarne?centerid=608fbac7a8637a3a5d932ab8",
-    "type": "drugstore",
-    "vaccine_type": [
-      "Janssen"
-    ],
-    "com_insee": "44109",
-    "address": "25 Boulevard Georges Pompidou 44200 Nantes",
-    "long_coor1": -1.529489,
-    "lat_coor1": 47.208239,
-    "phone_number": "+33240894333",
-    "business_hours": {
-      "Lundi": "08:30-19:30",
-      "Mardi": "08:30-19:30",
-      "Mercredi": "08:30-19:30",
-      "Jeudi": "08:30-19:30",
-      "Vendredi": "08:30-19:30",
-      "Samedi": "08:30-13:00",
-      "Dimanche": "08:30-19:30"
-    }
-  },
-  {
     "gid": "60914c2c",
-    "nom": "Pharmacie Malakoff",
-    "rdv_site_web": "https://www.maiia.com/pharmacie/44000-nantes/pharmacie-malakoff?centerid=60914c2ca8637a3a5d932ea3",
+    "nom": "Pharmacie de Malakoff",
+    "rdv_site_web": "https://www.maiia.com/pharmacie/44000-nantes/pharmacie-de-malakoff?centerid=60914c2ca8637a3a5d932ea3",
     "type": "drugstore",
     "vaccine_type": [
       "AstraZeneca"
