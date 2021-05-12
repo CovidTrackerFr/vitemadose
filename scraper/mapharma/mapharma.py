@@ -23,7 +23,7 @@ MAPHARMA_CONF = get_conf_platform("mapharma")
 MAPHARMA_API = MAPHARMA_CONF.get("api", {})
 MAPHARMA_ENABLED = MAPHARMA_CONF.get("enabled", False)
 
-timeout = httpx.Timeout(MAPHARMA_CONF.get("timeout", 25), connect=MAPHARMA_CONF.get("timeout", 25))
+#timeout = httpx.Timeout(MAPHARMA_CONF.get("timeout", 25), connect=MAPHARMA_CONF.get("timeout", 25))
 
 MAPHARMA_HEADERS = {
     "User-Agent": os.environ.get("MAPHARMA_API_KEY", ""),
@@ -40,7 +40,7 @@ MAPHARMA_OPEN_DATA_URL_FALLBACK = MAPHARMA_API.get("opendata_fallback", "")
 MAPHARMA_SLOT_LIMIT = MAPHARMA_CONF.get("slot_limit", 50)
 
 
-DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=MAPHARMA_HEADERS)
+DEFAULT_CLIENT = httpx.Client(headers=MAPHARMA_HEADERS)
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
 

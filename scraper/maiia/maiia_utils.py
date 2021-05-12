@@ -7,8 +7,8 @@ from utils.vmd_config import get_conf_platform
 MAIIA_CONF = get_conf_platform("maiia")
 MAIIA_SCRAPER = MAIIA_CONF.get("center_scraper", {})
 
-timeout = httpx.Timeout(MAIIA_CONF.get("timeout", 25), connect=MAIIA_CONF.get("timeout", 25))
-DEFAULT_CLIENT = httpx.Client(timeout=timeout)
+#timeout = httpx.Timeout(MAIIA_CONF.get("timeout", 25), connect=MAIIA_CONF.get("timeout", 25))
+DEFAULT_CLIENT = httpx.Client()
 logger = logging.getLogger("scraper")
 
 MAIIA_LIMIT = MAIIA_SCRAPER.get("centers_per_page")
