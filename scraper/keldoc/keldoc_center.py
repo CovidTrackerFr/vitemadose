@@ -16,8 +16,8 @@ timeout = httpx.Timeout(25.0, connect=25.0)
 KELDOC_HEADERS = {
     "User-Agent": os.environ.get("KELDOC_API_KEY", ""),
 }
-# 28 days is enough for now, due to recent issues with Keldoc API
-KELDOC_SLOT_PAGES = 7
+# 16 days is enough for now, due to recent issues with Keldoc API
+KELDOC_SLOT_PAGES = 4
 KELDOC_DAYS_PER_PAGE = 4
 DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
 logger = logging.getLogger("scraper")
