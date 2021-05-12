@@ -10,7 +10,7 @@ CONFIG_DATA = {}
 logger = get_logger()
 
 
-def get_config() -> Optional[dict]:
+def get_config() -> dict:
     global CONFIG_DATA
     if not CONFIG_DATA:
         try:
@@ -32,7 +32,7 @@ def get_conf_outstats() -> Optional[dict]:
     return get_conf_outputs().get("stats", {})
 
 
-def get_conf_platform(platform: str) -> Optional[dict]:
+def get_conf_platform(platform: str) -> dict:
     if not get_config().get("platforms"):
         logger.error("Unknown ’platforms’ key in configuration file.")
         exit(1)
