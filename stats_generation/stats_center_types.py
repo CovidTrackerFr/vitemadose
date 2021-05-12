@@ -5,11 +5,12 @@ from datetime import datetime
 import pytz
 import requests
 
+from utils.vmd_config import get_conf_outstats
 from utils.vmd_logger import enable_logger_for_production
 
 logger = logging.getLogger("scraper")
 
-DATA_AUTO = "https://vitemadose.gitlab.io/vitemadose/"
+DATA_AUTO = get_conf_outstats().get("data-auto")
 
 
 def compute_plateforme_data(centres_info):
@@ -55,7 +56,7 @@ def compute_plateforme_data(centres_info):
 
 
 def generate_stats_center_types(centres_info):
-    stats_path = "stats_center_types.json"
+    stats_path = get_conf_outstats().get("center_types")
     stats_data = {"dates": [], "plateformes": {}, "center_types": {}}
 
     try:
@@ -64,9 +65,7 @@ def generate_stats_center_types(centres_info):
         if data:
             stats_data = data
     except Exception as e:
-        logger.warning(
-            f"Unable to fetch {DATA_AUTO}{stats_path}: generating a template file."
-        )
+        logger.warning(f"Unable to fetch {DATA_AUTO}{stats_path}: generating a template file.")
         pass
     ctz = pytz.timezone("Europe/Paris")
     current_time = datetime.now(tz=ctz).strftime("%Y-%m-%d %H:00:00")

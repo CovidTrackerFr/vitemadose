@@ -10,6 +10,7 @@ from scraper.pattern.center_info import convert_csv_data_to_center_info, CenterI
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from scraper.profiler import Profiling
+from utils.vmd_config import get_conf_platform
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
 from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
@@ -127,24 +128,20 @@ def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:  # pragma: no 
 def get_default_fetch_map():
     return {
         "Doctolib": {
-            "urls": ["https://partners.doctolib.fr", "https://www.doctolib.fr"],
+            "urls": get_conf_platform("doctolib").get("recognized_urls", []),
             "scraper_ptr": doctolib_fetch_slots,
         },
         "Keldoc": {
-            "urls": ["https://vaccination-covid.keldoc.com", "https://keldoc.com"],
+            "urls": get_conf_platform("keldoc").get("recognized_urls", []),
             "scraper_ptr": keldoc_fetch_slots,
         },
-        "Maiia": {"urls": ["https://www.maiia.com"], "scraper_ptr": maiia_fetch_slots},
+        "Maiia": {"urls": get_conf_platform("maiia").get("recognized_urls", []), "scraper_ptr": maiia_fetch_slots},
         "Mapharma": {
-            "urls": [
-                "https://mapharma.net/",
-            ],
+            "urls": get_conf_platform("mapharma").get("recognized_urls", []),
             "scraper_ptr": mapharma_fetch_slots,
         },
         "Ordoclic": {
-            "urls": [
-                "https://app.ordoclic.fr/",
-            ],
+            "urls": get_conf_platform("ordoclic").get("recognized_urls", []),
             "scraper_ptr": ordoclic_fetch_slots,
         },
     }
@@ -166,7 +163,7 @@ def get_center_platform(center_url: str, fetch_map: dict = None):
 
 
 @Profiling.measure("Any_slot")
-def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
+def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None) -> ScraperResult:
     if fetch_map is None:
         # Map platform to implementation.
         # May be overridden for unit testing purposes.

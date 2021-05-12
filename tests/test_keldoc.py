@@ -201,11 +201,11 @@ def test_keldoc_scrape():
 
     date = fetch_slots(request)
     # When it's already killed
-    if keldoc.KELDOC_KILL_SWITCH:
+    if not keldoc.KELDOC_ENABLED:
         assert date is None
     else:
         assert date == "2021-04-20T16:55:00.000000+0200"
-    keldoc.KELDOC_KILL_SWITCH = True
+    keldoc.KELDOC_ENABLED = False
     test_killswitch = fetch_slots(request)
     assert not test_killswitch
 
@@ -216,7 +216,7 @@ def test_keldoc_scrape_nodate():
         "-bretagne-sud-lorient-hopital-du-scorff?specialty=144 "
     )
 
-    keldoc.KELDOC_KILL_SWITCH = False
+    keldoc.KELDOC_ENABLED = True
 
     def app_center2(request: httpx.Request) -> httpx.Response:
         if "timetables/" in request.url.path:

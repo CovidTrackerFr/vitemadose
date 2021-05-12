@@ -14,16 +14,18 @@ from datetime import date, timedelta, datetime
 from pathlib import Path
 from unidecode import unidecode
 
-RESERVED_CENTERS = ["réservé", "reserve", "professionnel"]
+from utils.vmd_config import get_conf_inputs, get_config
+
+RESERVED_CENTERS = get_config().get("reserved_centers", [])
 
 
 def load_insee() -> dict:
-    with open("data/input/codepostal_to_insee.json") as json_file:
+    with open(get_conf_inputs().get("postalcode_to_insee")) as json_file:
         return json.load(json_file)
 
 
 def load_cedex_to_insee() -> dict:
-    with open("data/input/cedex_to_insee.json") as json_file:
+    with open(get_conf_inputs().get("cedex_to_insee")) as json_file:
         return json.load(json_file)
 
 
@@ -66,7 +68,7 @@ class departementUtils:
         >>> sorted(departements) == departements
         True
         """
-        with open("data/input/departements-france.csv", newline="\n") as csvfile:
+        with open(get_conf_inputs().get("departements"), newline="\n") as csvfile:
             reader = csv.DictReader(csvfile)
             return [str(row["code_departement"]) for row in reader]
 
@@ -95,7 +97,7 @@ class departementUtils:
         if len(insee_code) != 5:
             raise ValueError(f"Code INSEE non-valide : {insee_code}")
 
-        with open("data/input/insee_to_codepostal_and_code_departement.json") as json_file:
+        with open(get_conf_inputs().get("insee_to_postalcode_and_dep")) as json_file:
             insee_to_code_departement_table = json.load(json_file)
 
         if insee_code in insee_to_code_departement_table:
@@ -144,6 +146,7 @@ class departementUtils:
 
 def format_cp(cp: str) -> str:
     # Permet le cas du CP sous form 75 005 au lieu de 75005
+    formatted_cp = cp
     if len(re.findall(r"\d+", cp)) > 0:
         formatted_cp = re.findall(r"\d+", cp)[0]
     else:
@@ -194,7 +197,7 @@ def fix_scrap_urls(url):
 
 
 def get_last_scans(centres):
-    url = "https://vitemadose.gitlab.io/vitemadose/info_centres.json"
+    url = get_conf_inputs().get("last_scans")
     last_scans = {}
     liste_centres = []
 

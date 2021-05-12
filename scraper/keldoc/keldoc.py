@@ -8,10 +8,12 @@ from scraper.keldoc.keldoc_center import KeldocCenter
 from scraper.keldoc.keldoc_filters import get_relevant_vaccine_specialties_id, filter_vaccine_motives
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.profiler import Profiling
+from utils.vmd_config import get_conf_platform
 
-timeout = httpx.Timeout(25.0, connect=25.0)
+KELDOC_CONF = get_conf_platform("keldoc")
+timeout = httpx.Timeout(KELDOC_CONF.get("timeout", 25), connect=KELDOC_CONF.get("timeout", 25))
 # change KELDOC_KILL_SWITCH to True to bypass Keldoc scraping
-KELDOC_KILL_SWITCH = False
+KELDOC_ENABLED = KELDOC_CONF.get("enabled", False)
 KELDOC_HEADERS = {
     "User-Agent": os.environ.get("KELDOC_API_KEY", ""),
 }
@@ -24,7 +26,7 @@ def fetch_slots(request: ScraperRequest):
     if "www.keldoc.com" in request.url:
         logger.debug(f"Fixing wrong hostname in request: {request.url}")
         request.url = request.url.replace("www.keldoc.com", "vaccination-covid.keldoc.com")
-    if KELDOC_KILL_SWITCH:
+    if not KELDOC_ENABLED:
         return None
     center = KeldocCenter(request, client=session)
     # Unable to parse center resources (id, location)?

@@ -2,10 +2,16 @@ import httpx
 import json
 import logging
 
-timeout = httpx.Timeout(30.0, connect=30.0)
-DEFAULT_CLIENT = httpx.Client(timeout=timeout)
+from utils.vmd_config import get_conf_platform
+
+MAIIA_CONF = get_conf_platform("maiia")
+MAIIA_SCRAPER = MAIIA_CONF.get("center_scraper", {})
+
+#timeout = httpx.Timeout(MAIIA_CONF.get("timeout", 25), connect=MAIIA_CONF.get("timeout", 25))
+DEFAULT_CLIENT = httpx.Client()
 logger = logging.getLogger("scraper")
-MAIIA_LIMIT = 100
+
+MAIIA_LIMIT = MAIIA_SCRAPER.get("centers_per_page")
 
 
 def get_paged(url: str, limit: MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIENT) -> dict:
