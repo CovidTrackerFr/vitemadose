@@ -147,7 +147,7 @@ class KeldocCenter:
             f"get_timetables -> start_date: {start_date} end_date: {end_date} motive: {motive_id} agenda: {agenda_ids}"
         )
         calendar_params = {
-            "from": start_date.strftime('%Y-%m-%d'),
+            "from": start_date.strftime("%Y-%m-%d"),
             "to": end_date,
             "agenda_ids[]": agenda_ids,
         }
@@ -193,11 +193,7 @@ class KeldocCenter:
         if page >= KELDOC_SLOT_PAGES:
             return timetable
         return self.get_timetables(
-            start_date + timedelta(days=KELDOC_DAYS_PER_PAGE),
-            motive_id,
-            agenda_ids,
-            page=1 + page,
-            timetable=timetable
+            start_date + timedelta(days=KELDOC_DAYS_PER_PAGE), motive_id, agenda_ids, page=1 + page, timetable=timetable
         )
 
     def count_appointements(self, appointments: list, start_date: str, end_date: str) -> int:
