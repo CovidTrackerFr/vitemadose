@@ -1,5 +1,6 @@
 import json
 import traceback
+from pathlib import Path
 from typing import Optional
 
 from utils.vmd_logger import get_logger
@@ -12,14 +13,10 @@ logger = get_logger()
 def get_config() -> Optional[dict]:
     global CONFIG_DATA
     if not CONFIG_DATA:
-        file = open("config.json")
         try:
-            CONFIG_DATA = json.loads(file.read())
-        except:
-            logger.error("Unable to load configuration file:")
-            traceback.print_exc()
-            exit(1)
-        file.close()
+            CONFIG_DATA = Path("config.json").read_text()
+        except (OSError, ValueError):
+            logger.exception("Unable to load configuration file.")
     return CONFIG_DATA
 
 
