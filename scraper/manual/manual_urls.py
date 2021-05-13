@@ -8,7 +8,7 @@ from utils.vmd_logger import get_logger
 logger = get_logger()
 
 
-def manual_uls_iterator() -> Iterator[dict]:
+def manual_urls_iterator() -> Iterator[dict]:
     logger.info("Recherche des urls manuel")
     path_file = "data/input/manual_urls.csv"
     total = 0
