@@ -23,13 +23,10 @@ MAPHARMA_CONF = get_conf_platform("mapharma")
 MAPHARMA_API = MAPHARMA_CONF.get("api", {})
 MAPHARMA_ENABLED = MAPHARMA_CONF.get("enabled", False)
 
-#timeout = httpx.Timeout(MAPHARMA_CONF.get("timeout", 25), connect=MAPHARMA_CONF.get("timeout", 25))
+# timeout = httpx.Timeout(MAPHARMA_CONF.get("timeout", 25), connect=MAPHARMA_CONF.get("timeout", 25))
 
 MAPARMA_REFERER = MAPHARMA_CONF.get("headers", {}).get("referer", {})
-MAPHARMA_HEADERS = {
-    "User-Agent": os.environ.get("MAPHARMA_API_KEY", ""),
-    "Referer": MAPARMA_REFERER
-}
+MAPHARMA_HEADERS = {"User-Agent": os.environ.get("MAPHARMA_API_KEY", ""), "Referer": MAPARMA_REFERER}
 
 MAPHARMA_FILTERS = MAPHARMA_CONF.get("filters", {})
 MAPHARMA_CAMPAGNES_VALIDES = MAPHARMA_CONF.get("valid_campaigns", [])
@@ -122,8 +119,13 @@ def get_pharmacy_and_campagne(
     raise ValueError(f"Unable to find campagne (c={id_campagne}&l={id_type})")
 
 
-def get_slots(campagneId: str, optionId: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT,
-              request: ScraperRequest = None) -> dict:
+def get_slots(
+    campagneId: str,
+    optionId: str,
+    start_date: str,
+    client: httpx.Client = DEFAULT_CLIENT,
+    request: ScraperRequest = None,
+) -> dict:
     base_url = MAPHARMA_API.get("slots").format(campagneId=campagneId, start_date=start_date, optionId=optionId)
     if request:
         request.increase_request_count("slots")
