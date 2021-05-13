@@ -145,6 +145,7 @@ def center_from_doctor_dict(doctor_dict) -> dict:
         "lat_coor1": latitude,
         "type": _type,
         "com_insee": departementUtils.cp_to_insee(code_postal),
+        "com_cp": code_postal,
     }
 
     for info_center in dict_infos_centers_page:
@@ -187,7 +188,9 @@ def get_dict_infos_center_page(url_path: str) -> dict:
         infos_page["address"] = place["full_address"]
         infos_page["long_coor1"] = place.get("longitude")
         infos_page["lat_coor1"] = place.get("latitude")
-        infos_page["com_insee"] = departementUtils.cp_to_insee(place["zipcode"].replace(" ", "").strip())
+        cp = place["zipcode"].replace(" ", "").strip()
+        infos_page["com_cp"] = cp
+        infos_page["com_insee"] = departementUtils.cp_to_insee(cp)
 
         # Parse landline number
         if place.get("landline_number"):

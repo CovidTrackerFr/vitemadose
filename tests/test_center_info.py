@@ -19,7 +19,7 @@ from scraper.pattern.center_info import (
 
 def test_center_info_fill():
     center = CenterInfo("Paris", "Centre 1", "https://.../centre")
-    newloc = CenterLocation(1.122, 2.391, "Ok")
+    newloc = CenterLocation(1.122, 2.391, "Ok", "Cp")
     request = ScraperRequest(center.url, "2021-05-04")
     result = ScraperResult(request, "Doctolib", "2021-05-06")
     center.fill_localization(newloc)
@@ -44,7 +44,7 @@ def test_center_info_fill():
         "departement": "Paris",
         "nom": "Centre 1",
         "url": "https://.../centre",
-        "location": {"longitude": 1.122, "latitude": 2.391, "city": "Ok"},
+        "location": {"longitude": 1.122, "latitude": 2.391, "city": "Ok", "cp": "Cp"},
         "metadata": None,
         "prochain_rdv": "2021-05-06",
         "plateforme": "Doctolib",

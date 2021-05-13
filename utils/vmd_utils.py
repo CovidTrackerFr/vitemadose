@@ -118,6 +118,17 @@ class departementUtils:
         return None
 
     @staticmethod
+    def get_cp(address: str) -> str:
+        """
+        Récupère le code postal depuis l'adresse complète
+        >>> get_cp(("2 avenue de la République, 75005 PARIS")
+        '75005'
+        """
+        if search := re.search(r"\b\d{5}\b", address):
+            return search.group(0)
+        return None
+
+    @staticmethod
     def cp_to_insee(cp: str) -> str:
         # Split for when when CP is like 'XXXX CEDEX'
         if not isinstance(cp, str):
