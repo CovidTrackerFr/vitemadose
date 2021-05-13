@@ -5,9 +5,10 @@ from scraper.doctolib.doctolib_center_scrap import (
     center_type,
     parse_doctolib_business_hours,
     get_dict_infos_center_page,
+    parse_page_centers,
     parse_page_centers_departement,
     parse_pages_departement,
-    parse_doctolib_centers,
+    parse_doctolib_centers, booking_requests,
 )
 
 import requests
@@ -73,17 +74,13 @@ def test_get_dict_infos_center_page(mock_get):
     with open("tests/fixtures/doctolib/booking-with-doctors.json", "r") as file:
         booking = json.load(file)
 
-    unique_urls = []
     expectedInfosCenterPageWithLandlineNumber = [
         {
             "gid": "d1",
-            "nom": "Hopital test",
-            "ville": "Les Lilas",
             "address": "41 Avenue du Maréchal Juin, 93260 Les Lilas",
             "long_coor1": 2.42283520000001,
             "lat_coor1": 48.8788792,
             "com_insee": "93045",
-            "com_cp": "93260",
             "phone_number": "+33600000000",
             "place_id": "practice-37157",
             "business_hours": {
@@ -99,13 +96,10 @@ def test_get_dict_infos_center_page(mock_get):
         },
         {
             "gid": "d1",
-            "nom": "Hopital test",
-            "ville": "Neuilly-sur-Seine",
             "address": "11 Rue d'Orléans, 92200 Neuilly-sur-Seine",
             "long_coor1": 2.27230770000006,
             "lat_coor1": 48.8814861,
             "com_insee": "92051",
-            "com_cp": "92200",
             "phone_number": "+33638952553",
             "place_id": "practice-86656",
             "business_hours": {
@@ -121,11 +115,12 @@ def test_get_dict_infos_center_page(mock_get):
         },
     ]
     mock_get.return_value.json.return_value = booking
-    mockedResponse, unique_urls = get_dict_infos_center_page("someURL?pid=practice-86656", unique_urls)
+    mockedResponse = get_dict_infos_center_page("someURL?pid=practice-86656")
     assert mockedResponse == expectedInfosCenterPageWithLandlineNumber
 
+    booking_requests.clear()
     mock_get.return_value.json.return_value = {"data": {}}
-    mockedResponse, unique_urls = get_dict_infos_center_page("someURL", unique_urls)
+    mockedResponse = get_dict_infos_center_page("someURL")
     assert mockedResponse == []
 
 
@@ -134,110 +129,108 @@ def test_centers_parsing(mock_get):
     with open("tests/fixtures/doctolib/booking-with-doctors.json", "r") as file:
         doctors = json.load(file)
 
-    unique_urls = []
     expectedCentersPage = [
         {
-            "nom": "Hopital test",
-            "ville": "Les Lilas",
-            "address": "41 Avenue du Maréchal Juin, 93260 Les Lilas",
-            "long_coor1": 2.42283520000001,
-            "lat_coor1": 48.8788792,
-            "type": "drugstore",
-            "com_insee": "93045",
-            "com_cp": "93260",
-            "gid": "d1",
-            "place_id": "practice-37157",
-            "phone_number": "+33600000000",
+            "address": "22b Rue Jean Jaurès, 94800 Villejuif",
             "business_hours": {
+                "dimanche": None,
+                "jeudi": None,
                 "lundi": None,
                 "mardi": None,
                 "mercredi": None,
-                "jeudi": None,
-                "vendredi": None,
                 "samedi": None,
-                "dimanche": None,
+                "vendredi": None,
             },
-            "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
+            "com_insee": "94076",
+            "gid": "d1",
+            "lat_coor1": 48.7951181,
+            "long_coor1": 2.3662778,
+            "nom": "Pharmacie des écoles - Leadersanté - Villejuif",
+            "phone_number": "+33600000000",
+            "place_id": "practice-37157",
             "rdv_site_web": "https://www.doctolib.fr/pharmacie/villejuif/pharmacie-des-ecoles?pid=practice-37157",
-        },
-        {
-            "nom": "Hopital test",
-            "ville": "Neuilly-sur-Seine",
-            "address": "11 Rue d'Orléans, 92200 Neuilly-sur-Seine",
-            "long_coor1": 2.27230770000006,
-            "lat_coor1": 48.8814861,
             "type": "drugstore",
-            "com_insee": "92051",
-            "com_cp": "92200",
-            "gid": "d1",
-            "place_id": "practice-86656",
-            "phone_number": "+33638952553",
+            "ville": "Villejuif",
+            "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
+        },
+        {
+            "address": "22b Rue Jean Jaurès, 94800 Villejuif",
             "business_hours": {
+                "dimanche": None,
+                "jeudi": None,
                 "lundi": None,
                 "mardi": None,
                 "mercredi": None,
-                "jeudi": None,
-                "vendredi": None,
                 "samedi": None,
-                "dimanche": None,
+                "vendredi": None,
             },
-            "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
+            "com_insee": "94076",
+            "gid": "d1",
+            "lat_coor1": 48.7951181,
+            "long_coor1": 2.3662778,
+            "nom": "Pharmacie des écoles - Leadersanté - Villejuif",
+            "phone_number": "+33638952553",
+            "place_id": "practice-86656",
             "rdv_site_web": "https://www.doctolib.fr/pharmacie/villejuif/pharmacie-des-ecoles?pid=practice-86656",
+            "type": "drugstore",
+            "ville": "Villejuif",
+            "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
         },
         {
-            "nom": "Hopital test",
-            "ville": "Les Lilas",
-            "address": "41 Avenue du Maréchal Juin, 93260 Les Lilas",
-            "long_coor1": 2.42283520000001,
-            "lat_coor1": 48.8788792,
-            "type": "vaccination-center",
-            "com_insee": "93045",
-            "com_cp": "93260",
+            "address": "96 Avenue Jean Jaurès, 76140 Le Petit-Quevilly",
+            "business_hours": {
+                "dimanche": None,
+                "jeudi": None,
+                "lundi": None,
+                "mardi": None,
+                "mercredi": None,
+                "samedi": None,
+                "vendredi": None,
+            },
+            "com_insee": "76498",
             "gid": "d1",
-            "place_id": "practice-37157",
+            "lat_coor1": 49.4269181,
+            "long_coor1": 1.0627287,
+            "nom": "Vaccinodrome Jean Jaurès",
             "phone_number": "+33600000000",
-            "business_hours": {
-                "lundi": None,
-                "mardi": None,
-                "mercredi": None,
-                "jeudi": None,
-                "vendredi": None,
-                "samedi": None,
-                "dimanche": None,
-            },
-            "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
+            "place_id": "practice-37157",
             "rdv_site_web": "https://www.doctolib.fr/vaccinodrome/le-petit-quevilly/dubois?pid=practice-37157",
+            "type": "vaccination-center",
+            "ville": "Le Petit-Quevilly",
+            "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
         },
         {
-            "nom": "Hopital test",
-            "ville": "Neuilly-sur-Seine",
-            "address": "11 Rue d'Orléans, 92200 Neuilly-sur-Seine",
-            "long_coor1": 2.27230770000006,
-            "lat_coor1": 48.8814861,
-            "type": "vaccination-center",
-            "com_insee": "92051",
-            "com_cp": "92200",
-            "gid": "d1",
-            "place_id": "practice-86656",
-            "phone_number": "+33638952553",
+            "address": "96 Avenue Jean Jaurès, 76140 Le Petit-Quevilly",
             "business_hours": {
+                "dimanche": None,
+                "jeudi": None,
                 "lundi": None,
                 "mardi": None,
                 "mercredi": None,
-                "jeudi": None,
-                "vendredi": None,
                 "samedi": None,
-                "dimanche": None,
+                "vendredi": None,
             },
-            "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
+            "com_insee": "76498",
+            "gid": "d1",
+            "lat_coor1": 49.4269181,
+            "long_coor1": 1.0627287,
+            "nom": "Vaccinodrome Jean Jaurès",
+            "phone_number": "+33638952553",
+            "place_id": "practice-86656",
             "rdv_site_web": "https://www.doctolib.fr/vaccinodrome/le-petit-quevilly/dubois?pid=practice-86656",
+            "type": "vaccination-center",
+            "ville": "Le Petit-Quevilly",
+            "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
         },
     ]
 
     mock_get.return_value.json.return_value = doctors
-    mockedResponse, urls = parse_pages_departement("indre", unique_urls)
-    with open('got.txt', 'w') as p:
-        p.write(json.dumps(mockedResponse, indent=2))
-    with open('expected.txt', 'w') as p:
-        p.write(json.dumps(expectedCentersPage, indent=2))
+
+    mockedResponse = parse_page_centers(0)
+    assert mockedResponse == expectedCentersPage
+
+    mockedResponse = parse_page_centers_departement("", 1, [])
+    assert mockedResponse == expectedCentersPage
+
+    mockedResponse = parse_pages_departement("indre")
     assert mockedResponse == expectedCentersPage
