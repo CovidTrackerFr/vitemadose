@@ -132,14 +132,16 @@ def get_first_availability(
                 counts[f"{n}_days"] += count_slots(slots, start_date, n_date)
             slots_count += len(slots)
             if get_vaccine_name(consultation_reason["name"]) in CHRONODOSES["Vaccine"]:
-                n_date = (isoparse(start_date) + timedelta(days=CHRONODOSES["Interval"], seconds=-1)).isoformat()
-                counts["chronodose"] += count_slots(slots, start_date, n_date)
+                current_date = (paris_tz.localize(datetime.now() + timedelta(days=0))).isoformat()
+                n_date = (datetime.now() + timedelta(1, seconds=-1)).isoformat()
+                counts["chronodose"] += count_slots(slots, current_date, n_date)
             if first_availability == None or slot_availability < first_availability:
                 first_availability = slot_availability
+    current_date = (paris_tz.localize(datetime.now() + timedelta(days=0))).isoformat()
     start_date = (paris_tz.localize(date)).isoformat()
-    n_date = (paris_tz.localize(date + timedelta(days=2, seconds=-1))).isoformat()
+    n_date = (datetime.now() + timedelta(1, seconds=-1)).isoformat()
     appointment_schedules.append(
-        {"name": "chronodose", "from": start_date, "to": n_date, "total": counts["chronodose"]}
+        {"name": "chronodose", "from": current_date, "to": n_date, "total": counts["chronodose"]}
     )
     for n in INTERVAL_SPLIT_DAYS:
         n_date = (paris_tz.localize(date + timedelta(days=n, seconds=-1))).isoformat()
