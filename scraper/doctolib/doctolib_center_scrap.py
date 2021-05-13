@@ -178,7 +178,7 @@ def get_dict_infos_center_page(url_path: str) -> dict:
     liste_infos_page = []
 
     try:
-        data = requests.get(internal_api_url)
+        data = requests.get(internal_api_url, headers=DOCTOLIB_HEADERS)
         data.raise_for_status()
         output = data.json().get("data", {})
     except:
