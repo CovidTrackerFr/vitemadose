@@ -17,6 +17,7 @@ from utils.vmd_utils import departementUtils, is_reserved_center
 POOL_SIZE = int(os.getenv("POOL_SIZE", 50))
 PARTIAL_SCRAPE = float(os.getenv("PARTIAL_SCRAPE", 1.0))
 PARTIAL_SCRAPE = max(0, min(PARTIAL_SCRAPE, 1))
+OM_CODES = {"975", "977", "978", "98"}
 
 logger = get_logger()
 
@@ -38,6 +39,15 @@ def export_data(centres_cherchés: Iterator[CenterInfo], last_scrap, outpath_for
         for code in departementUtils.import_departements()
     }
 
+    # code spécifique aux collectivités d'outre-mer
+    par_departement["om"] = {
+        "version": 1,
+        "last_updated": dt.datetime.now(tz=pytz.timezone("Europe/Paris")).isoformat(),
+        "last_scrap": last_scrap,
+        "centres_disponibles": [],
+        "centres_indisponibles": [],
+    }
+
     blocklist = get_blocklist_urls()
     # This should be duplicate free, they are already checked in
     is_blocked_center = lambda center: (is_reserved_center(center) or is_in_blocklist(center, blocklist))
@@ -51,8 +61,14 @@ def export_data(centres_cherchés: Iterator[CenterInfo], last_scrap, outpath_for
         compte_centres += 1
 
         centre.nom = centre.nom.strip()
+
+        if centre.departement in OM_CODES:
+            centre.departement = "om"
+
         if centre.departement not in par_departement:
-            logger.warning(f"Center {centre.nom} ({centre.departement}) could not be attached to a valid department")
+            logger.warning(
+                f"Center {centre.nom} ({centre.departement}) could not be attached to a valid department or collectivity"
+            )
             continue
         erreur = centre.erreur
         if centre.internal_id and centre.internal_id in internal_ids:  # pragma: no cover
