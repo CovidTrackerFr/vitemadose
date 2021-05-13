@@ -10,7 +10,7 @@ from utils.vmd_logger import get_logger
 from scraper.doctolib.doctolib import DOCTOLIB_HEADERS
 from scraper.doctolib.doctolib_filters import is_vaccination_center
 
-from typing import List, Union, Tuple
+from typing import List
 import requests
 import json
 from urllib import parse
@@ -30,25 +30,33 @@ CENTER_TYPES = SCRAPER_CONF.get("categories", [])
 
 DOCTOLIB_DOMAINS = DOCTOLIB_CONF.get("recognized_urls", [])
 
+
 DOCTOLIB_WEIRD_DEPARTEMENTS = SCRAPER_CONF.get("dep_conversion", {})
 
-logger = get_logger()
 
+logger = get_logger()
 booking_requests = {}
+
 
 def parse_doctolib_centers(page_limit=None) -> List[dict]:
     centers = []
-    unique_urls = []
+    unique_center_urls = []
 
     for departement in get_departements():
         logger.info(f"[Doctolib centers] Parsing pages of departement {departement} through department SEO link")
-        centers_departements, unique_urls = parse_pages_departement(departement, unique_urls)
+        centers_departements = parse_pages_departement(departement)
         if centers_departements == 0:
             raise Exception("No Value found for department {}, crashing")
         centers += centers_departements
 
     centers = list(filter(is_vaccination_center, centers))  # Filter vaccination centers
     centers = list(map(center_reducer, centers))  # Remove fields irrelevant to the front
+
+    for item in list(centers):
+        if item.get("rdv_site_web") in unique_center_urls:
+            centers.remove(item)
+            continue
+        unique_center_urls.append(item.get("rdv_site_web"))
 
     return centers
 
@@ -65,10 +73,11 @@ def get_departements():
         return departements
 
 
-def parse_pages_departement(departement, unique_urls: List[str]):
+def parse_pages_departement(departement):
     departement = doctolib_urlify(departement)
     page_id = 1
     page_has_centers = True
+    liste_urls = []
 
     for weird_dep in DOCTOLIB_WEIRD_DEPARTEMENTS:
         if weird_dep == departement:
@@ -77,7 +86,7 @@ def parse_pages_departement(departement, unique_urls: List[str]):
     centers = []
     while page_has_centers:
         logger.info(f"[Doctolib centers] Parsing page {page_id} of {departement}")
-        centers_page, unique_urls = parse_page_centers_departement(departement, page_id, unique_urls)
+        centers_page = parse_page_centers_departement(departement, page_id, liste_urls)
         centers += centers_page
 
         page_id += 1
@@ -85,40 +94,26 @@ def parse_pages_departement(departement, unique_urls: List[str]):
         if len(centers_page) == 0:
             page_has_centers = False
 
-    return centers, unique_urls
+    return centers
 
 
-def parse_page_centers_departement(departement: str, page_id: int,
-                                   unique_urls: List[str]) -> Tuple[List[dict], List[str]]:
-    try:
-        url = doctolib_urlify(departement)
-        if url in unique_urls:
-            return [], unique_urls
-        r = requests.get(
-            BASE_URL_DEPARTEMENT.format(url, page_id),
-            headers=DOCTOLIB_HEADERS,
-        )
-        data = r.json()
-        unique_urls.append(url)
-    except:
-        logger.warning(f"Cannot reach {BASE_URL_DEPARTEMENT.format(doctolib_urlify(departement), page_id)}")
-        return [], unique_urls
-
-    return get_centers_info(data, unique_urls)
-
-
-def get_centers_info(data: dict, unique_urls: List[str]) -> Tuple[List[dict], List[str]]:
+def parse_page_centers_departement(departement, page_id, liste_urls) -> List[dict]:
+    r = requests.get(
+        BASE_URL_DEPARTEMENT.format(doctolib_urlify(departement), page_id),
+        headers=DOCTOLIB_HEADERS,
+    )
+    data = r.json()
     centers_page = []
-    centers = []
+
     # TODO parallelism can be put here
     for payload in data["data"]["doctors"]:
         # If the "doctor" hasn't already been checked
-        if payload["link"] not in unique_urls:
-            unique_urls.append(payload["link"])
+        if payload["link"] not in liste_urls:
+            liste_urls.append(payload["link"])
             # One "doctor" can have multiple places, hence center_from_doctor_dict returns a list
-            centers, unique_urls = center_from_doctor_dict(payload, unique_urls)
-            centers_page += centers
-    return centers_page, unique_urls
+            centers_page += center_from_doctor_dict(payload)
+
+    return centers_page
 
 
 def doctolib_urlify(departement: str) -> str:
@@ -127,7 +122,19 @@ def doctolib_urlify(departement: str) -> str:
     return unidecode(departement)
 
 
-def center_from_doctor_dict(doctor_dict, unique_urls: List[str]) -> Tuple[List[dict], List[str]]:
+def parse_page_centers(page_id) -> List[dict]:
+    r = requests.get(BASE_URL.format(page_id), headers=DOCTOLIB_HEADERS)
+    data = r.json()
+
+    centers_page = []
+    # TODO parallelism can be put here
+    for payload in data["data"]["doctors"]:
+        centers_page += center_from_doctor_dict(payload)
+    return centers_page
+
+
+def center_from_doctor_dict(doctor_dict) -> dict:
+
     liste_centres = []
     nom = doctor_dict["name_with_title"]
     sub_addresse = doctor_dict["address"]
@@ -137,9 +144,7 @@ def center_from_doctor_dict(doctor_dict, unique_urls: List[str]) -> Tuple[List[d
     url_path = doctor_dict["link"]
     _type = center_type(url_path, nom)
 
-    dict_infos_centers_page, unique_urls = get_dict_infos_center_page(url_path, unique_urls)
-    if not dict_infos_centers_page:
-        return [], unique_urls
+    dict_infos_centers_page = get_dict_infos_center_page(url_path)
     longitude, latitude = get_coordinates(doctor_dict)
     dict_infos_browse_page = {
         "nom": nom,
@@ -149,14 +154,13 @@ def center_from_doctor_dict(doctor_dict, unique_urls: List[str]) -> Tuple[List[d
         "lat_coor1": latitude,
         "type": _type,
         "com_insee": departementUtils.cp_to_insee(code_postal),
-        "com_cp": code_postal,
     }
 
     for info_center in dict_infos_centers_page:
         info_center["rdv_site_web"] = f"https://www.doctolib.fr{url_path}?pid={info_center['place_id']}"
-        liste_centres.append({**dict_infos_browse_page, **info_center})
+        liste_centres.append({**info_center, **dict_infos_browse_page})
 
-    return liste_centres, unique_urls
+    return liste_centres
 
 
 def get_coordinates(doctor_dict):
@@ -169,23 +173,25 @@ def get_coordinates(doctor_dict):
     return longitude, latitude
 
 
-def get_dict_infos_center_page(url_path: str, unique_urls: List[str]) -> Tuple[list, List[str]]:
-    center_name = parse.urlsplit(url_path).path.split("/")[-1]
-    internal_api_url = BOOKING_URL.format(centre=center_name)
+def get_dict_infos_center_page(url_path: str) -> dict:
+    global booking_requests
+    internal_api_url = BOOKING_URL.format(centre=parse.urlsplit(url_path).path.split("/")[-1])
     logger.info(f"> Parsing {internal_api_url}")
     liste_infos_page = []
+
     try:
         data = None
-        if center_name in booking_requests:
-            data = booking_requests.get(center_name)
+        if internal_api_url in booking_requests:
+            data = booking_requests.get(internal_api_url)
         else:
-            data = requests.get(internal_api_url, headers=DOCTOLIB_HEADERS)
-            data.raise_for_status()
-            booking_requests[center_name] = data
-        output = data.json().get("data", {})
+            req = requests.get(internal_api_url)
+            req.raise_for_status()
+            data = req.json()
+            booking_requests[internal_api_url] = data
+        output = data.get("data", {})
     except:
-        logger.warning(f"> Could not retrieve data from {internal_api_url}")
-        return liste_infos_page, unique_urls
+        logger.warn(f"> Could not retrieve data from {internal_api_url}")
+        return liste_infos_page
 
     # Parse place
     places = output.get("places", {})
@@ -194,14 +200,10 @@ def get_dict_infos_center_page(url_path: str, unique_urls: List[str]) -> Tuple[l
         # Parse place location
         infos_page["gid"] = "d{0}".format(output.get("profile", {}).get("id", ""))
         infos_page["place_id"] = place["id"]
-        infos_page["nom"] = output.get("profile", {}).get("name_with_title", "")
-        infos_page["ville"] = place.get("city", "")
         infos_page["address"] = place["full_address"]
         infos_page["long_coor1"] = place.get("longitude")
         infos_page["lat_coor1"] = place.get("latitude")
-        cp = place["zipcode"].replace(" ", "").strip()
-        infos_page["com_cp"] = cp
-        infos_page["com_insee"] = departementUtils.cp_to_insee(cp)
+        infos_page["com_insee"] = departementUtils.cp_to_insee(place["zipcode"].replace(" ", "").strip())
 
         # Parse landline number
         if place.get("landline_number"):
@@ -219,7 +221,7 @@ def get_dict_infos_center_page(url_path: str, unique_urls: List[str]) -> Tuple[l
         liste_infos_page.append(infos_page)
 
     # Returns a list with data for each place
-    return liste_infos_page, unique_urls
+    return liste_infos_page
 
 
 def parse_doctolib_business_hours(place) -> dict:
