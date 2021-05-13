@@ -16,5 +16,6 @@ setup(
         "coverage-badge==1.0.1",
         "unidecode==1.2.0",
         "jsonschema==3.2.0",
+        "pydantic==1.8.2",
     ],
 )
