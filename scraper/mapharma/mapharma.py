@@ -121,9 +121,12 @@ def get_pharmacy_and_campagne(
     raise ValueError(f"Unable to find campagne (c={id_campagne}&l={id_type})")
 
 
-def get_slots(campagneId: str, optionId: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT) -> dict:
+def get_slots(campagneId: str, optionId: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT,
+              request: ScraperRequest = None) -> dict:
     base_url = MAPHARMA_API.get("slots").format(campagneId=campagneId, start_date=start_date, optionId=optionId)
     client.headers.update(MAPHARMA_CONF.get("referer", {}))
+    if request:
+        request.increase_request_count("slots")
     try:
         r = client.get(base_url)
         r.raise_for_status()
@@ -176,7 +179,7 @@ def fetch_slots(
     start_date = date.fromisoformat(request.get_start_date())
     for delta in range(0, MAPHARMA_SLOT_LIMIT, 6):
         new_date = start_date + timedelta(days=delta)
-        slots = get_slots(id_campagne, id_type, new_date.isoformat(), client)
+        slots = get_slots(id_campagne, id_type, new_date.isoformat(), client, request=request)
         for day, day_slot in slots.items():
             if day in day_slots:
                 continue

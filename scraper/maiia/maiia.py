@@ -62,11 +62,14 @@ def count_slots(slots: list, start_date: str, end_date: str) -> int:
 
 
 def get_next_slot_date(
-    center_id: str, consultation_reason_name: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT
+    center_id: str, consultation_reason_name: str, start_date: str,
+    client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None
 ) -> Optional[str]:
     url = MAIIA_API.get("next_slot").format(
         center_id=center_id, consultation_reason_name=consultation_reason_name, start_date=start_date
     )
+    if request:
+        request.increase_request_count("next-slots")
     try:
         r = client.get(url)
         r.raise_for_status()
@@ -85,14 +88,15 @@ def get_slots(
     start_date: str,
     end_date: str,
     limit=MAIIA_LIMIT,
-    client: httpx.Client = DEFAULT_CLIENT,
+    client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None
 ) -> Optional[list]:
     url = MAIIA_API.get("slots").format(
         center_id=center_id, consultation_reason_name=consultation_reason_name, start_date=start_date, end_date=end_date
     )
-    availabilities = get_paged(url, limit=limit, client=client)["items"]
+    availabilities = get_paged(url, limit=limit, client=client, request=request, request_type="slots")["items"]
     if not availabilities:
-        next_slot_date = get_next_slot_date(center_id, consultation_reason_name, start_date, client=client)
+        next_slot_date = get_next_slot_date(center_id, consultation_reason_name, start_date, client=client,
+                                            request=request)
         if not next_slot_date:
             return None
         next_date = datetime.strptime(next_slot_date, "%Y-%m-%dT%H:%M:%S.%fZ")
@@ -105,22 +109,24 @@ def get_slots(
             start_date=start_date,
             end_date=end_date,
         )
-        availabilities = get_paged(url, limit=limit, client=client)["items"]
+        availabilities = get_paged(url, limit=limit, client=client, request=request, request_type="slots")["items"]
     if availabilities:
         return availabilities
     return None
 
 
-def get_reasons(center_id: str, limit=MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIENT) -> list:
+def get_reasons(center_id: str, limit=MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIENT,
+                request: ScraperRequest = None) -> list:
     url = MAIIA_API.get("motives").format(center_id=center_id)
-    result = get_paged(url, limit=limit, client=client)
+    result = get_paged(url, limit=limit, client=client, request=request, request_type="motives")
     if not result["total"]:
         return []
     return result.get("items", [])
 
 
 def get_first_availability(
-    center_id: str, request_date: str, reasons: [dict], client: httpx.Client = DEFAULT_CLIENT
+    center_id: str, request_date: str, reasons: [dict], client: httpx.Client = DEFAULT_CLIENT,
+    request: ScraperRequest = None
 ) -> [Optional[datetime], int, dict]:
     date = isoparse(request_date).replace(tzinfo=None)
     start_date = date.isoformat()
@@ -135,9 +141,10 @@ def get_first_availability(
     for consultation_reason in reasons:
         consultation_reason_name_quote = quote(consultation_reason.get("name"), "")
         if "injectionType" in consultation_reason and consultation_reason["injectionType"] in ["FIRST"]:
-            slots = get_slots(center_id, consultation_reason_name_quote, start_date, end_date, client=client)
+            slots = get_slots(center_id, consultation_reason_name_quote, start_date, end_date, client=client,
+                              request=request)
             slot_availability = parse_slots(slots)
-            if slot_availability == None:
+            if slot_availability is None:
                 continue
             for n in (
                 INTERVAL_SPLIT_DAY
@@ -178,14 +185,14 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
         return None
     center_id = url_query["centerid"][0]
 
-    reasons = get_reasons(center_id, client=client)
+    reasons = get_reasons(center_id, client=client, request=request)
     if not reasons:
         return None
 
     first_availability, slots_count, appointment_schedules = get_first_availability(
-        center_id, start_date, reasons, client=client
+        center_id, start_date, reasons, client=client, request=request
     )
-    if first_availability == None:
+    if first_availability is None:
         return None
 
     for reason in reasons:

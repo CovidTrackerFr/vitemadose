@@ -88,7 +88,7 @@
       },
       "request_sleep": 0.1,
       "pagination": {
-        "pages": 7,
+        "pages": 4,
         "days": 7
       },
       "filters": {
@@ -214,7 +214,7 @@
         "scraper": "https://www.maiia.com/api/pat-public/hcd?distanceMax=10000&AllVaccinationPlaces=true&speciality.shortName={speciality}",
         "slots": "https://www.maiia.com/api/pat-public/availabilities?centerId={center_id}&consultationReasonName={consultation_reason_name}&from={start_date}&to={end_date}",
         "next_slot": "https://www.maiia.com/api/pat-public/availability-closests?centerId={center_id}&consultationReasonName={consultation_reason_name}&from={start_date}",
-        "motives": "https://www.main.com/api/pat-public/consultation-reason-hcd?rootCenterId={center_id}"
+        "motives": "https://www.maiia.com/api/pat-public/consultation-reason-hcd?rootCenterId={center_id}"
       },
       "center_scraper": {
         "centers_per_page": 100,

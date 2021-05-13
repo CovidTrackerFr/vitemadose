@@ -40,7 +40,8 @@ def fetch_slots(request: ScraperRequest):
     center.vaccine_specialties = get_relevant_vaccine_specialties_id(center.specialties)
     center.fetch_vaccine_cabinets()
     center.vaccine_motives = filter_vaccine_motives(
-        session, center.selected_cabinet, center.id, center.vaccine_specialties, center.vaccine_cabinets
+        session, center.selected_cabinet, center.id, center.vaccine_specialties,
+        center.vaccine_cabinets, request=request
     )
     # Find the first availability
     date, count, appointment_schedules = center.find_first_availability(request.get_start_date())

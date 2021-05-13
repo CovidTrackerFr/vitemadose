@@ -18,7 +18,7 @@ from scraper.doctolib.doctolib import (
     _find_visit_motive_id,
     _parse_centre,
     _parse_practice_id,
-    DOCTOLIB_SLOT_LIMIT,
+    DOCTOLIB_SLOT_PAGES,
 )
 
 
@@ -50,7 +50,7 @@ def test_blocked_by_doctolib_par_centre():
             "insurance_sector": "public",
             "practice_ids": "4",
             "destroy_temporary": "true",
-            "limit": str(DOCTOLIB_SLOT_LIMIT),
+            "limit": str(DOCTOLIB_SLOT_PAGES),
         }
         path = Path("tests", "fixtures", "doctolib", "basic-availabilities.json")
         return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
