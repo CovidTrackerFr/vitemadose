@@ -146,6 +146,9 @@ def make_stats_creneaux_pop(stats: dict):
     ceiling = 1000000
     top_count = 0
     for dept, dept_stat in stats.items():
+        if dept_stat["population"] == 0:
+            logger.warning(f"No population data for department {dept}")
+            continue
         nb = min(dept_stat["creneaux"] / (int(dept_stat["population"]) / 1000), ceiling)
         top_count = max(nb, top_count)
         depts[dept] = nb
@@ -175,6 +178,9 @@ def make_stats_rdv(dept_rdv: dict):
         if monday not in dept_stat:
             continue
         doses_allouees += dept_stat[monday]["doses_allouees"]
+        if doses_allouees == 0:
+            logger.warning(f"No doses data for department {dept}")
+            continue
         rdv_pris += dept_stat[monday]["rdv_pris"]
         taux = 100 * rdv_pris / doses_allouees
         depts[dept] = taux
