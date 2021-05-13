@@ -25,8 +25,10 @@ MAPHARMA_ENABLED = MAPHARMA_CONF.get("enabled", False)
 
 #timeout = httpx.Timeout(MAPHARMA_CONF.get("timeout", 25), connect=MAPHARMA_CONF.get("timeout", 25))
 
+MAPARMA_REFERER = MAPHARMA_CONF.get("headers", {}).get("referer", {})
 MAPHARMA_HEADERS = {
     "User-Agent": os.environ.get("MAPHARMA_API_KEY", ""),
+    "Referer": MAPARMA_REFERER
 }
 
 MAPHARMA_FILTERS = MAPHARMA_CONF.get("filters", {})
@@ -123,7 +125,6 @@ def get_pharmacy_and_campagne(
 def get_slots(campagneId: str, optionId: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT,
               request: ScraperRequest = None) -> dict:
     base_url = MAPHARMA_API.get("slots").format(campagneId=campagneId, start_date=start_date, optionId=optionId)
-    client.headers.update(MAPHARMA_CONF.get("referer", {}))
     if request:
         request.increase_request_count("slots")
     try:
