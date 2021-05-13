@@ -9,6 +9,7 @@ from utils.vmd_utils import fix_scrap_urls
 
 logger = get_logger()
 
+IS_KELDOC_ACTIVATED = False
 
 def center_iterator(outpath_format="data/output/{}.json") -> Iterator[dict]:
     url = "https://www.data.gouv.fr/fr/datasets/r/5cb21a85-b0b0-4a65-a249-806a040ec372"
@@ -49,6 +50,8 @@ def center_iterator(outpath_format="data/output/{}.json") -> Iterator[dict]:
 
 def should_use_opendata_csv(rdv_site_web: str) -> bool:
     plateformes_hors_csv = ["doctolib", "maiia"]
+    if not IS_KELDOC_ACTIVATED:
+        plateformes_hors_csv.append("keldoc")
 
     if any(p in rdv_site_web for p in plateformes_hors_csv):
         return False
