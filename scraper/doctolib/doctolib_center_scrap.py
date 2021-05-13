@@ -182,7 +182,7 @@ def get_dict_infos_center_page(url_path: str) -> dict:
         data.raise_for_status()
         output = data.json().get("data", {})
     except:
-        logger.warning(f"> Could not retrieve data from {internal_api_url}")
+        logger.warn(f"> Could not retrieve data from {internal_api_url}")
         return liste_infos_page
 
     # Parse place
@@ -279,9 +279,13 @@ if __name__ == "__main__":  # pragma: no cover
         centers = parse_doctolib_centers()
         path_out = SCRAPER_CONF.get("result_path")
         logger.info(f"Found {len(centers)} centers on Doctolib")
-        logger.info(f"> Writing them on {path_out}")
-        with open(path_out, "w") as f:
-            f.write(json.dumps(centers, indent=2))
+        if len(centers) < 10000:
+            # for reference, on 13-05, there were 12k centers
+            logger.error(f"[NOT SAVING RESULTS]{len(centers)} does not seem like enough Doctolib centers")
+        else:
+            logger.info(f"> Writing them on {path_out}")
+            with open(path_out, "w") as f:
+                f.write(json.dumps(centers, indent=2))
     else:
         logger.error(f"Doctolib scraper is disabled in configuration file.")
         exit(1)
