@@ -34,6 +34,7 @@ DOCTOLIB_WEIRD_DEPARTEMENTS = SCRAPER_CONF.get("dep_conversion", {})
 
 logger = get_logger()
 
+booking_requests = {}
 
 def parse_doctolib_centers(page_limit=None) -> List[dict]:
     centers = []
@@ -108,13 +109,15 @@ def parse_page_centers_departement(departement: str, page_id: int,
 
 def get_centers_info(data: dict, unique_urls: List[str]) -> Tuple[List[dict], List[str]]:
     centers_page = []
+    centers = []
     # TODO parallelism can be put here
     for payload in data["data"]["doctors"]:
         # If the "doctor" hasn't already been checked
         if payload["link"] not in unique_urls:
             unique_urls.append(payload["link"])
             # One "doctor" can have multiple places, hence center_from_doctor_dict returns a list
-            centers_page += center_from_doctor_dict(payload, unique_urls)
+            centers, unique_urls = center_from_doctor_dict(payload, unique_urls)
+            centers_page += centers
     return centers_page, unique_urls
 
 
@@ -167,16 +170,19 @@ def get_coordinates(doctor_dict):
 
 
 def get_dict_infos_center_page(url_path: str, unique_urls: List[str]) -> Tuple[list, List[str]]:
-    internal_api_url = BOOKING_URL.format(centre=parse.urlsplit(url_path).path.split("/")[-1])
-    if internal_api_url in unique_urls:
-        return [], unique_urls
+    center_name = parse.urlsplit(url_path).path.split("/")[-1]
+    internal_api_url = BOOKING_URL.format(centre=center_name)
     logger.info(f"> Parsing {internal_api_url}")
     liste_infos_page = []
     try:
-        data = requests.get(internal_api_url)
-        data.raise_for_status()
+        data = None
+        if center_name in booking_requests:
+            data = booking_requests.get(center_name)
+        else:
+            data = requests.get(internal_api_url)
+            data.raise_for_status()
+            booking_requests[center_name] = data
         output = data.json().get("data", {})
-        unique_urls.append(internal_api_url)
     except:
         logger.warning(f"> Could not retrieve data from {internal_api_url}")
         return liste_infos_page, unique_urls
