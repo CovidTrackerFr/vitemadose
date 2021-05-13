@@ -48,6 +48,7 @@ class KeldocCenter:
         self.vaccine_cabinets = []
         for specialty in self.vaccine_specialties:
             cabinet_url = API_KELDOC_CABINETS.format(self.id, specialty)
+            self.request.increase_request_count("cabinets")
             try:
                 cabinet_req = self.client.get(cabinet_url)
                 cabinet_req.raise_for_status()
@@ -73,6 +74,7 @@ class KeldocCenter:
         if not self.base_url:
             return False
         # Fetch center id
+        self.request.increase_request_count("booking")
         try:
             resource = self.client.get(API_KELDOC_CENTER, params=self.resource_params)
             resource.raise_for_status()
@@ -99,6 +101,7 @@ class KeldocCenter:
             return False
 
         # Fetch new URL after redirection
+        self.request.increase_request_count("resource")
         try:
             rq = self.client.get(self.base_url)
             rq.raise_for_status()
@@ -163,6 +166,7 @@ class KeldocCenter:
             "to": end_date,
             "agenda_ids[]": agenda_ids,
         }
+        self.request.increase_request_count("slots")
         try:
             calendar_req = self.client.get(calendar_url, params=calendar_params)
             calendar_req.raise_for_status()
