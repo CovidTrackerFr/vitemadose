@@ -4,12 +4,15 @@ import json
 from typing import Iterator
 import requests
 
-from utils.vmd_logger import enable_logger_for_production, get_logger
+from utils.vmd_logger import get_logger
 from utils.vmd_utils import fix_scrap_urls
 
 logger = get_logger()
 
 IS_KELDOC_ACTIVATED = False
+if not IS_KELDOC_ACTIVATED:
+    logger.warning("KELDOC IS BLOCKED")
+
 
 def center_iterator(outpath_format="data/output/{}.json") -> Iterator[dict]:
     url = "https://www.data.gouv.fr/fr/datasets/r/5cb21a85-b0b0-4a65-a249-806a040ec372"
