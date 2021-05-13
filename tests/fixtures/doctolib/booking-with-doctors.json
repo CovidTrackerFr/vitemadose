@@ -1,7 +1,8 @@
 {
   "data": {
     "profile": {
-      "id": 1
+      "id": 1,
+      "name_with_title": "Hopital test"
     },
     "visit_motives": [
       {
@@ -18,6 +19,7 @@
         "longitude": 2.42283520000001,
         "phone_number": "06 00 00 00 00",
         "full_address": "41 Avenue du Maréchal Juin, 93260 Les Lilas",
+        "city": "Les Lilas",
         "zipcode": "93260",
         "opening_hours": [
           {
@@ -99,6 +101,7 @@
         "longitude": 2.27230770000006,
         "landline_number": "06 38 95 25 53",
         "full_address": "11 Rue d'Orléans, 92200 Neuilly-sur-Seine",
+        "city": "Neuilly-sur-Seine",
         "zipcode": "92200",
         "opening_hours": [
           {
