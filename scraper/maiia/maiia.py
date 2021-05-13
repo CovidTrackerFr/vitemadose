@@ -16,14 +16,21 @@ from scraper.profiler import Profiling
 from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT
+from utils.vmd_config import get_conf_platform, get_config
 
-timeout = httpx.Timeout(30.0, connect=30.0)
-DEFAULT_CLIENT = httpx.Client(timeout=timeout)
+MAIIA_CONF = get_conf_platform("maiia")
+MAIIA_API = MAIIA_CONF.get("api", {})
+MAIIA_ENABLED = MAIIA_CONF.get("enabled", False)
+MAIIA_SCRAPER = MAIIA_CONF.get("center_scraper", {})
+
+#timeout = httpx.Timeout(MAIIA_CONF.get("timeout", 25), connect=MAIIA_CONF.get("timeout", 25))
+
+DEFAULT_CLIENT = httpx.Client()
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
 
-MAIIA_URL = "https://www.maiia.com"
-MAIIA_DAY_LIMIT = 50
+MAIIA_URL = MAIIA_CONF.get("base_url")
+MAIIA_DAY_LIMIT = MAIIA_CONF.get("calendar_limit", 50)
 
 
 def parse_slots(slots: list) -> Optional[datetime]:
@@ -32,13 +39,13 @@ def parse_slots(slots: list) -> Optional[datetime]:
     first_availability = None
     for slot in slots:
         start_date_time = isoparse(slot["startDateTime"])
-        if first_availability == None or start_date_time < first_availability:
+        if first_availability is None or start_date_time < first_availability:
             first_availability = start_date_time
     return first_availability
 
 
 def count_slots(slots: list, start_date: str, end_date: str) -> int:
-    logger.debug(f"couting slots from {start_date} to {end_date}")
+    logger.debug(f"counting slots from {start_date} to {end_date}")
     paris_tz = timezone("Europe/Paris")
     start_dt = isoparse(start_date).astimezone(paris_tz)
     end_dt = isoparse(end_date).astimezone(paris_tz)
@@ -48,16 +55,21 @@ def count_slots(slots: list, start_date: str, end_date: str) -> int:
         if "startDateTime" not in slot:
             continue
         slot_dt = isoparse(slot["startDateTime"]).astimezone(paris_tz)
-        if slot_dt > start_dt and slot_dt < end_dt:
+        if start_dt < slot_dt < end_dt:
             count += 1
 
     return count
 
 
 def get_next_slot_date(
-    center_id: str, consultation_reason_name: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT
+    center_id: str, consultation_reason_name: str, start_date: str,
+    client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None
 ) -> Optional[str]:
-    url = f"{MAIIA_URL}/api/pat-public/availability-closests?centerId={center_id}&consultationReasonName={consultation_reason_name}&from={start_date}"
+    url = MAIIA_API.get("next_slot").format(
+        center_id=center_id, consultation_reason_name=consultation_reason_name, start_date=start_date
+    )
+    if request:
+        request.increase_request_count("next-slots")
     try:
         r = client.get(url)
         r.raise_for_status()
@@ -76,35 +88,45 @@ def get_slots(
     start_date: str,
     end_date: str,
     limit=MAIIA_LIMIT,
-    client: httpx.Client = DEFAULT_CLIENT,
+    client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None
 ) -> Optional[list]:
-    url = f"{MAIIA_URL}/api/pat-public/availabilities?centerId={center_id}&consultationReasonName={consultation_reason_name}&from={start_date}&to={end_date}"
-    availabilities = get_paged(url, limit=limit, client=client)["items"]
+    url = MAIIA_API.get("slots").format(
+        center_id=center_id, consultation_reason_name=consultation_reason_name, start_date=start_date, end_date=end_date
+    )
+    availabilities = get_paged(url, limit=limit, client=client, request=request, request_type="slots")["items"]
     if not availabilities:
-        next_slot_date = get_next_slot_date(center_id, consultation_reason_name, start_date, client=client)
+        next_slot_date = get_next_slot_date(center_id, consultation_reason_name, start_date, client=client,
+                                            request=request)
         if not next_slot_date:
             return None
         next_date = datetime.strptime(next_slot_date, "%Y-%m-%dT%H:%M:%S.%fZ")
         if next_date - isoparse(start_date) > timedelta(days=MAIIA_DAY_LIMIT):
             return None
         start_date = next_date.isoformat()
-        url = f"{MAIIA_URL}/api/pat-public/availabilities?centerId={center_id}&consultationReasonName={consultation_reason_name}&from={start_date}&to={end_date}"
-        availabilities = get_paged(url, limit=limit, client=client)["items"]
+        url = MAIIA_API.get("slots").format(
+            center_id=center_id,
+            consultation_reason_name=consultation_reason_name,
+            start_date=start_date,
+            end_date=end_date,
+        )
+        availabilities = get_paged(url, limit=limit, client=client, request=request, request_type="slots")["items"]
     if availabilities:
         return availabilities
     return None
 
 
-def get_reasons(center_id: str, limit=MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIENT) -> list:
-    url = f"{MAIIA_URL}/api/pat-public/consultation-reason-hcd?rootCenterId={center_id}"
-    result = get_paged(url, limit=limit, client=client)
+def get_reasons(center_id: str, limit=MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIENT,
+                request: ScraperRequest = None) -> list:
+    url = MAIIA_API.get("motives").format(center_id=center_id)
+    result = get_paged(url, limit=limit, client=client, request=request, request_type="motives")
     if not result["total"]:
         return []
     return result.get("items", [])
 
 
 def get_first_availability(
-    center_id: str, request_date: str, reasons: [dict], client: httpx.Client = DEFAULT_CLIENT
+    center_id: str, request_date: str, reasons: [dict], client: httpx.Client = DEFAULT_CLIENT,
+    request: ScraperRequest = None
 ) -> [Optional[datetime], int, dict]:
     date = isoparse(request_date).replace(tzinfo=None)
     start_date = date.isoformat()
@@ -119,9 +141,10 @@ def get_first_availability(
     for consultation_reason in reasons:
         consultation_reason_name_quote = quote(consultation_reason.get("name"), "")
         if "injectionType" in consultation_reason and consultation_reason["injectionType"] in ["FIRST"]:
-            slots = get_slots(center_id, consultation_reason_name_quote, start_date, end_date, client=client)
+            slots = get_slots(center_id, consultation_reason_name_quote, start_date, end_date, client=client,
+                              request=request)
             slot_availability = parse_slots(slots)
-            if slot_availability == None:
+            if slot_availability is None:
                 continue
             for n in (
                 INTERVAL_SPLIT_DAY
@@ -154,6 +177,8 @@ def get_first_availability(
 
 @Profiling.measure("maiia_slot")
 def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) -> Optional[str]:
+    if not MAIIA_ENABLED:
+        return None
     url = request.get_url()
     start_date = request.get_start_date()
     url_query = parse_qs(urlparse.urlparse(url).query)
@@ -162,14 +187,14 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
         return None
     center_id = url_query["centerid"][0]
 
-    reasons = get_reasons(center_id, client=client)
+    reasons = get_reasons(center_id, client=client, request=request)
     if not reasons:
         return None
 
     first_availability, slots_count, appointment_schedules = get_first_availability(
-        center_id, start_date, reasons, client=client
+        center_id, start_date, reasons, client=client, request=request
     )
-    if first_availability == None:
+    if first_availability is None:
         return None
 
     for reason in reasons:
@@ -181,9 +206,12 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
 
 
 def centre_iterator():
+    if not MAIIA_ENABLED:
+        return None
     try:
-        center_path = "data/output/maiia_centers.json"
-        url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"
+        center_path = MAIIA_SCRAPER.get("result_path")
+        data_auto = get_config().get("data-auto", {}).get("base_url")
+        url = f"{data_auto}{center_path}"
         response = requests.get(url)
         response.raise_for_status()
         data = response.json()

@@ -1,0 +1,331 @@
+{
+  "data-auto": {
+    "base_url": "https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/"
+  },
+  "inputs": {
+    "centers_gouv": "https://www.data.gouv.fr/fr/datasets/r/5cb21a85-b0b0-4a65-a249-806a040ec372",
+    "rdv_gouv": "https://www.data.gouv.fr/fr/datasets/r/b7bd49cd-904c-4c5d-b60f-018b51df9b0e",
+    "departements": "data/input/departements-france.csv",
+    "blocklist": "data/input/centers_blocklist.json",
+    "postalcode_to_insee": "data/input/codepostal_to_insee.json",
+    "cedex_to_insee": "data/input/cedex_to_insee.json",
+    "insee_to_postalcode_and_dep": "data/input/insee_to_codepostal_and_code_departement.json",
+    "last_scans": "https://vitemadose.gitlab.io/vitemadose/info_centres.json",
+    "dep_pop": "https://raw.githubusercontent.com/rozierguillaume/covid-19/master/data/france/dep-pop.csv",
+    "map": "data/input/map.svg"
+  },
+  "outputs": {
+    "stats": {
+      "data-auto": "https://vitemadose.gitlab.io/vitemadose/",
+      "chronodoses": "data/output/stats_chronodoses.json",
+      "by_date": "stats_by_date.json",
+      "by_date_dep": "stats_by_date_dep.json",
+      "by_vaccine_type": "data/output/stats_by_vaccine.json",
+      "center_types": "stats_center_types.json",
+      "global": "stats.json"
+    },
+    "last_scans": "data/output/info_centres.json"
+  },
+  "scrape": {
+    "pool_size": 50,
+    "blocked_calls_threshold": 10
+  },
+  "vaccines": {
+    "Pfizer-BioNTech": ["pfizer", "biontech"],
+    "Moderna": ["moderna"],
+    "ARNm": ["arn", "arnm", "arn-m", "arn m"],
+    "AstraZeneca": ["astrazeneca", "astra-zeneca", "astra zeneca", "az"],
+    "Janssen": [
+        "janssen",
+        "jansen",
+        "jansenn",
+        "jannsen",
+        "jenssen",
+        "jensen",
+        "jonson",
+        "johnson",
+        "johnnson",
+        "j&j"
+    ]
+  },
+  "appointment_split_days": [
+    1,
+    2,
+    7,
+    28,
+    49
+  ],
+  "chronodoses": {
+    "vaccine": [
+      "ARNm",
+      "Pfizer-BioNTech",
+      "Moderna"
+    ],
+    "interval": 2
+  },
+  "excluded_gouv_platforms": [
+    "doctolib",
+    "maiia"
+  ],
+  "reserved_centers": [
+    "réservé",
+    "reserve",
+    "professionnel"
+  ],
+  "platforms": {
+    "doctolib": {
+      "enabled": true,
+      "timeout": 30,
+      "recognized_urls": [
+        "https://partners.doctolib.fr",
+        "https://www.doctolib.fr"
+      ],
+      "build_url": "https://www.doctolib.fr{url_path}?pid={place_id}",
+      "api": {
+        "booking": "https://partners.doctolib.fr/booking/{centre}.json",
+        "slots": "https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={limit}",
+        "scraper": "http://www.doctolib.fr/vaccination-covid-19/france.json?page={0}",
+        "scraper_dep": "http://www.doctolib.fr/vaccination-covid-19/{0}.json?page={1}"
+      },
+      "request_sleep": 0.1,
+      "pagination": {
+        "pages": 4,
+        "days": 7
+      },
+      "filters": {
+        "appointment_reason": [
+          "1 ere injection",
+          "1 ère injection",
+          "1er injection",
+          "1ere dose",
+          "1ere injection",
+          "1ère injection",
+          "1re injection",
+          "vaccination",
+          "Vaccin COVID-19"
+        ],
+        "appointment_category": [
+          "18 à 54",
+          "55 ans",
+          "70 ans",
+          "astra Zeneca",
+          "femmes enceintes",
+          "injection unique",
+          "janssen",
+          "je ne suis pas professionnel de santé",
+          "je suis un particulier",
+          "non professionnels de santé",
+          "patient",
+          "personnes à très haut risque",
+          "personnes âgées de 60 ans ou plus",
+          "personnes de 60 ans et plus",
+          "personnes de plus de",
+          "pfizer",
+          "public",
+          "vaccination au centre",
+          "vaccination covid",
+          "vaccination pfizer"
+        ]
+      },
+      "center_scraper": {
+        "result_path": "data/output/doctolib-centers.json",
+        "business_days": [
+          "lundi",
+          "mardi",
+          "mercredi",
+          "jeudi",
+          "vendredi",
+          "samedi",
+          "dimanche"
+        ],
+        "center_types": {
+          "pharmacie": "drugstore",
+          "medecin": "general-practitioner",
+          "*": "vaccination-center"
+        },
+        "categories": [
+          "hopital-public",
+          "centre-de-vaccinations-internationales",
+          "centre-de-sante",
+          "pharmacie",
+          "medecin-generaliste",
+          "centre-de-vaccinations-internationales",
+          "centre-examens-de-sante"
+        ],
+        "dep_conversion": {
+          "indre": "departement-indre",
+          "gironde": "departement-gironde",
+          "mayenne": "departement-mayenne",
+          "vienne": "departement-vienne"
+        }
+      }
+    },
+    "keldoc": {
+      "enabled": true,
+      "timeout": 20,
+      "recognized_urls": [
+        "https://vaccination-covid.keldoc.com",
+        "https://keldoc.com"
+      ],
+      "api": {
+        "booking": "https://booking.keldoc.com/api/patients/v2/searches/resource",
+        "motives": "https://booking.keldoc.com/api/patients/v2/clinics/{0}/specialties/{1}/cabinets/{2}/motive_categories",
+        "cabinets": "https://booking.keldoc.com/api/patients/v2/clinics/{0}/specialties/{1}/cabinets",
+        "slots": "https://www.keldoc.com/api/patients/v2/timetables/{0}"
+      },
+      "pagination": {
+        "pages": 4,
+        "days": 4
+      },
+      "filters": {
+        "appointment_speciality": [
+          "Maladies infectieuses",
+          "COVID19 - Vaccination"
+        ],
+        "appointment_skill": [
+          "Centre de vaccination COVID-19"
+        ],
+        "appointment_reason": [
+          "1 er inj",
+          "1 ere inj",
+          "1 ère inj",
+          "1ere dose",
+          "1ère dose",
+          "1ere inj",
+          "1ère inj",
+          "covid19 - vaccination",
+          "inj 1",
+          "inj. 1",
+          "inj1",
+          "1 injection",
+          "première dose",
+          "1° injection",
+          "première injection"
+        ]
+      }
+    },
+    "maiia": {
+      "enabled": true,
+      "timeout": 30,
+      "base_url": "https://www.maiia.com",
+      "recognized_urls": [
+        "https://www.maiia.com"
+      ],
+      "api": {
+        "scraper": "https://www.maiia.com/api/pat-public/hcd?distanceMax=10000&AllVaccinationPlaces=true&speciality.shortName={speciality}",
+        "slots": "https://www.maiia.com/api/pat-public/availabilities?centerId={center_id}&consultationReasonName={consultation_reason_name}&from={start_date}&to={end_date}",
+        "next_slot": "https://www.maiia.com/api/pat-public/availability-closests?centerId={center_id}&consultationReasonName={consultation_reason_name}&from={start_date}",
+        "motives": "https://www.maiia.com/api/pat-public/consultation-reason-hcd?rootCenterId={center_id}"
+      },
+      "center_scraper": {
+        "centers_per_page": 100,
+        "result_path": "data/output/maiia_centers.json",
+        "categories": [
+          "centre-de-vaccination",
+          "pharmacie",
+          "centre-hospitalier-(ch)"
+        ],
+        "specialities": [
+          "VAC01"
+        ],
+        "excluded_ids": [
+          "603e4fae8c512e753fc49ba1"
+        ],
+        "excluded_names": [
+          "test",
+          "antigenique",
+          "antigénique"
+        ],
+        "business_days": {
+          "Lundi": "MONDAY",
+          "Mardi": "TUESDAY",
+          "Mercredi": "WEDNESDAY",
+          "Jeudi": "THURSDAY",
+          "Vendredi": "FRIDAY",
+          "Samedi": "SATURDAY",
+          "Dimanche": "SUNDAY"
+        }
+      },
+      "filters": {
+        "injection_type": [
+          "FIRST"
+        ]
+      },
+      "calendar_limit": 50
+    },
+    "mapharma": {
+      "enabled": true,
+      "timeout": 30,
+      "recognized_urls": [
+        "https://mapharma.net"
+      ],
+      "api": {
+        "opendata": "https://mapharma.net/opendata/rdv",
+        "opendata_fallback": "https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/mapharma_open_data.json",
+        "slots": "https://mapharma.net/api/public/calendar/{campagneId}/{start_date}/{optionId}"
+      },
+      "headers": {
+        "referer": "https://mapharma.net/"
+      },
+      "paths": {
+        "opendata": "data/output/mapharma_open_data.json",
+        "valid_campaigns": "data/input/mapharma_campagnes_valides.json",
+        "invalid_campaigns": "data/input/mapharma_campagnes_inconnues.json"
+      },
+      "slot_limit": 50,
+      "business_days": [
+        "lundi",
+        "mardi",
+        "mercredi",
+        "jeudi",
+        "vendredi",
+        "samedi",
+        "dimanche"
+      ],
+      "filters": {
+        "valid_campaigns": [
+          "vaccination covid",
+          "covid 1ère injection"
+        ],
+        "invalid_campaigns": [
+          "test antigenique",
+          "test antigénique",
+          "test sérologique",
+          "pilulier",
+          "diététique",
+          "nutrition"
+        ]
+      }
+    },
+    "ordoclic": {
+      "enabled": true,
+      "timeout": 30,
+      "recognized_urls": [
+        "https://app.ordoclic.fr"
+      ],
+      "build_url": "https://app.ordoclic.fr/app/pharmacie/{slug}",
+      "api": {
+        "scraper": "https://api.ordoclic.fr/v1/public/search",
+        "motives": "https://api.ordoclic.fr/v1/solar/entities/{entityId}/reasons",
+        "slots": "https://api.ordoclic.fr/v1/solar/slots/availableSlots",
+        "profile_professionals": "https://api.ordoclic.fr/v1/professionals/profile/{slug}",
+        "profile_public_entities": "https://api.ordoclic.fr/v1/public/entities/profile/{slug}"
+      },
+      "filters": {
+        "valid_injections": [
+          1
+        ]
+      },
+      "scraper_payload": {
+        "page": "1",
+        "per_page": "10000",
+        "in.isPublicProfile": "true",
+        "in.isCovidVaccineSupported": "true",
+        "or.covidOnlineBookingAvailabilities.vaccineAstraZeneca1": "true",
+        "or.covidOnlineBookingAvailabilities.vaccineJanssen1": "true",
+        "or.covidOnlineBookingAvailabilities.vaccinePfizer1": "true",
+        "or.covidOnlineBookingAvailabilities.vaccineModerna1": "true"
+      }
+    }
+  }
+}

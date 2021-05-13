@@ -9,7 +9,7 @@ def main():  # pragma: no cover
     parser = argparse.ArgumentParser()
     parser.add_argument("--platform", "-p", help="scrape platform. (eg: doctolib,keldoc or all)")
     parser.add_argument("--url", "-u", action="append", help="scrape one url, can be repeated")
-    parser.add_argument("--url-file", type=argparse.FileType("r"),  help="scrape urls listed in file (one per line)")
+    parser.add_argument("--url-file", type=argparse.FileType("r"), help="scrape urls listed in file (one per line)")
     parser.add_argument("--merge", "-m", help="merge platform results", action="store_true")
     args = parser.parse_args()
 
@@ -22,9 +22,10 @@ def main():  # pragma: no cover
         scrape_debug(args.url)
         return
     platforms = []
-    if args.platform and args.platform != 'all':
-        platforms = args.platform.split(',')
+    if args.platform and args.platform != "all":
+        platforms = args.platform.split(",")
     scrape(platforms=platforms)
+
 
 if __name__ == "__main__":  # pragma: no cover
     main()

@@ -78,6 +78,20 @@ def test_export_data(tmp_path):
             "appointment_count": 1,
             "internal_id": None,
         },
+        {
+            # Not technically a department, should be in om.json
+            "departement": "975",
+            "nom": "Exemple Saint Pierre et Miquelon",
+            "url": "https://example.com/st-pierre-miquelon",
+            "plateforme": "Doctolib",
+            "prochain_rdv": "2021-05-10T00:00:00",
+            "location": None,
+            "metadata": None,
+            "type": None,
+            "appointment_by_phone_only": False,
+            "appointment_count": 1,
+            "internal_id": None,
+        },
     ]
     centres_cherchés = [dict_to_center_info(center) for center in centres_cherchés_dict]
 
@@ -129,6 +143,7 @@ def test_export_data(tmp_path):
                 "vaccine_type": None,
                 "erreur": None,
                 "last_scan_with_availabilities": None,
+                "request_counts": None
             },
         ],
         "centres_indisponibles": [],
@@ -155,6 +170,7 @@ def test_export_data(tmp_path):
                 "vaccine_type": None,
                 "erreur": None,
                 "last_scan_with_availabilities": None,
+                "request_counts": None
             },
         ],
         "centres_indisponibles": [
@@ -173,6 +189,7 @@ def test_export_data(tmp_path):
                 "vaccine_type": None,
                 "erreur": None,
                 "last_scan_with_availabilities": None,
+                "request_counts": None
             }
         ],
         "last_scrap": [],
@@ -199,8 +216,37 @@ def test_export_data(tmp_path):
                 "vaccine_type": None,
                 "erreur": None,
                 "last_scan_with_availabilities": None,
+                "request_counts": None
             },
         ],
+        "last_scrap": [],
+        "last_updated": "2021-04-04T00:00:00",
+    }
+
+    # outre-mer file should contain St Pierre et Miquelon data
+    content = json.loads((out_dir / "om.json").read_text())
+    assert content == {
+        "version": 1,
+        "centres_disponibles": [
+            {
+                "departement": "om",
+                "nom": "Exemple Saint Pierre et Miquelon",
+                "url": "https://example.com/st-pierre-miquelon",
+                "plateforme": "Doctolib",
+                "prochain_rdv": "2021-05-10T00:00:00",
+                "location": None,
+                "metadata": None,
+                "type": None,
+                "appointment_by_phone_only": False,
+                "appointment_count": 1,
+                "internal_id": None,
+                "vaccine_type": None,
+                "erreur": None,
+                "last_scan_with_availabilities": None,
+                "request_counts": None
+            },
+        ],
+        "centres_indisponibles": [],
         "last_scrap": [],
         "last_updated": "2021-04-04T00:00:00",
     }
@@ -227,7 +273,14 @@ def test_export_data(tmp_path):
             "url": "https://example.com/mediatheque-jacques-gautier",
             "plateforme": "Maiia",
         },
+        {
+            "departement": "om",
+            "nom": "Exemple Saint Pierre et Miquelon",
+            "plateforme": "Doctolib",
+            "url": "https://example.com/st-pierre-miquelon",
+        },
     ]
+
 
 def test_export_reserved_centers(tmp_path):
     centres_cherchés_dict = [
@@ -329,6 +382,7 @@ def test_export_data_when_blocked(tmp_path):
                 "appointment_by_phone_only": False,
                 "erreur": "ERREUR DE SCRAPPING (Doctolib): Doctolib bloque nos appels: 403 https://example.com/hopital-magique",
                 "last_scan_with_availabilities": None,
+                "request_counts": None
             }
         ],
         "doctolib_bloqué": True,
@@ -354,6 +408,7 @@ def test_export_data_when_blocked(tmp_path):
                 "vaccine_type": None,
                 "erreur": None,
                 "last_scan_with_availabilities": None,
+                "request_counts": None
             },
         ],
         "centres_indisponibles": [],

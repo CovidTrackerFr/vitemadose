@@ -10,7 +10,8 @@ from scraper.pattern.center_info import convert_csv_data_to_center_info, CenterI
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from scraper.profiler import Profiling
-from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
+from utils.vmd_config import get_conf_platform
+from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug, log_requests, log_platform_requests
 from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
@@ -44,7 +45,11 @@ def scrape_debug(urls):  # pragma: no cover
             logger.exception(f"erreur lors du traitement")
         logger.info(f'{result.platform!s:16} {result.next_availability or ""!s:32}')
         if result.request.appointment_count:
-            logger.debug(f'appointments: {result.request.appointment_count}:\n{pformat(result.request.appointment_schedules)}')
+            logger.debug(
+                f"appointments: {result.request.appointment_count}:\n{result.request.appointment_schedules}"
+            )
+        log_requests(result.request)
+
 
 
 def scrape(platforms=None) -> None:  # pragma: no cover
@@ -57,6 +62,9 @@ def scrape(platforms=None) -> None:  # pragma: no cover
         centres_cherchés = pool.imap_unordered(cherche_prochain_rdv_dans_centre, centre_iterator_proportion, 1)
 
         centres_cherchés = get_last_scans(centres_cherchés)
+
+        log_platform_requests(centres_cherchés)
+
         if platforms:
             for platform in platforms:
                 compte_centres, compte_centres_avec_dispo, compte_bloqués = export_pool(centres_cherchés, platform)
@@ -80,8 +88,8 @@ def scrape(platforms=None) -> None:  # pragma: no cover
                     "Notre IP a été bloquée par le CDN Doctolib plus de 10 fois. Pour éviter de pousser des données erronées, on s'arrête ici"
                 )
                 exit(code=2)
-
     logger.info(profiler.print_summary())
+
 
 def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:  # pragma: no cover
     center_data = convert_csv_data_to_center_info(centre)
@@ -124,24 +132,20 @@ def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:  # pragma: no 
 def get_default_fetch_map():
     return {
         "Doctolib": {
-            "urls": ["https://partners.doctolib.fr", "https://www.doctolib.fr"],
+            "urls": get_conf_platform("doctolib").get("recognized_urls", []),
             "scraper_ptr": doctolib_fetch_slots,
         },
         "Keldoc": {
-            "urls": ["https://vaccination-covid.keldoc.com", "https://keldoc.com"],
+            "urls": get_conf_platform("keldoc").get("recognized_urls", []),
             "scraper_ptr": keldoc_fetch_slots,
         },
-        "Maiia": {"urls": ["https://www.maiia.com"], "scraper_ptr": maiia_fetch_slots},
+        "Maiia": {"urls": get_conf_platform("maiia").get("recognized_urls", []), "scraper_ptr": maiia_fetch_slots},
         "Mapharma": {
-            "urls": [
-                "https://mapharma.net/",
-            ],
+            "urls": get_conf_platform("mapharma").get("recognized_urls", []),
             "scraper_ptr": mapharma_fetch_slots,
         },
         "Ordoclic": {
-            "urls": [
-                "https://app.ordoclic.fr/",
-            ],
+            "urls": get_conf_platform("ordoclic").get("recognized_urls", []),
             "scraper_ptr": ordoclic_fetch_slots,
         },
     }
@@ -163,7 +167,7 @@ def get_center_platform(center_url: str, fetch_map: dict = None):
 
 
 @Profiling.measure("Any_slot")
-def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None):
+def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None) -> ScraperResult:
     if fetch_map is None:
         # Map platform to implementation.
         # May be overridden for unit testing purposes.
@@ -189,7 +193,7 @@ def centre_iterator(platforms=None):  # pragma: no cover
         mapharma_centre_iterator(),
         maiia_centre_iterator(),
         doctolib_center_iterator(),
-        gouv_centre_iterator()
+        gouv_centre_iterator(),
     ):
         platform = get_center_platform(center["rdv_site_web"], get_default_fetch_map())
         if platforms and platform and platform.lower() not in platforms:

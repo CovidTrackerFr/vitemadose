@@ -1,8 +1,12 @@
 import json
 from pathlib import Path
 from typing import DefaultDict
-from scraper.doctolib.doctolib_filters import is_category_relevant, is_vaccination_center, is_appointment_relevant, \
-    parse_practitioner_type
+from scraper.doctolib.doctolib_filters import (
+    is_category_relevant,
+    is_vaccination_center,
+    is_appointment_relevant,
+    parse_practitioner_type,
+)
 from scraper.error import BlockedByDoctolibError
 from scraper.pattern.center_info import Vaccine
 
@@ -14,7 +18,7 @@ from scraper.doctolib.doctolib import (
     _find_visit_motive_id,
     _parse_centre,
     _parse_practice_id,
-    DOCTOLIB_SLOT_LIMIT,
+    DOCTOLIB_SLOT_PAGES,
 )
 
 
@@ -46,7 +50,7 @@ def test_blocked_by_doctolib_par_centre():
             "insurance_sector": "public",
             "practice_ids": "4",
             "destroy_temporary": "true",
-            "limit": str(DOCTOLIB_SLOT_LIMIT),
+            "limit": str(DOCTOLIB_SLOT_PAGES),
         }
         path = Path("tests", "fixtures", "doctolib", "basic-availabilities.json")
         return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
@@ -405,9 +409,7 @@ def test_category_relevant():
 
 
 def test_is_vaccination_center():
-    data = {
-        "visit_motives": []
-    }
+    data = {"visit_motives": []}
     assert is_vaccination_center(data)
 
 
@@ -423,12 +425,6 @@ def test_is_appointment_relevant():
 def test_parse_practitioner_type():
     name = parse_practitioner_type("Pharmacie de la Gare", {})
     assert name == DRUG_STORE
-    data = {
-        'profile': {
-            'speciality': {
-                'slug': 'medecin-generaliste'
-            }
-        }
-    }
+    data = {"profile": {"speciality": {"slug": "medecin-generaliste"}}}
     name = parse_practitioner_type("Dr Coq", data)
     assert name == GENERAL_PRACTITIONER

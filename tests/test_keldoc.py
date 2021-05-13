@@ -13,7 +13,8 @@ from scraper.keldoc.keldoc_filters import (
     get_relevant_vaccine_specialties_id,
     filter_vaccine_motives,
     is_appointment_relevant,
-    is_specialty_relevant, parse_keldoc_availability,
+    is_specialty_relevant,
+    parse_keldoc_availability,
 )
 from scraper.pattern.scraper_request import ScraperRequest
 
@@ -48,8 +49,8 @@ def get_test_data(file_name):
 
 def app_center1(request: httpx.Request) -> httpx.Response:
     if (
-            request.url.path
-            == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
+        request.url.path
+        == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
     ):
         return httpx.Response(
             302,
@@ -116,42 +117,12 @@ def test_keldoc_parse_center():
     tz = datetime.timezone(datetime.timedelta(seconds=7200))
     assert date == datetime.datetime(2021, 4, 20, 16, 55, tzinfo=tz)
     assert appointment_schedules == [
-        {
-            'name': 'chronodose',
-            'from': '2020-04-04T00:00:00+02:00',
-            'to': '2020-04-05T23:59:59+02:00',
-            'total': 0
-        },
-        {
-            'name': '1_days',
-            'from': '2020-04-04T00:00:00+02:00',
-            'to': '2020-04-04T23:59:59+02:00',
-            'total': 0
-        },
-        {
-            'name': '2_days',
-            'from': '2020-04-04T00:00:00+02:00',
-            'to': '2020-04-05T23:59:59+02:00',
-            'total': 0
-        },
-        {
-            'name': '7_days',
-            'from': '2020-04-04T00:00:00+02:00',
-            'to': '2020-04-10T23:59:59+02:00',
-            'total': 0
-        },
-        {
-            'name': '28_days',
-            'from': '2020-04-04T00:00:00+02:00',
-            'to': '2020-05-01T23:59:59+02:00',
-            'total': 0
-        },
-        {
-            'name': '49_days',
-            'from': '2020-04-04T00:00:00+02:00',
-            'to': '2020-05-22T23:59:59+02:00',
-            'total': 0
-        }
+        {"name": "chronodose", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-05T23:59:59+02:00", "total": 0},
+        {"name": "1_days", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-04T23:59:59+02:00", "total": 0},
+        {"name": "2_days", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-05T23:59:59+02:00", "total": 0},
+        {"name": "7_days", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-10T23:59:59+02:00", "total": 0},
+        {"name": "28_days", "from": "2020-04-04T00:00:00+02:00", "to": "2020-05-01T23:59:59+02:00", "total": 0},
+        {"name": "49_days", "from": "2020-04-04T00:00:00+02:00", "to": "2020-05-22T23:59:59+02:00", "total": 0},
     ]
 
 
@@ -230,11 +201,11 @@ def test_keldoc_scrape():
 
     date = fetch_slots(request)
     # When it's already killed
-    if keldoc.KELDOC_KILL_SWITCH:
+    if not keldoc.KELDOC_ENABLED:
         assert date is None
     else:
         assert date == "2021-04-20T16:55:00.000000+0200"
-    keldoc.KELDOC_KILL_SWITCH = True
+    keldoc.KELDOC_ENABLED = False
     test_killswitch = fetch_slots(request)
     assert not test_killswitch
 
@@ -245,13 +216,14 @@ def test_keldoc_scrape_nodate():
         "-bretagne-sud-lorient-hopital-du-scorff?specialty=144 "
     )
 
-    keldoc.KELDOC_KILL_SWITCH = False
+    keldoc.KELDOC_ENABLED = True
+
     def app_center2(request: httpx.Request) -> httpx.Response:
-        if 'timetables/' in request.url.path:
+        if "timetables/" in request.url.path:
             return httpx.Response(200, json={})
         if (
-                request.url.path
-                == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
+            request.url.path
+            == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
         ):
             return httpx.Response(
                 302,
@@ -263,6 +235,7 @@ def test_keldoc_scrape_nodate():
             if request.url.path == path:
                 return httpx.Response(200, json=get_test_data(CENTER1_KELDOC[path]))
         return httpx.Response(200, json={})
+
     request = ScraperRequest(center1_url, "2099-12-12")
     keldoc.session = httpx.Client(transport=httpx.MockTransport(app_center2))
 
@@ -272,9 +245,7 @@ def test_keldoc_scrape_nodate():
 
 def test_keldoc_parse_simple():
     appointments = []
-    data = {
-        "date": "2021-04-20T16:55:00.000000+0200"
-    }
+    data = {"date": "2021-04-20T16:55:00.000000+0200"}
     availability, new_count = parse_keldoc_availability(data, appointments)
     assert availability.isoformat() == "2021-04-20T16:55:00+02:00"
 
@@ -284,21 +255,11 @@ def test_keldoc_parse_complex():
     data = {
         "availabilities": {
             "2021-04-20": [
-                {
-                    "start_time": "2021-04-20T16:53:00.000000+0200"
-                },
-                {
-                    "start_time": "2021-04-20T16:50:00.000000+0200"
-                },
-                {
-                    "start_time": "2021-04-20T18:59:59.000000+0200"
-                }
+                {"start_time": "2021-04-20T16:53:00.000000+0200"},
+                {"start_time": "2021-04-20T16:50:00.000000+0200"},
+                {"start_time": "2021-04-20T18:59:59.000000+0200"},
             ],
-            "2021-04-21": [
-                {
-                    "start_time": "2021-04-21T08:12:12.000000+0200"
-                }
-            ]
+            "2021-04-21": [{"start_time": "2021-04-21T08:12:12.000000+0200"}],
         }
     }
     availability, new_count = parse_keldoc_availability(data, appointments)
@@ -313,27 +274,13 @@ def test_keldoc_parse_complex():
             "2021-04-16": [],
             "2021-04-17": [],
             "2021-04-18": [],
-            "2021-04-19": [
-                {
-                    "agenda_id": None
-                }
-            ],
+            "2021-04-19": [{"agenda_id": None}],
             "2021-04-20": [
-                {
-                    "start_time": "2021-04-20T16:53:00.000000+0200"
-                },
-                {
-                    "start_time": "2021-04-20T16:50:00.000000+0200"
-                },
-                {
-                    "start_time": "2021-04-20T18:59:59.000000+0200"
-                }
+                {"start_time": "2021-04-20T16:53:00.000000+0200"},
+                {"start_time": "2021-04-20T16:50:00.000000+0200"},
+                {"start_time": "2021-04-20T18:59:59.000000+0200"},
             ],
-            "2021-04-21": [
-                {
-                    "start_time": "2021-04-21T08:12:12.000000+0200"
-                }
-            ]
+            "2021-04-21": [{"start_time": "2021-04-21T08:12:12.000000+0200"}],
         }
     }
     availability, new_count = parse_keldoc_availability(data, appointments)
@@ -342,11 +289,5 @@ def test_keldoc_parse_complex():
 
 def test_null_motives():
     client = DEFAULT_CLIENT
-    motives = filter_vaccine_motives(
-        client,
-        4233,
-        1,
-        None,
-        None
-    )
+    motives = filter_vaccine_motives(client, 4233, 1, None, None)
     assert not motives

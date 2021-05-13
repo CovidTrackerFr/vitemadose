@@ -5,25 +5,17 @@ from httpx import TimeoutException
 
 from scraper.keldoc.keldoc_routes import API_KELDOC_MOTIVES
 from scraper.pattern.center_info import get_vaccine_name
+from scraper.pattern.scraper_request import ScraperRequest
+from utils.vmd_config import get_conf_platform
 
-KELDOC_COVID_SPECIALTIES = ["Maladies infectieuses"]
+KELDOC_CONF = get_conf_platform("keldoc")
+KELDOC_FILTERS = KELDOC_CONF.get("filters", {})
 
-KELDOC_APPOINTMENT_REASON = [
-    "1 er inj",
-    "1 ere inj",
-    "1 ère inj",
-    "1ere dose",
-    "1ère dose",
-    "1ere inj",
-    "1ère inj",
-    "covid19 - vaccination",
-    "inj 1",
-    "inj. 1",
-    "inj1",
-    "première injection",
-]
+KELDOC_COVID_SPECIALTIES = KELDOC_FILTERS.get("appointment_speciality", [])
 
-KELDOC_COVID_SKILLS = ["Centre de vaccination COVID-19"]
+KELDOC_APPOINTMENT_REASON = KELDOC_FILTERS.get("appointment_reason", [])
+
+KELDOC_COVID_SKILLS = KELDOC_FILTERS.get("appointment_skill", [])
 
 
 def parse_keldoc_availability(availability_data, appointments):
@@ -58,7 +50,8 @@ def get_relevant_vaccine_specialties_id(specialties: dict) -> list:
     return [specialty_data.get("id") for specialty_data in specialties if is_specialty_relevant(specialty_data)]
 
 
-def filter_vaccine_motives(session, selected_cabinet, id, vaccine_specialties, vaccine_cabinets):
+def filter_vaccine_motives(session, selected_cabinet, id, vaccine_specialties, vaccine_cabinets,
+                           request: ScraperRequest = None):
     if not id or not vaccine_specialties or not vaccine_cabinets:
         return None
 
@@ -69,6 +62,8 @@ def filter_vaccine_motives(session, selected_cabinet, id, vaccine_specialties, v
         for cabinet in vaccine_cabinets:
             if selected_cabinet is not None and cabinet != selected_cabinet:
                 continue
+            if request:
+                request.increase_request_count("motives")
             try:
                 motive_req = session.get(API_KELDOC_MOTIVES.format(id, specialty, cabinet))
             except TimeoutException:
@@ -86,7 +81,7 @@ def filter_vaccine_motives(session, selected_cabinet, id, vaccine_specialties, v
             motive_agendas = [motive_agenda.get("id", None) for motive_agenda in motive.get("agendas", {})]
             vaccine_type = get_vaccine_name(motive_name)
             if vaccine_type is None:
-                vaccine_type = get_vaccine_name(motive_cat.get('name'))
+                vaccine_type = get_vaccine_name(motive_cat.get("name"))
             vaccine_motives.append(
                 {"id": motive.get("id", None), "vaccine_type": vaccine_type, "agendas": motive_agendas}
             )

@@ -9,40 +9,32 @@ from pytz import timezone
 from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
+from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import departementUtils
 from scraper.profiler import Profiling
 
 
 logger = logging.getLogger("scraper")
 
-timeout = httpx.Timeout(15.0, connect=15.0)
+ORDOCLIC_CONF = get_conf_platform("ordoclic")
+ORDOCLIC_API = ORDOCLIC_CONF.get("api", {})
+ORDOCLIC_ENABLED = ORDOCLIC_CONF.get("enabled", False)
+
+timeout = httpx.Timeout(ORDOCLIC_CONF.get("timeout", 25), connect=ORDOCLIC_CONF.get("timeout", 25))
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 insee = {}
 paris_tz = timezone("Europe/Paris")
 
 # Filtre pour le rang d'injection
 # Il faut rajouter 2 à la liste si l'on veut les 2èmes injections
-ORDOCLIC_VALID_INJECTION = [1]
+ORDOCLIC_VALID_INJECTION = ORDOCLIC_CONF.get("filters", {}).get("valid_injections", [])
 
 
 # get all slugs
 def search(client: httpx.Client = DEFAULT_CLIENT):
-    base_url = "https://api.ordoclic.fr/v1/public/search"
-    # toutes les pharmacies
-    # payload = {'page': '1', 'per_page': '10000', 'in.isPublicProfile': 'true'}
-    # toutes les pharmacies faisant des vaccins
-    # payload = {'page': '1', 'per_page': '10000', 'in.isPublicProfile': 'true', 'in.isCovidVaccineSupported': 'true'}
-    # toutes les pharmacies faisant des vaccins avec des calendriers en ligne
-    # payload = {'page': '1', 'per_page': '10000', 'in.isPublicProfile': 'true', 'in.isCovidVaccineSupported': 'true', 'in.covidOnlineBookingAvailabilities.covidInjection1': 'true' }
-    # toutes les pharmacies faisant du Pfizer ou de l'AstraZeneca
-    payload = {
-        "page": "1",
-        "per_page": "10000",
-        "in.isPublicProfile": "true",
-        "in.isCovidVaccineSupported": "true",
-        "or.covidOnlineBookingAvailabilities.Vaccination Pfizer": "true",
-        "or.covidOnlineBookingAvailabilities.Vaccination AstraZeneca": "true",
-    }
+    base_url = ORDOCLIC_API.get("scraper")
+
+    payload = ORDOCLIC_CONF.get("scraper_payload")
     try:
         r = client.get(base_url, params=payload)
         r.raise_for_status()
@@ -55,8 +47,10 @@ def search(client: httpx.Client = DEFAULT_CLIENT):
     return r.json()
 
 
-def get_reasons(entityId, client: httpx.Client = DEFAULT_CLIENT):
-    base_url = f"https://api.ordoclic.fr/v1/solar/entities/{entityId}/reasons"
+def get_reasons(entityId, client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None):
+    base_url = ORDOCLIC_API.get("motives").format(entityId=entityId)
+    if request:
+        request.increase_request_count("motives")
     try:
         r = client.get(base_url)
         r.raise_for_status()
@@ -69,8 +63,9 @@ def get_reasons(entityId, client: httpx.Client = DEFAULT_CLIENT):
     return r.json()
 
 
-def get_slots(entityId, medicalStaffId, reasonId, start_date, end_date, client: httpx.Client = DEFAULT_CLIENT):
-    base_url = "https://api.ordoclic.fr/v1/solar/slots/availableSlots"
+def get_slots(entityId, medicalStaffId, reasonId, start_date, end_date,
+              client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None):
+    base_url = ORDOCLIC_API.get("slots")
     payload = {
         "entityId": entityId,
         "medicalStaffId": medicalStaffId,
@@ -79,6 +74,8 @@ def get_slots(entityId, medicalStaffId, reasonId, start_date, end_date, client: 
         "dateStart": f"{start_date}T23:59:59.000Z",
     }
     headers = {"Content-type": "application/json", "Accept": "text/plain"}
+    if request:
+        request.increase_request_count("slots")
     try:
         r = client.post(base_url, data=json.dumps(payload), headers=headers)
         r.raise_for_status()
@@ -95,9 +92,10 @@ def get_profile(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     slug = request.get_url().rsplit("/", 1)[-1]
     prof = request.get_url().rsplit("/", 2)[-2]
     if prof in ["pharmacien", "medecin"]:  # pragma: no cover
-        base_url = f"https://api.ordoclic.fr/v1/professionals/profile/{slug}"
+        base_url = ORDOCLIC_API.get("profile_professionals").format(slug=slug)
     else:
-        base_url = f"https://api.ordoclic.fr/v1/public/entities/profile/{slug}"
+        base_url = ORDOCLIC_API.get("profile_public_entities").format(slug=slug)
+    request.increase_request_count("booking")
     try:
         r = client.get(base_url)
         r.raise_for_status()
@@ -169,6 +167,8 @@ def parse_ordoclic_slots(request: ScraperRequest, availability_data):
 @Profiling.measure("ordoclic_slot")
 def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     first_availability = None
+    if not ORDOCLIC_ENABLED:
+        return first_availability
     profile = get_profile(request, client)
     if not profile:
         return None
@@ -195,7 +195,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
         medicalStaffId = professional["id"]
         name = professional["fullName"]
         zip = professional["zip"]
-        reasons = get_reasons(entityId)
+        reasons = get_reasons(entityId, request=request)
         for reason in reasons["reasons"]:
             if not is_reason_valid(reason):
                 continue
@@ -203,7 +203,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
             reasonId = reason["id"]
             date_obj = datetime.strptime(request.get_start_date(), "%Y-%m-%d")
             end_date = (date_obj + timedelta(days=50)).strftime("%Y-%m-%d")
-            slots = get_slots(entityId, medicalStaffId, reasonId, request.get_start_date(), end_date, client)
+            slots = get_slots(entityId, medicalStaffId, reasonId, request.get_start_date(), end_date, client, request)
             date = parse_ordoclic_slots(request, slots)
             if date is None:
                 continue
@@ -231,6 +231,9 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
 
 
 def centre_iterator(client: httpx.Client = DEFAULT_CLIENT):
+    if not ORDOCLIC_ENABLED:
+        logger.warning("Ordoclic scrap is disabled in configuration file.")
+        return []
     items = search(client)
     if items is None:
         return []
@@ -242,7 +245,8 @@ def centre_iterator(client: httpx.Client = DEFAULT_CLIENT):
                 centre = {}
                 slug = item["publicProfile"]["slug"]
                 centre["gid"] = item["id"][:8]
-                centre["rdv_site_web"] = f"https://app.ordoclic.fr/app/pharmacie/{slug}"
+                centre["rdv_site_web"] = ORDOCLIC_CONF.get("build_url").format(slug=slug)
+                centre["com_cp"] = item["location"]["zip"]
                 centre["com_insee"] = departementUtils.cp_to_insee(item["location"]["zip"])
                 centre["nom"] = item.get("name")
                 centre["phone_number"] = item.get("phone")

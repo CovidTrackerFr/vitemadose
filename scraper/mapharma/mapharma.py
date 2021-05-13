@@ -15,34 +15,31 @@ from urllib import parse
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
 from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
+from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import departementUtils
 from scraper.profiler import Profiling
 
-MAPHARMA_HEADERS = {
-    "User-Agent": os.environ.get("MAPHARMA_API_KEY", ""),
-}
+MAPHARMA_CONF = get_conf_platform("mapharma")
+MAPHARMA_API = MAPHARMA_CONF.get("api", {})
+MAPHARMA_ENABLED = MAPHARMA_CONF.get("enabled", False)
 
-MAPHARMA_CAMPAGNES_VALIDES = ["vaccination covid", "covid 1ère injection"]
+# timeout = httpx.Timeout(MAPHARMA_CONF.get("timeout", 25), connect=MAPHARMA_CONF.get("timeout", 25))
 
-MAPHARMA_CAMPAGNES_INVALIDES = [
-    "test antigenique",
-    "test antigénique",
-    "test sérologique",
-    "pilulier",
-    "diététique",
-    "nutrition",
-]
+MAPARMA_REFERER = MAPHARMA_CONF.get("headers", {}).get("referer", {})
+MAPHARMA_HEADERS = {"User-Agent": os.environ.get("MAPHARMA_API_KEY", ""), "Referer": MAPARMA_REFERER}
 
-MAPHARMA_OPEN_DATA_FILE = Path("data", "output", "mapharma_open_data.json")
-MAPHARMA_OPEN_DATA_URL = "https://mapharma.net/opendata/rdv"
-MAPHARMA_OPEN_DATA_URL_FALLBACK = (
-    "https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/mapharma_open_data.json"
-)
-MAPHARMA_SLOT_LIMIT = 50
+MAPHARMA_FILTERS = MAPHARMA_CONF.get("filters", {})
+MAPHARMA_CAMPAGNES_VALIDES = MAPHARMA_CONF.get("valid_campaigns", [])
+MAPHARMA_CAMPAGNES_INVALIDES = MAPHARMA_CONF.get("invalid_campaigns", [])
+
+MAPHARMA_PATHS = MAPHARMA_CONF.get("paths", {})
+MAPHARMA_OPEN_DATA_FILE = Path(MAPHARMA_PATHS.get("opendata", ""))
+MAPHARMA_OPEN_DATA_URL = MAPHARMA_API.get("opendata", "")
+MAPHARMA_OPEN_DATA_URL_FALLBACK = MAPHARMA_API.get("opendata_fallback", "")
+MAPHARMA_SLOT_LIMIT = MAPHARMA_CONF.get("slot_limit", 50)
 
 
-timeout = httpx.Timeout(30.0, connect=30.0)
-DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=MAPHARMA_HEADERS)
+DEFAULT_CLIENT = httpx.Client(headers=MAPHARMA_HEADERS)
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
 
@@ -65,10 +62,11 @@ def campagne_to_centre(pharmacy: dict, campagne: dict) -> dict:
     adr_voie = pharmacy.get("adresse")
     adr_cp = pharmacy.get("code_postal")
     adr_nom = pharmacy.get("ville")
+    centre["com_cp"] = adr_cp
     centre["address"] = f"{adr_voie}, {adr_cp} {adr_nom}"
     business_hours = dict()
     horaires = pharmacy.get("horaires", "")
-    days = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+    days = MAPHARMA_CONF.get("business_days", [])
     for day in days:
         for line in horaires.splitlines():
             if day not in line:
@@ -114,7 +112,7 @@ def get_pharmacy_and_campagne(
         with open(opendata_file, "r", encoding="utf8") as f:
             opendata = json.load(f)
     except IOError as ioex:
-        logger.warning("Reading mapharma_open_data.json returned error {ioex}")
+        logger.warning(f"Reading {opendata_file} returned error {ioex}")
     for pharmacy in opendata:
         for campagne in pharmacy["campagnes"]:
             if id_campagne == campagne["id_campagne"] and id_type == campagne["id_type"]:
@@ -122,9 +120,16 @@ def get_pharmacy_and_campagne(
     raise ValueError(f"Unable to find campagne (c={id_campagne}&l={id_type})")
 
 
-def get_slots(campagneId: str, optionId: str, start_date: str, client: httpx.Client = DEFAULT_CLIENT) -> dict:
-    base_url = f"https://mapharma.net/api/public/calendar/{campagneId}/{start_date}/{optionId}"
-    client.headers.update({"referer": "https://mapharma.net/"})
+def get_slots(
+    campagneId: str,
+    optionId: str,
+    start_date: str,
+    client: httpx.Client = DEFAULT_CLIENT,
+    request: ScraperRequest = None,
+) -> dict:
+    base_url = MAPHARMA_API.get("slots").format(campagneId=campagneId, start_date=start_date, optionId=optionId)
+    if request:
+        request.increase_request_count("slots")
     try:
         r = client.get(base_url)
         r.raise_for_status()
@@ -177,7 +182,7 @@ def fetch_slots(
     start_date = date.fromisoformat(request.get_start_date())
     for delta in range(0, MAPHARMA_SLOT_LIMIT, 6):
         new_date = start_date + timedelta(days=delta)
-        slots = get_slots(id_campagne, id_type, new_date.isoformat(), client)
+        slots = get_slots(id_campagne, id_type, new_date.isoformat(), client, request=request)
         for day, day_slot in slots.items():
             if day in day_slots:
                 continue
@@ -233,11 +238,11 @@ def is_campagne_valid(campagne: dict) -> bool:
         return True
     if not campagnes_valides:
         # on charge la liste des campagnes valides (vaccination)
-        with open(Path("data", "input", "mapharma_campagnes_valides.json"), "r", encoding="utf8") as f:
+        with open(Path(MAPHARMA_PATHS.get("valid_campaigns")), "r", encoding="utf8") as f:
             campagnes_valides = json.load(f)
     if not campagnes_inconnues:
         # on charge la liste des campagnes non valides (tests, ...)
-        with open(Path("data", "output", "mapharma_campagnes_inconnues.json"), "r", encoding="utf8") as f:
+        with open(Path(MAPHARMA_PATHS.get("invalid_campaigns")), "r", encoding="utf8") as f:
             campagnes_inconnues = json.load(f)
     for campagne_valide in campagnes_valides:
         if campagne.get("url") == campagne_valide.get("url"):
@@ -270,5 +275,5 @@ def centre_iterator():
             centre = campagne_to_centre(pharmacy, campagne)
             yield centre
     # on sauvegarde la liste des campagnes inconnues pour review
-    with open(Path("data", "output", "mapharma_campagnes_inconnues.json"), "w", encoding="utf8") as f:
+    with open(Path(MAPHARMA_PATHS.get("invalid_campaigns")), "w", encoding="utf8") as f:
         json.dump(campagnes_inconnues, f, indent=2)

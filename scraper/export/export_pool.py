@@ -93,9 +93,7 @@ def export_pool(centres_cherchés: Iterator[CenterInfo], platform: str, outpath_
                 global_data["doctolib_bloqué"] = True
                 bloqués_doctolib += 1
 
-    global_data["centres_disponibles"] = sorted(
-        deduplicates_names(global_data["centres_disponibles"]), key=sort_center
-    )
+    global_data["centres_disponibles"] = sorted(deduplicates_names(global_data["centres_disponibles"]), key=sort_center)
     global_data["centres_indisponibles"] = deduplicates_names(global_data["centres_indisponibles"])
     outpath = outpath_format.format(platform)
     with open(outpath, "w") as info_centres:

@@ -4,6 +4,7 @@ from scraper.pattern.scraper_result import (
     GENERAL_PRACTITIONER,
     VACCINATION_CENTER,
 )
+from utils.vmd_config import get_conf_platform, get_conf_inputs
 from utils.vmd_utils import departementUtils, format_phone_number
 from utils.vmd_logger import get_logger
 from scraper.doctolib.doctolib import DOCTOLIB_HEADERS
@@ -18,29 +19,19 @@ import os
 import re
 from unidecode import unidecode
 
-BASE_URL = "http://www.doctolib.fr/vaccination-covid-19/france.json?page={0}"
-BASE_URL_DEPARTEMENT = "http://www.doctolib.fr/vaccination-covid-19/{0}.json?page={1}"
-BOOKING_URL = "https://www.doctolib.fr/booking/{0}.json"
+DOCTOLIB_CONF = get_conf_platform("doctolib")
+DOCTOLIB_API = DOCTOLIB_CONF.get("api", {})
+BASE_URL = DOCTOLIB_API.get("scraper")
+BASE_URL_DEPARTEMENT = DOCTOLIB_API.get("scraper_dep")
+BOOKING_URL = DOCTOLIB_API.get("booking")
 
-CENTER_TYPES = [
-    "hopital-public",
-    "centre-de-vaccinations-internationales",
-    "centre-de-sante",
-    "pharmacie",
-    "medecin-generaliste",
-    "centre-de-vaccinations-internationales",
-    "centre-examens-de-sante",
-]
+SCRAPER_CONF = DOCTOLIB_CONF.get("center_scraper", {})
+CENTER_TYPES = SCRAPER_CONF.get("categories", [])
 
-DOCTOLIB_DOMAINS = ["https://partners.doctolib.fr", "https://www.doctolib.fr"]
+DOCTOLIB_DOMAINS = DOCTOLIB_CONF.get("recognized_urls", [])
 
 
-DOCTOLIB_WEIRD_DEPARTEMENTS = {
-    "indre": "departement-indre",
-    "gironde": "departement-gironde",
-    "mayenne": "departement-mayenne",
-    "vienne": "departement-vienne",
-}
+DOCTOLIB_WEIRD_DEPARTEMENTS = SCRAPER_CONF.get("dep_conversion", {})
 
 
 logger = get_logger()
@@ -66,7 +57,7 @@ def get_departements():
 
     # Guyane uses Maiia and does not have doctolib pages
     NOT_INCLUDED_DEPARTEMENTS = ["Guyane"]
-    with open("data/input/departements-france.csv", encoding="utf8", newline="\n") as csvfile:
+    with open(get_conf_inputs().get("departements"), encoding="utf8", newline="\n") as csvfile:
         reader = csv.DictReader(csvfile)
         departements = [str(row["nom_departement"]) for row in reader]
         [departements.remove(ndep) for ndep in NOT_INCLUDED_DEPARTEMENTS]
@@ -97,22 +88,29 @@ def parse_pages_departement(departement):
     return centers
 
 
-def parse_page_centers_departement(departement, page_id, liste_urls) -> List[dict]:
-    r = requests.get(
-        BASE_URL_DEPARTEMENT.format(doctolib_urlify(departement), page_id),
-        headers=DOCTOLIB_HEADERS,
-    )
-    data = r.json()
-    centers_page = []
+def parse_page_centers_departement(departement: str, page_id: int, liste_unique_urls: List[str]) -> List[dict]:
+    try:
+        r = requests.get(
+            BASE_URL_DEPARTEMENT.format(doctolib_urlify(departement), page_id),
+            headers=DOCTOLIB_HEADERS,
+        )
+        data = r.json()
+    except:
+        logger.warning(f"Cannot reach {BASE_URL_DEPARTEMENT.format(doctolib_urlify(departement), page_id)}")
+        return []
 
+    return get_centers_info(data, liste_unique_urls)
+
+
+def get_centers_info(data: dict, liste_unique_urls: List[str]) -> List[dict]:
+    centers_page = []
     # TODO parallelism can be put here
     for payload in data["data"]["doctors"]:
         # If the "doctor" hasn't already been checked
-        if payload["link"] not in liste_urls:
-            liste_urls.append(payload["link"])
+        if payload["link"] not in liste_unique_urls:
+            liste_unique_urls.append(payload["link"])
             # One "doctor" can have multiple places, hence center_from_doctor_dict returns a list
             centers_page += center_from_doctor_dict(payload)
-
     return centers_page
 
 
@@ -154,11 +152,12 @@ def center_from_doctor_dict(doctor_dict) -> dict:
         "lat_coor1": latitude,
         "type": _type,
         "com_insee": departementUtils.cp_to_insee(code_postal),
+        "com_cp": code_postal,
     }
 
     for info_center in dict_infos_centers_page:
         info_center["rdv_site_web"] = f"https://www.doctolib.fr{url_path}?pid={info_center['place_id']}"
-        liste_centres.append({**info_center, **dict_infos_browse_page})
+        liste_centres.append({**dict_infos_browse_page, **info_center})
 
     return liste_centres
 
@@ -174,7 +173,7 @@ def get_coordinates(doctor_dict):
 
 
 def get_dict_infos_center_page(url_path: str) -> dict:
-    internal_api_url = BOOKING_URL.format(parse.urlsplit(url_path).path.split("/")[-1])
+    internal_api_url = BOOKING_URL.format(centre=parse.urlsplit(url_path).path.split("/")[-1])
     logger.info(f"> Parsing {internal_api_url}")
     liste_infos_page = []
 
@@ -193,10 +192,14 @@ def get_dict_infos_center_page(url_path: str) -> dict:
         # Parse place location
         infos_page["gid"] = "d{0}".format(output.get("profile", {}).get("id", ""))
         infos_page["place_id"] = place["id"]
+        infos_page["nom"] = output.get("profile", {}).get("name_with_title", "")
+        infos_page["ville"] = place.get("city", "")
         infos_page["address"] = place["full_address"]
         infos_page["long_coor1"] = place.get("longitude")
         infos_page["lat_coor1"] = place.get("latitude")
-        infos_page["com_insee"] = departementUtils.cp_to_insee(place["zipcode"].replace(" ", "").strip())
+        cp = place["zipcode"].replace(" ", "").strip()
+        infos_page["com_cp"] = cp
+        infos_page["com_insee"] = departementUtils.cp_to_insee(cp)
 
         # Parse landline number
         if place.get("landline_number"):
@@ -220,7 +223,7 @@ def get_dict_infos_center_page(url_path: str) -> dict:
 def parse_doctolib_business_hours(place) -> dict:
     # Opening hours
     business_hours = dict()
-    keys = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+    keys = SCRAPER_CONF.get("business_days", [])
     if not place["opening_hours"]:
         return None
 
@@ -240,11 +243,11 @@ def parse_doctolib_business_hours(place) -> dict:
 
 
 def center_type(url_path: str, nom: str) -> str:
-    if "pharmacie" in nom.lower() or "pharmacie" in url_path:
-        return DRUG_STORE
-    if "medecin" in url_path or "medecin" in nom.lower():
-        return GENERAL_PRACTITIONER
-    return VACCINATION_CENTER
+    ctypes = SCRAPER_CONF.get("center_types", [])
+    for key in ctypes:
+        if key in nom.lower() or key in url_path:
+            return ctypes[key]
+    return ctypes.get("*", VACCINATION_CENTER)
 
 
 def center_reducer(center: dict) -> dict:
@@ -272,9 +275,13 @@ def center_reducer(center: dict) -> dict:
 
 
 if __name__ == "__main__":  # pragma: no cover
-    centers = parse_doctolib_centers()
-    path_out = "data/output/doctolib-centers.json"
-    logger.info(f"Found {len(centers)} centers on Doctolib")
-    logger.info(f"> Writing them on {path_out}")
-    with open(path_out, "w") as f:
-        f.write(json.dumps(centers, indent=2))
+    if DOCTOLIB_CONF.get("enabled", False):
+        centers = parse_doctolib_centers()
+        path_out = SCRAPER_CONF.get("result_path")
+        logger.info(f"Found {len(centers)} centers on Doctolib")
+        logger.info(f"> Writing them on {path_out}")
+        with open(path_out, "w") as f:
+            f.write(json.dumps(centers, indent=2))
+    else:
+        logger.error(f"Doctolib scraper is disabled in configuration file.")
+        exit(1)

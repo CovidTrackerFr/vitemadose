@@ -152,10 +152,25 @@
             "covidOnlineBookingAvailabilities": {
               "type": "object",
               "properties": {
-                "Vaccination AstraZeneca": {
+                "vaccineAstraZeneca1": {
                   "type": "boolean"
                 },
-                "Vaccination Pfizer": {
+                "vaccineAstraZeneca2": {
+                  "type": "boolean"
+                },
+                "vaccineJanssen1": {
+                  "type": "boolean"
+                },
+                "vaccinePfizer1": {
+                  "type": "boolean"
+                },
+                "vaccinePfizer2": {
+                  "type": "boolean"
+                },
+                "vaccineModerna1": {
+                  "type": "boolean"
+                },
+                "vaccineModerna2": {
                   "type": "boolean"
                 },
                 "antigenic": {
@@ -163,8 +178,10 @@
                 }
               },
               "required": [
-                "Vaccination AstraZeneca",
-                "Vaccination Pfizer",
+                "vaccineAstraZeneca1",
+                "vaccineJanssen1",
+                "vaccinePfizer1",
+                "vaccineModerna1",
                 "antigenic"
               ]
             }
