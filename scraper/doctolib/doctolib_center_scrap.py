@@ -88,22 +88,29 @@ def parse_pages_departement(departement):
     return centers
 
 
-def parse_page_centers_departement(departement, page_id, liste_urls) -> List[dict]:
-    r = requests.get(
-        BASE_URL_DEPARTEMENT.format(doctolib_urlify(departement), page_id),
-        headers=DOCTOLIB_HEADERS,
-    )
-    data = r.json()
-    centers_page = []
+def parse_page_centers_departement(departement: str, page_id: int, liste_unique_urls: List[str]) -> List[dict]:
+    try:
+        r = requests.get(
+            BASE_URL_DEPARTEMENT.format(doctolib_urlify(departement), page_id),
+            headers=DOCTOLIB_HEADERS,
+        )
+        data = r.json()
+    except:
+        logger.warning(f"Cannot reach {BASE_URL_DEPARTEMENT.format(doctolib_urlify(departement), page_id)}")
+        return []
 
+    return get_centers_info(data, liste_unique_urls)
+
+
+def get_centers_info(data: dict, liste_unique_urls: List[str]) -> List[dict]:
+    centers_page = []
     # TODO parallelism can be put here
     for payload in data["data"]["doctors"]:
         # If the "doctor" hasn't already been checked
-        if payload["link"] not in liste_urls:
-            liste_urls.append(payload["link"])
+        if payload["link"] not in liste_unique_urls:
+            liste_unique_urls.append(payload["link"])
             # One "doctor" can have multiple places, hence center_from_doctor_dict returns a list
             centers_page += center_from_doctor_dict(payload)
-
     return centers_page
 
 
@@ -150,7 +157,7 @@ def center_from_doctor_dict(doctor_dict) -> dict:
 
     for info_center in dict_infos_centers_page:
         info_center["rdv_site_web"] = f"https://www.doctolib.fr{url_path}?pid={info_center['place_id']}"
-        liste_centres.append({**info_center, **dict_infos_browse_page})
+        liste_centres.append({**dict_infos_browse_page, **info_center})
 
     return liste_centres
 
@@ -185,6 +192,8 @@ def get_dict_infos_center_page(url_path: str) -> dict:
         # Parse place location
         infos_page["gid"] = "d{0}".format(output.get("profile", {}).get("id", ""))
         infos_page["place_id"] = place["id"]
+        infos_page["nom"] = output.get("profile", {}).get("name_with_title", "")
+        infos_page["ville"] = place.get("city", "")
         infos_page["address"] = place["full_address"]
         infos_page["long_coor1"] = place.get("longitude")
         infos_page["lat_coor1"] = place.get("latitude")
