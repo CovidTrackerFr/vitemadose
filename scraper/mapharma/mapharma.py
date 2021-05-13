@@ -62,6 +62,7 @@ def campagne_to_centre(pharmacy: dict, campagne: dict) -> dict:
     adr_voie = pharmacy.get("adresse")
     adr_cp = pharmacy.get("code_postal")
     adr_nom = pharmacy.get("ville")
+    centre["com_cp"] = adr_cp
     centre["address"] = f"{adr_voie}, {adr_cp} {adr_nom}"
     business_hours = dict()
     horaires = pharmacy.get("horaires", "")

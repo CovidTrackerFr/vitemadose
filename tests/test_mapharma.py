@@ -68,6 +68,7 @@ def test_campaign_to_center():
         "long_coor1": 1.13,
         "lat_coor1": 42.84,
         "com_nom": "Rennes",
+        "com_cp": "35000",
         "address": "1 Rue de la Gare, 35000 Rennes",
         "business_hours": {"lundi": "09:00-12:00", "mardi": "09:00-11:00"},
         "phone_number": "06 06 06 06 06",

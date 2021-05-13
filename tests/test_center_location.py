@@ -36,4 +36,4 @@ def test_location_bad_values():
 def test_location_callback():
     dict = {"long_coor1": "1.231", "lat_coor1": -1.23, "address": "39 Rue de la Fraise, 35000 Foo2bar"}
     center_location = convert_csv_data_to_location(dict)
-    assert center_location.default() == {"longitude": 1.231, "latitude": -1.23, "city": "Foo2bar"}
+    assert center_location.default() == {"longitude": 1.231, "latitude": -1.23, "city": "Foo2bar", "cp": "35000"}

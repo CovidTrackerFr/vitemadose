@@ -246,6 +246,7 @@ def centre_iterator(client: httpx.Client = DEFAULT_CLIENT):
                 slug = item["publicProfile"]["slug"]
                 centre["gid"] = item["id"][:8]
                 centre["rdv_site_web"] = ORDOCLIC_CONF.get("build_url").format(slug=slug)
+                centre["com_cp"] = item["location"]["zip"]
                 centre["com_insee"] = departementUtils.cp_to_insee(item["location"]["zip"])
                 centre["nom"] = item.get("name")
                 centre["phone_number"] = item.get("phone")
