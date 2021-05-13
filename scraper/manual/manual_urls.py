@@ -17,5 +17,5 @@ def manual_urls_iterator() -> Iterator[dict]:
         for row in reader:
             total = total + 1
             # row["rdv_site_web"] = fix_scrap_urls(row["rdv_site_web"])
+            yield row
         logger.info("Nombre d'urls manuel " + str(total))
-        yield row
