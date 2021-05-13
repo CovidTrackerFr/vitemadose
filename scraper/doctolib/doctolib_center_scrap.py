@@ -40,11 +40,13 @@ logger = get_logger()
 def parse_doctolib_centers(page_limit=None) -> List[dict]:
     centers = []
     for departement in get_departements():
+        departement = "jura"
         logger.info(f"[Doctolib centers] Parsing pages of departement {departement} through department SEO link")
         centers_departements = parse_pages_departement(departement)
         if centers_departements == 0:
             raise Exception("No Value found for department {}, crashing")
         centers += centers_departements
+        break
 
     centers = list(filter(is_vaccination_center, centers))  # Filter vaccination centers
     centers = list(map(center_reducer, centers))  # Remove fields irrelevant to the front
@@ -173,7 +175,7 @@ def get_coordinates(doctor_dict):
 
 
 def get_dict_infos_center_page(url_path: str) -> dict:
-    internal_api_url = BOOKING_URL.format(centre=parse.urlsplit(url_path).path.split("/")[-1])
+    internal_api_url = BOOKING_URL.format(centre=parse.urlsplit(url_path).path.split("/")[-1], headers=DOCTOLIB_HEADERS)
     logger.info(f"> Parsing {internal_api_url}")
     liste_infos_page = []
 
