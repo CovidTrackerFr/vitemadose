@@ -174,7 +174,7 @@ def get_dict_infos_center_page(url_path: str) -> dict:
         data.raise_for_status()
         output = data.json().get("data", {})
     except:
-        logger.warning(f"> Could not retrieve data from {internal_api_url}")
+        logger.error(f"> Could not retrieve data from {internal_api_url}")
         return liste_infos_page
 
     # Parse place
