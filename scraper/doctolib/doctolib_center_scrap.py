@@ -175,12 +175,12 @@ def get_coordinates(doctor_dict):
 
 
 def get_dict_infos_center_page(url_path: str) -> dict:
-    internal_api_url = BOOKING_URL.format(centre=parse.urlsplit(url_path).path.split("/")[-1], headers=DOCTOLIB_HEADERS)
+    internal_api_url = BOOKING_URL.format(centre=parse.urlsplit(url_path).path.split("/")[-1])
     logger.info(f"> Parsing {internal_api_url}")
     liste_infos_page = []
 
     try:
-        data = requests.get(internal_api_url)
+        data = requests.get(internal_api_url, headers=DOCTOLIB_HEADERS)
         data.raise_for_status()
         output = data.json().get("data", {})
     except:
