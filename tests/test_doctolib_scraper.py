@@ -5,7 +5,6 @@ from scraper.doctolib.doctolib_center_scrap import (
     center_type,
     parse_doctolib_business_hours,
     get_dict_infos_center_page,
-    parse_page_centers,
     parse_page_centers_departement,
     parse_pages_departement,
     parse_doctolib_centers,
@@ -74,6 +73,7 @@ def test_get_dict_infos_center_page(mock_get):
     with open("tests/fixtures/doctolib/booking-with-doctors.json", "r") as file:
         booking = json.load(file)
 
+    unique_urls = []
     expectedInfosCenterPageWithLandlineNumber = [
         {
             "gid": "d1",
@@ -121,11 +121,11 @@ def test_get_dict_infos_center_page(mock_get):
         },
     ]
     mock_get.return_value.json.return_value = booking
-    mockedResponse = get_dict_infos_center_page("someURL?pid=practice-86656")
+    mockedResponse, unique_urls = get_dict_infos_center_page("someURL?pid=practice-86656", unique_urls)
     assert mockedResponse == expectedInfosCenterPageWithLandlineNumber
 
     mock_get.return_value.json.return_value = {"data": {}}
-    mockedResponse = get_dict_infos_center_page("someURL")
+    mockedResponse, unique_urls = get_dict_infos_center_page("someURL", unique_urls)
     assert mockedResponse == []
 
 
@@ -134,6 +134,7 @@ def test_centers_parsing(mock_get):
     with open("tests/fixtures/doctolib/booking-with-doctors.json", "r") as file:
         doctors = json.load(file)
 
+    unique_urls = []
     expectedCentersPage = [
         {
             "nom": "Hopital test",
@@ -234,12 +235,9 @@ def test_centers_parsing(mock_get):
     ]
 
     mock_get.return_value.json.return_value = doctors
-
-    mockedResponse = parse_page_centers(0)
-    assert mockedResponse == expectedCentersPage
-
-    mockedResponse = parse_page_centers_departement("", 1, [])
-    assert mockedResponse == expectedCentersPage
-
-    mockedResponse = parse_pages_departement("indre")
+    mockedResponse, urls = parse_pages_departement("indre", unique_urls)
+    with open('got.txt', 'w') as p:
+        p.write(json.dumps(mockedResponse, indent=2))
+    with open('expected.txt', 'w') as p:
+        p.write(json.dumps(expectedCentersPage, indent=2))
     assert mockedResponse == expectedCentersPage
