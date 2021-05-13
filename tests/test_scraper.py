@@ -243,6 +243,7 @@ def test_export_data(tmp_path):
                 "vaccine_type": None,
                 "erreur": None,
                 "last_scan_with_availabilities": None,
+                "request_counts": None
             },
         ],
         "centres_indisponibles": [],
