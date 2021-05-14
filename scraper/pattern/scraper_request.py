@@ -13,6 +13,7 @@ class ScraperRequest:
         self.vaccine_type = None
         self.appointment_by_phone_only = False
         self.requests = None
+        self.input_data = None
 
     def update_internal_id(self, internal_id: str) -> Optional[str]:
         self.internal_id = internal_id

@@ -143,7 +143,7 @@ def test_export_data(tmp_path):
                 "vaccine_type": None,
                 "erreur": None,
                 "last_scan_with_availabilities": None,
-                "request_counts": None
+                "request_counts": None,
             },
         ],
         "centres_indisponibles": [],
@@ -170,7 +170,7 @@ def test_export_data(tmp_path):
                 "vaccine_type": None,
                 "erreur": None,
                 "last_scan_with_availabilities": None,
-                "request_counts": None
+                "request_counts": None,
             },
         ],
         "centres_indisponibles": [
@@ -189,7 +189,7 @@ def test_export_data(tmp_path):
                 "vaccine_type": None,
                 "erreur": None,
                 "last_scan_with_availabilities": None,
-                "request_counts": None
+                "request_counts": None,
             }
         ],
         "last_scrap": [],
@@ -216,7 +216,7 @@ def test_export_data(tmp_path):
                 "vaccine_type": None,
                 "erreur": None,
                 "last_scan_with_availabilities": None,
-                "request_counts": None
+                "request_counts": None,
             },
         ],
         "last_scrap": [],
@@ -243,7 +243,7 @@ def test_export_data(tmp_path):
                 "vaccine_type": None,
                 "erreur": None,
                 "last_scan_with_availabilities": None,
-                "request_counts": None
+                "request_counts": None,
             },
         ],
         "centres_indisponibles": [],
@@ -382,7 +382,7 @@ def test_export_data_when_blocked(tmp_path):
                 "appointment_by_phone_only": False,
                 "erreur": "ERREUR DE SCRAPPING (Doctolib): Doctolib bloque nos appels: 403 https://example.com/hopital-magique",
                 "last_scan_with_availabilities": None,
-                "request_counts": None
+                "request_counts": None,
             }
         ],
         "doctolib_bloqué": True,
@@ -408,7 +408,7 @@ def test_export_data_when_blocked(tmp_path):
                 "vaccine_type": None,
                 "erreur": None,
                 "last_scan_with_availabilities": None,
-                "request_counts": None
+                "request_counts": None,
             },
         ],
         "centres_indisponibles": [],

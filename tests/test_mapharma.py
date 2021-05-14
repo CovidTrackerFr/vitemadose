@@ -53,6 +53,7 @@ def test_fetch_slots():
     first_availability = fetch_slots(request, client, opendata_file=TEST_OPEN_DATA_FILE)
     assert first_availability == None
 
+
 def test_campaign_to_center():
     pharma = {
         "code_postal": "35000",
