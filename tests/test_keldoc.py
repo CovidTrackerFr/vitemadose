@@ -195,20 +195,19 @@ def test_keldoc_filters():
 
 
 def test_keldoc_scrape():
-    center1_url = (
-        "https://www.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier"
-        "-bretagne-sud-lorient-hopital-du-scorff?specialty=144 "
-    )
+    center1_url = "https://www.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?specialty=144"
     request = ScraperRequest(center1_url, "2020-04-04")
     keldoc.session = httpx.Client(transport=httpx.MockTransport(app_center1))
 
     date = fetch_slots(request)
+    print(request)
+    print(date)
     # When it's already killed
-    if keldoc.KELDOC_KILL_SWITCH:
+    if not keldoc.KELDOC_ENABLED:
         assert date is None
     else:
         assert date == "2021-04-20T16:55:00.000000+0200"
-    keldoc.KELDOC_KILL_SWITCH = True
+    keldoc.KELDOC_ENABLED = False
     test_killswitch = fetch_slots(request)
     assert not test_killswitch
 
@@ -219,7 +218,7 @@ def test_keldoc_scrape_nodate():
         "-bretagne-sud-lorient-hopital-du-scorff?specialty=144 "
     )
 
-    keldoc.KELDOC_KILL_SWITCH = False
+    keldoc.KELDOC_ENABLED = True
 
     def app_center2(request: httpx.Request) -> httpx.Response:
         if "timetables/" in request.url.path:

@@ -13,7 +13,6 @@ from utils.vmd_config import get_conf_platform
 KELDOC_CONF = get_conf_platform("keldoc")
 timeout = httpx.Timeout(KELDOC_CONF.get("timeout", 25), connect=KELDOC_CONF.get("timeout", 25))
 # change KELDOC_KILL_SWITCH to True to bypass Keldoc scraping
-KELDOC_KILL_SWITCH = False
 KELDOC_ENABLED = KELDOC_CONF.get("enabled", False)
 KELDOC_HEADERS = {
     "User-Agent": os.environ.get("KELDOC_API_KEY", ""),
