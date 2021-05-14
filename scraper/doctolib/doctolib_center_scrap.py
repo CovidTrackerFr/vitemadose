@@ -49,19 +49,19 @@ def parse_doctolib_centers(page_limit=None) -> List[dict]:
     centers = []
     unique_center_urls = []
 
-    pool = multiprocessing.Pool(50)
-    centers = pool.map(run_departement_scrap, get_departements())
+    with multiprocessing.Pool(50) as pool:
+        centers = pool.imap_unordered(run_departement_scrap, get_departements())
 
-    centers = list(filter(is_vaccination_center, centers))  # Filter vaccination centers
-    centers = list(map(center_reducer, centers))  # Remove fields irrelevant to the front
+        centers = list(filter(is_vaccination_center, centers))  # Filter vaccination centers
+        centers = list(map(center_reducer, centers))  # Remove fields irrelevant to the front
 
-    for item in list(centers):
-        if item.get("rdv_site_web") in unique_center_urls:
-            centers.remove(item)
-            continue
-        unique_center_urls.append(item.get("rdv_site_web"))
+        for item in list(centers):
+            if item.get("rdv_site_web") in unique_center_urls:
+                centers.remove(item)
+                continue
+            unique_center_urls.append(item.get("rdv_site_web"))
 
-    return centers
+        return centers
 
 
 def get_departements():
