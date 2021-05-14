@@ -1,3 +1,4 @@
+import multiprocessing
 from time import sleep, time
 from scraper.pattern.scraper_result import (
     DRUG_STORE,
@@ -30,24 +31,26 @@ CENTER_TYPES = SCRAPER_CONF.get("categories", [])
 
 DOCTOLIB_DOMAINS = DOCTOLIB_CONF.get("recognized_urls", [])
 
-
 DOCTOLIB_WEIRD_DEPARTEMENTS = SCRAPER_CONF.get("dep_conversion", {})
-
 
 logger = get_logger()
 booking_requests = {}
+
+
+def run_departement_scrap(departement: str):
+    logger.info(f"[Doctolib centers] Parsing pages of departement {departement} through department SEO link")
+    centers_departements = parse_pages_departement(departement)
+    if centers_departements == 0:
+        raise Exception("No Value found for department {}, crashing")
+    return centers_departements
 
 
 def parse_doctolib_centers(page_limit=None) -> List[dict]:
     centers = []
     unique_center_urls = []
 
-    for departement in get_departements():
-        logger.info(f"[Doctolib centers] Parsing pages of departement {departement} through department SEO link")
-        centers_departements = parse_pages_departement(departement)
-        if centers_departements == 0:
-            raise Exception("No Value found for department {}, crashing")
-        centers += centers_departements
+    pool = multiprocessing.Pool()
+    centers = pool.map(run_departement_scrap, get_departements())
 
     centers = list(filter(is_vaccination_center, centers))  # Filter vaccination centers
     centers = list(map(center_reducer, centers))  # Remove fields irrelevant to the front
@@ -137,7 +140,6 @@ def parse_page_centers(page_id) -> List[dict]:
 
 
 def center_from_doctor_dict(doctor_dict) -> Tuple[dict, bool]:
-
     liste_centres = []
     nom = doctor_dict["name_with_title"]
     sub_addresse = doctor_dict["address"]
@@ -294,6 +296,7 @@ if __name__ == "__main__":  # pragma: no cover
         if len(centers) < 2000:
             # for reference, on 13-05, there were 12k centers
             logger.error(f"[NOT SAVING RESULTS]{len(centers)} does not seem like enough Doctolib centers")
+            exit(1)
         else:
             logger.info(f"> Writing them on {path_out}")
             with open(path_out, "w") as f:
