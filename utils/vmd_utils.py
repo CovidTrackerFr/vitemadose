@@ -2,7 +2,7 @@ import re
 import csv
 import json
 import logging
-from typing import List
+from typing import List, Optional
 from urllib.parse import urlparse, urlencode, urlunparse, parse_qs, unquote
 import datetime as dt
 import pytz
