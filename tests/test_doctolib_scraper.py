@@ -226,7 +226,7 @@ def test_centers_parsing(mock_get):
 
     mock_get.return_value.json.return_value = doctors
 
-    mockedResponse = parse_page_centers_departement("", 1, [])
+    mockedResponse, stop = parse_page_centers_departement("", 1, [])
     assert mockedResponse == expectedCentersPage
 
     mockedResponse = parse_pages_departement("indre")
