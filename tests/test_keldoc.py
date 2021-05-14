@@ -39,7 +39,6 @@ def online_keldoc_test():
     )
 
     slots = fetch_slots(request)
-    print(slots)
 
 
 def get_test_data(file_name):

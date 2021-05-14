@@ -10,7 +10,7 @@ from dateutil.parser import isoparse
 from pathlib import Path
 from urllib import parse as urlparse
 from urllib.parse import quote, parse_qs
-from typing import Optional
+from typing import Optional, Tuple
 
 from scraper.profiler import Profiling
 from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
@@ -136,7 +136,7 @@ def get_first_availability(
     reasons: [dict],
     client: httpx.Client = DEFAULT_CLIENT,
     request: ScraperRequest = None,
-) -> [Optional[dt.datetime], int, dict]:
+) -> Tuple[Optional[dt.datetime], int, dict]:
     date = isoparse(request_date).replace(tzinfo=None)
     start_date = date.isoformat()
     end_date = (date + dt.timedelta(days=MAIIA_DAY_LIMIT)).isoformat()
@@ -164,15 +164,16 @@ def get_first_availability(
                 n_date = (isoparse(start_date) + dt.timedelta(days=n, seconds=-1)).isoformat()
                 counts[f"{n}_days"] += count_slots(slots, start_date, n_date)
             slots_count += len(slots)
+            datenow = dt.datetime.now()
             if get_vaccine_name(consultation_reason["name"]) in CHRONODOSES["Vaccine"]:
-                current_date = (paris_tz.localize(dt.datetime.now() + dt.timedelta(days=0))).isoformat()
-                n_date = (dt.datetime.now() + dt.timedelta(1, seconds=-1)).isoformat()
+                current_date = (paris_tz.localize(datenow + dt.timedelta(days=0))).isoformat()
+                n_date = (datenow + dt.timedelta(days=1, seconds=-1)).isoformat()
                 counts["chronodose"] += count_slots(slots, current_date, n_date)
             if first_availability == None or slot_availability < first_availability:
                 first_availability = slot_availability
-    current_date = (paris_tz.localize(dt.datetime.now() + dt.timedelta(days=0))).isoformat()
+    current_date = (paris_tz.localize(datenow + dt.timedelta(days=0))).isoformat()
     start_date = (paris_tz.localize(date)).isoformat()
-    n_date = (paris_tz.localize(dt.datetime.now() + dt.timedelta(1, seconds=-1))).isoformat()
+    n_date = (paris_tz.localize(datenow + dt.timedelta(days=1, seconds=-1))).isoformat()
     appointment_schedules.append(
         {"name": "chronodose", "from": current_date, "to": n_date, "total": counts["chronodose"]}
     )
