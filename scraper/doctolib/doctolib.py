@@ -3,16 +3,13 @@ import time
 import logging
 import os
 import re
-from datetime import date, timedelta, datetime
+from datetime import timedelta, datetime
 from math import floor
 from typing import Optional, Tuple
 from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 
 import httpx
 import requests
-from collections import Counter
-from collections import defaultdict
-from dateutil.parser import isoparse
 
 from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
 from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
