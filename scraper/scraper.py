@@ -2,11 +2,10 @@ import os
 import traceback
 from collections import deque
 from multiprocessing import Pool
-from pprint import pformat
 from random import random
 
 from scraper.error import ScrapeError
-from scraper.pattern.center_info import convert_csv_data_to_center_info, CenterInfo
+from scraper.pattern.center_info import CenterInfo
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from scraper.profiler import Profiling
@@ -45,11 +44,8 @@ def scrape_debug(urls):  # pragma: no cover
             logger.exception(f"erreur lors du traitement")
         logger.info(f'{result.platform!s:16} {result.next_availability or ""!s:32}')
         if result.request.appointment_count:
-            logger.debug(
-                f"appointments: {result.request.appointment_count}:\n{result.request.appointment_schedules}"
-            )
+            logger.debug(f"appointments: {result.request.appointment_count}:\n{result.request.appointment_schedules}")
         log_requests(result.request)
-
 
 
 def scrape(platforms=None) -> None:  # pragma: no cover
@@ -92,7 +88,7 @@ def scrape(platforms=None) -> None:  # pragma: no cover
 
 
 def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:  # pragma: no cover
-    center_data = convert_csv_data_to_center_info(centre)
+    center_data = CenterInfo.from_csv_data(centre)
     start_date = get_start_date()
     has_error = None
     result = None

@@ -1,17 +1,12 @@
-import datetime as dt
-
-from scraper.pattern.center_location import convert_csv_data_to_location, CenterLocation
+from scraper.pattern.center_location import CenterLocation
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, DRUG_STORE
-from utils.vmd_utils import format_phone_number, get_last_scans
-from .utils import mock_datetime_now
 from scraper.pattern.center_info import (
     CenterInfo,
     convert_csv_address,
     Vaccine,
     convert_csv_business_hours,
     convert_ordoclic_to_center_info,
-    convert_csv_data_to_center_info,
     get_vaccine_name,
     get_vaccine_astrazeneca_minus_55_edgecase,
 )
@@ -147,7 +142,7 @@ def test_convert_ordoclic_second():
         },
         "phone_number": "06 06 06 06 06",
     }
-    center = convert_csv_data_to_center_info(data)
+    center = CenterInfo.from_csv_data(data)
     assert center.nom == "Centre 2"
     assert center.metadata["address"] == "12 Avenue de la ville, 22000 Foobar"
     assert center.metadata["phone_number"] == "+33606060606"
@@ -176,7 +171,7 @@ def test_convert_centerinfo():
         },
     }
 
-    center = convert_csv_data_to_center_info(data)
+    center = CenterInfo.from_csv_data(data)
     assert center.departement == "35"
     assert center.url == "https://site.fr"
     assert center.metadata["address"] == "1 Rue de la Fraise, 75016 Paris"
@@ -215,7 +210,7 @@ def test_convert_centerinfo_invalid():
         },
     }
 
-    center = convert_csv_data_to_center_info(data)
+    center = CenterInfo.from_csv_data(data)
     assert center.departement == ""
     assert center.url == "https://site.fr"
     assert center.metadata["address"] == "1 Rue de la Fraise, 75016 Paris"

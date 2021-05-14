@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from enum import Enum
 from datetime import datetime, timedelta
 from typing import Optional, List
@@ -6,8 +8,7 @@ import pytz
 
 from utils.vmd_config import get_config
 from utils.vmd_utils import departementUtils
-from scraper.pattern.center_location import CenterLocation, convert_csv_data_to_location
-from scraper.pattern.scraper_request import ScraperRequest
+from scraper.pattern.center_location import CenterLocation
 from scraper.pattern.scraper_result import ScraperResult
 
 from utils.vmd_utils import urlify, format_phone_number
@@ -36,6 +37,27 @@ VACCINES_NAMES = {
 }
 
 
+def get_vaccine_name(name: str, fallback: Vaccine = None) -> Vaccine:
+    if not name:
+        return fallback
+    name = name.lower().strip()
+    for vaccine in (Vaccine.ARNM, Vaccine.MODERNA, Vaccine.PFIZER, Vaccine.ASTRAZENECA, Vaccine.JANSSEN):
+        vaccine_names = VACCINES_NAMES[vaccine]
+        for vaccine_name in vaccine_names:
+            if vaccine_name in name:
+                if vaccine == Vaccine.ASTRAZENECA:
+                    return get_vaccine_astrazeneca_minus_55_edgecase(name)
+                return vaccine
+    return fallback
+
+
+def get_vaccine_astrazeneca_minus_55_edgecase(name: str) -> Vaccine:
+    has_minus = "-" in name or "–" in name or "–" in name or "moins" in name
+    if has_minus and "55" in name and "suite" in name:
+        return Vaccine.ARNM
+    return Vaccine.ASTRAZENECA
+
+
 # Schedules array for appointments by interval
 INTERVAL_SPLIT_DAYS = get_config().get("appointment_split_days", [])
 
@@ -45,22 +67,74 @@ CHRONODOSES = {"Vaccine": CHRONODOSE_CONF.get("vaccine", []), "Interval": CHRONO
 
 
 class CenterInfo:
-    def __init__(self, departement: str, nom: str, url: str):
+    def __init__(
+        self,
+        departement: str,
+        nom: str,
+        url: str,
+        location: Optional[CenterLocation] = None,
+        metadata: Optional[dict] = None,
+        plateforme: Optional[str] = None,
+        prochain_rdv: Optional[str] = None,
+        erreur: Optional[str] = None,
+    ):
         self.departement = departement
         self.nom = nom
         self.url = url
-        self.location = None
-        self.metadata = None
-        self.prochain_rdv = None
-        self.plateforme = None
+        self.location = location
+        self.metadata = metadata
+        self.prochain_rdv = prochain_rdv
+        self.plateforme = plateforme
         self.type = None
         self.appointment_count = 0
         self.internal_id = None
         self.vaccine_type: List[Vaccine] = None
         self.appointment_by_phone_only = False
-        self.erreur = None
+        self.erreur = erreur
         self.last_scan_with_availabilities = None
         self.request_counts = None
+
+    @classmethod
+    def from_dict(cls, data: dict) -> CenterInfo:
+        kwargs = {
+            key: value
+            for key, value in data.items()
+            if key in ("departement", "nom", "url", "plateforme", "prochain_rdv", "erreur")
+        }
+        return CenterInfo(**kwargs)
+
+    @classmethod
+    def from_csv_data(cls, data: dict) -> CenterInfo:
+        departement = ""
+        try:
+            departement = departementUtils.to_departement_number(data.get("com_insee"))
+        except ValueError as e:
+            logger.error(
+                f"erreur lors du traitement de la ligne avec le gid {data['gid']}, com_insee={data['com_insee']} : {e}"
+            )
+
+        center = CenterInfo(
+            departement,
+            data.get("nom"),
+            data.get("rdv_site_web"),
+            location=CenterLocation.from_csv_data(data),
+            metadata=cls._metadata_from_csv_data(data),
+        )
+
+        # TODO: Behaviour about particular implementations shouldln’t bubble up to the pattern.
+        if data.get("iterator") == "ordoclic":
+            return convert_ordoclic_to_center_info(data, center)
+
+        return center
+
+    @staticmethod
+    def _metadata_from_csv_data(data: dict) -> dict:
+        metadata = {"address": convert_csv_address(data), "business_hours": convert_csv_business_hours(data)}
+        if data.get("rdv_tel"):
+            metadata.update({"phone_number": format_phone_number(data.get("rdv_tel"))})
+        if data.get("phone_number"):
+            metadata.update({"phone_number": format_phone_number(data.get("phone_number"))})
+        return metadata
 
     def fill_localization(self, location: Optional[CenterLocation]):
         self.location = location
@@ -105,9 +179,7 @@ class CenterInfo:
         return self.prochain_rdv is not None and self.appointment_count > 0
 
 
-def convert_csv_address(data: dict) -> str:
-    if data.get("address", None):
-        return data.get("address")
+def _address_from_data(data: dict) -> str:
     adr_num = data.get("adr_num", "")
     adr_voie = data.get("adr_voie", "")
     adr_cp = data.get("com_cp", "")
@@ -115,22 +187,21 @@ def convert_csv_address(data: dict) -> str:
     return f"{adr_num} {adr_voie}, {adr_cp} {adr_nom}"
 
 
-def convert_csv_business_hours(data: dict) -> str:
-    if data.get("business_hours"):
-        return data.get("business_hours")
-    keys = ["rdv_lundi", "rdv_mardi", "rdv_mercredi", "rdv_jeudi", "rdv_vendredi", "rdv_samedi", "rdv_dimanche"]
-    meta = {}
-
-    for key in data:
-        if key not in keys:
-            continue
-        formatted_key = key.replace("rdv_", "")
-        meta[formatted_key] = data[key]
-    if not meta:
-        return None
-    return meta
+def convert_csv_address(data: dict) -> str:
+    return data.get("address") or _address_from_data(data)
 
 
+def _extract_business_hours(data: dict) -> Optional[dict]:
+    to_extract = [f"rdv_{day}" for day in ("lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche")]
+    extracted = {key.replace("rdv_", ""): value for key, value in data.items() if key in to_extract}
+    return extracted or None
+
+
+def convert_csv_business_hours(data: dict) -> Optional[dict]:
+    return data.get("business_hours") or _extract_business_hours(data)
+
+
+# TODO: This should be in the `ordoclinic` module.
 def convert_ordoclic_to_center_info(data: dict, center: CenterInfo) -> CenterInfo:
     localization = data.get("location")
     coordinates = localization.get("coordinates")
@@ -145,66 +216,4 @@ def convert_ordoclic_to_center_info(data: dict, center: CenterInfo) -> CenterInf
     if len(data.get("phone_number", "")) > 3:
         center.metadata["phone_number"] = format_phone_number(data.get("phone_number"))
     center.metadata["business_hours"] = None
-    return center
-
-
-def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
-    name = data.get("nom", None)
-    departement = ""
-    ville = ""
-    url = data.get("rdv_site_web", None)
-    try:
-        departement = departementUtils.to_departement_number(data.get("com_insee", None))
-    except ValueError as e:
-        logger.error(
-            f"erreur lors du traitement de la ligne avec le gid {data['gid']}, com_insee={data['com_insee']} : {e}"
-        )
-
-    center = CenterInfo(departement, name, url)
-    if data.get("iterator", "") == "ordoclic":
-        return convert_ordoclic_to_center_info(data, center)
-    center.fill_localization(convert_csv_data_to_location(data))
-    center.metadata = dict()
-    center.metadata["address"] = convert_csv_address(data)
-    if data.get("rdv_tel"):
-        center.metadata["phone_number"] = format_phone_number(data.get("rdv_tel"))
-    if data.get("phone_number"):
-        center.metadata["phone_number"] = format_phone_number(data.get("phone_number"))
-    center.metadata["business_hours"] = convert_csv_business_hours(data)
-    return center
-
-
-def get_vaccine_name(name: str, fallback: Vaccine = None) -> Vaccine:
-    if not name:
-        return fallback
-    name = name.lower().strip()
-    for vaccine in (Vaccine.ARNM, Vaccine.MODERNA, Vaccine.PFIZER, Vaccine.ASTRAZENECA, Vaccine.JANSSEN):
-        vaccine_names = VACCINES_NAMES[vaccine]
-        for vaccine_name in vaccine_names:
-            if vaccine_name in name:
-                if vaccine == Vaccine.ASTRAZENECA:
-                    return get_vaccine_astrazeneca_minus_55_edgecase(name)
-                return vaccine
-    return fallback
-
-
-def get_vaccine_astrazeneca_minus_55_edgecase(name: str) -> Vaccine:
-    has_minus = "-" in name or "–" in name or "–" in name or "moins" in name
-    if has_minus and "55" in name and "suite" in name:
-        return Vaccine.ARNM
-    return Vaccine.ASTRAZENECA
-
-
-def dict_to_center_info(data: dict) -> CenterInfo:
-    center = CenterInfo(data.get("departement"), data.get("nom"), data.get("url"))
-    center.plateforme = data.get("plateforme")
-    center.prochain_rdv = data.get("prochain_rdv")
-    center.erreur = data.get("erreur")
-    return center
-
-
-def full_dict_to_center(data: dict) -> CenterInfo:
-    center = CenterInfo("", "", "")
-    for key in data:
-        setattr(center, key, data.get(key))
     return center
