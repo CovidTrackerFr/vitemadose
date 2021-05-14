@@ -162,7 +162,9 @@ def center_from_doctor_dict(doctor_dict) -> Tuple[dict, bool]:
 
     for info_center in dict_infos_centers_page:
         info_center["rdv_site_web"] = f"https://www.doctolib.fr{url_path}?pid={info_center['place_id']}"
-        liste_centres.append({**info_center, **dict_infos_browse_page})
+        # info center overrides the keys found in the SEO page if they are different
+        # This is for when centers have multiple practice-ids which are also centers with different addresses
+        liste_centres.append({**dict_infos_browse_page, **info_center})
 
     stop = False
     if not exact_match:
@@ -209,6 +211,7 @@ def get_dict_infos_center_page(url_path: str) -> dict:
         infos_page["gid"] = "d{0}".format(output.get("profile", {}).get("id", ""))
         infos_page["place_id"] = place["id"]
         infos_page["address"] = place["full_address"]
+        infos_page["ville"] = place["city"]
         infos_page["long_coor1"] = place.get("longitude")
         infos_page["lat_coor1"] = place.get("latitude")
         infos_page["com_insee"] = departementUtils.cp_to_insee(place["zipcode"].replace(" ", "").strip())
