@@ -4,7 +4,7 @@ import time
 from math import floor
 from typing import Optional, Union, Iterable, List
 from urllib.parse import urlsplit, parse_qs
-from datetime import datetime, timedelta
+import datetime as dt
 from dateutil.parser import isoparse
 from pytz import timezone
 import httpx
@@ -140,7 +140,13 @@ class KeldocCenter:
         return True
 
     def get_timetables(
-        self, start_date: datetime, motive_id: str, agenda_ids: List[int], page: int = 1, timetable=None, run: float = 0
+        self,
+        start_date: dt.datetime,
+        motive_id: str,
+        agenda_ids: List[int],
+        page: int = 1,
+        timetable=None,
+        run: float = 0,
     ) -> Iterable[Union[Optional[dict], float]]:
         """
         Get timetables recursively with KELDOC_DAYS_PER_PAGE as the number of days to query.
@@ -156,7 +162,7 @@ class KeldocCenter:
             return timetable, run
         calendar_url = API_KELDOC_CALENDAR.format(motive_id)
 
-        end_date = (start_date + timedelta(days=KELDOC_DAYS_PER_PAGE)).strftime("%Y-%m-%d")
+        end_date = (start_date + dt.timedelta(days=KELDOC_DAYS_PER_PAGE)).strftime("%Y-%m-%d")
         logger.debug(
             f"get_timetables -> start_date: {start_date} end_date: {end_date} "
             f"motive: {motive_id} agenda: {agenda_ids} (page: {page})"
@@ -201,7 +207,7 @@ class KeldocCenter:
             Checks for the presence of the ’availabilities’ attribute, even if it's not supposed to be set
             """
             if "availabilities" not in current_timetable:
-                next_expected_date = start_date + timedelta(days=KELDOC_DAYS_PER_PAGE)
+                next_expected_date = start_date + dt.timedelta(days=KELDOC_DAYS_PER_PAGE)
                 next_fetch_date = isoparse(current_timetable["date"])
                 diff = next_fetch_date.replace(tzinfo=None) - next_expected_date.replace(tzinfo=None)
 
@@ -229,7 +235,7 @@ class KeldocCenter:
         if page >= KELDOC_SLOT_PAGES or run >= KELDOC_SLOT_TIMEOUT:
             return timetable, run
         return self.get_timetables(
-            start_date + timedelta(days=KELDOC_DAYS_PER_PAGE), motive_id, agenda_ids, 1 + page, timetable, run
+            start_date + dt.timedelta(days=KELDOC_DAYS_PER_PAGE), motive_id, agenda_ids, 1 + page, timetable, run
         )
 
     def count_appointements(self, appointments: list, start_date: str, end_date: str) -> int:
@@ -282,12 +288,12 @@ class KeldocCenter:
             if not timetables or "availabilities" not in timetables:
                 continue
         # update appointment_schedules
-        s_date = (paris_tz.localize(isoparse(start_date) + timedelta(days=0))).isoformat()
-        n_date = (
-            paris_tz.localize(isoparse(start_date) + timedelta(days=CHRONODOSES["Interval"], seconds=-1))
-        ).isoformat()
+        datenow = dt.datetime.now()
+        s_date = (paris_tz.localize(datenow + dt.timedelta(days=0))).isoformat()
+        n_date = (paris_tz.localize(datenow + dt.timedelta(days=1, seconds=-1))).isoformat()
         appointment_schedules.append(self.get_appointment_schedule(appointments, s_date, n_date, "chronodose"))
         for n in INTERVAL_SPLIT_DAYS:
-            n_date = (paris_tz.localize(isoparse(start_date) + timedelta(days=n, seconds=-1))).isoformat()
+            s_date = (paris_tz.localize(isoparse(start_date) + dt.timedelta(days=0))).isoformat()
+            n_date = (paris_tz.localize(isoparse(start_date) + dt.timedelta(days=n, seconds=-1))).isoformat()
             appointment_schedules.append(self.get_appointment_schedule(appointments, s_date, n_date, f"{n}_days"))
         return first_availability, len(appointments), appointment_schedules

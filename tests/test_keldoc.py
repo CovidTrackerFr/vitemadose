@@ -2,10 +2,10 @@
 import datetime
 import json
 from pathlib import Path
-
+import datetime as dt
 import httpx
 import pytest
-
+from .utils import mock_datetime_now
 from scraper.keldoc import keldoc
 from scraper.keldoc.keldoc import fetch_slots
 from scraper.keldoc.keldoc_center import KeldocCenter, DEFAULT_CLIENT
@@ -39,7 +39,6 @@ def online_keldoc_test():
     )
 
     slots = fetch_slots(request)
-    print(slots)
 
 
 def get_test_data(file_name):
@@ -110,14 +109,17 @@ def test_keldoc_parse_center():
     assert motives == json.loads(Path("tests", "fixtures", "keldoc", "center1-motives.json").read_text())
 
     # Find first availability date
-    date, count, appointment_schedules = test_center_1.find_first_availability("2020-04-04")
+    fake_now = dt.datetime(2020, 4, 4, 8, 15)
+    with mock_datetime_now(fake_now):
+        date, count, appointment_schedules = test_center_1.find_first_availability("2020-04-04")
     assert not date
     test_center_1.vaccine_motives = motives
-    date, count, appointment_schedules = test_center_1.find_first_availability("2020-04-04")
+    with mock_datetime_now(fake_now):
+        date, count, appointment_schedules = test_center_1.find_first_availability("2020-04-04")
     tz = datetime.timezone(datetime.timedelta(seconds=7200))
     assert date == datetime.datetime(2021, 4, 20, 16, 55, tzinfo=tz)
     assert appointment_schedules == [
-        {"name": "chronodose", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-05T23:59:59+02:00", "total": 0},
+        {"name": "chronodose", "from": "2020-04-04T08:15:00+02:00", "to": "2020-04-05T08:14:59+02:00", "total": 0},
         {"name": "1_days", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-04T23:59:59+02:00", "total": 0},
         {"name": "2_days", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-05T23:59:59+02:00", "total": 0},
         {"name": "7_days", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-10T23:59:59+02:00", "total": 0},
@@ -192,10 +194,7 @@ def test_keldoc_filters():
 
 
 def test_keldoc_scrape():
-    center1_url = (
-        "https://www.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier"
-        "-bretagne-sud-lorient-hopital-du-scorff?specialty=144 "
-    )
+    center1_url = "https://www.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?specialty=144"
     request = ScraperRequest(center1_url, "2020-04-04")
     keldoc.session = httpx.Client(transport=httpx.MockTransport(app_center1))
 
