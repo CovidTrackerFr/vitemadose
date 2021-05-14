@@ -189,7 +189,8 @@
           "lat": 48.7951181,
           "lng": 2.3662778
         },
-        "place_id": null
+        "place_id": null,
+        "exact_match": true
       },
       {
         "address": "96 Avenue Jean Jaurès",
@@ -201,7 +202,8 @@
           "lat": 49.4269181,
           "lng": 1.0627287
         },
-        "place_id": 1
+        "place_id": 1,
+        "exact_match": true
       }
     ]
   }
