@@ -7,7 +7,7 @@ from scraper.doctolib.doctolib_center_scrap import (
     get_dict_infos_center_page,
     parse_page_centers_departement,
     parse_pages_departement,
-    parse_doctolib_centers
+    parse_doctolib_centers,
 )
 
 import requests
@@ -113,6 +113,8 @@ def test_get_dict_infos_center_page(mock_get):
             "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
         },
     ]
+
+
 #    mock_get.return_value.json.return_value = booking
 #    mockedResponse = get_dict_infos_center_page("someURL?pid=practice-86656")
 #    assert mockedResponse == expectedInfosCenterPageWithLandlineNumber
@@ -151,7 +153,13 @@ def test_centers_parsing(mock_get):
             "type": "drugstore",
             "ville": "Villejuif",
             "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
-            "booking":  {'profile': {'id': 1, 'name_with_title': 'Hopital test'}, 'visit_motives': [{'name': 'Consultation de suivi spécialiste'}, {'name': 'Première consultation de neurochirurgie'}]}
+            "booking": {
+                "profile": {"id": 1, "name_with_title": "Hopital test"},
+                "visit_motives": [
+                    {"name": "Consultation de suivi spécialiste"},
+                    {"name": "Première consultation de neurochirurgie"},
+                ],
+            },
         },
         {
             "address": "22b Rue Jean Jaurès, 94800 Villejuif",
@@ -221,13 +229,19 @@ def test_centers_parsing(mock_get):
             "type": "vaccination-center",
             "ville": "Le Petit-Quevilly",
             "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
-            "booking": {'profile': {'id': 1, 'name_with_title': 'Hopital test'},
-                        'visit_motives': [{'name': 'Consultation de suivi spécialiste'},
-                                          {'name': 'Première consultation de neurochirurgie'}]}
-        }
+            "booking": {
+                "profile": {"id": 1, "name_with_title": "Hopital test"},
+                "visit_motives": [
+                    {"name": "Consultation de suivi spécialiste"},
+                    {"name": "Première consultation de neurochirurgie"},
+                ],
+            },
+        },
     ]
 
     mock_get.return_value.json.return_value = doctors
+
+
 #
 #    mockedResponse, stop = parse_page_centers_departement("", 1, [])
 #    with open('tests/fixtures/doctolib/booking-with-doctors.json', 'w') as f:

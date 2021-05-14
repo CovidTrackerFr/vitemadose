@@ -184,7 +184,7 @@ def test_parse_centre():
 
     # Ancienne URL
     url = "https://www.doctolib.fr/centre-de-vaccinations-internationales/ville2/Centre2"  # noqa
-    _parse_centre(url) == "centre2"
+    assert _parse_centre(url) == "centre2"
 
     # URL invalide
     url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville2/"
@@ -215,12 +215,10 @@ def test_parse_practice_id():
 
 def test_find_visit_motive_category_id():
     data = {
-        "data": {
-            "visit_motive_categories": [
-                {"id": 41, "name": "Professionnels de santé"},
-                {"id": 42, "name": "Non professionnels de santé"},
-            ]
-        }
+        "visit_motive_categories": [
+            {"id": 41, "name": "Professionnels de santé"},
+            {"id": 42, "name": "Non professionnels de santé"},
+        ]
     }
     assert _find_visit_motive_category_id(data) == [42]
 
@@ -228,131 +226,121 @@ def test_find_visit_motive_category_id():
 def test_find_visit_motive_id():
     # Un seul motif dispo
     data = {
-        "data": {
-            "visit_motives": [
-                {
-                    "id": 1,
-                    "visit_motive_category_id": 42,
-                    "name": "1ère injection vaccin COVID-19 (Moderna)",
-                    "vaccination_motive": True,
-                    "first_shot_motive": True,
-                }
-            ]
-        }
+        "visit_motives": [
+            {
+                "id": 1,
+                "visit_motive_category_id": 42,
+                "name": "1ère injection vaccin COVID-19 (Moderna)",
+                "vaccination_motive": True,
+                "first_shot_motive": True,
+            }
+        ]
     }
     assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {1: Vaccine.MODERNA}
 
     # Plusieurs motifs dispo
     data = {
-        "data": {
-            "visit_motives": [
-                {
-                    "id": 1,
-                    "visit_motive_category_id": 42,
-                    "name": "1ère injection vaccin COVID-19 (Pfizer/BioNTech)",
-                    "vaccination_motive": True,
-                    "first_shot_motive": True,
-                },
-                {
-                    "id": 2,
-                    "name": "1ère injection vaccin COVID-19 (Moderna)",
-                    "visit_motive_category_id": 42,
-                    "vaccination_motive": True,
-                    "first_shot_motive": True,
-                },
-            ]
-        }
+        "visit_motives": [
+            {
+                "id": 1,
+                "visit_motive_category_id": 42,
+                "name": "1ère injection vaccin COVID-19 (Pfizer/BioNTech)",
+                "vaccination_motive": True,
+                "first_shot_motive": True,
+            },
+            {
+                "id": 2,
+                "name": "1ère injection vaccin COVID-19 (Moderna)",
+                "visit_motive_category_id": 42,
+                "vaccination_motive": True,
+                "first_shot_motive": True,
+            },
+        ]
     }
     assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {1: Vaccine.PFIZER, 2: Vaccine.MODERNA}
 
     # Mix avec un motif autre
     data = {
-        "data": {
-            "visit_motives": [
-                {"id": 1, "visit_motive_category_id": 42, "name": "Autre motif"},
-                {
-                    "id": 2,
-                    "visit_motive_category_id": 42,
-                    "name": "1ère injection vaccin COVID-19 (Moderna)",
-                    "vaccination_motive": True,
-                    "first_shot_motive": True,
-                },
-            ]
-        }
+        "visit_motives": [
+            {"id": 1, "visit_motive_category_id": 42, "name": "Autre motif"},
+            {
+                "id": 2,
+                "visit_motive_category_id": 42,
+                "name": "1ère injection vaccin COVID-19 (Moderna)",
+                "vaccination_motive": True,
+                "first_shot_motive": True,
+            },
+        ]
     }
     assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {2: Vaccine.MODERNA}
 
     # Mix avec une catégorie autre
     data = {
-        "data": {
-            "visit_motives": [
-                {
-                    "id": 1,
-                    "visit_motive_category_id": 41,
-                    "name": "1ère injection vaccin COVID-19 (Moderna)",
-                    "vaccination_motive": True,
-                    "first_shot_motive": True,
-                },
-                {
-                    "id": 2,
-                    "visit_motive_category_id": 42,
-                    "name": "1ère injection vaccin COVID-19 (AstraZeneca)",
-                    "vaccination_motive": True,
-                    "first_shot_motive": True,
-                },
-            ]
-        }
+        "visit_motives": [
+            {
+                "id": 1,
+                "visit_motive_category_id": 41,
+                "name": "1ère injection vaccin COVID-19 (Moderna)",
+                "vaccination_motive": True,
+                "first_shot_motive": True,
+            },
+            {
+                "id": 2,
+                "visit_motive_category_id": 42,
+                "name": "1ère injection vaccin COVID-19 (AstraZeneca)",
+                "vaccination_motive": True,
+                "first_shot_motive": True,
+            },
+        ]
     }
     assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {2: Vaccine.ASTRAZENECA}
 
     # Plusieurs types de vaccin
     data = {
-        "data": {
-            "visit_motives": [
-                {
-                    "id": 1,
-                    "visit_motive_category_id": 42,
-                    "name": "1ère injection vaccin COVID-19 (Moderna)",
-                    "vaccination_motive": True,
-                    "first_shot_motive": True,
-                },
-                {
-                    "id": 2,
-                    "visit_motive_category_id": 42,
-                    "name": "1ère injection vaccin COVID-19 (AstraZeneca)",
-                    "vaccination_motive": True,
-                    "first_shot_motive": True,
-                },
-                {
-                    "id": 3,
-                    "visit_motive_category_id": 42,
-                    "name": "1ère injection vaccin COVID-19 (Pfizer-BioNTech)",
-                    "vaccination_motive": True,
-                    "first_shot_motive": True,
-                },
-                {
-                    "id": 4,
-                    "visit_motive_category_id": 42,
-                    "name": "2nde injection vaccin COVID-19 (Moderna)",
-                    "vaccination_motive": True,
-                    "first_shot_motive": False,
-                },
-                {
-                    "id": 5,
-                    "visit_motive_category_id": 42,
-                    "name": "2nde injection vaccin COVID-19 (AstraZeneca)",
-                    "vaccination_motive": True,
-                    "first_shot_motive": False,
-                },
-                {
-                    "id": 6,
-                    "visit_motive_category_id": 42,
-                    "name": "2nde injection vaccin COVID-19 (Pfizer-BioNTech)",
-                    "vaccination_motive": True,
-                    "first_shot_motive": False,
-                },
-            ]
-        }
+        "visit_motives": [
+            {
+                "id": 1,
+                "visit_motive_category_id": 42,
+                "name": "1ère injection vaccin COVID-19 (Moderna)",
+                "vaccination_motive": True,
+                "first_shot_motive": True,
+            },
+            {
+                "id": 2,
+                "visit_motive_category_id": 42,
+                "name": "1ère injection vaccin COVID-19 (AstraZeneca)",
+                "vaccination_motive": True,
+                "first_shot_motive": True,
+            },
+            {
+                "id": 3,
+                "visit_motive_category_id": 42,
+                "name": "1ère injection vaccin COVID-19 (Pfizer-BioNTech)",
+                "vaccination_motive": True,
+                "first_shot_motive": True,
+            },
+            {
+                "id": 4,
+                "visit_motive_category_id": 42,
+                "name": "2nde injection vaccin COVID-19 (Moderna)",
+                "vaccination_motive": True,
+                "first_shot_motive": False,
+            },
+            {
+                "id": 5,
+                "visit_motive_category_id": 42,
+                "name": "2nde injection vaccin COVID-19 (AstraZeneca)",
+                "vaccination_motive": True,
+                "first_shot_motive": False,
+            },
+            {
+                "id": 6,
+                "visit_motive_category_id": 42,
+                "name": "2nde injection vaccin COVID-19 (Pfizer-BioNTech)",
+                "vaccination_motive": True,
+                "first_shot_motive": False,
+            },
+        ]
     }
     assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {
         1: Vaccine.MODERNA,
@@ -363,36 +351,34 @@ def test_find_visit_motive_id():
 
 def test_find_agenda_and_practice_ids():
     data = {
-        "data": {
-            "agendas": [
-                {
-                    "id": 10,
-                    "practice_id": 20,
-                    "booking_disabled": False,
-                    "visit_motive_ids_by_practice_id": {
-                        "20": [1, 2],
-                        "21": [1],
-                        "22": [2],  # => Pas inclus
-                    },
+        "agendas": [
+            {
+                "id": 10,
+                "practice_id": 20,
+                "booking_disabled": False,
+                "visit_motive_ids_by_practice_id": {
+                    "20": [1, 2],
+                    "21": [1],
+                    "22": [2],  # => Pas inclus
                 },
-                {
-                    "id": 11,
-                    "booking_disabled": True,  # => Pas inclus
-                    "visit_motive_ids_by_practice_id": {
-                        "23": [1, 2],
-                    },
+            },
+            {
+                "id": 11,
+                "booking_disabled": True,  # => Pas inclus
+                "visit_motive_ids_by_practice_id": {
+                    "23": [1, 2],
                 },
-                {
-                    "id": 12,
-                    "practice_id": 21,
-                    "booking_disabled": False,
-                    "visit_motive_ids_by_practice_id": {
-                        "21": [1, 2],
-                        "24": [1],
-                    },
+            },
+            {
+                "id": 12,
+                "practice_id": 21,
+                "booking_disabled": False,
+                "visit_motive_ids_by_practice_id": {
+                    "21": [1, 2],
+                    "24": [1],
                 },
-            ],
-        },
+            },
+        ],
     }
     agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_id=1)
     assert agenda_ids == ["10", "12"]
