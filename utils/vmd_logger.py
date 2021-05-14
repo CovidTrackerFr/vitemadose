@@ -62,7 +62,7 @@ def enable_logger_for_debug():
         root_logger.addHandler(ch)
 
 
-def log_requests(request) -> None:
+def log_requests(request):
     logger = get_logger()
     if not request or not request.requests:
         logger.debug(f"{request.internal_id} requests -> No requests made.")
@@ -75,7 +75,7 @@ def log_requests(request) -> None:
     logger.debug(f"{request.internal_id} requests -> Total({total_requests}){requests}")
 
 
-def log_platform_requests(centers) -> None:
+def log_platform_requests(centers):
     logger = get_logger()
     platforms = {}
 

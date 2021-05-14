@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from enum import Enum
 from datetime import datetime, timedelta
 from typing import Optional, List
 
@@ -10,52 +9,12 @@ from utils.vmd_config import get_config
 from utils.vmd_utils import departementUtils
 from scraper.pattern.center_location import CenterLocation
 from scraper.pattern.scraper_result import ScraperResult
+from scraper.pattern.vaccine import Vaccine
 
 from utils.vmd_utils import urlify, format_phone_number
 from utils.vmd_logger import get_logger
 
 logger = get_logger()
-
-
-class Vaccine(str, Enum):
-    PFIZER = "Pfizer-BioNTech"
-    MODERNA = "Moderna"
-    ASTRAZENECA = "AstraZeneca"
-    JANSSEN = "Janssen"
-    ARNM = "ARNm"
-
-
-VACCINE_CONF = get_config().get("vaccines", {})
-
-
-VACCINES_NAMES = {
-    Vaccine.PFIZER: VACCINE_CONF.get(Vaccine.PFIZER, []),
-    Vaccine.MODERNA: VACCINE_CONF.get(Vaccine.MODERNA, []),
-    Vaccine.ARNM: VACCINE_CONF.get(Vaccine.ARNM, []),
-    Vaccine.ASTRAZENECA: VACCINE_CONF.get(Vaccine.ASTRAZENECA, []),
-    Vaccine.JANSSEN: VACCINE_CONF.get(Vaccine.JANSSEN, []),
-}
-
-
-def get_vaccine_name(name: str, fallback: Vaccine = None) -> Vaccine:
-    if not name:
-        return fallback
-    name = name.lower().strip()
-    for vaccine in (Vaccine.ARNM, Vaccine.MODERNA, Vaccine.PFIZER, Vaccine.ASTRAZENECA, Vaccine.JANSSEN):
-        vaccine_names = VACCINES_NAMES[vaccine]
-        for vaccine_name in vaccine_names:
-            if vaccine_name in name:
-                if vaccine == Vaccine.ASTRAZENECA:
-                    return get_vaccine_astrazeneca_minus_55_edgecase(name)
-                return vaccine
-    return fallback
-
-
-def get_vaccine_astrazeneca_minus_55_edgecase(name: str) -> Vaccine:
-    has_minus = "-" in name or "–" in name or "–" in name or "moins" in name
-    if has_minus and "55" in name and "suite" in name:
-        return Vaccine.ARNM
-    return Vaccine.ASTRAZENECA
 
 
 # Schedules array for appointments by interval

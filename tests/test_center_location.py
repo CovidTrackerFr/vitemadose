@@ -1,9 +1,4 @@
-import datetime as dt
-
 from scraper.pattern.center_location import convert_csv_data_to_location
-from utils.vmd_utils import format_phone_number, get_last_scans
-from .utils import mock_datetime_now
-from scraper.pattern.center_info import CenterInfo
 
 
 def test_location_working():

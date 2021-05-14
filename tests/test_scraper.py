@@ -2,8 +2,9 @@ import datetime as dt
 import json
 
 from scraper.export.export_merge import export_data
-from scraper.pattern.center_info import CenterInfo, Vaccine, get_vaccine_name
+from scraper.pattern.center_info import CenterInfo
 from scraper.pattern.scraper_result import GENERAL_PRACTITIONER, ScraperResult
+from scraper.pattern.vaccine import Vaccine, get_vaccine_name
 from utils.vmd_utils import departementUtils
 from scraper.scraper import fetch_centre_slots, get_start_date, gouv_centre_iterator
 from scraper.pattern.scraper_request import ScraperRequest

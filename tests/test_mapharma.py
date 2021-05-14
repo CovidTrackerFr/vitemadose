@@ -1,9 +1,8 @@
 import json
 import httpx
 
-from bs4 import BeautifulSoup
 from pathlib import Path
-from datetime import datetime, date
+from datetime import datetime
 from pytz import timezone
 
 from scraper.mapharma.mapharma import parse_slots, fetch_slots, count_appointements, campagne_to_centre

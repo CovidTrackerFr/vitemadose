@@ -30,15 +30,17 @@ class CenterLocation:
         cp = data.get("com_cp")
 
         if long and lat:
-            if "address" in data and not city and not cp:
-                address = data["address"]
-                city = departementUtils.get_city(address)
-                cp = departementUtils.get_cp(address)
+            if address := data.get("address"):
+                if not city:
+                    city = departementUtils.get_city(address)
+                if not cp:
+                    cp = departementUtils.get_cp(address)
             try:
                 return CenterLocation(long, lat, city, cp)
             except Exception as e:
                 logger.warning("Failed to parse CenterLocation from {}".format(data))
                 logger.warning(e)
+        return
 
 
 convert_csv_data_to_location = CenterLocation.from_csv_data

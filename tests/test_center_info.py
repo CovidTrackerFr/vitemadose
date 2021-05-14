@@ -4,12 +4,10 @@ from scraper.pattern.scraper_result import ScraperResult, DRUG_STORE
 from scraper.pattern.center_info import (
     CenterInfo,
     convert_csv_address,
-    Vaccine,
     convert_csv_business_hours,
     convert_ordoclic_to_center_info,
-    get_vaccine_name,
-    get_vaccine_astrazeneca_minus_55_edgecase,
 )
+from scraper.pattern.vaccine import Vaccine, get_vaccine_name, get_vaccine_astrazeneca_minus_55_edgecase
 
 
 def test_center_info_fill():

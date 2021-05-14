@@ -14,7 +14,8 @@ import requests
 
 from scraper.doctolib.conf import DoctolibConf
 from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
-from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
+from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
+from scraper.pattern.vaccine import get_vaccine_name, Vaccine
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 from scraper.profiler import Profiling
@@ -56,7 +57,7 @@ class DoctolibSlots:
     # Permet de passer un faux client HTTP,
     # pour éviter de vraiment appeler Doctolib lors des tests.
 
-    def __init__(self, client: httpx.Client = None, cooldown_interval=DOCTOLIB_CONF.request_sleep) -> None:
+    def __init__(self, client: httpx.Client = None, cooldown_interval=DOCTOLIB_CONF.request_sleep):
         self._cooldown_interval = cooldown_interval
         self._client = DEFAULT_CLIENT if client is None else client
 
@@ -249,7 +250,7 @@ class DoctolibSlots:
                 new_agenda_list.append(str(agenda))
         return new_agenda_list
 
-    def pop_practice_id(self, request: ScraperRequest) -> None:
+    def pop_practice_id(self, request: ScraperRequest):
         """
         In some cases, practice id needs to be deleted
         """
@@ -379,7 +380,7 @@ class DoctolibSlots:
 
 def set_doctolib_center_internal_id(
     request: ScraperRequest, data: dict, practice_ids: Optional[List[int]], practice_same_adress: bool
-) -> None:
+):
     profile = data.get("profile")
 
     if not profile:
@@ -455,16 +456,7 @@ def link_practice_ids(practice_id: list, rdata: dict) -> Tuple[list, bool]:
 
 
 def parse_agenda_ids(rdata: dict) -> List[int]:
-    agendas = rdata.get("agendas", None)
-    agenda_ids = []
-    if not agendas:
-        return None
-    for agenda in agendas:
-        agenda_id = agenda.get("id", None)
-        if not agenda_id:
-            continue
-        agenda_ids.append(int(agenda_id))
-    return agenda_ids
+    return [agenda_id for agenda in rdata.get("agendas", []) if (agenda_id := agenda.get("id"))]
 
 
 def _parse_practice_id(rdv_site_web: str) -> Optional[List[int]]:

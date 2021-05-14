@@ -1,6 +1,5 @@
 import json
 from pathlib import Path
-from typing import DefaultDict
 from scraper.doctolib.doctolib_filters import (
     is_category_relevant,
     is_vaccination_center,
@@ -8,7 +7,7 @@ from scraper.doctolib.doctolib_filters import (
     parse_practitioner_type,
 )
 from scraper.error import BlockedByDoctolibError
-from scraper.pattern.center_info import Vaccine
+from scraper.pattern.vaccine import Vaccine
 
 import httpx
 from scraper.doctolib.doctolib import (

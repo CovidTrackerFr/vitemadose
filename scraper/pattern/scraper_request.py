@@ -42,7 +42,7 @@ class ScraperRequest:
     def get_appointment_schedules(self) -> Optional[list]:
         return self.appointment_schedules
 
-    def add_vaccine_type(self, vaccine_name: Optional[str]) -> None:
+    def add_vaccine_type(self, vaccine_name: Optional[str]):
         if vaccine_name and vaccine_name not in self.vaccine_type:
             self.vaccine_type.append(vaccine_name)
 
@@ -52,5 +52,5 @@ class ScraperRequest:
     def get_start_date(self) -> str:
         return self.start_date
 
-    def set_appointments_only_by_phone(self, only_by_phone: bool) -> None:
+    def set_appointments_only_by_phone(self, only_by_phone: bool):
         self.appointment_by_phone_only = only_by_phone

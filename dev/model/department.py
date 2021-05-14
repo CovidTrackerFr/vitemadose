@@ -22,14 +22,12 @@ import json
 from datetime import datetime
 from itertools import chain
 from pathlib import Path
-from scraper.pattern.center_info import VACCINES_NAMES
+from scraper.pattern.vaccine import Vaccine
 from typing import Dict, Iterator, List, Optional
 
 from pydantic import BaseModel, Field
 
 from dev.model.schedule import Schedule
-from scraper.pattern.center_location import CenterLocation
-from scraper.pattern.center_info import Vaccine
 
 
 class Location(BaseModel):

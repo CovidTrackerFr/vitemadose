@@ -4,7 +4,7 @@ from datetime import datetime
 from httpx import TimeoutException
 
 from scraper.keldoc.keldoc_routes import API_KELDOC_MOTIVES
-from scraper.pattern.center_info import get_vaccine_name
+from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from utils.vmd_config import get_conf_platform
 
@@ -50,8 +50,9 @@ def get_relevant_vaccine_specialties_id(specialties: dict) -> list:
     return [specialty_data.get("id") for specialty_data in specialties if is_specialty_relevant(specialty_data)]
 
 
-def filter_vaccine_motives(session, selected_cabinet, id, vaccine_specialties, vaccine_cabinets,
-                           request: ScraperRequest = None):
+def filter_vaccine_motives(
+    session, selected_cabinet, id, vaccine_specialties, vaccine_cabinets, request: ScraperRequest = None
+):
     if not id or not vaccine_specialties or not vaccine_cabinets:
         return None
 

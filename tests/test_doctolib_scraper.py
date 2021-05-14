@@ -4,13 +4,8 @@ from scraper.doctolib.doctolib_center_scrap import (
     get_coordinates,
     center_type,
     parse_doctolib_business_hours,
-    get_dict_infos_center_page,
-    parse_page_centers_departement,
-    parse_pages_departement,
-    parse_doctolib_centers,
 )
 
-import requests
 import json
 
 # -- Tests de l'API (offline) --

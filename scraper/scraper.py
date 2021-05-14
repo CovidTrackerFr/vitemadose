@@ -48,7 +48,7 @@ def scrape_debug(urls):  # pragma: no cover
         log_requests(result.request)
 
 
-def scrape(platforms=None) -> None:  # pragma: no cover
+def scrape(platforms=None):  # pragma: no cover
     compte_centres = 0
     compte_centres_avec_dispo = 0
     compte_bloqués = 0
