@@ -75,16 +75,21 @@ class DoctolibSlots:
 
         practice_same_adress = False
 
-        centre_api_url = DOCTOLIB_API.get("booking", "").format(centre=centre)
-        request.increase_request_count("booking")
-        response = self._client.get(centre_api_url, headers=DOCTOLIB_HEADERS)
-        if response.status_code == 403:
-            raise BlockedByDoctolibError(centre_api_url)
+        rdata = None
+        # We already have rdata
+        if request.input_data:
+            rdata = request.input_data
+        else:
+            centre_api_url = DOCTOLIB_API.get("booking", "").format(centre=centre)
+            request.increase_request_count("booking")
+            response = self._client.get(centre_api_url, headers=DOCTOLIB_HEADERS)
+            if response.status_code == 403:
+                raise BlockedByDoctolibError(centre_api_url)
 
-        response.raise_for_status()
-        time.sleep(self._cooldown_interval)
-        data = response.json()
-        rdata = data.get("data", {})
+            response.raise_for_status()
+            time.sleep(self._cooldown_interval)
+            data = response.json()
+            rdata = data.get("data", {})
 
         if not self.is_practice_id_valid(request, rdata):
             logger.warning(f"Invalid practice ID for this Doctolib center: {request.get_url()}")
@@ -104,9 +109,9 @@ class DoctolibSlots:
 
         # visit_motive_categories
         # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1
-        visit_motive_category_id = _find_visit_motive_category_id(data)
+        visit_motive_category_id = _find_visit_motive_category_id(rdata)
         # visit_motive_id
-        visit_motive_ids = _find_visit_motive_id(data, visit_motive_category_id=visit_motive_category_id)
+        visit_motive_ids = _find_visit_motive_id(rdata, visit_motive_category_id=visit_motive_category_id)
         if visit_motive_ids is None:
             return None
 
@@ -136,7 +141,7 @@ class DoctolibSlots:
         timetable_start_date = datetime.now()  # shouldn't be datetime.now()!!
         for visit_motive_id in visit_motive_ids:
             agenda_ids, practice_ids = _find_agenda_and_practice_ids(
-                data, visit_motive_id, practice_id_filter=practice_id
+                rdata, visit_motive_id, practice_id_filter=practice_id
             )
             if not agenda_ids or not practice_ids:
                 continue
@@ -507,14 +512,13 @@ def build_appointment_schedules(
     return appointment_schedules
 
 
-def _find_visit_motive_category_id(data: dict):
+def _find_visit_motive_category_id(rdata: dict):
     """
     Etant donnée une réponse à /booking/<centre>.json, renvoie le cas échéant
     l'ID de la catégorie de motif correspondant à 'Non professionnels de santé'
     (qui correspond à la population civile).
     """
     categories = []
-    rdata = data.get("data", {})
 
     if not rdata.get("visit_motive_categories"):
         return None
@@ -524,14 +528,14 @@ def _find_visit_motive_category_id(data: dict):
     return categories
 
 
-def _find_visit_motive_id(data: dict, visit_motive_category_id: list = None):
+def _find_visit_motive_id(rdata: dict, visit_motive_category_id: list = None):
     """
     Etant donnée une réponse à /booking/<centre>.json, renvoie le cas échéant
     l'ID du 1er motif de visite disponible correspondant à une 1ère dose pour
     la catégorie de motif attendue.
     """
     relevant_motives = {}
-    for visit_motive in data.get("data", {}).get("visit_motives", []):
+    for visit_motive in rdata.get("visit_motives", []):
         vaccine_name = repr(get_vaccine_name(visit_motive["name"]))
         # On ne gère que les 1ère doses (le RDV pour la 2e dose est en général donné
         # après la 1ère dose, donc les gens n'ont pas besoin d'aide pour l'obtenir).
@@ -571,7 +575,7 @@ def _find_agenda_and_practice_ids(
     """
     agenda_ids = set()
     practice_ids = set()
-    for agenda in data["data"]["agendas"]:
+    for agenda in data.get("agendas", []):
         if (
                 "practice_id" in agenda
                 and practice_id_filter is not None
