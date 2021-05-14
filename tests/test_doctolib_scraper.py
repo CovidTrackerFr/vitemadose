@@ -5,10 +5,9 @@ from scraper.doctolib.doctolib_center_scrap import (
     center_type,
     parse_doctolib_business_hours,
     get_dict_infos_center_page,
-    parse_page_centers,
     parse_page_centers_departement,
     parse_pages_departement,
-    parse_doctolib_centers, booking_requests,
+    parse_doctolib_centers
 )
 
 import requests

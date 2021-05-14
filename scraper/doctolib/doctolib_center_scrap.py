@@ -35,7 +35,6 @@ DOCTOLIB_WEIRD_DEPARTEMENTS = SCRAPER_CONF.get("dep_conversion", {})
 
 
 logger = get_logger()
-booking_requests = {}
 
 
 def parse_doctolib_centers(page_limit=None) -> List[dict]:
@@ -125,17 +124,6 @@ def doctolib_urlify(departement: str) -> str:
     return unidecode(departement)
 
 
-def parse_page_centers(page_id) -> List[dict]:
-    r = requests.get(BASE_URL.format(page_id), headers=DOCTOLIB_HEADERS)
-    data = r.json()
-
-    centers_page = []
-    # TODO parallelism can be put here
-    for payload in data["data"]["doctors"]:
-        centers_page += center_from_doctor_dict(payload)
-    return centers_page
-
-
 def center_from_doctor_dict(doctor_dict) -> Tuple[dict, bool]:
 
     liste_centres = []
@@ -183,21 +171,15 @@ def get_coordinates(doctor_dict):
 
 
 def get_dict_infos_center_page(url_path: str) -> dict:
-    global booking_requests
     internal_api_url = BOOKING_URL.format(centre=parse.urlsplit(url_path).path.split("/")[-1])
     logger.info(f"> Parsing {internal_api_url}")
     liste_infos_page = []
     output = None
 
     try:
-        data = None
-        if internal_api_url in booking_requests:
-            data = booking_requests.get(internal_api_url)
-        else:
-            req = requests.get(internal_api_url)
-            req.raise_for_status()
-            data = req.json()
-            booking_requests[internal_api_url] = data
+        req = requests.get(internal_api_url)
+        req.raise_for_status()
+        data = req.json()
         output = data.get("data", {})
     except:
         logger.warn(f"> Could not retrieve data from {internal_api_url}")
