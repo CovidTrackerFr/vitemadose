@@ -110,7 +110,7 @@ def test_keldoc_parse_center():
     assert motives == json.loads(Path("tests", "fixtures", "keldoc", "center1-motives.json").read_text())
 
     # Find first availability date
-    fake_now = dt.datetime(2020, 4, 4)
+    fake_now = dt.datetime(2020, 4, 4, 8, 15)
     with mock_datetime_now(fake_now):
         date, count, appointment_schedules = test_center_1.find_first_availability("2020-04-04")
     assert not date
@@ -120,7 +120,7 @@ def test_keldoc_parse_center():
     tz = datetime.timezone(datetime.timedelta(seconds=7200))
     assert date == datetime.datetime(2021, 4, 20, 16, 55, tzinfo=tz)
     assert appointment_schedules == [
-        {"name": "chronodose", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-04T23:59:59+02:00", "total": 0},
+        {"name": "chronodose", "from": "2020-04-04T08:15:00+02:00", "to": "2020-04-05T08:14:59+02:00", "total": 0},
         {"name": "1_days", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-04T23:59:59+02:00", "total": 0},
         {"name": "2_days", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-05T23:59:59+02:00", "total": 0},
         {"name": "7_days", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-10T23:59:59+02:00", "total": 0},
@@ -200,8 +200,6 @@ def test_keldoc_scrape():
     keldoc.session = httpx.Client(transport=httpx.MockTransport(app_center1))
 
     date = fetch_slots(request)
-    print(request)
-    print(date)
     # When it's already killed
     if not keldoc.KELDOC_ENABLED:
         assert date is None
