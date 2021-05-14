@@ -113,6 +113,11 @@ class departementUtils:
         >>> get_city("2 avenue de la République, 75005 PARIS")
         'PARIS'
         """
+        if not address:
+            return None
+        # tmp debug
+        if not isinstance(address, str):
+            print(f"Type of address: {type(address)}")
         if search := re.search(r"(?<=\s\d{5}\s)(?P<com_nom>.*?)\s*$", address):
             return search.groupdict().get("com_nom")
         return None
