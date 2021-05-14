@@ -49,7 +49,7 @@ def parse_doctolib_centers(page_limit=None) -> List[dict]:
     centers = []
     unique_center_urls = []
 
-    pool = multiprocessing.Pool()
+    pool = multiprocessing.Pool(50)
     centers = pool.map(run_departement_scrap, get_departements())
 
     centers = list(filter(is_vaccination_center, centers))  # Filter vaccination centers
@@ -296,7 +296,6 @@ if __name__ == "__main__":  # pragma: no cover
         if len(centers) < 2000:
             # for reference, on 13-05, there were 12k centers
             logger.error(f"[NOT SAVING RESULTS]{len(centers)} does not seem like enough Doctolib centers")
-            exit(1)
         else:
             logger.info(f"> Writing them on {path_out}")
             with open(path_out, "w") as f:
