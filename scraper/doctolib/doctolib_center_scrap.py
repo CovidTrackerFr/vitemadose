@@ -43,6 +43,8 @@ def parse_doctolib_centers(page_limit=None) -> List[dict]:
     unique_center_urls = []
 
     for departement in get_departements():
+        if departement != "Ille-et-Vilaine":
+            continue
         logger.info(f"[Doctolib centers] Parsing pages of departement {departement} through department SEO link")
         centers_departements = parse_pages_departement(departement)
         if centers_departements == 0:
@@ -185,6 +187,7 @@ def get_dict_infos_center_page(url_path: str) -> dict:
     internal_api_url = BOOKING_URL.format(centre=parse.urlsplit(url_path).path.split("/")[-1])
     logger.info(f"> Parsing {internal_api_url}")
     liste_infos_page = []
+    output = None
 
     try:
         data = None
@@ -211,7 +214,7 @@ def get_dict_infos_center_page(url_path: str) -> dict:
         infos_page["long_coor1"] = place.get("longitude")
         infos_page["lat_coor1"] = place.get("latitude")
         infos_page["com_insee"] = departementUtils.cp_to_insee(place["zipcode"].replace(" ", "").strip())
-
+        infos_page["booking"] = output
         # Parse landline number
         if place.get("landline_number"):
             phone_number = place.get("landline_number")
@@ -290,9 +293,9 @@ if __name__ == "__main__":  # pragma: no cover
         centers = parse_doctolib_centers()
         path_out = SCRAPER_CONF.get("result_path")
         logger.info(f"Found {len(centers)} centers on Doctolib")
-        if len(centers) < 10000:
-            # for reference, on 13-05, there were 12k centers
-            logger.error(f"[NOT SAVING RESULTS]{len(centers)} does not seem like enough Doctolib centers")
+        if len(centers) < 2000:
+            # for reference, on 13-05, there were ~2,3K non-duplicated centers 
+            logger.error(f"[NOT SAVING RESULTS] {len(centers)} does not seem like enough Doctolib centers")
         else:
             logger.info(f"> Writing them on {path_out}")
             with open(path_out, "w") as f:
