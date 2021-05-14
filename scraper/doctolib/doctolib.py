@@ -47,6 +47,7 @@ else:
 
 logger = logging.getLogger("scraper")
 
+
 @Profiling.measure("doctolib_slot")
 def fetch_slots(request: ScraperRequest):
     if not DOCTOLIB_ENABLED:
@@ -149,15 +150,31 @@ class DoctolibSlots:
 
             agenda_ids_q = "-".join(agenda_ids)
             practice_ids_q = "-".join(practice_ids)
-            availability = self.get_timetables(request, visit_motive_ids, visit_motive_id, agenda_ids_q,
-                                               practice_ids_q, timetable_start_date, appointment_schedules)
+            availability = self.get_timetables(
+                request,
+                visit_motive_ids,
+                visit_motive_id,
+                agenda_ids_q,
+                practice_ids_q,
+                timetable_start_date,
+                appointment_schedules,
+            )
             if availability and (not first_availability or availability < first_availability):
                 first_availability = availability
         return first_availability
 
-    def get_timetables(self, request: ScraperRequest, visit_motive_ids, visit_motive_id, agenda_ids_q: str,
-                       practice_ids_q: str, start_date: datetime, appointment_schedules: list, page: int = 1,
-                       first_availability: Optional[str] = None) -> Optional[str]:
+    def get_timetables(
+        self,
+        request: ScraperRequest,
+        visit_motive_ids,
+        visit_motive_id,
+        agenda_ids_q: str,
+        practice_ids_q: str,
+        start_date: datetime,
+        appointment_schedules: list,
+        page: int = 1,
+        first_availability: Optional[str] = None,
+    ) -> Optional[str]:
         """
         Get timetables recursively with DOCTOLIB_DAYS_PER_PAGE as the number of days to query.
         Recursively limited by DOCTOLIB_SLOT_PAGES and appends new availabilities to a ’timetable’,
@@ -182,18 +199,25 @@ class DoctolibSlots:
             return first_availability
         if next_slot:
             """
-                Optimize query count by jumping directly to the first availability date by using ’next_slot’ key
+            Optimize query count by jumping directly to the first availability date by using ’next_slot’ key
             """
             next_expected_date = start_date + timedelta(days=DOCTOLIB_DAYS_PER_PAGE)
-            next_fetch_date = datetime.strptime(next_slot, '%Y-%m-%d')
+            next_fetch_date = datetime.strptime(next_slot, "%Y-%m-%d")
             diff = next_fetch_date.replace(tzinfo=None) - next_expected_date.replace(tzinfo=None)
 
             if page > DOCTOLIB_SLOT_PAGES:
                 return first_availability
-            return self.get_timetables(request, visit_motive_ids, visit_motive_id, agenda_ids_q,
-                                       practice_ids_q, next_fetch_date, appointment_schedules,
-                                       page=1 + max(0, floor(diff.days / DOCTOLIB_DAYS_PER_PAGE)) + page,
-                                       first_availability=first_availability)
+            return self.get_timetables(
+                request,
+                visit_motive_ids,
+                visit_motive_id,
+                agenda_ids_q,
+                practice_ids_q,
+                next_fetch_date,
+                appointment_schedules,
+                page=1 + max(0, floor(diff.days / DOCTOLIB_DAYS_PER_PAGE)) + page,
+                first_availability=first_availability,
+            )
         if not sdate:
             return first_availability
         if not first_availability or sdate < first_availability:
@@ -203,9 +227,17 @@ class DoctolibSlots:
             request.update_appointment_schedules(schedules)
         if page >= DOCTOLIB_SLOT_PAGES:
             return first_availability
-        return self.get_timetables(request, visit_motive_ids, visit_motive_id, agenda_ids_q,
-                                   practice_ids_q, start_date + timedelta(days=DOCTOLIB_DAYS_PER_PAGE),
-                                   appointment_schedules, 1 + page, first_availability=first_availability)
+        return self.get_timetables(
+            request,
+            visit_motive_ids,
+            visit_motive_id,
+            agenda_ids_q,
+            practice_ids_q,
+            start_date + timedelta(days=DOCTOLIB_DAYS_PER_PAGE),
+            appointment_schedules,
+            1 + page,
+            first_availability=first_availability,
+        )
 
     def sort_agenda_ids(self, all_agendas, ids):
         """
@@ -251,16 +283,16 @@ class DoctolibSlots:
         return False
 
     def get_appointments(
-            self,
-            request: ScraperRequest,
-            start_date: str,
-            visit_motive_ids,
-            motive_id: str,
-            agenda_ids_q: str,
-            practice_ids_q: str,
-            limit: int,
-            start_date_original: str,
-            appointment_schedules: list,
+        self,
+        request: ScraperRequest,
+        start_date: str,
+        visit_motive_ids,
+        motive_id: str,
+        agenda_ids_q: str,
+        practice_ids_q: str,
+        limit: int,
+        start_date_original: str,
+        appointment_schedules: list,
     ):
         stop = False
         motive_availability = False
@@ -329,7 +361,7 @@ class DoctolibSlots:
                 if append_date_days(start_date_original, 0) <= append_date_days(start_date_original, interval):
                     if availability.get("date"):
                         if append_date_days(availability.get("date"), 0) < append_date_days(
-                                start_date_original, interval
+                            start_date_original, interval
                         ):
                             appointment_schedules = build_appointment_schedules(
                                 request,
@@ -474,7 +506,7 @@ def _parse_practice_id(rdv_site_web: str):
 
 
 def build_appointment_schedules(
-        request, interval, start_date, end_date, count, appointment_schedules, chronodose=False
+    request, interval, start_date, end_date, count, appointment_schedules, chronodose=False
 ):
     if appointment_schedules is None:
         appointment_schedules = []
@@ -566,7 +598,7 @@ def _find_visit_motive_id(rdata: dict, visit_motive_category_id: list = None):
 
 
 def _find_agenda_and_practice_ids(
-        data: dict, visit_motive_id: str, practice_id_filter: list = None
+    data: dict, visit_motive_id: str, practice_id_filter: list = None
 ) -> Tuple[list, list]:
     """
     Etant donné une réponse à /booking/<centre>.json, renvoie tous les
@@ -577,9 +609,9 @@ def _find_agenda_and_practice_ids(
     practice_ids = set()
     for agenda in data.get("agendas", []):
         if (
-                "practice_id" in agenda
-                and practice_id_filter is not None
-                and agenda["practice_id"] not in practice_id_filter
+            "practice_id" in agenda
+            and practice_id_filter is not None
+            and agenda["practice_id"] not in practice_id_filter
         ):
             continue
         if agenda["booking_disabled"]:
