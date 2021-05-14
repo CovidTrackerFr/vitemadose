@@ -11,6 +11,7 @@ from urllib.parse import parse_qs
 from bs4 import BeautifulSoup
 from pathlib import Path
 from urllib import parse
+from typing import Optional
 
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
@@ -171,7 +172,7 @@ def count_appointements(slots: dict, start_date: datetime, end_date: datetime) -
 @Profiling.measure("mapharma_slot")
 def fetch_slots(
     request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT, opendata_file: str = MAPHARMA_OPEN_DATA_FILE
-) -> str:
+) -> Optional[str]:
     url = request.get_url()
     # on récupère les paramètres c (id_campagne) & l (id_type)
     params = dict(parse.parse_qsl(parse.urlsplit(url).query))
