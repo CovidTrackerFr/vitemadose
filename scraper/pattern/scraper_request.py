@@ -1,5 +1,4 @@
-import hashlib
-from typing import Optional
+from typing import List, Optional
 
 
 class ScraperRequest:
@@ -10,48 +9,42 @@ class ScraperRequest:
         self.practitioner_type = None
         self.appointment_count = 0
         self.appointment_schedules = None
-        self.vaccine_type = None
+        self.vaccine_type: List[str] = []
         self.appointment_by_phone_only = False
         self.requests = None
         self.input_data = None
 
-    def update_internal_id(self, internal_id: str) -> Optional[str]:
+    def update_internal_id(self, internal_id: str) -> str:
         self.internal_id = internal_id
         return self.internal_id
 
-    def update_practitioner_type(self, practitioner_type: str) -> Optional[str]:
+    def update_practitioner_type(self, practitioner_type: str) -> str:
         self.practitioner_type = practitioner_type
         return self.practitioner_type
 
-    def update_appointment_count(self, appointment_count: int) -> Optional[int]:
+    def update_appointment_count(self, appointment_count: int) -> int:
         self.appointment_count = appointment_count
         return self.appointment_count
 
     def update_appointment_schedules(self, appointment_schedules: dict):
         self.appointment_schedules = appointment_schedules
 
-    def increase_request_count(self, request_type: str):
+    def increase_request_count(self, request_type: str) -> int:
         if self.requests is None:
             self.requests = {}
-        if not request_type:
-            request_type = "unknown"
+        request_type = request_type or "unknown"
         if request_type not in self.requests:
             self.requests[request_type] = 1
-            return 1
-        self.requests[request_type] += 1
+        else:
+            self.requests[request_type] += 1
         return self.requests[request_type]
 
-    def get_appointment_schedules(self) -> list:
+    def get_appointment_schedules(self) -> Optional[list]:
         return self.appointment_schedules
 
-    def add_vaccine_type(self, vaccine_name):
-        if not vaccine_name:
-            return
-        if self.vaccine_type is None:
-            self.vaccine_type = []
-        if vaccine_name in self.vaccine_type:
-            return
-        self.vaccine_type.append(vaccine_name)
+    def add_vaccine_type(self, vaccine_name: Optional[str]) -> None:
+        if vaccine_name and vaccine_name not in self.vaccine_type:
+            self.vaccine_type.append(vaccine_name)
 
     def get_url(self) -> str:
         return self.url
