@@ -178,6 +178,11 @@ def fetch_slots(
     id_campagne = int(params.get("c"))
     id_type = int(params.get("l"))
     day_slots = {}
+    # certaines campagnes ont des dispos mais 0 doses
+    # si total_libres est à 0 c'est qu'il n'y a pas de vraies dispo
+    pharmacy, campagne = get_pharmacy_and_campagne(id_campagne, id_type, opendata_file)
+    if campagne is None or campagne["total_libres"] == 0:
+        return None
     # l'api ne renvoie que 7 jours, on parse un peu plus loin dans le temps
     start_date = date.fromisoformat(request.get_start_date())
     for delta in range(0, MAPHARMA_SLOT_LIMIT, 6):
@@ -194,7 +199,6 @@ def fetch_slots(
     first_availability, slot_count = parse_slots(day_slots)
     request.update_appointment_count(slot_count)
     request.update_practitioner_type(DRUG_STORE)
-    pharmacy, campagne = get_pharmacy_and_campagne(id_campagne, id_type, opendata_file)
     request.add_vaccine_type(get_vaccine_name(campagne["nom"]))
 
     appointment_schedules = []
