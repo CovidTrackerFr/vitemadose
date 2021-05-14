@@ -147,6 +147,8 @@ def get_first_availability(
     counts["chronodose"] = 0
     for n in INTERVAL_SPLIT_DAYS:
         counts[f"{n}_days"] = 0
+    datenow = dt.datetime.now()
+
     for consultation_reason in reasons:
         consultation_reason_name_quote = quote(consultation_reason.get("name"), "")
         if "injectionType" in consultation_reason and consultation_reason["injectionType"] in ["FIRST"]:
@@ -164,7 +166,6 @@ def get_first_availability(
                 n_date = (isoparse(start_date) + dt.timedelta(days=n, seconds=-1)).isoformat()
                 counts[f"{n}_days"] += count_slots(slots, start_date, n_date)
             slots_count += len(slots)
-            datenow = dt.datetime.now()
             if get_vaccine_name(consultation_reason["name"]) in CHRONODOSES["Vaccine"]:
                 current_date = (paris_tz.localize(datenow + dt.timedelta(days=0))).isoformat()
                 n_date = (datenow + dt.timedelta(days=1, seconds=-1)).isoformat()
