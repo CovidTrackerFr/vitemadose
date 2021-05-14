@@ -10,7 +10,7 @@ from utils.vmd_logger import get_logger
 from scraper.doctolib.doctolib import DOCTOLIB_HEADERS
 from scraper.doctolib.doctolib_filters import is_vaccination_center
 
-from typing import List
+from typing import List, Tuple
 import requests
 import json
 from urllib import parse
@@ -111,7 +111,10 @@ def parse_page_centers_departement(departement, page_id, liste_urls) -> List[dic
         if payload["link"] not in liste_urls:
             liste_urls.append(payload["link"])
             # One "doctor" can have multiple places, hence center_from_doctor_dict returns a list
-            centers_page += center_from_doctor_dict(payload)
+            centers, stop = center_from_doctor_dict(payload)
+            centers_page += centers
+            if stop:
+                return centers_page
 
     return centers_page
 
@@ -133,12 +136,13 @@ def parse_page_centers(page_id) -> List[dict]:
     return centers_page
 
 
-def center_from_doctor_dict(doctor_dict) -> dict:
+def center_from_doctor_dict(doctor_dict) -> Tuple[dict, bool]:
 
     liste_centres = []
     nom = doctor_dict["name_with_title"]
     sub_addresse = doctor_dict["address"]
     ville = doctor_dict["city"]
+    exact_match = doctor_dict["exact_match"]
     code_postal = doctor_dict["zipcode"].replace(" ", "").strip()
     addresse = f"{sub_addresse}, {code_postal} {ville}"
     url_path = doctor_dict["link"]
@@ -160,7 +164,10 @@ def center_from_doctor_dict(doctor_dict) -> dict:
         info_center["rdv_site_web"] = f"https://www.doctolib.fr{url_path}?pid={info_center['place_id']}"
         liste_centres.append({**info_center, **dict_infos_browse_page})
 
-    return liste_centres
+    stop = False
+    if not exact_match:
+        stop = True
+    return liste_centres, stop
 
 
 def get_coordinates(doctor_dict):
