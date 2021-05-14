@@ -302,7 +302,7 @@ if __name__ == "__main__":  # pragma: no cover
         else:
             logger.info(f"> Writing them on {path_out}")
             with open(path_out, "w") as f:
-                f.write(json.dumps(centers, indent=2))
+                f.write(json.dumps(centers))
     else:
         logger.error(f"Doctolib scraper is disabled in configuration file.")
         exit(1)
