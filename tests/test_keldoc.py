@@ -2,10 +2,10 @@
 import datetime
 import json
 from pathlib import Path
-
+import datetime as dt
 import httpx
 import pytest
-
+from .utils import mock_datetime_now
 from scraper.keldoc import keldoc
 from scraper.keldoc.keldoc import fetch_slots
 from scraper.keldoc.keldoc_center import KeldocCenter, DEFAULT_CLIENT
@@ -110,14 +110,17 @@ def test_keldoc_parse_center():
     assert motives == json.loads(Path("tests", "fixtures", "keldoc", "center1-motives.json").read_text())
 
     # Find first availability date
-    date, count, appointment_schedules = test_center_1.find_first_availability("2020-04-04")
+    fake_now = dt.datetime(2020, 4, 4)
+    with mock_datetime_now(fake_now):
+        date, count, appointment_schedules = test_center_1.find_first_availability("2020-04-04")
     assert not date
     test_center_1.vaccine_motives = motives
-    date, count, appointment_schedules = test_center_1.find_first_availability("2020-04-04")
+    with mock_datetime_now(fake_now):
+        date, count, appointment_schedules = test_center_1.find_first_availability("2020-04-04")
     tz = datetime.timezone(datetime.timedelta(seconds=7200))
     assert date == datetime.datetime(2021, 4, 20, 16, 55, tzinfo=tz)
     assert appointment_schedules == [
-        {"name": "chronodose", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-05T23:59:59+02:00", "total": 0},
+        {"name": "chronodose", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-04T23:59:59+02:00", "total": 0},
         {"name": "1_days", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-04T23:59:59+02:00", "total": 0},
         {"name": "2_days", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-05T23:59:59+02:00", "total": 0},
         {"name": "7_days", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-10T23:59:59+02:00", "total": 0},
@@ -201,11 +204,11 @@ def test_keldoc_scrape():
 
     date = fetch_slots(request)
     # When it's already killed
-    if not keldoc.KELDOC_ENABLED:
+    if keldoc.KELDOC_KILL_SWITCH:
         assert date is None
     else:
         assert date == "2021-04-20T16:55:00.000000+0200"
-    keldoc.KELDOC_ENABLED = False
+    keldoc.KELDOC_KILL_SWITCH = True
     test_killswitch = fetch_slots(request)
     assert not test_killswitch
 
@@ -216,7 +219,7 @@ def test_keldoc_scrape_nodate():
         "-bretagne-sud-lorient-hopital-du-scorff?specialty=144 "
     )
 
-    keldoc.KELDOC_ENABLED = True
+    keldoc.KELDOC_KILL_SWITCH = False
 
     def app_center2(request: httpx.Request) -> httpx.Response:
         if "timetables/" in request.url.path:
