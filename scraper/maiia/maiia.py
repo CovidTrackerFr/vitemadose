@@ -148,7 +148,6 @@ def get_first_availability(
     for n in INTERVAL_SPLIT_DAYS:
         counts[f"{n}_days"] = 0
     datenow = dt.datetime.now()
-
     for consultation_reason in reasons:
         consultation_reason_name_quote = quote(consultation_reason.get("name"), "")
         if "injectionType" in consultation_reason and consultation_reason["injectionType"] in ["FIRST"]:
