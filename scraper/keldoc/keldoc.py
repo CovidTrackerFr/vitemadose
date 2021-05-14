@@ -13,6 +13,7 @@ from utils.vmd_config import get_conf_platform
 KELDOC_CONF = get_conf_platform("keldoc")
 timeout = httpx.Timeout(KELDOC_CONF.get("timeout", 25), connect=KELDOC_CONF.get("timeout", 25))
 # change KELDOC_KILL_SWITCH to True to bypass Keldoc scraping
+KELDOC_KILL_SWITCH = False
 KELDOC_ENABLED = KELDOC_CONF.get("enabled", False)
 KELDOC_HEADERS = {
     "User-Agent": os.environ.get("KELDOC_API_KEY", ""),
@@ -40,8 +41,12 @@ def fetch_slots(request: ScraperRequest):
     center.vaccine_specialties = get_relevant_vaccine_specialties_id(center.specialties)
     center.fetch_vaccine_cabinets()
     center.vaccine_motives = filter_vaccine_motives(
-        session, center.selected_cabinet, center.id, center.vaccine_specialties,
-        center.vaccine_cabinets, request=request
+        session,
+        center.selected_cabinet,
+        center.id,
+        center.vaccine_specialties,
+        center.vaccine_cabinets,
+        request=request,
     )
     # Find the first availability
     date, count, appointment_schedules = center.find_first_availability(request.get_start_date())
