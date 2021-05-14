@@ -5,7 +5,7 @@ import os
 import re
 from datetime import timedelta, datetime
 from math import floor
-from typing import Optional, Tuple
+from typing import Dict, Iterator, List, Optional, Tuple
 from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 
 import httpx
@@ -44,7 +44,7 @@ logger = logging.getLogger("scraper")
 
 
 @Profiling.measure("doctolib_slot")
-def fetch_slots(request: ScraperRequest):
+def fetch_slots(request: ScraperRequest) -> Optional[str]:
     if not DOCTOLIB_CONF.enabled:
         return None
     # Fonction principale avec le comportement "de prod".
@@ -234,7 +234,7 @@ class DoctolibSlots:
             first_availability=first_availability,
         )
 
-    def sort_agenda_ids(self, all_agendas, ids):
+    def sort_agenda_ids(self, all_agendas, ids) -> List[str]:
         """
         On Doctolib front-side, agenda ids are sorted using the center.json order
         so we need to use all agendas in order to sort.
@@ -249,7 +249,7 @@ class DoctolibSlots:
                 new_agenda_list.append(str(agenda))
         return new_agenda_list
 
-    def pop_practice_id(self, request: ScraperRequest):
+    def pop_practice_id(self, request: ScraperRequest) -> None:
         """
         In some cases, practice id needs to be deleted
         """
@@ -259,7 +259,7 @@ class DoctolibSlots:
         u = u._replace(query=urlencode(query, True))
         request.url = urlunparse(u)
 
-    def is_practice_id_valid(self, request: ScraperRequest, rdata: dict):
+    def is_practice_id_valid(self, request: ScraperRequest, rdata: dict) -> bool:
         """
         Some practice IDs are wrong and prevent people from booking an appointment.
         So if the practice id is invalid, this center does not seems to exist anymore.
@@ -293,7 +293,6 @@ class DoctolibSlots:
         motive_availability = False
         first_availability = None
         appointment_count = 0
-        appointment_schedules_updated = None
         slots_api_url = DOCTOLIB_CONF.api.get("slots", "").format(
             start_date=start_date,
             motive_id=motive_id,
@@ -304,7 +303,7 @@ class DoctolibSlots:
         request.increase_request_count("slots")
         try:
             response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
-        except httpx.ReadTimeout as hex:
+        except httpx.ReadTimeout:
             logger.warning(f"Doctolib returned error ReadTimeout for url {request.get_url()}")
             raise BlockedByDoctolibError(request.get_url())
         if response.status_code == 403 or response.status_code == 400:
@@ -378,7 +377,9 @@ class DoctolibSlots:
         return first_availability, appointment_count, appointment_schedules, stop, slots.get("next_slot")
 
 
-def set_doctolib_center_internal_id(request: ScraperRequest, data: dict, practice_ids, practice_same_adress: bool):
+def set_doctolib_center_internal_id(
+    request: ScraperRequest, data: dict, practice_ids: Optional[List[int]], practice_same_adress: bool
+) -> None:
     profile = data.get("profile")
 
     if not profile:
@@ -419,7 +420,7 @@ def _parse_centre(rdv_site_web: str) -> Optional[str]:
     return centre
 
 
-def link_practice_ids(practice_id: list, rdata: dict):
+def link_practice_ids(practice_id: list, rdata: dict) -> Tuple[list, bool]:
     same_adress = False
     if not practice_id:
         return practice_id, same_adress
@@ -453,7 +454,7 @@ def link_practice_ids(practice_id: list, rdata: dict):
     return practice_id, same_adress
 
 
-def parse_agenda_ids(rdata: dict):
+def parse_agenda_ids(rdata: dict) -> List[int]:
     agendas = rdata.get("agendas", None)
     agenda_ids = []
     if not agendas:
@@ -466,7 +467,7 @@ def parse_agenda_ids(rdata: dict):
     return agenda_ids
 
 
-def _parse_practice_id(rdv_site_web: str):
+def _parse_practice_id(rdv_site_web: str) -> Optional[List[int]]:
     # Doctolib fetches multiple vaccination centers sometimes
     # so if a practice id is present in query, only related agendas
     # will be selected.
@@ -501,8 +502,14 @@ def _parse_practice_id(rdv_site_web: str):
 
 
 def build_appointment_schedules(
-    request, interval, start_date, end_date, count, appointment_schedules, chronodose=False
-):
+    request,
+    interval: int,
+    start_date: str,
+    end_date: str,
+    count: int,
+    appointment_schedules: Optional[List[dict]],
+    chronodose=False,
+) -> List[dict]:
     if appointment_schedules is None:
         appointment_schedules = []
     if isinstance(appointment_schedules, list) and len(appointment_schedules) > 0:
@@ -539,7 +546,7 @@ def build_appointment_schedules(
     return appointment_schedules
 
 
-def _find_visit_motive_category_id(rdata: dict):
+def _find_visit_motive_category_id(rdata: dict) -> List[int]:
     """
     Etant donnée une réponse à /booking/<centre>.json, renvoie le cas échéant
     l'ID de la catégorie de motif correspondant à 'Non professionnels de santé'
@@ -555,7 +562,7 @@ def _find_visit_motive_category_id(rdata: dict):
     return categories
 
 
-def _find_visit_motive_id(rdata: dict, visit_motive_category_id: list = None):
+def _find_visit_motive_id(rdata: dict, visit_motive_category_id: list = None) -> Dict[int, str]:
     """
     Etant donnée une réponse à /booking/<centre>.json, renvoie le cas échéant
     l'ID du 1er motif de visite disponible correspondant à une 1ère dose pour
@@ -619,10 +626,8 @@ def _find_agenda_and_practice_ids(
     return sorted(agenda_ids), sorted(practice_ids)
 
 
-def is_allowing_online_appointments(rdata):
-    """
-    Check if online appointments are allowed for this center
-    """
+def is_allowing_online_appointments(rdata: dict) -> bool:
+    """Check if online appointments are allowed for this center."""
     agendas = rdata.get("agendas", None)
     if not agendas:
         return False
@@ -632,7 +637,7 @@ def is_allowing_online_appointments(rdata):
     return False
 
 
-def center_iterator():
+def center_iterator() -> Iterator[Dict]:
     if not DOCTOLIB_CONF.enabled:
         return
     try:
