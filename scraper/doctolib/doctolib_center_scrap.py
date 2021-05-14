@@ -86,18 +86,18 @@ def parse_pages_departement(departement):
     centers = []
     while page_has_centers:
         logger.info(f"[Doctolib centers] Parsing page {page_id} of {departement}")
-        centers_page = parse_page_centers_departement(departement, page_id, liste_urls)
+        centers_page, stop = parse_page_centers_departement(departement, page_id, liste_urls)
         centers += centers_page
 
         page_id += 1
 
-        if len(centers_page) == 0:
+        if len(centers_page) == 0 or stop:
             page_has_centers = False
 
     return centers
 
 
-def parse_page_centers_departement(departement, page_id, liste_urls) -> List[dict]:
+def parse_page_centers_departement(departement, page_id, liste_urls) -> Tuple[List[dict], bool]:
     r = requests.get(
         BASE_URL_DEPARTEMENT.format(doctolib_urlify(departement), page_id),
         headers=DOCTOLIB_HEADERS,
@@ -114,9 +114,9 @@ def parse_page_centers_departement(departement, page_id, liste_urls) -> List[dic
             centers, stop = center_from_doctor_dict(payload)
             centers_page += centers
             if stop:
-                return centers_page
+                return centers_page, True
 
-    return centers_page
+    return centers_page, False
 
 
 def doctolib_urlify(departement: str) -> str:
