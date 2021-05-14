@@ -1,3 +1,4 @@
+import multiprocessing
 from time import sleep, time
 from scraper.pattern.scraper_result import (
     DRUG_STORE,
@@ -30,34 +31,39 @@ CENTER_TYPES = SCRAPER_CONF.get("categories", [])
 
 DOCTOLIB_DOMAINS = DOCTOLIB_CONF.get("recognized_urls", [])
 
-
 DOCTOLIB_WEIRD_DEPARTEMENTS = SCRAPER_CONF.get("dep_conversion", {})
 
-
 logger = get_logger()
+
+
+def run_departement_scrap(departement: str):
+    logger.info(f"[Doctolib centers] Parsing pages of departement {departement} through department SEO link")
+    centers_departements = parse_pages_departement(departement)
+    if centers_departements == 0:
+        raise Exception("No Value found for department {}, crashing")
+    return centers_departements
 
 
 def parse_doctolib_centers(page_limit=None) -> List[dict]:
     centers = []
     unique_center_urls = []
 
-    for departement in get_departements():
-        logger.info(f"[Doctolib centers] Parsing pages of departement {departement} through department SEO link")
-        centers_departements = parse_pages_departement(departement)
-        if centers_departements == 0:
-            raise Exception("No Value found for department {}, crashing")
-        centers += centers_departements
+    with multiprocessing.Pool(50) as pool:
+        center_lists = pool.imap_unordered(run_departement_scrap, get_departements())
+        centers = []
 
-    centers = list(filter(is_vaccination_center, centers))  # Filter vaccination centers
-    centers = list(map(center_reducer, centers))  # Remove fields irrelevant to the front
+        for center_list in center_lists:
+            centers.extend(center_list)
+        centers = list(filter(is_vaccination_center, centers))  # Filter vaccination centers
+        centers = list(map(center_reducer, centers))  # Remove fields irrelevant to the front
 
-    for item in list(centers):
-        if item.get("rdv_site_web") in unique_center_urls:
-            centers.remove(item)
-            continue
-        unique_center_urls.append(item.get("rdv_site_web"))
+        for item in list(centers):
+            if item.get("rdv_site_web") in unique_center_urls:
+                centers.remove(item)
+                continue
+            unique_center_urls.append(item.get("rdv_site_web"))
 
-    return centers
+        return centers
 
 
 def get_departements():
@@ -125,7 +131,6 @@ def doctolib_urlify(departement: str) -> str:
 
 
 def center_from_doctor_dict(doctor_dict) -> Tuple[dict, bool]:
-
     liste_centres = []
     nom = doctor_dict["name_with_title"]
     sub_addresse = doctor_dict["address"]
@@ -282,7 +287,7 @@ if __name__ == "__main__":  # pragma: no cover
         else:
             logger.info(f"> Writing them on {path_out}")
             with open(path_out, "w") as f:
-                f.write(json.dumps(centers, indent=2))
+                f.write(json.dumps(centers))
     else:
         logger.error(f"Doctolib scraper is disabled in configuration file.")
         exit(1)
