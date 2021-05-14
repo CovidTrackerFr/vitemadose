@@ -1,6 +1,7 @@
 import json
 import logging
 import httpx
+import os
 
 from datetime import datetime, timedelta
 from pytz import timezone
@@ -22,8 +23,11 @@ MAIIA_CONF = get_conf_platform("maiia")
 MAIIA_API = MAIIA_CONF.get("api", {})
 MAIIA_ENABLED = MAIIA_CONF.get("enabled", False)
 MAIIA_SCRAPER = MAIIA_CONF.get("center_scraper", {})
+MAIIA_HEADERS = {
+    "User-Agent": os.environ.get("MAIIA_API_KEY", ""),
+}
 
-#timeout = httpx.Timeout(MAIIA_CONF.get("timeout", 25), connect=MAIIA_CONF.get("timeout", 25))
+# timeout = httpx.Timeout(MAIIA_CONF.get("timeout", 25), connect=MAIIA_CONF.get("timeout", 25))
 
 DEFAULT_CLIENT = httpx.Client()
 logger = logging.getLogger("scraper")
@@ -62,8 +66,11 @@ def count_slots(slots: list, start_date: str, end_date: str) -> int:
 
 
 def get_next_slot_date(
-    center_id: str, consultation_reason_name: str, start_date: str,
-    client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None
+    center_id: str,
+    consultation_reason_name: str,
+    start_date: str,
+    client: httpx.Client = DEFAULT_CLIENT,
+    request: ScraperRequest = None,
 ) -> Optional[str]:
     url = MAIIA_API.get("next_slot").format(
         center_id=center_id, consultation_reason_name=consultation_reason_name, start_date=start_date
@@ -71,7 +78,7 @@ def get_next_slot_date(
     if request:
         request.increase_request_count("next-slots")
     try:
-        r = client.get(url)
+        r = client.get(url, headers=MAIIA_HEADERS)
         r.raise_for_status()
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{url} returned error {hex.response.status_code}")
@@ -88,15 +95,19 @@ def get_slots(
     start_date: str,
     end_date: str,
     limit=MAIIA_LIMIT,
-    client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None
+    client: httpx.Client = DEFAULT_CLIENT,
+    request: ScraperRequest = None,
 ) -> Optional[list]:
     url = MAIIA_API.get("slots").format(
         center_id=center_id, consultation_reason_name=consultation_reason_name, start_date=start_date, end_date=end_date
     )
-    availabilities = get_paged(url, limit=limit, client=client, request=request, request_type="slots")["items"]
+    availabilities = get_paged(
+        url, limit=limit, client=client, request=request, request_type="slots", headers=MAIIA_HEADERS
+    )["items"]
     if not availabilities:
-        next_slot_date = get_next_slot_date(center_id, consultation_reason_name, start_date, client=client,
-                                            request=request)
+        next_slot_date = get_next_slot_date(
+            center_id, consultation_reason_name, start_date, client=client, request=request
+        )
         if not next_slot_date:
             return None
         next_date = datetime.strptime(next_slot_date, "%Y-%m-%dT%H:%M:%S.%fZ")
@@ -109,24 +120,30 @@ def get_slots(
             start_date=start_date,
             end_date=end_date,
         )
-        availabilities = get_paged(url, limit=limit, client=client, request=request, request_type="slots")["items"]
+        availabilities = get_paged(
+            url, limit=limit, client=client, request=request, request_type="slots", headers=MAIIA_HEADERS
+        )["items"]
     if availabilities:
         return availabilities
     return None
 
 
-def get_reasons(center_id: str, limit=MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIENT,
-                request: ScraperRequest = None) -> list:
+def get_reasons(
+    center_id: str, limit=MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None
+) -> list:
     url = MAIIA_API.get("motives").format(center_id=center_id)
-    result = get_paged(url, limit=limit, client=client, request=request, request_type="motives")
+    result = get_paged(url, limit=limit, client=client, request=request, request_type="motives", headers=MAIIA_HEADERS)
     if not result["total"]:
         return []
     return result.get("items", [])
 
 
 def get_first_availability(
-    center_id: str, request_date: str, reasons: [dict], client: httpx.Client = DEFAULT_CLIENT,
-    request: ScraperRequest = None
+    center_id: str,
+    request_date: str,
+    reasons: [dict],
+    client: httpx.Client = DEFAULT_CLIENT,
+    request: ScraperRequest = None,
 ) -> [Optional[datetime], int, dict]:
     date = isoparse(request_date).replace(tzinfo=None)
     start_date = date.isoformat()
@@ -141,8 +158,9 @@ def get_first_availability(
     for consultation_reason in reasons:
         consultation_reason_name_quote = quote(consultation_reason.get("name"), "")
         if "injectionType" in consultation_reason and consultation_reason["injectionType"] in ["FIRST"]:
-            slots = get_slots(center_id, consultation_reason_name_quote, start_date, end_date, client=client,
-                              request=request)
+            slots = get_slots(
+                center_id, consultation_reason_name_quote, start_date, end_date, client=client, request=request
+            )
             slot_availability = parse_slots(slots)
             if slot_availability is None:
                 continue

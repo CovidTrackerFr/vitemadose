@@ -8,15 +8,21 @@ from utils.vmd_config import get_conf_platform
 MAIIA_CONF = get_conf_platform("maiia")
 MAIIA_SCRAPER = MAIIA_CONF.get("center_scraper", {})
 
-#timeout = httpx.Timeout(MAIIA_CONF.get("timeout", 25), connect=MAIIA_CONF.get("timeout", 25))
+# timeout = httpx.Timeout(MAIIA_CONF.get("timeout", 25), connect=MAIIA_CONF.get("timeout", 25))
 DEFAULT_CLIENT = httpx.Client()
 logger = logging.getLogger("scraper")
 
 MAIIA_LIMIT = MAIIA_SCRAPER.get("centers_per_page")
 
 
-def get_paged(url: str, limit: MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIENT,
-              request: ScraperRequest = None, request_type: str = None) -> dict:
+def get_paged(
+    url: str,
+    limit: MAIIA_LIMIT,
+    client: httpx.Client = DEFAULT_CLIENT,
+    request: ScraperRequest = None,
+    request_type: str = None,
+    headers: dict = {},
+) -> dict:
     result = dict()
     result["items"] = []
     result["total"] = 0
@@ -27,7 +33,7 @@ def get_paged(url: str, limit: MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIEN
         if request:
             request.increase_request_count(request_type)
         try:
-            r = client.get(base_url)
+            r = client.get(base_url, headers=headers)
             r.raise_for_status()
         except httpx.HTTPStatusError as hex:
             logger.warning(f"{base_url} returned error {hex.response.status_code}")
