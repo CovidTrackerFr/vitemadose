@@ -51,7 +51,6 @@ def campagne_to_centre(pharmacy: dict, campagne: dict) -> dict:
     if not pharmacy.get("code_postal"):
         raise ValueError("Absence de code postal")
     insee = departementUtils.cp_to_insee(pharmacy.get("code_postal"))
-    departementUtils.to_departement_number(insee)
     centre = dict()
     centre["nom"] = pharmacy.get("nom")
     centre["type"] = DRUG_STORE
