@@ -269,8 +269,6 @@ class KeldocCenter:
             if "id" not in relevant_motive or "agendas" not in relevant_motive:
                 continue
             motive_id = relevant_motive.get("id", None)
-            API_KELDOC_CALENDAR.format(motive_id)
-
             agenda_ids = relevant_motive.get("agendas", None)
             if not agenda_ids:
                 continue
