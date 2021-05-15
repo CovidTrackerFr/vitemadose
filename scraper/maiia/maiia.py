@@ -7,13 +7,13 @@ from pytz import timezone
 
 import requests
 from dateutil.parser import isoparse
-from pathlib import Path
 from urllib import parse as urlparse
 from urllib.parse import quote, parse_qs
-from typing import Optional, Tuple
+from typing import List, Optional, Tuple
 
 from scraper.profiler import Profiling
-from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
+from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
+from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT
 from utils.vmd_config import get_conf_platform, get_config
@@ -133,7 +133,7 @@ def get_reasons(
 def get_first_availability(
     center_id: str,
     request_date: str,
-    reasons: [dict],
+    reasons: List[dict],
     client: httpx.Client = DEFAULT_CLIENT,
     request: ScraperRequest = None,
 ) -> Tuple[Optional[dt.datetime], int, dict]:

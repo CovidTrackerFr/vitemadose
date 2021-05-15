@@ -2,15 +2,13 @@ import httpx
 import json
 import logging
 
-from datetime import datetime, timedelta
-from dateutil.parser import isoparse
 from pathlib import Path
 
 from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import departementUtils, format_phone_number
-from scraper.pattern.center_info import get_vaccine_name
-from scraper.pattern.scraper_result import DRUG_STORE, GENERAL_PRACTITIONER, VACCINATION_CENTER
-from .maiia_utils import get_paged, MAIIA_LIMIT
+from scraper.pattern.vaccine import get_vaccine_name
+from scraper.pattern.scraper_result import DRUG_STORE, VACCINATION_CENTER
+from .maiia_utils import get_paged
 
 MAIIA_CONF = get_conf_platform("maiia")
 MAIIA_API = MAIIA_CONF.get("api", {})

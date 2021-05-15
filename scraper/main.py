@@ -1,5 +1,4 @@
 import argparse
-import sys
 
 from scraper.export.export_merge import merge_platforms
 from scraper.scraper import scrape, scrape_debug

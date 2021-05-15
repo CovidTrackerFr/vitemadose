@@ -5,13 +5,10 @@ import httpx
 from datetime import datetime
 from dateutil.parser import isoparse
 from jsonschema import validate
-from jsonschema.exceptions import ValidationError
-import pytest
 
 from scraper.ordoclic import (
     search,
     get_reasons,
-    get_slots,
     get_profile,
     parse_ordoclic_slots,
     fetch_slots,

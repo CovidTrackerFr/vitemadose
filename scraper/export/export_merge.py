@@ -6,7 +6,7 @@ from typing import Iterator
 import pytz
 
 from scraper.error import BlockedByDoctolibError
-from scraper.pattern.center_info import CenterInfo, full_dict_to_center
+from scraper.pattern.center_info import CenterInfo
 from utils.vmd_blocklist import get_blocklist_urls, is_in_blocklist
 from utils.vmd_center_sort import sort_center
 from utils.vmd_duplicated import deduplicates_names
@@ -90,7 +90,7 @@ def export_data(centres_cherchés: Iterator[CenterInfo], last_scrap, outpath_for
             "vaccine_type",
             "appointment_by_phone_only",
             "last_scan_with_availabilities",
-            "request_counts"
+            "request_counts",
         ]
         centres_open_data.append(copy_omit_keys(centre.default(), skipped_keys))
 
@@ -128,7 +128,7 @@ def export_data(centres_cherchés: Iterator[CenterInfo], last_scrap, outpath_for
 
 def merge_centers(centers: list, center_dicts):
     for center_dict in center_dicts:
-        centers.append(full_dict_to_center(center_dict))
+        centers.append(CenterInfo(**center_dict))
     return centers
 
 

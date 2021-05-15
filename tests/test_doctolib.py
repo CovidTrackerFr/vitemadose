@@ -1,6 +1,5 @@
 import json
 from pathlib import Path
-from typing import DefaultDict
 from scraper.doctolib.doctolib_filters import (
     is_category_relevant,
     is_vaccination_center,
@@ -8,7 +7,7 @@ from scraper.doctolib.doctolib_filters import (
     parse_practitioner_type,
 )
 from scraper.error import BlockedByDoctolibError
-from scraper.pattern.center_info import Vaccine
+from scraper.pattern.vaccine import Vaccine
 
 import httpx
 from scraper.doctolib.doctolib import (
@@ -18,7 +17,7 @@ from scraper.doctolib.doctolib import (
     _find_visit_motive_id,
     _parse_centre,
     _parse_practice_id,
-    DOCTOLIB_SLOT_PAGES,
+    DOCTOLIB_CONF,
 )
 
 
@@ -50,7 +49,7 @@ def test_blocked_by_doctolib_par_centre():
             "insurance_sector": "public",
             "practice_ids": "4",
             "destroy_temporary": "true",
-            "limit": str(DOCTOLIB_SLOT_PAGES),
+            "limit": str(DOCTOLIB_CONF.pagination["pages"]),
         }
         path = Path("tests", "fixtures", "doctolib", "basic-availabilities.json")
         return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
