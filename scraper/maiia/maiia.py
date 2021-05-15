@@ -1,7 +1,6 @@
 import json
 import logging
 import httpx
-import os
 
 import datetime as dt
 from pytz import timezone
@@ -16,20 +15,16 @@ from typing import Optional, Tuple
 from scraper.profiler import Profiling
 from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT
+from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT, DEFAULT_CLIENT
 from utils.vmd_config import get_conf_platform, get_config
 
 MAIIA_CONF = get_conf_platform("maiia")
 MAIIA_API = MAIIA_CONF.get("api", {})
 MAIIA_ENABLED = MAIIA_CONF.get("enabled", False)
 MAIIA_SCRAPER = MAIIA_CONF.get("center_scraper", {})
-MAIIA_HEADERS = {
-    "User-Agent": os.environ.get("MAIIA_API_KEY", ""),
-}
 
 # timeout = httpx.Timeout(MAIIA_CONF.get("timeout", 25), connect=MAIIA_CONF.get("timeout", 25))
 
-DEFAULT_CLIENT = httpx.Client()
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
 
@@ -78,7 +73,7 @@ def get_next_slot_date(
     if request:
         request.increase_request_count("next-slots")
     try:
-        r = client.get(url, headers=MAIIA_HEADERS)
+        r = client.get(url)
         r.raise_for_status()
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{url} returned error {hex.response.status_code}")
@@ -101,9 +96,7 @@ def get_slots(
     url = MAIIA_API.get("slots").format(
         center_id=center_id, consultation_reason_name=consultation_reason_name, start_date=start_date, end_date=end_date
     )
-    availabilities = get_paged(
-        url, limit=limit, client=client, request=request, request_type="slots", headers=MAIIA_HEADERS
-    )["items"]
+    availabilities = get_paged(url, limit=limit, client=client, request=request, request_type="slots")["items"]
     if not availabilities:
         next_slot_date = get_next_slot_date(
             center_id, consultation_reason_name, start_date, client=client, request=request
@@ -120,9 +113,7 @@ def get_slots(
             start_date=start_date,
             end_date=end_date,
         )
-        availabilities = get_paged(
-            url, limit=limit, client=client, request=request, request_type="slots", headers=MAIIA_HEADERS
-        )["items"]
+        availabilities = get_paged(url, limit=limit, client=client, request=request, request_type="slots")["items"]
     if availabilities:
         return availabilities
     return None
@@ -132,7 +123,7 @@ def get_reasons(
     center_id: str, limit=MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None
 ) -> list:
     url = MAIIA_API.get("motives").format(center_id=center_id)
-    result = get_paged(url, limit=limit, client=client, request=request, request_type="motives", headers=MAIIA_HEADERS)
+    result = get_paged(url, limit=limit, client=client, request=request, request_type="motives")
     if not result["total"]:
         return []
     return result.get("items", [])
