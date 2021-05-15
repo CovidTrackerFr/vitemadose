@@ -2,7 +2,7 @@ import re
 import csv
 import json
 import logging
-from typing import List
+from typing import List, Optional
 from urllib.parse import urlparse, urlencode, urlunparse, parse_qs, unquote
 import datetime as dt
 import pytz
@@ -107,23 +107,28 @@ class departementUtils:
             raise ValueError(f"Code INSEE absent de la base des codes INSEE : {insee_code}")
 
     @staticmethod
-    def get_city(address: str) -> str:
+    def get_city(address: str) -> Optional[str]:
         """
         Récupère la ville depuis l'adresse complète
         >>> get_city("2 avenue de la République, 75005 PARIS")
         'PARIS'
         """
+        if not address:
+            return None
+        # tmp debug
         if search := re.search(r"(?<=\s\d{5}\s)(?P<com_nom>.*?)\s*$", address):
             return search.groupdict().get("com_nom")
         return None
 
     @staticmethod
-    def get_cp(address: str) -> str:
+    def get_cp(address: str) -> Optional[str]:
         """
         Récupère le code postal depuis l'adresse complète
         >>> get_cp(("2 avenue de la République, 75005 PARIS")
         '75005'
         """
+        if not address:
+            return None
         if search := re.search(r"\b\d{5}\b", address):
             return search.group(0)
         return None

@@ -3,7 +3,7 @@ import logging
 import httpx
 import os
 
-from datetime import datetime, timedelta
+import datetime as dt
 from pytz import timezone
 
 import requests
@@ -11,7 +11,7 @@ from dateutil.parser import isoparse
 from pathlib import Path
 from urllib import parse as urlparse
 from urllib.parse import quote, parse_qs
-from typing import Optional
+from typing import Optional, Tuple
 
 from scraper.profiler import Profiling
 from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
@@ -37,7 +37,7 @@ MAIIA_URL = MAIIA_CONF.get("base_url")
 MAIIA_DAY_LIMIT = MAIIA_CONF.get("calendar_limit", 50)
 
 
-def parse_slots(slots: list) -> Optional[datetime]:
+def parse_slots(slots: list) -> Optional[dt.datetime]:
     if not slots:
         return None
     first_availability = None
@@ -110,8 +110,8 @@ def get_slots(
         )
         if not next_slot_date:
             return None
-        next_date = datetime.strptime(next_slot_date, "%Y-%m-%dT%H:%M:%S.%fZ")
-        if next_date - isoparse(start_date) > timedelta(days=MAIIA_DAY_LIMIT):
+        next_date = dt.datetime.strptime(next_slot_date, "%Y-%m-%dT%H:%M:%S.%fZ")
+        if next_date - isoparse(start_date) > dt.timedelta(days=MAIIA_DAY_LIMIT):
             return None
         start_date = next_date.isoformat()
         url = MAIIA_API.get("slots").format(
@@ -144,10 +144,10 @@ def get_first_availability(
     reasons: [dict],
     client: httpx.Client = DEFAULT_CLIENT,
     request: ScraperRequest = None,
-) -> [Optional[datetime], int, dict]:
+) -> Tuple[Optional[dt.datetime], int, dict]:
     date = isoparse(request_date).replace(tzinfo=None)
     start_date = date.isoformat()
-    end_date = (date + timedelta(days=MAIIA_DAY_LIMIT)).isoformat()
+    end_date = (date + dt.timedelta(days=MAIIA_DAY_LIMIT)).isoformat()
     first_availability = None
     slots_count = 0
     appointment_schedules = []
@@ -155,6 +155,7 @@ def get_first_availability(
     counts["chronodose"] = 0
     for n in INTERVAL_SPLIT_DAYS:
         counts[f"{n}_days"] = 0
+    datenow = dt.datetime.now()
     for consultation_reason in reasons:
         consultation_reason_name_quote = quote(consultation_reason.get("name"), "")
         if "injectionType" in consultation_reason and consultation_reason["injectionType"] in ["FIRST"]:
@@ -169,21 +170,23 @@ def get_first_availability(
                 for INTERVAL_SPLIT_DAY in INTERVAL_SPLIT_DAYS
                 if INTERVAL_SPLIT_DAY <= MAIIA_DAY_LIMIT
             ):
-                n_date = (isoparse(start_date) + timedelta(days=n, seconds=-1)).isoformat()
+                n_date = (isoparse(start_date) + dt.timedelta(days=n, seconds=-1)).isoformat()
                 counts[f"{n}_days"] += count_slots(slots, start_date, n_date)
             slots_count += len(slots)
             if get_vaccine_name(consultation_reason["name"]) in CHRONODOSES["Vaccine"]:
-                n_date = (isoparse(start_date) + timedelta(days=CHRONODOSES["Interval"], seconds=-1)).isoformat()
-                counts["chronodose"] += count_slots(slots, start_date, n_date)
+                current_date = (paris_tz.localize(datenow + dt.timedelta(days=0))).isoformat()
+                n_date = (datenow + dt.timedelta(days=1, seconds=-1)).isoformat()
+                counts["chronodose"] += count_slots(slots, current_date, n_date)
             if first_availability == None or slot_availability < first_availability:
                 first_availability = slot_availability
+    current_date = (paris_tz.localize(datenow + dt.timedelta(days=0))).isoformat()
     start_date = (paris_tz.localize(date)).isoformat()
-    n_date = (paris_tz.localize(date + timedelta(days=2, seconds=-1))).isoformat()
+    n_date = (paris_tz.localize(datenow + dt.timedelta(days=1, seconds=-1))).isoformat()
     appointment_schedules.append(
-        {"name": "chronodose", "from": start_date, "to": n_date, "total": counts["chronodose"]}
+        {"name": "chronodose", "from": current_date, "to": n_date, "total": counts["chronodose"]}
     )
     for n in INTERVAL_SPLIT_DAYS:
-        n_date = (paris_tz.localize(date + timedelta(days=n, seconds=-1))).isoformat()
+        n_date = (paris_tz.localize(date + dt.timedelta(days=n, seconds=-1))).isoformat()
         appointment_schedules.append(
             {"name": f"{n}_days", "from": start_date, "to": n_date, "total": counts[f"{n}_days"]}
         )

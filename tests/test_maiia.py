@@ -1,7 +1,7 @@
 import json
 import logging
 import httpx
-
+import datetime as dt
 from pathlib import Path
 
 import scraper
@@ -17,6 +17,8 @@ from scraper.maiia.maiia import (
 )
 from scraper.maiia.maiia_center_scrap import maiia_scrap
 from scraper.pattern.scraper_request import ScraperRequest
+from .utils import mock_datetime_now
+
 
 logger = logging.getLogger("scraper")
 
@@ -81,11 +83,14 @@ def test_get_reasons():
 
 def test_get_first_availability():
     reasons = get_reasons("5ffc744c68dedf073a5b87a2", limit=MAIIA_LIMIT, client=client)
-    first_availability, slots_count, appointment_schedules = get_first_availability(
-        "5ffc744c68dedf073a5b87a2", "2021-04-29", reasons, client=client
-    )
+
+    fake_now = dt.datetime(2021, 4, 29, 18, 20)
+    with mock_datetime_now(fake_now):
+        first_availability, slots_count, appointment_schedules = get_first_availability(
+            "5ffc744c68dedf073a5b87a2", "2021-04-29", reasons, client=client
+        )
     assert appointment_schedules == [
-        {"from": "2021-04-29T00:00:00+02:00", "name": "chronodose", "to": "2021-04-30T23:59:59+02:00", "total": 0},
+        {"from": "2021-04-29T18:20:00+02:00", "name": "chronodose", "to": "2021-04-30T18:19:59+02:00", "total": 0},
         {"from": "2021-04-29T00:00:00+02:00", "name": "1_days", "to": "2021-04-29T23:59:59+02:00", "total": 0},
         {"from": "2021-04-29T00:00:00+02:00", "name": "2_days", "to": "2021-04-30T23:59:59+02:00", "total": 0},
         {"from": "2021-04-29T00:00:00+02:00", "name": "7_days", "to": "2021-05-05T23:59:59+02:00", "total": 0},

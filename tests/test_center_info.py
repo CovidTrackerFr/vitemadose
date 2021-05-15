@@ -56,7 +56,7 @@ def test_center_info_fill():
         "erreur": None,
         "last_scan_with_availabilities": None,
         "appointment_schedules": None,
-        "request_counts": None
+        "request_counts": None,
     }
 
 

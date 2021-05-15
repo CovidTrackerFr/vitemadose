@@ -1,3 +1,4 @@
+import multiprocessing
 from time import sleep, time
 from scraper.pattern.scraper_result import (
     DRUG_STORE,
@@ -30,35 +31,39 @@ CENTER_TYPES = SCRAPER_CONF.get("categories", [])
 
 DOCTOLIB_DOMAINS = DOCTOLIB_CONF.get("recognized_urls", [])
 
-
 DOCTOLIB_WEIRD_DEPARTEMENTS = SCRAPER_CONF.get("dep_conversion", {})
 
-
 logger = get_logger()
-booking_requests = {}
+
+
+def run_departement_scrap(departement: str):
+    logger.info(f"[Doctolib centers] Parsing pages of departement {departement} through department SEO link")
+    centers_departements = parse_pages_departement(departement)
+    if centers_departements == 0:
+        raise Exception("No Value found for department {}, crashing")
+    return centers_departements
 
 
 def parse_doctolib_centers(page_limit=None) -> List[dict]:
     centers = []
     unique_center_urls = []
 
-    for departement in get_departements():
-        logger.info(f"[Doctolib centers] Parsing pages of departement {departement} through department SEO link")
-        centers_departements = parse_pages_departement(departement)
-        if centers_departements == 0:
-            raise Exception("No Value found for department {}, crashing")
-        centers += centers_departements
+    with multiprocessing.Pool(50) as pool:
+        center_lists = pool.imap_unordered(run_departement_scrap, get_departements())
+        centers = []
 
-    centers = list(filter(is_vaccination_center, centers))  # Filter vaccination centers
-    centers = list(map(center_reducer, centers))  # Remove fields irrelevant to the front
+        for center_list in center_lists:
+            centers.extend(center_list)
+        centers = list(filter(is_vaccination_center, centers))  # Filter vaccination centers
+        centers = list(map(center_reducer, centers))  # Remove fields irrelevant to the front
 
-    for item in list(centers):
-        if item.get("rdv_site_web") in unique_center_urls:
-            centers.remove(item)
-            continue
-        unique_center_urls.append(item.get("rdv_site_web"))
+        for item in list(centers):
+            if item.get("rdv_site_web") in unique_center_urls:
+                centers.remove(item)
+                continue
+            unique_center_urls.append(item.get("rdv_site_web"))
 
-    return centers
+        return centers
 
 
 def get_departements():
@@ -125,19 +130,7 @@ def doctolib_urlify(departement: str) -> str:
     return unidecode(departement)
 
 
-def parse_page_centers(page_id) -> List[dict]:
-    r = requests.get(BASE_URL.format(page_id), headers=DOCTOLIB_HEADERS)
-    data = r.json()
-
-    centers_page = []
-    # TODO parallelism can be put here
-    for payload in data["data"]["doctors"]:
-        centers_page += center_from_doctor_dict(payload)
-    return centers_page
-
-
 def center_from_doctor_dict(doctor_dict) -> Tuple[dict, bool]:
-
     liste_centres = []
     nom = doctor_dict["name_with_title"]
     sub_addresse = doctor_dict["address"]
@@ -183,21 +176,15 @@ def get_coordinates(doctor_dict):
 
 
 def get_dict_infos_center_page(url_path: str) -> dict:
-    global booking_requests
     internal_api_url = BOOKING_URL.format(centre=parse.urlsplit(url_path).path.split("/")[-1])
     logger.info(f"> Parsing {internal_api_url}")
     liste_infos_page = []
     output = None
 
     try:
-        data = None
-        if internal_api_url in booking_requests:
-            data = booking_requests.get(internal_api_url)
-        else:
-            req = requests.get(internal_api_url)
-            req.raise_for_status()
-            data = req.json()
-            booking_requests[internal_api_url] = data
+        req = requests.get(internal_api_url)
+        req.raise_for_status()
+        data = req.json()
         output = data.get("data", {})
     except:
         logger.warn(f"> Could not retrieve data from {internal_api_url}")
@@ -300,7 +287,7 @@ if __name__ == "__main__":  # pragma: no cover
         else:
             logger.info(f"> Writing them on {path_out}")
             with open(path_out, "w") as f:
-                f.write(json.dumps(centers, indent=2))
+                f.write(json.dumps(centers))
     else:
         logger.error(f"Doctolib scraper is disabled in configuration file.")
         exit(1)
