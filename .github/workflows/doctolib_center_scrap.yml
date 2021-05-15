@@ -3,7 +3,7 @@ name: Doctolib center scrap
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "0 * * * *"
   # Allow running manually
   workflow_dispatch:
 
