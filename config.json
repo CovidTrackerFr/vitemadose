@@ -31,21 +31,36 @@
     "blocked_calls_threshold": 10
   },
   "vaccines": {
-    "Pfizer-BioNTech": ["pfizer", "biontech"],
-    "Moderna": ["moderna"],
-    "ARNm": ["arn", "arnm", "arn-m", "arn m"],
-    "AstraZeneca": ["astrazeneca", "astra-zeneca", "astra zeneca", "az"],
+    "Pfizer-BioNTech": [
+      "pfizer",
+      "biontech"
+    ],
+    "Moderna": [
+      "moderna"
+    ],
+    "ARNm": [
+      "arn",
+      "arnm",
+      "arn-m",
+      "arn m"
+    ],
+    "AstraZeneca": [
+      "astrazeneca",
+      "astra-zeneca",
+      "astra zeneca",
+      "az"
+    ],
     "Janssen": [
-        "janssen",
-        "jansen",
-        "jansenn",
-        "jannsen",
-        "jenssen",
-        "jensen",
-        "jonson",
-        "johnson",
-        "johnnson",
-        "j&j"
+      "janssen",
+      "jansen",
+      "jansenn",
+      "jannsen",
+      "jenssen",
+      "jensen",
+      "jonson",
+      "johnson",
+      "johnnson",
+      "j&j"
     ]
   },
   "appointment_split_days": [
@@ -349,6 +364,14 @@
         "or.covidOnlineBookingAvailabilities.vaccinePfizer1": "true",
         "or.covidOnlineBookingAvailabilities.vaccineModerna1": "true"
       }
+    }
+  },
+  "manual": {
+    "sheet_id": "https://docs.google.com/spreadsheets/u/1/d/e/SHEET_ID",
+    "page_number": 1,
+    "column_names": {
+      "1": "name",
+      "2": "url"
     }
   }
 }
