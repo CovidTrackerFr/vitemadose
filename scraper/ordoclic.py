@@ -172,7 +172,6 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     profile = get_profile(request, client)
     if not profile:
         return None
-    profile["profileSlug"]
     entityId = profile["entityId"]
     attributes = profile.get("attributeValues")
     for settings in attributes:
@@ -193,8 +192,6 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
         )
     for professional in profile["publicProfessionals"]:
         medicalStaffId = professional["id"]
-        professional["fullName"]
-        professional["zip"]
         reasons = get_reasons(entityId, request=request)
         for reason in reasons["reasons"]:
             if not is_reason_valid(reason):
