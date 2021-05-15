@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from dev.model.department import Center, Department, Schedule, load_all
+from dev.model.department import Center, Schedule
 
 
 path = Path("tests", "fixtures", "utils", "info_centres.json")

@@ -4,13 +4,8 @@ from scraper.doctolib.doctolib_center_scrap import (
     get_coordinates,
     center_type,
     parse_doctolib_business_hours,
-    get_dict_infos_center_page,
-    parse_page_centers_departement,
-    parse_pages_departement,
-    parse_doctolib_centers,
 )
 
-import requests
 import json
 
 # -- Tests de l'API (offline) --
@@ -65,13 +60,13 @@ def test_doctolib_coordinates():
     assert lat == 8.192
 
 
-from unittest.mock import Mock, patch
+from unittest.mock import patch
 
 
 @patch("requests.get")
 def test_get_dict_infos_center_page(mock_get):
     with open("tests/fixtures/doctolib/booking-with-doctors.json", "r") as file:
-        booking = json.load(file)
+        json.load(file)
 
     expectedInfosCenterPageWithLandlineNumber = [
         {

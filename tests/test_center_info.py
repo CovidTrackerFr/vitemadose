@@ -1,10 +1,7 @@
-import datetime as dt
 
-from scraper.pattern.center_location import convert_csv_data_to_location, CenterLocation
+from scraper.pattern.center_location import CenterLocation
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, DRUG_STORE
-from utils.vmd_utils import format_phone_number, get_last_scans
-from .utils import mock_datetime_now
 from scraper.pattern.center_info import (
     CenterInfo,
     convert_csv_address,

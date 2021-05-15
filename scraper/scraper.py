@@ -2,7 +2,6 @@ import os
 import traceback
 from collections import deque
 from multiprocessing import Pool
-from pprint import pformat
 from random import random
 
 from scraper.error import ScrapeError
@@ -41,7 +40,7 @@ def scrape_debug(urls):  # pragma: no cover
         logger.info("scraping URL %s", rdv_site_web)
         try:
             result = fetch_centre_slots(rdv_site_web, start_date)
-        except Exception as e:
+        except Exception:
             logger.exception(f"erreur lors du traitement")
         logger.info(f'{result.platform!s:16} {result.next_availability or ""!s:32}')
         if result.request.appointment_count:
@@ -102,7 +101,7 @@ def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:  # pragma: no 
     except ScrapeError as scrape_error:
         logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(scrape_error)}")
         has_error = scrape_error
-    except Exception as e:
+    except Exception:
         logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']}")
         traceback.print_exc()
 

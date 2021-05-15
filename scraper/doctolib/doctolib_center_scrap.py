@@ -1,8 +1,5 @@
 import multiprocessing
-from time import sleep, time
 from scraper.pattern.scraper_result import (
-    DRUG_STORE,
-    GENERAL_PRACTITIONER,
     VACCINATION_CENTER,
 )
 from utils.vmd_config import get_conf_platform, get_conf_inputs
@@ -16,7 +13,6 @@ import requests
 import json
 from urllib import parse
 import requests
-import os
 import re
 from unidecode import unidecode
 

@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from dateutil.parser import isoparse
 from pytz import timezone
 
-from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
+from scraper.pattern.center_info import CHRONODOSES, INTERVAL_SPLIT_DAYS, get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
 from utils.vmd_config import get_conf_platform
@@ -172,7 +172,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
     profile = get_profile(request, client)
     if not profile:
         return None
-    slug = profile["profileSlug"]
+    profile["profileSlug"]
     entityId = profile["entityId"]
     attributes = profile.get("attributeValues")
     for settings in attributes:
@@ -193,8 +193,8 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
         )
     for professional in profile["publicProfessionals"]:
         medicalStaffId = professional["id"]
-        name = professional["fullName"]
-        zip = professional["zip"]
+        professional["fullName"]
+        professional["zip"]
         reasons = get_reasons(entityId, request=request)
         for reason in reasons["reasons"]:
             if not is_reason_valid(reason):

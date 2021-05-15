@@ -7,13 +7,12 @@ from pytz import timezone
 
 import requests
 from dateutil.parser import isoparse
-from pathlib import Path
 from urllib import parse as urlparse
 from urllib.parse import quote, parse_qs
 from typing import Optional, Tuple
 
 from scraper.profiler import Profiling
-from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
+from scraper.pattern.center_info import CHRONODOSES, INTERVAL_SPLIT_DAYS, get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT
 from utils.vmd_config import get_conf_platform, get_config

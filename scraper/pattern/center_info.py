@@ -7,7 +7,6 @@ import pytz
 from utils.vmd_config import get_config
 from utils.vmd_utils import departementUtils
 from scraper.pattern.center_location import CenterLocation, convert_csv_data_to_location
-from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult
 
 from utils.vmd_utils import urlify, format_phone_number
@@ -151,7 +150,6 @@ def convert_ordoclic_to_center_info(data: dict, center: CenterInfo) -> CenterInf
 def convert_csv_data_to_center_info(data: dict) -> CenterInfo:
     name = data.get("nom", None)
     departement = ""
-    ville = ""
     url = data.get("rdv_site_web", None)
     try:
         departement = departementUtils.to_departement_number(data.get("com_insee", None))

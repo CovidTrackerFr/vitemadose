@@ -17,7 +17,7 @@ def test_stat_count():
     generated_content = output_file.read()
     output_file.close()
     base_file = open("tests/fixtures/stats/stat-output.json", "r")
-    base_content = base_file.read()
+    base_file.read()
     base_file.close()
 
     stats = json.loads(generated_content)

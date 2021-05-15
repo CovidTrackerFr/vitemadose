@@ -7,15 +7,13 @@ import logging
 from datetime import date, datetime, timedelta
 from dateutil.parser import isoparse
 from pytz import timezone
-from urllib.parse import parse_qs
-from bs4 import BeautifulSoup
 from pathlib import Path
 from urllib import parse
 from typing import Optional
 
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
-from scraper.pattern.center_info import get_vaccine_name, Vaccine, INTERVAL_SPLIT_DAYS, CHRONODOSES
+from scraper.pattern.center_info import CHRONODOSES, INTERVAL_SPLIT_DAYS, get_vaccine_name
 from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import departementUtils
 from scraper.profiler import Profiling
@@ -53,7 +51,7 @@ def campagne_to_centre(pharmacy: dict, campagne: dict) -> dict:
     if not pharmacy.get("code_postal"):
         raise ValueError("Absence de code postal")
     insee = departementUtils.cp_to_insee(pharmacy.get("code_postal"))
-    departement = departementUtils.to_departement_number(insee)
+    departementUtils.to_departement_number(insee)
     centre = dict()
     centre["nom"] = pharmacy.get("nom")
     centre["type"] = DRUG_STORE
@@ -265,7 +263,6 @@ def is_campagne_valid(campagne: dict) -> bool:
 def centre_iterator():
     global opendata
     global campagnes_inconnues
-    campagnes = []
     opendata = get_mapharma_opendata()
     if not opendata:
         logger.error("Mapharma unable to get centre list")
