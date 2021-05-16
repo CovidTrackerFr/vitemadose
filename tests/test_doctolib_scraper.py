@@ -5,6 +5,7 @@ from scraper.doctolib.doctolib_center_scrap import (
     center_type,
     parse_doctolib_business_hours,
     parse_place,
+    parse_center_places,
 )
 
 import json
@@ -59,6 +60,194 @@ def test_doctolib_coordinates():
     long, lat = get_coordinates(docto)
     assert long == 1.381
     assert lat == 8.192
+
+
+EXPECTED_PARSED_PAGES = [
+    {
+        "gid": "d1",
+        "place_id": "practice-37157",
+        "address": "41 Avenue du Maréchal Juin, 93260 Les Lilas",
+        "ville": "Les Lilas",
+        "long_coor1": 2.42283520000001,
+        "lat_coor1": 48.8788792,
+        "com_insee": "93045",
+        "booking": {
+            "profile": {"id": 1, "name_with_title": "Hopital test"},
+            "visit_motives": [
+                {"name": "Consultation de suivi spécialiste"},
+                {"name": "Première consultation de neurochirurgie"},
+            ],
+            "places": [
+                {
+                    "id": "practice-37157",
+                    "latitude": 48.8788792,
+                    "longitude": 2.42283520000001,
+                    "phone_number": "06 00 00 00 00",
+                    "full_address": "41 Avenue du Maréchal Juin, 93260 Les Lilas",
+                    "city": "Les Lilas",
+                    "zipcode": "93260",
+                    "opening_hours": [
+                        {"day": 1, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 2, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 3, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 4, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 5, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 6, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 0, "ranges": [["09:00", "13:00"]], "enabled": False},
+                    ],
+                    "name": "Clinique des Lilas ",
+                },
+                {
+                    "id": "practice-86656",
+                    "latitude": 48.8814861,
+                    "longitude": 2.27230770000006,
+                    "landline_number": "06 38 95 25 53",
+                    "full_address": "11 Rue d'Orléans, 92200 Neuilly-sur-Seine",
+                    "city": "Neuilly-sur-Seine",
+                    "zipcode": "92200",
+                    "opening_hours": [
+                        {"day": 1, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 2, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 3, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 4, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 5, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 6, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 0, "ranges": [["09:00", "13:00"]], "enabled": False},
+                    ],
+                    "name": "Cabinet Neuilly",
+                },
+            ],
+            "doctors": [
+                {
+                    "address": "22b Rue Jean Jaurès",
+                    "city": "Villejuif",
+                    "zipcode": "94800",
+                    "link": "/pharmacie/villejuif/pharmacie-des-ecoles",
+                    "name_with_title": "Pharmacie des écoles - Leadersanté - Villejuif",
+                    "position": {"lat": 48.7951181, "lng": 2.3662778},
+                    "place_id": None,
+                    "exact_match": True,
+                },
+                {
+                    "address": "96 Avenue Jean Jaurès",
+                    "city": "Le Petit-Quevilly",
+                    "zipcode": "76140",
+                    "link": "/vaccinodrome/le-petit-quevilly/dubois",
+                    "name_with_title": "Vaccinodrome Jean Jaurès",
+                    "position": {"lat": 49.4269181, "lng": 1.0627287},
+                    "place_id": 1,
+                    "exact_match": True,
+                },
+            ],
+        },
+        "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
+        "phone_number": "+33600000000",
+        "business_hours": {
+            "lundi": None,
+            "mardi": None,
+            "mercredi": None,
+            "jeudi": None,
+            "vendredi": None,
+            "samedi": None,
+            "dimanche": None,
+        },
+    },
+    {
+        "gid": "d1",
+        "place_id": "practice-86656",
+        "address": "11 Rue d'Orléans, 92200 Neuilly-sur-Seine",
+        "ville": "Neuilly-sur-Seine",
+        "long_coor1": 2.27230770000006,
+        "lat_coor1": 48.8814861,
+        "com_insee": "92051",
+        "booking": {
+            "profile": {"id": 1, "name_with_title": "Hopital test"},
+            "visit_motives": [
+                {"name": "Consultation de suivi spécialiste"},
+                {"name": "Première consultation de neurochirurgie"},
+            ],
+            "places": [
+                {
+                    "id": "practice-37157",
+                    "latitude": 48.8788792,
+                    "longitude": 2.42283520000001,
+                    "phone_number": "06 00 00 00 00",
+                    "full_address": "41 Avenue du Maréchal Juin, 93260 Les Lilas",
+                    "city": "Les Lilas",
+                    "zipcode": "93260",
+                    "opening_hours": [
+                        {"day": 1, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 2, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 3, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 4, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 5, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 6, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 0, "ranges": [["09:00", "13:00"]], "enabled": False},
+                    ],
+                    "name": "Clinique des Lilas ",
+                },
+                {
+                    "id": "practice-86656",
+                    "latitude": 48.8814861,
+                    "longitude": 2.27230770000006,
+                    "landline_number": "06 38 95 25 53",
+                    "full_address": "11 Rue d'Orléans, 92200 Neuilly-sur-Seine",
+                    "city": "Neuilly-sur-Seine",
+                    "zipcode": "92200",
+                    "opening_hours": [
+                        {"day": 1, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 2, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 3, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 4, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 5, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 6, "ranges": [["09:00", "13:00"]], "enabled": False},
+                        {"day": 0, "ranges": [["09:00", "13:00"]], "enabled": False},
+                    ],
+                    "name": "Cabinet Neuilly",
+                },
+            ],
+            "doctors": [
+                {
+                    "address": "22b Rue Jean Jaurès",
+                    "city": "Villejuif",
+                    "zipcode": "94800",
+                    "link": "/pharmacie/villejuif/pharmacie-des-ecoles",
+                    "name_with_title": "Pharmacie des écoles - Leadersanté - Villejuif",
+                    "position": {"lat": 48.7951181, "lng": 2.3662778},
+                    "place_id": None,
+                    "exact_match": True,
+                },
+                {
+                    "address": "96 Avenue Jean Jaurès",
+                    "city": "Le Petit-Quevilly",
+                    "zipcode": "76140",
+                    "link": "/vaccinodrome/le-petit-quevilly/dubois",
+                    "name_with_title": "Vaccinodrome Jean Jaurès",
+                    "position": {"lat": 49.4269181, "lng": 1.0627287},
+                    "place_id": 1,
+                    "exact_match": True,
+                },
+            ],
+        },
+        "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
+        "phone_number": "+33638952553",
+        "business_hours": {
+            "lundi": None,
+            "mardi": None,
+            "mercredi": None,
+            "jeudi": None,
+            "vendredi": None,
+            "samedi": None,
+            "dimanche": None,
+        },
+    },
+]
+
+
+def test_parse_places():
+    with open("tests/fixtures/doctolib/booking-with-doctors.json", "r") as f:
+        booking = json.load(f)
+        assert parse_center_places(booking["data"]) == EXPECTED_PARSED_PAGES
 
 
 def test_parse_place():

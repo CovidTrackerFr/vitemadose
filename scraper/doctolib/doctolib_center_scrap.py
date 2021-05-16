@@ -172,7 +172,6 @@ def get_coordinates(doctor_dict):
 def get_dict_infos_center_page(url_path: str) -> dict:
     internal_api_url = BOOKING_URL.format(centre=parse.urlsplit(url_path).path.split("/")[-1])
     logger.info(f"> Parsing {internal_api_url}")
-    liste_infos_page = []
     output = None
 
     try:
@@ -182,14 +181,19 @@ def get_dict_infos_center_page(url_path: str) -> dict:
         output = data.get("data", {})
     except:
         logger.warn(f"> Could not retrieve data from {internal_api_url}")
-        return liste_infos_page
+        return []
 
-    # Parse place
-    places = output.get("places", {})
-    gid = "d{0}".format(output.get("profile", {}).get("id", ""))
-    extracted_visit_motives = [vm.get("name") for vm in output.get("visit_motives", [])]
+    return parse_center_places(output)
+
+
+def parse_center_places(center_output: Dict) -> List[Dict]:
+    places = center_output.get("places", {})
+    gid = "d{0}".format(center_output.get("profile", {}).get("id", ""))
+    extracted_visit_motives = [vm.get("name") for vm in center_output.get("visit_motives", [])]
+
+    liste_infos_page = []
     for place in places:
-        infos_page = parse_place(place, gid, extracted_visit_motives, output)
+        infos_page = parse_place(place, gid, extracted_visit_motives, center_output)
         liste_infos_page.append(infos_page)
 
     # Returns a list with data for each place
