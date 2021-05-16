@@ -1,5 +1,8 @@
 import json
 from pathlib import Path
+
+import pytest
+
 from scraper.doctolib.doctolib_filters import (
     is_category_relevant,
     is_vaccination_center,
@@ -57,12 +60,8 @@ def test_blocked_by_doctolib_par_centre():
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client, cooldown_interval=0)
 
-    error = None
-    try:
-        next_date = slots.fetch(scrap_request)
-    except Exception as e:
-        error = e
-    assert True is isinstance(error, BlockedByDoctolibError)
+    with pytest.raises(BlockedByDoctolibError):
+        slots.fetch(scrap_request)
 
 
 def test_blocked_by_doctolib_par_availabilities():
@@ -84,12 +83,8 @@ def test_blocked_by_doctolib_par_availabilities():
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client, cooldown_interval=0)
 
-    error = None
-    try:
-        next_date = slots.fetch(scrap_request)
-    except Exception as e:
-        error = e
-    assert True is isinstance(error, BlockedByDoctolibError)
+    with pytest.raises(BlockedByDoctolibError):
+        slots.fetch(scrap_request)
 
 
 def test_doctolib():
@@ -107,7 +102,6 @@ def test_doctolib():
             return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
         assert request.url.path == "/availabilities.json"
-        params = dict(httpx.QueryParams(request.url.query))
         path = Path("tests", "fixtures", "doctolib", "basic-availabilities.json")
         return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
