@@ -9,7 +9,7 @@ import json
 from datetime import datetime, timedelta
 from dateutil.parser import isoparse
 from pytz import timezone
-from typing import Optional, Tuple
+from typing import Iterator, Optional, Tuple
 
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.center_info import (
@@ -36,14 +36,14 @@ def search(client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
     url = AVECMONDOC_API.get("search", "")
     payload = {
         "params": json.dumps({
-            "city": "paris",
+            "city": None,
             "gps": None,
             "dateBefore": None
         }),
         "options": json.dumps({
             "limit": 1000,
             "page": 1,
-            "distance": 42000
+            "distance": None
         })
     }
     try:
@@ -89,7 +89,7 @@ def get_organization_slug(slug: str, client: httpx.Client = DEFAULT_CLIENT) -> O
     return r.json()
 
 
-def get_by_doctor(doctor_id: int, client: httpx.Client = DEFAULT_CLIENT) -> Optional[dict]:
+def get_by_doctor(doctor_id: int, client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
     url = str(AVECMONDOC_API.get("get_by_doctor", "")).format(id=doctor_id)
     try:
         r = client.get(url)
@@ -104,7 +104,7 @@ def get_by_doctor(doctor_id: int, client: httpx.Client = DEFAULT_CLIENT) -> Opti
     return r.json()
 
 
-def get_by_organization(organization_id: int, client: httpx.Client = DEFAULT_CLIENT) -> Optional[dict]:
+def get_by_organization(organization_id: int, client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
     url = str(AVECMONDOC_API.get("get_by_organization", "")).format(id=organization_id)
     try:
         r = client.get(url)
@@ -232,7 +232,7 @@ def get_availabilities(reason_id: int, organization_id: int,
                 # pas de date cette semaine ni plus tard -> on arrête
                 if (next_available_business_hour_in_current_week or next_available_business_hour) == False:
                     page_date = end_date
-                    continue
+                    break
                 # ce champ peut être False ou un dict
                 if next_available_business_hour is False:
                     continue
@@ -319,6 +319,8 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
         availabilities = get_availabilities(reason["id"], reason["organizationId"],
             start_date, end_date, client)
         date, appointment_count = parse_availabilities(availabilities)
+        if date is None:
+            continue
         request.appointment_count += appointment_count
         for appointment_schedule in appointment_schedules:
             s_date = isoparse(appointment_schedule["from"])
@@ -328,8 +330,6 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
                 continue
             appointment_schedule["total"] += count_appointements(availabilities, s_date, n_date)
         request.appointment_schedules = appointment_schedules
-        if date is None:
-            continue
         if first_availability is None or first_availability > date:
             first_availability = date
     

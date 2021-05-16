@@ -8,23 +8,7 @@ from jsonschema import validate
 from jsonschema.exceptions import ValidationError
 from datetime import datetime
 
-from scraper.avecmondoc.avecmondoc import (
-    search,
-    get_doctor_slug,
-    get_organization_slug,
-    get_by_doctor,
-    get_by_organization,
-    get_reasons,
-    organization_to_center,
-    get_valid_reasons,
-    get_availabilities,
-    get_availabilities_week,
-    parse_availabilities,
-    fetch_slots,
-    center_to_centerdict,
-    has_valid_zipcode,
-    center_iterator
-)
+from scraper.avecmondoc import avecmondoc
 
 def test_search():
     # Test offline
@@ -32,14 +16,14 @@ def test_search():
         assert request.url.path == "/api/Doctors/search"
         assert dict(httpx.QueryParams(request.url.query)) == {
             "params": json.dumps({
-                "city": "paris",
+                "city": None,
                 "gps": None,
                 "dateBefore": None
             }),
             "options": json.dumps({
                 "limit": 1000,
                 "page": 1,
-                "distance": 42000
+                "distance": None
             })
         }
 
@@ -49,26 +33,26 @@ def test_search():
     client = httpx.Client(transport=httpx.MockTransport(app))
     data_file = Path("tests/fixtures/avecmondoc/search-result.json")
     data = json.loads(data_file.read_text(encoding='utf8'))
-    assert search(client=client) == data
+    assert avecmondoc.search(client=client) == data
 
     # Test erreur HTTP
     def response_unavailable(request: httpx.Request) -> httpx.Response:
         return httpx.Response(403, json={})
 
     client = httpx.Client(transport=httpx.MockTransport(response_unavailable))
-    assert search(client) is None
+    assert avecmondoc.search(client) is None
 
     # Test timeout
     def response_timeout(request: httpx.Request) -> httpx.Response:
         raise httpx.TimeoutException(message="Timeout", request=request)
 
     client = httpx.Client(transport=httpx.MockTransport(response_timeout))
-    assert search(client) is None
+    assert avecmondoc.search(client) is None
 
     # Test online
     schema_file = Path("tests/fixtures/avecmondoc/search-result.schema")
     schema = json.loads(schema_file.read_text())
-    live_data = search()
+    live_data = avecmondoc.search()
     if live_data:
         validate(instance=live_data, schema=schema)
 
@@ -82,7 +66,7 @@ def test_get_doctor_slug():
     client = httpx.Client(transport=httpx.MockTransport(app))
     data_file = Path("tests/fixtures/avecmondoc/get_doctor_slug.json")
     data = json.loads(data_file.read_text(encoding='utf8'))
-    assert get_doctor_slug("delphine-rousseau-216", client=client) == data
+    assert avecmondoc.get_doctor_slug("delphine-rousseau-216", client=client) == data
 
 
 def test_get_organization_slug():
@@ -94,7 +78,7 @@ def test_get_organization_slug():
     client = httpx.Client(transport=httpx.MockTransport(app))
     data_file = Path("tests/fixtures/avecmondoc/get_organization_slug.json")
     data = json.loads(data_file.read_text(encoding='utf8'))
-    assert get_organization_slug("delphine-rousseau-159", client=client) == data
+    assert avecmondoc.get_organization_slug("delphine-rousseau-159", client=client) == data
 
 
 def test_get_by_doctor():
@@ -106,7 +90,7 @@ def test_get_by_doctor():
     client = httpx.Client(transport=httpx.MockTransport(app))
     data_file = Path("tests/fixtures/avecmondoc/get_by_doctor.json")
     data = json.loads(data_file.read_text(encoding='utf8'))
-    assert get_by_doctor(216, client=client) == data
+    assert avecmondoc.get_by_doctor(216, client=client) == data
 
 
 def test_get_by_organization():
@@ -118,7 +102,7 @@ def test_get_by_organization():
     client = httpx.Client(transport=httpx.MockTransport(app))
     data_file = Path("tests/fixtures/avecmondoc/get_by_organization.json")
     data = json.loads(data_file.read_text(encoding='utf8'))
-    assert get_by_organization(159, client=client) == data
+    assert avecmondoc.get_by_organization(159, client=client) == data
 
 
 def test_get_reasons():
@@ -136,7 +120,7 @@ def test_get_reasons():
     client = httpx.Client(transport=httpx.MockTransport(app))
     data_file = Path("tests/fixtures/avecmondoc/get_reasons.json")
     data = json.loads(data_file.read_text(encoding='utf8'))
-    assert get_reasons(159, 216, client=client) == data
+    assert avecmondoc.get_reasons(159, 216, client=client) == data
 
 
 def test_organization_to_center():
@@ -162,7 +146,7 @@ def test_organization_to_center():
     }
     center.location = CenterLocation(1.481373, 48.447586, "Chartres", "28000")
     center.internal_id = "amd159"
-    assert organization_to_center(data).default() == center.default()
+    assert avecmondoc.organization_to_center(data).default() == center.default()
 
 
 def test_get_valid_reasons():
@@ -180,7 +164,7 @@ def test_get_valid_reasons():
             "id": 606
         }
     ]
-    assert  get_valid_reasons(reasons) == [
+    assert avecmondoc.get_valid_reasons(reasons) == [
         {
             "reason": "Première injection vaccinale COVID-19",
             "id": 604,
@@ -202,7 +186,7 @@ def test_get_availabilities():
     client = httpx.Client(transport=httpx.MockTransport(app))
     data_file = Path("tests/fixtures/avecmondoc/get_availabilities.json")
     data = json.loads(data_file.read_text(encoding='utf8'))
-    assert get_availabilities(604, 159, datetime(2021, 5, 20), datetime(2021, 6, 1), client=client) == data
+    assert avecmondoc.get_availabilities(604, 159, datetime(2021, 5, 20), datetime(2021, 6, 1), client=client) == data
 
 
 def test_get_availabilities_week():
@@ -237,17 +221,17 @@ def test_get_availabilities_week():
 
     data_file = Path("tests/fixtures/avecmondoc/get_availabilities_week1.json")
     data = json.loads(data_file.read_text(encoding='utf8'))
-    assert get_availabilities_week(604, 159, datetime(2021, 5, 20), client=client) == data
+    assert avecmondoc.get_availabilities_week(604, 159, datetime(2021, 5, 20), client=client) == data
 
     data_file = Path("tests/fixtures/avecmondoc/get_availabilities_week2.json")
     data = json.loads(data_file.read_text(encoding='utf8'))
-    assert get_availabilities_week(604, 159, datetime(2021, 5, 26), client=client) == data
+    assert avecmondoc.get_availabilities_week(604, 159, datetime(2021, 5, 26), client=client) == data
 
 
 def test_parse_availabilities():
     data_file = Path("tests/fixtures/avecmondoc/get_availabilities.json")
     data = json.loads(data_file.read_text(encoding='utf8'))
-    first_appointment, appointment_count = parse_availabilities(data)
+    first_appointment, appointment_count = avecmondoc.parse_availabilities(data)
     assert  first_appointment == "2021-05-20T09:00:00.000Z"
     assert appointment_count == 12
 
@@ -265,7 +249,7 @@ def test_fetch_slots():
     client = httpx.Client(transport=httpx.MockTransport(app))
     url = "https://patient.avecmondoc.com/fiche/structure/delphine-rousseau-159"
     request = ScraperRequest(url, "2021-05-20")
-    first_availability = fetch_slots(request, client)
+    first_availability = avecmondoc.fetch_slots(request, client)
     assert first_availability == "2021-05-20T09:00:00.000Z"
     assert request.appointment_count == 108
     assert request.vaccine_type == ["Pfizer-BioNTech"]
@@ -295,13 +279,13 @@ def test_center_to_centerdict():
     data_file = Path("tests/fixtures/avecmondoc/centerdict.json")
     data = json.loads(data_file.read_text(encoding='utf8'))
     
-    assert center_to_centerdict(center) == data
+    assert avecmondoc.center_to_centerdict(center) == data
 
 
 def test_has_valid_zipcode():
-    assert has_valid_zipcode({"zipCode": "63000"}) == True
-    assert has_valid_zipcode({"zipCode": "6000"}) == False
-    assert has_valid_zipcode({"zipCode": None}) == False
+    assert avecmondoc.has_valid_zipcode({"zipCode": "63000"}) == True
+    assert avecmondoc.has_valid_zipcode({"zipCode": "6000"}) == False
+    assert avecmondoc.has_valid_zipcode({"zipCode": None}) == False
 
 
 def test_center_iterator():
@@ -321,7 +305,7 @@ def test_center_iterator():
         return httpx.Response(404)
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    centres = [centre for centre in center_iterator(client)]
+    centres = [centre for centre in avecmondoc.center_iterator(client)]
     assert len(centres) > 0
     data_file = Path("tests/fixtures/avecmondoc/centerdict.json")
     data = json.loads(data_file.read_text(encoding='utf8'))
