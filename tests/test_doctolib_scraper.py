@@ -4,6 +4,7 @@ from scraper.doctolib.doctolib_center_scrap import (
     get_coordinates,
     center_type,
     parse_doctolib_business_hours,
+    parse_place,
 )
 
 import json
@@ -58,6 +59,43 @@ def test_doctolib_coordinates():
     long, lat = get_coordinates(docto)
     assert long == 1.381
     assert lat == 8.192
+
+
+def test_parse_place():
+    test_place = {
+        "id": "practice-166932",
+        "zipcode": "97150",
+        "city": "97150",
+        "latitude": 18.0665433,
+        "longitude": -63.0754092,
+        "landline_number": "05 90 52 27 22",
+        "full_address": "Rue Jean-Luc Hamlet Marigot, 97150 97150",
+        "opening_hours": [{"day": 1, "ranges": [["09:00", "12:00"], ["14:00", "17:00"]], "enabled": True}],
+    }
+
+    gid = 123456
+    visit_motives = ["1re injection vaccin COVID-19 (Pfizer-BioNTech)"]
+    center_output = {}
+
+    expected_result = {
+        "gid": gid,
+        "place_id": "practice-166932",
+        "address": "Rue Jean-Luc Hamlet Marigot, 97150 97150",
+        "ville": "97150",
+        "long_coor1": -63.0754092,
+        "lat_coor1": 18.0665433,
+        "com_insee": "97801",
+        "booking": {},
+        "visit_motives": ["1re injection vaccin COVID-19 (Pfizer-BioNTech)"],
+        "phone_number": "+33590522722",
+        "business_hours": {"lundi": "09:00-12:00, 14:00-17:00"},
+    }
+
+    assert parse_place(test_place, gid, visit_motives, center_output) == expected_result
+    # test it still works if landline is replaced by phone
+    test_place["phone_number"] = test_place["landline_number"]
+    del test_place["landline_number"]
+    assert parse_place(test_place, gid, visit_motives, center_output) == expected_result
 
 
 from unittest.mock import Mock, patch
