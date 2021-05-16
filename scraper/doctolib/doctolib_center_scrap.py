@@ -120,8 +120,7 @@ def parse_page_centers_departement(departement, page_id, liste_urls) -> Tuple[Li
 
 
 def doctolib_urlify(departement: str) -> str:
-    departement = re.sub(r"[^\w\s\-]", "-", departement)
-    departement = re.sub(r"\s+", "-", departement).lower()
+    departement = re.sub(r"\s+|\W", "-", departement).lower()
     return unidecode(departement)
 
 
