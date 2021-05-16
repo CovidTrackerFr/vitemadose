@@ -64,12 +64,13 @@ def test_search():
     client = httpx.Client(transport=httpx.MockTransport(app2))
     assert search(client) is None
 
-    # Test online
+    # Test online - pas actif pour le moment
+    '''
     schema_file = Path("tests/fixtures/avecmondoc/search-result.schema")
     schema = json.loads(schema_file.read_text())
     live_data = search()
     validate(instance=live_data, schema=schema)
-
+    '''
 
 def test_get_doctor_slug():
     def app(request: httpx.Request) -> httpx.Response:
