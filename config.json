@@ -349,6 +349,42 @@
         "or.covidOnlineBookingAvailabilities.vaccinePfizer1": "true",
         "or.covidOnlineBookingAvailabilities.vaccineModerna1": "true"
       }
+    },
+    "avecmondoc": {
+      "enable": true,
+      "timeout": 25,
+      "slot_limit": 50,
+      "week_size": 6,
+      "recognized_urls": [
+        "https://patient.avecmondoc.com/"
+      ],
+      "api": {
+        "search": "https://api.avecmondoc.com/api/Doctors/search",
+        "get_doctor_slug": "https://api.avecmondoc.com/api/Doctors/slug/{slug}",
+        "get_organization_slug": "https://api.avecmondoc.com/api/Organizations/slug/{slug}",
+        "get_by_organization": "https://api.avecmondoc.com/api/Doctors/getByOrganization/{id}",
+        "get_by_doctor": "https://api.avecmondoc.com/api/Organizations/getByDoctor/{id}",
+        "get_reasons": "https://api.avecmondoc.com/api/Organizations/getConsultationReasons",
+        "availabilities_per_day": "https://api.avecmondoc.com/api/BusinessHours/availabilitiesPerDay"
+      },
+      "filters": {
+        "valid_reasons": [
+          "Premiere injection COVID 19",
+          "Première injection vaccinale COVID-19",
+          "Injection vaccinale monodose Janssen"
+        ]
+      },
+      "center_scraper": {
+        "business_days": {
+          "1": "Lundi",
+          "2": "Mardi",
+          "3": "Mercredi",
+          "4": "Jeudi",
+          "5": "Vendredi",
+          "6": "Samedi",
+          "0": "Dimanche"
+        }
+      }
     }
   }
 }
