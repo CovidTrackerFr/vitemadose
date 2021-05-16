@@ -176,11 +176,11 @@ def organization_to_center(organization, client: httpx.Client = DEFAULT_CLIENT) 
 
 
 def get_valid_reasons(reasons: list) -> list:
-    valid_reasons = []
-    for reason in reasons:
-        if any(valid_reason.lower() in reason["reason"].lower() for valid_reason in AVECMONDOC_VALID_REASONS):
-            valid_reasons.append(reason)
-    return valid_reasons
+    return [
+        reason
+        for reason in reasons
+        if any(valid_reason.lower() in reason["reason"].lower() for valid_reason in AVECMONDOC_VALID_REASONS)
+    ]
 
 
 def get_availabilities_week(reason_id: int, organization_id: int,
