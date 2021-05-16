@@ -1,0 +1,67 @@
+[
+    {
+      "organization": "Ordre des médecins",
+      "phone": null,
+      "stripeAccountStatus": "unverified",
+      "photoPath": null,
+      "sector": 0,
+      "companyName": null,
+      "companyAccessDetails": null,
+      "companyAddress": "47 Avenue Wilson",
+      "companyZipCode": "94300",
+      "companyCity": "Vincennes",
+      "companyCountry": "France",
+      "companyCoordinates": null,
+      "companyCoordinatesFetchingStatus": "not_found",
+      "isPrivateCalendar": false,
+      "optam": null,
+      "holidayDaysAccepted": false,
+      "timezone": "Europe/Paris",
+      "appointmentDuration": 10,
+      "workdayStart": "09:00:00",
+      "workdayEnd": "18:00:00",
+      "slug": "delphine-rousseau-216",
+      "informations": null,
+      "paymentMethods": [
+        "Bank Check",
+        "Card",
+        "Cash",
+        "Third-party Payment",
+        "Vitale Card"
+      ],
+      "daysWeekToHide": [],
+      "patientRestriction": "off",
+      "selectedFormulaCode": null,
+      "organizationInvitationId": null,
+      "isProfileComplete": true,
+      "showInPublicSearch": true,
+      "delayBwtNowAndTimeAppointment": "0",
+      "id": 216,
+      "appUserId": 1066,
+      "professionId": 14,
+      "appUser": {
+        "firstname": "Delphine",
+        "lastname": "ROUSSEAU",
+        "id": 1066
+      },
+      "specialitiesToDoctors": [
+        {
+          "isDefault": 1,
+          "id": 85,
+          "doctorId": 216,
+          "specialityId": 190,
+          "speciality": {
+            "label": "Pharmacie",
+            "code": "50",
+            "nomenclature": "Pharmacie",
+            "status": "enabled",
+            "isMain": null,
+            "color": null,
+            "icon": null,
+            "id": 190,
+            "professionId": 24
+          }
+        }
+      ]
+    }
+  ]

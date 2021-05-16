@@ -1,0 +1,230 @@
+[
+  {
+    "start": "2021-05-25T22:00:00.000Z",
+    "end": "2021-05-26T21:59:59.999Z",
+    "slots": [
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      },
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      },
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      },
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      }
+    ]
+  },
+  {
+    "start": "2021-05-26T22:00:00.000Z",
+    "end": "2021-05-27T21:59:59.999Z",
+    "slots": [
+      {
+        "start": "0",
+        "end": "2021-05-27T09:15:00.000Z",
+        "businessHours": {
+          "id": 161446,
+          "end": "2021-05-27T09:15:00.000Z",
+          "start": "2021-05-27T09:00:00.000Z",
+          "title": "dispo",
+          "extendedProps": {
+            "doctorId": 822,
+            "organizationId": 703,
+            "type": "inOffice",
+            "delayBwtNowAndTimeAppointment": "1h"
+          }
+        },
+        "isAvailable": true
+      },
+      {
+        "start": "1",
+        "end": "2021-05-27T09:30:00.000Z",
+        "businessHours": {
+          "id": 161586,
+          "end": "2021-05-27T09:30:00.000Z",
+          "start": "2021-05-27T09:15:00.000Z",
+          "title": "dispo",
+          "extendedProps": {
+            "doctorId": 822,
+            "organizationId": 703,
+            "type": "inOffice",
+            "delayBwtNowAndTimeAppointment": "1h"
+          }
+        },
+        "isAvailable": true
+      },
+      {
+        "start": "2",
+        "end": "2021-05-27T09:45:00.000Z",
+        "businessHours": {
+          "id": 161600,
+          "end": "2021-05-27T09:45:00.000Z",
+          "start": "2021-05-27T09:30:00.000Z",
+          "title": "dispo",
+          "extendedProps": {
+            "doctorId": 822,
+            "organizationId": 703,
+            "type": "inOffice",
+            "delayBwtNowAndTimeAppointment": "1h"
+          }
+        },
+        "isAvailable": true
+      },
+      {
+        "start": "3",
+        "end": "2021-05-27T10:00:00.000Z",
+        "businessHours": {
+          "id": 161614,
+          "end": "2021-05-27T10:00:00.000Z",
+          "start": "2021-05-27T09:45:00.000Z",
+          "title": "dispo",
+          "extendedProps": {
+            "doctorId": 822,
+            "organizationId": 703,
+            "type": "inOffice",
+            "delayBwtNowAndTimeAppointment": "1h"
+          }
+        },
+        "isAvailable": true
+      }
+    ]
+  },
+  {
+    "start": "2021-05-27T22:00:00.000Z",
+    "end": "2021-05-28T21:59:59.999Z",
+    "slots": [
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      },
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      },
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      },
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      }
+    ]
+  },
+  {
+    "start": "2021-05-28T22:00:00.000Z",
+    "end": "2021-05-29T21:59:59.999Z",
+    "slots": [
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      },
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      },
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      },
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      }
+    ]
+  },
+  {
+    "start": "2021-05-29T22:00:00.000Z",
+    "end": "2021-05-30T21:59:59.999Z",
+    "slots": [
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      },
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      },
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      },
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      }
+    ]
+  },
+  {
+    "start": "2021-05-30T22:00:00.000Z",
+    "end": "2021-05-31T21:59:59.999Z",
+    "slots": [
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      },
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      },
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      },
+      {
+        "start": null,
+        "end": null,
+        "businessHours": null,
+        "isAvailable": false
+      }
+    ]
+  },
+  {
+    "nextAvailableBusinessHourInCurrentWeek": true,
+    "nextAvailableBusinessHour": false
+  }
+]

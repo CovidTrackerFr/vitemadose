@@ -1,0 +1,230 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1621112073.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"data",
+		"page",
+		"pages",
+		"limit",
+		"hasPreviousPage",
+		"hasNextPage",
+		"count"
+	],
+	"properties": {
+		"data": {
+			"$id": "#root/data", 
+			"title": "Data", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/data/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"id",
+					"slug",
+					"organizationSlug",
+					"name",
+					"speciality",
+					"organizationType",
+					"patientRestriction",
+					"sector",
+					"photo",
+					"type",
+					"lat",
+					"lng"
+				],
+				"properties": {
+					"id": {
+						"$id": "#root/data/items/id", 
+						"title": "Id", 
+						"type": "integer",
+						"examples": [
+							4
+						],
+						"default": 0
+					},
+					"slug": {
+						"$id": "#root/data/items/slug", 
+						"title": "Slug", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"richard-valla-4"
+						],
+						"pattern": "^.*$"
+					},
+					"organizationSlug": {
+						"$id": "#root/data/items/organizationSlug", 
+						"title": "Organizationslug", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"richard-valla-3"
+						],
+						"pattern": "^.*$"
+					},
+					"name": {
+						"$id": "#root/data/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Richard VALLA"
+						],
+						"pattern": "^.*$"
+					},
+					"speciality": {
+						"$id": "#root/data/items/speciality", 
+						"title": "Speciality", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Médecine Générale"
+						],
+						"pattern": "^.*$"
+					},
+					"organizationType": {
+						"$id": "#root/data/items/organizationType", 
+						"title": "Organizationtype", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"doctor"
+						],
+						"pattern": "^.*$"
+					},
+					"patientRestriction": {
+						"$id": "#root/data/items/patientRestriction", 
+						"title": "Patientrestriction", 
+						"anyOf": [
+                            {"type": "string"},
+                            {"type": "null"}
+                        ],
+						"default": "",
+						"examples": [
+							"off"
+						],
+						"pattern": "^.*$"
+					},
+					"sector": {
+						"$id": "#root/data/items/sector", 
+						"title": "Sector", 
+						"anyOf": [
+                            {"type": "integer"},
+                            {"type": "null"}
+                        ],
+						"examples": [
+							1
+						],
+						"default": 0
+					},
+					"photo": {
+						"$id": "#root/data/items/photo", 
+						"title": "Photo", 
+						"anyOf": [
+                            {"type": "string"},
+                            {"type": "null"}
+                        ],
+                        "examples": [
+                            "public/doctors/photo/2df9687b181cbe0b65a65720d112f799.jpg"
+                        ],
+						"default": null
+					},
+					"type": {
+						"$id": "#root/data/items/type", 
+						"title": "Type", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"doctor"
+						],
+						"pattern": "^.*$"
+					},
+					"lat": {
+						"$id": "#root/data/items/lat", 
+						"title": "Lat", 
+						"anyOf": [
+                            {"type": "number"},
+                            {"type": "null"}
+                        ],
+						"examples": [
+							44.092491
+						],
+						"default": 0.0
+					},
+					"lng": {
+						"$id": "#root/data/items/lng", 
+						"title": "Lng", 
+						"anyOf": [
+                            {"type": "number"},
+                            {"type": "null"}
+                        ],
+						"examples": [
+							6.234408
+						],
+						"default": 0.0
+					}
+				}
+			}
+
+		},
+		"page": {
+			"$id": "#root/page", 
+			"title": "Page", 
+			"type": "integer",
+			"examples": [
+				1
+			],
+			"default": 0
+		},
+		"pages": {
+			"$id": "#root/pages", 
+			"title": "Pages", 
+			"type": "integer",
+			"examples": [
+				1
+			],
+			"default": 0
+		},
+		"limit": {
+			"$id": "#root/limit", 
+			"title": "Limit", 
+			"type": "integer",
+			"examples": [
+				1000
+			],
+			"default": 0
+		},
+		"hasPreviousPage": {
+			"$id": "#root/hasPreviousPage", 
+			"title": "Haspreviouspage", 
+			"type": "boolean",
+			"examples": [
+				false
+			],
+			"default": true
+		},
+		"hasNextPage": {
+			"$id": "#root/hasNextPage", 
+			"title": "Hasnextpage", 
+			"type": "boolean",
+			"examples": [
+				false
+			],
+			"default": true
+		},
+		"count": {
+			"$id": "#root/count", 
+			"title": "Count", 
+			"type": "integer",
+			"examples": [
+				562
+			],
+			"default": 0
+		}
+	}
+}

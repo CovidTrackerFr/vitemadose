@@ -1,0 +1,30 @@
+{
+    "id": 216,
+    "firstname": "Delphine",
+    "lastname": "ROUSSEAU",
+    "informations": null,
+    "paymentMethods": [
+      "Bank Check",
+      "Card",
+      "Cash",
+      "Third-party Payment",
+      "Vitale Card"
+    ],
+    "address": {
+      "name": null,
+      "address": "47 Avenue Wilson",
+      "city": "Vincennes",
+      "zipCode": "94300",
+      "gps": null
+    },
+    "phone": null,
+    "specialities": [
+      {
+        "label": "Pharmacie",
+        "isDefault": 1,
+        "id": 190
+      }
+    ],
+    "sector": 0,
+    "patientRestriction": "off"
+  }
