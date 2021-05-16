@@ -193,25 +193,25 @@ def parse_center_places(center_output: Dict) -> List[Dict]:
 
     liste_infos_page = []
     for place in places:
-        infos_page = parse_place(place, gid, extracted_visit_motives, center_output)
+        infos_page = parse_place(place)
+        infos_page["gid"] = gid
+        infos_page["visit_motives"] = extracted_visit_motives
+        infos_page["booking"] = center_output
         liste_infos_page.append(infos_page)
 
     # Returns a list with data for each place
     return liste_infos_page
 
 
-def parse_place(place: Dict, gid: str, visit_motives: List[str], center_output: Dict) -> Dict:
+def parse_place(place: Dict) -> Dict:
     infos_page = {}
     # Parse place location
-    infos_page["gid"] = gid
     infos_page["place_id"] = place["id"]
     infos_page["address"] = place["full_address"]
     infos_page["ville"] = place["city"]
     infos_page["long_coor1"] = place.get("longitude")
     infos_page["lat_coor1"] = place.get("latitude")
     infos_page["com_insee"] = departementUtils.cp_to_insee(place["zipcode"].replace(" ", "").strip())
-    infos_page["booking"] = center_output
-    infos_page["visit_motives"] = visit_motives
     # Parse landline number
     if place.get("landline_number"):
         phone_number = place.get("landline_number")

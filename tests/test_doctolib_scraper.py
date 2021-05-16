@@ -262,29 +262,22 @@ def test_parse_place():
         "opening_hours": [{"day": 1, "ranges": [["09:00", "12:00"], ["14:00", "17:00"]], "enabled": True}],
     }
 
-    gid = 123456
-    visit_motives = ["1re injection vaccin COVID-19 (Pfizer-BioNTech)"]
-    center_output = {}
-
     expected_result = {
-        "gid": gid,
         "place_id": "practice-166932",
         "address": "Rue Jean-Luc Hamlet Marigot, 97150 97150",
         "ville": "97150",
         "long_coor1": -63.0754092,
         "lat_coor1": 18.0665433,
         "com_insee": "97801",
-        "booking": {},
-        "visit_motives": ["1re injection vaccin COVID-19 (Pfizer-BioNTech)"],
         "phone_number": "+33590522722",
         "business_hours": {"lundi": "09:00-12:00, 14:00-17:00"},
     }
 
-    assert parse_place(test_place, gid, visit_motives, center_output) == expected_result
+    assert parse_place(test_place) == expected_result
     # test it still works if landline is replaced by phone
     test_place["phone_number"] = test_place["landline_number"]
     del test_place["landline_number"]
-    assert parse_place(test_place, gid, visit_motives, center_output) == expected_result
+    assert parse_place(test_place) == expected_result
 
 
 from unittest.mock import Mock, patch
