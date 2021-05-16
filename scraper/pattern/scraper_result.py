@@ -1,5 +1,3 @@
-import json
-from enum import Enum
 
 from scraper.pattern.scraper_request import ScraperRequest
 

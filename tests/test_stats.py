@@ -16,9 +16,6 @@ def test_stat_count():
     output_file = open(f"data/output/{output_file_name}", "r")
     generated_content = output_file.read()
     output_file.close()
-    base_file = open("tests/fixtures/stats/stat-output.json", "r")
-    base_content = base_file.read()
-    base_file.close()
 
     stats = json.loads(generated_content)
     assert stats["tout_departement"]["disponibles"] == 280

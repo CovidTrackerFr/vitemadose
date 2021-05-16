@@ -295,13 +295,13 @@ def test_parse_doctor():
     assert parse_doctor(test_doctor) == expected_result
 
 
-from unittest.mock import Mock, patch
+from unittest.mock import patch
 
 
 @patch("requests.get")
 def test_get_dict_infos_center_page(mock_get):
     with open("tests/fixtures/doctolib/booking-with-doctors.json", "r") as file:
-        booking = json.load(file)
+        json.load(file)
 
     expectedInfosCenterPageWithLandlineNumber = [
         {
