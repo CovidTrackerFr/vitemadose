@@ -170,7 +170,9 @@ def format_phone_number(_phone_number: str) -> str:
     phone_number = phone_number.replace(".", "")
 
     if not phone_number[0] == "+":
-        if phone_number[0] == "0":
+        if phone_number[:2] == "00":
+            phone_number = "+" + phone_number[2:]
+        elif phone_number[0] == "0":
             phone_number = "+33" + phone_number[1:]
         else:
             phone_number = "+33" + phone_number

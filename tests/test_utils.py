@@ -22,6 +22,9 @@ def test_format_phone_number():
     phone_number = "3975"
     assert format_phone_number(phone_number) == "+333975"
 
+    phone_number = "0033146871340"
+    assert format_phone_number(phone_number) == "+33146871340"
+
 
 def test_get_last_scans():
 
