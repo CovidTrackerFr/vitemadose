@@ -47,6 +47,7 @@ pages:
     - mkdir -p public
     - cp -r data/output/* public/
     - gzip -k -6 $(find public -type f)
+    - scripts/create-index.sh public
   only:
     - main
     - gitlab-publish
