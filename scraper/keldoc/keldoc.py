@@ -8,9 +8,11 @@ from scraper.keldoc.keldoc_filters import get_relevant_vaccine_specialties_id, f
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform
+from scraper.circuit_breaker import ShortCircuit
 
 KELDOC_CONF = get_conf_platform("keldoc")
 timeout = httpx.Timeout(KELDOC_CONF.get("timeout", 25), connect=KELDOC_CONF.get("timeout", 25))
+timeout = httpx.Timeout(0.3)
 # change KELDOC_KILL_SWITCH to True to bypass Keldoc scraping
 KELDOC_ENABLED = KELDOC_CONF.get("enabled", False)
 KELDOC_HEADERS = {
@@ -20,6 +22,7 @@ session = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
 logger = logging.getLogger("scraper")
 
 
+@ShortCircuit("keldoc_slot", trigger=3, release=20)
 @Profiling.measure("keldoc_slot")
 def fetch_slots(request: ScraperRequest):
     if "www.keldoc.com" in request.url:
@@ -55,3 +58,4 @@ def fetch_slots(request: ScraperRequest):
     if appointment_schedules:
         request.update_appointment_schedules(appointment_schedules)
     return date.strftime("%Y-%m-%dT%H:%M:%S.%f%z")
+

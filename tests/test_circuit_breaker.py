@@ -54,7 +54,7 @@ def test_calls_default_off_behaviour ():
     def on_func (*args, **kwargs):
         raise Exception("some error")
 
-    breaker = CircuitBreaker(on=on_func, name="test name", trigger_count=1)
+    breaker = CircuitBreaker(on=on_func, name="test name", trigger=1)
     actual = None
 
     # When
@@ -82,7 +82,7 @@ def test_calls_off_function_with_args ():
     def on_func (*args, **kwargs):
         raise Exception("SomeError")
 
-    breaker = CircuitBreaker(on=on_func, off=off_func, trigger_count=1)
+    breaker = CircuitBreaker(on=on_func, off=off_func, trigger=1)
 
     # When
     ignore_exception(lambda: breaker(8, 6, 'Hey', salut="bonjour"))
@@ -109,7 +109,7 @@ def test_calls_on_function_again ():
             raise Exception('Some Error')
         return 'ON'
 
-    breaker = CircuitBreaker(on=on_func, off=off_func, trigger_count=1)
+    breaker = CircuitBreaker(on=on_func, off=off_func, trigger=1)
 
     # When
     ignore_exception(lambda: breaker())
@@ -130,7 +130,7 @@ def test_calls_on_function_again ():
     assert on_count == 2
     assert off_count == 10
 
-def test_calls_off_after_trigger_count ():
+def test_calls_off_after_trigger ():
     # Given
     off_count = 0
     on_count = 0
@@ -146,7 +146,7 @@ def test_calls_off_after_trigger_count ():
             raise Exception('Some Error')
         return 'ON'
 
-    breaker = CircuitBreaker(on=on_func, off=off_func, trigger_count=3, release_count=5)
+    breaker = CircuitBreaker(on=on_func, off=off_func, trigger=3, release=5)
 
     # When
     ignore_exception(lambda: breaker()) # fail
@@ -172,7 +172,7 @@ def test_calls_off_after_trigger_count ():
     assert off_count == 10
     assert actual == "ON"
 
-def test_calls_off_after_soft_trigger_count ():
+def test_calls_off_after_soft_trigger ():
     # Given
     off_count = 0
     on_count = 0
@@ -189,7 +189,7 @@ def test_calls_off_after_soft_trigger_count ():
         else:
             raise Exception('Some Error')
 
-    breaker = CircuitBreaker(on=on_func, off=off_func, trigger_count=3, release_count=5)
+    breaker = CircuitBreaker(on=on_func, off=off_func, trigger=3, release=5)
 
     # When
     ignore_exception(lambda: breaker()) # ON fail
