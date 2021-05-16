@@ -2,7 +2,6 @@ import json
 import re
 from pathlib import Path
 import httpx
-from datetime import datetime
 from dateutil.parser import isoparse
 from jsonschema import validate
 

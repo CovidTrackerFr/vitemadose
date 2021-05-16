@@ -6,7 +6,6 @@ import pytz
 import requests
 
 from utils.vmd_config import get_conf_outstats
-from utils.vmd_logger import enable_logger_for_production
 
 logger = logging.getLogger("scraper")
 
@@ -64,9 +63,8 @@ def generate_stats_center_types(centres_info):
         data = history_rq.json()
         if data:
             stats_data = data
-    except Exception as e:
+    except Exception:
         logger.warning(f"Unable to fetch {DATA_AUTO}{stats_path}: generating a template file.")
-        pass
     ctz = pytz.timezone("Europe/Paris")
     current_time = datetime.now(tz=ctz).strftime("%Y-%m-%d %H:00:00")
     if current_time in stats_data["dates"]:
