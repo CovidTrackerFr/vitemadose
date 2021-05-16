@@ -321,11 +321,8 @@ def test_center_iterator():
         return httpx.Response(404)
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    centres = []
-    for centre in center_iterator(client):
-        centres.append(centre)
+    centres = [centre for centre in center_iterator(client)]
     assert len(centres) > 0
     data_file = Path("tests/fixtures/avecmondoc/centerdict.json")
     data = json.loads(data_file.read_text(encoding='utf8'))
     assert centres[0] == data
-

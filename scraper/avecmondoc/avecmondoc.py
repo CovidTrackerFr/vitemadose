@@ -256,7 +256,7 @@ def count_appointements(availabilities: list, start_date: datetime, end_date: da
     return count
 
 
-def parse_availabilities(availabilities: list) -> [Optional[datetime], int]:
+def parse_availabilities(availabilities: list) -> Tuple[Optional[datetime], int]:
     first_appointment = None
     appointment_count = 0
     for availability in availabilities:
@@ -357,7 +357,7 @@ def has_valid_zipcode(organization : dict) -> bool :
    return organization["zipCode"] is not None and len(organization["zipCode"]) == 5
 
 
-def center_iterator(client: httpx.Client = DEFAULT_CLIENT):
+def center_iterator(client: httpx.Client = DEFAULT_CLIENT) -> Iterator[dict]:
     organization_slugs = []
     search_result = search(client)
     if search_result is None:
