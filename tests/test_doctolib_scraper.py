@@ -6,6 +6,7 @@ from scraper.doctolib.doctolib_center_scrap import (
     parse_doctolib_business_hours,
     parse_place,
     parse_center_places,
+    parse_doctor,
 )
 
 import json
@@ -278,6 +279,20 @@ def test_parse_place():
     test_place["phone_number"] = test_place["landline_number"]
     del test_place["landline_number"]
     assert parse_place(test_place) == expected_result
+
+
+def test_parse_doctor():
+    test_doctor = EXPECTED_PARSED_PAGES[0]["booking"]["doctors"][0]
+    expected_result = {
+        "nom": "Pharmacie des écoles - Leadersanté - Villejuif",
+        "ville": "Villejuif",
+        "address": "22b Rue Jean Jaurès, 94800 Villejuif",
+        "long_coor1": 2.3662778,
+        "lat_coor1": 48.7951181,
+        "type": "drugstore",
+        "com_insee": "94076",
+    }
+    assert parse_doctor(test_doctor) == expected_result
 
 
 from unittest.mock import Mock, patch

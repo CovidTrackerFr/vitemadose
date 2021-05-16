@@ -126,26 +126,8 @@ def doctolib_urlify(departement: str) -> str:
 
 def center_from_doctor_dict(doctor_dict) -> Tuple[dict, bool]:
     liste_centres = []
-    nom = doctor_dict["name_with_title"]
-    sub_addresse = doctor_dict["address"]
-    ville = doctor_dict["city"]
-    exact_match = doctor_dict["exact_match"]
-    code_postal = doctor_dict["zipcode"].replace(" ", "").strip()
-    addresse = f"{sub_addresse}, {code_postal} {ville}"
-    url_path = doctor_dict["link"]
-    _type = center_type(url_path, nom)
-
-    dict_infos_centers_page = get_dict_infos_center_page(url_path)
-    longitude, latitude = get_coordinates(doctor_dict)
-    dict_infos_browse_page = {
-        "nom": nom,
-        "ville": ville,
-        "address": addresse,
-        "long_coor1": longitude,
-        "lat_coor1": latitude,
-        "type": _type,
-        "com_insee": departementUtils.cp_to_insee(code_postal),
-    }
+    dict_infos_browse_page = parse_doctor(doctor_dict)
+    dict_infos_centers_page = get_dict_infos_center_page(doctor_dict["link"])
 
     for info_center in dict_infos_centers_page:
         info_center["rdv_site_web"] = f"https://www.doctolib.fr{url_path}?pid={info_center['place_id']}"
@@ -154,7 +136,7 @@ def center_from_doctor_dict(doctor_dict) -> Tuple[dict, bool]:
         liste_centres.append({**dict_infos_browse_page, **info_center})
 
     stop = False
-    if not exact_match:
+    if not doctor_dict["exact_match"]:
         stop = True
     return liste_centres, stop
 
@@ -167,6 +149,26 @@ def get_coordinates(doctor_dict):
     if latitude:
         latitude = float(latitude)
     return longitude, latitude
+
+
+def parse_doctor(doctor_dict: Dict) -> Dict:
+    nom = doctor_dict["name_with_title"]
+    sub_addresse = doctor_dict["address"]
+    ville = doctor_dict["city"]
+    code_postal = doctor_dict["zipcode"].replace(" ", "").strip()
+    addresse = f"{sub_addresse}, {code_postal} {ville}"
+    url_path = doctor_dict["link"]
+    _type = center_type(url_path, nom)
+    longitude, latitude = get_coordinates(doctor_dict)
+    return {
+        "nom": nom,
+        "ville": ville,
+        "address": addresse,
+        "long_coor1": longitude,
+        "lat_coor1": latitude,
+        "type": _type,
+        "com_insee": departementUtils.cp_to_insee(code_postal),
+    }
 
 
 def get_dict_infos_center_page(url_path: str) -> dict:
