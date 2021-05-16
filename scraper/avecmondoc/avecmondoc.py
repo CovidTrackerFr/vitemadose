@@ -353,6 +353,10 @@ def center_to_centerdict(center: CenterInfo) -> dict:
     return center_dict
 
 
+def has_valid_zipcode(organization : dict) -> bool : 
+   return organization["zipCode"] is not None and len(organization["zipCode"]) == 5
+
+
 def center_iterator(client: httpx.Client = DEFAULT_CLIENT):
     organization_slugs = []
     search_result = search(client)
@@ -365,13 +369,14 @@ def center_iterator(client: httpx.Client = DEFAULT_CLIENT):
         slug_type = slug["type"]
         if slug_type == "doctor":
             doctor_id = slug["id"]
-            for doctor_organization in get_by_doctor(doctor_id, client):
-                organizations.append(get_organization_slug(doctor_organization["slug"], client))
+            organizations = [
+                get_organization_slug(doctor_organization["slug"], client) 
+                for doctor_organization in get_by_doctor(doctor_id, client)
+            ]
         elif slug_type == "organization":
             organizations = [get_organization_slug(slug["organizationSlug"], client)]
-        for organization in organizations:
-            if organization["zipCode"] is None or len(organization["zipCode"]) != 5:
-                continue
+        valid_organizations = [organization for organization in organizations if has_valid_zipcode(organization)]
+        for organization in valid_organizations:
             organization_slug = organization["slug"]
             if organization_slug in organization_slugs:
                 continue

@@ -22,6 +22,7 @@ from scraper.avecmondoc.avecmondoc import (
     parse_availabilities,
     fetch_slots,
     center_to_centerdict,
+    has_valid_zipcode,
     center_iterator
 )
 
@@ -51,26 +52,26 @@ def test_search():
     assert search(client=client) == data
 
     # Test erreur HTTP
-    def app(request: httpx.Request) -> httpx.Response:
+    def response_unavailable(request: httpx.Request) -> httpx.Response:
         return httpx.Response(403, json={})
 
-    client = httpx.Client(transport=httpx.MockTransport(app))
+    client = httpx.Client(transport=httpx.MockTransport(response_unavailable))
     assert search(client) is None
 
     # Test timeout
-    def app2(request: httpx.Request) -> httpx.Response:
+    def response_timeout(request: httpx.Request) -> httpx.Response:
         raise httpx.TimeoutException(message="Timeout", request=request)
 
-    client = httpx.Client(transport=httpx.MockTransport(app2))
+    client = httpx.Client(transport=httpx.MockTransport(response_timeout))
     assert search(client) is None
 
-    # Test online - pas actif pour le moment
-    '''
+    # Test online
     schema_file = Path("tests/fixtures/avecmondoc/search-result.schema")
     schema = json.loads(schema_file.read_text())
     live_data = search()
-    validate(instance=live_data, schema=schema)
-    '''
+    if live_data:
+        validate(instance=live_data, schema=schema)
+
 
 def test_get_doctor_slug():
     def app(request: httpx.Request) -> httpx.Response:
@@ -295,6 +296,12 @@ def test_center_to_centerdict():
     data = json.loads(data_file.read_text(encoding='utf8'))
     
     assert center_to_centerdict(center) == data
+
+
+def test_has_valid_zipcode():
+    assert has_valid_zipcode({"zipCode": "63000"}) == True
+    assert has_valid_zipcode({"zipCode": "6000"}) == False
+    assert has_valid_zipcode({"zipCode": None}) == False
 
 
 def test_center_iterator():
