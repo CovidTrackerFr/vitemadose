@@ -27,5 +27,8 @@ stats: ## Run the statistic scripts
 doctoscrap: ## Scrap all doctolib centers, output : data/output/doctolib-centers.json
 	venv/bin/python -m scraper.doctolib.doctolib_center_scrap
 
+keldocscrap: ## Scrap all doctolib centers, output : data/output/keldoc-centers.json
+	venv/bin/python -m scraper.keldoc.keldoc_center_scrap
+
 maiiascrap: ## Retrieve maiia centers from API
 	venv/bin/python -m scraper.maiia.maiia_center_scrap
