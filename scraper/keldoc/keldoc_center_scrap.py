@@ -2,12 +2,11 @@ import csv
 import json
 import multiprocessing
 import os
-from typing import List, Optional, Tuple
+from typing import List, Optional
 
 import httpx
 
 from scraper.doctolib.doctolib_center_scrap import doctolib_urlify
-from scraper.doctolib.doctolib_filters import is_vaccination_center
 from utils.vmd_config import get_conf_platform, get_conf_inputs
 from utils.vmd_logger import get_logger
 
@@ -17,7 +16,6 @@ SCRAPER_CONF = KELDOC_CONF.get("center_scraper", {})
 BASE_URL = KELDOC_API.get("scraper")
 
 timeout = httpx.Timeout(KELDOC_CONF.get("timeout", 25), connect=KELDOC_CONF.get("timeout", 25))
-# change KELDOC_KILL_SWITCH to True to bypass Keldoc scraping
 KELDOC_ENABLED = KELDOC_CONF.get("enabled", False)
 KELDOC_HEADERS = {
     "User-Agent": os.environ.get("KELDOC_API_KEY", ""),
@@ -110,8 +108,6 @@ def parse_keldoc_center(center: dict) -> Optional[dict]:
         "cabinets": [],
         "specialties": center.get("specialty_ids", [])
     }
-    img = center.get("img", "")
-    specialties = center.get("specialty_ids", [])
     data["resources"] = parse_keldoc_resources(center)
     if not data["resources"]:
         return None
