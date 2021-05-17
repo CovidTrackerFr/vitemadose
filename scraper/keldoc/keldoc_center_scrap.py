@@ -69,16 +69,15 @@ def parse_keldoc_centers(page_limit=None) -> List[dict]:
 
 
 def get_departements():
-    with open(get_conf_inputs().get("departements"), encoding="utf8", newline="\n") as csvfile:
+    with open(get_conf_inputs()["departements"], encoding="utf8", newline="\n") as csvfile:
         reader = csv.DictReader(csvfile)
-        departements = [str(row["nom_departement"]) for row in reader]
-        return departements
+        return [str(row["nom_department"]) for row in reader]
 
 
 def parse_keldoc_resources(center: dict) -> dict:
     center_url = center.get("url")
     url_split = center_url.split("/")
-    type, location, slug = url_split[1], url_split[2], url_split[3]
+    type, location, slug = url_split[1:4]
     resource_url = f"{KELDOC_API.get('booking')}?type={type}&location={location}&slug={slug}"
     resource_data = send_keldoc_request(resource_url)
     return resource_data
@@ -139,7 +138,7 @@ def parse_pages_departement(departement: str, page_id: int = 1, centers: list = 
     if not results:
         return centers
 
-    sections = dict(filter(lambda item: "section_" in item[0], results.items()))
+    sections = {key: value for key, value in results.items() if "section_" in key}
     for section_name, data in sections.items():
         data = data.get("data")
         if not data:
