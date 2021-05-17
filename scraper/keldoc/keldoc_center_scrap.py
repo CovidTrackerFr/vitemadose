@@ -28,7 +28,7 @@ def run_departement_scrap(departement: str) -> list:
     logger.info(f"[Keldoc centers] Parsing pages of departement {departement} through department SEO link")
     centers_departements = parse_pages_departement(departement)
     if not centers_departements:
-        raise Exception("No Value found for department {}, crashing")
+        return []
     return centers_departements
 
 
