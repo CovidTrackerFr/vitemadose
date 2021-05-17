@@ -80,7 +80,7 @@ def get_departements():
 def parse_keldoc_resources(center: dict) -> dict:
     center_url = center.get("url")
     url_split = center_url.split("/")
-    type, location, slug = url_split[1], url_split[2], url_split[3]
+    type, location, slug = url_split[1:4]
     resource_url = f"{KELDOC_API.get('booking')}?type={type}&location={location}&slug={slug}"
     resource_data = send_keldoc_request(resource_url)
     return resource_data
