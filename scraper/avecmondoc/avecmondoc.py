@@ -252,7 +252,7 @@ def count_appointements(availabilities: list, start_date: datetime, end_date: da
             if slot["businessHours"] is None:
                 continue
             slot_dt = paris_tz.localize(isoparse(slot["businessHours"]["start"]).replace(tzinfo=None))
-            if slot_dt >= start_date and slot_dt < end_date:
+            if start_date <= slot_dt < end_date:
                 count += 1
     return count
 
