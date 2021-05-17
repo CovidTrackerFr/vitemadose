@@ -250,7 +250,7 @@ def test_fetch_slots():
     url = "https://patient.avecmondoc.com/fiche/structure/delphine-rousseau-159"
     request = ScraperRequest(url, "2021-05-20")
     first_availability = avecmondoc.fetch_slots(request, client)
-    assert first_availability == "2021-05-20T09:00:00.000Z"
+    assert first_availability == "2021-05-20T09:00:00+02:00"
     assert request.appointment_count == 108
     assert request.vaccine_type == ["Pfizer-BioNTech"]
 
