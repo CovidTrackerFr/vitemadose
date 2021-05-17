@@ -71,7 +71,8 @@ def parse_keldoc_centers(page_limit=None) -> List[dict]:
 def get_departements():
     with open(get_conf_inputs()["departements"], encoding="utf8", newline="\n") as csvfile:
         reader = csv.DictReader(csvfile)
-        return [str(row["nom_department"]) for row in reader]
+        departements = [str(row["nom_departement"]) for row in reader]
+        return departements
 
 
 def parse_keldoc_resources(center: dict) -> dict:
