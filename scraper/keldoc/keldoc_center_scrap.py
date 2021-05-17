@@ -141,7 +141,7 @@ def parse_pages_departement(departement: str, page_id: int = 1, centers: list = 
     if not results:
         return centers
 
-    sections = dict(filter(lambda item: "section_" in item[0], results.items()))
+    sections = {key: value for key, value in results.items() if "section_" in key}
     for section_name, data in sections.items():
         data = data.get("data")
         if not data:
