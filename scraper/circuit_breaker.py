@@ -1,4 +1,6 @@
 from collections import deque
+from diskcache import Deque
+import os
 
 def ShortCircuit(name, trigger=3, release=10):
     def decorator(fn):
@@ -18,42 +20,45 @@ def ShortCircuit(name, trigger=3, release=10):
 #  - counts the numbers of times `off` is called
 #  - if this counts exceeds `release`, the breaker becomes ON
 class CircuitBreaker:
-    def __init__(self, on, off=None, trigger=3, release=10, name=None):
-        self.policies = deque(["ON" for _ in range(trigger)])
+    def __init__(self, name, on, off=None, trigger=3, release=10):
+        self.policies = Deque(["ON" for _ in range(trigger)], f'/tmp/breaker/{name}')
         self.on_func = on
         self.off_func = off
         self.release = release
         self.trigger = trigger
         self.name = name
-        if name is None and off is None:
-            raise Exception("You must specify a name if you don't specify a `off` for CircuitBreaker")
-
     def clear(self):
-        pass
+        with self.policies.transact():
+            self.policies.clear()
+            self.policies += ['ON' for _ in range(self.trigger)]
+
+    def __str__(self):
+        return f"[{self.name}:{os.getpid():5}] {[x for x in self.policies]}"
 
     def __call__(self, *args, **kwargs):
         return self.call(*args, **kwargs)
 
     def call(self, *args, **kwargs):
-        policy = self.policies.popleft()
+        with self.policies.transact():
+            policy = self.policies.popleft()
+
         if policy == 'OFF':
             return self.call_off(*args, **kwargs)
 
         try:
             value = self.on_func(*args, **kwargs)
 
-            self.policies.append('ON')
-            if len(self.policies) < self.trigger:
+            with self.policies.transact():
                 self.policies.append('ON')
+                if len(self.policies) < self.trigger:
+                    self.policies.append('ON')
             return value
 
         except Exception as e:
-            if len(self.policies) == 0:
-                for _ in range(self.release):
-                    self.policies.append('OFF')
-                for _ in range(self.trigger):
-                    self.policies.append('ON')
-
+            with self.policies.transact():
+                if len(self.policies) == 0:
+                    self.policies += ['OFF' for _ in range(self.release)]
+                    self.policies += ['ON' for _ in range(self.trigger)]
             raise e
 
 

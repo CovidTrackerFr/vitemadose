@@ -106,10 +106,8 @@ def test_calls_off_function_with_args ():
 def breakable (*args, **kwargs):
     raise Exception("SomeError")
 
-def run(*args, **kwargs):
-    print(f"running {breakable}")
+def run():
     try:
-        time.sleep(random.random() / 10)
         breakable()
         return 'on'
     except CircuitBreakerOffException:
@@ -117,22 +115,20 @@ def run(*args, **kwargs):
     except Exception:
         return 'on'
 
-@pytest.mark.skip
 def test_breaks_accross_processes ():
     # Given
     breakable.clear()
 
     # When
     actual = None
-    with Pool(2) as pool:
-        actual = pool.map(run, range(9), 1)
+    with Pool(4) as pool:
+        actual = pool.map(run, range(15), 1)
 
     # Then
     times_on = [on for on in actual if on == "on"]
     times_off = [off for off in actual if off == "off"]
-    assert len(times_on) == 6
-    assert len(times_off) == 3
-    assert actual == ["on", "on", "on", "off", "off", "off", "on", "on", "on"]
+    assert len(times_on) == 9
+    assert len(times_off) == 6
 
 
 def test_calls_on_function_again ():
