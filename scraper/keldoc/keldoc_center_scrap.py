@@ -27,7 +27,7 @@ logger = get_logger()
 def run_departement_scrap(departement: str) -> list:
     logger.info(f"[Keldoc centers] Parsing pages of departement {departement} through department SEO link")
     centers_departements = parse_pages_departement(departement)
-    if centers_departements == 0:
+    if not centers_departements:
         raise Exception("No Value found for department {}, crashing")
     return centers_departements
 
@@ -69,11 +69,9 @@ def parse_keldoc_centers(page_limit=None) -> List[dict]:
 
 
 def get_departements():
-    NOT_INCLUDED_DEPARTEMENTS = []
     with open(get_conf_inputs().get("departements"), encoding="utf8", newline="\n") as csvfile:
         reader = csv.DictReader(csvfile)
         departements = [str(row["nom_departement"]) for row in reader]
-        [departements.remove(ndep) for ndep in NOT_INCLUDED_DEPARTEMENTS]
         return departements
 
 
