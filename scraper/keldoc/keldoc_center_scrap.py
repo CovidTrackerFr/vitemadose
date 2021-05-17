@@ -70,7 +70,7 @@ def parse_keldoc_centers(page_limit=None) -> List[dict]:
 
 def get_departements():
     NOT_INCLUDED_DEPARTEMENTS = []
-    with open(get_conf_inputs().get("departements"), encoding="utf8", newline="\n") as csvfile:
+    with open(get_conf_inputs()["departements"], encoding="utf8", newline="\n") as csvfile:
         reader = csv.DictReader(csvfile)
         departements = [str(row["nom_departement"]) for row in reader]
         [departements.remove(ndep) for ndep in NOT_INCLUDED_DEPARTEMENTS]
