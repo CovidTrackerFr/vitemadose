@@ -60,7 +60,7 @@ def search(client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
 
 
 def get_doctor_slug(slug: str, client: httpx.Client = DEFAULT_CLIENT) -> Optional[dict]:
-    url = str(AVECMONDOC_API.get("get_doctor_slug", "")).format(slug=slug)
+    url = AVECMONDOC_API.get("get_doctor_slug", "").format(slug=slug)
     try:
         r = client.get(url)
         r.raise_for_status()
@@ -90,7 +90,7 @@ def get_organization_slug(slug: str, client: httpx.Client = DEFAULT_CLIENT) -> O
 
 
 def get_by_doctor(doctor_id: int, client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
-    url = str(AVECMONDOC_API.get("get_by_doctor", "")).format(id=doctor_id)
+    url = AVECMONDOC_API.get("get_by_doctor", "").format(id=doctor_id)
     try:
         r = client.get(url)
         r.raise_for_status()
@@ -105,7 +105,7 @@ def get_by_doctor(doctor_id: int, client: httpx.Client = DEFAULT_CLIENT) -> Opti
 
 
 def get_by_organization(organization_id: int, client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
-    url = str(AVECMONDOC_API.get("get_by_organization", "")).format(id=organization_id)
+    url = AVECMONDOC_API.get("get_by_organization", "").format(id=organization_id)
     try:
         r = client.get(url)
         r.raise_for_status()
@@ -120,7 +120,7 @@ def get_by_organization(organization_id: int, client: httpx.Client = DEFAULT_CLI
 
 
 def get_reasons(organization_id: int, doctor_id:int, client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
-    url = str(AVECMONDOC_API.get("get_reasons", "")).format(id=id)
+    url = AVECMONDOC_API.get("get_reasons", "").format(id=id)
     payload = {
         "params": json.dumps({
             "organizationId": organization_id,
@@ -158,9 +158,10 @@ def organization_to_center(organization, client: httpx.Client = DEFAULT_CLIENT) 
     if organization.get("coordinates") is not None:
         location.longitude = organization["coordinates"].get("lng", 0.0)
         location.latitude = organization["coordinates"].get("lat", 0.0)
-    center.metadata = {}
-    center.metadata["address"] = organization["address"]
-    center.metadata["phone_number"] = organization["phone"]
+    center.metadata = {
+        "address": organization["address"],
+        "phone_number": organization["phone"],
+    }
     center.location = location
     center.internal_id = f"amd{id}"
     if "schedules" not in organization:
@@ -264,11 +265,12 @@ def parse_availabilities(availabilities: list) -> Tuple[Optional[datetime], int]
             continue
         slots = availability["slots"]
         for slot in slots:
-            if slot["isAvailable"]:
-                appointment_count += 1
-                date = slot["businessHours"]["start"]
-                if first_appointment is None or date < first_appointment:
-                    first_appointment = date
+            if not slot["isAvailable"]:
+                continue
+            appointment_count += 1
+            date = slot["businessHours"]["start"]
+            if first_appointment is None or date < first_appointment:
+                first_appointment = date
     return first_appointment, appointment_count
 
 
@@ -282,12 +284,9 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
     if "error" in organization:
         logger.warning(organization["error"])   
     for speciality in organization["speciality"]:
-        if speciality["id"] == 190:
-            request.update_practitioner_type(DRUG_STORE)
-        else:
-            request.update_practitioner_type(GENERAL_PRACTITIONER)
-    organization_id = organization["id"]
-    reasons = organization["consultationReasons"]
+        request.update_practitioner_type(DRUG_STORE if speciality["id"] == 190 else GENERAL_PRACTITIONER)
+    organization_id = organization.get("id")
+    reasons = organization.get("consultationReasons")
     if reasons is None:
         logger.warning(f"unable to get reasons from organization {organization_id}")
         return None
@@ -353,7 +352,7 @@ def center_to_centerdict(center: CenterInfo) -> dict:
     return center_dict
 
 
-def has_valid_zipcode(organization : dict) -> bool : 
+def has_valid_zipcode(organization : dict) -> bool: 
    return organization["zipCode"] is not None and len(organization["zipCode"]) == 5
 
 
@@ -387,11 +386,11 @@ def center_iterator(client: httpx.Client = DEFAULT_CLIENT) -> Iterator[dict]:
             yield center_to_centerdict(center)
 
 
-def main():
+def main():  #  pragma: no cover
     for center in center_iterator():
         request = ScraperRequest(center["rdv_site_web"], datetime.now().strftime("%Y-%m-%d"))
         availability = fetch_slots(request)
         logger.info(f'{center["nom"]:48}: {availability}')
 
-if __name__ == "__main__":
+if __name__ == "__main__":  #  pragma: no cover
     main()
