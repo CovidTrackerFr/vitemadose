@@ -98,11 +98,18 @@ def parse_pages_departement(departement):
 
 
 def parse_page_centers_departement(departement, page_id, liste_urls) -> Tuple[List[dict], bool]:
-    r = requests.get(
-        BASE_URL_DEPARTEMENT.format(doctolib_urlify(departement), page_id),
-        headers=DOCTOLIB_HEADERS,
-    )
-    data = r.json()
+    try:
+        r = requests.get(
+            BASE_URL_DEPARTEMENT.format(doctolib_urlify(departement), page_id),
+            headers=DOCTOLIB_HEADERS,
+        )
+        data = r.json()
+    except:
+        logger.warn(
+            f"> Could not retrieve centers from department {departement} page_id {page_id}. Request status code: {r.status_code}"
+        )
+        return [], False
+
     centers_page = []
 
     # TODO parallelism can be put here
