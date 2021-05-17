@@ -121,7 +121,7 @@ def test_fetch_slots():
 
 def test_centre_iterator():
     centres = []
-    for centre in centre_iterator():
+    for centre in centre_iterator(overwrite_centers_file=False):
         centres.append(centre)
     assert len(centres) > 0
 
