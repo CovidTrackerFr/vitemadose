@@ -9,7 +9,7 @@ class ScraperRequest:
         self.practitioner_type = None
         self.appointment_count = 0
         self.appointment_schedules = None
-        self.vaccine_type: List[str] = []
+        self.vaccine_type = None
         self.appointment_by_phone_only = False
         self.requests = None
         self.input_data = None
@@ -43,6 +43,9 @@ class ScraperRequest:
         return self.appointment_schedules
 
     def add_vaccine_type(self, vaccine_name: Optional[str]):
+        # Temp fix due to iOS app issues with empty list
+        if self.vaccine_type is None:
+            self.vaccine_type = []
         if vaccine_name and vaccine_name not in self.vaccine_type:
             self.vaccine_type.append(vaccine_name)
 

@@ -47,7 +47,7 @@ class CenterInfo:
         self.type = None
         self.appointment_count = 0
         self.internal_id = None
-        self.vaccine_type: List[Vaccine] = None
+        self.vaccine_type = None
         self.appointment_by_phone_only = False
         self.erreur = erreur
         self.last_scan_with_availabilities = None
