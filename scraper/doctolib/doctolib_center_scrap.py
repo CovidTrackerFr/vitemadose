@@ -127,7 +127,8 @@ def doctolib_urlify(departement: str) -> str:
 def center_from_doctor_dict(doctor_dict) -> Tuple[dict, bool]:
     liste_centres = []
     dict_infos_browse_page = parse_doctor(doctor_dict)
-    dict_infos_centers_page = get_dict_infos_center_page(doctor_dict["link"])
+    url_path = doctor_dict["link"]
+    dict_infos_centers_page = get_dict_infos_center_page(url_path)
 
     for info_center in dict_infos_centers_page:
         info_center["rdv_site_web"] = f"https://www.doctolib.fr{url_path}?pid={info_center['place_id']}"
@@ -135,9 +136,7 @@ def center_from_doctor_dict(doctor_dict) -> Tuple[dict, bool]:
         # This is for when centers have multiple practice-ids which are also centers with different addresses
         liste_centres.append({**dict_infos_browse_page, **info_center})
 
-    stop = False
-    if not doctor_dict["exact_match"]:
-        stop = True
+    stop = not doctor_dict["exact_match"]
     return liste_centres, stop
 
 
