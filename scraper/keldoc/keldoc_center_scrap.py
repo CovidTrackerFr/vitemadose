@@ -41,9 +41,7 @@ def send_keldoc_request(url: str) -> Optional[dict]:
         logger.warning(f"Keldoc request timed out: {url}")
         return None
     except httpx.HTTPStatusError as hex:
-        logger.warning(
-            f"Keldoc request returned HTTP code {hex.response.status_code}: {url}"
-        )
+        logger.warning(f"Keldoc request returned HTTP code {hex.response.status_code}: {url}")
         return None
     except (httpx.RemoteProtocolError, httpx.ConnectError) as hex:
         logger.warning(f"Keldoc raise error {hex} for request: {url}")
@@ -81,7 +79,7 @@ def get_departements():
 
 def parse_keldoc_resources(center: dict) -> dict:
     center_url = center.get("url")
-    url_split = center_url.split('/')
+    url_split = center_url.split("/")
     type, location, slug = url_split[1], url_split[2], url_split[3]
     resource_url = f"{KELDOC_API.get('booking')}?type={type}&location={location}&slug={slug}"
     resource_data = send_keldoc_request(resource_url)
@@ -103,10 +101,10 @@ def parse_keldoc_motive_categories(center_id: int, cabinets: list, specialties: 
 
 def parse_keldoc_center(center: dict) -> Optional[dict]:
     data = {
-        "name": center['title'],
+        "name": center["title"],
         "rdv_site_web": f"https://keldoc.com{center['url']}",
         "cabinets": [],
-        "specialties": center.get("specialty_ids", [])
+        "specialties": center.get("specialty_ids", []),
     }
     data["resources"] = parse_keldoc_resources(center)
     if not data["resources"]:
@@ -130,8 +128,10 @@ def parse_pages_departement(departement: str, page_id: int = 1, centers: list = 
         centers = []
     logger.info(f"[Keldoc centers] Parsing page {page_id} of {departement}")
     formatted_departement = doctolib_urlify(departement)
-    url = "https://www.keldoc.com/api/patients/v2/searches/geo_location?specialty_id=maladies-infectieuses" \
-          f"&raw_location={formatted_departement}&page={page_id}"
+    url = (
+        "https://www.keldoc.com/api/patients/v2/searches/geo_location?specialty_id=maladies-infectieuses"
+        f"&raw_location={formatted_departement}&page={page_id}"
+    )
     data = send_keldoc_request(url)
 
     options = data.get("options")
