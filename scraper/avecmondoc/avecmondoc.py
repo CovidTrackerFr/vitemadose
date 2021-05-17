@@ -34,18 +34,7 @@ paris_tz = timezone("Europe/Paris")
 
 def search(client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
     url = AVECMONDOC_API.get("search", "")
-    payload = {
-        "params": json.dumps({
-            "city": None,
-            "gps": None,
-            "dateBefore": None
-        }),
-        "options": json.dumps({
-            "limit": 1000,
-            "page": 1,
-            "distance": None
-        })
-    }
+    payload = AVECMONDOC_API.get("search_filter", "")
     try:
         r = client.get(url, params=payload)
         r.raise_for_status()
@@ -59,7 +48,8 @@ def search(client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
     return r.json()
 
 
-def get_doctor_slug(slug: str, client: httpx.Client = DEFAULT_CLIENT) -> Optional[dict]:
+def get_doctor_slug(slug: str, client: httpx.Client = DEFAULT_CLIENT,
+    request: ScraperRequest = None) -> Optional[dict]:
     url = AVECMONDOC_API.get("get_doctor_slug", "").format(slug=slug)
     try:
         r = client.get(url)
@@ -71,10 +61,13 @@ def get_doctor_slug(slug: str, client: httpx.Client = DEFAULT_CLIENT) -> Optiona
         logger.warning(f"{url} returned error {hex.response.status_code}")
         logger.warning(r.content)
         return None
+    if request:
+        request.increase_request_count("cabinets")
     return r.json()
 
 
-def get_organization_slug(slug: str, client: httpx.Client = DEFAULT_CLIENT) -> Optional[dict]:
+def get_organization_slug(slug: str, client: httpx.Client = DEFAULT_CLIENT,
+    request: ScraperRequest = None) -> Optional[dict]:
     url = str(AVECMONDOC_API.get("get_organization_slug", "")).format(slug=slug)
     try:
         r = client.get(url)
@@ -86,10 +79,13 @@ def get_organization_slug(slug: str, client: httpx.Client = DEFAULT_CLIENT) -> O
         logger.warning(f"{url} returned error {hex.response.status_code}")
         logger.warning(r.content)
         return None
+    if request:
+        request.increase_request_count("cabinets")
     return r.json()
 
 
-def get_by_doctor(doctor_id: int, client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
+def get_by_doctor(doctor_id: int, client: httpx.Client = DEFAULT_CLIENT,
+    request: ScraperRequest = None) -> Optional[list]:
     url = AVECMONDOC_API.get("get_by_doctor", "").format(id=doctor_id)
     try:
         r = client.get(url)
@@ -101,10 +97,13 @@ def get_by_doctor(doctor_id: int, client: httpx.Client = DEFAULT_CLIENT) -> Opti
         logger.warning(f"{url} returned error {hex.response.status_code}")
         logger.warning(r.content)
         return None
+    if request:
+        request.increase_request_count("resource")
     return r.json()
 
 
-def get_by_organization(organization_id: int, client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
+def get_by_organization(organization_id: int, client: httpx.Client = DEFAULT_CLIENT,
+    request: ScraperRequest = None) -> Optional[list]:
     url = AVECMONDOC_API.get("get_by_organization", "").format(id=organization_id)
     try:
         r = client.get(url)
@@ -116,10 +115,13 @@ def get_by_organization(organization_id: int, client: httpx.Client = DEFAULT_CLI
         logger.warning(f"{url} returned error {hex.response.status_code}")
         logger.warning(r.content)
         return None
+    if request:
+        request.increase_request_count("resource")
     return r.json()
 
 
-def get_reasons(organization_id: int, doctor_id:int, client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
+def get_reasons(organization_id: int, doctor_id:int, client: httpx.Client = DEFAULT_CLIENT,
+    request: ScraperRequest = None) -> Optional[list]:
     url = AVECMONDOC_API.get("get_reasons", "").format(id=id)
     payload = {
         "params": json.dumps({
@@ -137,13 +139,15 @@ def get_reasons(organization_id: int, doctor_id:int, client: httpx.Client = DEFA
         logger.warning(f"{url} returned error {hex.response.status_code}")
         logger.warning(r.content)
         return None
+    if request:
+        request.increase_request_count("motives")
     return r.json()
 
 
-def organization_to_center(organization, client: httpx.Client = DEFAULT_CLIENT) -> Optional[CenterInfo]:
+def organization_to_center(organization) -> Optional[CenterInfo]:
     if organization is None:
         return None
-    url = f"https://patient.avecmondoc.com/fiche/structure/{organization['slug']}"
+    url = AVECMONDOC_CONF.get("patient_url", "").format(slug=organization.get("slug"))
     id = organization["id"]
     zip = organization["zipCode"]
     dept = departementUtils.to_departement_number(departementUtils.cp_to_insee(zip))
@@ -213,14 +217,15 @@ def get_availabilities_week(reason_id: int, organization_id: int,
 
 def get_availabilities(reason_id: int, organization_id: int,
     start_date: datetime, end_date: datetime, 
-    client: httpx.Client = DEFAULT_CLIENT) -> list:
+    client: httpx.Client = DEFAULT_CLIENT,
+    request: ScraperRequest = None) -> list:
     availabilities = []
     week_size = AVECMONDOC_CONF.get("week_size", 5)
     page_date = start_date
     while page_date < end_date:
-        week_availabilities = get_availabilities_week(
-            reason_id, organization_id, page_date, client=client
-        )
+        week_availabilities = get_availabilities_week(reason_id, organization_id, page_date, client)
+        if request:
+            request.increase_request_count("slots" if page_date == start_date else "next-slots")
         page_date = page_date + timedelta(days=week_size)
         for week_availability in week_availabilities:
             if "slots" in week_availability:
@@ -278,7 +283,7 @@ def parse_availabilities(availabilities: list) -> Tuple[Optional[datetime], int]
 def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) -> Optional[str]:
     url = request.get_url()
     slug = url.split('/')[-1]
-    organization = get_organization_slug(slug, client)
+    organization = get_organization_slug(slug, client, request)
     if organization is None:
         return None
     if "error" in organization:
@@ -316,7 +321,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
         end_date = start_date + timedelta(days=AVECMONDOC_CONF.get("slot_limit", 50))
         request.add_vaccine_type(get_vaccine_name(reason["reason"]))
         availabilities = get_availabilities(reason["id"], reason["organizationId"],
-            start_date, end_date, client)
+            start_date, end_date, client, request)
         date, appointment_count = parse_availabilities(availabilities)
         if date is None:
             continue
@@ -358,7 +363,11 @@ def has_valid_zipcode(organization : dict) -> bool:
 
 def center_iterator(client: httpx.Client = DEFAULT_CLIENT) -> Iterator[dict]:
     organization_slugs = []
-    search_result = search(client)
+    # l'api fait parfois un timeout au premier appel
+    for _ in range(0, AVECMONDOC_CONF.get("search_tries", 2)):
+        search_result = search(client)
+        if search_result:
+            break
     if search_result is None:
         return []
     if "data" not in search_result:
@@ -380,7 +389,7 @@ def center_iterator(client: httpx.Client = DEFAULT_CLIENT) -> Iterator[dict]:
             if organization_slug in organization_slugs:
                 continue
             organization_slugs.append(organization_slug)
-            center = organization_to_center(organization, client)
+            center = organization_to_center(organization)
             if center is None:
                 continue
             yield center_to_centerdict(center)

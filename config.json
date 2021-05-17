@@ -358,8 +358,14 @@
       "recognized_urls": [
         "https://patient.avecmondoc.com/"
       ],
+      "patient_url": "https://patient.avecmondoc.com/fiche/structure/{slug}",
+      "search_tries": 2,
       "api": {
         "search": "https://api.avecmondoc.com/api/Doctors/search",
+        "search_filter": {
+          "params": "{\"city\": null, \"gps\": null, \"dateBefore\": null}", 
+          "options": "{\"limit\": 1000, \"page\": 1, \"distance\": null}"
+        },
         "get_doctor_slug": "https://api.avecmondoc.com/api/Doctors/slug/{slug}",
         "get_organization_slug": "https://api.avecmondoc.com/api/Organizations/slug/{slug}",
         "get_by_organization": "https://api.avecmondoc.com/api/Doctors/getByOrganization/{id}",
