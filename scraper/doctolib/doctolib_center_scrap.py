@@ -4,6 +4,8 @@ from scraper.pattern.scraper_result import VACCINATION_CENTER
 from utils.vmd_config import get_conf_platform, get_conf_inputs
 from utils.vmd_utils import departementUtils, format_phone_number
 from utils.vmd_logger import get_logger
+
+from scraper.doctolib.conf import DoctolibConf
 from scraper.doctolib.doctolib import DOCTOLIB_HEADERS
 from scraper.doctolib.doctolib_filters import is_vaccination_center
 
@@ -15,18 +17,11 @@ import requests
 import re
 from unidecode import unidecode
 
-DOCTOLIB_CONF = get_conf_platform("doctolib")
-DOCTOLIB_API = DOCTOLIB_CONF.get("api", {})
-BASE_URL = DOCTOLIB_API.get("scraper")
-BASE_URL_DEPARTEMENT = DOCTOLIB_API.get("scraper_dep")
-BOOKING_URL = DOCTOLIB_API.get("booking")
+DOCTOLIB_CONF = DoctolibConf(**get_conf_platform("doctolib"))
+SCRAPER_CONF = DOCTOLIB_CONF.center_scraper
 
-SCRAPER_CONF = DOCTOLIB_CONF.get("center_scraper", {})
-CENTER_TYPES = SCRAPER_CONF.get("categories", [])
-
-DOCTOLIB_DOMAINS = DOCTOLIB_CONF.get("recognized_urls", [])
-
-DOCTOLIB_WEIRD_DEPARTEMENTS = SCRAPER_CONF.get("dep_conversion", {})
+BASE_URL_DEPARTEMENT = DOCTOLIB_CONF.api.get("scraper_dep")
+BOOKING_URL = DOCTOLIB_CONF.api.get("booking")
 
 logger = get_logger()
 
@@ -79,9 +74,9 @@ def parse_pages_departement(departement):
     page_has_centers = True
     liste_urls = []
 
-    for weird_dep in DOCTOLIB_WEIRD_DEPARTEMENTS:
+    for weird_dep in SCRAPER_CONF.dep_conversion:
         if weird_dep == departement:
-            departement = DOCTOLIB_WEIRD_DEPARTEMENTS[weird_dep]
+            departement = SCRAPER_CONF.dep_conversion[weird_dep]
             break
     centers = []
     while page_has_centers:
@@ -235,13 +230,12 @@ def parse_place(place: Dict) -> Dict:
 def parse_doctolib_business_hours(place) -> dict:
     # Opening hours
     business_hours = dict()
-    keys = SCRAPER_CONF.get("business_days", [])
     if not place["opening_hours"]:
         return None
 
     for opening_hour in place["opening_hours"]:
         format_hours = ""
-        key_name = keys[opening_hour["day"] - 1]
+        key_name = SCRAPER_CONF.business_days[opening_hour["day"] - 1]
         if not opening_hour.get("enabled", False):
             business_hours[key_name] = None
             continue
@@ -255,11 +249,10 @@ def parse_doctolib_business_hours(place) -> dict:
 
 
 def center_type(url_path: str, nom: str) -> str:
-    ctypes = SCRAPER_CONF.get("center_types", [])
-    for key in ctypes:
+    for key in SCRAPER_CONF.center_types:
         if key in nom.lower() or key in url_path:
-            return ctypes[key]
-    return ctypes.get("*", VACCINATION_CENTER)
+            return SCRAPER_CONF.center_types[key]
+    return SCRAPER_CONF.center_types.get("*", VACCINATION_CENTER)
 
 
 def center_reducer(center: dict) -> dict:
@@ -287,9 +280,9 @@ def center_reducer(center: dict) -> dict:
 
 
 if __name__ == "__main__":  # pragma: no cover
-    if DOCTOLIB_CONF.get("enabled", False):
+    if DOCTOLIB_CONF.enabled:
         centers = parse_doctolib_centers()
-        path_out = SCRAPER_CONF.get("result_path")
+        path_out = SCRAPER_CONF.result_path
         logger.info(f"Found {len(centers)} centers on Doctolib")
         if len(centers) < 2000:
             # for reference, on 13-05, there were 12k centers
