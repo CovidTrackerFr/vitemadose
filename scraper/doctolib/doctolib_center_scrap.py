@@ -7,7 +7,7 @@ from utils.vmd_logger import get_logger
 from scraper.doctolib.doctolib import DOCTOLIB_HEADERS
 from scraper.doctolib.doctolib_filters import is_vaccination_center
 
-from typing import List, Tuple
+from typing import Dict, List, Tuple
 import requests
 import json
 from urllib import parse
@@ -126,26 +126,8 @@ def doctolib_urlify(departement: str) -> str:
 
 def center_from_doctor_dict(doctor_dict) -> Tuple[dict, bool]:
     liste_centres = []
-    nom = doctor_dict["name_with_title"]
-    sub_addresse = doctor_dict["address"]
-    ville = doctor_dict["city"]
-    exact_match = doctor_dict["exact_match"]
-    code_postal = doctor_dict["zipcode"].replace(" ", "").strip()
-    addresse = f"{sub_addresse}, {code_postal} {ville}"
-    url_path = doctor_dict["link"]
-    _type = center_type(url_path, nom)
-
-    dict_infos_centers_page = get_dict_infos_center_page(url_path)
-    longitude, latitude = get_coordinates(doctor_dict)
-    dict_infos_browse_page = {
-        "nom": nom,
-        "ville": ville,
-        "address": addresse,
-        "long_coor1": longitude,
-        "lat_coor1": latitude,
-        "type": _type,
-        "com_insee": departementUtils.cp_to_insee(code_postal),
-    }
+    dict_infos_browse_page = parse_doctor(doctor_dict)
+    dict_infos_centers_page = get_dict_infos_center_page(doctor_dict["link"])
 
     for info_center in dict_infos_centers_page:
         info_center["rdv_site_web"] = f"https://www.doctolib.fr{url_path}?pid={info_center['place_id']}"
@@ -154,7 +136,7 @@ def center_from_doctor_dict(doctor_dict) -> Tuple[dict, bool]:
         liste_centres.append({**dict_infos_browse_page, **info_center})
 
     stop = False
-    if not exact_match:
+    if not doctor_dict["exact_match"]:
         stop = True
     return liste_centres, stop
 
@@ -169,10 +151,29 @@ def get_coordinates(doctor_dict):
     return longitude, latitude
 
 
+def parse_doctor(doctor_dict: Dict) -> Dict:
+    nom = doctor_dict["name_with_title"]
+    sub_addresse = doctor_dict["address"]
+    ville = doctor_dict["city"]
+    code_postal = doctor_dict["zipcode"].replace(" ", "").strip()
+    addresse = f"{sub_addresse}, {code_postal} {ville}"
+    url_path = doctor_dict["link"]
+    _type = center_type(url_path, nom)
+    longitude, latitude = get_coordinates(doctor_dict)
+    return {
+        "nom": nom,
+        "ville": ville,
+        "address": addresse,
+        "long_coor1": longitude,
+        "lat_coor1": latitude,
+        "type": _type,
+        "com_insee": departementUtils.cp_to_insee(code_postal),
+    }
+
+
 def get_dict_infos_center_page(url_path: str) -> dict:
     internal_api_url = BOOKING_URL.format(centre=parse.urlsplit(url_path).path.split("/")[-1])
     logger.info(f"> Parsing {internal_api_url}")
-    liste_infos_page = []
     output = None
 
     try:
@@ -182,38 +183,47 @@ def get_dict_infos_center_page(url_path: str) -> dict:
         output = data.get("data", {})
     except:
         logger.warn(f"> Could not retrieve data from {internal_api_url}")
-        return liste_infos_page
+        return []
 
-    # Parse place
-    places = output.get("places", {})
+    return parse_center_places(output)
+
+
+def parse_center_places(center_output: Dict) -> List[Dict]:
+    places = center_output.get("places", {})
+    gid = "d{0}".format(center_output.get("profile", {}).get("id", ""))
+    extracted_visit_motives = [vm.get("name") for vm in center_output.get("visit_motives", [])]
+
+    liste_infos_page = []
     for place in places:
-        infos_page = {}
-        # Parse place location
-        infos_page["gid"] = "d{0}".format(output.get("profile", {}).get("id", ""))
-        infos_page["place_id"] = place["id"]
-        infos_page["address"] = place["full_address"]
-        infos_page["ville"] = place["city"]
-        infos_page["long_coor1"] = place.get("longitude")
-        infos_page["lat_coor1"] = place.get("latitude")
-        infos_page["com_insee"] = departementUtils.cp_to_insee(place["zipcode"].replace(" ", "").strip())
-        infos_page["booking"] = output
-        # Parse landline number
-        if place.get("landline_number"):
-            phone_number = place.get("landline_number")
-        else:
-            phone_number = place.get("phone_number")
-        if phone_number:
-            infos_page["phone_number"] = format_phone_number(phone_number)
-
-        infos_page["business_hours"] = parse_doctolib_business_hours(place)
-
-        # Parse visit motives, not sure it's the right place to do it, maybe this function should be refactored
-        extracted_visit_motives = output.get("visit_motives", [])
-        infos_page["visit_motives"] = list(map(lambda vm: vm.get("name"), extracted_visit_motives))
+        infos_page = parse_place(place)
+        infos_page["gid"] = gid
+        infos_page["visit_motives"] = extracted_visit_motives
+        infos_page["booking"] = center_output
         liste_infos_page.append(infos_page)
 
     # Returns a list with data for each place
     return liste_infos_page
+
+
+def parse_place(place: Dict) -> Dict:
+    infos_page = {}
+    # Parse place location
+    infos_page["place_id"] = place["id"]
+    infos_page["address"] = place["full_address"]
+    infos_page["ville"] = place["city"]
+    infos_page["long_coor1"] = place.get("longitude")
+    infos_page["lat_coor1"] = place.get("latitude")
+    infos_page["com_insee"] = departementUtils.cp_to_insee(place["zipcode"].replace(" ", "").strip())
+    # Parse landline number
+    if place.get("landline_number"):
+        phone_number = place.get("landline_number")
+    else:
+        phone_number = place.get("phone_number")
+    if phone_number:
+        infos_page["phone_number"] = format_phone_number(phone_number)
+
+    infos_page["business_hours"] = parse_doctolib_business_hours(place)
+    return infos_page
 
 
 def parse_doctolib_business_hours(place) -> dict:
