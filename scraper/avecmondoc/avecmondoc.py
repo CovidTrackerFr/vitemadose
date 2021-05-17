@@ -28,7 +28,7 @@ AVECMONDOC_HEADERS = {
     "User-Agent": os.environ.get("AVECMONDOC_API_KEY", ""),
 }
 timeout = httpx.Timeout(AVECMONDOC_CONF.get("timeout", 25), connect=AVECMONDOC_CONF.get("timeout", 25))
-DEFAULT_CLIENT = httpx.Client(headers=AVECMONDOC_HEADERS)
+DEFAULT_CLIENT = httpx.Client(headers=AVECMONDOC_HEADERS, timeout=timeout)
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
 
@@ -336,8 +336,9 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
         request.appointment_schedules = appointment_schedules
         if first_availability is None or first_availability > date:
             first_availability = date
-    
-    return(first_availability)
+    if first_availability is None:
+        return None
+    return paris_tz.localize(isoparse(first_availability).replace(tzinfo=None)).isoformat()
 
 
 def center_to_centerdict(center: CenterInfo) -> dict:
