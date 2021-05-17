@@ -1,5 +1,10 @@
 import pytest
-from scraper.circuit_breaker import CircuitBreaker, CircuitBreakerOffException
+from scraper.circuit_breaker import CircuitBreaker, CircuitBreakerOffException, ShortCircuit
+from multiprocessing import Pool
+import random
+import time
+
+name = 'test_circuit_breaker'
 
 def noop():
     pass
@@ -15,7 +20,8 @@ def test_calls_on_function ():
         nonlocal on_count
         on_count = on_count +1
 
-    breaker = CircuitBreaker(on=on_func, off=noop)
+    breaker = CircuitBreaker(name=name, on=on_func, off=noop)
+    breaker.clear()
     # When
     breaker()
     breaker()
@@ -38,7 +44,8 @@ def test_calls_on_function_with_args ():
         on_kwargs = kwargs
         return ret
 
-    breaker = CircuitBreaker(on=on_func, off=noop)
+    breaker = CircuitBreaker(name=name, on=on_func, off=noop)
+    breaker.clear()
 
     # When
     actual = breaker(8, 6, 'Hey', salut="bonjour")
@@ -55,6 +62,7 @@ def test_calls_default_off_behaviour ():
         raise Exception("some error")
 
     breaker = CircuitBreaker(on=on_func, name="test name", trigger=1)
+    breaker.clear()
     actual = None
 
     # When
@@ -82,7 +90,8 @@ def test_calls_off_function_with_args ():
     def on_func (*args, **kwargs):
         raise Exception("SomeError")
 
-    breaker = CircuitBreaker(on=on_func, off=off_func, trigger=1)
+    breaker = CircuitBreaker(name=name, on=on_func, off=off_func, trigger=1)
+    breaker.clear()
 
     # When
     ignore_exception(lambda: breaker(8, 6, 'Hey', salut="bonjour"))
@@ -92,6 +101,39 @@ def test_calls_off_function_with_args ():
     assert off_args == (8, 6, 'Hey')
     assert off_kwargs == { 'salut': "bonjour" }
     assert actual == "OFF"
+
+@ShortCircuit('short_circuit_test', trigger=3, release=3)
+def breakable (*args, **kwargs):
+    raise Exception("SomeError")
+
+def run(*args, **kwargs):
+    print(f"running {breakable}")
+    try:
+        time.sleep(random.random() / 10)
+        breakable()
+        return 'on'
+    except CircuitBreakerOffException:
+        return 'off'
+    except Exception:
+        return 'on'
+
+@pytest.mark.skip
+def test_breaks_accross_processes ():
+    # Given
+    breakable.clear()
+
+    # When
+    actual = None
+    with Pool(2) as pool:
+        actual = pool.map(run, range(9), 1)
+
+    # Then
+    times_on = [on for on in actual if on == "on"]
+    times_off = [off for off in actual if off == "off"]
+    assert len(times_on) == 6
+    assert len(times_off) == 3
+    assert actual == ["on", "on", "on", "off", "off", "off", "on", "on", "on"]
+
 
 def test_calls_on_function_again ():
     # Given
@@ -109,7 +151,8 @@ def test_calls_on_function_again ():
             raise Exception('Some Error')
         return 'ON'
 
-    breaker = CircuitBreaker(on=on_func, off=off_func, trigger=1)
+    breaker = CircuitBreaker(name=name, on=on_func, off=off_func, trigger=1)
+    breaker.clear()
 
     # When
     ignore_exception(lambda: breaker())
@@ -123,7 +166,7 @@ def test_calls_on_function_again ():
     breaker()
     breaker()
     breaker()
-    actual = actual = breaker()
+    actual = breaker()
 
     # Then
     assert actual == "ON"
@@ -146,26 +189,27 @@ def test_calls_off_after_trigger ():
             raise Exception('Some Error')
         return 'ON'
 
-    breaker = CircuitBreaker(on=on_func, off=off_func, trigger=3, release=5)
+    breaker = CircuitBreaker(name=name, on=on_func, off=off_func, trigger=3, release=5)
+    breaker.clear()
 
     # When
-    ignore_exception(lambda: breaker()) # fail
-    ignore_exception(lambda: breaker()) # fail
-    ignore_exception(lambda: breaker()) # fail
-    breaker() # pass
-    breaker() # pass
-    breaker() # pass
-    breaker() # pass
-    breaker() # pass
-    ignore_exception(lambda: breaker()) # fail
-    ignore_exception(lambda: breaker()) # fail
-    ignore_exception(lambda: breaker()) # fail
-    breaker() # pass
-    breaker() # pass
-    breaker() # pass
-    breaker() # pass
-    breaker() # pass
-    actual = breaker()
+    ignore_exception(lambda: breaker()) # fail ON
+    ignore_exception(lambda: breaker()) # fail ON
+    ignore_exception(lambda: breaker()) # fail ON
+    breaker() # pass OFF
+    breaker() # pass OFF
+    breaker() # pass OFF
+    breaker() # pass OFF
+    breaker() # pass OFF
+    ignore_exception(lambda: breaker()) # fail ON
+    ignore_exception(lambda: breaker()) # fail ON
+    ignore_exception(lambda: breaker()) # fail ON
+    breaker() # pass OFF
+    breaker() # pass OFF
+    breaker() # pass OFF
+    breaker() # pass OFF
+    breaker() # pass OFF
+    actual = breaker() # pass ON
 
     # Then
     assert on_count == 7
@@ -189,7 +233,8 @@ def test_calls_off_after_soft_trigger ():
         else:
             raise Exception('Some Error')
 
-    breaker = CircuitBreaker(on=on_func, off=off_func, trigger=3, release=5)
+    breaker = CircuitBreaker(name=name, on=on_func, off=off_func, trigger=3, release=5)
+    breaker.clear()
 
     # When
     ignore_exception(lambda: breaker()) # ON fail

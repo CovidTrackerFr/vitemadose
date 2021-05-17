@@ -1,3 +1,4 @@
+from collections import deque
 
 def ShortCircuit(name, trigger=3, release=10):
     def decorator(fn):
@@ -18,42 +19,43 @@ def ShortCircuit(name, trigger=3, release=10):
 #  - if this counts exceeds `release`, the breaker becomes ON
 class CircuitBreaker:
     def __init__(self, on, off=None, trigger=3, release=10, name=None):
+        self.policies = deque(["ON" for _ in range(trigger)])
         self.on_func = on
         self.off_func = off
-        self.is_on = True
-        self.off_count = 0
-        self.error_count = 0
         self.release = release
         self.trigger = trigger
         self.name = name
         if name is None and off is None:
             raise Exception("You must specify a name if you don't specify a `off` for CircuitBreaker")
 
+    def clear(self):
+        pass
+
     def __call__(self, *args, **kwargs):
         return self.call(*args, **kwargs)
 
     def call(self, *args, **kwargs):
-        if not self.is_on:
-            self.off_count += 1
-            if self.off_count <= self.release:
-                return self.call_off(*args, **kwargs)
-            else:
-                self.is_on = True
-                self.off_count = 0
+        policy = self.policies.popleft()
+        if policy == 'OFF':
+            return self.call_off(*args, **kwargs)
 
         try:
             value = self.on_func(*args, **kwargs)
-            if self.error_count > 0:
-                self.error_count -= 1
 
+            self.policies.append('ON')
+            if len(self.policies) < self.trigger:
+                self.policies.append('ON')
             return value
 
         except Exception as e:
-            self.error_count += 1
-            if self.error_count >= self.trigger:
-                self.is_on = False
-                self.error_count = 0
+            if len(self.policies) == 0:
+                for _ in range(self.release):
+                    self.policies.append('OFF')
+                for _ in range(self.trigger):
+                    self.policies.append('ON')
+
             raise e
+
 
     def call_off(self, *args, **kwargs):
         if self.off_func is not None:
