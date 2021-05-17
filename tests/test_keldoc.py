@@ -38,7 +38,7 @@ def online_keldoc_test():
         "2021-04-13",
     )
 
-    slots = fetch_slots(request)
+    fetch_slots(request)
 
 
 def get_test_data(file_name):

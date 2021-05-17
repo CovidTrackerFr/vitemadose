@@ -1,5 +1,9 @@
+import copy
 import json
 from pathlib import Path
+
+import pytest
+
 from scraper.doctolib.doctolib_filters import (
     is_category_relevant,
     is_vaccination_center,
@@ -17,6 +21,7 @@ from scraper.doctolib.doctolib import (
     _find_visit_motive_id,
     _parse_centre,
     _parse_practice_id,
+    set_doctolib_center_internal_id,
     DOCTOLIB_CONF,
 )
 
@@ -57,12 +62,8 @@ def test_blocked_by_doctolib_par_centre():
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client, cooldown_interval=0)
 
-    error = None
-    try:
-        next_date = slots.fetch(scrap_request)
-    except Exception as e:
-        error = e
-    assert True is isinstance(error, BlockedByDoctolibError)
+    with pytest.raises(BlockedByDoctolibError):
+        slots.fetch(scrap_request)
 
 
 def test_blocked_by_doctolib_par_availabilities():
@@ -84,12 +85,8 @@ def test_blocked_by_doctolib_par_availabilities():
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client, cooldown_interval=0)
 
-    error = None
-    try:
-        next_date = slots.fetch(scrap_request)
-    except Exception as e:
-        error = e
-    assert True is isinstance(error, BlockedByDoctolibError)
+    with pytest.raises(BlockedByDoctolibError):
+        slots.fetch(scrap_request)
 
 
 def test_doctolib():
@@ -107,7 +104,6 @@ def test_doctolib():
             return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
         assert request.url.path == "/availabilities.json"
-        params = dict(httpx.QueryParams(request.url.query))
         path = Path("tests", "fixtures", "doctolib", "basic-availabilities.json")
         return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
@@ -413,3 +409,100 @@ def test_parse_practitioner_type():
     data = {"profile": {"speciality": {"slug": "medecin-generaliste"}}}
     name = parse_practitioner_type("Dr Coq", data)
     assert name == GENERAL_PRACTITIONER
+
+
+def test_pop_practice_id():
+    base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"
+    expected_result = (
+        "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?enable_cookies_consent=1"
+    )
+    start_date = "2021-04-03"
+    scraper_request = ScraperRequest(base_url, start_date)
+    doctolib_slots = DoctolibSlots()
+    doctolib_slots.pop_practice_id(scraper_request)
+    assert scraper_request.url == expected_result
+
+
+def test_set_doctolib_center_internal_id():
+    base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"
+    start_date = "2021-04-03"
+    scraper_request = ScraperRequest(base_url, start_date)
+
+    TEST_CASES = [
+        {
+            "input": {
+                "request": copy.copy(scraper_request),
+                "data": {"profile": {"id": 245547}},
+                "practice_ids": [123456],
+                "practice_same_adress": False,
+            },
+            "expected_result": "doctolib245547pid123456",
+        },
+        {
+            "input": {
+                "request": copy.copy(scraper_request),
+                "data": {"profile": {"id": 245547}},
+                "practice_ids": [123456],
+                "practice_same_adress": True,
+            },
+            "expected_result": "doctolib245547pid123456",
+        },
+        {
+            "input": {
+                "request": copy.copy(scraper_request),
+                "data": {"profile": {"id": 245547}},
+                "practice_ids": [],
+                "practice_same_adress": False,
+            },
+            "expected_result": "doctolib245547",
+        },
+        {
+            "input": {
+                "request": copy.copy(scraper_request),
+                "data": {"profile": {"id": 245547}},
+                "practice_ids": None,
+                "practice_same_adress": False,
+            },
+            "expected_result": "doctolib245547",
+        },
+        {
+            "input": {
+                "request": copy.copy(scraper_request),
+                "data": {"profile": {}},
+                "practice_ids": [123456],
+                "practice_same_adress": False,
+            },
+            "expected_result": None,
+        },
+        {
+            "input": {
+                "request": copy.copy(scraper_request),
+                "data": {},
+                "practice_ids": [123456],
+                "practice_same_adress": False,
+            },
+            "expected_result": None,
+        },
+        {
+            "input": {
+                "request": copy.copy(scraper_request),
+                "data": {"profile": {"id": 245547}},
+                "practice_ids": [123456, 789123],
+                "practice_same_adress": False,
+            },
+            "expected_result": "doctolib245547",
+        },
+        {
+            "input": {
+                "request": copy.copy(scraper_request),
+                "data": {"profile": {"id": 245547}},
+                "practice_ids": [123456, 789123],
+                "practice_same_adress": True,
+            },
+            "expected_result": "doctolib245547pid123456",
+        },
+    ]
+
+    for case in TEST_CASES:
+        set_doctolib_center_internal_id(**case["input"])
+        assert case["input"]["request"].internal_id == case["expected_result"]

@@ -52,7 +52,6 @@ def campagne_to_centre(pharmacy: dict, campagne: dict) -> dict:
     if not pharmacy.get("code_postal"):
         raise ValueError("Absence de code postal")
     insee = departementUtils.cp_to_insee(pharmacy.get("code_postal"))
-    departement = departementUtils.to_departement_number(insee)
     centre = dict()
     centre["nom"] = pharmacy.get("nom")
     centre["type"] = DRUG_STORE
@@ -264,7 +263,6 @@ def is_campagne_valid(campagne: dict) -> bool:
 def centre_iterator():
     global opendata
     global campagnes_inconnues
-    campagnes = []
     opendata = get_mapharma_opendata()
     if not opendata:
         logger.error("Mapharma unable to get centre list")

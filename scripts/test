@@ -4,6 +4,6 @@ BIN="venv/bin/"
 
 set -x
 
-${BIN}coverage run -m pytest --ignore tests/ -vv
+${BIN}coverage run -m pytest --ignore tests/
 
 scripts/coverage

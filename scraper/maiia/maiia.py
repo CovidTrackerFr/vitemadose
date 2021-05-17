@@ -15,7 +15,7 @@ from scraper.profiler import Profiling
 from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
 from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT
+from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT, DEFAULT_CLIENT
 from utils.vmd_config import get_conf_platform, get_config
 
 MAIIA_CONF = get_conf_platform("maiia")
@@ -25,7 +25,6 @@ MAIIA_SCRAPER = MAIIA_CONF.get("center_scraper", {})
 
 # timeout = httpx.Timeout(MAIIA_CONF.get("timeout", 25), connect=MAIIA_CONF.get("timeout", 25))
 
-DEFAULT_CLIENT = httpx.Client()
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
 
