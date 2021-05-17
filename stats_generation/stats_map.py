@@ -2,14 +2,13 @@ import io
 import csv
 import httpx
 import logging
-import time
 
 from datetime import date, datetime, timedelta
 import pytz
 from pathlib import Path
 
 from utils.vmd_config import get_conf_inputs
-from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug
+from utils.vmd_logger import enable_logger_for_debug
 
 timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)

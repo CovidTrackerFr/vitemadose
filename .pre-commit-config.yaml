@@ -3,3 +3,8 @@ repos:
     rev: 20.8b1
     hooks:
       - id: black
+  - repo: git@github.com:humitos/mirrors-autoflake.git
+    rev: v1.3
+    hooks:
+      - id: autoflake
+        args: ['--in-place', '--remove-all-unused-imports', '--remove-unused-variable', '--ignore-init-module-imports']

@@ -30,9 +30,8 @@ def generate_stats_date(centres_stats):
         data = history_rq.json()
         if data:
             stats_data = data
-    except Exception as e:
+    except Exception:
         logger.warning(f"Unable to fetch {DATA_AUTO}{stats_path}: generating a template file.")
-        pass
     ctz = pytz.timezone("Europe/Paris")
     current_time = datetime.now(tz=ctz).strftime("%Y-%m-%d %H:00:00")
     if current_time in stats_data["dates"]:
@@ -65,9 +64,8 @@ def generate_stats_dep_date(centres_stats):
         data = history_rq.json()
         if data:
             stats_data = data
-    except Exception as e:
+    except Exception:
         logger.warning(f"Unable to fetch {DATA_AUTO}{stats_path}: generating a template file.")
-        pass
     ctz = pytz.timezone("Europe/Paris")
     current_time = datetime.now(tz=ctz).strftime("%Y-%m-%d %H:00:00")
     if current_time in stats_data["dates"]:

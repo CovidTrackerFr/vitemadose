@@ -10,7 +10,7 @@ help: ## provides cli help for this makefile (default) 📖
 install: ## sets up package and its dependencies
 	scripts/install
 
-test: ## sets up package and its dependencies
+test: ## runs tests
 	scripts/test
 
 coverage: ## reports test coverage (automatically run by `test`)
@@ -26,6 +26,9 @@ stats: ## Run the statistic scripts
 
 doctoscrap: ## Scrap all doctolib centers, output : data/output/doctolib-centers.json
 	venv/bin/python -m scraper.doctolib.doctolib_center_scrap
+
+keldocscrap: ## Scrap all doctolib centers, output : data/output/keldoc-centers.json
+	venv/bin/python -m scraper.keldoc.keldoc_center_scrap
 
 maiiascrap: ## Retrieve maiia centers from API
 	venv/bin/python -m scraper.maiia.maiia_center_scrap
