@@ -1,5 +1,6 @@
 from collections import deque
 from diskcache import Deque
+import time
 import os
 
 def ShortCircuit(name, trigger=3, release=10):
@@ -20,13 +21,15 @@ def ShortCircuit(name, trigger=3, release=10):
 #  - counts the numbers of times `off` is called
 #  - if this counts exceeds `release`, the breaker becomes ON
 class CircuitBreaker:
-    def __init__(self, name, on, off=None, trigger=3, release=10):
+    def __init__(self, name, on, off=None, trigger=3, release=10, time_limit=120):
         self.policies = Deque(["ON" for _ in range(trigger)], f'/tmp/breaker/{name}')
+        self.time_limit = time_limit
         self.on_func = on
         self.off_func = off
         self.release = release
         self.trigger = trigger
         self.name = name
+
     def clear(self):
         with self.policies.transact():
             self.policies.clear()
@@ -45,8 +48,14 @@ class CircuitBreaker:
         if policy == 'OFF':
             return self.call_off(*args, **kwargs)
 
+        error = None
+        value = None
         try:
+            start_time = time.time()
             value = self.on_func(*args, **kwargs)
+            elapsed_time = time.time() - start_time
+            if elapsed_time > self.time_limit:
+                raise CircuitBreakerTooLongException(self.name)
 
             with self.policies.transact():
                 self.policies.append('ON')
@@ -54,13 +63,19 @@ class CircuitBreaker:
                     self.policies.append('ON')
             return value
 
+        except CircuitBreakerTooLongException:
+            self.count_error()
+            return value
         except Exception as e:
-            with self.policies.transact():
-                if len(self.policies) == 0:
-                    self.policies += ['OFF' for _ in range(self.release)]
-                    self.policies += ['ON' for _ in range(self.trigger)]
+            self.count_error()
             raise e
 
+
+    def count_error(self):
+        with self.policies.transact():
+            if len(self.policies) == 0:
+                self.policies += ['OFF' for _ in range(self.release)]
+                self.policies += ['ON' for _ in range(self.trigger)]
 
     def call_off(self, *args, **kwargs):
         if self.off_func is not None:
@@ -71,5 +86,11 @@ class CircuitBreaker:
 class CircuitBreakerOffException(RuntimeError):
     def __init__(self, name):
         msg = f"CircuitBreaker '{name}' is currently off"
+        super().__init__(self, msg)
+        self.message = msg
+
+class CircuitBreakerTooLongException(RuntimeError):
+    def __init__(self, name):
+        msg = f"CircuitBreaker '{name}' execution took too long"
         super().__init__(self, msg)
         self.message = msg

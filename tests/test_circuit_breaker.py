@@ -102,11 +102,41 @@ def test_calls_off_function_with_args ():
     assert off_kwargs == { 'salut': "bonjour" }
     assert actual == "OFF"
 
+def test_turns_off_if_too_long ():
+    # Given
+    off_count = 0
+    on_count = 0
+    time_limit = 0.1
+
+    def off_func (*args, **kwargs):
+        nonlocal off_count
+        off_count += 1
+        return "OFF"
+
+    def on_func (*args, **kwargs):
+        nonlocal on_count
+        on_count += 1
+        time.sleep(0.04 * on_count)
+        return 'ON'
+
+    breaker = CircuitBreaker(name=name, on=on_func, off=off_func, trigger=1, time_limit=time_limit)
+    breaker.clear()
+
+    # When
+    breaker() # ON in 40ms
+    breaker() # ON in 80ms
+    breaker() # ON in 120ms -> fail
+    breaker() # OFF
+
+    # Then
+    assert off_count == 1
+    assert on_count == 3
+
 @ShortCircuit('short_circuit_test', trigger=3, release=3)
 def breakable (*args, **kwargs):
     raise Exception("SomeError")
 
-def run():
+def run(chunk):
     try:
         breakable()
         return 'on'
