@@ -10,7 +10,7 @@ help: ## provides cli help for this makefile (default) 📖
 install: ## sets up package and its dependencies
 	scripts/install
 
-test: ## runs tests
+test: ## sets up package and its dependencies
 	scripts/test
 
 coverage: ## reports test coverage (automatically run by `test`)
