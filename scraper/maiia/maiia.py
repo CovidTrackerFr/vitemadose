@@ -215,7 +215,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
     return first_availability.isoformat()
 
 
-def centre_iterator():
+def centre_iterator(overwrite_centers_file=True):
     if not MAIIA_ENABLED:
         return None
     try:
@@ -225,9 +225,9 @@ def centre_iterator():
         response = requests.get(url)
         response.raise_for_status()
         data = response.json()
-        file = open(center_path, "w")
-        file.write(json.dumps(data, indent=2))
-        file.close()
+        if overwrite_centers_file:
+            with open(center_path, "w") as f:
+                f.write(json.dumps(data, indent=2))
         logger.info(f"Found {len(data)} Maiia centers (external scraper).")
         for center in data:
             yield center
