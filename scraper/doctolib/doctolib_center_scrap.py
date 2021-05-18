@@ -171,7 +171,7 @@ def parse_doctor(doctor_dict: Dict) -> Dict:
     }
 
 
-def get_dict_infos_center_page(url_path: str) -> list[dict]:
+def get_dict_infos_center_page(url_path: str) -> List[Dict]:
     internal_api_url = BOOKING_URL.format(centre=parse.urlsplit(url_path).path.split("/")[-1])
     logger.info(f"> Parsing {internal_api_url}")
     output = None
