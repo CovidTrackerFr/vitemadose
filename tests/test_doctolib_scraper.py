@@ -1,4 +1,4 @@
-from scraper.doctolib.doctolib_center_scrap import (
+from scraper.doctolib.doctolib_parsers import (
     get_departements,
     doctolib_urlify,
     get_coordinates,
@@ -246,7 +246,7 @@ EXPECTED_PARSED_PAGES = [
 
 
 def test_parse_places():
-    with open("tests/fixtures/doctolib/booking-with-doctors.json", "r", encoding='utf8') as f:
+    with open("tests/fixtures/doctolib/booking-with-doctors.json", "r", encoding="utf8") as f:
         booking = json.load(f)
         assert parse_center_places(booking["data"]) == EXPECTED_PARSED_PAGES
 
