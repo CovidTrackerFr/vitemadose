@@ -7,6 +7,7 @@ from scraper.doctolib.doctolib_center_scrap import (
     parse_place,
     parse_center_places,
     parse_doctor,
+    get_dict_infos_center_page,
 )
 
 import json
@@ -301,58 +302,11 @@ from unittest.mock import patch
 @patch("requests.get")
 def test_get_dict_infos_center_page(mock_get):
     with open("tests/fixtures/doctolib/booking-with-doctors.json", "r") as file:
-        json.load(file)
+        booking = json.load(file)
 
-    expectedInfosCenterPageWithLandlineNumber = [
-        {
-            "gid": "d1",
-            "address": "41 Avenue du Maréchal Juin, 93260 Les Lilas",
-            "long_coor1": 2.42283520000001,
-            "lat_coor1": 48.8788792,
-            "com_insee": "93045",
-            "phone_number": "+33600000000",
-            "place_id": "practice-37157",
-            "business_hours": {
-                "lundi": None,
-                "mardi": None,
-                "mercredi": None,
-                "jeudi": None,
-                "vendredi": None,
-                "samedi": None,
-                "dimanche": None,
-            },
-            "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
-        },
-        {
-            "gid": "d1",
-            "address": "11 Rue d'Orléans, 92200 Neuilly-sur-Seine",
-            "long_coor1": 2.27230770000006,
-            "lat_coor1": 48.8814861,
-            "com_insee": "92051",
-            "phone_number": "+33638952553",
-            "place_id": "practice-86656",
-            "business_hours": {
-                "lundi": None,
-                "mardi": None,
-                "mercredi": None,
-                "jeudi": None,
-                "vendredi": None,
-                "samedi": None,
-                "dimanche": None,
-            },
-            "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
-        },
-    ]
-
-
-#    mock_get.return_value.json.return_value = booking
-#    mockedResponse = get_dict_infos_center_page("someURL?pid=practice-86656")
-#    assert mockedResponse == expectedInfosCenterPageWithLandlineNumber
-
-#    booking_requests.clear()
-#    mock_get.return_value.json.return_value = {"data": {}}
-#    mockedResponse = get_dict_infos_center_page("someURL")
-#    assert mockedResponse == []
+    mock_get.return_value.json.return_value = booking
+    mockedResponse = get_dict_infos_center_page("someURL?pid=practice-86656")
+    assert mockedResponse == EXPECTED_PARSED_PAGES
 
 
 @patch("requests.get")
