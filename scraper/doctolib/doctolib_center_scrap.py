@@ -10,7 +10,6 @@ from scraper.doctolib.doctolib import DOCTOLIB_HEADERS
 from scraper.doctolib.doctolib_filters import is_vaccination_center
 
 from typing import Dict, List, Tuple
-import requests
 import json
 from urllib import parse
 import requests
