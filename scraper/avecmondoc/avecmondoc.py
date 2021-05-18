@@ -1,6 +1,5 @@
 import os
 import logging
-import re
 from scraper.profiler import Profiling
 from scraper.pattern.scraper_result import DRUG_STORE, GENERAL_PRACTITIONER
 import httpx
@@ -273,7 +272,7 @@ def parse_availabilities(availabilities: list) -> Tuple[Optional[datetime], int]
             if not slot["isAvailable"]:
                 continue
             appointment_count += 1
-            date = slot["businessHours"]["start"]
+            date = isoparse(slot["businessHours"]["start"])
             if first_appointment is None or date < first_appointment:
                 first_appointment = date
     return first_appointment, appointment_count
@@ -338,7 +337,7 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
             first_availability = date
     if first_availability is None:
         return None
-    return paris_tz.localize(isoparse(first_availability).replace(tzinfo=None)).isoformat()
+    return first_availability.isoformat()
 
 
 def center_to_centerdict(center: CenterInfo) -> dict:

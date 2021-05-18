@@ -7,6 +7,7 @@ from pathlib import Path
 from jsonschema import validate
 from jsonschema.exceptions import ValidationError
 from datetime import datetime
+from dateutil.tz import tzutc
 
 from scraper.avecmondoc import avecmondoc
 
@@ -232,7 +233,7 @@ def test_parse_availabilities():
     data_file = Path("tests/fixtures/avecmondoc/get_availabilities.json")
     data = json.loads(data_file.read_text(encoding='utf8'))
     first_appointment, appointment_count = avecmondoc.parse_availabilities(data)
-    assert  first_appointment == "2021-05-20T09:00:00.000Z"
+    assert  first_appointment == datetime(2021, 5, 20, 9, 0, tzinfo=tzutc())
     assert appointment_count == 12
 
 
@@ -250,7 +251,7 @@ def test_fetch_slots():
     url = "https://patient.avecmondoc.com/fiche/structure/delphine-rousseau-159"
     request = ScraperRequest(url, "2021-05-20")
     first_availability = avecmondoc.fetch_slots(request, client)
-    assert first_availability == "2021-05-20T09:00:00+02:00"
+    assert first_availability == "2021-05-20T09:00:00+00:00"
     assert request.appointment_count == 108
     assert request.vaccine_type == ["Pfizer-BioNTech"]
 
