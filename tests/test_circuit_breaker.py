@@ -132,7 +132,7 @@ def test_turns_off_if_too_long ():
     assert off_count == 1
     assert on_count == 3
 
-@ShortCircuit('short_circuit_test', trigger=3, release=3)
+@ShortCircuit('short_circuit_test', trigger=3, release=3, time_limit=1)
 def breakable (*args, **kwargs):
     raise Exception("SomeError")
 
@@ -241,6 +241,40 @@ def test_calls_off_after_trigger ():
     assert on_count == 7
     assert off_count == 10
     assert actual == "ON"
+
+def test_always_calls_on_when_disabled ():
+    # Given
+    off_count = 0
+    on_count = 0
+
+    def off_func (*args, **kwargs):
+        nonlocal off_count
+        off_count += 1
+
+    def on_func (*args, **kwargs):
+        nonlocal on_count
+        on_count += 1
+        if on_count <= 6:
+            raise Exception('Some Error')
+        return 'ON'
+
+    breaker = CircuitBreaker(name=name, on=on_func, off=off_func, trigger=3, release=5)
+    breaker.clear()
+    breaker.breaker_enabled(False)
+
+    # When
+    ignore_exception(lambda: breaker())
+    ignore_exception(lambda: breaker())
+    ignore_exception(lambda: breaker())
+    ignore_exception(lambda: breaker())
+    ignore_exception(lambda: breaker())
+    ignore_exception(lambda: breaker())
+    ignore_exception(lambda: breaker())
+    ignore_exception(lambda: breaker())
+
+    # Then
+    assert on_count == 8
+    assert off_count == 0
 
 def test_calls_off_after_soft_trigger ():
     # Given

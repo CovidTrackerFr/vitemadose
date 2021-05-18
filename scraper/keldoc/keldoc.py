@@ -12,7 +12,6 @@ from scraper.circuit_breaker import ShortCircuit
 
 KELDOC_CONF = get_conf_platform("keldoc")
 timeout = httpx.Timeout(KELDOC_CONF.get("timeout", 25), connect=KELDOC_CONF.get("timeout", 25))
-timeout = httpx.Timeout(0.3)
 # change KELDOC_KILL_SWITCH to True to bypass Keldoc scraping
 KELDOC_ENABLED = KELDOC_CONF.get("enabled", False)
 KELDOC_HEADERS = {
@@ -22,7 +21,8 @@ session = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
 logger = logging.getLogger("scraper")
 
 
-@ShortCircuit("keldoc_slot", trigger=3, release=20)
+# Allow 10 bad runs of keldoc_slot before giving up for the 60 next tries
+@ShortCircuit("keldoc_slot", trigger=10, release=60, time_limit=25.0)
 @Profiling.measure("keldoc_slot")
 def fetch_slots(request: ScraperRequest):
     if "www.keldoc.com" in request.url:

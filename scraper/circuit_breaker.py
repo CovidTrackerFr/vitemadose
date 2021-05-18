@@ -3,9 +3,9 @@ from diskcache import Deque
 import time
 import os
 
-def ShortCircuit(name, trigger=3, release=10):
+def ShortCircuit(name, trigger=3, release=10, time_limit=120):
     def decorator(fn):
-        breaker = CircuitBreaker(on=fn, name=name, trigger=trigger, release=release)
+        breaker = CircuitBreaker(on=fn, name=name, trigger=trigger, release=release, time_limit=time_limit)
         return breaker
 
     return decorator
@@ -29,6 +29,7 @@ class CircuitBreaker:
         self.release = release
         self.trigger = trigger
         self.name = name
+        self.enabled = True
 
     def clear(self):
         with self.policies.transact():
@@ -42,9 +43,10 @@ class CircuitBreaker:
         return self.call(*args, **kwargs)
 
     def call(self, *args, **kwargs):
-        with self.policies.transact():
-            policy = self.policies.popleft()
+        if not self.enabled:
+            return self.on_func(*args, **kwargs)
 
+        policy = self.get_policy()
         if policy == 'OFF':
             return self.call_off(*args, **kwargs)
 
@@ -70,6 +72,19 @@ class CircuitBreaker:
             self.count_error()
             raise e
 
+    def breaker_enabled(self, enabled):
+        self.enabled = enabled
+
+    def get_policy (self):
+        start_time = time.time()
+        while (time.time() - start_time) < self.time_limit:
+            with self.policies.transact():
+                try:
+                    return self.policies.popleft()
+                except IndexError:
+                    time.sleep(0.200)
+        return 'OFF'
+
 
     def count_error(self):
         with self.policies.transact():
@@ -88,9 +103,11 @@ class CircuitBreakerOffException(RuntimeError):
         msg = f"CircuitBreaker '{name}' is currently off"
         super().__init__(self, msg)
         self.message = msg
+        self.name = name
 
 class CircuitBreakerTooLongException(RuntimeError):
     def __init__(self, name):
         msg = f"CircuitBreaker '{name}' execution took too long"
         super().__init__(self, msg)
         self.message = msg
+        self.name = name
