@@ -1,0 +1,938 @@
+[
+    {
+        "nom": "Pharmacie des écoles - Leadersanté - Villejuif",
+        "ville": "Les Lilas",
+        "address": "41 Avenue du Maréchal Juin, 93260 Les Lilas",
+        "long_coor1": 2.42283520000001,
+        "lat_coor1": 48.8788792,
+        "type": "drugstore",
+        "com_insee": "93045",
+        "place_id": "practice-37157",
+        "phone_number": "+33600000000",
+        "business_hours": {
+            "lundi": null,
+            "mardi": null,
+            "mercredi": null,
+            "jeudi": null,
+            "vendredi": null,
+            "samedi": null,
+            "dimanche": null
+        },
+        "gid": "d1",
+        "visit_motives": [
+            "Consultation de suivi spécialiste",
+            "Première consultation de neurochirurgie"
+        ],
+        "booking": {
+            "profile": {
+                "id": 1,
+                "name_with_title": "Hopital test"
+            },
+            "visit_motives": [
+                {
+                    "name": "Consultation de suivi spécialiste"
+                },
+                {
+                    "name": "Première consultation de neurochirurgie"
+                }
+            ],
+            "places": [
+                {
+                    "id": "practice-37157",
+                    "latitude": 48.8788792,
+                    "longitude": 2.42283520000001,
+                    "phone_number": "06 00 00 00 00",
+                    "full_address": "41 Avenue du Maréchal Juin, 93260 Les Lilas",
+                    "city": "Les Lilas",
+                    "zipcode": "93260",
+                    "opening_hours": [
+                        {
+                            "day": 1,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 2,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 3,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 4,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 5,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 6,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 0,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        }
+                    ],
+                    "name": "Clinique des Lilas "
+                },
+                {
+                    "id": "practice-86656",
+                    "latitude": 48.8814861,
+                    "longitude": 2.27230770000006,
+                    "landline_number": "06 38 95 25 53",
+                    "full_address": "11 Rue d'Orléans, 92200 Neuilly-sur-Seine",
+                    "city": "Neuilly-sur-Seine",
+                    "zipcode": "92200",
+                    "opening_hours": [
+                        {
+                            "day": 1,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 2,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 3,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 4,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 5,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 6,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 0,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        }
+                    ],
+                    "name": "Cabinet Neuilly"
+                }
+            ],
+            "doctors": [
+                {
+                    "address": "22b Rue Jean Jaurès",
+                    "city": "Villejuif",
+                    "zipcode": "94800",
+                    "link": "/pharmacie/villejuif/pharmacie-des-ecoles",
+                    "name_with_title": "Pharmacie des écoles - Leadersanté - Villejuif",
+                    "position": {
+                        "lat": 48.7951181,
+                        "lng": 2.3662778
+                    },
+                    "place_id": null,
+                    "exact_match": true
+                },
+                {
+                    "address": "96 Avenue Jean Jaurès",
+                    "city": "Le Petit-Quevilly",
+                    "zipcode": "76140",
+                    "link": "/vaccinodrome/le-petit-quevilly/dubois",
+                    "name_with_title": "Vaccinodrome Jean Jaurès",
+                    "position": {
+                        "lat": 49.4269181,
+                        "lng": 1.0627287
+                    },
+                    "place_id": 1,
+                    "exact_match": true
+                }
+            ]
+        },
+        "rdv_site_web": "https://www.doctolib.fr/pharmacie/villejuif/pharmacie-des-ecoles?pid=practice-37157"
+    },
+    {
+        "nom": "Pharmacie des écoles - Leadersanté - Villejuif",
+        "ville": "Neuilly-sur-Seine",
+        "address": "11 Rue d'Orléans, 92200 Neuilly-sur-Seine",
+        "long_coor1": 2.27230770000006,
+        "lat_coor1": 48.8814861,
+        "type": "drugstore",
+        "com_insee": "92051",
+        "place_id": "practice-86656",
+        "phone_number": "+33638952553",
+        "business_hours": {
+            "lundi": null,
+            "mardi": null,
+            "mercredi": null,
+            "jeudi": null,
+            "vendredi": null,
+            "samedi": null,
+            "dimanche": null
+        },
+        "gid": "d1",
+        "visit_motives": [
+            "Consultation de suivi spécialiste",
+            "Première consultation de neurochirurgie"
+        ],
+        "booking": {
+            "profile": {
+                "id": 1,
+                "name_with_title": "Hopital test"
+            },
+            "visit_motives": [
+                {
+                    "name": "Consultation de suivi spécialiste"
+                },
+                {
+                    "name": "Première consultation de neurochirurgie"
+                }
+            ],
+            "places": [
+                {
+                    "id": "practice-37157",
+                    "latitude": 48.8788792,
+                    "longitude": 2.42283520000001,
+                    "phone_number": "06 00 00 00 00",
+                    "full_address": "41 Avenue du Maréchal Juin, 93260 Les Lilas",
+                    "city": "Les Lilas",
+                    "zipcode": "93260",
+                    "opening_hours": [
+                        {
+                            "day": 1,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 2,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 3,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 4,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 5,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 6,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 0,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        }
+                    ],
+                    "name": "Clinique des Lilas "
+                },
+                {
+                    "id": "practice-86656",
+                    "latitude": 48.8814861,
+                    "longitude": 2.27230770000006,
+                    "landline_number": "06 38 95 25 53",
+                    "full_address": "11 Rue d'Orléans, 92200 Neuilly-sur-Seine",
+                    "city": "Neuilly-sur-Seine",
+                    "zipcode": "92200",
+                    "opening_hours": [
+                        {
+                            "day": 1,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 2,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 3,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 4,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 5,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 6,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 0,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        }
+                    ],
+                    "name": "Cabinet Neuilly"
+                }
+            ],
+            "doctors": [
+                {
+                    "address": "22b Rue Jean Jaurès",
+                    "city": "Villejuif",
+                    "zipcode": "94800",
+                    "link": "/pharmacie/villejuif/pharmacie-des-ecoles",
+                    "name_with_title": "Pharmacie des écoles - Leadersanté - Villejuif",
+                    "position": {
+                        "lat": 48.7951181,
+                        "lng": 2.3662778
+                    },
+                    "place_id": null,
+                    "exact_match": true
+                },
+                {
+                    "address": "96 Avenue Jean Jaurès",
+                    "city": "Le Petit-Quevilly",
+                    "zipcode": "76140",
+                    "link": "/vaccinodrome/le-petit-quevilly/dubois",
+                    "name_with_title": "Vaccinodrome Jean Jaurès",
+                    "position": {
+                        "lat": 49.4269181,
+                        "lng": 1.0627287
+                    },
+                    "place_id": 1,
+                    "exact_match": true
+                }
+            ]
+        },
+        "rdv_site_web": "https://www.doctolib.fr/pharmacie/villejuif/pharmacie-des-ecoles?pid=practice-86656"
+    },
+    {
+        "nom": "Vaccinodrome Jean Jaurès",
+        "ville": "Les Lilas",
+        "address": "41 Avenue du Maréchal Juin, 93260 Les Lilas",
+        "long_coor1": 2.42283520000001,
+        "lat_coor1": 48.8788792,
+        "type": "vaccination-center",
+        "com_insee": "93045",
+        "place_id": "practice-37157",
+        "phone_number": "+33600000000",
+        "business_hours": {
+            "lundi": null,
+            "mardi": null,
+            "mercredi": null,
+            "jeudi": null,
+            "vendredi": null,
+            "samedi": null,
+            "dimanche": null
+        },
+        "gid": "d1",
+        "visit_motives": [
+            "Consultation de suivi spécialiste",
+            "Première consultation de neurochirurgie"
+        ],
+        "booking": {
+            "profile": {
+                "id": 1,
+                "name_with_title": "Hopital test"
+            },
+            "visit_motives": [
+                {
+                    "name": "Consultation de suivi spécialiste"
+                },
+                {
+                    "name": "Première consultation de neurochirurgie"
+                }
+            ],
+            "places": [
+                {
+                    "id": "practice-37157",
+                    "latitude": 48.8788792,
+                    "longitude": 2.42283520000001,
+                    "phone_number": "06 00 00 00 00",
+                    "full_address": "41 Avenue du Maréchal Juin, 93260 Les Lilas",
+                    "city": "Les Lilas",
+                    "zipcode": "93260",
+                    "opening_hours": [
+                        {
+                            "day": 1,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 2,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 3,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 4,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 5,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 6,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 0,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        }
+                    ],
+                    "name": "Clinique des Lilas "
+                },
+                {
+                    "id": "practice-86656",
+                    "latitude": 48.8814861,
+                    "longitude": 2.27230770000006,
+                    "landline_number": "06 38 95 25 53",
+                    "full_address": "11 Rue d'Orléans, 92200 Neuilly-sur-Seine",
+                    "city": "Neuilly-sur-Seine",
+                    "zipcode": "92200",
+                    "opening_hours": [
+                        {
+                            "day": 1,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 2,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 3,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 4,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 5,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 6,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 0,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        }
+                    ],
+                    "name": "Cabinet Neuilly"
+                }
+            ],
+            "doctors": [
+                {
+                    "address": "22b Rue Jean Jaurès",
+                    "city": "Villejuif",
+                    "zipcode": "94800",
+                    "link": "/pharmacie/villejuif/pharmacie-des-ecoles",
+                    "name_with_title": "Pharmacie des écoles - Leadersanté - Villejuif",
+                    "position": {
+                        "lat": 48.7951181,
+                        "lng": 2.3662778
+                    },
+                    "place_id": null,
+                    "exact_match": true
+                },
+                {
+                    "address": "96 Avenue Jean Jaurès",
+                    "city": "Le Petit-Quevilly",
+                    "zipcode": "76140",
+                    "link": "/vaccinodrome/le-petit-quevilly/dubois",
+                    "name_with_title": "Vaccinodrome Jean Jaurès",
+                    "position": {
+                        "lat": 49.4269181,
+                        "lng": 1.0627287
+                    },
+                    "place_id": 1,
+                    "exact_match": true
+                }
+            ]
+        },
+        "rdv_site_web": "https://www.doctolib.fr/vaccinodrome/le-petit-quevilly/dubois?pid=practice-37157"
+    },
+    {
+        "nom": "Vaccinodrome Jean Jaurès",
+        "ville": "Neuilly-sur-Seine",
+        "address": "11 Rue d'Orléans, 92200 Neuilly-sur-Seine",
+        "long_coor1": 2.27230770000006,
+        "lat_coor1": 48.8814861,
+        "type": "vaccination-center",
+        "com_insee": "92051",
+        "place_id": "practice-86656",
+        "phone_number": "+33638952553",
+        "business_hours": {
+            "lundi": null,
+            "mardi": null,
+            "mercredi": null,
+            "jeudi": null,
+            "vendredi": null,
+            "samedi": null,
+            "dimanche": null
+        },
+        "gid": "d1",
+        "visit_motives": [
+            "Consultation de suivi spécialiste",
+            "Première consultation de neurochirurgie"
+        ],
+        "booking": {
+            "profile": {
+                "id": 1,
+                "name_with_title": "Hopital test"
+            },
+            "visit_motives": [
+                {
+                    "name": "Consultation de suivi spécialiste"
+                },
+                {
+                    "name": "Première consultation de neurochirurgie"
+                }
+            ],
+            "places": [
+                {
+                    "id": "practice-37157",
+                    "latitude": 48.8788792,
+                    "longitude": 2.42283520000001,
+                    "phone_number": "06 00 00 00 00",
+                    "full_address": "41 Avenue du Maréchal Juin, 93260 Les Lilas",
+                    "city": "Les Lilas",
+                    "zipcode": "93260",
+                    "opening_hours": [
+                        {
+                            "day": 1,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 2,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 3,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 4,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 5,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 6,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 0,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        }
+                    ],
+                    "name": "Clinique des Lilas "
+                },
+                {
+                    "id": "practice-86656",
+                    "latitude": 48.8814861,
+                    "longitude": 2.27230770000006,
+                    "landline_number": "06 38 95 25 53",
+                    "full_address": "11 Rue d'Orléans, 92200 Neuilly-sur-Seine",
+                    "city": "Neuilly-sur-Seine",
+                    "zipcode": "92200",
+                    "opening_hours": [
+                        {
+                            "day": 1,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 2,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 3,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 4,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 5,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 6,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        },
+                        {
+                            "day": 0,
+                            "ranges": [
+                                [
+                                    "09:00",
+                                    "13:00"
+                                ]
+                            ],
+                            "enabled": false
+                        }
+                    ],
+                    "name": "Cabinet Neuilly"
+                }
+            ],
+            "doctors": [
+                {
+                    "address": "22b Rue Jean Jaurès",
+                    "city": "Villejuif",
+                    "zipcode": "94800",
+                    "link": "/pharmacie/villejuif/pharmacie-des-ecoles",
+                    "name_with_title": "Pharmacie des écoles - Leadersanté - Villejuif",
+                    "position": {
+                        "lat": 48.7951181,
+                        "lng": 2.3662778
+                    },
+                    "place_id": null,
+                    "exact_match": true
+                },
+                {
+                    "address": "96 Avenue Jean Jaurès",
+                    "city": "Le Petit-Quevilly",
+                    "zipcode": "76140",
+                    "link": "/vaccinodrome/le-petit-quevilly/dubois",
+                    "name_with_title": "Vaccinodrome Jean Jaurès",
+                    "position": {
+                        "lat": 49.4269181,
+                        "lng": 1.0627287
+                    },
+                    "place_id": 1,
+                    "exact_match": true
+                }
+            ]
+        },
+        "rdv_site_web": "https://www.doctolib.fr/vaccinodrome/le-petit-quevilly/dubois?pid=practice-86656"
+    }
+]

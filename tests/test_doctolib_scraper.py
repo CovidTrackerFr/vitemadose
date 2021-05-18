@@ -8,8 +8,11 @@ from scraper.doctolib.doctolib_parsers import (
     parse_center_places,
     parse_doctor,
 )
+from scraper.doctolib.doctolib_center_scrap import DoctolibCenters
 
+import httpx
 import json
+from pathlib import Path
 
 # -- Tests de l'API (offline) --
 from scraper.pattern.scraper_result import GENERAL_PRACTITIONER, DRUG_STORE, VACCINATION_CENTER
@@ -480,3 +483,14 @@ def test_centers_parsing(mock_get):
 
 #    mockedResponse = parse_pages_departement("indre")
 #    assert mockedResponse == expectedCentersPage
+
+
+def test_doctolib_center_scrap():
+    def app(request: httpx.Request) -> httpx.Response:
+        path = Path("tests", "fixtures", "doctolib", "booking-with-doctors.json")
+        return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
+
+    client = httpx.Client(transport=httpx.MockTransport(app))
+    centers = DoctolibCenters(client=client)
+    result = centers.run_departement_scrap("test")
+    assert result == json.loads(Path("tests/fixtures/doctolib/scrap-center-result.json").read_text())
