@@ -26,5 +26,5 @@ config = Config(**get_config().get("manual"))
 
 def manual_urls_iterator() -> Iterator[dict]:
     logger.info("Recherche des urls manuels")
-    for entry in sheets.load(config.sheet_id, config.page_number, config.page_number):
+    for entry in sheets.load(config.sheet_id, config.page_number, config.column_names):
         yield {"rdv_site_web": fix_scrap_urls(entry["url"])}

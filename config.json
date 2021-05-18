@@ -381,7 +381,7 @@
       "api": {
         "search": "https://api.avecmondoc.com/api/Doctors/search",
         "search_filter": {
-          "params": "{\"city\": null, \"gps\": null, \"dateBefore\": null}", 
+          "params": "{\"city\": null, \"gps\": null, \"dateBefore\": null}",
           "options": "{\"limit\": 1000, \"page\": 1, \"distance\": null}"
         },
         "get_doctor_slug": "https://api.avecmondoc.com/api/Doctors/slug/{slug}",
@@ -416,8 +416,8 @@
     }
   },
   "manual": {
-    "sheet_id": "https://docs.google.com/spreadsheets/u/1/d/e/SHEET_ID",
-    "page_number": 1,
+    "sheet_id": "1nrIMkkumTVb8QGRPtauGWXU6USy42ZTw6GmezGjaDa0",
+    "page_number": 2,
     "column_names": {
       "1": "name",
       "2": "url"

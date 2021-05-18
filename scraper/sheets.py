@@ -23,6 +23,7 @@ So, we are provided with a flattened view of our data, and we need to morph it i
 what we want, i.e. a list of dictionnaries.
 """
 
+from functools import reduce
 from typing import Dict, List
 import requests
 
@@ -35,26 +36,30 @@ def _fetch(sheet_id: str, page_number: int) -> dict:
     return response.json()
 
 
-def _flatten_cells(data: dict, column_names: Dict[int, str], has_header: bool) -> List[dict]:
-    return [
-        cell
-        for entry in data
-        if int((cell := entry["gs$cell"])["col"]) in column_names and (int(cell["row"]) > 1 if has_header else True)
-    ]
+def _group_rows(accumulator: dict, new: dict) -> dict:
+    if (row := new["row"]) in accumulator:
+        accumulator[row].append(new)
+    else:
+        accumulator[row] = [new]
+    return accumulator
 
 
-def _assemble(cells: List[str], column_names: Dict[int, str]):
+def _parse_row(row: Dict[str, List[dict]], column_names: Dict[int, str]) -> dict:
     return {
-        column_name: [cell["inputValue"] for cell in cells if int(cell["col"]) == column_id]
+        column_name: cell["inputValue"]
+        for cell in row
         for column_id, column_name in column_names.items()
+        if int(cell["col"]) == column_id
     }
 
 
-def _parse(data: dict, column_names: Dict[int, str], has_header: bool) -> List[dict]:
-    cells = _flatten_cells(data, column_names, has_header)
-    return _assemble(cells, column_names)
+def _parse(entries: list, column_names: Dict[int, str], has_header: bool) -> list:
+    cells = (_["gs$cell"] for _ in entries)
+    by_row = dict(reduce(_group_rows, cells, {}))
+    rows = list(by_row.values())
+    return [_parse_row(row, column_names) for row in (rows if not has_header else rows[1:])]
 
 
 def load(sheet_id: str, page_number: int, column_names: Dict[int, str], has_header=True) -> List[dict]:
-    data = _fetch(sheet_id, page_number)["feed"]["entry"]
-    return _parse(data, column_names, has_header)
+    entries = _fetch(sheet_id, page_number)["feed"]["entry"]
+    return _parse(entries, column_names, has_header)
