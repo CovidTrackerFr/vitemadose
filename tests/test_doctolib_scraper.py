@@ -308,6 +308,9 @@ def test_get_dict_infos_center_page(mock_get):
     mockedResponse = get_dict_infos_center_page("someURL?pid=practice-86656")
     assert mockedResponse == EXPECTED_PARSED_PAGES
 
+def test_get_dict_infos_center_page_error():
+    emptyResponse = get_dict_infos_center_page("someURL")
+    assert emptyResponse == []
 
 @patch("requests.get")
 def test_centers_parsing(mock_get):
