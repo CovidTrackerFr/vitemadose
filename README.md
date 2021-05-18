@@ -31,6 +31,7 @@ La plupart des IDEs et éditeurs de code moderne proposent des outils permettant
 | <img src="https://vitemadose.covidtracker.fr/assets/images/png/logo_maiia.png" width="100" /> | https://maiia.com | <font style="color: green; font-size: 16px;">✓</font> |
 | <img src="https://vitemadose.covidtracker.fr/assets/images/png/logo_ordoclic.png" width="100" /> | https://ordoclic.fr | <font style="color: green; font-size: 16px;">✓</font> |
 | <img src="https://vitemadose.covidtracker.fr/assets/images/png/logo_mapharma.png" width="100" /> | https://www.mapharma.net/ | <font style="color: green; font-size: 16px;">✓</font> |
+| <img src="https://vitemadose.covidtracker.fr/assets/images/png/logo_avecmondoc.png" width="100" /> | https://www.avecmondoc.com/ | <font style="color: green; font-size: 16px;">✓</font> |
 | <img src="https://vitemadose.covidtracker.fr/assets/images/png/logo_pandalab.png" width="100" /> | https://pharmagest.com/en/pandalab-agenda/ | <font style="color: orange; font-size: 16px;">En cours</font> |
 
 ## Utilisation
