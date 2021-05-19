@@ -45,7 +45,7 @@ class DoctolibCenterScraper:
             raise Exception("No Value found for department {}, crashing")
         return centers_departements
 
-    def parse_pages_departement(self, departement):
+    def parse_pages_departement(self, departement: str) -> list:
         departement = doctolib_urlify(departement)
         page_id = 1
         page_has_centers = True
