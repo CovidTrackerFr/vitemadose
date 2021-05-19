@@ -362,6 +362,8 @@ def has_valid_zipcode(organization : dict) -> bool:
 
 
 def center_iterator(client: httpx.Client = DEFAULT_CLIENT) -> Iterator[dict]:
+    # mise en pause 
+    return []
     organization_slugs = []
     # l'api fait parfois un timeout au premier appel
     for _ in range(0, AVECMONDOC_CONF.get("search_tries", 2)):
