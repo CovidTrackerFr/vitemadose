@@ -1,0 +1,227 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.565814+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "61",
+      "nom": "Centres de vaccination de l'Orne, la Manche et du Calvados - Flers",
+      "url": "https://www.doctolib.fr/centre-de-sante/normandie/centres-de-vaccination-orne-manche-calvados?pid=practice-146012",
+      "location": {
+        "longitude": -0.541654,
+        "latitude": 48.746116,
+        "city": "Flers"
+      },
+      "metadata": {
+        "address": "Rue Jacques Pr\u00e9vert, 61100 Flers",
+        "phone_number": "+33233626200",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib127110pid146012",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d127110"
+    },
+    {
+      "departement": "61",
+      "nom": "Pharmacie du March\u00e9 Denoyelle",
+      "url": "https://www.doctolib.fr/pharmacie/flers/pharmacie-du-marche-denoyelle",
+      "location": {
+        "longitude": -0.5686953,
+        "latitude": 48.7489886,
+        "city": "Flers"
+      },
+      "metadata": {
+        "address": "60 Rue du 6 Juin, 61100 Flers",
+        "phone_number": "+33233652170",
+        "business_hours": {
+          "lundi": "08:45-12:30, 13:45-19:30",
+          "mardi": "08:45-12:30, 13:45-19:30",
+          "mercredi": "08:45-12:30, 13:45-19:30",
+          "jeudi": "08:45-12:30, 13:45-19:30",
+          "vendredi": "08:45-12:30, 13:45-19:30",
+          "samedi": "08:45-12:30, 13:45-18:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib257017",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d257017"
+    },
+    {
+      "departement": "61",
+      "nom": "Centres de vaccination de l'Orne, la Manche et du Calvados - Domfront en Poiraie",
+      "url": "https://www.doctolib.fr/centre-de-sante/normandie/centres-de-vaccination-orne-manche-calvados?pid=practice-164580",
+      "location": {
+        "longitude": -0.6582461,
+        "latitude": 48.5906303,
+        "city": "Domfront en Poiraie"
+      },
+      "metadata": {
+        "address": "28 Rue de la Gare, 61700 Domfront en Poiraie",
+        "phone_number": "+33233307037",
+        "business_hours": {
+          "lundi": "09:00-12:30, 14:00-17:00",
+          "mardi": "09:00-12:30, 14:00-17:00",
+          "mercredi": "09:00-12:30, 14:00-17:00",
+          "jeudi": "09:00-12:30, 14:00-17:00",
+          "vendredi": "09:00-12:30, 14:00-17:00",
+          "samedi": "09:00-12:30, 14:00-17:00",
+          "dimanche": "09:00-12:30, 14:00-17:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib127110pid164580",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d127110"
+    }
+  ]
+}

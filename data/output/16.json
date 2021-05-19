@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.532842+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "16",
+      "nom": "CH CONFOLENS",
+      "url": "https://vaccination-covid.keldoc.com/vaccination-covid19/confolens-16500/covid-vaccination?category=-1&cabinet=6507",
+      "location": {
+        "longitude": 0.67039,
+        "latitude": 46.005,
+        "city": "Confolens"
+      },
+      "metadata": {
+        "address": " Rue du Docteur Marcel Perrot, 16500 Confolens",
+        "phone_number": "+33545844011",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc53",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "53"
+    }
+  ]
+}

@@ -1,0 +1,708 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.594600+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "91",
+      "nom": "Centre de Vaccination COVID - Conseil D\u00e9partemental de l'Essonne (CD91)",
+      "url": "https://www.doctolib.fr/centre-de-sante/massy/centre-de-vaccination-covid-conseil-departemental-de-l-essonne-cd91?pid=practice-178293",
+      "location": {
+        "longitude": 2.2697937,
+        "latitude": 48.7316036,
+        "city": "Massy"
+      },
+      "metadata": {
+        "address": "1 Avenue du G\u00e9n\u00e9ral de Gaulle, 91300 Massy",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242631pid178293",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d242631"
+    },
+    {
+      "departement": "91",
+      "nom": "Centre de vaccination Covid-19- CH Sud Essonne - \u00c9tampes - \u00c9tampes",
+      "url": "https://www.doctolib.fr/hopital-public/etampes/centre-de-vaccination-covid19-ch-sud-essonne",
+      "location": {
+        "longitude": 2.151654,
+        "latitude": 48.4210664,
+        "city": "\u00c9tampes"
+      },
+      "metadata": {
+        "address": "26 Avenue Charles de Gaulle, 91150 \u00c9tampes",
+        "phone_number": "+33160806060",
+        "business_hours": {
+          "lundi": null,
+          "mardi": "09:00-12:45, 13:30-17:15",
+          "mercredi": "09:00-12:45, 13:30-17:15",
+          "jeudi": "09:00-12:45, 13:30-17:15",
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib240848pid165171",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d240848"
+    },
+    {
+      "departement": "91",
+      "nom": "Centre de vaccination Covid-19- CH Sud Essonne - \u00c9tampes - \u00c9tampes",
+      "url": "https://www.doctolib.fr/hopital-public/etampes/centre-de-vaccination-covid19-ch-sud-essonne?pid=practice-55924",
+      "location": {
+        "longitude": 2.1508086,
+        "latitude": 48.4211599,
+        "city": "\u00c9tampes"
+      },
+      "metadata": {
+        "address": "26 Avenue Charles de Gaulle, 91150 \u00c9tampes",
+        "phone_number": "+33160807676",
+        "business_hours": {
+          "lundi": "08:30-16:30",
+          "mardi": "08:30-16:30",
+          "mercredi": "08:30-16:30",
+          "jeudi": "08:30-16:30",
+          "vendredi": "08:30-16:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib240848pid55924",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d240848"
+    },
+    {
+      "departement": "91",
+      "nom": "Centre de Vaccination Covid-19 CH Bligny",
+      "url": "https://www.doctolib.fr/centre-de-sante/fontenay-les-briis/centre-de-vaccination-covid-19-ch-bligny",
+      "location": {
+        "longitude": 2.150078,
+        "latitude": 48.620872,
+        "city": "Fontenay-l\u00e8s-Briis"
+      },
+      "metadata": {
+        "address": "Rue de Bligny, 91640 Fontenay-l\u00e8s-Briis",
+        "business_hours": {
+          "lundi": "09:30-12:30, 14:30-18:30",
+          "mardi": "09:30-12:30, 14:30-18:30",
+          "mercredi": "09:30-12:30, 14:30-18:30",
+          "jeudi": "09:30-12:30, 14:30-18:30",
+          "vendredi": "09:30-12:30, 14:30-18:30",
+          "samedi": "09:30-12:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib262293",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d262293"
+    },
+    {
+      "departement": "91",
+      "nom": "Centre de vaccination Covid-19 Milly La For\u00eat - Salle des f\u00eates",
+      "url": "https://www.doctolib.fr/centre-de-sante/milly-la-foret/centre-de-vaccination-covid-19-milly-la-foret-salle-des-fetes",
+      "location": {
+        "longitude": 2.4675501,
+        "latitude": 48.4046148,
+        "city": "Milly-la-For\u00eat"
+      },
+      "metadata": {
+        "address": "11 Boulevard du Mar\u00e9chal Lyautey, 91490 Milly-la-For\u00eat",
+        "phone_number": "+33181000013",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib259882",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d259882"
+    },
+    {
+      "departement": "91",
+      "nom": "Centre de Vaccination COVID - Salle Claude Nougaro",
+      "url": "https://www.doctolib.fr/centre-de-sante/evry-courcouronnes/centre-de-vaccination-covid-salle-claude-nougaro",
+      "location": {
+        "longitude": 2.4131695,
+        "latitude": 48.6293338,
+        "city": "\u00c9vry-Courcouronnes"
+      },
+      "metadata": {
+        "address": "10 Rue du Marquis de Raies, 91080 \u00c9vry-Courcouronnes",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242763pid164604",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:13:31.983130+02:00",
+      "appointment_schedules": null,
+      "gid": "d242763"
+    },
+    {
+      "departement": "91",
+      "nom": "Centre de vaccination Covid-19 - Ris-Orangis",
+      "url": "https://www.doctolib.fr/centre-de-vaccinations-internationales/ris-orangis/centre-de-vaccination-covid-19-ris-orangis",
+      "location": {
+        "longitude": 2.4047216,
+        "latitude": 48.6598298,
+        "city": "Ris-Orangis"
+      },
+      "metadata": {
+        "address": "60 Rue Albert R\u00e9my, 91130 Ris-Orangis",
+        "business_hours": {
+          "lundi": "09:00-12:00, 13:30-17:30",
+          "mardi": "09:00-12:00, 13:30-17:30",
+          "mercredi": "09:00-12:00, 13:30-17:30",
+          "jeudi": "09:00-12:00, 13:30-17:30",
+          "vendredi": "09:00-12:00, 13:30-17:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib248434",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d248434"
+    },
+    {
+      "departement": "91",
+      "nom": "Centre de vaccination Covid-19 - Cerny",
+      "url": "https://www.doctolib.fr/centre-de-sante/cerny/centre-de-vaccination-covid-19-cerny",
+      "location": {
+        "longitude": 2.3327112,
+        "latitude": 48.4838002,
+        "city": "Cerny"
+      },
+      "metadata": {
+        "address": "Avenue Carnot, 91590 Cerny",
+        "business_hours": {
+          "lundi": "09:00-12:00, 14:00-17:00",
+          "mardi": "09:00-12:00, 14:00-17:00",
+          "mercredi": "09:00-12:00",
+          "jeudi": "09:00-12:00, 14:00-17:00",
+          "vendredi": "09:00-12:00, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib244294",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d244294"
+    },
+    {
+      "departement": "91",
+      "nom": "Centre de vaccination Epinay-sous-S\u00e9nart",
+      "url": "https://www.doctolib.fr/centre-de-sante/epinay-sous-senart/centre-de-vaccination-epinay-sous-senart",
+      "location": {
+        "longitude": 2.5173624,
+        "latitude": 48.694394,
+        "city": "\u00c9pinay-sous-S\u00e9nart"
+      },
+      "metadata": {
+        "address": "12 Rue de Rocheau, 91860 \u00c9pinay-sous-S\u00e9nart",
+        "business_hours": {
+          "lundi": "09:00-12:00, 14:00-17:00",
+          "mardi": "09:00-12:00, 14:00-17:00",
+          "mercredi": "09:00-12:00, 14:00-17:00",
+          "jeudi": "09:00-12:00, 14:00-17:00",
+          "vendredi": "09:00-12:00, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib258490",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d258490"
+    },
+    {
+      "departement": "91",
+      "nom": "Dr Mathieu Charpentier",
+      "url": "https://www.doctolib.fr/dentiste/juvisy-sur-orge/mathieu-charpentier",
+      "location": {
+        "longitude": 2.38454939999997,
+        "latitude": 48.6873648,
+        "city": "Juvisy-sur-Orge"
+      },
+      "metadata": {
+        "address": "30 Rue Monttessuy, 91260 Juvisy-sur-Orge",
+        "phone_number": "+33169218923",
+        "business_hours": {
+          "lundi": "09:00-12:00, 14:00-19:00",
+          "mardi": "09:00-12:00, 14:00-19:00",
+          "mercredi": "09:00-12:00, 14:00-19:00",
+          "jeudi": "09:00-12:00, 14:00-19:00",
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib7849",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d7849"
+    },
+    {
+      "departement": "91",
+      "nom": "Maison de Sant\u00e9 Pluridisciplinaire des Bleuets - Savigny-sur-Orge",
+      "url": "https://www.doctolib.fr/maison-de-sante/savigny-sur-orge/maison-de-sante-des-bleuets-savigny-sur-orge",
+      "location": {
+        "longitude": 2.3518206,
+        "latitude": 48.6871838,
+        "city": "Savigny-sur-Orge"
+      },
+      "metadata": {
+        "address": "9 Avenue des \u00c9coles, 91600 Savigny-sur-Orge",
+        "phone_number": "+33973030704",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib212368pid71658",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d212368"
+    },
+    {
+      "departement": "91",
+      "nom": "Site de \"La Croix Louis\"",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/bretigny-sur-orge-91220/centre-de-vaccination-covid19-bretigny?agenda=48971&motive=81790&category=-1&cabinet=16650&specialty=496",
+      "location": {
+        "longitude": 2.31322,
+        "latitude": 48.6036,
+        "city": "Br\u00e9tigny-sur-Orge"
+      },
+      "metadata": {
+        "address": "6 Rue de la Croix Louis, 91220 Br\u00e9tigny-sur-Orge",
+        "phone_number": "+33169884064",
+        "business_hours": {
+          "lundi": "9h00 \u00e0 17h00 ",
+          "mardi": "9h00 \u00e0 17h00 ",
+          "mercredi": "9h00 \u00e0 17h00 ",
+          "jeudi": "9h00 \u00e0 17h00 ",
+          "vendredi": "9h00 \u00e0 17h00 ",
+          "samedi": "9h00 \u00e0 13h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-06-03T11:40:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc745",
+      "vaccine_type": [
+        "Moderna"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.346987+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "745"
+    },
+    {
+      "departement": "91",
+      "nom": "CENTRE DE VACCINATION COVID - MSP DE NOZAY",
+      "url": "https://www.maiia.com/centre-de-vaccination/91620-nozay/centre-de-vaccination-covid---msp-de-nozay?centerid=5ffee780b1a1aa1cc204ebff",
+      "location": {
+        "longitude": 2.241824,
+        "latitude": 48.656749,
+        "city": "Nozay"
+      },
+      "metadata": {
+        "address": "Andr\u00e9 Jouanen 91620 Nozay",
+        "phone_number": "+33160825682",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "maiia5ffee780",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:53:09.677028+02:00",
+      "appointment_schedules": null,
+      "gid": "5ffee780"
+    },
+    {
+      "departement": "91",
+      "nom": "Pharmacie Gervais",
+      "url": "https://www.maiia.com/pharmacie/91290-arpajon/pharmacie-gervais?centerid=6040d5360fa4ea0ab57a0d8b",
+      "location": {
+        "longitude": 2.248274,
+        "latitude": 48.590569,
+        "city": "Arpajon"
+      },
+      "metadata": {
+        "address": "55 Grande Rue 91290 Arpajon",
+        "phone_number": "+33164900022",
+        "business_hours": {
+          "Lundi": "09:00-12:30 14:30-19:30",
+          "Mardi": "09:00-12:30 14:30-19:30",
+          "Mercredi": "09:00-12:30 14:30-19:30",
+          "Jeudi": "09:00-12:30 14:30-19:30",
+          "Vendredi": "09:00-12:30 14:30-19:30",
+          "Samedi": "09:00-12:30 14:30-17:30",
+          "Dimanche": "09:00-12:30 14:30-19:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "maiia6040d536",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:06:41.012594+02:00",
+      "appointment_schedules": null,
+      "gid": "6040d536"
+    }
+  ]
+}

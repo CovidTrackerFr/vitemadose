@@ -1,0 +1,370 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.554100+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "50",
+      "nom": "Pharmacie des Couplets",
+      "url": "https://www.maiia.com/pharmacie/50120-equeurdreville-hainneville/pharmacie-des-couplets?centerid=602cf2f837219034c307a79a",
+      "location": {
+        "longitude": -1.664912,
+        "latitude": 49.648983,
+        "city": "EQUEURDREVILLE HAINNEVILLE"
+      },
+      "metadata": {
+        "address": "48 Rue du Rideret 50120 EQUEURDREVILLE HAINNEVILLE",
+        "phone_number": "+33233932206",
+        "business_hours": {
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-05-17T13:15:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 7,
+      "internal_id": "maiia602cf2f837219034c307a79a",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527361+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 7
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 7
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 7
+        }
+      ],
+      "gid": "602cf2f8"
+    },
+    {
+      "departement": "50",
+      "nom": "Pharmacie Patin",
+      "url": "https://www.maiia.com/pharmacie/50290-brehal/pharmacie-patin?centerid=6022d0aa3e7833638314b97a",
+      "location": {
+        "longitude": -1.512774,
+        "latitude": 48.89931,
+        "city": "Br\u00e9hal"
+      },
+      "metadata": {
+        "address": "10 Rue du G\u00e9n\u00e9ral de Gaulle 50290 Br\u00e9hal",
+        "phone_number": "+33233616132",
+        "business_hours": {
+          "Lundi": "09:00-12:30 14:00-19:30",
+          "Mardi": "09:00-12:30 14:00-19:30",
+          "Mercredi": "09:00-12:30 14:00-19:30",
+          "Jeudi": "09:00-12:30 14:00-19:30",
+          "Vendredi": "09:00-12:30 14:00-19:30",
+          "Samedi": "09:00-12:30 14:00-17:00",
+          "Dimanche": "09:00-12:30 14:00-19:30"
+        }
+      },
+      "prochain_rdv": "2021-05-20T17:00:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 1,
+      "internal_id": "maiia6022d0aa3e7833638314b97a",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527260+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 1
+        }
+      ],
+      "gid": "6022d0aa"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "50",
+      "nom": "Pharmacie Lamoureux",
+      "url": "https://www.doctolib.fr/pharmacie/villedieu-les-poeles-rouffigny/pharmacie-lamoureux",
+      "location": {
+        "longitude": -1.2224425,
+        "latitude": 48.8381384,
+        "city": "Villedieu-les-Po\u00eales-Rouffigny"
+      },
+      "metadata": {
+        "address": "1 Place de la R\u00e9publique, 50800 Villedieu-les-Po\u00eales-Rouffigny",
+        "phone_number": "+33233610013",
+        "business_hours": {
+          "lundi": "14:00-19:30",
+          "mardi": "08:30-13:00, 14:00-19:30",
+          "mercredi": "08:30-12:30, 14:00-19:30",
+          "jeudi": "08:30-12:30, 14:00-19:30",
+          "vendredi": "08:30-12:30, 14:00-19:30",
+          "samedi": "08:30-12:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib261779",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d261779"
+    },
+    {
+      "departement": "50",
+      "nom": "Centre de vaccination Cherbourg-en-Cotentin : Salle Montecot (Octeville)",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/cherbourg-octeville-50100/chpc-centre-delocalise-salle-de-l-europe-tourlaville?cabinet=17298&specialty=496",
+      "location": {
+        "longitude": -1.645,
+        "latitude": 49.6242,
+        "city": "Cherbourg-en-Cotentin"
+      },
+      "metadata": {
+        "address": " Place des Justes - Octeville, 50130 Cherbourg-en-Cotentin",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc110",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T13:46:01.610782+02:00",
+      "appointment_schedules": null,
+      "gid": "110"
+    },
+    {
+      "departement": "50",
+      "nom": "Centre de vaccination Cherbourg-en-Cotentin : Salles des f\u00eates - place centrale",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/cherbourg-octeville-50100/cpts-nord-cotentin?motive=81940&category=-1&cabinet=16689&specialty=496",
+      "location": {
+        "longitude": -1.61351,
+        "latitude": 49.6213,
+        "city": "Cherbourg-en-Cotentin"
+      },
+      "metadata": {
+        "address": " , 50110 Cherbourg-en-Cotentin",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc576",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "576"
+    },
+    {
+      "departement": "50",
+      "nom": "Valognes : gymnase de l\u2019Oncor",
+      "url": "https://vaccination-covid.keldoc.com/redirect/?dom=maison-de-sante&inst=valognes-50700&user=chpc-centre-delocalise-salle-lechanoine-valognes&cabinet=17307&specialty=496",
+      "location": {
+        "longitude": -1.47663,
+        "latitude": 49.5102,
+        "city": "Valognes"
+      },
+      "metadata": {
+        "address": " R\u00e9sidence F\u00e9lix Buhot, 50700 Valognes",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-05-20T18:00:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc118",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347217+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "118"
+    }
+  ]
+}

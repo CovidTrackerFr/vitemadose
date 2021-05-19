@@ -1,0 +1,638 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.502206+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "01",
+      "nom": "Pharmacie de Beynost",
+      "url": "https://www.maiia.com/pharmacie/01700-beynost/pharmacie-de-beynost?centerid=60478d4787f983173a70af4f",
+      "location": {
+        "longitude": 5.000043,
+        "latitude": 45.835129,
+        "city": "Beynost"
+      },
+      "metadata": {
+        "address": "5 Place des Dombes 01700 Beynost",
+        "phone_number": "+33478552760",
+        "business_hours": {
+          "Lundi": "14:30-19:15",
+          "Mardi": "08:45-12:15 14:30-19:15",
+          "Mercredi": "08:45-12:15 14:30-19:15",
+          "Jeudi": "08:45-12:15 14:30-19:15",
+          "Vendredi": "08:45-12:15 14:30-19:15",
+          "Samedi": "09:00-12:15 14:30-19:00",
+          "Dimanche": "08:45-12:15 14:30-19:15"
+        }
+      },
+      "prochain_rdv": "2021-05-12T06:50:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 42,
+      "internal_id": "maiia60478d4787f983173a70af4f",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527601+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 21
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 42
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 42
+        }
+      ],
+      "gid": "60478d47"
+    },
+    {
+      "departement": "01",
+      "nom": "Pharmacie du Printemps",
+      "url": "https://www.maiia.com/pharmacie/01000-saint-denis-les-bourg/pharmacie-du-printemps?centerid=601029e312d6094f0d3f595b",
+      "location": {
+        "longitude": 5.203018,
+        "latitude": 46.201239,
+        "city": "Saint-Denis-l\u00e8s-Bourg"
+      },
+      "metadata": {
+        "address": "348 Avenue de Trevoux 01000 Saint-Denis-l\u00e8s-Bourg",
+        "phone_number": "+33474214863",
+        "business_hours": {
+          "Lundi": "08:30-12:30 13:30-19:30",
+          "Mardi": "08:30-12:30 13:30-19:30",
+          "Mercredi": "08:30-12:30 13:30-19:30",
+          "Jeudi": "08:30-12:30 13:30-19:30",
+          "Vendredi": "08:30-12:30 13:30-19:30",
+          "Samedi": "08:30-12:30",
+          "Dimanche": "08:30-12:30 13:30-19:30"
+        }
+      },
+      "prochain_rdv": "2021-05-12T07:30:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 34,
+      "internal_id": "maiia601029e312d6094f0d3f595b",
+      "vaccine_type": [
+        "AstraZeneca",
+        "Janssen"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527076+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 34
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 34
+        }
+      ],
+      "gid": "601029e3"
+    },
+    {
+      "departement": "01",
+      "nom": "Pharmacie Saint Laurent",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-saint-laurent-saint-laurent-sur-saone",
+      "location": {
+        "longitude": 4.839701499999999,
+        "latitude": 46.3049112,
+        "city": "saint-laurent-sur-saone"
+      },
+      "metadata": {
+        "address": "27 Rue de la Levee, 01750 Saint-Laurent-sur-Sa\u00f4ne",
+        "phone_number": "+33385380161",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-05-12T09:45:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 5,
+      "internal_id": "ordoclic18b20b52",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:39:59.056680+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 5
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 5
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 5
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 5
+        }
+      ],
+      "gid": "18b20b52"
+    },
+    {
+      "departement": "01",
+      "nom": "Centre de vaccination de la Plaine de l'Ain",
+      "url": "https://www.maiia.com/centre-de-vaccination/01500-amberieu-en-bugey/centre-de-vaccination-de-la-plaine-de-l-ain?centerid=6005bad42475225a68a3f19f",
+      "location": {
+        "longitude": 5.348146,
+        "latitude": 45.960048,
+        "city": "Amb\u00e9rieu-en-Bugey"
+      },
+      "metadata": {
+        "address": "10 Rue L\u00e9on Blum 01500 Amb\u00e9rieu-en-Bugey",
+        "phone_number": "+33428640049",
+        "business_hours": {
+          "Lundi": "08:30-12:25 14:00-17:55",
+          "Mardi": "08:30-12:25 14:00-17:55",
+          "Mercredi": "08:30-12:25 14:00-17:55",
+          "Jeudi": "08:30-12:25 14:00-17:55",
+          "Vendredi": "08:30-12:25 14:00-17:55",
+          "Samedi": "08:30-12:25 14:00-17:55",
+          "Dimanche": "08:30-12:25 14:00-17:55"
+        }
+      },
+      "prochain_rdv": "2021-05-13T08:40:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 600,
+      "internal_id": "maiia6005bad42475225a68a3f19f",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527590+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 100
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 600
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 600
+        }
+      ],
+      "gid": "6005bad4"
+    },
+    {
+      "departement": "01",
+      "nom": "Pharmacie Centrale Montrevel",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-centrale-montrevel-montrevel-en-bresse",
+      "location": {
+        "longitude": 5.1284131,
+        "latitude": 46.33727589999999,
+        "city": "montrevel-en-bresse"
+      },
+      "metadata": {
+        "address": "25 Grande Rue, 01340 Montrevel en Bresse",
+        "phone_number": "+33474254017",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-05-14T16:30:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 2,
+      "internal_id": "ordoclic7e4fc7e4",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:39:59.056782+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 2
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 2
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 2
+        }
+      ],
+      "gid": "7e4fc7e4"
+    },
+    {
+      "departement": "01",
+      "nom": "Centre de Vaccination \u2013 Gymnase Saint Roch, Bourg en Bresse",
+      "url": "https://www.maiia.com/centre-de-vaccination/01000-bourg-en-bresse/centre-de-vaccination---gymnase-saint-roch--bourg-en-bresse?centerid=602ff4cc423df27f1cb576f0",
+      "location": {
+        "longitude": 5.228277600557056,
+        "latitude": 46.19422686000424,
+        "city": "Bourg-en-Bresse"
+      },
+      "metadata": {
+        "address": "20 Rue Charles Demia 01000 Bourg-en-Bresse",
+        "business_hours": {
+          "Lundi": "09:00-13:00 13:30-19:00",
+          "Mardi": "09:00-13:00 13:30-19:00",
+          "Mercredi": "09:00-13:00 13:30-19:00",
+          "Jeudi": "09:00-13:00 13:30-19:00",
+          "Vendredi": "09:00-13:00 13:30-19:00",
+          "Samedi": "09:00-13:00 13:30-19:00",
+          "Dimanche": "09:00-13:00 13:30-19:00"
+        }
+      },
+      "prochain_rdv": "2021-05-18T12:55:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 1880,
+      "internal_id": "maiia602ff4cc423df27f1cb576f0",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527811+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 1880
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 1880
+        }
+      ],
+      "gid": "602ff4cc"
+    },
+    {
+      "departement": "01",
+      "nom": "Centre de Vaccination de Dombes",
+      "url": "https://www.maiia.com/centre-de-vaccination/01330-villars-les-dombes/centre-de-vaccination-de-dombes?centerid=605a0b7ed254f158baffc4d7",
+      "location": {
+        "longitude": 5.02658,
+        "latitude": 46.000483,
+        "city": "Villars-les-Dombes"
+      },
+      "metadata": {
+        "address": "114 Rue de dombes 01330 Villars-les-Dombes",
+        "business_hours": {
+          "Lundi": "09:00-13:00",
+          "Mardi": "09:00-13:00",
+          "Mercredi": "09:00-13:00",
+          "Jeudi": "13:00-17:00",
+          "Vendredi": "09:00-13:00"
+        }
+      },
+      "prochain_rdv": "2021-05-19T11:20:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 300,
+      "internal_id": "maiia605a0b7ed254f158baffc4d7",
+      "vaccine_type": [
+        "ARNm",
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.526989+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 300
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 300
+        }
+      ],
+      "gid": "605a0b7e"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "01",
+      "nom": "Pharmacie Des Deux Rives",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-deux-rives-montreal-la-cluse",
+      "location": {
+        "longitude": 5.5744149,
+        "latitude": 46.1711369,
+        "city": "montreal-la-cluse"
+      },
+      "metadata": {
+        "address": "15 avenue de Bresse, 01460 Montr\u00e9al-la-Cluse",
+        "phone_number": "+33474760666",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordoclic0b066c1c",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "0b066c1c"
+    },
+    {
+      "departement": "01",
+      "nom": "Pharmacie Du Coll\u00e8ge",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-college",
+      "location": {
+        "longitude": 5.606802999999999,
+        "latitude": 46.153488,
+        "city": "nantua"
+      },
+      "metadata": {
+        "address": "19 rue du Coll\u00e8ge, 01130 Nantua",
+        "phone_number": "+33474750042",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordoclicfeb094ba",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "feb094ba"
+    }
+  ]
+}

@@ -1,0 +1,354 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.533044+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "17",
+      "nom": "Centre de Vaccination Covid-19 - Ville de Saint Martin de R\u00e9",
+      "url": "https://www.doctolib.fr/centre-de-sante/saint-martin-de-re/centre-de-vaccination-covid-19-ville-de-saint-martin-de-re-saint-martin-de-re",
+      "location": {
+        "longitude": -1.3559619,
+        "latitude": 46.1933699,
+        "city": "Saint-Martin-de-R\u00e9"
+      },
+      "metadata": {
+        "address": "Avenue Philippsburg, 17410 Saint-Martin-de-R\u00e9",
+        "business_hours": {
+          "lundi": "08:30-17:00",
+          "mardi": "08:30-17:00",
+          "mercredi": "08:30-17:00",
+          "jeudi": "08:30-17:00",
+          "vendredi": "08:30-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib243147",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T11:53:04.241528+02:00",
+      "appointment_schedules": null,
+      "gid": "d243147"
+    },
+    {
+      "departement": "17",
+      "nom": "Centres de vaccination Covid 19 - Agglom\u00e9ration de La Rochelle - Vaccination Covid-19",
+      "url": "https://www.doctolib.fr/centre-de-sante/la-rochelle/centre-de-vaccination-covid-19-ville-de-la-rochelle-la-rochelle",
+      "location": {
+        "longitude": -1.1495258,
+        "latitude": 46.1507341,
+        "city": "La Rochelle"
+      },
+      "metadata": {
+        "address": "Quai Louis Prunier, 17000 La Rochelle",
+        "phone_number": "+33546305717",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib243501pid165304",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d243501"
+    },
+    {
+      "departement": "17",
+      "nom": "Aunis Atlantique - Ville de Marans - Vaccination Covid-19",
+      "url": "https://www.doctolib.fr/centre-de-sante/marans/aunis-atlantique-ville-de-marans",
+      "location": {
+        "longitude": -0.996123,
+        "latitude": 46.308853,
+        "city": "Marans"
+      },
+      "metadata": {
+        "address": "Rue de Bordeaux, 17230 Marans",
+        "phone_number": "+33532920601",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-17:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242843",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d242843"
+    },
+    {
+      "departement": "17",
+      "nom": "Pharmacie du Port",
+      "url": "https://www.doctolib.fr/pharmacie/saint-martin-de-re/pharmacie-du-port",
+      "location": {
+        "longitude": -1.3683235,
+        "latitude": 46.2042992,
+        "city": "Saint-Martin-de-R\u00e9"
+      },
+      "metadata": {
+        "address": "7 Rue de Sully, 17410 Saint-Martin-de-R\u00e9",
+        "business_hours": {
+          "lundi": "09:00-12:30, 14:00-18:30",
+          "mardi": "09:00-12:30, 14:00-18:30",
+          "mercredi": "09:00-12:30, 14:00-18:30",
+          "jeudi": "09:00-12:30, 14:00-18:30",
+          "vendredi": "09:00-12:30, 14:00-18:30",
+          "samedi": "09:00-12:30, 14:00-18:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib263101",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d263101"
+    },
+    {
+      "departement": "17",
+      "nom": "Dr Magali Staub",
+      "url": "https://www.doctolib.fr/medecin-generaliste/saint-rogatien/magali-staub",
+      "location": {
+        "longitude": -1.07087090000005,
+        "latitude": 46.1491512,
+        "city": "Saint-Rogatien"
+      },
+      "metadata": {
+        "address": "Place des Ch\u00eanes Verts, 17220 Saint-Rogatien",
+        "phone_number": "+33546005970",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib170439",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d170439"
+    },
+    {
+      "departement": "17",
+      "nom": "Pharmacie Du Port",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-port-saint-martin-de-re",
+      "location": {
+        "longitude": -1.3683235,
+        "latitude": 46.20429920000001,
+        "city": "saint-martin-de-re"
+      },
+      "metadata": {
+        "address": "7 rue de Sully, 17410 Saint Martin de R\u00e9",
+        "phone_number": "+33546092043",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordoclic836ca4db",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "836ca4db"
+    },
+    {
+      "departement": "17",
+      "nom": "Pharmacie des Corsaires",
+      "url": "https://www.maiia.com/pharmacie/17000-la-rochelle/pharmacie-des-corsaires?centerid=601a7ea39e90dc786d6eb3b6",
+      "location": {
+        "longitude": -1.170364,
+        "latitude": 46.169328,
+        "city": "La Rochelle"
+      },
+      "metadata": {
+        "address": "146 Avenue des Corsaires 17000 La Rochelle",
+        "phone_number": "+33546427142",
+        "business_hours": {
+          "Lundi": "09:00-12:30 14:30-19:30",
+          "Mardi": "09:00-12:30 14:30-19:30",
+          "Mercredi": "09:00-12:30 14:30-19:30",
+          "Jeudi": "09:00-12:30 14:30-19:30",
+          "Vendredi": "09:00-12:30 14:30-19:30",
+          "Samedi": "09:00-12:30 14:30-19:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "maiia601a7ea3",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "601a7ea3"
+    }
+  ]
+}

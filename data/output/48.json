@@ -1,0 +1,294 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.552833+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "48",
+      "nom": "Centre de vaccination covid-19 - Centre mobile de Loz\u00e8re - Langogne",
+      "url": "https://www.doctolib.fr/centre-de-sante/mende/centre-de-vaccination-covid-19-centre-mobile-de-lozere?pid=practice-185336",
+      "location": {
+        "longitude": 3.8572175,
+        "latitude": 44.7218365,
+        "city": "Langogne"
+      },
+      "metadata": {
+        "address": "Avenue du Mar\u00e9chal Joffre, 48300 Langogne",
+        "business_hours": {
+          "lundi": "09:00-12:00, 14:00-17:00",
+          "mardi": "09:00-12:00, 14:00-17:00",
+          "mercredi": "09:00-12:00, 14:00-17:00",
+          "jeudi": "09:00-12:00, 14:00-17:00",
+          "vendredi": "09:00-12:00, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib269754pid185336",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d269754"
+    },
+    {
+      "departement": "48",
+      "nom": "Centre de vaccination covid-19 - Centre mobile de Loz\u00e8re - Florac-Trois-Rivi\u00e8res",
+      "url": "https://www.doctolib.fr/centre-de-sante/mende/centre-de-vaccination-covid-19-centre-mobile-de-lozere?pid=practice-186581",
+      "location": {
+        "longitude": 3.5981848,
+        "latitude": 44.3211854,
+        "city": "Florac-Trois-Rivi\u00e8res"
+      },
+      "metadata": {
+        "address": "Place du Saguenay, 48400 Florac-Trois-Rivi\u00e8res",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "09:00-12:00, 14:00-17:00",
+          "mardi": "09:00-12:00, 14:00-17:00",
+          "mercredi": "09:00-12:00, 14:00-17:00",
+          "jeudi": "09:00-12:00, 14:00-17:00",
+          "vendredi": "09:00-12:00, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib269754pid186581",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d269754"
+    },
+    {
+      "departement": "48",
+      "nom": "Centre de vaccination Covid 19 Nord-Loz\u00e8re",
+      "url": "https://www.doctolib.fr/centre-de-sante/le-malzieu-ville/centre-de-vaccination-nord-lozere",
+      "location": {
+        "longitude": 3.3365961,
+        "latitude": 44.8593637,
+        "city": "Le Malzieu-Ville"
+      },
+      "metadata": {
+        "address": "Route de Saugues, 48140 Le Malzieu-Ville",
+        "phone_number": "+33809541919",
+        "business_hours": {
+          "lundi": "13:30-15:30",
+          "mardi": "15:00-17:00",
+          "mercredi": null,
+          "jeudi": "10:00-12:00",
+          "vendredi": "10:00-12:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib241566",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T12:09:25.312360+02:00",
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d241566"
+    },
+    {
+      "departement": "48",
+      "nom": "Centre de vaccination COVID-19 - MSP La Canourgue",
+      "url": "https://www.doctolib.fr/centre-de-sante/la-canourgue/centre-de-vaccination-covid-msp-la-canourgue",
+      "location": {
+        "longitude": 3.2144292,
+        "latitude": 44.4313446,
+        "city": "La Canourgue"
+      },
+      "metadata": {
+        "address": "5 Place du Pr\u00e9 Commun, 48500 La Canourgue",
+        "phone_number": "+33809541919",
+        "business_hours": {
+          "lundi": "14:00-17:00",
+          "mardi": "10:00-12:00",
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": "14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib244519",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d244519"
+    },
+    {
+      "departement": "48",
+      "nom": "Centre de Vaccination COVID - Saint Ch\u00e9ly d'Apcher",
+      "url": "https://www.doctolib.fr/centre-de-sante/saint-chely-d-apcher/centre-de-vaccination-covid-saint-chely-d-apcher",
+      "location": {
+        "longitude": 3.2696766,
+        "latitude": 44.8037062,
+        "city": "Saint-Ch\u00e9ly-d'Apcher"
+      },
+      "metadata": {
+        "address": "23 Boulevard Gu\u00e9rin d'Apcher, 48200 Saint-Ch\u00e9ly-d'Apcher",
+        "phone_number": "+33809541919",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": "08:00-12:00, 14:00-18:00",
+          "jeudi": "14:00-16:00",
+          "vendredi": "14:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib245244",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d245244"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.510528+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "09",
+      "nom": "Centre de Vaccination COVID-19 du Pays d'Olmes",
+      "url": "https://www.doctolib.fr/centre-de-sante/laroque-d-olmes/centre-de-vaccination-covid-msp-laroque",
+      "location": {
+        "longitude": 1.8551084,
+        "latitude": 42.9408983,
+        "city": "Lavelanet"
+      },
+      "metadata": {
+        "address": "40ter Avenue Alsace Lorraine, 09300 Lavelanet",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib243198",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T08:48:27.127498+02:00",
+      "appointment_schedules": null,
+      "gid": "d243198"
+    }
+  ]
+}

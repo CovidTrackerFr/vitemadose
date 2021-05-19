@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.591815+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "85",
+      "nom": "Centre de vaccination Covid - Saint-Hilaire-de-Riez",
+      "url": "https://www.doctolib.fr/centre-de-sante/saint-hilaire-de-riez/centre-de-vaccination-covid-saint-hilaire-de-riez",
+      "location": {
+        "longitude": -1.9589826,
+        "latitude": 46.7250157,
+        "city": "Saint-Hilaire-de-Riez"
+      },
+      "metadata": {
+        "address": "47 Avenue de la Faye, 85270 Saint-Hilaire-de-Riez",
+        "phone_number": "+33251599457",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib262585",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d262585"
+    },
+    {
+      "departement": "85",
+      "nom": "Centre de vaccination Covid-19 de Challans - CPTS",
+      "url": "https://www.doctolib.fr/centre-de-sante/challans/cpts-lvo-centre-vaccination",
+      "location": {
+        "longitude": -1.87203,
+        "latitude": 46.8504123,
+        "city": "Challans"
+      },
+      "metadata": {
+        "address": "1 Rue des Plantes, 85300 Challans",
+        "phone_number": "+33251600130",
+        "business_hours": {
+          "lundi": "09:00-11:00",
+          "mardi": "09:00-11:00",
+          "mercredi": null,
+          "jeudi": "09:00-11:00",
+          "vendredi": "09:00-11:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242963",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d242963"
+    }
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.604163+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "972",
+      "nom": "Centre de vaccination du Hall des sports du Lamentin",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/fort-de-france-97200/centre-de-vaccination-du-lamentin",
+      "location": {
+        "longitude": -60.9962,
+        "latitude": 14.6117,
+        "city": "Le Lamentin"
+      },
+      "metadata": {
+        "address": " Hall des sports - Place d'Armes, 97232 Le Lamentin",
+        "phone_number": "+33596425560",
+        "business_hours": {
+          "lundi": "7H30 \u00e0 19H",
+          "mardi": "7H30 \u00e0 19H",
+          "mercredi": "7H30 \u00e0 19H",
+          "jeudi": "7H30 \u00e0 19H",
+          "vendredi": "7H30 \u00e0 19H",
+          "samedi": "7H30 \u00e0 19H",
+          "dimanche": "7H30 \u00e0 19H"
+        }
+      },
+      "prochain_rdv": "2021-05-11T16:15:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 597,
+      "internal_id": "keldoc2286",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347531+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 136
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 25
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 136
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 597
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 597
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 597
+        }
+      ],
+      "gid": "2286"
+    },
+    {
+      "departement": "972",
+      "nom": "Pharmacie Gely Kst",
+      "url": "https://mapharma.net/97200?c=60&l=0",
+      "location": {
+        "longitude": -61.071282,
+        "latitude": 14.606159,
+        "city": "FORT DE FRANCE"
+      },
+      "metadata": {
+        "address": "angle rue Lamartine & Isambert, 97200 FORT DE FRANCE",
+        "business_hours": {
+          "lundi": "07:00 \u2013 18:00",
+          "mardi": "07:00 \u2013 18:00",
+          "mercredi": "07:00 \u2013 18:00",
+          "jeudi": "07:00 \u2013 18:00",
+          "vendredi": "07:00 \u2013 18:00",
+          "samedi": "07:00 \u2013 16:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T08:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 48,
+      "internal_id": "mapharma3f633d3630266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.935099+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 24
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 48
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 48
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 48
+        }
+      ],
+      "gid": "3f633d3630266c3d30"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "972",
+      "nom": "Centre de vaccination du CHUM",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/fort-de-france-cedex-97261/centre-hospitalier-universitaire-martinique/centre-de-vaccination-du-centre-hospitalier-universitaire-martinique",
+      "location": {
+        "longitude": -61.0386,
+        "latitude": 14.6331,
+        "city": "Fort-de-France"
+      },
+      "metadata": {
+        "address": " La Meynard, 97200 Fort-de-France",
+        "phone_number": "+33596425560",
+        "business_hours": {
+          "lundi": "7h30 \u00e0 17h00",
+          "mardi": "7h30 \u00e0 17h00",
+          "mercredi": "7h30 \u00e0 17h00",
+          "jeudi": "7h30 \u00e0 17h00",
+          "vendredi": "7h30 \u00e0 17h00",
+          "samedi": "8h00 \u00e0 12h30",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc228",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "228"
+    },
+    {
+      "departement": "972",
+      "nom": "Centre de vaccination de Fort-de-France",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/fort-de-france-97200/ville-de-fort-de-france/centre-de-vaccination-de-la-ville-de-fort-de-france",
+      "location": {
+        "longitude": -61.0617,
+        "latitude": 14.6032,
+        "city": "Fort-de-France"
+      },
+      "metadata": {
+        "address": " Avenue Maurice Bishop, immeuble du Port, 97200 Fort-de-France",
+        "phone_number": "+33596425560",
+        "business_hours": {
+          "lundi": "9h00 \u00e0 17h00",
+          "mardi": "9h00 \u00e0 17h00",
+          "mercredi": "9h00 \u00e0 17h00",
+          "jeudi": "9h00 \u00e0 17h00",
+          "vendredi": "9h00 \u00e0 17h00",
+          "samedi": "9h00 \u00e0 13h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc1171",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "1171"
+    },
+    {
+      "departement": "972",
+      "nom": "Centre de vaccination du Marin",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/le-marin-97290/centre-hospitalier-marin/centre-de-vaccination-du-centre-hospitalier-marin",
+      "location": {
+        "longitude": -60.8692,
+        "latitude": 14.471,
+        "city": "Le Marin"
+      },
+      "metadata": {
+        "address": " Rez-de-chauss\u00e9e \u2013 Bat A1 - Boulevard All\u00e8gre, 97290 Le Marin",
+        "phone_number": "+33596425560",
+        "business_hours": {
+          "lundi": "08h \u00e0 13h puis 14h \u00e0 18h",
+          "mardi": "08h \u00e0 13h puis 14h \u00e0 18h",
+          "mercredi": "08h \u00e0 13h puis 14h \u00e0 18h",
+          "jeudi": "08h \u00e0 13h puis 14h \u00e0 18h",
+          "vendredi": "08h \u00e0 13h puis 14h \u00e0 18h",
+          "samedi": "08h \u00e0 12h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc408",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "408"
+    },
+    {
+      "departement": "972",
+      "nom": "Centre de vaccination de la Trinit\u00e9",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/trinite-97220/centre-hospitalier-louis-domergue-trinite/centre-de-vaccination-du-centre-hospitalier-louis-domergue-trinite",
+      "location": {
+        "longitude": -60.965,
+        "latitude": 14.7369,
+        "city": "La Trinit\u00e9"
+      },
+      "metadata": {
+        "address": " Rue Jean Eug\u00e8ne Fatier - Maison m\u00e9dicale de garde de la Trinit\u00e9, 97220 La Trinit\u00e9",
+        "phone_number": "+33596425560",
+        "business_hours": {
+          "lundi": "09h \u00e0 13h puis 14h \u00e0 18h",
+          "mardi": "09h \u00e0 13h puis 14h \u00e0 18h",
+          "mercredi": "09h \u00e0 13h puis 14h \u00e0 18h",
+          "jeudi": "09h \u00e0 13h puis 14h \u00e0 18h",
+          "vendredi": "09h \u00e0 13h puis 14h \u00e0 18h",
+          "samedi": "08h \u00e0 12h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc407",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "407"
+    },
+    {
+      "departement": "972",
+      "nom": "AEROVAC - A\u00e9roport Martinique",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/fort-de-france-97200/centre-de-vaccination-aerovac-aeroport-martinique",
+      "location": {
+        "longitude": -61.0001,
+        "latitude": 14.5955,
+        "city": "Le Lamentin"
+      },
+      "metadata": {
+        "address": "1er \u00e9tage Enceinte de l'a\u00e9roport Aim\u00e9 C\u00e9saire, 97232 Le Lamentin",
+        "phone_number": "+33596421658",
+        "business_hours": {
+          "lundi": "9h \u00e0 18h",
+          "mardi": "9h \u00e0 18h",
+          "mercredi": "9h \u00e0 18h",
+          "jeudi": "9h \u00e0 18h",
+          "vendredi": "9h \u00e0 18h",
+          "samedi": "9h \u00e0 18h",
+          "dimanche": "9h \u00e0 18h"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc2135",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "2135"
+    },
+    {
+      "departement": "972",
+      "nom": "Centre de vaccination du Carbet",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/fort-de-france-97200/centre-hospitalier-nord-caraibe",
+      "location": {
+        "longitude": -61.1798,
+        "latitude": 14.7025,
+        "city": "Le Carbet"
+      },
+      "metadata": {
+        "address": " Quartier LAJUS, 97221 Le Carbet",
+        "phone_number": "+33596425560",
+        "business_hours": {
+          "lundi": "13H \u00e0 16H",
+          "mardi": "13H \u00e0 16H",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "13H \u00e0 16H",
+          "vendredi": "13H \u00e0 16H",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc2280",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "2280"
+    }
+  ]
+}

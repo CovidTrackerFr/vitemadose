@@ -1,0 +1,923 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.534879+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "22",
+      "nom": "ST BRIEUC - Palais des congr\u00e9s BREZILLET",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/st-brieuc-22000/robien-saint-brieuc?category=-1&cabinet=16618&specialty=144",
+      "location": {
+        "longitude": -2.7643,
+        "latitude": 48.4997,
+        "city": "Saint-Brieuc"
+      },
+      "metadata": {
+        "address": "16 rue Pierre de Coubertin, 22099 Saint-Brieuc",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "8h30-12h30 / 13h30-17h30",
+          "mardi": "8h30-12h30 / 13h30-17h30",
+          "mercredi": "8h30-12h30 / 13h30-17h30",
+          "jeudi": "8h30-12h30 / 13h30-17h30",
+          "vendredi": "8h30-12h30 / 13h30-17h30",
+          "samedi": "8h30-12h30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T11:35:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 85,
+      "internal_id": "keldoc854",
+      "vaccine_type": [
+        "ARNm",
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347121+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 4
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 4
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 85
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 85
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 85
+        }
+      ],
+      "gid": "854"
+    },
+    {
+      "departement": "22",
+      "nom": "ST BRIEUC- BREZILLET 2 (SDIS)",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/st-brieuc-22000/centre-de-vaccination-saint-brieuc-palais-des-congres-et-des-expositions-de-la-baie-de-saint-brieuc-brezillet-2",
+      "location": {
+        "longitude": -2.76442,
+        "latitude": 48.4998,
+        "city": "Saint Brieuc"
+      },
+      "metadata": {
+        "address": "16 Rue Pierre de Coubertin, 22000 Saint Brieuc",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "8h30-12h30 / 13h30-17h30",
+          "mardi": "8h30-12h30 / 13h30-17h30",
+          "mercredi": "8h30-12h30 / 13h30-17h30",
+          "jeudi": "8h30-12h30 / 13h30-17h30",
+          "vendredi": "8h30-12h30 / 13h30-17h30",
+          "samedi": "8h30-12h30",
+          "dimanche": "9h-17h20"
+        }
+      },
+      "prochain_rdv": "2021-05-13T10:50:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 67,
+      "internal_id": "keldoc2510",
+      "vaccine_type": [
+        "ARNm"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347256+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 67
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 67
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 67
+        }
+      ],
+      "gid": "2510"
+    },
+    {
+      "departement": "22",
+      "nom": "LAMBALLE - Salle municipale",
+      "url": "https://vaccination-covid.keldoc.com/maison-de-sante/lamballe-22400/lamballe/centre-de-vaccination-lamballe-salle-municipale-lamballe",
+      "location": {
+        "longitude": -2.51413,
+        "latitude": 48.4654,
+        "city": "Lamballe-Armor"
+      },
+      "metadata": {
+        "address": "6 Rue mouexigne, 22400 Lamballe-Armor",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "9h00-13h00 / 13h30-17h30",
+          "mardi": "9h00-13h00 / 13h30-17h30",
+          "mercredi": "9h00-13h00 / 13h30-17h30",
+          "jeudi": "9h00-13h00 / 13h30-17h30",
+          "vendredi": "9h00-13h00 / 13h30-17h30",
+          "samedi": "9h-13h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-14T09:00:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 54,
+      "internal_id": "keldoc886",
+      "vaccine_type": [
+        "ARNm"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347540+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 54
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 54
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 54
+        }
+      ],
+      "gid": "886"
+    },
+    {
+      "departement": "22",
+      "nom": "LANVOLLON - Salle Armor Argoat",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/lanvollon-22290/ville-de-lanvollon/centre-de-vaccination-de-la-ville-de-lanvollon",
+      "location": {
+        "longitude": -2.99161,
+        "latitude": 48.6371,
+        "city": "Lanvollon"
+      },
+      "metadata": {
+        "address": " Rue du Tregor, 22290 Lanvollon",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "9h-13h / 13h30-17h30",
+          "vendredi": "9h-13h / 13h30-17h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-14T10:30:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 18,
+      "internal_id": "keldoc1303",
+      "vaccine_type": [
+        "ARNm",
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347287+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 18
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 18
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 18
+        }
+      ],
+      "gid": "1303"
+    },
+    {
+      "departement": "22",
+      "nom": "PAIMPOL - Gymnase Kerraoul 2",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/paimpol-22500/centre-de-vaccination-de-paimpol-gymnase-k2",
+      "location": {
+        "longitude": -3.06482,
+        "latitude": 48.7833,
+        "city": "Paimpol"
+      },
+      "metadata": {
+        "address": "18 Voie Communale Hent Kervig, 22500 Paimpol",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "9h00-13h00 / 13h30 -17h30",
+          "mardi": "9h00-13h00 / 13h30 -17h30",
+          "mercredi": "9h00-13h00 / 13h30 -17h30",
+          "jeudi": "9h00-13h00 / 13h30 -17h30",
+          "vendredi": "9h00-13h00 / 13h30 -17h30",
+          "samedi": "9h00-13h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-14T11:10:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 51,
+      "internal_id": "keldoc2348",
+      "vaccine_type": [
+        "ARNm",
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347436+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 51
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 51
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 51
+        }
+      ],
+      "gid": "2348"
+    },
+    {
+      "departement": "22",
+      "nom": "LOUDEAC - Foyer municipal",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/loudeac-22600/centre-de-vaccination-loudeac-foyer-municipal",
+      "location": {
+        "longitude": -2.75584,
+        "latitude": 48.1784,
+        "city": "Loud\u00e9ac"
+      },
+      "metadata": {
+        "address": "34 Rue de Moncontour, 22600 Loud\u00e9ac",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "9h30-12h30 / 13h30-17h30",
+          "mardi": "9h30-12h30 / 13h30-17h30",
+          "mercredi": "9h30-12h30 / 13h30-17h30",
+          "jeudi": "9h30-12h30 / 13h30-17h30",
+          "vendredi": "9h30-12h30 / 13h30-17h30",
+          "samedi": "9h30-13h30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-14T11:45:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 27,
+      "internal_id": "keldoc889",
+      "vaccine_type": [
+        "ARNm"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347367+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 27
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 27
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 27
+        }
+      ],
+      "gid": "889"
+    },
+    {
+      "departement": "22",
+      "nom": "LANNION - Salle des ursulines",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/lannion-22300/centre-de-vaccination-de-lannion/centre-de-vaccination-de-lannion-salle-des-ursulines",
+      "location": {
+        "longitude": -3.45495,
+        "latitude": 48.7312,
+        "city": "Lannion"
+      },
+      "metadata": {
+        "address": " Place des Patriotes, 22300 Lannion",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "9h00-13h00 / 13h30-17h30 ",
+          "mardi": "9h00-13h00 / 13h30-17h30 ",
+          "mercredi": "9h00-13h00 / 13h30-17h30 ",
+          "jeudi": "9h00-13h00 / 13h30-17h30 ",
+          "vendredi": "9h00-13h00 / 13h30-17h30 ",
+          "samedi": "9h00-13h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-14T14:15:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 38,
+      "internal_id": "keldoc893",
+      "vaccine_type": [
+        "ARNm"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347210+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 38
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 38
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 38
+        }
+      ],
+      "gid": "893"
+    },
+    {
+      "departement": "22",
+      "nom": "Pharmacie Gu\u00e9ziec",
+      "url": "https://www.maiia.com/pharmacie/22700-louannec/pharmacie-gueziec?centerid=602a3599be88e65a696ae18f",
+      "location": {
+        "longitude": -3.414289,
+        "latitude": 48.792485,
+        "city": "Louannec"
+      },
+      "metadata": {
+        "address": "11 bis Avenue des Feux du Large 22700 Louannec",
+        "phone_number": "+33296231971",
+        "business_hours": {
+          "Lundi": "09:00-12:45 14:00-19:00",
+          "Mardi": "09:00-12:45 14:00-19:00",
+          "Mercredi": "09:00-12:45 14:00-19:00",
+          "Jeudi": "09:00-12:45 14:00-19:00",
+          "Vendredi": "09:00-12:45 14:00-19:00",
+          "Samedi": "09:00-12:45",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-05-17T09:15:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 3,
+      "internal_id": "maiia602a3599be88e65a696ae18f",
+      "vaccine_type": [
+        "AstraZeneca",
+        "Janssen"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527352+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 2
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 3
+        }
+      ],
+      "gid": "602a3599"
+    },
+    {
+      "departement": "22",
+      "nom": "Pharmacie des 7 \u00eeles",
+      "url": "https://www.maiia.com/pharmacie/22730-tregastel/pharmacie-des-7-iles-?centerid=601d7b53cfc13702bff1ec41",
+      "location": {
+        "longitude": -3.510941,
+        "latitude": 48.826029,
+        "city": "Tr\u00e9gastel"
+      },
+      "metadata": {
+        "address": "23 Place Sainte-Anne 22730 Tr\u00e9gastel",
+        "phone_number": "+33296234999",
+        "business_hours": {
+          "Lundi": "08:30-12:30 14:00-19:00",
+          "Mardi": "08:30-12:30 14:00-19:00",
+          "Mercredi": "08:30-12:30 14:00-19:00",
+          "Jeudi": "08:30-12:30 14:00-19:00",
+          "Vendredi": "08:30-12:30 14:00-19:00",
+          "Samedi": "09:00-12:30 14:00-18:00",
+          "Dimanche": "08:30-12:30 14:00-19:00"
+        }
+      },
+      "prochain_rdv": "2021-05-18T14:30:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 1,
+      "internal_id": "maiia601d7b53cfc13702bff1ec41",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527173+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 1
+        }
+      ],
+      "gid": "601d7b53"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "22",
+      "nom": "ROSTRENEN - Salle des f\u00eates",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/rostrenen-22110/salle-des-fetes-rostrenen/centre-de-vaccination-de-la-salle-des-fetes-rostrenen",
+      "location": {
+        "longitude": -3.31588,
+        "latitude": 48.2352,
+        "city": "Rostrenen"
+      },
+      "metadata": {
+        "address": " Place du Bourk Kozh, 22110 Rostrenen",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "13h30-17h30",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "13h30-17h30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-18T17:20:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc1302",
+      "vaccine_type": [
+        "ARNm"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.346954+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "1302"
+    },
+    {
+      "departement": "22",
+      "nom": "PLEUMEUR BODOU - PHOENIX",
+      "url": "https://vaccination-covid.keldoc.com/maison-de-sante/pleumeur-bodou-22560/centre-de-vaccination-ephemere-sdis-pleumeur-bodou/centre-de-vaccination-ephemere-sdis-lannion?category=-1&cabinet=17301&specialty=496",
+      "location": {
+        "longitude": -3.52707,
+        "latitude": 48.7814,
+        "city": "Pleumeur-Bodou"
+      },
+      "metadata": {
+        "address": " Route du Rad\u00f4me, 22560 Pleumeur-Bodou",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "9h-17h30",
+          "mardi": "9h-17h30",
+          "mercredi": "9h-17h30",
+          "jeudi": "9h-17h30",
+          "vendredi": "9h-17h30",
+          "samedi": "9h-17h30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc2106",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "2106"
+    },
+    {
+      "departement": "22",
+      "nom": "GUINGAMP - Centre social",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/guingamp-22200/guingamp/centre-de-vaccination-guingamp-centre-social-guingamp",
+      "location": {
+        "longitude": -3.15965,
+        "latitude": 48.5639,
+        "city": "Guingamp"
+      },
+      "metadata": {
+        "address": " Rue Hyacinthe Cheval, 22200 Guingamp",
+        "phone_number": "+33257180060",
+        "business_hours": {
+          "lundi": "9h00-13h00 / 13h30-17h30",
+          "mardi": "9h00-13h00 / 13h30-17h30",
+          "mercredi": "9h00-13h00 / 13h30-17h30",
+          "jeudi": "9h00-13h00 / 13h30-17h30",
+          "vendredi": "9h00-13h00 / 13h30-17h30",
+          "samedi": "9h00-13h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-21T09:10:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc890",
+      "vaccine_type": [
+        "ARNm"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347345+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "890"
+    },
+    {
+      "departement": "22",
+      "nom": "Pharmacie Guildo",
+      "url": "https://www.maiia.com/pharmacie/22380-saint-cast-le-guildo/pharmacie-guildo?centerid=5fa28cedbaf1175842a308f3",
+      "location": {
+        "longitude": -2.234704,
+        "latitude": 48.582536,
+        "city": "Saint-Cast-le-Guildo"
+      },
+      "metadata": {
+        "address": "22 Rue de la Croix aux Merles 22380 Saint-Cast-le-Guildo",
+        "phone_number": "+33296411726",
+        "business_hours": {
+          "Lundi": "09:00-12:15 14:00-19:00",
+          "Mardi": "09:00-12:15 14:00-19:00",
+          "Mercredi": "09:00-12:15 14:00-19:00",
+          "Jeudi": "09:00-12:15 14:00-19:00",
+          "Vendredi": "09:00-12:15 14:00-19:00",
+          "Samedi": "09:00-12:15"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "maiia5fa28ced",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "5fa28ced"
+    },
+    {
+      "departement": "22",
+      "nom": "Pharmacie Balan",
+      "url": "https://www.maiia.com/pharmacie/22370-pleneuf-val-andre/pharmacie-balan?centerid=6037947a4fe0fe5a7a4dacac",
+      "location": {
+        "longitude": -2.536509,
+        "latitude": 48.583982,
+        "city": "Pl\u00e9neuf-Val-Andr\u00e9"
+      },
+      "metadata": {
+        "address": "4 Rue de l\u2019Eglise 22370 Pl\u00e9neuf-Val-Andr\u00e9",
+        "phone_number": "+33296729930",
+        "business_hours": {
+          "Lundi": "09:00-12:30 14:00-18:00",
+          "Mardi": "09:00-12:30 14:00-18:00",
+          "Mercredi": "09:00-12:30 14:00-18:00",
+          "Jeudi": "09:00-12:30 14:00-18:00",
+          "Vendredi": "09:00-12:30 14:00-18:00",
+          "Samedi": "09:00-12:30 14:00-18:00",
+          "Dimanche": "09:00-12:30 14:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "maiia6037947a",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "6037947a"
+    }
+  ]
+}

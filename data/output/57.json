@@ -1,0 +1,714 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.560457+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "57",
+      "nom": "Pharmacie du March\u00e9 Sarrebourg",
+      "url": "https://www.doctolib.fr/pharmacie/sarrebourg/pharmacie-du-marche-sarrebourg",
+      "location": {
+        "longitude": 7.0518628,
+        "latitude": 48.7351651,
+        "city": "Sarrebourg"
+      },
+      "metadata": {
+        "address": "28 Place du March\u00e9, 57400 Sarrebourg",
+        "phone_number": "+33387032156",
+        "business_hours": {
+          "lundi": "08:00-12:30, 13:30-19:00",
+          "mardi": "08:00-12:30, 13:30-19:00",
+          "mercredi": "08:00-12:30, 13:30-19:00",
+          "jeudi": "08:00-12:30, 13:30-19:00",
+          "vendredi": "08:00-12:30, 13:30-19:00",
+          "samedi": "08:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib256081",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d256081"
+    },
+    {
+      "departement": "57",
+      "nom": "Pharmacie Franiatte",
+      "url": "https://www.doctolib.fr/pharmacie/montigny-les-metz/pharmacie-franiatte",
+      "location": {
+        "longitude": 6.1545208,
+        "latitude": 49.0908948,
+        "city": "Montigny-l\u00e8s-Metz"
+      },
+      "metadata": {
+        "address": "45 Rue G\u00e9n\u00e9ral Franiatte, 57950 Montigny-l\u00e8s-Metz",
+        "phone_number": "+33387633900",
+        "business_hours": {
+          "lundi": "08:30-12:15, 14:00-19:15",
+          "mardi": "08:30-12:15, 14:00-19:15",
+          "mercredi": "08:30-12:15, 14:00-19:15",
+          "jeudi": "08:30-12:15, 14:00-19:15",
+          "vendredi": "08:30-12:15, 14:00-19:15",
+          "samedi": "08:30-12:15",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib253039",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d253039"
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination - Thionville - ELSAN",
+      "url": "https://www.doctolib.fr/clinique-privee/thionville/centre-de-vaccination-thionville-elsan",
+      "location": {
+        "longitude": 6.155765,
+        "latitude": 49.3567337,
+        "city": "Thionville"
+      },
+      "metadata": {
+        "address": "3 Rue Paul Albert, 57100 Thionville",
+        "phone_number": "+33387396899",
+        "business_hours": {
+          "lundi": "09:00-12:00, 13:00-16:00",
+          "mardi": "09:00-12:00, 13:00-16:00",
+          "mercredi": "09:00-12:00, 13:00-16:00",
+          "jeudi": "09:00-12:00, 13:00-16:00",
+          "vendredi": "09:00-12:00, 13:00-16:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242959",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d242959"
+    },
+    {
+      "departement": "57",
+      "nom": "Pharmacie Lafayette du Laurier",
+      "url": "https://www.doctolib.fr/pharmacie/metz/pharmacie-lafayette-du-laurier",
+      "location": {
+        "longitude": 6.1763574,
+        "latitude": 49.1185466,
+        "city": "Metz"
+      },
+      "metadata": {
+        "address": "14 Place Saint-Jacques, 57000 Metz",
+        "business_hours": {
+          "lundi": "08:00-13:00, 13:00-19:30",
+          "mardi": "08:00-13:00, 13:00-19:30",
+          "mercredi": "08:00-13:00, 13:00-19:30",
+          "jeudi": "08:00-13:00, 13:00-19:30",
+          "vendredi": "08:00-13:00, 13:00-19:30",
+          "samedi": "08:00-13:00, 13:00-19:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib248999",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d248999"
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination Covid-19 du CH de Sarreguemines - Sarreguemines",
+      "url": "https://www.doctolib.fr/hopital-public/sarreguemines/centre-de-vaccination-covid-19-du-ch-de-sarreguemines",
+      "location": {
+        "longitude": 7.0829539,
+        "latitude": 49.0996952,
+        "city": "Sarreguemines"
+      },
+      "metadata": {
+        "address": "1 Rue Calmette, 57200 Sarreguemines",
+        "business_hours": {
+          "lundi": "09:00-17:30",
+          "mardi": "09:00-17:30",
+          "mercredi": "09:00-17:30",
+          "jeudi": "09:00-17:30",
+          "vendredi": "09:00-17:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib246410pid169290",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d246410"
+    },
+    {
+      "departement": "57",
+      "nom": "Dr Gautier SCHOUMACHER",
+      "url": "https://www.doctolib.fr/medecin-generaliste/57155-marly/gautier-schoumacher",
+      "location": {
+        "longitude": 6.1510799,
+        "latitude": 49.0638802,
+        "city": "Marly"
+      },
+      "metadata": {
+        "address": "16 Rue Ugo Anzile, 57155 Marly",
+        "phone_number": "+33387524350",
+        "business_hours": {
+          "lundi": "08:30-18:00",
+          "mardi": "08:30-18:00",
+          "mercredi": "08:30-11:00",
+          "jeudi": "08:30-18:00",
+          "vendredi": "08:30-18:00",
+          "samedi": "08:30-11:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib235860",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d235860"
+    },
+    {
+      "departement": "57",
+      "nom": "Dr Audrey PLUCHE",
+      "url": "https://www.doctolib.fr/medecin-generaliste/metz/audrey-pluche",
+      "location": {
+        "longitude": 6.2428675,
+        "latitude": 49.0927115,
+        "city": "Metz"
+      },
+      "metadata": {
+        "address": "16 Rue du Cuvion, 57070 Metz",
+        "business_hours": {
+          "lundi": "08:00-19:00",
+          "mardi": "08:00-19:00",
+          "mercredi": "08:00-19:00",
+          "jeudi": "08:00-19:00",
+          "vendredi": "08:00-19:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib252707",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d252707"
+    },
+    {
+      "departement": "57",
+      "nom": "Centre hospitalier de Sarreguemines - Sarreguemines",
+      "url": "https://www.doctolib.fr/hopital-public/sarreguemines/ch-de-sarreguemines?pid=practice-169290",
+      "location": {
+        "longitude": 7.0829539,
+        "latitude": 49.0996952,
+        "city": "Sarreguemines"
+      },
+      "metadata": {
+        "address": "1 Rue Calmette, 57200 Sarreguemines",
+        "business_hours": {
+          "lundi": "09:00-17:30",
+          "mardi": "09:00-17:30",
+          "mercredi": "09:00-17:30",
+          "jeudi": "09:00-17:30",
+          "vendredi": "09:00-17:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib230252pid169290",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d230252"
+    },
+    {
+      "departement": "57",
+      "nom": "Centre Vaccination Commune Rohrbach-les-bitche",
+      "url": "https://www.doctolib.fr/centre-de-sante/rohrbach-les-bitche/centre-vaccination-commune-rohrbach-les-bitche",
+      "location": {
+        "longitude": 7.2719096,
+        "latitude": 49.040451,
+        "city": "Rohrbach-l\u00e8s-Bitche"
+      },
+      "metadata": {
+        "address": "Rue des Sports, 57410 Rohrbach-l\u00e8s-Bitche",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib264082",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d264082"
+    },
+    {
+      "departement": "57",
+      "nom": "Centre hospitalier de Sarreguemines - Bitche",
+      "url": "https://www.doctolib.fr/hopital-public/sarreguemines/ch-de-sarreguemines?pid=practice-173166",
+      "location": {
+        "longitude": 7.4222811,
+        "latitude": 49.0466955,
+        "city": "Bitche"
+      },
+      "metadata": {
+        "address": "1 Rue de Lebach, 57230 Bitche",
+        "business_hours": {
+          "lundi": "09:00-16:30",
+          "mardi": "09:00-16:30",
+          "mercredi": "09:00-16:30",
+          "jeudi": "09:00-16:30",
+          "vendredi": "09:00-16:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib230252pid173166",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d230252"
+    },
+    {
+      "departement": "57",
+      "nom": "Centre de vaccination Covid-19 du CH de Sarreguemines - Bitche",
+      "url": "https://www.doctolib.fr/hopital-public/sarreguemines/centre-de-vaccination-covid-19-du-ch-de-sarreguemines?pid=practice-173166",
+      "location": {
+        "longitude": 7.4222811,
+        "latitude": 49.0466955,
+        "city": "Bitche"
+      },
+      "metadata": {
+        "address": "1 Rue de Lebach, 57230 Bitche",
+        "business_hours": {
+          "lundi": "09:00-16:30",
+          "mardi": "09:00-16:30",
+          "mercredi": "09:00-16:30",
+          "jeudi": "09:00-16:30",
+          "vendredi": "09:00-16:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib246410pid173166",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d246410"
+    }
+  ]
+}

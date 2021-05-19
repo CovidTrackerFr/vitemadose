@@ -1,0 +1,258 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.558933+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "55",
+      "nom": "Maison M\u00e9dicale - Bar le Duc",
+      "url": "https://www.maiia.com/centre-de-vaccination/55000-bar-le-duc/maison-medicale---bar-le-duc?centerid=609553811ff26778bbe89cb0",
+      "location": {
+        "longitude": 5.166123,
+        "latitude": 48.77214,
+        "city": "Bar-le-Duc"
+      },
+      "metadata": {
+        "address": "44 Rue Andr\u00e9 Theuriet 55000 Bar-le-Duc",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-05-15T07:25:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 1,
+      "internal_id": "maiia609553811ff26778bbe89cb0",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527000+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 1
+        }
+      ],
+      "gid": "60955381"
+    },
+    {
+      "departement": "55",
+      "nom": "Centre de vaccination d\u2019 ETAIN",
+      "url": "https://www.maiia.com/centre-de-vaccination/55400-etain/centre-de-vaccination-d--etain?centerid=6024fc7c1dc0b7275b739f0c",
+      "location": {
+        "longitude": 5.636335,
+        "latitude": 49.212896,
+        "city": "\u00c9tain"
+      },
+      "metadata": {
+        "address": "Centre de vaccination d\u2019 ETAIN  salle Brasse et Focosi  place du march\u00e9 (derri\u00e8re la mairie) 55400 \u00c9tain",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-05-20T07:50:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 24,
+      "internal_id": "maiia6024fc7c1dc0b7275b739f0c",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527182+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 24
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 24
+        }
+      ],
+      "gid": "6024fc7c"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "55",
+      "nom": "Centre de vaccination - SAINT MIHIEL",
+      "url": "https://www.maiia.com/centre-de-vaccination/55300-saint-mihiel/centre-de-vaccination---saint-mihiel?centerid=600e81e69ddc145c9ed23c14",
+      "location": {
+        "longitude": 5.542235,
+        "latitude": 48.888369,
+        "city": "Saint-Mihiel"
+      },
+      "metadata": {
+        "address": "Place des moines 55300 Saint-Mihiel",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "maiia600e81e6",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T11:03:57.393954+02:00",
+      "appointment_schedules": null,
+      "gid": "600e81e6"
+    },
+    {
+      "departement": "55",
+      "nom": "Centre de vaccination - REVIGNY SUR ORNAIN",
+      "url": "https://www.maiia.com/centre-de-vaccination/55800-revigny-sur-ornain/centre-de-vaccination---revigny-sur-ornain?centerid=600015a379dfd27ec2d189f7",
+      "location": {
+        "longitude": 4.98718,
+        "latitude": 48.828244,
+        "city": "Revigny-sur-Ornain"
+      },
+      "metadata": {
+        "address": "1 Place Pierre Gaxotte 55800 Revigny-sur-Ornain",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "maiia600015a3",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T14:28:49.974679+02:00",
+      "appointment_schedules": null,
+      "gid": "600015a3"
+    },
+    {
+      "departement": "55",
+      "nom": "Centre de Vaccination - Pierrefitte sur Aire",
+      "url": "https://www.maiia.com/centre-de-vaccination/55260-pierrefitte-sur-aire/centre-de-vaccination---pierrefitte-sur-aire?centerid=6033785b423df27f1cb57805",
+      "location": {
+        "longitude": 5.329514,
+        "latitude": 48.898487,
+        "city": "Pierrefitte-sur-Aire"
+      },
+      "metadata": {
+        "address": "3 Salle de la mairie, Rue de Cond\u00e9 55260 Pierrefitte-sur-Aire",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "maiia6033785b",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "6033785b"
+    }
+  ]
+}

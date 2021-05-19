@@ -1,0 +1,1979 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.561768+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "59",
+      "nom": "Centre de vaccination La luna (Espace Sculfort)",
+      "url": "https://www.maiia.com/centre-de-vaccination/59600-maubeuge/centre-de-vaccination-la-luna--espace-sculfort-?centerid=60001f2879dfd27ec2d18a27",
+      "location": {
+        "longitude": 3.94989,
+        "latitude": 50.281532,
+        "city": "Maubeuge"
+      },
+      "metadata": {
+        "address": "Avenue Jean Jaur\u00e8s 59600 Maubeuge",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-05-11T16:55:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 480,
+      "internal_id": "maiia60001f2879dfd27ec2d18a27",
+      "vaccine_type": [
+        "AstraZeneca",
+        "ARNm",
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527560+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 240
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 240
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 240
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 463
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 480
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 480
+        }
+      ],
+      "gid": "60001f28"
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie Des Remparts",
+      "url": "https://mapharma.net/59530?c=102&l=0",
+      "location": {
+        "longitude": 3.637413,
+        "latitude": 50.247392,
+        "city": "LE QUESNOY"
+      },
+      "metadata": {
+        "address": "2 rue Gambetta, 59530 LE QUESNOY",
+        "business_hours": {
+          "lundi": "13:30 \u2013 19:30",
+          "mardi": "08:30 \u2013 12:15, 13:45 \u2013 19:30",
+          "mercredi": "08:30 \u2013 12:15, 13:45 \u2013 19:30",
+          "jeudi": "08:30 \u2013 12:15, 13:45 \u2013 19:30",
+          "vendredi": "08:30 \u2013 12:15, 13:45 \u2013 19:30",
+          "samedi": "08:30 \u2013 12:30",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-11T18:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 272,
+      "internal_id": "mapharma3f633d313032266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.935090+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 5
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 16
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 43
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 104
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 212
+        }
+      ],
+      "gid": "3f633d313032266c3d30"
+    },
+    {
+      "departement": "59",
+      "nom": "Centre de vaccination - Foyer Timmermans",
+      "url": "https://www.maiia.com/centre-de-vaccination/59460-jeumont/centre-de-vaccination---foyer-timmermans-?centerid=60002a507f9ff61ee1d5d0b7",
+      "location": {
+        "longitude": 4.101479,
+        "latitude": 50.297517,
+        "city": "Jeumont"
+      },
+      "metadata": {
+        "address": "boulevard de lessines 59460 Jeumont",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "09:00-12:00 14:00-17:00",
+          "Jeudi": "14:00-17:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "14:00-17:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-05-12T06:40:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 386,
+      "internal_id": "maiia60002a507f9ff61ee1d5d0b7",
+      "vaccine_type": [
+        "ARNm",
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527329+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 86
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 86
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 386
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 386
+        }
+      ],
+      "gid": "60002a50"
+    },
+    {
+      "departement": "59",
+      "nom": "Centre de vaccination - Maison m\u00e9dicale de Bavay",
+      "url": "https://www.maiia.com/centre-de-vaccination/59570-bavay/centre-de-vaccination---maison-medicale-de-bavay?centerid=5ffed203a400683faf1c2237",
+      "location": {
+        "longitude": 3.794242,
+        "latitude": 50.296486,
+        "city": "Bavay"
+      },
+      "metadata": {
+        "address": "29 Rue des Remparts 59570 Bavay",
+        "phone_number": "+33327631034",
+        "business_hours": {
+          "Lundi": "12:00-14:00",
+          "Mardi": "12:00-14:00",
+          "Mercredi": "12:00-14:00",
+          "Jeudi": "12:00-14:00",
+          "Vendredi": "12:00-14:00 18:00-20:00",
+          "Samedi": "09:00-12:00",
+          "Dimanche": "12:00-14:00"
+        }
+      },
+      "prochain_rdv": "2021-05-13T06:40:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 170,
+      "internal_id": "maiia5ffed203a400683faf1c2237",
+      "vaccine_type": [
+        "ARNm",
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527230+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 96
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 112
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 170
+        }
+      ],
+      "gid": "5ffed203"
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie du Bizet",
+      "url": "https://www.maiia.com/pharmacie/59650-villeneuve-d-ascq/pharmacie-du-bizet?centerid=602a75251f85b5153aaf95ee",
+      "location": {
+        "longitude": 3.144518,
+        "latitude": 50.620259,
+        "city": "Villeneuve-d'Ascq"
+      },
+      "metadata": {
+        "address": "49 Boulevard Bizet 59650 Villeneuve-d'Ascq",
+        "phone_number": "+33320911392",
+        "business_hours": {
+          "Lundi": "08:30-19:30",
+          "Mardi": "08:30-19:30",
+          "Mercredi": "08:30-19:30",
+          "Jeudi": "08:30-19:30",
+          "Vendredi": "08:30-19:30",
+          "Samedi": "09:00-19:00",
+          "Dimanche": "08:30-19:30"
+        }
+      },
+      "prochain_rdv": "2021-05-14T08:15:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 7,
+      "internal_id": "maiia602a75251f85b5153aaf95ee",
+      "vaccine_type": [
+        "Janssen",
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527370+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 2
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 7
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 7
+        }
+      ],
+      "gid": "602a7525"
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie du Pont Noir",
+      "url": "https://www.maiia.com/pharmacie/59460-jeumont/pharmacie-du-pont-noir?centerid=5ff82bcefabad2432c9bca47",
+      "location": {
+        "longitude": 4.10209,
+        "latitude": 50.300343,
+        "city": "Jeumont"
+      },
+      "metadata": {
+        "address": "2 Rue d'Erquelinnes 59460 Jeumont",
+        "phone_number": "+33327395512",
+        "business_hours": {
+          "Lundi": "08:45-12:30 14:00-19:00",
+          "Mardi": "08:45-12:30 14:00-19:00",
+          "Mercredi": "08:45-12:30 14:00-19:00",
+          "Jeudi": "08:45-12:30 14:00-19:00",
+          "Vendredi": "08:45-12:30 14:00-19:00",
+          "Samedi": "08:45-12:30",
+          "Dimanche": "08:45-12:30 14:00-19:00"
+        }
+      },
+      "prochain_rdv": "2021-05-20T12:00:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 10,
+      "internal_id": "maiia5ff82bcefabad2432c9bca47",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527039+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 10
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 10
+        }
+      ],
+      "gid": "5ff82bce"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "59",
+      "nom": "Pharmacie de l'H\u00f4tel de Ville - Le Quesnoy",
+      "url": "https://www.doctolib.fr/pharmacie/le-quesnoy/pharmacie-de-l-hotel-de-ville-le-quesnoy",
+      "location": {
+        "longitude": 3.6389518,
+        "latitude": 50.2474754,
+        "city": "Le Quesnoy"
+      },
+      "metadata": {
+        "address": "50 Rue du Mar\u00e9chal Joffre, 59530 Le Quesnoy",
+        "phone_number": "+33327491273",
+        "business_hours": {
+          "lundi": "13:45-19:30",
+          "mardi": "08:30-12:15, 13:45-19:30",
+          "mercredi": "08:30-12:15, 13:45-19:30",
+          "jeudi": "08:30-12:15, 13:45-19:30",
+          "vendredi": "08:30-12:15, 13:45-19:30",
+          "samedi": "08:30-12:15",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib256835",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d256835"
+    },
+    {
+      "departement": "59",
+      "nom": "Dr Adrien CHANU",
+      "url": "https://www.doctolib.fr/medecin-generaliste/wallers/adrien-chanu",
+      "location": {
+        "longitude": 3.39082059999998,
+        "latitude": 50.374501,
+        "city": "Wallers"
+      },
+      "metadata": {
+        "address": "14 Rue Henri Barbusse, 59135 Wallers",
+        "phone_number": "+33361258642",
+        "business_hours": {
+          "lundi": "08:00-12:30",
+          "mardi": "08:00-12:30",
+          "mercredi": "08:00-12:30",
+          "jeudi": "08:00-12:30",
+          "vendredi": "08:00-12:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib39564",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d39564"
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie des Hauts Champs Intermarch\u00e9",
+      "url": "https://www.doctolib.fr/pharmacie/roubaix/pharmacie-des-hauts-champs",
+      "location": {
+        "longitude": 3.194992,
+        "latitude": 50.6752292,
+        "city": "Roubaix"
+      },
+      "metadata": {
+        "address": "203 Avenue Alfred Motte, 59100 Roubaix",
+        "phone_number": "+33320819681",
+        "business_hours": {
+          "lundi": "08:30-20:00",
+          "mardi": "08:30-20:00",
+          "mercredi": "08:30-20:00",
+          "jeudi": "08:30-20:00",
+          "vendredi": "08:30-20:00",
+          "samedi": "09:00-20:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib256823",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d256823"
+    },
+    {
+      "departement": "59",
+      "nom": "Cabinet param\u00e9dical Saint-Joseph",
+      "url": "https://www.doctolib.fr/cabinet-paramedical/la-madeleine/cabinet-paramedical-saint-joseph",
+      "location": {
+        "longitude": 3.0676865,
+        "latitude": 50.6552441,
+        "city": "La Madeleine"
+      },
+      "metadata": {
+        "address": "10 Rue Saint-Joseph, 59110 La Madeleine",
+        "phone_number": "+33632003710",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib178901",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d178901"
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie V2",
+      "url": "https://www.doctolib.fr/pharmacie/villeneuve-d-ascq/pharmacie-v2",
+      "location": {
+        "longitude": 3.1267291,
+        "latitude": 50.6191097,
+        "city": "Villeneuve-d'Ascq"
+      },
+      "metadata": {
+        "address": "Boulevard de Valmy, 59650 Villeneuve-d'Ascq",
+        "phone_number": "+33320914300",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": "09:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib230818",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d230818"
+    },
+    {
+      "departement": "59",
+      "nom": "Dr Nicolas RYCKEWAERT",
+      "url": "https://www.doctolib.fr/medecin-generaliste/croix/nicolas-ryckewaert",
+      "location": {
+        "longitude": 3.15409599999998,
+        "latitude": 50.67073,
+        "city": "Croix"
+      },
+      "metadata": {
+        "address": "4 Avenue Jussieu, 59170 Croix",
+        "phone_number": "+33320980310",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib11698",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d11698"
+    },
+    {
+      "departement": "59",
+      "nom": "Dr Audrey MALAGNOUX",
+      "url": "https://www.doctolib.fr/medecin-generaliste/lille/audrey-malagnoux",
+      "location": {
+        "longitude": 3.07012810000003,
+        "latitude": 50.6328311,
+        "city": "Lille"
+      },
+      "metadata": {
+        "address": "55 Avenue du Pr\u00e9sident Kennedy, 59800 Lille",
+        "phone_number": "+33984245401",
+        "business_hours": {
+          "lundi": "09:00-12:00, 14:00-17:00",
+          "mardi": "09:00-12:00, 13:30-15:00",
+          "mercredi": "14:00-17:00",
+          "jeudi": "10:00-12:00, 15:00-17:00",
+          "vendredi": "09:00-12:00, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib78224",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d78224"
+    },
+    {
+      "departement": "59",
+      "nom": "Dr Etienne DELEPIERRE",
+      "url": "https://www.doctolib.fr/medecin-generaliste/faches-thumesnil/etienne-delepierre",
+      "location": {
+        "longitude": 3.07850499999995,
+        "latitude": 50.5958646,
+        "city": "Faches-Thumesnil"
+      },
+      "metadata": {
+        "address": "Avenue de Bordeaux, 59155 Faches-Thumesnil",
+        "phone_number": "+33320373493",
+        "business_hours": {
+          "lundi": "08:30-12:00",
+          "mardi": "09:00-12:00",
+          "mercredi": "09:00-12:00",
+          "jeudi": "09:00-12:00",
+          "vendredi": "09:00-12:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib84450",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d84450"
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie Obled",
+      "url": "https://www.doctolib.fr/pharmacie/hallennes-lez-haubourdin/pharmacie-obled",
+      "location": {
+        "longitude": 2.9670898,
+        "latitude": 50.6159983,
+        "city": "Hallennes-lez-Haubourdin"
+      },
+      "metadata": {
+        "address": "57 Rue Emile Zola, 59320 Hallennes-lez-Haubourdin",
+        "phone_number": "+33320507737",
+        "business_hours": {
+          "lundi": "08:30-12:30, 13:30-19:00",
+          "mardi": "08:30-12:30, 13:30-19:00",
+          "mercredi": "08:30-12:30, 13:30-19:00",
+          "jeudi": "08:30-12:30, 13:30-19:00",
+          "vendredi": "08:30-12:30, 13:30-19:00",
+          "samedi": "09:00-12:30, 14:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib249606",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d249606"
+    },
+    {
+      "departement": "59",
+      "nom": "CH de Roubaix - Centre de vaccination COVID-19",
+      "url": "https://www.doctolib.fr/hopital-public/roubaix/ch-de-roubaix-centre-de-vaccination-covid-19",
+      "location": {
+        "longitude": 3.206107,
+        "latitude": 50.6797125,
+        "city": "Roubaix"
+      },
+      "metadata": {
+        "address": "Avenue Maxence Van Der Meersch, 59100 Roubaix",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib241483pid163503",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d241483"
+    },
+    {
+      "departement": "59",
+      "nom": "CHU de Lille - Centre vaccination Covid - 19 - Lille - Lille",
+      "url": "https://www.doctolib.fr/hopital-public/lille/chu-lille-vaccination-covid-19?pid=practice-181611",
+      "location": {
+        "longitude": 3.034404,
+        "latitude": 50.605823,
+        "city": "Lille"
+      },
+      "metadata": {
+        "address": "Rue Pierre Decoulx, 59000 Lille",
+        "phone_number": "+33320444493",
+        "business_hours": {
+          "lundi": "08:30-12:30, 13:30-17:00",
+          "mardi": "08:30-12:30, 13:30-17:00",
+          "mercredi": "08:30-12:30, 13:30-17:00",
+          "jeudi": "08:30-12:30, 13:30-17:00",
+          "vendredi": "08:30-12:30, 13:30-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib241025pid181611",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d241025"
+    },
+    {
+      "departement": "59",
+      "nom": "CHU de Lille - Centre vaccination Covid - 19 - Lille - Lille",
+      "url": "https://www.doctolib.fr/hopital-public/lille/chu-lille-vaccination-covid-19",
+      "location": {
+        "longitude": 3.034404,
+        "latitude": 50.605823,
+        "city": "Lille"
+      },
+      "metadata": {
+        "address": "Rue Pierre Decoulx, 59120 Lille",
+        "phone_number": "+33362943677",
+        "business_hours": {
+          "lundi": "09:00-20:00",
+          "mardi": "09:00-20:00",
+          "mercredi": "09:00-20:00",
+          "jeudi": "09:00-20:00",
+          "vendredi": "09:00-20:00",
+          "samedi": "09:00-20:00",
+          "dimanche": "09:00-20:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib241025pid163202",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d241025"
+    },
+    {
+      "departement": "59",
+      "nom": "Cabinet Infirmier St Jo de Pauline Plaquin et Clara Faligot",
+      "url": "https://www.doctolib.fr/cabinet-medical/la-madeleine/cabinet-infirmier-st-jo-de-pauline-plaquin-et-clara-faligot",
+      "location": {
+        "longitude": 3.0676865,
+        "latitude": 50.6552441,
+        "city": "La Madeleine"
+      },
+      "metadata": {
+        "address": "10 Rue Saint-Joseph, 59110 La Madeleine",
+        "phone_number": "+33632003710",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib180048",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d180048"
+    },
+    {
+      "departement": "59",
+      "nom": "CH La bass\u00e9e - Vaccination COVID",
+      "url": "https://www.doctolib.fr/hopital-public/bassee/ch-la-bassee-vaccination-covid",
+      "location": {
+        "longitude": 2.8042305,
+        "latitude": 50.5309116,
+        "city": "Bass\u00e9e"
+      },
+      "metadata": {
+        "address": "17 Avenue Jean Baptiste Lebas, 59480 Bass\u00e9e",
+        "phone_number": "+33613559387",
+        "business_hours": {
+          "lundi": "08:30-12:00, 13:30-17:00",
+          "mardi": "08:30-12:00, 13:30-17:00",
+          "mercredi": "08:30-12:00, 13:30-17:00",
+          "jeudi": "08:30-12:00, 13:30-17:00",
+          "vendredi": "08:30-12:00, 13:30-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib243249",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T10:11:06.037781+02:00",
+      "appointment_schedules": null,
+      "gid": "d243249"
+    },
+    {
+      "departement": "59",
+      "nom": "Centre Hospitalier d\u2019Armenti\u00e8res",
+      "url": "https://www.doctolib.fr/hopital-public/armentieres/ch-armentieres?pid=practice-175038",
+      "location": {
+        "longitude": 2.8671109,
+        "latitude": 50.6869228,
+        "city": "Armenti\u00e8res"
+      },
+      "metadata": {
+        "address": "136 Boulevard Faidherbe, 59280 Armenti\u00e8res",
+        "phone_number": "+33320483334",
+        "business_hours": {
+          "lundi": "09:00-13:00, 13:00-17:00",
+          "mardi": "09:00-13:00, 13:00-17:00",
+          "mercredi": "09:00-13:00, 13:00-17:00",
+          "jeudi": "09:00-13:00, 13:00-17:00",
+          "vendredi": "09:00-13:00, 13:00-17:00",
+          "samedi": "09:00-13:00, 13:00-17:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib241874pid175038",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d241874"
+    },
+    {
+      "departement": "59",
+      "nom": "Centre Hospitalier Universitaire de Lille (CHU)",
+      "url": "https://www.doctolib.fr/hopital-public/lille/chu-de-lille?pid=practice-181611",
+      "location": {
+        "longitude": 3.034404,
+        "latitude": 50.605823,
+        "city": "Lille"
+      },
+      "metadata": {
+        "address": "Rue Pierre Decoulx, 59000 Lille",
+        "phone_number": "+33320444493",
+        "business_hours": {
+          "lundi": "08:30-12:30, 13:30-17:00",
+          "mardi": "08:30-12:30, 13:30-17:00",
+          "mercredi": "08:30-12:30, 13:30-17:00",
+          "jeudi": "08:30-12:30, 13:30-17:00",
+          "vendredi": "08:30-12:30, 13:30-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib123297pid181611",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d123297"
+    },
+    {
+      "departement": "59",
+      "nom": "Dr Bruno LEBLANC",
+      "url": "https://www.doctolib.fr/medecin-generaliste/tourcoing/bruno-leblanc",
+      "location": {
+        "longitude": 3.15577469999994,
+        "latitude": 50.7056386,
+        "city": "Tourcoing"
+      },
+      "metadata": {
+        "address": "132 Rue du Blanc Seau, 59200 Tourcoing",
+        "phone_number": "+33320363212",
+        "business_hours": {
+          "lundi": "07:00-19:00",
+          "mardi": "07:00-19:00",
+          "mercredi": "07:00-19:00",
+          "jeudi": "07:00-12:00",
+          "vendredi": "07:00-19:00",
+          "samedi": "07:30-11:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib83229",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d83229"
+    },
+    {
+      "departement": "59",
+      "nom": "Dr L Phuong BETBEDER NGUYEN",
+      "url": "https://www.doctolib.fr/gynecologue-medicale/wattignies/n-phuong-betbeder-nguyen",
+      "location": {
+        "longitude": 3.05258129999993,
+        "latitude": 50.5990662,
+        "city": "Wattignies"
+      },
+      "metadata": {
+        "address": "82 Rue Clemenceau, 59139 Wattignies",
+        "phone_number": "+33320070809",
+        "business_hours": {
+          "lundi": "11:30-17:00",
+          "mardi": "13:00-17:00",
+          "mercredi": "11:00-17:30",
+          "jeudi": "09:30-18:30",
+          "vendredi": "09:30-13:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib145697",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d145697"
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie du Bourg",
+      "url": "https://www.doctolib.fr/pharmacie/lambersart/pharmacie-du-bourg",
+      "location": {
+        "longitude": 3.0227377,
+        "latitude": 50.6511664,
+        "city": "Lambersart"
+      },
+      "metadata": {
+        "address": "389 Avenue de l'Hippodrome, 59130 Lambersart",
+        "phone_number": "+33320922747",
+        "business_hours": {
+          "lundi": "08:30-12:30, 14:00-19:30",
+          "mardi": "08:30-12:30, 14:00-19:30",
+          "mercredi": "08:30-12:30, 14:00-19:30",
+          "jeudi": "08:30-12:30, 14:00-19:30",
+          "vendredi": "08:30-12:30, 14:00-19:30",
+          "samedi": "08:30-12:30, 14:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib255564",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d255564"
+    },
+    {
+      "departement": "59",
+      "nom": "Grande Pharmacie Des Halles",
+      "url": "https://app.ordoclic.fr/app/pharmacie/grande-pharmacie-des-halles-lille",
+      "location": {
+        "longitude": 3.054965,
+        "latitude": 50.6312977,
+        "city": "lille"
+      },
+      "metadata": {
+        "address": "99 Rue de Solferino, 59000 Lille",
+        "phone_number": "+33320540274",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordoclic0662342e",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "0662342e"
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie De La Sambre",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-sambre-jeumont",
+      "location": {
+        "longitude": 4.102241999999999,
+        "latitude": 50.29707430000001,
+        "city": "jeumont"
+      },
+      "metadata": {
+        "address": "27 Rue Jean Jaur\u00e8s, 59460 Jeumont",
+        "phone_number": "+33327396187",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordocliccfa2beff",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "cfa2beff"
+    },
+    {
+      "departement": "59",
+      "nom": "Centre de vaccination - CHSA Maubeuge",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/maubeuge-59600/centre-hospitalier-de-sambre-avesnois/centre-de-vaccination-du-centre-hospitalier-de-sambre-avesnois",
+      "location": {
+        "longitude": 3.95922,
+        "latitude": 50.2785,
+        "city": "Maubeuge"
+      },
+      "metadata": {
+        "address": "13 Boulevard Louis Pasteur, 59600 Maubeuge",
+        "phone_number": "+33327698786",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-21T16:45:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc1045",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347419+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "1045"
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie Mutualiste de Roubaix",
+      "url": "https://www.maiia.com/pharmacie/59100-roubaix/pharmacie-mutualiste-de-roubaix?centerid=602bd6f8f19d417a4a2475c5",
+      "location": {
+        "longitude": 3.185435,
+        "latitude": 50.692295,
+        "city": "Roubaix"
+      },
+      "metadata": {
+        "address": "34 boulevard Gambetta 59100 Roubaix",
+        "phone_number": "+33320894100",
+        "business_hours": {
+          "Lundi": "09:00-19:30",
+          "Mardi": "09:00-19:30",
+          "Mercredi": "09:00-19:30",
+          "Jeudi": "09:00-19:30",
+          "Vendredi": "09:00-19:30",
+          "Samedi": "09:00-12:30 13:30-17:00",
+          "Dimanche": "09:00-19:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "maiia602bd6f8",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T15:13:19.741207+02:00",
+      "appointment_schedules": null,
+      "gid": "602bd6f8"
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie Dufour",
+      "url": "https://www.maiia.com/pharmacie/59140-dunkerque/pharmacie-dufour?centerid=603e504048362623d5c5583b",
+      "location": {
+        "longitude": 2.358616,
+        "latitude": 51.028791,
+        "city": "Dunkerque"
+      },
+      "metadata": {
+        "address": "20 Rue de la Republique (Saint-Pol-sur-Mer) 59140 Dunkerque",
+        "phone_number": "+33328649325",
+        "business_hours": {
+          "Lundi": "08:30-19:00",
+          "Mardi": "08:30-19:00",
+          "Mercredi": "08:30-19:00",
+          "Jeudi": "08:30-19:00",
+          "Vendredi": "08:30-19:00",
+          "Samedi": "08:30-13:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "maiia603e5040",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "603e5040"
+    }
+  ]
+}

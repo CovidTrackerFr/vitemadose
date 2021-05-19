@@ -1,0 +1,264 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.588907+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "81",
+      "nom": "Pharmacie Joly",
+      "url": "https://www.maiia.com/pharmacie/81210-lacrouzette/pharmacie-joly?centerid=6049c6841feec469afd51f68",
+      "location": {
+        "longitude": 2.348026,
+        "latitude": 43.662389,
+        "city": "Lacrouzette"
+      },
+      "metadata": {
+        "address": "14 Route de Castres 81210 Lacrouzette",
+        "phone_number": "+33563506232",
+        "business_hours": {
+          "Lundi": "08:30-12:15 14:30-19:15",
+          "Mardi": "08:30-12:15 14:30-19:15",
+          "Mercredi": "08:30-12:15 14:30-19:15",
+          "Jeudi": "08:30-12:15 14:30-19:15",
+          "Vendredi": "08:30-12:15 14:30-19:15",
+          "Samedi": "09:00-12:00 15:00-18:00",
+          "Dimanche": "08:30-12:15 14:30-19:15"
+        }
+      },
+      "prochain_rdv": "2021-05-14T07:30:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 16,
+      "internal_id": "maiia6049c6841feec469afd51f68",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527630+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 8
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 16
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 16
+        }
+      ],
+      "gid": "6049c684"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "81",
+      "nom": "Centres de Vaccination Covid-19 du Tarn",
+      "url": "https://www.doctolib.fr/hopital-public/tarn/chic-castres-mazamet-centre-de-vaccination?pid=practice-165330",
+      "location": {
+        "longitude": 1.8181707,
+        "latitude": 43.7005319,
+        "city": "Lavaur"
+      },
+      "metadata": {
+        "address": "1 Place Vialas, 81500 Lavaur",
+        "phone_number": "+33563588535",
+        "business_hours": {
+          "lundi": "08:30-16:30",
+          "mardi": "08:30-16:30",
+          "mercredi": "08:30-16:30",
+          "jeudi": "08:30-16:30",
+          "vendredi": "08:30-16:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242019pid165330",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T08:35:47.361925+02:00",
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d242019"
+    },
+    {
+      "departement": "81",
+      "nom": "Centre de vaccination de Labastide Rouairoux",
+      "url": "https://www.doctolib.fr/centre-de-sante/labastide-rouairoux/centre-de-vaccination-de-labastide-rouairoux",
+      "location": {
+        "longitude": 2.634269,
+        "latitude": 43.475394,
+        "city": "Labastide-Rouairoux"
+      },
+      "metadata": {
+        "address": "Avenue de la Gare, 81270 Labastide-Rouairoux",
+        "phone_number": "+33809541919",
+        "business_hours": {
+          "lundi": "13:30-17:30",
+          "mardi": "13:30-17:30",
+          "mercredi": "13:30-17:30",
+          "jeudi": "13:30-17:30",
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242522",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d242522"
+    },
+    {
+      "departement": "81",
+      "nom": "Centre de Vaccination Covid-19 - Graulhet",
+      "url": "https://www.doctolib.fr/centre-de-sante/graulhet/centre-de-vaccination-covid-19-graulhet",
+      "location": {
+        "longitude": 1.987474,
+        "latitude": 43.7608732,
+        "city": "Graulhet"
+      },
+      "metadata": {
+        "address": "Place de L'od\u00e9on, 81300 Graulhet",
+        "phone_number": "+33809541919",
+        "business_hours": {
+          "lundi": "13:30-17:30",
+          "mardi": "13:30-17:30",
+          "mercredi": "13:30-16:30",
+          "jeudi": "13:30-16:30",
+          "vendredi": "13:30-16:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib244867",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:14:06.123159+02:00",
+      "appointment_schedules": null,
+      "gid": "d244867"
+    }
+  ]
+}

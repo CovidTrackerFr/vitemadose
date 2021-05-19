@@ -1,0 +1,610 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.564788+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "60",
+      "nom": "Pharmacie De L'Eglise",
+      "url": "https://mapharma.net/60550?c=64&l=0",
+      "location": {
+        "longitude": 2.517184,
+        "latitude": 49.274876,
+        "city": "VERNEUIL EN HALATTE"
+      },
+      "metadata": {
+        "address": "6 Place de l'Eglise, 60550 VERNEUIL EN HALATTE",
+        "business_hours": {
+          "lundi": "08:30 \u2013 12:30, 14:00 \u2013 19:30",
+          "mardi": "08:30 \u2013 12:30, 14:00 \u2013 19:30",
+          "mercredi": "08:30 \u2013 12:30, 14:00 \u2013 19:30",
+          "jeudi": "08:30 \u2013 12:30, 14:00 \u2013 19:30",
+          "vendredi": "08:30 \u2013 12:30, 14:00 \u2013 19:30",
+          "samedi": "08:30 \u2013 12:30, 14:00 \u2013 16:30",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T09:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 1170,
+      "internal_id": "mapharma3f633d3634266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.935109+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 39
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 117
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 585
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 1053
+        }
+      ],
+      "gid": "3f633d3634266c3d30"
+    },
+    {
+      "departement": "60",
+      "nom": "Centre de vaccination - CHI Clermont",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/breuil-le-sec-60840/centre-hospitalier-isarien-de-clermont/centre-de-vaccination-covid-du-centre-hospitalier-isarien-de-clermont",
+      "location": {
+        "longitude": 2.44009,
+        "latitude": 49.3824,
+        "city": "Breuil-le-Sec"
+      },
+      "metadata": {
+        "address": " Rue Guy Boulet, 60840 Breuil-le-Sec",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "08:30-18:00",
+          "mardi": "08:30-18:00",
+          "mercredi": "08:30-18:00",
+          "jeudi": "08:30-18:00",
+          "vendredi": "08:30-18:00",
+          "samedi": "08:30-12:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T12:05:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 82,
+      "internal_id": "keldoc378",
+      "vaccine_type": [
+        "Pfizer-BioNTech",
+        "Moderna"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347178+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 8
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 8
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 82
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 82
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 82
+        }
+      ],
+      "gid": "378"
+    },
+    {
+      "departement": "60",
+      "nom": "Centre de vaccination - Communaut\u00e9 Communes du Pays Noyonnais,  Salle du th\u00e9\u00e2tre Le Chevalet",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/noyon-60400/pays-noyonnais/centre-de-vaccination-du-pays-noyonnais",
+      "location": {
+        "longitude": 2.99838,
+        "latitude": 49.5817,
+        "city": "Noyon"
+      },
+      "metadata": {
+        "address": "6 Place Aristide Briand, 60400 Noyon",
+        "phone_number": "+33801908030",
+        "business_hours": {
+          "lundi": "10:00-12:00/14:00-17:00",
+          "mardi": "10:00-12:00/14:00-17:00",
+          "mercredi": "10:00-12:00/14:00-17:00",
+          "jeudi": "10:00-12:00/14:00-17:00",
+          "vendredi": "10:00-12:00/14:00-17:00",
+          "samedi": "10:00-12:00/14:00-17:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-13T15:50:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 1,
+      "internal_id": "keldoc1388",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347515+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 1
+        }
+      ],
+      "gid": "1388"
+    },
+    {
+      "departement": "60",
+      "nom": "Pharmacie H\u00f4tel de Ville",
+      "url": "https://www.maiia.com/pharmacie/60200-compiegne/pharmacie-hotel-de-ville?centerid=603cbf2b68359b1abff14b5b",
+      "location": {
+        "longitude": 2.826061,
+        "latitude": 49.417367,
+        "city": "Compi\u00e8gne"
+      },
+      "metadata": {
+        "address": "8 Rue Jean Legendre 60200 Compi\u00e8gne",
+        "phone_number": "+33344401606",
+        "business_hours": {
+          "Lundi": "08:00-20:00",
+          "Mardi": "08:00-20:00",
+          "Mercredi": "08:00-20:00",
+          "Jeudi": "08:00-20:00",
+          "Vendredi": "08:00-20:00",
+          "Samedi": "08:00-20:00"
+        }
+      },
+      "prochain_rdv": "2021-06-03T14:45:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 26,
+      "internal_id": "maiia603cbf2b68359b1abff14b5b",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527437+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 5
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 26
+        }
+      ],
+      "gid": "603cbf2b"
+    },
+    {
+      "departement": "60",
+      "nom": "Chambly Pharma",
+      "url": "https://app.ordoclic.fr/app/pharmacie/chambly-pharma-chambly",
+      "location": {
+        "longitude": 2.2564365,
+        "latitude": 49.15763519999999,
+        "city": "chambly"
+      },
+      "metadata": {
+        "address": "rue francois truffaut , 60230 Chambly",
+        "phone_number": "+33134705137",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-06-11T16:50:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 1,
+      "internal_id": "ordoclicec0e1678",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:39:59.056848+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 1
+        }
+      ],
+      "gid": "ec0e1678"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "60",
+      "nom": "Dr Claire Duchesne",
+      "url": "https://www.doctolib.fr/medecin-generaliste/senlis/claire-duchesne",
+      "location": {
+        "longitude": 2.5828458,
+        "latitude": 49.2055522,
+        "city": "Senlis"
+      },
+      "metadata": {
+        "address": "26 Place Henri IV, 60300 Senlis",
+        "phone_number": "+33344320497",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib182928",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d182928"
+    },
+    {
+      "departement": "60",
+      "nom": "Dr Ines BRET",
+      "url": "https://www.doctolib.fr/medecin-generaliste/senlis/ines-bret",
+      "location": {
+        "longitude": 2.5828458,
+        "latitude": 49.2055522,
+        "city": "Senlis"
+      },
+      "metadata": {
+        "address": "26 Place Henri IV, 60300 Senlis",
+        "phone_number": "+33344320497",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib229916",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d229916"
+    },
+    {
+      "departement": "60",
+      "nom": "Pharmacie De La Mairie M\u00e9ru",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-meru-meru",
+      "location": {
+        "longitude": 2.1355473,
+        "latitude": 49.2364028,
+        "city": "meru"
+      },
+      "metadata": {
+        "address": "4 PLACE DE L HOTEL DE VILLE, 60110 MERU",
+        "phone_number": "+33344224157",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordoclic0318b49d",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "0318b49d"
+    },
+    {
+      "departement": "60",
+      "nom": "Centre de vaccination - Centre Hospitalier Intercommunal de Compi\u00e8gne-Noyon",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/compiegne-60200/centre-hospitalier-intercommunal-compiegne-noyon/centre-de-vaccination-du-chcn",
+      "location": {
+        "longitude": 2.79026,
+        "latitude": 49.3871,
+        "city": "Compi\u00e8gne"
+      },
+      "metadata": {
+        "address": "8 Avenue Henri Adnot, 60200 Compi\u00e8gne",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "10:00-13:00/14:00-16:00",
+          "mardi": "10:00-13:00/14:00-16:00",
+          "mercredi": "10:00-13:00/14:00-16:00",
+          "jeudi": "10:00-13:00/14:00-16:00",
+          "vendredi": "10:00-13:00/14:00-16:00",
+          "samedi": "14:00-16:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc300",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "300"
+    }
+  ]
+}

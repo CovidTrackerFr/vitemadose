@@ -1,0 +1,507 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.586300+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "79",
+      "nom": "Pharmacie Frigot",
+      "url": "https://www.maiia.com/pharmacie/79000-niort/pharmacie-frigot?centerid=604f19aea842b64c5ef004b3",
+      "location": {
+        "longitude": -0.461872,
+        "latitude": 46.324623,
+        "city": "Niort"
+      },
+      "metadata": {
+        "address": "53 Rue Victor Hugo 79000 Niort",
+        "phone_number": "+33549240041",
+        "business_hours": {
+          "Lundi": "10:00-13:00 14:00-19:00",
+          "Mardi": "09:00-13:00 14:00-19:00",
+          "Mercredi": "09:00-13:00 14:00-19:00",
+          "Jeudi": "09:00-13:00 14:00-19:00",
+          "Vendredi": "09:00-13:00 14:00-19:00",
+          "Samedi": "09:00-12:30 14:30-18:30",
+          "Dimanche": "10:00-13:00 14:00-19:00"
+        }
+      },
+      "prochain_rdv": "2021-05-21T08:20:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 10,
+      "internal_id": "maiia604f19aea842b64c5ef004b3",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527611+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 10
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 10
+        }
+      ],
+      "gid": "604f19ae"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "79",
+      "nom": "Centre de vaccination Covid-19 - SDIS 79 - Nanteuil",
+      "url": "https://www.doctolib.fr/centre-de-sante/vouille/centre-de-vaccination-covid-19-sdis-79?pid=practice-179575",
+      "location": {
+        "longitude": -0.1771576,
+        "latitude": 46.4119777,
+        "city": "Nanteuil"
+      },
+      "metadata": {
+        "address": "8 Chemin des Grandes Vignes, 79400 Nanteuil",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib262594pid179575",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d262594"
+    },
+    {
+      "departement": "79",
+      "nom": "Centre de vaccination Covid-19 - SDIS 79 - Brioux-sur-Boutonne",
+      "url": "https://www.doctolib.fr/centre-de-sante/vouille/centre-de-vaccination-covid-19-sdis-79?pid=practice-179577",
+      "location": {
+        "longitude": -0.2226053,
+        "latitude": 46.141514,
+        "city": "Brioux-sur-Boutonne"
+      },
+      "metadata": {
+        "address": "20 Place du Champ de Foire, 79170 Brioux-sur-Boutonne",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib262594pid179577",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d262594"
+    },
+    {
+      "departement": "79",
+      "nom": "Centre de vaccination COVID-19 - Saint-Maixent-l'Ecole",
+      "url": "https://www.doctolib.fr/centre-de-sante/saint-maixent-l-ecole/centre-de-vaccination-covid-19-saint-maixent-l-ecole-saint-maixent-l-ecole",
+      "location": {
+        "longitude": -0.203301,
+        "latitude": 46.413781,
+        "city": "Saint-Maixent-l'\u00c9cole"
+      },
+      "metadata": {
+        "address": "Place Denfert Rochereau, 79400 Saint-Maixent-l'\u00c9cole",
+        "phone_number": "+33549169977",
+        "business_hours": {
+          "lundi": "09:00-12:30, 13:00-17:00",
+          "mardi": "09:00-12:30, 13:00-17:00",
+          "mercredi": "09:00-12:30, 13:00-17:00",
+          "jeudi": "09:00-12:30, 13:00-17:00",
+          "vendredi": "09:00-12:30, 13:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib250092",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d250092"
+    },
+    {
+      "departement": "79",
+      "nom": "Centre de vaccination de Champdeniers",
+      "url": "https://www.doctolib.fr/centre-de-sante/champdeniers/centre-de-vaccination-de-champdeniers",
+      "location": {
+        "longitude": -0.4067573,
+        "latitude": 46.4868259,
+        "city": "Champdeniers"
+      },
+      "metadata": {
+        "address": "13 Chemin du Tram, 79220 Champdeniers",
+        "phone_number": "+33586302280",
+        "business_hours": {
+          "lundi": "10:00-12:00, 14:00-16:00",
+          "mardi": "10:00-12:00, 14:00-16:00",
+          "mercredi": "10:00-12:00, 14:00-16:00",
+          "jeudi": "10:00-12:00, 14:00-16:00",
+          "vendredi": "10:00-12:00, 14:00-16:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib257315",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d257315"
+    },
+    {
+      "departement": "79",
+      "nom": "Centre de Vaccination COVID- 19 - CH Niort",
+      "url": "https://www.doctolib.fr/hopital-public/niort/centre-de-vaccination-ch-niort",
+      "location": {
+        "longitude": -0.4586251,
+        "latitude": 46.3158527,
+        "city": "Niort"
+      },
+      "metadata": {
+        "address": "40 Avenue Charles de Gaulle, 79000 Niort",
+        "phone_number": "+33549782010",
+        "business_hours": {
+          "lundi": "09:00-12:30, 13:30-17:00",
+          "mardi": "09:00-12:30, 13:30-17:00",
+          "mercredi": "09:00-12:30, 13:30-17:00",
+          "jeudi": "09:00-12:30, 13:30-17:00",
+          "vendredi": "09:00-12:30, 13:30-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242458",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d242458"
+    },
+    {
+      "departement": "79",
+      "nom": "Centre de vaccination Covid-19 - SDIS 79 - Thouars",
+      "url": "https://www.doctolib.fr/centre-de-sante/vouille/centre-de-vaccination-covid-19-sdis-79?pid=practice-179574",
+      "location": {
+        "longitude": -0.1803084,
+        "latitude": 46.9727024,
+        "city": "Thouars"
+      },
+      "metadata": {
+        "address": "2 Rue Docteur Andr\u00e9 Colas, 79100 Thouars",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib262594pid179574",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d262594"
+    },
+    {
+      "departement": "79",
+      "nom": "Centre de vaccination Covid-19 - SDIS 79 - Moncoutant-sur-S\u00e8vre",
+      "url": "https://www.doctolib.fr/centre-de-sante/vouille/centre-de-vaccination-covid-19-sdis-79?pid=practice-179573",
+      "location": {
+        "longitude": -0.596994906980896,
+        "latitude": 46.7095087331753,
+        "city": "Moncoutant-sur-S\u00e8vre"
+      },
+      "metadata": {
+        "address": "1 La Morini\u00e8re , 79320 Moncoutant-sur-S\u00e8vre",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib262594pid179573",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d262594"
+    }
+  ]
+}

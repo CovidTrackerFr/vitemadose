@@ -1,0 +1,364 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.537339+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "26",
+      "nom": "Centre de Vaccination Covid-19 - Commune de Nyons",
+      "url": "https://www.doctolib.fr/centre-de-sante/nyons/centre-de-vaccination-covid-19-commune-de-nyons",
+      "location": {
+        "longitude": 5.1352679,
+        "latitude": 44.3564883,
+        "city": "Nyons"
+      },
+      "metadata": {
+        "address": "128 Promenade de la Digue, 26110 Nyons",
+        "phone_number": "+33475261287",
+        "business_hours": {
+          "lundi": "08:30-12:30, 14:00-17:00",
+          "mardi": "08:30-12:30, 14:00-17:00",
+          "mercredi": "08:30-12:30, 14:00-17:00",
+          "jeudi": "08:30-12:30, 14:00-17:00",
+          "vendredi": "08:30-12:30, 14:00-17:00",
+          "samedi": "08:30-12:30, 14:00-17:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib244843",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d244843"
+    },
+    {
+      "departement": "26",
+      "nom": "Pharmacie Centrale de la Valdaine",
+      "url": "https://www.doctolib.fr/pharmacie/cleon-d-andran/pharmacie-centrale-de-la-valdaine?pid=practice-53742",
+      "location": {
+        "longitude": 4.95422099999996,
+        "latitude": 44.619523,
+        "city": "Cl\u00e9on-d'Andran"
+      },
+      "metadata": {
+        "address": "1 Route de Mont\u00e9limar, 26450 Cl\u00e9on-d'Andran",
+        "business_hours": {
+          "lundi": "08:30-12:00, 14:00-19:15",
+          "mardi": "08:30-12:00, 14:00-19:15",
+          "mercredi": "08:30-12:00, 14:00-19:15",
+          "jeudi": "08:30-12:00, 14:00-19:15",
+          "vendredi": "08:30-12:00, 14:00-19:15",
+          "samedi": "08:30-12:00, 14:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib90493pid53742",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d90493"
+    },
+    {
+      "departement": "26",
+      "nom": "Centre de vaccination de Crest",
+      "url": "https://www.doctolib.fr/centre-de-sante/crest/centre-de-vaccination-de-crest",
+      "location": {
+        "longitude": 5.0227097,
+        "latitude": 44.7243074,
+        "city": "Crest"
+      },
+      "metadata": {
+        "address": "Avenue Jean Rabot, 26400 Crest",
+        "phone_number": "+33618466381",
+        "business_hours": {
+          "lundi": "09:00-12:00, 14:00-18:00",
+          "mardi": "09:00-12:00, 14:00-18:00",
+          "mercredi": "09:00-12:00, 14:00-18:00",
+          "jeudi": "09:00-12:00, 14:00-18:00",
+          "vendredi": "09:00-12:00, 14:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib257134",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d257134"
+    },
+    {
+      "departement": "26",
+      "nom": "M\u00e9decins g\u00e9n\u00e9ralistes - MSP Simone Veil -  Saint Paul Trois Ch\u00e2teaux",
+      "url": "https://www.doctolib.fr/maison-de-sante/saint-paul-trois-chateaux/medecins-generalistes-msp-simone-veil-saint-paul-trois-chateaux?pid=practice-174743",
+      "location": {
+        "longitude": 4.76056257852361,
+        "latitude": 44.3464226614099,
+        "city": "Saint-Paul-Trois-Ch\u00e2teaux"
+      },
+      "metadata": {
+        "address": "4 Rue de Clastres, 26130 Saint-Paul-Trois-Ch\u00e2teaux",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib206111pid174743",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d206111"
+    },
+    {
+      "departement": "26",
+      "nom": "Pharmacie des Recollets",
+      "url": "https://www.doctolib.fr/pharmacie/romans-sur-isere/pharmacie-des-recollets",
+      "location": {
+        "longitude": 5.0340326,
+        "latitude": 45.0441124,
+        "city": "Romans-sur-Is\u00e8re"
+      },
+      "metadata": {
+        "address": "64 Avenue Berthelot, 26100 Romans-sur-Is\u00e8re",
+        "phone_number": "+33475027110",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:30-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib246774",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d246774"
+    },
+    {
+      "departement": "26",
+      "nom": "Pharmacie de la Galaure",
+      "url": "https://www.doctolib.fr/pharmacie/chateauneuf-de-galaure/pharmacie-de-la-galaure",
+      "location": {
+        "longitude": 4.9517068,
+        "latitude": 45.2213018,
+        "city": "Ch\u00e2teauneuf-de-Galaure"
+      },
+      "metadata": {
+        "address": "Les Genthons, 26330 Ch\u00e2teauneuf-de-Galaure",
+        "phone_number": "+33475686310",
+        "business_hours": {
+          "lundi": "08:30-12:30, 14:00-19:00",
+          "mardi": "08:30-12:30, 14:00-19:00",
+          "mercredi": "08:30-12:30, 14:00-19:00",
+          "jeudi": "08:30-12:30, 14:00-19:00",
+          "vendredi": "08:30-12:30, 14:00-19:00",
+          "samedi": "08:30-14:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib256347",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d256347"
+    }
+  ]
+}

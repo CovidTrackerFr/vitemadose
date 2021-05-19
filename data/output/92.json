@@ -1,0 +1,1687 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.595706+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "92",
+      "nom": "Pharmacie Trincal",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-trincal-vanves",
+      "location": {
+        "longitude": 2.2900994,
+        "latitude": 48.82025789999999,
+        "city": "vanves"
+      },
+      "metadata": {
+        "address": "55 R RAYMOND MARCHERON, 92170 VANVES",
+        "phone_number": "+33146420381",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-05-14T09:00:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 30,
+      "internal_id": "ordocliccfb2dc09",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:39:59.056821+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 5
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 30
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 30
+        }
+      ],
+      "gid": "cfb2dc09"
+    },
+    {
+      "departement": "92",
+      "nom": "CENTRE DE VACCINATION COVID - VILLE DE COLOMBES",
+      "url": "https://www.maiia.com/centre-de-vaccination/92700-colombes/centre-de-vaccination-covid---ville-de-colombes?centerid=6000660219fa1c60a4ff65e9",
+      "location": {
+        "longitude": 2.24675160629,
+        "latitude": 48.9225179147,
+        "city": "COLOMBES"
+      },
+      "metadata": {
+        "address": "GYMNASE AMBROISE PARE 140 rue Saint Denis 92700 COLOMBES",
+        "phone_number": "+33805119395",
+        "business_hours": {
+          "Lundi": "08:30-20:30",
+          "Mardi": "08:30-20:30",
+          "Mercredi": "08:30-20:30",
+          "Jeudi": "08:30-20:30",
+          "Vendredi": "08:30-20:30",
+          "Samedi": "08:30-20:30",
+          "Dimanche": "08:30-20:30"
+        }
+      },
+      "prochain_rdv": "2021-05-18T08:25:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 600,
+      "internal_id": "maiia6000660219fa1c60a4ff65e9",
+      "vaccine_type": [
+        "ARNm"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527551+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 600
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 600
+        }
+      ],
+      "gid": "60006602"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "92",
+      "nom": "Centre Municipal de Sant\u00e9 (CMS) Etienne Gatineau-Sailliant",
+      "url": "https://www.doctolib.fr/centre-de-sante/gennevilliers/centre-municipal-de-sante-etienne-gatineau-sailliant",
+      "location": {
+        "longitude": 2.296649,
+        "latitude": 48.9341317,
+        "city": "Gennevilliers"
+      },
+      "metadata": {
+        "address": "3 Rue de la Paix, 92230 Gennevilliers",
+        "phone_number": "+33140856650",
+        "business_hours": {
+          "lundi": "08:30-19:00",
+          "mardi": "08:30-19:00",
+          "mercredi": "08:30-19:00",
+          "jeudi": "08:30-19:00",
+          "vendredi": "08:30-19:00",
+          "samedi": "08:30-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib126820pid76565",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d126820"
+    },
+    {
+      "departement": "92",
+      "nom": "Centres municipaux de sant\u00e9 (CMS) de Gennevilliers",
+      "url": "https://www.doctolib.fr/centre-de-sante/gennevilliers/centres-de-sante-de-gennevilliers",
+      "location": {
+        "longitude": 2.296649,
+        "latitude": 48.9341317,
+        "city": "Gennevilliers"
+      },
+      "metadata": {
+        "address": "3 Rue de la Paix, 92230 Gennevilliers",
+        "phone_number": "+33140856650",
+        "business_hours": {
+          "lundi": "08:30-19:00",
+          "mardi": "08:30-19:00",
+          "mercredi": "08:30-19:00",
+          "jeudi": "08:30-19:00",
+          "vendredi": "08:30-19:00",
+          "samedi": "08:30-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib126815pid76565",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d126815"
+    },
+    {
+      "departement": "92",
+      "nom": "Dr Martine GERARDIN",
+      "url": "https://www.doctolib.fr/pediatre/rueil-malmaison/martine-gerardin",
+      "location": {
+        "longitude": 2.1891303,
+        "latitude": 48.8790088,
+        "city": "Rueil-Malmaison"
+      },
+      "metadata": {
+        "address": "9 Rue Danton, 92500 Rueil-Malmaison",
+        "phone_number": "+33147329161",
+        "business_hours": {
+          "lundi": "08:00-13:00, 15:15-19:00",
+          "mardi": "08:00-13:00, 15:15-19:00",
+          "mercredi": "08:00-13:00, 15:15-19:00",
+          "jeudi": null,
+          "vendredi": "08:00-13:00, 15:15-19:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib197739",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d197739"
+    },
+    {
+      "departement": "92",
+      "nom": "Cabinet d'infirmiers Grizzetti",
+      "url": "https://www.doctolib.fr/cabinet-medical/meudon/cabinet-d-infirmiers-grizzetti",
+      "location": {
+        "longitude": 2.237501,
+        "latitude": 48.8097465,
+        "city": "Meudon"
+      },
+      "metadata": {
+        "address": "7 Rue du March\u00e9 Couvert, 92190 Meudon",
+        "phone_number": "+33665979636",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib222136pid147600",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d222136"
+    },
+    {
+      "departement": "92",
+      "nom": "Centre de vaccination de Levallois",
+      "url": "https://www.doctolib.fr/centre-de-sante/levallois-perret/centre-de-vaccination-de-levallois",
+      "location": {
+        "longitude": 2.2782482,
+        "latitude": 48.8960883,
+        "city": "Levallois-Perret"
+      },
+      "metadata": {
+        "address": "141 Rue Danton, 92300 Levallois-Perret",
+        "phone_number": "+33147157515",
+        "business_hours": {
+          "lundi": "09:30-17:30",
+          "mardi": "09:30-17:30",
+          "mercredi": "09:30-17:30",
+          "jeudi": "09:30-17:30",
+          "vendredi": "09:30-17:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib256191",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d256191"
+    },
+    {
+      "departement": "92",
+      "nom": "Centre de Vaccination Covid-19 - La Garenne Colombes",
+      "url": "https://www.doctolib.fr/centre-de-sante/la-garenne-colombes/centre-de-vaccination-covid-19-la-garenne-colombes",
+      "location": {
+        "longitude": 2.2454947,
+        "latitude": 48.9099172,
+        "city": "La Garenne-Colombes"
+      },
+      "metadata": {
+        "address": "20-22 Rue de Ch\u00e2teaudun, 92250 La Garenne-Colombes",
+        "phone_number": "+33172424028",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242600",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d242600"
+    },
+    {
+      "departement": "92",
+      "nom": "Centre de vaccination Covid-19 du th\u00e9\u00e2tre des Sablons \u00e0 Neuilly",
+      "url": "https://www.doctolib.fr/centre-de-sante/neuilly-sur-seine/centre-de-vaccination-covid-19-du-theatre-des-sablons",
+      "location": {
+        "longitude": 2.2757342,
+        "latitude": 48.8832692,
+        "city": "Neuilly-sur-Seine"
+      },
+      "metadata": {
+        "address": "70 Avenue du Roule, 92200 Neuilly-sur-Seine",
+        "phone_number": "+33800092200",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": "09:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242121",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d242121"
+    },
+    {
+      "departement": "92",
+      "nom": "Centre de sant\u00e9 des \u00c9pinettes d'Issy-les-Moulineaux",
+      "url": "https://www.doctolib.fr/centre-de-sante/issy-les-moulineaux/centre-de-sante-des-epinettes",
+      "location": {
+        "longitude": 2.26041710000004,
+        "latitude": 48.8182453,
+        "city": "Issy-les-Moulineaux"
+      },
+      "metadata": {
+        "address": "44 Rue d'Erevan, 92130 Issy-les-Moulineaux",
+        "phone_number": "+33141239246",
+        "business_hours": {
+          "lundi": "08:30-19:00",
+          "mardi": "08:30-19:00",
+          "mercredi": "08:30-19:00",
+          "jeudi": "08:30-19:00",
+          "vendredi": "08:30-19:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib175426",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d175426"
+    },
+    {
+      "departement": "92",
+      "nom": "Espace Sant\u00e9 Simone Veil d'Issy-les-Moulineaux",
+      "url": "https://www.doctolib.fr/centre-de-sante/issy-les-moulineaux/centre-municipal-de-sante-d-issy-les-moulineaux",
+      "location": {
+        "longitude": 2.26947180000002,
+        "latitude": 48.8228601,
+        "city": "Issy-les-Moulineaux"
+      },
+      "metadata": {
+        "address": "27 bis Avenue Victor Cresson, 92130 Issy-les-Moulineaux",
+        "phone_number": "+33141238300",
+        "business_hours": {
+          "lundi": "08:30-19:00",
+          "mardi": "08:30-19:00",
+          "mercredi": "08:30-19:00",
+          "jeudi": "08:30-19:00",
+          "vendredi": "08:30-19:00",
+          "samedi": "08:30-12:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib41921pid22883",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d41921"
+    },
+    {
+      "departement": "92",
+      "nom": "Dr Franck Lalloum",
+      "url": "https://www.doctolib.fr/ophtalmologue/paris/franck-lalloum",
+      "location": {
+        "longitude": 2.29009740000004,
+        "latitude": 48.8939878,
+        "city": "Levallois-Perret"
+      },
+      "metadata": {
+        "address": "2 Place d'Estienne d'Orves, 92300 Levallois-Perret",
+        "phone_number": "+33146394021",
+        "business_hours": {
+          "lundi": "08:30-18:00",
+          "mardi": "08:30-18:00",
+          "mercredi": "14:00-18:00",
+          "jeudi": "08:30-18:00",
+          "vendredi": "08:30-12:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib7158",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d7158"
+    },
+    {
+      "departement": "92",
+      "nom": "Dr Laurie TAIEB",
+      "url": "https://www.doctolib.fr/medecin-generaliste/paris/laurie-taieb",
+      "location": {
+        "longitude": 2.26292280000007,
+        "latitude": 48.8267596,
+        "city": "Issy-les-Moulineaux"
+      },
+      "metadata": {
+        "address": "6 All\u00e9e Gustave Eiffel, 92130 Issy-les-Moulineaux",
+        "phone_number": "+33184192300",
+        "business_hours": {
+          "lundi": "08:30-20:00",
+          "mardi": "08:30-20:00",
+          "mercredi": "08:30-20:00",
+          "jeudi": "08:30-20:00",
+          "vendredi": "08:30-20:00",
+          "samedi": "08:30-20:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib92645",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d92645"
+    },
+    {
+      "departement": "92",
+      "nom": "Centres municipaux de sant\u00e9 de Malakoff (Maurice-T\u00e9nine et Jacqueline Akoun-Cornet)",
+      "url": "https://www.doctolib.fr/centre-de-sante/malakoff/centre-municipal-de-sante-maurice-tenine-malakoff",
+      "location": {
+        "longitude": 2.30486529999996,
+        "latitude": 48.8205821,
+        "city": "Malakoff"
+      },
+      "metadata": {
+        "address": "74 Avenue Pierre Larousse, 92240 Malakoff",
+        "phone_number": "+33141174350",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib66472pid1359",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d66472"
+    },
+    {
+      "departement": "92",
+      "nom": "Dr Marie-Adelaide DE OLIVEIRA",
+      "url": "https://www.doctolib.fr/medecin-generaliste/montrouge/marie-adelaide-de-oliveira",
+      "location": {
+        "longitude": 2.31883360000006,
+        "latitude": 48.8120868,
+        "city": "Montrouge"
+      },
+      "metadata": {
+        "address": "2 Rue Boileau, 92120 Montrouge",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": "09:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib20278",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d20278"
+    },
+    {
+      "departement": "92",
+      "nom": "Centre de Vaccination Covid-19 - Ch\u00e2tillon Malakoff",
+      "url": "https://www.doctolib.fr/centre-de-sante/chatillon/centre-de-vaccination-covid-19-chatillon-malakoff",
+      "location": {
+        "longitude": 2.2990351,
+        "latitude": 48.8095142,
+        "city": "Ch\u00e2tillon"
+      },
+      "metadata": {
+        "address": "2 Avenue Saint-Exup\u00e9ry, 92320 Ch\u00e2tillon",
+        "phone_number": "+33158072460",
+        "business_hours": {
+          "lundi": "08:00-12:00, 13:00-17:00",
+          "mardi": "08:00-12:00, 13:00-17:00",
+          "mercredi": "08:00-12:00, 13:00-17:00",
+          "jeudi": "08:00-12:00, 13:00-17:00",
+          "vendredi": "08:00-12:00, 13:00-17:00",
+          "samedi": "08:00-12:00, 13:00-17:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib257746",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:24:01.716490+02:00",
+      "appointment_schedules": null,
+      "gid": "d257746"
+    },
+    {
+      "departement": "92",
+      "nom": "Centre de vaccination Covid de Clichy",
+      "url": "https://www.doctolib.fr/centre-depistage-covid/clichy/centre-de-vaccination-covid-de-clichy",
+      "location": {
+        "longitude": 2.3036867,
+        "latitude": 48.9027864,
+        "city": "Clichy"
+      },
+      "metadata": {
+        "address": "6 Place du March\u00e9, 92110 Clichy",
+        "phone_number": "+33800022000",
+        "business_hours": {
+          "lundi": "08:30-12:30, 14:00-18:00",
+          "mardi": "08:30-12:30, 14:00-18:00",
+          "mercredi": "08:30-12:30, 14:00-18:00",
+          "jeudi": "08:30-12:30, 14:00-18:00",
+          "vendredi": "08:30-12:30, 14:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242304",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d242304"
+    },
+    {
+      "departement": "92",
+      "nom": "Centre de Vaccination COVID-19 de la Ville de Clamart",
+      "url": "https://www.doctolib.fr/centre-de-sante/clamart/centre-de-vaccination-covid-de-la-ville-de-clamart",
+      "location": {
+        "longitude": 2.2610356,
+        "latitude": 48.8003267,
+        "city": "Clamart"
+      },
+      "metadata": {
+        "address": "Place Jules Hunebelle, 92140 Clamart",
+        "business_hours": {
+          "lundi": "08:00-12:00, 13:30-17:00",
+          "mardi": "08:00-12:00, 13:30-17:00",
+          "mercredi": "08:00-12:00, 13:30-17:00",
+          "jeudi": "08:00-12:00, 13:30-17:00",
+          "vendredi": "08:00-12:00, 13:30-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242636",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:24:01.716470+02:00",
+      "appointment_schedules": null,
+      "gid": "d242636"
+    },
+    {
+      "departement": "92",
+      "nom": "Dr Catherine BARZEGAR",
+      "url": "https://www.doctolib.fr/dermatologue/clamart/catherine-barzegar",
+      "location": {
+        "longitude": 2.27045210000006,
+        "latitude": 48.8133223,
+        "city": "Clamart"
+      },
+      "metadata": {
+        "address": "26 Avenue du Dr Calmette, 92140 Clamart",
+        "phone_number": "+33146447638",
+        "business_hours": {
+          "lundi": "08:30-19:00",
+          "mardi": "08:30-19:00",
+          "mercredi": "08:30-19:00",
+          "jeudi": "08:30-19:00",
+          "vendredi": "08:30-19:00",
+          "samedi": "09:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib82426",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d82426"
+    },
+    {
+      "departement": "92",
+      "nom": "Centre de Sant\u00e9 de la Croix-Rouge - Villeneuve-la-Garenne",
+      "url": "https://www.doctolib.fr/centre-de-sante/villeneuve-la-garenne/centre-de-sante-de-la-croix-rouge-villeneuve-la-garenne-villeneuve-la-garenne",
+      "location": {
+        "longitude": 2.3328383,
+        "latitude": 48.9339826,
+        "city": "Villeneuve-la-Garenne"
+      },
+      "metadata": {
+        "address": "196 Boulevard Gallieni, 92390 Villeneuve-la-Garenne",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib227938",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d227938"
+    },
+    {
+      "departement": "92",
+      "nom": "Vaccination COVID 19 - Centre M\u00e9dico-dentaire du Nord-Ouest Parisien / CMDNOP",
+      "url": "https://www.doctolib.fr/centre-de-sante/clichy/vaccination-centre-medico-dentaire-du-nord-ouest-parisien-cmdnop",
+      "location": {
+        "longitude": 2.3013727,
+        "latitude": 48.9008608,
+        "city": "Clichy"
+      },
+      "metadata": {
+        "address": "39 Rue Casteres, 92110 Clichy",
+        "phone_number": "+33147312626",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib258202",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d258202"
+    },
+    {
+      "departement": "92",
+      "nom": "CAST (Centre Alternative Sant\u00e9 du Trap\u00e8ze)",
+      "url": "https://www.doctolib.fr/cabinet-paramedical/boulogne-billancourt/cast-centre-alternative-sante-du-trapeze",
+      "location": {
+        "longitude": 2.2404344,
+        "latitude": 48.8263607,
+        "city": "Boulogne-Billancourt"
+      },
+      "metadata": {
+        "address": "34 Rue Marcel Bontemps, 92100 Boulogne-Billancourt",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib66094pid37397",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d66094"
+    },
+    {
+      "departement": "92",
+      "nom": "Dr Mathieu van dessel",
+      "url": "https://www.doctolib.fr/medecin-generaliste/clichy/mathieu-van-dessel",
+      "location": {
+        "longitude": 2.3170436,
+        "latitude": 48.9037211,
+        "city": "Clichy"
+      },
+      "metadata": {
+        "address": "21 Rue Georges Boisseau, 92110 Clichy",
+        "phone_number": "+33184200402",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-18:00",
+          "mardi": "09:00-13:00, 14:00-18:00",
+          "mercredi": "09:00-13:00, 14:00-18:00",
+          "jeudi": "09:00-13:00, 14:00-18:00",
+          "vendredi": "09:00-13:00, 14:00-16:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib186739",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d186739"
+    },
+    {
+      "departement": "92",
+      "nom": "Captain Pharma",
+      "url": "https://app.ordoclic.fr/app/pharmacie/captain-pharma-nanterre",
+      "location": {
+        "longitude": 2.2174692,
+        "latitude": 48.8856215,
+        "city": "nanterre"
+      },
+      "metadata": {
+        "address": "242 Avenue Georges Clemenceau, 92000 Nanterre",
+        "phone_number": "+33184608680",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordoclic72908e47",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "72908e47"
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie Amandiers",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-amandiers-nanterre",
+      "location": {
+        "longitude": 2.2025588,
+        "latitude": 48.8894482,
+        "city": "nanterre-"
+      },
+      "metadata": {
+        "address": "25 rue Sadi Carnot , 92000 Nanterre ",
+        "phone_number": "+33147213294",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordoclic662646d8",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "662646d8"
+    },
+    {
+      "departement": "92",
+      "nom": "Snc Pharmacie Du Centre Tchikirian - Teknetzian",
+      "url": "https://app.ordoclic.fr/app/pharmacie/snc-pharmacie-du-centre-tchikirian---teknetzian-la-garenne-colombes",
+      "location": {
+        "longitude": 2.2479974,
+        "latitude": 48.90670799999999,
+        "city": "la-garenne-colombes"
+      },
+      "metadata": {
+        "address": "2 Rd Pt du Souvenir Fran\u00e7ais , 92250 LA GARENNE COLOMBES",
+        "phone_number": "+33142425204",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordoclica65cf6f8",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "a65cf6f8"
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie De La Gare",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-gare-nanterre",
+      "location": {
+        "longitude": 2.1962787,
+        "latitude": 48.8949177,
+        "city": "nanterre"
+      },
+      "metadata": {
+        "address": "82bis rue Maurice Thorez, 92000 Nanterre",
+        "phone_number": "+33147211223",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordoclic9eaace69",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "9eaace69"
+    },
+    {
+      "departement": "92",
+      "nom": "Centre de vaccination PERCY",
+      "url": "https://www.maiia.com/centre-de-vaccination/92140-clamart/centre-de-vaccination-percy?centerid=6076b154ad24f57239de0c4a",
+      "location": {
+        "longitude": 2.25474652922,
+        "latitude": 48.7964306792,
+        "city": "CLAMART"
+      },
+      "metadata": {
+        "address": "101 avenue Henri Barbusse 92140 CLAMART",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "maiia6076b154",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:53:56.620266+02:00",
+      "appointment_schedules": null,
+      "gid": "6076b154"
+    },
+    {
+      "departement": "92",
+      "nom": "Centre de Vaccination Garches",
+      "url": "https://www.maiia.com/centre-de-vaccination/92380-garches/centre-de-vaccination-garches?centerid=5fff08ad79dfd27ec2d18435",
+      "location": {
+        "longitude": 2.188722,
+        "latitude": 48.844239,
+        "city": "Garches"
+      },
+      "metadata": {
+        "address": "86 Grande Rue 92380 Garches",
+        "phone_number": "+33147956615",
+        "business_hours": {
+          "Lundi": "09:00-17:00",
+          "Mardi": "09:00-17:00",
+          "Mercredi": "09:00-17:00",
+          "Jeudi": "09:00-17:00",
+          "Vendredi": "09:00-17:00",
+          "Samedi": "09:00-17:00",
+          "Dimanche": "09:00-17:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "maiia5fff08ad",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "5fff08ad"
+    },
+    {
+      "departement": "92",
+      "nom": "Pharmacie du Pont de Neuilly",
+      "url": "https://www.maiia.com/pharmacie/92200-neuilly-sur-seine/pharmacie-du-pont-de-neuilly?centerid=60408dc1484c650ca0a454b0",
+      "location": {
+        "longitude": 2.25946,
+        "latitude": 48.885429,
+        "city": "Neuilly-sur-Seine"
+      },
+      "metadata": {
+        "address": "174 Avenue Charles de Gaulle 92200 Neuilly-sur-Seine",
+        "phone_number": "+33146247532",
+        "business_hours": {
+          "Lundi": "08:30-19:00",
+          "Mardi": "08:30-19:00",
+          "Mercredi": "08:30-19:00",
+          "Jeudi": "08:30-19:00",
+          "Vendredi": "08:30-19:00",
+          "Samedi": "09:00-13:00",
+          "Dimanche": "08:30-19:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "maiia60408dc1",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T09:28:39.478573+02:00",
+      "appointment_schedules": null,
+      "gid": "60408dc1"
+    }
+  ]
+}

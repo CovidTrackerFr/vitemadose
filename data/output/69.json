@@ -1,0 +1,1361 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.572927+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "69",
+      "nom": "Pharmacie de l'\u00eele Barbe",
+      "url": "https://www.maiia.com/pharmacie/69009-lyon/pharmacie-de-l-ile-barbe?centerid=60422cd62871352ceb9f182a",
+      "location": {
+        "longitude": 4.829947,
+        "latitude": 45.798196,
+        "city": "Lyon"
+      },
+      "metadata": {
+        "address": "3 Place Henri Barbusse 69009 Lyon",
+        "phone_number": "+33478839940",
+        "business_hours": {
+          "Lundi": "09:00-12:30 14:00-19:30",
+          "Mardi": "09:00-12:30 14:00-19:30",
+          "Mercredi": "09:00-12:30 14:00-19:30",
+          "Jeudi": "09:00-12:30 14:00-19:30",
+          "Vendredi": "09:00-12:30 14:00-19:30",
+          "Samedi": "09:00-12:30",
+          "Dimanche": "09:00-12:30 14:00-18:30"
+        }
+      },
+      "prochain_rdv": "2021-05-11T16:30:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 66,
+      "internal_id": "maiia60422cd62871352ceb9f182a",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527522+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 66
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 66
+        }
+      ],
+      "gid": "60422cd6"
+    },
+    {
+      "departement": "69",
+      "nom": "Pharmacie du 8\u00e8me",
+      "url": "https://www.maiia.com/pharmacie/69008-lyon/pharmacie-du-8eme-?centerid=6034d799ec418369f59f0703",
+      "location": {
+        "longitude": 4.862218,
+        "latitude": 45.740972,
+        "city": "Lyon"
+      },
+      "metadata": {
+        "address": "74 Rue Marius Berliet 69008 Lyon",
+        "phone_number": "+33478775045",
+        "business_hours": {
+          "Lundi": "08:45-12:30 14:00-19:00",
+          "Mardi": "08:45-12:30 14:00-19:00",
+          "Mercredi": "08:45-12:30 14:00-19:00",
+          "Jeudi": "08:45-12:30 14:00-19:00",
+          "Vendredi": "08:45-12:30 14:00-19:00",
+          "Samedi": "09:00-12:30"
+        }
+      },
+      "prochain_rdv": "2021-05-17T12:40:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 9,
+      "internal_id": "maiia6034d799ec418369f59f0703",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527381+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 9
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 9
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 9
+        }
+      ],
+      "gid": "6034d799"
+    },
+    {
+      "departement": "69",
+      "nom": "Pharmacie du March\u00e9 des Etats-Unis",
+      "url": "https://www.maiia.com/pharmacie/69008-lyon/pharmacie-du-marche-des-etats-unis?centerid=602036af26b6634fdf1b5333",
+      "location": {
+        "longitude": 4.866336,
+        "latitude": 45.728748,
+        "city": "Lyon"
+      },
+      "metadata": {
+        "address": "139 Rue Professeur Beauvisage 69008 Lyon",
+        "phone_number": "+33478740163",
+        "business_hours": {
+          "Lundi": "14:30-19:00",
+          "Mardi": "08:45-12:00 14:30-19:00",
+          "Mercredi": "08:45-12:00 14:30-19:00",
+          "Jeudi": "08:45-12:00 14:30-19:00",
+          "Vendredi": "08:45-12:00 14:30-19:00",
+          "Samedi": "08:45-12:00 14:30-19:00",
+          "Dimanche": "08:45-12:00 14:00-19:00"
+        }
+      },
+      "prochain_rdv": "2021-05-25T13:00:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 17,
+      "internal_id": "maiia602036af26b6634fdf1b5333",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527239+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 8
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 17
+        }
+      ],
+      "gid": "602036af"
+    },
+    {
+      "departement": "69",
+      "nom": "Pharmacie Voltaire",
+      "url": "https://www.maiia.com/pharmacie/69310-pierre-benite/pharmacie-voltaire?centerid=602f7dff9d292b087327a867",
+      "location": {
+        "longitude": 4.821539,
+        "latitude": 45.703209,
+        "city": "Pierre-B\u00e9nite"
+      },
+      "metadata": {
+        "address": "21 Rue Voltaire 69310 Pierre-B\u00e9nite",
+        "phone_number": "+33478513650",
+        "business_hours": {
+          "Lundi": "08:30-13:00 14:30-19:00",
+          "Mardi": "08:30-13:00 14:30-19:00",
+          "Mercredi": "08:30-13:00 14:30-19:00",
+          "Jeudi": "08:30-13:00 14:30-19:00",
+          "Vendredi": "08:30-13:00 14:30-19:00",
+          "Samedi": "08:30-13:00 14:30-19:00",
+          "Dimanche": "08:30-13:00 14:30-19:00"
+        }
+      },
+      "prochain_rdv": "2021-05-25T13:00:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 12,
+      "internal_id": "maiia602f7dff9d292b087327a867",
+      "vaccine_type": [
+        "Moderna",
+        "AstraZeneca",
+        "Janssen"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527504+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 11
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 12
+        }
+      ],
+      "gid": "602f7dff"
+    },
+    {
+      "departement": "69",
+      "nom": "Pharmacie de la Mairie - Bron",
+      "url": "https://www.maiia.com/pharmacie/69500-bron/pharmacie-de-la-mairie?centerid=604723ce0aaa8b3252cf7056",
+      "location": {
+        "longitude": 4.908687,
+        "latitude": 45.733407,
+        "city": "Bron"
+      },
+      "metadata": {
+        "address": "146 Avenue Franklin Roosevelt 69500 Bron",
+        "phone_number": "+33478268038",
+        "business_hours": {
+          "Lundi": "09:00-12:15 14:00-19:30",
+          "Mardi": "09:00-12:15 14:00-19:30",
+          "Mercredi": "09:00-12:15 14:00-19:30",
+          "Jeudi": "09:00-12:15 14:00-19:30",
+          "Vendredi": "09:00-12:15 14:00-19:30",
+          "Samedi": "09:00-12:00 14:00-19:00"
+        }
+      },
+      "prochain_rdv": "2021-05-28T08:45:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 36,
+      "internal_id": "maiia604723ce0aaa8b3252cf7056",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527569+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 7
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 36
+        }
+      ],
+      "gid": "604723ce"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "69",
+      "nom": "Pharmacie des Charmes",
+      "url": "https://www.doctolib.fr/pharmacie/genay/pharmacie-des-charmes",
+      "location": {
+        "longitude": 4.8400705,
+        "latitude": 45.8994068,
+        "city": "Genay"
+      },
+      "metadata": {
+        "address": "92 Rue de la Gare, 69730 Genay",
+        "phone_number": "+33472089232",
+        "business_hours": {
+          "lundi": "08:30-12:15, 14:30-19:15",
+          "mardi": "08:30-12:15, 14:30-19:15",
+          "mercredi": "08:30-12:15, 14:30-19:15",
+          "jeudi": "08:30-12:15, 14:30-19:15",
+          "vendredi": "08:30-12:15, 14:30-19:15",
+          "samedi": "08:30-12:15, 14:30-18:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib229443",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d229443"
+    },
+    {
+      "departement": "69",
+      "nom": "Dr Frederic LAROCHE",
+      "url": "https://www.doctolib.fr/medecin-generaliste/corbas/frederic-laroche",
+      "location": {
+        "longitude": 4.898375,
+        "latitude": 45.671888,
+        "city": "Corbas"
+      },
+      "metadata": {
+        "address": "72 Rue Centrale, 69960 Corbas",
+        "phone_number": "+33472506460",
+        "business_hours": {
+          "lundi": "08:00-11:00, 15:00-18:00",
+          "mardi": "08:00-11:00, 15:00-18:00",
+          "mercredi": "08:00-11:00, 15:00-18:00",
+          "jeudi": "08:00-11:00, 16:30-18:00",
+          "vendredi": "08:00-11:00, 15:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib234486",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d234486"
+    },
+    {
+      "departement": "69",
+      "nom": "Vaccination Covid - Centre de sant\u00e9 et pr\u00e9vention Venissieux - CDHS",
+      "url": "https://www.doctolib.fr/centre-depistage-covid/venissieux/cdhs-centre-de-sante-et-prevention-venissieux-vaccination-covid",
+      "location": {
+        "longitude": 4.8790341,
+        "latitude": 45.7135612,
+        "city": "V\u00e9nissieux"
+      },
+      "metadata": {
+        "address": "68 Boulevard Ir\u00e8ne Joliot Curie, 69200 V\u00e9nissieux",
+        "business_hours": {
+          "lundi": "08:00-17:00",
+          "mardi": "08:00-17:00",
+          "mercredi": "08:00-17:00",
+          "jeudi": "08:00-17:00",
+          "vendredi": "08:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242571",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d242571"
+    },
+    {
+      "departement": "69",
+      "nom": "Pharmacie de l'Oasis - Oullins",
+      "url": "https://www.doctolib.fr/pharmacie/oullins/pharamcie-de-l-oasis",
+      "location": {
+        "longitude": 4.7984854,
+        "latitude": 45.7155318,
+        "city": "Oullins"
+      },
+      "metadata": {
+        "address": "15 Rue Francisque Jomard, 69600 Oullins",
+        "phone_number": "+33478510964",
+        "business_hours": {
+          "lundi": "08:30-12:15, 14:15-19:30",
+          "mardi": "08:30-12:15, 14:15-19:30",
+          "mercredi": "08:30-12:15, 14:15-19:30",
+          "jeudi": "08:30-12:15, 14:15-19:30",
+          "vendredi": "08:30-12:15, 14:15-19:30",
+          "samedi": "08:30-12:15, 14:30-18:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib257447",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d257447"
+    },
+    {
+      "departement": "69",
+      "nom": "Grande Pharmacie Lyonnaise",
+      "url": "https://www.doctolib.fr/pharmacie/lyon/grande-pharmacie-lyonnaise",
+      "location": {
+        "longitude": 4.8355907,
+        "latitude": 45.7636187,
+        "city": "Lyon"
+      },
+      "metadata": {
+        "address": "22 Rue de la R\u00e9publique, 69002 Lyon",
+        "phone_number": "+33472564400",
+        "business_hours": {
+          "lundi": "00:00-23:45",
+          "mardi": "00:00-23:45",
+          "mercredi": "00:00-23:45",
+          "jeudi": "00:00-23:45",
+          "vendredi": "00:00-23:45",
+          "samedi": "00:00-23:45",
+          "dimanche": "19:00-23:45"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib227964",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d227964"
+    },
+    {
+      "departement": "69",
+      "nom": "Pharmacie Gambetta - Lyon",
+      "url": "https://www.doctolib.fr/pharmacie/lyon/pharmacie-gambetta",
+      "location": {
+        "longitude": 4.8528595,
+        "latitude": 45.7516622,
+        "city": "Lyon"
+      },
+      "metadata": {
+        "address": "100 Cours Gambetta 69007, 69003 Lyon",
+        "phone_number": "+33478724624",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:30-20:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib258433",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d258433"
+    },
+    {
+      "departement": "69",
+      "nom": "Centre de vaccination de Neuville-sur-Sa\u00f4ne",
+      "url": "https://www.doctolib.fr/hopital-public/neuville-sur-saone/centre-hospitalier-de-neuville-centre-de-vaccination",
+      "location": {
+        "longitude": 4.8377281,
+        "latitude": 45.878221,
+        "city": "Neuville-sur-Sa\u00f4ne"
+      },
+      "metadata": {
+        "address": "Avenue Jean Christophe, 69250 Neuville-sur-Sa\u00f4ne",
+        "phone_number": "+33423101010",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242052",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T10:23:48.872129+02:00",
+      "appointment_schedules": null,
+      "gid": "d242052"
+    },
+    {
+      "departement": "69",
+      "nom": "Centre de Vaccination Covid 19 de Thizy",
+      "url": "https://www.doctolib.fr/hopital-public/thizy-les-bourgs/centre-de-vaccination-de-thizy",
+      "location": {
+        "longitude": 4.3124958,
+        "latitude": 46.0304206,
+        "city": "Thizy-les-Bourgs"
+      },
+      "metadata": {
+        "address": "6 Rue de l'Hospice, 69240 Thizy-les-Bourgs",
+        "phone_number": "+33423101010",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-20:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib243049",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d243049"
+    },
+    {
+      "departement": "69",
+      "nom": "Dr Nicolas BRYON",
+      "url": "https://www.doctolib.fr/medecin-generaliste/ecully/nicolas-bryon",
+      "location": {
+        "longitude": 4.78075089999993,
+        "latitude": 45.7690642,
+        "city": "\u00c9cully"
+      },
+      "metadata": {
+        "address": "39 Chemin de la Vernique, 69130 \u00c9cully",
+        "phone_number": "+33472193428",
+        "business_hours": {
+          "lundi": "09:00-19:00",
+          "mardi": "09:00-19:00",
+          "mercredi": "09:00-19:00",
+          "jeudi": "09:00-19:00",
+          "vendredi": "09:00-19:00",
+          "samedi": "09:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib130037",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d130037"
+    },
+    {
+      "departement": "69",
+      "nom": "Pharmacie Lafayette du Vitrail",
+      "url": "https://www.doctolib.fr/pharmacie/tassin-la-demi-lune/pharmacie-lafayette-du-vitrail",
+      "location": {
+        "longitude": 4.7761002,
+        "latitude": 45.7638797,
+        "city": "Tassin-la-Demi-Lune"
+      },
+      "metadata": {
+        "address": "84 Avenue de la R\u00e9publique, 69160 Tassin-la-Demi-Lune",
+        "phone_number": "+33478341210",
+        "business_hours": {
+          "lundi": "08:30-19:00",
+          "mardi": "08:30-19:00",
+          "mercredi": "08:30-19:00",
+          "jeudi": "08:30-19:00",
+          "vendredi": "08:30-19:00",
+          "samedi": "09:00-12:15, 14:30-18:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib258099",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d258099"
+    },
+    {
+      "departement": "69",
+      "nom": "Pharmacie de l'Iris",
+      "url": "https://www.doctolib.fr/pharmacie/villeurbanne/pharmacie-de-l-iris",
+      "location": {
+        "longitude": 4.8981415,
+        "latitude": 45.7663257,
+        "city": "Villeurbanne"
+      },
+      "metadata": {
+        "address": "337 Rue Francis de Pressens\u00e9, 69100 Villeurbanne",
+        "phone_number": "+33478843326",
+        "business_hours": {
+          "lundi": "08:30-12:15, 14:00-19:15",
+          "mardi": "08:30-12:15, 14:00-19:15",
+          "mercredi": "08:30-12:15, 14:00-19:15",
+          "jeudi": "08:30-12:15, 14:00-19:15",
+          "vendredi": "08:30-12:15, 14:00-19:15",
+          "samedi": "08:30-12:15, 14:00-19:15",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib256277",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d256277"
+    },
+    {
+      "departement": "69",
+      "nom": "Emilie PICQUIER",
+      "url": "https://www.doctolib.fr/infirmier/lyon/emilie-picquier",
+      "location": {
+        "longitude": 4.8895312,
+        "latitude": 45.7396607,
+        "city": "Lyon"
+      },
+      "metadata": {
+        "address": "64 Avenue Rockefeller, 69008 Lyon",
+        "phone_number": "+33428382800",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "09:00-13:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib147138",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d147138"
+    },
+    {
+      "departement": "69",
+      "nom": "Dr Dominique LANGIN",
+      "url": "https://www.doctolib.fr/medecin-generaliste/ecully/dominique-langin",
+      "location": {
+        "longitude": 4.78075089999993,
+        "latitude": 45.7690642,
+        "city": "\u00c9cully"
+      },
+      "metadata": {
+        "address": "39 Chemin de la Vernique, 69130 \u00c9cully",
+        "phone_number": "+33472193428",
+        "business_hours": {
+          "lundi": "09:00-19:00",
+          "mardi": "09:00-19:00",
+          "mercredi": "09:00-19:00",
+          "jeudi": "09:00-19:00",
+          "vendredi": "09:00-19:00",
+          "samedi": "09:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib128331",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d128331"
+    },
+    {
+      "departement": "69",
+      "nom": "Centre de vaccination du pole de sante des Etats-unis",
+      "url": "https://www.maiia.com/centre-de-vaccination/69008-lyon/centre-de-vaccination-du-pole-de-sante-des-etats-unis?centerid=606f11cb671fc84079b10991",
+      "location": {
+        "longitude": 4.86935722305,
+        "latitude": 45.7342034691,
+        "city": "lyon"
+      },
+      "metadata": {
+        "address": "56 rue ludovic arrachart 69008 lyon",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "maiia606f11cb",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:39:16.541936+02:00",
+      "appointment_schedules": null,
+      "gid": "606f11cb"
+    },
+    {
+      "departement": "69",
+      "nom": "Centre de Vaccination - Rillieux la Pape",
+      "url": "https://www.maiia.com/centre-de-vaccination/69140-rillieux-la-pape/centre-de-vaccination---rillieux-la-pape?centerid=6006b05090cb277506450ee4",
+      "location": {
+        "longitude": 4.89682,
+        "latitude": 45.821058,
+        "city": "Rillieux-la-Pape"
+      },
+      "metadata": {
+        "address": "Place Vedun 69140 Rillieux-la-Pape",
+        "business_hours": {
+          "Lundi": "10:00-14:00 14:01-18:00",
+          "Mardi": "10:00-14:00 14:01-18:00",
+          "Mercredi": "10:00-14:00 14:01-18:00",
+          "Jeudi": "10:00-14:00 14:01-18:00",
+          "Vendredi": "10:00-14:00 14:01-18:00",
+          "Samedi": "10:00-14:00 14:01-18:00",
+          "Dimanche": "09:00-14:00 14:01-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "maiia6006b050",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:58:42.275326+02:00",
+      "appointment_schedules": null,
+      "gid": "6006b050"
+    },
+    {
+      "departement": "69",
+      "nom": "Pharmacie Couderc",
+      "url": "https://www.maiia.com/pharmacie/69008-lyon/pharmacie-couderc?centerid=603cbb8f68359b1abff14ae3",
+      "location": {
+        "longitude": 4.864881,
+        "latitude": 45.732396,
+        "city": "Lyon"
+      },
+      "metadata": {
+        "address": "76 Boulevard des Etats-Unis 69008 Lyon",
+        "phone_number": "+33478740520",
+        "business_hours": {
+          "Lundi": "08:30-12:15 14:30-19:00",
+          "Mardi": "08:30-12:15 14:30-19:00",
+          "Mercredi": "08:30-12:15 14:30-19:00",
+          "Jeudi": "08:30-12:15 14:30-19:00",
+          "Vendredi": "08:30-12:15 14:30-19:00",
+          "Samedi": "08:30-12:15 15:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "maiia603cbb8f",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "603cbb8f"
+    },
+    {
+      "departement": "69",
+      "nom": "Pharmacie de l'Eglise",
+      "url": "https://www.maiia.com/pharmacie/69360-saint-symphorien-d-ozon/pharmacie-de-l-eglise?centerid=6045eaf12871352ceb9f390c",
+      "location": {
+        "longitude": 4.855149,
+        "latitude": 45.631773,
+        "city": "Saint-Symphorien-d'Ozon"
+      },
+      "metadata": {
+        "address": "19 Avenue Claude de la Colombi\u00e8re 69360 Saint-Symphorien-d'Ozon",
+        "phone_number": "+33478025050",
+        "business_hours": {
+          "Lundi": "08:30-12:30 14:15-19:30",
+          "Mardi": "08:30-12:30 14:15-19:30",
+          "Mercredi": "08:30-12:30 14:15-19:30",
+          "Jeudi": "08:30-12:30 14:15-19:30",
+          "Vendredi": "08:30-12:30 14:15-19:30",
+          "Samedi": "08:30-12:30 14:15-18:00",
+          "Dimanche": "08:30-12:30 14:15-19:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "maiia6045eaf1",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "6045eaf1"
+    }
+  ]
+}

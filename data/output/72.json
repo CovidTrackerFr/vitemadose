@@ -1,0 +1,539 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.575296+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "72",
+      "nom": "Pharmacie Du Miroir",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-miroir-le-mans",
+      "location": {
+        "longitude": 0.1947337,
+        "latitude": 47.9930529,
+        "city": "le-mans"
+      },
+      "metadata": {
+        "address": "18 bis Avenue Henri Lefeuvre, 72100 Le Mans",
+        "phone_number": "+33243727556",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-05-14T15:30:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 9,
+      "internal_id": "ordoclic881d85f9",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:39:59.056813+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 9
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 9
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 9
+        }
+      ],
+      "gid": "881d85f9"
+    },
+    {
+      "departement": "72",
+      "nom": "CENTRE DE VACCINATION - MSP DU PAYS SABOLIEN",
+      "url": "https://www.maiia.com/centre-de-vaccination/72300-sable-sur-sarthe/centre-de-vaccination---msp-du-pays-sabolien?centerid=5fc8a456310f92465037b285",
+      "location": {
+        "longitude": 0.3325081,
+        "latitude": 47.8375297,
+        "city": "SABLE SUR SARTHE"
+      },
+      "metadata": {
+        "address": "rue Th\u00e9ophile Pl\u00e9  72300 SABLE SUR SARTHE",
+        "phone_number": "+33243624737",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-05-18T11:05:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 100,
+      "internal_id": "maiia5fc8a456310f92465037b285",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.526856+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 100
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 100
+        }
+      ],
+      "gid": "5fc8a456"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "72",
+      "nom": "Centre de vaccination Covid-19 - La Fert\u00e9-Bernard",
+      "url": "https://www.doctolib.fr/centre-de-vaccinations-internationales/la-ferte-bernard/centre-de-vaccination-covid-19-la-ferte-bernard",
+      "location": {
+        "longitude": 0.6420127,
+        "latitude": 48.1936205,
+        "city": "La Fert\u00e9-Bernard"
+      },
+      "metadata": {
+        "address": "87 Rue Robert Surmont, 72400 La Fert\u00e9-Bernard",
+        "phone_number": "+33619528711",
+        "business_hours": {
+          "lundi": "09:00-12:30, 14:00-18:00",
+          "mardi": "09:00-12:30, 14:00-18:00",
+          "mercredi": "09:00-12:30, 14:00-18:00",
+          "jeudi": "09:00-12:30, 14:00-18:00",
+          "vendredi": "09:00-12:30, 14:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib255906",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d255906"
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de vaccination Covid-19 du Sud Est Manceau",
+      "url": "https://www.doctolib.fr/centre-de-sante/change/centre-de-vaccination-covid-19-du-sud-est-manceau",
+      "location": {
+        "longitude": 0.291635,
+        "latitude": 47.9879188,
+        "city": "Chang\u00e9"
+      },
+      "metadata": {
+        "address": "1 All\u00e9e du Pont des Arts, 72560 Chang\u00e9",
+        "phone_number": "+33252360700",
+        "business_hours": {
+          "lundi": "09:00-17:30",
+          "mardi": "09:00-17:30",
+          "mercredi": "09:00-17:30",
+          "jeudi": "09:00-17:30",
+          "vendredi": "09:00-17:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib263510",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d263510"
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de Vaccination Covid-19 de Saint-Calais",
+      "url": "https://www.doctolib.fr/hopital-public/saint-calais/centre-de-vaccination-covid-19-de-saint-calais",
+      "location": {
+        "longitude": 0.7511444,
+        "latitude": 47.9163068,
+        "city": "Saint-Calais"
+      },
+      "metadata": {
+        "address": "Rue de la Maladrerie, 72120 Saint-Calais",
+        "phone_number": "+33221762959",
+        "business_hours": {
+          "lundi": "13:00-17:00",
+          "mardi": "09:00-12:00, 13:00-17:00",
+          "mercredi": "13:00-17:00",
+          "jeudi": "09:00-12:00, 13:00-17:00",
+          "vendredi": "13:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib245621",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d245621"
+    },
+    {
+      "departement": "72",
+      "nom": "Pharmacie Flott\u00e9",
+      "url": "https://www.doctolib.fr/pharmacie/noyen-sur-sarthe/pharmacie-flotte",
+      "location": {
+        "longitude": -0.0976369,
+        "latitude": 47.8710015,
+        "city": "Noyen-sur-Sarthe"
+      },
+      "metadata": {
+        "address": "35 Rue Pasteur, 72430 Noyen-sur-Sarthe",
+        "phone_number": "+33243957023",
+        "business_hours": {
+          "lundi": "08:30-12:30, 14:00-19:30",
+          "mardi": "08:30-12:30, 14:00-19:30",
+          "mercredi": "08:30-12:30, 14:00-19:30",
+          "jeudi": "08:30-12:30, 14:00-19:30",
+          "vendredi": "08:30-12:30, 14:00-19:30",
+          "samedi": "08:30-12:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib256103",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d256103"
+    },
+    {
+      "departement": "72",
+      "nom": "Pharmacie Flotte-Couilleaux",
+      "url": "https://www.doctolib.fr/pharmacie/mulsanne/pharmacie-flotte-couilleaux",
+      "location": {
+        "longitude": 0.2468094,
+        "latitude": 47.9132062,
+        "city": "Mulsanne"
+      },
+      "metadata": {
+        "address": "Avenue de Bonen, 72230 Mulsanne",
+        "phone_number": "+33243420864",
+        "business_hours": {
+          "lundi": "09:00-19:30",
+          "mardi": "09:00-19:30",
+          "mercredi": "09:00-19:30",
+          "jeudi": "09:00-19:30",
+          "vendredi": "09:00-19:30",
+          "samedi": "09:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib256355",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d256355"
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de Vaccination Covid du Pays de Sill\u00e9",
+      "url": "https://www.doctolib.fr/centre-de-sante/sille-le-guillaume/centre-de-vaccination-covid-du-pays-de-sille",
+      "location": {
+        "longitude": -0.1265749,
+        "latitude": 48.1825368,
+        "city": "Sill\u00e9-le-Guillaume"
+      },
+      "metadata": {
+        "address": "34 Rue du Docteur Touchard, 72140 Sill\u00e9-le-Guillaume",
+        "phone_number": "+33800009110",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09:00-17:00",
+          "dimanche": "09:00-20:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242856",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d242856"
+    },
+    {
+      "departement": "72",
+      "nom": "Centre de Vaccination - Beaumont Sur Sarthe",
+      "url": "https://www.maiia.com/centre-de-vaccination/72170-beaumont-sur-sarthe/centre-de-vaccination---beaumont-sur-sarthe?centerid=603cca7668359b1abff14c7b",
+      "location": {
+        "longitude": 0.132621,
+        "latitude": 48.228417,
+        "city": "Beaumont-sur-Sarthe"
+      },
+      "metadata": {
+        "address": "8 Avenue du Joncheray 72170 Beaumont-sur-Sarthe",
+        "phone_number": "+33290870180",
+        "business_hours": {
+          "Lundi": "14:00-17:30",
+          "Mardi": "14:00-17:30",
+          "Mercredi": "14:00-17:30",
+          "Jeudi": "14:00-17:30",
+          "Vendredi": "09:30-13:00 14:00-17:30",
+          "Samedi": "14:00-17:30",
+          "Dimanche": "14:00-17:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "maiia603cca76",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:06:41.011750+02:00",
+      "appointment_schedules": null,
+      "gid": "603cca76"
+    }
+  ]
+}

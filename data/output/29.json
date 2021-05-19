@@ -1,0 +1,508 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.538542+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "29",
+      "nom": "QUIMPER - Salle des f\u00eates Dan Ar Braz",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/quimper-29000/quimper/centre-de-vaccination-de-quimper",
+      "location": {
+        "longitude": -4.09997,
+        "latitude": 48.0095,
+        "city": "Quimper"
+      },
+      "metadata": {
+        "address": " Rue de Stang Bihan, 29000 Quimper",
+        "phone_number": "+33257180061",
+        "business_hours": {
+          "lundi": "08:30-12:30 / 13:30-17:30",
+          "mardi": "08:30-12:30 / 13:30-17:30",
+          "mercredi": "08:30-12:30 / 13:30-17:30",
+          "jeudi": "08:30-12:30 / 13:30-17:30",
+          "vendredi": "08:30-12:30 / 13:30-17:30",
+          "samedi": "08:30-12:30 / 13:30-17:30",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T13:35:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 5,
+      "internal_id": "keldoc925",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347146+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 5
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 5
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 5
+        }
+      ],
+      "gid": "925"
+    },
+    {
+      "departement": "29",
+      "nom": "DOUARNENEZ - Espace sportif Jules Verne",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/douarnenez-29100/gradlon/centre-de-vaccination-de-gradlon",
+      "location": {
+        "longitude": -4.34015,
+        "latitude": 48.0928,
+        "city": "Douarnenez"
+      },
+      "metadata": {
+        "address": "2 Rue Jules Verne, 29100 Douarnenez",
+        "phone_number": "+33257180061",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "8h-18h",
+          "mercredi": "8h-18h",
+          "jeudi": "8h-18h",
+          "vendredi": "8h-18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-13T11:40:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 121,
+      "internal_id": "keldoc927",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347023+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 121
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 121
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 121
+        }
+      ],
+      "gid": "927"
+    },
+    {
+      "departement": "29",
+      "nom": "Pharmacie de Pont Croix",
+      "url": "https://www.maiia.com/pharmacie/29790-pont-croix/pharmacie-de-pont-croix?centerid=5f198aa53e8f5f018a15e903",
+      "location": {
+        "longitude": -4.489253,
+        "latitude": 48.042386,
+        "city": "Pont-Croix"
+      },
+      "metadata": {
+        "address": "2 Place du 8 Mai 1945 29790 Pont-Croix",
+        "phone_number": "+33298704059",
+        "business_hours": {
+          "Lundi": "09:00-19:30",
+          "Mardi": "09:00-19:30",
+          "Mercredi": "09:00-19:30",
+          "Jeudi": "09:00-19:30",
+          "Vendredi": "09:00-19:30",
+          "Samedi": "09:00-12:00",
+          "Dimanche": "09:00-19:30"
+        }
+      },
+      "prochain_rdv": "2021-05-18T08:25:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 9,
+      "internal_id": "maiia5f198aa53e8f5f018a15e903",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527009+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 9
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 9
+        }
+      ],
+      "gid": "5f198aa5"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "29",
+      "nom": "CH Cornouaille - Vaccination Covid-19",
+      "url": "https://www.doctolib.fr/centre-depistage-covid/cornouaille/ch-cornouaille-vaccination-covid",
+      "location": {
+        "longitude": -4.098,
+        "latitude": 47.9843551,
+        "city": "Quimper"
+      },
+      "metadata": {
+        "address": "13 Rue Emile Zola, 29000 Quimper",
+        "phone_number": "+33298526355",
+        "business_hours": {
+          "lundi": "09:00-12:00, 13:30-16:30",
+          "mardi": "09:00-12:00, 13:30-16:30",
+          "mercredi": "09:00-12:00, 13:30-16:30",
+          "jeudi": "09:00-12:00, 13:30-16:30",
+          "vendredi": "09:00-12:00, 13:30-16:30",
+          "samedi": "09:00-12:00",
+          "dimanche": "09:00-12:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib241737",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d241737"
+    },
+    {
+      "departement": "29",
+      "nom": "Pharmacie La Galerie",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-la-galerie-quimper",
+      "location": {
+        "longitude": -4.094823,
+        "latitude": 47.9747201,
+        "city": "quimper"
+      },
+      "metadata": {
+        "address": "163 RTE DE BENODET, 29000 quimper",
+        "phone_number": "+33298905316",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordoclica8adb3b4",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "a8adb3b4"
+    },
+    {
+      "departement": "29",
+      "nom": "ST RENAN - Centre culturel",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/st-renan-29290/saint-renan/centre-de-vaccination-de-saint-renan",
+      "location": {
+        "longitude": -4.6209,
+        "latitude": 48.434,
+        "city": "Saint-Renan"
+      },
+      "metadata": {
+        "address": "1 Place Leon Cheminant, 29290 Saint-Renan",
+        "phone_number": "+33257180061",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-19T15:00:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc918",
+      "vaccine_type": [
+        "ARNm",
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347547+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "918"
+    },
+    {
+      "departement": "29",
+      "nom": "Centre de Vaccination - GYMNASE DE KERGREIS",
+      "url": "https://www.maiia.com/centre-de-vaccination/29800-landerneau/centre-de-vaccination---gymnase-de-kergreis-?centerid=600599c2e4e80549d8cb9eaa",
+      "location": {
+        "longitude": -4.28247,
+        "latitude": 48.45256,
+        "city": "Landerneau"
+      },
+      "metadata": {
+        "address": "Stade De Kergreis 29800 Landerneau",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "maiia600599c2",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:18:47.300274+02:00",
+      "appointment_schedules": null,
+      "gid": "600599c2"
+    },
+    {
+      "departement": "29",
+      "nom": "Centre de vaccination - LESNEVEN",
+      "url": "https://www.maiia.com/centre-de-vaccination/29260-lesneven/centre-de-vaccination---lesneven?centerid=600686103b987b202a404143",
+      "location": {
+        "longitude": -4.31293757639,
+        "latitude": 48.5801251196,
+        "city": "LESNEVEN"
+      },
+      "metadata": {
+        "address": "L'atelier Rue Jeanne d'Arc  29260 LESNEVEN",
+        "business_hours": {
+          "Lundi": "08:30-19:00",
+          "Mardi": "08:30-19:00",
+          "Mercredi": "08:30-19:00",
+          "Jeudi": "08:30-19:00",
+          "Vendredi": "08:30-19:00",
+          "Samedi": "08:30-19:00",
+          "Dimanche": "08:30-19:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "maiia60068610",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:18:47.300364+02:00",
+      "appointment_schedules": null,
+      "gid": "60068610"
+    }
+  ]
+}
