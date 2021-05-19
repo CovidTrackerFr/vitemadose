@@ -196,7 +196,8 @@ def centre_iterator(platforms=None):  # pragma: no cover
         ordoclic_centre_iterator(),
         mapharma_centre_iterator(),
         maiia_centre_iterator(),
-        avecmondoc_centre_iterator(),
+        # mise en pause temporaire
+        # avecmondoc_centre_iterator(),
         doctolib_center_iterator(),
         gouv_centre_iterator(),
     ):
