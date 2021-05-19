@@ -26,6 +26,7 @@ from .ordoclic import centre_iterator as ordoclic_centre_iterator
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
 from .avecmondoc.avecmondoc import center_iterator as avecmondoc_centre_iterator
 from .avecmondoc.avecmondoc import fetch_slots as avecmondoc_fetch_slots
+from .circuit_breaker import CircuitBreakerOffException
 
 POOL_SIZE = int(os.getenv("POOL_SIZE", 50))
 PARTIAL_SCRAPE = float(os.getenv("PARTIAL_SCRAPE", 1.0))
@@ -100,6 +101,9 @@ def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:  # pragma: no 
     except ScrapeError as scrape_error:
         logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(scrape_error)}")
         has_error = scrape_error
+    except CircuitBreakerOffException as error:
+        logger.error(f"circuit '{error.name}' désactivé lors du traîtement de la ligne avec le gid {centre['gid']}: {str(error)}")
+        has_error = error
     except Exception:
         logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']}")
         traceback.print_exc()
@@ -168,7 +172,7 @@ def get_center_platform(center_url: str, fetch_map: dict = None):
     return platform
 
 
-@Profiling.measure("Any_slot")
+@Profiling.measure("any_slot")
 def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None, input_data: dict = None) -> ScraperResult:
     if fetch_map is None:
         # Map platform to implementation.
