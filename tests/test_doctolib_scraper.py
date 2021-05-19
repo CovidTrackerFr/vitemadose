@@ -8,7 +8,7 @@ from scraper.doctolib.doctolib_parsers import (
     parse_center_places,
     parse_doctor,
 )
-from scraper.doctolib.doctolib_center_scrap import DoctolibCenters
+from scraper.doctolib.doctolib_center_scrap import DoctolibCenterScraper
 
 import httpx
 import json
@@ -491,6 +491,6 @@ def test_doctolib_center_scrap():
         return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    centers = DoctolibCenters(client=client)
-    result = centers.run_departement_scrap("test")
+    scraper = DoctolibCenterScraper(client=client)
+    result = scraper.run_departement_scrap("test")
     assert result == json.loads(Path("tests/fixtures/doctolib/scrap-center-result.json").read_text())

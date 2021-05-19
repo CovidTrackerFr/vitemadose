@@ -34,7 +34,7 @@ DEFAULT_CLIENT = httpx.Client()
 logger = get_logger()
 
 
-class DoctolibCenters:
+class DoctolibCenterScraper:
     def __init__(self, client: httpx.Client = DEFAULT_CLIENT):
         self._client = client
 
@@ -130,8 +130,8 @@ class DoctolibCenters:
 def fetch_department(department: str):
     if not DOCTOLIB_CONF.enabled:
         return None
-    doctolib_centers = DoctolibCenters()
-    return doctolib_centers.run_departement_scrap(department)
+    scraper = DoctolibCenterScraper()
+    return scraper.run_departement_scrap(department)
 
 
 def parse_doctolib_centers(page_limit=None) -> List[dict]:
