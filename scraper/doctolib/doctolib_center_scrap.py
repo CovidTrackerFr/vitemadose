@@ -16,6 +16,7 @@ from scraper.doctolib.doctolib_parsers import (
     parse_place,
     parse_center_places,
     parse_doctor,
+    center_reducer,
 )
 
 from typing import List, Tuple, Dict
@@ -126,12 +127,19 @@ class DoctolibCenters:
         return parse_center_places(output)
 
 
-def parse_doctolib_centers(doctolib_centers, page_limit=None) -> List[dict]:
+def fetch_department(department: str):
+    if not DOCTOLIB_CONF.enabled:
+        return None
+    doctolib_centers = DoctolibCenters()
+    return doctolib_centers.run_departement_scrap(department)
+
+
+def parse_doctolib_centers(page_limit=None) -> List[dict]:
     centers = []
     unique_center_urls = []
 
     with multiprocessing.Pool(50) as pool:
-        center_lists = pool.imap_unordered(doctolib_centers.run_departement_scrap, get_departements())
+        center_lists = pool.imap_unordered(fetch_department, get_departements())
         centers = []
 
         for center_list in center_lists:
@@ -150,7 +158,7 @@ def parse_doctolib_centers(doctolib_centers, page_limit=None) -> List[dict]:
 
 if __name__ == "__main__":  # pragma: no cover
     if DOCTOLIB_CONF.enabled:
-        centers = parse_doctolib_centers(DoctolibCenters())
+        centers = parse_doctolib_centers()
         path_out = SCRAPER_CONF.result_path
         logger.info(f"Found {len(centers)} centers on Doctolib")
         if len(centers) < 2000:
