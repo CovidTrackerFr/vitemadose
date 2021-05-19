@@ -85,24 +85,17 @@ def parse_center_places(center_output: Dict) -> List[Dict]:
 
 
 def parse_place(place: Dict) -> Dict:
-    infos_page = {}
-    # Parse place location
-    infos_page["place_id"] = place["id"]
-    infos_page["address"] = place["full_address"]
-    infos_page["ville"] = place["city"]
-    infos_page["long_coor1"] = place.get("longitude")
-    infos_page["lat_coor1"] = place.get("latitude")
-    infos_page["com_insee"] = departementUtils.cp_to_insee(place["zipcode"].replace(" ", "").strip())
-    # Parse landline number
-    if place.get("landline_number"):
-        phone_number = place.get("landline_number")
-    else:
-        phone_number = place.get("phone_number")
-    if phone_number:
-        infos_page["phone_number"] = format_phone_number(phone_number)
-
-    infos_page["business_hours"] = parse_doctolib_business_hours(place)
-    return infos_page
+    phone_number =  place.get("landline_number", place.get("phone_number"))
+    return {
+      "place_id": place["id"],
+      "address": place["full_address"],
+      "ville": place["city"],
+      "long_coor1": place.get("longitude"),
+      "lat_coor1": place.get("latitude"),
+      "com_insee": departementUtils.cp_to_insee(place["zipcode"].replace(" ", "").strip()),
+      "phone_number": format_phone_number(phone_number) if phone_number else None,
+      "business_hours": parse_doctolib_business_hours(place),
+    }
 
 
 def parse_doctolib_business_hours(place: dict) -> Optional[dict]:
