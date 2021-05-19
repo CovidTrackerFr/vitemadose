@@ -105,7 +105,7 @@ def parse_place(place: Dict) -> Dict:
     return infos_page
 
 
-def parse_doctolib_business_hours(place) -> dict:
+def parse_doctolib_business_hours(place: dict) -> Optional[dict]:
     # Opening hours
     business_hours = dict()
     if not place["opening_hours"]:
