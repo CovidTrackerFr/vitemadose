@@ -22,7 +22,7 @@ def ShortCircuit(name, trigger=3, release=10, time_limit=120):
 #  - if this counts exceeds `release`, the breaker becomes ON
 class CircuitBreaker:
     def __init__(self, name, on, off=None, trigger=3, release=10, time_limit=120):
-        self.policies = Deque(["ON" for _ in range(trigger)], f'/tmp/breaker/{name}')
+        self.policies = Deque(["ON"] * trigger], f'/tmp/breaker/{name}')
         self.time_limit = time_limit
         self.on_func = on
         self.off_func = off
