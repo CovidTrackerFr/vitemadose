@@ -17,6 +17,5 @@ setup(
         "unidecode==1.2.0",
         "jsonschema==3.2.0",
         "pydantic==1.8.2",
-        "diskcache==5.2.1"
     ],
 )
