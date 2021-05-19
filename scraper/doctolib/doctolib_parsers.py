@@ -1,6 +1,6 @@
 import re
 
-from typing import Dict, List
+from typing import Dict, List, Optional
 from unidecode import unidecode
 
 from scraper.doctolib.conf import DoctolibConf
@@ -85,16 +85,16 @@ def parse_center_places(center_output: Dict) -> List[Dict]:
 
 
 def parse_place(place: Dict) -> Dict:
-    phone_number =  place.get("landline_number", place.get("phone_number"))
+    phone_number = place.get("landline_number", place.get("phone_number"))
     return {
-      "place_id": place["id"],
-      "address": place["full_address"],
-      "ville": place["city"],
-      "long_coor1": place.get("longitude"),
-      "lat_coor1": place.get("latitude"),
-      "com_insee": departementUtils.cp_to_insee(place["zipcode"].replace(" ", "").strip()),
-      "phone_number": format_phone_number(phone_number) if phone_number else None,
-      "business_hours": parse_doctolib_business_hours(place),
+        "place_id": place["id"],
+        "address": place["full_address"],
+        "ville": place["city"],
+        "long_coor1": place.get("longitude"),
+        "lat_coor1": place.get("latitude"),
+        "com_insee": departementUtils.cp_to_insee(place["zipcode"].replace(" ", "").strip()),
+        "phone_number": format_phone_number(phone_number) if phone_number else None,
+        "business_hours": parse_doctolib_business_hours(place),
     }
 
 
