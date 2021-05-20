@@ -18,7 +18,7 @@ jobs:
       - name: "Install dependencies"
         run: scripts/install
       - name: "List all contributors"
-        run: scripts/contributors
+        run: scripts/test
 
   test:
     name: "Test"
