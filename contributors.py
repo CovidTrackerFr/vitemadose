@@ -49,13 +49,13 @@ def main(teams=SECTIONS, export_path=EXPORT_PATH):
 
     for team, contributors in contributors_by_team.items():
         outpath = export_path.format(team=team)
-        logger.info(f"writing about {len(contributors)} to {outpath}")
+        logger.info(f"writing about {len(contributors)} contributors to {outpath}")
         with open(outpath, "w") as outfile:
             json.dump({"contributors": contributors}, outfile, indent=2)
 
     outpath = export_path.format(team="all")
     with open(outpath, "w") as outfile:
-        logger.info(f"writing about {len(all_contributors)} to {outpath}")
+        logger.info(f"writing about {len(all_contributors)} contributors to {outpath}")
         json.dump({"contributors": list(all_contributors.values())}, outfile, indent=2)
 
 
