@@ -7,19 +7,6 @@ on:
     branches: ["main"]
 
 jobs:
-  contributors:
-    name: "List contributors"
-    runs-on: "ubuntu-20:04"
-    steps:
-      - uses: "actions/checkout@v2"
-      - uses: "actions/setup-python@v2"
-        with:
-          python-version: "3.8"
-      - name: "Install dependencies"
-        run: scripts/install
-      - name: "List all contributors"
-        run: scripts/test
-
   test:
     name: "Test"
     runs-on: "ubuntu-20.04"
@@ -32,6 +19,8 @@ jobs:
         run: scripts/install
       - name: "Run tests"
         run: scripts/test
+      - name: "List all contributors"
+        run: scripts/contributors
       - name: "Install coverage badge"
         run: pip install pytest coverage coverage-badge
       - name: "Generate coverage badge"
