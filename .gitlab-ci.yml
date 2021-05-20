@@ -5,7 +5,7 @@ stages:
 
 test:
   stage: test
-  image: python:3.8-alpine
+  image: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/python:3.8-alpine
   timeout: "2 minutes"
   before_script:
     - ./scripts/install
@@ -16,7 +16,7 @@ test:
 
 trouver_les_rdv:
   stage: scrape
-  image: python:3.8-alpine
+  image: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/python:3.8-alpine
   timeout: "7 minutes"
   tags:
     - ovh
@@ -40,7 +40,7 @@ trouver_les_rdv:
 
 pages:
   stage: deploy
-  image: python:3.8-alpine
+  image: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/python:3.8-alpine
   tags:
     - ovh
   script:
