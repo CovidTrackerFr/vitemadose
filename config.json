@@ -31,21 +31,36 @@
     "blocked_calls_threshold": 10
   },
   "vaccines": {
-    "Pfizer-BioNTech": ["pfizer", "biontech"],
-    "Moderna": ["moderna"],
-    "ARNm": ["arn", "arnm", "arn-m", "arn m"],
-    "AstraZeneca": ["astrazeneca", "astra-zeneca", "astra zeneca", "az"],
+    "Pfizer-BioNTech": [
+      "pfizer",
+      "biontech"
+    ],
+    "Moderna": [
+      "moderna"
+    ],
+    "ARNm": [
+      "arn",
+      "arnm",
+      "arn-m",
+      "arn m"
+    ],
+    "AstraZeneca": [
+      "astrazeneca",
+      "astra-zeneca",
+      "astra zeneca",
+      "az"
+    ],
     "Janssen": [
-        "janssen",
-        "jansen",
-        "jansenn",
-        "jannsen",
-        "jenssen",
-        "jensen",
-        "jonson",
-        "johnson",
-        "johnnson",
-        "j&j"
+      "janssen",
+      "jansen",
+      "jansenn",
+      "jannsen",
+      "jenssen",
+      "jensen",
+      "jonson",
+      "johnson",
+      "johnnson",
+      "j&j"
     ]
   },
   "appointment_split_days": [
@@ -366,7 +381,7 @@
       "api": {
         "search": "https://api.avecmondoc.com/api/Doctors/search",
         "search_filter": {
-          "params": "{\"city\": null, \"gps\": null, \"dateBefore\": null}", 
+          "params": "{\"city\": null, \"gps\": null, \"dateBefore\": null}",
           "options": "{\"limit\": 1000, \"page\": 1, \"distance\": null}"
         },
         "get_doctor_slug": "https://api.avecmondoc.com/api/Doctors/slug/{slug}",
@@ -398,6 +413,14 @@
           "0": "Dimanche"
         }
       }
+    }
+  },
+  "manual": {
+    "sheet_id": "1nrIMkkumTVb8QGRPtauGWXU6USy42ZTw6GmezGjaDa0",
+    "page_number": 2,
+    "column_names": {
+      "1": "name",
+      "2": "url"
     }
   }
 }
