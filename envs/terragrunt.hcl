@@ -16,4 +16,5 @@ remote_state {
 inputs = {
   nb_instances = 1
   ovh_region = path_relative_to_include()
+  gitlab_runner_token = get_env("GITLAB_RUNNER_TOKEN")
 }

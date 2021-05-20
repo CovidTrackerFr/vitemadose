@@ -10,7 +10,6 @@ variable "ovh_region" {
 variable "gitlab_runner_token" {
   description = "Le registration token Gitlab"
   type = string
-  default = "agggXo8oMS7s9DKeSMBJ"
 }
 variable "nb_instances" {
   description = "Le nombre de runners à lancer"
