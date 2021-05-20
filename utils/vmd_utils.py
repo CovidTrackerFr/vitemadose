@@ -87,6 +87,9 @@ class departementUtils:
         >>> to_departement_number('97701')  # Saint-Barthélémy
         '971'
         """
+        if not insee_code:
+            logger.warning("Null insee code")
+            return None
         insee_code = insee_code.strip()
         if len(insee_code) == 4:
             # Quand le CSV des centres de vaccinations est édité avec un tableur comme Excel,
