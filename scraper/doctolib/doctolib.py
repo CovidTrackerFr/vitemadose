@@ -241,7 +241,7 @@ class DoctolibSlots:
         so we need to use all agendas in order to sort.
 
         Because: 429620-440654-434343-434052-434337-447048-434338-433994-415613-440655-415615
-        don't give the same result as: 440654-429620-434343-434052-447048-434338-433994-415613-440655-415615-434337
+        won't give the same result as: 440654-429620-434343-434052-447048-434338-433994-415613-440655-415615-434337
         -> seems to be a doctolib issue
         """
         new_agenda_list = []
