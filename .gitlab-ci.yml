@@ -14,6 +14,24 @@ test:
   except:
     - schedules
 
+lister_contributeurs:
+  stage: scrape
+  allow_failure: true
+  image: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/python:3.8-alpine
+  timeout: "3 minutes"
+  before_script:
+    - ./scripts/install
+  script:
+    - ./scripts/contributors
+  artifacts:
+    name: "contributors"
+    paths:
+      - data/output
+  only:
+    - main
+    - gitlab-publish
+    - schedules
+
 trouver_les_rdv:
   stage: scrape
   image: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/python:3.8-alpine

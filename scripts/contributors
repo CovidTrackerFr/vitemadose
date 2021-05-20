@@ -1,0 +1,6 @@
+#!/bin/sh -e
+
+BIN="venv/bin/"
+
+${BIN}python contributors.py $@
+
