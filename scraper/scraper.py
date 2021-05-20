@@ -19,7 +19,6 @@ from .export.export_pool import export_pool
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
 from .maiia.maiia import centre_iterator as maiia_centre_iterator
 from .maiia.maiia import fetch_slots as maiia_fetch_slots
-from .manual.manual_urls import manual_urls_iterator
 from .mapharma.mapharma import centre_iterator as mapharma_centre_iterator
 from .mapharma.mapharma import fetch_slots as mapharma_fetch_slots
 from .opendata.opendata import center_iterator as gouv_centre_iterator
@@ -198,7 +197,6 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None, input_d
 def centre_iterator(platforms=None):  # pragma: no cover
     visited_centers_links = set()
     for center in ialternate(
-        manual_urls_iterator(),
         ordoclic_centre_iterator(),
         mapharma_centre_iterator(),
         maiia_centre_iterator(),
