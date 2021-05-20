@@ -3,11 +3,16 @@ import logging
 from dotmap import DotMap
 import json
 import requests
+import os
 from requests.auth import HTTPBasicAuth
 
 EXPORT_PATH = "data/output/contributors_{team}.json"
-TOKEN = "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"
-auth = HTTPBasicAuth("floby", TOKEN)
+GITHUB_API_USER = os.environ.get('GITHUB_API_USER')
+GITHUB_API_KEY = os.environ.get('GITHUB_API_KEY')
+
+client = requests.Session()
+if GITHUB_API_KEY is not None and GITHUB_API_USER is not None:
+    client.auth = HTTPBasicAuth(GITHUB_API_USER, GITHUB_API_KEY)
 
 logger = logging.getLogger("contributors")
 logger.setLevel(logging.DEBUG)
@@ -26,7 +31,7 @@ def main(teams=SECTIONS, export_path=EXPORT_PATH):
     contributors_by_team = {}
     for team, path in teams.items():
         logger.info(f"getting contributors for team '{team}'")
-        response = requests.get(f"https://api.github.com/repos/{path}/contributors", auth=auth)
+        response = client.get(f"https://api.github.com/repos/{path}/contributors")
         response.raise_for_status()
         team_contributors = response.json()
         contributors_by_team[team] = [
@@ -88,7 +93,7 @@ def get_github_profile(login):
         logger.debug(f"HIT! got profile '{login}' from cache")
         return PROFILES[login]
 
-    pr = requests.get(f"https://api.github.com/users/{login}", auth=auth)
+    pr = client.get(f"https://api.github.com/users/{login}")
     pr.raise_for_status()
     p = DotMap(pr.json())
     PROFILES[login] = p
