@@ -1,4 +1,5 @@
 import json
+import pytest
 import re
 from pathlib import Path
 import httpx
@@ -36,6 +37,7 @@ def test_search():
         path = Path("tests/fixtures/ordoclic/search.json")
         return httpx.Response(200, json=json.loads(path.read_text()))
 
+    # test OK
     client = httpx.Client(transport=httpx.MockTransport(app))
     data_file = Path("tests/fixtures/ordoclic/search.json")
     data = json.loads(data_file.read_text())
@@ -55,10 +57,13 @@ def test_search():
     client = httpx.Client(transport=httpx.MockTransport(app2))
     assert search(client) is None
 
+@pytest.mark.xfail
+def test_ordoclic_online_search_result_has_expected_shape():
     # Test online
     schema_file = Path("tests/fixtures/ordoclic/search.schema")
     schema = json.loads(schema_file.read_text())
     live_data = search()
+    assert live_data is not None
     validate(instance=live_data, schema=schema)
 
 
