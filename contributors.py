@@ -1,4 +1,5 @@
 import sys
+import random
 import logging
 from dotmap import DotMap
 import json
@@ -32,6 +33,7 @@ def main(export_path=EXPORT_PATH):
     ]
 
     all_contributors = list(github_contributors.values()) + additional_contributors
+    random.shuffle(all_contributors)
 
     outpath = export_path.format(team="all")
     with open(outpath, "w") as outfile:
