@@ -16,12 +16,10 @@ def test_get_location_from_address():
     address: str = "389 Avenue Maréchal de Lattre de Tassigny"
     inseecode: str = "71270"  # Varennes-lès-Mâcon
     zipcode: str = "71000"
-    coordinates: Coordinates = Coordinates(4.8405438, 46.3165338)
 
     assert get_location_from_address(address) != location
     assert get_location_from_address(address, zipcode=zipcode) == location
     assert get_location_from_address(address, inseecode=inseecode) == location
-    assert get_location_from_address(address, coordinates=coordinates) == location
 
 
 def test_get_location_from_coordinates():
