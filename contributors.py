@@ -18,16 +18,24 @@ logger = logging.getLogger("contributors")
 logger.setLevel(logging.DEBUG)
 logger.addHandler(logging.StreamHandler(sys.stdout))
 
-SECTIONS = {
+
+
+def main(export_path=EXPORT_PATH):
+    all_contributors = get_github_contributors()
+    outpath = export_path.format(team="all")
+    with open(outpath, "w") as outfile:
+        logger.info(f"writing about {len(all_contributors)} contributors to {outpath}")
+        json.dump({"contributors": list(all_contributors.values())}, outfile, indent=2)
+
+
+GITHUB_REPOS = {
     "scrap": "CovidTrackerFr/vitemadose",
     "web": "CovidTrackerFr/vitemadose-front",
     "ios": "CovidTrackerFr/vitemadose-ios",
     "android": "CovidTrackerFr/vitemadose-android",
     "infra": "CovidTrackerFr/covidtracker-server",
 }
-
-
-def main(teams=SECTIONS, export_path=EXPORT_PATH):
+def get_github_contributors(teams=GITHUB_REPOS):
     contributors_by_team = {}
     for team, path in teams.items():
         logger.info(f"getting contributors for team '{team}'")
@@ -47,16 +55,7 @@ def main(teams=SECTIONS, export_path=EXPORT_PATH):
             else:
                 all_contributors[contributor.id] = contributor
 
-    for team, contributors in contributors_by_team.items():
-        outpath = export_path.format(team=team)
-        logger.info(f"writing about {len(contributors)} contributors to {outpath}")
-        with open(outpath, "w") as outfile:
-            json.dump({"contributors": contributors}, outfile, indent=2)
-
-    outpath = export_path.format(team="all")
-    with open(outpath, "w") as outfile:
-        logger.info(f"writing about {len(all_contributors)} contributors to {outpath}")
-        json.dump({"contributors": list(all_contributors.values())}, outfile, indent=2)
+    return all_contributors
 
 
 def map_github_contributor(team, login, avatar_url, html_url, **kwargs):
