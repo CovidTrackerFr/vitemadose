@@ -25,7 +25,6 @@ def get_location_from_address(
     address: str,
     zipcode: Optional[str] = None,
     inseecode: Optional[str] = None,
-    coordinates: Optional[Coordinates] = None,
 ) -> Optional[Location]:
     params = {"q": address, "limit": 1}
 
@@ -33,9 +32,6 @@ def get_location_from_address(
         params["postcode"] = zipcode
     elif inseecode:
         params["citycode"] = inseecode
-    elif coordinates:
-        params["lat"] = getattr(coordinates, "latitude")
-        params["lon"] = getattr(coordinates, "longitude")
 
     r = requests.get("https://api-adresse.data.gouv.fr/search/", params=params)
 
