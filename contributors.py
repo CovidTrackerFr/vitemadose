@@ -10,6 +10,7 @@ from requests.auth import HTTPBasicAuth
 EXPORT_PATH = "data/output/contributors_{team}.json"
 GITHUB_API_USER = os.environ.get('GITHUB_API_USER')
 GITHUB_API_KEY = os.environ.get('GITHUB_API_KEY')
+DEFAULT_AVATAR = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAIAAAACUFjqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH5QUWFgkw2H/zhQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAP0lEQVQY06WNQQ6AMBACGeL/n7XPWjw0sYnVHnSODASqSlISLdg+LnFrAN3tIdb1SKx3kvjxdd5ry08NfFwDJ0OrHVn+VpHQAAAAAElFTkSuQmCC'
 
 client = requests.Session()
 if GITHUB_API_KEY is not None and GITHUB_API_USER is not None:
@@ -125,7 +126,7 @@ class CsvContributor(Contributor):
     super().__init__(login)
     self.row = row
     self.nom = f"{row['Prénom']} {row['Nom']}"
-    self.photo = None
+    self.photo = DEFAULT_AVATAR
     self.site_web = row['site_web']
     self.localisation = row['Localisation']
     if row['pseudo_twitter']:
