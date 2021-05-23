@@ -1,6 +1,7 @@
 from typing import TypedDict, Optional, NamedTuple
 import requests
 from utils.vmd_logger import get_logger
+from functools import lru_cache
 
 logger = get_logger()
 
@@ -21,6 +22,7 @@ class Coordinates(NamedTuple):
     latitude: float
 
 
+@lru_cache
 def get_location_from_address(
     address: str,
     zipcode: Optional[str] = None,
@@ -38,6 +40,7 @@ def get_location_from_address(
     return _parse_geojson(r.json())
 
 
+@lru_cache
 def get_location_from_coordinates(coordinates: Coordinates) -> Optional[Location]:
     params = {"lon": getattr(coordinates, "longitude"), "lat": getattr(coordinates, "latitude")}
 
