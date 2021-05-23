@@ -130,6 +130,82 @@ def test_keldoc_parse_center():
     ]
 
 
+def test_keldoc_no_base_url():
+    center1_url = (
+        "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier"
+        "-bretagne-sud-lorient-hopital-du-scorff?specialty=144 "
+    )
+
+    center1_data = json.loads(Path("tests", "fixtures", "keldoc", "center1-info.json").read_text())
+
+    request = ScraperRequest(center1_url, "2020-04-04")
+    client = httpx.Client(transport=httpx.MockTransport(app_center1))
+    test_center_1 = KeldocCenter(request, client=client)
+    test_center_1.base_url = None
+
+    assert not test_center_1.fetch_center_data()
+    assert not test_center_1.parse_resource()
+
+
+def test_keldoc_booking_connect_error():
+    center1_url = (
+        "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier"
+        "-bretagne-sud-lorient-hopital-du-scorff?specialty=144 "
+    )
+
+    center1_data = json.loads(Path("tests", "fixtures", "keldoc", "center1-info.json").read_text())
+
+    request = ScraperRequest(center1_url, "2020-04-04")
+
+    def mock_client(request: httpx.Request) -> httpx.Response:
+        if request.url.path == "/api/patients/v2/searches/resource":
+            raise httpx.ConnectError("Unable to connect", request=request)
+        if (
+                request.url.path
+                == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
+        ):
+            return httpx.Response(
+                302,
+                headers={
+                    "Location": "https://vaccination-covid.keldoc.com/redirect/?dom=centre-hospitalier-regional&inst=lorient-56100&user=groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff&specialty=144 "
+                },
+            )
+        for path in CENTER1_KELDOC:
+            if request.url.path == path:
+                return httpx.Response(200, json=get_test_data(CENTER1_KELDOC[path]))
+        return httpx.Response(200, json={})
+    client = httpx.Client(transport=httpx.MockTransport(mock_client))
+    test_center_1 = KeldocCenter(request, client=client)
+
+    assert not test_center_1.fetch_center_data()
+
+
+def test_keldoc_redirect_connect_error():
+    center1_url = (
+        "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier"
+        "-bretagne-sud-lorient-hopital-du-scorff?specialty=144 "
+    )
+
+    center1_data = json.loads(Path("tests", "fixtures", "keldoc", "center1-info.json").read_text())
+
+    request = ScraperRequest(center1_url, "2020-04-04")
+
+    def mock_client(request: httpx.Request) -> httpx.Response:
+        if (
+                request.url.path
+                == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
+        ):
+            raise httpx.ConnectError("Unable to connect", request=request)
+        for path in CENTER1_KELDOC:
+            if request.url.path == path:
+                return httpx.Response(200, json=get_test_data(CENTER1_KELDOC[path]))
+        return httpx.Response(200, json={})
+    client = httpx.Client(transport=httpx.MockTransport(mock_client))
+    test_center_1 = KeldocCenter(request, client=client)
+
+    assert not test_center_1.parse_resource()
+
+
 def test_keldoc_missing_params():
     center1_url = "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/foo/bar?specialty=no"
     center1_redirect = "https://vaccination-covid.keldoc.com/redirect/?dom=foo&user=ok&specialty=no"
@@ -292,3 +368,122 @@ def test_null_motives():
     client = DEFAULT_CLIENT
     motives = filter_vaccine_motives(client, 4233, 1, None, None)
     assert not motives
+
+
+def test_null_resource():
+    center1_url = "https://www.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?specialty=144"
+    request = ScraperRequest(center1_url, "2020-04-04")
+
+    def app(request: httpx.Request) -> httpx.Response:
+        if (
+                request.url.path
+                == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
+        ):
+            return httpx.Response(
+                302,
+                headers={
+                    "Location": "https://vaccination-covid.keldoc.com/redirect/?dom=centre-hospitalier-regional&inst=lorient-56100&user=groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff&specialty=144 "
+                },
+            )
+        return httpx.Response(403, json={})
+
+    keldoc.session = httpx.Client(transport=httpx.MockTransport(app))
+    date = fetch_slots(request)
+    assert not date
+
+def test_no_center_data():
+    center1_url = "https://www.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?specialty=144"
+    request = ScraperRequest(center1_url, "2020-04-04")
+
+    def app(request: httpx.Request) -> httpx.Response:
+        if (
+                request.url.path
+                == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
+        ):
+            return httpx.Response(
+                302,
+                headers={
+                    "Location": "https://vaccination-covid.keldoc.com/redirect/?dom=centre-hospitalier-regional&inst=lorient-56100&user=groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff&specialty=144 "
+                },
+            )
+        if request.url.path == "/redirect/":
+            return httpx.Response(200, json={})
+        return httpx.Response(403, json={})
+
+    keldoc.session = httpx.Client(transport=httpx.MockTransport(app))
+    date = fetch_slots(request)
+    assert not date
+
+
+def test_cabinet_error():
+    center1_url = "https://www.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?specialty=144"
+    request = ScraperRequest(center1_url, "2020-04-04")
+
+    def app(request: httpx.Request) -> httpx.Response:
+        if (
+                request.url.path
+                == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
+        ):
+            return httpx.Response(
+                302,
+                headers={
+                    "Location": "https://vaccination-covid.keldoc.com/redirect/?dom=centre-hospitalier-regional&inst=lorient-56100&user=groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff&specialty=144 "
+                },
+            )
+        if request.url.path == "/redirect/":
+            return httpx.Response(200, json={})
+        if request.url.path.startswith("/api/patients/v2/clinics/"):
+            return httpx.Response(403, json={})
+        if request.url.path == "/api/patients/v2/searches/resource":
+            return httpx.Response(200, json=get_test_data("center1-info"))
+        return httpx.Response(200, json={})
+
+    keldoc.session = httpx.Client(transport=httpx.MockTransport(app))
+    date = fetch_slots(request)
+    assert not date
+
+    def app(request: httpx.Request) -> httpx.Response:
+        if (
+                request.url.path
+                == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
+        ):
+            return httpx.Response(
+                302,
+                headers={
+                    "Location": "https://vaccination-covid.keldoc.com/redirect/?dom=centre-hospitalier-regional&inst=lorient-56100&user=groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff&specialty=144 "
+                },
+            )
+        if request.url.path == "/redirect/":
+            return httpx.Response(200, json={})
+        if request.url.path.startswith("/api/patients/v2/clinics/"):
+            raise httpx.ConnectError("Connect error", request=request)
+        if request.url.path == "/api/patients/v2/searches/resource":
+            return httpx.Response(200, json=get_test_data("center1-info"))
+        return httpx.Response(200, json={})
+
+    keldoc.session = httpx.Client(transport=httpx.MockTransport(app))
+    date = fetch_slots(request)
+    assert not date
+
+    def app(request: httpx.Request) -> httpx.Response:
+        if (
+                request.url.path
+                == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
+        ):
+            return httpx.Response(
+                302,
+                headers={
+                    "Location": "https://vaccination-covid.keldoc.com/redirect/?dom=centre-hospitalier-regional&inst=lorient-56100&user=groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff&specialty=144 "
+                },
+            )
+        if request.url.path == "/redirect/":
+            return httpx.Response(200, json={})
+        if request.url.path.startswith("/api/patients/v2/clinics/"):
+            return httpx.Response(200, json={})
+        if request.url.path == "/api/patients/v2/searches/resource":
+            return httpx.Response(200, json=get_test_data("center1-info"))
+        return httpx.Response(200, json={})
+
+    keldoc.session = httpx.Client(transport=httpx.MockTransport(app))
+    date = fetch_slots(request)
+    assert not date

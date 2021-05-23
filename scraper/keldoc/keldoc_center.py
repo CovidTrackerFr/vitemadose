@@ -121,7 +121,7 @@ class KeldocCenter:
         # If the vaccination URL have several medication places,
         # we select the current cabinet, since CSV data contains subURLs
         self.selected_cabinet = params_get.get("cabinet", [None])[0]
-        if self.selected_cabinet:
+        if self.selected_cabinet:  # pragma: no cover
             self.selected_cabinet = int(self.selected_cabinet)
         self.resource_params = {
             "type": params_get.get("dom")[0],
