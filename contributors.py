@@ -28,7 +28,7 @@ def main(export_path=EXPORT_PATH):
 
     additional_contributors = [
       contributor for contributor in csv_contributors
-      if contributor.github not in github_contributors
+      if contributor.github.lower() not in github_contributors
     ]
 
     all_contributors = list(github_contributors.values()) + additional_contributors
@@ -61,10 +61,11 @@ def get_github_contributors(teams=GITHUB_REPOS):
     all_contributors = {}
     for team, contributors in contributors_by_team.items():
         for contributor in contributors:
-            if contributor.github in all_contributors:
-                all_contributors[contributor.github].teams.add(team)
+            handle = contributor.github.lower()
+            if handle in all_contributors:
+                all_contributors[handle].teams.add(team)
             else:
-                all_contributors[contributor.github] = contributor
+                all_contributors[handle] = contributor
 
     return all_contributors
 
