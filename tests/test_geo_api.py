@@ -59,8 +59,22 @@ def test_get_location_from_address():
     assert get_location_from_address(address, zipcode=cedexcode) == None  # API Adresse does not handle CEDEX codes
     assert get_location_from_address(address, inseecode=inseecode) == location3
 
+    # Check cache mechanism
+    get_location_from_address.cache_clear()
+    get_location_from_address(address)
+    get_location_from_address(address)
+    assert get_location_from_address.cache_info().hits == 1
+    assert get_location_from_address.cache_info().misses == 1
+
 
 def test_get_location_from_coordinates():
     coordinates: Coordinates = Coordinates(4.8405438, 46.3165338)
 
     assert get_location_from_coordinates(coordinates) == location1
+
+    # Check cache mechanism
+    get_location_from_coordinates.cache_clear()
+    get_location_from_coordinates(coordinates)
+    get_location_from_coordinates(coordinates)
+    assert get_location_from_coordinates.cache_info().hits == 1
+    assert get_location_from_coordinates.cache_info().misses == 1
