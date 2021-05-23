@@ -35,3 +35,6 @@ maiiascrap: ## Retrieve maiia centers from API
 
 lint:
 	venv/bin/black $$(git ls-files | grep .py$$)
+
+contributors: install
+	scripts/contributors
