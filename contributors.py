@@ -93,7 +93,7 @@ class Contributor:
         if github is not None and github:
             self.links["github"] = f"https://github.com/{github}"
 
-    def toJSON(self):
+    def asdict(self):
         return {
             "nom": self.nom,
             "pseudo": self.pseudo,
@@ -155,7 +155,7 @@ class MergedContributor(Contributor):
 
 def dumper(obj):
     try:
-        return obj.toJSON()
+        return obj.asdict()
     except AttributeError as e:
         return obj.__dict__
 
