@@ -13,7 +13,7 @@ GITHUB_API_USER = os.environ.get("GITHUB_API_USER")
 GITHUB_API_KEY = os.environ.get("GITHUB_API_KEY")
 
 client = requests.Session()
-if GITHUB_API_KEY is not None and GITHUB_API_USER is not None:
+if GITHUB_API_KEY and GITHUB_API_USER:
     client.auth = HTTPBasicAuth(GITHUB_API_USER, GITHUB_API_KEY)
 
 logger = logging.getLogger("contributors")
@@ -74,12 +74,9 @@ DEFAULT_CSV_PATH = os.path.join(os.path.dirname(__file__), "./data/input/benevol
 
 
 def get_benevoles_csv_contributors(csv_path=DEFAULT_CSV_PATH):
-    contributors = []
     with open(csv_path, "r") as infile:
         csvreader = csv.DictReader(infile, delimiter=",")
-        for row in csvreader:
-            contributors.append(CsvContributor(row))
-    return contributors
+        return [CsvContributor(row) for row in csvreader]
 
 
 class Contributor:
@@ -90,7 +87,7 @@ class Contributor:
         self.job = None
         self.localisation = None
         self.company = None
-        if github is not None and github:
+        if github:
             self.links["github"] = f"https://github.com/{github}"
 
     def asdict(self):
@@ -103,7 +100,7 @@ class Contributor:
             "localisation": self.localisation,
             "company": self.company,
             "teams": list(self.teams),
-            "links": [{"site": site, "url": url} for site, url in self.links.items() if url is not None and url],
+            "links": [{"site": site, "url": url} for site, url in self.links.items() if url],
         }
 
 
