@@ -32,3 +32,6 @@ keldocscrap: ## Scrap all doctolib centers, output : data/output/keldoc-centers.
 
 maiiascrap: ## Retrieve maiia centers from API
 	venv/bin/python -m scraper.maiia.maiia_center_scrap
+
+lint:
+	venv/bin/black $$(git ls-files | grep .py$$)
