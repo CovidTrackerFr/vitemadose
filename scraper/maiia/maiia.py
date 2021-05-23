@@ -77,6 +77,7 @@ def get_next_slot_date(
         r.raise_for_status()
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{url} returned error {hex.response.status_code}")
+        request.increase_request_count("error")
         return None
     result = r.json()
     if "firstPhysicalStartDateTime" in result:

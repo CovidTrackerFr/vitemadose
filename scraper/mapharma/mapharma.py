@@ -90,16 +90,20 @@ def get_mapharma_opendata(
         return request.json()
     except httpx.TimeoutException as hex:
         logger.warning(f"{opendata_url} timed out {hex}")
+        request.increase_request_count("time-out")
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{opendata_url} returned error {hex.response.status_code}")
+        request.increase_request_count("error")
     try:
         request = client.get(opendata_url_fallback, headers=MAPHARMA_HEADERS)
         request.raise_for_status()
         return request.json()
     except httpx.TimeoutException as hex:
         logger.warning(f"{opendata_url_fallback} timed out {hex}")
+        request.increase_request_count("time-out")
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{opendata_url_fallback} returned error {hex.response.status_code}")
+        request.increase_request_count("error")
     return None
 
 
@@ -134,9 +138,11 @@ def get_slots(
         r.raise_for_status()
     except httpx.TimeoutException as hex:
         logger.warning(f"{base_url} timed out {hex}")
+        request.increase_request_count("time-out")
         return {}
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{base_url} returned error {hex.response.status_code}")
+        request.increase_request_count("error")
         return {}
     return r.json()
 
