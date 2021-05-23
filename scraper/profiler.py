@@ -57,6 +57,7 @@ class Profiling:
                     return fn(*args, **kwargs)
                 start_time = time.time()
                 error = None
+                ret = None
                 try:
                     ret = fn(*args, **kwargs)
                 except Exception as e:
