@@ -47,7 +47,7 @@ resource null_resource "register_runner" {
     inline = [
       "export GITLAB_RUNNER_TOKEN=${var.gitlab_runner_token}",
       "export RUNNER_LOCATION='OVH ${var.ovh_region} (num ${count.index})'",
-      "export TAG_LIST='ovh-${var.ovh_region},${formatdate("DD MMM YYYY hh:mm ZZZ", timestamp())}'",
+      "export TAG_LIST='ovh,ovh-${var.ovh_region},${formatdate("DD MMM YYYY hh:mm ZZZ", timestamp())}'",
       "export GITLAB_RUN_UNTAGGED=yes",
       "sudo -E bash /tmp/provision.sh"
     ]
