@@ -39,8 +39,8 @@ resource null_resource "register_runner" {
   }
 
   provisioner "file" {
-    destination = "/tmp/provision.sh"
     source = "./provision.sh"
+    destination = "/tmp/provision-${random_string.provision_name.id}.sh"
   }
 
   provisioner "remote-exec" {
@@ -49,7 +49,7 @@ resource null_resource "register_runner" {
       "export RUNNER_LOCATION='OVH ${var.ovh_region} (num ${count.index})'",
       "export TAG_LIST='ovh,ovh-${var.ovh_region},${formatdate("DD MMM YYYY hh:mm ZZZ", timestamp())}'",
       "export GITLAB_RUN_UNTAGGED=yes",
-      "sudo -E bash /tmp/provision.sh"
+      "sudo -E bash /tmp/provision-${random_string.provision_name.id}.sh"
     ]
   }
 
@@ -60,6 +60,11 @@ resource null_resource "register_runner" {
       "sudo gitlab-runner unregister --all-runners"
     ]
   }
+}
+
+resource random_string provision_name {
+  length = 6
+  special = false
 }
 
 resource "openstack_compute_keypair_v2" "runner_keypair" {
