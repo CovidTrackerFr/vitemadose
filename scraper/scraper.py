@@ -5,6 +5,7 @@ from collections import deque
 from multiprocessing.dummy import Pool, Process  # Use Threading (dummy processes) for Scrap Pool
 from multiprocessing import Process, Queue  # Use actual Process for Collecting creneau (CPU intensive)
 from random import random
+from typing import Iterator, List
 
 from .export.export_v2 import JSONExporter
 
@@ -13,7 +14,7 @@ from scraper.pattern.center_info import CenterInfo
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from scraper.profiler import Profiling
-from utils.vmd_config import get_conf_platform
+from utils.vmd_config import get_conf_platform, get_config
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug, log_requests, log_platform_requests
 from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date, q_iter, EOQ
 from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date
@@ -156,24 +157,24 @@ def cherche_prochain_rdv_dans_centre(centre: dict, creneau_q: Queue) -> CenterIn
 def get_default_fetch_map():
     return {
         "Doctolib": {
-            "urls": get_conf_platform("doctolib").get("recognized_urls", []),
+            "urls": get_conf_platform(doctolib.NAME).get("recognized_urls", []),
             "scraper_ptr": doctolib.fetch_slots,
         },
         "Keldoc": {
-            "urls": get_conf_platform("keldoc").get("recognized_urls", []),
+            "urls": get_conf_platform(keldoc.NAME).get("recognized_urls", []),
             "scraper_ptr": keldoc.fetch_slots,
         },
-        "Maiia": {"urls": get_conf_platform("maiia").get("recognized_urls", []), "scraper_ptr": maiia.fetch_slots},
+        "Maiia": {"urls": get_conf_platform(maiia.NAME).get("recognized_urls", []), "scraper_ptr": maiia.fetch_slots},
         "Mapharma": {
-            "urls": get_conf_platform("mapharma").get("recognized_urls", []),
+            "urls": get_conf_platform(mapharma.NAME).get("recognized_urls", []),
             "scraper_ptr": mapharma.fetch_slots,
         },
         "Ordoclic": {
-            "urls": get_conf_platform("ordoclic").get("recognized_urls", []),
+            "urls": get_conf_platform(ordoclic.NAME).get("recognized_urls", []),
             "scraper_ptr": ordoclic.fetch_slots,
         },
         "AvecMonDoc": {
-            "urls": get_conf_platform("avecmondoc").get("recognized_urls", []),
+            "urls": get_conf_platform(avecmondoc.NAME).get("recognized_urls", []),
             "scraper_ptr": avecmondoc.fetch_slots,
         },
     }
@@ -218,18 +219,27 @@ def fetch_centre_slots(
     return result
 
 
+# TODO: If someone knows how to do it automatically *and* not with a something
+# that make people want to carve their eyes out, it would be a nice addition :)
+iterators = {
+    doctolib.NAME: doctolib.iterator,
+    maiia.NAME: maiia.iterator,
+    manual_urls.NAME: manual_urls.iterator,
+    mapharma.NAME: mapharma.iterator,
+    opendata.NAME: opendata.iterator,
+    ordoclic.NAME: ordoclic.iterator,
+    # mise en pause temporaire
+    # avecmondoc.NAME: avecmondoc.iterator,
+}
+
+
+def get_iterators() -> List[Iterator]:
+    return list(iterators[platform]() for platform in get_config()["platforms"] if platform.get("enabled", False))
+
+
 def iterator(platforms=None):  # pragma: no cover
     visited_centers_links = set()
-    for center in ialternate(
-        manual_urls.iterator(),
-        ordoclic.iterator(),
-        mapharma.iterator(),
-        maiia.iterator(),
-        # mise en pause temporaire
-        # avecmondoc.iterator(),
-        doctolib.iterator(),
-        opendata.iterator(),
-    ):
+    for center in ialternate(*get_iterators()):
         platform = get_center_platform(center["rdv_site_web"], get_default_fetch_map())
         if platforms and platform and platform.lower() not in platforms:
             continue

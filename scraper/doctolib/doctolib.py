@@ -26,7 +26,9 @@ from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import append_date_days, DummyQueue
 
 
-DOCTOLIB_CONF = DoctolibConf(**get_conf_platform("doctolib"))
+NAME = "doctolib"
+
+DOCTOLIB_CONF = DoctolibConf(**get_conf_platform(NAME))
 
 timeout = httpx.Timeout(DOCTOLIB_CONF.timeout, connect=DOCTOLIB_CONF.timeout)
 

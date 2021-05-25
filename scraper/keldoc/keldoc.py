@@ -11,7 +11,9 @@ from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import DummyQueue
 from scraper.circuit_breaker import ShortCircuit
 
-KELDOC_CONF = get_conf_platform("keldoc")
+NAME = "keldoc"
+
+KELDOC_CONF = get_conf_platform(NAME)
 timeout = httpx.Timeout(KELDOC_CONF.get("timeout", 25), connect=KELDOC_CONF.get("timeout", 25))
 # change KELDOC_KILL_SWITCH to True to bypass Keldoc scraping
 KELDOC_ENABLED = KELDOC_CONF.get("enabled", False)

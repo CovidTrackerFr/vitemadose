@@ -14,10 +14,11 @@ from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import departementUtils, DummyQueue
 from scraper.profiler import Profiling
 
+NAME = "ordoclic"
 
 logger = logging.getLogger("scraper")
 
-ORDOCLIC_CONF = get_conf_platform("ordoclic")
+ORDOCLIC_CONF = get_conf_platform(NAME)
 ORDOCLIC_API = ORDOCLIC_CONF.get("api", {})
 ORDOCLIC_ENABLED = ORDOCLIC_CONF.get("enabled", False)
 

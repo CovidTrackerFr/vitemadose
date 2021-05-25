@@ -16,7 +16,9 @@ from scraper.pattern.vaccine import get_vaccine_name
 from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import departementUtils, DummyQueue
 
-AVECMONDOC_CONF = get_conf_platform("avecmondoc")
+NAME = "avecmondoc"
+
+AVECMONDOC_CONF = get_conf_platform(NAME)
 AVECMONDOC_API = AVECMONDOC_CONF.get("api", {})
 AVECMONDOC_SCRAPER = AVECMONDOC_CONF.get("center_scraper", {})
 AVECMONDOC_FILTERS = AVECMONDOC_CONF.get("filters", {})

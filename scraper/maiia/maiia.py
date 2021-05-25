@@ -19,7 +19,9 @@ from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT, DEFAULT_CLIENT
 from utils.vmd_config import get_conf_platform, get_config
 from utils.vmd_utils import DummyQueue
 
-MAIIA_CONF = get_conf_platform("maiia")
+NAME = "maiia"
+
+MAIIA_CONF = get_conf_platform(NAME)
 MAIIA_API = MAIIA_CONF.get("api", {})
 MAIIA_ENABLED = MAIIA_CONF.get("enabled", False)
 MAIIA_SCRAPER = MAIIA_CONF.get("center_scraper", {})

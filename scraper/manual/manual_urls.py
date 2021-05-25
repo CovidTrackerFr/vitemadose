@@ -12,7 +12,7 @@ from utils.vmd_logger import get_logger
 from utils.vmd_utils import fix_scrap_urls
 from scraper import sheets
 
-name = "manual"
+NAME = "manual"
 
 
 class Config(BaseModel):
@@ -24,7 +24,7 @@ class Config(BaseModel):
 
 logger = get_logger()
 
-config = Config(**get_config().get(name))
+config = Config(**get_config().get(NAME))
 
 
 def iterator() -> Iterator[dict]:

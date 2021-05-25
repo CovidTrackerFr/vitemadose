@@ -19,7 +19,9 @@ from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import departementUtils, DummyQueue
 from scraper.profiler import Profiling
 
-MAPHARMA_CONF = get_conf_platform("mapharma")
+NAME = "mapharma"
+
+MAPHARMA_CONF = get_conf_platform(NAME)
 MAPHARMA_API = MAPHARMA_CONF.get("api", {})
 MAPHARMA_ENABLED = MAPHARMA_CONF.get("enabled", False)
 
