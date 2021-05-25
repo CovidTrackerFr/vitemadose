@@ -12,8 +12,11 @@ from utils.vmd_logger import get_logger
 from utils.vmd_utils import fix_scrap_urls
 from scraper import sheets
 
+name = "manual"
+
 
 class Config(BaseModel):
+    enabled: bool
     sheet_id: str  # ID of the spreadsheet.
     page_number: int  # Index of the sheet inside the spreadsheet (starts at 1).
     column_names: Dict[int, str]  # Mapping of column ID to column name (starts at 1).
@@ -21,10 +24,10 @@ class Config(BaseModel):
 
 logger = get_logger()
 
-config = Config(**get_config().get("manual"))
+config = Config(**get_config().get(name))
 
 
-def manual_urls_iterator() -> Iterator[dict]:
+def iterator() -> Iterator[dict]:
     logger.info("Recherche des urls manuels")
     for entry in sheets.load(config.sheet_id, config.page_number, config.column_names):
         yield {"rdv_site_web": fix_scrap_urls(entry["url"])}

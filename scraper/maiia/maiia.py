@@ -219,7 +219,7 @@ def fetch_slots(
     return first_availability.isoformat()
 
 
-def centre_iterator(overwrite_centers_file=True):
+def iterator(overwrite_centers_file=True):
     if not MAIIA_ENABLED:
         return None
     try:

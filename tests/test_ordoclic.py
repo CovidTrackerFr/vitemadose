@@ -12,7 +12,7 @@ from scraper.ordoclic import (
     get_profile,
     parse_ordoclic_slots,
     fetch_slots,
-    centre_iterator,
+    iterator,
     is_reason_valid,
 )
 
@@ -207,7 +207,7 @@ def test_center_iterator():
         return httpx.Response(200, json=json.loads(path.read_text(encoding="utf8")))
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    generated = list(centre_iterator(client))
+    generated = list(iterator(client))
     result_path = Path("tests/fixtures/ordoclic/search-result.json")
     expected = json.loads(result_path.read_text())
     assert generated == expected

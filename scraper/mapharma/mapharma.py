@@ -269,7 +269,7 @@ def is_campagne_valid(campagne: dict) -> bool:
     return False
 
 
-def centre_iterator():
+def iterator():
     global opendata
     global campagnes_inconnues
     opendata = get_mapharma_opendata()

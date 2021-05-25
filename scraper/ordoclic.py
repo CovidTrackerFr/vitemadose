@@ -245,7 +245,7 @@ def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue(), client: httpx.C
     return first_availability.isoformat()
 
 
-def centre_iterator(client: httpx.Client = DEFAULT_CLIENT):
+def iterator(client: httpx.Client = DEFAULT_CLIENT):
     if not ORDOCLIC_ENABLED:
         logger.warning("Ordoclic scrap is disabled in configuration file.")
         return []

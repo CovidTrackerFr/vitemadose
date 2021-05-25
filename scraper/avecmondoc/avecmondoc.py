@@ -381,7 +381,7 @@ def has_valid_zipcode(organization: dict) -> bool:
     return organization["zipCode"] is not None and len(organization["zipCode"]) == 5
 
 
-def center_iterator(client: httpx.Client = DEFAULT_CLIENT) -> Iterator[dict]:
+def iterator(client: httpx.Client = DEFAULT_CLIENT) -> Iterator[dict]:
     organization_slugs = []
     # l'api fait parfois un timeout au premier appel
     for _ in range(0, AVECMONDOC_CONF.get("search_tries", 2)):
@@ -416,7 +416,7 @@ def center_iterator(client: httpx.Client = DEFAULT_CLIENT) -> Iterator[dict]:
 
 
 def main():  #  pragma: no cover
-    for center in center_iterator():
+    for center in iterator():
         request = ScraperRequest(center["rdv_site_web"], datetime.now().strftime("%Y-%m-%d"))
         availability = fetch_slots(request)
         logger.info(f'{center["nom"]:48}: {availability}')

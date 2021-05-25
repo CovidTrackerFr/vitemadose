@@ -674,7 +674,7 @@ def is_allowing_online_appointments(rdata: dict) -> bool:
     return False
 
 
-def center_iterator() -> Iterator[Dict]:
+def iterator() -> Iterator[Dict]:
     if not DOCTOLIB_CONF.enabled:
         return
     try:

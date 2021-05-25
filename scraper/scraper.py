@@ -16,21 +16,17 @@ from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug, log_requests, log_platform_requests
 from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date, q_iter, EOQ
-from .doctolib.doctolib import center_iterator as doctolib_center_iterator
-from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
+from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date
+from .doctolib import doctolib
 from .export.export_merge import export_data
 from .export.export_pool import export_pool
-from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
-from .maiia.maiia import centre_iterator as maiia_centre_iterator
-from .maiia.maiia import fetch_slots as maiia_fetch_slots
-from .manual.manual_urls import manual_urls_iterator
-from .mapharma.mapharma import centre_iterator as mapharma_centre_iterator
-from .mapharma.mapharma import fetch_slots as mapharma_fetch_slots
-from .opendata.opendata import center_iterator as gouv_centre_iterator
-from .ordoclic import centre_iterator as ordoclic_centre_iterator
-from .ordoclic import fetch_slots as ordoclic_fetch_slots
-from .avecmondoc.avecmondoc import center_iterator as avecmondoc_centre_iterator
-from .avecmondoc.avecmondoc import fetch_slots as avecmondoc_fetch_slots
+from .keldoc import keldoc
+from .maiia import maiia
+from .manual import manual_urls
+from .mapharma import mapharma
+from .opendata import opendata
+from . import ordoclic
+from .avecmondoc import avecmondoc
 from .circuit_breaker import CircuitBreakerOffException
 
 POOL_SIZE = int(os.getenv("POOL_SIZE", 50))
@@ -65,7 +61,7 @@ def scrape(platforms=None):  # pragma: no cover
     export_process = Process(target=export_by_creneau, args=(creneau_q,))
     export_process.start()
     with profiler, Pool(POOL_SIZE, **profiler.pool_args()) as pool:
-        centre_iterator_proportion = (c for c in centre_iterator(platforms=platforms) if random() < PARTIAL_SCRAPE)
+        centre_iterator_proportion = (c for c in iterator(platforms=platforms) if random() < PARTIAL_SCRAPE)
         centres_cherchés = pool.imap_unordered(
             lambda c: cherche_prochain_rdv_dans_centre(c, creneau_q), centre_iterator_proportion, 1
         )
@@ -161,24 +157,24 @@ def get_default_fetch_map():
     return {
         "Doctolib": {
             "urls": get_conf_platform("doctolib").get("recognized_urls", []),
-            "scraper_ptr": doctolib_fetch_slots,
+            "scraper_ptr": doctolib.fetch_slots,
         },
         "Keldoc": {
             "urls": get_conf_platform("keldoc").get("recognized_urls", []),
-            "scraper_ptr": keldoc_fetch_slots,
+            "scraper_ptr": keldoc.fetch_slots,
         },
-        "Maiia": {"urls": get_conf_platform("maiia").get("recognized_urls", []), "scraper_ptr": maiia_fetch_slots},
+        "Maiia": {"urls": get_conf_platform("maiia").get("recognized_urls", []), "scraper_ptr": maiia.fetch_slots},
         "Mapharma": {
             "urls": get_conf_platform("mapharma").get("recognized_urls", []),
-            "scraper_ptr": mapharma_fetch_slots,
+            "scraper_ptr": mapharma.fetch_slots,
         },
         "Ordoclic": {
             "urls": get_conf_platform("ordoclic").get("recognized_urls", []),
-            "scraper_ptr": ordoclic_fetch_slots,
+            "scraper_ptr": ordoclic.fetch_slots,
         },
         "AvecMonDoc": {
             "urls": get_conf_platform("avecmondoc").get("recognized_urls", []),
-            "scraper_ptr": avecmondoc_fetch_slots,
+            "scraper_ptr": avecmondoc.fetch_slots,
         },
     }
 
@@ -222,17 +218,17 @@ def fetch_centre_slots(
     return result
 
 
-def centre_iterator(platforms=None):  # pragma: no cover
+def iterator(platforms=None):  # pragma: no cover
     visited_centers_links = set()
     for center in ialternate(
-        manual_urls_iterator(),
-        ordoclic_centre_iterator(),
-        mapharma_centre_iterator(),
-        maiia_centre_iterator(),
+        manual_urls.iterator(),
+        ordoclic.iterator(),
+        mapharma.iterator(),
+        maiia.iterator(),
         # mise en pause temporaire
-        # avecmondoc_centre_iterator(),
-        doctolib_center_iterator(),
-        gouv_centre_iterator(),
+        # avecmondoc.iterator(),
+        doctolib.iterator(),
+        opendata.iterator(),
     ):
         platform = get_center_platform(center["rdv_site_web"], get_default_fetch_map())
         if platforms and platform and platform.lower() not in platforms:

@@ -11,7 +11,7 @@ from utils.vmd_utils import fix_scrap_urls
 logger = logging.getLogger("scraper")
 
 
-def center_iterator(outpath_format="data/output/{}.json") -> Iterator[dict]:
+def iterator(outpath_format="data/output/{}.json") -> Iterator[dict]:
     url = "https://www.data.gouv.fr/fr/datasets/r/5cb21a85-b0b0-4a65-a249-806a040ec372"
     response = requests.get(url)
     try:

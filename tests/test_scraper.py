@@ -6,7 +6,8 @@ from scraper.pattern.center_info import CenterInfo
 from scraper.pattern.scraper_result import GENERAL_PRACTITIONER, ScraperResult
 from scraper.pattern.vaccine import Vaccine, get_vaccine_name
 from utils.vmd_utils import departementUtils
-from scraper.scraper import fetch_centre_slots, get_start_date, gouv_centre_iterator
+from scraper.opendata import opendata
+from scraper.scraper import fetch_centre_slots, get_start_date
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 from .utils import mock_datetime_now
@@ -501,5 +502,5 @@ def test_scraper_request():
 
 
 def test_has_gouv_centers():
-    itr = gouv_centre_iterator()
-    assert sum(1 for center in itr) > 0
+    itr = opendata.iterator()
+    assert sum(1 for _ in itr) > 0
