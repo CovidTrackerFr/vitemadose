@@ -96,7 +96,7 @@ def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:  # pragma: no 
     has_error = None
     result = None
     try:
-        result = fetch_centre_slots(centre["rdv_site_web"], start_date, input_data=centre.get("booking"))
+        result = fetch_centre_slots(centre["rdv_site_web"], start_date, center_info=center_data, input_data=centre.get("booking"))
         center_data.fill_result(result)
     except ScrapeError as scrape_error:
         logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(scrape_error)}")
@@ -175,14 +175,14 @@ def get_center_platform(center_url: str, fetch_map: dict = None):
 
 
 @Profiling.measure("any_slot")
-def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None, input_data: dict = None) -> ScraperResult:
+def fetch_centre_slots(rdv_site_web, start_date, center_info, fetch_map: dict = None, input_data: dict = None) -> ScraperResult:
     if fetch_map is None:
         # Map platform to implementation.
         # May be overridden for unit testing purposes.
         fetch_map = get_default_fetch_map()
 
     rdv_site_web = fix_scrap_urls(rdv_site_web)
-    request = ScraperRequest(rdv_site_web, start_date)
+    request = ScraperRequest(rdv_site_web, start_date, center_info)
     platform = get_center_platform(rdv_site_web, fetch_map=fetch_map)
 
     if not platform:

@@ -60,5 +60,4 @@ class CreneauxByDepartement:
             'centres_disponibles': list(self.centres_disponibles.values()),
             'centres_indisponibles': [],
             'last_updated': self.now().isoformat()
-
         }

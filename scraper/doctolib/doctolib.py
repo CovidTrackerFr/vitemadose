@@ -7,11 +7,13 @@ from datetime import timedelta, datetime
 from math import floor
 from typing import Dict, Iterator, List, Optional, Tuple
 from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
+import dateutil
 
 import httpx
 import requests
 
 
+from scraper.creneaux.creneau import Creneau, Lieu, Plateforme
 from scraper.doctolib.conf import DoctolibConf
 from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
 from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
@@ -44,12 +46,20 @@ else:
 logger = logging.getLogger("scraper")
 
 
+class DummyQueue:
+    def __init__(self):
+        pass
+
+    def put(self, *args, **kwargs):
+        pass
+
+
 @Profiling.measure("doctolib_slot")
-def fetch_slots(request: ScraperRequest) -> Optional[str]:
+def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue) -> Optional[str]:
     if not DOCTOLIB_CONF.enabled:
         return None
     # Fonction principale avec le comportement "de prod".
-    doctolib = DoctolibSlots(client=DEFAULT_CLIENT)
+    doctolib = DoctolibSlots(client=DEFAULT_CLIENT, creneau_q=creneau_q)
     return doctolib.fetch(request)
 
 
@@ -57,8 +67,9 @@ class DoctolibSlots:
     # Permet de passer un faux client HTTP,
     # pour éviter de vraiment appeler Doctolib lors des tests.
 
-    def __init__(self, client: httpx.Client = None, cooldown_interval=DOCTOLIB_CONF.request_sleep):
+    def __init__(self, creneau_q=DummyQueue, client: httpx.Client = None, cooldown_interval=DOCTOLIB_CONF.request_sleep):
         self._cooldown_interval = cooldown_interval
+        self.creneau_q = creneau_q
         self._client = DEFAULT_CLIENT if client is None else client
 
     def fetch(self, request: ScraperRequest) -> Optional[str]:
@@ -320,8 +331,8 @@ class DoctolibSlots:
             appointment_count += int(slots.get("total", 0))
 
         for availability in slots["availabilities"]:
-            slot_list = availability.get("slots", None)
-            if not slot_list or len(slot_list) == 0:
+            slot_list = availability.get("slots", [])
+            if len(slot_list) == 0:
                 continue
             if isinstance(slot_list[0], str):
                 if not first_availability or slot_list[0] < first_availability:
@@ -337,6 +348,18 @@ class DoctolibSlots:
                 if not first_availability or sdate < first_availability:
                     first_availability = sdate
                     motive_availability = True
+                creneau = Creneau(
+                    horaire=dateutil.parser.parse(sdate),
+                    reservation_url=request.url,
+                    lieu=Lieu(
+                        url=request.url,
+                        nom=request.center_info.nom,
+                        internal_id=request.internal_id,
+                        departement=request.center_info.departement,
+                        lieu_type=request.practitioner_type
+                    )
+                )
+                self.creneau_q.put(creneau)
 
             if visit_motive_ids[motive_id]:
                 visite_motive_vaccine = visit_motive_ids[motive_id]

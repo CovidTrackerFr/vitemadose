@@ -1,6 +1,8 @@
 import copy
+import dateutil
 import json
 from pathlib import Path
+from queue import SimpleQueue
 
 import pytest
 
@@ -12,6 +14,9 @@ from scraper.doctolib.doctolib_filters import (
 )
 from scraper.error import BlockedByDoctolibError
 from scraper.pattern.vaccine import Vaccine
+from scraper.pattern.center_info import CenterInfo
+from scraper.creneaux.creneau import Creneau, Lieu, Plateforme
+from datetime import datetime
 
 import httpx
 from scraper.doctolib.doctolib import (
@@ -25,6 +30,7 @@ from scraper.doctolib.doctolib import (
     DOCTOLIB_CONF,
 )
 
+DOCTOLIB_CONF.pagination["pages"] = 1
 
 # -- Tests de l'API (offline) --
 from scraper.pattern.scraper_request import ScraperRequest
@@ -36,7 +42,8 @@ def test_blocked_by_doctolib_par_centre():
 
     start_date = "2021-04-03"
     base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
-    scrap_request = ScraperRequest(base_url, start_date)
+    center_info = CenterInfo(departement='07', nom="Mon Super Centre", url=base_url)
+    scrap_request = ScraperRequest(base_url, start_date, center_info)
 
     def app(request: httpx.Request) -> httpx.Response:
         assert "User-Agent" in request.headers
@@ -94,7 +101,8 @@ def test_doctolib():
 
     start_date = "2021-04-03"
     base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
-    scrap_request = ScraperRequest(base_url, start_date)
+    center_info = CenterInfo(departement='07', nom="Mon Super Centre", url=base_url)
+    scrap_request = ScraperRequest(base_url, start_date, center_info)
 
     def app(request: httpx.Request) -> httpx.Response:
         assert "User-Agent" in request.headers
@@ -113,6 +121,48 @@ def test_doctolib():
     next_date = slots.fetch(scrap_request)
     assert next_date == "2021-04-10"
 
+def test_doctolib_sends_creneau():
+    # Given
+    start_date = "2021-04-03"
+    base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
+    center_info = CenterInfo(departement='07', nom="Mon Super Centre", url=base_url)
+    scrap_request = ScraperRequest(base_url, start_date, center_info)
+
+    def app(request: httpx.Request) -> httpx.Response:
+        assert "User-Agent" in request.headers
+
+        if request.url.path == "/booking/centre1.json":
+            path = Path("tests", "fixtures", "doctolib", "basic-booking.json")
+            return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
+
+        assert request.url.path == "/availabilities.json"
+        path = Path("tests", "fixtures", "doctolib", "basic-availabilities.json")
+        return httpx.Response(200, json=json.loads(path.read_text(encoding="utf-8")))
+
+    client = httpx.Client(transport=httpx.MockTransport(app))
+    q = SimpleQueue()
+    slots = DoctolibSlots(client=client, cooldown_interval=0, creneau_q=q)
+
+    # When
+    slots.fetch(scrap_request)
+    actual = []
+    while not q.empty():
+        actual.append(q.get())
+    # Then
+    dates = [creneau.horaire for creneau in actual]
+    assert len(actual) == 1
+    assert actual[0] == Creneau(
+        reservation_url=base_url,
+        horaire=dateutil.parser.parse('2021-04-10'),
+        lieu=Lieu(
+            departement="07",
+            url=base_url,
+            nom="Mon Super Centre",
+            internal_id="doctolib123456789pid165752",
+            lieu_type="vaccination-center"
+        )
+    )
+
 
 def test_doctolib_motive_categories():
     # Certains centres opèrent une distinction de motifs pour les professionnels de santé /
@@ -121,7 +171,8 @@ def test_doctolib_motive_categories():
 
     start_date = "2021-04-03"
     base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
-    scrap_request = ScraperRequest(base_url, start_date)
+    center_info = CenterInfo(departement='07', nom="Mon Super Centre", url=base_url)
+    scrap_request = ScraperRequest(base_url, start_date, center_info)
 
     def app(request: httpx.Request) -> httpx.Response:
         assert "User-Agent" in request.headers
