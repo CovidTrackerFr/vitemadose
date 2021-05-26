@@ -21,7 +21,8 @@ class CreneauxByDepartement:
         """
         by_departement = CreneauxByDepartement(now=now, departement=departement)
         for creneau in creneaux:
-            by_departement.on_creneau(creneau)
+            if creneau.lieu.departement == departement:
+                by_departement.on_creneau(creneau)
         yield by_departement
 
     def on_creneau(self, creneau: Creneau):
@@ -49,7 +50,7 @@ class CreneauxByDepartement:
                 }
         centre = self.centres_disponibles[lieu.internal_id]
         centre['appointment_count'] += 1
-        centre['vaccine_type'] = list(set(centre['vaccine_type'] + [creneau.type_vaccin.value]))
+        centre['vaccine_type'] = sorted(list(set(centre['vaccine_type'] + [creneau.type_vaccin.value])))
         if not centre['prochain_rdv'] or dateutil.parser.parse(centre['prochain_rdv']) > creneau.horaire:
             centre['prochain_rdv'] = creneau.horaire.strftime("%Y-%m-%dT%H:%M:%SZ")
 

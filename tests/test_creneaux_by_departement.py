@@ -26,6 +26,26 @@ def test_creneaux_by_departement_from_empty():
         "centres_indisponibles": []
     }
 
+def test_creneaux_by_departement__from_other_departement():
+    # Given
+    departement = '07'
+    creneau = Creneau(
+        horaire=dateutil.parser.parse("2021-06-06T06:30:00.000Z"),
+        lieu=centre_perigueux,
+        reservation_url = "https://some.url/reservation",
+        timezone=Timezone("Europe/Paris"),
+        type_vaccin = Vaccine.ASTRAZENECA
+    )
+    # When
+    actual = next(CreneauxByDepartement.from_creneaux([creneau], departement=departement, now=now))
+    # Then
+    assert actual.asdict() == {
+        'version': 1,
+        'last_updated': expected_now.isoformat(),
+        "centres_disponibles": [],
+        "centres_indisponibles": []
+    }
+
 def test_creneaux_by_departement__1_creneau():
     # Given
     departement = '07'
@@ -109,7 +129,7 @@ def test_creneaux_by_departement__3_creneau():
             "type": "vaccination-center",
             "appointment_count": 3,
             "internal_id": "maiia5fff1f61b1a1aa1cc204f203",
-            "vaccine_type": ["Pfizer-BioNTech", 'Moderna'],
+            "vaccine_type": ["Moderna", "Pfizer-BioNTech"],
             "appointment_by_phone_only": False,
             "erreur": None,
         }],
@@ -135,4 +155,20 @@ centre_lamastre = Lieu(
     ),
     metadata=None,
     plateforme=Plateforme.MAIIA
+)
+
+centre_perigueux = Lieu(
+    departement='24',
+    nom="CENTRE DE VACCINATION COVID - PERIGUEUX",
+    url="https://www.doctolib.com/centre-de-vaccination/24000-perigueux/centre-de-vaccination-covid---lamastre?centerid=5fff1f61b1a1aa1cc204f205" ,
+    lieu_type="vaccination-center",
+    internal_id='doctolibfaaaaa1b1a1aa1cc204f203',
+    location=CenterLocation(
+        longitude = 4.5,
+        latitude = 45.0,
+        city = 'Perigueux',
+        cp = '24000',
+    ),
+    metadata=None,
+    plateforme=Plateforme.DOCTOLIB
 )
