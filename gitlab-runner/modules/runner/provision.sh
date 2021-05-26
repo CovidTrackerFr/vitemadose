@@ -27,6 +27,9 @@ function main () {
   cartouche "Installing Gitlab Runner"
   install_gitlab_runner
 
+  cartouche "Installing Datadog Agent"
+  install_dd_agent
+
   cartouche "Register Gitlab Runner"
   register_gitlab_runner
 
@@ -40,6 +43,13 @@ function install_gitlab_runner () {
   apt-get install -y gitlab-runner
   gitlab-runner start
   adduser gitlab-runner docker
+}
+
+function install_dd_agent () {
+  export DD_AGENT_MAJOR_VERSION=7
+  export DD_API_KEY=${DD_API_KEY}
+  export DD_SITE="datadoghq.com"
+  bash -c "$(curl -L https://s3.amazonaws.com/dd-agent/scripts/install_script.sh)"
 }
 
 function register_gitlab_runner () {
