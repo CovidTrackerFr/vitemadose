@@ -11,6 +11,10 @@ variable "gitlab_runner_token" {
   description = "Le registration token Gitlab"
   type = string
 }
+variable "datadog_api_key" {
+  description = "Clé d'API datadog"
+  type = string
+}
 variable "nb_instances" {
   description = "Le nombre de runners à lancer"
   type = number
