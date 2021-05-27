@@ -2,8 +2,10 @@ import os
 import json
 import traceback
 from collections import deque
-from multiprocessing.dummy import Pool, Queue
+from multiprocessing.dummy import Pool, Queue, Process
 from random import random
+
+from .export.export_v2 import JSONExporter
 
 from scraper.error import ScrapeError
 from scraper.pattern.center_info import CenterInfo
@@ -12,7 +14,7 @@ from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug, log_requests, log_platform_requests
-from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date
+from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date, q_iter, EOQ
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .export.export_merge import export_data
@@ -58,12 +60,13 @@ def scrape(platforms=None):  # pragma: no cover
     compte_bloqués = 0
     profiler = Profiling()
     creneau_q = Queue()
-    with profiler, Pool(4, **profiler.pool_args()) as pool:
+    export_process = Process(target=export_by_creneau, args=(creneau_q,))
+    export_process.start()
+    with profiler, Pool(POOL_SIZE, **profiler.pool_args()) as pool:
         centre_iterator_proportion = (c for c in centre_iterator(platforms=platforms) if random() < PARTIAL_SCRAPE)
         centres_cherchés = pool.imap_unordered(lambda c: cherche_prochain_rdv_dans_centre(c, creneau_q), centre_iterator_proportion, 1)
 
         centres_cherchés = get_last_scans(centres_cherchés)
-        dump_creneaux(creneau_q)
         log_platform_requests(centres_cherchés)
 
         if platforms:
@@ -89,21 +92,13 @@ def scrape(platforms=None):  # pragma: no cover
                     "Notre IP a été bloquée par le CDN Doctolib plus de 10 fois. Pour éviter de pousser des données erronées, on s'arrête ici"
                 )
                 exit(code=2)
+    creneau_q.put(EOQ)
+    export_process.join()
     logger.info(profiler.print_summary())
 
-def dump_creneaux(q):
-    count = 0
-    lieux_vus = {}
-    while not q.empty():
-        creneau = q.get()
-        logger.debug(f"Got Creneau {creneau}")
-        count += 1
-        if creneau.lieu.internal_id in lieux_vus:
-            lieux_vus[creneau.lieu.internal_id] += 1
-        else:
-            lieux_vus[creneau.lieu.internal_id] = 1
-    logger.info(f"Trouvé {count} créneaux dans {len(lieux_vus)} lieux")
-    print(json.dumps(lieux_vus, indent=2))
+def export_by_creneau(creneaux_q, ):
+    exporter = JSONExporter(outpath_format="data/output/v2/{}.json")
+    exporter.export(q_iter(creneaux_q))
 
 
 def cherche_prochain_rdv_dans_centre(centre: dict, creneau_q: Queue) -> CenterInfo:  # pragma: no cover

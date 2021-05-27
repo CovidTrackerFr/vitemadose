@@ -140,6 +140,17 @@ class DoctolibSlots:
             )
         request.update_appointment_schedules(appointment_schedules)
 
+        self.lieu = Lieu(
+            plateforme=Plateforme.DOCTOLIB,
+            url=request.url,
+            location=request.center_info.location,
+            nom=request.center_info.nom,
+            internal_id=request.internal_id,
+            departement=request.center_info.departement,
+            lieu_type=request.practitioner_type,
+            metadata=request.center_info.metadata
+        )
+
         timetable_start_date = datetime.now()  # shouldn't be datetime.now()!!
         for visit_motive_id in visit_motive_ids:
             agenda_ids, practice_ids = _find_agenda_and_practice_ids(
@@ -331,6 +342,12 @@ class DoctolibSlots:
                 if not first_availability or slot_list[0] < first_availability:
                     first_availability = slot_list[0]
                     motive_availability = True
+                    self.creneau_q.put(Creneau(
+                        horaire=dateutil.parser.parse(slot_list[0]),
+                        reservation_url=request.url,
+                        type_vaccin=visit_motive_ids[motive_id],
+                        lieu=self.lieu
+                    ))
 
             for slot_info in slot_list:
                 if isinstance(slot_info, str):
@@ -341,18 +358,12 @@ class DoctolibSlots:
                 if not first_availability or sdate < first_availability:
                     first_availability = sdate
                     motive_availability = True
-                creneau = Creneau(
+                self.creneau_q.put(Creneau(
                     horaire=dateutil.parser.parse(sdate),
                     reservation_url=request.url,
-                    lieu=Lieu(
-                        url=request.url,
-                        nom=request.center_info.nom,
-                        internal_id=request.internal_id,
-                        departement=request.center_info.departement,
-                        lieu_type=request.practitioner_type
-                    )
-                )
-                self.creneau_q.put(creneau)
+                    type_vaccin=visit_motive_ids[motive_id],
+                    lieu=self.lieu
+                ))
 
             if visit_motive_ids[motive_id]:
                 visite_motive_vaccine = visit_motive_ids[motive_id]

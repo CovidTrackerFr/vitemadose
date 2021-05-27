@@ -2,7 +2,6 @@ from datetime import datetime
 import dateutil
 from typing import Iterator
 
-
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme
 
 class CreneauxByDepartement:
@@ -21,30 +20,27 @@ class CreneauxByDepartement:
         """
         by_departement = CreneauxByDepartement(now=now, departement=departement)
         for creneau in creneaux:
-            if creneau.lieu.departement == departement:
-                by_departement.on_creneau(creneau)
+            by_departement.on_creneau(creneau)
         yield by_departement
 
     def on_creneau(self, creneau: Creneau):
         lieu = creneau.lieu
+        if lieu.departement != self.departement:
+            return
         if lieu.internal_id not in self.centres_disponibles:
             self.centres_disponibles[lieu.internal_id] = {
                     'internal_id': lieu.internal_id,
                     "departement": self.departement,
                     "nom": lieu.nom,
                     "url": lieu.url,
-                    "location": {
-                        'city': lieu.location.city,
-                        'cp': lieu.location.cp,
-                        'latitude': lieu.location.latitude,
-                        'longitude': lieu.location.longitude
-                    },
+                    "location": self.location_to_dict(lieu.location),
                     "metadata": lieu.metadata,
                     "prochain_rdv": None,
                     "plateforme": lieu.plateforme.value,
                     "type": lieu.lieu_type,
                     "appointment_count": 0,
                     "vaccine_type": [],
+                    "appointment_schedules": [],
                     "appointment_by_phone_only": False,
                     "erreur": None,
                 }
@@ -53,6 +49,16 @@ class CreneauxByDepartement:
         centre['vaccine_type'] = sorted(list(set(centre['vaccine_type'] + [creneau.type_vaccin.value])))
         if not centre['prochain_rdv'] or dateutil.parser.parse(centre['prochain_rdv']) > creneau.horaire:
             centre['prochain_rdv'] = creneau.horaire.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    def location_to_dict(self, location):
+        if not location:
+            return None
+        return {
+            'city': location.city,
+            'cp': location.cp,
+            'latitude': location.latitude,
+            'longitude': location.longitude
+        }
 
     def asdict(self):
         return {

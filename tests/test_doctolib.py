@@ -78,7 +78,8 @@ def test_blocked_by_doctolib_par_availabilities():
 
     start_date = "2021-04-03"
     base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
-    scrap_request = ScraperRequest(base_url, start_date)
+    center_info = CenterInfo(departement='07', nom="Mon Super Centre", url=base_url)
+    scrap_request = ScraperRequest(base_url, start_date, center_info)
 
     def app(request: httpx.Request) -> httpx.Response:
         assert "User-Agent" in request.headers
@@ -154,8 +155,10 @@ def test_doctolib_sends_creneau():
     assert actual[0] == Creneau(
         reservation_url=base_url,
         horaire=dateutil.parser.parse('2021-04-10'),
+        type_vaccin=Vaccine.MODERNA,
         lieu=Lieu(
             departement="07",
+            plateforme=Plateforme.DOCTOLIB,
             url=base_url,
             nom="Mon Super Centre",
             internal_id="doctolib123456789pid165752",
@@ -199,7 +202,8 @@ def test_doctolib_next_slot():
 
     start_date = "2021-04-03"
     base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
-    scrap_request = ScraperRequest(base_url, start_date)
+    center_info = CenterInfo(departement='07', nom="Mon Super Centre", url=base_url)
+    scrap_request = ScraperRequest(base_url, start_date, center_info)
 
     def app(request: httpx.Request) -> httpx.Response:
         assert "User-Agent" in request.headers
