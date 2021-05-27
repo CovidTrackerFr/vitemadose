@@ -1,7 +1,8 @@
 import os
+import json
 import traceback
 from collections import deque
-from multiprocessing import Pool
+from multiprocessing.dummy import Pool, Queue
 from random import random
 
 from scraper.error import ScrapeError
@@ -56,12 +57,13 @@ def scrape(platforms=None):  # pragma: no cover
     compte_centres_avec_dispo = 0
     compte_bloqués = 0
     profiler = Profiling()
-    with profiler, Pool(POOL_SIZE, **profiler.pool_args()) as pool:
+    creneau_q = Queue()
+    with profiler, Pool(4, **profiler.pool_args()) as pool:
         centre_iterator_proportion = (c for c in centre_iterator(platforms=platforms) if random() < PARTIAL_SCRAPE)
-        centres_cherchés = pool.imap_unordered(cherche_prochain_rdv_dans_centre, centre_iterator_proportion, 1)
+        centres_cherchés = pool.imap_unordered(lambda c: cherche_prochain_rdv_dans_centre(c, creneau_q), centre_iterator_proportion, 1)
 
         centres_cherchés = get_last_scans(centres_cherchés)
-
+        dump_creneaux(creneau_q)
         log_platform_requests(centres_cherchés)
 
         if platforms:
@@ -89,14 +91,28 @@ def scrape(platforms=None):  # pragma: no cover
                 exit(code=2)
     logger.info(profiler.print_summary())
 
+def dump_creneaux(q):
+    count = 0
+    lieux_vus = {}
+    while not q.empty():
+        creneau = q.get()
+        logger.debug(f"Got Creneau {creneau}")
+        count += 1
+        if creneau.lieu.internal_id in lieux_vus:
+            lieux_vus[creneau.lieu.internal_id] += 1
+        else:
+            lieux_vus[creneau.lieu.internal_id] = 1
+    logger.info(f"Trouvé {count} créneaux dans {len(lieux_vus)} lieux")
+    print(json.dumps(lieux_vus, indent=2))
 
-def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:  # pragma: no cover
+
+def cherche_prochain_rdv_dans_centre(centre: dict, creneau_q: Queue) -> CenterInfo:  # pragma: no cover
     center_data = CenterInfo.from_csv_data(centre)
     start_date = get_start_date()
     has_error = None
     result = None
     try:
-        result = fetch_centre_slots(centre["rdv_site_web"], start_date, center_info=center_data, input_data=centre.get("booking"))
+        result = fetch_centre_slots(centre["rdv_site_web"], start_date, creneau_q, center_info=center_data, input_data=centre.get("booking"))
         center_data.fill_result(result)
     except ScrapeError as scrape_error:
         logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(scrape_error)}")
@@ -175,7 +191,7 @@ def get_center_platform(center_url: str, fetch_map: dict = None):
 
 
 @Profiling.measure("any_slot")
-def fetch_centre_slots(rdv_site_web, start_date, center_info, fetch_map: dict = None, input_data: dict = None) -> ScraperResult:
+def fetch_centre_slots(rdv_site_web, start_date, creneau_q, center_info, fetch_map: dict = None, input_data: dict = None) -> ScraperResult:
     if fetch_map is None:
         # Map platform to implementation.
         # May be overridden for unit testing purposes.
@@ -192,7 +208,7 @@ def fetch_centre_slots(rdv_site_web, start_date, center_info, fetch_map: dict = 
     # Dispatch to appropriate implementation.
     fetch_impl = fetch_map[platform]["scraper_ptr"]
     result = ScraperResult(request, platform, None)
-    result.next_availability = fetch_impl(request)
+    result.next_availability = fetch_impl(request, creneau_q)
     return result
 
 
