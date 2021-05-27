@@ -58,4 +58,3 @@ def fetch_slots(request: ScraperRequest):
     if appointment_schedules:
         request.update_appointment_schedules(appointment_schedules)
     return date.strftime("%Y-%m-%dT%H:%M:%S.%f%z")
-

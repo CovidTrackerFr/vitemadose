@@ -68,7 +68,9 @@ class DoctolibCenterScraper:
 
         return centers
 
-    def parse_page_centers_departement(self, departement: str, page_id: int, liste_urls: list) -> Tuple[List[dict], bool]:
+    def parse_page_centers_departement(
+        self, departement: str, page_id: int, liste_urls: list
+    ) -> Tuple[List[dict], bool]:
         try:
             r = self._client.get(
                 BASE_URL_DEPARTEMENT.format(doctolib_urlify(departement), page_id),

@@ -57,9 +57,13 @@ def get_reasons(entityId, client: httpx.Client = DEFAULT_CLIENT, request: Scrape
         r.raise_for_status()
     except httpx.TimeoutException as hex:
         logger.warning(f"request timed out for center: {base_url}")
+        if request:
+            request.increase_request_count("time-out")
         return None
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{base_url} returned error {hex.response.status_code}")
+        if request:
+            request.increase_request_count("error")
         return None
     return r.json()
 
@@ -89,9 +93,13 @@ def get_slots(
         r.raise_for_status()
     except httpx.TimeoutException as hex:
         logger.warning(f"request timed out for center: {base_url}")
+        if request:
+            request.increase_request_count("time-out")
         return False
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{base_url} returned error {hex.response.status_code}")
+        if request:
+            request.increase_request_count("error")
         return None
     return r.json()
 
@@ -109,9 +117,11 @@ def get_profile(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
         r.raise_for_status()
     except httpx.TimeoutException as hex:
         logger.warning(f"request timed out for center: {base_url}")
+        request.increase_request_count("time-out")
         return False
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{base_url} returned error {hex.response.status_code}")
+        request.increase_request_count("error")
         return None
     return r.json()
 

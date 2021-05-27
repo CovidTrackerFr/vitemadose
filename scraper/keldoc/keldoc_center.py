@@ -57,9 +57,11 @@ class KeldocCenter:
                     f"Keldoc request returned error {hex.response.status_code} "
                     f"for center: {self.base_url} (vaccine cabinets)"
                 )
+                self.request.increase_request_count("error")
                 continue
             except (httpx.RemoteProtocolError, httpx.ConnectError) as hex:
                 logger.warning(f"Keldoc raise error {hex} for center: {self.base_url} (vaccine cabinets)")
+                self.request.increase_request_count("error")
                 continue
             data = cabinet_req.json()
             if not data:
@@ -80,9 +82,11 @@ class KeldocCenter:
                 f"Keldoc request returned error {hex.response.status_code} "
                 f"for center: {self.base_url} (center info)"
             )
+            self.request.increase_request_count("error")
             return False
         except (httpx.RemoteProtocolError, httpx.ConnectError) as hex:
             logger.warning(f"Keldoc raise error {hex} for center: {self.base_url} (center info)")
+            self.request.increase_request_count("error")
             return False
         data = resource.json()
 
@@ -103,9 +107,11 @@ class KeldocCenter:
             logger.warning(
                 f"Keldoc request returned error {hex.response.status_code} " f"for center: {self.base_url} (resource)"
             )
+            self.request.increase_request_count("error")
             return False
         except (httpx.RemoteProtocolError, httpx.ConnectError) as hex:
             logger.warning(f"Keldoc raise error {hex} for center: {self.base_url} (resource)")
+            self.request.increase_request_count("error")
             return False
         new_url = rq.url._uri_reference.unsplit()
 
@@ -173,6 +179,7 @@ class KeldocCenter:
                 f" celendar_url: {calendar_url}"
                 f" calendar_params: {calendar_params}"
             )
+            self.request.increase_request_count("time-out")
             return timetable, run
 
         except httpx.HTTPStatusError as hex:
@@ -180,10 +187,12 @@ class KeldocCenter:
                 f"Keldoc request returned error {hex.response.status_code} "
                 f"for center: {self.base_url} (calendar request)"
             )
+            self.request.increase_request_count("error")
             return timetable, run
 
         except (httpx.RemoteProtocolError, httpx.ConnectError) as hex:
             logger.warning(f"Keldoc raise error {hex} for center: {self.base_url} (calendar request)")
+            self.request.increase_request_count("error")
             return timetable, run
 
         current_timetable = calendar_req.json()
