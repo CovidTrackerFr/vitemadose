@@ -22,7 +22,7 @@ from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform
-from utils.vmd_utils import append_date_days
+from utils.vmd_utils import append_date_days, DummyQueue
 
 
 DOCTOLIB_CONF = DoctolibConf(**get_conf_platform("doctolib"))
@@ -45,13 +45,6 @@ else:
 
 logger = logging.getLogger("scraper")
 
-
-class DummyQueue:
-    def __init__(self):
-        pass
-
-    def put(self, *args, **kwargs):
-        pass
 
 
 @Profiling.measure("doctolib_slot")

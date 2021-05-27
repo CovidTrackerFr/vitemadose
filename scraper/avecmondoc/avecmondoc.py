@@ -14,7 +14,7 @@ from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.center_info import CenterInfo, CenterLocation, INTERVAL_SPLIT_DAYS, CHRONODOSES
 from scraper.pattern.vaccine import get_vaccine_name
 from utils.vmd_config import get_conf_platform
-from utils.vmd_utils import departementUtils
+from utils.vmd_utils import departementUtils, DummyQueue
 
 AVECMONDOC_CONF = get_conf_platform("avecmondoc")
 AVECMONDOC_API = AVECMONDOC_CONF.get("api", {})
@@ -301,7 +301,7 @@ def parse_availabilities(availabilities: list) -> Tuple[Optional[datetime], int]
 
 
 @Profiling.measure("avecmondoc_slot")
-def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) -> Optional[str]:
+def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue(), client: httpx.Client = DEFAULT_CLIENT) -> Optional[str]:
     url = request.get_url()
     slug = url.split("/")[-1]
     organization = get_organization_slug(slug, client, request)

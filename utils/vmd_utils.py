@@ -254,3 +254,12 @@ def append_date_days(mydate: str, days: int, seconds=0):
 
 def get_start_date():
     return dt.date.today().isoformat()
+
+
+class DummyQueue:
+    def __init__(self):
+        pass
+
+    def put(self, *args, **kwargs):
+        pass
+

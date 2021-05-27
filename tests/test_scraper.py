@@ -10,7 +10,8 @@ from scraper.scraper import fetch_centre_slots, get_start_date, gouv_centre_iter
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError
 from .utils import mock_datetime_now
-
+from utils.vmd_utils import DummyQueue
+from scraper.pattern.center_info import CenterInfo
 
 def test_export_data(tmp_path):
     centres_cherchés_dict = [
@@ -422,13 +423,13 @@ def test_fetch_centre_slots():
     We detect which implementation to use based on the visit URL.
     """
 
-    def fake_doctolib_fetch_slots(request: ScraperRequest):
+    def fake_doctolib_fetch_slots(request: ScraperRequest, sdate, **kwargs):
         return "2021-04-04"
 
-    def fake_keldoc_fetch_slots(request: ScraperRequest):
+    def fake_keldoc_fetch_slots(request: ScraperRequest, sdate, **kwargs):
         return "2021-04-05"
 
-    def fake_maiia_fetch_slots(request: ScraperRequest):
+    def fake_maiia_fetch_slots(request: ScraperRequest, sdate, **kwargs):
         return "2021-04-06"
 
     fetch_map = {
@@ -444,34 +445,35 @@ def test_fetch_centre_slots():
     }
 
     start_date = "2021-04-03"
+    center_info = CenterInfo(departement='08', nom='Mon Centre', url='https://some.url/')
 
     # Doctolib
     url = "https://partners.doctolib.fr/blabla"
-    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map)
+    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map, creneau_q=DummyQueue(), center_info=center_info)
     assert res.platform == "Doctolib"
     assert res.next_availability == "2021-04-04"
 
     # Doctolib (old)
     url = "https://www.doctolib.fr/blabla"
-    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map)
+    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map, creneau_q=DummyQueue(), center_info=center_info)
     assert res.platform == "Doctolib"
     assert res.next_availability == "2021-04-04"
 
     # Keldoc
     url = "https://vaccination-covid.keldoc.com/blabla"
-    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map)
+    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map, creneau_q=DummyQueue(), center_info=center_info)
     assert res.platform == "Keldoc"
     assert res.next_availability == "2021-04-05"
 
     # Maiia
     url = "https://www.maiia.com/blabla"
-    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map)
+    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map, creneau_q=DummyQueue(), center_info=center_info)
     assert res.platform == "Maiia"
     assert res.next_availability == "2021-04-06"
 
     # Default / unknown
     url = "https://www.example.com"
-    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map)
+    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map, creneau_q=DummyQueue(), center_info=center_info)
     assert res.platform == "Autre"
     assert res.next_availability is None
 

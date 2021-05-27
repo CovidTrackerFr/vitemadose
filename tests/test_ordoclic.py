@@ -163,10 +163,6 @@ def test_parse_ordoclic_slots():
     assert request.appointment_count == 42
 
 
-def test_fetch_slots():
-    pass
-
-
 def test_centre_iterator():
     pass
 
@@ -235,7 +231,7 @@ def test_fetch_slots():
 
     client = httpx.Client(transport=httpx.MockTransport(app))
     request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08")
-    res = fetch_slots(request, client)
+    res = fetch_slots(request, client=client)
     assert res == "2021-05-12T16:00:00+00:00"
 
     # Timeout test
@@ -254,7 +250,7 @@ def test_fetch_slots():
 
     client = httpx.Client(transport=httpx.MockTransport(app2))
     request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08")
-    res = fetch_slots(request, client)
+    res = fetch_slots(request, client=client)
     assert res is None
 
     # HTTP error test (available slots)
@@ -271,7 +267,7 @@ def test_fetch_slots():
 
     client = httpx.Client(transport=httpx.MockTransport(app3))
     request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08")
-    res = fetch_slots(request, client)
+    res = fetch_slots(request, client=client)
     assert res is None
 
     # HTTP error test (profile)
@@ -280,7 +276,7 @@ def test_fetch_slots():
 
     client = httpx.Client(transport=httpx.MockTransport(app4))
     request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08")
-    res = fetch_slots(request, client)
+    res = fetch_slots(request, client=client)
     assert res is None
 
     # Only appointments by phone test
@@ -301,5 +297,5 @@ def test_fetch_slots():
 
     client = httpx.Client(transport=httpx.MockTransport(app5))
     request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08")
-    res = fetch_slots(request, client)
+    res = fetch_slots(request, client=client)
     assert res is None

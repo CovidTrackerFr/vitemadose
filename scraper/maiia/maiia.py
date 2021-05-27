@@ -17,6 +17,7 @@ from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT, DEFAULT_CLIENT
 from utils.vmd_config import get_conf_platform, get_config
+from utils.vmd_utils import DummyQueue
 
 MAIIA_CONF = get_conf_platform("maiia")
 MAIIA_API = MAIIA_CONF.get("api", {})
@@ -187,7 +188,7 @@ def get_first_availability(
 
 
 @Profiling.measure("maiia_slot")
-def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) -> Optional[str]:
+def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue(), client: httpx.Client = DEFAULT_CLIENT) -> Optional[str]:
     if not MAIIA_ENABLED:
         return None
     url = request.get_url()

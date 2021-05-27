@@ -42,7 +42,7 @@ class CreneauxByDepartement:
                     "metadata": lieu.metadata,
                     "prochain_rdv": None,
                     "plateforme": lieu.plateforme.value,
-                    "type": lieu.type,
+                    "type": lieu.lieu_type,
                     "appointment_count": 0,
                     "vaccine_type": [],
                     "appointment_by_phone_only": False,
