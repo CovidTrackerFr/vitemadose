@@ -36,8 +36,10 @@ class Creneau:
     reservation_url: str
     timezone: Timezone = Timezone('Europe/Paris')
     type_vaccin: Optional[Vaccine] = None
+    disponible: bool = True
 
 @dataclass
 class PasDeCreneau:
     lieu: Lieu
     phone_only: bool = False
+    disponible: bool = False

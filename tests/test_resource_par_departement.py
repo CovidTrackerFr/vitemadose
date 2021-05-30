@@ -1,6 +1,5 @@
-from pytz import timezone as Timezone
 import dateutil
-import json
+from dateutil.tz import gettz
 from scraper.creneaux.creneau import Creneau, Plateforme, Lieu, PasDeCreneau
 from scraper.export.resource_centres import ResourceParDepartement
 from datetime import datetime
@@ -33,7 +32,7 @@ def test_resource_par_departement__from_other_departement():
         horaire=dateutil.parser.parse("2021-06-06T06:30:00.000Z"),
         lieu=centre_perigueux,
         reservation_url = "https://some.url/reservation",
-        timezone=Timezone("Europe/Paris"),
+        timezone=gettz("Europe/Paris"),
         type_vaccin = Vaccine.ASTRAZENECA
     )
     # When
@@ -53,7 +52,7 @@ def test_resource_par_departement__1_creneau():
         horaire=dateutil.parser.parse("2021-06-06T06:30:00.000Z"),
         lieu=centre_lamastre,
         reservation_url = "https://some.url/reservation",
-        timezone=Timezone("Europe/Paris"),
+        timezone=gettz("Europe/Paris"),
         type_vaccin = Vaccine.MODERNA
     )
     expected = {
@@ -130,21 +129,21 @@ def test_resource_par_departement__3_creneau():
         horaire=dateutil.parser.parse("2021-06-06T06:30:00.000Z"),
         lieu=centre_lamastre,
         reservation_url = "https://some.url/reservation",
-        timezone=Timezone("Europe/Paris"),
+        timezone=gettz("Europe/Paris"),
         type_vaccin = Vaccine.MODERNA
     )
     creneau_2 = Creneau(
         horaire=dateutil.parser.parse("2021-06-06T06:35:00.000Z"),
         lieu=centre_lamastre,
         reservation_url = "https://some.url/reservation",
-        timezone=Timezone("Europe/Paris"),
+        timezone=gettz("Europe/Paris"),
         type_vaccin = Vaccine.MODERNA
     )
     creneau_3 = Creneau(
         horaire=dateutil.parser.parse("2021-06-06T06:00:00.000Z"),
         lieu=centre_lamastre,
         reservation_url = "https://some.url/reservation",
-        timezone=Timezone("Europe/Paris"),
+        timezone=gettz("Europe/Paris"),
         type_vaccin = Vaccine.PFIZER
     )
     expected = {
