@@ -1,55 +1,49 @@
 from datetime import datetime
 import dateutil
-from typing import Iterator
+from typing import Iterator, Union
 from .resource import Resource
 
-from scraper.creneaux.creneau import Creneau, Lieu, Plateforme
+from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 
-class ResourceParDepartement(Resource):
-    def __init__(self, departement, now=datetime.now):
+class ResourceTousDepartements(Resource):
+    def __init__(self, now=datetime.now):
         self.now = now
-        self.departement = departement
         self.centres_disponibles = {}
-        pass
+        self.centres_indisponibles = {}
 
-    @classmethod
-    def from_creneaux(cls, creneaux: Iterator[Creneau], departement, now=datetime.now):
-        """
-        On retourne un iterateur qui contient un seul et unique ResourceParDepartement pour pouvoir découpler
-        l'invocation de l'execution car l'execution ne se lance alors qu'à l'appel
-        de `next(ResourceParDepartement.from_creneaux())`
-        """
-        by_departement = ResourceParDepartement(now=now, departement=departement)
-        for creneau in creneaux:
-            by_departement.on_creneau(creneau)
-        yield by_departement
-
-    def on_creneau(self, creneau: Creneau):
+    def on_creneau(self, creneau: Union[Creneau, PasDeCreneau]):
         lieu = creneau.lieu
-        if lieu.departement != self.departement:
+
+        if isinstance(creneau, PasDeCreneau):
+            self.centres_indisponibles[creneau.lieu.internal_id] = self.centre(lieu)
             return
+
         if lieu.internal_id not in self.centres_disponibles:
-            self.centres_disponibles[lieu.internal_id] = {
-                    'internal_id': lieu.internal_id,
-                    "departement": self.departement,
-                    "nom": lieu.nom,
-                    "url": lieu.url,
-                    "location": self.location_to_dict(lieu.location),
-                    "metadata": lieu.metadata,
-                    "prochain_rdv": None,
-                    "plateforme": lieu.plateforme.value,
-                    "type": lieu.lieu_type,
-                    "appointment_count": 0,
-                    "vaccine_type": [],
-                    "appointment_schedules": [],
-                    "appointment_by_phone_only": False,
-                    "erreur": None,
-                }
+            self.centres_disponibles[lieu.internal_id] = self.centre(lieu)
+
         centre = self.centres_disponibles[lieu.internal_id]
         centre['appointment_count'] += 1
         centre['vaccine_type'] = sorted(list(set(centre['vaccine_type'] + [creneau.type_vaccin.value])))
         if not centre['prochain_rdv'] or dateutil.parser.parse(centre['prochain_rdv']) > creneau.horaire:
             centre['prochain_rdv'] = creneau.horaire.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    def centre(self, lieu: Lieu):
+        return {
+            'internal_id': lieu.internal_id,
+            "departement": lieu.departement,
+            "nom": lieu.nom,
+            "url": lieu.url,
+            "location": self.location_to_dict(lieu.location),
+            "metadata": lieu.metadata,
+            "prochain_rdv": None,
+            "plateforme": lieu.plateforme.value,
+            "type": lieu.lieu_type,
+            "appointment_count": 0,
+            "vaccine_type": [],
+            "appointment_schedules": [],
+            "appointment_by_phone_only": False,
+            "erreur": None,
+        }
 
     def location_to_dict(self, location):
         if not location:
@@ -65,7 +59,16 @@ class ResourceParDepartement(Resource):
         return {
             'version': 1,
             'centres_disponibles': list(self.centres_disponibles.values()),
-            'centres_indisponibles': [],
+            'centres_indisponibles': list(self.centres_indisponibles.values()),
             'last_updated': self.now().isoformat()
         }
 
+
+class ResourceParDepartement(ResourceTousDepartements):
+    def __init__(self, departement, now=datetime.now):
+        super().__init__(now=now)
+        self.departement = departement
+
+    def on_creneau(self, creneau: Creneau):
+        if creneau.lieu.departement == self.departement:
+            return super().on_creneau(creneau)

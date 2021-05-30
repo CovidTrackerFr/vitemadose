@@ -1,6 +1,6 @@
 from utils.vmd_utils import q_iter
 from scraper.creneaux.creneau import Creneau
-from scraper.export.resource_centres import ResourceParDepartement
+from scraper.export.resource_centres import ResourceParDepartement, ResourceTousDepartements
 import os
 import json
 import logging
@@ -29,9 +29,13 @@ class JSONExporter:
     def __init__(self, departements=None, outpath_format="data/output/{}.json"):
         self.outpath_format = outpath_format
         departements = departements if departements else Departement.all()
-        self.resources = {
+        resources_departements = {
             departement.code: ResourceParDepartement(departement.code)
             for departement in departements
+        }
+        self.resources = {
+            'info_centres': ResourceTousDepartements(),
+            **resources_departements
         }
 
     def export(self, creneaux: Iterator[Creneau]):

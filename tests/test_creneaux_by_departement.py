@@ -1,7 +1,7 @@
 from pytz import timezone as Timezone
 import dateutil
 import json
-from scraper.creneaux.creneau import Creneau, Plateforme, Lieu
+from scraper.creneaux.creneau import Creneau, Plateforme, Lieu, PasDeCreneau
 from scraper.export.resource_centres import ResourceParDepartement
 from datetime import datetime
 from scraper.pattern.vaccine import Vaccine
@@ -85,6 +85,42 @@ def test_creneaux_by_departement__1_creneau():
     # When
     actual = next(ResourceParDepartement.from_creneaux([creneau], departement=departement, now=now))
     # Then
+    assert actual.asdict()['centres_disponibles'] == expected['centres_disponibles']
+
+def test_creneaux_by_departement__0_creneau():
+    # Given
+    departement = '07'
+    creneau = PasDeCreneau(lieu=centre_lamastre)
+    expected = {
+        'version': 1,
+        'last_updated': expected_now.isoformat(),
+        "centres_indisponibles": [{
+            "departement": "07",
+            "nom": "CENTRE DE VACCINATION COVID - LAMASTRE",
+            "url": "https://www.maiia.com/centre-de-vaccination/07270-lamastre/centre-de-vaccination-covid---lamastre?centerid=5fff1f61b1a1aa1cc204f203",
+            "location": {
+                "longitude": 4.5,
+                "latitude": 45.0,
+                "city": "Lamastre",
+                "cp": "07270"
+                },
+            "metadata": None,
+            "prochain_rdv": None,
+            "plateforme": "Maiia",
+            "type": "vaccination-center",
+            "appointment_count": 0,
+            "appointment_schedules": [],
+            "internal_id": "maiia5fff1f61b1a1aa1cc204f203",
+            "vaccine_type": [],
+            "appointment_by_phone_only": False,
+            "erreur": None,
+        }],
+        "centres_disponibles": []
+    }
+    # When
+    actual = next(ResourceParDepartement.from_creneaux([creneau], departement=departement, now=now))
+    # Then
+    assert actual.asdict()['centres_indisponibles'] == expected['centres_indisponibles']
     assert actual.asdict()['centres_disponibles'] == expected['centres_disponibles']
 
 def test_creneaux_by_departement__3_creneau():

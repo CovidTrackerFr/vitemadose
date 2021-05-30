@@ -37,5 +37,7 @@ class Creneau:
     timezone: Timezone = Timezone('Europe/Paris')
     type_vaccin: Optional[Vaccine] = None
 
-
-
+@dataclass
+class PasDeCreneau:
+    lieu: Lieu
+    phone_only: bool = False
