@@ -1,6 +1,6 @@
 from utils.vmd_utils import q_iter
 from scraper.creneaux.creneau import Creneau
-from scraper.creneaux.creneaux_by_departement import CreneauxByDepartement
+from scraper.export.resource_centres import ResourceParDepartement
 import os
 import json
 import logging
@@ -12,7 +12,7 @@ logger = logging.getLogger("scraper")
 def export_by_departement(creneaux_it):
     count = 0
     lieux_vus = {}
-    dep75 = CreneauxByDepartement('75')
+    dep75 = ResourceParDepartement('75')
     for creneau in creneaux_it:
         logger.debug(f"Got Creneau {creneau}")
         count += 1
@@ -29,8 +29,8 @@ class JSONExporter:
     def __init__(self, departements=None, outpath_format="data/output/{}.json"):
         self.outpath_format = outpath_format
         departements = departements if departements else Departement.all()
-        self.by_departement = {
-            departement.code: CreneauxByDepartement(departement.code)
+        self.resources = {
+            departement.code: ResourceParDepartement(departement.code)
             for departement in departements
         }
 
@@ -39,14 +39,14 @@ class JSONExporter:
         for creneau in creneaux:
             logger.debug(f"Got Creneau {creneau}")
             count += 1
-            for departement in self.by_departement.values():
-                departement.on_creneau(creneau)
+            for resource in self.resources.values():
+                resource.on_creneau(creneau)
 
-        lieux_avec_creneau = sum([len(departement.centres_disponibles) for departement in self.by_departement.values()])
+        lieux_avec_creneau = sum([len(departement.centres_disponibles) for departement in self.resources.values()])
         logger.info(f"Trouvé {count} créneaux dans {lieux_avec_creneau} lieux")
-        for code, departement in self.by_departement.items():
-            with open(self.outpath_format.format(code), 'w') as outfile:
-                json.dump(departement.asdict(), outfile, indent=2)
+        for key, resource in self.resources.items():
+            with open(self.outpath_format.format(key), 'w') as outfile:
+                json.dump(resource.asdict(), outfile, indent=2)
 
 @dataclass
 class Departement:

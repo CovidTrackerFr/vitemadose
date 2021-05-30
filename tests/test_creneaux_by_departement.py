@@ -2,7 +2,7 @@ from pytz import timezone as Timezone
 import dateutil
 import json
 from scraper.creneaux.creneau import Creneau, Plateforme, Lieu
-from scraper.creneaux.creneaux_by_departement import CreneauxByDepartement
+from scraper.export.resource_centres import ResourceParDepartement
 from datetime import datetime
 from scraper.pattern.vaccine import Vaccine
 from scraper.pattern.center_location import CenterLocation
@@ -17,7 +17,7 @@ def test_creneaux_by_departement_from_empty():
     departement = '07'
     creneaux = []
     # When
-    actual = next(CreneauxByDepartement.from_creneaux(creneaux, departement=departement, now=now))
+    actual = next(ResourceParDepartement.from_creneaux(creneaux, departement=departement, now=now))
     # Then
     assert actual.asdict() == {
         'version': 1,
@@ -37,7 +37,7 @@ def test_creneaux_by_departement__from_other_departement():
         type_vaccin = Vaccine.ASTRAZENECA
     )
     # When
-    actual = next(CreneauxByDepartement.from_creneaux([creneau], departement=departement, now=now))
+    actual = next(ResourceParDepartement.from_creneaux([creneau], departement=departement, now=now))
     # Then
     assert actual.asdict() == {
         'version': 1,
@@ -83,7 +83,7 @@ def test_creneaux_by_departement__1_creneau():
         "centres_indisponibles": []
     }
     # When
-    actual = next(CreneauxByDepartement.from_creneaux([creneau], departement=departement, now=now))
+    actual = next(ResourceParDepartement.from_creneaux([creneau], departement=departement, now=now))
     # Then
     assert actual.asdict()['centres_disponibles'] == expected['centres_disponibles']
 
@@ -138,7 +138,7 @@ def test_creneaux_by_departement__3_creneau():
         "centres_indisponibles": []
     }
     # When
-    actual = next(CreneauxByDepartement.from_creneaux([creneau_1, creneau_2, creneau_3], departement=departement, now=now))
+    actual = next(ResourceParDepartement.from_creneaux([creneau_1, creneau_2, creneau_3], departement=departement, now=now))
     # Then
     assert actual.asdict()['centres_disponibles'] == expected['centres_disponibles']
 

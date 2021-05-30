@@ -1,10 +1,11 @@
 from datetime import datetime
 import dateutil
 from typing import Iterator
+from .resource import Resource
 
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme
 
-class CreneauxByDepartement:
+class ResourceParDepartement(Resource):
     def __init__(self, departement, now=datetime.now):
         self.now = now
         self.departement = departement
@@ -14,11 +15,11 @@ class CreneauxByDepartement:
     @classmethod
     def from_creneaux(cls, creneaux: Iterator[Creneau], departement, now=datetime.now):
         """
-        On retourne un iterateur qui contient un seul et unique CreneauxByDepartement pour pouvoir découpler
+        On retourne un iterateur qui contient un seul et unique ResourceParDepartement pour pouvoir découpler
         l'invocation de l'execution car l'execution ne se lance alors qu'à l'appel
-        de `next(CreneauxByDepartement.from_creneaux())`
+        de `next(ResourceParDepartement.from_creneaux())`
         """
-        by_departement = CreneauxByDepartement(now=now, departement=departement)
+        by_departement = ResourceParDepartement(now=now, departement=departement)
         for creneau in creneaux:
             by_departement.on_creneau(creneau)
         yield by_departement
@@ -67,3 +68,4 @@ class CreneauxByDepartement:
             'centres_indisponibles': [],
             'last_updated': self.now().isoformat()
         }
+
