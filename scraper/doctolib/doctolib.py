@@ -109,7 +109,6 @@ class DoctolibSlots:
         # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1
         visit_motive_category_id = _find_visit_motive_category_id(rdata)
         # visit_motive_id
-        # TODO change following line to call _find_visite_motive_category_names_group
         visit_motive_ids_by_vaccine = _find_visit_motive_id(rdata, visit_motive_category_id=visit_motive_category_id)
         if visit_motive_ids_by_vaccine is None:
             return None
