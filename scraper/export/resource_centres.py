@@ -2,6 +2,7 @@ from datetime import datetime
 import dateutil
 from typing import Iterator, Union
 from .resource import Resource
+from utils.vmd_center_sort import sort_center
 
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 
@@ -25,11 +26,10 @@ class ResourceTousDepartements(Resource):
         centre['appointment_count'] += 1
         centre['vaccine_type'] = sorted(list(set(centre['vaccine_type'] + [creneau.type_vaccin.value])))
         if not centre['prochain_rdv'] or dateutil.parser.parse(centre['prochain_rdv']) > creneau.horaire:
-            centre['prochain_rdv'] = creneau.horaire.strftime("%Y-%m-%dT%H:%M:%SZ")
+            centre['prochain_rdv'] = creneau.horaire.replace(microsecond=0).isoformat()
 
     def centre(self, lieu: Lieu):
         return {
-            'internal_id': lieu.internal_id,
             "departement": lieu.departement,
             "nom": lieu.nom,
             "url": lieu.url,
@@ -39,6 +39,7 @@ class ResourceTousDepartements(Resource):
             "plateforme": lieu.plateforme.value,
             "type": lieu.lieu_type,
             "appointment_count": 0,
+            'internal_id': lieu.internal_id,
             "vaccine_type": [],
             "appointment_schedules": [],
             "appointment_by_phone_only": False,
@@ -49,18 +50,18 @@ class ResourceTousDepartements(Resource):
         if not location:
             return None
         return {
+            'longitude': location.longitude,
+            'latitude': location.latitude,
             'city': location.city,
             'cp': location.cp,
-            'latitude': location.latitude,
-            'longitude': location.longitude
         }
 
     def asdict(self):
         return {
             'version': 1,
-            'centres_disponibles': list(self.centres_disponibles.values()),
+            'last_updated': self.now().isoformat(),
+            'centres_disponibles': sorted(list(self.centres_disponibles.values()), key=sort_center),
             'centres_indisponibles': list(self.centres_indisponibles.values()),
-            'last_updated': self.now().isoformat()
         }
 
 

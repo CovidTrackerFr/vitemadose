@@ -70,7 +70,7 @@ def test_creneaux_by_departement__1_creneau():
                 "cp": "07270"
                 },
             "metadata": None,
-            "prochain_rdv": "2021-06-06T06:30:00Z",
+            "prochain_rdv": "2021-06-06T06:30:00+00:00",
             "plateforme": "Maiia",
             "type": "vaccination-center",
             "appointment_count": 1,
@@ -161,7 +161,7 @@ def test_creneaux_by_departement__3_creneau():
                 "cp": "07270"
                 },
             "metadata": None,
-            "prochain_rdv": "2021-06-06T06:00:00Z",
+            "prochain_rdv": "2021-06-06T06:00:00+00:00",
             "plateforme": "Maiia",
             "type": "vaccination-center",
             "appointment_count": 3,

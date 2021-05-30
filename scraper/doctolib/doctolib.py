@@ -13,7 +13,7 @@ import httpx
 import requests
 
 
-from scraper.creneaux.creneau import Creneau, Lieu, Plateforme
+from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 from scraper.doctolib.conf import DoctolibConf
 from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
 from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
@@ -64,8 +64,16 @@ class DoctolibSlots:
         self._cooldown_interval = cooldown_interval
         self.creneau_q = creneau_q
         self._client = DEFAULT_CLIENT if client is None else client
+        self.lieu = None
 
     def fetch(self, request: ScraperRequest) -> Optional[str]:
+        result = self._fetch(request)
+        if result is None and self.lieu:
+            self.creneau_q.put(PasDeCreneau(lieu=self.lieu, phone_only=request.appointment_by_phone_only))
+
+        return result
+
+    def _fetch(self, request: ScraperRequest) -> Optional[str]:
 
         centre = _parse_centre(request.get_url())
 
