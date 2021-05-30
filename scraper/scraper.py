@@ -26,6 +26,8 @@ from .ordoclic import centre_iterator as ordoclic_centre_iterator
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
 from .avecmondoc.avecmondoc import center_iterator as avecmondoc_centre_iterator
 from .avecmondoc.avecmondoc import fetch_slots as avecmondoc_fetch_slots
+from .clikodoc.clikodoc import center_iterator as clikodoc_centre_iterator
+from .clikodoc.clikodoc import fetch_slots as clikodoc_fetch_slots
 from .circuit_breaker import CircuitBreakerOffException
 
 POOL_SIZE = int(os.getenv("POOL_SIZE", 50))
@@ -156,6 +158,10 @@ def get_default_fetch_map():
             "urls": get_conf_platform("avecmondoc").get("recognized_urls", []),
             "scraper_ptr": avecmondoc_fetch_slots,
         },
+        "Clikodoc": {
+            "urls": get_conf_platform("clikodoc").get("recognized_urls", []),
+            "scraper_ptr": clikodoc_fetch_slots,
+        },
     }
 
 
@@ -199,13 +205,14 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None, input_d
 def centre_iterator(platforms=None):  # pragma: no cover
     visited_centers_links = set()
     for center in ialternate(
-        ordoclic_centre_iterator(),
-        mapharma_centre_iterator(),
-        maiia_centre_iterator(),
+        #ordoclic_centre_iterator(),
+        #mapharma_centre_iterator(),
+        #maiia_centre_iterator(),
         # mise en pause temporaire
         # avecmondoc_centre_iterator(),
-        doctolib_center_iterator(),
-        gouv_centre_iterator(),
+        #doctolib_center_iterator(),
+        #gouv_centre_iterator(),
+        clikodoc_centre_iterator(),
     ):
         platform = get_center_platform(center["rdv_site_web"], get_default_fetch_map())
         if platforms and platform and platform.lower() not in platforms:
