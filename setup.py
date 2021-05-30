@@ -19,5 +19,6 @@ setup(
         "pydantic==1.8.2",
         "diskcache==5.2.1",
         "dotmap==1.3.23",
+        "lxml==4.6.3",
     ],
 )

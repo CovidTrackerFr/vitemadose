@@ -398,6 +398,37 @@
           "0": "Dimanche"
         }
       }
+    },
+    "clikodoc": {
+      "enabled": true,
+      "timeout": 25,
+      "recognized_urls": [
+        "https://www.clikodoc.com"
+      ],
+      "api": {
+        "homepage": "https://www.clikodoc.com",
+        "doctors": "https://www.clikodoc.com/getDoctorsListForAllState",
+        "next_available_date": "https://www.clikodoc.com/foreapicntrl/nextavaildate?module=patients",
+        "slots": "https://www.clikodoc.com/getSlotsForBookingV2"
+      },
+      "doctors_options": {
+        "speciality_id": "9",
+        "city_id": "0"
+      },
+      "slot_limit": 3,
+      "days_limit": 50,
+      "filters": {
+        "first_injection_typeids": [
+          "699",
+          "737"
+        ],
+        "invalid_doctors": [
+          7027
+        ]
+      },
+      "center_scraper": {
+        "result_path": "data/output/clikodoc_centers.json"
+      }
     }
   }
 }

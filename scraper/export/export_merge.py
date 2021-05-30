@@ -133,7 +133,7 @@ def merge_centers(centers: list, center_dicts):
 
 
 def merge_platforms():
-    platforms = ["doctolib", "ordoclic", "keldoc", "maiia", "mapharma"]
+    platforms = ["doctolib", "ordoclic", "keldoc", "maiia", "mapharma", "clikodoc"]
     platform_path = "data/output/pool/{}.json"
     centers = []
     last_scrap = {}
