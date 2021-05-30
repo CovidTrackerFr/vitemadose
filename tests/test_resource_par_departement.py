@@ -12,7 +12,7 @@ def now():
     expected_now
     return expected_now
 
-def test_creneaux_by_departement_from_empty():
+def test_resource_par_departement_from_empty():
     # Given
     departement = '07'
     creneaux = []
@@ -26,7 +26,7 @@ def test_creneaux_by_departement_from_empty():
         "centres_indisponibles": []
     }
 
-def test_creneaux_by_departement__from_other_departement():
+def test_resource_par_departement__from_other_departement():
     # Given
     departement = '07'
     creneau = Creneau(
@@ -46,7 +46,7 @@ def test_creneaux_by_departement__from_other_departement():
         "centres_indisponibles": []
     }
 
-def test_creneaux_by_departement__1_creneau():
+def test_resource_par_departement__1_creneau():
     # Given
     departement = '07'
     creneau = Creneau(
@@ -87,7 +87,7 @@ def test_creneaux_by_departement__1_creneau():
     # Then
     assert actual.asdict()['centres_disponibles'] == expected['centres_disponibles']
 
-def test_creneaux_by_departement__0_creneau():
+def test_resource_par_departement__0_creneau():
     # Given
     departement = '07'
     creneau = PasDeCreneau(lieu=centre_lamastre)
@@ -123,7 +123,7 @@ def test_creneaux_by_departement__0_creneau():
     assert actual.asdict()['centres_indisponibles'] == expected['centres_indisponibles']
     assert actual.asdict()['centres_disponibles'] == expected['centres_disponibles']
 
-def test_creneaux_by_departement__3_creneau():
+def test_resource_par_departement__3_creneau():
     # Given
     departement = '07'
     creneau_1 = Creneau(
