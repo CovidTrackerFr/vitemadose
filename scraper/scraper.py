@@ -102,7 +102,9 @@ def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:  # pragma: no 
         logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(scrape_error)}")
         has_error = scrape_error
     except CircuitBreakerOffException as error:
-        logger.error(f"circuit '{error.name}' désactivé lors du traîtement de la ligne avec le gid {centre['gid']}: {str(error)}")
+        logger.error(
+            f"circuit '{error.name}' désactivé lors du traîtement de la ligne avec le gid {centre['gid']}: {str(error)}"
+        )
         has_error = error
     except Exception:
         logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']}")

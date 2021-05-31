@@ -18,6 +18,6 @@ setup(
         "jsonschema==3.2.0",
         "pydantic==1.8.2",
         "diskcache==5.2.1",
-        "dotmap==1.3.23"
+        "dotmap==1.3.23",
     ],
 )

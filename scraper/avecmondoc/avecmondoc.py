@@ -11,9 +11,7 @@ from pytz import timezone
 from typing import Iterator, Optional, Tuple
 
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.pattern.center_info import (
-    CenterInfo, CenterLocation, INTERVAL_SPLIT_DAYS, CHRONODOSES
-)
+from scraper.pattern.center_info import CenterInfo, CenterLocation, INTERVAL_SPLIT_DAYS, CHRONODOSES
 from scraper.pattern.vaccine import get_vaccine_name
 from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import departementUtils
@@ -31,6 +29,7 @@ DEFAULT_CLIENT = httpx.Client(headers=AVECMONDOC_HEADERS, timeout=timeout)
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
 
+
 def search(client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
     url = AVECMONDOC_API.get("search", "")
     payload = AVECMONDOC_API.get("search_filter", "")
@@ -47,96 +46,114 @@ def search(client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
     return r.json()
 
 
-def get_doctor_slug(slug: str, client: httpx.Client = DEFAULT_CLIENT,
-    request: ScraperRequest = None) -> Optional[dict]:
+def get_doctor_slug(slug: str, client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None) -> Optional[dict]:
     url = AVECMONDOC_API.get("get_doctor_slug", "").format(slug=slug)
     try:
         r = client.get(url)
         r.raise_for_status()
     except httpx.TimeoutException as hex:
         logger.warning(f"request timed out for center: {url} (get_slug)")
+        if request:
+            request.increase_request_count("time-out")
         return None
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{url} returned error {hex.response.status_code}")
         logger.warning(r.content)
+        if request:
+            request.increase_request_count("error")
         return None
     if request:
         request.increase_request_count("cabinets")
     return r.json()
 
 
-def get_organization_slug(slug: str, client: httpx.Client = DEFAULT_CLIENT,
-    request: ScraperRequest = None) -> Optional[dict]:
+def get_organization_slug(
+    slug: str, client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None
+) -> Optional[dict]:
     url = str(AVECMONDOC_API.get("get_organization_slug", "")).format(slug=slug)
     try:
         r = client.get(url)
         r.raise_for_status()
     except httpx.TimeoutException as hex:
         logger.warning(f"request timed out for center: {url} (get_slug)")
+        if request:
+            request.increase_request_count("time-out")
         return None
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{url} returned error {hex.response.status_code}")
         logger.warning(r.content)
+        if request:
+            request.increase_request_count("error")
         return None
     if request:
         request.increase_request_count("cabinets")
     return r.json()
 
 
-def get_by_doctor(doctor_id: int, client: httpx.Client = DEFAULT_CLIENT,
-    request: ScraperRequest = None) -> Optional[list]:
+def get_by_doctor(
+    doctor_id: int, client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None
+) -> Optional[list]:
     url = AVECMONDOC_API.get("get_by_doctor", "").format(id=doctor_id)
     try:
         r = client.get(url)
         r.raise_for_status()
     except httpx.TimeoutException as hex:
         logger.warning(f"request timed out for {url} (get_by_doctor)")
+        if request:
+            request.increase_request_count("time-out")
         return None
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{url} returned error {hex.response.status_code}")
         logger.warning(r.content)
+        if request:
+            request.increase_request_count("error")
         return None
     if request:
         request.increase_request_count("resource")
     return r.json()
 
 
-def get_by_organization(organization_id: int, client: httpx.Client = DEFAULT_CLIENT,
-    request: ScraperRequest = None) -> Optional[list]:
+def get_by_organization(
+    organization_id: int, client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None
+) -> Optional[list]:
     url = AVECMONDOC_API.get("get_by_organization", "").format(id=organization_id)
     try:
         r = client.get(url)
         r.raise_for_status()
     except httpx.TimeoutException as hex:
         logger.warning(f"request timed out for {url} (get_by_doctor)")
+        if request:
+            request.increase_request_count("time-out")
         return None
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{url} returned error {hex.response.status_code}")
         logger.warning(r.content)
+        if request:
+            request.increase_request_count("error")
         return None
     if request:
         request.increase_request_count("resource")
     return r.json()
 
 
-def get_reasons(organization_id: int, doctor_id:int, client: httpx.Client = DEFAULT_CLIENT,
-    request: ScraperRequest = None) -> Optional[list]:
+def get_reasons(
+    organization_id: int, doctor_id: int, client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None
+) -> Optional[list]:
     url = AVECMONDOC_API.get("get_reasons", "").format(id=id)
-    payload = {
-        "params": json.dumps({
-            "organizationId": organization_id,
-            "doctorId": doctor_id
-        })
-    }
+    payload = {"params": json.dumps({"organizationId": organization_id, "doctorId": doctor_id})}
     try:
         r = client.get(url, params=payload)
         r.raise_for_status()
     except httpx.TimeoutException as hex:
         logger.warning(f"request timed out for center: {url} (get_reasons)")
+        if request:
+            request.increase_request_count("time-out")
         return None
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{url} returned error {hex.response.status_code}")
         logger.warning(r.content)
+        if request:
+            request.increase_request_count("error")
         return None
     if request:
         request.increase_request_count("motives")
@@ -187,8 +204,9 @@ def get_valid_reasons(reasons: list) -> list:
     ]
 
 
-def get_availabilities_week(reason_id: int, organization_id: int,
-    start_date: datetime, client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
+def get_availabilities_week(
+    reason_id: int, organization_id: int, start_date: datetime, client: httpx.Client = DEFAULT_CLIENT
+) -> Optional[list]:
     url = AVECMONDOC_API.get("availabilities_per_day", "")
     week_size = AVECMONDOC_CONF.get("week_size", 5)
     payload = {
@@ -198,7 +216,7 @@ def get_availabilities_week(reason_id: int, organization_id: int,
         "organizationId": organization_id,
         "periodEnd": (start_date + timedelta(days=week_size)).strftime("%Y-%m-%dT%H:%M:%S.000Z"),
         "periodStart": start_date.strftime("%Y-%m-%dT%H:%M:%S.000Z"),
-        "type":"inOffice"
+        "type": "inOffice",
     }
     headers = {"Content-type": "application/json", "Accept": "application/json"}
     try:
@@ -214,10 +232,14 @@ def get_availabilities_week(reason_id: int, organization_id: int,
     return r.json()
 
 
-def get_availabilities(reason_id: int, organization_id: int,
-    start_date: datetime, end_date: datetime, 
+def get_availabilities(
+    reason_id: int,
+    organization_id: int,
+    start_date: datetime,
+    end_date: datetime,
     client: httpx.Client = DEFAULT_CLIENT,
-    request: ScraperRequest = None) -> list:
+    request: ScraperRequest = None,
+) -> list:
     availabilities = []
     week_size = AVECMONDOC_CONF.get("week_size", 5)
     page_date = start_date
@@ -281,12 +303,12 @@ def parse_availabilities(availabilities: list) -> Tuple[Optional[datetime], int]
 @Profiling.measure("avecmondoc_slot")
 def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) -> Optional[str]:
     url = request.get_url()
-    slug = url.split('/')[-1]
+    slug = url.split("/")[-1]
     organization = get_organization_slug(slug, client, request)
     if organization is None:
         return None
     if "error" in organization:
-        logger.warning(organization["error"])   
+        logger.warning(organization["error"])
     for speciality in organization["speciality"]:
         request.update_practitioner_type(DRUG_STORE if speciality["id"] == 190 else GENERAL_PRACTITIONER)
     organization_id = organization.get("id")
@@ -307,20 +329,16 @@ def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT) 
     for n in INTERVAL_SPLIT_DAYS:
         n_date = s_date + timedelta(days=n, seconds=-1)
         appointment_schedules.append(
-            {
-                "name": f"{n}_days",
-                "from": s_date.isoformat(),
-                "to": n_date.isoformat(),
-                "total": 0
-            }
+            {"name": f"{n}_days", "from": s_date.isoformat(), "to": n_date.isoformat(), "total": 0}
         )
 
     for reason in get_valid_reasons(reasons):
         start_date = isoparse(request.get_start_date())
         end_date = start_date + timedelta(days=AVECMONDOC_CONF.get("slot_limit", 50))
         request.add_vaccine_type(get_vaccine_name(reason["reason"]))
-        availabilities = get_availabilities(reason["id"], reason["organizationId"],
-            start_date, end_date, client, request)
+        availabilities = get_availabilities(
+            reason["id"], reason["organizationId"], start_date, end_date, client, request
+        )
         date, appointment_count = parse_availabilities(availabilities)
         if date is None:
             continue
@@ -347,7 +365,7 @@ def center_to_centerdict(center: CenterInfo) -> dict:
     center_dict["type"] = DRUG_STORE
     center_dict["business_hours"] = center.metadata["business_hours"]
     center_dict["phone_number"] = center.metadata["phone_number"]
-    center_dict["address"] = f'{center.metadata["address"]}, {center.location.cp} {center.location.city}' 
+    center_dict["address"] = f'{center.metadata["address"]}, {center.location.cp} {center.location.city}'
     center_dict["long_coor1"] = center.location.longitude
     center_dict["lat_coor1"] = center.location.latitude
     center_dict["com_nom"] = center.location.city
@@ -357,8 +375,8 @@ def center_to_centerdict(center: CenterInfo) -> dict:
     return center_dict
 
 
-def has_valid_zipcode(organization : dict) -> bool: 
-   return organization["zipCode"] is not None and len(organization["zipCode"]) == 5
+def has_valid_zipcode(organization: dict) -> bool:
+    return organization["zipCode"] is not None and len(organization["zipCode"]) == 5
 
 
 def center_iterator(client: httpx.Client = DEFAULT_CLIENT) -> Iterator[dict]:
@@ -378,7 +396,7 @@ def center_iterator(client: httpx.Client = DEFAULT_CLIENT) -> Iterator[dict]:
         if slug_type == "doctor":
             doctor_id = slug["id"]
             organizations = [
-                get_organization_slug(doctor_organization["slug"], client) 
+                get_organization_slug(doctor_organization["slug"], client)
                 for doctor_organization in get_by_doctor(doctor_id, client)
             ]
         elif slug_type == "organization":
@@ -400,6 +418,7 @@ def main():  #  pragma: no cover
         request = ScraperRequest(center["rdv_site_web"], datetime.now().strftime("%Y-%m-%d"))
         availability = fetch_slots(request)
         logger.info(f'{center["nom"]:48}: {availability}')
+
 
 if __name__ == "__main__":  #  pragma: no cover
     main()

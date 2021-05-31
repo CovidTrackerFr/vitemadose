@@ -81,6 +81,7 @@ class DoctolibSlots:
             request.increase_request_count("booking")
             response = self._client.get(centre_api_url, headers=DOCTOLIB_HEADERS)
             if response.status_code == 403:
+                request.increase_request_count("error")
                 raise BlockedByDoctolibError(centre_api_url)
 
             response.raise_for_status()
@@ -306,8 +307,10 @@ class DoctolibSlots:
             response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
         except httpx.ReadTimeout:
             logger.warning(f"Doctolib returned error ReadTimeout for url {request.get_url()}")
+            request.increase_request_count("time-out")
             raise BlockedByDoctolibError(request.get_url())
         if response.status_code == 403 or response.status_code == 400:
+            request.increase_request_count("error")
             raise BlockedByDoctolibError(request.get_url())
 
         response.raise_for_status()

@@ -1,4 +1,3 @@
-
 from scraper.pattern.scraper_request import ScraperRequest
 
 
