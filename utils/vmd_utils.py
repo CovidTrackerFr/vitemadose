@@ -55,6 +55,11 @@ def urlify(s):
     return unidecode(s)
 
 
+def department_urlify(department: str) -> str:
+    department = re.sub(r"\s+|\W", "-", department).lower()
+    return unidecode(department)
+
+
 class departementUtils:
     @staticmethod
     def import_departements() -> List[str]:

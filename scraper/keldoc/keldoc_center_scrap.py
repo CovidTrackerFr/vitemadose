@@ -5,10 +5,9 @@ from typing import List, Optional
 
 import httpx
 
-from scraper.doctolib.doctolib_center_scrap import doctolib_urlify
 from utils.vmd_config import get_conf_platform
 from utils.vmd_logger import get_logger
-from utils.vmd_utils import get_departements
+from utils.vmd_utils import get_departements, department_urlify
 
 KELDOC_CONF = get_conf_platform("keldoc")
 KELDOC_API = KELDOC_CONF.get("api", {})
@@ -68,11 +67,15 @@ def parse_keldoc_centers(page_limit=None) -> List[dict]:
         return centers
 
 
-def parse_keldoc_resources(center: dict) -> dict:
+def parse_keldoc_resource_url(center: dict) -> str:
     center_url = center.get("url")
     url_split = center_url.split("/")
     type, location, slug = url_split[1:4]
-    resource_url = f"{KELDOC_API.get('booking')}?type={type}&location={location}&slug={slug}"
+    return f"{KELDOC_API.get('booking')}?type={type}&location={location}&slug={slug}"
+
+
+def parse_keldoc_resources(center: dict) -> dict:
+    resource_url = parse_keldoc_resource_url(center)
     resource_data = send_keldoc_request(resource_url)
     return resource_data
 
@@ -90,6 +93,14 @@ def parse_keldoc_motive_categories(center_id: int, cabinets: list, specialties: 
     return cabinets
 
 
+def get_cabinets(resources: dict) -> list:
+    if "cabinet" in resources:
+        return [resources["cabinet"]]
+    elif "cabinets" in resources:
+        return resources["cabinets"]
+    return []
+
+
 def parse_keldoc_center(center: dict) -> Optional[dict]:
     data = {
         "name": center["title"],
@@ -102,12 +113,7 @@ def parse_keldoc_center(center: dict) -> Optional[dict]:
         return None
 
     # Weird Keldoc management on cabinet IDs
-    cabinets = []
-    if data["resources"].get("cabinet"):
-        cabinets = [data["resources"].get("cabinet")]
-    elif data["resources"].get("cabinets"):
-        cabinets = data["resources"].get("cabinets")
-
+    cabinets = get_cabinets(data["resources"])
     data["cabinets"] = parse_keldoc_motive_categories(center.get("id"), cabinets, data["specialties"])
     if not data["cabinets"]:
         return None
@@ -118,7 +124,7 @@ def parse_pages_departement(departement: str, page_id: int = 1, centers: list = 
     if not centers:
         centers = []
     logger.info(f"[Keldoc centers] Parsing page {page_id} of {departement}")
-    formatted_departement = doctolib_urlify(departement)
+    formatted_departement = department_urlify(departement)
     url = (
         "https://www.keldoc.com/api/patients/v2/searches/geo_location?specialty_id=maladies-infectieuses"
         f"&raw_location={formatted_departement}&page={page_id}"

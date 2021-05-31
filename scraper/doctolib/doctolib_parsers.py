@@ -1,7 +1,4 @@
-import re
-
 from typing import Dict, List, Optional
-from unidecode import unidecode
 
 from scraper.doctolib.conf import DoctolibConf
 from scraper.pattern.scraper_result import VACCINATION_CENTER
@@ -11,11 +8,6 @@ from utils.vmd_utils import departementUtils, format_phone_number
 
 DOCTOLIB_CONF = DoctolibConf(**get_conf_platform("doctolib"))
 SCRAPER_CONF = DOCTOLIB_CONF.center_scraper
-
-
-def doctolib_urlify(departement: str) -> str:
-    departement = re.sub(r"\s+|\W", "-", departement).lower()
-    return unidecode(departement)
 
 
 def get_coordinates(doctor_dict: Dict):
