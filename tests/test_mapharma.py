@@ -2,7 +2,7 @@ import json
 import httpx
 
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, date
 from pytz import timezone
 
 from scraper.mapharma.mapharma import parse_slots, fetch_slots, count_appointements, campagne_to_centre
@@ -28,7 +28,7 @@ def test_parse_slots():
     slots = dict()
     with open(TEST_SLOT_FILE, "r", encoding="utf8") as f:
         slots = json.load(f)
-    first_availability, slots_count = parse_slots(slots)
+    first_availability, slots_count = parse_slots(slots, start_date=date(2021, 4, 19))
     assert first_availability == datetime(2021, 4, 19, 17, 15)
     assert slots_count == 72
 
