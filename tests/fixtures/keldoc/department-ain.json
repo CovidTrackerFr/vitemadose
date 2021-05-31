@@ -1,0 +1,67 @@
+{
+    "options": {
+        "location_input": "Ain",
+        "location_text": "Ain (01)",
+        "next_page": false,
+        "previous_page": false,
+        "empty": false,
+        "search_type": "departement",
+        "specialty_id": "maladies-infectieuses"
+    },
+    "results": {
+        "section_1": {
+            "data": [
+                {
+                    "id": 17136,
+                    "type": "Cabinet",
+                    "img": "https://www.keldoc.com/assets/be/front/clinics/clinic-missing-square_medium-1f94da4f68250e10b53f55d503bc6884.png",
+                    "alt": "Centre de vaccination de Jean Marinet à Valserhône 01200",
+                    "title": "Centre de vaccination de Jean Marinet",
+                    "sub_title": "Jean Marinet - Centre de vaccination COVID",
+                    "convention_type_name": null,
+                    "cabinet": {
+                        "street": "Place Jeanne d'arc",
+                        "zipcode": "01200",
+                        "city": "Valserhône",
+                        "location": "Place Jeanne d'arc, 01200, Valserhône"
+                    },
+                    "agenda": {
+                        "ids": [
+                            51314,
+                            50247,
+                            51313,
+                            49968,
+                            49969,
+                            56107
+                        ],
+                        "specialty_id": 144,
+                        "next_availability": "2021-05-20T09:30:00.000+02:00",
+                        "default_online_motive_id": 84927
+                    },
+                    "specialty_ids": [
+                        144
+                    ],
+                    "coordinates": "46.108467,5.82781",
+                    "url": "/cabinet-medical/valserhone-01200/jean-marinet/centre-de-vaccination-de-jean-marinet"
+                }
+            ],
+            "empty_description": null,
+            "section_title": "Prendre un RDV avec un maladies infectieuses dans l’Ain (01)"
+        },
+        "section_2": {
+            "data": [],
+            "section_title": "Contacter un maladies infectieuses dans l’Ain (01)"
+        },
+        "section_3": {
+            "data": []
+        },
+        "section_4": {
+            "data": []
+        }
+    },
+    "seo": {
+        "title": "Maladies infectieuses à Ain (01)",
+        "keywords": "Maladies infectieuses, Maladies infectieuses Ain 01, 01",
+        "description": "Trouvez votre Maladies infectieuses à Ain 01 et prenez rendez-vous directement en ligne en quelques clics seulement ! Rapide, Gratuit et Sécurisé."
+    }
+}

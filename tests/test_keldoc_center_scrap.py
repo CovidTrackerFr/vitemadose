@@ -1,4 +1,7 @@
-from scraper.keldoc.keldoc_center_scrap import parse_keldoc_resource_url, get_cabinets
+import httpx
+
+from scraper.keldoc.keldoc_center_scrap import parse_keldoc_resource_url, get_cabinets, KeldocCenterScraper
+from tests.test_keldoc import get_test_data
 
 TEST_CENTERS = [
     {
@@ -20,6 +23,24 @@ TEST_CENTERS = [
         "result": "https://booking.keldoc.com/api/patients/v2/searches/resource?type=centre-de-vaccination&location=02120-guise&slug=centre-de-vaccination---msp-de-guise?centerid=5ffc21a0fabad2432c9bd0df",
     },
 ]
+
+API_MOCKS = {
+    "/api/patients/v2/searches/resource": "resource-ain",
+    "/api/patients/v2/searches/geo_location": "department-ain",
+    "/api/patients/v2/clinics/17136/specialties/144/cabinets/17136/motive_categories": "motives-ain",
+}
+
+
+def test_keldoc_center_scraper():
+    def app(request: httpx.Request) -> httpx.Response:
+        if request.url.path in API_MOCKS:
+            return httpx.Response(200, json=get_test_data(API_MOCKS[request.url.path]))
+        return httpx.Response(200, json={})
+
+    client = httpx.Client(transport=httpx.MockTransport(app))
+    scraper = KeldocCenterScraper(session=client)
+    result = scraper.run_departement_scrap("ain")
+    assert result == get_test_data("result-ain")
 
 
 def test_parse_keldoc_resource_url():
