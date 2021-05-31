@@ -1,4 +1,3 @@
-import csv
 import json
 import multiprocessing
 import os
@@ -7,8 +6,9 @@ from typing import List, Optional
 import httpx
 
 from scraper.doctolib.doctolib_center_scrap import doctolib_urlify
-from utils.vmd_config import get_conf_platform, get_conf_inputs
+from utils.vmd_config import get_conf_platform
 from utils.vmd_logger import get_logger
+from utils.vmd_utils import get_departements
 
 KELDOC_CONF = get_conf_platform("keldoc")
 KELDOC_API = KELDOC_CONF.get("api", {})
@@ -66,13 +66,6 @@ def parse_keldoc_centers(page_limit=None) -> List[dict]:
             unique_center_urls.append(item.get("rdv_site_web"))
 
         return centers
-
-
-def get_departements():
-    with open(get_conf_inputs()["departements"], encoding="utf8", newline="\n") as csvfile:
-        reader = csv.DictReader(csvfile)
-        departements = [str(row["nom_departement"]) for row in reader]
-        return departements
 
 
 def parse_keldoc_resources(center: dict) -> dict:

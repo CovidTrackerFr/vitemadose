@@ -1,5 +1,4 @@
 from scraper.doctolib.doctolib_parsers import (
-    get_departements,
     doctolib_urlify,
     get_coordinates,
     center_type,
@@ -10,6 +9,8 @@ from scraper.doctolib.doctolib_parsers import (
 )
 from scraper.doctolib.doctolib_center_scrap import DoctolibCenterScraper
 
+from utils.vmd_utils import get_departements
+
 import httpx
 import json
 from pathlib import Path
@@ -19,7 +20,7 @@ from scraper.pattern.scraper_result import GENERAL_PRACTITIONER, DRUG_STORE, VAC
 
 
 def test_doctolib_departements():
-    dep = get_departements()
+    dep = get_departements(excluded_departments=["Guyane"])
     assert len(dep) == 100
 
 

@@ -8,10 +8,8 @@ import datetime as dt
 import pytz
 import requests
 
-import time
 from datetime import date, timedelta, datetime
 
-from pathlib import Path
 from unidecode import unidecode
 
 from utils.vmd_config import get_conf_inputs, get_config
@@ -27,6 +25,13 @@ def load_insee() -> dict:
 def load_cedex_to_insee() -> dict:
     with open(get_conf_inputs().get("cedex_to_insee")) as json_file:
         return json.load(json_file)
+
+
+def get_departements(excluded_departments: List[str] = []) -> List[str]:
+    with open(get_conf_inputs()["departements"], encoding="utf8", newline="\n") as csvfile:
+        reader = csv.DictReader(csvfile)
+        departements = [row["nom_departement"] for row in reader if row["nom_departement"] not in excluded_departments]
+        return departements
 
 
 logger = logging.getLogger("scraper")
