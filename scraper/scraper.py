@@ -2,7 +2,8 @@ import os
 import json
 import traceback
 from collections import deque
-from multiprocessing.dummy import Pool, Queue, Process
+from multiprocessing.dummy import Pool, Process  # Use Threading (dummy processes) for Scrap Pool
+from multiprocessing import Process, Queue  # Use actual Process for Collecting creneau (CPU intensive)
 from random import random
 
 from .export.export_v2 import JSONExporter

@@ -264,7 +264,9 @@ class DummyQueue:
         pass
 
 
-EOQ = object()  # Special value to Signal end of Queue content
+# Special value to Signal end of Queue content
+# This needs to be serializable in order to be used accross processes
+EOQ = "EOQ-f43732d8-c250-11eb-8d1f-f38a886756c1"
 
 
 def q_iter(q, EOQ=EOQ):
