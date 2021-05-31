@@ -1,5 +1,6 @@
 from datetime import datetime
 import dateutil
+from dateutil.tz import gettz
 from typing import Iterator, Union
 from .resource import Resource
 from utils.vmd_center_sort import sort_center
@@ -59,7 +60,7 @@ class ResourceTousDepartements(Resource):
     def asdict(self):
         return {
             'version': 1,
-            'last_updated': self.now().isoformat(),
+            'last_updated': self.now(tz=gettz()).replace(microsecond=0).isoformat(),
             'centres_disponibles': sorted(list(self.centres_disponibles.values()), key=sort_center),
             'centres_indisponibles': list(self.centres_indisponibles.values()),
         }

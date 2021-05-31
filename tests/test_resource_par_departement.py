@@ -7,8 +7,7 @@ from scraper.pattern.vaccine import Vaccine
 from scraper.pattern.center_location import CenterLocation
 
 expected_now = dateutil.parser.parse('2021-05-26T21:34:00.000Z')
-def now():
-    expected_now
+def now(tz=None):
     return expected_now
 
 def test_resource_par_departement_from_empty():
