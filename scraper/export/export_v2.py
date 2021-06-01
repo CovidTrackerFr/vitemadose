@@ -37,8 +37,8 @@ class JSONExporter:
             for resource in self.resources.values():
                 resource.on_creneau(creneau)
 
-        lieux_avec_creneau = len(self.resources["info_centres"].centres_disponibles)
-        logger.info(f"Trouvé {count} créneaux dans {lieux_avec_creneau} lieux")
+        #lieux_avec_creneau = len(self.resources["info_centres"].centres_disponibles)
+        #logger.info(f"Trouvé {count} créneaux dans {lieux_avec_creneau} lieux")
         for key, resource in self.resources.items():
             outfile_path = self.outpath_format.format(key)
             os.makedirs(os.path.dirname(outfile_path), exist_ok=True)

@@ -67,10 +67,14 @@ class DoctolibSlots:
         self._client = DEFAULT_CLIENT if client is None else client
         self.lieu = None
 
+    @Profiling.measure("doctolib_found_creneau")
+    def found_creneau(self, creneau):
+        self.creneau_q.put(creneau)
+
     def fetch(self, request: ScraperRequest) -> Optional[str]:
         result = self._fetch(request)
         if result is None and self.lieu:
-            self.creneau_q.put(PasDeCreneau(lieu=self.lieu, phone_only=request.appointment_by_phone_only))
+            self.found_creneau(PasDeCreneau(lieu=self.lieu, phone_only=request.appointment_by_phone_only))
 
         return result
 
@@ -351,14 +355,12 @@ class DoctolibSlots:
                 if not first_availability or slot_list[0] < first_availability:
                     first_availability = slot_list[0]
                     motive_availability = True
-                    self.creneau_q.put(
-                        Creneau(
-                            horaire=dateutil.parser.parse(slot_list[0]),
-                            reservation_url=request.url,
-                            type_vaccin=visit_motive_ids[motive_id],
-                            lieu=self.lieu,
-                        )
-                    )
+                    self.found_creneau(Creneau(
+                        horaire=dateutil.parser.parse(slot_list[0]),
+                        reservation_url=request.url,
+                        type_vaccin=visit_motive_ids[motive_id],
+                        lieu=self.lieu,
+                    ))
 
             for slot_info in slot_list:
                 if isinstance(slot_info, str):
@@ -369,14 +371,12 @@ class DoctolibSlots:
                 if not first_availability or sdate < first_availability:
                     first_availability = sdate
                     motive_availability = True
-                self.creneau_q.put(
-                    Creneau(
-                        horaire=dateutil.parser.parse(sdate),
-                        reservation_url=request.url,
-                        type_vaccin=visit_motive_ids[motive_id],
-                        lieu=self.lieu,
-                    )
-                )
+                self.found_creneau(Creneau(
+                    horaire=dateutil.parser.parse(sdate),
+                    reservation_url=request.url,
+                    type_vaccin=visit_motive_ids[motive_id],
+                    lieu=self.lieu,
+                ))
 
             if visit_motive_ids[motive_id]:
                 visite_motive_vaccine = visit_motive_ids[motive_id]
