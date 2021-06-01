@@ -35,7 +35,7 @@ lister_contributeurs:
 trouver_les_rdv:
   stage: scrape
   image: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/python:3.8-alpine
-  timeout: "10 minutes"
+  timeout: "8 minutes"
   tags:
     - ovh
   before_script:
