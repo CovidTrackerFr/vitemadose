@@ -11,10 +11,11 @@ from dataclasses import dataclass
 
 logger = logging.getLogger("scraper")
 
+
 def export_by_departement(creneaux_it):
     count = 0
     lieux_vus = {}
-    dep75 = ResourceParDepartement('75')
+    dep75 = ResourceParDepartement("75")
     for creneau in creneaux_it:
         logger.debug(f"Got Creneau {creneau}")
         count += 1
@@ -27,20 +28,20 @@ def export_by_departement(creneaux_it):
     print(json.dumps(lieux_vus, indent=2))
     print(json.dumps(dep75.asdict(), indent=2))
 
+
 class JSONExporter:
     def __init__(self, departements=None, outpath_format="data/output/{}.json"):
         self.outpath_format = outpath_format
         departements = departements if departements else Departement.all()
         resources_departements = {
-            departement.code: ResourceParDepartement(departement.code)
-            for departement in departements
+            departement.code: ResourceParDepartement(departement.code) for departement in departements
         }
         resources_creneaux_quotidiens = {
             f"{departement.code}/creneaux-quotidiens": ResourceCreneauxQuotidiens(departement.code, tags=CURRENT_TAGS)
             for departement in departements
         }
         self.resources = {
-            'info_centres': ResourceTousDepartements(),
+            "info_centres": ResourceTousDepartements(),
             **resources_departements,
             **resources_creneaux_quotidiens,
         }
@@ -53,14 +54,15 @@ class JSONExporter:
             for resource in self.resources.values():
                 resource.on_creneau(creneau)
 
-        lieux_avec_creneau = len(self.resources['info_centres'].centres_disponibles)
+        lieux_avec_creneau = len(self.resources["info_centres"].centres_disponibles)
         logger.info(f"Trouvé {count} créneaux dans {lieux_avec_creneau} lieux")
         for key, resource in self.resources.items():
             outfile_path = self.outpath_format.format(key)
             os.makedirs(os.path.dirname(outfile_path), exist_ok=True)
-            with open(outfile_path, 'w') as outfile:
-                logger.info(f'Writing file {outfile_path}')
+            with open(outfile_path, "w") as outfile:
+                logger.info(f"Writing file {outfile_path}")
                 json.dump(resource.asdict(), outfile, indent=2)
+
 
 @dataclass
 class Departement:
@@ -80,8 +82,7 @@ class Departement:
     @classmethod
     def all(cls):
         dir_path = os.path.dirname(os.path.realpath(__file__))
-        json_source_path = os.path.join(dir_path, '../../data/output/departements.json')
-        with open(json_source_path, 'r') as source:
+        json_source_path = os.path.join(dir_path, "../../data/output/departements.json")
+        with open(json_source_path, "r") as source:
             departements = json.load(source)
         return [Departement(**dep) for dep in departements]
-

@@ -7,6 +7,7 @@ from utils.vmd_center_sort import sort_center
 
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 
+
 class ResourceTousDepartements(Resource):
     def __init__(self, now=datetime.now):
         self.now = now
@@ -24,10 +25,10 @@ class ResourceTousDepartements(Resource):
             self.centres_disponibles[lieu.internal_id] = self.centre(lieu)
 
         centre = self.centres_disponibles[lieu.internal_id]
-        centre['appointment_count'] += 1
-        centre['vaccine_type'] = sorted(list(set(centre['vaccine_type'] + [creneau.type_vaccin.value])))
-        if not centre['prochain_rdv'] or dateutil.parser.parse(centre['prochain_rdv']) > creneau.horaire:
-            centre['prochain_rdv'] = creneau.horaire.replace(microsecond=0).isoformat()
+        centre["appointment_count"] += 1
+        centre["vaccine_type"] = sorted(list(set(centre["vaccine_type"] + [creneau.type_vaccin.value])))
+        if not centre["prochain_rdv"] or dateutil.parser.parse(centre["prochain_rdv"]) > creneau.horaire:
+            centre["prochain_rdv"] = creneau.horaire.replace(microsecond=0).isoformat()
 
     def centre(self, lieu: Lieu):
         return {
@@ -40,7 +41,7 @@ class ResourceTousDepartements(Resource):
             "plateforme": lieu.plateforme.value,
             "type": lieu.lieu_type,
             "appointment_count": 0,
-            'internal_id': lieu.internal_id,
+            "internal_id": lieu.internal_id,
             "vaccine_type": [],
             "appointment_schedules": [],
             "appointment_by_phone_only": False,
@@ -51,18 +52,18 @@ class ResourceTousDepartements(Resource):
         if not location:
             return None
         return {
-            'longitude': location.longitude,
-            'latitude': location.latitude,
-            'city': location.city,
-            'cp': location.cp,
+            "longitude": location.longitude,
+            "latitude": location.latitude,
+            "city": location.city,
+            "cp": location.cp,
         }
 
     def asdict(self):
         return {
-            'version': 1,
-            'last_updated': self.now(tz=gettz()).replace(microsecond=0).isoformat(),
-            'centres_disponibles': sorted(list(self.centres_disponibles.values()), key=sort_center),
-            'centres_indisponibles': list(self.centres_indisponibles.values()),
+            "version": 1,
+            "last_updated": self.now(tz=gettz()).replace(microsecond=0).isoformat(),
+            "centres_disponibles": sorted(list(self.centres_disponibles.values()), key=sort_center),
+            "centres_indisponibles": list(self.centres_indisponibles.values()),
         }
 
 
