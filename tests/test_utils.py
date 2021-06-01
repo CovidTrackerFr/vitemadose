@@ -1,6 +1,6 @@
 import datetime as dt
 
-from utils.vmd_utils import format_phone_number, get_last_scans
+from utils.vmd_utils import format_phone_number, get_last_scans, append_date_days
 from .utils import mock_datetime_now
 from scraper.pattern.center_info import CenterInfo
 
@@ -41,3 +41,15 @@ def test_get_last_scans():
 
     assert centres_cherchés[0].last_scan_with_availabilities == None
     assert centres_cherchés[1].last_scan_with_availabilities == "2021-05-05T00:00:00"
+
+
+TEST_DATES = [
+    {"item": ("2021-04-21", 0), "result": "2021-04-21T00:00:00+02:00"},
+    {"item": ("2021-04-21", 3), "result": "2021-04-24T00:00:00+02:00"},
+]
+
+
+def test_append_days_date():
+    for test_date in TEST_DATES:
+        item = test_date["item"]
+        assert append_date_days(item[0], item[1]) == test_date["result"]
