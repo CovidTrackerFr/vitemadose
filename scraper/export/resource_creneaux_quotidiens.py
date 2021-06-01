@@ -5,12 +5,12 @@ from typing import Iterator, Union
 from .resource import Resource
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 
-DEFAULT_NEXT_DAYS = 7
+NEXT_DAYS_COUNT = int(os.getenv("NEXT_DAYS_COUNT", 15))
 DEFAULT_TAGS = {"all": lambda creneau: True}
 
 
 class ResourceCreneauxQuotidiens(Resource):
-    def __init__(self, departement, next_days=DEFAULT_NEXT_DAYS, now=datetime.now, tags=DEFAULT_TAGS):
+    def __init__(self, departement, next_days=NEXT_DAYS_COUNT, now=datetime.now, tags=DEFAULT_TAGS):
         super().__init__()
         self.departement = departement
         self.now = now
