@@ -28,6 +28,7 @@ def test_parse_slots():
     slots = dict()
     with open(TEST_SLOT_FILE, "r", encoding="utf8") as f:
         slots = json.load(f)
+    slots["first_something"] = []
     first_availability, slots_count = parse_slots(slots, start_date=date(2021, 4, 19))
     assert first_availability == datetime(2021, 4, 19, 17, 15)
     assert slots_count == 72
