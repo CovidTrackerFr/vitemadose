@@ -13,6 +13,7 @@ import httpx
 import requests
 
 
+from scraper.circuit_breaker import ShortCircuit
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 from scraper.doctolib.conf import DoctolibConf
 from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
@@ -46,6 +47,7 @@ else:
 logger = logging.getLogger("scraper")
 
 
+@ShortCircuit("doctolib_slot", trigger=20, release=80, time_limit=20.0)
 @Profiling.measure("doctolib_slot")
 def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue) -> Optional[str]:
     if not DOCTOLIB_CONF.enabled:
