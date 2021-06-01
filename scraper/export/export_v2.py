@@ -24,8 +24,8 @@ class JSONExporter:
             for departement in departements
         }
         self.resources = {
-            "info_centres": ResourceTousDepartements(),
-            **resources_departements,
+            #  "info_centres": ResourceTousDepartements(),
+            #  **resources_departements,
             **resources_creneaux_quotidiens,
         }
 
