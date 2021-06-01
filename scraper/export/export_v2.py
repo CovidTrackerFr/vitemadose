@@ -12,25 +12,8 @@ from dataclasses import dataclass
 logger = logging.getLogger("scraper")
 
 
-def export_by_departement(creneaux_it):
-    count = 0
-    lieux_vus = {}
-    dep75 = ResourceParDepartement("75")
-    for creneau in creneaux_it:
-        logger.debug(f"Got Creneau {creneau}")
-        count += 1
-        dep75.on_creneau(creneau)
-        if creneau.lieu.internal_id in lieux_vus:
-            lieux_vus[creneau.lieu.internal_id] += 1
-        else:
-            lieux_vus[creneau.lieu.internal_id] = 1
-    logger.info(f"Trouvé {count} créneaux dans {len(lieux_vus)} lieux")
-    print(json.dumps(lieux_vus, indent=2))
-    print(json.dumps(dep75.asdict(), indent=2))
-
-
 class JSONExporter:
-    def __init__(self, departements=None, outpath_format="data/output/{}.json"):
+    def __init__(self, departements=None, outpath_format="data/output/v2/{}.json"):
         self.outpath_format = outpath_format
         departements = departements if departements else Departement.all()
         resources_departements = {

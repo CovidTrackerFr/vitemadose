@@ -103,7 +103,7 @@ def scrape(platforms=None):  # pragma: no cover
 def export_by_creneau(
     creneaux_q,
 ):
-    exporter = JSONExporter(outpath_format="data/output/v2/{}.json")
+    exporter = JSONExporter()
     exporter.export(q_iter(creneaux_q))
 
 
