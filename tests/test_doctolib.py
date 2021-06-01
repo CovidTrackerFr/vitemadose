@@ -42,7 +42,7 @@ def test_blocked_by_doctolib_par_centre():
 
     start_date = "2021-04-03"
     base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
-    center_info = CenterInfo(departement='07', nom="Mon Super Centre", url=base_url)
+    center_info = CenterInfo(departement="07", nom="Mon Super Centre", url=base_url)
     scrap_request = ScraperRequest(base_url, start_date, center_info)
 
     def app(request: httpx.Request) -> httpx.Response:
@@ -78,7 +78,7 @@ def test_blocked_by_doctolib_par_availabilities():
 
     start_date = "2021-04-03"
     base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
-    center_info = CenterInfo(departement='07', nom="Mon Super Centre", url=base_url)
+    center_info = CenterInfo(departement="07", nom="Mon Super Centre", url=base_url)
     scrap_request = ScraperRequest(base_url, start_date, center_info)
 
     def app(request: httpx.Request) -> httpx.Response:
@@ -102,7 +102,7 @@ def test_doctolib():
 
     start_date = "2021-04-03"
     base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
-    center_info = CenterInfo(departement='07', nom="Mon Super Centre", url=base_url)
+    center_info = CenterInfo(departement="07", nom="Mon Super Centre", url=base_url)
     scrap_request = ScraperRequest(base_url, start_date, center_info)
 
     def app(request: httpx.Request) -> httpx.Response:
@@ -122,11 +122,12 @@ def test_doctolib():
     next_date = slots.fetch(scrap_request)
     assert next_date == "2021-04-10"
 
+
 def test_doctolib_sends_creneau():
     # Given
     start_date = "2021-04-03"
     base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
-    center_info = CenterInfo(departement='07', nom="Mon Super Centre", url=base_url)
+    center_info = CenterInfo(departement="07", nom="Mon Super Centre", url=base_url)
     scrap_request = ScraperRequest(base_url, start_date, center_info)
 
     def app(request: httpx.Request) -> httpx.Response:
@@ -153,7 +154,7 @@ def test_doctolib_sends_creneau():
     assert len(actual) == 1
     assert actual[0] == Creneau(
         reservation_url=base_url,
-        horaire=dateutil.parser.parse('2021-04-10'),
+        horaire=dateutil.parser.parse("2021-04-10"),
         type_vaccin=Vaccine.MODERNA,
         lieu=Lieu(
             departement="07",
@@ -161,15 +162,16 @@ def test_doctolib_sends_creneau():
             url=base_url,
             nom="Mon Super Centre",
             internal_id="doctolib123456789pid165752",
-            lieu_type="vaccination-center"
-        )
+            lieu_type="vaccination-center",
+        ),
     )
+
 
 def test_doctolib_sends_pas_de_creneau():
     # Given
     start_date = "2021-04-03"
     base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
-    center_info = CenterInfo(departement='07', nom="Mon Super Centre", url=base_url)
+    center_info = CenterInfo(departement="07", nom="Mon Super Centre", url=base_url)
     scrap_request = ScraperRequest(base_url, start_date, center_info)
 
     def app(request: httpx.Request) -> httpx.Response:
@@ -181,11 +183,7 @@ def test_doctolib_sends_pas_de_creneau():
 
         assert request.url.path == "/availabilities.json"
         path = Path("tests", "fixtures", "doctolib", "basic-availabilities.json")
-        no_availabilities = {
-            'availabilities': [{
-                'slots': []
-            }]
-        }
+        no_availabilities = {"availabilities": [{"slots": []}]}
         return httpx.Response(200, json=no_availabilities)
 
     client = httpx.Client(transport=httpx.MockTransport(app))
@@ -206,7 +204,7 @@ def test_doctolib_sends_pas_de_creneau():
             url=base_url,
             nom="Mon Super Centre",
             internal_id="doctolib123456789pid165752",
-            lieu_type="vaccination-center"
+            lieu_type="vaccination-center",
         )
     )
 
@@ -218,7 +216,7 @@ def test_doctolib_motive_categories():
 
     start_date = "2021-04-03"
     base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
-    center_info = CenterInfo(departement='07', nom="Mon Super Centre", url=base_url)
+    center_info = CenterInfo(departement="07", nom="Mon Super Centre", url=base_url)
     scrap_request = ScraperRequest(base_url, start_date, center_info)
 
     def app(request: httpx.Request) -> httpx.Response:
@@ -246,7 +244,7 @@ def test_doctolib_next_slot():
 
     start_date = "2021-04-03"
     base_url = "https://partners.doctolib.fr/centre-de-vaccinations-internationales/ville1/centre1?pid=practice-165752&enable_cookies_consent=1"  # noqa
-    center_info = CenterInfo(departement='07', nom="Mon Super Centre", url=base_url)
+    center_info = CenterInfo(departement="07", nom="Mon Super Centre", url=base_url)
     scrap_request = ScraperRequest(base_url, start_date, center_info)
 
     def app(request: httpx.Request) -> httpx.Response:

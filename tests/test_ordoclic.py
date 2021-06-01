@@ -57,6 +57,7 @@ def test_search():
     client = httpx.Client(transport=httpx.MockTransport(app2))
     assert search(client) is None
 
+
 @pytest.mark.xfail
 def test_ordoclic_online_search_result_has_expected_shape():
     # Test online

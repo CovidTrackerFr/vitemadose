@@ -13,6 +13,7 @@ from .utils import mock_datetime_now
 from utils.vmd_utils import DummyQueue
 from scraper.pattern.center_info import CenterInfo
 
+
 def test_export_data(tmp_path):
     centres_cherchés_dict = [
         {
@@ -445,7 +446,7 @@ def test_fetch_centre_slots():
     }
 
     start_date = "2021-04-03"
-    center_info = CenterInfo(departement='08', nom='Mon Centre', url='https://some.url/')
+    center_info = CenterInfo(departement="08", nom="Mon Centre", url="https://some.url/")
 
     # Doctolib
     url = "https://partners.doctolib.fr/blabla"
