@@ -48,6 +48,9 @@ trouver_les_rdv:
     - ./scripts/scrape
     - make stats
     - cp data/output/stats*.json data/output/departements.json data/output/v2/  # Temporary to have double run v1/v2
+  cache:
+    paths:
+      - venv
   artifacts:
     name: "rdv"
     paths:
