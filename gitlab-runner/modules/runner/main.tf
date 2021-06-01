@@ -5,7 +5,7 @@ locals {
 
 data "openstack_images_image_v2" "debian_9" {
   provider    = openstack.ovh
-  name        = "Debian 9"
+  name        = "Debian 10"
   most_recent = true
 }
 
@@ -19,7 +19,6 @@ resource "openstack_compute_instance_v2" "runner" {
   key_pair        = openstack_compute_keypair_v2.runner_keypair.name
 
   lifecycle {
-    ignore_changes = [image_id, user_data]
     create_before_destroy = false
   }
 }
@@ -30,6 +29,8 @@ resource null_resource "register_runner" {
     private_key = openstack_compute_keypair_v2.runner_keypair.private_key
     host = openstack_compute_instance_v2.runner[count.index].access_ip_v4
     user = "debian"
+    gitlab_runner_token = var.gitlab_runner_token
+    ovh_region = var.ovh_region
   }
   connection {
     user = self.triggers.user
@@ -45,9 +46,9 @@ resource null_resource "register_runner" {
 
   provisioner "remote-exec" {
     inline = [
-      "export GITLAB_RUNNER_TOKEN=${var.gitlab_runner_token}",
-      "export RUNNER_LOCATION='OVH ${var.ovh_region} (num ${count.index})'",
-      "export TAG_LIST='ovh,ovh-${var.ovh_region},${formatdate("DD MMM YYYY hh:mm ZZZ", timestamp())}'",
+      "export GITLAB_RUNNER_TOKEN=${self.triggers.gitlab_runner_token}",
+      "export RUNNER_LOCATION='OVH ${self.triggers.ovh_region} (num ${count.index})'",
+      "export TAG_LIST='ovh,ovh-${self.triggers.ovh_region},${formatdate("DD MMM YYYY hh:mm ZZZ", timestamp())}'",
       "export GITLAB_RUN_UNTAGGED=yes",
       "sudo -E bash /tmp/provision-${random_string.provision_name.id}.sh"
     ]

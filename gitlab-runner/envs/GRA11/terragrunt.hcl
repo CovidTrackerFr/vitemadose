@@ -7,5 +7,5 @@ include {
 }
 
 inputs = {
-  nb_instances = 0
+  nb_instances = 2
 }

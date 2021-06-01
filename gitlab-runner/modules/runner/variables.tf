@@ -25,5 +25,5 @@ variable "name" {
 variable "flavor" {
   description = "Nom de la flavor de l'instance"
   type        = string
-  default     = "b2-7"
-}
+  default     = "c2-7"
+ }

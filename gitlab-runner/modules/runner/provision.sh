@@ -32,13 +32,11 @@ function main () {
 
   cartouche "Programmer le nettoyage"
   schedule_cleanup
-
-  update-ca-certificates
 }
 
 
 function install_gitlab_runner () {
-  curl -s -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | bash
+  wget -O- --quiet https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | bash
   apt-get install -y gitlab-runner
   gitlab-runner start
   adduser gitlab-runner docker
@@ -78,10 +76,9 @@ function install_docker () {
        apt-transport-https \
        ca-certificates \
        software-properties-common \
-       htop \
-       curl
+       htop
 
-  curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+  wget --quiet -O- 'https://download.docker.com/linux/debian/gpg' | apt-key add -
 
   add-apt-repository \
      "deb [arch=amd64] https://download.docker.com/linux/debian \
