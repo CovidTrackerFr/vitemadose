@@ -39,3 +39,7 @@ lint: install
 
 contributors: install
 	scripts/contributors
+
+clean:
+	rm -rf data/output
+	git checkout data/output
