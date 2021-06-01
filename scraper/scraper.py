@@ -2,9 +2,9 @@ import os
 import json
 import traceback
 from collections import deque
-from multiprocessing.dummy import Pool, Process  # Use Threading (dummy processes) for Scrap Pool
-from multiprocessing import Process, Queue  # Use actual Process for Collecting creneau (CPU intensive)
+from multiprocessing import Manager, Pool, Process, Queue  # Use actual Process for Collecting creneau (CPU intensive)
 from random import random
+from typing import Tuple
 
 from .export.export_v2 import JSONExporter
 
@@ -60,17 +60,18 @@ def scrape(platforms=None):  # pragma: no cover
     compte_centres_avec_dispo = 0
     compte_bloqués = 0
     profiler = Profiling()
-    creneau_q = Queue(maxsize=100000)
-    export_process = Process(target=export_by_creneau, args=(creneau_q,))
-    export_process.start()
-    with profiler, Pool(POOL_SIZE, **profiler.pool_args()) as pool:
-        centre_iterator_proportion = (c for c in centre_iterator(platforms=platforms) if random() < PARTIAL_SCRAPE)
-        centres_cherchés = pool.imap_unordered(
-            lambda c: cherche_prochain_rdv_dans_centre(c, creneau_q), centre_iterator_proportion, 1
-        )
+    with profiler, Manager() as manager, Pool(POOL_SIZE, **profiler.pool_args()) as pool:
+        creneau_q = manager.Queue(maxsize=999999)
+        export_process = Process(target=export_by_creneau, args=(creneau_q,))
+        export_process.start()
+        centre_iterator_proportion = ((c, creneau_q) for c in centre_iterator(platforms=platforms) if random() < PARTIAL_SCRAPE)
+        centres_cherchés = pool.imap_unordered(cherche_prochain_rdv_dans_centre, centre_iterator_proportion, 1)
 
         centres_cherchés = get_last_scans(centres_cherchés)
         log_platform_requests(centres_cherchés)
+
+        creneau_q.put(EOQ)
+        export_process.join()
 
         if platforms:
             for platform in platforms:
@@ -95,8 +96,7 @@ def scrape(platforms=None):  # pragma: no cover
                     "Notre IP a été bloquée par le CDN Doctolib plus de 10 fois. Pour éviter de pousser des données erronées, on s'arrête ici"
                 )
                 exit(code=2)
-    creneau_q.put(EOQ)
-    export_process.join()
+
     logger.info(profiler.print_summary())
 
 
@@ -107,7 +107,8 @@ def export_by_creneau(
     exporter.export(q_iter(creneaux_q))
 
 
-def cherche_prochain_rdv_dans_centre(centre: dict, creneau_q: Queue) -> CenterInfo:  # pragma: no cover
+def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  # pragma: no cover
+    centre, creneau_q = data
     center_data = CenterInfo.from_csv_data(centre)
     start_date = get_start_date()
     has_error = None
