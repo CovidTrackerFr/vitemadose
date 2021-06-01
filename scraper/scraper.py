@@ -60,7 +60,7 @@ def scrape(platforms=None):  # pragma: no cover
     compte_centres_avec_dispo = 0
     compte_bloqués = 0
     profiler = Profiling()
-    creneau_q = Queue()
+    creneau_q = Queue(maxsize=100000)
     export_process = Process(target=export_by_creneau, args=(creneau_q,))
     export_process.start()
     with profiler, Pool(POOL_SIZE, **profiler.pool_args()) as pool:
