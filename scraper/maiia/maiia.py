@@ -188,7 +188,9 @@ def get_first_availability(
 
 
 @Profiling.measure("maiia_slot")
-def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue(), client: httpx.Client = DEFAULT_CLIENT) -> Optional[str]:
+def fetch_slots(
+    request: ScraperRequest, creneau_q=DummyQueue(), client: httpx.Client = DEFAULT_CLIENT
+) -> Optional[str]:
     if not MAIIA_ENABLED:
         return None
     url = request.get_url()

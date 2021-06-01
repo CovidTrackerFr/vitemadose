@@ -4,7 +4,6 @@ from scraper.pattern.center_info import CenterInfo
 from utils.vmd_config import get_conf_inputs
 
 
-
 def is_in_blocklist(center: CenterInfo, blocklist_urls) -> bool:
     return center.url in blocklist_urls
 

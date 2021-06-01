@@ -271,4 +271,3 @@ EOQ = "EOQ-f43732d8-c250-11eb-8d1f-f38a886756c1"
 
 def q_iter(q, EOQ=EOQ):
     return iter(q.get, EOQ)
-

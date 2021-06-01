@@ -301,7 +301,9 @@ def parse_availabilities(availabilities: list) -> Tuple[Optional[datetime], int]
 
 
 @Profiling.measure("avecmondoc_slot")
-def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue(), client: httpx.Client = DEFAULT_CLIENT) -> Optional[str]:
+def fetch_slots(
+    request: ScraperRequest, creneau_q=DummyQueue(), client: httpx.Client = DEFAULT_CLIENT
+) -> Optional[str]:
     url = request.get_url()
     slug = url.split("/")[-1]
     organization = get_organization_slug(slug, client, request)

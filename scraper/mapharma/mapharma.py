@@ -175,7 +175,10 @@ def count_appointements(slots: dict, start_date: datetime, end_date: datetime) -
 
 @Profiling.measure("mapharma_slot")
 def fetch_slots(
-    request: ScraperRequest, creneau_q=DummyQueue(), client: httpx.Client = DEFAULT_CLIENT, opendata_file: str = MAPHARMA_OPEN_DATA_FILE
+    request: ScraperRequest,
+    creneau_q=DummyQueue(),
+    client: httpx.Client = DEFAULT_CLIENT,
+    opendata_file: str = MAPHARMA_OPEN_DATA_FILE,
 ) -> Optional[str]:
     url = request.get_url()
     # on récupère les paramètres c (id_campagne) & l (id_type)

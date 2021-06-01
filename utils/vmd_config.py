@@ -13,7 +13,7 @@ def get_config() -> dict:
     global CONFIG_DATA
     if not CONFIG_DATA:
         try:
-            CONFIG_DATA = json.loads(Path("config.json").read_text(encoding='utf8'))
+            CONFIG_DATA = json.loads(Path("config.json").read_text(encoding="utf8"))
         except (OSError, ValueError):
             logger.exception("Unable to load configuration file.")
     return CONFIG_DATA

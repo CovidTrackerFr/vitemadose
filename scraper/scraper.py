@@ -65,7 +65,9 @@ def scrape(platforms=None):  # pragma: no cover
     export_process.start()
     with profiler, Pool(POOL_SIZE, **profiler.pool_args()) as pool:
         centre_iterator_proportion = (c for c in centre_iterator(platforms=platforms) if random() < PARTIAL_SCRAPE)
-        centres_cherchés = pool.imap_unordered(lambda c: cherche_prochain_rdv_dans_centre(c, creneau_q), centre_iterator_proportion, 1)
+        centres_cherchés = pool.imap_unordered(
+            lambda c: cherche_prochain_rdv_dans_centre(c, creneau_q), centre_iterator_proportion, 1
+        )
 
         centres_cherchés = get_last_scans(centres_cherchés)
         log_platform_requests(centres_cherchés)
@@ -97,7 +99,10 @@ def scrape(platforms=None):  # pragma: no cover
     export_process.join()
     logger.info(profiler.print_summary())
 
-def export_by_creneau(creneaux_q, ):
+
+def export_by_creneau(
+    creneaux_q,
+):
     exporter = JSONExporter(outpath_format="data/output/v2/{}.json")
     exporter.export(q_iter(creneaux_q))
 
@@ -108,7 +113,13 @@ def cherche_prochain_rdv_dans_centre(centre: dict, creneau_q: Queue) -> CenterIn
     has_error = None
     result = None
     try:
-        result = fetch_centre_slots(centre["rdv_site_web"], start_date, creneau_q=creneau_q, center_info=center_data, input_data=centre.get("booking"))
+        result = fetch_centre_slots(
+            centre["rdv_site_web"],
+            start_date,
+            creneau_q=creneau_q,
+            center_info=center_data,
+            input_data=centre.get("booking"),
+        )
         center_data.fill_result(result)
     except ScrapeError as scrape_error:
         logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(scrape_error)}")
@@ -187,7 +198,9 @@ def get_center_platform(center_url: str, fetch_map: dict = None):
 
 
 @Profiling.measure("any_slot")
-def fetch_centre_slots(rdv_site_web, start_date, creneau_q, center_info, fetch_map: dict = None, input_data: dict = None) -> ScraperResult:
+def fetch_centre_slots(
+    rdv_site_web, start_date, creneau_q, center_info, fetch_map: dict = None, input_data: dict = None
+) -> ScraperResult:
     if fetch_map is None:
         # Map platform to implementation.
         # May be overridden for unit testing purposes.
