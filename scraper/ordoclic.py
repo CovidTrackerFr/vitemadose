@@ -11,7 +11,7 @@ from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
 from utils.vmd_config import get_conf_platform
-from utils.vmd_utils import departementUtils
+from utils.vmd_utils import departementUtils, DummyQueue
 from scraper.profiler import Profiling
 
 
@@ -183,7 +183,7 @@ def parse_ordoclic_slots(request: ScraperRequest, availability_data):
 
 
 @Profiling.measure("ordoclic_slot")
-def fetch_slots(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
+def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue(), client: httpx.Client = DEFAULT_CLIENT):
     first_availability = None
     if not ORDOCLIC_ENABLED:
         return first_availability

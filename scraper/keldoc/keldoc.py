@@ -8,6 +8,7 @@ from scraper.keldoc.keldoc_filters import get_relevant_vaccine_specialties_id, f
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform
+from utils.vmd_utils import DummyQueue
 from scraper.circuit_breaker import ShortCircuit
 
 KELDOC_CONF = get_conf_platform("keldoc")
@@ -22,9 +23,9 @@ logger = logging.getLogger("scraper")
 
 
 # Allow 10 bad runs of keldoc_slot before giving up for the 60 next tries
-@ShortCircuit("keldoc_slot", trigger=10, release=60, time_limit=25.0)
+@ShortCircuit("keldoc_slot", trigger=10, release=200, time_limit=20.0)
 @Profiling.measure("keldoc_slot")
-def fetch_slots(request: ScraperRequest):
+def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue()):
     if "www.keldoc.com" in request.url:
         logger.debug(f"Fixing wrong hostname in request: {request.url}")
         request.url = request.url.replace("www.keldoc.com", "vaccination-covid.keldoc.com")
