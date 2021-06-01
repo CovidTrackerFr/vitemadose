@@ -57,12 +57,13 @@ class Profiling:
                     return fn(*args, **kwargs)
                 start_time = time.time()
                 error = None
+                ret = None
                 try:
                     ret = fn(*args, **kwargs)
                 except Exception as e:
                     error = e
                 elapsed_time = time.time() - start_time
-                q.put_nowait((section, elapsed_time))
+                q.put_nowait((section, elapsed_time, ret is None))
                 if error is None:
                     return ret
                 else:
@@ -77,7 +78,7 @@ class Profiling:
             return
         summary = self.summary
         keys = keys if keys is not None else sorted(summary.keys())
-        datatable = [["Section", "Count", "Min", "Avg", "50%", "80%", "95%", "Max"]]
+        datatable = [["Section", "Count", "Min", "Avg", "50%", "80%", "95%", "Max", "None Results"]]
         for section in keys:
             stats = summary[section]
             datatable.append(
@@ -90,6 +91,7 @@ class Profiling:
                     stats["p80"],
                     stats["p95"],
                     stats["max"],
+                    "{:.0%}".format(stats["none_results"]),
                 ]
             )
 
@@ -98,8 +100,8 @@ class Profiling:
 
     def read_profiling_result(collecting_q, result_q):
         sink = ProfilerSink()
-        for section, duration in iter(collecting_q.get, None):
-            sink.append(section, duration)
+        for section, duration, none_result in iter(collecting_q.get, None):
+            sink.append(section, duration, none_result)
 
         result_q.put(sink.summary())
 
@@ -111,14 +113,19 @@ class ProfilerSink:
     def __init__(self):
         self.sections_duration = {}
 
-    def append(self, section, duration):
+    def append(self, section, duration, none_result):
         if section not in self.sections_duration:
-            self.sections_duration[section] = []
-        self.sections_duration[section].append(duration)
+            self.sections_duration[section] = {}
+            self.sections_duration[section]["durations"] = []
+            self.sections_duration[section]["none_results"] = []
+        self.sections_duration[section]["durations"].append(duration)
+        self.sections_duration[section]["none_results"].append(none_result)
 
     def summary(self):
         summary = {}
-        for section, durations in self.sections_duration.items():
+        for section, durations_none_results in self.sections_duration.items():
+            durations = durations_none_results["durations"]
+            none_results = durations_none_results["none_results"]
             p80, p95 = self.percentiles(durations)
             summary[section] = {
                 "count": len(durations),
@@ -128,6 +135,7 @@ class ProfilerSink:
                 "median": round(statistics.median(durations) * 1000),
                 "p80": round(p80 * 1000),
                 "p95": round(p95 * 1000),
+                "none_results": sum(none_results) / max(len(none_results), 1),
             }
 
         return summary

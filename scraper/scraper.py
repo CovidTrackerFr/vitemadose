@@ -1,8 +1,12 @@
 import os
+import json
 import traceback
 from collections import deque
-from multiprocessing import Pool
+from multiprocessing import Manager, Pool, Process, Queue  # Use actual Process for Collecting creneau (CPU intensive)
 from random import random
+from typing import Tuple
+
+from .export.export_v2 import JSONExporter
 
 from scraper.error import ScrapeError
 from scraper.pattern.center_info import CenterInfo
@@ -11,7 +15,7 @@ from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug, log_requests, log_platform_requests
-from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date
+from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date, q_iter, EOQ
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .export.export_merge import export_data
@@ -56,13 +60,18 @@ def scrape(platforms=None):  # pragma: no cover
     compte_centres_avec_dispo = 0
     compte_bloqués = 0
     profiler = Profiling()
-    with profiler, Pool(POOL_SIZE, **profiler.pool_args()) as pool:
-        centre_iterator_proportion = (c for c in centre_iterator(platforms=platforms) if random() < PARTIAL_SCRAPE)
+    with profiler, Manager() as manager, Pool(POOL_SIZE, **profiler.pool_args()) as pool:
+        creneau_q = manager.Queue(maxsize=999999)
+        export_process = Process(target=export_by_creneau, args=(creneau_q,))
+        export_process.start()
+        centre_iterator_proportion = ((c, creneau_q) for c in centre_iterator(platforms=platforms) if random() < PARTIAL_SCRAPE)
         centres_cherchés = pool.imap_unordered(cherche_prochain_rdv_dans_centre, centre_iterator_proportion, 1)
 
         centres_cherchés = get_last_scans(centres_cherchés)
-
         log_platform_requests(centres_cherchés)
+
+        creneau_q.put(EOQ)
+        export_process.join()
 
         if platforms:
             for platform in platforms:
@@ -87,22 +96,39 @@ def scrape(platforms=None):  # pragma: no cover
                     "Notre IP a été bloquée par le CDN Doctolib plus de 10 fois. Pour éviter de pousser des données erronées, on s'arrête ici"
                 )
                 exit(code=2)
+
     logger.info(profiler.print_summary())
 
 
-def cherche_prochain_rdv_dans_centre(centre: dict) -> CenterInfo:  # pragma: no cover
+def export_by_creneau(
+    creneaux_q,
+):
+    exporter = JSONExporter()
+    exporter.export(q_iter(creneaux_q))
+
+
+def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  # pragma: no cover
+    centre, creneau_q = data
     center_data = CenterInfo.from_csv_data(centre)
     start_date = get_start_date()
     has_error = None
     result = None
     try:
-        result = fetch_centre_slots(centre["rdv_site_web"], start_date, input_data=centre.get("booking"))
+        result = fetch_centre_slots(
+            centre["rdv_site_web"],
+            start_date,
+            creneau_q=creneau_q,
+            center_info=center_data,
+            input_data=centre.get("booking"),
+        )
         center_data.fill_result(result)
     except ScrapeError as scrape_error:
         logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(scrape_error)}")
         has_error = scrape_error
     except CircuitBreakerOffException as error:
-        logger.error(f"circuit '{error.name}' désactivé lors du traîtement de la ligne avec le gid {centre['gid']}: {str(error)}")
+        logger.error(
+            f"circuit '{error.name}' désactivé lors du traîtement de la ligne avec le gid {centre['gid']}: {str(error)}"
+        )
         has_error = error
     except Exception:
         logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']}")
@@ -173,14 +199,16 @@ def get_center_platform(center_url: str, fetch_map: dict = None):
 
 
 @Profiling.measure("any_slot")
-def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None, input_data: dict = None) -> ScraperResult:
+def fetch_centre_slots(
+    rdv_site_web, start_date, creneau_q, center_info, fetch_map: dict = None, input_data: dict = None
+) -> ScraperResult:
     if fetch_map is None:
         # Map platform to implementation.
         # May be overridden for unit testing purposes.
         fetch_map = get_default_fetch_map()
 
     rdv_site_web = fix_scrap_urls(rdv_site_web)
-    request = ScraperRequest(rdv_site_web, start_date)
+    request = ScraperRequest(rdv_site_web, start_date, center_info)
     platform = get_center_platform(rdv_site_web, fetch_map=fetch_map)
 
     if not platform:
@@ -190,7 +218,7 @@ def fetch_centre_slots(rdv_site_web, start_date, fetch_map: dict = None, input_d
     # Dispatch to appropriate implementation.
     fetch_impl = fetch_map[platform]["scraper_ptr"]
     result = ScraperResult(request, platform, None)
-    result.next_availability = fetch_impl(request)
+    result.next_availability = fetch_impl(request, creneau_q)
     return result
 
 

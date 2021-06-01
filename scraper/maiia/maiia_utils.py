@@ -12,8 +12,8 @@ MAIIA_HEADERS = {
     "User-Agent": os.environ.get("MAIIA_API_KEY", ""),
 }
 
-# timeout = httpx.Timeout(MAIIA_CONF.get("timeout", 25), connect=MAIIA_CONF.get("timeout", 25))
-DEFAULT_CLIENT = httpx.Client(headers=MAIIA_HEADERS)
+timeout = httpx.Timeout(MAIIA_CONF.get("timeout", 25), connect=MAIIA_CONF.get("timeout", 25))
+DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=MAIIA_HEADERS)
 logger = logging.getLogger("scraper")
 
 MAIIA_LIMIT = MAIIA_SCRAPER.get("centers_per_page")

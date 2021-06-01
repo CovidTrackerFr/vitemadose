@@ -16,7 +16,7 @@ from scraper.pattern.scraper_result import DRUG_STORE
 from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
 from scraper.pattern.vaccine import get_vaccine_name
 from utils.vmd_config import get_conf_platform
-from utils.vmd_utils import departementUtils
+from utils.vmd_utils import departementUtils, DummyQueue
 from scraper.profiler import Profiling
 
 MAPHARMA_CONF = get_conf_platform("mapharma")
@@ -90,16 +90,20 @@ def get_mapharma_opendata(
         return request.json()
     except httpx.TimeoutException as hex:
         logger.warning(f"{opendata_url} timed out {hex}")
+        request.increase_request_count("time-out")
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{opendata_url} returned error {hex.response.status_code}")
+        request.increase_request_count("error")
     try:
         request = client.get(opendata_url_fallback, headers=MAPHARMA_HEADERS)
         request.raise_for_status()
         return request.json()
     except httpx.TimeoutException as hex:
         logger.warning(f"{opendata_url_fallback} timed out {hex}")
+        request.increase_request_count("time-out")
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{opendata_url_fallback} returned error {hex.response.status_code}")
+        request.increase_request_count("error")
     return None
 
 
@@ -134,9 +138,11 @@ def get_slots(
         r.raise_for_status()
     except httpx.TimeoutException as hex:
         logger.warning(f"{base_url} timed out {hex}")
+        request.increase_request_count("time-out")
         return {}
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{base_url} returned error {hex.response.status_code}")
+        request.increase_request_count("error")
         return {}
     return r.json()
 
@@ -169,7 +175,10 @@ def count_appointements(slots: dict, start_date: datetime, end_date: datetime) -
 
 @Profiling.measure("mapharma_slot")
 def fetch_slots(
-    request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT, opendata_file: str = MAPHARMA_OPEN_DATA_FILE
+    request: ScraperRequest,
+    creneau_q=DummyQueue(),
+    client: httpx.Client = DEFAULT_CLIENT,
+    opendata_file: str = MAPHARMA_OPEN_DATA_FILE,
 ) -> Optional[str]:
     url = request.get_url()
     # on récupère les paramètres c (id_campagne) & l (id_type)

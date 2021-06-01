@@ -161,8 +161,8 @@ def test_keldoc_booking_connect_error():
         if request.url.path == "/api/patients/v2/searches/resource":
             raise httpx.ConnectError("Unable to connect", request=request)
         if (
-                request.url.path
-                == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
+            request.url.path
+            == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
         ):
             return httpx.Response(
                 302,
@@ -174,6 +174,7 @@ def test_keldoc_booking_connect_error():
             if request.url.path == path:
                 return httpx.Response(200, json=get_test_data(CENTER1_KELDOC[path]))
         return httpx.Response(200, json={})
+
     client = httpx.Client(transport=httpx.MockTransport(mock_client))
     test_center_1 = KeldocCenter(request, client=client)
 
@@ -192,14 +193,15 @@ def test_keldoc_redirect_connect_error():
 
     def mock_client(request: httpx.Request) -> httpx.Response:
         if (
-                request.url.path
-                == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
+            request.url.path
+            == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
         ):
             raise httpx.ConnectError("Unable to connect", request=request)
         for path in CENTER1_KELDOC:
             if request.url.path == path:
                 return httpx.Response(200, json=get_test_data(CENTER1_KELDOC[path]))
         return httpx.Response(200, json={})
+
     client = httpx.Client(transport=httpx.MockTransport(mock_client))
     test_center_1 = KeldocCenter(request, client=client)
 
@@ -376,8 +378,8 @@ def test_null_resource():
 
     def app(request: httpx.Request) -> httpx.Response:
         if (
-                request.url.path
-                == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
+            request.url.path
+            == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
         ):
             return httpx.Response(
                 302,
@@ -391,14 +393,15 @@ def test_null_resource():
     date = fetch_slots(request)
     assert not date
 
+
 def test_no_center_data():
     center1_url = "https://www.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?specialty=144"
     request = ScraperRequest(center1_url, "2020-04-04")
 
     def app(request: httpx.Request) -> httpx.Response:
         if (
-                request.url.path
-                == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
+            request.url.path
+            == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
         ):
             return httpx.Response(
                 302,
@@ -421,8 +424,8 @@ def test_cabinet_error():
 
     def app(request: httpx.Request) -> httpx.Response:
         if (
-                request.url.path
-                == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
+            request.url.path
+            == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
         ):
             return httpx.Response(
                 302,
@@ -444,8 +447,8 @@ def test_cabinet_error():
 
     def app(request: httpx.Request) -> httpx.Response:
         if (
-                request.url.path
-                == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
+            request.url.path
+            == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
         ):
             return httpx.Response(
                 302,
@@ -467,8 +470,8 @@ def test_cabinet_error():
 
     def app(request: httpx.Request) -> httpx.Response:
         if (
-                request.url.path
-                == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
+            request.url.path
+            == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
         ):
             return httpx.Response(
                 302,
