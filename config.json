@@ -413,15 +413,19 @@
           "0": "Dimanche"
         }
       }
-    }
-  },
-  "manual": {
-    "enabled": true,
-    "sheet_id": "1nrIMkkumTVb8QGRPtauGWXU6USy42ZTw6GmezGjaDa0",
-    "page_number": 2,
-    "column_names": {
-      "1": "name",
-      "2": "url"
+    },
+    "manual": {
+      "enabled": true,
+      "sheet_id": "1nrIMkkumTVb8QGRPtauGWXU6USy42ZTw6GmezGjaDa0",
+      "page_number": 2,
+      "column_names": {
+        "1": "name",
+        "2": "url",
+        "3": "address",
+        "4": "insee",
+        "5": "lat",
+        "6": "lon"
+      }
     }
   }
 }

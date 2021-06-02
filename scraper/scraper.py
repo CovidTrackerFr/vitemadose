@@ -221,7 +221,7 @@ def fetch_centre_slots(
 
 # TODO: If someone knows how to do it automatically *and* not with a something
 # that make people want to carve their eyes out, it would be a nice addition :)
-iterators = {
+_iterators = {
     doctolib.NAME: doctolib.iterator,
     maiia.NAME: maiia.iterator,
     manual_urls.NAME: manual_urls.iterator,
@@ -234,7 +234,7 @@ iterators = {
 
 
 def get_iterators() -> List[Iterator]:
-    return list(iterators[platform]() for platform in get_config()["platforms"] if platform.get("enabled", False))
+    return list(_iterators[platform]() for platform in get_config()["platforms"] if platform.get("enabled", False))
 
 
 def iterator(platforms=None):  # pragma: no cover
