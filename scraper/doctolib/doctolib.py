@@ -5,7 +5,7 @@ import os
 import re
 from datetime import timedelta, datetime
 from math import floor
-from typing import Dict, Iterator, List, Optional, Tuple, Set
+from typing import Dict, Iterator, List, Optional, Tuple
 from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 import dateutil
 
@@ -128,8 +128,8 @@ class DoctolibSlots:
         # example: https://partners.doctolib.fr/hopital-public/tarbes/centre-de-vaccination-tarbes-ayguerote?speciality_id=5494&enable_cookies_consent=1
         visit_motive_category_id = _find_visit_motive_category_id(rdata)
         # visit_motive_id
-        visit_motive_ids_by_vaccine = _find_visit_motive_id(rdata, visit_motive_category_id=visit_motive_category_id)
-        if visit_motive_ids_by_vaccine is None:
+        visit_motive_ids = _find_visit_motive_id(rdata, visit_motive_category_id=visit_motive_category_id)
+        if visit_motive_ids is None:
             return None
 
         all_agendas = parse_agenda_ids(rdata)
@@ -167,9 +167,9 @@ class DoctolibSlots:
         )
 
         timetable_start_date = datetime.now()  # shouldn't be datetime.now()!!
-        for vaccine, visite_motive_ids in visit_motive_ids_by_vaccine.items():
+        for visit_motive_id in visit_motive_ids:
             agenda_ids, practice_ids = _find_agenda_and_practice_ids(
-                rdata, visite_motive_ids, practice_id_filter=practice_id
+                rdata, visit_motive_id, practice_id_filter=practice_id
             )
             if not agenda_ids or not practice_ids:
                 continue
@@ -177,11 +177,10 @@ class DoctolibSlots:
 
             agenda_ids_q = "-".join(agenda_ids)
             practice_ids_q = "-".join(practice_ids)
-            motive_ids_q = "-".join(list(map(lambda id: str(id), visite_motive_ids)))
             availability = self.get_timetables(
                 request,
-                vaccine,
-                motive_ids_q,
+                visit_motive_ids,
+                visit_motive_id,
                 agenda_ids_q,
                 practice_ids_q,
                 timetable_start_date,
@@ -194,8 +193,8 @@ class DoctolibSlots:
     def get_timetables(
         self,
         request: ScraperRequest,
-        vaccine,
-        motive_ids_q,
+        visit_motive_ids,
+        visit_motive_id,
         agenda_ids_q: str,
         practice_ids_q: str,
         start_date: datetime,
@@ -215,8 +214,8 @@ class DoctolibSlots:
         sdate, appt, schedules, ended, next_slot = self.get_appointments(
             request,
             start_date.strftime("%Y-%m-%d"),
-            vaccine,
-            motive_ids_q,
+            visit_motive_ids,
+            visit_motive_id,
             agenda_ids_q,
             practice_ids_q,
             DOCTOLIB_CONF.pagination["days"],
@@ -237,8 +236,8 @@ class DoctolibSlots:
                 return first_availability
             return self.get_timetables(
                 request,
-                vaccine,
-                motive_ids_q,
+                visit_motive_ids,
+                visit_motive_id,
                 agenda_ids_q,
                 practice_ids_q,
                 next_fetch_date,
@@ -257,8 +256,8 @@ class DoctolibSlots:
             return first_availability
         return self.get_timetables(
             request,
-            vaccine,
-            motive_ids_q,
+            visit_motive_ids,
+            visit_motive_id,
             agenda_ids_q,
             practice_ids_q,
             start_date + timedelta(days=DOCTOLIB_CONF.pagination["days"]),
@@ -314,8 +313,8 @@ class DoctolibSlots:
         self,
         request: ScraperRequest,
         start_date: str,
-        vaccine: Vaccine,
-        motive_ids_q: str,
+        visit_motive_ids,
+        motive_id: str,
         agenda_ids_q: str,
         practice_ids_q: str,
         limit: int,
@@ -328,7 +327,7 @@ class DoctolibSlots:
         appointment_count = 0
         slots_api_url = DOCTOLIB_CONF.api.get("slots", "").format(
             start_date=start_date,
-            motive_id=motive_ids_q,
+            motive_id=motive_id,
             agenda_ids_q=agenda_ids_q,
             practice_ids_q=practice_ids_q,
             limit=limit,
@@ -381,9 +380,14 @@ class DoctolibSlots:
                     lieu=self.lieu,
                 ))
 
+            if visit_motive_ids[motive_id]:
+                visite_motive_vaccine = visit_motive_ids[motive_id]
+            else:
+                visite_motive_vaccine = None
+
             for interval in INTERVAL_SPLIT_DAYS:
                 chronodose = False
-                if vaccine in CHRONODOSES["Vaccine"] and interval == CHRONODOSES["Interval"]:
+                if visite_motive_vaccine in CHRONODOSES["Vaccine"] and interval == CHRONODOSES["Interval"]:
                     chronodose = True
                 appointment_schedules = build_appointment_schedules(
                     request,
@@ -410,7 +414,7 @@ class DoctolibSlots:
                             )
 
         if motive_availability:
-            request.add_vaccine_type(vaccine)
+            request.add_vaccine_type(visit_motive_ids[motive_id])
         # Sometimes Doctolib does not allow to see slots for next weeks
         # which is a weird move, but still, we have to stop here.
 
@@ -594,7 +598,8 @@ def _find_visit_motive_category_id(rdata: dict) -> List[int]:
             categories.append(category["id"])
     return categories
 
-def _find_visit_motive_id(rdata: dict, visit_motive_category_id: list = None) -> Dict[Vaccine, Set[int]]:
+
+def _find_visit_motive_id(rdata: dict, visit_motive_category_id: list = None) -> Dict[int, str]:
     """
     Etant donnée une réponse à /booking/<centre>.json, renvoie le cas échéant
     l'ID du 1er motif de visite disponible correspondant à une 1ère dose pour
@@ -627,14 +632,12 @@ def _find_visit_motive_id(rdata: dict, visit_motive_category_id: list = None) ->
         # * visit_motive_category_id=<id> : filtre => on veut les motifs qui
         # correspondent à la catégorie en question.
         if visit_motive_category_id is None or visit_motive.get("visit_motive_category_id") in visit_motive_category_id:
-            ids = relevant_motives.get(vaccine_name, set())
-            ids.add(visit_motive["id"])
-            relevant_motives[vaccine_name] = ids
+            relevant_motives[visit_motive["id"]] = vaccine_name
     return relevant_motives
 
 
 def _find_agenda_and_practice_ids(
-    data: dict, visit_motive_ids: Set[int], practice_id_filter: list = None
+    data: dict, visit_motive_id: str, practice_id_filter: list = None
 ) -> Tuple[list, list]:
     """
     Etant donné une réponse à /booking/<centre>.json, renvoie tous les
@@ -654,7 +657,7 @@ def _find_agenda_and_practice_ids(
             continue
         agenda_id = str(agenda["id"])
         for pratice_id_agenda, visit_motive_list_agenda in agenda["visit_motive_ids_by_practice_id"].items():
-            if len(visit_motive_ids.intersection(visit_motive_list_agenda)) > 0 : # Some motives are present in this agenda
+            if visit_motive_id in visit_motive_list_agenda:
                 practice_ids.add(str(pratice_id_agenda))
                 agenda_ids.add(agenda_id)
     return sorted(agenda_ids), sorted(practice_ids)
