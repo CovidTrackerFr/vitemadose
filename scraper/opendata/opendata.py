@@ -3,6 +3,7 @@ import io
 import json
 from typing import Iterator
 import requests
+import logging
 
 from utils.vmd_logger import get_logger
 from utils.vmd_utils import fix_scrap_urls
