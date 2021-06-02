@@ -7,13 +7,17 @@ import requests
 from utils.vmd_logger import get_logger
 from utils.vmd_utils import fix_scrap_urls
 
-logger = get_logger()
+logger = logging.getLogger("scraper")
 
 
 def center_iterator(outpath_format="data/output/{}.json") -> Iterator[dict]:
     url = "https://www.data.gouv.fr/fr/datasets/r/5cb21a85-b0b0-4a65-a249-806a040ec372"
     response = requests.get(url)
-    response.raise_for_status()
+    try:
+        response.raise_for_status()
+    except requests.exceptions.HTTPError as error:
+        logger.error(f"Le fichier CSV des centres de vaccination n'est pas disponible. {error}")
+        return []
 
     reader = io.StringIO(response.content.decode("utf8"))
     csvreader = csv.DictReader(reader, delimiter=";")
