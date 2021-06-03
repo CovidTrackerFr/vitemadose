@@ -275,7 +275,7 @@ def q_iter(q, EOQ=EOQ):
 
 
 class BulkQueue:
-    def __init__(self, q, bulksize=500, delay=0.200):
+    def __init__(self, q, bulksize=300, delay=5):
         self.q = q
         self.bulksize = bulksize
         self.current_read = None
