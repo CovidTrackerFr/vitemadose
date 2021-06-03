@@ -104,6 +104,7 @@ def scrape(platforms=None):  # pragma: no cover
 def export_by_creneau(
     creneaux_q,
 ):
+    print(f" ----- EXPORTER RUNNING IN PROCESS {os.getpid()} ------")
     exporter = JSONExporter()
     exporter.export(q_iter(creneaux_q))
 

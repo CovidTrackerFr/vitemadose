@@ -27,8 +27,8 @@ class ResourceTousDepartements(Resource):
         centre = self.centres_disponibles[lieu.internal_id]
         centre["appointment_count"] += 1
         centre["vaccine_type"] = sorted(list(set(centre["vaccine_type"] + [creneau.type_vaccin.value])))
-        if not centre["prochain_rdv"] or dateutil.parser.parse(centre["prochain_rdv"]) > creneau.horaire:
-            centre["prochain_rdv"] = creneau.horaire.replace(microsecond=0).isoformat()
+        if not centre["prochain_rdv"] or centre["prochain_rdv"] > creneau.horaire:
+            centre["prochain_rdv"] = creneau.horaire
 
     def centre(self, lieu: Lieu):
         return {
@@ -62,8 +62,14 @@ class ResourceTousDepartements(Resource):
         return {
             "version": 1,
             "last_updated": self.now(tz=gettz()).replace(microsecond=0).isoformat(),
-            "centres_disponibles": sorted(list(self.centres_disponibles.values()), key=sort_center),
+            "centres_disponibles": sorted([self.centre_asdict(c) for c in self.centres_disponibles.values()], key=sort_center),
             "centres_indisponibles": list(self.centres_indisponibles.values()),
+        }
+
+    def centre_asdict(self, centre):
+        return {
+            **centre,
+            'prochain_rdv': centre['prochain_rdv'].replace(microsecond=0).isoformat()
         }
 
 
