@@ -493,4 +493,4 @@ def test_doctolib_center_scrap():
     client = httpx.Client(transport=httpx.MockTransport(app))
     scraper = DoctolibCenterScraper(client=client)
     result = scraper.run_departement_scrap("test")
-    assert result == json.loads(Path("tests/fixtures/doctolib/scrap-center-result.json").read_text())
+    assert result == json.loads(Path("tests/fixtures/doctolib/scrap-center-result.json").read_text(encoding="utf-8"))
