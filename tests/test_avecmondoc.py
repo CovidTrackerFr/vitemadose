@@ -15,12 +15,7 @@ from scraper.avecmondoc import avecmondoc
 def test_search():
     # Test offline
     def app(request: httpx.Request) -> httpx.Response:
-        assert request.url.path == "/api/Doctors/search"
-        assert dict(httpx.QueryParams(request.url.query)) == {
-            "params": json.dumps({"city": None, "gps": None, "dateBefore": None}),
-            "options": json.dumps({"limit": 1000, "page": 1, "distance": None}),
-        }
-
+        assert request.url.path == "/api/Organizations/public/covid"
         path = Path("tests/fixtures/avecmondoc/search-result.json")
         return httpx.Response(200, json=json.loads(path.read_text(encoding="utf8")))
 
@@ -274,7 +269,7 @@ def test_has_valid_zipcode():
 
 def test_center_iterator():
     def app(request: httpx.Request) -> httpx.Response:
-        if request.url.path == "/api/Doctors/search":
+        if request.url.path == "/api/Organizations/public/covid":
             path = Path("tests/fixtures/avecmondoc/iterator_search_result.json")
             return httpx.Response(200, json=json.loads(path.read_text(encoding="utf8")))
         elif request.url.path == "/api/Organizations/slug/delphine-rousseau-159":
