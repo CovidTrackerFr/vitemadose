@@ -9,15 +9,15 @@ import datetime as dt
 import pytz
 import requests
 
-import time
-from datetime import date, timedelta, datetime
+from datetime import datetime, timedelta
 
-from pathlib import Path
 from unidecode import unidecode
 
 from utils.vmd_config import get_conf_inputs, get_config
 
 RESERVED_CENTERS = get_config().get("reserved_centers", [])
+
+PARIS_TZ = pytz.timezone("Europe/Paris")
 
 
 def load_insee() -> dict:
@@ -243,12 +243,9 @@ def append_date_days(mydate: str, days: int, seconds=0):
     if not mydate:
         return
 
-    mydate = date.fromisoformat(mydate)
-    mydate = datetime.combine(mydate, datetime.min.time())
+    mydate = datetime.fromisoformat(mydate)
     newdate = mydate + timedelta(days=days, seconds=seconds)
-
-    paris_tz = pytz.timezone("Europe/Paris")
-    newdate = paris_tz.localize(newdate)
+    newdate = PARIS_TZ.localize(newdate)
 
     return newdate.isoformat()
 
