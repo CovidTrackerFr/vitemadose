@@ -32,7 +32,6 @@ class JSONExporter:
     def export(self, creneaux: Iterator[Creneau]):
         count = 0
         for creneau in creneaux:
-            logger.debug(f"Got Creneau {creneau}")
             count += 1
             for resource in self.resources.values():
                 resource.on_creneau(creneau)
