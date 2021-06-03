@@ -62,15 +62,19 @@ class ResourceTousDepartements(Resource):
         return {
             "version": 1,
             "last_updated": self.now(tz=gettz()).replace(microsecond=0).isoformat(),
-            "centres_disponibles": sorted([self.centre_asdict(c) for c in self.centres_disponibles.values()], key=sort_center),
-            "centres_indisponibles": [self.centre_asdict(c) for c in self.centres_indisponibles.values()]
+            "centres_disponibles": sorted(
+                [self.centre_asdict(c) for c in self.centres_disponibles.values()], key=sort_center
+            ),
+            "centres_indisponibles": [self.centre_asdict(c) for c in self.centres_indisponibles.values()],
         }
 
     def centre_asdict(self, centre):
         return {
             **centre,
-            'prochain_rdv': centre['prochain_rdv'].replace(microsecond=0).isoformat() if centre['prochain_rdv'] else None,
-            'vaccine_type': sorted(list(centre['vaccine_type'].keys()))
+            "prochain_rdv": centre["prochain_rdv"].replace(microsecond=0).isoformat()
+            if centre["prochain_rdv"]
+            else None,
+            "vaccine_type": sorted(list(centre["vaccine_type"].keys())),
         }
 
 

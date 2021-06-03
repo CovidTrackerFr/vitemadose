@@ -66,7 +66,11 @@ def scrape(platforms=None):  # pragma: no cover
             creneau_q = BulkQueue(manager.Queue(maxsize=99999))
             export_process = Process(target=export_by_creneau, args=(creneau_q,))
             export_process.start()
-            centre_iterator_proportion = ((c, DummyQueue() if CRENEAUX_DISABLED else creneau_q) for c in centre_iterator(platforms=platforms) if random() < PARTIAL_SCRAPE)
+            centre_iterator_proportion = (
+                (c, DummyQueue() if CRENEAUX_DISABLED else creneau_q)
+                for c in centre_iterator(platforms=platforms)
+                if random() < PARTIAL_SCRAPE
+            )
             centres_cherchés = pool.imap_unordered(cherche_prochain_rdv_dans_centre, centre_iterator_proportion, 1)
 
             centres_cherchés = get_last_scans(centres_cherchés)
