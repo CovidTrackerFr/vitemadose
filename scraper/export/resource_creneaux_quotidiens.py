@@ -23,7 +23,7 @@ class ResourceCreneauxQuotidiens(Resource):
             self.dates[date] = ResourceCreneauxParDate(date=date, tags=tags)
 
     def on_creneau(self, creneau: Union[Creneau, PasDeCreneau]):
-        if creneau.lieu.departement == self.departement and creneau.disponible:
+        if creneau.disponible and creneau.lieu.departement == self.departement:
             date = as_date(creneau.horaire)
             if date in self.dates:
                 self.dates[date].on_creneau(creneau)
@@ -78,4 +78,4 @@ class ResourceCreneauxParLieu(Resource):
 
 
 def as_date(datetime):
-    return datetime.strftime("%Y-%m-%d")
+    return datetime.isoformat()[:10]

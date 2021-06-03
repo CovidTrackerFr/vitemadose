@@ -1,5 +1,6 @@
 import re
 import csv
+import threading
 import json
 import logging
 from typing import List, Optional
@@ -271,3 +272,46 @@ EOQ = "EOQ-f43732d8-c250-11eb-8d1f-f38a886756c1"
 
 def q_iter(q, EOQ=EOQ):
     return iter(q.get, EOQ)
+
+
+class BulkQueue:
+    def __init__(self, q, bulksize=300, delay=5):
+        self.q = q
+        self.bulksize = bulksize
+        self.current_read = None
+        self.current_bulk = []
+        self._scheduled_timer = None
+        self.delay = delay
+
+    def put(self, item):
+        self.current_bulk.append(item)
+        if len(self.current_bulk) >= self.bulksize:
+            self._flush()
+            return None
+
+        if self._scheduled_timer:
+            self._scheduled_timer.cancel()
+
+        self._scheduled_timer = threading.Timer(self.delay, self._flush)
+        self._scheduled_timer.start()
+
+    def get(self):
+        if not self.current_read:
+            next_bulk = self.q.get()
+            self.current_read = iter(next_bulk)
+
+        try:
+            return next(self.current_read)
+        except StopIteration:
+            self.current_read = None
+            return self.get()
+
+    def delayed_flush(self):
+        self._flush()
+
+    def _flush(self):
+        if not self.current_bulk or len(self.current_bulk) == 0:
+            return
+        bulk = self.current_bulk
+        self.current_bulk = []
+        self.q.put(bulk)
