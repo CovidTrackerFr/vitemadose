@@ -1,6 +1,6 @@
 import datetime as dt
 
-from utils.vmd_utils import format_phone_number, get_last_scans, department_urlify
+from utils.vmd_utils import format_phone_number, get_last_scans, append_date_days, department_urlify
 from .utils import mock_datetime_now
 from scraper.pattern.center_info import CenterInfo
 
@@ -46,3 +46,15 @@ def test_get_last_scans():
 def test_department_urlify():
     url = "FooBar 42"
     assert department_urlify(url) == "foobar-42"
+
+
+TEST_DATES = [
+    {"item": ("2021-04-21", 0), "result": "2021-04-21T00:00:00+02:00"},
+    {"item": ("2021-04-21", 3), "result": "2021-04-24T00:00:00+02:00"},
+]
+
+
+def test_append_days_date():
+    for test_date in TEST_DATES:
+        item = test_date["item"]
+        assert append_date_days(item[0], item[1]) == test_date["result"]

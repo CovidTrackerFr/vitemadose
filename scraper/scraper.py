@@ -15,7 +15,7 @@ from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug, log_requests, log_platform_requests
-from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date, q_iter, EOQ
+from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date, q_iter, EOQ, DummyQueue, BulkQueue
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .export.export_merge import export_data
@@ -35,6 +35,7 @@ from .circuit_breaker import CircuitBreakerOffException
 POOL_SIZE = int(os.getenv("POOL_SIZE", 50))
 PARTIAL_SCRAPE = float(os.getenv("PARTIAL_SCRAPE", 1.0))
 PARTIAL_SCRAPE = max(0, min(PARTIAL_SCRAPE, 1))
+CRENEAUX_DISABLED = True if os.environ.get("CRENEAUX_DISABLED", False) else False
 
 logger = enable_logger_for_production()
 
@@ -60,15 +61,20 @@ def scrape(platforms=None):  # pragma: no cover
     compte_centres_avec_dispo = 0
     compte_bloqués = 0
     profiler = Profiling()
-    with profiler, Manager() as manager, Pool(POOL_SIZE, **profiler.pool_args()) as pool:
-        creneau_q = manager.Queue(maxsize=999999)
-        export_process = Process(target=export_by_creneau, args=(creneau_q,))
-        export_process.start()
-        centre_iterator_proportion = ((c, creneau_q) for c in centre_iterator(platforms=platforms) if random() < PARTIAL_SCRAPE)
-        centres_cherchés = pool.imap_unordered(cherche_prochain_rdv_dans_centre, centre_iterator_proportion, 1)
+    with Manager() as manager:
+        with profiler, Pool(POOL_SIZE, **profiler.pool_args()) as pool:
+            creneau_q = BulkQueue(manager.Queue(maxsize=99999))
+            export_process = Process(target=export_by_creneau, args=(creneau_q,))
+            export_process.start()
+            centre_iterator_proportion = (
+                (c, DummyQueue() if CRENEAUX_DISABLED else creneau_q)
+                for c in centre_iterator(platforms=platforms)
+                if random() < PARTIAL_SCRAPE
+            )
+            centres_cherchés = pool.imap_unordered(cherche_prochain_rdv_dans_centre, centre_iterator_proportion, 1)
 
-        centres_cherchés = get_last_scans(centres_cherchés)
-        log_platform_requests(centres_cherchés)
+            centres_cherchés = get_last_scans(centres_cherchés)
+            log_platform_requests(centres_cherchés)
 
         creneau_q.put(EOQ)
         export_process.join()
@@ -103,6 +109,7 @@ def scrape(platforms=None):  # pragma: no cover
 def export_by_creneau(
     creneaux_q,
 ):
+    print(f" ----- EXPORTER RUNNING IN PROCESS {os.getpid()} ------")
     exporter = JSONExporter()
     exporter.export(q_iter(creneaux_q))
 
@@ -228,8 +235,7 @@ def centre_iterator(platforms=None):  # pragma: no cover
         ordoclic_centre_iterator(),
         mapharma_centre_iterator(),
         maiia_centre_iterator(),
-        # mise en pause temporaire
-        # avecmondoc_centre_iterator(),
+        avecmondoc_centre_iterator(),
         doctolib_center_iterator(),
         gouv_centre_iterator(),
     ):

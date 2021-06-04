@@ -26,9 +26,9 @@ class ResourceTousDepartements(Resource):
 
         centre = self.centres_disponibles[lieu.internal_id]
         centre["appointment_count"] += 1
-        centre["vaccine_type"] = sorted(list(set(centre["vaccine_type"] + [creneau.type_vaccin.value])))
-        if not centre["prochain_rdv"] or dateutil.parser.parse(centre["prochain_rdv"]) > creneau.horaire:
-            centre["prochain_rdv"] = creneau.horaire.replace(microsecond=0).isoformat()
+        centre["vaccine_type"][creneau.type_vaccin.value] = True
+        if not centre["prochain_rdv"] or centre["prochain_rdv"] > creneau.horaire:
+            centre["prochain_rdv"] = creneau.horaire
 
     def centre(self, lieu: Lieu):
         return {
@@ -42,7 +42,7 @@ class ResourceTousDepartements(Resource):
             "type": lieu.lieu_type,
             "appointment_count": 0,
             "internal_id": lieu.internal_id,
-            "vaccine_type": [],
+            "vaccine_type": {},
             "appointment_schedules": [],
             "appointment_by_phone_only": False,
             "erreur": None,
@@ -62,8 +62,19 @@ class ResourceTousDepartements(Resource):
         return {
             "version": 1,
             "last_updated": self.now(tz=gettz()).replace(microsecond=0).isoformat(),
-            "centres_disponibles": sorted(list(self.centres_disponibles.values()), key=sort_center),
-            "centres_indisponibles": list(self.centres_indisponibles.values()),
+            "centres_disponibles": sorted(
+                [self.centre_asdict(c) for c in self.centres_disponibles.values()], key=sort_center
+            ),
+            "centres_indisponibles": [self.centre_asdict(c) for c in self.centres_indisponibles.values()],
+        }
+
+    def centre_asdict(self, centre):
+        return {
+            **centre,
+            "prochain_rdv": centre["prochain_rdv"].replace(microsecond=0).isoformat()
+            if centre["prochain_rdv"]
+            else None,
+            "vaccine_type": sorted(list(centre["vaccine_type"].keys())),
         }
 
 

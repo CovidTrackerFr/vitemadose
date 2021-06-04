@@ -1,5 +1,6 @@
 import re
 import csv
+import threading
 import json
 import logging
 from typing import List, Optional
@@ -8,13 +9,15 @@ import datetime as dt
 import pytz
 import requests
 
-from datetime import date, timedelta, datetime
+from datetime import datetime, timedelta
 
 from unidecode import unidecode
 
 from utils.vmd_config import get_conf_inputs, get_config
 
 RESERVED_CENTERS = get_config().get("reserved_centers", [])
+
+PARIS_TZ = pytz.timezone("Europe/Paris")
 
 
 def load_insee() -> dict:
@@ -252,12 +255,9 @@ def append_date_days(mydate: str, days: int, seconds=0):
     if not mydate:
         return
 
-    mydate = date.fromisoformat(mydate)
-    mydate = datetime.combine(mydate, datetime.min.time())
+    mydate = datetime.fromisoformat(mydate)
     newdate = mydate + timedelta(days=days, seconds=seconds)
-
-    paris_tz = pytz.timezone("Europe/Paris")
-    newdate = paris_tz.localize(newdate)
+    newdate = PARIS_TZ.localize(newdate)
 
     return newdate.isoformat()
 
@@ -281,3 +281,46 @@ EOQ = "EOQ-f43732d8-c250-11eb-8d1f-f38a886756c1"
 
 def q_iter(q, EOQ=EOQ):
     return iter(q.get, EOQ)
+
+
+class BulkQueue:
+    def __init__(self, q, bulksize=300, delay=5):
+        self.q = q
+        self.bulksize = bulksize
+        self.current_read = None
+        self.current_bulk = []
+        self._scheduled_timer = None
+        self.delay = delay
+
+    def put(self, item):
+        self.current_bulk.append(item)
+        if len(self.current_bulk) >= self.bulksize:
+            self._flush()
+            return None
+
+        if self._scheduled_timer:
+            self._scheduled_timer.cancel()
+
+        self._scheduled_timer = threading.Timer(self.delay, self._flush)
+        self._scheduled_timer.start()
+
+    def get(self):
+        if not self.current_read:
+            next_bulk = self.q.get()
+            self.current_read = iter(next_bulk)
+
+        try:
+            return next(self.current_read)
+        except StopIteration:
+            self.current_read = None
+            return self.get()
+
+    def delayed_flush(self):
+        self._flush()
+
+    def _flush(self):
+        if not self.current_bulk or len(self.current_bulk) == 0:
+            return
+        bulk = self.current_bulk
+        self.current_bulk = []
+        self.q.put(bulk)

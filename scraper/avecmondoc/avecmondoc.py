@@ -32,18 +32,35 @@ paris_tz = timezone("Europe/Paris")
 
 def search(client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
     url = AVECMONDOC_API.get("search", "")
-    payload = AVECMONDOC_API.get("search_filter", "")
-    try:
-        r = client.get(url, params=payload)
-        r.raise_for_status()
-    except httpx.TimeoutException as hex:
-        logger.warning(f"request timed out for center: {url} (search)")
-        return None
-    except httpx.HTTPStatusError as hex:
-        logger.warning(f"{url} returned error {hex.response.status_code}")
-        logger.warning(r.content)
-        return None
-    return r.json()
+    limit = AVECMONDOC_API.get("search_page_size", 10)
+    page = 1
+    result = { "data" : [], "hasNextPage": True }
+    while result["hasNextPage"]:
+        payload = { "limit": limit, "page": page }
+        try:
+            r = client.get(url, params=payload)
+            r.raise_for_status()
+        except httpx.TimeoutException as hex:
+            logger.warning(f"{url} timed out (search)")
+            return None
+        except httpx.HTTPStatusError as hex:
+            logger.warning(f"{url} returned error {hex.response.status_code}")
+            logger.warning(r.content)
+            return None
+        try:
+            paged_result = r.json()
+        except json.decoder.JSONDecodeError as jde:
+            logger.warning(f"{url} raised {jde}")
+            break
+        page += 1
+        if result["data"] == []:
+            result = paged_result
+            continue
+        result["hasNextPage"] = paged_result["hasNextPage"]
+        for item in paged_result["data"]:
+            result["data"].append(item)
+        #logger.info(f"Downloaded {j['page']}/{j['pages']}")
+    return result
 
 
 def get_doctor_slug(slug: str, client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None) -> Optional[dict]:
@@ -378,7 +395,7 @@ def center_to_centerdict(center: CenterInfo) -> dict:
 
 
 def has_valid_zipcode(organization: dict) -> bool:
-    return organization["zipCode"] is not None and len(organization["zipCode"]) == 5
+    return organization is not None and organization.get("zipCode", None) is not None and len(organization["zipCode"]) == 5
 
 
 def center_iterator(client: httpx.Client = DEFAULT_CLIENT) -> Iterator[dict]:
@@ -392,17 +409,9 @@ def center_iterator(client: httpx.Client = DEFAULT_CLIENT) -> Iterator[dict]:
         return []
     if "data" not in search_result:
         return []
-    for slug in search_result["data"]:
-        organizations = []
-        slug_type = slug["type"]
-        if slug_type == "doctor":
-            doctor_id = slug["id"]
-            organizations = [
-                get_organization_slug(doctor_organization["slug"], client)
-                for doctor_organization in get_by_doctor(doctor_id, client)
-            ]
-        elif slug_type == "organization":
-            organizations = [get_organization_slug(slug["organizationSlug"], client)]
+    for structure in search_result["data"]:
+        slug = structure["url"].split("/")[-1]
+        organizations = [get_organization_slug(slug, client)]
         valid_organizations = [organization for organization in organizations if has_valid_zipcode(organization)]
         for organization in valid_organizations:
             organization_slug = organization["slug"]

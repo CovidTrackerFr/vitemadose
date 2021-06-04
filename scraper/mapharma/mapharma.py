@@ -147,14 +147,14 @@ def get_slots(
     return r.json()
 
 
-def parse_slots(slots) -> [datetime, int]:
+def parse_slots(slots, start_date) -> [datetime, int]:
     first_availability = None
     slot_count = 0
-    for date, day_slots in slots.items():
-        if "first" not in date:
+    for day, day_slots in slots.items():
+        if "first" not in day and date.fromisoformat(day) >= start_date:
             for day_slot in day_slots:
                 time = day_slot["time"]
-                timestamp = datetime.strptime(f"{date} {time}", "%Y-%m-%d %H:%M")
+                timestamp = datetime.strptime(f"{day} {time}", "%Y-%m-%d %H:%M")
                 slot_count += day_slot["places_dispo"]
                 if first_availability is None or timestamp < first_availability:
                     first_availability = timestamp
@@ -204,7 +204,7 @@ def fetch_slots(
         return
     day_slots.pop("first", None)
     day_slots.pop("first_text", None)
-    first_availability, slot_count = parse_slots(day_slots)
+    first_availability, slot_count = parse_slots(day_slots, start_date)
     request.update_appointment_count(slot_count)
     request.update_practitioner_type(DRUG_STORE)
     request.add_vaccine_type(get_vaccine_name(campagne["nom"]))
