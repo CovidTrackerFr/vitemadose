@@ -145,5 +145,5 @@ class ProfilerSink:
             return 0, 0
         if len(durations) == 1:
             return durations[0], durations[0]
-        percentiles = statistics.quantiles(durations, n=100)
-        return percentiles[80 - 2], percentiles[95 - 2]
+        percentiles = statistics.quantiles(durations, n=100, method='inclusive')
+        return percentiles[80], percentiles[95]
