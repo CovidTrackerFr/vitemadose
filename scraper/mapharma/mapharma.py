@@ -79,6 +79,7 @@ def campagne_to_centre(pharmacy: dict, campagne: dict) -> dict:
     return centre
 
 
+@Profiling.measure("mapharma_opendata")
 def get_mapharma_opendata(
     client: httpx.Client = DEFAULT_CLIENT,
     opendata_url: str = MAPHARMA_OPEN_DATA_URL,
@@ -90,20 +91,16 @@ def get_mapharma_opendata(
         return request.json()
     except httpx.TimeoutException as hex:
         logger.warning(f"{opendata_url} timed out {hex}")
-        request.increase_request_count("time-out")
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{opendata_url} returned error {hex.response.status_code}")
-        request.increase_request_count("error")
     try:
         request = client.get(opendata_url_fallback, headers=MAPHARMA_HEADERS)
         request.raise_for_status()
         return request.json()
     except httpx.TimeoutException as hex:
         logger.warning(f"{opendata_url_fallback} timed out {hex}")
-        request.increase_request_count("time-out")
     except httpx.HTTPStatusError as hex:
         logger.warning(f"{opendata_url_fallback} returned error {hex.response.status_code}")
-        request.increase_request_count("error")
     return None
 
 
