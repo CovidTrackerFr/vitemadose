@@ -18,4 +18,5 @@ inputs = {
   ovh_region = path_relative_to_include()
   gitlab_runner_token = get_env("GITLAB_RUNNER_TOKEN")
   flavor = "c2-7"
+  datadog_api_key = get_env("DD_API_KEY")
 }
