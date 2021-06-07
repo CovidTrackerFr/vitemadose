@@ -20,7 +20,7 @@ from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_pra
 from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
 from scraper.pattern.vaccine import get_vaccine_name, Vaccine
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.error import BlockedByDoctolibError
+from scraper.error import BlockedByDoctolibError, DoublonDoctolib
 from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import append_date_days, DummyQueue
@@ -92,6 +92,7 @@ class DoctolibSlots:
         practice_same_adress = False
 
         rdata = None
+
         # We already have rdata
         if request.input_data:
             rdata = request.input_data
@@ -168,9 +169,14 @@ class DoctolibSlots:
 
         timetable_start_date = datetime.fromisoformat(start_date)
         for visit_motive_id in visit_motive_ids:
-            agenda_ids, practice_ids = _find_agenda_and_practice_ids(
-                rdata, visit_motive_id, practice_id_filter=practice_id
+            practice_id_original = _parse_practice_id(request.get_url())
+            agenda_ids, practice_ids, is_doublon = _find_agenda_and_practice_ids(
+                rdata, visit_motive_id, practice_id_original, practice_id_filter=practice_id
             )
+
+            if is_doublon == True and practice_id_original:
+                raise DoublonDoctolib(request.get_url())
+
             if not agenda_ids or not practice_ids:
                 continue
             agenda_ids = self.sort_agenda_ids(all_agendas, agenda_ids)
@@ -643,15 +649,21 @@ def _find_visit_motive_id(rdata: dict, visit_motive_category_id: list = None) ->
 
 
 def _find_agenda_and_practice_ids(
-    data: dict, visit_motive_id: str, practice_id_filter: list = None
+    data: dict, visit_motive_id: str, practice_id_url: int, practice_id_filter: list = None
 ) -> Tuple[list, list]:
     """
     Etant donné une réponse à /booking/<centre>.json, renvoie tous les
     "agendas" et "pratiques" (jargon Doctolib) qui correspondent au motif de visite.
     On a besoin de ces valeurs pour récupérer les disponibilités.
     """
+
+    if isinstance(practice_id_url, list):
+        practice_id_url = practice_id_url[0]
+
+    is_doublon = False
     agenda_ids = set()
     practice_ids = set()
+    responses = 0
     for agenda in data.get("agendas", []):
         if (
             "practice_id" in agenda
@@ -659,6 +671,10 @@ def _find_agenda_and_practice_ids(
             and agenda["practice_id"] not in practice_id_filter
         ):
             continue
+
+        if practice_id_url in list(map(int, list(agenda["visit_motive_ids_by_practice_id"].keys()))):
+            responses += 1
+
         if agenda["booking_disabled"]:
             continue
         agenda_id = str(agenda["id"])
@@ -666,7 +682,9 @@ def _find_agenda_and_practice_ids(
             if visit_motive_id in visit_motive_list_agenda:
                 practice_ids.add(str(pratice_id_agenda))
                 agenda_ids.add(agenda_id)
-    return sorted(agenda_ids), sorted(practice_ids)
+    if responses == 0:
+        is_doublon = True
+    return sorted(agenda_ids), sorted(practice_ids), is_doublon
 
 
 def is_allowing_online_appointments(rdata: dict) -> bool:
