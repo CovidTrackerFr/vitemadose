@@ -328,7 +328,7 @@ def test_find_visit_motive_id():
             }
         ]
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {1: Vaccine.MODERNA}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.MODERNA: {1}}
 
     # Plusieurs motifs dispo
     data = {
@@ -349,7 +349,7 @@ def test_find_visit_motive_id():
             },
         ]
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {1: Vaccine.PFIZER, 2: Vaccine.MODERNA}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.PFIZER: {1}, Vaccine.MODERNA: {2}}
 
     # Mix avec un motif autre
     data = {
@@ -364,7 +364,7 @@ def test_find_visit_motive_id():
             },
         ]
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {2: Vaccine.MODERNA}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.MODERNA: {2}}
 
     # Mix avec une catégorie autre
     data = {
@@ -385,7 +385,7 @@ def test_find_visit_motive_id():
             },
         ]
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {2: Vaccine.ASTRAZENECA}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.ASTRAZENECA: {2}}
 
     # Plusieurs types de vaccin
     data = {
@@ -435,9 +435,9 @@ def test_find_visit_motive_id():
         ]
     }
     assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {
-        1: Vaccine.MODERNA,
-        2: Vaccine.ASTRAZENECA,
-        3: Vaccine.PFIZER,
+        Vaccine.MODERNA: {1},
+        Vaccine.ASTRAZENECA: {2},
+        Vaccine.PFIZER: {3},
     }
 
 
@@ -472,21 +472,24 @@ def test_find_agenda_and_practice_ids():
             },
         ],
     }
-    agenda_ids, practice_ids, is_doublon = _find_agenda_and_practice_ids(data, visit_motive_id=1, practice_id_url=20)
+
+    agenda_ids, practice_ids, is_doublon = _find_agenda_and_practice_ids(data, visit_motive_ids={1}, practice_id_url=20)
+
     assert agenda_ids == ["10", "12"]
     assert practice_ids == ["20", "21", "24"]
     assert is_doublon == False
 
     agenda_ids, practice_ids, is_doublon = _find_agenda_and_practice_ids(
-        data, visit_motive_id=1, practice_id_url=21, practice_id_filter=[21]
+        data, visit_motive_ids={1}, practice_id_url=21, practice_id_filter=[21]
     )
     assert agenda_ids == ["12"]
     assert practice_ids == ["21", "24"]
     assert is_doublon == False
 
     agenda_ids, practice_ids, is_doublon = _find_agenda_and_practice_ids(
-        data, visit_motive_id=1, practice_id_url=35, practice_id_filter=[21]
+        data, visit_motive_ids={1}, practice_id_url=35, practice_id_filter=[21]
     )
+
     assert agenda_ids == ["12"]
     assert practice_ids == ["21", "24"]
     assert is_doublon == True
