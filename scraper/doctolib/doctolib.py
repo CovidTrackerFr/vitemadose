@@ -671,7 +671,7 @@ def _find_agenda_and_practice_ids(
         ):
             continue
 
-        if practice_id_from_url in list(map(int, list(agenda["visit_motive_ids_by_practice_id"].keys()))):
+        if practice_id_from_url in list(map(int, list(agenda["visit_motive_ids_by_practice_id"].keys()))) and len(agenda["visit_motive_ids_by_practice_id"][str(practice_id_from_url)])>0:
             responses += 1
 
         if agenda["booking_disabled"]:

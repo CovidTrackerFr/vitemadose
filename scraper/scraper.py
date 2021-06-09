@@ -133,6 +133,7 @@ def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  #
             input_data=centre.get("booking"),
         )
         center_data.fill_result(result)
+
     except BlockedByDoctolibError as blocked_doctolib__error:
         logger.error(
             f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(blocked_doctolib__error)}"
@@ -140,7 +141,7 @@ def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  #
         has_error = blocked_doctolib__error
 
     except DoublonDoctolib as doublon_doctolib:
-        logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(doublon_doctolib)}")
+        logger.warning(f"Exception lors du traitement du centre {centre['gid']} {str(doublon_doctolib)}")
         has_error = doublon_doctolib
 
     except CircuitBreakerOffException as error:
