@@ -3,13 +3,12 @@ import multiprocessing
 
 from utils.vmd_config import get_conf_platform
 from utils.vmd_logger import get_logger
+from utils.vmd_utils import get_departements, department_urlify
 
 from scraper.doctolib.conf import DoctolibConf
 from scraper.doctolib.doctolib import DOCTOLIB_HEADERS
 from scraper.doctolib.doctolib_filters import is_vaccination_center
 from scraper.doctolib.doctolib_parsers import (
-    get_departements,
-    doctolib_urlify,
     get_coordinates,
     center_type,
     parse_doctolib_business_hours,
@@ -46,7 +45,7 @@ class DoctolibCenterScraper:
         return centers_departements
 
     def parse_pages_departement(self, departement: str) -> list:
-        departement = doctolib_urlify(departement)
+        departement = department_urlify(departement)
         page_id = 1
         page_has_centers = True
         liste_urls = []
@@ -73,7 +72,7 @@ class DoctolibCenterScraper:
     ) -> Tuple[List[dict], bool]:
         try:
             r = self._client.get(
-                BASE_URL_DEPARTEMENT.format(doctolib_urlify(departement), page_id),
+                BASE_URL_DEPARTEMENT.format(department_urlify(departement), page_id),
                 headers=DOCTOLIB_HEADERS,
             )
             data = r.json()
@@ -141,7 +140,7 @@ def parse_doctolib_centers(page_limit=None) -> List[dict]:
     unique_center_urls = []
 
     with multiprocessing.Pool(50) as pool:
-        center_lists = pool.imap_unordered(fetch_department, get_departements())
+        center_lists = pool.imap_unordered(fetch_department, get_departements(excluded_departments=["Guyane"]))
         centers = []
 
         for center_list in center_lists:

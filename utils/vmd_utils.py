@@ -30,6 +30,13 @@ def load_cedex_to_insee() -> dict:
         return json.load(json_file)
 
 
+def get_departements(excluded_departments: List[str] = []) -> List[str]:
+    with open(get_conf_inputs()["departements"], encoding="utf8", newline="\n") as csvfile:
+        reader = csv.DictReader(csvfile)
+        departements = [row["nom_departement"] for row in reader if row["nom_departement"] not in excluded_departments]
+        return departements
+
+
 logger = logging.getLogger("scraper")
 insee = load_insee()
 cedex_to_insee = load_cedex_to_insee()
@@ -49,6 +56,11 @@ def urlify(s):
     s = re.sub(r"[^\w\s\-]", "", s)
     s = re.sub(r"\s+", "-", s).lower()
     return unidecode(s)
+
+
+def department_urlify(department: str) -> str:
+    department = re.sub(r"\s+|\W", "-", department).lower()
+    return unidecode(department)
 
 
 class departementUtils:

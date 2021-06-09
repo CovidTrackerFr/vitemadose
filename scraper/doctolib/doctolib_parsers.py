@@ -1,33 +1,13 @@
-import re
-
 from typing import Dict, List, Optional
-from unidecode import unidecode
 
 from scraper.doctolib.conf import DoctolibConf
 from scraper.pattern.scraper_result import VACCINATION_CENTER
-from utils.vmd_config import get_conf_platform, get_conf_inputs
+from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import departementUtils, format_phone_number
 
 
 DOCTOLIB_CONF = DoctolibConf(**get_conf_platform("doctolib"))
 SCRAPER_CONF = DOCTOLIB_CONF.center_scraper
-
-
-def get_departements():
-    import csv
-
-    # Guyane uses Maiia and does not have doctolib pages
-    NOT_INCLUDED_DEPARTEMENTS = ["Guyane"]
-    with open(get_conf_inputs().get("departements"), encoding="utf8", newline="\n") as csvfile:
-        reader = csv.DictReader(csvfile)
-        departements = [str(row["nom_departement"]) for row in reader]
-        [departements.remove(ndep) for ndep in NOT_INCLUDED_DEPARTEMENTS]
-        return departements
-
-
-def doctolib_urlify(departement: str) -> str:
-    departement = re.sub(r"\s+|\W", "-", departement).lower()
-    return unidecode(departement)
 
 
 def get_coordinates(doctor_dict: Dict):

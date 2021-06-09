@@ -1,6 +1,4 @@
 from scraper.doctolib.doctolib_parsers import (
-    get_departements,
-    doctolib_urlify,
     get_coordinates,
     center_type,
     parse_doctolib_business_hours,
@@ -9,6 +7,8 @@ from scraper.doctolib.doctolib_parsers import (
     parse_doctor,
 )
 from scraper.doctolib.doctolib_center_scrap import DoctolibCenterScraper
+
+from utils.vmd_utils import get_departements
 
 import httpx
 import json
@@ -19,13 +19,8 @@ from scraper.pattern.scraper_result import GENERAL_PRACTITIONER, DRUG_STORE, VAC
 
 
 def test_doctolib_departements():
-    dep = get_departements()
+    dep = get_departements(excluded_departments=["Guyane"])
     assert len(dep) == 100
-
-
-def test_doctolib_urlify():
-    url = "FooBar 42"
-    assert doctolib_urlify(url) == "foobar-42"
 
 
 def test_center_type():
