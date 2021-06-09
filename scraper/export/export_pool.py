@@ -3,7 +3,7 @@ import json
 import os
 from typing import Iterator
 
-from scraper.error import BlockedByDoctolibError
+from scraper.error import BlockedByDoctolibError, DoublonDoctolib
 
 import pytz
 
@@ -26,6 +26,7 @@ def export_pool(centres_cherchés: Iterator[CenterInfo], platform: str, outpath_
     compte_centres = 0
     compte_centres_avec_dispo = 0
     bloqués_doctolib = 0
+    doublons_doctolib = 0
     centres_open_data = []
     internal_ids = []
     global_data = {
@@ -79,11 +80,14 @@ def export_pool(centres_cherchés: Iterator[CenterInfo], platform: str, outpath_
         if centre.has_available_appointments():
             compte_centres_avec_dispo += 1
             global_data["centres_disponibles"].append(centre.default())
+
         else:
-            global_data["centres_indisponibles"].append(centre.default())
             if isinstance(erreur, BlockedByDoctolibError):
-                global_data["doctolib_bloqué"] = True
                 bloqués_doctolib += 1
+            elif isinstance(erreur, DoublonDoctolib):
+                doublons_doctolib += 1
+            else:
+                global_data["centres_indisponibles"].append(centre.default())
 
     global_data["centres_disponibles"] = sorted(deduplicates_names(global_data["centres_disponibles"]), key=sort_center)
     global_data["centres_indisponibles"] = deduplicates_names(global_data["centres_indisponibles"])
@@ -91,4 +95,4 @@ def export_pool(centres_cherchés: Iterator[CenterInfo], platform: str, outpath_
     with open(outpath, "w") as info_centres:
         json.dump(global_data, info_centres, indent=2)
 
-    return compte_centres, compte_centres_avec_dispo, bloqués_doctolib
+    return compte_centres, compte_centres_avec_dispo, bloqués_doctolib, doublons_doctolib

@@ -8,7 +8,7 @@ from typing import Tuple
 
 from .export.export_v2 import JSONExporter
 
-from scraper.error import ScrapeError
+from scraper.error import BlockedByDoctolibError, DoublonDoctolib
 from scraper.pattern.center_info import CenterInfo
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
@@ -81,13 +81,17 @@ def scrape(platforms=None):  # pragma: no cover
 
         if platforms:
             for platform in platforms:
-                compte_centres, compte_centres_avec_dispo, compte_bloqués = export_pool(centres_cherchés, platform)
+                compte_centres, compte_centres_avec_dispo, compte_bloqués, compte_doublons = export_pool(
+                    centres_cherchés, platform
+                )
 
                 logger.info(
                     f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés"
                 )
         else:
-            compte_centres, compte_centres_avec_dispo, compte_bloqués = export_data(centres_cherchés, [])
+            compte_centres, compte_centres_avec_dispo, compte_bloqués, compte_doublons = export_data(
+                centres_cherchés, []
+            )
             logger.info(
                 f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés"
             )
@@ -129,17 +133,27 @@ def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  #
             input_data=centre.get("booking"),
         )
         center_data.fill_result(result)
-    except ScrapeError as scrape_error:
-        logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(scrape_error)}")
-        has_error = scrape_error
+    except BlockedByDoctolibError as blocked_doctolib__error:
+        logger.error(
+            f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(blocked_doctolib__error)}"
+        )
+        has_error = blocked_doctolib__error
+
+    except DoublonDoctolib as doublon_doctolib:
+        logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']} {str(doublon_doctolib)}")
+        has_error = doublon_doctolib
+
     except CircuitBreakerOffException as error:
         logger.error(
             f"circuit '{error.name}' désactivé lors du traîtement de la ligne avec le gid {centre['gid']}: {str(error)}"
         )
         has_error = error
     except Exception:
+
         logger.error(f"erreur lors du traitement de la ligne avec le gid {centre['gid']}")
         traceback.print_exc()
+
+    center_data.erreur = has_error
 
     if has_error is None:
         logger.info(
@@ -160,7 +174,6 @@ def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  #
     if not center_data.type:
         center_data.type = VACCINATION_CENTER
     center_data.gid = centre.get("gid", "")
-    logger.debug(center_data.default())
     return center_data
 
 

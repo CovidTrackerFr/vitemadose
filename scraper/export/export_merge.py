@@ -5,7 +5,7 @@ from typing import Iterator
 
 import pytz
 
-from scraper.error import BlockedByDoctolibError
+from scraper.error import BlockedByDoctolibError, DoublonDoctolib
 from scraper.pattern.center_info import CenterInfo
 from utils.vmd_blocklist import get_blocklist_urls, is_in_blocklist
 from utils.vmd_center_sort import sort_center
@@ -26,6 +26,7 @@ def export_data(centres_cherchés: Iterator[CenterInfo], last_scrap, outpath_for
     compte_centres = 0
     compte_centres_avec_dispo = 0
     bloqués_doctolib = 0
+    doublons_doctolib = 0
     centres_open_data = []
     internal_ids = []
     par_departement = {
@@ -97,11 +98,15 @@ def export_data(centres_cherchés: Iterator[CenterInfo], last_scrap, outpath_for
         if centre.has_available_appointments():
             compte_centres_avec_dispo += 1
             par_departement[centre.departement]["centres_disponibles"].append(centre.default())
+
         else:
-            par_departement[centre.departement]["centres_indisponibles"].append(centre.default())
             if isinstance(erreur, BlockedByDoctolibError):
-                par_departement[centre.departement]["doctolib_bloqué"] = True
                 bloqués_doctolib += 1
+                par_departement[centre.departement]["doctolib_bloqué"] = True
+            elif isinstance(erreur, DoublonDoctolib):
+                doublons_doctolib += 1
+                continue
+            par_departement[centre.departement]["centres_indisponibles"].append(centre.default())
 
     outpath = outpath_format.format("info_centres")
     with open(outpath, "w") as info_centres:
@@ -123,7 +128,7 @@ def export_data(centres_cherchés: Iterator[CenterInfo], last_scrap, outpath_for
         with open(outpath, "w") as outfile:
             outfile.write(json.dumps(disponibilités, indent=2))
 
-    return compte_centres, compte_centres_avec_dispo, bloqués_doctolib
+    return compte_centres, compte_centres_avec_dispo, bloqués_doctolib, doublons_doctolib
 
 
 def merge_centers(centers: list, center_dicts):
@@ -154,6 +159,8 @@ def merge_platforms():
         centers = merge_centers(centers, data["centres_indisponibles"])
         file.close()
     logger.info(f"Total: found {len(centers)} centers.")
-    total, available, blocked = export_data(centers, last_scrap)
-    logger.info(f"Exported {total} vaccination locations ({available} available, {blocked} blocked)")
+    total, available, blocked, doublons = export_data(centers, last_scrap)
+    logger.info(
+        f"Exported {total} vaccination locations ({available} available, {blocked} blocked, {doublons} doublons)"
+    )
     logger.info(f"Availabilities: {round(available / total * 100, 2)}%")

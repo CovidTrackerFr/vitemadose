@@ -9,3 +9,8 @@ class BlockedByDoctolibError(ScrapeError):
     def __init__(self, url):
         super().__init__("Doctolib", f"Doctolib bloque nos appels: 403 {url}")
         self.blocked = True
+
+
+class DoublonDoctolib(ScrapeError):
+    def __init__(self, url):
+        super().__init__("Doctolib", f"Le centre est un doublon {url}")

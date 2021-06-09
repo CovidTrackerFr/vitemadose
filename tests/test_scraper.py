@@ -355,12 +355,13 @@ def test_export_data_when_blocked(tmp_path):
 
     fake_now = dt.datetime(2021, 4, 4)
     with mock_datetime_now(fake_now):
-        total, actifs, bloqués = export_data(centres_cherchés, [], outpath_format=outpath_format)
+        total, actifs, bloqués, doublons = export_data(centres_cherchés, [], outpath_format=outpath_format)
 
     # les totaux doivent être bons
     assert total == 2
     assert actifs == 1
     assert bloqués == 1
+    assert doublons == 0
 
     # Departements 14 and 59 should contain expected data.
     content = json.loads((out_dir / "14.json").read_text())

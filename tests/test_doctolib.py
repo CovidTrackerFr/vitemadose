@@ -472,13 +472,29 @@ def test_find_agenda_and_practice_ids():
             },
         ],
     }
-    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_ids={1})
+
+    agenda_ids, practice_ids, is_doublon = _find_agenda_and_practice_ids(
+        data, visit_motive_ids={1}, practice_id_from_url=20
+    )
+
     assert agenda_ids == ["10", "12"]
     assert practice_ids == ["20", "21", "24"]
+    assert not is_doublon
 
-    agenda_ids, practice_ids = _find_agenda_and_practice_ids(data, visit_motive_ids={1}, practice_id_filter=[21])
+    agenda_ids, practice_ids, is_doublon = _find_agenda_and_practice_ids(
+        data, visit_motive_ids={1}, practice_id_from_url=21, practice_id_filter=[21]
+    )
     assert agenda_ids == ["12"]
     assert practice_ids == ["21", "24"]
+    assert not is_doublon
+
+    agenda_ids, practice_ids, is_doublon = _find_agenda_and_practice_ids(
+        data, visit_motive_ids={1}, practice_id_from_url=35, practice_id_filter=[21]
+    )
+
+    assert agenda_ids == ["12"]
+    assert practice_ids == ["21", "24"]
+    assert is_doublon
 
 
 def test_category_relevant():
