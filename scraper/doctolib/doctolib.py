@@ -170,12 +170,11 @@ class DoctolibSlots:
         timetable_start_date = datetime.fromisoformat(start_date)
 
         for vaccine, visite_motive_ids in visit_motive_ids_by_vaccine.items():
-            practice_id_original = _parse_practice_id(request.get_url())
             agenda_ids, practice_ids, is_doublon = _find_agenda_and_practice_ids(
-                rdata, visite_motive_ids, practice_id_original, practice_id_filter=practice_id
+                rdata, visite_motive_ids, practice_id_filter=practice_id
             )
 
-            if is_doublon and practice_id_original:
+            if is_doublon:
                 raise DoublonDoctolib(request.get_url())
 
             if not agenda_ids or not practice_ids:
@@ -480,10 +479,13 @@ def link_practice_ids(practice_id: list, rdata: dict) -> Tuple[list, bool]:
     if not practice_id:
         return practice_id, same_adress
     places = rdata.get("places")
+    agendas = rdata.get("agendas")
+
     if not places:
         return practice_id, same_adress
     base_place = None
     place_ids = []
+
     for place in places:
         place_id = place.get("id", None)
         if not place_id:
@@ -493,7 +495,6 @@ def link_practice_ids(practice_id: list, rdata: dict) -> Tuple[list, bool]:
             # Indispensable pour eviter une erreur si le pid est en establishment-xxx
             # En effet, dans ce cas le pid change dans practice_ids et c'est lui qui est correct
             if practice_id[0] not in place.get("practice_ids", []):
-                practice_id.clear()
                 practice_id.append(int(place.get("practice_ids", [])[0]))
             base_place = place
             break
@@ -504,8 +505,18 @@ def link_practice_ids(practice_id: list, rdata: dict) -> Tuple[list, bool]:
         if place.get("id") == base_place.get("id"):
             continue
         if place.get("address") == base_place.get("address"):  # Tideous check
-            practice_id.append(int(re.findall(r"\d+", place.get("id"))[0]))
-            same_adress = True
+            valid_practice_id = 0
+            for agenda in agendas:
+                if agenda.get("practice_id") == int(re.findall(r"\d+", place.get("id"))[0]):
+                    if (
+                        int(re.findall(r"\d+", place.get("id"))[0])
+                        in list(map(int, list(agenda["visit_motive_ids_by_practice_id"].keys())))
+                        and len(agenda["visit_motive_ids_by_practice_id"][re.findall(r"\d+", place.get("id"))[0]]) > 0
+                    ):
+                        valid_practice_id += 1
+            if valid_practice_id == 0:
+                practice_id.append(int(re.findall(r"\d+", place.get("id"))[0]))
+                same_adress = True
     return practice_id, same_adress
 
 
@@ -648,17 +659,13 @@ def _find_visit_motive_id(rdata: dict, visit_motive_category_id: list = None) ->
 
 
 def _find_agenda_and_practice_ids(
-    data: dict, visit_motive_ids: Set[int], practice_id_from_url: int, practice_id_filter: list = None
+    data: dict, visit_motive_ids: Set[int], practice_id_filter: list = None
 ) -> Tuple[list, list]:
     """
     Etant donné une réponse à /booking/<centre>.json, renvoie tous les
     "agendas" et "pratiques" (jargon Doctolib) qui correspondent au motif de visite.
     On a besoin de ces valeurs pour récupérer les disponibilités.
     """
-
-    if isinstance(practice_id_from_url, list):
-        practice_id_from_url = practice_id_from_url[0]
-
     is_doublon = False
     agenda_ids = set()
     practice_ids = set()
@@ -670,19 +677,20 @@ def _find_agenda_and_practice_ids(
             and agenda["practice_id"] not in practice_id_filter
         ):
             continue
-
-        if practice_id_from_url in list(map(int, list(agenda["visit_motive_ids_by_practice_id"].keys()))) and len(agenda["visit_motive_ids_by_practice_id"][str(practice_id_from_url)])>0:
-            responses += 1
-
         if agenda["booking_disabled"]:
             continue
-        agenda_id = str(agenda["id"])
+        for practice_id in practice_id_filter:
+            if (
+                practice_id in list(map(int, list(agenda["visit_motive_ids_by_practice_id"].keys())))
+                and len(agenda["visit_motive_ids_by_practice_id"][str(practice_id)]) > 0
+            ):
+                responses += 1
         for pratice_id_agenda, visit_motive_list_agenda in agenda["visit_motive_ids_by_practice_id"].items():
             if (
                 len(visit_motive_ids.intersection(visit_motive_list_agenda)) > 0
             ):  # Some motives are present in this agenda
                 practice_ids.add(str(pratice_id_agenda))
-                agenda_ids.add(agenda_id)
+                agenda_ids.add(str(agenda["id"]))
     if responses == 0:
         is_doublon = True
     return sorted(agenda_ids), sorted(practice_ids), is_doublon
