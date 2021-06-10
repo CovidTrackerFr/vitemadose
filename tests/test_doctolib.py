@@ -451,12 +451,13 @@ def test_find_agenda_and_practice_ids():
                 "visit_motive_ids_by_practice_id": {
                     "20": [1, 2],
                     "21": [1],
-                    "22": [2],  # => Pas inclus
+                    "22": [2],
                 },
             },
             {
                 "id": 11,
-                "booking_disabled": True,  # => Pas inclus
+                "practice_id": 22,
+                "booking_disabled": False,
                 "visit_motive_ids_by_practice_id": {
                     "23": [1, 2],
                 },
@@ -474,26 +475,26 @@ def test_find_agenda_and_practice_ids():
     }
 
     agenda_ids, practice_ids, is_doublon = _find_agenda_and_practice_ids(
-        data, visit_motive_ids={1}, practice_id_from_url=20
+        data, visit_motive_ids={1}, practice_id_filter=[20]
     )
 
-    assert agenda_ids == ["10", "12"]
-    assert practice_ids == ["20", "21", "24"]
+    assert agenda_ids == ["10"]
+    assert practice_ids == ["20", "21"]
     assert not is_doublon
 
     agenda_ids, practice_ids, is_doublon = _find_agenda_and_practice_ids(
-        data, visit_motive_ids={1}, practice_id_from_url=21, practice_id_filter=[21]
+        data, visit_motive_ids={1}, practice_id_filter=[21]
     )
     assert agenda_ids == ["12"]
     assert practice_ids == ["21", "24"]
     assert not is_doublon
 
     agenda_ids, practice_ids, is_doublon = _find_agenda_and_practice_ids(
-        data, visit_motive_ids={1}, practice_id_from_url=35, practice_id_filter=[21]
+        data, visit_motive_ids={1}, practice_id_filter=[22]
     )
 
-    assert agenda_ids == ["12"]
-    assert practice_ids == ["21", "24"]
+    assert agenda_ids == ["11"]
+    assert practice_ids == ["23"]
     assert is_doublon
 
 
