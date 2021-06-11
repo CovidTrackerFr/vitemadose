@@ -289,7 +289,7 @@ def test_export_reserved_centers(tmp_path):
     centres_cherchés_dict = [
         {
             "departement": "01",
-            "nom": "Bugey Sud - Réservé aux médecins du groupe hospitalier",
+            "nom": "Bugey Sud - Réservé aux professionnels de santé du groupe hospitalier",
             "url": "https://example.com/bugey-sud",
             "plateforme": "Doctolib",
             "prochain_rdv": "2021-04-10T00:00:00",
