@@ -13,4 +13,6 @@ class BlockedByDoctolibError(ScrapeError):
 
 class DoublonDoctolib(ScrapeError):
     def __init__(self, url):
-        super().__init__("Doctolib", f"Le centre est un doublon {url}")
+        super().__init__(
+            "Doctolib", f"Le centre est un doublon ou ne propose pas de motif de vaccination sur ce lieu {url}"
+        )

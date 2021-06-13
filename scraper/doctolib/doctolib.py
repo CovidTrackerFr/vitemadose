@@ -635,12 +635,13 @@ def _find_visit_motive_id(rdata: dict, visit_motive_category_id: list = None) ->
 
         vaccine_name = get_vaccine_name(visit_motive["name"])
 
-        # If this motive isn't related to vaccination
-        if not visit_motive.get("first_shot_motive") and vaccine_name != Vaccine.JANSSEN:
-            continue
         # If it's not a first shot motive
         # TODO: filter system
-        if not visit_motive.get("first_shot_motive") and vaccine_name != Vaccine.JANSSEN:
+        if (
+            not visit_motive.get("first_shot_motive")
+            and vaccine_name != Vaccine.JANSSEN
+            and "injection unique" not in visit_motive["name"].lower()
+        ):
             continue
         # Si le lieu de vaccination n'accepte pas les nouveaux patients
         # on ne considère pas comme valable.
@@ -680,11 +681,15 @@ def _find_agenda_and_practice_ids(
         if agenda["booking_disabled"]:
             continue
         for practice_id in practice_id_filter:
-            if (
-                practice_id in list(map(int, list(agenda["visit_motive_ids_by_practice_id"].keys())))
-                and len(agenda["visit_motive_ids_by_practice_id"][str(practice_id)]) > 0
+            if practice_id in list(map(int, list(agenda["visit_motive_ids_by_practice_id"].keys()))) and any(
+                [
+                    vaccination_motive
+                    for vaccination_motive in visit_motive_ids
+                    if vaccination_motive in agenda["visit_motive_ids_by_practice_id"][str(practice_id)]
+                ]
             ):
                 responses += 1
+
         for pratice_id_agenda, visit_motive_list_agenda in agenda["visit_motive_ids_by_practice_id"].items():
             if (
                 len(visit_motive_ids.intersection(visit_motive_list_agenda)) > 0
