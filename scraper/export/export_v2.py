@@ -8,6 +8,10 @@ import json
 import logging
 from typing import Iterator
 from dataclasses import dataclass
+import sys
+
+sys.setrecursionlimit(10 ** 8)
+
 
 logger = logging.getLogger("scraper")
 

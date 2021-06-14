@@ -5,7 +5,7 @@ from collections import deque
 from multiprocessing import Manager, Pool, Process, Queue  # Use actual Process for Collecting creneau (CPU intensive)
 from random import random
 from typing import Tuple
-
+import sys
 from .export.export_v2 import JSONExporter
 
 from scraper.error import BlockedByDoctolibError, DoublonDoctolib
@@ -31,6 +31,9 @@ from .ordoclic import fetch_slots as ordoclic_fetch_slots
 from .avecmondoc.avecmondoc import center_iterator as avecmondoc_centre_iterator
 from .avecmondoc.avecmondoc import fetch_slots as avecmondoc_fetch_slots
 from .circuit_breaker import CircuitBreakerOffException
+
+sys.setrecursionlimit(10 ** 8)
+
 
 POOL_SIZE = int(os.getenv("POOL_SIZE", 50))
 PARTIAL_SCRAPE = float(os.getenv("PARTIAL_SCRAPE", 1.0))

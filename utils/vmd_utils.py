@@ -8,12 +8,16 @@ from urllib.parse import urlparse, urlencode, urlunparse, parse_qs, unquote
 import datetime as dt
 import pytz
 import requests
+import sys
 
 from datetime import datetime, timedelta
 
 from unidecode import unidecode
 
 from utils.vmd_config import get_conf_inputs, get_config
+
+sys.setrecursionlimit(10 ** 8)
+
 
 RESERVED_CENTERS = get_config().get("reserved_centers", [])
 

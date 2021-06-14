@@ -11,7 +11,7 @@ import dateutil
 
 import httpx
 import requests
-
+import sys
 
 from scraper.circuit_breaker import ShortCircuit
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
@@ -25,6 +25,7 @@ from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import append_date_days, DummyQueue
 
+sys.setrecursionlimit(10 ** 8)
 
 DOCTOLIB_CONF = DoctolibConf(**get_conf_platform("doctolib"))
 
