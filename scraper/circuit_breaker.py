@@ -2,6 +2,9 @@ from collections import deque
 from diskcache import Deque
 import time
 import os
+import sys
+
+sys.setrecursionlimit(10 ** 8)
 
 
 def ShortCircuit(name, trigger=3, release=10, time_limit=120):
