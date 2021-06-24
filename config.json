@@ -397,6 +397,36 @@
           "0": "Dimanche"
         }
       }
+    },
+    "mesoigner": {
+      "enabled": true,
+      "timeout": 30,
+      "recognized_urls": [
+        "mesoigner.fr"
+      ],
+      "center_types": {
+        "pharmacie": "drugstore",
+        "médecin": "general-practitioner",
+        "centre de vaccination": "vaccination-center"
+      },
+      "api": {
+        "center_list": "https://www.mesoigner.fr/api/v1/vaccination/centers",
+        "slots": "https://www.mesoigner.fr/api/v1/vaccination/centers/{id}/{start_date}"
+      },
+      "request_sleep": 0.1,
+      "center_scraper": {
+        "minimum_results" : 400,
+        "result_path": "data/output/mesoigner_centers.json",
+        "business_days": [
+          "lundi",
+          "mardi",
+          "mercredi",
+          "jeudi",
+          "vendredi",
+          "samedi",
+          "dimanche"
+        ]
+      }
     }
   }
 }

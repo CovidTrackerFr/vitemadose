@@ -15,6 +15,7 @@ class Plateforme(str, Enum):
     KELDOC = "Keldoc"
     MAPHARMA = "Mapharma"
     AVECMONDOC = "AvecMonDoc"
+    MESOIGNER = "mesoigner"
 
 
 @dataclass

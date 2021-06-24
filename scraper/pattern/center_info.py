@@ -36,6 +36,8 @@ class CenterInfo:
         plateforme: Optional[str] = None,
         prochain_rdv: Optional[str] = None,
         erreur: Optional[str] = None,
+        internal_id: Optional[str] = None,
+        type: Optional[str] = None,
     ):
         self.departement = departement
         self.nom = nom
@@ -44,9 +46,9 @@ class CenterInfo:
         self.metadata = metadata
         self.prochain_rdv = prochain_rdv
         self.plateforme = plateforme
-        self.type = None
+        self.type = type
         self.appointment_count = 0
-        self.internal_id = None
+        self.internal_id = internal_id
         self.vaccine_type = None
         self.appointment_by_phone_only = False
         self.erreur = erreur
@@ -78,6 +80,9 @@ class CenterInfo:
             data.get("rdv_site_web"),
             location=CenterLocation.from_csv_data(data),
             metadata=cls._metadata_from_csv_data(data),
+            internal_id=data.get("gid"),
+            plateforme=data.get("platform_is"),
+            type=data.get("type"),
         )
 
         # TODO: Behaviour about particular implementations shouldln’t bubble up to the pattern.

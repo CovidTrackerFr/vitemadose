@@ -7,7 +7,7 @@ from random import random
 from typing import Tuple
 import sys
 from .export.export_v2 import JSONExporter
-
+import pprint
 from scraper.error import BlockedByDoctolibError, DoublonDoctolib
 from scraper.pattern.center_info import CenterInfo
 from scraper.pattern.scraper_request import ScraperRequest
@@ -30,9 +30,9 @@ from .ordoclic import centre_iterator as ordoclic_centre_iterator
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
 from .avecmondoc.avecmondoc import center_iterator as avecmondoc_centre_iterator
 from .avecmondoc.avecmondoc import fetch_slots as avecmondoc_fetch_slots
+from .mesoigner.mesoigner import center_iterator as mesoigner_centre_iterator
+from .mesoigner.mesoigner import fetch_slots as mesoigner_fetch_slots
 from .circuit_breaker import CircuitBreakerOffException
-
-sys.setrecursionlimit(10 ** 8)
 
 
 POOL_SIZE = int(os.getenv("POOL_SIZE", 50))
@@ -60,6 +60,7 @@ def scrape_debug(urls):  # pragma: no cover
 
 
 def scrape(platforms=None):  # pragma: no cover
+
     compte_centres = 0
     compte_centres_avec_dispo = 0
     compte_bloqués = 0
@@ -122,7 +123,9 @@ def export_by_creneau(
 
 
 def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  # pragma: no cover
+
     centre, creneau_q = data
+    # print(centre)
     center_data = CenterInfo.from_csv_data(centre)
     start_date = get_start_date()
     has_error = None
@@ -130,11 +133,13 @@ def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  #
     try:
         result = fetch_centre_slots(
             centre["rdv_site_web"],
+            centre["platform_is"] if "platform_is" in centre.keys() else None,
             start_date,
             creneau_q=creneau_q,
             center_info=center_data,
             input_data=centre.get("booking"),
         )
+
         center_data.fill_result(result)
 
     except BlockedByDoctolibError as blocked_doctolib__error:
@@ -204,10 +209,14 @@ def get_default_fetch_map():
             "urls": get_conf_platform("avecmondoc").get("recognized_urls", []),
             "scraper_ptr": avecmondoc_fetch_slots,
         },
+        "mesoigner": {
+            "platform_name": "mesoigner",
+            "scraper_ptr": mesoigner_fetch_slots,
+        },
     }
 
 
-def get_center_platform(center_url: str, fetch_map: dict = None):
+def get_center_platform(center_url: str, center_platform: str = None, fetch_map: dict = None):
     # Determine platform based on visit URL
     platform = None
 
@@ -215,16 +224,21 @@ def get_center_platform(center_url: str, fetch_map: dict = None):
         return None
     for scraper_name in fetch_map:
         scraper = fetch_map[scraper_name]
-        scrap = sum([1 if center_url.startswith(url) else 0 for url in scraper.get("urls", [])])
+
+        scrap = sum([1 if url in center_url else 0 for url in scraper.get("urls", [])])
+        if center_platform and center_platform in scraper.get("platform_name", []):
+            scrap += 1
+
         if scrap == 0:
             continue
         platform = scraper_name
+
     return platform
 
 
 @Profiling.measure("any_slot")
 def fetch_centre_slots(
-    rdv_site_web, start_date, creneau_q, center_info, fetch_map: dict = None, input_data: dict = None
+    rdv_site_web, center_platform, start_date, creneau_q, center_info, fetch_map: dict = None, input_data: dict = None
 ) -> ScraperResult:
     if fetch_map is None:
         # Map platform to implementation.
@@ -233,7 +247,7 @@ def fetch_centre_slots(
 
     rdv_site_web = fix_scrap_urls(rdv_site_web)
     request = ScraperRequest(rdv_site_web, start_date, center_info)
-    platform = get_center_platform(rdv_site_web, fetch_map=fetch_map)
+    platform = get_center_platform(rdv_site_web, center_platform, fetch_map=fetch_map)
 
     if not platform:
         return ScraperResult(request, "Autre", None)
@@ -249,14 +263,21 @@ def fetch_centre_slots(
 def centre_iterator(platforms=None):  # pragma: no cover
     visited_centers_links = set()
     for center in ialternate(
-        ordoclic_centre_iterator(),
-        mapharma_centre_iterator(),
-        maiia_centre_iterator(),
-        avecmondoc_centre_iterator(),
-        doctolib_center_iterator(),
-        gouv_centre_iterator(),
+        # ordoclic_centre_iterator(),
+        # mapharma_centre_iterator(),
+        # maiia_centre_iterator(),
+        # avecmondoc_centre_iterator(),
+        mesoigner_centre_iterator(),
+        # doctolib_center_iterator(),
+        # gouv_centre_iterator(),
     ):
-        platform = get_center_platform(center["rdv_site_web"], get_default_fetch_map())
+
+        platform = get_center_platform(
+            center["rdv_site_web"],
+            center["platform_is"] if "platform_is" in center.keys() else None,
+            get_default_fetch_map(),
+        )
+
         if platforms and platform and platform.lower() not in platforms:
             continue
         if center["rdv_site_web"] not in visited_centers_links:
