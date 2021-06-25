@@ -48,7 +48,7 @@ else:
 logger = logging.getLogger("scraper")
 
 
-@ShortCircuit("doctolib_slot", trigger=20, release=80, time_limit=20.0)
+@ShortCircuit("doctolib_slot", trigger=20, release=80, time_limit=40.0)
 @Profiling.measure("doctolib_slot")
 def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue) -> Optional[str]:
     if not DOCTOLIB_CONF.enabled:
@@ -133,6 +133,9 @@ class DoctolibSlots:
             practice_id, practice_same_adress = link_practice_ids(practice_id, rdata)
         if len(rdata.get("places", [])) > 1 and practice_id is None:
             practice_id = rdata.get("places")[0].get("practice_ids", None)
+
+        if len(rdata.get("places", [])) == 0 and practice_id is None:
+            return None
 
         request.update_practitioner_type(parse_practitioner_type(centre, rdata))
         set_doctolib_center_internal_id(request, rdata, practice_id, practice_same_adress)
