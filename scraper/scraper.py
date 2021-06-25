@@ -77,19 +77,13 @@ def scrape(platforms=None):  # pragma: no cover
             centres_cherchés = pool.imap_unordered(cherche_prochain_rdv_dans_centre, centre_iterator_proportion, 1)
 
             centres_cherchés = get_last_scans(centres_cherchés)
-            logger.warning("debut breakpoint 1")
             log_platform_requests(centres_cherchés)
-            logger.warning("debut breakpoint 2")
 
         if CRENEAUX_ENABLED:
             creneau_q.put(EOQ)
             export_process.join()
-            logger.warning("debut breakpoint 3")
-        logger.warning("debut breakpoint 4")
 
         if platforms:
-            logger.warning("debut breakpoint 5")
-
             for platform in platforms:
                 compte_centres, compte_centres_avec_dispo, compte_bloqués, compte_doublons = export_pool(
                     centres_cherchés, platform
@@ -99,8 +93,6 @@ def scrape(platforms=None):  # pragma: no cover
                     f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés"
                 )
         else:
-            logger.warning("debut breakpoint 6")
-
             compte_centres, compte_centres_avec_dispo, compte_bloqués, compte_doublons = export_data(
                 centres_cherchés, []
             )
@@ -108,22 +100,16 @@ def scrape(platforms=None):  # pragma: no cover
                 f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés"
             )
             if compte_centres_avec_dispo == 0:
-                logger.warning("debut breakpoint 7")
-
                 logger.error(
                     "Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur"
                 )
                 exit(code=1)
 
             if compte_bloqués > 10:
-                logger.warning("debut breakpoint 8")
-
                 logger.error(
                     "Notre IP a été bloquée par le CDN Doctolib plus de 10 fois. Pour éviter de pousser des données erronées, on s'arrête ici"
                 )
                 exit(code=2)
-
-    logger.warning("debut breakpoint 9")
 
     logger.info(profiler.print_summary())
 
