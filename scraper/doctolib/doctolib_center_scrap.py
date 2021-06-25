@@ -77,7 +77,8 @@ class DoctolibCenterScraper:
             )
             data = r.json()
         except:
-            logger.warn(f"> Could not retrieve centers from department {departement} page_id {page_id}.")
+
+            logger.warn(f"> Could not retrieve centers from department {departement} page_id {page_id}  => {r}.")
             return [], False
 
         return self.centers_from_page(data, liste_urls)
