@@ -77,7 +77,8 @@ class DoctolibCenterScraper:
             )
             data = r.json()
         except:
-            logger.warn(f"> Could not retrieve centers from department {departement} page_id {page_id}.")
+
+            logger.warn(f"> Could not retrieve centers from department {departement} page_id {page_id}  => {r}.")
             return [], False
 
         return self.centers_from_page(data, liste_urls)
@@ -122,7 +123,7 @@ class DoctolibCenterScraper:
             data = req.json()
             output = data.get("data", {})
         except:
-            logger.warn(f"> Could not retrieve data from {internal_api_url}")
+            logger.warn(f"> Could not retrieve data from {internal_api_url} => {req}")
             return []
 
         return parse_center_places(output)

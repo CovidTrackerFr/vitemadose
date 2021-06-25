@@ -13,7 +13,7 @@ from scraper.pattern.center_info import CenterInfo
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from scraper.profiler import Profiling
-from utils.vmd_config import get_conf_platform
+from utils.vmd_config import get_conf_platform, get_config
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug, log_requests, log_platform_requests
 from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date, q_iter, EOQ, DummyQueue, BulkQueue
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
@@ -38,8 +38,7 @@ from .circuit_breaker import CircuitBreakerOffException
 POOL_SIZE = int(os.getenv("POOL_SIZE", 50))
 PARTIAL_SCRAPE = float(os.getenv("PARTIAL_SCRAPE", 1.0))
 PARTIAL_SCRAPE = max(0, min(PARTIAL_SCRAPE, 1))
-CRENEAUX_DISABLED = True if os.environ.get("CRENEAUX_DISABLED", False) else False
-
+CRENEAUX_ENABLED = get_config().get("scrape_par_creneaux", False)
 logger = enable_logger_for_production()
 
 
@@ -68,10 +67,11 @@ def scrape(platforms=None):  # pragma: no cover
     with Manager() as manager:
         with profiler, Pool(POOL_SIZE, **profiler.pool_args()) as pool:
             creneau_q = BulkQueue(manager.Queue(maxsize=99999))
-            export_process = Process(target=export_by_creneau, args=(creneau_q,))
-            export_process.start()
+            if CRENEAUX_ENABLED:
+                export_process = Process(target=export_by_creneau, args=(creneau_q,))
+                export_process.start()
             centre_iterator_proportion = (
-                (c, DummyQueue() if CRENEAUX_DISABLED else creneau_q)
+                (c, creneau_q if CRENEAUX_ENABLED else DummyQueue())
                 for c in centre_iterator(platforms=platforms)
                 if random() < PARTIAL_SCRAPE
             )
@@ -80,8 +80,9 @@ def scrape(platforms=None):  # pragma: no cover
             centres_cherchés = get_last_scans(centres_cherchés)
             log_platform_requests(centres_cherchés)
 
-        creneau_q.put(EOQ)
-        export_process.join()
+        if CRENEAUX_ENABLED:
+            creneau_q.put(EOQ)
+            export_process.join()
 
         if platforms:
             for platform in platforms:
