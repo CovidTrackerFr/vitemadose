@@ -123,7 +123,7 @@ class DoctolibCenterScraper:
             data = req.json()
             output = data.get("data", {})
         except:
-            logger.warn(f"> Could not retrieve data from {internal_api_url}")
+            logger.warn(f"> Could not retrieve data from {internal_api_url} => {req}")
             return []
 
         return parse_center_places(output)
