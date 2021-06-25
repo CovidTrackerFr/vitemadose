@@ -11,6 +11,12 @@ class BlockedByDoctolibError(ScrapeError):
         self.blocked = True
 
 
+class RequestError(ScrapeError):
+    def __init__(self, url, response_code=""):
+        super().__init__("Doctolib", f"Erreur {response_code} lors de l'accès à {url}")
+        self.blocked = True
+
+
 class DoublonDoctolib(ScrapeError):
     def __init__(self, url):
         super().__init__(

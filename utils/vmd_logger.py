@@ -31,6 +31,7 @@ def get_logger():
 
 
 def enable_logger_for_production():
+    logging.basicConfig(filename="example.log", encoding="utf-8", level=logging.DEBUG)
     logger = get_logger()
     logger.setLevel(logging.INFO)
 
@@ -44,6 +45,7 @@ def enable_logger_for_production():
 
 
 def enable_logger_for_debug():
+    logging.basicConfig(filename="example.log", encoding="utf-8", level=logging.DEBUG)
     # must be called after enable_logger_for_production(), otherwise it'll be partially overridden by it
     logger = get_logger()
     logger.setLevel(logging.DEBUG)

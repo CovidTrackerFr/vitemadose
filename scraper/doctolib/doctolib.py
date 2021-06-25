@@ -20,7 +20,7 @@ from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_pra
 from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
 from scraper.pattern.vaccine import get_vaccine_name, Vaccine
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.error import BlockedByDoctolibError, DoublonDoctolib
+from scraper.error import BlockedByDoctolibError, DoublonDoctolib, RequestError
 from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import append_date_days, DummyQueue
@@ -100,20 +100,30 @@ class DoctolibSlots:
         else:
             centre_api_url = DOCTOLIB_CONF.api.get("booking", "").format(centre=centre)
             request.increase_request_count("booking")
-            response = self._client.get(centre_api_url, headers=DOCTOLIB_HEADERS)
-            if response.status_code == 403:
-                request.increase_request_count("error")
-                raise BlockedByDoctolibError(centre_api_url)
+            try:
+                response = self._client.get(centre_api_url, headers=DOCTOLIB_HEADERS)
+                # response.raise_for_status()
+                time.sleep(self._cooldown_interval)
+                data = response.json()
+                rdata = data.get("data", {})
 
-            response.raise_for_status()
-            time.sleep(self._cooldown_interval)
-            data = response.json()
-            rdata = data.get("data", {})
+            except requests.exceptions.RequestException as e:
+                request.increase_request_count("error")
+                # raise RequestError(centre_api_url)
+                if response.status_code == 403:
+                    raise BlockedByDoctolibError(centre_api_url)
+                elif response.status_code != 200:
+                    raise RequestError(centre_api_url, response.status_code)
 
         if not self.is_practice_id_valid(request, rdata):
-            logger.warning(f"Invalid practice ID for this Doctolib center: {request.get_url()}")
-            practice_id = None
-            self.pop_practice_id(request)
+            logger.warning(
+                f"Invalid practice ID for this Doctolib center. Practice_id will be corrected: {request.get_url()}"
+            )
+            practice_id = self.correct_practice_id(request, rdata)
+            if not practice_id:
+                self.pop_practice_id(request)
+                raise DoublonDoctolib(centre)
+
         if practice_id:
             practice_id, practice_same_adress = link_practice_ids(practice_id, rdata)
         if len(rdata.get("places", [])) > 1 and practice_id is None:
@@ -298,6 +308,26 @@ class DoctolibSlots:
         query.pop("pid", None)
         u = u._replace(query=urlencode(query, True))
         request.url = urlunparse(u)
+
+    def correct_practice_id(self, request: ScraperRequest, rdata):
+        """
+        In some cases, practice id needs to be corrected after a change
+        """
+        correct_practice_id = None
+        places = rdata.get("places", {})
+        for place in places:
+            if place["full_address"] == request.center_info.metadata["address"]:
+                correct_practice_id = place["practice_ids"][0]
+        if correct_practice_id:
+            u = urlparse(request.get_url())
+            query = parse_qs(u.query, keep_blank_values=True)
+            query["pid"] = correct_practice_id
+            u = u._replace(query=urlencode(query, True))
+            request.url = urlunparse(u)
+            return [correct_practice_id]
+
+        else:
+            return None
 
     def is_practice_id_valid(self, request: ScraperRequest, rdata: dict) -> bool:
         """
