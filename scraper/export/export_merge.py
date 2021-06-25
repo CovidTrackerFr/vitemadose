@@ -2,7 +2,7 @@ import datetime as dt
 import json
 import os
 from typing import Iterator
-
+import sys
 import pytz
 
 from scraper.error import BlockedByDoctolibError, DoublonDoctolib

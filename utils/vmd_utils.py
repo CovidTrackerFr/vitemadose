@@ -16,8 +16,6 @@ from unidecode import unidecode
 
 from utils.vmd_config import get_conf_inputs, get_config
 
-sys.setrecursionlimit(10 ** 8)
-
 
 RESERVED_CENTERS = get_config().get("reserved_centers", [])
 
