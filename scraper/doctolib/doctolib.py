@@ -48,7 +48,7 @@ else:
 logger = logging.getLogger("scraper")
 
 
-# @ShortCircuit("doctolib_slot", trigger=20, release=80, time_limit=40.0)
+#   @ShortCircuit("doctolib_slot", trigger=20, release=80, time_limit=40.0)
 # @Profiling.measure("doctolib_slot")
 def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue) -> Optional[str]:
     if not DOCTOLIB_CONF.enabled:
