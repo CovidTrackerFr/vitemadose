@@ -1,0 +1,266 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.593961+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "89",
+      "nom": "Pharmacie de Fleury",
+      "url": "https://www.maiia.com/pharmacie/89113-fleury-la-vallee/pharmacie-de-fleury?centerid=603cbcc068359b1abff14b0a",
+      "location": {
+        "longitude": 3.452553,
+        "latitude": 47.868897,
+        "city": "Fleury-la-Vall\u00e9e"
+      },
+      "metadata": {
+        "address": "39 Grande Rue 89113 Fleury-la-Vall\u00e9e",
+        "phone_number": "+33386737414",
+        "business_hours": {
+          "Lundi": "14:00-18:00",
+          "Mardi": "08:30-12:00 13:30-18:00",
+          "Mercredi": "08:30-12:00 13:30-18:00",
+          "Jeudi": "08:30-12:00 13:30-18:00",
+          "Vendredi": "08:30-12:00 13:30-18:00",
+          "Samedi": "09:00-12:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-05-17T13:15:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 2,
+      "internal_id": "maiia603cbcc068359b1abff14b0a",
+      "vaccine_type": [
+        "AstraZeneca",
+        "Janssen"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527466+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 2
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 2
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 2
+        }
+      ],
+      "gid": "603cbcc0"
+    },
+    {
+      "departement": "89",
+      "nom": "Pharmacie de l'Aillantais",
+      "url": "https://www.maiia.com/pharmacie/89110-montholon/pharmacie-de-l-aillantais?centerid=6042a6977f3d8265d0a71f8f",
+      "location": {
+        "longitude": 3.352829,
+        "latitude": 47.876545,
+        "city": "Montholon"
+      },
+      "metadata": {
+        "address": "4 Chemin de Neuilly 89110 Montholon",
+        "business_hours": {
+          "Lundi": "09:00-12:30 14:00-19:15",
+          "Mardi": "09:00-12:30 14:00-19:15",
+          "Mercredi": "09:00-12:30 14:00-19:15",
+          "Jeudi": "09:00-12:30 14:00-19:15",
+          "Vendredi": "09:00-12:30 14:00-19:15",
+          "Samedi": "09:00-12:30 14:00-19:15",
+          "Dimanche": "09:00-12:30 14:00-19:15"
+        }
+      },
+      "prochain_rdv": "2021-05-17T14:45:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 8,
+      "internal_id": "maiia6042a6977f3d8265d0a71f8f",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527532+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 8
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 8
+        }
+      ],
+      "gid": "6042a697"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "89",
+      "nom": "Centre de vaccination du CH de Sens",
+      "url": "https://vaccination-covid.keldoc.com/infectiologue/sens-89100/vaccination-covid-19-2?agenda=51183&motive=81385&category=-1&cabinet=16565",
+      "location": {
+        "longitude": 3.29471,
+        "latitude": 48.1923,
+        "city": "Sens"
+      },
+      "metadata": {
+        "address": "58 Rue Ren\u00e9 Binet, 89100 Sens",
+        "phone_number": "+33186650105",
+        "business_hours": {
+          "lundi": "08:00-19:00",
+          "mardi": "08:00-19:00",
+          "mercredi": "08:00-19:00",
+          "jeudi": "08:00-19:00",
+          "vendredi": "08:00-19:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc524",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "524"
+    },
+    {
+      "departement": "89",
+      "nom": "Centre de vaccination- Les Champs Blancs",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/joigny-89300/centre-de-vaccination-les-champs-blanc",
+      "location": {
+        "longitude": 3.4256,
+        "latitude": 47.9762,
+        "city": "Joigny"
+      },
+      "metadata": {
+        "address": "10 Avenue d'Am\u00e9lia, 89300 Joigny",
+        "phone_number": "+33800725089",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-17T15:50:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc605",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347491+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "605"
+    }
+  ]
+}

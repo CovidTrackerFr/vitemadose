@@ -1,0 +1,671 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.544134+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "34",
+      "nom": "Pharmacie des Arbousiers",
+      "url": "https://www.maiia.com/pharmacie/34150-aniane/pharmacie-des-arbousiers?centerid=601d850ecfc13702bff1ec63",
+      "location": {
+        "longitude": 3.57765,
+        "latitude": 43.682069,
+        "city": "Aniane"
+      },
+      "metadata": {
+        "address": "185 Avenue des Treilles 34150 Aniane",
+        "phone_number": "+33467577001",
+        "business_hours": {
+          "Lundi": "08:30-12:15 14:00-20:00",
+          "Mardi": "08:30-12:15 14:00-20:00",
+          "Mercredi": "08:30-12:15 14:00-20:00",
+          "Jeudi": "08:30-12:15 14:00-20:00",
+          "Vendredi": "08:30-12:15 14:00-20:00",
+          "Samedi": "09:00-12:30 14:30-19:00",
+          "Dimanche": "08:30-12:15 14:00-20:00"
+        }
+      },
+      "prochain_rdv": "2021-05-14T14:45:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 78,
+      "internal_id": "maiia601d850ecfc13702bff1ec63",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527279+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 30
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 78
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 78
+        }
+      ],
+      "gid": "601d850e"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "34",
+      "nom": "Centre de Vaccination COVID d'Olonzac",
+      "url": "https://www.doctolib.fr/centre-de-sante/olonzac/centre-de-vaccination-covid-d-olonzac",
+      "location": {
+        "longitude": 2.7390706,
+        "latitude": 43.284079,
+        "city": "Olonzac"
+      },
+      "metadata": {
+        "address": "Route d'Oupia, 34210 Olonzac",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-16:00",
+          "mardi": "14:00-16:00",
+          "mercredi": "14:00-16:00",
+          "jeudi": "14:00-16:00",
+          "vendredi": "14:00-16:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib243100",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d243100"
+    },
+    {
+      "departement": "34",
+      "nom": "Centre de Vaccination COVID de Saint-Pons-de-Thomi\u00e8res",
+      "url": "https://www.doctolib.fr/centre-de-sante/saint-pons-de-thomieres/centre-de-vaccination-covid-de-saint-pons-de-thomieres",
+      "location": {
+        "longitude": 2.759437,
+        "latitude": 43.490146,
+        "city": "Saint-Pons-de-Thomi\u00e8res"
+      },
+      "metadata": {
+        "address": "Chemin de Camp Soulel, 34220 Saint-Pons-de-Thomi\u00e8res",
+        "phone_number": "+33800541919",
+        "business_hours": {
+          "lundi": "14:00-16:00",
+          "mardi": "14:00-16:00",
+          "mercredi": "14:00-16:00",
+          "jeudi": "14:00-16:00",
+          "vendredi": "14:00-16:00",
+          "samedi": "10:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib243098",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d243098"
+    },
+    {
+      "departement": "34",
+      "nom": "Centre de Vaccination - Clinique Saint Louis - Cap Sant\u00e9",
+      "url": "https://www.doctolib.fr/centre-depistage-covid/ganges/centres-de-vaccination-cap-sante?pid=establishment-8147",
+      "location": {
+        "longitude": 3.1504049,
+        "latitude": 43.6080449,
+        "city": "B\u00e9darieux"
+      },
+      "metadata": {
+        "address": "4 Route de Saint-Pons, 34600 B\u00e9darieux",
+        "phone_number": "+33467955656",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242635pid62680",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d242635"
+    },
+    {
+      "departement": "34",
+      "nom": "Centre de vaccination h\u00f4pital de Clermont l'H\u00e9rault",
+      "url": "https://www.doctolib.fr/hopital-public/clermont-l-herault/centre-de-vaccination-hopital-de-clermont-l-herault",
+      "location": {
+        "longitude": 3.437003,
+        "latitude": 43.626665,
+        "city": "Clermont-l'H\u00e9rault"
+      },
+      "metadata": {
+        "address": "Cours de la Chicane, 34800 Clermont-l'H\u00e9rault",
+        "phone_number": "+33809541919",
+        "business_hours": {
+          "lundi": "08:30-17:00",
+          "mardi": "08:30-17:00",
+          "mercredi": "08:30-17:00",
+          "jeudi": "08:30-17:00",
+          "vendredi": "08:30-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242997",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d242997"
+    },
+    {
+      "departement": "34",
+      "nom": "Dr Chlo\u00e9 LESAUVAGE",
+      "url": "https://www.doctolib.fr/medecin-generaliste/gignac/chloe-lesauvage",
+      "location": {
+        "longitude": 3.55347900000004,
+        "latitude": 43.652083,
+        "city": "Gignac"
+      },
+      "metadata": {
+        "address": "1 Rue de la R\u00e9publique, 34150 Gignac",
+        "business_hours": {
+          "lundi": "09:00-12:00, 14:00-18:00",
+          "mardi": "09:00-12:00, 14:00-18:00",
+          "mercredi": "09:00-12:00, 14:00-18:00",
+          "jeudi": "09:00-12:00, 14:00-18:00",
+          "vendredi": "09:00-12:00, 14:00-18:00",
+          "samedi": "09:00-11:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib137931",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d137931"
+    },
+    {
+      "departement": "34",
+      "nom": "Institut Bouisson Bertrand - Centre de vaccination COVID 19",
+      "url": "https://www.doctolib.fr/centre-de-vaccinations-internationales/montpellier/institut-bouisson-bertrand-centre-de-vaccination-covid-19",
+      "location": {
+        "longitude": 3.8733651,
+        "latitude": 43.6126755,
+        "city": "Montpellier"
+      },
+      "metadata": {
+        "address": "5 Rue de l'\u00c9cole de M\u00e9decine, 34000 Montpellier",
+        "phone_number": "+33434087365",
+        "business_hours": {
+          "lundi": "08:30-12:00, 14:00-16:00",
+          "mardi": "08:30-12:00, 14:00-16:00",
+          "mercredi": "08:30-12:00, 14:00-16:00",
+          "jeudi": "08:30-12:00, 14:00-16:00",
+          "vendredi": "08:30-12:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242189",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d242189"
+    },
+    {
+      "departement": "34",
+      "nom": "Pharmacie Gambetta - Montpellier",
+      "url": "https://www.doctolib.fr/pharmacie/montpellier/pharmacie-gambetta-montpellier",
+      "location": {
+        "longitude": 3.8696444,
+        "latitude": 43.6079978,
+        "city": "Montpellier"
+      },
+      "metadata": {
+        "address": "46 Cours Gambetta, 34000 Montpellier",
+        "phone_number": "+33467920504",
+        "business_hours": {
+          "lundi": "08:00-19:00",
+          "mardi": "08:00-19:00",
+          "mercredi": "08:00-19:00",
+          "jeudi": "08:00-19:00",
+          "vendredi": "08:00-19:00",
+          "samedi": "08:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib265585",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d265585"
+    },
+    {
+      "departement": "34",
+      "nom": "Centre de vaccination Covid-19 - Ob\u00e9sant\u00e9 Montpellier",
+      "url": "https://www.doctolib.fr/centre-de-sante/montpellier/centre-de-vaccination-covid-19-obesante-montpellier",
+      "location": {
+        "longitude": 3.8186455,
+        "latitude": 43.6192878,
+        "city": "Montpellier"
+      },
+      "metadata": {
+        "address": "195 Rue Yves Montand, 34080 Montpellier",
+        "phone_number": "+33448204930",
+        "business_hours": {
+          "lundi": "10:00-18:00",
+          "mardi": "10:00-18:00",
+          "mercredi": "10:00-18:00",
+          "jeudi": "10:00-18:00",
+          "vendredi": "10:00-18:00",
+          "samedi": "10:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib252792",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d252792"
+    },
+    {
+      "departement": "34",
+      "nom": "Dr Jean-Louis DUBOIS",
+      "url": "https://www.doctolib.fr/medecin-generaliste/montpellier/dubois-jean-louis",
+      "location": {
+        "longitude": 3.85607049999999,
+        "latitude": 43.5936919,
+        "city": "Montpellier"
+      },
+      "metadata": {
+        "address": "509 Rue de Bugarel, 34070 Montpellier",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib54328",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d54328"
+    },
+    {
+      "departement": "34",
+      "nom": "Pharmacie Des Vignes",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-vignes-montpellier",
+      "location": {
+        "longitude": 3.8577281,
+        "latitude": 43.6143535,
+        "city": "montpellier"
+      },
+      "metadata": {
+        "address": "31 avenue Ecole Agriculture G. Buchet, 34000 MONTPELLIER",
+        "phone_number": "+33467630785",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordoclicb07ad721",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "b07ad721"
+    }
+  ]
+}

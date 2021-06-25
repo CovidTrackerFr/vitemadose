@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.554741+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "51",
+      "nom": "Pharmacie Croix Dampierre",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-croix-dampierre-chalons-en-champagne",
+      "location": {
+        "longitude": 4.3858888,
+        "latitude": 48.9422828,
+        "city": "chalons-en-champagne"
+      },
+      "metadata": {
+        "address": "AV DU PRESIDENT ROOSEVELT CC CROIX DAMPIERRE, 51000 CHALONS EN CHAMPAGNE",
+        "phone_number": "+33326219000",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-05-14T10:50:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 14,
+      "internal_id": "ordoclic51142bd5",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:39:59.056746+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 14
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 14
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 14
+        }
+      ],
+      "gid": "51142bd5"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "51",
+      "nom": "Centre de vaccination Argonne - Marne",
+      "url": "https://www.doctolib.fr/hopital-public/sainte-menehould/centre-de-vaccination-argonne-marne",
+      "location": {
+        "longitude": 4.9050416,
+        "latitude": 49.0928139,
+        "city": "Sainte-Menehould"
+      },
+      "metadata": {
+        "address": "Rue du Quartier Valmy, 51800 Sainte-Menehould",
+        "phone_number": "+33352829786",
+        "business_hours": {
+          "lundi": null,
+          "mardi": "09:00-12:00, 14:00-17:00",
+          "mercredi": "09:00-12:00, 14:00-17:00",
+          "jeudi": "09:00-12:00, 14:00-17:00",
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242949",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d242949"
+    },
+    {
+      "departement": "51",
+      "nom": "Centre de Vaccination Covid de Vitry-le-Fran\u00e7ois",
+      "url": "https://www.doctolib.fr/centre-de-sante/vitry-le-francois/centre-de-vaccination-covid-de-vitry-le-francois",
+      "location": {
+        "longitude": 4.5812547,
+        "latitude": 48.7286839,
+        "city": "Vitry-le-Fran\u00e7ois"
+      },
+      "metadata": {
+        "address": "Esplanade de Tauberbischofsheim, 51300 Vitry-le-Fran\u00e7ois",
+        "phone_number": "+33607109453",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-17:00",
+          "mardi": "09:00-13:00, 14:00-17:00",
+          "mercredi": "09:00-13:00, 14:00-17:00",
+          "jeudi": "09:00-13:00, 14:00-17:00",
+          "vendredi": "09:00-13:00, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242194",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T15:38:45.302632+02:00",
+      "appointment_schedules": null,
+      "gid": "d242194"
+    }
+  ]
+}

@@ -1,0 +1,402 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.550015+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "42",
+      "nom": "Pharmacie du Portail Rouge",
+      "url": "https://www.maiia.com/pharmacie/42100-saint-etienne/pharmacie-du-portail-rouge?centerid=601d32a926b6634fdf1b3bce",
+      "location": {
+        "longitude": 4.410563,
+        "latitude": 45.416171,
+        "city": "Saint-\u00c9tienne"
+      },
+      "metadata": {
+        "address": "118 Rue Crozet-Boussingault 42100 Saint-\u00c9tienne",
+        "phone_number": "+33477255414",
+        "business_hours": {
+          "Lundi": "09:00-12:30 14:30-19:15",
+          "Mardi": "09:00-12:30 14:30-19:15",
+          "Mercredi": "09:00-12:30 14:30-19:15",
+          "Jeudi": "09:00-12:30 14:30-19:15",
+          "Vendredi": "09:00-12:30 14:30-19:15",
+          "Samedi": "09:00-12:15",
+          "Dimanche": "09:00-12:30 14:30-19:15"
+        }
+      },
+      "prochain_rdv": "2021-05-12T07:30:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 96,
+      "internal_id": "maiia601d32a926b6634fdf1b3bce",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527191+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 25
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 41
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 96
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 96
+        }
+      ],
+      "gid": "601d32a9"
+    },
+    {
+      "departement": "42",
+      "nom": "Centre de vaccination COVID - H\u00f4pital du Gier",
+      "url": "https://www.maiia.com/centre-de-vaccination/42400-saint-chamond/centre-de-vaccination-covid---hopital-du-gier-?centerid=5ffc744c68dedf073a5b87a2",
+      "location": {
+        "longitude": 4.50184989506,
+        "latitude": 45.4698319517,
+        "city": "Saint-Chamond"
+      },
+      "metadata": {
+        "address": "19 rue victor hugo 42400 Saint-Chamond",
+        "business_hours": {
+          "Lundi": "08:15-17:15",
+          "Mardi": "08:15-17:15",
+          "Mercredi": "08:15-17:15",
+          "Jeudi": "08:15-17:15",
+          "Vendredi": "08:15-17:15",
+          "Samedi": "08:15-17:15",
+          "Dimanche": "08:15-17:15"
+        }
+      },
+      "prochain_rdv": "2021-05-12T12:55:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 1029,
+      "internal_id": "maiia5ffc744c68dedf073a5b87a2",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527057+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 301
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 1029
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 1029
+        }
+      ],
+      "gid": "5ffc744c"
+    },
+    {
+      "departement": "42",
+      "nom": "Centre de vaccination anti-covid 19 H\u00f4pital Le Corbusier Firminy",
+      "url": "https://www.maiia.com/centre-de-vaccination/42700-firminy/centre-de-vaccination-anti-covid-19-hopital-le-corbusier-firminy?centerid=5ffd749d2766c02a387e2564",
+      "location": {
+        "longitude": 4.290078,
+        "latitude": 45.387762,
+        "city": "Firminy"
+      },
+      "metadata": {
+        "address": "2 Rue Robert Plotton 42700 Firminy",
+        "phone_number": "+33970771710",
+        "business_hours": {
+          "Lundi": "08:30-18:00",
+          "Mardi": "08:30-18:00",
+          "Mercredi": "08:30-18:00",
+          "Jeudi": "08:30-18:00",
+          "Vendredi": "08:30-18:00"
+        }
+      },
+      "prochain_rdv": "2021-05-13T11:55:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 1000,
+      "internal_id": "maiia5ffd749d2766c02a387e2564",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.526980+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 991
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 1000
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 1000
+        }
+      ],
+      "gid": "5ffd749d"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "42",
+      "nom": "Centre de vaccination Covid-19 - Maison de sant\u00e9 du pays d'urf\u00e9",
+      "url": "https://www.doctolib.fr/centre-de-sante/saint-just-en-chevalet/centre-de-vaccination-covid-19-maison-de-sante-du-pays-d-urfe",
+      "location": {
+        "longitude": 3.8486595,
+        "latitude": 45.9147503,
+        "city": "Saint-Just-en-Chevalet"
+      },
+      "metadata": {
+        "address": "55 Rue Ren\u00e9 Cassin, 42430 Saint-Just-en-Chevalet",
+        "phone_number": "+33750656094",
+        "business_hours": {
+          "lundi": "08:00-11:30, 13:30-16:30",
+          "mardi": "08:00-11:30, 13:30-16:30",
+          "mercredi": null,
+          "jeudi": "08:00-11:30, 13:30-16:30",
+          "vendredi": "08:00-11:30, 13:30-16:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib257089",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d257089"
+    },
+    {
+      "departement": "42",
+      "nom": "Grande Pharmacie de Montplaisir",
+      "url": "https://www.doctolib.fr/pharmacie/saint-etienne/pharmacie-montplaisir",
+      "location": {
+        "longitude": 4.4172734,
+        "latitude": 45.4346399,
+        "city": "Saint-\u00c9tienne"
+      },
+      "metadata": {
+        "address": "97 Boulevard Normandie Niemen, 42100 Saint-\u00c9tienne",
+        "phone_number": "+33477329315",
+        "business_hours": {
+          "lundi": "08:30-19:30",
+          "mardi": "08:30-19:30",
+          "mercredi": "08:30-19:30",
+          "jeudi": "08:30-19:30",
+          "vendredi": "08:30-19:30",
+          "samedi": "08:30-19:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib230386",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d230386"
+    },
+    {
+      "departement": "42",
+      "nom": "Pharmacie de la Fouillouse",
+      "url": "https://www.maiia.com/pharmacie/42480-la-fouillouse/pharmacie-de-la-fouillouse?centerid=60252a821dc0b7275b739fb9",
+      "location": {
+        "longitude": 4.319441,
+        "latitude": 45.500586,
+        "city": "La Fouillouse"
+      },
+      "metadata": {
+        "address": "56 bis Rue de la Lib\u00e9ration 42480 La Fouillouse",
+        "phone_number": "+33477301876",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "maiia60252a82",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "60252a82"
+    },
+    {
+      "departement": "42",
+      "nom": "Pharmacie Saint Philibert",
+      "url": "https://www.maiia.com/pharmacie/42190-charlieu/pharmacie-saint-philibert?centerid=604a3f4f65d8f5139d42db0a",
+      "location": {
+        "longitude": 4.167847,
+        "latitude": 46.157024,
+        "city": "Charlieu"
+      },
+      "metadata": {
+        "address": "6 b Rue de l\u2019Industrie 42190 Charlieu",
+        "phone_number": "+33477690302",
+        "business_hours": {
+          "Lundi": "08:30-12:15 14:00-19:15",
+          "Mardi": "08:30-12:15 14:00-19:15",
+          "Mercredi": "08:30-12:15 14:00-19:15",
+          "Jeudi": "08:30-12:15 14:00-19:15",
+          "Vendredi": "08:30-12:15 14:00-19:15",
+          "Samedi": "08:30-12:15 14:00-19:00",
+          "Dimanche": "08:30-12:15 14:00-19:15"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "maiia604a3f4f",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T09:58:20.985055+02:00",
+      "appointment_schedules": null,
+      "gid": "604a3f4f"
+    }
+  ]
+}

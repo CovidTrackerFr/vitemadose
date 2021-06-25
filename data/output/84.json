@@ -1,0 +1,603 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.590746+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "84",
+      "nom": "Centre de vaccination d\u00e9partemental - Montfavet",
+      "url": "https://www.maiia.com/centre-de-vaccination/84140-avignon/centre-de-vaccination-departemental---montfavet?centerid=606c1317c3c4ff5db63884a1",
+      "location": {
+        "longitude": 4.887078,
+        "latitude": 43.91765,
+        "city": "Avignon"
+      },
+      "metadata": {
+        "address": "246 Rue Felicien Florent Mft 84140 Avignon",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-05-17T13:50:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 400,
+      "internal_id": "maiia606c1317c3c4ff5db63884a1",
+      "vaccine_type": [
+        "ARNm"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527390+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 200
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 400
+        }
+      ],
+      "gid": "606c1317"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "84",
+      "nom": "Centre de Vaccination - La Tour-d'Aigues",
+      "url": "https://www.doctolib.fr/centre-de-sante/la-tour-d-aigues/centre-de-vaccination-la-tour-d-aigues",
+      "location": {
+        "longitude": 5.5512034,
+        "latitude": 43.7282048,
+        "city": "La Tour-d'Aigues"
+      },
+      "metadata": {
+        "address": "Rue Th\u00e9ophile Vallet, 84240 La Tour-d'Aigues",
+        "phone_number": "+33972502700",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "09:00-12:00, 14:00-18:00",
+          "mercredi": "09:00-12:00, 14:00-18:00",
+          "jeudi": "09:00-12:00, 14:00-18:00",
+          "vendredi": "09:00-12:00, 14:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242727",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d242727"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre de vaccination - Pertuis",
+      "url": "https://www.doctolib.fr/centre-de-sante/pertuis/centre-de-vaccination-pertuis",
+      "location": {
+        "longitude": 5.507474,
+        "latitude": 43.6949344,
+        "city": "Pertuis"
+      },
+      "metadata": {
+        "address": "168 Rue Resini, 84120 Pertuis",
+        "phone_number": "+33972502700",
+        "business_hours": {
+          "lundi": "14:00-18:00",
+          "mardi": "09:00-11:00, 14:00-18:00",
+          "mercredi": "09:00-13:00, 14:00-18:00",
+          "jeudi": "11:00-13:00, 14:00-18:00",
+          "vendredi": "09:00-13:00",
+          "samedi": "10:00-12:00",
+          "dimanche": "13:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242726",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d242726"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre de vaccination Covid-19 - CH Pays d'Apt",
+      "url": "https://www.doctolib.fr/hopital-public/apt/centre-de-vaccination-covid-19-ch-pays-d-apt",
+      "location": {
+        "longitude": 5.3831276,
+        "latitude": 43.8763643,
+        "city": "Apt"
+      },
+      "metadata": {
+        "address": "225 Avenue de Marseille, 84400 Apt",
+        "phone_number": "+33490043401",
+        "business_hours": {
+          "lundi": "13:00-18:00",
+          "mardi": "13:00-18:00",
+          "mercredi": "13:00-18:00",
+          "jeudi": "13:00-18:00",
+          "vendredi": "13:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242805",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d242805"
+    },
+    {
+      "departement": "84",
+      "nom": "Pharmacie Angot - Hurtier",
+      "url": "https://www.doctolib.fr/pharmacie/apt/pharmacie-angot-hurtier",
+      "location": {
+        "longitude": 5.3960383,
+        "latitude": 43.8759,
+        "city": "Apt"
+      },
+      "metadata": {
+        "address": "72 Rue des Marchands, 84400 Apt",
+        "phone_number": "+33490740139",
+        "business_hours": {
+          "lundi": "08:30-12:30, 14:30-19:30",
+          "mardi": "08:30-12:30, 14:30-19:30",
+          "mercredi": "08:30-12:30, 14:30-19:30",
+          "jeudi": "08:30-12:30, 14:30-19:30",
+          "vendredi": "08:30-12:30, 14:30-19:30",
+          "samedi": "08:00-12:30, 14:30-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib251472",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d251472"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre de vaccination de Cavaillon - Vaccination COVID-19",
+      "url": "https://www.doctolib.fr/centre-de-sante/cavaillon/centre-hospitalier-intercommunal-cavaillon-lauris-vaccination-covid-19",
+      "location": {
+        "longitude": 5.042193,
+        "latitude": 43.8251966,
+        "city": "Cavaillon"
+      },
+      "metadata": {
+        "address": "15 Avenue Pierre Grand, 84300 Cavaillon",
+        "phone_number": "+33490719617",
+        "business_hours": {
+          "lundi": "08:45-18:00",
+          "mardi": "08:45-18:00",
+          "mercredi": "08:45-18:00",
+          "jeudi": "08:45-18:00",
+          "vendredi": "08:45-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib244062",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d244062"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre vaccination Covid-19 - Centre Hospitalier l'Isle-sur-la-Sorgue",
+      "url": "https://www.doctolib.fr/hopital-public/l-isle-sur-la-sorgue/centre-de-vaccination-covid-19-l-isle-sur-la-sorgue",
+      "location": {
+        "longitude": 5.0481014,
+        "latitude": 43.920489,
+        "city": "L'Isle-sur-la-Sorgue"
+      },
+      "metadata": {
+        "address": "Quai Lices Berthelot, 84800 L'Isle-sur-la-Sorgue",
+        "phone_number": "+33490389653",
+        "business_hours": {
+          "lundi": "08:30-13:00, 14:00-19:00",
+          "mardi": "08:30-13:00, 14:00-19:00",
+          "mercredi": "08:30-13:00, 14:00-19:00",
+          "jeudi": "08:30-13:00, 14:00-19:00",
+          "vendredi": "08:30-13:00, 14:00-19:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib243172",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d243172"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre Hospitalier de Vaison la Romaine - Vaccination COVID-19",
+      "url": "https://www.doctolib.fr/hopital-public/vaison-la-romaine/centre-hospitalier-de-vaison-la-romaine-vaccination-covid-19",
+      "location": {
+        "longitude": 5.0751665,
+        "latitude": 44.2396315,
+        "city": "Vaison-la-Romaine"
+      },
+      "metadata": {
+        "address": "18 Grand Rue, 84110 Vaison-la-Romaine",
+        "phone_number": "+33490287739",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-13:00, 14:00-18:00",
+          "jeudi": "09:00-13:00, 14:00-18:00",
+          "vendredi": "09:00-17:00, 14:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib244425",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d244425"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre de vaccination Covid-19 de Valr\u00e9as",
+      "url": "https://www.doctolib.fr/centre-de-vaccinations-internationales/valreas/centre-de-vaccination-covid-19-de-valreas",
+      "location": {
+        "longitude": 4.9889578,
+        "latitude": 44.3853477,
+        "city": "Valr\u00e9as"
+      },
+      "metadata": {
+        "address": "43 Cours Victor Hugo, 84600 Valr\u00e9as",
+        "phone_number": "+33490353031",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib243035",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d243035"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre d'examens de sant\u00e9 - CPAM de Vaucluse",
+      "url": "https://www.doctolib.fr/centre-examens-de-sante/avignon/centre-d-examens-de-sante-cpam-du-vaucluse",
+      "location": {
+        "longitude": 4.82605269999999,
+        "latitude": 43.940881,
+        "city": "Avignon"
+      },
+      "metadata": {
+        "address": "72 Route de Montfavet, 84000 Avignon",
+        "phone_number": "+33486199320",
+        "business_hours": {
+          "lundi": "08:00-12:00, 13:00-16:30",
+          "mardi": "08:00-12:00, 13:00-16:30",
+          "mercredi": "08:00-12:00, 13:00-16:30",
+          "jeudi": "08:00-12:00, 13:00-16:30",
+          "vendredi": "08:00-12:00, 13:00-16:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib177181",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d177181"
+    },
+    {
+      "departement": "84",
+      "nom": "Pharmacie Principale",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-principale-pertuis",
+      "location": {
+        "longitude": 5.5016043,
+        "latitude": 43.6934976,
+        "city": "pertuis"
+      },
+      "metadata": {
+        "address": "114 Place Jean Jaures, 84120 PERTUIS",
+        "phone_number": "+33490097271",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordoclic40d3f70d",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "40d3f70d"
+    },
+    {
+      "departement": "84",
+      "nom": "Centre intercommunal de vaccination de Boll\u00e8ne",
+      "url": "https://www.maiia.com/centre-de-vaccination/84500-bollene/centre-intercommunal-de-vaccination-de-bollene?centerid=6006f901cd19c5464610ec42",
+      "location": {
+        "longitude": 4.753102,
+        "latitude": 44.291295,
+        "city": "Boll\u00e8ne"
+      },
+      "metadata": {
+        "address": "2483 Avenue Jean Moulin 84500 Boll\u00e8ne",
+        "phone_number": "+33465796579",
+        "business_hours": {
+          "Lundi": "14:00-17:00",
+          "Mardi": "09:00-12:00",
+          "Mercredi": "09:00-12:00",
+          "Jeudi": "09:00-12:00",
+          "Vendredi": "09:00-12:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "maiia6006f901",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T11:18:32.719994+02:00",
+      "appointment_schedules": null,
+      "gid": "6006f901"
+    }
+  ]
+}

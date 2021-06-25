@@ -1,0 +1,478 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.584425+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "77",
+      "nom": "Centre de vaccination du covid 19 du Pays de Meaux",
+      "url": "https://www.maiia.com/centre-de-vaccination/77100-meaux/centre-de-vaccination-du-covid-19-du-pays-de-meaux?centerid=5ffeb69ba6974139202922d5",
+      "location": {
+        "longitude": 2.902882,
+        "latitude": 48.943926,
+        "city": "Meaux"
+      },
+      "metadata": {
+        "address": "73 Avenue Henri Dunant 77100 Meaux",
+        "phone_number": "+33160099884",
+        "business_hours": {
+          "Lundi": "13:00-21:10 08:00-12:50",
+          "Mardi": "13:00-21:10 08:00-12:50",
+          "Mercredi": "13:00-21:10 08:00-12:50",
+          "Jeudi": "13:00-21:10 08:00-12:50",
+          "Vendredi": "13:00-21:10 08:00-12:50",
+          "Samedi": "13:00-21:10 08:00-12:50",
+          "Dimanche": "13:00-21:10 08:00-12:50"
+        }
+      },
+      "prochain_rdv": "2021-05-12T09:20:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 500,
+      "internal_id": "maiia5ffeb69ba6974139202922d5",
+      "vaccine_type": [
+        "ARNm"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527495+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 32
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 32
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 200
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 500
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 500
+        }
+      ],
+      "gid": "5ffeb69b"
+    },
+    {
+      "departement": "77",
+      "nom": "Lagny Centre de vaccination du Totem",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/lagny-sur-marne-77400/cpts-liens-sante-77?motive=81620&category=-1&cabinet=16552&specialty=47",
+      "location": {
+        "longitude": 2.70773,
+        "latitude": 48.8673,
+        "city": "Lagny-sur-Marne"
+      },
+      "metadata": {
+        "address": "SALLE POLYVALENTE TOTEM Avenue ANDRE MALRAUX, 77400 Lagny-sur-Marne",
+        "phone_number": "+33800077400",
+        "business_hours": {
+          "lundi": "9:00-12:00/14:00-17:00",
+          "mardi": "9:00-12:00/14:00-17:00",
+          "mercredi": "9:00-12:00/14:00-17:00",
+          "jeudi": "9:00-12:00/14:00-17:00",
+          "vendredi": "9:00-12:00/14:00-17:00",
+          "samedi": "ouvert",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-14T11:20:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 184,
+      "internal_id": "keldoc296",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.346945+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 184
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 184
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 184
+        }
+      ],
+      "gid": "296"
+    },
+    {
+      "departement": "77",
+      "nom": "Centre de vaccination du GHSIF Melun",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/melun-cedex-77011/groupe-hospitalier-sud-ile-de-france/centre-covid?specialty=496",
+      "location": {
+        "longitude": 2.67334,
+        "latitude": 48.5396,
+        "city": "Melun"
+      },
+      "metadata": {
+        "address": "8 Rue de Vaux, 77000 Melun",
+        "phone_number": "+33181742700",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "09h00-17h00",
+          "dimanche": "ouvert"
+        }
+      },
+      "prochain_rdv": "2021-05-16T11:10:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 1,
+      "internal_id": "keldoc246",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347554+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 1
+        }
+      ],
+      "gid": "246"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "77",
+      "nom": "Pharmacie du Bois de Grace",
+      "url": "https://www.doctolib.fr/centre-depistage-covid/champs-sur-marne/pharmacie-du-bois-de-grace",
+      "location": {
+        "longitude": 2.5850516,
+        "latitude": 48.8467288,
+        "city": "Champs-sur-Marne"
+      },
+      "metadata": {
+        "address": "16 Place du Bois de Gr\u00e2ce, 77420 Champs-sur-Marne",
+        "phone_number": "+33164681012",
+        "business_hours": {
+          "lundi": "08:30-12:30, 14:00-19:45",
+          "mardi": "08:30-12:30, 14:00-19:45",
+          "mercredi": "08:30-12:30, 14:00-19:45",
+          "jeudi": "08:30-12:30, 14:00-19:45",
+          "vendredi": "08:30-12:30, 14:00-19:45",
+          "samedi": "08:30-19:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib231538",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d231538"
+    },
+    {
+      "departement": "77",
+      "nom": "Dr C\u00e9cile BRUCHET",
+      "url": "https://www.doctolib.fr/medecin-generaliste/fontainebleau/cecile-bruchet",
+      "location": {
+        "longitude": 2.700014,
+        "latitude": 48.412687,
+        "city": "Fontainebleau"
+      },
+      "metadata": {
+        "address": "17 bis Rue Anne-Marie Javouhey, 77300 Fontainebleau",
+        "business_hours": {
+          "lundi": "08:00-12:00, 14:00-19:00",
+          "mardi": "08:00-12:00, 14:00-19:00",
+          "mercredi": "08:00-12:00, 14:00-19:00",
+          "jeudi": "08:00-12:00, 14:00-19:00",
+          "vendredi": "08:00-12:00, 14:00-19:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib18686",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d18686"
+    },
+    {
+      "departement": "77",
+      "nom": "Centres de vaccination GHIF Melun- site de Savigny le temple",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/savigny-le-temple-77176/centre-de-vaccination-covid-ghsif-site-de-savigny-le-temple",
+      "location": {
+        "longitude": 2.58289,
+        "latitude": 48.5955,
+        "city": "Savigny-le-Temple"
+      },
+      "metadata": {
+        "address": "3 Place du 19 Mars 1962, 77176 Savigny-le-Temple",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc2254",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "2254"
+    },
+    {
+      "departement": "77",
+      "nom": "centre de vaccination GHSIF MELUN - site de Combs la Ville",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/melun-cedex-77011/groupe-hospitalier-sud-ile-de-france?preview=&cabinet=24574&specialty=496",
+      "location": {
+        "longitude": 2.55789,
+        "latitude": 48.6658,
+        "city": "Combs-la-Ville"
+      },
+      "metadata": {
+        "address": "6 Place de l\u2019An 2000, 77380 Combs-la-Ville",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "9h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-17T13:25:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc2255",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347427+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "2255"
+    }
+  ]
+}

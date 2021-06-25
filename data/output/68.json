@@ -1,0 +1,403 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.570674+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "68",
+      "nom": "Pharmacie Du Centre - COLMAR",
+      "url": "https://mapharma.net/68000-1?c=286&l=0",
+      "location": {
+        "longitude": 7.379882,
+        "latitude": 48.080143,
+        "city": "COLMAR"
+      },
+      "metadata": {
+        "address": "97 route de Neuf-Brisach, 68000 COLMAR",
+        "business_hours": {
+          "lundi": "08:00 \u2013 20:00",
+          "mardi": "08:00 \u2013 20:00",
+          "mercredi": "08:00 \u2013 20:00",
+          "jeudi": "08:00 \u2013 20:00",
+          "vendredi": "08:00 \u2013 20:00",
+          "samedi": "08:00 \u2013 20:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-11T17:55:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 3,
+      "internal_id": "mapharma2d313f633d323836266c3d3",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.935051+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 3
+        }
+      ],
+      "gid": "2d313f633d323836266c3d3"
+    },
+    {
+      "departement": "68",
+      "nom": "Pharmacie d'Entremont",
+      "url": "https://www.maiia.com/pharmacie/68170-rixheim/pharmacie-d-entremont?centerid=604f1d5aa842b64c5ef0054e",
+      "location": {
+        "longitude": 7.383044,
+        "latitude": 47.752543,
+        "city": "Rixheim"
+      },
+      "metadata": {
+        "address": "3 Rue des Peupliers 68170 Rixheim",
+        "phone_number": "+33389541042",
+        "business_hours": {
+          "Lundi": "08:30-12:15 14:30-19:00",
+          "Mardi": "08:30-12:15 14:30-19:00",
+          "Mercredi": "08:30-12:15 14:30-19:00",
+          "Jeudi": "08:30-12:15 14:30-19:00",
+          "Vendredi": "08:30-12:15 14:30-19:00",
+          "Samedi": "08:30-12:15"
+        }
+      },
+      "prochain_rdv": "2021-05-19T07:45:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 17,
+      "internal_id": "maiia604f1d5aa842b64c5ef0054e",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527666+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 17
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 17
+        }
+      ],
+      "gid": "604f1d5a"
+    },
+    {
+      "departement": "68",
+      "nom": "Pharma 6",
+      "url": "https://mapharma.net/68200?c=168&l=0",
+      "location": {
+        "longitude": 7.295446,
+        "latitude": 47.738914,
+        "city": "MULHOUSE"
+      },
+      "metadata": {
+        "address": "230-232 rue de Belfort, 68200 MULHOUSE",
+        "business_hours": {
+          "lundi": "08:00 \u2013 20:00",
+          "mardi": "08:00 \u2013 20:00",
+          "mercredi": "08:00 \u2013 20:00",
+          "jeudi": "08:00 \u2013 20:00",
+          "vendredi": "08:00 \u2013 20:00",
+          "samedi": "08:00 \u2013 18:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-20T11:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 43,
+      "internal_id": "mapharma3f633d313638266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.935079+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 5
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 7
+        }
+      ],
+      "gid": "3f633d313638266c3d30"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "68",
+      "nom": "Centres de vaccination Covid-19 - UGECAM Haut-Rhin - Bouxwiller",
+      "url": "https://www.doctolib.fr/centre-de-vaccinations-internationales/haut-rhin/centres-de-vaccination-covid-19-ugecam-haut-rhin?pid=practice-170521",
+      "location": {
+        "longitude": 7.3299953,
+        "latitude": 47.506438,
+        "city": "Bouxwiller"
+      },
+      "metadata": {
+        "address": " lieu dit Luppach, 68480 Bouxwiller",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib250393pid170521",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d250393"
+    },
+    {
+      "departement": "68",
+      "nom": "Centres de vaccination Covid-19 - UGECAM Haut-Rhin - Jungholtz",
+      "url": "https://www.doctolib.fr/centre-de-vaccinations-internationales/haut-rhin/centres-de-vaccination-covid-19-ugecam-haut-rhin?pid=practice-170524",
+      "location": {
+        "longitude": 7.1952972,
+        "latitude": 47.8842314,
+        "city": "Jungholtz"
+      },
+      "metadata": {
+        "address": "Rue de Thierenbach, 68500 Jungholtz",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib250393pid170524",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d250393"
+    },
+    {
+      "departement": "68",
+      "nom": "Pharmacie Saint C\u00f4me",
+      "url": "https://www.maiia.com/pharmacie/68400-riedisheim/pharmacie-saint-come-?centerid=6050dce97a1e3f112d086701",
+      "location": {
+        "longitude": 7.365054,
+        "latitude": 47.747323,
+        "city": "Riedisheim"
+      },
+      "metadata": {
+        "address": "79 Rue de Mulhouse 68400 Riedisheim",
+        "phone_number": "+33389447501",
+        "business_hours": {
+          "Lundi": "08:15-12:15 14:00-19:00",
+          "Mardi": "08:15-12:15 14:00-19:00",
+          "Mercredi": "08:15-12:15 14:00-19:00",
+          "Jeudi": "08:15-12:15 14:00-19:00",
+          "Vendredi": "08:15-12:15 14:00-19:00",
+          "Samedi": "08:15-12:15 14:00-17:00",
+          "Dimanche": "08:15-12:15 14:00-19:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "maiia6050dce9",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "6050dce9"
+    }
+  ]
+}

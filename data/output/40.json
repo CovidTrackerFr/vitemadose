@@ -1,0 +1,803 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.548541+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "40",
+      "nom": "Centre de Vaccination - Forum Mimizan",
+      "url": "https://www.maiia.com/centre-de-vaccination/40200-mimizan/centre-de-vaccination---forum-mimizan?centerid=5fff2263b1a1aa1cc204f21a",
+      "location": {
+        "longitude": -1.227433,
+        "latitude": 44.202248,
+        "city": "Mimizan"
+      },
+      "metadata": {
+        "address": "Rue du Jardin Public 40200 Mimizan",
+        "business_hours": {
+          "Lundi": "08:00-13:00 14:00-18:00",
+          "Mardi": "08:00-13:00 14:00-18:00",
+          "Mercredi": "08:00-13:00 14:00-18:00",
+          "Jeudi": "08:00-13:00 14:00-18:00",
+          "Vendredi": "08:00-13:00 14:00-18:00",
+          "Samedi": "08:00-13:00 14:00-18:00",
+          "Dimanche": "08:00-13:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-05-12T12:10:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 6,
+      "internal_id": "maiia5fff2263b1a1aa1cc204f21a",
+      "vaccine_type": [
+        "Pfizer-BioNTech",
+        "Moderna"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527342+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 6
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 6
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 6
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 6
+        }
+      ],
+      "gid": "5fff2263"
+    },
+    {
+      "departement": "40",
+      "nom": "Pharmacie Lemarquis",
+      "url": "https://www.maiia.com/pharmacie/40800-aire-sur-l-adour/pharmacie-lemarquis?centerid=6034d800698e2a173a312183",
+      "location": {
+        "longitude": -0.263021,
+        "latitude": 43.700806,
+        "city": "Aire-sur-l'Adour"
+      },
+      "metadata": {
+        "address": "19 Rue Carnot 40800 Aire-sur-l'Adour",
+        "phone_number": "+33558716059",
+        "business_hours": {
+          "Lundi": "08:30-12:30 13:30-20:00",
+          "Mardi": "08:30-12:30 13:30-20:00",
+          "Mercredi": "08:30-12:30 13:30-20:00",
+          "Jeudi": "08:30-12:30 13:30-20:00",
+          "Vendredi": "08:30-12:30 13:30-20:00",
+          "Samedi": "08:30-13:00 13:30-19:00",
+          "Dimanche": "08:30-12:30 13:30-20:00"
+        }
+      },
+      "prochain_rdv": "2021-05-14T09:10:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 2,
+      "internal_id": "maiia6034d800698e2a173a312183",
+      "vaccine_type": [
+        "Janssen",
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527427+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 2
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 2
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 2
+        }
+      ],
+      "gid": "6034d800"
+    },
+    {
+      "departement": "40",
+      "nom": "Vaccination MODERNA / AstraZeneca MSP de l\u2019Adour",
+      "url": "https://www.maiia.com/centre-de-vaccination/40800-aire-sur-l-adour/vaccination-moderna---astrazeneca-msp-de-l-adour-?centerid=606187286a4ba23f95fc3a91",
+      "location": {
+        "longitude": -0.263435,
+        "latitude": 43.700722,
+        "city": "Aire-sur-l'Adour"
+      },
+      "metadata": {
+        "address": "4  rue Ren\u00e9 Mericam Centre de vaccination Aire sur l\u2019Adour, Salle de l\u2019orangerie  40800 Aire-sur-l'Adour",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-05-17T12:10:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 35,
+      "internal_id": "maiia606187286a4ba23f95fc3a91",
+      "vaccine_type": [
+        "AstraZeneca",
+        "Moderna"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.526959+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 32
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 35
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 35
+        }
+      ],
+      "gid": "60618728"
+    },
+    {
+      "departement": "40",
+      "nom": "Centre De Vaccination - Maison De Sant\u00e9 De L'Adour",
+      "url": "https://www.maiia.com/centre-de-vaccination/-40800--aire-sur-l-adour/centre-de-vaccination---maison-de-sante-de-l-adour?centerid=5ffec752a400683faf1c220c",
+      "location": {
+        "longitude": -0.265145513574,
+        "latitude": 43.6983525736,
+        "city": " Aire-sur-l'Adour"
+      },
+      "metadata": {
+        "address": "4  Rue Ren\u00e9 M\u00e9ricam,Salle de L'Orangerie  40800  Aire-sur-l'Adour",
+        "business_hours": {
+          "Lundi": "08:30-12:30 14:00-18:00",
+          "Mardi": "08:30-12:30 14:00-18:00",
+          "Mercredi": "08:30-12:30 14:00-18:00",
+          "Jeudi": "08:30-12:30 14:00-18:00",
+          "Vendredi": "08:30-12:30 14:00-18:00",
+          "Samedi": "08:30-12:30",
+          "Dimanche": "08:30-12:30 14:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-05-18T07:30:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 700,
+      "internal_id": "maiia5ffec752a400683faf1c220c",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527486+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 700
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 700
+        }
+      ],
+      "gid": "5ffec752"
+    },
+    {
+      "departement": "40",
+      "nom": "Centre de Vaccination - MAISON DE SANTE AMOU",
+      "url": "https://www.maiia.com/centre-de-vaccination/40330-amou/centre-de-vaccination---maison-de-sante-amou?centerid=60058639e4e80549d8cb9d3e",
+      "location": {
+        "longitude": -0.743678079626,
+        "latitude": 43.5938659835,
+        "city": "AMOU"
+      },
+      "metadata": {
+        "address": "Salle De l'Etoile 24 Avenue De La Digue 40330 AMOU",
+        "business_hours": {
+          "Lundi": "08:30-12:30 13:30-17:30",
+          "Mardi": "08:30-12:30 13:30-17:30",
+          "Mercredi": "08:30-12:30 13:30-17:30",
+          "Jeudi": "08:30-12:30 13:30-17:30",
+          "Vendredi": "08:30-12:30 13:30-17:30",
+          "Samedi": "08:30-12:30 13:30-17:30",
+          "Dimanche": "08:30-12:30 13:30-17:30"
+        }
+      },
+      "prochain_rdv": "2021-05-19T07:10:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 460,
+      "internal_id": "maiia60058639e4e80549d8cb9d3e",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527477+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 460
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 460
+        }
+      ],
+      "gid": "60058639"
+    },
+    {
+      "departement": "40",
+      "nom": "Centre de vaccination Covid-19 de Labrit",
+      "url": "https://www.maiia.com/centre-de-vaccination/40420-labrit/centre-de-vaccination-covid-19-de-labrit?centerid=6006bebd3b987b202a4042fe",
+      "location": {
+        "longitude": -0.546164,
+        "latitude": 44.104913,
+        "city": "Labrit"
+      },
+      "metadata": {
+        "address": "salle de f\u00eates 40420 Labrit",
+        "business_hours": {
+          "Lundi": "08:30-12:30 13:30-17:30",
+          "Mardi": "08:30-12:30 13:30-17:30",
+          "Mercredi": "08:30-12:30 13:30-17:30",
+          "Jeudi": "08:30-12:30 13:30-17:30",
+          "Vendredi": "08:30-12:30 13:30-17:30",
+          "Samedi": "08:30-12:30 13:30-17:30",
+          "Dimanche": "08:30-12:30 13:30-17:30"
+        }
+      },
+      "prochain_rdv": "2021-06-25T08:05:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 2,
+      "internal_id": "maiia6006bebd3b987b202a4042fe",
+      "vaccine_type": [
+        "ARNm"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527164+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 2
+        }
+      ],
+      "gid": "6006bebd"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "40",
+      "nom": "Centre de vaccination covid-19 - Morcenx-la-Nouvelle",
+      "url": "https://www.doctolib.fr/centre-de-sante/morcenx-la-nouvelle/centre-de-vaccination-covid-19-morcenx-la-nouvelle",
+      "location": {
+        "longitude": -0.9117519,
+        "latitude": 44.0302249,
+        "city": "Morcenx-la-Nouvelle"
+      },
+      "metadata": {
+        "address": "32 Boulevard Gallieni, 40110 Morcenx-la-Nouvelle",
+        "business_hours": {
+          "lundi": "09:00-12:00",
+          "mardi": "09:00-12:00",
+          "mercredi": "09:00-12:00",
+          "jeudi": "09:00-12:00",
+          "vendredi": "09:00-12:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib255770",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d255770"
+    },
+    {
+      "departement": "40",
+      "nom": "Centre Vaccination COVID - Ville de Biscarrosse",
+      "url": "https://www.doctolib.fr/centre-de-sante/biscarrosse/centre-vaccination-covid-ville-de-biscarrosse",
+      "location": {
+        "longitude": -1.1823626,
+        "latitude": 44.3872858,
+        "city": "Biscarrosse"
+      },
+      "metadata": {
+        "address": "1500 Avenue Pierre Georges Lat\u00e9co\u00e8re, 40600 Biscarrosse",
+        "phone_number": "+33558827064",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": "09:00-12:00, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib244297",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d244297"
+    },
+    {
+      "departement": "40",
+      "nom": "Centre de vaccination Covid-19 - Tartas [Annexe Morcenx la Nouvelle]",
+      "url": "https://www.doctolib.fr/centre-de-sante/tartas/centre-de-vaccination-covid-19-tartas-annexe-morcenx-la-nouvelle",
+      "location": {
+        "longitude": -0.9117519,
+        "latitude": 44.0302249,
+        "city": "Morcenx-la-Nouvelle"
+      },
+      "metadata": {
+        "address": "32 Boulevard Gallieni, 40110 Morcenx-la-Nouvelle",
+        "phone_number": "+33762657047",
+        "business_hours": {
+          "lundi": "09:00-12:00",
+          "mardi": "09:00-12:00",
+          "mercredi": "09:00-12:00",
+          "jeudi": "09:00-12:00",
+          "vendredi": "09:00-12:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib262299pid179373",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d262299"
+    },
+    {
+      "departement": "40",
+      "nom": "Centre de vaccination Covid- 19 du Centre Hospitalier de Dax",
+      "url": "https://www.doctolib.fr/hopital-public/dax/centre-de-vaccination-reserve-aux-professionnels-de-sante-ch-de-dax-en-preparation",
+      "location": {
+        "longitude": -1.0526894,
+        "latitude": 43.7067983,
+        "city": "Dax"
+      },
+      "metadata": {
+        "address": "Rue Saint-Eutrope, 40100 Dax",
+        "phone_number": "+33558352499",
+        "business_hours": {
+          "lundi": null,
+          "mardi": "08:30-17:30",
+          "mercredi": "08:30-17:30",
+          "jeudi": "08:30-17:30",
+          "vendredi": "08:30-17:30",
+          "samedi": "08:30-17:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib240773",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d240773"
+    },
+    {
+      "departement": "40",
+      "nom": "Dr Anne BASTIEN",
+      "url": "https://www.doctolib.fr/medecin-generaliste/soorts-hossegor/anne-bastien",
+      "location": {
+        "longitude": -1.42632920000005,
+        "latitude": 43.6593282,
+        "city": "Soorts-Hossegor"
+      },
+      "metadata": {
+        "address": "148 Avenue Jean Roger Sourgen, 40150 Soorts-Hossegor",
+        "phone_number": "+33558410020",
+        "business_hours": {
+          "lundi": "09:00-12:00, 14:00-19:00",
+          "mardi": "09:00-12:00, 14:00-19:00",
+          "mercredi": "09:00-12:00, 14:00-19:00",
+          "jeudi": "09:00-12:00, 14:00-19:00",
+          "vendredi": "09:00-12:00, 14:00-19:00",
+          "samedi": "09:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib6658",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d6658"
+    }
+  ]
+}

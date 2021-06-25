@@ -1,0 +1,619 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.514808+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "14",
+      "nom": "centre de vaccination du parc des expositions",
+      "url": "https://vaccination-covid.keldoc.com/redirect/?dom=centre-hospitalier&inst=caen-14000&user=centre-de-vaccination-de-caen-parc-des-expositions&cabinet=25876&specialty=496",
+      "location": {
+        "longitude": -0.380106,
+        "latitude": 49.1709,
+        "city": "Caen"
+      },
+      "metadata": {
+        "address": "3 Rue Joseph Philippon, 14000 Caen",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "09:00-20:00",
+          "mardi": "09:00-20:00",
+          "mercredi": "09:00-20:00",
+          "jeudi": "09:00-20:00",
+          "vendredi": "09:00-20:00",
+          "samedi": "09:00-20:00",
+          "dimanche": "09:00-20:00"
+        }
+      },
+      "prochain_rdv": "2021-05-13T09:00:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 35,
+      "internal_id": "keldoc2527",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347444+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 35
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 35
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 35
+        }
+      ],
+      "gid": "2527"
+    },
+    {
+      "departement": "14",
+      "nom": "Centre de Vaccination Caen-Centre (ancienne caserne Canada)",
+      "url": "https://vaccination-covid.keldoc.com/centre-municipal-de-sante/caen-14000/caen-lemiere-ancienne-ecole-lemiere/centre-de-vaccination-de-caen-lemiere-ancienne-ecole-lemiere",
+      "location": {
+        "longitude": -0.372545,
+        "latitude": 49.1843,
+        "city": "Caen"
+      },
+      "metadata": {
+        "address": "14 Rue de l\u2019Academie, 14000 Caen",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-05-14T15:25:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 2,
+      "internal_id": "keldoc501",
+      "vaccine_type": [
+        "Pfizer-BioNTech",
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347294+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 2
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 2
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 2
+        }
+      ],
+      "gid": "501"
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie de la Mer",
+      "url": "https://www.maiia.com/pharmacie/14530-luc-sur-mer/pharmacie-de-la-mer?centerid=6058b41cd254f158baffc121",
+      "location": {
+        "longitude": -0.357268,
+        "latitude": 49.316601,
+        "city": "Luc-sur-Mer"
+      },
+      "metadata": {
+        "address": "Place de l'Etoile 14530 Luc-sur-Mer",
+        "phone_number": "+33231973210",
+        "business_hours": {
+          "Lundi": "09:00-12:15 14:30-19:15",
+          "Mardi": "09:00-12:15 14:30-19:15",
+          "Mercredi": "09:00-12:15 14:30-19:15",
+          "Jeudi": "09:00-12:15 14:30-19:15",
+          "Vendredi": "09:00-12:15 14:30-19:15",
+          "Samedi": "09:00-12:15 14:30-19:15",
+          "Dimanche": "09:00-12:15 14:30-19:15"
+        }
+      },
+      "prochain_rdv": "2021-05-18T13:30:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 1,
+      "internal_id": "maiia6058b41cd254f158baffc121",
+      "vaccine_type": [
+        "AstraZeneca",
+        "Janssen"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527685+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 1
+        }
+      ],
+      "gid": "6058b41c"
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie Saint Gilles",
+      "url": "https://www.maiia.com/pharmacie/14000-caen/pharmacie-saint-gilles?centerid=604a421a4125a3012e92f03f",
+      "location": {
+        "longitude": -0.356997,
+        "latitude": 49.187953,
+        "city": "Caen"
+      },
+      "metadata": {
+        "address": "53 Rue de la Pigaciere 14000 Caen",
+        "phone_number": "+33231936978",
+        "business_hours": {
+          "Lundi": "09:00-12:30 14:00-19:30",
+          "Mardi": "09:00-12:30 14:00-19:30",
+          "Mercredi": "09:00-12:30 14:00-19:30",
+          "Jeudi": "09:00-12:30 14:00-19:30",
+          "Vendredi": "09:00-12:30 14:00-19:30",
+          "Samedi": "09:00-12:30 14:00-18:00",
+          "Dimanche": "09:00-12:30 14:00-19:30"
+        }
+      },
+      "prochain_rdv": "2021-05-20T13:15:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 8,
+      "internal_id": "maiia604a421a4125a3012e92f03f",
+      "vaccine_type": [
+        "Janssen",
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527722+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 8
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 8
+        }
+      ],
+      "gid": "604a421a"
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie Du Port",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-du-port-ouistreham",
+      "location": {
+        "longitude": -0.250916,
+        "latitude": 49.2791064,
+        "city": "ouistreham"
+      },
+      "metadata": {
+        "address": "1 place du g\u00e9n\u00e9ral de gaulle, 14150 OUISTREHAM",
+        "phone_number": "+33231962541",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-05-25T09:30:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 9,
+      "internal_id": "ordoclicda299e28",
+      "vaccine_type": [
+        "AstraZeneca",
+        "Janssen"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:39:59.056871+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 9
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 9
+        }
+      ],
+      "gid": "da299e28"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "14",
+      "nom": "Dr Fran\u00e7ois SANOUILLER",
+      "url": "https://www.doctolib.fr/medecin-generaliste/bayeux/francois-sanouiller",
+      "location": {
+        "longitude": -0.709992100000022,
+        "latitude": 49.2882039,
+        "city": "Bayeux"
+      },
+      "metadata": {
+        "address": "42 Rue de Beauvais, 14400 Bayeux",
+        "phone_number": "+33231927434",
+        "business_hours": {
+          "lundi": "08:00-12:15, 13:45-16:15",
+          "mardi": "08:00-12:15, 13:45-16:15",
+          "mercredi": "08:00-12:15, 13:45-16:15",
+          "jeudi": "08:00-12:15, 13:45-16:15",
+          "vendredi": "08:00-12:15, 13:45-16:15",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib49629",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d49629"
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie De L'Avenir",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-l'avenir-orbec",
+      "location": {
+        "longitude": 0.4058560000000001,
+        "latitude": 49.022737,
+        "city": "orbec"
+      },
+      "metadata": {
+        "address": "127 rue Grande, 14290 Orbec",
+        "phone_number": "+33231328949",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordoclic6f564914",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "6f564914"
+    },
+    {
+      "departement": "14",
+      "nom": "Centre de vaccination de Honfleur - site Equemauville",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/equemauville-14600/vaccination-covid-honfleur?agenda=48923&motive=81685&category=-1&cabinet=16628&specialty=496",
+      "location": {
+        "longitude": 0.202282,
+        "latitude": 49.3834,
+        "city": "\u00c9quemauville"
+      },
+      "metadata": {
+        "address": " CHEMIN DE LA PLANE, 14600 \u00c9quemauville",
+        "phone_number": "+33279461156",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "",
+          "dimanche": ""
+        }
+      },
+      "prochain_rdv": "2021-05-27T09:10:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc509",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347013+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "509"
+    },
+    {
+      "departement": "14",
+      "nom": "Pharmacie Calvaire Saint Pierre",
+      "url": "https://www.maiia.com/pharmacie/14000-caen/pharmacie-calvaire-saint-pierre?centerid=6058b3abd254f158baffc107",
+      "location": {
+        "longitude": -0.364154,
+        "latitude": 49.197721,
+        "city": "Caen"
+      },
+      "metadata": {
+        "address": "17 Avenue Professeur Horatio Smith 14000 Caen",
+        "phone_number": "+33231931019",
+        "business_hours": {
+          "Lundi": "09:00-12:30 14:00-19:30",
+          "Mardi": "09:00-12:30 14:00-19:30",
+          "Mercredi": "09:00-12:30 14:00-19:30",
+          "Jeudi": "09:00-12:30 14:00-19:30",
+          "Vendredi": "09:00-12:30 14:00-19:30",
+          "Samedi": "09:00-12:30",
+          "Dimanche": "09:30-12:30 14:00-19:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "maiia6058b3ab",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "6058b3ab"
+    }
+  ]
+}

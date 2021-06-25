@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.568093+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "63",
+      "nom": "Pharmacie Maizaud",
+      "url": "https://www.maiia.com/pharmacie/63670-orcet/pharmacie-maizaud?centerid=60769f86ad24f57239de0bae",
+      "location": {
+        "longitude": 3.165048,
+        "latitude": 45.706648,
+        "city": "Orcet"
+      },
+      "metadata": {
+        "address": "9 Rue Alexandre Rouel 63670 Orcet",
+        "phone_number": "+33473848468",
+        "business_hours": {
+          "Lundi": "08:30-12:00 14:00-19:15",
+          "Mardi": "08:30-12:00 14:00-19:15",
+          "Mercredi": "08:30-12:00 14:00-19:15",
+          "Jeudi": "08:30-12:00 14:00-19:15",
+          "Vendredi": "08:30-12:00 14:00-19:15",
+          "Samedi": "08:30-13:00"
+        }
+      },
+      "prochain_rdv": "2021-05-17T13:15:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 30,
+      "internal_id": "maiia60769f86ad24f57239de0bae",
+      "vaccine_type": [
+        "AstraZeneca",
+        "Janssen"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527763+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 2
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 25
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 30
+        }
+      ],
+      "gid": "60769f86"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "63",
+      "nom": "Centre de vaccination COVID RIOM Ville - H\u00f4pital",
+      "url": "https://www.doctolib.fr/centre-de-sante/riom/centre-de-vaccination-covid-ch-riom",
+      "location": {
+        "longitude": 3.1176321,
+        "latitude": 45.8898473,
+        "city": "Riom"
+      },
+      "metadata": {
+        "address": "33 Rue Jeanne d'Arc, 63200 Riom",
+        "phone_number": "+33805299797",
+        "business_hours": {
+          "lundi": "08:30-17:30",
+          "mardi": "08:30-17:30",
+          "mercredi": "08:30-17:30",
+          "jeudi": "08:30-17:30",
+          "vendredi": "08:30-17:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib244613",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d244613"
+    }
+  ]
+}

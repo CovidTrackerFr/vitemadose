@@ -1,0 +1,439 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.593231+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "88",
+      "nom": "Pharmacie Bloch",
+      "url": "https://mapharma.net/88600?c=123&l=0",
+      "location": {
+        "longitude": 6.725223,
+        "latitude": 48.199851,
+        "city": "BRUYERES"
+      },
+      "metadata": {
+        "address": "8 route de G\u00e9rardmer, 88600 BRUYERES",
+        "business_hours": {
+          "lundi": "08:30 \u2013 12:15, 13:45 \u2013 19:30",
+          "mardi": "08:30 \u2013 12:15, 13:45 \u2013 19:30",
+          "mercredi": "08:30 \u2013 12:15, 13:45 \u2013 19:30",
+          "jeudi": "08:30 \u2013 12:15, 13:45 \u2013 19:30",
+          "vendredi": "08:30 \u2013 12:15, 13:45 \u2013 19:30",
+          "samedi": "08:30 \u2013 12:15, 13:45 \u2013 18:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T17:50:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 4,
+      "internal_id": "mapharma3f633d313233266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.935070+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 4
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 4
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 4
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 4
+        }
+      ],
+      "gid": "3f633d313233266c3d30"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "88",
+      "nom": "CH de Ravenel - Centre de vaccination Covid-19 de Mirecourt",
+      "url": "https://www.doctolib.fr/hopital-public/mirecourt/mirecourt-centre-de-vaccinationcovid19",
+      "location": {
+        "longitude": 6.1110914,
+        "latitude": 48.296194,
+        "city": "Mirecourt"
+      },
+      "metadata": {
+        "address": "1115 Avenue Ren\u00e9 Porterat, 88500 Mirecourt",
+        "phone_number": "+33329818878",
+        "business_hours": {
+          "lundi": "09:00-12:30, 13:00-17:00",
+          "mardi": "08:30-12:30, 13:00-17:00",
+          "mercredi": "08:30-12:30, 13:00-17:00",
+          "jeudi": "08:30-12:30, 13:00-17:00",
+          "vendredi": "08:30-12:30, 13:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib256286",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d256286"
+    },
+    {
+      "departement": "88",
+      "nom": "Centres de vaccination Covid-19 de Meurthe-et-Moselle - Mirecourt",
+      "url": "https://www.doctolib.fr/centre-de-vaccinations-internationales/nancy/centre-de-vaccination-covid-19-nancy?pid=practice-163781",
+      "location": {
+        "longitude": 6.1110914,
+        "latitude": 48.296194,
+        "city": "Mirecourt"
+      },
+      "metadata": {
+        "address": "1115 Avenue Ren\u00e9 Porterat, 88500 Mirecourt",
+        "phone_number": "+33329818878",
+        "business_hours": {
+          "lundi": "09:00-12:30, 13:00-17:00",
+          "mardi": "08:30-12:30, 13:00-17:00",
+          "mercredi": "08:30-12:30, 13:00-17:00",
+          "jeudi": "08:30-12:30, 13:00-17:00",
+          "vendredi": "08:30-12:30, 13:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib241211pid163781",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d241211"
+    },
+    {
+      "departement": "88",
+      "nom": "Centre de vaccination - Saint-Di\u00e9-des-Vosges - Vaccination Covid-19",
+      "url": "https://www.doctolib.fr/hopital-public/saint-die-des-vosges/mairie-saint-die-des-vosges?pid=practice-163880",
+      "location": {
+        "longitude": 6.8733316,
+        "latitude": 48.0684515,
+        "city": "G\u00e9rardmer"
+      },
+      "metadata": {
+        "address": "16 Rue Charles de Gaulle, 88400 G\u00e9rardmer",
+        "phone_number": "+33329606075",
+        "business_hours": {
+          "lundi": "09:00-12:30, 13:30-18:00",
+          "mardi": "09:00-12:30, 13:30-18:00",
+          "mercredi": "09:00-12:30, 13:30-18:00",
+          "jeudi": "09:00-12:30, 13:30-18:00",
+          "vendredi": "09:00-12:30, 13:30-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib240924pid163880",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d240924"
+    },
+    {
+      "departement": "88",
+      "nom": "Pharmacie Lafayette Michel",
+      "url": "https://www.doctolib.fr/pharmacie/saint-die-des-vosges/pharmacie-lafayette-michel",
+      "location": {
+        "longitude": 6.9495328,
+        "latitude": 48.2861651,
+        "city": "Saint-Di\u00e9-des-Vosges"
+      },
+      "metadata": {
+        "address": "18 Rue Thiers, 88100 Saint-Di\u00e9-des-Vosges",
+        "phone_number": "+33329561362",
+        "business_hours": {
+          "lundi": "08:30-12:30, 13:30-19:30",
+          "mardi": "08:30-12:30, 13:30-19:30",
+          "mercredi": "08:30-12:30, 13:30-19:30",
+          "jeudi": "08:30-12:30, 13:30-19:30",
+          "vendredi": "08:30-12:30, 13:30-19:30",
+          "samedi": "08:30-12:30, 13:30-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib262024",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d262024"
+    },
+    {
+      "departement": "88",
+      "nom": "Pharmacie Des Lacs",
+      "url": "https://mapharma.net/88400?c=92&l=0",
+      "location": {
+        "longitude": 6.9266,
+        "latitude": 48.083113,
+        "city": "XONRUPT LONGEMER"
+      },
+      "metadata": {
+        "address": "158 rue de l'H\u00f4tel de Ville, 88400 XONRUPT LONGEMER",
+        "business_hours": {
+          "lundi": "09:00 \u2013 12:00, 14:00 \u2013 19:00",
+          "mardi": "09:00 \u2013 12:00, 14:00 \u2013 19:00",
+          "mercredi": "09:00 \u2013 12:00, 14:00 \u2013 19:00",
+          "jeudi": "09:00 \u2013 12:00, 14:00 \u2013 19:00",
+          "vendredi": "09:00 \u2013 12:00, 14:00 \u2013 19:00",
+          "samedi": "09:00 \u2013 12:00, 14:00 \u2013 18:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "mapharma3f633d3932266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:20:14.698555+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "3f633d3932266c3d30"
+    }
+  ]
+}

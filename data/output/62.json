@@ -1,0 +1,1174 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.566276+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "62",
+      "nom": "Pharmacie Centrale Henin Beaumont",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-centrale-henin-beaumont-henin-beaumont",
+      "location": {
+        "longitude": 2.9487318,
+        "latitude": 50.4203365,
+        "city": "henin-beaumont"
+      },
+      "metadata": {
+        "address": "74 Place Carnot, 62110 H\u00e9nin-Beaumont",
+        "phone_number": "+33321200024",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-05-12T09:30:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 25,
+      "internal_id": "ordoclic4b05eead",
+      "vaccine_type": [
+        "AstraZeneca",
+        "Janssen"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:39:59.056762+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 7
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 25
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 25
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 25
+        }
+      ],
+      "gid": "4b05eead"
+    },
+    {
+      "departement": "62",
+      "nom": "Pharmacie Leusch",
+      "url": "https://www.maiia.com/pharmacie/62223-saint-nicolas/pharmacie-leusch?centerid=6034db95698e2a173a3125a7",
+      "location": {
+        "longitude": 2.789323,
+        "latitude": 50.300587,
+        "city": "Saint-Nicolas"
+      },
+      "metadata": {
+        "address": "42 Rue de la Forge au Fer 62223 Saint-Nicolas",
+        "phone_number": "+33321553841",
+        "business_hours": {
+          "Lundi": "09:00-12:15 14:00-19:30",
+          "Mardi": "09:00-12:15 14:00-19:30",
+          "Mercredi": "09:00-12:15 14:00-19:30",
+          "Jeudi": "09:00-12:15 14:00-19:30",
+          "Vendredi": "09:00-12:15 14:00-19:30",
+          "Samedi": "09:00-13:00"
+        }
+      },
+      "prochain_rdv": "2021-05-12T12:15:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 3,
+      "internal_id": "maiia6034db95698e2a173a3125a7",
+      "vaccine_type": [
+        "AstraZeneca",
+        "Janssen"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527457+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 3
+        }
+      ],
+      "gid": "6034db95"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination  - Fondation Hopale, Kursaal",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/berck-62600/fondation-hopale/centre-de-vaccination-de-la-fondation-hopale",
+      "location": {
+        "longitude": 1.5665,
+        "latitude": 50.4077,
+        "city": "Berck"
+      },
+      "metadata": {
+        "address": " Avenue du G\u00e9n\u00e9ral de Gaulle, 62600 Berck",
+        "phone_number": "+33321899051",
+        "business_hours": {
+          "lundi": "",
+          "mardi": "",
+          "mercredi": "",
+          "jeudi": "",
+          "vendredi": "",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-13T08:30:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 162,
+      "internal_id": "keldoc1183",
+      "vaccine_type": [
+        "Moderna",
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347187+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 162
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 162
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 162
+        }
+      ],
+      "gid": "1183"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de Vaccination Lievin-Pays Dartois",
+      "url": "https://www.maiia.com/centre-de-vaccination/62800-lievin/centre-de-vaccination-lievin-pays-dartois?centerid=5f92930176af0c5443ff0b63",
+      "location": {
+        "longitude": 2.77876,
+        "latitude": 50.42635,
+        "city": "Li\u00e9vin"
+      },
+      "metadata": {
+        "address": "Rue Montgolfier 62800 Li\u00e9vin",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-05-15T06:30:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 1400,
+      "internal_id": "maiia5f92930176af0c5443ff0b63",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.526939+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 7
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 25
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 1400
+        }
+      ],
+      "gid": "5f929301"
+    },
+    {
+      "departement": "62",
+      "nom": "Pharmacie du Marais",
+      "url": "https://www.maiia.com/pharmacie/62120-norrent-fontes/pharmacie-du-marais?centerid=6013df72292703309f812d58",
+      "location": {
+        "longitude": 2.408022,
+        "latitude": 50.585399,
+        "city": "Norrent-Fontes"
+      },
+      "metadata": {
+        "address": "49 Route Departementale 943 62120 Norrent-Fontes",
+        "business_hours": {
+          "Lundi": "08:30-12:15 14:00-19:15",
+          "Mardi": "08:30-12:15 14:00-19:15",
+          "Mercredi": "08:30-12:15 14:00-19:15",
+          "Jeudi": "08:30-12:15 14:00-19:15",
+          "Vendredi": "08:30-12:15 14:00-19:15",
+          "Samedi": "08:30-12:15",
+          "Dimanche": "08:30-12:15 14:00-19:15"
+        }
+      },
+      "prochain_rdv": "2021-05-17T12:10:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 7,
+      "internal_id": "maiia6013df72292703309f812d58",
+      "vaccine_type": [
+        "AstraZeneca",
+        "Janssen"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527107+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 7
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 7
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 7
+        }
+      ],
+      "gid": "6013df72"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "62",
+      "nom": "Groupe AHNAC",
+      "url": "https://www.doctolib.fr/espic-etablissement-de-sante-prive-d-interet-collectif/valenciennes-divion-henin-beaumont-lievin/groupe-ahnac?pid=practice-182024",
+      "location": {
+        "longitude": 2.962242,
+        "latitude": 50.410953,
+        "city": "H\u00e9nin-Beaumont"
+      },
+      "metadata": {
+        "address": "5001F Rue Ren\u00e9 Cassin, 62110 H\u00e9nin-Beaumont",
+        "phone_number": "+33321748005",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib54886pid182024",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d54886"
+    },
+    {
+      "departement": "62",
+      "nom": "Pharmacie de Catorive",
+      "url": "https://www.doctolib.fr/pharmacie/bethune/pharmacie-de-catorive",
+      "location": {
+        "longitude": 2.636293,
+        "latitude": 50.5369267,
+        "city": "B\u00e9thune"
+      },
+      "metadata": {
+        "address": "170 Rue d'Aire, 62400 B\u00e9thune",
+        "phone_number": "+33321572653",
+        "business_hours": {
+          "lundi": "08:00-13:00, 13:00-19:00",
+          "mardi": "08:00-13:00, 13:00-19:00",
+          "mercredi": "08:00-13:00, 13:00-19:00",
+          "jeudi": "08:00-13:00, 13:00-19:00",
+          "vendredi": "08:00-13:00, 13:00-19:00",
+          "samedi": "08:00-13:00, 13:00-18:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib249706",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d249706"
+    },
+    {
+      "departement": "62",
+      "nom": "Pharmacie de la Place Isbergues",
+      "url": "https://www.doctolib.fr/pharmacie/isbergues/pharmacie-de-la-place-isbergues",
+      "location": {
+        "longitude": 2.4710223,
+        "latitude": 50.618816,
+        "city": "Isbergues"
+      },
+      "metadata": {
+        "address": "130 Rue Roger Salengro, 62330 Isbergues",
+        "phone_number": "+33321011020",
+        "business_hours": {
+          "lundi": "08:30-12:15, 14:00-19:30",
+          "mardi": "08:30-12:15, 14:00-19:30",
+          "mercredi": "08:30-12:15, 14:00-19:30",
+          "jeudi": "08:30-12:15, 14:00-19:30",
+          "vendredi": "08:30-12:15, 14:00-19:30",
+          "samedi": "08:30-13:00",
+          "dimanche": "10:00-10:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib234784",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d234784"
+    },
+    {
+      "departement": "62",
+      "nom": "Dr Pierre GRAVE",
+      "url": "https://www.doctolib.fr/medecin-generaliste/saint-pol-sur-ternoise/pierre-grave",
+      "location": {
+        "longitude": 2.34250480000003,
+        "latitude": 50.3835726,
+        "city": "Saint-Pol-sur-Ternoise"
+      },
+      "metadata": {
+        "address": "102 Rue de B\u00e9thune, 62130 Saint-Pol-sur-Ternoise",
+        "business_hours": {
+          "lundi": "08:00-18:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-18:00",
+          "jeudi": "08:00-18:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib62969",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d62969"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination Covid-19 - B\u00e9thune",
+      "url": "https://www.doctolib.fr/centre-de-sante/bethune/centre-de-vaccination-covid-19-bethune",
+      "location": {
+        "longitude": 2.6353167,
+        "latitude": 50.5326086,
+        "city": "B\u00e9thune"
+      },
+      "metadata": {
+        "address": "335 Rue Fernand Bar, 62400 B\u00e9thune",
+        "phone_number": "+33321214481",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-19:00",
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib256171",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d256171"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination Covid-19 - Roger Couderc",
+      "url": "https://www.doctolib.fr/centre-de-vaccinations-internationales/auchel/centre-de-vaccination-covid-19-roger-couderc",
+      "location": {
+        "longitude": 2.4734732,
+        "latitude": 50.5033372,
+        "city": "Auchel"
+      },
+      "metadata": {
+        "address": "Rue Martin Luther King, 62260 Auchel",
+        "phone_number": "+33800009110",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-19:00",
+          "mardi": "09:00-13:00, 14:00-19:00",
+          "mercredi": "09:00-13:00, 14:00-19:00",
+          "jeudi": "09:00-13:00, 14:00-19:00",
+          "vendredi": "09:00-13:00, 14:00-19:00",
+          "samedi": "09:00-13:00, 14:00-19:00",
+          "dimanche": "09:00-13:00, 14:00-19:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib258577",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d258577"
+    },
+    {
+      "departement": "62",
+      "nom": "GHT Artois-Ternois - Vaccination Covid 19 - Arras",
+      "url": "https://www.doctolib.fr/hopital-public/arras/ght-artois-ternois-vaccination-covid",
+      "location": {
+        "longitude": 2.7544433,
+        "latitude": 50.2970709,
+        "city": "Arras"
+      },
+      "metadata": {
+        "address": "57 Avenue Winston Churchill, 62000 Arras",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "08:00-18:00",
+          "mardi": "08:00-18:00",
+          "mercredi": "08:00-18:00",
+          "jeudi": "08:00-18:00",
+          "vendredi": "08:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242237pid163451",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d242237"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination Covid-19 - Salle Roger Couderc",
+      "url": "https://www.doctolib.fr/centre-de-sante/auchel/centre-de-vaccination-covid-19-salle-roger-couderc",
+      "location": {
+        "longitude": 2.4734732,
+        "latitude": 50.5033372,
+        "city": "Auchel"
+      },
+      "metadata": {
+        "address": "Rue Martin Luther King, 62260 Auchel",
+        "phone_number": "+33800009110",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-19:00",
+          "mardi": "09:00-13:00, 14:00-19:00",
+          "mercredi": "09:00-13:00, 14:00-19:00",
+          "jeudi": "09:00-13:00, 14:00-19:00",
+          "vendredi": "09:00-13:00, 14:00-19:00",
+          "samedi": "09:00-13:00, 14:00-19:00",
+          "dimanche": "09:00-13:00, 14:00-19:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib268019",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d268019"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination Covid-19 - Forum Gambetta",
+      "url": "https://www.doctolib.fr/centre-de-sante/calais/centre-de-vaccination-covid-19-forum-gambetta",
+      "location": {
+        "longitude": 1.8499187,
+        "latitude": 50.9471366,
+        "city": "Calais"
+      },
+      "metadata": {
+        "address": "23 Boulevard Gambetta, 62100 Calais",
+        "phone_number": "+33321462056",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": "08:00-20:00",
+          "dimanche": "08:00-20:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib243031",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d243031"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination Covid-19 MCO (Groupe HPL)",
+      "url": "https://www.doctolib.fr/clinique-privee/saint-martin-boulogne/centre-de-vaccination-mco-groupe-hpl",
+      "location": {
+        "longitude": 1.6416137,
+        "latitude": 50.7230804,
+        "city": "Saint-Martin-Boulogne"
+      },
+      "metadata": {
+        "address": "Route de Desvres, 62280 Saint-Martin-Boulogne",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242809pid164798",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d242809"
+    },
+    {
+      "departement": "62",
+      "nom": "GHT Artois-Ternois - Vaccination Covid 19 - Gauchin-Verloingt",
+      "url": "https://www.doctolib.fr/hopital-public/arras/ght-artois-ternois-vaccination-covid?pid=practice-163453",
+      "location": {
+        "longitude": 2.324028,
+        "latitude": 50.3782017,
+        "city": "Gauchin-Verloingt"
+      },
+      "metadata": {
+        "address": "176 Rue d'Hesdin, 62130 Gauchin-Verloingt",
+        "phone_number": "+33392043471",
+        "business_hours": {
+          "lundi": "08:00-18:00",
+          "mardi": "08:00-18:00",
+          "mercredi": "08:00-18:00",
+          "jeudi": "08:00-18:00",
+          "vendredi": "08:00-18:00",
+          "samedi": "08:00-18:00",
+          "dimanche": "08:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242237pid163453",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d242237"
+    },
+    {
+      "departement": "62",
+      "nom": "Centre de vaccination Covid-19 - Polyclinique de la Clarence",
+      "url": "https://www.doctolib.fr/centre-de-sante/divion/centre-de-vaccination-covid-19-polyclinique-de-la-clarence-divion",
+      "location": {
+        "longitude": 2.4874322,
+        "latitude": 50.4789812,
+        "city": "Divion"
+      },
+      "metadata": {
+        "address": "Rue Charles Legay, 62460 Divion",
+        "phone_number": "+33800009110",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-19:00",
+          "mardi": "09:00-13:00, 14:00-19:00",
+          "mercredi": "09:00-13:00, 14:00-19:00",
+          "jeudi": "09:00-13:00, 14:00-19:00",
+          "vendredi": "09:00-13:00, 14:00-19:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib264613",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d264613"
+    },
+    {
+      "departement": "62",
+      "nom": "Mme Christel DELATTRE",
+      "url": "https://www.doctolib.fr/infirmier/montreuil/christel-delattre",
+      "location": {
+        "longitude": 1.7598194,
+        "latitude": 50.4621564,
+        "city": "Montreuil"
+      },
+      "metadata": {
+        "address": "53 Place du G\u00e9n\u00e9ral de Gaulle, 62170 Montreuil",
+        "phone_number": "+33672806285",
+        "business_hours": {
+          "lundi": "06:00-19:30",
+          "mardi": "06:00-19:30",
+          "mercredi": "06:00-19:30",
+          "jeudi": "06:00-19:30",
+          "vendredi": "06:00-19:30",
+          "samedi": "06:00-19:30",
+          "dimanche": "06:00-19:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib265513",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d265513"
+    },
+    {
+      "departement": "62",
+      "nom": "Pharmacie D'Eleu",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-d'eleu-eleu-dit-leauwette",
+      "location": {
+        "longitude": 2.8171747,
+        "latitude": 50.4161742,
+        "city": "eleu-dit-leauwette"
+      },
+      "metadata": {
+        "address": "2 rue gabriel P\u00e9ri, 62300 ELEU-DIT-LEAUWETTE",
+        "phone_number": "+33321282330",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordoclice9c4990e",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "e9c4990e"
+    }
+  ]
+}

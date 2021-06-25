@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.539486+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "2B",
+      "nom": "Centre de vaccination - Centre Moriani (Plaine orientale nord)",
+      "url": "https://www.maiia.com/centre-de-vaccination/20230-san-nicolao/centre-de-vaccination---centre-moriani--plaine-orientale-nord-?centerid=60045bdc6ca5de6f1d289219",
+      "location": {
+        "longitude": 9.518812,
+        "latitude": 42.37009,
+        "city": "San-Nicolao"
+      },
+      "metadata": {
+        "address": "Le Chalet 20230 San-Nicolao",
+        "phone_number": "+33495604021",
+        "business_hours": {
+          "Lundi": "09:00-12:00 15:00-18:00",
+          "Mardi": "09:00-12:00 15:00-18:00",
+          "Mercredi": "09:00-12:00 15:00-18:00",
+          "Jeudi": "09:00-12:00 15:00-18:00",
+          "Vendredi": "09:00-12:00 15:00-18:00",
+          "Samedi": "09:00-12:00 15:00-18:00",
+          "Dimanche": "09:00-12:00 15:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-05-12T07:15:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 100,
+      "internal_id": "maiia60045bdc6ca5de6f1d289219",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527135+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 92
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 92
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 100
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 100
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 100
+        }
+      ],
+      "gid": "60045bdc"
+    }
+  ],
+  "centres_indisponibles": []
+}

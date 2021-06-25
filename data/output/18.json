@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.533641+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "18",
+      "nom": "Centre de vaccination COVID-19 d\u00e9l\u00e9gation d\u00e9partementale du SDIS du Cher",
+      "url": "https://www.doctolib.fr/centre-de-sante/bourges/centre-de-vaccination-covid-19-delegation-departementale-du-sdis-du-cher",
+      "location": {
+        "longitude": 2.3568733,
+        "latitude": 47.0827264,
+        "city": "Bourges"
+      },
+      "metadata": {
+        "address": "224 Rue Louis Mallet, 18000 Bourges",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": "09:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib267433",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d267433"
+    }
+  ]
+}

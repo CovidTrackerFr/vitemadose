@@ -1,0 +1,846 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.602177+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "95",
+      "nom": "Centre de vaccination territorial Centre Val d'Oise - Enghien-les-Bains",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/enghien-les-bains-95880/vaccination-plaine-vallee-enghien-les-bains?category=-1&cabinet=16606&specialty=496",
+      "location": {
+        "longitude": 2.30465,
+        "latitude": 48.9684,
+        "city": "Enghien-les-Bains"
+      },
+      "metadata": {
+        "address": "85 Rue du G\u00e9n\u00e9ral de Gaulle, 95880 Enghien-les-Bains",
+        "phone_number": "+33130103980",
+        "business_hours": {
+          "lundi": "9h-12h",
+          "mardi": "9h-12h",
+          "mercredi": "9h-12h",
+          "jeudi": "9h-12h",
+          "vendredi": "ferm\u00e9",
+          "samedi": "9h-12h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T14:20:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 15,
+      "internal_id": "keldoc827",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347500+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 15
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 15
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 15
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 15
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 15
+        }
+      ],
+      "gid": "827"
+    },
+    {
+      "departement": "95",
+      "nom": "Centre de vaccination territorial Centre Val d'Oise - Montmorency",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/montmorency-95160/vaccination-plaine-vallee-montmorency-salle-des-fetes?category=-1&cabinet=16607&specialty=496",
+      "location": {
+        "longitude": 2.32059,
+        "latitude": 48.9893,
+        "city": "Montmorency"
+      },
+      "metadata": {
+        "address": "3 Avenue Foch, 95160 Montmorency",
+        "phone_number": "+33130103980",
+        "business_hours": {
+          "lundi": "14h-17h",
+          "mardi": "14h-17h",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "14h-17h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T16:15:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 6,
+      "internal_id": "keldoc824",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347412+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 6
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 6
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 6
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 6
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 6
+        }
+      ],
+      "gid": "824"
+    },
+    {
+      "departement": "95",
+      "nom": "Centre de vaccination territorial Centre Val d'Oise - Saint-Brice-sous-For\u00eat",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/st-brice-sous-foret-95350/vaccination-plaine-vallee-saint-brice-sous-foret?category=-1&cabinet=16609&specialty=496",
+      "location": {
+        "longitude": 2.34897,
+        "latitude": 49.0047,
+        "city": "Saint-Brice-sous-For\u00eat"
+      },
+      "metadata": {
+        "address": "5bis Rue de la For\u00eat, 95350 Saint-Brice-sous-For\u00eat",
+        "phone_number": "+33130103980",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "14h-17h",
+          "jeudi": "14h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-13T18:20:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 124,
+      "internal_id": "keldoc822",
+      "vaccine_type": [
+        "ARNm"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.346978+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 124
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 124
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 124
+        }
+      ],
+      "gid": "822"
+    },
+    {
+      "departement": "95",
+      "nom": "Pharmacie De La Mairie",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-andilly",
+      "location": {
+        "longitude": 2.2988758,
+        "latitude": 49.0048594,
+        "city": "andilly"
+      },
+      "metadata": {
+        "address": "9 place louis jean finot, 95580 andilly",
+        "phone_number": "+33139592168",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-06-05T12:30:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 3,
+      "internal_id": "ordoclicace3c632",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:39:59.056832+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 3
+        }
+      ],
+      "gid": "ace3c632"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "95",
+      "nom": "Centre de vaccination Covid - Beaumont",
+      "url": "https://www.doctolib.fr/hopital-public/beaumont-sur-oise/centre-de-vaccination-covid-beaumont",
+      "location": {
+        "longitude": 2.2906753,
+        "latitude": 49.1448249,
+        "city": "Beaumont-sur-Oise"
+      },
+      "metadata": {
+        "address": "25 Rue Edmond Turcq, 95260 Beaumont-sur-Oise",
+        "phone_number": "+33139371472",
+        "business_hours": {
+          "lundi": "09:00-12:00",
+          "mardi": "09:00-12:00",
+          "mercredi": "09:00-12:00",
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242344",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d242344"
+    },
+    {
+      "departement": "95",
+      "nom": "Centre de vaccination Covid-19 - Beaumont",
+      "url": "https://www.doctolib.fr/centre-de-sante/beaumont-sur-oise/centre-de-vaccination-covid-19-beaumont-beaumont-sur-oise",
+      "location": {
+        "longitude": 2.2906753,
+        "latitude": 49.1448249,
+        "city": "Beaumont-sur-Oise"
+      },
+      "metadata": {
+        "address": "25 Rue Edmond Turcq, 95260 Beaumont-sur-Oise",
+        "phone_number": "+33139371472",
+        "business_hours": {
+          "lundi": "09:00-12:00",
+          "mardi": "09:00-12:00",
+          "mercredi": "09:00-12:00",
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib272283",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d272283"
+    },
+    {
+      "departement": "95",
+      "nom": "Pharmacie de la mairie Groslay",
+      "url": "https://www.doctolib.fr/pharmacie/groslay/pharmacie-de-la-mairie-groslay",
+      "location": {
+        "longitude": 2.3451673,
+        "latitude": 48.9869642,
+        "city": "Groslay"
+      },
+      "metadata": {
+        "address": "11 Rue du G\u00e9n\u00e9ral Leclerc, 95410 Groslay",
+        "phone_number": "+33986440646",
+        "business_hours": {
+          "lundi": "08:30-20:00",
+          "mardi": "08:30-20:00",
+          "mercredi": "08:30-20:00",
+          "jeudi": "08:30-20:00",
+          "vendredi": "08:30-20:00",
+          "samedi": "09:00-13:00, 14:00-19:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib264735",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d264735"
+    },
+    {
+      "departement": "95",
+      "nom": "Pharmacie de la Gare - Ermont",
+      "url": "https://www.doctolib.fr/pharmacie/ermont/pharmacie-de-la-gare-ermont",
+      "location": {
+        "longitude": 2.2709357,
+        "latitude": 48.9810275,
+        "city": "Ermont"
+      },
+      "metadata": {
+        "address": "437 Rue du G\u00e9n\u00e9ral Leclerc, 95120 Ermont",
+        "phone_number": "+33130727480",
+        "business_hours": {
+          "lundi": "07:30-21:00",
+          "mardi": "07:30-21:00",
+          "mercredi": "07:30-21:00",
+          "jeudi": "07:30-21:00",
+          "vendredi": "07:30-21:00",
+          "samedi": "09:00-20:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib252033",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d252033"
+    },
+    {
+      "departement": "95",
+      "nom": "Centre de vaccination CH Simone Veil Grand public",
+      "url": "https://www.doctolib.fr/hopital-public/eaubonne/ch-simone-veil-vaccination-covid",
+      "location": {
+        "longitude": 2.2713257,
+        "latitude": 49.0010332,
+        "city": "EAUBONNE"
+      },
+      "metadata": {
+        "address": "14 RUE DE SAINT PRIX, 95602 EAUBONNE",
+        "phone_number": "+33134066000",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib254831",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d254831"
+    },
+    {
+      "departement": "95",
+      "nom": "Pharmacie du March\u00e9",
+      "url": "https://www.doctolib.fr/pharmacie/le-plessis-bouchard/pharmacie-haggege",
+      "location": {
+        "longitude": 2.2372242,
+        "latitude": 48.9967906,
+        "city": "Le Plessis-Bouchard"
+      },
+      "metadata": {
+        "address": "2 Rue Charles de Gaulle, 95130 Le Plessis-Bouchard",
+        "business_hours": {
+          "lundi": "09:00-19:30",
+          "mardi": "09:00-19:30",
+          "mercredi": "09:00-19:30",
+          "jeudi": "09:00-19:30",
+          "vendredi": "09:00-19:30",
+          "samedi": "09:00-19:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib248763",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d248763"
+    },
+    {
+      "departement": "95",
+      "nom": "Pharmacie Du Forum",
+      "url": "https://www.doctolib.fr/pharmacie/saint-gratien/pharmacie-du-forum",
+      "location": {
+        "longitude": 2.2856671,
+        "latitude": 48.9686643,
+        "city": "Saint-Gratien"
+      },
+      "metadata": {
+        "address": "2 Rue du G\u00e9n\u00e9ral Leclerc, 95210 Saint-Gratien",
+        "phone_number": "+33139891854",
+        "business_hours": {
+          "lundi": "09:00-20:00",
+          "mardi": "09:00-20:00",
+          "mercredi": "09:00-20:00",
+          "jeudi": "09:00-20:00",
+          "vendredi": "09:00-20:00",
+          "samedi": "09:00-12:30, 14:30-19:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib254735",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d254735"
+    },
+    {
+      "departement": "95",
+      "nom": "Pharmacie Guignon",
+      "url": "https://www.doctolib.fr/pharmacie/franconville/pharmacie-guignon",
+      "location": {
+        "longitude": 2.227704,
+        "latitude": 48.984442,
+        "city": "Franconville"
+      },
+      "metadata": {
+        "address": "108 Rue du G\u00e9n\u00e9ral Leclerc, 95130 Franconville",
+        "phone_number": "+33134136926",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-19:30",
+          "mardi": "09:00-13:00, 14:00-19:30",
+          "mercredi": "09:00-13:00, 14:00-19:30",
+          "jeudi": "09:00-13:00, 14:00-19:30",
+          "vendredi": "09:00-13:00, 14:00-19:30",
+          "samedi": "09:00-13:00, 14:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib257068",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d257068"
+    },
+    {
+      "departement": "95",
+      "nom": "Olivier Sanchez",
+      "url": "https://app.ordoclic.fr/app/pharmacie/olivier-sanchez-la-frette-sur-seine",
+      "location": {
+        "longitude": 2.1826285,
+        "latitude": 48.980173,
+        "city": "la-frette-sur-seine"
+      },
+      "metadata": {
+        "address": "123 TER BD DE PONTOISE, 95530 LA FRETTE SUR SEINE",
+        "phone_number": "+33134508844",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordoclic91dc764f",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "91dc764f"
+    },
+    {
+      "departement": "95",
+      "nom": "Pharmacie du Vexin",
+      "url": "https://www.maiia.com/pharmacie/95420-magny-en-vexin/pharmacie-du-vexin?centerid=60409120484c650ca0a4550f",
+      "location": {
+        "longitude": 1.787433,
+        "latitude": 49.155283,
+        "city": "Magny-en-Vexin"
+      },
+      "metadata": {
+        "address": "20 Place de la Halle 95420 Magny-en-Vexin",
+        "phone_number": "+33134670032",
+        "business_hours": {
+          "Lundi": "09:00-19:00",
+          "Mardi": "09:00-19:00",
+          "Mercredi": "09:00-19:00",
+          "Jeudi": "09:00-19:00",
+          "Vendredi": "09:00-19:00",
+          "Samedi": "09:00-19:00",
+          "Dimanche": "09:00-19:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "maiia60409120",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:24:34.658140+02:00",
+      "appointment_schedules": null,
+      "gid": "60409120"
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.604796+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "973",
+      "nom": "Centre de vaccination - SDIS PROGT",
+      "url": "https://www.maiia.com/centre-de-vaccination/97351--matoury/centre-de-vaccination---sdis-progt?centerid=6091338ea8637a3a5d932dc1",
+      "location": {
+        "longitude": -52.323087,
+        "latitude": 4.931755,
+        "city": " Matoury"
+      },
+      "metadata": {
+        "address": "Palais R\u00e9gional Omnisport Georges Theolade Balata Abriba 97351  Matoury",
+        "phone_number": "+33594397333",
+        "business_hours": {
+          "Lundi": "07:30-16:00",
+          "Mardi": "07:30-16:00",
+          "Mercredi": "07:30-16:00",
+          "Jeudi": "07:30-16:00",
+          "Vendredi": "07:30-16:00",
+          "Samedi": "07:30-16:00",
+          "Dimanche": "07:30-16:00"
+        }
+      },
+      "prochain_rdv": "2021-05-11T16:15:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 300,
+      "internal_id": "maiia6091338ea8637a3a5d932dc1",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527018+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 100
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 36
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 100
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 200
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 300
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 300
+        }
+      ],
+      "gid": "6091338e"
+    },
+    {
+      "departement": "973",
+      "nom": "Centre de vaccination - CENTRE HOSPITALIER DE CAYENNE",
+      "url": "https://www.maiia.com/centre-de-vaccination/97306-cayenne/centre-de-vaccination---centre-hospitalier-de-cayenne?centerid=5fff697eb1a1aa1cc204f378",
+      "location": {
+        "longitude": -52.32041,
+        "latitude": 4.923198,
+        "city": "Cayenne"
+      },
+      "metadata": {
+        "address": "Route de Montabo L\u2019ENCRE (EPCC Les Trois Fleuves) 97306 Cayenne",
+        "phone_number": "+33594397333",
+        "business_hours": {
+          "Lundi": "07:00-17:00",
+          "Mardi": "07:00-17:00",
+          "Mercredi": "07:00-17:00",
+          "Jeudi": "07:00-17:00",
+          "Vendredi": "07:00-17:00",
+          "Samedi": "07:00-17:00",
+          "Dimanche": "07:00-17:00"
+        }
+      },
+      "prochain_rdv": "2021-05-13T11:35:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 800,
+      "internal_id": "maiia5fff697eb1a1aa1cc204f378",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527542+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 800
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 800
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 800
+        }
+      ],
+      "gid": "5fff697e"
+    },
+    {
+      "departement": "973",
+      "nom": "Centre de vaccination - CH DE KOUROU - M\u00e9diath\u00e8que",
+      "url": "https://www.maiia.com/centre-de-vaccination/97310-kourou/centre-de-vaccination---ch-de-kourou---mediatheque?centerid=5ffdf9eb9021595c9eb874bd",
+      "location": {
+        "longitude": -52.646444,
+        "latitude": 5.164318,
+        "city": "Kourou"
+      },
+      "metadata": {
+        "address": "Ave de Rue Thomas Guidiglo 97310 Kourou",
+        "phone_number": "+33594327746",
+        "business_hours": {
+          "Lundi": "08:30-19:20",
+          "Mardi": "08:30-19:20",
+          "Mercredi": "08:30-19:20",
+          "Jeudi": "08:30-19:20",
+          "Vendredi": "08:30-19:20",
+          "Samedi": "08:30-13:20",
+          "Dimanche": "08:30-13:20"
+        }
+      },
+      "prochain_rdv": "2021-05-15T15:20:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 1500,
+      "internal_id": "maiia5ffdf9eb9021595c9eb874bd",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527802+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 435
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 1500
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 1500
+        }
+      ],
+      "gid": "5ffdf9eb"
+    },
+    {
+      "departement": "973",
+      "nom": "Centre de vaccination - CH de l\u2019Ouest Guyanais",
+      "url": "https://www.maiia.com/centre-de-vaccination/97320-saint-laurent-du-maroni/centre-de-vaccination---ch-de-l-ouest-guyanais?centerid=5ffdf5e19021595c9eb874ac",
+      "location": {
+        "longitude": -54.03333,
+        "latitude": 5.5,
+        "city": "saint laurent du maroni"
+      },
+      "metadata": {
+        "address": "Avenue Paul Castaing 97320 saint laurent du maroni",
+        "phone_number": "+33594347488",
+        "business_hours": {
+          "Lundi": "10:30-18:00",
+          "Mardi": "09:00-16:00",
+          "Mercredi": "09:00-16:00",
+          "Jeudi": "09:00-16:00",
+          "Vendredi": "09:00-16:00",
+          "Samedi": "09:00-16:00",
+          "Dimanche": "09:00-16:00"
+        }
+      },
+      "prochain_rdv": "2021-05-18T17:20:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 600,
+      "internal_id": "maiia5ffdf5e19021595c9eb874ac",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527408+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 600
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 600
+        }
+      ],
+      "gid": "5ffdf5e1"
+    }
+  ],
+  "centres_indisponibles": []
+}

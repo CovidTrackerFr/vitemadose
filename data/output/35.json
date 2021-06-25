@@ -1,0 +1,475 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.545165+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "35",
+      "nom": "Centre de Vaccination Territorial de RETIERS",
+      "url": "https://www.maiia.com/centre-de-vaccination/35240-retiers/centre-de-vaccination-territorial-de-retiers-?centerid=60071225cd19c5464610ecfd",
+      "location": {
+        "longitude": -1.374349,
+        "latitude": 47.912604,
+        "city": "Retiers"
+      },
+      "metadata": {
+        "address": "Rue Victor hugo 35240 Retiers",
+        "business_hours": {
+          "Lundi": "07:30-13:00 14:00-20:30",
+          "Mardi": "07:30-13:00 14:00-20:30",
+          "Mercredi": "07:30-13:00 14:00-20:30",
+          "Jeudi": "07:30-13:00 14:00-20:30",
+          "Vendredi": "07:30-13:00 14:00-20:30",
+          "Samedi": "07:30-13:00 14:00-20:30",
+          "Dimanche": "07:30-13:00 14:00-20:30"
+        }
+      },
+      "prochain_rdv": "2021-06-08T09:10:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 300,
+      "internal_id": "maiia60071225cd19c5464610ecfd",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527319+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 300
+        }
+      ],
+      "gid": "60071225"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "35",
+      "nom": "GH Rance Emeraude - Vaccination Covid-19",
+      "url": "https://www.doctolib.fr/centre-de-sante/saint-malo-et-dinan/gh-rance-emeraude-vaccination-covid",
+      "location": {
+        "longitude": -2.0088861,
+        "latitude": 48.6374165,
+        "city": "Saint-Malo"
+      },
+      "metadata": {
+        "address": "1 Rue de la Marne, 35400 Saint-Malo",
+        "phone_number": "+33800009110",
+        "business_hours": {
+          "lundi": null,
+          "mardi": "09:00-12:30, 13:30-16:45",
+          "mercredi": "09:00-12:30, 13:30-16:45",
+          "jeudi": "09:00-12:30, 13:30-16:45",
+          "vendredi": "09:00-12:30, 13:30-16:45",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib241037pid163095",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d241037"
+    },
+    {
+      "departement": "35",
+      "nom": "Pharmacie Lafayette de la D\u00e9couverte",
+      "url": "https://www.doctolib.fr/pharmacie/saint-malo/pharmacie-lafayette-de-la-decouverte",
+      "location": {
+        "longitude": -1.9921269,
+        "latitude": 48.6374818,
+        "city": "Saint-Malo"
+      },
+      "metadata": {
+        "address": "39 Rue du P\u00e9rou, 35400 Saint-Malo",
+        "phone_number": "+33299818793",
+        "business_hours": {
+          "lundi": "09:00-19:30",
+          "mardi": "09:00-19:30",
+          "mercredi": "09:00-19:30",
+          "jeudi": "09:00-19:30",
+          "vendredi": "09:00-19:30",
+          "samedi": "09:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib259339",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d259339"
+    },
+    {
+      "departement": "35",
+      "nom": "Pharmacie des Corsaires Saint-Malo",
+      "url": "https://www.doctolib.fr/pharmacie/saint-malo/pharmacie-des-corsaires-saint-malo",
+      "location": {
+        "longitude": -1.9852403,
+        "latitude": 48.6582449,
+        "city": "Saint-Malo"
+      },
+      "metadata": {
+        "address": "5 Rue du Pr\u00e9sident Robert Schuman, 35400 Saint-Malo",
+        "phone_number": "+33299560110",
+        "business_hours": {
+          "lundi": "09:00-12:30, 14:00-19:30",
+          "mardi": "09:00-12:30, 14:00-19:30",
+          "mercredi": "09:00-12:30, 14:00-19:30",
+          "jeudi": "09:00-12:30, 14:00-19:30",
+          "vendredi": "09:00-12:30, 14:00-19:30",
+          "samedi": "09:00-12:30, 14:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib256348",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d256348"
+    },
+    {
+      "departement": "35",
+      "nom": "Centre de vaccination COVID-19 de Broc\u00e9liande",
+      "url": "https://www.doctolib.fr/centre-de-sante/montfort-sur-meu/centre-de-vaccination-covid-19-de-broceliande",
+      "location": {
+        "longitude": -1.9644586,
+        "latitude": 48.1381919,
+        "city": "Montfort-sur-Meu"
+      },
+      "metadata": {
+        "address": "1 Route d'Iffendic, 35160 Montfort-sur-Meu",
+        "phone_number": "+33805690821",
+        "business_hours": {
+          "lundi": "09:00-12:30, 14:00-18:00",
+          "mardi": "09:00-12:30, 14:00-18:00",
+          "mercredi": "09:00-12:30, 14:00-18:00",
+          "jeudi": "09:00-12:30, 14:00-18:00",
+          "vendredi": "09:00-12:30, 14:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib244874",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d244874"
+    },
+    {
+      "departement": "35",
+      "nom": "Dr Ludovic JOULAUD",
+      "url": "https://www.doctolib.fr/medecin-generaliste/saint-m-herve/ludovic-joulaud-saint-m-herve",
+      "location": {
+        "longitude": -1.11587170000007,
+        "latitude": 48.1784673,
+        "city": "Saint-M'Herv\u00e9"
+      },
+      "metadata": {
+        "address": "2 Rue d'Ern\u00e9e, 35500 Saint-M'Herv\u00e9",
+        "phone_number": "+33299767395",
+        "business_hours": {
+          "lundi": "10:00-13:00",
+          "mardi": "10:00-13:00",
+          "mercredi": "10:00-13:00",
+          "jeudi": null,
+          "vendredi": "10:00-13:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib47146",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d47146"
+    },
+    {
+      "departement": "35",
+      "nom": "BAIN DE BGNE-La Croix Rouge",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/bain-de-bretagne-35470/salle-des-fetes-de-bain-de-bretagne/centre-de-vaccination-de-la-salle-des-fetes-de-bain-de-bretagne",
+      "location": {
+        "longitude": -1.68564,
+        "latitude": 47.831,
+        "city": "Bain-de-Bretagne"
+      },
+      "metadata": {
+        "address": "75 La Croix Rouge, 35470 Bain-de-Bretagne",
+        "phone_number": "+33805690821",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "9h-12h / 14h-17h",
+          "mercredi": "9h-12h / 14h-17h",
+          "jeudi": "9h-12h / 14h-17h",
+          "vendredi": "9h-12h / 14h-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-18T14:55:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc1439",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347131+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "1439"
+    },
+    {
+      "departement": "35",
+      "nom": "Pharmacie Fran\u00e7ois Catherine",
+      "url": "https://www.maiia.com/pharmacie/35760-montgermont/pharmacie-francois-catherine?centerid=601d2b7a26b6634fdf1b3bc0",
+      "location": {
+        "longitude": -1.715901,
+        "latitude": 48.155585,
+        "city": "Montgermont"
+      },
+      "metadata": {
+        "address": "Place Jane Beusnel 35760 Montgermont",
+        "phone_number": "+33299689661",
+        "business_hours": {
+          "Lundi": "08:30-12:30 14:00-19:30",
+          "Mardi": "08:30-12:30 14:00-19:30",
+          "Mercredi": "08:30-12:30 14:00-19:30",
+          "Jeudi": "08:30-12:30 14:00-19:30",
+          "Vendredi": "08:30-12:30 14:00-19:30",
+          "Samedi": "09:00-12:30",
+          "Dimanche": "08:30-12:30 14:00-19:30"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "maiia601d2b7a",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "601d2b7a"
+    }
+  ]
+}

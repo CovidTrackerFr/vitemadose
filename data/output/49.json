@@ -1,0 +1,446 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.553349+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "49",
+      "nom": "Pharmacie De La Gare",
+      "url": "https://mapharma.net/49100-5?c=201&l=0",
+      "location": {
+        "longitude": -0.557994,
+        "latitude": 47.464515,
+        "city": "ANGERS"
+      },
+      "metadata": {
+        "address": "5 ESPLANADE DE LA GARE, 49100 ANGERS",
+        "business_hours": {
+          "lundi": "09:00 \u2013 19:00",
+          "mardi": "09:00 \u2013 19:00",
+          "mercredi": "09:00 \u2013 19:00",
+          "jeudi": "09:00 \u2013 19:00",
+          "vendredi": "09:00 \u2013 19:00",
+          "samedi": "09:00 \u2013 19:00",
+          "dimanche": "09:00 \u2013 19:30"
+        }
+      },
+      "prochain_rdv": "2021-05-11T18:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 3,
+      "internal_id": "mapharma2d353f633d323031266c3d3",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.935023+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 3
+        }
+      ],
+      "gid": "2d353f633d323031266c3d3"
+    },
+    {
+      "departement": "49",
+      "nom": "Pharmacie Grand Maine",
+      "url": "https://mapharma.net/49100-3?c=259&l=0",
+      "location": {
+        "longitude": -0.595416,
+        "latitude": 47.468377,
+        "city": "ANGERS"
+      },
+      "metadata": {
+        "address": "CENTRE CIAL GRAND MAINE RUE DU GRAND LAUNAY, 49100 ANGERS",
+        "business_hours": {
+          "lundi": "08:30 \u2013 19:30",
+          "mardi": "08:30 \u2013 19:30",
+          "mercredi": "08:30 \u2013 19:30",
+          "jeudi": "08:30 \u2013 19:30",
+          "vendredi": "08:30 \u2013 19:30",
+          "samedi": "08:30 \u2013 19:30",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-11T18:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 343,
+      "internal_id": "mapharma2d333f633d323539266c3d3",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.935042+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 28
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 213
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 343
+        }
+      ],
+      "gid": "2d333f633d323539266c3d3"
+    },
+    {
+      "departement": "49",
+      "nom": "Pharmacie Le Gall",
+      "url": "https://mapharma.net/49100-2?c=231&l=0",
+      "location": {
+        "longitude": -0.557354,
+        "latitude": 47.466778,
+        "city": "ANGERS"
+      },
+      "metadata": {
+        "address": "27 RUE HOCHE ET 8 PLACE DE LA VISITATION, 49100 ANGERS",
+        "business_hours": {
+          "lundi": "08:45 \u2013 20:30",
+          "mardi": "08:45 \u2013 20:30",
+          "mercredi": "08:45 \u2013 20:30",
+          "jeudi": "08:45 \u2013 20:30",
+          "vendredi": "08:45 \u2013 20:30",
+          "samedi": "08:45 \u2013 20:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-11T18:15:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 43,
+      "internal_id": "mapharma2d323f633d323331266c3d3",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.935014+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 2
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 13
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 43
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 43
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 43
+        }
+      ],
+      "gid": "2d323f633d323331266c3d3"
+    },
+    {
+      "departement": "49",
+      "nom": "Pharmacie Des Halles",
+      "url": "https://mapharma.net/49100-7?c=237&l=0",
+      "location": {
+        "longitude": -0.554808,
+        "latitude": 47.47116,
+        "city": "ANGERS"
+      },
+      "metadata": {
+        "address": "78 RUE BAUDRIERE, 49100 ANGERS",
+        "business_hours": {
+          "lundi": "09:00 \u2013 19:30",
+          "mardi": "09:00 \u2013 19:30",
+          "mercredi": "09:00 \u2013 19:30",
+          "jeudi": "09:00 \u2013 19:30",
+          "vendredi": "09:00 \u2013 19:30",
+          "samedi": "09:00 \u2013 18:30",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-11T18:30:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 1,
+      "internal_id": "mapharma2d373f633d323337266c3d3",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.935032+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 1
+        }
+      ],
+      "gid": "2d373f633d323337266c3d3"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "49",
+      "nom": "Mme Claire TRANAIN",
+      "url": "https://www.doctolib.fr/infirmier/trelaze/claire-tranain",
+      "location": {
+        "longitude": -0.4685464,
+        "latitude": 47.4536586,
+        "city": "Tr\u00e9laz\u00e9"
+      },
+      "metadata": {
+        "address": "10 Rue Christophe Colomb, 49800 Tr\u00e9laz\u00e9",
+        "phone_number": "+33698344945",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib268904",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d268904"
+    },
+    {
+      "departement": "49",
+      "nom": "Pharmacie Le Gall",
+      "url": "https://mapharma.net/49100-2?c=250&l=0",
+      "location": {
+        "longitude": -0.557354,
+        "latitude": 47.466778,
+        "city": "ANGERS"
+      },
+      "metadata": {
+        "address": "27 RUE HOCHE ET 8 PLACE DE LA VISITATION, 49100 ANGERS",
+        "business_hours": {
+          "lundi": "08:45 \u2013 20:30",
+          "mardi": "08:45 \u2013 20:30",
+          "mercredi": "08:45 \u2013 20:30",
+          "jeudi": "08:45 \u2013 20:30",
+          "vendredi": "08:45 \u2013 20:30",
+          "samedi": "08:45 \u2013 20:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "mapharma2d323f633d323530266c3d3",
+      "vaccine_type": [
+        "Janssen"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "2d323f633d323530266c3d3"
+    }
+  ]
+}

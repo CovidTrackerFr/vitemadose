@@ -1,0 +1,371 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.505814+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "04",
+      "nom": "Palais des Congr\u00e8s",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/digne-les-bains-04000/centre-de-vaccination-palais-des-congres-de-digne-les-bains?category=-1&cabinet=16641&specialty=496",
+      "location": {
+        "longitude": 6.22994,
+        "latitude": 44.0996,
+        "city": "Digne-les-Bains"
+      },
+      "metadata": {
+        "address": "1 Place de la R\u00e9publique/rue de la R\u00e9publique, 04000 Digne-les-Bains",
+        "phone_number": "+33423101175",
+        "business_hours": {
+          "lundi": "09h-13h/14h-17h30",
+          "mardi": "09h-13h/14h-17h30",
+          "mercredi": "09h-13h/14h-17h30",
+          "jeudi": "09h-13h/14h-17h30",
+          "vendredi": "09h-13h/14h-17h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T08:30:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 16,
+      "internal_id": "keldoc1001",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347244+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 16
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 16
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 16
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 16
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 16
+        }
+      ],
+      "gid": "1001"
+    },
+    {
+      "departement": "04",
+      "nom": "Palais des Congr\u00e8s (temporaire)",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/digne-les-bains-04000/centre-de-vaccination-palais-des-congres-de-digne-les-bains?agenda=55824&motive=95356&category=3582&cabinet=16641&specialty=496",
+      "location": {
+        "longitude": 6.23056,
+        "latitude": 44.0996,
+        "city": "Digne-les-Bains"
+      },
+      "metadata": {
+        "address": "1 Place de la R\u00e9publique/rue de la R\u00e9publique, 04000 Digne-les-Bains",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "9h-13h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T08:30:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 16,
+      "internal_id": "keldoc2453",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347405+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 16
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 16
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 16
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 16
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 16
+        }
+      ],
+      "gid": "2453"
+    },
+    {
+      "departement": "04",
+      "nom": "Centre de vaccination - MANOSQUE",
+      "url": "https://www.maiia.com/centre-de-vaccination/04100-manosque/centre-de-vaccination---manosque?centerid=6000745619fa1c60a4ff66b7",
+      "location": {
+        "longitude": 5.797885,
+        "latitude": 43.827741,
+        "city": "Manosque"
+      },
+      "metadata": {
+        "address": "611 Avenue du Moulin Neuf 04100 Manosque",
+        "phone_number": "+33492703456",
+        "business_hours": {
+          "Lundi": "08:30-12:30 13:30-17:30",
+          "Mardi": "08:30-12:30 13:30-17:30",
+          "Mercredi": "08:30-12:30 13:30-17:30",
+          "Jeudi": "08:30-12:30 13:30-17:30",
+          "Vendredi": "08:30-12:30 13:30-17:30",
+          "Samedi": "08:30-12:30 13:30-17:30",
+          "Dimanche": "08:30-12:30 13:30-17:30"
+        }
+      },
+      "prochain_rdv": "2021-05-25T13:00:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 300,
+      "internal_id": "maiia6000745619fa1c60a4ff66b7",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527269+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 300
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 300
+        }
+      ],
+      "gid": "60007456"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "04",
+      "nom": "Centre de vaccination COVID-19 de la ville de Barcelonnette",
+      "url": "https://www.doctolib.fr/centre-de-vaccinations-internationales/barcelonnette/centre-de-vaccination-de-la-ville-de-barcelonnette",
+      "location": {
+        "longitude": 6.6510893,
+        "latitude": 44.3859132,
+        "city": "Barcelonnette"
+      },
+      "metadata": {
+        "address": "Place Aim\u00e9 Gassier, 04400 Barcelonnette",
+        "phone_number": "+33492807900",
+        "business_hours": {
+          "lundi": "08:30-12:00, 14:00-16:30",
+          "mardi": "08:30-12:00, 14:00-16:30",
+          "mercredi": "08:30-12:00, 14:00-16:30",
+          "jeudi": "08:30-12:00, 14:00-16:30",
+          "vendredi": "08:30-12:00, 14:00-16:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242378",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d242378"
+    },
+    {
+      "departement": "04",
+      "nom": "Centre de Vaccination -  Ville de Forcalquier",
+      "url": "https://www.doctolib.fr/centre-de-sante/forcalquier/centre-de-vaccination-ville-de-forcalquier",
+      "location": {
+        "longitude": 5.7806289,
+        "latitude": 43.9598484,
+        "city": "Forcalquier"
+      },
+      "metadata": {
+        "address": "1 Place du Bourguet, 04300 Forcalquier",
+        "phone_number": "+33776150710",
+        "business_hours": {
+          "lundi": "08:00-12:00, 14:00-17:00",
+          "mardi": "08:00-12:00, 14:00-17:00",
+          "mercredi": "08:00-12:00, 14:00-17:00",
+          "jeudi": "08:00-12:00, 14:00-17:00",
+          "vendredi": "08:00-12:00, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242836",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d242836"
+    },
+    {
+      "departement": "04",
+      "nom": "Salle de l'Ermitage",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/digne-les-bains-04000/centre-de-vaccination-salle-de-l-ermitage",
+      "location": {
+        "longitude": 6.22729,
+        "latitude": 44.0855,
+        "city": "Digne-les-Bains"
+      },
+      "metadata": {
+        "address": "33 Boulevard Gambetta, 04000 Digne-les-Bains",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "13h - 18h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-07-30T13:00:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc2456",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347004+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "2456"
+    }
+  ]
+}

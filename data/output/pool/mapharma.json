@@ -1,0 +1,1781 @@
+{
+  "version": 1,
+  "pool": "mapharma",
+  "last_updated": "2021-05-11T18:15:43.206518+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "59",
+      "nom": "Pharmacie Des Remparts",
+      "url": "https://mapharma.net/59530?c=102&l=0",
+      "location": {
+        "longitude": 3.637413,
+        "latitude": 50.247392,
+        "city": "LE QUESNOY"
+      },
+      "metadata": {
+        "address": "2 rue Gambetta, 59530 LE QUESNOY",
+        "business_hours": {
+          "lundi": "13:30 \u2013 19:30",
+          "mardi": "08:30 \u2013 12:15, 13:45 \u2013 19:30",
+          "mercredi": "08:30 \u2013 12:15, 13:45 \u2013 19:30",
+          "jeudi": "08:30 \u2013 12:15, 13:45 \u2013 19:30",
+          "vendredi": "08:30 \u2013 12:15, 13:45 \u2013 19:30",
+          "samedi": "08:30 \u2013 12:30",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-11T18:20:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 270,
+      "internal_id": "mapharma3f633d313032266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202189+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 14
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 41
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 102
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 210
+        }
+      ],
+      "gid": "3f633d313032266c3d30"
+    },
+    {
+      "departement": "49",
+      "nom": "Pharmacie Des Halles",
+      "url": "https://mapharma.net/49100-7?c=237&l=0",
+      "location": {
+        "longitude": -0.554808,
+        "latitude": 47.47116,
+        "city": "ANGERS"
+      },
+      "metadata": {
+        "address": "78 RUE BAUDRIERE, 49100 ANGERS",
+        "business_hours": {
+          "lundi": "09:00 \u2013 19:30",
+          "mardi": "09:00 \u2013 19:30",
+          "mercredi": "09:00 \u2013 19:30",
+          "jeudi": "09:00 \u2013 19:30",
+          "vendredi": "09:00 \u2013 19:30",
+          "samedi": "09:00 \u2013 18:30",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-11T18:30:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 1,
+      "internal_id": "mapharma2d373f633d323337266c3d3",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202125+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 1
+        }
+      ],
+      "gid": "2d373f633d323337266c3d3"
+    },
+    {
+      "departement": "49",
+      "nom": "Pharmacie Grand Maine",
+      "url": "https://mapharma.net/49100-3?c=259&l=0",
+      "location": {
+        "longitude": -0.595416,
+        "latitude": 47.468377,
+        "city": "ANGERS"
+      },
+      "metadata": {
+        "address": "CENTRE CIAL GRAND MAINE RUE DU GRAND LAUNAY, 49100 ANGERS",
+        "business_hours": {
+          "lundi": "08:30 \u2013 19:30",
+          "mardi": "08:30 \u2013 19:30",
+          "mercredi": "08:30 \u2013 19:30",
+          "jeudi": "08:30 \u2013 19:30",
+          "vendredi": "08:30 \u2013 19:30",
+          "samedi": "08:30 \u2013 19:30",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-11T18:30:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 341,
+      "internal_id": "mapharma2d333f633d323539266c3d3",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202174+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 26
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 211
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 341
+        }
+      ],
+      "gid": "2d333f633d323539266c3d3"
+    },
+    {
+      "departement": "49",
+      "nom": "Pharmacie De La Gare",
+      "url": "https://mapharma.net/49100-5?c=201&l=0",
+      "location": {
+        "longitude": -0.557994,
+        "latitude": 47.464515,
+        "city": "ANGERS"
+      },
+      "metadata": {
+        "address": "5 ESPLANADE DE LA GARE, 49100 ANGERS",
+        "business_hours": {
+          "lundi": "09:00 \u2013 19:00",
+          "mardi": "09:00 \u2013 19:00",
+          "mercredi": "09:00 \u2013 19:00",
+          "jeudi": "09:00 \u2013 19:00",
+          "vendredi": "09:00 \u2013 19:00",
+          "samedi": "09:00 \u2013 19:00",
+          "dimanche": "09:00 \u2013 19:30"
+        }
+      },
+      "prochain_rdv": "2021-05-11T18:30:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 1,
+      "internal_id": "mapharma2d353f633d323031266c3d3",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202181+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 1
+        }
+      ],
+      "gid": "2d353f633d323031266c3d3"
+    },
+    {
+      "departement": "49",
+      "nom": "Pharmacie Le Gall",
+      "url": "https://mapharma.net/49100-2?c=231&l=0",
+      "location": {
+        "longitude": -0.557354,
+        "latitude": 47.466778,
+        "city": "ANGERS"
+      },
+      "metadata": {
+        "address": "27 RUE HOCHE ET 8 PLACE DE LA VISITATION, 49100 ANGERS",
+        "business_hours": {
+          "lundi": "08:45 \u2013 20:30",
+          "mardi": "08:45 \u2013 20:30",
+          "mercredi": "08:45 \u2013 20:30",
+          "jeudi": "08:45 \u2013 20:30",
+          "vendredi": "08:45 \u2013 20:30",
+          "samedi": "08:45 \u2013 20:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-11T18:40:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 42,
+      "internal_id": "mapharma2d323f633d323331266c3d3",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202151+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 12
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 42
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 42
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 42
+        }
+      ],
+      "gid": "2d323f633d323331266c3d3"
+    },
+    {
+      "departement": "972",
+      "nom": "Pharmacie Gely Kst",
+      "url": "https://mapharma.net/97200?c=60&l=0",
+      "location": {
+        "longitude": -61.071282,
+        "latitude": 14.606159,
+        "city": "FORT DE FRANCE"
+      },
+      "metadata": {
+        "address": "angle rue Lamartine & Isambert, 97200 FORT DE FRANCE",
+        "business_hours": {
+          "lundi": "07:00 \u2013 18:00",
+          "mardi": "07:00 \u2013 18:00",
+          "mercredi": "07:00 \u2013 18:00",
+          "jeudi": "07:00 \u2013 18:00",
+          "vendredi": "07:00 \u2013 18:00",
+          "samedi": "07:00 \u2013 16:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T08:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 48,
+      "internal_id": "mapharma3f633d3630266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202198+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 24
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 48
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 48
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 48
+        }
+      ],
+      "gid": "3f633d3630266c3d30"
+    },
+    {
+      "departement": "60",
+      "nom": "Pharmacie De L'Eglise",
+      "url": "https://mapharma.net/60550?c=64&l=0",
+      "location": {
+        "longitude": 2.517184,
+        "latitude": 49.274876,
+        "city": "VERNEUIL EN HALATTE"
+      },
+      "metadata": {
+        "address": "6 Place de l'Eglise, 60550 VERNEUIL EN HALATTE",
+        "business_hours": {
+          "lundi": "08:30 \u2013 12:30, 14:00 \u2013 19:30",
+          "mardi": "08:30 \u2013 12:30, 14:00 \u2013 19:30",
+          "mercredi": "08:30 \u2013 12:30, 14:00 \u2013 19:30",
+          "jeudi": "08:30 \u2013 12:30, 14:00 \u2013 19:30",
+          "vendredi": "08:30 \u2013 12:30, 14:00 \u2013 19:30",
+          "samedi": "08:30 \u2013 12:30, 14:00 \u2013 16:30",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T09:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 1170,
+      "internal_id": "mapharma3f633d3634266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202214+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 39
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 117
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 585
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 1053
+        }
+      ],
+      "gid": "3f633d3634266c3d30"
+    },
+    {
+      "departement": "974",
+      "nom": "Pharmacie Du Petit Bazar",
+      "url": "https://mapharma.net/97440-2?c=162&l=0",
+      "location": {
+        "longitude": 55.647806,
+        "latitude": -20.945999,
+        "city": "SAINT ANDRE"
+      },
+      "metadata": {
+        "address": "1631 Avenue \u00cele-de-France, 97440 SAINT ANDRE",
+        "business_hours": {
+          "lundi": "08:00 \u2013 19:30",
+          "mardi": "08:00 \u2013 19:30",
+          "mercredi": "08:00 \u2013 19:30",
+          "jeudi": "08:00 \u2013 19:30",
+          "vendredi": "08:00 \u2013 19:30",
+          "samedi": "08:00 \u2013 19:30",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T10:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 1104,
+      "internal_id": "mapharma2d323f633d313632266c3d3",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202221+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 24
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 120
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 552
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 984
+        }
+      ],
+      "gid": "2d323f633d313632266c3d3"
+    },
+    {
+      "departement": "88",
+      "nom": "Pharmacie Bloch",
+      "url": "https://mapharma.net/88600?c=123&l=0",
+      "location": {
+        "longitude": 6.725223,
+        "latitude": 48.199851,
+        "city": "BRUYERES"
+      },
+      "metadata": {
+        "address": "8 route de G\u00e9rardmer, 88600 BRUYERES",
+        "business_hours": {
+          "lundi": "08:30 \u2013 12:15, 13:45 \u2013 19:30",
+          "mardi": "08:30 \u2013 12:15, 13:45 \u2013 19:30",
+          "mercredi": "08:30 \u2013 12:15, 13:45 \u2013 19:30",
+          "jeudi": "08:30 \u2013 12:15, 13:45 \u2013 19:30",
+          "vendredi": "08:30 \u2013 12:15, 13:45 \u2013 19:30",
+          "samedi": "08:30 \u2013 12:15, 13:45 \u2013 18:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T17:50:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 3,
+      "internal_id": "mapharma3f633d313233266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202166+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 3
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 3
+        }
+      ],
+      "gid": "3f633d313233266c3d30"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des Floralies - VALLAURIS",
+      "url": "https://mapharma.net/06220?c=294&l=0",
+      "location": {
+        "longitude": 7.05004,
+        "latitude": 43.57604,
+        "city": "VALLAURIS"
+      },
+      "metadata": {
+        "address": "41 Avenue de Cannes, 06220 VALLAURIS",
+        "business_hours": {
+          "lundi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mardi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mercredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "jeudi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "vendredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "samedi": "08:15 \u2013 12:30, 14:00 \u2013 19:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-14T09:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 4,
+      "internal_id": "mapharma3f633d323934266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202012+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 4
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 4
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 4
+        }
+      ],
+      "gid": "3f633d323934266c3d30"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des Floralies - VALLAURIS",
+      "url": "https://mapharma.net/06220?c=295&l=0",
+      "location": {
+        "longitude": 7.05004,
+        "latitude": 43.57604,
+        "city": "VALLAURIS"
+      },
+      "metadata": {
+        "address": "41 Avenue de Cannes, 06220 VALLAURIS",
+        "business_hours": {
+          "lundi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mardi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mercredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "jeudi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "vendredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "samedi": "08:15 \u2013 12:30, 14:00 \u2013 19:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-17T09:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 5,
+      "internal_id": "mapharma3f633d323935266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202108+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 5
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 5
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 5
+        }
+      ],
+      "gid": "3f633d323935266c3d30"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des Floralies - VALLAURIS",
+      "url": "https://mapharma.net/06220?c=297&l=0",
+      "location": {
+        "longitude": 7.05004,
+        "latitude": 43.57604,
+        "city": "VALLAURIS"
+      },
+      "metadata": {
+        "address": "41 Avenue de Cannes, 06220 VALLAURIS",
+        "business_hours": {
+          "lundi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mardi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mercredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "jeudi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "vendredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "samedi": "08:15 \u2013 12:30, 14:00 \u2013 19:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-17T16:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 4,
+      "internal_id": "mapharma3f633d323937266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202064+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 4
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 4
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 4
+        }
+      ],
+      "gid": "3f633d323937266c3d30"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des Floralies - VALLAURIS",
+      "url": "https://mapharma.net/06220?c=298&l=0",
+      "location": {
+        "longitude": 7.05004,
+        "latitude": 43.57604,
+        "city": "VALLAURIS"
+      },
+      "metadata": {
+        "address": "41 Avenue de Cannes, 06220 VALLAURIS",
+        "business_hours": {
+          "lundi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mardi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mercredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "jeudi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "vendredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "samedi": "08:15 \u2013 12:30, 14:00 \u2013 19:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-18T09:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 6,
+      "internal_id": "mapharma3f633d323938266c3d30",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202100+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 6
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 6
+        }
+      ],
+      "gid": "3f633d323938266c3d30"
+    },
+    {
+      "departement": "86",
+      "nom": "Pharmacie De L'Espace Lyautey",
+      "url": "https://mapharma.net/86100?c=303&l=0",
+      "location": {
+        "longitude": 0.541342,
+        "latitude": 46.802117,
+        "city": "CHATELLERAULT"
+      },
+      "metadata": {
+        "address": "32 rue Marius Montier, 86100 CHATELLERAULT",
+        "business_hours": {
+          "lundi": "08:30 \u2013 13:00, 14:00 \u2013 19:30",
+          "mardi": "08:30 \u2013 13:00, 14:00 \u2013 19:30",
+          "mercredi": "08:30 \u2013 13:00, 14:00 \u2013 19:30",
+          "jeudi": "08:30 \u2013 13:00, 14:00 \u2013 19:30",
+          "vendredi": "08:30 \u2013 13:00, 14:00 \u2013 19:30",
+          "samedi": "09:00 \u2013 12:30, 14:00 \u2013 18:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-18T10:15:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 6,
+      "internal_id": "mapharma3f633d333033266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202158+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 6
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 6
+        }
+      ],
+      "gid": "3f633d333033266c3d30"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des Floralies - VALLAURIS",
+      "url": "https://mapharma.net/06220?c=299&l=0",
+      "location": {
+        "longitude": 7.05004,
+        "latitude": 43.57604,
+        "city": "VALLAURIS"
+      },
+      "metadata": {
+        "address": "41 Avenue de Cannes, 06220 VALLAURIS",
+        "business_hours": {
+          "lundi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mardi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mercredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "jeudi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "vendredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "samedi": "08:15 \u2013 12:30, 14:00 \u2013 19:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-18T16:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 9,
+      "internal_id": "mapharma3f633d323939266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202083+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 9
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 9
+        }
+      ],
+      "gid": "3f633d323939266c3d30"
+    },
+    {
+      "departement": "38",
+      "nom": "Pharmacie Du Centre",
+      "url": "https://mapharma.net/38290?c=292&l=0",
+      "location": {
+        "longitude": 5.146132,
+        "latitude": 45.634376,
+        "city": "LA VERPILLIERE"
+      },
+      "metadata": {
+        "address": "90, place Joseph Serlin, 38290 LA VERPILLIERE",
+        "business_hours": {
+          "lundi": "08:30 \u2013 12:30, 14:00 \u2013 19:30",
+          "mardi": "08:30 \u2013 12:30, 14:00 \u2013 19:30",
+          "mercredi": "08:30 \u2013 12:30, 14:00 \u2013 19:30",
+          "jeudi": "08:30 \u2013 12:30, 14:00 \u2013 19:30",
+          "vendredi": "08:30 \u2013 12:30, 14:00 \u2013 19:30",
+          "samedi": "08:30 \u2013 12:30, 14:00 \u2013 19:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-19T15:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 6,
+      "internal_id": "mapharma3f633d323932266c3d30",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202135+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 6
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 6
+        }
+      ],
+      "gid": "3f633d323932266c3d30"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des Floralies - VALLAURIS",
+      "url": "https://mapharma.net/06220?c=300&l=0",
+      "location": {
+        "longitude": 7.05004,
+        "latitude": 43.57604,
+        "city": "VALLAURIS"
+      },
+      "metadata": {
+        "address": "41 Avenue de Cannes, 06220 VALLAURIS",
+        "business_hours": {
+          "lundi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mardi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mercredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "jeudi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "vendredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "samedi": "08:15 \u2013 12:30, 14:00 \u2013 19:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-19T18:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 4,
+      "internal_id": "mapharma3f633d333030266c3d30",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202075+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 4
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 4
+        }
+      ],
+      "gid": "3f633d333030266c3d30"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des Floralies - VALLAURIS",
+      "url": "https://mapharma.net/06220?c=301&l=0",
+      "location": {
+        "longitude": 7.05004,
+        "latitude": 43.57604,
+        "city": "VALLAURIS"
+      },
+      "metadata": {
+        "address": "41 Avenue de Cannes, 06220 VALLAURIS",
+        "business_hours": {
+          "lundi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mardi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mercredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "jeudi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "vendredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "samedi": "08:15 \u2013 12:30, 14:00 \u2013 19:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-20T09:30:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 4,
+      "internal_id": "mapharma3f633d333031266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202117+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 4
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 4
+        }
+      ],
+      "gid": "3f633d333031266c3d30"
+    },
+    {
+      "departement": "68",
+      "nom": "Pharma 6",
+      "url": "https://mapharma.net/68200?c=168&l=0",
+      "location": {
+        "longitude": 7.295446,
+        "latitude": 47.738914,
+        "city": "MULHOUSE"
+      },
+      "metadata": {
+        "address": "230-232 rue de Belfort, 68200 MULHOUSE",
+        "business_hours": {
+          "lundi": "08:00 \u2013 20:00",
+          "mardi": "08:00 \u2013 20:00",
+          "mercredi": "08:00 \u2013 20:00",
+          "jeudi": "08:00 \u2013 20:00",
+          "vendredi": "08:00 \u2013 20:00",
+          "samedi": "08:00 \u2013 18:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-20T11:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 43,
+      "internal_id": "mapharma3f633d313638266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202143+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 5
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 7
+        }
+      ],
+      "gid": "3f633d313638266c3d30"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des Floralies - VALLAURIS",
+      "url": "https://mapharma.net/06220?c=302&l=0",
+      "location": {
+        "longitude": 7.05004,
+        "latitude": 43.57604,
+        "city": "VALLAURIS"
+      },
+      "metadata": {
+        "address": "41 Avenue de Cannes, 06220 VALLAURIS",
+        "business_hours": {
+          "lundi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mardi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mercredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "jeudi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "vendredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "samedi": "08:15 \u2013 12:30, 14:00 \u2013 19:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-20T16:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 8,
+      "internal_id": "mapharma3f633d333032266c3d30",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:15:43.202205+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 8
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 8
+        }
+      ],
+      "gid": "3f633d333032266c3d30"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "02",
+      "nom": "Pharmacie De Saint Quentin",
+      "url": "https://mapharma.net/02100-2?c=93&l=0",
+      "location": {
+        "longitude": 3.275341,
+        "latitude": 49.844111,
+        "city": "SAINT QUENTIN"
+      },
+      "metadata": {
+        "address": "4 rue de la Chauss\u00e9e Romaine, 02100 SAINT QUENTIN",
+        "business_hours": {
+          "lundi": "08:30 \u2013 12:30, 13:30 \u2013 19:30",
+          "mardi": "08:30 \u2013 12:30, 13:30 \u2013 19:30",
+          "mercredi": "08:30 \u2013 12:30, 13:30 \u2013 19:30",
+          "jeudi": "08:30 \u2013 12:30, 13:30 \u2013 19:30",
+          "vendredi": "08:30 \u2013 12:30, 13:30 \u2013 19:30",
+          "samedi": "08:30 \u2013 12:30, 14:00 \u2013 18:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "mapharma2d323f633d3933266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "2d323f633d3933266c3d30"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des Floralies",
+      "url": "https://mapharma.net/06220?c=268&l=0",
+      "location": {
+        "longitude": 7.05004,
+        "latitude": 43.57604,
+        "city": "VALLAURIS"
+      },
+      "metadata": {
+        "address": "41 Avenue de Cannes, 06220 VALLAURIS",
+        "business_hours": {
+          "lundi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mardi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mercredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "jeudi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "vendredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "samedi": "08:15 \u2013 12:30, 14:00 \u2013 19:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "mapharma3f633d323638266c3d30",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:00:56.716254+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "3f633d323638266c3d30"
+    },
+    {
+      "departement": "49",
+      "nom": "Pharmacie Le Gall",
+      "url": "https://mapharma.net/49100-2?c=250&l=0",
+      "location": {
+        "longitude": -0.557354,
+        "latitude": 47.466778,
+        "city": "ANGERS"
+      },
+      "metadata": {
+        "address": "27 RUE HOCHE ET 8 PLACE DE LA VISITATION, 49100 ANGERS",
+        "business_hours": {
+          "lundi": "08:45 \u2013 20:30",
+          "mardi": "08:45 \u2013 20:30",
+          "mercredi": "08:45 \u2013 20:30",
+          "jeudi": "08:45 \u2013 20:30",
+          "vendredi": "08:45 \u2013 20:30",
+          "samedi": "08:45 \u2013 20:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "mapharma2d323f633d323530266c3d3",
+      "vaccine_type": [
+        "Janssen"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "2d323f633d323530266c3d3"
+    },
+    {
+      "departement": "88",
+      "nom": "Pharmacie Des Lacs",
+      "url": "https://mapharma.net/88400?c=92&l=0",
+      "location": {
+        "longitude": 6.9266,
+        "latitude": 48.083113,
+        "city": "XONRUPT LONGEMER"
+      },
+      "metadata": {
+        "address": "158 rue de l'H\u00f4tel de Ville, 88400 XONRUPT LONGEMER",
+        "business_hours": {
+          "lundi": "09:00 \u2013 12:00, 14:00 \u2013 19:00",
+          "mardi": "09:00 \u2013 12:00, 14:00 \u2013 19:00",
+          "mercredi": "09:00 \u2013 12:00, 14:00 \u2013 19:00",
+          "jeudi": "09:00 \u2013 12:00, 14:00 \u2013 19:00",
+          "vendredi": "09:00 \u2013 12:00, 14:00 \u2013 19:00",
+          "samedi": "09:00 \u2013 12:00, 14:00 \u2013 18:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "mapharma3f633d3932266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:20:14.698555+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "3f633d3932266c3d30"
+    },
+    {
+      "departement": "68",
+      "nom": "Pharmacie Du Centre",
+      "url": "https://mapharma.net/68000-1?c=286&l=0",
+      "location": {
+        "longitude": 7.379882,
+        "latitude": 48.080143,
+        "city": "COLMAR"
+      },
+      "metadata": {
+        "address": "97 route de Neuf-Brisach, 68000 COLMAR",
+        "business_hours": {
+          "lundi": "08:00 \u2013 20:00",
+          "mardi": "08:00 \u2013 20:00",
+          "mercredi": "08:00 \u2013 20:00",
+          "jeudi": "08:00 \u2013 20:00",
+          "vendredi": "08:00 \u2013 20:00",
+          "samedi": "08:00 \u2013 20:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "mapharma2d313f633d323836266c3d3",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:14:35.935636+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "2d313f633d323836266c3d3"
+    }
+  ]
+}

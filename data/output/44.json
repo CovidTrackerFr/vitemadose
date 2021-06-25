@@ -1,0 +1,481 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.551263+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "44",
+      "nom": "Pharmacie Malakoff",
+      "url": "https://www.maiia.com/pharmacie/44000-nantes/pharmacie-malakoff?centerid=60914c2ca8637a3a5d932ea3",
+      "location": {
+        "longitude": -1.529338,
+        "latitude": 47.214653,
+        "city": "Nantes"
+      },
+      "metadata": {
+        "address": "16 Place Rosa Parks 44000 Nantes",
+        "phone_number": "+33240475337",
+        "business_hours": {
+          "Lundi": "09:00-19:30",
+          "Mardi": "09:00-19:30",
+          "Mercredi": "09:00-19:30",
+          "Jeudi": "09:00-19:30",
+          "Vendredi": "09:00-19:30",
+          "Samedi": "09:00-12:30 14:00-18:00",
+          "Dimanche": "09:00-19:30"
+        }
+      },
+      "prochain_rdv": "2021-05-18T12:30:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 13,
+      "internal_id": "maiia60914c2ca8637a3a5d932ea3",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527648+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 13
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 13
+        }
+      ],
+      "gid": "60914c2c"
+    },
+    {
+      "departement": "44",
+      "nom": "Pharmacie Noury Pepion",
+      "url": "https://www.maiia.com/pharmacie/44470-carquefou/pharmacie-noury-pepion?centerid=606c199da0a73c628026e9a1",
+      "location": {
+        "longitude": -1.491388,
+        "latitude": 47.298035,
+        "city": "Carquefou"
+      },
+      "metadata": {
+        "address": "13 Rue Fran\u00e7ois Ren\u00e9 de Chateaubriand 44470 Carquefou",
+        "phone_number": "+33240527036",
+        "business_hours": {
+          "Lundi": "08:30-12:30 14:00-19:30",
+          "Mardi": "08:30-12:30 14:00-19:30",
+          "Mercredi": "08:30-12:30 14:00-19:30",
+          "Jeudi": "08:30-12:30 14:00-19:30",
+          "Vendredi": "08:30-12:30 14:00-19:30",
+          "Samedi": "08:30-12:30 14:00-19:00",
+          "Dimanche": "08:30-12:30 14:00-19:30"
+        }
+      },
+      "prochain_rdv": "2021-05-18T14:30:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 1,
+      "internal_id": "maiia606c199da0a73c628026e9a1",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527675+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 1
+        }
+      ],
+      "gid": "606c199d"
+    },
+    {
+      "departement": "44",
+      "nom": "Pharmacie de la Galarne",
+      "url": "https://www.maiia.com/pharmacie/44200-nantes/pharmacie-de-la-galarne?centerid=608fbac7a8637a3a5d932ab8",
+      "location": {
+        "longitude": -1.529489,
+        "latitude": 47.208239,
+        "city": "Nantes"
+      },
+      "metadata": {
+        "address": "25 Boulevard Georges Pompidou 44200 Nantes",
+        "phone_number": "+33240894333",
+        "business_hours": {
+          "Lundi": "08:30-19:30",
+          "Mardi": "08:30-19:30",
+          "Mercredi": "08:30-19:30",
+          "Jeudi": "08:30-19:30",
+          "Vendredi": "08:30-19:30",
+          "Samedi": "08:30-13:00",
+          "Dimanche": "08:30-19:30"
+        }
+      },
+      "prochain_rdv": "2021-05-19T07:30:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 10,
+      "internal_id": "maiia608fbac7a8637a3a5d932ab8",
+      "vaccine_type": [
+        "AstraZeneca",
+        "Janssen"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527752+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 10
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 10
+        }
+      ],
+      "gid": "608fbac7"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "44",
+      "nom": "Centre de vaccination COVID-19 Nort-sur-Erdre",
+      "url": "https://www.doctolib.fr/centre-de-sante/nort-sur-erdre/centre-de-vaccination-covid-19-nort-sur-erdre",
+      "location": {
+        "longitude": -1.5103358,
+        "latitude": 47.4352717,
+        "city": "Nort-sur-Erdre"
+      },
+      "metadata": {
+        "address": "Route D H\u00e9ric, 44390 Nort-sur-Erdre",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "08:45-12:00, 13:45-17:00",
+          "mardi": "08:45-12:00, 13:45-17:00",
+          "mercredi": null,
+          "jeudi": "08:45-12:00, 13:45-17:00",
+          "vendredi": "08:45-12:00, 13:45-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib265924",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d265924"
+    },
+    {
+      "departement": "44",
+      "nom": "#VacciproHIPR - Vaccination Covid-19 - Personnel soignant",
+      "url": "https://www.doctolib.fr/hopital-public/pornic/chi-pays-de-retz",
+      "location": {
+        "longitude": -2.0591722,
+        "latitude": 47.1125101,
+        "city": "Pornic"
+      },
+      "metadata": {
+        "address": "La Chauss\u00e9e, 44210 Pornic",
+        "business_hours": {
+          "lundi": null,
+          "mardi": "09:30-12:30, 14:00-17:00",
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242472",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d242472"
+    },
+    {
+      "departement": "44",
+      "nom": "Centre de vaccination COVID - Machecoul-St M\u00eame",
+      "url": "https://www.doctolib.fr/centre-de-sante/saint-meme-le-tenu/centre-de-vaccination-covid-machecoul-st-meme",
+      "location": {
+        "longitude": -1.7939509,
+        "latitude": 47.0178182,
+        "city": "Saint-M\u00eame-le-Tenu"
+      },
+      "metadata": {
+        "address": "Rue des Ch\u00eanes, 44270 Saint-M\u00eame-le-Tenu",
+        "phone_number": "+33806000344",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib262590",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d262590"
+    },
+    {
+      "departement": "44",
+      "nom": "Pharmacie de Mauves",
+      "url": "https://www.doctolib.fr/pharmacie/mauves-sur-loire/pharmacie-de-mauves",
+      "location": {
+        "longitude": -1.3941747,
+        "latitude": 47.2975164,
+        "city": "Mauves-sur-Loire"
+      },
+      "metadata": {
+        "address": "12 Rue du Carteron, 44470 Mauves-sur-Loire",
+        "phone_number": "+33240255034",
+        "business_hours": {
+          "lundi": "09:00-12:30, 14:30-19:45",
+          "mardi": "09:00-12:30, 14:30-19:45",
+          "mercredi": "09:00-12:30, 14:30-19:45",
+          "jeudi": "09:00-12:30, 14:30-19:45",
+          "vendredi": "09:00-12:30, 14:30-19:45",
+          "samedi": "09:00-12:30, 15:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib257013",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d257013"
+    }
+  ]
+}

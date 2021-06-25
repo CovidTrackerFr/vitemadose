@@ -1,0 +1,1008 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.600500+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "94",
+      "nom": "Pharmacie de la Mairie - Nogent-sur-Marne",
+      "url": "https://www.maiia.com/pharmacie/94130-nogent-sur-marne/pharmacie-de-la-mairie?centerid=603f6858484c650ca0a3d24c",
+      "location": {
+        "longitude": 2.490699,
+        "latitude": 48.838254,
+        "city": "Nogent-sur-Marne"
+      },
+      "metadata": {
+        "address": "162 Grande Rue Charles de Gaulle 94130 Nogent-sur-Marne",
+        "phone_number": "+33148711356",
+        "business_hours": {
+          "Lundi": "08:00-20:00",
+          "Mardi": "08:00-20:00",
+          "Mercredi": "08:00-20:00",
+          "Jeudi": "08:00-20:00",
+          "Vendredi": "08:00-20:00",
+          "Samedi": "08:00-20:00",
+          "Dimanche": "08:00-20:00"
+        }
+      },
+      "prochain_rdv": "2021-05-12T12:30:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 5,
+      "internal_id": "maiia603f6858484c650ca0a3d24c",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527418+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 5
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 5
+        }
+      ],
+      "gid": "603f6858"
+    },
+    {
+      "departement": "94",
+      "nom": "Centre de vaccination - CHI de Villeneuve-Saint-Georges",
+      "url": "https://www.maiia.com/centre-de-vaccination/94190-villeneuve-saint-georges/centre-de-vaccination---chi-de-villeneuve-saint-georges?centerid=6001704008fa3a60d6d1b0aa",
+      "location": {
+        "longitude": 2.450239,
+        "latitude": 48.723306,
+        "city": "Villeneuve-Saint-Georges"
+      },
+      "metadata": {
+        "address": "40 All\u00e9e de la Source 94190 Villeneuve-Saint-Georges",
+        "phone_number": "+33143862150",
+        "business_hours": {
+          "Lundi": "09:00-16:30",
+          "Mardi": "09:00-16:30",
+          "Mercredi": "09:00-16:30",
+          "Jeudi": "09:00-16:30",
+          "Vendredi": "09:00-16:30",
+          "Samedi": "09:00-16:30",
+          "Dimanche": "09:00-16:30"
+        }
+      },
+      "prochain_rdv": "2021-05-17T13:40:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 953,
+      "internal_id": "maiia6001704008fa3a60d6d1b0aa",
+      "vaccine_type": [
+        "Pfizer-BioNTech",
+        "ARNm"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527774+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 7
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 169
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 818
+        }
+      ],
+      "gid": "60017040"
+    },
+    {
+      "departement": "94",
+      "nom": "Centre de vaccination - Espace Louise Voelckel",
+      "url": "https://www.maiia.com/centre-de-vaccination/94380-bonneuil-sur-marne/-centre-de-vaccination---espace-louise-voelckel?centerid=60000d73b1a1aa1cc204f407",
+      "location": {
+        "longitude": 2.477552,
+        "latitude": 48.783892,
+        "city": "Bonneuil-sur-Marne"
+      },
+      "metadata": {
+        "address": "Rue du 8 mai 45 94380 Bonneuil-sur-Marne",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-05-19T07:40:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 400,
+      "internal_id": "maiia60000d73b1a1aa1cc204f407",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527288+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 400
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 400
+        }
+      ],
+      "gid": "60000d73"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "94",
+      "nom": "Dr Ariel AMAR - Le Perreux-sur-Marne",
+      "url": "https://www.doctolib.fr/pharmacie/paris/ariel-amar?pid=practice-153823",
+      "location": {
+        "longitude": 2.4951948,
+        "latitude": 48.8383127,
+        "city": "Le Perreux-sur-Marne"
+      },
+      "metadata": {
+        "address": "12 Place Robert Belvaux, 94170 Le Perreux-sur-Marne",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib228021pid153823",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d228021"
+    },
+    {
+      "departement": "94",
+      "nom": "Centre municipal de sant\u00e9 Fanny Dewerpe - (CMS Ivry-sur-Seine)",
+      "url": "https://www.doctolib.fr/centre-de-sante/ivry-sur-seine/centre-municipal-de-sante-fanny-dewerpe-ivry-sur-seine",
+      "location": {
+        "longitude": 2.38884870000004,
+        "latitude": 48.8138978,
+        "city": "Ivry-sur-Seine"
+      },
+      "metadata": {
+        "address": "64 Avenue Georges Gosnat, 94200 Ivry-sur-Seine",
+        "phone_number": "+33180518600",
+        "business_hours": {
+          "lundi": "08:30-12:30, 13:30-19:30",
+          "mardi": "08:30-12:30, 13:30-19:30",
+          "mercredi": "08:30-12:30, 13:30-19:30",
+          "jeudi": "08:30-12:30, 13:30-19:30",
+          "vendredi": "08:30-12:30, 13:30-19:30",
+          "samedi": "08:30-12:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib174023",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d174023"
+    },
+    {
+      "departement": "94",
+      "nom": "Pharmacie de l'H\u00f4tel de Ville - Alfortville",
+      "url": "https://www.doctolib.fr/pharmacie/alfortville/pharmacie-de-l-hotel-de-ville-alfortville",
+      "location": {
+        "longitude": 2.4187268,
+        "latitude": 48.8057826,
+        "city": "Alfortville"
+      },
+      "metadata": {
+        "address": "158 Rue Paul Vaillant Couturier, 94140 Alfortville",
+        "phone_number": "+33143751555",
+        "business_hours": {
+          "lundi": "09:00-20:00",
+          "mardi": "09:00-20:00",
+          "mercredi": "09:00-20:00",
+          "jeudi": "09:00-20:00",
+          "vendredi": "09:00-20:00",
+          "samedi": "09:00-19:00",
+          "dimanche": "09:00-19:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib249669",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d249669"
+    },
+    {
+      "departement": "94",
+      "nom": "Dr Sibylle JAMMAL",
+      "url": "https://www.doctolib.fr/medecin-generaliste/cachan/sibylle-jammal",
+      "location": {
+        "longitude": 2.3364593,
+        "latitude": 48.7935031,
+        "city": "Cachan"
+      },
+      "metadata": {
+        "address": "16 Place Jacques Carat, 94230 Cachan",
+        "phone_number": "+33146659139",
+        "business_hours": {
+          "lundi": "08:30-09:30, 12:30-13:30, 17:30-18:30",
+          "mardi": "08:30-09:30, 12:30-13:30, 17:30-18:30",
+          "mercredi": "08:30-09:30, 12:30-13:30, 17:30-18:30",
+          "jeudi": "08:30-09:30, 12:30-13:30, 17:30-18:30",
+          "vendredi": "08:30-09:30, 12:30-13:30, 17:30-18:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib62337",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d62337"
+    },
+    {
+      "departement": "94",
+      "nom": "Pharmacie des \u00e9coles - Leadersant\u00e9 - Villejuif",
+      "url": "https://www.doctolib.fr/pharmacie/villejuif/pharmacie-des-ecoles",
+      "location": {
+        "longitude": 2.3662778,
+        "latitude": 48.7951181,
+        "city": "Villejuif"
+      },
+      "metadata": {
+        "address": "22b Rue Jean Jaur\u00e8s, 94800 Villejuif",
+        "phone_number": "+33146776122",
+        "business_hours": {
+          "lundi": "08:30-20:00",
+          "mardi": "08:30-20:00",
+          "mercredi": "08:30-20:00",
+          "jeudi": "08:30-20:00",
+          "vendredi": "08:30-20:00",
+          "samedi": "09:00-20:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib235981",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d235981"
+    },
+    {
+      "departement": "94",
+      "nom": "Dr Ariel AMAR - Charenton-le-Pont",
+      "url": "https://www.doctolib.fr/pharmacie/paris/ariel-amar?pid=practice-157097",
+      "location": {
+        "longitude": 2.4052,
+        "latitude": 48.8264314,
+        "city": "Charenton-le-Pont"
+      },
+      "metadata": {
+        "address": "3 Place des Marseillais, 94220 Charenton-le-Pont",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib228021pid157097",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d228021"
+    },
+    {
+      "departement": "94",
+      "nom": "Pharmacie Satock Garka",
+      "url": "https://www.doctolib.fr/pharmacie/choisy-le-roi/pharmacie-satock-garka",
+      "location": {
+        "longitude": 2.4087063,
+        "latitude": 48.7647885,
+        "city": "Choisy-le-Roi"
+      },
+      "metadata": {
+        "address": "4 Avenue Anatole France, 94600 Choisy-le-Roi",
+        "phone_number": "+33148847082",
+        "business_hours": {
+          "lundi": "10:00-19:00",
+          "mardi": "09:30-19:00",
+          "mercredi": "09:30-19:00",
+          "jeudi": "09:30-19:00",
+          "vendredi": "09:30-19:00",
+          "samedi": "10:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib266962",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d266962"
+    },
+    {
+      "departement": "94",
+      "nom": "Pharmacie Mariani",
+      "url": "https://www.doctolib.fr/pharmacie/choisy-le-roi/pharmacie-mariani",
+      "location": {
+        "longitude": 2.4087063,
+        "latitude": 48.7647885,
+        "city": "Choisy-le-Roi"
+      },
+      "metadata": {
+        "address": "4 Avenue Anatole France, 94600 Choisy-le-Roi",
+        "phone_number": "+33148847534",
+        "business_hours": {
+          "lundi": "09:00-19:30",
+          "mardi": "09:00-19:30",
+          "mercredi": "09:00-19:30",
+          "jeudi": "09:00-19:30",
+          "vendredi": "09:00-19:30",
+          "samedi": "09:00-12:30, 14:00-19:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib265190",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d265190"
+    },
+    {
+      "departement": "94",
+      "nom": "Pharmacie IvryMed",
+      "url": "https://www.doctolib.fr/pharmacie/ivry-sur-seine/pharmacie-ivrymed-que-anh-nguyen-leadersante",
+      "location": {
+        "longitude": 2.3765704,
+        "latitude": 48.80554,
+        "city": "Ivry-sur-Seine"
+      },
+      "metadata": {
+        "address": "166 Boulevard de Stalingrad, 94200 Ivry-sur-Seine",
+        "phone_number": "+33146711085",
+        "business_hours": {
+          "lundi": "09:00-12:30, 14:00-19:30",
+          "mardi": "09:00-12:30, 14:00-19:30",
+          "mercredi": "09:00-12:30, 14:00-19:30",
+          "jeudi": "09:00-12:30, 14:00-19:30",
+          "vendredi": "09:00-12:30, 14:00-19:30",
+          "samedi": "09:00-12:30, 14:00-19:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib248475",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d248475"
+    },
+    {
+      "departement": "94",
+      "nom": "Centre de Vaccination COVID - [Maisons-Alfort]",
+      "url": "https://www.doctolib.fr/centre-de-sante/maisons-alfort/centre-de-vaccination-covid-maisons-alfort",
+      "location": {
+        "longitude": 2.437625,
+        "latitude": 48.816287,
+        "city": "Maisons-Alfort"
+      },
+      "metadata": {
+        "address": "47 Avenue Foch, 94700 Maisons-Alfort",
+        "phone_number": "+33805040994",
+        "business_hours": {
+          "lundi": "09:00-12:00, 14:00-18:00",
+          "mardi": "09:00-12:00, 14:00-18:00",
+          "mercredi": "09:00-12:00, 14:00-18:00",
+          "jeudi": "09:00-12:00, 14:00-18:00",
+          "vendredi": "09:00-12:00, 14:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib244790",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d244790"
+    },
+    {
+      "departement": "94",
+      "nom": "Centre de vaccination Covid-19 de Limeil",
+      "url": "https://www.doctolib.fr/centre-de-sante/limeil-brevannes/centre-de-vaccination-covid-19-de-limeil",
+      "location": {
+        "longitude": 2.480973,
+        "latitude": 48.7475551,
+        "city": "Limeil-Br\u00e9vannes"
+      },
+      "metadata": {
+        "address": "Rue des Herbages de S\u00e8ze, 94450 Limeil-Br\u00e9vannes",
+        "phone_number": "+33145107702",
+        "business_hours": {
+          "lundi": "09:00-12:00, 13:30-16:30",
+          "mardi": "09:00-12:00, 13:30-16:30",
+          "mercredi": "09:00-12:00, 13:30-16:30",
+          "jeudi": "09:00-12:00, 13:30-16:30",
+          "vendredi": "09:00-12:00, 13:30-16:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib270943",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d270943"
+    },
+    {
+      "departement": "94",
+      "nom": "Pharmacie Ruiz",
+      "url": "https://www.doctolib.fr/pharmacie/chennevieres-sur-marne/pharmacie-ruiz",
+      "location": {
+        "longitude": 2.5309193,
+        "latitude": 48.7963338,
+        "city": "Chennevi\u00e8res-sur-Marne"
+      },
+      "metadata": {
+        "address": "25B Rue du G\u00e9n\u00e9ral de Gaulle, 94430 Chennevi\u00e8res-sur-Marne",
+        "phone_number": "+33145760123",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:30-20:00",
+          "mardi": "09:00-13:00, 14:30-20:00",
+          "mercredi": "09:00-13:00, 14:30-20:00",
+          "jeudi": "09:00-13:00, 14:30-20:00",
+          "vendredi": "09:00-13:00, 14:30-20:00",
+          "samedi": "09:00-19:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib254934",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d254934"
+    }
+  ]
+}

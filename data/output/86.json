@@ -1,0 +1,466 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.592097+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "86",
+      "nom": "Pharmacie De L'Espace Lyautey",
+      "url": "https://mapharma.net/86100?c=303&l=0",
+      "location": {
+        "longitude": 0.541342,
+        "latitude": 46.802117,
+        "city": "CHATELLERAULT"
+      },
+      "metadata": {
+        "address": "32 rue Marius Montier, 86100 CHATELLERAULT",
+        "business_hours": {
+          "lundi": "08:30 \u2013 13:00, 14:00 \u2013 19:30",
+          "mardi": "08:30 \u2013 13:00, 14:00 \u2013 19:30",
+          "mercredi": "08:30 \u2013 13:00, 14:00 \u2013 19:30",
+          "jeudi": "08:30 \u2013 13:00, 14:00 \u2013 19:30",
+          "vendredi": "08:30 \u2013 13:00, 14:00 \u2013 19:30",
+          "samedi": "09:00 \u2013 12:30, 14:00 \u2013 18:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-18T10:15:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 6,
+      "internal_id": "mapharma3f633d333033266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.935060+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 6
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 6
+        }
+      ],
+      "gid": "3f633d333033266c3d30"
+    },
+    {
+      "departement": "86",
+      "nom": "Pharmacie Gilles",
+      "url": "https://www.maiia.com/pharmacie/86180-buxerolles/pharmacie-gilles?centerid=601ad35822db2c1d7435fe39",
+      "location": {
+        "longitude": 0.365374,
+        "latitude": 46.607606,
+        "city": "Buxerolles"
+      },
+      "metadata": {
+        "address": "24 Rue des Terrageaux 86180 Buxerolles",
+        "phone_number": "+33549458903",
+        "business_hours": {
+          "Lundi": "09:00-12:30 14:30-19:30",
+          "Mardi": "09:00-12:30 14:30-19:30",
+          "Mercredi": "09:00-12:30 14:30-19:30",
+          "Jeudi": "09:00-12:30 14:30-19:30",
+          "Vendredi": "09:00-12:30 14:30-19:30",
+          "Samedi": "09:00-12:30 14:30-18:00",
+          "Dimanche": "09:00-12:30 14:30-19:30"
+        }
+      },
+      "prochain_rdv": "2021-05-20T13:30:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 12,
+      "internal_id": "maiia601ad35822db2c1d7435fe39",
+      "vaccine_type": [
+        "AstraZeneca",
+        "Janssen"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527221+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 12
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 12
+        }
+      ],
+      "gid": "601ad358"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "86",
+      "nom": "Centre de vaccination Covid-19 - SISA P\u00f4le Sant\u00e9",
+      "url": "https://www.doctolib.fr/centre-de-vaccinations-internationales/usson-du-poitou/centre-de-vaccination-covid-19-sisa-pole-sante",
+      "location": {
+        "longitude": 0.5362832,
+        "latitude": 46.2720198,
+        "city": "Usson-du-Poitou"
+      },
+      "metadata": {
+        "address": "20 Chemin du D\u00e9sert, 86350 Usson-du-Poitou",
+        "phone_number": "+33676542564",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib254046",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d254046"
+    },
+    {
+      "departement": "86",
+      "nom": "Centre de vaccination Covid-19 - SDIS 86",
+      "url": "https://www.doctolib.fr/centre-de-sante/buxerolles/centre-de-vaccination-covid-19-sdis-86-buxerolles?pid=practice-180166",
+      "location": {
+        "longitude": 0.3528636,
+        "latitude": 46.5947215,
+        "city": "Buxerolles"
+      },
+      "metadata": {
+        "address": "Avenue des Castors, 86180 Buxerolles",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib265265pid180166",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d265265"
+    },
+    {
+      "departement": "86",
+      "nom": "Centre Vaccination MSP Vouneuil sur Vienne",
+      "url": "https://www.doctolib.fr/maison-de-sante/vouneuil-sur-vienne/centre-vaccination-msp-vouneuil-sur-vienne",
+      "location": {
+        "longitude": 0.5410678,
+        "latitude": 46.7166796,
+        "city": "Vouneuil-sur-Vienne"
+      },
+      "metadata": {
+        "address": "9 Avenue Jean Jaur\u00e8s, 86210 Vouneuil-sur-Vienne",
+        "phone_number": "+33549851061",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib253166",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d253166"
+    },
+    {
+      "departement": "86",
+      "nom": "Centre de vaccination du P\u00f4le de sant\u00e9 de L'envigne",
+      "url": "https://www.doctolib.fr/maison-de-sante/scorbe-clairvaux/centre-de-vaccination-du-pole-de-sante-de-l-envigne",
+      "location": {
+        "longitude": 0.4125004,
+        "latitude": 46.8100628,
+        "city": "Scorb\u00e9-Clairvaux"
+      },
+      "metadata": {
+        "address": "Place Etienne Ch\u00e9rade de Monbron, 86140 Scorb\u00e9-Clairvaux",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib254775",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d254775"
+    },
+    {
+      "departement": "86",
+      "nom": "Pharmacie Porte Sud",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-porte-sud-chatellerault",
+      "location": {
+        "longitude": 0.5293911000000001,
+        "latitude": 46.7983394,
+        "city": "chatellerault"
+      },
+      "metadata": {
+        "address": "6 AV CAMILLE PAGE, 86100 CHATELLERAULT",
+        "phone_number": "+33549215709",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordoclic07d3b6f9",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "07d3b6f9"
+    },
+    {
+      "departement": "86",
+      "nom": "Centre de vaccination de Jaunay Marigny",
+      "url": "https://www.maiia.com/centre-de-vaccination/86130-jaunay-marigny/centre-de-vaccination-de-jaunay-marigny?centerid=609643a280372e1852d57ed3",
+      "location": {
+        "longitude": 0.374522,
+        "latitude": 46.681571,
+        "city": "Jaunay-Marigny"
+      },
+      "metadata": {
+        "address": "Salle Agora 86130 Jaunay-Marigny",
+        "phone_number": "+33549005186",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "maiia609643a2",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T14:03:59.759672+02:00",
+      "appointment_schedules": null,
+      "gid": "609643a2"
+    }
+  ]
+}

@@ -1,0 +1,1030 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.503441+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "02",
+      "nom": "Centre de vaccination - MSP de Guise",
+      "url": "https://www.maiia.com/centre-de-vaccination/02120-guise/centre-de-vaccination---msp-de-guise?centerid=5ffc21a0fabad2432c9bd0df",
+      "location": {
+        "longitude": 3.626341,
+        "latitude": 49.901711,
+        "city": "Guise"
+      },
+      "metadata": {
+        "address": "41 Rue Andr\u00e9 Godin 02120 Guise",
+        "phone_number": "+33323057580",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-05-15T06:40:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 422,
+      "internal_id": "maiia5ffc21a0fabad2432c9bd0df",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.526921+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 322
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 422
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 422
+        }
+      ],
+      "gid": "5ffc21a0"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "02",
+      "nom": "Pharmacie de l'Omois",
+      "url": "https://www.doctolib.fr/pharmacie/chateau-thierry/pharmacie-de-l-omois-laurent-sebban",
+      "location": {
+        "longitude": 3.4044336,
+        "latitude": 49.0416537,
+        "city": "Ch\u00e2teau-Thierry"
+      },
+      "metadata": {
+        "address": "62 Rue Carnot, 02400 Ch\u00e2teau-Thierry",
+        "phone_number": "+33323830064",
+        "business_hours": {
+          "lundi": "08:45-19:15",
+          "mardi": "08:45-19:15",
+          "mercredi": "08:45-19:15",
+          "jeudi": "08:45-19:15",
+          "vendredi": "08:45-19:15",
+          "samedi": "08:45-18:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib257074",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d257074"
+    },
+    {
+      "departement": "02",
+      "nom": "Centre de vaccination Covid-19 \u00e9ph\u00e9m\u00e8re - Sapeurs Pompiers de l'Aisne - Cond\u00e9-en-Brie",
+      "url": "https://www.doctolib.fr/centre-de-sante/aisne/centre-de-vaccination-covid-19-caserne-de-pompiers-de-soissons-sdis02?pid=practice-183248",
+      "location": {
+        "longitude": 3.5523891,
+        "latitude": 49.0092921,
+        "city": "Cond\u00e9-en-Brie"
+      },
+      "metadata": {
+        "address": "Rue de Chaury, 02330 Cond\u00e9-en-Brie",
+        "phone_number": "+33800009110",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib264530pid183248",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d264530"
+    },
+    {
+      "departement": "02",
+      "nom": "Centre de vaccination Covid-19 \u00e9ph\u00e9m\u00e8re - Sapeurs Pompiers de l'Aisne - Vic-sur-Aisne",
+      "url": "https://www.doctolib.fr/centre-de-sante/aisne/centre-de-vaccination-covid-19-caserne-de-pompiers-de-soissons-sdis02?pid=practice-183260",
+      "location": {
+        "longitude": 3.1154391,
+        "latitude": 49.4052499,
+        "city": "Vic-sur-Aisne"
+      },
+      "metadata": {
+        "address": "Place du G\u00e9n\u00e9ral de Gaulle, 02290 Vic-sur-Aisne",
+        "phone_number": "+33800009110",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib264530pid183260",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d264530"
+    },
+    {
+      "departement": "02",
+      "nom": "Centre de vaccination Covid-19 \u00e9ph\u00e9m\u00e8re - Sapeurs Pompiers de l'Aisne - Neuilly-Saint-Front",
+      "url": "https://www.doctolib.fr/centre-de-sante/aisne/centre-de-vaccination-covid-19-caserne-de-pompiers-de-soissons-sdis02?pid=practice-182793",
+      "location": {
+        "longitude": 3.262488,
+        "latitude": 49.170584,
+        "city": "Neuilly-Saint-Front"
+      },
+      "metadata": {
+        "address": "Impasse Poron, 02470 Neuilly-Saint-Front",
+        "phone_number": "+33800009110",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib264530pid182793",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d264530"
+    },
+    {
+      "departement": "02",
+      "nom": "Centre de vaccination Covid-19 \u00e9ph\u00e9m\u00e8re - Sapeurs Pompiers de l'Aisne - Braine",
+      "url": "https://www.doctolib.fr/centre-de-sante/aisne/centre-de-vaccination-covid-19-caserne-de-pompiers-de-soissons-sdis02?pid=practice-182861",
+      "location": {
+        "longitude": 3.5440904,
+        "latitude": 49.3470997,
+        "city": "Braine"
+      },
+      "metadata": {
+        "address": "Route de Vieil Arcy, 02220 Braine",
+        "phone_number": "+33800009110",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib264530pid182861",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d264530"
+    },
+    {
+      "departement": "02",
+      "nom": "CH de Soissons - Centre de vaccination Covid-19",
+      "url": "https://www.doctolib.fr/hopital-public/soissons/ch-de-soissons-centre-de-vaccination",
+      "location": {
+        "longitude": 3.335686,
+        "latitude": 49.3710377,
+        "city": "Soissons"
+      },
+      "metadata": {
+        "address": "46 Avenue du G\u00e9n\u00e9ral de Gaulle, 02200 Soissons",
+        "business_hours": {
+          "lundi": "09:00-12:00, 14:00-17:00",
+          "mardi": "09:00-12:00, 14:00-17:00",
+          "mercredi": "09:00-12:00, 14:00-17:00",
+          "jeudi": "09:00-12:00, 14:00-17:00",
+          "vendredi": "09:00-12:00, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib241547",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d241547"
+    },
+    {
+      "departement": "02",
+      "nom": "Pharmacie du golf",
+      "url": "https://www.doctolib.fr/pharmacie/chateau-thierry/pharmacie-du-golf-jean-charles-defurne-giphar",
+      "location": {
+        "longitude": 3.3948981,
+        "latitude": 49.0592747,
+        "city": "Ch\u00e2teau-Thierry"
+      },
+      "metadata": {
+        "address": "Avenue de Soissons, 02400 Ch\u00e2teau-Thierry",
+        "phone_number": "+33323842384",
+        "business_hours": {
+          "lundi": "08:30-19:00",
+          "mardi": "08:30-19:00",
+          "mercredi": "08:30-19:00",
+          "jeudi": "08:30-19:00",
+          "vendredi": "08:30-19:00",
+          "samedi": "08:30-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib270037",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d270037"
+    },
+    {
+      "departement": "02",
+      "nom": "Centre de vaccination Covid-19 \u00e9ph\u00e9m\u00e8re - Sapeurs Pompiers de l'Aisne - Soissons",
+      "url": "https://www.doctolib.fr/centre-de-sante/aisne/centre-de-vaccination-covid-19-caserne-de-pompiers-de-soissons-sdis02?pid=practice-185764",
+      "location": {
+        "longitude": 3.327737,
+        "latitude": 49.389905,
+        "city": "Soissons"
+      },
+      "metadata": {
+        "address": "Avenue du Mail, 02200 Soissons",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib264530pid185764",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d264530"
+    },
+    {
+      "departement": "02",
+      "nom": "Centre de vaccination Covid-19 \u00e9ph\u00e9m\u00e8re - Sapeurs Pompiers de l'Aisne - Itancourt",
+      "url": "https://www.doctolib.fr/centre-de-sante/aisne/centre-de-vaccination-covid-19-caserne-de-pompiers-de-soissons-sdis02?pid=practice-182864",
+      "location": {
+        "longitude": 3.3458982,
+        "latitude": 49.8068892,
+        "city": "Itancourt"
+      },
+      "metadata": {
+        "address": "Rue de la Mairie, 02240 Itancourt",
+        "phone_number": "+33800009110",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib264530pid182864",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d264530"
+    },
+    {
+      "departement": "02",
+      "nom": "Centre de vaccination Covid-19 Commune de Tergnier",
+      "url": "https://www.doctolib.fr/etablissement-de-prevention/tergnier/centre-de-vaccination-covid19-centre-de-vie-jacques-desalangre",
+      "location": {
+        "longitude": 3.2800479,
+        "latitude": 49.6376095,
+        "city": "Tergnier"
+      },
+      "metadata": {
+        "address": "Boulevard du 32E Reg d'Infanterie, 02700 Tergnier",
+        "phone_number": "+33800009110",
+        "business_hours": {
+          "lundi": null,
+          "mardi": "09:00-12:00",
+          "mercredi": "13:30-16:30",
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib243755",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d243755"
+    },
+    {
+      "departement": "02",
+      "nom": "Centre de vaccination Covid-19 \u00e9ph\u00e9m\u00e8re - Sapeurs Pompiers de l'Aisne - Rozoy-sur-Serre",
+      "url": "https://www.doctolib.fr/centre-de-sante/aisne/centre-de-vaccination-covid-19-caserne-de-pompiers-de-soissons-sdis02?pid=practice-182824",
+      "location": {
+        "longitude": 4.1327604,
+        "latitude": 49.7095191,
+        "city": "Rozoy-sur-Serre"
+      },
+      "metadata": {
+        "address": "Rue Jean Mermoz, 02360 Rozoy-sur-Serre",
+        "phone_number": "+33800009110",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib264530pid182824",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d264530"
+    },
+    {
+      "departement": "02",
+      "nom": "Centre de vaccination Covid-19 \u00e9ph\u00e9m\u00e8re - Sapeurs Pompiers de l'Aisne - Charly-sur-Marne",
+      "url": "https://www.doctolib.fr/centre-de-sante/aisne/centre-de-vaccination-covid-19-caserne-de-pompiers-de-soissons-sdis02?pid=practice-183815",
+      "location": {
+        "longitude": 3.2788471,
+        "latitude": 48.9744788,
+        "city": "Charly-sur-Marne"
+      },
+      "metadata": {
+        "address": "Rue Paul Hivet, 02310 Charly-sur-Marne",
+        "phone_number": "+33800009110",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib264530pid183815",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d264530"
+    },
+    {
+      "departement": "02",
+      "nom": "Centre de vaccination Covid-19 Saint-Quentin",
+      "url": "https://www.doctolib.fr/centre-de-sante/saint-quentin/centre-de-vaccination-covid-19-saint-quentin",
+      "location": {
+        "longitude": 3.2942459,
+        "latitude": 49.849371,
+        "city": "Saint-Quentin"
+      },
+      "metadata": {
+        "address": "Avenue de Remicourt, 02100 Saint-Quentin",
+        "phone_number": "+33323636863",
+        "business_hours": {
+          "lundi": "09:00-11:30, 13:30-16:30",
+          "mardi": "09:00-11:30, 13:30-16:30",
+          "mercredi": "09:00-11:30, 13:30-16:30",
+          "jeudi": "09:00-11:30, 13:30-16:30",
+          "vendredi": "09:00-11:30, 13:30-16:30",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242672",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d242672"
+    },
+    {
+      "departement": "02",
+      "nom": "Pharmacie Ponthieux",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-ponthieux-chauny",
+      "location": {
+        "longitude": 3.218973,
+        "latitude": 49.6147741,
+        "city": "chauny"
+      },
+      "metadata": {
+        "address": "10 rue de la r\u00e9publique, 02300 Chauny",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordoclice009c904",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "e009c904"
+    },
+    {
+      "departement": "02",
+      "nom": "Pharmacie De Saint Quentin",
+      "url": "https://mapharma.net/02100-2?c=93&l=0",
+      "location": {
+        "longitude": 3.275341,
+        "latitude": 49.844111,
+        "city": "SAINT QUENTIN"
+      },
+      "metadata": {
+        "address": "4 rue de la Chauss\u00e9e Romaine, 02100 SAINT QUENTIN",
+        "business_hours": {
+          "lundi": "08:30 \u2013 12:30, 13:30 \u2013 19:30",
+          "mardi": "08:30 \u2013 12:30, 13:30 \u2013 19:30",
+          "mercredi": "08:30 \u2013 12:30, 13:30 \u2013 19:30",
+          "jeudi": "08:30 \u2013 12:30, 13:30 \u2013 19:30",
+          "vendredi": "08:30 \u2013 12:30, 13:30 \u2013 19:30",
+          "samedi": "08:30 \u2013 12:30, 14:00 \u2013 18:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "mapharma2d323f633d3933266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "2d323f633d3933266c3d30"
+    }
+  ]
+}

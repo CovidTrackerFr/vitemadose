@@ -1,0 +1,1583 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.506895+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "06",
+      "nom": "Pharmacie la Ven\u00e7oise",
+      "url": "https://www.maiia.com/pharmacie/06140-vence/pharmacie-la-vencoise?centerid=605857dbd254f158baffbea0",
+      "location": {
+        "longitude": 7.112858,
+        "latitude": 43.722192,
+        "city": "Vence"
+      },
+      "metadata": {
+        "address": "27 Avenue Marcellin Maurel 06140 Vence",
+        "phone_number": "+33493580309",
+        "business_hours": {
+          "Lundi": "08:30-12:30 14:30-19:30",
+          "Mardi": "08:30-12:30 14:30-19:30",
+          "Mercredi": "08:30-12:30 14:30-19:30",
+          "Jeudi": "08:30-12:30 14:30-19:30",
+          "Vendredi": "08:30-12:30 14:30-19:30",
+          "Samedi": "08:30-12:30 14:30-19:30"
+        }
+      },
+      "prochain_rdv": "2021-05-14T07:00:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 11,
+      "internal_id": "maiia605857dbd254f158baffbea0",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527713+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 10
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 11
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 11
+        }
+      ],
+      "gid": "605857db"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des Floralies - VALLAURIS - VALLAURIS",
+      "url": "https://mapharma.net/06220?c=294&l=0",
+      "location": {
+        "longitude": 7.05004,
+        "latitude": 43.57604,
+        "city": "VALLAURIS"
+      },
+      "metadata": {
+        "address": "41 Avenue de Cannes, 06220 VALLAURIS",
+        "business_hours": {
+          "lundi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mardi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mercredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "jeudi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "vendredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "samedi": "08:15 \u2013 12:30, 14:00 \u2013 19:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-14T09:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 4,
+      "internal_id": "mapharma3f633d323934266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.934852+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 4
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 4
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 4
+        }
+      ],
+      "gid": "3f633d323934266c3d30"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des Floralies - VALLAURIS - VALLAURIS",
+      "url": "https://mapharma.net/06220?c=295&l=0",
+      "location": {
+        "longitude": 7.05004,
+        "latitude": 43.57604,
+        "city": "VALLAURIS"
+      },
+      "metadata": {
+        "address": "41 Avenue de Cannes, 06220 VALLAURIS",
+        "business_hours": {
+          "lundi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mardi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mercredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "jeudi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "vendredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "samedi": "08:15 \u2013 12:30, 14:00 \u2013 19:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-17T09:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 5,
+      "internal_id": "mapharma3f633d323935266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.934922+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 5
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 5
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 5
+        }
+      ],
+      "gid": "3f633d323935266c3d30"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des Floralies - VALLAURIS - VALLAURIS",
+      "url": "https://mapharma.net/06220?c=297&l=0",
+      "location": {
+        "longitude": 7.05004,
+        "latitude": 43.57604,
+        "city": "VALLAURIS"
+      },
+      "metadata": {
+        "address": "41 Avenue de Cannes, 06220 VALLAURIS",
+        "business_hours": {
+          "lundi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mardi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mercredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "jeudi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "vendredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "samedi": "08:15 \u2013 12:30, 14:00 \u2013 19:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-17T16:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 4,
+      "internal_id": "mapharma3f633d323937266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.934955+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 4
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 4
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 4
+        }
+      ],
+      "gid": "3f633d323937266c3d30"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des Floralies - VALLAURIS - VALLAURIS",
+      "url": "https://mapharma.net/06220?c=298&l=0",
+      "location": {
+        "longitude": 7.05004,
+        "latitude": 43.57604,
+        "city": "VALLAURIS"
+      },
+      "metadata": {
+        "address": "41 Avenue de Cannes, 06220 VALLAURIS",
+        "business_hours": {
+          "lundi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mardi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mercredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "jeudi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "vendredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "samedi": "08:15 \u2013 12:30, 14:00 \u2013 19:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-18T09:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 6,
+      "internal_id": "mapharma3f633d323938266c3d30",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.934964+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 6
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 6
+        }
+      ],
+      "gid": "3f633d323938266c3d30"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des Floralies - VALLAURIS - VALLAURIS",
+      "url": "https://mapharma.net/06220?c=299&l=0",
+      "location": {
+        "longitude": 7.05004,
+        "latitude": 43.57604,
+        "city": "VALLAURIS"
+      },
+      "metadata": {
+        "address": "41 Avenue de Cannes, 06220 VALLAURIS",
+        "business_hours": {
+          "lundi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mardi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mercredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "jeudi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "vendredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "samedi": "08:15 \u2013 12:30, 14:00 \u2013 19:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-18T16:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 9,
+      "internal_id": "mapharma3f633d323939266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.934944+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 9
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 9
+        }
+      ],
+      "gid": "3f633d323939266c3d30"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des Floralies - VALLAURIS - VALLAURIS",
+      "url": "https://mapharma.net/06220?c=300&l=0",
+      "location": {
+        "longitude": 7.05004,
+        "latitude": 43.57604,
+        "city": "VALLAURIS"
+      },
+      "metadata": {
+        "address": "41 Avenue de Cannes, 06220 VALLAURIS",
+        "business_hours": {
+          "lundi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mardi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mercredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "jeudi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "vendredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "samedi": "08:15 \u2013 12:30, 14:00 \u2013 19:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-19T18:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 4,
+      "internal_id": "mapharma3f633d333030266c3d30",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.934984+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 4
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 4
+        }
+      ],
+      "gid": "3f633d333030266c3d30"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des Floralies - VALLAURIS - VALLAURIS",
+      "url": "https://mapharma.net/06220?c=301&l=0",
+      "location": {
+        "longitude": 7.05004,
+        "latitude": 43.57604,
+        "city": "VALLAURIS"
+      },
+      "metadata": {
+        "address": "41 Avenue de Cannes, 06220 VALLAURIS",
+        "business_hours": {
+          "lundi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mardi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mercredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "jeudi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "vendredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "samedi": "08:15 \u2013 12:30, 14:00 \u2013 19:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-20T09:30:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 4,
+      "internal_id": "mapharma3f633d333031266c3d30",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.935003+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 4
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 4
+        }
+      ],
+      "gid": "3f633d333031266c3d30"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des Floralies - VALLAURIS - VALLAURIS",
+      "url": "https://mapharma.net/06220?c=302&l=0",
+      "location": {
+        "longitude": 7.05004,
+        "latitude": 43.57604,
+        "city": "VALLAURIS"
+      },
+      "metadata": {
+        "address": "41 Avenue de Cannes, 06220 VALLAURIS",
+        "business_hours": {
+          "lundi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mardi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mercredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "jeudi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "vendredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "samedi": "08:15 \u2013 12:30, 14:00 \u2013 19:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-20T16:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 8,
+      "internal_id": "mapharma3f633d333032266c3d30",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.934974+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 8
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 8
+        }
+      ],
+      "gid": "3f633d333032266c3d30"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie De L'Horloge",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-l'horloge-nice",
+      "location": {
+        "longitude": 7.2526853,
+        "latitude": 43.7185431,
+        "city": "nice"
+      },
+      "metadata": {
+        "address": "98 Boulevard DE CESSOLE, 06100 NICE",
+        "phone_number": "+33493844886",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-06-09T14:10:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 2,
+      "internal_id": "ordoclic769ad31e",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:39:59.056772+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 2
+        }
+      ],
+      "gid": "769ad31e"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination COVID 19 - Mairie du Cannet",
+      "url": "https://www.doctolib.fr/centre-de-sante/le-cannet/centre-de-vaccination-covid-mairie-du-cannet",
+      "location": {
+        "longitude": 6.9848437,
+        "latitude": 43.5700417,
+        "city": "Le Cannet"
+      },
+      "metadata": {
+        "address": "730 Avenue Georges Pompidou, 06110 Le Cannet",
+        "phone_number": "+33493464888",
+        "business_hours": {
+          "lundi": "09:00-13:00",
+          "mardi": "09:00-13:00",
+          "mercredi": "09:00-13:00",
+          "jeudi": "09:00-13:00",
+          "vendredi": "09:00-13:00",
+          "samedi": "09:00-13:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242309",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d242309"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination Covid-19 - Centre des congr\u00e8s Mandelieu La Napoule",
+      "url": "https://www.doctolib.fr/centre-de-sante/mandelieu-la-napoule/centre-de-vaccination-covid-19-centre-des-congres-mandelieu-la-napoule",
+      "location": {
+        "longitude": 6.9388239,
+        "latitude": 43.546294,
+        "city": "Mandelieu-la-Napoule"
+      },
+      "metadata": {
+        "address": "836 Boulevard des \u00c9cureuils, 06210 Mandelieu-la-Napoule",
+        "phone_number": "+33422191307",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242662",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d242662"
+    },
+    {
+      "departement": "06",
+      "nom": "Centres de vaccination COVID-19 - CPTS des collines",
+      "url": "https://www.doctolib.fr/centre-de-sante/le-rouret/cpts-des-collines-vaccination-covid?pid=practice-163940",
+      "location": {
+        "longitude": 7.100497,
+        "latitude": 43.627646,
+        "city": "Biot"
+      },
+      "metadata": {
+        "address": "679 Chemin des Combes, 06410 Biot",
+        "phone_number": "+33698349976",
+        "business_hours": {
+          "lundi": "08:30-17:00",
+          "mardi": "08:30-17:00",
+          "mercredi": "08:30-17:00",
+          "jeudi": "08:30-17:00",
+          "vendredi": "08:30-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242051pid163940",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d242051"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie de la R\u00e9gence - Antibes",
+      "url": "https://www.doctolib.fr/pharmacie/antibes/pharmacie-de-la-regence-julien-cornec",
+      "location": {
+        "longitude": 7.1091266,
+        "latitude": 43.5715789,
+        "city": "Antibes"
+      },
+      "metadata": {
+        "address": "1 Avenue Amiral Courbet, 06160 Antibes",
+        "business_hours": {
+          "lundi": "08:30-12:30, 14:00-19:30",
+          "mardi": "08:30-12:30, 14:00-19:30",
+          "mercredi": "08:30-12:30, 14:00-19:30",
+          "jeudi": "08:30-12:30, 14:00-19:30",
+          "vendredi": "08:30-12:30, 14:00-19:30",
+          "samedi": "08:30-12:30, 14:00-19:30",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib259139",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d259139"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination Covid-19 - Ville de Vallauris Golfe -Juan",
+      "url": "https://www.doctolib.fr/maison-de-sante/vallauris/centre-de-vaccination-covid-19-ville-de-vallauris-golfejuan",
+      "location": {
+        "longitude": 7.0553243,
+        "latitude": 43.5804393,
+        "city": "Vallauris"
+      },
+      "metadata": {
+        "address": "Avenue Henri Pourtalet, 06220 Vallauris",
+        "phone_number": "+33493633560",
+        "business_hours": {
+          "lundi": "09:00-12:00, 14:00-17:00",
+          "mardi": "09:00-12:00, 14:00-17:00",
+          "mercredi": "09:00-12:00, 14:00-17:00",
+          "jeudi": "09:00-12:00, 14:00-17:00",
+          "vendredi": "09:00-12:00, 14:00-17:00",
+          "samedi": "09:00-12:00, 14:00-17:00",
+          "dimanche": "09:00-12:00, 14:00-17:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242722",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d242722"
+    },
+    {
+      "departement": "06",
+      "nom": "Dr Walid MOUKFI",
+      "url": "https://www.doctolib.fr/medecin-generaliste/villeneuve-loubet/walid-moukfi",
+      "location": {
+        "longitude": 7.1764285,
+        "latitude": 43.76057,
+        "city": "Gatti\u00e8res"
+      },
+      "metadata": {
+        "address": "3 Rue des Anciens Combattants, 06510 Gatti\u00e8res",
+        "phone_number": "+33493087032",
+        "business_hours": {
+          "lundi": "08:30-18:00",
+          "mardi": "08:30-18:00",
+          "mercredi": "08:30-18:00",
+          "jeudi": "08:30-18:00",
+          "vendredi": "08:30-18:00",
+          "samedi": "08:30-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib159772",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d159772"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination COVID-19 - Sospel",
+      "url": "https://www.doctolib.fr/centre-de-sante/sospel/centre-de-vaccination-covid-sospel",
+      "location": {
+        "longitude": 7.4513444,
+        "latitude": 43.8783804,
+        "city": "Sospel"
+      },
+      "metadata": {
+        "address": "Place Saint-Fran\u00e7ois, 06380 Sospel",
+        "phone_number": "+33493043042",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": "14:00-18:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib243156",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d243156"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination COVID-19 - Palais des Congr\u00e8s de Grasse",
+      "url": "https://www.doctolib.fr/centre-de-vaccinations-internationales/grasse/centre-de-vaccination-du-palais-des-congres-de-grasse",
+      "location": {
+        "longitude": 6.9207539,
+        "latitude": 43.6575109,
+        "city": "Grasse"
+      },
+      "metadata": {
+        "address": "22 Cours Honor\u00e9 Cresp, 06130 Grasse",
+        "phone_number": "+33497055369",
+        "business_hours": {
+          "lundi": "08:30-12:30, 13:15-17:00",
+          "mardi": "08:30-12:30, 13:15-17:00",
+          "mercredi": "08:30-12:30, 13:15-17:00",
+          "jeudi": "08:30-12:30, 13:15-17:00",
+          "vendredi": "08:30-12:30, 13:15-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib244639",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d244639"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination - H\u00f4pital de Breil / MSP de la Roya - Vaccination Covid-19",
+      "url": "https://www.doctolib.fr/centre-de-sante/breil-sur-roya/centre-de-vaccination-hopital-de-breil-msp-de-la-roya",
+      "location": {
+        "longitude": 7.5154387,
+        "latitude": 43.9460363,
+        "city": "Breil-sur-Roya"
+      },
+      "metadata": {
+        "address": "2 Rue Jules Cordier, 06540 Breil-sur-Roya",
+        "phone_number": "+33422163739",
+        "business_hours": {
+          "lundi": "08:00-13:00, 14:00-20:00",
+          "mardi": "08:00-13:00, 14:00-20:00",
+          "mercredi": "08:00-13:00, 14:00-20:00",
+          "jeudi": "08:00-13:00, 14:00-20:00",
+          "vendredi": "08:00-13:00, 14:00-20:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242140",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d242140"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination COVID - Tende",
+      "url": "https://www.doctolib.fr/centre-de-sante/tende/centre-de-vaccination-covid-tende",
+      "location": {
+        "longitude": 7.595064,
+        "latitude": 44.089338,
+        "city": "Tende"
+      },
+      "metadata": {
+        "address": "3 Rue Jean M\u00e9decin, 06430 Tende",
+        "phone_number": "+33422163739",
+        "business_hours": {
+          "lundi": "08:00-13:00, 14:00-20:00",
+          "mardi": "08:00-13:00, 14:00-20:00",
+          "mercredi": "08:00-13:00, 14:00-20:00",
+          "jeudi": "08:00-13:00, 14:00-20:00",
+          "vendredi": "08:00-13:00, 14:00-20:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib244070",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d244070"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de Vaccination COVID-19 Roquebrune-Cap-Martin",
+      "url": "https://www.doctolib.fr/centre-de-sante/roquebrune-cap-martin/centre-de-vaccination-covid-19-roquebrune-cap-martin",
+      "location": {
+        "longitude": 7.4766208,
+        "latitude": 43.7644551,
+        "city": "Roquebrune-Cap-Martin"
+      },
+      "metadata": {
+        "address": "Chemin du Vallonet, 06190 Roquebrune-Cap-Martin",
+        "phone_number": "+33493002853",
+        "business_hours": {
+          "lundi": "08:00-20:00",
+          "mardi": "08:00-20:00",
+          "mercredi": "08:00-20:00",
+          "jeudi": "08:00-20:00",
+          "vendredi": "08:00-20:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib262234",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d262234"
+    },
+    {
+      "departement": "06",
+      "nom": "Centre de vaccination COVID19 - Maison des Associations Antibes",
+      "url": "https://www.doctolib.fr/centre-de-sante/antibes/vaccination",
+      "location": {
+        "longitude": 7.1122152,
+        "latitude": 43.5943595,
+        "city": "Antibes"
+      },
+      "metadata": {
+        "address": "288 Chemin de Saint-Claude, 06600 Antibes",
+        "phone_number": "+33805020445",
+        "business_hours": {
+          "lundi": "09:00-18:00",
+          "mardi": "09:00-18:00",
+          "mercredi": "09:00-18:00",
+          "jeudi": "09:00-18:00",
+          "vendredi": "09:00-18:00",
+          "samedi": "09:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib242973",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d242973"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Antiboise",
+      "url": "https://www.doctolib.fr/pharmacie/antibes/pharmacie-antiboise-dr-guillaume-secondo-groupe-leader-sante",
+      "location": {
+        "longitude": 7.1195883,
+        "latitude": 43.5806369,
+        "city": "Antibes"
+      },
+      "metadata": {
+        "address": "2 Avenue Aristide Briand, 06600 Antibes",
+        "phone_number": "+33493339386",
+        "business_hours": {
+          "lundi": "08:30-13:00, 14:00-19:30",
+          "mardi": "08:30-13:00, 14:00-19:30",
+          "mercredi": "08:30-13:00, 14:00-19:30",
+          "jeudi": "08:30-13:00, 14:00-19:30",
+          "vendredi": "08:30-13:00, 14:00-19:30",
+          "samedi": "08:30-13:00, 14:00-18:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "doctolib258979",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d258979"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie De Fabron",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-de-fabron-nice",
+      "location": {
+        "longitude": 7.2407192,
+        "latitude": 43.68950340000001,
+        "city": "nice"
+      },
+      "metadata": {
+        "address": "54 avenue de la Californie, 06200 Nice",
+        "phone_number": "+33493865267",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordoclic0e9d4b2f",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "0e9d4b2f"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Tournamy",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-tournamy-mougins",
+      "location": {
+        "longitude": 6.987608,
+        "latitude": 43.604383,
+        "city": "mougins"
+      },
+      "metadata": {
+        "address": "762 avenue de Tournamy, 6250 Mougins",
+        "phone_number": "+33493752955",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "ordoclic277041f1",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "277041f1"
+    },
+    {
+      "departement": "06",
+      "nom": "Pharmacie Des Floralies",
+      "url": "https://mapharma.net/06220?c=268&l=0",
+      "location": {
+        "longitude": 7.05004,
+        "latitude": 43.57604,
+        "city": "VALLAURIS"
+      },
+      "metadata": {
+        "address": "41 Avenue de Cannes, 06220 VALLAURIS",
+        "business_hours": {
+          "lundi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mardi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "mercredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "jeudi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "vendredi": "08:15 \u2013 12:30, 13:30 \u2013 20:00",
+          "samedi": "08:15 \u2013 12:30, 14:00 \u2013 19:00",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "mapharma3f633d323638266c3d30",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:00:56.716254+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "3f633d323638266c3d30"
+    }
+  ]
+}

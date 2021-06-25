@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.552499+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "46",
+      "nom": "Centre de vaccination - MSP labastide murat - Vaccination Covid-19",
+      "url": "https://www.doctolib.fr/centre-de-vaccinations-internationales/grenoble/centre-de-vaccination-msp-labastide-murat",
+      "location": {
+        "longitude": 1.567936,
+        "latitude": 44.648973,
+        "city": "C\u0153ur-de-Causse"
+      },
+      "metadata": {
+        "address": "8 Rue Saint-Jacques, 46240 C\u0153ur-de-Causse",
+        "phone_number": "+33565206868",
+        "business_hours": {
+          "lundi": "09:00-12:00, 14:00-17:30",
+          "mardi": "09:00-12:00, 14:00-17:30",
+          "mercredi": "09:00-12:00, 14:00-17:30",
+          "jeudi": "09:00-12:00, 14:00-17:30",
+          "vendredi": "09:00-12:00, 14:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib243870",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T15:48:44.930473+02:00",
+      "appointment_schedules": null,
+      "gid": "d243870"
+    }
+  ]
+}

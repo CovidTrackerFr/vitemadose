@@ -1,0 +1,491 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.559620+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "56",
+      "nom": "LORIENT - Cit\u00e9 de la Voile",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?specialty=144",
+      "location": {
+        "longitude": -3.374,
+        "latitude": 47.7306,
+        "city": "Lorient"
+      },
+      "metadata": {
+        "address": " Rue Roland Morillot, 56323 Lorient",
+        "phone_number": "+33297069794",
+        "business_hours": {
+          "lundi": "9h-17h",
+          "mardi": "9h-17h",
+          "mercredi": "9h-17h",
+          "jeudi": "9h-17h",
+          "vendredi": "9h-17h",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T13:35:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 2,
+      "internal_id": "keldoc1215",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347476+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 2
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 2
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 2
+        }
+      ],
+      "gid": "1215"
+    },
+    {
+      "departement": "56",
+      "nom": "Pharmacie Des Montagnes Noires",
+      "url": "https://app.ordoclic.fr/app/pharmacie/pharmacie-des-montagnes-noires-gourin",
+      "location": {
+        "longitude": -3.6059005,
+        "latitude": 48.14027919999999,
+        "city": "gourin"
+      },
+      "metadata": {
+        "address": "4 RUE FAMILLE BOUCHARD, 56110 GOURIN",
+        "phone_number": "+33297234416",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-05-18T14:45:00+00:00",
+      "plateforme": "Ordoclic",
+      "type": "drugstore",
+      "appointment_count": 7,
+      "internal_id": "ordoclic86e232da",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:39:59.056804+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 7
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 7
+        }
+      ],
+      "gid": "86e232da"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "56",
+      "nom": "Centre de Sant\u00e9 Kersant\u00e9 Monistrol",
+      "url": "https://www.doctolib.fr/centre-de-sante/lorient/centre-de-sante-kersante-monistrol",
+      "location": {
+        "longitude": -3.3830749,
+        "latitude": 47.7354773,
+        "city": "Lorient"
+      },
+      "metadata": {
+        "address": "64 Rue Monistrol, 56100 Lorient",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib121953",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d121953"
+    },
+    {
+      "departement": "56",
+      "nom": "Dr Charlotte PENCOLE",
+      "url": "https://www.doctolib.fr/medecin-generaliste/saint-philibert/charlotte-pencole",
+      "location": {
+        "longitude": -3.00299599999994,
+        "latitude": 47.586773,
+        "city": "Saint-Philibert"
+      },
+      "metadata": {
+        "address": "Rue Jean-Fran\u00e7ois Gouzer, 56470 Saint-Philibert",
+        "phone_number": "+33297854718",
+        "business_hours": {
+          "lundi": "08:00-19:00",
+          "mardi": "08:00-19:00",
+          "mercredi": "08:00-19:00",
+          "jeudi": "08:00-19:00",
+          "vendredi": "09:00-19:00",
+          "samedi": "08:00-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib267715",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d267715"
+    },
+    {
+      "departement": "56",
+      "nom": "LE FAOUET - Maison de sant\u00e9",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?cabinet=16913&specialty=144",
+      "location": {
+        "longitude": -3.4902,
+        "latitude": 48.0309,
+        "city": "Le Faou\u00ebt"
+      },
+      "metadata": {
+        "address": "104 Rue de Saint Fiacre, 56320 Le Faou\u00ebt",
+        "phone_number": "+33297069794",
+        "business_hours": {
+          "lundi": "8h30-12h30 / 13h30-17h30",
+          "mardi": "8h30-12h30 / 13h30-17h30",
+          "mercredi": "8h30-12h30 / 13h30-17h30",
+          "jeudi": "8h30-12h30 / 13h30-17h30",
+          "vendredi": "8h30-12h30 / 13h30-17h30",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-20T18:00:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc904",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347104+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "904"
+    },
+    {
+      "departement": "56",
+      "nom": "GHBS - B\u00e2timent Onc'Oriant",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?cabinet=16571&specialty=144",
+      "location": {
+        "longitude": -3.35595,
+        "latitude": 47.753,
+        "city": "Lorient"
+      },
+      "metadata": {
+        "address": "1 Rampe de l'h\u00f4pital des arm\u00e9es, 56100 Lorient",
+        "phone_number": "+33297069794",
+        "business_hours": {
+          "lundi": "8h-20h",
+          "mardi": "8h-20h",
+          "mercredi": "8h-20h",
+          "jeudi": "8h-20h",
+          "vendredi": "8h-20h",
+          "samedi": "8h-20h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc736",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "736"
+    },
+    {
+      "departement": "56",
+      "nom": "PONTIVY - Gymnase Kerantr\u00e9e",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/noyal-pontivy-56920/centre-hospitalier-centre-bretagne/centre-de-vaccination-du-centre-hospitalier-centre-bretagne",
+      "location": {
+        "longitude": -2.95456,
+        "latitude": 48.0593,
+        "city": "Pontivy"
+      },
+      "metadata": {
+        "address": " Rue Jeff le Penven, 56300 Pontivy",
+        "phone_number": "+33974199963",
+        "business_hours": {
+          "lundi": "9h-19h",
+          "mardi": "9h-19h",
+          "mercredi": "9h-19h",
+          "jeudi": "9h-19h",
+          "vendredi": "9h-19h",
+          "samedi": "9h-19h",
+          "dimanche": "9h-19h"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc454",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:13:31.974345+02:00",
+      "appointment_schedules": null,
+      "gid": "454"
+    },
+    {
+      "departement": "56",
+      "nom": "GHBS - H\u00f4pital du Scorff",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?category=2528&cabinet=16581&specialty=144",
+      "location": {
+        "longitude": -3.35593,
+        "latitude": 47.753,
+        "city": "Lorient"
+      },
+      "metadata": {
+        "address": "5 Avenue \u00c9tienne-fran\u00e7ois de Choiseul, 56100 Lorient",
+        "phone_number": "+33297069794",
+        "business_hours": {
+          "lundi": "8h-20h",
+          "mardi": "8h-20h",
+          "mercredi": "8h-20h",
+          "jeudi": "8h-20h",
+          "vendredi": "8h-20h",
+          "samedi": "8h-20h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc733",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "733"
+    },
+    {
+      "departement": "56",
+      "nom": "CDV CAUDAN",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?cabinet=18780&specialty=144",
+      "location": {
+        "longitude": -3.35325,
+        "latitude": 47.8115,
+        "city": "Caudan"
+      },
+      "metadata": {
+        "address": "10 Rue du 19 Dragon, 56850 Caudan",
+        "phone_number": "+33297069794",
+        "business_hours": {
+          "lundi": "08:45-18:45",
+          "mardi": "08:45-18:45",
+          "mercredi": "08:45-18:45",
+          "jeudi": "08:45-18:45",
+          "vendredi": "08:45-18:45",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc2350",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:13:31.979676+02:00",
+      "appointment_schedules": null,
+      "gid": "2350"
+    }
+  ]
+}

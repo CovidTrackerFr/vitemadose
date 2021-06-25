@@ -1,0 +1,1053 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.605347+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID 19 du CHOR",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/saint-paul-97460/centre-hospitalier-ouest-reunion/centre-de-vaccination-du-centre-hospitalier-ouest-reunion",
+      "location": {
+        "longitude": 55.2704,
+        "latitude": -21.0128,
+        "city": "Saint-Paul"
+      },
+      "metadata": {
+        "address": "38 Rue Labourdonnais, 97460 Saint-Paul",
+        "phone_number": "+33262720404",
+        "business_hours": {
+          "lundi": "de 8h \u00e0 18h",
+          "mardi": "de 8h \u00e0 18h",
+          "mercredi": "de 8h \u00e0 18h",
+          "jeudi": "de 8h \u00e0 18h",
+          "vendredi": "de 8h \u00e0 18h",
+          "samedi": "de 8h \u00e0 12h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-11T18:39:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 1034,
+      "internal_id": "keldoc496",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347263+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 43
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 1
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 43
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 1034
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 1034
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 1034
+        }
+      ],
+      "gid": "496"
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination Covid-19 du GHER",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/saint-benoit-97437/gher-saint-benoit/centre-de-vaccination-du-gher-saint-benoit",
+      "location": {
+        "longitude": 55.7093,
+        "latitude": -21.0572,
+        "city": "Saint-Beno\u00eet"
+      },
+      "metadata": {
+        "address": "30 Route nationale 3 - ZAC madeleine, 97470 Saint-Beno\u00eet",
+        "phone_number": "+33262720404",
+        "business_hours": {
+          "lundi": "de 8h \u00e0 18h",
+          "mardi": "de 8h \u00e0 18h",
+          "mercredi": "de 8h \u00e0 18h",
+          "jeudi": "de 8h \u00e0 18h",
+          "vendredi": "de 8h \u00e0 18h",
+          "samedi": "de 8h \u00e0 12h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T07:20:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 401,
+      "internal_id": "keldoc491",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347164+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 93
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 93
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 401
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 401
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 401
+        }
+      ],
+      "gid": "491"
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID 19 de la Possession",
+      "url": "https://vaccination-covid.keldoc.com/redirect/?dom=centre-hospitalier&inst=la-possession-97419&user=centre-de-vaccination-la-possession&cabinet=25882&specialty=496",
+      "location": {
+        "longitude": 55.3312,
+        "latitude": -20.9358,
+        "city": "La Possession"
+      },
+      "metadata": {
+        "address": "27 b Rue Youri Gagarine, 97419 La Possession",
+        "phone_number": "+262262720404",
+        "business_hours": {
+          "lundi": "08:30-12:45/14:30-18:00",
+          "mardi": "08:30-12:45/14:30-18:00",
+          "mercredi": "08:30-12:45/14:30-18:00",
+          "jeudi": "08:30-12:45/14:30-18:00",
+          "vendredi": "08:30-12:45/14:30-18:00",
+          "samedi": "08:30-12:45/14:30-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T09:40:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 336,
+      "internal_id": "keldoc2516",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347039+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 66
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 66
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 336
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 336
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 336
+        }
+      ],
+      "gid": "2516"
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID-19 de Saint-Andr\u00e9 - Ex commissariat de la police nationale",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-andre-97440/saint-andre/centre-de-vaccination-de-saint-andre",
+      "location": {
+        "longitude": 55.652,
+        "latitude": -20.9615,
+        "city": "Saint-Andr\u00e9"
+      },
+      "metadata": {
+        "address": "237 Avenue de la Republique, 97440 Saint-Andr\u00e9",
+        "phone_number": "+33262720404",
+        "business_hours": {
+          "lundi": "de 14h \u00e0 18h",
+          "mardi": "de 8h \u00e0 12h et de 14h \u00e0 18h",
+          "mercredi": "de 8h \u00e0 12h et de 14h \u00e0 18h",
+          "jeudi": "de 8h \u00e0 12h et de 14h \u00e0 18h",
+          "vendredi": "de 8h \u00e0 12h et de 14h \u00e0 18h",
+          "samedi": "de 8h \u00e0 12h et de 14h \u00e0 18h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T09:40:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 268,
+      "internal_id": "keldoc1266",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347235+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 6
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 6
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 268
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 268
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 268
+        }
+      ],
+      "gid": "1266"
+    },
+    {
+      "departement": "974",
+      "nom": "Pharmacie Du Petit Bazar",
+      "url": "https://mapharma.net/97440-2?c=162&l=0",
+      "location": {
+        "longitude": 55.647806,
+        "latitude": -20.945999,
+        "city": "SAINT ANDRE"
+      },
+      "metadata": {
+        "address": "1631 Avenue \u00cele-de-France, 97440 SAINT ANDRE",
+        "business_hours": {
+          "lundi": "08:00 \u2013 19:30",
+          "mardi": "08:00 \u2013 19:30",
+          "mercredi": "08:00 \u2013 19:30",
+          "jeudi": "08:00 \u2013 19:30",
+          "vendredi": "08:00 \u2013 19:30",
+          "samedi": "08:00 \u2013 19:30",
+          "dimanche": "Ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T10:00:00",
+      "plateforme": "Mapharma",
+      "type": "drugstore",
+      "appointment_count": 1104,
+      "internal_id": "mapharma2d323f633d313632266c3d3",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T17:50:05.935118+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 24
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 120
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 552
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 984
+        }
+      ],
+      "gid": "2d323f633d313632266c3d3"
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID 19-Nord : Site Felix Guyon",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/saint-denis-97400/centre-hospitalier-universitaire-la-reunion-site-felix-guyon/centre-de-vaccination-du-centre-hospitalier-universitaire-la-reunion-site-felix-guyon",
+      "location": {
+        "longitude": 55.4439,
+        "latitude": -20.8915,
+        "city": "Saint-Denis"
+      },
+      "metadata": {
+        "address": " All\u00e9e des Topazes, 97400 Saint-Denis",
+        "phone_number": "+33262720404",
+        "business_hours": {
+          "lundi": "de 8h \u00e0 18h",
+          "mardi": "de 8h \u00e0 18h",
+          "mercredi": "de 8h \u00e0 18h",
+          "jeudi": "de 8h \u00e0 18h",
+          "vendredi": "de 8h \u00e0 18h",
+          "samedi": "de 8h \u00e0 12h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T10:50:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 385,
+      "internal_id": "keldoc495",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347279+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 40
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 40
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 385
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 385
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 385
+        }
+      ],
+      "gid": "495"
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID-19 de Saint-Denis - NORDEV - Parc des expositions",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-denis-97400/saint-denis/centre-de-vaccination-de-saint-denis",
+      "location": {
+        "longitude": 55.4981,
+        "latitude": -20.8936,
+        "city": "Sainte-Clotilde"
+      },
+      "metadata": {
+        "address": "1 Rue du Karting, 97490 Sainte-Clotilde",
+        "phone_number": "+33262720404",
+        "business_hours": {
+          "lundi": "de 8h30 \u00e0 13h00 et de 14h30 \u00e0 18h00",
+          "mardi": "de 8h30 \u00e0 13h00 et de 14h30 \u00e0 18h00",
+          "mercredi": "de 8h30 \u00e0 13h00 et de 14h30 \u00e0 18h00",
+          "jeudi": "de 8h30 \u00e0 13h00 et de 14h30 \u00e0 18h00",
+          "vendredi": "de 8h30 \u00e0 13h00 et de 14h30 \u00e0 18h00",
+          "samedi": "de 8h30 \u00e0 13h00 et de 14h30 \u00e0 18h00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-12T11:45:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 372,
+      "internal_id": "keldoc1267",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347336+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 46
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 46
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 372
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 372
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 372
+        }
+      ],
+      "gid": "1267"
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID 19-Sud : Site de St Pierre",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/saint-pierre-97448/centre-hospitalier-universitaire-la-reunion-sud/centre-de-vaccination-du-centre-hospitalier-universitaire-la-reunion-sud",
+      "location": {
+        "longitude": 55.4945,
+        "latitude": -21.3452,
+        "city": "Saint-Pierre"
+      },
+      "metadata": {
+        "address": " Avenue Fran\u00e7ois Mitterand, 97410 Saint-Pierre",
+        "phone_number": "+33262720404",
+        "business_hours": {
+          "lundi": "de 8h \u00e0 18h",
+          "mardi": "de 8h \u00e0 18h",
+          "mercredi": "de 8h \u00e0 18h",
+          "jeudi": "de 8h \u00e0 18h",
+          "vendredi": "de 8h \u00e0 18h",
+          "samedi": "de 8h \u00e0 12h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-13T12:40:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 262,
+      "internal_id": "keldoc493",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347194+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 262
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 262
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 262
+        }
+      ],
+      "gid": "493"
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID-19 du Tampon - Salle Raymond Lauret 14e",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/le-tampon-97418/le-tampon/centre-de-vaccination-le-tampon",
+      "location": {
+        "longitude": 55.5224,
+        "latitude": -21.2565,
+        "city": "Le Tampon"
+      },
+      "metadata": {
+        "address": "Salle Raymond Lauret 14e km, Rue Georges Pompidou, RN3, 97430 Le Tampon",
+        "phone_number": "+33262720404",
+        "business_hours": {
+          "lundi": "de 14h \u00e0 18h",
+          "mardi": "de 8h \u00e0 12h et de 14h \u00e0 18h",
+          "mercredi": "de 8h \u00e0 12h et de 14h \u00e0 18h",
+          "jeudi": "de 8h \u00e0 12h et de 14h \u00e0 18h",
+          "vendredi": "de 8h \u00e0 12h et de 14h \u00e0 18h",
+          "samedi": "de 8h \u00e0 12h et de 14h \u00e0 18h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-13T17:50:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 132,
+      "internal_id": "keldoc1268",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347062+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 132
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 132
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 132
+        }
+      ],
+      "gid": "1268"
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID-19 de Saint-Paul - Salle polyvalente de l'etang",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-paul-97460/saint-paul/centre-de-vaccination-de-saint-paul",
+      "location": {
+        "longitude": 55.2848,
+        "latitude": -20.9907,
+        "city": "Saint-Paul"
+      },
+      "metadata": {
+        "address": "57 Rue de la Croix, 97460 Saint-Paul",
+        "phone_number": "+33262720404",
+        "business_hours": {
+          "lundi": "de 14h \u00e0 18h",
+          "mardi": "de 8h \u00e0 12h et de 14h \u00e0 18h",
+          "mercredi": "de 8h \u00e0 12h et de 14h \u00e0 18h",
+          "jeudi": "de 8h \u00e0 12h et de 14h \u00e0 18h",
+          "vendredi": "de 8h \u00e0 12h et de 14h \u00e0 18h",
+          "samedi": "de 8h \u00e0 12h et de 14h \u00e0 18h",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-13T18:00:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 67,
+      "internal_id": "keldoc1265",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347469+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 67
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 67
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 67
+        }
+      ],
+      "gid": "1265"
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination Covid-19 a\u00e9roport de Pierrefonds",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/le-tampon-97418/centre-de-vaccination-covid-19-aeroport-de-pierrefonds",
+      "location": {
+        "longitude": 55.4266,
+        "latitude": -21.3182,
+        "city": "Saint-Pierre"
+      },
+      "metadata": {
+        "address": "34 Chemin de l\u2019Aerodrome, 97410 Saint-Pierre",
+        "phone_number": "+33262720404",
+        "business_hours": {
+          "lundi": "08:30-12:35/14:00-18:00",
+          "mardi": "08:30-12:35/14:00-18:00",
+          "mercredi": "08:30-12:35/14:00-18:00",
+          "jeudi": "08:30-12:35/14:00-18:00",
+          "vendredi": "08:30-12:35/14:00-18:00",
+          "samedi": "08:30-12:35/14:00-18:00",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-13T18:21:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 345,
+      "internal_id": "keldoc2085",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347138+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 345
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 345
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 345
+        }
+      ],
+      "gid": "2085"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID 19 : Site de Grand Ilet",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-benoit-97437/centre-de-vaccination-ephemere-station-de-trail-grand-ilet",
+      "location": {
+        "longitude": 55.4773,
+        "latitude": -21.0307,
+        "city": "Salazie"
+      },
+      "metadata": {
+        "address": "10 Rue du P\u00e8re Eugene Jouanno, 97433 Salazie",
+        "phone_number": "+33262720404",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "08h30 12h - 14h 17h30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc1751",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "1751"
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID 19 : Site de Cilaos",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier-universitaire/le-tampon-97418/hopital-de-cilaos-chu?category=3107&cabinet=17204&specialty=496",
+      "location": {
+        "longitude": 55.4801,
+        "latitude": -21.1333,
+        "city": "Cilaos"
+      },
+      "metadata": {
+        "address": "5 Rue Fleurs Jaunes, 97413 Cilaos",
+        "phone_number": "+33262720404",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "08h30 12h00  -  13h30 17h00",
+          "vendredi": "08h30 12h00  -  13h30 17h00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc1710",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "1710"
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID 19 : Site de Mare \u00e0 vieille place",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-benoit-97437/centre-de-vaccination-ephemere-case-de-mare-a-vieille-place",
+      "location": {
+        "longitude": 55.5058,
+        "latitude": -21.0278,
+        "city": "Salazie"
+      },
+      "metadata": {
+        "address": "159 rue du pere Castagnan, 97433 Salazie",
+        "phone_number": "+262262724720",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "08h30 12h - 14h 17h30",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc1748",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "1748"
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID 19 : Site du Port",
+      "url": "https://vaccination-covid.keldoc.com/vaccination-covid19/saint-paul-97460/file-1-centre-de-vaccination-ephemere-du-port",
+      "location": {
+        "longitude": 55.2997,
+        "latitude": -20.9442,
+        "city": "Le Port"
+      },
+      "metadata": {
+        "address": "4 Avenue Louis Aragon, 97420 Le Port",
+        "phone_number": "+262262724720",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "08:30-12:45/14:30-17:45",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc2300",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "2300"
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID 19 : site de Hell-Bourg",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-benoit-97437/centre-de-vaccination-ephemere-mairie-annexe-d-hell-bourg",
+      "location": {
+        "longitude": 55.5214,
+        "latitude": -21.0649,
+        "city": "Salazie"
+      },
+      "metadata": {
+        "address": "23 Rue G\u00e9n\u00e9ral de Gaulle, 97433 Salazie",
+        "phone_number": "+33262720404",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "08h30 12h00 - 14h 17h30",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc1739",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "1739"
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID 19 : Site de Salazie Village",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-benoit-97437/centre-de-vaccination-ephemere-pole-multi-service",
+      "location": {
+        "longitude": 55.541,
+        "latitude": -21.0272,
+        "city": "Salazie"
+      },
+      "metadata": {
+        "address": "75 Rue Georges Pompidou, 97433 Salazie",
+        "phone_number": "+33262720404",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "08h30 12h - 14h 17h30",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc1745",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "1745"
+    },
+    {
+      "departement": "974",
+      "nom": "Centre de vaccination COVID 19 : site des Makes",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/saint-louis-97134/centre-de-vaccination-ephemere-mairie-annexe-des-makes",
+      "location": {
+        "longitude": 55.4039,
+        "latitude": -21.2069,
+        "city": "Saint-Louis"
+      },
+      "metadata": {
+        "address": "3 Rue Paul Hermann, 97421 Saint-Louis",
+        "phone_number": "+262262724720",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "08:30-12:00/14:00-17:30",
+          "jeudi": "ferm\u00e9",
+          "vendredi": "ferm\u00e9",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc2061",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "2061"
+    }
+  ]
+}

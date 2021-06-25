@@ -1,0 +1,225 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.534447+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "21",
+      "nom": "Pharmacie des Perri\u00e8res",
+      "url": "https://www.maiia.com/pharmacie/21000-dijon/pharmacie-des-perrieres?centerid=6051b8857a1e3f112d086807",
+      "location": {
+        "longitude": 5.017812,
+        "latitude": 47.323893,
+        "city": "Dijon"
+      },
+      "metadata": {
+        "address": "6 bis Boulevard de l\u2019Ouest 21000 Dijon",
+        "phone_number": "+33380434493",
+        "business_hours": {
+          "Lundi": "08:30-12:00 14:00-20:00",
+          "Mardi": "08:30-12:00 14:00-20:00",
+          "Mercredi": "08:30-12:00 14:00-20:00",
+          "Jeudi": "08:30-12:00 14:00-20:00",
+          "Vendredi": "08:30-12:00 14:00-20:00",
+          "Samedi": "08:30-12:00 14:00-17:00",
+          "Dimanche": "08:30-12:00 14:00-20:00"
+        }
+      },
+      "prochain_rdv": "2021-05-22T13:20:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 5,
+      "internal_id": "maiia6051b8857a1e3f112d086807",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527639+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 5
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 5
+        }
+      ],
+      "gid": "6051b885"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "21",
+      "nom": "Centre de vaccination Seurre COVID-19 - P\u00f4le de Sant\u00e9 Rives de Sa\u00f4ne",
+      "url": "https://www.doctolib.fr/maison-de-sante/seurre/centre-de-vaccination-pole-de-sante-rives-de-saone",
+      "location": {
+        "longitude": 5.1483724,
+        "latitude": 46.9975403,
+        "city": "Seurre"
+      },
+      "metadata": {
+        "address": "11 Rue des Foss\u00e9s, 21250 Seurre",
+        "business_hours": {
+          "lundi": "09:00-13:00, 14:00-19:00",
+          "mardi": "09:00-13:00, 14:00-19:00",
+          "mercredi": "09:00-13:00, 14:00-19:00",
+          "jeudi": "09:00-13:00, 14:00-19:00",
+          "vendredi": "09:00-13:00, 14:00-19:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib245846pid167163",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d245846"
+    },
+    {
+      "departement": "21",
+      "nom": "Centre de vaccination Covid-19 - Auxonne",
+      "url": "https://www.doctolib.fr/centre-de-sante/auxonne/centre-de-vaccination-covid-19-auxonne",
+      "location": {
+        "longitude": 5.3894214,
+        "latitude": 47.1927051,
+        "city": "Auxonne"
+      },
+      "metadata": {
+        "address": "Boulevard Pasteur, 21130 Auxonne",
+        "phone_number": "+33345810421",
+        "business_hours": {
+          "lundi": "10:00-15:00",
+          "mardi": "10:00-15:00",
+          "mercredi": "10:00-15:00",
+          "jeudi": null,
+          "vendredi": "10:00-15:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib244779pid166391",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d244779"
+    },
+    {
+      "departement": "21",
+      "nom": "Dr Pascal JEMELEN",
+      "url": "https://www.doctolib.fr/medecin-generaliste/dijon/pascal-jemelen",
+      "location": {
+        "longitude": 5.01812240000004,
+        "latitude": 47.3138082,
+        "city": "Dijon"
+      },
+      "metadata": {
+        "address": "69 Avenue Gustave Eiffel, 21000 Dijon",
+        "business_hours": {
+          "lundi": null,
+          "mardi": null,
+          "mercredi": null,
+          "jeudi": null,
+          "vendredi": null,
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "general-practitioner",
+      "appointment_count": 0,
+      "internal_id": "doctolib112834",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d112834"
+    }
+  ]
+}

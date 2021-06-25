@@ -1,0 +1,360 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.533832+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "19",
+      "nom": "Pharmacie de Ventadour",
+      "url": "https://www.maiia.com/pharmacie/19300-egletons/pharmacie-de-ventadour?centerid=5fdb82590a52e53db23040a3",
+      "location": {
+        "longitude": 2.046284,
+        "latitude": 45.403403,
+        "city": "\u00c9gletons"
+      },
+      "metadata": {
+        "address": "75 Avenue Charles de Gaulle 19300 \u00c9gletons",
+        "phone_number": "+33555930245",
+        "business_hours": {
+          "Lundi": "09:00-12:00 14:00-19:00",
+          "Mardi": "09:00-12:00 14:00-19:00",
+          "Mercredi": "09:00-12:00 14:00-19:00",
+          "Jeudi": "09:00-12:00 14:00-19:00",
+          "Vendredi": "09:00-12:00 14:00-19:00",
+          "Samedi": "09:00-12:00",
+          "Dimanche": "09:00-12:00 14:00-19:00"
+        }
+      },
+      "prochain_rdv": "2021-05-27T13:15:00+00:00",
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 34,
+      "internal_id": "maiia5fdb82590a52e53db23040a3",
+      "vaccine_type": [
+        "AstraZeneca"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527048+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 12
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 33
+        }
+      ],
+      "gid": "5fdb8259"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "19",
+      "nom": "Centre hospitalier du Pays d'Eygurande - Vaccination COVID-19",
+      "url": "https://www.doctolib.fr/hopital-public/monestier-merlines/centre-hospitalier-du-pays-d-eygurande-monestier-merlines",
+      "location": {
+        "longitude": 2.512209,
+        "latitude": 45.640248,
+        "city": "Monestier-Merlines"
+      },
+      "metadata": {
+        "address": "La Cellette, 19340 Monestier-Merlines",
+        "phone_number": "+33555943207",
+        "business_hours": {
+          "lundi": "09:00-17:00",
+          "mardi": "09:00-17:00",
+          "mercredi": "09:00-17:00",
+          "jeudi": "09:00-17:00",
+          "vendredi": "09:00-17:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib245904",
+      "vaccine_type": null,
+      "appointment_by_phone_only": true,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "d245904"
+    },
+    {
+      "departement": "19",
+      "nom": "[Limousin] Vaccination COVID-19 - Ussel",
+      "url": "https://www.doctolib.fr/centre-de-vaccinations-internationales/limousin/vaccination-covid-19-professionnels-de-sante?pid=practice-162958",
+      "location": {
+        "longitude": 2.3133131,
+        "latitude": 45.5433712,
+        "city": "Ussel"
+      },
+      "metadata": {
+        "address": "2 Avenue du Dr Roullet, 19200 Ussel",
+        "phone_number": "+33555087520",
+        "business_hours": {
+          "lundi": "07:30-20:00",
+          "mardi": "07:30-20:00",
+          "mercredi": "07:30-20:00",
+          "jeudi": "07:30-20:00",
+          "vendredi": "07:30-20:00",
+          "samedi": "07:30-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib240406pid162958",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d240406"
+    },
+    {
+      "departement": "19",
+      "nom": "Centre Medico Chirurgical Les C\u00e8dres - Vaccination Covid-19",
+      "url": "https://www.doctolib.fr/clinique-privee/brive-la-gaillarde/centre-medico-chirurgical-les-cedres-vaccination-covid-19",
+      "location": {
+        "longitude": 1.5001772,
+        "latitude": 45.1609615,
+        "city": "Brive-la-Gaillarde"
+      },
+      "metadata": {
+        "address": "Impasse des Cedres, 19100 Brive-la-Gaillarde",
+        "phone_number": "+33826300888",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib241647",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d241647"
+    },
+    {
+      "departement": "19",
+      "nom": "[Limousin] Vaccination COVID-19 - Bort-les-Orgues",
+      "url": "https://www.doctolib.fr/centre-de-vaccinations-internationales/limousin/vaccination-covid-19-professionnels-de-sante?pid=practice-162949",
+      "location": {
+        "longitude": 2.4968951,
+        "latitude": 45.3928502,
+        "city": "Bort-les-Orgues"
+      },
+      "metadata": {
+        "address": "190 Rue Gustave Parre, 19110 Bort-les-Orgues",
+        "business_hours": {
+          "lundi": "07:30-20:00",
+          "mardi": "07:30-20:00",
+          "mercredi": "07:30-20:00",
+          "jeudi": "07:30-20:00",
+          "vendredi": "07:30-20:00",
+          "samedi": "07:30-12:00",
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib240406pid162949",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d240406"
+    },
+    {
+      "departement": "19",
+      "nom": "Pharmacie Milhet",
+      "url": "https://www.maiia.com/pharmacie/19000-tulle/pharmacie-milhet?centerid=6022c4f93e7833638314b969",
+      "location": {
+        "longitude": 1.76949,
+        "latitude": 45.265309,
+        "city": "Tulle"
+      },
+      "metadata": {
+        "address": "4 Rue Jean Jaur\u00e8s 19000 Tulle",
+        "phone_number": "+33555266500",
+        "business_hours": {
+          "Lundi": "14:00-19:00",
+          "Mardi": "09:00-19:00",
+          "Mercredi": "09:00-19:00",
+          "Jeudi": "09:00-19:00",
+          "Vendredi": "09:00-19:00",
+          "Samedi": "09:00-12:00 14:00-18:00",
+          "Dimanche": "09:00-19:00"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Maiia",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "maiia6022c4f9",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "6022c4f9"
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "version": 1,
+  "last_updated": "2021-05-11T18:16:24.603525+02:00",
+  "last_scrap": {
+    "doctolib": "2021-05-11T17:46:52.588802+02:00",
+    "ordoclic": "2021-05-11T17:39:59.061057+02:00",
+    "keldoc": "2021-05-11T16:14:35.351815+02:00",
+    "maiia": "2021-05-11T18:01:59.534375+02:00",
+    "mapharma": "2021-05-11T17:50:05.940632+02:00"
+  },
+  "centres_disponibles": [
+    {
+      "departement": "971",
+      "nom": "Centre de vaccination - MEDICO SOCIAL DE SAINT BARTHELEMY",
+      "url": "https://www.maiia.com/centre-de-vaccination/97133-saint-barthelemy/-centre-de-vaccination---medico-social-de-saint-barthelemy?centerid=6008620ab646de355c797367",
+      "location": null,
+      "metadata": {
+        "address": "Gustavia Rue Auguste Nyman   97133 Saint Barthelemy",
+        "business_hours": {
+          "Lundi": "08:00-12:00 14:00-18:00",
+          "Mardi": "08:00-12:00 14:00-18:00",
+          "Mercredi": "08:00-12:00 14:00-18:00",
+          "Jeudi": "08:00-12:00 14:00-18:00",
+          "Vendredi": "08:00-12:00 14:00-18:00",
+          "Samedi": "08:00-12:00 14:00-18:00",
+          "Dimanche": "08:00-12:00 14:00-18:00"
+        }
+      },
+      "prochain_rdv": "2021-05-18T12:50:00+00:00",
+      "plateforme": "Maiia",
+      "type": "vaccination-center",
+      "appointment_count": 25,
+      "internal_id": "maiia6008620ab646de355c797367",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T18:01:59.527087+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 25
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 25
+        }
+      ],
+      "gid": "6008620a"
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "971",
+      "nom": "M. Gregory HUC",
+      "url": "https://www.doctolib.fr/infirmier/levallois-perret/gregory-huc",
+      "location": {
+        "longitude": -61.518447,
+        "latitude": 16.243538,
+        "city": "Les Abymes"
+      },
+      "metadata": {
+        "address": "Co7, b\u00e2timent n\u00b05, bloc C, porte Sonis 1 - Zac de Boissard, 97139 Les Abymes",
+        "phone_number": "+590690181236",
+        "business_hours": {
+          "lundi": "09:00-16:00",
+          "mardi": "09:00-16:00",
+          "mercredi": "09:00-16:00",
+          "jeudi": "09:00-16:00",
+          "vendredi": "09:00-16:00",
+          "samedi": null,
+          "dimanche": null
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Doctolib",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "doctolib260988",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": [
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "d260988"
+    },
+    {
+      "departement": "971",
+      "nom": "Centre de vaccination du CH de Capesterre Belle Eau",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/capesterre-belle-eau-97130/centre-hospitalier-de-capesterre-belle-eau/centre-de-vaccination-du-centre-hospitalier-de-capesterre-belle-eau",
+      "location": {
+        "longitude": -61.5991,
+        "latitude": 16.0041,
+        "city": "Capesterre-Belle-Eau"
+      },
+      "metadata": {
+        "address": "1464 Allee Saint Sauveur, 97130 Capesterre-Belle-Eau",
+        "phone_number": "+33590991474",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "08:00-17:00",
+          "mercredi": "08:00-17:00",
+          "jeudi": "08:00-17:00",
+          "vendredi": "08:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-05-26T14:35:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc724",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347077+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "724"
+    },
+    {
+      "departement": "971",
+      "nom": "Centre \u00e9ph\u00e9m\u00e8re de vaccination - Commune de Vieux Habitants",
+      "url": "https://vaccination-covid.keldoc.com/cabinet-medical/vieux-habitants-97119/dispensaire-departemental-d-hygiene-sociale/centre-de-vaccination-du-dispensaire-departemental-d-hygiene-sociale",
+      "location": {
+        "longitude": -61.7646,
+        "latitude": 16.06,
+        "city": "Vieux-Habitants"
+      },
+      "metadata": {
+        "address": "Ancien dispensaire Rue Henri Dunant, 97119 Vieux-Habitants",
+        "phone_number": "+33590991474",
+        "business_hours": {
+          "lundi": "ferm\u00e9",
+          "mardi": "ferm\u00e9",
+          "mercredi": "ferm\u00e9",
+          "jeudi": "14:00-17:00",
+          "vendredi": "14:00-17:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": null,
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc1378",
+      "vaccine_type": null,
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "appointment_schedules": null,
+      "gid": "1378"
+    },
+    {
+      "departement": "971",
+      "nom": "Centre de vaccination de Marie Galante",
+      "url": "https://vaccination-covid.keldoc.com/centre-hospitalier/grand-bourg-97112/centre-hospitalier-de-sainte-marie/centre-de-vaccination-du-centre-hospitalier-de-sainte-marie",
+      "location": {
+        "longitude": -61.2925,
+        "latitude": 15.8923,
+        "city": "Grand-Bourg"
+      },
+      "metadata": {
+        "address": "1005 p Section Ducos, 97112 Grand-Bourg",
+        "phone_number": "+33590991474",
+        "business_hours": {
+          "lundi": "09:30-14:00",
+          "mardi": "09:30-14:00",
+          "mercredi": "09:30-14:00",
+          "jeudi": "09:30-14:00",
+          "vendredi": "09:30-14:00",
+          "samedi": "ferm\u00e9",
+          "dimanche": "ferm\u00e9"
+        }
+      },
+      "prochain_rdv": "2021-06-03T15:50:00.000000+0200",
+      "plateforme": "Keldoc",
+      "type": "vaccination-center",
+      "appointment_count": 0,
+      "internal_id": "keldoc731",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": "2021-05-11T16:14:35.347453+02:00",
+      "appointment_schedules": [
+        {
+          "name": "chronodose",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "1_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-11T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "2_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-12T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "7_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-05-17T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "28_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-07T23:59:59+02:00",
+          "total": 0
+        },
+        {
+          "name": "49_days",
+          "from": "2021-05-11T00:00:00+02:00",
+          "to": "2021-06-28T23:59:59+02:00",
+          "total": 0
+        }
+      ],
+      "gid": "731"
+    }
+  ]
+}
