@@ -12,7 +12,7 @@ class BlockedByDoctolibError(ScrapeError):
 
 
 class RequestError(ScrapeError):
-    def __init__(self, url, response_code=""):
+    def __init__(self, url, response_code="wrong-url"):
         super().__init__("Doctolib", f"Erreur {response_code} lors de l'accès à {url}")
         self.blocked = True
 

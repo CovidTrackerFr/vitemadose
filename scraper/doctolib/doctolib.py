@@ -104,16 +104,21 @@ class DoctolibSlots:
                 response = self._client.get(centre_api_url, headers=DOCTOLIB_HEADERS)
                 # response.raise_for_status()
                 time.sleep(self._cooldown_interval)
-                data = response.json()
-                rdata = data.get("data", {})
+                try:
+                    data = response.json()
+                    rdata = data.get("data", {})
+                except:
+                    request.increase_request_count("error")
+                    if response.status_code == 403:
+                        raise BlockedByDoctolibError(centre_api_url)
+                    if response.status_code == 404:
+                        raise RequestError(centre_api_url, response.status_code)
+                    return None
 
             except requests.exceptions.RequestException as e:
                 request.increase_request_count("error")
-                # raise RequestError(centre_api_url)
-                if response.status_code == 403:
-                    raise BlockedByDoctolibError(centre_api_url)
-                elif response.status_code != 200:
-                    raise RequestError(centre_api_url, response.status_code)
+                raise RequestError(centre_api_url)
+                return None
 
         if not self.is_practice_id_valid(request, rdata):
             logger.warning(
