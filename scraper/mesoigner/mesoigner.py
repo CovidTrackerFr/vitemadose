@@ -112,7 +112,7 @@ class MesoignerSlots:
 
 
 def center_iterator() -> Iterator[Dict]:
-    if not MESOIGNER_CONF.enabled:
+    if not MESOIGNER_CONF["enabled"]:
         return
     try:
         center_path = "data/output/doctolib-centers.json"
