@@ -115,7 +115,7 @@ def center_iterator() -> Iterator[Dict]:
     if not MESOIGNER_CONF["enabled"]:
         return
     try:
-        center_path = "data/output/doctolib-centers.json"
+        center_path = "data/output/mesoigner_centers.json"
         url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"
         response = requests.get(url)
         response.raise_for_status()
