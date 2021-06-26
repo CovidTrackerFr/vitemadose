@@ -1,6 +1,8 @@
 ---
 name: Mesoigner center scrap
 
+env:
+  MESOIGNER_API_KEY: ${{ secrets.MESOIGNER_API_KEY }}
 on:
   schedule:
     - cron: "0 * * * *"
