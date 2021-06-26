@@ -2,11 +2,11 @@ from typing import List, Optional
 
 
 class ScraperRequest:
-    def __init__(self, url: str, start_date: str, center_info=None):
+    def __init__(self, url: str, start_date: str, center_info=None, internal_id=None):
         self.url = url
         self.start_date = start_date
         self.center_info = center_info
-        self.internal_id = None
+        self.internal_id = internal_id
         self.practitioner_type = None
         self.appointment_count = 0
         self.appointment_schedules = None

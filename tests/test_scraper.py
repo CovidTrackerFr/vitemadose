@@ -451,31 +451,41 @@ def test_fetch_centre_slots():
 
     # Doctolib
     url = "https://partners.doctolib.fr/blabla"
-    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map, creneau_q=DummyQueue(), center_info=center_info)
+    res = fetch_centre_slots(
+        url, None, start_date, fetch_map=fetch_map, creneau_q=DummyQueue(), center_info=center_info
+    )
     assert res.platform == "Doctolib"
     assert res.next_availability == "2021-04-04"
 
     # Doctolib (old)
     url = "https://www.doctolib.fr/blabla"
-    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map, creneau_q=DummyQueue(), center_info=center_info)
+    res = fetch_centre_slots(
+        url, None, start_date, fetch_map=fetch_map, creneau_q=DummyQueue(), center_info=center_info
+    )
     assert res.platform == "Doctolib"
     assert res.next_availability == "2021-04-04"
 
     # Keldoc
     url = "https://vaccination-covid.keldoc.com/blabla"
-    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map, creneau_q=DummyQueue(), center_info=center_info)
+    res = fetch_centre_slots(
+        url, None, start_date, fetch_map=fetch_map, creneau_q=DummyQueue(), center_info=center_info
+    )
     assert res.platform == "Keldoc"
     assert res.next_availability == "2021-04-05"
 
     # Maiia
     url = "https://www.maiia.com/blabla"
-    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map, creneau_q=DummyQueue(), center_info=center_info)
+    res = fetch_centre_slots(
+        url, None, start_date, fetch_map=fetch_map, creneau_q=DummyQueue(), center_info=center_info
+    )
     assert res.platform == "Maiia"
     assert res.next_availability == "2021-04-06"
 
     # Default / unknown
     url = "https://www.example.com"
-    res = fetch_centre_slots(url, start_date, fetch_map=fetch_map, creneau_q=DummyQueue(), center_info=center_info)
+    res = fetch_centre_slots(
+        url, None, start_date, fetch_map=fetch_map, creneau_q=DummyQueue(), center_info=center_info
+    )
     assert res.platform == "Autre"
     assert res.next_availability is None
 

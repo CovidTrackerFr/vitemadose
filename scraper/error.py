@@ -8,7 +8,11 @@ class ScrapeError(Exception):
 class BlockedByDoctolibError(ScrapeError):
     def __init__(self, url):
         super().__init__("Doctolib", f"Doctolib bloque nos appels: 403 {url}")
-        self.blocked = True
+
+
+class BlockedByMesoignerError(ScrapeError):
+    def __init__(self, url):
+        super().__init__("Mesoigner", f"Mesoigner bloque nos appels: 403 {url}")
 
 
 class RequestError(ScrapeError):
