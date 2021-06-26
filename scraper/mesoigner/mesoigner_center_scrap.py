@@ -29,9 +29,14 @@ def scrap_centers():
             headers=MESOIGNER_HEADERS,
         )
         api_centers = r.json()
+
+        if r.status_code != 200:
+            logger.error(f"Can't access API - {r.status_code}")
+            return None
+
     except:
-        logger.warn(f">Can't access API - {r.status_code}")
-        return [], False
+        logger.error(f"Can't access API")
+        return None
 
     return api_centers
 
@@ -78,6 +83,9 @@ def parse_mesoigner_centers():
     centers_list = scrap_centers()
     useless_keys = ["id", "zipcode", "position", "opening_hours", "position", "adress_city", "adress_street"]
 
+    if centers_list is None:
+        return None
+
     for centre in centers_list:
         logger.info(f'[Mesoigner] Found Center {centre["name"]} ({centre["zipcode"]})')
 
@@ -107,6 +115,9 @@ if __name__ == "__main__":  # pragma: no cover
         path_out = SCRAPER_CONF.get("result_path", False)
         if not path_out:
             logger.error(f"Mesoigner - No result_path in config file.")
+            exit(1)
+
+        if not centers:
             exit(1)
 
         logger.info(f"Found {len(centers)} centers on Mesoigner")
