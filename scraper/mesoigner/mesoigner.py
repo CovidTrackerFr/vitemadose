@@ -1,17 +1,20 @@
 import json
+from scraper.doctolib.doctolib import build_appointment_schedules
 import time
 import logging
 import os
 from typing import Dict, Iterator, Optional
 import httpx
 import requests
-import sys
 from scraper.circuit_breaker import ShortCircuit
 from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform
 from scraper.error import BlockedByMesoignerError
+from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
+from utils.vmd_utils import append_date_days
+from typing import Dict, Iterator, List, Optional
 
 
 MESOIGNER_CONF = get_conf_platform("mesoigner")
@@ -81,9 +84,54 @@ class MesoignerSlots:
         first_availability = self.get_appointments(request, rdata)
         return first_availability
 
+    def build_appointment_schedules(
+        request,
+        interval: int,
+        start_date: str,
+        end_date: str,
+        count: int,
+        appointment_schedules: Optional[List[dict]],
+        chronodose=False,
+    ) -> List[dict]:
+        if appointment_schedules is None:
+            appointment_schedules = []
+        if isinstance(appointment_schedules, list) and len(appointment_schedules) > 0:
+            for appointment in appointment_schedules:
+                if appointment["name"] == f"{interval}_days":
+                    appointment["total"] += count
+
+        if not any(appointment["name"] == f"{interval}_days" for appointment in appointment_schedules):
+            appointment_schedules.append(
+                {
+                    "name": f"{interval}_days",
+                    "from": start_date,
+                    "to": end_date,
+                    "total": count,
+                }
+            )
+
+        if chronodose:
+            if isinstance(appointment_schedules, list) and len(appointment_schedules) > 0:
+                for appointment in appointment_schedules:
+                    if appointment["name"] == "chronodose":
+                        appointment["total"] += count
+
+            if not any(appointment["name"] == "chronodose" for appointment in appointment_schedules):
+                appointment_schedules.append(
+                    {
+                        "name": "chronodose",
+                        "from": start_date,
+                        "to": end_date,
+                        "total": count,
+                    }
+                )
+
+        return appointment_schedules
+
     def get_appointments(self, request: ScraperRequest, slots_api):
         appointments_number = 0
         first_availability = None
+        appointment_schedules = None
 
         if slots_api.get("total"):
             appointments_number += int(slots_api.get("total", 0))
@@ -105,6 +153,21 @@ class MesoignerSlots:
                     request.add_vaccine_type(
                         [get_vaccine_name(vaccine) for vaccine in one_appointment_info["available_vaccines"]]
                     )
+
+        for interval in INTERVAL_SPLIT_DAYS:
+            chronodose = False
+            if interval == CHRONODOSES["Interval"]:
+                chronodose = True
+            appointment_schedules = build_appointment_schedules(
+                request,
+                interval,
+                append_date_days(request.get_start_date(), 0),
+                append_date_days(request.get_start_date(), days=interval, seconds=-1),
+                0,
+                appointment_schedules,
+                chronodose,
+            )
+        request.update_appointment_schedules(appointment_schedules)
 
         request.update_appointment_count(request.appointment_count + appointments_number)
 
