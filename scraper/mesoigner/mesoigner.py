@@ -17,7 +17,7 @@ from scraper.error import BlockedByMesoignerError
 MESOIGNER_CONF = get_conf_platform("mesoigner")
 MESOIGNER_ENABLED = MESOIGNER_CONF.get("enabled", False)
 MESOIGNER_HEADERS = {
-    "Authorization": os.environ.get("MESOIGNER_API_KEY", ""),
+    "Authorization": f'Mesoigner apikey="{os.environ.get("MESOIGNER_API_KEY", "")}"',
 }
 MESOIGNER_APIs = MESOIGNER_CONF.get("api", "")
 

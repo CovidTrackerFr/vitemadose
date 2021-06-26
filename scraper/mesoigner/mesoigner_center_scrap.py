@@ -8,7 +8,7 @@ import os
 MESOIGNER_CONF = get_conf_platform("mesoigner")
 MESOIGNER_ENABLED = MESOIGNER_CONF.get("enabled", False)
 MESOIGNER_HEADERS = {
-    "Authorization": os.environ.get("MESOIGNER_API_KEY", ""),
+    "Authorization": f'Mesoigner apikey="{os.environ.get("MESOIGNER_API_KEY", "")}"',
 }
 SCRAPER_CONF = MESOIGNER_CONF.get("center_scraper", {})
 CENTER_LIST_URL = MESOIGNER_CONF.get("api", {}).get("center_list", {})
