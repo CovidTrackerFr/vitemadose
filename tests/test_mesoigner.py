@@ -35,7 +35,7 @@ def test_get_appointments():
     )
     assert center_with_availability.get_appointments(request, slots_api=slots) == "2021-06-16T14:50:00+02:00"
     assert request.appointment_count == 4
-    assert request.vaccine_type == [[Vaccine.MODERNA], [Vaccine.ASTRAZENECA]]
+    assert request.vaccine_type == [Vaccine.MODERNA, Vaccine.ASTRAZENECA]
 
     # This one should return no date, neither appointment_count nor vaccine.
     request = ScraperRequest(
