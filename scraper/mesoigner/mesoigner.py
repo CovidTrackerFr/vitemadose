@@ -42,7 +42,7 @@ else:
 logger = logging.getLogger("scraper")
 
 
-@ShortCircuit("mesoigner_slot", trigger=5, release=20, time_limit=5.0)
+@ShortCircuit("mesoigner_slot", trigger=5, release=20, time_limit=20.0)
 @Profiling.measure("mesoigner_slot")
 def fetch_slots(request: ScraperRequest, creneaux_q=None) -> Optional[str]:
 
