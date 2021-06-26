@@ -1,5 +1,7 @@
 ---
 name: Doctolib center scrap
+env:
+  DOCTOLIB_API_KEY: ${{ secrets.DOCTOLIB_API_KEY }}
 
 on:
   schedule:
