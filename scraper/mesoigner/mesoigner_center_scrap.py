@@ -8,7 +8,7 @@ import os
 MESOIGNER_CONF = get_conf_platform("mesoigner")
 MESOIGNER_ENABLED = MESOIGNER_CONF.get("enabled", False)
 MESOIGNER_HEADERS = {
-    "Authorization": f'Mesoigner apikey="{os.environ.get("MESOIGNER_API_KEY", "")}"',
+    "Authorization": f'Mesoigner aikey="{os.environ.get("MESOIGNER_API_KEY", "")}"',
 }
 SCRAPER_CONF = MESOIGNER_CONF.get("center_scraper", {})
 CENTER_LIST_URL = MESOIGNER_CONF.get("api", {}).get("center_list", {})
@@ -31,8 +31,9 @@ def scrap_centers():
         api_centers = r.json()
 
         if r.status_code != 200:
+
             logger.error(f"Can't access API - {r.status_code} => {json.loads(r.text)['message']}")
-            return None
+         return None
 
     except:
         logger.error(f"Can't access API")
