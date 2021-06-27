@@ -19,7 +19,7 @@ from typing import Dict, Iterator, List, Optional
 MESOIGNER_CONF = get_conf_platform("mesoigner")
 MESOIGNER_ENABLED = MESOIGNER_CONF.get("enabled", False)
 MESOIGNER_HEADERS = {
-    "Authorization": f'Mesoigner apikey={os.environ.get("MESOIGNER_API_KEY", "")}',
+    "Authorization": f'Mesoigner apikey="{os.environ.get("MESOIGNER_API_KEY", "")}"',
 }
 MESOIGNER_APIs = MESOIGNER_CONF.get("api", "")
 
@@ -39,7 +39,6 @@ else:
     DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 
 logger = logging.getLogger("scraper")
-
 
 
 @Profiling.measure("mesoigner_slot")
@@ -166,9 +165,8 @@ class MesoignerSlots:
                     if first_availability is None or appointment_exact_date < first_availability:
                         first_availability = appointment_exact_date
 
-                    request.add_vaccine_type(
-                        [get_vaccine_name(vaccine) for vaccine in one_appointment_info["available_vaccines"]]
-                    )
+                    for vaccine in one_appointment_info["available_vaccines"]:
+                        request.add_vaccine_type(get_vaccine_name(vaccine))
 
                 for interval in INTERVAL_SPLIT_DAYS:
                     chronodose = False
