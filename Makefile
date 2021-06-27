@@ -33,6 +33,9 @@ keldocscrap: ## Scrap all doctolib centers, output : data/output/keldoc-centers.
 maiiascrap: ## Retrieve maiia centers from API
 	venv/bin/python -m scraper.maiia.maiia_center_scrap
 
+mesoignerscrap: ## Scrap all doctolib centers, output : data/output/doctolib-centers.json
+	venv/bin/python -m scraper.mesoigner.mesoigner_center_scrap
+
 lint: install
 	venv/bin/pip install black
 	venv/bin/black $$(git ls-files | grep .py$$)
