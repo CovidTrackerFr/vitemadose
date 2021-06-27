@@ -12,10 +12,9 @@ from scraper.pattern.scraper_request import ScraperRequest
 from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform
 from scraper.error import BlockedByMesoignerError
-from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
 from utils.vmd_utils import append_date_days
+from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
 from typing import Dict, Iterator, List, Optional
-
 
 MESOIGNER_CONF = get_conf_platform("mesoigner")
 MESOIGNER_ENABLED = MESOIGNER_CONF.get("enabled", False)
@@ -40,7 +39,6 @@ else:
     DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 
 logger = logging.getLogger("scraper")
-
 
 
 @Profiling.measure("mesoigner_slot")
@@ -139,6 +137,8 @@ class MesoignerSlots:
         if len(slots_api.get("slots", [])) == 0:
             return None
 
+        start_date = request.get_start_date()
+
         for interval in INTERVAL_SPLIT_DAYS:
             chronodose = False
             if interval == CHRONODOSES["Interval"]:
@@ -146,8 +146,8 @@ class MesoignerSlots:
             appointment_schedules = build_appointment_schedules(
                 request,
                 interval,
-                append_date_days(request.get_start_date(), 0),
-                append_date_days(request.get_start_date(), days=interval, seconds=-1),
+                append_date_days(start_date, 0),
+                append_date_days(start_date, days=interval, seconds=-1),
                 0,
                 appointment_schedules,
                 chronodose,
@@ -175,10 +175,10 @@ class MesoignerSlots:
                     appointment_schedules = build_appointment_schedules(
                         request,
                         interval,
-                        append_date_days(request.get_start_date(), 0),
-                        append_date_days(request.get_start_date(), days=interval, seconds=-1),
+                        append_date_days(start_date, 0),
+                        append_date_days(start_date, days=interval, seconds=-1),
                         sum(one_appointment_info["number_of_slots"] for one_appointment_info in appointments_infos)
-                        if day_date <= append_date_days(request.get_start_date(), days=interval, seconds=-1)
+                        if day_date <= append_date_days(start_date, days=interval, seconds=-1)
                         else 0,
                         appointment_schedules,
                         chronodose,
