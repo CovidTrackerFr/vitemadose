@@ -139,6 +139,21 @@ class MesoignerSlots:
         if len(slots_api.get("slots", [])) == 0:
             return None
 
+        for interval in INTERVAL_SPLIT_DAYS:
+            chronodose = False
+            if interval == CHRONODOSES["Interval"]:
+                chronodose = True
+            appointment_schedules = build_appointment_schedules(
+                request,
+                interval,
+                append_date_days(request.get_start_date(), 0),
+                append_date_days(request.get_start_date(), days=interval, seconds=-1),
+                0,
+                appointment_schedules,
+                chronodose,
+            )
+        request.update_appointment_schedules(appointment_schedules)
+
         for day in slots_api.get("slots", []):
 
             for day_date, appointments_infos in day.items():
@@ -153,19 +168,21 @@ class MesoignerSlots:
                     for vaccine in one_appointment_info["available_vaccines"]:
                         request.add_vaccine_type(get_vaccine_name(vaccine))
 
-        for interval in INTERVAL_SPLIT_DAYS:
-            chronodose = False
-            if interval == CHRONODOSES["Interval"]:
-                chronodose = True
-            appointment_schedules = build_appointment_schedules(
-                request,
-                interval,
-                append_date_days(request.get_start_date(), 0),
-                append_date_days(request.get_start_date(), days=interval, seconds=-1),
-                0,
-                appointment_schedules,
-                chronodose,
-            )
+                for interval in INTERVAL_SPLIT_DAYS:
+                    chronodose = False
+                    if interval == CHRONODOSES["Interval"]:
+                        chronodose = True
+                    appointment_schedules = build_appointment_schedules(
+                        request,
+                        interval,
+                        append_date_days(request.get_start_date(), 0),
+                        append_date_days(request.get_start_date(), days=interval, seconds=-1),
+                        sum(one_appointment_info["number_of_slots"] for one_appointment_info in appointments_infos)
+                        if day_date <= append_date_days(request.get_start_date(), days=interval, seconds=-1)
+                        else 0,
+                        appointment_schedules,
+                        chronodose,
+                    )
         request.update_appointment_schedules(appointment_schedules)
 
         request.update_appointment_count(request.appointment_count + appointments_number)
