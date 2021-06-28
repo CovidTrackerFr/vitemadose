@@ -11,6 +11,7 @@ GITLAB_CENTERS = f"https://vitemadose.gitlab.io/vitemadose/info_centres.json"
 
 def input_url():
     url_to_delete = os.getenv("INPUT_URL_TO_DELETE")
+    print(f"debug - l'url entrée est {url_to_delete}")
     return url_to_delete
 
 
@@ -26,7 +27,7 @@ def is_url_in_json(url_to_delete: str):
         if url_path in centre["url"]:
             url_in_json = True
             center_data = centre
-
+    print(f'Le centre choisi est \n {center_data["nom"]}{center_data["url"]}\n{center_data["metadata"]["address"]}\n')
     return url_in_json, center_data
 
 
