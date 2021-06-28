@@ -32,9 +32,9 @@ jobs:
       - name: "Get folder from data-auto"
         run: |
           git clone --branch data-auto https://github.com/CovidTrackerFr/vitemadose.git tmp/
-          cp -R tmp/data/output/* data/output
+          cp -R tmp/data/input/* data/input
           rm -rf tmp/
-          cp centers_blocklist.json data/output
+          cp centers_blocklist.json data/input
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Blocklist ok
