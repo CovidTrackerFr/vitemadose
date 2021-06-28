@@ -8,7 +8,7 @@ BLOCKLIST = "data/input/centers_blocklist.json"
 
 
 def input_url():
-    url_to_delete = input("\nEntrer l'url à bloquer :\n")
+    url_to_delete = INPUT_URL_TO_DELETE
     return url_to_delete
 
 
