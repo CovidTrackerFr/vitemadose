@@ -4,8 +4,8 @@ import json
 import pprint
 import os
 
-JSON_PATH = "data/output/info_centres.json"
 BLOCKLIST = "data/input/centers_blocklist.json"
+GITHUBDATA_URL = f"https://vitemadose.gitlab.io/vitemadose/info_centres.json"
 
 
 def input_url():
@@ -27,13 +27,15 @@ def is_url_in_json(url_to_delete: str):
 
 def filter_urls():
     new_centres = []
-    with open(JSON_PATH) as file:
-        centers_list = json.loads(file.read())
-        for departement, centers in centers_list.items():
-            for available in centers["centres_disponibles"]:
-                new_centres.append(available)
-            for unavailable in centers["centres_indisponibles"]:
-                new_centres.append(unavailable)
+    response = requests.get(GITHUBDATA_URL)
+    response.raise_for_status()
+    centers_list = response.json()
+
+    for departement, centers in centers_list.items():
+        for available in centers["centres_disponibles"]:
+            new_centres.append(available)
+        for unavailable in centers["centres_indisponibles"]:
+            new_centres.append(unavailable)
     return new_centres
 
 
@@ -66,7 +68,6 @@ def main():
     delete_reason = None
     github_issue = None
 
-
     print("\n******************* BLOCKLIST MANAGER *******************")
     print("Ce programme permet d'ajouter ou supprimer un centre à la Blocklist")
 
@@ -74,8 +75,14 @@ def main():
     url_in_json, center_data = is_url_in_json(url_to_delete)
 
     if url_in_json:
-        delete_reason = os.environ.get("INPUT_DELETE_REASON", "").strip() if len(os.environ.get("INPUT_DELETE_REASON", "")) > 0 else None
-        github_issue = os.environ.get("INPUT_GIT_ISSUE", "").strip() if len(os.environ.get("INPUT_GIT_ISSUE", "")) > 0 else None
+        delete_reason = (
+            os.environ.get("INPUT_URL_TO_DELETE", "").strip()
+            if len(os.environ.get("INPUT_URL_TO_DELETE", "")) > 0
+            else None
+        )
+        github_issue = (
+            os.environ.get("INPUT_GIT_ISSUE", "").strip() if len(os.environ.get("INPUT_GIT_ISSUE", "")) > 0 else None
+        )
 
         update_json(center_data, github_issue, delete_reason)
     else:
