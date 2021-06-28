@@ -33,12 +33,6 @@ jobs:
           INPUT_DELETE_REASON: ${{ github.event.inputs.delete_reason }}
       - name: "Copy output file"
         run: cp data/input/centers_blocklist.json .
-      - name: "Get folder from data-auto"
-        run: |
-          git clone --branch data-auto https://github.com/CovidTrackerFr/vitemadose.git tmp/
-          cp -R tmp/data/input/* data/input
-          rm -rf tmp/
-          cp centers_blocklist.json data/input
       - name: "Get folder from main"
         run: |
           mkdir tmp2
@@ -49,4 +43,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Blocklist - Ajout d'un centre
-          push_options: '--force HEAD:data-auto'
+          push_options: '--force HEAD:main'
