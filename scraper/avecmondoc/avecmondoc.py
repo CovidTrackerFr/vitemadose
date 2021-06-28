@@ -34,9 +34,9 @@ def search(client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
     url = AVECMONDOC_API.get("search", "")
     limit = AVECMONDOC_API.get("search_page_size", 10)
     page = 1
-    result = { "data" : [], "hasNextPage": True }
+    result = {"data": [], "hasNextPage": True}
     while result["hasNextPage"]:
-        payload = { "limit": limit, "page": page }
+        payload = {"limit": limit, "page": page}
         try:
             r = client.get(url, params=payload)
             r.raise_for_status()
@@ -59,7 +59,7 @@ def search(client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
         result["hasNextPage"] = paged_result["hasNextPage"]
         for item in paged_result["data"]:
             result["data"].append(item)
-        #logger.info(f"Downloaded {j['page']}/{j['pages']}")
+        # logger.info(f"Downloaded {j['page']}/{j['pages']}")
     return result
 
 
@@ -395,7 +395,9 @@ def center_to_centerdict(center: CenterInfo) -> dict:
 
 
 def has_valid_zipcode(organization: dict) -> bool:
-    return organization is not None and organization.get("zipCode", None) is not None and len(organization["zipCode"]) == 5
+    return (
+        organization is not None and organization.get("zipCode", None) is not None and len(organization["zipCode"]) == 5
+    )
 
 
 def center_iterator(client: httpx.Client = DEFAULT_CLIENT) -> Iterator[dict]:
