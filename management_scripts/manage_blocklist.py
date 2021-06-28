@@ -10,7 +10,7 @@ GITLAB_CENTERS = f"https://vitemadose.gitlab.io/vitemadose/info_centres.json"
 
 
 def input_url():
-    url_to_delete = os.getenv("INPUT_URL_TO_DELETE")
+    url_to_delete = os.environ.get("INPUT_URL_TO_DELETE","")
     print(f"debug - l'url entrée est {url_to_delete}")
     return url_to_delete
 
@@ -81,8 +81,8 @@ def main():
     url_to_delete = input_url()
     url_in_json, center_data = is_url_in_json(url_to_delete)
     if url_in_json:
-        delete_reason = os.getenv("INPUT_DELETE_REASON").strip() if len(os.getenv("INPUT_DELETE_REASON")) > 0 else None
-        github_issue = os.getenv("INPUT_GIT_ISSUE").strip() if len(os.getenv("INPUT_GIT_ISSUE")) > 0 else None
+        delete_reason = os.environ.get("INPUT_DELETE_REASON","").strip() if len(os.environ.get("INPUT_DELETE_REASON","")) > 0 else None
+        github_issue = os.environ.get("INPUT_GIT_ISSUE","").strip() if len(os.environ.get("INPUT_GIT_ISSUE","")) > 0 else None
 
         update_json(center_data, github_issue, delete_reason)
     else:
