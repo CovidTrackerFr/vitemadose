@@ -36,7 +36,7 @@ maiiascrap: ## Retrieve maiia centers from API
 mesoignerscrap: ## Scrap all mesoigner centers, output : data/output/mesoigner_centers.json
 	venv/bin/python -m scraper.mesoigner.mesoigner_center_scrap
 
-blocklistmnager: ## Scrap all doctolib centers, output : data/output/keldoc-centers.json
+blocklistmanager: ## Scrap all doctolib centers, output : data/output/keldoc-centers.json
 	venv/bin/python -m management_scripts.manage_blocklist.py
 
 lint: install
