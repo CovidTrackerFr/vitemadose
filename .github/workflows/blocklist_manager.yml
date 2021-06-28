@@ -1,0 +1,37 @@
+---
+name: Blocklist Manager
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  # Allow running manually
+  workflow_dispatch:
+
+jobs:
+
+  scrape:
+    name: "Blocklist Manager"
+    runs-on: "ubuntu-20.04"
+    steps:
+      - uses: "actions/checkout@v2"
+        with:
+            token: ${{ secrets.PAT_GRZ }}
+      - uses: "actions/setup-python@v2"
+        with:
+          python-version: "3.8"
+      - name: "Install"
+        run: make install
+      - name: "Blocklist Manager..."
+        run: make blocklistmanager
+      - name: "Copy output file"
+        run: cp data/input/centers_blocklist.json .
+      - name: "Get folder from data-auto"
+        run: |
+          git clone --branch data-auto https://github.com/CovidTrackerFr/vitemadose.git tmp/
+          cp -R tmp/data/output/* data/output
+          rm -rf tmp/
+          cp centers_blocklist.json data/output
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Blocklist ok
+          push_options: '--force HEAD:data-auto'
