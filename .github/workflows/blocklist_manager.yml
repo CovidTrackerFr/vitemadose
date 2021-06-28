@@ -1,17 +1,17 @@
 ---
 name: Blocklist Manager
 
-inputs:
-  url_to_delete:
-    description: 'url_to_delete'
-    required: true
-    
-    
 on:
   schedule:
     - cron: "0 * * * *"
   # Allow running manually
   workflow_dispatch:
+    inputs:
+      url_to_delete:
+        description: 'url_to_delete'
+        required: true
+    
+    
 
 jobs:
 
