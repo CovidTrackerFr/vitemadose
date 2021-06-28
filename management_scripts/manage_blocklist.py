@@ -2,13 +2,14 @@ import requests
 from urllib.parse import urlparse
 import json
 import pprint
+import os
 
 JSON_PATH = "data/output/info_centres.json"
 BLOCKLIST = "data/input/centers_blocklist.json"
 
 
 def input_url():
-    url_to_delete = INPUT_URL_TO_DELETE
+    url_to_delete = os.environ.get("INPUT_URL_TO_DELETE", "")
     return url_to_delete
 
 
@@ -73,8 +74,8 @@ def main():
     url_in_json, center_data = is_url_in_json(url_to_delete)
 
     if url_in_json:
-        delete_reason = INPUT_DELETE_REASON.strip() if len(INPUT_DELETE_REASON) > 0 else None
-        github_issue = INPUT_GITHUB_ISSUE.strip() if len(INPUT_GITHUB_ISSUE) > 0 else None
+        delete_reason = os.environ.get("INPUT_DELETE_REASON", "").strip() if len(os.environ.get("INPUT_DELETE_REASON", "")) > 0 else None
+        github_issue = os.environ.get("INPUT_GIT_ISSUE", "").strip() if len(os.environ.get("INPUT_GIT_ISSUE", "")) > 0 else None
 
         update_json(center_data, github_issue, delete_reason)
     else:
