@@ -18,12 +18,14 @@ def is_url_in_json(url_to_delete: str):
     url_in_json = False
     center_data = None
     url_path = urlparse(url_to_delete).path
+    if not url_path:
+        print("[ERREUR] - L'url est incorrecte")
+        exit(1)
     filtered_json = filter_urls()
     for centre in filtered_json:
         if url_path in centre["url"]:
             url_in_json = True
             center_data = centre
-    print(f"le centre qui match est {center_data}")
 
     return url_in_json, center_data
 
@@ -49,7 +51,6 @@ def update_json(center_data, github_issue, delete_reason):
     with open(BLOCKLIST, "r+") as blocklist_file:
 
         data = json.load(blocklist_file)
-        print(data)
         new_center = {
             "name": center_data["nom"],
             "url": center_data["url"],
@@ -63,7 +64,7 @@ def update_json(center_data, github_issue, delete_reason):
 
         data["centers_not_displayed"].append(new_center)
         blocklist_file.seek(0)
-        
+
         json.dump(data, blocklist_file, indent=2)
         print("\n[SUCCESS] - Le centre a bien été ajouté à la blocklist !\n")
 
@@ -74,26 +75,18 @@ def main():
     github_issue = None
 
     print("\n******************* BLOCKLIST MANAGER *******************")
-    print("Ce programme permet d'ajouter ou supprimer un centre à la Blocklist")
+    print("Ce programme permet d'ajouter un centre à la Blocklist")
 
     url_to_delete = input_url()
     url_in_json, center_data = is_url_in_json(url_to_delete)
-    print(f" l'url à supprimer est {url_to_delete}")
     if url_in_json:
-        delete_reason = (
-            os.getenv("INPUT_URL_TO_DELETE").strip()
-            if len(os.getenv("INPUT_URL_TO_DELETE")) > 0
-            else None
-        )
-        github_issue = (
-            os.getenv("INPUT_GIT_ISSUE").strip() if len(os.getenv("INPUT_GIT_ISSUE")) > 0 else None
-        )
+        delete_reason = os.getenv("INPUT_DELETE_REASON").strip() if len(os.getenv("INPUT_DELETE_REASON")) > 0 else None
+        github_issue = os.getenv("INPUT_GIT_ISSUE").strip() if len(os.getenv("INPUT_GIT_ISSUE")) > 0 else None
 
         update_json(center_data, github_issue, delete_reason)
     else:
         print("[ERREUR] - Ce centre n'est pas présent dans nos fichiers.")
         exit(1)
-
 
 if __name__ == "__main__":
     # execute only if run as a script
