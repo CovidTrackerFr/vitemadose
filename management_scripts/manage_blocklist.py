@@ -27,7 +27,7 @@ def is_url_in_json(url_to_delete: str):
     print(f'debug - la liste des url filtrées est {filtered_json}')
     for centre in filtered_json:
         if url_path in centre["url"]:
-          print(f'debug - cest le bon centre')
+            print(f'debug - cest le bon centre')
             url_in_json = True
             center_data = centre
     print(f'Le centre choisi est \n {center_data["nom"]}{center_data["url"]}\n{center_data["metadata"]["address"]}\n')
