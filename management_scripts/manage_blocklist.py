@@ -4,8 +4,10 @@ import json
 import pprint
 import os
 
+
 BLOCKLIST = "data/input/centers_blocklist.json"
-GITHUBDATA_URL = f"https://vitemadose.gitlab.io/vitemadose/info_centres.json"
+GITHUB_BLOCKLIST = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{BLOCKLIST}"
+GITLAB_CENTERS = f"https://vitemadose.gitlab.io/vitemadose/info_centres.json"
 
 
 def input_url():
@@ -27,7 +29,7 @@ def is_url_in_json(url_to_delete: str):
 
 def filter_urls():
     new_centres = []
-    response = requests.get(GITHUBDATA_URL)
+    response = requests.get(GITLAB_CENTERS)
     response.raise_for_status()
     centers_list = response.json()
 
@@ -43,9 +45,10 @@ def update_json(center_data, github_issue, delete_reason):
 
     url_path = urlparse(center_data["url"]).path
 
-    with open(BLOCKLIST, "r+") as blocklist_file:
+    with open(GITHUB_BLOCKLIST, "r+") as blocklist_file:
 
         data = json.load(blocklist_file)
+        print(data)
         new_center = {
             "name": center_data["nom"],
             "url": center_data["url"],
@@ -59,6 +62,7 @@ def update_json(center_data, github_issue, delete_reason):
 
         data["centers_not_displayed"].append(new_center)
         blocklist_file.seek(0)
+        
         json.dump(data, blocklist_file, indent=2)
         print("\n[SUCCESS] - Le centre a bien été ajouté à la blocklist !\n")
 
