@@ -13,9 +13,9 @@ jobs:
     name: "Blocklist Manager"
     runs-on: "ubuntu-20.04"
     steps:
-      - uses: "actions/checkout@v2"
-        with:
-            token: ${{ secrets.PAT_GRZ }}
+      # - uses: "actions/checkout@v2"
+      #   with:
+      #       token: ${{ secrets.PAT_GRZ }}
       - uses: "actions/setup-python@v2"
         with:
           python-version: "3.8"
