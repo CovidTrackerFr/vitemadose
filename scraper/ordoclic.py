@@ -14,7 +14,6 @@ from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import departementUtils, DummyQueue
 from scraper.profiler import Profiling
 
-
 logger = logging.getLogger("scraper")
 
 ORDOCLIC_CONF = get_conf_platform("ordoclic")
@@ -69,13 +68,13 @@ def get_reasons(entityId, client: httpx.Client = DEFAULT_CLIENT, request: Scrape
 
 
 def get_slots(
-    entityId,
-    medicalStaffId,
-    reasonId,
-    start_date,
-    end_date,
-    client: httpx.Client = DEFAULT_CLIENT,
-    request: ScraperRequest = None,
+        entityId,
+        medicalStaffId,
+        reasonId,
+        start_date,
+        end_date,
+        client: httpx.Client = DEFAULT_CLIENT,
+        request: ScraperRequest = None,
 ):
     base_url = ORDOCLIC_API.get("slots")
     payload = {
@@ -140,10 +139,10 @@ def count_appointements(appointments: list, start_date: datetime, end_date: date
     if not appointments:
         return count
     for appointment in appointments:
-        if not "timeStart" in appointment:
+        if "timeStart" not in appointment:
             continue
         slot_dt = isoparse(appointment["timeStart"]).astimezone(paris_tz)
-        if slot_dt >= start_date and slot_dt < end_date:
+        if start_date <= slot_dt < end_date:
             count += 1
 
     logger.debug(f"Slots count from {start_date} to {end_date}: {count}")
@@ -229,8 +228,8 @@ def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue(), client: httpx.C
                 end_date = isoparse(appointment_schedules[i]["to"])
                 # do not count chronodose if wrong vaccine
                 if (
-                    appointment_schedules[i]["name"] == "chronodose"
-                    and get_vaccine_name(reason.get("name", "")) not in CHRONODOSES["Vaccine"]
+                        appointment_schedules[i]["name"] == "chronodose"
+                        and get_vaccine_name(reason.get("name", "")) not in CHRONODOSES["Vaccine"]
                 ):
                     continue
                 appointment_schedules[i]["total"] += count_appointements(availabilities, start_date, end_date)

@@ -113,7 +113,7 @@ class ProfilerSink:
     def __init__(self):
         self.sections_duration = {}
 
-    def append(self, section, duration, none_result):
+    def append(self, section: str, duration, none_result):
         if section not in self.sections_duration:
             self.sections_duration[section] = {}
             self.sections_duration[section]["durations"] = []
@@ -140,7 +140,7 @@ class ProfilerSink:
 
         return summary
 
-    def percentiles(self, durations):
+    def percentiles(self, durations: list):
         if len(durations) == 0:
             return 0, 0
         if len(durations) == 1:

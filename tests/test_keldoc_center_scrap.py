@@ -1,4 +1,5 @@
 import httpx
+import pytest
 
 from scraper.keldoc.keldoc_center_scrap import parse_keldoc_resource_url, get_cabinets, KeldocCenterScraper
 from tests.test_keldoc import get_test_data
@@ -52,3 +53,31 @@ def test_get_cabinets():
     assert get_cabinets({"cabinet": {"id": 1}}) == [{"id": 1}]
     assert get_cabinets({"cabinets": [{"id": 1}]}) == [{"id": 1}]
     assert get_cabinets({}) == []
+
+
+def test_keldoc_requests():
+    # Timeout test
+    def app_timeout(request: httpx.Request) -> httpx.Response:
+        raise httpx.TimeoutException(message="Timeout", request=request)
+
+    client = httpx.Client(transport=httpx.MockTransport(app_timeout))
+    scraper = KeldocCenterScraper(session=client)
+    assert not scraper.send_keldoc_request("https://keldoc.com")
+
+    # Status test
+    def app_status(request: httpx.Request) -> httpx.Response:
+        res = httpx.Response(403, json={})
+        raise httpx.HTTPStatusError(message="status error", request=request, response=res)
+
+    client = httpx.Client(transport=httpx.MockTransport(app_status))
+    scraper = KeldocCenterScraper(session=client)
+    assert not scraper.send_keldoc_request("https://keldoc.com")
+
+    # Remote error test
+    def app_remote_error(request: httpx.Request) -> httpx.Response:
+        res = httpx.Response(403, json={})
+        raise httpx.RemoteProtocolError(message="status error", request=request)
+
+    client = httpx.Client(transport=httpx.MockTransport(app_remote_error))
+    scraper = KeldocCenterScraper(session=client)
+    assert not scraper.send_keldoc_request("https://keldoc.com")

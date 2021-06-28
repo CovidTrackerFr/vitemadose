@@ -77,7 +77,7 @@ class CircuitBreaker:
             self.count_error()
             raise e
 
-    def breaker_enabled(self, enabled):
+    def breaker_enabled(self, enabled: bool):
         self.enabled = enabled
 
     def get_policy(self):
