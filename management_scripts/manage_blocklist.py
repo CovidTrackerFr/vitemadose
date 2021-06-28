@@ -24,7 +24,6 @@ def is_url_in_json(url_to_delete: str):
         print("[ERREUR] - L'url est incorrecte")
         exit(1)
     filtered_json = filter_urls()
-    print(f'debug - la liste des url filtrées est {filtered_json}')
     for centre in filtered_json:
         if url_path in centre["url"]:
             print(f'debug - cest le bon centre')
