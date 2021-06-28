@@ -41,6 +41,7 @@ jobs:
           cp centers_blocklist.json data/input
       - name: "Get folder from main"
         run: |
+          mkdir tmp2
           git clone --branch main https://github.com/CovidTrackerFr/vitemadose.git tmp2/
           cp -R tmp2/data/input/* data/input
           rm -rf tmp2/
