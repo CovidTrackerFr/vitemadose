@@ -3,15 +3,12 @@ from urllib.parse import urlparse
 import json
 import os
 
-
 BLOCKLIST = "data/input/centers_blocklist.json"
-GITHUB_BLOCKLIST = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{BLOCKLIST}"
 GITLAB_CENTERS = f"https://vitemadose.gitlab.io/vitemadose/info_centres.json"
 
 
 def input_url():
-    url_to_delete = os.environ.get("INPUT_URL_TO_DELETE","")
-    print(f"debug - l'url entrée est {url_to_delete}")
+    url_to_delete = os.environ.get("INPUT_URL_TO_DELETE", "")
     return url_to_delete
 
 
@@ -19,17 +16,15 @@ def is_url_in_json(url_to_delete: str):
     url_in_json = False
     center_data = None
     url_path = urlparse(url_to_delete).path
-    print(f"debug - l'url tronquée est {url_path}")
     if not url_path:
         print("[ERREUR] - L'url est incorrecte")
         exit(1)
     filtered_json = filter_urls()
     for centre in filtered_json:
         if url_path in centre["url"]:
-            print(f'debug - cest le bon centre')
             url_in_json = True
             center_data = centre
-    print(f'Le centre choisi est \n {center_data["nom"]}{center_data["url"]}\n{center_data["metadata"]["address"]}\n')
+    print(f'\Le centre choisi est \n {center_data["nom"]}\n{center_data["url"]}\n{center_data["metadata"]["address"]}\n')
     return url_in_json, center_data
 
 
@@ -83,13 +78,20 @@ def main():
     url_to_delete = input_url()
     url_in_json, center_data = is_url_in_json(url_to_delete)
     if url_in_json:
-        delete_reason = os.environ.get("INPUT_DELETE_REASON","").strip() if len(os.environ.get("INPUT_DELETE_REASON","")) > 0 else None
-        github_issue = os.environ.get("INPUT_GIT_ISSUE","").strip() if len(os.environ.get("INPUT_GIT_ISSUE","")) > 0 else None
+        delete_reason = (
+            os.environ.get("INPUT_DELETE_REASON", "").strip()
+            if len(os.environ.get("INPUT_DELETE_REASON", "")) > 0
+            else None
+        )
+        github_issue = (
+            os.environ.get("INPUT_GIT_ISSUE", "").strip() if len(os.environ.get("INPUT_GIT_ISSUE", "")) > 0 else None
+        )
 
         update_json(center_data, github_issue, delete_reason)
     else:
         print("[ERREUR] - Ce centre n'est pas présent dans nos fichiers.")
         exit(1)
+
 
 if __name__ == "__main__":
     # execute only if run as a script
