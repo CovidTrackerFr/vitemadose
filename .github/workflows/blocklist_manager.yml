@@ -1,9 +1,6 @@
 ---
 name: Blocklist Manager
-env:
-  INPUT_URL_TO_DELETE: ${{ inputs.url_to_delete }}
-  INPUT_GIT_ISSUE: ${{ inputs.git_issue }}
-  INPUT_DELETE_REASON: ${{ inputs.delete_reason }}
+
 on:
   workflow_dispatch:
     inputs:
@@ -42,3 +39,7 @@ jobs:
         with:
           commit_message: Blocklist ok
           push_options: '--force HEAD:data-auto'
+env:
+  INPUT_URL_TO_DELETE: ${{ inputs.url_to_delete }}
+  INPUT_GIT_ISSUE: ${{ inputs.git_issue }}
+  INPUT_DELETE_REASON: ${{ inputs.delete_reason }}
