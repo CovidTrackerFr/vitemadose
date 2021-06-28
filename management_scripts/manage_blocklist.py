@@ -45,7 +45,7 @@ def update_json(center_data, github_issue, delete_reason):
 
     url_path = urlparse(center_data["url"]).path
 
-    with open(GITHUB_BLOCKLIST, "r+") as blocklist_file:
+    with open(BLOCKLIST, "r+") as blocklist_file:
 
         data = json.load(blocklist_file)
         print(data)
