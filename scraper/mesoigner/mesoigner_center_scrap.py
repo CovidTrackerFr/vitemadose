@@ -31,9 +31,8 @@ def scrap_centers():
         api_centers = r.json()
 
         if r.status_code != 200:
-
             logger.error(f"Can't access API - {r.status_code} => {json.loads(r.text)['message']}")
-         return None
+            return None
 
     except:
         logger.error(f"Can't access API")
