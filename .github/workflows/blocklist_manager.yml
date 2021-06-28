@@ -39,6 +39,12 @@ jobs:
           cp -R tmp/data/input/* data/input
           rm -rf tmp/
           cp centers_blocklist.json data/input
+      - name: "Get folder from main"
+        run: |
+          git clone --branch main https://github.com/CovidTrackerFr/vitemadose.git tmp2/
+          cp -R tmp2/data/input/* data/input
+          rm -rf tmp2/
+          cp centers_blocklist.json data/input
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Blocklist - Ajout d'un centre
