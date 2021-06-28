@@ -1,7 +1,6 @@
 import requests
 from urllib.parse import urlparse
 import json
-import pprint
 import os
 
 
@@ -24,6 +23,8 @@ def is_url_in_json(url_to_delete: str):
         if url_path in centre["url"]:
             url_in_json = True
             center_data = centre
+    print(f"le centre qui match est {center_data}")
+
     return url_in_json, center_data
 
 
@@ -77,7 +78,7 @@ def main():
 
     url_to_delete = input_url()
     url_in_json, center_data = is_url_in_json(url_to_delete)
-
+    print(f" l'url à supprimer est {url_to_delete}")
     if url_in_json:
         delete_reason = (
             os.environ.get("INPUT_URL_TO_DELETE", "").strip()
