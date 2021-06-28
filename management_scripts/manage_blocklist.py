@@ -24,7 +24,7 @@ def is_url_in_json(url_to_delete: str):
         if url_path in centre["url"]:
             url_in_json = True
             center_data = centre
-    print(f'\Le centre choisi est \n {center_data["nom"]}\n{center_data["url"]}\n{center_data["metadata"]["address"]}\n')
+    print(f'\nLe centre choisi est \n {center_data["nom"]}\n{center_data["url"]}\n{center_data["metadata"]["address"]}')
     return url_in_json, center_data
 
 
