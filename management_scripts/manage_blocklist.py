@@ -64,8 +64,7 @@ def main():
 
     delete_reason = None
     github_issue = None
-    delete_reason_input = None
-    github_issue_input = None
+
 
     print("\n******************* BLOCKLIST MANAGER *******************")
     print("Ce programme permet d'ajouter ou supprimer un centre à la Blocklist")
@@ -74,18 +73,8 @@ def main():
     url_in_json, center_data = is_url_in_json(url_to_delete)
 
     if url_in_json:
-        print(f'\n{center_data["nom"]}\n{center_data["metadata"]["address"]}\n{center_data["url"]}')
-        question_yesno = lambda q: True if input(q).lower().strip()[-1] == "y" else False
-
-        delete_confirmation = question_yesno("\nÊtes vous bien certain de vouloir supprimer ce centre ? (y/n)\n")
-        if not delete_confirmation:
-            print("[ERREUR] - Merci de réessayer.")
-            exit(1)
-
-        delete_reason_input = input("\nRaison de suppression ? (facultatif, utilisez entrée pour passer)\n")
-        github_issue_input = input("\nLien issue github correspondante ? (facultatif, utilisez entrée pour passer)\n")
-        delete_reason = delete_reason_input.strip() if len(delete_reason_input) > 0 else None
-        github_issue = github_issue_input.strip() if len(github_issue_input) > 0 else None
+        delete_reason = INPUT_DELETE_REASON.strip() if len(INPUT_DELETE_REASON) > 0 else None
+        github_issue = INPUT_GITHUB_ISSUE.strip() if len(INPUT_GITHUB_ISSUE) > 0 else None
 
         update_json(center_data, github_issue, delete_reason)
     else:
