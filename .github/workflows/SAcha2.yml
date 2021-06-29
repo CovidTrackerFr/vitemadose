@@ -43,7 +43,7 @@ jobs:
           
           
       - name: "Hello world"
-        run: echo "Hello $ENV_VAR_NAME"
+        run: TEST_SECRET=${{ secrets.PAT_GRZ }} python -c 'import os;print(os.environ['TEST_SECRET'])
         env:
           ENV_VAR_NAME: ${{ secrets.PAT_GRZ }}
   
