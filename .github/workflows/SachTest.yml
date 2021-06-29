@@ -1,0 +1,54 @@
+---
+name: Blocklist Manager
+
+on:
+  workflow_dispatch:
+    inputs:
+      url_to_delete:
+        description: "Lien de l'URL à bloquer"
+        required: true
+      delete_reason:
+        description: "Raison du blocage (facultatif)"
+      git_issue:
+        description: "Lien de l'issue Git correspondante (facultatif)"
+jobs:
+
+  scrape:
+    name: "Blocklist Manager"
+    runs-on: "ubuntu-20.04"
+    steps:
+      - uses: "actions/checkout@v2"
+        with:
+            token: ${{ secrets.PAT_GRZ }}
+      - uses: "actions/setup-python@v2"
+        with:
+          python-version: "3.8"
+      - name: "Install"
+        run: make install
+      - name: "Blocklist Manager..."
+        run: make blocklistmanager
+        env:
+          INPUT_URL_TO_DELETE: ${{ github.event.inputs.url_to_delete }}
+          INPUT_GIT_ISSUE: ${{ github.event.inputs.git_issue }}
+          INPUT_DELETE_REASON: ${{ github.event.inputs.delete_reason }}
+      - name: "Copy output file"
+        run: cp data/input/centers_blocklist.json .
+      - name: "Get folder from main"
+        run: |
+          mkdir tmp2
+          git clone --branch main https://github.com/CovidTrackerFr/vitemadose.git tmp2/
+          cp -R tmp2/data/input/* data/input
+          rm -rf tmp2/
+          cp centers_blocklist.json data/input
+          
+          
+      - name: "Hello world"
+        run: echo "Hello $ENV_VAR_NAME"
+        env:
+          ENV_VAR_NAME: ${{ secrets.PAT_GRZ }}
+  
+          
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Blocklist - Ajout d'un centre
+          push_options: '--force HEAD:main'
