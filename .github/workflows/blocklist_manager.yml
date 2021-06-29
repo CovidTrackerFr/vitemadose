@@ -11,6 +11,10 @@ on:
         description: "Raison du blocage (facultatif)"
       git_issue:
         description: "Lien de l'issue Git correspondante (facultatif)"
+        
+  repository_dispatch:
+    types:
+      - webhook
 jobs:
 
   scrape:
