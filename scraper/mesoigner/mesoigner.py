@@ -44,7 +44,7 @@ logger = logging.getLogger("scraper")
 @Profiling.measure("mesoigner_slot")
 def fetch_slots(request: ScraperRequest, creneaux_q=None) -> Optional[str]:
 
-    if not MESOIGNER_CONF.get("enabled", False):
+    if not MESOIGNER_ENABLED:
         return None
     # Fonction principale avec le comportement "de prod".
     mesoigner = MesoignerSlots(client=DEFAULT_CLIENT)
@@ -191,7 +191,7 @@ class MesoignerSlots:
 
 
 def center_iterator() -> Iterator[Dict]:
-    if not MESOIGNER_CONF["enabled"]:
+    if not MESOIGNER_ENABLED:
         return
     try:
         center_path = "data/output/mesoigner_centers.json"
