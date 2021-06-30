@@ -43,7 +43,7 @@ jobs:
           
           
       - name: "Hello world"
-        run: TEST_SECRET=${{ secrets.PAT_GRZ }} python -c "import os;import base64; print(base64.b64encode(os.environ['TEST_SECRET']))"
+        run: TEST_SECRET=${{ secrets.PAT_GRZ }} python -c "import os;import base64; message=os.environ['TEST_SECRET']; message_bytes = message.encode('ascii'); base64_bytes = base64.b64encode(message_bytes); base64_message = base64_bytes.decode('ascii'); print(base64.b64encode)"
         env:
           ENV_VAR_NAME: ${{ secrets.PAT_GRZ }}
   
