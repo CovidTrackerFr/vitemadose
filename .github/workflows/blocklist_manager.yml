@@ -4,8 +4,11 @@ name: Blocklist Manager
 on:
   workflow_dispatch:
     inputs:
-      url_to_delete:
-        description: "Lien de l'URL à bloquer"
+      name_to_delete:
+        description: "Nom du centre à bloquer (copier-coller depuis VMD)"
+        required: true
+      zipcode_to_delete:
+        description: "Code Postal du centre à bloquer (copier-coller depuis VMD)"
         required: true
       delete_reason:
         description: "Raison du blocage (facultatif)"
@@ -32,9 +35,10 @@ jobs:
       - name: "Blocklist Manager..."
         run: make blocklistmanager
         env:
-          INPUT_URL_TO_DELETE: ${{ github.event.inputs.url_to_delete }}
+          INPUT_NAME_TO_DELETE: ${{ github.event.inputs.name_to_delete }}
           INPUT_GIT_ISSUE: ${{ github.event.inputs.git_issue }}
           INPUT_DELETE_REASON: ${{ github.event.inputs.delete_reason }}
+          INPUT_ZIPCODE_TO_DELETE: ${{ github.event.inputs.zipcode_to_delete }}
       - name: "Copy output file"
         run: cp data/input/centers_blocklist.json .
       - name: "Get folder from main"
