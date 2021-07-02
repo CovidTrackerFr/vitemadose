@@ -11,6 +11,11 @@ from dateutil.tz import tzutc
 import io
 import scraper.mesoigner.mesoigner as mesoigner
 from scraper.pattern.vaccine import Vaccine
+from utils.vmd_config import get_conf_platform
+
+
+MESOIGNER_CONF = get_conf_platform("mesoigner")
+MESOIGNER_APIs = MESOIGNER_CONF.get("api", "")
 
 
 TEST_CENTRE_INFO = Path("tests", "fixtures", "mesoigner", "mesoigner_center_info.json")
@@ -71,7 +76,7 @@ def test_fetch_slots():
     assert response == None
 
 
-def test__fetch_slots():
+def test_fetch():
     mesoigner.MESOIGNER_ENABLED = True
 
     center_data = dict()
@@ -98,29 +103,22 @@ def test__fetch_slots():
 
     center_with_availability = mesoigner.MesoignerSlots(client=client)
 
-    response = center_with_availability._fetch(request)
+    response = center_with_availability.fetch(request)
     assert response == "2021-06-16T14:50:00+02:00"
 
 
-# def test_center_iterator():
-#     def app(request: httpx.Request) -> httpx.Response:
-#         if request.url.path == "/api/Organizations/public/covid":
-#             path = Path("tests/fixtures/avecmondoc/iterator_search_result.json")
-#             return httpx.Response(200, json=json.loads(path.read_text(encoding="utf8")))
-#         elif request.url.path == "/api/Organizations/slug/delphine-rousseau-159":
-#             path = Path("tests/fixtures/avecmondoc/get_organization_slug.json")
-#             return httpx.Response(200, json=json.loads(path.read_text(encoding="utf8")))
-#         elif request.url.path == "/api/Organizations/getConsultationReasons":
-#             path = Path("tests/fixtures/avecmondoc/get_reasons.json")
-#             return httpx.Response(200, json=json.loads(path.read_text(encoding="utf8")))
-#         elif request.url.path == "/api/Organizations/getByDoctor/216":
-#             path = Path("tests/fixtures/avecmondoc/get_by_doctor.json")
-#             return httpx.Response(200, json=json.loads(path.read_text(encoding="utf8")))
-#         return httpx.Response(404)
+def test_center_iterator():
+    result = mesoigner.center_iterator()
+    if mesoigner.MESOIGNER_ENABLED == False:
+        assert result == None
 
-#     client = httpx.Client(transport=httpx.MockTransport(app))
-#     centres = [centre for centre in avecmondoc.center_iterator(client)]
-#     assert len(centres) > 0
-#     data_file = Path("tests/fixtures/avecmondoc/centerdict.json")
-#     data = json.loads(data_file.read_text(encoding="utf8"))
-#     assert centres[0] == data
+
+def test_center_iterator():
+    def app(request: httpx.Request) -> httpx.Response:
+        print(request.url.path)
+        path = Path("tests/fixtures/mesoigner/mesoigner_centers.json")
+        return httpx.Response(200, json=json.loads(path.read_text(encoding="utf8")))
+
+    client = httpx.Client(transport=httpx.MockTransport(app))
+    centres = [centre for centre in mesoigner.center_iterator(client)]
+    assert len(centres) == 4
