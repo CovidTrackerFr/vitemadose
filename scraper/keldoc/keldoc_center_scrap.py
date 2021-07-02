@@ -49,8 +49,10 @@ class KeldocCenterScraper:
             logger.warning(f"Keldoc raise error {hex} for request: {url}")
             return None
 
-    def parse_keldoc_resources(self, center: dict) -> dict:
+    def parse_keldoc_resources(self, center: dict) -> Optional[dict]:
         resource_url = parse_keldoc_resource_url(center)
+        if resource_url is None:
+            return None
         resource_data = self.send_keldoc_request(resource_url)
         return resource_data
 
@@ -147,9 +149,11 @@ def parse_keldoc_centers(page_limit=None) -> List[dict]:
         return centers
 
 
-def parse_keldoc_resource_url(center: dict) -> str:
+def parse_keldoc_resource_url(center: dict) -> Optional[str]:
     center_url = center.get("url")
     url_split = center_url.split("/")
+    if len(url_split) < 4:
+        return None
     type, location, slug = url_split[1:4]
     return f"{KELDOC_API.get('booking')}?type={type}&location={location}&slug={slug}"
 
