@@ -22,7 +22,7 @@ def is_url_in_json(name: str, zipcode: str):
         exit(1)
     filtered_json = filter_urls()
     for centre in filtered_json:
-        if name.strip()==centre["nom"].strip() and zipcode.strip() in centre["location"]["cp"]:
+        if name.strip() == centre["nom"].strip() and zipcode.strip() in centre["location"]["cp"]:
             url_in_json = True
             center_data = centre
     if center_data:
@@ -32,7 +32,6 @@ def is_url_in_json(name: str, zipcode: str):
     else:
         print("[ERREUR] - Aucun centre ne correspond à votre recherche.")
         exit(1)
-
     return url_in_json, center_data
 
 
@@ -50,7 +49,7 @@ def filter_urls():
     return new_centres
 
 
-def update_json(center_data, github_issue, delete_reason):
+def update_json(center_data: dixt, github_issue: str, delete_reason: str):
 
     url_path = urlparse(center_data["url"]).path
 
@@ -67,22 +66,17 @@ def update_json(center_data, github_issue, delete_reason):
             if url_path in blocked_center["url"]:
                 print("[ERREUR] - Le centre est déjà bloqué.")
                 exit(1)
-
         data["centers_not_displayed"].append(new_center)
         blocklist_file.seek(0)
-
         json.dump(data, blocklist_file, indent=2)
         print("\n[SUCCESS] - Le centre a bien été ajouté à la blocklist !\n")
 
 
 def main():
-
     delete_reason = None
     github_issue = None
-
     print("\n******************* BLOCKLIST MANAGER *******************")
     print("Ce programme permet d'ajouter un centre à la Blocklist")
-
     name, zipcode = input_data()
     url_in_json, center_data = is_url_in_json(name, zipcode)
     if url_in_json:
