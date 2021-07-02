@@ -22,7 +22,7 @@ def is_url_in_json(name: str, zipcode: str):
         exit(1)
     filtered_json = filter_urls()
     for centre in filtered_json:
-        if name.strip() in centre["nom"] and zipcode.strip() in centre["location"]["cp"]:
+        if name.strip()==centre["nom"].strip() and zipcode.strip() in centre["location"]["cp"]:
             url_in_json = True
             center_data = centre
     if center_data:
