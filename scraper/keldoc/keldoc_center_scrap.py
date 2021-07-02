@@ -97,6 +97,8 @@ class KeldocCenterScraper:
         )
         data = self.send_keldoc_request(url)
 
+        if not data:
+            return centers
         options = data.get("options")
         if not options:
             return centers
