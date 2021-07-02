@@ -3,7 +3,7 @@ name: Blocklist Manager
 
 on:    
   repository_dispatch:
-    types:[custom_event_type]
+    types:[webhook]
   workflow_dispatch:
     inputs:
       name_to_delete:
