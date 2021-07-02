@@ -3,28 +3,36 @@ from urllib.parse import urlparse
 import json
 import os
 
+
 BLOCKLIST = "data/input/centers_blocklist.json"
 GITLAB_CENTERS = f"https://vitemadose.gitlab.io/vitemadose/info_centres.json"
 
 
-def input_url():
-    url_to_delete = os.environ.get("INPUT_URL_TO_DELETE", "")
-    return url_to_delete
+def input_data():
+    name = os.environ.get("INPUT_NAME_TO_DELETE", "")
+    zipcode = os.environ.get("INPUT_ZIPCODE_TO_DELETE", "")
+    return name, zipcode
 
 
-def is_url_in_json(url_to_delete: str):
+def is_url_in_json(name: str, zipcode: str):
     url_in_json = False
     center_data = None
-    url_path = urlparse(url_to_delete).path
-    if not url_path:
-        print("[ERREUR] - L'url est incorrecte")
+    if not name or not zipcode:
+        print("[ERREUR] - Le nom ou le code postal n'ont pas été saisis correctement.")
         exit(1)
     filtered_json = filter_urls()
     for centre in filtered_json:
-        if url_path in centre["url"]:
+        if name.strip() in centre["nom"] and zipcode.strip() in centre["location"]["cp"]:
             url_in_json = True
             center_data = centre
-    print(f'\nLe centre choisi est \n {center_data["nom"]}\n{center_data["url"]}\n{center_data["metadata"]["address"]}')
+    if center_data:
+        print(
+            f'\nLe centre choisi est \n {center_data["nom"]}\n{center_data["url"]}\n{center_data["metadata"]["address"]}'
+        )
+    else:
+        print("[ERREUR] - Aucun centre ne correspond à votre recherche.")
+        exit(1)
+
     return url_in_json, center_data
 
 
@@ -75,18 +83,15 @@ def main():
     print("\n******************* BLOCKLIST MANAGER *******************")
     print("Ce programme permet d'ajouter un centre à la Blocklist")
 
-    url_to_delete = input_url()
-    url_in_json, center_data = is_url_in_json(url_to_delete)
+    name, zipcode = input_data()
+    url_in_json, center_data = is_url_in_json(name, zipcode)
     if url_in_json:
-        delete_reason = (
-            os.environ.get("INPUT_DELETE_REASON", "").strip()
-            if len(os.environ.get("INPUT_DELETE_REASON", "")) > 0
-            else None
-        )
-        github_issue = (
-            os.environ.get("INPUT_GIT_ISSUE", "").strip() if len(os.environ.get("INPUT_GIT_ISSUE", "")) > 0 else None
-        )
-
+        delete_reason = os.environ.get("INPUT_DELETE_REASON", "").strip()
+        github_issue = os.environ.get("INPUT_GIT_ISSUE", "").strip()
+        if len(delete_reason) == 0:
+            delete_reason = None
+        if len(github_issue) == 0:
+            github_issue = None
         update_json(center_data, github_issue, delete_reason)
     else:
         print("[ERREUR] - Ce centre n'est pas présent dans nos fichiers.")
