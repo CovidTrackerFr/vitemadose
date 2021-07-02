@@ -2,6 +2,8 @@
 name: Blocklist Manager
 
 on:
+  repository_dispatch:
+    types: [custom_event_type]
   workflow_dispatch:
     inputs:
       name_to_delete:
