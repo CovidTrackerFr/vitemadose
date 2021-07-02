@@ -58,10 +58,6 @@ class MesoignerSlots:
         self.lieu = None
 
     def fetch(self, request: ScraperRequest) -> Optional[str]:
-        result = self._fetch(request)
-        return result
-
-    def _fetch(self, request: ScraperRequest) -> Optional[str]:
         gid = request.center_info.internal_id
         platform = request.center_info.plateforme
         center_id = gid.split(platform)[-1]
@@ -190,13 +186,13 @@ class MesoignerSlots:
         return first_availability
 
 
-def center_iterator() -> Iterator[Dict]:
+def center_iterator(client: httpx.Client = DEFAULT_CLIENT) -> Iterator[Dict]:
     if not MESOIGNER_ENABLED:
         return
     try:
         center_path = "data/output/mesoigner_centers.json"
         url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"
-        response = requests.get(url)
+        response = client.get(url)
         response.raise_for_status()
         data = response.json()
         file = open(center_path, "w")
