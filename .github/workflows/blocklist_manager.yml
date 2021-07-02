@@ -5,6 +5,18 @@ on:
   repository_dispatch:
     types:
       - webhook
+    inputs:
+      name_to_delete:
+        description: "Nom du centre à bloquer (copier-coller depuis VMD)"
+        required: true
+      zipcode_to_delete:
+        description: "Code Postal du centre à bloquer (copier-coller depuis VMD)"
+        required: true
+      delete_reason:
+        description: "Raison du blocage (facultatif)"
+      git_issue:
+        description: "Lien de l'issue Git correspondante (facultatif)"
+        
   workflow_dispatch:
     inputs:
       name_to_delete:
