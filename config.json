@@ -198,13 +198,20 @@
         "booking": "https://booking.keldoc.com/api/patients/v2/searches/resource",
         "motives": "https://booking.keldoc.com/api/patients/v2/clinics/{0}/specialties/{1}/cabinets/{2}/motive_categories",
         "cabinets": "https://booking.keldoc.com/api/patients/v2/clinics/{0}/specialties/{1}/cabinets",
-        "slots": "https://www.keldoc.com/api/patients/v2/timetables/{0}"
+        "slots": "https://www.keldoc.com/api/patients/v2/timetables/{0}",
+        "center_list":"https://www.keldoc.com/api/patients/v2/searches/geo_location?specialty_id={motive}&raw_location={dep}&page={page_id}"
+
       },
       "pagination": {
         "pages": 4,
         "days": 4
       },
       "filters": {
+        "appointment_speciality_urls": [
+          "maladies-infectieuses",
+          "vaccination-covid-19",
+          "vaccination-covid19"
+        ],
         "appointment_speciality": [
           "Maladies infectieuses",
           "COVID19 - Vaccination"
@@ -232,7 +239,21 @@
       },
       "center_scraper": {
         "result_path": "data/output/keldoc_centers.json"
-      }
+      },
+      "dep_conversion":{
+        "Bas-Rhin": "rhin-bas",
+        "Haut-Rhin": "rhin-haut",
+        "Hautes-Alpes": "alpes-hautes",
+        "Haute-Loire": "loire-haute",
+        "Haute-Marne": "marne-haute",
+        "Hautes-Pyrénées": "pyrenees-haute",
+        "Haute-Saône": "saune-haute",
+        "Haute-Savoie": "savoie-haute",
+        "Deux-Sèvres": "sevres-deux",
+        "Haute-Vienne": "vienne-haute",
+        "Territoire de Belfort": "belfort-territoire-de"
+        },
+      "missing_deps":["la-reunion-97", "haute-garonne", "ille-et-villaine", "---"]
     },
     "maiia": {
       "enabled": true,

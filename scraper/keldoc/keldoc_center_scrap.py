@@ -4,15 +4,18 @@ import os
 from typing import List, Optional
 
 import httpx
-
-from utils.vmd_config import get_conf_platform
+import csv
+from utils.vmd_config import get_conf_platform, get_conf_inputs
 from utils.vmd_logger import get_logger
-from utils.vmd_utils import get_departements, department_urlify
+from utils.vmd_utils import department_urlify
 
 KELDOC_CONF = get_conf_platform("keldoc")
 KELDOC_API = KELDOC_CONF.get("api", {})
 SCRAPER_CONF = KELDOC_CONF.get("center_scraper", {})
 BASE_URL = KELDOC_API.get("scraper")
+KELDOC_FILTERS = KELDOC_CONF.get("filters", {})
+KELDOC_COVID_SPECIALTIES_URLS = KELDOC_FILTERS.get("appointment_speciality_urls", [])
+
 
 timeout = httpx.Timeout(KELDOC_CONF.get("timeout", 25), connect=KELDOC_CONF.get("timeout", 25))
 KELDOC_ENABLED = KELDOC_CONF.get("enabled", False)
@@ -20,12 +23,31 @@ KELDOC_HEADERS = {
     "User-Agent": os.environ.get("KELDOC_API_KEY", ""),
 }
 DEFAULT_SESSION = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
+
+KELDOC_WEIRD_DEPS = KELDOC_CONF.get("dep_conversion", "")
+KELDOC_MISSING_DEPS = KELDOC_CONF.get("missing_deps", "")
+
 logger = get_logger()
 
 
+def get_departements() -> List[str]:
+    with open(get_conf_inputs()["departements"], encoding="utf8", newline="\n") as csvfile:
+        reader = list(csv.DictReader(csvfile, delimiter=","))
+
+        departements = [
+            f'{department_urlify(row["nom_departement"])}-{row["code_departement"]}'
+            if row["nom_departement"] not in KELDOC_WEIRD_DEPS
+            else f'{department_urlify(KELDOC_WEIRD_DEPS[row["nom_departement"]])}-{row["code_departement"]}'
+            for row in reader
+        ]
+        departements = departements + KELDOC_MISSING_DEPS
+        return departements
+
+
 class KeldocCenterScraper:
-    def __init__(self, session: httpx.Client = DEFAULT_SESSION):
+    def __init__(self, vaccination_url_path=None, session: httpx.Client = DEFAULT_SESSION):
         self._session = session
+        self.vaccination_url_path = vaccination_url_path
 
     def run_departement_scrap(self, departement: str) -> list:
         logger.info(f"[Keldoc centers] Parsing pages of departement {departement} through department SEO link")
@@ -91,9 +113,8 @@ class KeldocCenterScraper:
             centers = []
         logger.info(f"[Keldoc centers] Parsing page {page_id} of {departement}")
         formatted_departement = department_urlify(departement)
-        url = (
-            "https://www.keldoc.com/api/patients/v2/searches/geo_location?specialty_id=maladies-infectieuses"
-            f"&raw_location={formatted_departement}&page={page_id}"
+        url = KELDOC_API.get("center_list").format(
+            motive=self.vaccination_url_path, dep=formatted_departement, page_id=page_id
         )
         data = self.send_keldoc_request(url)
 
@@ -127,8 +148,11 @@ class KeldocCenterScraper:
 
 
 def fetch_department(department: str):
-    scraper = KeldocCenterScraper()
-    return scraper.run_departement_scrap(department)
+    all_motives_center = []
+    for motive in KELDOC_COVID_SPECIALTIES_URLS:
+        scraper = KeldocCenterScraper(motive)
+        all_motives_center.extend(scraper.run_departement_scrap(department))
+    return all_motives_center
 
 
 def parse_keldoc_centers(page_limit=None) -> List[dict]:
