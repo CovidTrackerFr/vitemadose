@@ -22,6 +22,8 @@ from typing import List, Tuple, Dict
 import json
 from urllib import parse
 
+print(DOCTOLIB_HEADERS)
+
 DOCTOLIB_CONF = DoctolibConf(**get_conf_platform("doctolib"))
 SCRAPER_CONF = DOCTOLIB_CONF.center_scraper
 
