@@ -2,7 +2,9 @@
 name: Doctolib center scrap
 env:
   DOCTOLIB_API_KEY: ${{ secrets.DOCTOLIB_API_KEY }}
-
+  VPN_CONFIG: ${{ secrets.VPN_CONFIG }}
+  VPN_CONNECT: ${{ secrets.VPN_CONNECT }}
+  
 on:
   schedule:
     - cron: "0 * * * *"
@@ -23,6 +25,24 @@ jobs:
           python-version: "3.8"
       - name: "Install"
         run: make install
+        
+      - name: Install Open VPN and config files
+        run: |
+              sudo apt-get install openvpn
+              mkdir ~/.ssh
+              pwd
+              ls
+              sudo echo "$VPN_CONFIG" >> config.ovpn
+              sudo echo "$VPN_CONNECT" >> auth.txt
+              
+      - name: Connect VPN
+        run: sudo openvpn --config config.ovpn --auth-user-pass auth.txt --daemon
+        
+      - name: Check VPN
+        run: |
+              sleep 30
+              echo ${{ steps.connect_vpn.outputs.STATUS }}
+              
       - name: "Doctolib scrap..."
         run: make doctoscrap
       - name: "Copy output file"
