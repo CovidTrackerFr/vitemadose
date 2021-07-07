@@ -23,8 +23,8 @@ from scraper.slotscraper.maiia.maiia import fetch_slots as maiia_fetch_slots
 from scraper.slotscraper.mapharma.mapharma import centre_iterator as mapharma_centre_iterator
 from scraper.slotscraper.mapharma.mapharma import fetch_slots as mapharma_fetch_slots
 from .opendata.opendata import center_iterator as gouv_centre_iterator
-from .ordoclic import centre_iterator as ordoclic_centre_iterator
-from .ordoclic import fetch_slots as ordoclic_fetch_slots
+from scraper.slotscraper.ordoclic.ordoclic import centre_iterator as ordoclic_centre_iterator
+from scraper.slotscraper.ordoclic.ordoclic import fetch_slots as ordoclic_fetch_slots
 from scraper.slotscraper.avecmondoc.avecmondoc import center_iterator as avecmondoc_centre_iterator
 from scraper.slotscraper.avecmondoc.avecmondoc import fetch_slots as avecmondoc_fetch_slots
 from scraper.slotscraper.mesoigner.mesoigner import center_iterator as mesoigner_centre_iterator
