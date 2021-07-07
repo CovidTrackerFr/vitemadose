@@ -6,7 +6,7 @@ import httpx
 from dateutil.parser import isoparse
 from jsonschema import validate
 
-from scraper.ordoclic import (
+from scraper.slotscraper.ordoclic.ordoclic import (
     search,
     get_reasons,
     get_profile,

@@ -5,7 +5,7 @@ import datetime as dt
 from pathlib import Path
 
 import scraper
-from scraper.slotscraper.maiia import (
+from scraper.slotscraper.maiia.maiia import (
     parse_slots,
     get_next_slot_date,
     get_slots,
