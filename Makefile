@@ -25,16 +25,16 @@ stats: ## Run the statistic scripts
 	venv/bin/python -m stats_generation.by_vaccine
 
 doctoscrap: ## Scrap all doctolib centers, output : data/output/doctolib-centers.json
-	venv/bin/python -m scraper.doctolib.doctolib_center_scrap
+	venv/bin/python -m scraper.centerscraper.doctolib_center_scrap
 
 keldocscrap: ## Scrap all doctolib centers, output : data/output/keldoc-centers.json
-	venv/bin/python -m scraper.keldoc.keldoc_center_scrap
+	venv/bin/python -m scraper.centerscraper.keldoc_center_scrap
 
 maiiascrap: ## Retrieve maiia centers from API
-	venv/bin/python -m scraper.maiia.maiia_center_scrap
+	venv/bin/python -m scraper.centerscraper.maiia_center_scrap
 
 mesoignerscrap: ## Scrap all mesoigner centers, output : data/output/mesoigner_centers.json
-	venv/bin/python -m scraper.mesoigner.mesoigner_center_scrap
+	venv/bin/python -m scraper.centerscraper.mesoigner_center_scrap
 
 blocklistmanager: ## Blocklist command line manager
 	venv/bin/python -m management_scripts.manage_blocklist
