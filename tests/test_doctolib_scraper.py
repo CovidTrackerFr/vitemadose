@@ -1,4 +1,4 @@
-from scraper.doctolib.doctolib_parsers import (
+from scraper.slotscraper.doctolib.doctolib_parsers import (
     get_coordinates,
     center_type,
     parse_doctolib_business_hours,
@@ -6,7 +6,7 @@ from scraper.doctolib.doctolib_parsers import (
     parse_center_places,
     parse_doctor,
 )
-from scraper.doctolib.doctolib_center_scrap import DoctolibCenterScraper
+from scraper.centerscraper.doctolib_center_scrap import DoctolibCenterScraper
 
 from utils.vmd_utils import get_departements
 

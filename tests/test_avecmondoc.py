@@ -5,11 +5,10 @@ from scraper.pattern.center_info import CenterInfo
 import httpx
 from pathlib import Path
 from jsonschema import validate
-from jsonschema.exceptions import ValidationError
 from datetime import datetime
 from dateutil.tz import tzutc
 
-from scraper.avecmondoc import avecmondoc
+from scraper.slotscraper.avecmondoc import avecmondoc
 
 
 def test_search():

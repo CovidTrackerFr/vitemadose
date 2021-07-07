@@ -1,12 +1,10 @@
 import json
-from scraper.doctolib.doctolib import build_appointment_schedules
+from scraper.slotscraper.doctolib.doctolib import build_appointment_schedules
 import time
 import logging
 import os
-from typing import Dict, Iterator, Optional
 import httpx
 import requests
-from scraper.circuit_breaker import ShortCircuit
 from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.profiler import Profiling

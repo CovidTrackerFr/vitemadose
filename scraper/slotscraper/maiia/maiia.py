@@ -15,7 +15,7 @@ from scraper.profiler import Profiling
 from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
 from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT, DEFAULT_CLIENT
+from scraper.slotscraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT, DEFAULT_CLIENT
 from utils.vmd_config import get_conf_platform, get_config
 from utils.vmd_utils import DummyQueue
 

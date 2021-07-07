@@ -8,7 +8,7 @@ from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import departementUtils, format_phone_number
 from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_result import DRUG_STORE, VACCINATION_CENTER
-from .maiia_utils import get_paged
+from scraper.slotscraper.maiia import get_paged
 
 MAIIA_CONF = get_conf_platform("maiia")
 MAIIA_API = MAIIA_CONF.get("api", {})

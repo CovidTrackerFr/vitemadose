@@ -5,7 +5,7 @@ import datetime as dt
 from pathlib import Path
 
 import scraper
-from scraper.maiia.maiia import (
+from scraper.slotscraper.maiia import (
     parse_slots,
     get_next_slot_date,
     get_slots,
@@ -15,7 +15,7 @@ from scraper.maiia.maiia import (
     centre_iterator,
     MAIIA_LIMIT,
 )
-from scraper.maiia.maiia_center_scrap import maiia_scrap
+from scraper.centerscraper.maiia_center_scrap import maiia_scrap
 from scraper.pattern.scraper_request import ScraperRequest
 from .utils import mock_datetime_now
 
@@ -36,7 +36,7 @@ def app(request: httpx.Request) -> httpx.Response:
 
 client = httpx.Client(transport=httpx.MockTransport(app))
 
-scraper.maiia.maiia.DEFAULT_CLIENT = client
+scraper.slotscraper.maiia.maiia.DEFAULT_CLIENT = client
 
 
 def test_parse_slots():

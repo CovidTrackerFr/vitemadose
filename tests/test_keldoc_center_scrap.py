@@ -1,7 +1,6 @@
 import httpx
-import pytest
 
-from scraper.keldoc.keldoc_center_scrap import parse_keldoc_resource_url, get_cabinets, KeldocCenterScraper
+from scraper.centerscraper.keldoc_center_scrap import parse_keldoc_resource_url, get_cabinets, KeldocCenterScraper
 from tests.test_keldoc import get_test_data
 
 TEST_CENTERS = [

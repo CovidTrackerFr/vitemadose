@@ -9,8 +9,8 @@ from dateutil.parser import isoparse
 from pytz import timezone
 import httpx
 
-from scraper.keldoc.keldoc_filters import parse_keldoc_availability
-from scraper.keldoc.keldoc_routes import API_KELDOC_CALENDAR, API_KELDOC_CENTER, API_KELDOC_CABINETS
+from scraper.slotscraper.keldoc.keldoc_filters import parse_keldoc_availability
+from scraper.slotscraper.keldoc.keldoc_routes import API_KELDOC_CALENDAR, API_KELDOC_CENTER, API_KELDOC_CABINETS
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS
 from utils.vmd_config import get_conf_platform

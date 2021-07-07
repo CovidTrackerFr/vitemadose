@@ -5,7 +5,7 @@ from pathlib import Path
 from datetime import datetime, date
 from pytz import timezone
 
-from scraper.mapharma.mapharma import parse_slots, fetch_slots, count_appointements, campagne_to_centre
+from scraper.slotscraper.mapharma import parse_slots, fetch_slots, count_appointements, campagne_to_centre
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
 

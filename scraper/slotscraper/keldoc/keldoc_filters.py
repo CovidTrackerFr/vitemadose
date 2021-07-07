@@ -3,7 +3,7 @@ from datetime import datetime
 
 from httpx import TimeoutException
 
-from scraper.keldoc.keldoc_routes import API_KELDOC_MOTIVES
+from scraper.slotscraper.keldoc.keldoc_routes import API_KELDOC_MOTIVES
 from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from utils.vmd_config import get_conf_platform

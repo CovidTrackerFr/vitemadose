@@ -13,15 +13,13 @@ import httpx
 import requests
 import sys
 
-from scraper.circuit_breaker import ShortCircuit
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
-from scraper.doctolib.conf import DoctolibConf
-from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
+from scraper.slotscraper.doctolib.doctolib_conf import DoctolibConf
+from scraper.slotscraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
 from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
 from scraper.pattern.vaccine import get_vaccine_name, Vaccine
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError, DoublonDoctolib, RequestError
-from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import append_date_days, DummyQueue
 

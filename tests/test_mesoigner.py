@@ -1,15 +1,10 @@
 import json
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.pattern.center_location import CenterLocation
 from scraper.pattern.center_info import CenterInfo
 import httpx
 from pathlib import Path
-from jsonschema import validate
-from jsonschema.exceptions import ValidationError
-from datetime import datetime
-from dateutil.tz import tzutc
 import io
-import scraper.mesoigner.mesoigner as mesoigner
+import scraper.slotscraper.mesoigner.mesoigner as mesoigner
 from scraper.pattern.vaccine import Vaccine
 from utils.vmd_config import get_conf_platform
 
@@ -56,8 +51,6 @@ def test_get_appointments():
     assert request.appointment_count == 0
     assert request.vaccine_type == None
 
-
-from unittest.mock import patch
 
 # On se place dans le cas où la plateforme est désactivée
 def test_fetch_slots():

@@ -1,6 +1,6 @@
 from typing import Dict, List, Optional
 
-from scraper.doctolib.conf import DoctolibConf
+from scraper.slotscraper.doctolib.doctolib_conf import DoctolibConf
 from scraper.pattern.scraper_result import VACCINATION_CENTER
 from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import departementUtils, format_phone_number

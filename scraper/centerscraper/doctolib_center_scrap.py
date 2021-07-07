@@ -5,14 +5,10 @@ from utils.vmd_config import get_conf_platform
 from utils.vmd_logger import get_logger
 from utils.vmd_utils import get_departements, department_urlify
 
-from scraper.doctolib.conf import DoctolibConf
-from scraper.doctolib.doctolib import DOCTOLIB_HEADERS
-from scraper.doctolib.doctolib_filters import is_vaccination_center
-from scraper.doctolib.doctolib_parsers import (
-    get_coordinates,
-    center_type,
-    parse_doctolib_business_hours,
-    parse_place,
+from scraper.slotscraper.doctolib.doctolib_conf import DoctolibConf
+from scraper.slotscraper.doctolib.doctolib import DOCTOLIB_HEADERS
+from scraper.slotscraper.doctolib.doctolib_filters import is_vaccination_center
+from scraper.slotscraper.doctolib.doctolib_parsers import (
     parse_center_places,
     parse_doctor,
     center_reducer,

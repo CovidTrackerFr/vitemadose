@@ -3,8 +3,8 @@ import logging
 
 import httpx
 
-from scraper.keldoc.keldoc_center import KeldocCenter
-from scraper.keldoc.keldoc_filters import get_relevant_vaccine_specialties_id, filter_vaccine_motives
+from scraper.slotscraper.keldoc.keldoc_center import KeldocCenter
+from scraper.slotscraper.keldoc.keldoc_filters import get_relevant_vaccine_specialties_id, filter_vaccine_motives
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform

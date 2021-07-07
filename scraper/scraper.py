@@ -1,13 +1,10 @@
 import os
-import json
 import traceback
 from collections import deque
 from multiprocessing import Manager, Pool, Process, Queue  # Use actual Process for Collecting creneau (CPU intensive)
 from random import random
 from typing import Tuple
-import sys
 from .export.export_v2 import JSONExporter
-import pprint
 from scraper.error import BlockedByDoctolibError, DoublonDoctolib
 from scraper.pattern.center_info import CenterInfo
 from scraper.pattern.scraper_request import ScraperRequest
@@ -16,22 +13,22 @@ from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform, get_config
 from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug, log_requests, log_platform_requests
 from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date, q_iter, EOQ, DummyQueue, BulkQueue
-from .doctolib.doctolib import center_iterator as doctolib_center_iterator
-from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
+from scraper.slotscraper.doctolib.doctolib import center_iterator as doctolib_center_iterator
+from scraper.slotscraper.doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .export.export_merge import export_data
 from .export.export_pool import export_pool
-from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
-from .maiia.maiia import centre_iterator as maiia_centre_iterator
-from .maiia.maiia import fetch_slots as maiia_fetch_slots
-from .mapharma.mapharma import centre_iterator as mapharma_centre_iterator
-from .mapharma.mapharma import fetch_slots as mapharma_fetch_slots
+from scraper.slotscraper.keldoc.keldoc import fetch_slots as keldoc_fetch_slots
+from scraper.slotscraper.maiia.maiia import centre_iterator as maiia_centre_iterator
+from scraper.slotscraper.maiia.maiia import fetch_slots as maiia_fetch_slots
+from scraper.slotscraper.mapharma.mapharma import centre_iterator as mapharma_centre_iterator
+from scraper.slotscraper.mapharma.mapharma import fetch_slots as mapharma_fetch_slots
 from .opendata.opendata import center_iterator as gouv_centre_iterator
 from .ordoclic import centre_iterator as ordoclic_centre_iterator
 from .ordoclic import fetch_slots as ordoclic_fetch_slots
-from .avecmondoc.avecmondoc import center_iterator as avecmondoc_centre_iterator
-from .avecmondoc.avecmondoc import fetch_slots as avecmondoc_fetch_slots
-from .mesoigner.mesoigner import center_iterator as mesoigner_centre_iterator
-from .mesoigner.mesoigner import fetch_slots as mesoigner_fetch_slots
+from scraper.slotscraper.avecmondoc.avecmondoc import center_iterator as avecmondoc_centre_iterator
+from scraper.slotscraper.avecmondoc.avecmondoc import fetch_slots as avecmondoc_fetch_slots
+from scraper.slotscraper.mesoigner.mesoigner import center_iterator as mesoigner_centre_iterator
+from scraper.slotscraper.mesoigner.mesoigner import fetch_slots as mesoigner_fetch_slots
 from .circuit_breaker import CircuitBreakerOffException
 
 

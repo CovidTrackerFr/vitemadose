@@ -6,10 +6,10 @@ import datetime as dt
 import httpx
 import pytest
 from .utils import mock_datetime_now
-from scraper.keldoc import keldoc
-from scraper.keldoc.keldoc import fetch_slots
-from scraper.keldoc.keldoc_center import KeldocCenter, DEFAULT_CLIENT
-from scraper.keldoc.keldoc_filters import (
+from scraper.slotscraper.keldoc import keldoc
+from scraper.slotscraper.keldoc.keldoc import fetch_slots
+from scraper.slotscraper.keldoc.keldoc_center import KeldocCenter, DEFAULT_CLIENT
+from scraper.slotscraper.keldoc.keldoc_filters import (
     get_relevant_vaccine_specialties_id,
     filter_vaccine_motives,
     is_appointment_relevant,

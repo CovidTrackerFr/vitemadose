@@ -6,7 +6,7 @@ from queue import SimpleQueue
 
 import pytest
 
-from scraper.doctolib.doctolib_filters import (
+from scraper.slotscraper.doctolib.doctolib_filters import (
     is_category_relevant,
     is_vaccination_center,
     is_appointment_relevant,
@@ -16,10 +16,9 @@ from scraper.error import BlockedByDoctolibError
 from scraper.pattern.vaccine import Vaccine
 from scraper.pattern.center_info import CenterInfo
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
-from datetime import datetime
 
 import httpx
-from scraper.doctolib.doctolib import (
+from scraper.slotscraper.doctolib.doctolib import (
     DoctolibSlots,
     _find_agenda_and_practice_ids,
     _find_visit_motive_category_id,
