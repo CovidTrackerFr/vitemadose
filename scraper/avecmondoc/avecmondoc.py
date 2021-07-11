@@ -200,6 +200,12 @@ def organization_to_center(organization) -> Optional[CenterInfo]:
         "phone_number": organization["phone"],
     }
     center.location = location
+    center.type = DRUG_STORE
+    for speciality in organization.get("speciality", []):
+        if speciality.get("professionId", 0) == 14:
+            center.type = GENERAL_PRACTITIONER
+        elif speciality.get("professionId", 0) == 24:
+            center.type = DRUG_STORE
     center.internal_id = f"amd{id}"
     if "schedules" not in organization:
         return center
@@ -381,7 +387,7 @@ def center_to_centerdict(center: CenterInfo) -> dict:
     center_dict = {}
     center_dict["rdv_site_web"] = center.url
     center_dict["nom"] = center.nom
-    center_dict["type"] = DRUG_STORE
+    center_dict["type"] = center.type
     center_dict["business_hours"] = center.metadata["business_hours"]
     center_dict["phone_number"] = center.metadata["phone_number"]
     center_dict["address"] = f'{center.metadata["address"]}, {center.location.cp} {center.location.city}'
@@ -412,6 +418,8 @@ def center_iterator(client: httpx.Client = DEFAULT_CLIENT) -> Iterator[dict]:
     if "data" not in search_result:
         return []
     for structure in search_result["data"]:
+        if structure.get("businessHoursCovidCount", 0) == 0:
+            continue
         slug = structure["url"].split("/")[-1]
         organizations = [get_organization_slug(slug, client)]
         valid_organizations = [organization for organization in organizations if has_valid_zipcode(organization)]
@@ -430,7 +438,8 @@ def main():  #  pragma: no cover
     for center in center_iterator():
         request = ScraperRequest(center["rdv_site_web"], datetime.now().strftime("%Y-%m-%d"))
         availability = fetch_slots(request)
-        logger.info(f'{center["nom"]:48}: {availability}')
+        count = request.appointment_count
+        logger.info(f'{center["nom"]:48}: {availability} ({count})')
 
 
 if __name__ == "__main__":  #  pragma: no cover

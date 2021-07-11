@@ -1,4 +1,5 @@
 import json
+from scraper.pattern.scraper_result import DRUG_STORE, GENERAL_PRACTITIONER
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.center_location import CenterLocation
 from scraper.pattern.center_info import CenterInfo
@@ -130,6 +131,7 @@ def test_organization_to_center():
     }
     center.location = CenterLocation(1.481373, 48.447586, "Chartres", "28000")
     center.internal_id = "amd159"
+    center.type = DRUG_STORE
     assert avecmondoc.organization_to_center(data).default() == center.default()
 
 
@@ -254,6 +256,7 @@ def test_center_to_centerdict():
     }
     center.location = CenterLocation(1.481373, 48.447586, "Chartres", "28000")
     center.internal_id = "amd159"
+    center.type = DRUG_STORE
 
     data_file = Path("tests/fixtures/avecmondoc/centerdict.json")
     data = json.loads(data_file.read_text(encoding="utf8"))
