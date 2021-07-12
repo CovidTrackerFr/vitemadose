@@ -110,7 +110,7 @@ class KeldocCenterScraper:
             "cabinets": [],
             "specialties": center.get("specialty_ids", []),
             "com_insee": departementUtils.cp_to_insee(center["cabinet"]["zipcode"]),
-            "gid": center["id"],
+            "gid": str(center["id"]),
             "address": center["cabinet"]["location"].strip(),
             "lat_coor1": center["coordinates"].split(",")[0],
             "long_coor1": center["coordinates"].split(",")[1],
