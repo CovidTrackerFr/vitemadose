@@ -25,8 +25,8 @@ logger = logging.getLogger("scraper")
 
 
 # Allow 10 bad runs of keldoc_slot before giving up for the 200 next tries
-@ShortCircuit("keldoc_slot", trigger=10, release=200, time_limit=40.0)
-@Profiling.measure("keldoc_slot")
+#@ShortCircuit("keldoc_slot", trigger=10, release=200, time_limit=40.0)
+#@Profiling.measure("keldoc_slot")
 def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue()):
     if "keldoc.com" in request.url:
         logger.debug(f"Fixing wrong hostname in request: {request.url}")
