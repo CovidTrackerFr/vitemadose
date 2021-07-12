@@ -47,6 +47,8 @@ cedex_to_insee = load_cedex_to_insee()
 def is_reserved_center(center):
     if not center:
         return False
+    if not center.nom
+        return False
     name = center.nom.lower().strip()
     for reserved_names in RESERVED_CENTERS:
         if reserved_names in name:
