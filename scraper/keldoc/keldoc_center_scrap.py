@@ -8,7 +8,6 @@ import csv
 from utils.vmd_config import get_conf_platform, get_conf_inputs
 from utils.vmd_logger import get_logger
 from utils.vmd_utils import department_urlify, departementUtils
-import pprint
 from scraper.pattern.center_location import CenterLocation
 
 KELDOC_CONF = get_conf_platform("keldoc")

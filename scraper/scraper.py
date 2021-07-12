@@ -7,7 +7,6 @@ from random import random
 from typing import Tuple
 import sys
 from .export.export_v2 import JSONExporter
-import pprint
 from scraper.error import BlockedByDoctolibError, DoublonDoctolib
 from scraper.pattern.center_info import CenterInfo
 from scraper.pattern.scraper_request import ScraperRequest
