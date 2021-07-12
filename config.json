@@ -75,7 +75,7 @@
   ],
   "platforms": {
     "doctolib": {
-      "enabled": false,
+      "enabled": true,
       "timeout": 30,
       "recognized_urls": [
         "https://partners.doctolib.fr",
@@ -257,7 +257,7 @@
       "missing_deps":["la-reunion-97", "haute-garonne", "ille-et-villaine", "---"]
     },
     "maiia": {
-      "enabled": false,
+      "enabled": true,
       "timeout": 30,
       "base_url": "https://www.maiia.com",
       "recognized_urls": [
@@ -306,7 +306,7 @@
       "calendar_limit": 50
     },
     "mapharma": {
-      "enabled": false,
+      "enabled": true,
       "timeout": 30,
       "recognized_urls": [
         "https://mapharma.net"
@@ -350,7 +350,7 @@
       }
     },
     "ordoclic": {
-      "enabled": false,
+      "enabled": true,
       "timeout": 30,
       "recognized_urls": [
         "https://app.ordoclic.fr"
@@ -380,7 +380,7 @@
       }
     },
     "avecmondoc": {
-      "enabled": false,
+      "enabled": true,
       "timeout": 25,
       "slot_limit": 50,
       "week_size": 6,
@@ -426,7 +426,7 @@
       }
     },
     "mesoigner": {
-      "enabled": false,
+      "enabled": true,
       "timeout": 30,
       "recognized_urls": [
         "mesoigner.fr"
