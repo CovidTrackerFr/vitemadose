@@ -11,7 +11,6 @@ from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import DummyQueue
 from scraper.circuit_breaker import ShortCircuit
 import json
-import requests
 
 KELDOC_CONF = get_conf_platform("keldoc")
 timeout = httpx.Timeout(KELDOC_CONF.get("timeout", 25), connect=KELDOC_CONF.get("timeout", 25))
@@ -67,17 +66,11 @@ def center_iterator() -> Iterator[Dict]:
     if not KELDOC_ENABLED:
         logger.warning("Keldoc scrap is disabled in configuration file.")
         return []
-    try:
-        center_path = "data/output/keldoc_centers.json"
-        url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"
-        response = requests.get(url)
-        response.raise_for_status()
-        data = response.json()
-        file = open(center_path, "w")
-        file.write(json.dumps(data, indent=2))
-        file.close()
-        logger.info(f"Found {len(data)} Keldoc centers (external scraper).")
-        for center in data:
-            yield center
-    except Exception as e:
-        logger.warning(f"Unable to scrape keldoc centers: {e}")
+    center_path = "data/output/keldoc_centers.json"
+    with open(center_path) as jsonFile:
+        jsonObject = json.loads(jsonFile.read())
+        jsonFile.close()
+
+    logger.info(f"Found {len(jsonObject)} Keldoc centers (external scraper).")
+    for center in jsonObject:
+        yield center
