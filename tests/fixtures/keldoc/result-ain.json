@@ -1,7 +1,8 @@
 [
     {
-        "name": "Centre de vaccination de Jean Marinet",
+        "nom": "Centre de vaccination de Jean Marinet",
         "rdv_site_web": "https://keldoc.com/cabinet-medical/valserhone-01200/jean-marinet/centre-de-vaccination-de-jean-marinet",
+        "address": "Place Jeanne d'arc, 01200, Valserhône",
         "cabinets": [
             {
                 "id": 17136,
@@ -196,6 +197,13 @@
         "specialties": [
             144
         ],
+        "city": "Valserhône",
+        "com_insee": "74109",
+        "gid": 17136,
+        "lat_coor1": "46.108467",
+        "long_coor1": "5.82781",
+        "phone_number": "+33672639944",
+        "type":null,
         "resources": {
             "id": 2737,
             "title": "Jean Marinet - Centre de vaccination COVID",

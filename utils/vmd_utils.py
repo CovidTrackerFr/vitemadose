@@ -186,7 +186,8 @@ def format_phone_number(_phone_number: str) -> str:
 
     phone_number = phone_number.replace(" ", "")
     phone_number = phone_number.replace(".", "")
-
+    if not len(phone_number) > 0:
+        return ""
     if not phone_number[0] == "+":
         if phone_number[:2] == "00":
             phone_number = "+" + phone_number[2:]

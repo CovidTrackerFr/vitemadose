@@ -2,17 +2,18 @@ import json
 import multiprocessing
 import os
 from typing import List, Optional
-
+import requests
 import httpx
 import csv
 from utils.vmd_config import get_conf_platform, get_conf_inputs
 from utils.vmd_logger import get_logger
-from utils.vmd_utils import department_urlify
+from utils.vmd_utils import department_urlify, departementUtils
+from scraper.pattern.center_location import CenterLocation
 
 KELDOC_CONF = get_conf_platform("keldoc")
 KELDOC_API = KELDOC_CONF.get("api", {})
 SCRAPER_CONF = KELDOC_CONF.get("center_scraper", {})
-BASE_URL = KELDOC_API.get("scraper")
+CENTER_DETAILS = KELDOC_API.get("center_details")
 KELDOC_FILTERS = KELDOC_CONF.get("filters", {})
 KELDOC_COVID_SPECIALTIES_URLS = KELDOC_FILTERS.get("appointment_speciality_urls", [])
 
@@ -42,6 +43,12 @@ def get_departements() -> List[str]:
         ]
         departements = departements + KELDOC_MISSING_DEPS
         return departements
+
+
+def set_center_type(center_type: str):
+    center_types = SCRAPER_CONF.get("center_types", {})
+    if center_type in center_types.keys():
+        return center_types[center_type]
 
 
 class KeldocCenterScraper:
@@ -91,11 +98,25 @@ class KeldocCenterScraper:
         return cabinets
 
     def parse_keldoc_center(self, center: dict) -> Optional[dict]:
+        motive_url = CENTER_DETAILS.format(center.get("id"))
+        motive_data = requests.get(motive_url).json()
+        phone_number = None
+        if "phone_number" in motive_data:
+            phone_number = motive_data["phone_number"]
+
         data = {
-            "name": center["title"],
+            "nom": center["title"],
             "rdv_site_web": f"https://keldoc.com{center['url']}",
             "cabinets": [],
             "specialties": center.get("specialty_ids", []),
+            "com_insee": departementUtils.cp_to_insee(center["cabinet"]["zipcode"]),
+            "gid": center["id"],
+            "address": center["cabinet"]["location"].strip(),
+            "lat_coor1": center["coordinates"].split(",")[0],
+            "long_coor1": center["coordinates"].split(",")[1],
+            "city": center["cabinet"]["city"].strip(),
+            "type": set_center_type(center["type"]),
+            "phone_number": phone_number,
         }
         data["resources"] = self.parse_keldoc_resources(center)
         if not data["resources"]:
@@ -135,7 +156,7 @@ class KeldocCenterScraper:
             for center_data in data:
                 parsed_center = self.parse_keldoc_center(center_data)
                 if parsed_center:
-                    logger.info(f"Found center for dep. {departement}: {parsed_center.get('name')}")
+                    logger.info(f"Found center for dep. {departement}: {parsed_center.get('nom')}")
                     centers.append(parsed_center)
                 else:
                     logger.warning(f"Not enough resources for center in dep. {departement}: {center_data.get('title')}")
@@ -171,7 +192,6 @@ def parse_keldoc_centers(page_limit=None) -> List[dict]:
                 centers.remove(item)
                 continue
             unique_center_urls.append(item.get("rdv_site_web"))
-
         return centers
 
 

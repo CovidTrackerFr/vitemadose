@@ -267,6 +267,9 @@ def is_campagne_valid(campagne: dict) -> bool:
 
 
 def centre_iterator():
+    if not MAPHARMA_ENABLED:
+        logger.warning("Mapharma scrap is disabled in configuration file.")
+        return []
     global opendata
     global campagnes_inconnues
     opendata = get_mapharma_opendata()

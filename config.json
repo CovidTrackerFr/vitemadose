@@ -199,7 +199,8 @@
         "motives": "https://booking.keldoc.com/api/patients/v2/clinics/{0}/specialties/{1}/cabinets/{2}/motive_categories",
         "cabinets": "https://booking.keldoc.com/api/patients/v2/clinics/{0}/specialties/{1}/cabinets",
         "slots": "https://www.keldoc.com/api/patients/v2/timetables/{0}",
-        "center_list":"https://www.keldoc.com/api/patients/v2/searches/geo_location?specialty_id={motive}&raw_location={dep}&page={page_id}"
+        "center_list":"https://www.keldoc.com/api/patients/v2/searches/geo_location?specialty_id={motive}&raw_location={dep}&page={page_id}",
+        "center_details":"https://www.keldoc.com/api/patients/v2/cabinets/{0}/details"
 
       },
       "pagination": {
@@ -379,7 +380,7 @@
       }
     },
     "avecmondoc": {
-      "enable": true,
+      "enabled": true,
       "timeout": 25,
       "slot_limit": 50,
       "week_size": 6,

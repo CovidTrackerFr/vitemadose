@@ -7,7 +7,6 @@ from random import random
 from typing import Tuple
 import sys
 from .export.export_v2 import JSONExporter
-import pprint
 from scraper.error import BlockedByDoctolibError, DoublonDoctolib
 from scraper.pattern.center_info import CenterInfo
 from scraper.pattern.scraper_request import ScraperRequest
@@ -21,6 +20,7 @@ from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .export.export_merge import export_data
 from .export.export_pool import export_pool
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
+from .keldoc.keldoc import center_iterator as keldoc_centre_iterator
 from .maiia.maiia import centre_iterator as maiia_centre_iterator
 from .maiia.maiia import fetch_slots as maiia_fetch_slots
 from .mapharma.mapharma import centre_iterator as mapharma_centre_iterator
@@ -270,7 +270,7 @@ def centre_iterator(platforms=None):  # pragma: no cover
         avecmondoc_centre_iterator(),
         mesoigner_centre_iterator(),
         doctolib_center_iterator(),
-        gouv_centre_iterator(),
+        keldoc_centre_iterator(),
     ):
 
         platform = get_center_platform(

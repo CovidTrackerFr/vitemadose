@@ -188,7 +188,8 @@ class MesoignerSlots:
 
 def center_iterator(client: httpx.Client = DEFAULT_CLIENT) -> Iterator[Dict]:
     if not MESOIGNER_ENABLED:
-        return
+        logger.warning("Mesoigner scrap is disabled in configuration file.")
+        return []
     try:
         center_path = "data/output/mesoigner_centers.json"
         url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"
