@@ -29,7 +29,12 @@ class ResourceCreneauxQuotidiens(Resource):
                 self.dates[date].on_creneau(creneau)
 
     def asdict(self):
-        return {"departement": self.departement, "creneaux_quotidiens": [date.asdict() for date in self.dates.values()]}
+        return {
+            "departement": self.departement,
+            "creneaux_quotidiens": [
+                date.asdict() for date in self.dates.values() if isinstance(date, ResourceCreneauxParDate)
+            ],
+        }
 
 
 class ResourceCreneauxParDate(Resource):

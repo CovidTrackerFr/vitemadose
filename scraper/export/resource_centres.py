@@ -26,7 +26,8 @@ class ResourceTousDepartements(Resource):
 
         centre = self.centres_disponibles[lieu.internal_id]
         centre["appointment_count"] += 1
-        centre["vaccine_type"][creneau.type_vaccin.value] = True
+        if len(centre["vaccine_type"]) > 0:
+            centre["vaccine_type"][creneau.type_vaccin.value] = True
         if not centre["prochain_rdv"] or centre["prochain_rdv"] > creneau.horaire:
             centre["prochain_rdv"] = creneau.horaire
 
