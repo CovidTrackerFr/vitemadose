@@ -75,7 +75,7 @@
   ],
   "platforms": {
     "doctolib": {
-      "enabled": true,
+      "enabled": false,
       "timeout": 30,
       "recognized_urls": [
         "https://partners.doctolib.fr",
@@ -199,7 +199,8 @@
         "motives": "https://booking.keldoc.com/api/patients/v2/clinics/{0}/specialties/{1}/cabinets/{2}/motive_categories",
         "cabinets": "https://booking.keldoc.com/api/patients/v2/clinics/{0}/specialties/{1}/cabinets",
         "slots": "https://www.keldoc.com/api/patients/v2/timetables/{0}",
-        "center_list":"https://www.keldoc.com/api/patients/v2/searches/geo_location?specialty_id={motive}&raw_location={dep}&page={page_id}"
+        "center_list":"https://www.keldoc.com/api/patients/v2/searches/geo_location?specialty_id={motive}&raw_location={dep}&page={page_id}",
+        "center_details":"https://www.keldoc.com/api/patients/v2/cabinets/{0}/details"
 
       },
       "pagination": {
@@ -256,7 +257,7 @@
       "missing_deps":["la-reunion-97", "haute-garonne", "ille-et-villaine", "---"]
     },
     "maiia": {
-      "enabled": true,
+      "enabled": false,
       "timeout": 30,
       "base_url": "https://www.maiia.com",
       "recognized_urls": [
@@ -305,7 +306,7 @@
       "calendar_limit": 50
     },
     "mapharma": {
-      "enabled": true,
+      "enabled": false,
       "timeout": 30,
       "recognized_urls": [
         "https://mapharma.net"
@@ -349,7 +350,7 @@
       }
     },
     "ordoclic": {
-      "enabled": true,
+      "enabled": false,
       "timeout": 30,
       "recognized_urls": [
         "https://app.ordoclic.fr"
@@ -379,7 +380,7 @@
       }
     },
     "avecmondoc": {
-      "enable": true,
+      "enabled": false,
       "timeout": 25,
       "slot_limit": 50,
       "week_size": 6,
@@ -425,7 +426,7 @@
       }
     },
     "mesoigner": {
-      "enabled": true,
+      "enabled": false,
       "timeout": 30,
       "recognized_urls": [
         "mesoigner.fr"

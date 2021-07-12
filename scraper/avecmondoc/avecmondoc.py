@@ -16,7 +16,9 @@ from scraper.pattern.vaccine import get_vaccine_name
 from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import departementUtils, DummyQueue
 
+
 AVECMONDOC_CONF = get_conf_platform("avecmondoc")
+AVECMONDOC_ENABLED = AVECMONDOC_CONF.get("enabled", False)
 AVECMONDOC_API = AVECMONDOC_CONF.get("api", {})
 AVECMONDOC_SCRAPER = AVECMONDOC_CONF.get("center_scraper", {})
 AVECMONDOC_FILTERS = AVECMONDOC_CONF.get("filters", {})
@@ -407,6 +409,9 @@ def has_valid_zipcode(organization: dict) -> bool:
 
 
 def center_iterator(client: httpx.Client = DEFAULT_CLIENT) -> Iterator[dict]:
+    if not AVECMONDOC_ENABLED:
+        logger.warning("Avecmondoc scrap is disabled in configuration file.")
+        return []
     organization_slugs = []
     # l'api fait parfois un timeout au premier appel
     for _ in range(0, AVECMONDOC_CONF.get("search_tries", 2)):

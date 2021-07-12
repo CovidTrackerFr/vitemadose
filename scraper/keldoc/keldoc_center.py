@@ -117,9 +117,11 @@ class KeldocCenter:
 
         # Parse relevant GET params for Keldoc API requests
         query = urlsplit(new_url).query
+
         params_get = parse_qs(query)
         mandatory_params = ["dom", "inst", "user"]
         # Some vaccination centers on Keldoc do not
+
         # accept online appointments, so you cannot retrieve data
         for mandatory_param in mandatory_params:
             if not mandatory_param in params_get:

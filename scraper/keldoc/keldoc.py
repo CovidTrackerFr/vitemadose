@@ -2,7 +2,7 @@ import os
 import logging
 
 import httpx
-
+from typing import Dict, Iterator, List, Optional, Tuple, Set
 from scraper.keldoc.keldoc_center import KeldocCenter
 from scraper.keldoc.keldoc_filters import get_relevant_vaccine_specialties_id, filter_vaccine_motives
 from scraper.pattern.scraper_request import ScraperRequest
@@ -10,6 +10,7 @@ from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import DummyQueue
 from scraper.circuit_breaker import ShortCircuit
+import json
 
 KELDOC_CONF = get_conf_platform("keldoc")
 timeout = httpx.Timeout(KELDOC_CONF.get("timeout", 25), connect=KELDOC_CONF.get("timeout", 25))
@@ -22,13 +23,13 @@ session = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
 logger = logging.getLogger("scraper")
 
 
-# Allow 10 bad runs of keldoc_slot before giving up for the 60 next tries
+# Allow 10 bad runs of keldoc_slot before giving up for the 200 next tries
 @ShortCircuit("keldoc_slot", trigger=10, release=200, time_limit=40.0)
 @Profiling.measure("keldoc_slot")
 def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue()):
-    if "www.keldoc.com" in request.url:
+    if "keldoc.com" in request.url:
         logger.debug(f"Fixing wrong hostname in request: {request.url}")
-        request.url = request.url.replace("www.keldoc.com", "vaccination-covid.keldoc.com")
+        request.url = request.url.replace("keldoc.com", "vaccination-covid.keldoc.com")
     if not KELDOC_ENABLED:
         return None
     center = KeldocCenter(request, client=session)
@@ -59,3 +60,17 @@ def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue()):
     if appointment_schedules:
         request.update_appointment_schedules(appointment_schedules)
     return date.strftime("%Y-%m-%dT%H:%M:%S.%f%z")
+
+
+def center_iterator() -> Iterator[Dict]:
+    if not KELDOC_ENABLED:
+        logger.warning("Keldoc scrap is disabled in configuration file.")
+        return []
+    center_path = "data/output/keldoc_centers.json"
+    with open(center_path) as jsonFile:
+        jsonObject = json.loads(jsonFile.read())
+        jsonFile.close()
+
+    logger.info(f"Found {len(jsonObject)} Keldoc centers (external scraper).")
+    for center in jsonObject:
+        yield center

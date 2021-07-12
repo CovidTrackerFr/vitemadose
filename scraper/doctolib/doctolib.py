@@ -753,7 +753,8 @@ def is_allowing_online_appointments(rdata: dict) -> bool:
 
 def center_iterator() -> Iterator[Dict]:
     if not DOCTOLIB_CONF.enabled:
-        return
+        logger.warning("Doctolib scrap is disabled in configuration file.")
+        return []
     try:
         center_path = "data/output/doctolib-centers.json"
         url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"

@@ -221,7 +221,8 @@ def fetch_slots(
 
 def centre_iterator(overwrite_centers_file=True):
     if not MAIIA_ENABLED:
-        return None
+        logger.warning("Maiia scrap is disabled in configuration file.")
+        return []
     try:
         center_path = MAIIA_SCRAPER.get("result_path")
         data_auto = get_config().get("data-auto", {}).get("base_url")
