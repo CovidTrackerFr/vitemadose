@@ -15,8 +15,8 @@ test:
     - ./scripts/install
   script:
     - ./scripts/test
-  except:
-    - schedules
+  only:
+    - branches
 
 lister_contributeurs:
   stage: scrape
