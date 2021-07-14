@@ -17,6 +17,9 @@ test:
     - ./scripts/test
   only:
     - branches
+  except:
+    - schedules
+    - triggers
 
 lister_contributeurs:
   stage: scrape
