@@ -189,7 +189,7 @@
     },
     "keldoc": {
       "enabled": true,
-      "timeout": 10,
+      "timeout": 40,
       "recognized_urls": [
         "https://vaccination-covid.keldoc.com",
         "https://keldoc.com"
@@ -207,7 +207,7 @@
         "pages": 10,
         "days": 4
       },
-      "filters": {
+      "filters": {  
         "appointment_speciality_urls": [
           "maladies-infectieuses",
           "vaccination-covid-19",
@@ -217,6 +217,7 @@
           "Maladies infectieuses",
           "COVID19 - Vaccination"
         ],
+        "vaccination_speciality_ids":["144","496"],
         "appointment_skill": [
           "Centre de vaccination COVID-19"
         ],
@@ -247,7 +248,12 @@
         ]
       },
       "center_scraper": {
-        "result_path": "data/output/keldoc_centers.json"
+        "result_path": "data/output/keldoc_centers.json",
+        "center_types": {
+          "pharmacie": "drugstore",
+          "medecin": "general-practitioner",
+          "*": "vaccination-center"
+        }
       },
       "dep_conversion":{
         "Bas-Rhin": "rhin-bas",

@@ -1,440 +1,250 @@
 [
     {
         "nom": "Centre de vaccination de Jean Marinet",
-        "rdv_site_web": "https://keldoc.com/cabinet-medical/valserhone-01200/jean-marinet/centre-de-vaccination-de-jean-marinet",
+        "rdv_site_web": "https://keldoc.com/cabinet-medical/valserhone-01200/jean-marinet/centre-de-vaccination-de-jean-marinet?cabinet=17136&specialty=144",
         "address": "Place Jeanne d'arc, 01200, Valserhône",
-        "cabinets": [
-            {
-                "id": 17136,
-                "name": "Centre de vaccination de Jean Marinet",
-                "location": "Place Jeanne d'arc, 01200, Valserhône",
-                "slug": "centre-de-vaccination-de-jean-marinet",
-                "latitude": 46.108467,
-                "longitude": 5.82781,
-                "transportations": [],
-                "motive_categories": [
-                    {
-                        "motive_category_id": 3247,
-                        "name": "Vaccination PS",
-                        "position": 999,
-                        "resource_type": "Clinic",
-                        "motives": [
-                            {
-                                "id": 84921,
-                                "name": "Vaccination Covid PS +50 ans 1ère Injection (INJ1)",
-                                "position": 0,
-                                "teleconsultation": false,
-                                "booking_delay_until": 720,
-                                "agendas": [
-                                    {
-                                        "id": 49969,
-                                        "name": "Equipe de vaccination - File 2 - Jean Marinet",
-                                        "hidden": true
-                                    },
-                                    {
-                                        "id": 51314,
-                                        "name": "Equipe de vaccination - File 4 - Jean Marinet",
-                                        "hidden": true
-                                    },
-                                    {
-                                        "id": 51313,
-                                        "name": "Equipe de vaccination - File 5 - Jean Marinet",
-                                        "hidden": true
-                                    },
-                                    {
-                                        "id": 50247,
-                                        "name": "Equipe de vaccination - File 3 - Jean Marinet",
-                                        "hidden": true
-                                    },
-                                    {
-                                        "id": 49968,
-                                        "name": "Equipe de vaccination - File 1 - Jean Marinet",
-                                        "hidden": true
-                                    },
-                                    {
-                                        "id": 56107,
-                                        "name": "Equipe de vaccination - File 6 - Jean Marinet",
-                                        "hidden": true
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "motive_category_id": 3093,
-                        "name": "Vaccination covid + 18 ans PFIZER",
-                        "position": 999,
-                        "resource_type": "Clinic",
-                        "motives": [
-                            {
-                                "id": 84923,
-                                "name": "Vaccination Covid +18 ans 1ère Injection (INJ1)",
-                                "position": 0,
-                                "teleconsultation": false,
-                                "booking_delay_until": 2160,
-                                "agendas": [
-                                    {
-                                        "id": 49968,
-                                        "name": "Equipe de vaccination - File 1 - Jean Marinet",
-                                        "hidden": true
-                                    },
-                                    {
-                                        "id": 50247,
-                                        "name": "Equipe de vaccination - File 3 - Jean Marinet",
-                                        "hidden": true
-                                    },
-                                    {
-                                        "id": 49969,
-                                        "name": "Equipe de vaccination - File 2 - Jean Marinet",
-                                        "hidden": true
-                                    },
-                                    {
-                                        "id": 51314,
-                                        "name": "Equipe de vaccination - File 4 - Jean Marinet",
-                                        "hidden": true
-                                    },
-                                    {
-                                        "id": 51313,
-                                        "name": "Equipe de vaccination - File 5 - Jean Marinet",
-                                        "hidden": true
-                                    },
-                                    {
-                                        "id": 56107,
-                                        "name": "Equipe de vaccination - File 6 - Jean Marinet",
-                                        "hidden": true
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "motive_category_id": 3843,
-                        "name": "PS comorbidités",
-                        "position": 999,
-                        "resource_type": "Clinic",
-                        "motives": [
-                            {
-                                "id": 84925,
-                                "name": "Vaccination Covid PS avec comorbidités 1ère Injection (INJ1)",
-                                "position": 0,
-                                "teleconsultation": false,
-                                "booking_delay_until": 720,
-                                "agendas": [
-                                    {
-                                        "id": 50247,
-                                        "name": "Equipe de vaccination - File 3 - Jean Marinet",
-                                        "hidden": true
-                                    },
-                                    {
-                                        "id": 51314,
-                                        "name": "Equipe de vaccination - File 4 - Jean Marinet",
-                                        "hidden": true
-                                    },
-                                    {
-                                        "id": 51313,
-                                        "name": "Equipe de vaccination - File 5 - Jean Marinet",
-                                        "hidden": true
-                                    },
-                                    {
-                                        "id": 56107,
-                                        "name": "Equipe de vaccination - File 6 - Jean Marinet",
-                                        "hidden": true
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "motive_category_id": 3246,
-                        "name": "Vaccination personnes avec comorbidité ",
-                        "position": 999,
-                        "resource_type": "Clinic",
-                        "motives": [
-                            {
-                                "id": 84927,
-                                "name": "Vaccination Covid personne vulnérable 1ère Injection (INJ1)",
-                                "position": 0,
-                                "teleconsultation": false,
-                                "booking_delay_until": 720,
-                                "agendas": [
-                                    {
-                                        "id": 51314,
-                                        "name": "Equipe de vaccination - File 4 - Jean Marinet",
-                                        "hidden": true
-                                    },
-                                    {
-                                        "id": 50247,
-                                        "name": "Equipe de vaccination - File 3 - Jean Marinet",
-                                        "hidden": true
-                                    },
-                                    {
-                                        "id": 51313,
-                                        "name": "Equipe de vaccination - File 5 - Jean Marinet",
-                                        "hidden": true
-                                    },
-                                    {
-                                        "id": 49968,
-                                        "name": "Equipe de vaccination - File 1 - Jean Marinet",
-                                        "hidden": true
-                                    },
-                                    {
-                                        "id": 49969,
-                                        "name": "Equipe de vaccination - File 2 - Jean Marinet",
-                                        "hidden": true
-                                    },
-                                    {
-                                        "id": 56107,
-                                        "name": "Equipe de vaccination - File 6 - Jean Marinet",
-                                        "hidden": true
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "specialties": [
-            144
-        ],
         "city": "Valserhône",
         "com_insee": "74109",
-        "gid": "17136",
+        "gid": "2737pid17136",
         "lat_coor1": "46.108467",
         "long_coor1": "5.82781",
         "phone_number": "+33672639944",
-        "type":null,
-        "resources": {
-            "id": 2737,
-            "title": "Jean Marinet - Centre de vaccination COVID",
-            "url": "/cabinet-medical/valserhone-01200/jean-marinet",
-            "description": "<div>est un centre de vaccination COVID</div>",
-            "main_description": "<div>est un centre de vaccination COVID</div>",
-            "cabinets": [
+        "type":"vaccination-center",
+        "booking": [
+            {
+              "motive_category_id": 3247,
+              "name": "Vaccination PS",
+              "position": 999,
+              "resource_type": "Clinic",
+              "motives": [
                 {
-                    "id": 17136,
-                    "name": "Centre de vaccination de Jean Marinet",
-                    "location": "Place Jeanne d'arc, 01200, Valserhône",
-                    "slug": "centre-de-vaccination-de-jean-marinet",
-                    "latitude": 46.108467,
-                    "longitude": 5.82781,
-                    "transportations": [],
-                    "motive_categories": [
-                        {
-                            "motive_category_id": 3247,
-                            "name": "Vaccination PS",
-                            "position": 999,
-                            "resource_type": "Clinic",
-                            "motives": [
-                                {
-                                    "id": 84921,
-                                    "name": "Vaccination Covid PS +50 ans 1ère Injection (INJ1)",
-                                    "position": 0,
-                                    "teleconsultation": false,
-                                    "booking_delay_until": 720,
-                                    "agendas": [
-                                        {
-                                            "id": 49969,
-                                            "name": "Equipe de vaccination - File 2 - Jean Marinet",
-                                            "hidden": true
-                                        },
-                                        {
-                                            "id": 51314,
-                                            "name": "Equipe de vaccination - File 4 - Jean Marinet",
-                                            "hidden": true
-                                        },
-                                        {
-                                            "id": 51313,
-                                            "name": "Equipe de vaccination - File 5 - Jean Marinet",
-                                            "hidden": true
-                                        },
-                                        {
-                                            "id": 50247,
-                                            "name": "Equipe de vaccination - File 3 - Jean Marinet",
-                                            "hidden": true
-                                        },
-                                        {
-                                            "id": 49968,
-                                            "name": "Equipe de vaccination - File 1 - Jean Marinet",
-                                            "hidden": true
-                                        },
-                                        {
-                                            "id": 56107,
-                                            "name": "Equipe de vaccination - File 6 - Jean Marinet",
-                                            "hidden": true
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "motive_category_id": 3093,
-                            "name": "Vaccination covid + 18 ans PFIZER",
-                            "position": 999,
-                            "resource_type": "Clinic",
-                            "motives": [
-                                {
-                                    "id": 84923,
-                                    "name": "Vaccination Covid +18 ans 1ère Injection (INJ1)",
-                                    "position": 0,
-                                    "teleconsultation": false,
-                                    "booking_delay_until": 2160,
-                                    "agendas": [
-                                        {
-                                            "id": 49968,
-                                            "name": "Equipe de vaccination - File 1 - Jean Marinet",
-                                            "hidden": true
-                                        },
-                                        {
-                                            "id": 50247,
-                                            "name": "Equipe de vaccination - File 3 - Jean Marinet",
-                                            "hidden": true
-                                        },
-                                        {
-                                            "id": 49969,
-                                            "name": "Equipe de vaccination - File 2 - Jean Marinet",
-                                            "hidden": true
-                                        },
-                                        {
-                                            "id": 51314,
-                                            "name": "Equipe de vaccination - File 4 - Jean Marinet",
-                                            "hidden": true
-                                        },
-                                        {
-                                            "id": 51313,
-                                            "name": "Equipe de vaccination - File 5 - Jean Marinet",
-                                            "hidden": true
-                                        },
-                                        {
-                                            "id": 56107,
-                                            "name": "Equipe de vaccination - File 6 - Jean Marinet",
-                                            "hidden": true
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "motive_category_id": 3843,
-                            "name": "PS comorbidités",
-                            "position": 999,
-                            "resource_type": "Clinic",
-                            "motives": [
-                                {
-                                    "id": 84925,
-                                    "name": "Vaccination Covid PS avec comorbidités 1ère Injection (INJ1)",
-                                    "position": 0,
-                                    "teleconsultation": false,
-                                    "booking_delay_until": 720,
-                                    "agendas": [
-                                        {
-                                            "id": 50247,
-                                            "name": "Equipe de vaccination - File 3 - Jean Marinet",
-                                            "hidden": true
-                                        },
-                                        {
-                                            "id": 51314,
-                                            "name": "Equipe de vaccination - File 4 - Jean Marinet",
-                                            "hidden": true
-                                        },
-                                        {
-                                            "id": 51313,
-                                            "name": "Equipe de vaccination - File 5 - Jean Marinet",
-                                            "hidden": true
-                                        },
-                                        {
-                                            "id": 56107,
-                                            "name": "Equipe de vaccination - File 6 - Jean Marinet",
-                                            "hidden": true
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "motive_category_id": 3246,
-                            "name": "Vaccination personnes avec comorbidité ",
-                            "position": 999,
-                            "resource_type": "Clinic",
-                            "motives": [
-                                {
-                                    "id": 84927,
-                                    "name": "Vaccination Covid personne vulnérable 1ère Injection (INJ1)",
-                                    "position": 0,
-                                    "teleconsultation": false,
-                                    "booking_delay_until": 720,
-                                    "agendas": [
-                                        {
-                                            "id": 51314,
-                                            "name": "Equipe de vaccination - File 4 - Jean Marinet",
-                                            "hidden": true
-                                        },
-                                        {
-                                            "id": 50247,
-                                            "name": "Equipe de vaccination - File 3 - Jean Marinet",
-                                            "hidden": true
-                                        },
-                                        {
-                                            "id": 51313,
-                                            "name": "Equipe de vaccination - File 5 - Jean Marinet",
-                                            "hidden": true
-                                        },
-                                        {
-                                            "id": 49968,
-                                            "name": "Equipe de vaccination - File 1 - Jean Marinet",
-                                            "hidden": true
-                                        },
-                                        {
-                                            "id": 49969,
-                                            "name": "Equipe de vaccination - File 2 - Jean Marinet",
-                                            "hidden": true
-                                        },
-                                        {
-                                            "id": 56107,
-                                            "name": "Equipe de vaccination - File 6 - Jean Marinet",
-                                            "hidden": true
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
+                  "id": 84921,
+                  "name": "Vaccination Covid PS +50 ans 1\u00e8re Injection (INJ1)",
+                  "position": 2,
+                  "teleconsultation": false,
+                  "booking_delay_until": 720,
+                  "agendas": [
+                    {
+                      "id": 49969,
+                      "name": "Equipe de vaccination - File 2 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 51314,
+                      "name": "Equipe de vaccination - File 4 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 51313,
+                      "name": "Equipe de vaccination - File 5 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 50247,
+                      "name": "Equipe de vaccination - File 3 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 49968,
+                      "name": "Equipe de vaccination - File 1 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 56107,
+                      "name": "Equipe de vaccination - File 6 - Jean Marinet",
+                      "hidden": true
+                    }
+                  ]
                 }
-            ],
-            "type": "Clinic",
-            "img": "https://www.keldoc.com/assets/be/front/clinics/clinic-missing-square_medium-1f94da4f68250e10b53f55d503bc6884.png",
-            "specialties": [
-                {
-                    "id": 144,
-                    "name": "Maladies infectieuses",
-                    "skills": [
-                        {
-                            "name": "Centre de vaccination COVID-19"
-                        }
-                    ]
-                }
-            ],
-            "seo": {
-                "noindex": false,
-                "title": "Jean Marinet - Centre de vaccination COVID (01200) : Prendre RDV en ligne",
-                "description": "Jean Marinet - Centre de vaccination COVID. Prenez rendez-vous en ligne chez votre maladies infectieuses grâce à KelDoc."
+              ]
             },
-            "breadcrumbs": [
+            {
+              "motive_category_id": 3093,
+              "name": "Vaccination covid + 12 ans PFIZER",
+              "position": 999,
+              "resource_type": "Clinic",
+              "motives": [
                 {
-                    "title": "Accueil",
-                    "path": "/"
-                },
-                {
-                    "title": "Ain (01)"
-                },
-                {
-                    "title": "Valserhône 01200"
-                },
-                {
-                    "title": "Jean Marinet - Centre de vaccination COVID",
-                    "path": "/cabinet-medical/valserhone-01200/jean-marinet"
+                  "id": 84923,
+                  "name": "Vaccination Covid +12 ans 1\u00e8re Injection (INJ1)",
+                  "position": 0,
+                  "teleconsultation": false,
+                  "booking_delay_until": 2160,
+                  "agendas": [
+                    {
+                      "id": 49968,
+                      "name": "Equipe de vaccination - File 1 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 50247,
+                      "name": "Equipe de vaccination - File 3 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 49969,
+                      "name": "Equipe de vaccination - File 2 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 51314,
+                      "name": "Equipe de vaccination - File 4 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 51313,
+                      "name": "Equipe de vaccination - File 5 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 56107,
+                      "name": "Equipe de vaccination - File 6 - Jean Marinet",
+                      "hidden": true
+                    }
+                  ]
                 }
-            ]
-        }
+              ]
+            },
+            {
+              "motive_category_id": 3843,
+              "name": "PS comorbidit\u00e9s",
+              "position": 999,
+              "resource_type": "Clinic",
+              "motives": [
+                {
+                  "id": 84925,
+                  "name": "Vaccination Covid PS avec comorbidit\u00e9s 1\u00e8re Injection (INJ1)",
+                  "position": 3,
+                  "teleconsultation": false,
+                  "booking_delay_until": 720,
+                  "agendas": [
+                    {
+                      "id": 50247,
+                      "name": "Equipe de vaccination - File 3 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 51314,
+                      "name": "Equipe de vaccination - File 4 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 51313,
+                      "name": "Equipe de vaccination - File 5 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 56107,
+                      "name": "Equipe de vaccination - File 6 - Jean Marinet",
+                      "hidden": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "motive_category_id": 3246,
+              "name": "Vaccination personnes avec comorbidit\u00e9 ",
+              "position": 999,
+              "resource_type": "Clinic",
+              "motives": [
+                {
+                  "id": 84927,
+                  "name": "Vaccination Covid personne vuln\u00e9rable 1\u00e8re Injection (INJ1)",
+                  "position": 1,
+                  "teleconsultation": false,
+                  "booking_delay_until": 720,
+                  "agendas": [
+                    {
+                      "id": 51314,
+                      "name": "Equipe de vaccination - File 4 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 50247,
+                      "name": "Equipe de vaccination - File 3 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 51313,
+                      "name": "Equipe de vaccination - File 5 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 49968,
+                      "name": "Equipe de vaccination - File 1 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 49969,
+                      "name": "Equipe de vaccination - File 2 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 56107,
+                      "name": "Equipe de vaccination - File 6 - Jean Marinet",
+                      "hidden": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "motive_category_id": 4347,
+              "name": "Injection seule + 12 ans",
+              "position": 999,
+              "resource_type": "Clinic",
+              "motives": [
+                {
+                  "id": 99281,
+                  "name": "1\u00e8re injection seule (sans rappel) + 12 ans",
+                  "position": 8,
+                  "teleconsultation": false,
+                  "booking_delay_until": 2160,
+                  "agendas": [
+                    {
+                      "id": 56107,
+                      "name": "Equipe de vaccination - File 6 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 51313,
+                      "name": "Equipe de vaccination - File 5 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 51314,
+                      "name": "Equipe de vaccination - File 4 - Jean Marinet",
+                      "hidden": true
+                    }
+                  ]
+                },
+                {
+                  "id": 99282,
+                  "name": "2\u00e8me injection seule + 12 ans",
+                  "position": 9,
+                  "teleconsultation": false,
+                  "booking_delay_until": 2160,
+                  "agendas": [
+                    {
+                      "id": 56107,
+                      "name": "Equipe de vaccination - File 6 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 51313,
+                      "name": "Equipe de vaccination - File 5 - Jean Marinet",
+                      "hidden": true
+                    },
+                    {
+                      "id": 51314,
+                      "name": "Equipe de vaccination - File 4 - Jean Marinet",
+                      "hidden": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
     }
 ]

@@ -9,6 +9,7 @@ from utils.vmd_config import get_conf_platform, get_conf_inputs
 from utils.vmd_logger import get_logger
 from utils.vmd_utils import department_urlify, departementUtils
 from scraper.pattern.center_location import CenterLocation
+from scraper.keldoc.keldoc_routes import API_SPECIALITY_IDS
 
 KELDOC_CONF = get_conf_platform("keldoc")
 KELDOC_API = KELDOC_CONF.get("api", {})
@@ -45,10 +46,17 @@ def get_departements() -> List[str]:
         return departements
 
 
-def set_center_type(center_type: str):
+def set_center_type(center_data: dict):
+    center_type = None
+    if not center_data or not center_data["rdv_site_web"]:
+        return
     center_types = SCRAPER_CONF.get("center_types", {})
-    if center_type in center_types.keys():
-        return center_types[center_type]
+    center_type = [value for value in center_types.keys() if value in center_data["rdv_site_web"]]
+    if len(center_type) > 0:
+        center_type = center_type[0]
+    else:
+        center_type = center_types["*"]
+    return center_type
 
 
 class KeldocCenterScraper:
@@ -78,55 +86,59 @@ class KeldocCenterScraper:
             logger.warning(f"Keldoc raise error {hex} for request: {url}")
             return None
 
-    def parse_keldoc_resources(self, center: dict) -> Optional[dict]:
-        resource_url = parse_keldoc_resource_url(center)
+    def parse_keldoc_resources(self, url: str) -> Optional[dict]:
+        resource_url = parse_keldoc_resource_url(url)
         if resource_url is None:
             return None
         resource_data = self.send_keldoc_request(resource_url)
         return resource_data
 
-    def parse_keldoc_motive_categories(self, center_id: int, cabinets: list, specialties: list) -> list:
+    def parse_keldoc_motive_categories(self, clinic_id: int, cabinet_id: int, specialty: int) -> list:
         """
         Fetch available motive categories from cabinet
         """
-        for specialty_id in specialties:
-            for cabinet in cabinets:
-                cabinet_id = cabinet.get("id")
-                motive_url = KELDOC_API.get("motives").format(center_id, specialty_id, cabinet_id)
-                motive_data = self.send_keldoc_request(motive_url)
-                cabinet["motive_categories"] = motive_data
-        return cabinets
+        if not clinic_id or not cabinet_id or not specialty:
+            return None
+        motive_url = KELDOC_API.get("motives").format(clinic_id, specialty, cabinet_id)
+        motive_data = self.send_keldoc_request(motive_url)
+        return motive_data
 
     def parse_keldoc_center(self, center: dict) -> Optional[dict]:
+        url_with_query = None
         motive_url = CENTER_DETAILS.format(center.get("id"))
         motive_data = requests.get(motive_url).json()
         phone_number = None
         if "phone_number" in motive_data:
             phone_number = motive_data["phone_number"]
 
+        for speciality in center.get("specialty_ids", []):
+            if str(speciality) in API_SPECIALITY_IDS:
+                vaccine_speciality = speciality
+                url_with_query = (
+                    f"https://keldoc.com{center['url']}?cabinet={center.get('id')}&specialty={vaccine_speciality}"
+                )
+
+        resources = self.parse_keldoc_resources(url_with_query)
+        if not resources:
+            return None
+        motives = self.parse_keldoc_motive_categories(resources["id"], center["id"], vaccine_speciality)
+        if resources["id"] != center["id"]:
+            gid = f'{resources["id"]}pid{center["id"]}'
+        else:
+            gid = f'{resources["id"]}'
         data = {
             "nom": center["title"],
-            "rdv_site_web": f"https://keldoc.com{center['url']}",
-            "cabinets": [],
-            "specialties": center.get("specialty_ids", []),
+            "rdv_site_web": url_with_query,
             "com_insee": departementUtils.cp_to_insee(center["cabinet"]["zipcode"]),
-            "gid": str(center["id"]),
+            "gid": gid,
             "address": center["cabinet"]["location"].strip(),
             "lat_coor1": center["coordinates"].split(",")[0],
             "long_coor1": center["coordinates"].split(",")[1],
             "city": center["cabinet"]["city"].strip(),
-            "type": set_center_type(center["type"]),
             "phone_number": phone_number,
+            "booking": motives,
         }
-        data["resources"] = self.parse_keldoc_resources(center)
-        if not data["resources"]:
-            return None
-
-        # Weird Keldoc management on cabinet IDs
-        cabinets = get_cabinets(data["resources"])
-        data["cabinets"] = self.parse_keldoc_motive_categories(center.get("id"), cabinets, data["specialties"])
-        if not data["cabinets"]:
-            return None
+        data["type"] = set_center_type(data)
         return data
 
     def parse_pages_departement(self, departement: str, page_id: int = 1, centers: list = None) -> list:
@@ -138,7 +150,6 @@ class KeldocCenterScraper:
             motive=self.vaccination_url_path, dep=formatted_departement, page_id=page_id
         )
         data = self.send_keldoc_request(url)
-
         if not data:
             return centers
         options = data.get("options")
@@ -195,21 +206,22 @@ def parse_keldoc_centers(page_limit=None) -> List[dict]:
         return centers
 
 
-def parse_keldoc_resource_url(center: dict) -> Optional[str]:
-    center_url = center.get("url")
-    url_split = center_url.split("/")
-    if len(url_split) < 4:
+def parse_keldoc_resource_url(center_url: str) -> Optional[str]:
+    if not center_url or not isinstance(center_url, str):
         return None
-    type, location, slug = url_split[1:4]
-    return f"{KELDOC_API.get('booking')}?type={type}&location={location}&slug={slug}"
-
-
-def get_cabinets(resources: dict) -> list:
-    if "cabinet" in resources:
-        return [resources["cabinet"]]
-    elif "cabinets" in resources:
-        return resources["cabinets"]
-    return []
+    if "?" in center_url:
+        url_split = center_url.split("?")[0].split("/")
+    else:
+        url_split = center_url.split("/")
+    if len(url_split) < 6:
+        return None
+    if len(url_split) == 6:
+        type, location, slug = url_split[3:6]
+        cabinet = ""
+    if len(url_split) == 7:
+        type, location, slug, cabinet = url_split[3:7]
+    resource_url = f"{KELDOC_API.get('booking')}?type={type}&location={location}&slug={slug}&cabinet={cabinet}"
+    return resource_url
 
 
 if __name__ == "__main__":  # pragma: no cover
