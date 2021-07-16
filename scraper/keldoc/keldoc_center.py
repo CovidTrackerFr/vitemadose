@@ -9,7 +9,7 @@ from dateutil.parser import isoparse
 from pytz import timezone
 import httpx
 
-from scraper.keldoc.keldoc_filters import parse_keldoc_availability
+from scraper.keldoc.keldoc_filters import parse_keldoc_availability, filter_vaccine_motives
 from scraper.keldoc.keldoc_routes import API_KELDOC_CALENDAR, API_KELDOC_CENTER, API_KELDOC_CABINETS
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS
@@ -34,109 +34,9 @@ class KeldocCenter:
         self.request = request
         self.base_url = request.get_url()
         self.client = DEFAULT_CLIENT if client is None else client
-        self.resource_params = None
         self.id = None
-        self.specialties = None
-        self.vaccine_specialties = None
-        self.vaccine_cabinets = None
         self.vaccine_motives = None
-        self.selected_cabinet = None
-
-    def fetch_vaccine_cabinets(self):
-        if not self.id or not self.vaccine_specialties:
-            return False
-        self.vaccine_cabinets = []
-        for specialty in self.vaccine_specialties:
-            cabinet_url = API_KELDOC_CABINETS.format(self.id, specialty)
-            self.request.increase_request_count("cabinets")
-            try:
-                cabinet_req = self.client.get(cabinet_url)
-                cabinet_req.raise_for_status()
-            except httpx.HTTPStatusError as hex:
-                logger.warning(
-                    f"Keldoc request returned error {hex.response.status_code} "
-                    f"for center: {self.base_url} (vaccine cabinets)"
-                )
-                self.request.increase_request_count("error")
-                continue
-            except (httpx.RemoteProtocolError, httpx.ConnectError) as hex:
-                logger.warning(f"Keldoc raise error {hex} for center: {self.base_url} (vaccine cabinets)")
-                self.request.increase_request_count("error")
-                continue
-            data = cabinet_req.json()
-            if not data:
-                continue
-            self.vaccine_cabinets.extend([cabinet.get("id", None) for cabinet in data])
-        return self.vaccine_cabinets
-
-    def fetch_center_data(self):
-        if not self.base_url:
-            return False
-        # Fetch center id
-        self.request.increase_request_count("booking")
-        try:
-            resource = self.client.get(API_KELDOC_CENTER, params=self.resource_params)
-            resource.raise_for_status()
-        except httpx.HTTPStatusError as hex:
-            logger.warning(
-                f"Keldoc request returned error {hex.response.status_code} "
-                f"for center: {self.base_url} (center info)"
-            )
-            self.request.increase_request_count("error")
-            return False
-        except (httpx.RemoteProtocolError, httpx.ConnectError) as hex:
-            logger.warning(f"Keldoc raise error {hex} for center: {self.base_url} (center info)")
-            self.request.increase_request_count("error")
-            return False
-        data = resource.json()
-
-        self.id = data.get("id", None)
-        self.specialties = data.get("specialties", None)
-        return True
-
-    def parse_resource(self):
-        if not self.base_url:
-            return False
-
-        # Fetch new URL after redirection
-        self.request.increase_request_count("resource")
-        try:
-            rq = self.client.get(self.base_url)
-            rq.raise_for_status()
-        except httpx.HTTPStatusError as hex:
-            logger.warning(
-                f"Keldoc request returned error {hex.response.status_code} " f"for center: {self.base_url} (resource)"
-            )
-            self.request.increase_request_count("error")
-            return False
-        except (httpx.RemoteProtocolError, httpx.ConnectError) as hex:
-            logger.warning(f"Keldoc raise error {hex} for center: {self.base_url} (resource)")
-            self.request.increase_request_count("error")
-            return False
-        new_url = rq.url._uri_reference.unsplit()
-
-        # Parse relevant GET params for Keldoc API requests
-        query = urlsplit(new_url).query
-
-        params_get = parse_qs(query)
-        mandatory_params = ["dom", "inst", "user"]
-        # Some vaccination centers on Keldoc do not
-
-        # accept online appointments, so you cannot retrieve data
-        for mandatory_param in mandatory_params:
-            if not mandatory_param in params_get:
-                return False
-        # If the vaccination URL have several medication places,
-        # we select the current cabinet, since CSV data contains subURLs
-        self.selected_cabinet = params_get.get("cabinet", [None])[0]
-        if self.selected_cabinet:  # pragma: no cover
-            self.selected_cabinet = int(self.selected_cabinet)
-        self.resource_params = {
-            "type": params_get.get("dom")[0],
-            "location": params_get.get("inst")[0],
-            "slug": params_get.get("user")[0],
-        }
-        return True
+        self.appointment_motives = request.input_data
 
     def get_timetables(
         self,
@@ -196,7 +96,6 @@ class KeldocCenter:
             logger.warning(f"Keldoc raise error {hex} for center: {self.base_url} (calendar request)")
             self.request.increase_request_count("error")
             return timetable, run
-
         current_timetable = calendar_req.json()
         run += time.time() - start_time
         # No fresh timetable
@@ -264,7 +163,6 @@ class KeldocCenter:
     def find_first_availability(self, start_date: str):
         if not self.vaccine_motives:
             return None, 0, None
-
         # Find next availabilities
         first_availability = None
         appointments = []

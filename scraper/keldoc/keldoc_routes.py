@@ -14,3 +14,5 @@ API_KELDOC_CABINETS = KELDOC_API.get("cabinets")
 
 # Calendar details route
 API_KELDOC_CALENDAR = KELDOC_API.get("slots")
+
+API_SPECIALITY_IDS = KELDOC_CONF.get("filters").get("vaccination_speciality_ids")

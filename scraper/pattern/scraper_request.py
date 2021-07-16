@@ -2,7 +2,7 @@ from typing import List, Optional
 
 
 class ScraperRequest:
-    def __init__(self, url: str, start_date: str, center_info=None, internal_id=None):
+    def __init__(self, url: str, start_date: str, center_info=None, internal_id=None, input_data=None):
         self.url = url
         self.start_date = start_date
         self.center_info = center_info
@@ -13,7 +13,7 @@ class ScraperRequest:
         self.vaccine_type = None
         self.appointment_by_phone_only = False
         self.requests = None
-        self.input_data = None
+        self.input_data = input_data
 
     def update_internal_id(self, internal_id: str) -> str:
         self.internal_id = internal_id

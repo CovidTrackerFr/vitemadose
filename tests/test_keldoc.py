@@ -10,7 +10,6 @@ from scraper.keldoc import keldoc
 from scraper.keldoc.keldoc import fetch_slots
 from scraper.keldoc.keldoc_center import KeldocCenter, DEFAULT_CLIENT
 from scraper.keldoc.keldoc_filters import (
-    get_relevant_vaccine_specialties_id,
     filter_vaccine_motives,
     is_appointment_relevant,
     is_specialty_relevant,
@@ -66,48 +65,23 @@ def app_center1(request: httpx.Request) -> httpx.Response:
 
 
 def test_keldoc_parse_center():
-    center1_url = (
-        "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier"
-        "-bretagne-sud-lorient-hopital-du-scorff?specialty=144 "
-    )
-
-    center1_data = json.loads(Path("tests", "fixtures", "keldoc", "center1-info.json").read_text())
-
-    request = ScraperRequest(center1_url, "2020-04-04")
+    center1_url = "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?cabinet=16913&specialty=144"
+    path = Path("tests", "fixtures", "keldoc", "center1-cabinet-16913.json")
+    input_data = json.loads(path.read_text(encoding="utf-8"))
+    request = ScraperRequest(center1_url, "2020-04-04", input_data=input_data)
     client = httpx.Client(transport=httpx.MockTransport(app_center1))
     test_center_1 = KeldocCenter(request, client=client)
-    assert test_center_1.parse_resource()
-
-    # Check if parameters are parsed correctly
-    assert test_center_1.resource_params
-    res = test_center_1.resource_params
-    assert res["type"] == "centre-hospitalier-regional"
-    assert res["location"] == "lorient-56100"
-    assert res["slug"] == "groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
-
-    # Fetch center data (id/center specialties)
-    assert test_center_1.fetch_center_data()
-    assert test_center_1.id == center1_data["id"]
-    assert test_center_1.specialties == center1_data["specialties"]
-
-    # Filter center specialties
-    filtered_specialties = get_relevant_vaccine_specialties_id(test_center_1.specialties)
-    assert filtered_specialties == [144]
-
     # Fetch vaccine cabinets
-    assert not test_center_1.fetch_vaccine_cabinets()
-    test_center_1.vaccine_specialties = filtered_specialties
-    cabinets = test_center_1.fetch_vaccine_cabinets()
-    assert cabinets == [18780, 16913, 16910, 16571, 16579]
+    cabinets = filter_vaccine_motives(test_center_1.appointment_motives)
+    agendas = []
+    for match in cabinets:
+        agendas.extend(match.get("agendas"))
+    agendas = list(set(agendas))
+    assert agendas == [51414, 49335]
 
     # Fetch motives
-    motives = filter_vaccine_motives(
-        client,
-        test_center_1.selected_cabinet,
-        test_center_1.id,
-        test_center_1.vaccine_specialties,
-        test_center_1.vaccine_cabinets,
-    )
+    motives = filter_vaccine_motives(test_center_1.appointment_motives)
+
     assert motives == json.loads(Path("tests", "fixtures", "keldoc", "center1-motives.json").read_text())
 
     # Find first availability date
@@ -130,24 +104,7 @@ def test_keldoc_parse_center():
     ]
 
 
-def test_keldoc_no_base_url():
-    center1_url = (
-        "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier"
-        "-bretagne-sud-lorient-hopital-du-scorff?specialty=144 "
-    )
-
-    center1_data = json.loads(Path("tests", "fixtures", "keldoc", "center1-info.json").read_text())
-
-    request = ScraperRequest(center1_url, "2020-04-04")
-    client = httpx.Client(transport=httpx.MockTransport(app_center1))
-    test_center_1 = KeldocCenter(request, client=client)
-    test_center_1.base_url = None
-
-    assert not test_center_1.fetch_center_data()
-    assert not test_center_1.parse_resource()
-
-
-def test_keldoc_booking_connect_error():
+def test_keldoc_motives_connect_error():
     center1_url = (
         "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier"
         "-bretagne-sud-lorient-hopital-du-scorff?specialty=144 "
@@ -178,80 +135,7 @@ def test_keldoc_booking_connect_error():
     client = httpx.Client(transport=httpx.MockTransport(mock_client))
     test_center_1 = KeldocCenter(request, client=client)
 
-    assert not test_center_1.fetch_center_data()
-
-
-def test_keldoc_redirect_connect_error():
-    center1_url = (
-        "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier"
-        "-bretagne-sud-lorient-hopital-du-scorff?specialty=144 "
-    )
-
-    center1_data = json.loads(Path("tests", "fixtures", "keldoc", "center1-info.json").read_text())
-
-    request = ScraperRequest(center1_url, "2020-04-04")
-
-    def mock_client(request: httpx.Request) -> httpx.Response:
-        if (
-            request.url.path
-            == "/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff"
-        ):
-            raise httpx.ConnectError("Unable to connect", request=request)
-        for path in CENTER1_KELDOC:
-            if request.url.path == path:
-                return httpx.Response(200, json=get_test_data(CENTER1_KELDOC[path]))
-        return httpx.Response(200, json={})
-
-    client = httpx.Client(transport=httpx.MockTransport(mock_client))
-    test_center_1 = KeldocCenter(request, client=client)
-
-    assert not test_center_1.parse_resource()
-
-
-def test_keldoc_missing_params():
-    center1_url = "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/foo/bar?specialty=no"
-    center1_redirect = "https://vaccination-covid.keldoc.com/redirect/?dom=foo&user=ok&specialty=no"
-
-    def app(request: httpx.Request) -> httpx.Response:
-        if request.url.path == "/centre-hospitalier-regional/foo/bar?specialty=no":
-            return httpx.Response(302, headers={"Location": center1_redirect})
-
-        return httpx.Response(200, json={})
-
-    client = httpx.Client(transport=httpx.MockTransport(app))
-    request = ScraperRequest(center1_url, "2020-04-04")
-    test_center_1 = KeldocCenter(request, client=client)
-    assert not test_center_1.parse_resource()
-
-
-def test_keldoc_timeout():
-    center1_url = "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/foo/bar?specialty=no"
-
-    def app(request: httpx.Request) -> httpx.Response:
-        if request.url.path == "/centre-hospitalier-regional/foo/bar":
-            raise TimeoutError
-        if request.url.path == "/api/patients/v2/searches/resource":
-            raise TimeoutError
-        if request.url.path == "/api/patients/v2/clinics/1/specialties/1/cabinets":
-            raise TimeoutError
-        return httpx.Response(200, json={})
-
-    client = httpx.Client(transport=httpx.MockTransport(app))
-    request = ScraperRequest(center1_url, "2020-04-04")
-    test_center_1 = KeldocCenter(request, client=client)
-
-    # Test center info TA
-    with pytest.raises(TimeoutError):
-        test_center_1.parse_resource()
-    with pytest.raises(TimeoutError):
-        test_center_1.fetch_center_data()
-
-    # Test cabinet TA
-    test_center_1.id = 1
-    test_center_1.vaccine_specialties = [1]
-    with pytest.raises(TimeoutError):
-        test_center_1.fetch_vaccine_cabinets()
-    assert not test_center_1.vaccine_cabinets
+    assert not test_center_1.vaccine_motives
 
 
 def test_keldoc_filters():
@@ -274,8 +158,11 @@ def test_keldoc_filters():
 
 
 def test_keldoc_scrape():
-    center1_url = "https://www.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?specialty=144"
-    request = ScraperRequest(center1_url, "2020-04-04")
+    center1_url = "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?cabinet=16913&specialty=144"
+    path = Path("tests", "fixtures", "keldoc", "center1-cabinet-16913.json")
+    input_data = json.loads(path.read_text(encoding="utf-8"))
+
+    request = ScraperRequest(center1_url, "2020-04-04", input_data=input_data)
     keldoc.session = httpx.Client(transport=httpx.MockTransport(app_center1))
 
     date = fetch_slots(request)
@@ -368,7 +255,7 @@ def test_keldoc_parse_complex():
 
 def test_null_motives():
     client = DEFAULT_CLIENT
-    motives = filter_vaccine_motives(client, 4233, 1, None, None)
+    motives = filter_vaccine_motives(None)
     assert not motives
 
 

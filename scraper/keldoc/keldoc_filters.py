@@ -1,13 +1,14 @@
 import re
+import logging
 from datetime import datetime
 
 from httpx import TimeoutException
-
 from scraper.keldoc.keldoc_routes import API_KELDOC_MOTIVES
 from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from utils.vmd_config import get_conf_platform
 
+logger = logging.getLogger("scraper")
 KELDOC_CONF = get_conf_platform("keldoc")
 KELDOC_FILTERS = KELDOC_CONF.get("filters", {})
 
@@ -46,34 +47,11 @@ def parse_keldoc_availability(availability_data, appointments):
     return cdate, appointments
 
 
-def get_relevant_vaccine_specialties_id(specialties: dict) -> list:
-    return [specialty_data.get("id") for specialty_data in specialties if is_specialty_relevant(specialty_data)]
-
-
-def filter_vaccine_motives(
-    session, selected_cabinet, id, vaccine_specialties, vaccine_cabinets, request: ScraperRequest = None
-):
-    if not id or not vaccine_specialties or not vaccine_cabinets:
+def filter_vaccine_motives(center_motives):
+    if not center_motives:
         return None
-
-    motive_categories = []
     vaccine_motives = []
-
-    for specialty in vaccine_specialties:
-        for cabinet in vaccine_cabinets:
-            if selected_cabinet is not None and cabinet != selected_cabinet:
-                continue
-            if request:
-                request.increase_request_count("motives")
-            try:
-                motive_req = session.get(API_KELDOC_MOTIVES.format(id, specialty, cabinet))
-            except TimeoutException:
-                continue
-            motive_req.raise_for_status()
-            motive_data = motive_req.json()
-            motive_categories.extend(motive_data)
-
-    for motive_cat in motive_categories:
+    for motive_cat in center_motives:
         motives = motive_cat.get("motives", {})
         for motive in motives:
             motive_name = motive.get("name", None)

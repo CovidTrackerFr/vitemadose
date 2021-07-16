@@ -131,6 +131,7 @@ def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  #
     start_date = get_start_date()
     has_error = None
     result = None
+    keldoc_centerlist = []
     try:
         result = fetch_centre_slots(
             centre["rdv_site_web"],
