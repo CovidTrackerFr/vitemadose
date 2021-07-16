@@ -16,6 +16,7 @@ from scraper.keldoc.keldoc_filters import (
     parse_keldoc_availability,
 )
 from scraper.pattern.scraper_request import ScraperRequest
+from scraper.pattern.center_info import CenterInfo
 
 fetch_slots.breaker_enabled(False)
 
@@ -34,9 +35,16 @@ CENTER1_KELDOC = {
 
 
 def online_keldoc_test():
+
+    path_centerinfo = Path("tests", "fixtures", "keldoc", "cabinet-16913-centerinfo.json")
+    centerinfo_1 = json.loads(path_centerinfo.read_text(encoding="utf-8"))
+
+    center_info = CenterInfo.from_csv_data(centerinfo_1)
+
     request = ScraperRequest(
         "https://www.keldoc.com/cabinet-medical/grenoble-38000/centre-de-vaccination-universite-inter-age-du-dauphine-uiad",
         "2021-04-13",
+        center_info=center_info,
     )
 
     fetch_slots(request)
@@ -162,7 +170,11 @@ def test_keldoc_scrape():
     path = Path("tests", "fixtures", "keldoc", "center1-cabinet-16913.json")
     input_data = json.loads(path.read_text(encoding="utf-8"))
 
-    request = ScraperRequest(center1_url, "2020-04-04", input_data=input_data)
+    path = Path("tests", "fixtures", "keldoc", "cabinet-16913-centerinfo.json")
+    centerinfo_1 = json.loads(path.read_text(encoding="utf-8"))
+
+    center_info = CenterInfo.from_csv_data(centerinfo_1)
+    request = ScraperRequest(center1_url, "2020-04-04", input_data=input_data, center_info=center_info)
     keldoc.session = httpx.Client(transport=httpx.MockTransport(app_center1))
 
     date = fetch_slots(request)
@@ -202,7 +214,12 @@ def test_keldoc_scrape_nodate():
                 return httpx.Response(200, json=get_test_data(CENTER1_KELDOC[path]))
         return httpx.Response(200, json={})
 
-    request = ScraperRequest(center1_url, "2099-12-12")
+    path_centerinfo = Path("tests", "fixtures", "keldoc", "cabinet-16913-centerinfo.json")
+    centerinfo_1 = json.loads(path_centerinfo.read_text(encoding="utf-8"))
+
+    center_info = CenterInfo.from_csv_data(centerinfo_1)
+
+    request = ScraperRequest(center1_url, "2099-12-12", center_info=center_info)
     keldoc.session = httpx.Client(transport=httpx.MockTransport(app_center2))
 
     date = fetch_slots(request)
@@ -210,13 +227,31 @@ def test_keldoc_scrape_nodate():
 
 
 def test_keldoc_parse_simple():
+    center1_url = "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?cabinet=16913&specialty=144"
+    path = Path("tests", "fixtures", "keldoc", "center1-cabinet-16913.json")
+    input_data = json.loads(path.read_text(encoding="utf-8"))
+    request = ScraperRequest(center1_url, "2020-04-04", input_data=input_data)
+    client = httpx.Client(transport=httpx.MockTransport(app_center1))
+    test_center_1 = KeldocCenter(request, client=client)
+    # Fetch vaccine cabinets
+    cabinets = filter_vaccine_motives(test_center_1.appointment_motives)
+
     appointments = []
     data = {"date": "2021-04-20T16:55:00.000000+0200"}
-    availability, new_count = parse_keldoc_availability(data, appointments)
+    availability, new_count = parse_keldoc_availability(test_center_1, data, appointments)
     assert availability.isoformat() == "2021-04-20T16:55:00+02:00"
 
 
 def test_keldoc_parse_complex():
+    center1_url = "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?cabinet=16913&specialty=144"
+    path = Path("tests", "fixtures", "keldoc", "center1-cabinet-16913.json")
+    input_data = json.loads(path.read_text(encoding="utf-8"))
+    request = ScraperRequest(center1_url, "2020-04-04", input_data=input_data)
+    client = httpx.Client(transport=httpx.MockTransport(app_center1))
+    test_center_1 = KeldocCenter(request, client=client)
+    # Fetch vaccine cabinets
+    cabinets = filter_vaccine_motives(test_center_1.appointment_motives)
+
     appointments = []
     data = {
         "availabilities": {
@@ -228,11 +263,20 @@ def test_keldoc_parse_complex():
             "2021-04-21": [{"start_time": "2021-04-21T08:12:12.000000+0200"}],
         }
     }
-    availability, new_count = parse_keldoc_availability(data, appointments)
+    availability, new_count = parse_keldoc_availability(test_center_1, data, appointments)
     assert availability.isoformat() == "2021-04-20T16:50:00+02:00"
 
 
 def test_keldoc_parse_complex():
+    center1_url = "https://vaccination-covid.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?cabinet=16913&specialty=144"
+    path = Path("tests", "fixtures", "keldoc", "center1-cabinet-16913.json")
+    input_data = json.loads(path.read_text(encoding="utf-8"))
+    request = ScraperRequest(center1_url, "2020-04-04", input_data=input_data)
+    client = httpx.Client(transport=httpx.MockTransport(app_center1))
+    test_center_1 = KeldocCenter(request, client=client)
+    # Fetch vaccine cabinets
+    cabinets = filter_vaccine_motives(test_center_1.appointment_motives)
+
     appointments = []
     data = {
         "availabilities": {
@@ -249,7 +293,7 @@ def test_keldoc_parse_complex():
             "2021-04-21": [{"start_time": "2021-04-21T08:12:12.000000+0200"}],
         }
     }
-    availability, new_count = parse_keldoc_availability(data, appointments)
+    availability, new_count = parse_keldoc_availability(test_center_1, data, appointments)
     assert availability.isoformat() == "2021-04-20T16:50:00+02:00"
 
 
@@ -260,8 +304,11 @@ def test_null_motives():
 
 
 def test_null_resource():
+    path_centerinfo = Path("tests", "fixtures", "keldoc", "cabinet-16913-centerinfo.json")
+    centerinfo_1 = json.loads(path_centerinfo.read_text(encoding="utf-8"))
+    center_info = CenterInfo.from_csv_data(centerinfo_1)
     center1_url = "https://www.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?specialty=144"
-    request = ScraperRequest(center1_url, "2020-04-04")
+    request = ScraperRequest(center1_url, "2020-04-04", center_info=center_info)
 
     def app(request: httpx.Request) -> httpx.Response:
         if (
@@ -282,8 +329,13 @@ def test_null_resource():
 
 
 def test_no_center_data():
+    path_centerinfo = Path("tests", "fixtures", "keldoc", "cabinet-16913-centerinfo.json")
+    centerinfo_1 = json.loads(path_centerinfo.read_text(encoding="utf-8"))
+
+    center_info = CenterInfo.from_csv_data(centerinfo_1)
+
     center1_url = "https://www.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?specialty=144"
-    request = ScraperRequest(center1_url, "2020-04-04")
+    request = ScraperRequest(center1_url, "2020-04-04", center_info=center_info)
 
     def app(request: httpx.Request) -> httpx.Response:
         if (
@@ -306,8 +358,13 @@ def test_no_center_data():
 
 
 def test_cabinet_error():
+    path_centerinfo = Path("tests", "fixtures", "keldoc", "cabinet-16913-centerinfo.json")
+    centerinfo_1 = json.loads(path_centerinfo.read_text(encoding="utf-8"))
+
+    center_info = CenterInfo.from_csv_data(centerinfo_1)
+
     center1_url = "https://www.keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff?specialty=144"
-    request = ScraperRequest(center1_url, "2020-04-04")
+    request = ScraperRequest(center1_url, "2020-04-04", center_info=center_info)
 
     def app(request: httpx.Request) -> httpx.Response:
         if (

@@ -67,7 +67,7 @@ def scrape(platforms=None):  # pragma: no cover
     with Manager() as manager:
         with profiler, Pool(POOL_SIZE, **profiler.pool_args()) as pool:
             if CRENEAUX_ENABLED:
-                creneau_q = BulkQueue(manager.Queue(maxsize=99999))
+                creneau_q = BulkQueue(manager.Queue(maxsize=500))
                 export_process = Process(target=export_by_creneau, args=(creneau_q,))
                 export_process.start()
             centre_iterator_proportion = (
@@ -118,6 +118,7 @@ def scrape(platforms=None):  # pragma: no cover
 def export_by_creneau(
     creneaux_q,
 ):
+
     print(f" ----- EXPORTER RUNNING IN PROCESS {os.getpid()} ------")
     exporter = JSONExporter()
     exporter.export(q_iter(creneaux_q))
@@ -131,7 +132,6 @@ def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  #
     start_date = get_start_date()
     has_error = None
     result = None
-    keldoc_centerlist = []
     try:
         result = fetch_centre_slots(
             centre["rdv_site_web"],
@@ -242,13 +242,20 @@ def get_center_platform(center_url: str, center_platform: str = None, fetch_map:
 def fetch_centre_slots(
     rdv_site_web, center_platform, start_date, creneau_q, center_info, fetch_map: dict = None, input_data: dict = None
 ) -> ScraperResult:
+    practitioner_type = None
+    internal_id = None
     if fetch_map is None:
         # Map platform to implementation.
         # May be overridden for unit testing purposes.
         fetch_map = get_default_fetch_map()
-
+    if center_info.type:
+        practitioner_type = center_info.type
+    if center_info.internal_id:
+        internal_id = center_info.internal_id
     rdv_site_web = fix_scrap_urls(rdv_site_web)
-    request = ScraperRequest(rdv_site_web, start_date, center_info)
+    request = ScraperRequest(
+        rdv_site_web, start_date, center_info, internal_id=internal_id, practitioner_type=practitioner_type
+    )
     platform = get_center_platform(rdv_site_web, center_platform, fetch_map=fetch_map)
 
     if not platform:

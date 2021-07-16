@@ -44,7 +44,7 @@ class JSONExporter:
             outfile_path = self.outpath_format.format(key)
             os.makedirs(os.path.dirname(outfile_path), exist_ok=True)
             with open(outfile_path, "w") as outfile:
-                logger.info(f"Writing file {outfile_path}")
+                logger.debug(f"Writing file {outfile_path}")
                 json.dump(resource.asdict(), outfile, indent=2)
 
 

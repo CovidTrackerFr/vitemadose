@@ -1,4 +1,4 @@
-{ "scrape_par_creneaux" : false,
+{ "scrape_par_creneaux" : true, 
   "data-auto": {
     "base_url": "https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/"
   },
@@ -34,7 +34,7 @@
     "Pfizer-BioNTech": ["pfizer", "biontech"],
     "Moderna": ["moderna"],
     "ARNm": ["arn", "arnm", "arn-m", "arn m"],
-    "AstraZeneca": ["astrazeneca", "astra-zeneca", "astra zeneca", "az"],
+    "AstraZeneca": ["astrazeneca", "astra-zeneca", "astra zeneca", "az", "astra"],
     "Janssen": [
         "janssen",
         "jansen",
