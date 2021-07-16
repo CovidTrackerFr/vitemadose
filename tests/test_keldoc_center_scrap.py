@@ -7,7 +7,7 @@ TEST_CENTERS = [
         "item": {
             "url": "https://keldoc.com/centre-de-vaccination/62800-lievin/centre-de-vaccination-lievin-pays-dartois"
         },
-        "result": "https://booking.keldoc.com/api/patients/v2/searches/resource?type=centre-de-vaccination&location=62800-lievin&slug=centre-de-vaccination-lievin-pays-dartois&cabinet=",
+        "result": "https://booking.keldoc.com/api/patients/v2/searches/resource?type=centre-de-vaccination&location=62800-lievin&slug=centre-de-vaccination-lievin-pays-dartois",
     },
     {
         "item": {

@@ -8,12 +8,12 @@ import datetime as dt
 from dateutil.parser import isoparse
 from pytz import timezone
 import httpx
-
 from scraper.keldoc.keldoc_filters import parse_keldoc_availability, filter_vaccine_motives
 from scraper.keldoc.keldoc_routes import API_KELDOC_CALENDAR, API_KELDOC_CENTER, API_KELDOC_CABINETS
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS
 from utils.vmd_config import get_conf_platform
+from utils.vmd_utils import DummyQueue
 
 KELDOC_CONF = get_conf_platform("keldoc")
 timeout = httpx.Timeout(KELDOC_CONF.get("timeout", 25), connect=KELDOC_CONF.get("timeout", 25))
@@ -30,13 +30,18 @@ paris_tz = timezone("Europe/Paris")
 
 
 class KeldocCenter:
-    def __init__(self, request: ScraperRequest, client: httpx.Client = None):
+    def __init__(self, request: ScraperRequest, client: httpx.Client = None, creneau_q=DummyQueue):
         self.request = request
         self.base_url = request.get_url()
         self.client = DEFAULT_CLIENT if client is None else client
         self.id = None
         self.vaccine_motives = None
         self.appointment_motives = request.input_data
+        self.creneau_q = creneau_q
+        self.lieu = None
+
+    def found_creneau(self, creneau):
+        self.creneau_q.put(creneau)
 
     def get_timetables(
         self,
@@ -171,6 +176,7 @@ class KeldocCenter:
             if "id" not in relevant_motive or "agendas" not in relevant_motive:
                 continue
             motive_id = relevant_motive.get("id", None)
+            vaccine = relevant_motive.get("vaccine_type")
             agenda_ids = relevant_motive.get("agendas", None)
             if not agenda_ids:
                 continue
@@ -178,10 +184,10 @@ class KeldocCenter:
             logger.debug(
                 f"get_timetables -> result [motive: {motive_id} agenda: {agenda_ids}] -> runtime: {round(runtime, 2)}s"
             )
-            date, appointments = parse_keldoc_availability(timetables, appointments)
+            date, appointments = parse_keldoc_availability(self, timetables, appointments, vaccine)
             if date is None:
                 continue
-            self.request.add_vaccine_type(relevant_motive.get("vaccine_type"))
+            self.request.add_vaccine_type(vaccine)
             # Compare first available date
             if first_availability is None or date < first_availability:
                 first_availability = date

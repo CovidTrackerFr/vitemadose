@@ -7,6 +7,8 @@ from scraper.keldoc.keldoc_routes import API_KELDOC_MOTIVES
 from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from utils.vmd_config import get_conf_platform
+from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
+import dateutil
 
 logger = logging.getLogger("scraper")
 KELDOC_CONF = get_conf_platform("keldoc")
@@ -19,7 +21,7 @@ KELDOC_APPOINTMENT_REASON = KELDOC_FILTERS.get("appointment_reason", [])
 KELDOC_COVID_SKILLS = KELDOC_FILTERS.get("appointment_skill", [])
 
 
-def parse_keldoc_availability(availability_data, appointments):
+def parse_keldoc_availability(self, availability_data, appointments, vaccine=None):
     if not availability_data:
         return None, appointments
     if "date" in availability_data:
@@ -44,6 +46,14 @@ def parse_keldoc_availability(availability_data, appointments):
             tdate = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%S.%f%z")
             if not cdate or tdate < cdate:
                 cdate = tdate
+            self.found_creneau(
+                Creneau(
+                    horaire=dateutil.parser.parse(slot["start_time"]),
+                    reservation_url=self.base_url,
+                    type_vaccin=vaccine,
+                    lieu=self.lieu,
+                )
+            )
     return cdate, appointments
 
 

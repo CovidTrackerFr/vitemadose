@@ -123,9 +123,9 @@ class KeldocCenterScraper:
             return None
         motives = self.parse_keldoc_motive_categories(resources["id"], center["id"], vaccine_speciality)
         if resources["id"] != center["id"]:
-            gid = f'{resources["id"]}pid{center["id"]}'
+            gid = f'keldoc{resources["id"]}pid{center["id"]}'
         else:
-            gid = f'{resources["id"]}'
+            gid = f'keldoc{resources["id"]}'
         data = {
             "nom": center["title"],
             "rdv_site_web": url_with_query,
@@ -217,10 +217,13 @@ def parse_keldoc_resource_url(center_url: str) -> Optional[str]:
         return None
     if len(url_split) == 6:
         type, location, slug = url_split[3:6]
-        cabinet = ""
+        cabinet = None
     if len(url_split) == 7:
         type, location, slug, cabinet = url_split[3:7]
-    resource_url = f"{KELDOC_API.get('booking')}?type={type}&location={location}&slug={slug}&cabinet={cabinet}"
+    if cabinet:
+        resource_url = f"{KELDOC_API.get('booking')}?type={type}&location={location}&slug={slug}&cabinet={cabinet}"
+    else:
+        resource_url = f"{KELDOC_API.get('booking')}?type={type}&location={location}&slug={slug}"
     return resource_url
 
 

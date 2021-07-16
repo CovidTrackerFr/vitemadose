@@ -10,6 +10,8 @@ from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import DummyQueue
 from scraper.circuit_breaker import ShortCircuit
+from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
+
 import json
 import requests
 
@@ -32,13 +34,27 @@ def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue()):
         request.url = request.url.replace("keldoc.com", "vaccination-covid.keldoc.com")
     if not KELDOC_ENABLED:
         return None
-    center = KeldocCenter(request, client=session)
+    center = KeldocCenter(request, client=session, creneau_q=creneau_q)
     center.vaccine_motives = filter_vaccine_motives(center.appointment_motives)
+
+    center.lieu = Lieu(
+        plateforme=Plateforme.KELDOC,
+        url=request.url,
+        location=request.center_info.location,
+        nom=request.center_info.nom,
+        internal_id=request.internal_id,
+        departement=request.center_info.departement,
+        lieu_type=request.practitioner_type,
+        metadata=request.center_info.metadata,
+    )
+
     # Find the first availability
     date, count, appointment_schedules = center.find_first_availability(request.get_start_date())
-    if not date:
+    if not date and center.lieu:
+        center.found_creneau(PasDeCreneau(lieu=center.lieu))
         request.update_appointment_count(0)
         return None
+
     request.update_appointment_count(count)
     if appointment_schedules:
         request.update_appointment_schedules(appointment_schedules)

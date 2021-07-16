@@ -1,0 +1,291 @@
+{
+    "nom": "Centre de vaccination K2 Lorient La Base",
+    "rdv_site_web": "https://keldoc.com/centre-hospitalier-regional/lorient-56100/groupe-hospitalier-bretagne-sud-lorient-hopital-du-scorff/centre-de-vaccination-k2-lorient-la-base?cabinet=16910&specialty=144",
+    "com_insee": "56121",
+    "gid": "2563pid16910",
+    "address": "Rue Etienne d'Orves, 56100 Lorient",
+    "lat_coor1": "47.732493",
+    "long_coor1": "-3.37471",
+    "city": "Lorient",
+    "phone_number": "+33297069794",
+    "booking": [
+        {
+            "motive_category_id": 3715,
+            "name": "Je suis une personne de +18 ans (Pfizer)",
+            "position": 0,
+            "resource_type": "Clinic",
+            "motives": [
+                {
+                    "id": 81484,
+                    "name": "1ère injection Vaccin COVID +18 ANS  (Pfizer)",
+                    "position": 4,
+                    "teleconsultation": false,
+                    "booking_delay_until": 1440,
+                    "agendas": [
+                        {"id": 51298, "name": "Equipe de vaccination 13 K2 Lorient La Base", "hidden": true},
+                        {"id": 50174, "name": "Equipe de vaccination 9 K2 Lorient La Base", "hidden": true},
+                        {"id": 50173, "name": "Equipe de vaccination 8 K2 Lorient La Base", "hidden": true},
+                        {"id": 51302, "name": "Equipe de vaccination 17 K2 Lorient La Base", "hidden": true},
+                        {"id": 55691, "name": "Equipe de vaccination 21 K2 Lorient La Base", "hidden": true},
+                        {"id": 49331, "name": "Equipe de vaccination 1 K2 Lorient La Base", "hidden": true},
+                        {"id": 51296, "name": "Equipe de vaccination 11 K2 Lorient La Base", "hidden": true},
+                        {"id": 55836, "name": "Equipe de vaccination 23 K2 Lorient La Base", "hidden": true},
+                        {"id": 51297, "name": "Equipe de vaccination 12 K2 Lorient La Base", "hidden": true},
+                        {"id": 49747, "name": "Equipe de vaccination 5 K2 Lorient La Base", "hidden": true},
+                        {"id": 51304, "name": "Equipe de vaccination 19 K2 Lorient La Base", "hidden": true},
+                        {"id": 49609, "name": "Equipe de vaccination 4 K2 Lorient La Base", "hidden": true},
+                        {"id": 50175, "name": "Equipe de vaccination 10 K2 Lorient La Base", "hidden": true},
+                        {"id": 49926, "name": "Equipe de vaccination 6 K2 Lorient La Base", "hidden": true},
+                        {"id": 55833, "name": "Equipe de vaccination 27 K2 Lorient La Base", "hidden": true},
+                        {"id": 51301, "name": "Equipe de vaccination 16 K2 Lorient La Base", "hidden": true},
+                        {"id": 55842, "name": "Equipe de vaccination 25 K2 Lorient La Base", "hidden": true},
+                        {"id": 49395, "name": "Equipe de vaccination 3 K2 Lorient La Base", "hidden": true},
+                        {"id": 50172, "name": "Equipe de vaccination 7 K2 Lorient La Base", "hidden": true},
+                        {"id": 51300, "name": "Equipe de vaccination 15 K2 Lorient La Base", "hidden": true},
+                        {"id": 51303, "name": "Equipe de vaccination 18 K2 Lorient La Base", "hidden": true},
+                        {"id": 51299, "name": "Equipe de vaccination 14 K2 Lorient La Base", "hidden": true},
+                        {"id": 49332, "name": "Equipe de vaccination 2 K2 Lorient La Base", "hidden": true},
+                        {"id": 55839, "name": "Equipe de vaccination 24 K2 Lorient La Base", "hidden": true},
+                        {"id": 51305, "name": "Equipe de vaccination 20 K2 Lorient La Base", "hidden": true},
+                        {"id": 55834, "name": "Equipe de vaccination 22 K2 Lorient La Base", "hidden": true}
+                    ]
+                }
+            ]
+        },
+        {
+            "motive_category_id": 4171,
+            "name": "Je suis une personne âgée de 12 à 17 ans (Pfizer)",
+            "position": 1,
+            "resource_type": "Clinic",
+            "motives": [
+                {
+                    "id": 98377,
+                    "name": "1ere Injection VACCIN COVID personne 12 a 17 ans (Pfizer)",
+                    "position": 36,
+                    "teleconsultation": false,
+                    "booking_delay_until": 720,
+                    "agendas": [
+                        {"id": 49331, "name": "Equipe de vaccination 1 K2 Lorient La Base", "hidden": true},
+                        {"id": 50175, "name": "Equipe de vaccination 10 K2 Lorient La Base", "hidden": true},
+                        {"id": 51296, "name": "Equipe de vaccination 11 K2 Lorient La Base", "hidden": true},
+                        {"id": 51299, "name": "Equipe de vaccination 14 K2 Lorient La Base", "hidden": true},
+                        {"id": 51297, "name": "Equipe de vaccination 12 K2 Lorient La Base", "hidden": true},
+                        {"id": 49926, "name": "Equipe de vaccination 6 K2 Lorient La Base", "hidden": true},
+                        {"id": 51300, "name": "Equipe de vaccination 15 K2 Lorient La Base", "hidden": true},
+                        {"id": 51298, "name": "Equipe de vaccination 13 K2 Lorient La Base", "hidden": true},
+                        {"id": 51301, "name": "Equipe de vaccination 16 K2 Lorient La Base", "hidden": true},
+                        {"id": 50172, "name": "Equipe de vaccination 7 K2 Lorient La Base", "hidden": true},
+                        {"id": 51302, "name": "Equipe de vaccination 17 K2 Lorient La Base", "hidden": true},
+                        {"id": 50173, "name": "Equipe de vaccination 8 K2 Lorient La Base", "hidden": true},
+                        {"id": 51303, "name": "Equipe de vaccination 18 K2 Lorient La Base", "hidden": true},
+                        {"id": 55691, "name": "Equipe de vaccination 21 K2 Lorient La Base", "hidden": true},
+                        {"id": 50174, "name": "Equipe de vaccination 9 K2 Lorient La Base", "hidden": true},
+                        {"id": 51304, "name": "Equipe de vaccination 19 K2 Lorient La Base", "hidden": true},
+                        {"id": 49332, "name": "Equipe de vaccination 2 K2 Lorient La Base", "hidden": true},
+                        {"id": 51305, "name": "Equipe de vaccination 20 K2 Lorient La Base", "hidden": true},
+                        {"id": 55834, "name": "Equipe de vaccination 22 K2 Lorient La Base", "hidden": true},
+                        {"id": 55836, "name": "Equipe de vaccination 23 K2 Lorient La Base", "hidden": true},
+                        {"id": 55839, "name": "Equipe de vaccination 24 K2 Lorient La Base", "hidden": true},
+                        {"id": 55842, "name": "Equipe de vaccination 25 K2 Lorient La Base", "hidden": true},
+                        {"id": 55833, "name": "Equipe de vaccination 27 K2 Lorient La Base", "hidden": true},
+                        {"id": 49747, "name": "Equipe de vaccination 5 K2 Lorient La Base", "hidden": true},
+                        {"id": 49395, "name": "Equipe de vaccination 3 K2 Lorient La Base", "hidden": true},
+                        {"id": 49609, "name": "Equipe de vaccination 4 K2 Lorient La Base", "hidden": true}
+                    ]
+                }
+            ]
+        },
+        {
+            "motive_category_id": 2527,
+            "name": "Je suis professionnel.le de santé (Pfizer)",
+            "position": 2,
+            "resource_type": "Clinic",
+            "motives": [
+                {
+                    "id": 81486,
+                    "name": "1ere injection Vaccin COVID Professionnel.le de sante (Pfizer)",
+                    "position": 8,
+                    "teleconsultation": false,
+                    "booking_delay_until": 1440,
+                    "agendas": [
+                        {"id": 51298, "name": "Equipe de vaccination 13 K2 Lorient La Base", "hidden": true},
+                        {"id": 50174, "name": "Equipe de vaccination 9 K2 Lorient La Base", "hidden": true},
+                        {"id": 50173, "name": "Equipe de vaccination 8 K2 Lorient La Base", "hidden": true},
+                        {"id": 51302, "name": "Equipe de vaccination 17 K2 Lorient La Base", "hidden": true},
+                        {"id": 55691, "name": "Equipe de vaccination 21 K2 Lorient La Base", "hidden": true},
+                        {"id": 49331, "name": "Equipe de vaccination 1 K2 Lorient La Base", "hidden": true},
+                        {"id": 51296, "name": "Equipe de vaccination 11 K2 Lorient La Base", "hidden": true},
+                        {"id": 55836, "name": "Equipe de vaccination 23 K2 Lorient La Base", "hidden": true},
+                        {"id": 51297, "name": "Equipe de vaccination 12 K2 Lorient La Base", "hidden": true},
+                        {"id": 49747, "name": "Equipe de vaccination 5 K2 Lorient La Base", "hidden": true},
+                        {"id": 51304, "name": "Equipe de vaccination 19 K2 Lorient La Base", "hidden": true},
+                        {"id": 49609, "name": "Equipe de vaccination 4 K2 Lorient La Base", "hidden": true},
+                        {"id": 50175, "name": "Equipe de vaccination 10 K2 Lorient La Base", "hidden": true},
+                        {"id": 49926, "name": "Equipe de vaccination 6 K2 Lorient La Base", "hidden": true},
+                        {"id": 55833, "name": "Equipe de vaccination 27 K2 Lorient La Base", "hidden": true},
+                        {"id": 51301, "name": "Equipe de vaccination 16 K2 Lorient La Base", "hidden": true},
+                        {"id": 55842, "name": "Equipe de vaccination 25 K2 Lorient La Base", "hidden": true},
+                        {"id": 49395, "name": "Equipe de vaccination 3 K2 Lorient La Base", "hidden": true},
+                        {"id": 50172, "name": "Equipe de vaccination 7 K2 Lorient La Base", "hidden": true},
+                        {"id": 51300, "name": "Equipe de vaccination 15 K2 Lorient La Base", "hidden": true},
+                        {"id": 51303, "name": "Equipe de vaccination 18 K2 Lorient La Base", "hidden": true},
+                        {"id": 51299, "name": "Equipe de vaccination 14 K2 Lorient La Base", "hidden": true},
+                        {"id": 49332, "name": "Equipe de vaccination 2 K2 Lorient La Base", "hidden": true},
+                        {"id": 55839, "name": "Equipe de vaccination 24 K2 Lorient La Base", "hidden": true},
+                        {"id": 51305, "name": "Equipe de vaccination 20 K2 Lorient La Base", "hidden": true},
+                        {"id": 55834, "name": "Equipe de vaccination 22 K2 Lorient La Base", "hidden": true}
+                    ]
+                }
+            ]
+        },
+        {
+            "motive_category_id": 2528,
+            "name": "Je suis professionnel.le du GHBS  (Pfizer)",
+            "position": 3,
+            "resource_type": "Clinic",
+            "motives": [
+                {
+                    "id": 81488,
+                    "name": "1ère injection Vaccin COVID Professionnel.le.s GHBS  (Pfizer)",
+                    "position": 12,
+                    "teleconsultation": false,
+                    "booking_delay_until": 1440,
+                    "agendas": [
+                        {"id": 51298, "name": "Equipe de vaccination 13 K2 Lorient La Base", "hidden": true},
+                        {"id": 50174, "name": "Equipe de vaccination 9 K2 Lorient La Base", "hidden": true},
+                        {"id": 50173, "name": "Equipe de vaccination 8 K2 Lorient La Base", "hidden": true},
+                        {"id": 51302, "name": "Equipe de vaccination 17 K2 Lorient La Base", "hidden": true},
+                        {"id": 55691, "name": "Equipe de vaccination 21 K2 Lorient La Base", "hidden": true},
+                        {"id": 49331, "name": "Equipe de vaccination 1 K2 Lorient La Base", "hidden": true},
+                        {"id": 51296, "name": "Equipe de vaccination 11 K2 Lorient La Base", "hidden": true},
+                        {"id": 55836, "name": "Equipe de vaccination 23 K2 Lorient La Base", "hidden": true},
+                        {"id": 51297, "name": "Equipe de vaccination 12 K2 Lorient La Base", "hidden": true},
+                        {"id": 49747, "name": "Equipe de vaccination 5 K2 Lorient La Base", "hidden": true},
+                        {"id": 51304, "name": "Equipe de vaccination 19 K2 Lorient La Base", "hidden": true},
+                        {"id": 49609, "name": "Equipe de vaccination 4 K2 Lorient La Base", "hidden": true},
+                        {"id": 50175, "name": "Equipe de vaccination 10 K2 Lorient La Base", "hidden": true},
+                        {"id": 49926, "name": "Equipe de vaccination 6 K2 Lorient La Base", "hidden": true},
+                        {"id": 55833, "name": "Equipe de vaccination 27 K2 Lorient La Base", "hidden": true},
+                        {"id": 51301, "name": "Equipe de vaccination 16 K2 Lorient La Base", "hidden": true},
+                        {"id": 55842, "name": "Equipe de vaccination 25 K2 Lorient La Base", "hidden": true},
+                        {"id": 49395, "name": "Equipe de vaccination 3 K2 Lorient La Base", "hidden": true},
+                        {"id": 50172, "name": "Equipe de vaccination 7 K2 Lorient La Base", "hidden": true},
+                        {"id": 51300, "name": "Equipe de vaccination 15 K2 Lorient La Base", "hidden": true},
+                        {"id": 51303, "name": "Equipe de vaccination 18 K2 Lorient La Base", "hidden": true},
+                        {"id": 51299, "name": "Equipe de vaccination 14 K2 Lorient La Base", "hidden": true},
+                        {"id": 49332, "name": "Equipe de vaccination 2 K2 Lorient La Base", "hidden": true},
+                        {"id": 55839, "name": "Equipe de vaccination 24 K2 Lorient La Base", "hidden": true},
+                        {"id": 51305, "name": "Equipe de vaccination 20 K2 Lorient La Base", "hidden": true},
+                        {"id": 55834, "name": "Equipe de vaccination 22 K2 Lorient La Base", "hidden": true}
+                    ]
+                }
+            ]
+        },
+        {
+            "motive_category_id": 2763,
+            "name": "Je suis une personne vulnérable ou prioritaire (Pfizer)",
+            "position": 4,
+            "resource_type": "Clinic",
+            "motives": [
+                {
+                    "id": 82874,
+                    "name": "1ère injection Vaccin COVID personne vulnérable ou prioritaire  (Pfizer)",
+                    "position": 27,
+                    "teleconsultation": false,
+                    "booking_delay_until": 720,
+                    "agendas": [
+                        {"id": 51304, "name": "Equipe de vaccination 19 K2 Lorient La Base", "hidden": true},
+                        {"id": 51300, "name": "Equipe de vaccination 15 K2 Lorient La Base", "hidden": true},
+                        {"id": 49332, "name": "Equipe de vaccination 2 K2 Lorient La Base", "hidden": true},
+                        {"id": 49331, "name": "Equipe de vaccination 1 K2 Lorient La Base", "hidden": true},
+                        {"id": 50175, "name": "Equipe de vaccination 10 K2 Lorient La Base", "hidden": true},
+                        {"id": 50174, "name": "Equipe de vaccination 9 K2 Lorient La Base", "hidden": true},
+                        {"id": 51303, "name": "Equipe de vaccination 18 K2 Lorient La Base", "hidden": true},
+                        {"id": 51302, "name": "Equipe de vaccination 17 K2 Lorient La Base", "hidden": true},
+                        {"id": 50172, "name": "Equipe de vaccination 7 K2 Lorient La Base", "hidden": true},
+                        {"id": 50173, "name": "Equipe de vaccination 8 K2 Lorient La Base", "hidden": true},
+                        {"id": 51301, "name": "Equipe de vaccination 16 K2 Lorient La Base", "hidden": true},
+                        {"id": 49747, "name": "Equipe de vaccination 5 K2 Lorient La Base", "hidden": true},
+                        {"id": 55691, "name": "Equipe de vaccination 21 K2 Lorient La Base", "hidden": true},
+                        {"id": 55839, "name": "Equipe de vaccination 24 K2 Lorient La Base", "hidden": true},
+                        {"id": 55842, "name": "Equipe de vaccination 25 K2 Lorient La Base", "hidden": true},
+                        {"id": 55834, "name": "Equipe de vaccination 22 K2 Lorient La Base", "hidden": true},
+                        {"id": 55836, "name": "Equipe de vaccination 23 K2 Lorient La Base", "hidden": true},
+                        {"id": 55833, "name": "Equipe de vaccination 27 K2 Lorient La Base", "hidden": true},
+                        {"id": 51296, "name": "Equipe de vaccination 11 K2 Lorient La Base", "hidden": true},
+                        {"id": 51299, "name": "Equipe de vaccination 14 K2 Lorient La Base", "hidden": true},
+                        {"id": 49395, "name": "Equipe de vaccination 3 K2 Lorient La Base", "hidden": true},
+                        {"id": 51298, "name": "Equipe de vaccination 13 K2 Lorient La Base", "hidden": true},
+                        {"id": 51297, "name": "Equipe de vaccination 12 K2 Lorient La Base", "hidden": true},
+                        {"id": 49926, "name": "Equipe de vaccination 6 K2 Lorient La Base", "hidden": true},
+                        {"id": 51305, "name": "Equipe de vaccination 20 K2 Lorient La Base", "hidden": true},
+                        {"id": 49609, "name": "Equipe de vaccination 4 K2 Lorient La Base", "hidden": true}
+                    ]
+                }
+            ]
+        },
+        {
+            "motive_category_id": 3635,
+            "name": "J'ai moins de 55 ans et j'ai reçu une première injection du vaccin AstraZeneca",
+            "position": 7,
+            "resource_type": "Clinic",
+            "motives": [
+                {
+                    "id": 95528,
+                    "name": "2nde injection Population Générale (V2 Pfizer pour V1 AstraZeneca)",
+                    "position": 16,
+                    "teleconsultation": false,
+                    "booking_delay_until": 2160,
+                    "agendas": [
+                        {"id": 49747, "name": "Equipe de vaccination 5 K2 Lorient La Base", "hidden": true},
+                        {"id": 49926, "name": "Equipe de vaccination 6 K2 Lorient La Base", "hidden": true}
+                    ]
+                }
+            ]
+        },
+        {
+            "motive_category_id": 4310,
+            "name": "Vous avez reçu une 1ère  injection dans un autre centre et souhaitez prendre RDV pour une 2nde injection (Pfizer)",
+            "position": 999,
+            "resource_type": "Clinic",
+            "motives": [
+                {
+                    "id": 99129,
+                    "name": "2ème Injection seule +12 ans (Pfizer)",
+                    "position": 38,
+                    "teleconsultation": false,
+                    "booking_delay_until": 1440,
+                    "agendas": [
+                        {"id": 50175, "name": "Equipe de vaccination 10 K2 Lorient La Base", "hidden": true},
+                        {"id": 51296, "name": "Equipe de vaccination 11 K2 Lorient La Base", "hidden": true},
+                        {"id": 51297, "name": "Equipe de vaccination 12 K2 Lorient La Base", "hidden": true},
+                        {"id": 51298, "name": "Equipe de vaccination 13 K2 Lorient La Base", "hidden": true},
+                        {"id": 51299, "name": "Equipe de vaccination 14 K2 Lorient La Base", "hidden": true},
+                        {"id": 51300, "name": "Equipe de vaccination 15 K2 Lorient La Base", "hidden": true},
+                        {"id": 49331, "name": "Equipe de vaccination 1 K2 Lorient La Base", "hidden": true},
+                        {"id": 51301, "name": "Equipe de vaccination 16 K2 Lorient La Base", "hidden": true},
+                        {"id": 50172, "name": "Equipe de vaccination 7 K2 Lorient La Base", "hidden": true},
+                        {"id": 51302, "name": "Equipe de vaccination 17 K2 Lorient La Base", "hidden": true},
+                        {"id": 51303, "name": "Equipe de vaccination 18 K2 Lorient La Base", "hidden": true},
+                        {"id": 51304, "name": "Equipe de vaccination 19 K2 Lorient La Base", "hidden": true},
+                        {"id": 51305, "name": "Equipe de vaccination 20 K2 Lorient La Base", "hidden": true},
+                        {"id": 49926, "name": "Equipe de vaccination 6 K2 Lorient La Base", "hidden": true},
+                        {"id": 55691, "name": "Equipe de vaccination 21 K2 Lorient La Base", "hidden": true},
+                        {"id": 55839, "name": "Equipe de vaccination 24 K2 Lorient La Base", "hidden": true},
+                        {"id": 55834, "name": "Equipe de vaccination 22 K2 Lorient La Base", "hidden": true},
+                        {"id": 50174, "name": "Equipe de vaccination 9 K2 Lorient La Base", "hidden": true},
+                        {"id": 55842, "name": "Equipe de vaccination 25 K2 Lorient La Base", "hidden": true},
+                        {"id": 50173, "name": "Equipe de vaccination 8 K2 Lorient La Base", "hidden": true},
+                        {"id": 49332, "name": "Equipe de vaccination 2 K2 Lorient La Base", "hidden": true},
+                        {"id": 55833, "name": "Equipe de vaccination 27 K2 Lorient La Base", "hidden": true},
+                        {"id": 49395, "name": "Equipe de vaccination 3 K2 Lorient La Base", "hidden": true},
+                        {"id": 49747, "name": "Equipe de vaccination 5 K2 Lorient La Base", "hidden": true},
+                        {"id": 49609, "name": "Equipe de vaccination 4 K2 Lorient La Base", "hidden": true},
+                        {"id": 55836, "name": "Equipe de vaccination 23 K2 Lorient La Base", "hidden": true}
+                    ]
+                }
+            ]
+        }
+    ],
+    "type": "vaccination-center"
+}
