@@ -710,7 +710,6 @@ def _find_agenda_and_practice_ids(
     """
     agenda_ids = set()
     practice_ids = set()
-    responses = 0
     for agenda in data.get("agendas", []):
         if (
             "practice_id" in agenda
