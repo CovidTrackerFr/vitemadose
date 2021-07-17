@@ -83,6 +83,7 @@ class DoctolibSlots:
 
     def _fetch(self, request: ScraperRequest) -> Optional[str]:
 
+        doublon_responses = 0
         centre = _parse_centre(request.get_url())
 
         # Doctolib fetches multiple vaccination centers sometimes
@@ -189,12 +190,9 @@ class DoctolibSlots:
         timetable_start_date = datetime.fromisoformat(start_date)
 
         for vaccine, visite_motive_ids in visit_motive_ids_by_vaccine.items():
-            agenda_ids, practice_ids, is_doublon = _find_agenda_and_practice_ids(
-                rdata, visite_motive_ids, practice_id_filter=practice_id
+            agenda_ids, practice_ids, doublon_responses = _find_agenda_and_practice_ids(
+                rdata, visite_motive_ids, doublon_responses, practice_id_filter=practice_id
             )
-
-            if is_doublon:
-                raise DoublonDoctolib(request.get_url())
 
             if not agenda_ids or not practice_ids:
                 continue
@@ -214,6 +212,10 @@ class DoctolibSlots:
             )
             if availability and (not first_availability or availability < first_availability):
                 first_availability = availability
+
+        if doublon_responses == 0:
+            raise DoublonDoctolib(request.get_url())
+
         return first_availability
 
     def get_timetables(
@@ -699,14 +701,13 @@ def _find_visit_motive_id(rdata: dict, visit_motive_category_id: list = None) ->
 
 
 def _find_agenda_and_practice_ids(
-    data: dict, visit_motive_ids: Set[int], practice_id_filter: list = None
+    data: dict, visit_motive_ids: Set[int], responses=0, practice_id_filter: list = None
 ) -> Tuple[list, list]:
     """
     Etant donné une réponse à /booking/<centre>.json, renvoie tous les
     "agendas" et "pratiques" (jargon Doctolib) qui correspondent au motif de visite.
     On a besoin de ces valeurs pour récupérer les disponibilités.
     """
-    is_doublon = False
     agenda_ids = set()
     practice_ids = set()
     responses = 0
@@ -735,9 +736,7 @@ def _find_agenda_and_practice_ids(
             ):  # Some motives are present in this agenda
                 practice_ids.add(str(pratice_id_agenda))
                 agenda_ids.add(str(agenda["id"]))
-    if responses == 0:
-        is_doublon = True
-    return sorted(agenda_ids), sorted(practice_ids), is_doublon
+    return sorted(agenda_ids), sorted(practice_ids), responses
 
 
 def is_allowing_online_appointments(rdata: dict) -> bool:
