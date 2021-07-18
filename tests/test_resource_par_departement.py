@@ -57,7 +57,7 @@ def test_resource_par_departement__1_creneau():
         lieu=centre_lamastre,
         reservation_url="https://some.url/reservation",
         timezone=gettz("Europe/Paris"),
-        type_vaccin=Vaccine.MODERNA,
+        type_vaccin=[Vaccine.MODERNA],
     )
     expected = {
         "version": 1,
@@ -75,7 +75,7 @@ def test_resource_par_departement__1_creneau():
                 "appointment_count": 1,
                 "appointment_schedules": [],
                 "internal_id": "maiia5fff1f61b1a1aa1cc204f203",
-                "vaccine_type": ["Moderna"],
+                "vaccine_type": [{"Moderna": True}],
                 "appointment_by_phone_only": False,
                 "erreur": None,
             }
@@ -130,21 +130,21 @@ def test_resource_par_departement__3_creneau():
         lieu=centre_lamastre,
         reservation_url="https://some.url/reservation",
         timezone=gettz("Europe/Paris"),
-        type_vaccin=Vaccine.MODERNA,
+        type_vaccin=[Vaccine.MODERNA],
     )
     creneau_2 = Creneau(
         horaire=dateutil.parser.parse("2021-06-06T06:35:00.000Z"),
         lieu=centre_lamastre,
         reservation_url="https://some.url/reservation",
         timezone=gettz("Europe/Paris"),
-        type_vaccin=Vaccine.MODERNA,
+        type_vaccin=[Vaccine.MODERNA],
     )
     creneau_3 = Creneau(
         horaire=dateutil.parser.parse("2021-06-06T06:00:00.000Z"),
         lieu=centre_lamastre,
         reservation_url="https://some.url/reservation",
         timezone=gettz("Europe/Paris"),
-        type_vaccin=Vaccine.PFIZER,
+        type_vaccin=[Vaccine.PFIZER],
     )
     expected = {
         "version": 1,
@@ -162,7 +162,7 @@ def test_resource_par_departement__3_creneau():
                 "appointment_count": 3,
                 "appointment_schedules": [],
                 "internal_id": "maiia5fff1f61b1a1aa1cc204f203",
-                "vaccine_type": ["Moderna", "Pfizer-BioNTech"],
+                "vaccine_type": [{"Moderna": True}, {"Pfizer-BioNTech": True}],
                 "appointment_by_phone_only": False,
                 "erreur": None,
             }

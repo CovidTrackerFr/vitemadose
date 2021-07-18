@@ -411,7 +411,7 @@ class DoctolibSlots:
                         Creneau(
                             horaire=dateutil.parser.parse(slot_list[0]),
                             reservation_url=request.url,
-                            type_vaccin=vaccine,
+                            type_vaccin=[vaccine],
                             lieu=self.lieu,
                         )
                     )
@@ -429,7 +429,7 @@ class DoctolibSlots:
                     Creneau(
                         horaire=dateutil.parser.parse(sdate),
                         reservation_url=request.url,
-                        type_vaccin=vaccine,
+                        type_vaccin=[vaccine],
                         lieu=self.lieu,
                     )
                 )

@@ -155,7 +155,7 @@ def test_doctolib_sends_creneau():
     assert actual[0] == Creneau(
         reservation_url=base_url,
         horaire=dateutil.parser.parse("2021-04-10"),
-        type_vaccin=Vaccine.MODERNA,
+        type_vaccin=[Vaccine.MODERNA],
         lieu=Lieu(
             departement="07",
             plateforme=Plateforme.DOCTOLIB,

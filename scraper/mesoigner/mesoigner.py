@@ -7,14 +7,16 @@ from typing import Dict, Iterator, Optional
 import httpx
 import requests
 from scraper.circuit_breaker import ShortCircuit
+from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform
 from scraper.error import BlockedByMesoignerError
-from utils.vmd_utils import append_date_days
+from utils.vmd_utils import DummyQueue, append_date_days
 from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
 from typing import Dict, Iterator, List, Optional
+import dateutil
 
 MESOIGNER_CONF = get_conf_platform("mesoigner")
 MESOIGNER_ENABLED = MESOIGNER_CONF.get("enabled", False)
@@ -42,26 +44,45 @@ logger = logging.getLogger("scraper")
 
 
 @Profiling.measure("mesoigner_slot")
-def fetch_slots(request: ScraperRequest, creneaux_q=None) -> Optional[str]:
-
+def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue) -> Optional[str]:
     if not MESOIGNER_ENABLED:
         return None
     # Fonction principale avec le comportement "de prod".
-    mesoigner = MesoignerSlots(client=DEFAULT_CLIENT)
+    mesoigner = MesoignerSlots(client=DEFAULT_CLIENT, creneau_q=creneau_q)
     return mesoigner.fetch(request)
 
 
 class MesoignerSlots:
-    def __init__(self, client: httpx.Client = None, cooldown_interval=MESOIGNER_CONF.get("request_sleep", 0.1)):
+    def __init__(
+        self,
+        creneau_q=DummyQueue,
+        client: httpx.Client = None,
+        cooldown_interval=MESOIGNER_CONF.get("request_sleep", 0.1),
+    ):
         self._cooldown_interval = cooldown_interval
         self._client = DEFAULT_CLIENT if client is None else client
+        self.creneau_q = creneau_q
         self.lieu = None
+
+    def found_creneau(self, creneau):
+        self.creneau_q.put(creneau)
 
     def fetch(self, request: ScraperRequest) -> Optional[str]:
         gid = request.center_info.internal_id
         platform = request.center_info.plateforme
         center_id = gid.split(platform)[-1]
         start_date = request.get_start_date()
+
+        self.lieu = Lieu(
+            plateforme=Plateforme.MESOIGNER,
+            url=request.url,
+            location=request.center_info.location,
+            nom=request.center_info.nom,
+            internal_id=f"mesoigner{request.internal_id}",
+            departement=request.center_info.departement,
+            lieu_type=request.practitioner_type,
+            metadata=request.center_info.metadata,
+        )
 
         centre_api_url = MESOIGNER_APIs.get("slots", "").format(id=center_id, start_date=start_date)
         response = self._client.get(centre_api_url, headers=MESOIGNER_HEADERS)
@@ -150,6 +171,7 @@ class MesoignerSlots:
             )
         request.update_appointment_schedules(appointment_schedules)
 
+        # print(slots_api.get("slots", []))
         for day in slots_api.get("slots", []):
 
             for day_date, appointments_infos in day.items():
@@ -158,6 +180,15 @@ class MesoignerSlots:
 
                 for one_appointment_info in appointments_infos:
                     appointment_exact_date = one_appointment_info["slot_beginning"]
+
+                    self.found_creneau(
+                        Creneau(
+                            horaire=dateutil.parser.parse(appointment_exact_date),
+                            reservation_url=request.url,
+                            type_vaccin=one_appointment_info["available_vaccines"],
+                            lieu=self.lieu,
+                        )
+                    )
                     if first_availability is None or appointment_exact_date < first_availability:
                         first_availability = appointment_exact_date
 

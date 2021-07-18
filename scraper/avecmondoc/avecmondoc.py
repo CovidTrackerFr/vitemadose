@@ -6,13 +6,13 @@ import httpx
 import json
 
 from datetime import datetime, timedelta
-from dateutil.parser import isoparse
+from dateutil.parser import isoparse, parse
 from pytz import timezone
 from typing import Iterator, Optional, Tuple
-
+from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.center_info import CenterInfo, CenterLocation, INTERVAL_SPLIT_DAYS, CHRONODOSES
-from scraper.pattern.vaccine import get_vaccine_name
+from scraper.pattern.vaccine import Vaccine, get_vaccine_name
 from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import departementUtils, DummyQueue
 
@@ -273,6 +273,7 @@ def get_availabilities(
         if request:
             request.increase_request_count("slots" if page_date == start_date else "next-slots")
         page_date = page_date + timedelta(days=week_size)
+
         for week_availability in week_availabilities:
             if "slots" in week_availability:
                 availabilities.append(week_availability)
@@ -308,81 +309,118 @@ def count_appointements(availabilities: list, start_date: datetime, end_date: da
     return count
 
 
-def parse_availabilities(availabilities: list) -> Tuple[Optional[datetime], int]:
-    first_appointment = None
-    appointment_count = 0
-    for availability in availabilities:
-        if "slots" not in availability:
-            continue
-        slots = availability["slots"]
-        for slot in slots:
-            if not slot["isAvailable"]:
-                continue
-            appointment_count += 1
-            date = isoparse(slot["businessHours"]["start"])
-            if first_appointment is None or date < first_appointment:
-                first_appointment = date
-    return first_appointment, appointment_count
-
-
 @Profiling.measure("avecmondoc_slot")
 def fetch_slots(
     request: ScraperRequest, creneau_q=DummyQueue(), client: httpx.Client = DEFAULT_CLIENT
 ) -> Optional[str]:
-    url = request.get_url()
-    slug = url.split("/")[-1]
-    organization = get_organization_slug(slug, client, request)
-    if organization is None:
+    if not AVECMONDOC_ENABLED:
         return None
-    if "error" in organization:
-        logger.warning(organization["error"])
-    for speciality in organization["speciality"]:
-        request.update_practitioner_type(DRUG_STORE if speciality["id"] == 190 else GENERAL_PRACTITIONER)
-    organization_id = organization.get("id")
-    reasons = organization.get("consultationReasons")
-    if reasons is None:
-        logger.warning(f"unable to get reasons from organization {organization_id}")
-        return None
-    if not get_valid_reasons(reasons):
-        return None
-    first_availability = None
+    # Fonction principale avec le comportement "de prod".
+    avecmondoc = AvecmonDoc(client=DEFAULT_CLIENT, creneau_q=creneau_q)
+    return avecmondoc.fetch(request, client)
 
-    appointment_schedules = []
-    s_date = paris_tz.localize(isoparse(request.get_start_date()) + timedelta(days=0))
-    n_date = s_date + timedelta(days=CHRONODOSES["Interval"], seconds=-1)
-    appointment_schedules.append(
-        {"name": "chronodose", "from": s_date.isoformat(), "to": n_date.isoformat(), "total": 0}
-    )
-    for n in INTERVAL_SPLIT_DAYS:
-        n_date = s_date + timedelta(days=n, seconds=-1)
-        appointment_schedules.append(
-            {"name": f"{n}_days", "from": s_date.isoformat(), "to": n_date.isoformat(), "total": 0}
-        )
 
-    for reason in get_valid_reasons(reasons):
-        start_date = isoparse(request.get_start_date())
-        end_date = start_date + timedelta(days=AVECMONDOC_CONF.get("slot_limit", 50))
-        request.add_vaccine_type(get_vaccine_name(reason["reason"]))
-        availabilities = get_availabilities(
-            reason["id"], reason["organizationId"], start_date, end_date, client, request
-        )
-        date, appointment_count = parse_availabilities(availabilities)
-        if date is None:
-            continue
-        request.appointment_count += appointment_count
-        for appointment_schedule in appointment_schedules:
-            s_date = isoparse(appointment_schedule["from"])
-            n_date = isoparse(appointment_schedule["to"])
-            name = appointment_schedule["name"]
-            if name == "chronodose" and get_vaccine_name(reason["reason"]) not in CHRONODOSES["Vaccine"]:
+class AvecmonDoc:
+    def __init__(self, creneau_q=DummyQueue, client: httpx.Client = DEFAULT_CLIENT):
+        self.creneau_q = creneau_q
+        self.lieu = None
+
+    def found_creneau(self, creneau):
+        self.creneau_q.put(creneau)
+
+    def parse_availabilities(
+        self, availabilities: list, request: ScraperRequest, lieu: Lieu, vaccine: Vaccine
+    ) -> Tuple[Optional[datetime], int]:
+        first_appointment = None
+        appointment_count = 0
+        for availability in availabilities:
+            if "slots" not in availability:
                 continue
-            appointment_schedule["total"] += count_appointements(availabilities, s_date, n_date)
-        request.appointment_schedules = appointment_schedules
-        if first_availability is None or first_availability > date:
-            first_availability = date
-    if first_availability is None:
-        return None
-    return first_availability.isoformat()
+            slots = availability["slots"]
+            for slot in slots:
+                if not slot["isAvailable"]:
+                    continue
+                appointment_count += 1
+                date = isoparse(slot["businessHours"]["start"])
+                self.found_creneau(
+                    Creneau(
+                        horaire=parse(slot["businessHours"]["start"]),
+                        reservation_url=request.url,
+                        type_vaccin=[vaccine],
+                        lieu=lieu,
+                    )
+                )
+                if first_appointment is None or date < first_appointment:
+                    first_appointment = date
+        return first_appointment, appointment_count
+
+    def fetch(self, request, client):
+        url = request.get_url()
+        slug = url.split("/")[-1]
+        organization = get_organization_slug(slug, client, request)
+        if organization is None:
+            return None
+        if "error" in organization:
+            logger.warning(organization["error"])
+        for speciality in organization["speciality"]:
+            request.update_practitioner_type(DRUG_STORE if speciality["id"] == 190 else GENERAL_PRACTITIONER)
+        organization_id = organization.get("id")
+        reasons = organization.get("consultationReasons")
+        if reasons is None:
+            logger.warning(f"unable to get reasons from organization {organization_id}")
+            return None
+        if not get_valid_reasons(reasons):
+            return None
+        first_availability = None
+
+        self.lieu = Lieu(
+            plateforme=Plateforme.AVECMONDOC,
+            url=request.url,
+            location=request.center_info.location,
+            nom=request.center_info.nom,
+            internal_id=request.internal_id,
+            departement=request.center_info.departement,
+            lieu_type=request.practitioner_type,
+            metadata=request.center_info.metadata,
+        )
+
+        appointment_schedules = []
+        s_date = paris_tz.localize(isoparse(request.get_start_date()) + timedelta(days=0))
+        n_date = s_date + timedelta(days=CHRONODOSES["Interval"], seconds=-1)
+        appointment_schedules.append(
+            {"name": "chronodose", "from": s_date.isoformat(), "to": n_date.isoformat(), "total": 0}
+        )
+        for n in INTERVAL_SPLIT_DAYS:
+            n_date = s_date + timedelta(days=n, seconds=-1)
+            appointment_schedules.append(
+                {"name": f"{n}_days", "from": s_date.isoformat(), "to": n_date.isoformat(), "total": 0}
+            )
+
+        for reason in get_valid_reasons(reasons):
+            start_date = isoparse(request.get_start_date())
+            end_date = start_date + timedelta(days=AVECMONDOC_CONF.get("slot_limit", 50))
+            vaccine = get_vaccine_name(reason["reason"])
+            request.add_vaccine_type(vaccine)
+            availabilities = get_availabilities(
+                reason["id"], reason["organizationId"], start_date, end_date, client, request
+            )
+            date, appointment_count = self.parse_availabilities(availabilities, request, self.lieu, vaccine)
+            if date is None:
+                continue
+            request.appointment_count += appointment_count
+            for appointment_schedule in appointment_schedules:
+                s_date = isoparse(appointment_schedule["from"])
+                n_date = isoparse(appointment_schedule["to"])
+                name = appointment_schedule["name"]
+                if name == "chronodose" and get_vaccine_name(reason["reason"]) not in CHRONODOSES["Vaccine"]:
+                    continue
+                appointment_schedule["total"] += count_appointements(availabilities, s_date, n_date)
+            request.appointment_schedules = appointment_schedules
+            if first_availability is None or first_availability > date:
+                first_availability = date
+        if first_availability is None:
+            return None
+        return first_availability.isoformat()
 
 
 def center_to_centerdict(center: CenterInfo) -> dict:

@@ -50,7 +50,7 @@ def parse_keldoc_availability(self, availability_data, appointments, vaccine=Non
                 Creneau(
                     horaire=dateutil.parser.parse(slot["start_time"]),
                     reservation_url=self.base_url,
-                    type_vaccin=vaccine,
+                    type_vaccin=[vaccine],
                     lieu=self.lieu,
                 )
             )

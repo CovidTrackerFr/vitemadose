@@ -111,7 +111,7 @@ class MaiiaSlots:
                 Creneau(
                     horaire=parse(slot["startDateTime"]),
                     reservation_url=request.url,
-                    type_vaccin=slot.get("vaccine_type"),
+                    type_vaccin=[slot.get("vaccine_type")],
                     lieu=self.lieu,
                 )
             )
