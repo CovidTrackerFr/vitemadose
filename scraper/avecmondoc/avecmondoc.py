@@ -329,7 +329,7 @@ class AvecmonDoc:
         self.creneau_q.put(creneau)
 
     def parse_availabilities(
-        self, availabilities: list, request: ScraperRequest, lieu: Lieu, vaccine: Vaccine
+        self, availabilities: list, request: ScraperRequest, vaccine: Vaccine
     ) -> Tuple[Optional[datetime], int]:
         first_appointment = None
         appointment_count = 0
@@ -347,7 +347,7 @@ class AvecmonDoc:
                         horaire=parse(slot["businessHours"]["start"]),
                         reservation_url=request.url,
                         type_vaccin=[vaccine],
-                        lieu=lieu,
+                        lieu=self.lieu,
                     )
                 )
                 if first_appointment is None or date < first_appointment:
@@ -404,7 +404,7 @@ class AvecmonDoc:
             availabilities = get_availabilities(
                 reason["id"], reason["organizationId"], start_date, end_date, client, request
             )
-            date, appointment_count = self.parse_availabilities(availabilities, request, self.lieu, vaccine)
+            date, appointment_count = self.parse_availabilities(availabilities, request, vaccine)
             if date is None:
                 continue
             request.appointment_count += appointment_count
