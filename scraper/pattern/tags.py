@@ -7,7 +7,13 @@ def tag_all(creneau: Creneau):
 
 
 def tag_preco18_55(creneau: Creneau):
-    return creneau.type_vaccin == Vaccine.PFIZER or creneau.type_vaccin == Vaccine.MODERNA
+
+    if (
+        Vaccine.PFIZER in creneau.type_vaccin
+        or Vaccine.MODERNA in creneau.type_vaccin
+        or Vaccine.ARNM in creneau.type_vaccin
+    ):
+        return True
 
 
 CURRENT_TAGS = {"all": tag_all, "preco18_55": tag_preco18_55}

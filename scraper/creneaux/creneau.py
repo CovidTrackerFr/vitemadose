@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from enum import Enum
 from pytz import timezone as Timezone
 from datetime import datetime
-from typing import Optional
+from typing import Optional, List
 from scraper.pattern.center_location import CenterLocation
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.vaccine import Vaccine
@@ -36,7 +36,7 @@ class Creneau:
     lieu: Lieu
     reservation_url: str
     timezone: Timezone = Timezone("Europe/Paris")
-    type_vaccin: Optional[Vaccine] = None
+    type_vaccin: Optional[List[Vaccine]] = None
     disponible: bool = True
 
 

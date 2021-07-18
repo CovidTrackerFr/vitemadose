@@ -411,7 +411,7 @@ class DoctolibSlots:
                         Creneau(
                             horaire=dateutil.parser.parse(slot_list[0]),
                             reservation_url=request.url,
-                            type_vaccin=vaccine,
+                            type_vaccin=[vaccine],
                             lieu=self.lieu,
                         )
                     )
@@ -429,7 +429,7 @@ class DoctolibSlots:
                     Creneau(
                         horaire=dateutil.parser.parse(sdate),
                         reservation_url=request.url,
-                        type_vaccin=vaccine,
+                        type_vaccin=[vaccine],
                         lieu=self.lieu,
                     )
                 )
@@ -710,7 +710,6 @@ def _find_agenda_and_practice_ids(
     """
     agenda_ids = set()
     practice_ids = set()
-    responses = 0
     for agenda in data.get("agendas", []):
         if (
             "practice_id" in agenda

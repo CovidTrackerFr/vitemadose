@@ -1,4 +1,5 @@
 from datetime import datetime
+from scraper.pattern.vaccine import Vaccine
 import dateutil
 from dateutil.tz import gettz
 from typing import Iterator, Union
@@ -26,11 +27,16 @@ class ResourceTousDepartements(Resource):
 
         centre = self.centres_disponibles[lieu.internal_id]
         centre["appointment_count"] += 1
-        # print(f' centre est {centre["vaccine_type"]} et longueur est {len(centre["vaccine_type"])}')
-        if creneau.type_vaccin:
-            centre["vaccine_type"][creneau.type_vaccin.value] = True
+
         if not centre["prochain_rdv"] or centre["prochain_rdv"] > creneau.horaire:
             centre["prochain_rdv"] = creneau.horaire
+
+        if not creneau.type_vaccin:
+            return
+
+        for vaccine in creneau.type_vaccin:
+            if not any([vaccine.value in one_vaccine for one_vaccine in centre["vaccine_type"]]):
+                centre["vaccine_type"].append({vaccine.value: True})
 
     def centre(self, lieu: Lieu):
         return {
@@ -44,7 +50,7 @@ class ResourceTousDepartements(Resource):
             "type": lieu.lieu_type,
             "appointment_count": 0,
             "internal_id": lieu.internal_id,
-            "vaccine_type": {},
+            "vaccine_type": [],
             "appointment_schedules": [],
             "appointment_by_phone_only": False,
             "erreur": None,
@@ -76,7 +82,7 @@ class ResourceTousDepartements(Resource):
             "prochain_rdv": centre["prochain_rdv"].replace(microsecond=0).isoformat()
             if centre["prochain_rdv"]
             else None,
-            "vaccine_type": sorted(list(centre["vaccine_type"].keys())),
+            "vaccine_type": centre["vaccine_type"],
         }
 
 

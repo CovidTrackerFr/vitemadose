@@ -67,7 +67,7 @@ def scrape(platforms=None):  # pragma: no cover
     with Manager() as manager:
         with profiler, Pool(POOL_SIZE, **profiler.pool_args()) as pool:
             if CRENEAUX_ENABLED:
-                creneau_q = BulkQueue(manager.Queue(maxsize=500))
+                creneau_q = BulkQueue(manager.Queue(maxsize=100))
                 export_process = Process(target=export_by_creneau, args=(creneau_q,))
                 export_process.start()
             centre_iterator_proportion = (
