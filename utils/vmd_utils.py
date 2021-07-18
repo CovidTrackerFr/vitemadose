@@ -137,7 +137,7 @@ class departementUtils:
         if not address:
             return None
         # tmp debug
-        if search := re.search(r"(?<=\s\d{5}\s)(?P<com_nom>.*?)\s*$", address):
+        if search := re.search(r"\D+\d{5}\s+(?P<com_nom>.*\S)\s*$", address):
             return search.groupdict().get("com_nom")
         return None
 
