@@ -35,8 +35,11 @@ class ResourceTousDepartements(Resource):
             return
 
         for vaccine in creneau.type_vaccin:
-            if not any([vaccine.value in one_vaccine for one_vaccine in centre["vaccine_type"]]):
-                centre["vaccine_type"].append({vaccine.value: True})
+            if vaccine is not None:
+                if isinstance(vaccine, Vaccine):
+                    vaccine = vaccine.value
+                if not any([vaccine in one_vaccine for one_vaccine in centre["vaccine_type"]]):
+                    centre["vaccine_type"].append({vaccine: True})
 
     def centre(self, lieu: Lieu):
         return {
