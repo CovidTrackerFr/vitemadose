@@ -148,10 +148,6 @@ class OrdoclicSlots:
 
             if first_availability is None or date < first_availability:
                 first_availability = date
-
-            if self.lieu and first_availability is None:
-                self.found_creneau(PasDeCreneau(lieu=self.lieu))
-
         return first_availability
 
     def get_slots(

@@ -97,8 +97,6 @@ class MesoignerSlots:
         rdata = response.json()
 
         first_availability = self.get_appointments(request, rdata)
-        if self.lieu and first_availability is None:
-            self.found_creneau(PasDeCreneau(lieu=self.lieu))
         return first_availability
 
     def build_appointment_schedules(
