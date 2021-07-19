@@ -3,9 +3,9 @@ import logging
 import httpx
 
 from datetime import datetime, timedelta
-from dateutil.parser import isoparse
+from dateutil.parser import isoparse, parse as dateparse
 from pytz import timezone
-
+from typing import Dict, Iterator, List, Optional, Tuple, Set
 from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
 from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
@@ -13,6 +13,7 @@ from scraper.pattern.scraper_result import DRUG_STORE
 from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import departementUtils, DummyQueue
 from scraper.profiler import Profiling
+from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 
 logger = logging.getLogger("scraper")
 
@@ -28,7 +29,6 @@ paris_tz = timezone("Europe/Paris")
 # Filtre pour le rang d'injection
 # Il faut rajouter 2 à la liste si l'on veut les 2èmes injections
 ORDOCLIC_VALID_INJECTION = ORDOCLIC_CONF.get("filters", {}).get("valid_injections", [])
-
 
 # get all slugs
 def search(client: httpx.Client = DEFAULT_CLIENT):
@@ -67,64 +67,6 @@ def get_reasons(entityId, client: httpx.Client = DEFAULT_CLIENT, request: Scrape
     return r.json()
 
 
-def get_slots(
-        entityId,
-        medicalStaffId,
-        reasonId,
-        start_date,
-        end_date,
-        client: httpx.Client = DEFAULT_CLIENT,
-        request: ScraperRequest = None,
-):
-    base_url = ORDOCLIC_API.get("slots")
-    payload = {
-        "entityId": entityId,
-        "medicalStaffId": medicalStaffId,
-        "reasonId": reasonId,
-        "dateEnd": f"{end_date}T00:00:00.000Z",
-        "dateStart": f"{start_date}T23:59:59.000Z",
-    }
-    headers = {"Content-type": "application/json", "Accept": "text/plain"}
-    if request:
-        request.increase_request_count("slots")
-    try:
-        r = client.post(base_url, data=json.dumps(payload), headers=headers)
-        r.raise_for_status()
-    except httpx.TimeoutException as hex:
-        logger.warning(f"request timed out for center: {base_url}")
-        if request:
-            request.increase_request_count("time-out")
-        return False
-    except httpx.HTTPStatusError as hex:
-        logger.warning(f"{base_url} returned error {hex.response.status_code}")
-        if request:
-            request.increase_request_count("error")
-        return None
-    return r.json()
-
-
-def get_profile(request: ScraperRequest, client: httpx.Client = DEFAULT_CLIENT):
-    slug = request.get_url().rsplit("/", 1)[-1]
-    prof = request.get_url().rsplit("/", 2)[-2]
-    if prof in ["pharmacien", "medecin"]:  # pragma: no cover
-        base_url = ORDOCLIC_API.get("profile_professionals").format(slug=slug)
-    else:
-        base_url = ORDOCLIC_API.get("profile_public_entities").format(slug=slug)
-    request.increase_request_count("booking")
-    try:
-        r = client.get(base_url)
-        r.raise_for_status()
-    except httpx.TimeoutException as hex:
-        logger.warning(f"request timed out for center: {base_url}")
-        request.increase_request_count("time-out")
-        return False
-    except httpx.HTTPStatusError as hex:
-        logger.warning(f"{base_url} returned error {hex.response.status_code}")
-        request.increase_request_count("error")
-        return None
-    return r.json()
-
-
 def is_reason_valid(reason: dict) -> bool:
     if reason.get("canBookOnline", False) is False:
         return False
@@ -149,99 +91,198 @@ def count_appointements(appointments: list, start_date: datetime, end_date: date
     return count
 
 
-def parse_ordoclic_slots(request: ScraperRequest, availability_data):
-    first_availability = None
-    if not availability_data:
-        return None
-    availabilities = availability_data.get("slots", None)
-    availability_count = 0
-    if type(availabilities) is list:
-        availability_count = len(availabilities)
-    request.update_appointment_count(request.appointment_count + availability_count)
-
-    if "nextAvailableSlotDate" in availability_data:
-        nextAvailableSlotDate = availability_data.get("nextAvailableSlotDate", None)
-        if nextAvailableSlotDate is not None:
-            first_availability = datetime.strptime(nextAvailableSlotDate, "%Y-%m-%dT%H:%M:%S%z")
-            first_availability += first_availability.replace(tzinfo=timezone("CET")).utcoffset()
-            return first_availability
-
-    if availabilities is None:
-        return None
-    for slot in availabilities:
-        timeStart = slot.get("timeStart", None)
-        if not timeStart:
-            continue
-        date = datetime.strptime(timeStart, "%Y-%m-%dT%H:%M:%S%z")
-        if "timeStartUtcOffset" in slot:
-            timeStartUtcOffset = slot["timeStartUtcOffset"]
-            date += timedelta(minutes=timeStartUtcOffset)
-        if first_availability is None or date < first_availability:
-            first_availability = date
-    return first_availability
-
-
 @Profiling.measure("ordoclic_slot")
-def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue(), client: httpx.Client = DEFAULT_CLIENT):
-    first_availability = None
+def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue, client=DEFAULT_CLIENT) -> Optional[str]:
     if not ORDOCLIC_ENABLED:
-        return first_availability
-    profile = get_profile(request, client)
-    if not profile:
         return None
-    entityId = profile["entityId"]
-    attributes = profile.get("attributeValues")
-    for settings in attributes:
-        if settings["label"] == "booking_settings" and settings["value"].get("option", "any") == "any":
-            request.set_appointments_only_by_phone(True)
+    # Fonction principale avec le comportement "de prod".
+
+    ordoclic = OrdoclicSlots(client=client, creneau_q=creneau_q)
+    return ordoclic.fetch(request)
+
+
+class OrdoclicSlots:
+    def __init__(self, creneau_q=DummyQueue, client: httpx.Client = None):
+        self.creneau_q = creneau_q
+        self._client = DEFAULT_CLIENT if client is None else client
+        self.lieu = None
+
+    def found_creneau(self, creneau):
+        self.creneau_q.put(creneau)
+
+    def parse_ordoclic_slots(self, request: ScraperRequest, availability_data, vaccine):
+        first_availability = None
+        if not availability_data:
             return None
-    # create appointment_schedules array with names and dates
-    appointment_schedules = []
-    start_date = paris_tz.localize(isoparse(request.get_start_date()) + timedelta(days=0))
-    end_date = start_date + timedelta(days=CHRONODOSES["Interval"], seconds=-1)
-    appointment_schedules.append(
-        {"name": "chronodose", "from": start_date.isoformat(), "to": end_date.isoformat(), "total": 0}
-    )
-    for n in INTERVAL_SPLIT_DAYS:
-        end_date = start_date + timedelta(days=n, seconds=-1)
-        appointment_schedules.append(
-            {"name": f"{n}_days", "from": start_date.isoformat(), "to": end_date.isoformat(), "total": 0}
-        )
-    for professional in profile["publicProfessionals"]:
-        medicalStaffId = professional["id"]
-        reasons = get_reasons(entityId, request=request)
-        for reason in reasons["reasons"]:
-            if not is_reason_valid(reason):
+        availabilities = availability_data.get("slots", None)
+        availability_count = 0
+        if type(availabilities) is list:
+            availability_count = len(availabilities)
+
+        request.update_appointment_count(request.appointment_count + availability_count)
+        if "nextAvailableSlotDate" in availability_data:
+            nextAvailableSlotDate = availability_data.get("nextAvailableSlotDate", None)
+            if nextAvailableSlotDate is not None:
+                first_availability = datetime.strptime(nextAvailableSlotDate, "%Y-%m-%dT%H:%M:%S%z")
+                first_availability += first_availability.replace(tzinfo=timezone("CET")).utcoffset()
+                return first_availability
+
+        if availabilities is None:
+            return None
+        for slot in availabilities:
+            timeStart = slot.get("timeStart", None)
+            if not timeStart:
                 continue
-            request.add_vaccine_type(get_vaccine_name(reason.get("name", "")))
-            reasonId = reason["id"]
-            date_obj = datetime.strptime(request.get_start_date(), "%Y-%m-%d")
-            end_date = (date_obj + timedelta(days=50)).strftime("%Y-%m-%d")
-            slots = get_slots(entityId, medicalStaffId, reasonId, request.get_start_date(), end_date, client, request)
-            date = parse_ordoclic_slots(request, slots)
-            if date is None:
-                continue
-            # add counts to appointment_schedules
-            availabilities = slots.get("slots", None)
-            for i in range(0, len(appointment_schedules)):
-                start_date = isoparse(appointment_schedules[i]["from"])
-                end_date = isoparse(appointment_schedules[i]["to"])
-                # do not count chronodose if wrong vaccine
-                if (
-                        appointment_schedules[i]["name"] == "chronodose"
-                        and get_vaccine_name(reason.get("name", "")) not in CHRONODOSES["Vaccine"]
-                ):
-                    continue
-                appointment_schedules[i]["total"] += count_appointements(availabilities, start_date, end_date)
-            request.update_appointment_schedules(appointment_schedules)
-            logger.debug(f"appointment_schedules: {appointment_schedules}")
+            date = datetime.strptime(timeStart, "%Y-%m-%dT%H:%M:%S%z")
+            if "timeStartUtcOffset" in slot:
+                timeStartUtcOffset = slot["timeStartUtcOffset"]
+                date += timedelta(minutes=timeStartUtcOffset)
+                self.found_creneau(
+                    Creneau(
+                        horaire=date,
+                        reservation_url=request.url,
+                        type_vaccin=[vaccine],
+                        lieu=self.lieu,
+                    )
+                )
+
             if first_availability is None or date < first_availability:
                 first_availability = date
-    request.update_appointment_schedules(appointment_schedules)
-    if first_availability is None:
-        return None
-    logger.debug(f"appointment_schedules: {request.appointment_schedules}")
-    return first_availability.isoformat()
+        return first_availability
+
+    def get_slots(
+        self,
+        entityId,
+        medicalStaffId,
+        reasonId,
+        start_date,
+        end_date,
+        request: ScraperRequest = None,
+    ):
+        base_url = ORDOCLIC_API.get("slots")
+        payload = {
+            "entityId": entityId,
+            "medicalStaffId": medicalStaffId,
+            "reasonId": reasonId,
+            "dateEnd": f"{end_date}T00:00:00.000Z",
+            "dateStart": f"{start_date}T23:59:59.000Z",
+        }
+        headers = {"Content-type": "application/json", "Accept": "text/plain"}
+        if request:
+            request.increase_request_count("slots")
+        try:
+            r = self._client.post(base_url, data=json.dumps(payload), headers=headers)
+            r.raise_for_status()
+        except httpx.TimeoutException as hex:
+            logger.warning(f"request timed out for center: {base_url}")
+            if request:
+                request.increase_request_count("time-out")
+            return False
+        except httpx.HTTPStatusError as hex:
+            logger.warning(f"{base_url} returned error {hex.response.status_code}")
+            if request:
+                request.increase_request_count("error")
+            return None
+        return r.json()
+
+    def get_profile(self, request: ScraperRequest):
+        slug = request.get_url().rsplit("/", 1)[-1]
+        prof = request.get_url().rsplit("/", 2)[-2]
+        if prof in ["pharmacien", "medecin"]:  # pragma: no cover
+            base_url = ORDOCLIC_API.get("profile_professionals").format(slug=slug)
+        else:
+            base_url = ORDOCLIC_API.get("profile_public_entities").format(slug=slug)
+        request.increase_request_count("booking")
+        try:
+            r = self._client.get(base_url)
+            r.raise_for_status()
+        except httpx.TimeoutException as hex:
+            logger.warning(f"request timed out for center: {base_url}")
+            request.increase_request_count("time-out")
+            return False
+        except httpx.HTTPStatusError as hex:
+            logger.warning(f"{base_url} returned error {hex.response.status_code}")
+            request.increase_request_count("error")
+            return None
+        return r.json()
+
+    def fetch(
+        self,
+        request: ScraperRequest,
+    ):
+        first_availability = None
+        profile = self.get_profile(request=request)
+        if not profile:
+            return None
+
+        self.lieu = Lieu(
+            plateforme=Plateforme.ORDOCLIC,
+            url=request.url,
+            location=request.center_info.location,
+            nom=request.center_info.nom,
+            internal_id=f"ordoclic{request.internal_id}",
+            departement=request.center_info.departement,
+            lieu_type=request.practitioner_type,
+            metadata=request.center_info.metadata,
+        )
+
+        entityId = profile["entityId"]
+        attributes = profile.get("attributeValues")
+        for settings in attributes:
+            if settings["label"] == "booking_settings" and settings["value"].get("option", "any") == "any":
+                request.set_appointments_only_by_phone(True)
+                return None
+        # create appointment_schedules array with names and dates
+        appointment_schedules = []
+        start_date = paris_tz.localize(isoparse(request.get_start_date()) + timedelta(days=0))
+        end_date = start_date + timedelta(days=CHRONODOSES["Interval"], seconds=-1)
+        appointment_schedules.append(
+            {"name": "chronodose", "from": start_date.isoformat(), "to": end_date.isoformat(), "total": 0}
+        )
+        for n in INTERVAL_SPLIT_DAYS:
+            end_date = start_date + timedelta(days=n, seconds=-1)
+            appointment_schedules.append(
+                {"name": f"{n}_days", "from": start_date.isoformat(), "to": end_date.isoformat(), "total": 0}
+            )
+        for professional in profile["publicProfessionals"]:
+            medicalStaffId = professional["id"]
+            reasons = get_reasons(entityId, request=request)
+            for reason in reasons["reasons"]:
+                if not is_reason_valid(reason):
+                    continue
+                vaccine = get_vaccine_name(reason.get("name", ""))
+                request.add_vaccine_type(vaccine)
+                reasonId = reason["id"]
+                date_obj = datetime.strptime(request.get_start_date(), "%Y-%m-%d")
+                end_date = (date_obj + timedelta(days=50)).strftime("%Y-%m-%d")
+                slots = self.get_slots(entityId, medicalStaffId, reasonId, request.get_start_date(), end_date, request)
+                date = self.parse_ordoclic_slots(request, slots, vaccine)
+                if date is None:
+                    continue
+                # add counts to appointment_schedules
+                availabilities = slots.get("slots", None)
+                for i in range(0, len(appointment_schedules)):
+                    start_date = isoparse(appointment_schedules[i]["from"])
+                    end_date = isoparse(appointment_schedules[i]["to"])
+                    # do not count chronodose if wrong vaccine
+                    if (
+                        appointment_schedules[i]["name"] == "chronodose"
+                        and get_vaccine_name(reason.get("name", "")) not in CHRONODOSES["Vaccine"]
+                    ):
+                        continue
+                    appointment_schedules[i]["total"] += count_appointements(availabilities, start_date, end_date)
+                request.update_appointment_schedules(appointment_schedules)
+                logger.debug(f"appointment_schedules: {appointment_schedules}")
+                if first_availability is None or date < first_availability:
+                    first_availability = date
+        request.update_appointment_schedules(appointment_schedules)
+        if first_availability is None:
+            if self.lieu:
+                self.found_creneau(PasDeCreneau(lieu=self.lieu, phone_only=request.appointment_by_phone_only))
+            return None
+        logger.debug(f"appointment_schedules: {request.appointment_schedules}")
+
+        return first_availability.isoformat()
 
 
 def centre_iterator(client: httpx.Client = DEFAULT_CLIENT):
