@@ -5,18 +5,19 @@ from pathlib import Path
 import httpx
 from dateutil.parser import isoparse
 from jsonschema import validate
+from scraper.pattern.vaccine import Vaccine
 
 from scraper.ordoclic import (
+    OrdoclicSlots,
     search,
     get_reasons,
-    get_profile,
-    parse_ordoclic_slots,
     fetch_slots,
     centre_iterator,
     is_reason_valid,
 )
 
 from scraper.pattern.scraper_request import ScraperRequest
+from scraper.pattern.center_info import CenterInfo, CenterLocation
 
 
 def test_search():
@@ -109,13 +110,16 @@ def test_getReasons():
 
 
 def test_get_slots():
+    ordoclic = OrdoclicSlots()
     request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-meru-meru", "2021-05-08")
     data = {"id": 1}
-    assert not parse_ordoclic_slots(request, data)
+    vaccine = Vaccine.MODERNA
+    assert not ordoclic.parse_ordoclic_slots(request, data, vaccine)
 
     request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-meru-meru", "2021-05-08")
     data = {"slots": [{"timeEnd": "2021-05-09"}]}
-    assert not parse_ordoclic_slots(request, data)
+    vaccine = Vaccine.MODERNA
+    assert not ordoclic.parse_ordoclic_slots(request, data, vaccine)
 
 
 def test_get_profile():
@@ -125,7 +129,9 @@ def test_get_profile():
 
     client = httpx.Client(transport=httpx.MockTransport(app4))
     request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-meru-meru", "2021-05-08")
-    res = get_profile(request, client)
+    ordoclic = OrdoclicSlots(client=client)
+
+    res = ordoclic.get_profile(request)
     assert not res
 
     # HTTP error test (profile)
@@ -134,32 +140,38 @@ def test_get_profile():
 
     client = httpx.Client(transport=httpx.MockTransport(app5))
     request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-meru-meru", "2021-05-08")
-    res = get_profile(request, client)
+    ordoclic = OrdoclicSlots(client=client)
+    res = ordoclic.get_profile(request)
     assert not res
 
 
 def test_parse_ordoclic_slots():
     # Test availability_data vide
+    ordoclic = OrdoclicSlots()
     request = ScraperRequest("", "2021-04-05")
-    assert parse_ordoclic_slots(request, {}) == None
+
+    vaccine = Vaccine.PFIZER
+    assert ordoclic.parse_ordoclic_slots(request, {}, vaccine) == None
 
     # Test pas de slots disponibles
     empty_slots_file = Path("tests/fixtures/ordoclic/empty_slots.json")
     empty_slots = json.loads(empty_slots_file.read_text())
     request = ScraperRequest("", "2021-04-05")
-    assert parse_ordoclic_slots(request, empty_slots) == None
+    assert ordoclic.parse_ordoclic_slots(request, empty_slots, vaccine) == None
 
     # Test nextAvailableSlotDate
     nextavailable_slots_file = Path("tests/fixtures/ordoclic/nextavailable_slots.json")
     nextavailable_slots = json.loads(nextavailable_slots_file.read_text())
     request = ScraperRequest("", "2021-04-05")
-    assert parse_ordoclic_slots(request, nextavailable_slots) == isoparse("2021-06-12T11:30:00Z")  # timezone CET
+    assert ordoclic.parse_ordoclic_slots(request, nextavailable_slots, vaccine) == isoparse(
+        "2021-06-12T11:30:00Z"
+    )  # timezone CET
 
     # Test slots disponibles
     full_slots_file = Path("tests/fixtures/ordoclic/full_slots.json")
     full_slots = json.loads(full_slots_file.read_text())
     request = ScraperRequest("", "2021-04-05")
-    first_availability = parse_ordoclic_slots(request, full_slots)
+    first_availability = ordoclic.parse_ordoclic_slots(request, full_slots, vaccine)
     assert first_availability == isoparse("2021-04-19T16:15:00Z")  # timezone CET
     assert request.appointment_count == 42
 
@@ -231,7 +243,19 @@ def test_fetch_slots():
         return httpx.Response(403, json={})
 
     client = httpx.Client(transport=httpx.MockTransport(app))
-    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08")
+    center_info = CenterInfo(
+        departement="51",
+        nom="Pharmacie Croix Dampierre",
+        url="https://app.ordoclic.fr/app/pharmacie/pharmacie-croix-dampierre-chalons-en-champagne",
+        location=CenterLocation(longitude=4.3858888, latitude=48.9422828, city="chalons-en-champagne", cp="51000"),
+        metadata={
+            "address": "AV DU PRESIDENT ROOSEVELT CC CROIX DAMPIERRE, 51000 CHALONS EN CHAMPAGNE",
+            "phone_number": "+33326219000",
+            "business_hours": None,
+        },
+    )
+
+    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08", center_info)
     res = fetch_slots(request, client=client)
     assert res == "2021-05-12T16:00:00+00:00"
 
@@ -250,7 +274,7 @@ def test_fetch_slots():
         return httpx.Response(403, json={})
 
     client = httpx.Client(transport=httpx.MockTransport(app2))
-    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08")
+    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08", center_info)
     res = fetch_slots(request, client=client)
     assert res is None
 
@@ -267,7 +291,7 @@ def test_fetch_slots():
         return httpx.Response(403, json={})
 
     client = httpx.Client(transport=httpx.MockTransport(app3))
-    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08")
+    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08", center_info)
     res = fetch_slots(request, client=client)
     assert res is None
 
@@ -276,7 +300,7 @@ def test_fetch_slots():
         return httpx.Response(403, json={})
 
     client = httpx.Client(transport=httpx.MockTransport(app4))
-    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08")
+    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08", center_info)
     res = fetch_slots(request, client=client)
     assert res is None
 
@@ -297,6 +321,6 @@ def test_fetch_slots():
         return httpx.Response(403, json={})
 
     client = httpx.Client(transport=httpx.MockTransport(app5))
-    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08")
+    request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-oceane-paris", "2021-05-08", center_info)
     res = fetch_slots(request, client=client)
     assert res is None
