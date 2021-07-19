@@ -38,6 +38,9 @@ class CenterInfo:
         erreur: Optional[str] = None,
         internal_id: Optional[str] = None,
         type: Optional[str] = None,
+        vaccine_type=None,
+        appointment_schedules=[],
+        appointment_count=0,
     ):
         self.departement = departement
         self.nom = nom
@@ -47,13 +50,14 @@ class CenterInfo:
         self.prochain_rdv = prochain_rdv
         self.plateforme = plateforme
         self.type = type
-        self.appointment_count = 0
+        self.appointment_count = appointment_count
         self.internal_id = internal_id
-        self.vaccine_type = None
+        self.vaccine_type = vaccine_type
         self.appointment_by_phone_only = False
         self.erreur = erreur
         self.last_scan_with_availabilities = None
         self.request_counts = None
+        self.appointment_schedules = appointment_schedules
 
     @classmethod
     def from_dict(cls, data: dict) -> CenterInfo:

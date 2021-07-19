@@ -17,8 +17,6 @@ from utils.vmd_logger import enable_logger_for_production, enable_logger_for_deb
 from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date, q_iter, EOQ, DummyQueue, BulkQueue
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
-from .export.export_merge import export_data
-from .export.export_pool import export_pool
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
 from .keldoc.keldoc import center_iterator as keldoc_centre_iterator
 from .maiia.maiia import centre_iterator as maiia_centre_iterator
@@ -83,36 +81,6 @@ def scrape(platforms=None):  # pragma: no cover
         if CRENEAUX_ENABLED:
             creneau_q.put(EOQ)
             export_process.join()
-
-        if platforms:
-            for platform in platforms:
-                compte_centres, compte_centres_avec_dispo, compte_bloqués, compte_doublons = export_pool(
-                    centres_cherchés, platform
-                )
-
-                logger.info(
-                    f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés"
-                )
-        else:
-            compte_centres, compte_centres_avec_dispo, compte_bloqués, compte_doublons = export_data(
-                centres_cherchés, []
-            )
-            logger.info(
-                f"{compte_centres_avec_dispo} centres de vaccination avaient des disponibilités sur {compte_centres} scannés"
-            )
-            if compte_centres_avec_dispo == 0:
-                logger.error(
-                    "Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur"
-                )
-                exit(code=1)
-
-            if compte_bloqués > 10:
-                logger.error(
-                    "Notre IP a été bloquée par le CDN Doctolib plus de 10 fois. Pour éviter de pousser des données erronées, on s'arrête ici"
-                )
-                exit(code=2)
-
-    logger.info(profiler.print_summary())
 
 
 def export_by_creneau(
