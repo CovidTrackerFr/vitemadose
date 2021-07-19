@@ -277,8 +277,6 @@ class Mapharma:
         request.update_appointment_schedules(appointment_schedules)
 
         if first_availability is None:
-            if self.lieu:
-                self.found_creneau(PasDeCreneau(lieu=self.lieu))
             return None
         return first_availability.isoformat()
 

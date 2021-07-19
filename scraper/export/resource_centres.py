@@ -1,17 +1,12 @@
 from datetime import datetime
-from scraper.pattern.center_info import CenterInfo
 from scraper.pattern.vaccine import Vaccine
 import dateutil
 from dateutil.tz import gettz
 from typing import Iterator, Union
 from .resource import Resource
 from utils.vmd_center_sort import sort_center
+
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
-from utils.vmd_utils import departementUtils, is_reserved_center
-from utils.vmd_blocklist import get_blocklist_urls, is_in_blocklist
-
-
-blocklist = get_blocklist_urls()
 
 
 class ResourceTousDepartements(Resource):
@@ -19,56 +14,50 @@ class ResourceTousDepartements(Resource):
         self.now = now
         self.centres_disponibles = {}
         self.centres_indisponibles = {}
-        self.centres_bloques_mais_disponibles = {}
 
     def on_creneau(self, creneau: Union[Creneau, PasDeCreneau]):
         lieu = creneau.lieu
-        centre = None
-        is_blocked_center = lambda center: (is_reserved_center(center) or is_in_blocklist(center, blocklist))
 
-        if not is_blocked_center(self.centre(lieu)):
-            if isinstance(creneau, PasDeCreneau):
-                self.centres_indisponibles[creneau.lieu.internal_id] = self.centre(lieu).default()
-                return
+        if isinstance(creneau, PasDeCreneau):
+            self.centres_indisponibles[creneau.lieu.internal_id] = self.centre(lieu)
+            return
 
-            if lieu.internal_id not in self.centres_disponibles:
-                self.centres_disponibles[lieu.internal_id] = self.centre(lieu).default()
-            centre = self.centres_disponibles[lieu.internal_id]
-        else:
-            self.centres_bloques_mais_disponibles[lieu.internal_id] = self.centre(lieu).default()
+        if lieu.internal_id not in self.centres_disponibles:
+            self.centres_disponibles[lieu.internal_id] = self.centre(lieu)
 
-        if centre is not None:
-            centre["appointment_count"] += 1
+        centre = self.centres_disponibles[lieu.internal_id]
+        centre["appointment_count"] += 1
 
-            if not centre["prochain_rdv"] or centre["prochain_rdv"] > creneau.horaire:
-                centre["prochain_rdv"] = creneau.horaire
+        if not centre["prochain_rdv"] or centre["prochain_rdv"] > creneau.horaire:
+            centre["prochain_rdv"] = creneau.horaire
 
-            if not creneau.type_vaccin:
-                return
+        if not creneau.type_vaccin:
+            return
 
-            for vaccine in creneau.type_vaccin:
-                if vaccine is not None:
-                    if isinstance(vaccine, Vaccine):
-                        vaccine = vaccine.value
-                    if not any([vaccine in one_vaccine for one_vaccine in centre["vaccine_type"]]):
-                        centre["vaccine_type"].append({vaccine: True})
+        for vaccine in creneau.type_vaccin:
+            if vaccine is not None:
+                if isinstance(vaccine, Vaccine):
+                    vaccine = vaccine.value
+                if not any([vaccine in one_vaccine for one_vaccine in centre["vaccine_type"]]):
+                    centre["vaccine_type"].append({vaccine: True})
 
     def centre(self, lieu: Lieu):
-        return CenterInfo(
-            departement=lieu.departement,
-            nom=lieu.nom,
-            url=lieu.url,
-            location=self.location_to_dict(lieu.location),
-            metadata=lieu.metadata,
-            prochain_rdv=None,
-            plateforme=lieu.plateforme.value,
-            type=lieu.lieu_type,
-            appointment_count=0,
-            internal_id=lieu.internal_id,
-            vaccine_type=[],
-            appointment_schedules=[],
-            erreur=None,
-        )
+        return {
+            "departement": lieu.departement,
+            "nom": lieu.nom,
+            "url": lieu.url,
+            "location": self.location_to_dict(lieu.location),
+            "metadata": lieu.metadata,
+            "prochain_rdv": None,
+            "plateforme": lieu.plateforme.value,
+            "type": lieu.lieu_type,
+            "appointment_count": 0,
+            "internal_id": lieu.internal_id,
+            "vaccine_type": [],
+            "appointment_schedules": [],
+            "appointment_by_phone_only": False,
+            "erreur": None,
+        }
 
     def location_to_dict(self, location):
         if not location:

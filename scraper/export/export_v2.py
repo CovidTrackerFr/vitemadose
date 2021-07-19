@@ -15,7 +15,7 @@ logger = logging.getLogger("scraper")
 
 
 class JSONExporter:
-    def __init__(self, departements=None, outpath_format="data/output/{}.json"):
+    def __init__(self, departements=None, outpath_format="data/output/v2/{}.json"):
         self.outpath_format = outpath_format
         departements = departements if departements else Departement.all()
         resources_departements = {
@@ -38,19 +38,8 @@ class JSONExporter:
             for resource in self.resources.values():
                 resource.on_creneau(creneau)
 
-        lieux_avec_dispo = len(self.resources["info_centres"].centres_disponibles)
-        lieux_sans_dispo = len(self.resources["info_centres"].centres_indisponibles)
-        lieux_bloques_mais_dispo = len(self.resources["info_centres"].centres_bloques_mais_disponibles)
-
-        logger.info(
-            f"{lieux_avec_dispo} centres ont des disponibilités sur {lieux_avec_dispo+lieux_sans_dispo} centre scannés"
-        )
-        logger.info(f"{count} créneaux dans {lieux_avec_dispo} centres")
-
-        logger.info(f"{lieux_bloques_mais_dispo} centres sont bloqués mais ont des disponibilités : ")
-        for centre_bloque in self.resources["info_centres"].centres_bloques_mais_disponibles:
-            logger.info(f"Le centre {centre_bloque} est bloqué mais a des disponibilités.")
-
+        lieux_avec_creneau = len(self.resources["info_centres"].centres_disponibles)
+        logger.info(f"Trouvé {count} créneaux dans {lieux_avec_creneau} lieux")
         for key, resource in self.resources.items():
             outfile_path = self.outpath_format.format(key)
             os.makedirs(os.path.dirname(outfile_path), exist_ok=True)

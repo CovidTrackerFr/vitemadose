@@ -93,8 +93,6 @@ class MaiiaSlots:
             center_id, start_date, reasons, client=self._client, request=request
         )
         if first_availability is None:
-            if self.lieu:
-                self.found_creneau(PasDeCreneau(lieu=self.lieu, phone_only=request.appointment_by_phone_only))
             return None
 
         for reason in reasons:
