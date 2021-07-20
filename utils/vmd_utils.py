@@ -38,6 +38,12 @@ def get_departements(excluded_departments: List[str] = []) -> List[str]:
         departements = [row["nom_departement"] for row in reader if row["nom_departement"] not in excluded_departments]
         return departements
 
+def get_departements_numbers(excluded_departments: List[str] = []) -> List[str]:
+    with open(get_conf_inputs()["departements"], encoding="utf8", newline="\n") as csvfile:
+        reader = csv.DictReader(csvfile)
+        departements = [row["code_departement"] for row in reader if row["nom_departement"] not in excluded_departments]
+        return departements
+
 
 logger = logging.getLogger("scraper")
 insee = load_insee()
