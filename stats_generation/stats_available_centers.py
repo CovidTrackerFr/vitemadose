@@ -98,7 +98,6 @@ def export_centres_stats(
 ):
     if center_data.exists():
         centres_info = get_centres_info(center_data)
-        print(centres_info["centres_disponibles"])
 
         centres_stats = {"tout_departement": {"disponibles": 0, "total": 0, "creneaux": 0}}
         tout_dep_obj = centres_stats["tout_departement"]
@@ -131,7 +130,7 @@ def export_centres_stats(
 
         available_pct = (tout_dep_obj["disponibles"] / max(1, tout_dep_obj["total"])) * 100
         logger.info(
-            "Found {0}/{1} available centers. ({2}%)".format(
+            "Found {0}/{1} available centers ({2}%)".format(
                 tout_dep_obj["disponibles"],
                 tout_dep_obj["total"],
                 round(available_pct, 2),
