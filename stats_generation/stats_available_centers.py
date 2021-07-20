@@ -98,7 +98,6 @@ def export_centres_stats(
 ):
     if center_data.exists():
         centres_info = get_centres_info(center_data)
-        print(centres_info["centres_disponibles"])
 
         centres_stats = {"tout_departement": {"disponibles": 0, "total": 0, "creneaux": 0}}
         tout_dep_obj = centres_stats["tout_departement"]
