@@ -19,9 +19,9 @@ coverage: ## reports test coverage (automatically run by `test`)
 scrape: ## runs the full scraping experience
 	scripts/scrape $(URL)
 
-#stats: ## Run the statistic scripts
-#	venv/bin/python -m stats_generation.stats_available_centers
-#	venv/bin/python -m stats_generation.by_vaccine
+stats: ## Run the statistic scripts
+	venv/bin/python -m stats_generation.stats_available_centers
+	venv/bin/python -m stats_generation.by_vaccine
 
 doctoscrap: ## Scrap all doctolib centers, output : data/output/doctolib-centers.json
 	venv/bin/python -m scraper.doctolib.doctolib_center_scrap
