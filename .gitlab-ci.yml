@@ -2,11 +2,9 @@ stages:
   - test
   - scrape
   - deploy
-
 cache:
   paths:
     - venv
-
 test:
   stage: test
   image: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/python:3.8-alpine
@@ -38,7 +36,6 @@ lister_contributeurs:
     - main
     - gitlab-publish
     - schedules
-
 trouver_les_rdv:
   stage: scrape
   image: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/python:3.8-alpine
@@ -53,6 +50,8 @@ trouver_les_rdv:
     - curl --silent --fail --head https://partners.doctolib.fr/
   script:
     - ./scripts/scrape
+    - make stats
+    - cp data/output/stats*.json data/output/departements.json data/output/v2/  # Temporary to have double run v1/v2
   artifacts:
     name: "rdv"
     paths:
@@ -61,7 +60,6 @@ trouver_les_rdv:
     - main
     - gitlab-publish
     - schedules
-
 pages:
   stage: deploy
   image: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/python:3.8-alpine
