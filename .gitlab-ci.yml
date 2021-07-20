@@ -53,7 +53,6 @@ trouver_les_rdv:
     - curl --silent --fail --head https://partners.doctolib.fr/
   script:
     - ./scripts/scrape
-    - cp data/output/departements.json data/output/  # Temporary to have double run v1/v2
   artifacts:
     name: "rdv"
     paths:
