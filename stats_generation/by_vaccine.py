@@ -15,11 +15,12 @@ python3 -m stats_generation.chronodoses_by_vaccine \
 
 """
 import argparse
+from collections import defaultdict
 import json
 import sys
 from functools import reduce
 from pathlib import Path
-from typing import Iterator, List, Tuple
+from typing import DefaultDict, Iterator, List, Tuple
 
 from utils.vmd_config import get_conf_outputs, get_conf_outstats
 
@@ -54,14 +55,16 @@ def merge(data: dict, new: tuple) -> dict:
 
 
 def flatten_vaccine_types_schedules(data: dict) -> Iterator[Tuple[str, int]]:
+    count = defaultdict(int)
+    for center in data["centres_disponibles"]:
+        for vaccine in center["vaccine_type"]:
+            for vaccine_name in vaccine.keys():
+                count[vaccine_name] += 1
     return (
-        (center["vaccine_type"][0], schedule["total"])
-        for department in data.values()
-        for center in department["centres_disponibles"]
-        for schedule in center["appointment_schedules"]
-        # Some centers report multiple vaccine types and it’s not clear how many are available for each
-        # schedulable appointment. So, for the moment, they are left out.
-        if len(center["vaccine_type"] or []) == 1
+        (vaccine_name, count[vaccine_name])
+        for center in data["centres_disponibles"]
+        for vaccine in center["vaccine_type"]
+        for vaccine_name in vaccine.keys()
     )
 
 

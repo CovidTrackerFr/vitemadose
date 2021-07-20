@@ -16,29 +16,75 @@ def test_merge():
 
 def test_flatten_vaccine_types():
     data = {
-        "01": {
-            "centres_disponibles": [
-                # Dropped because it lists multiple vaccine types.
-                {"appointment_schedules": [{"total": 10}], "vaccine_type": ["Pfizer", "Astra"]},
-                {"appointment_schedules": [{"total": 10}], "vaccine_type": ["Pfizer"]},
-            ],
-            "centres_indisponibles": [
-                {"vaccine_type": ["Pfizer"]},
-                {"vaccine_type": ["Astra"]},
-            ],
-        },
-        "02": {
-            "centres_disponibles": [
-                {"appointment_schedules": [{"total": 10}], "vaccine_type": ["Pfizer"]},
-                {"appointment_schedules": [{"total": 100}], "vaccine_type": ["Astra"]},
-            ],
-            "centres_indisponibles": [],
-        },
-        "03": {
-            "centres_disponibles": [],
-            "centres_indisponibles": [],
-        },
+        "version": 1,
+        "last_updated": "2021-07-19T23:02:28+02:00",
+        "centres_disponibles": [
+            {
+                "departement": "75",
+                "nom": "Pharmacie Bassereau",
+                "url": "https://www.maiia.com/pharmacie/75017-paris/pharmacie-bassereau?centerid=604b186665d8f5139d42dc21",
+                "location": {"longitude": 2.317913, "latitude": 48.886224, "city": "Paris", "cp": "75017"},
+                "metadata": {
+                    "address": "70 Rue Legendre 75017 Paris",
+                    "business_hours": {
+                        "Lundi": "09:20-20:00",
+                        "Mardi": "09:20-20:00",
+                        "Mercredi": "09:20-20:00",
+                        "Jeudi": "09:20-20:00",
+                        "Vendredi": "09:20-20:00",
+                        "Samedi": "09:20-20:00",
+                        "Dimanche": "09:20-20:00",
+                    },
+                },
+                "prochain_rdv": "2021-07-20T07:00:00+00:00",
+                "plateforme": "Maiia",
+                "type": "drugstore",
+                "appointment_count": 7,
+                "internal_id": "maiia604b1866",
+                "vaccine_type": [{"Janssen": True}],
+                "appointment_by_phone_only": False,
+                "erreur": None,
+                "last_scan_with_availabilities": None,
+                "request_counts": None,
+                "appointment_schedules": [],
+            },
+            {
+                "departement": "94",
+                "nom": "Centre de vaccination - CHI de Villeneuve-Saint-Georges",
+                "url": "https://www.maiia.com/centre-de-vaccination/94190-villeneuve-saint-georges/centre-de-vaccination---chi-de-villeneuve-saint-georges?centerid=6001704008fa3a60d6d1b0aa",
+                "location": {
+                    "longitude": 2.450239,
+                    "latitude": 48.723306,
+                    "city": "Villeneuve-Saint-Georges",
+                    "cp": "94190",
+                },
+                "metadata": {
+                    "address": "40 Allée de la Source 94190 Villeneuve-Saint-Georges",
+                    "business_hours": {
+                        "Lundi": "09:00-16:30",
+                        "Mardi": "09:00-16:30",
+                        "Mercredi": "09:00-16:30",
+                        "Jeudi": "09:00-16:30",
+                        "Vendredi": "09:00-16:30",
+                        "Samedi": "09:00-16:30",
+                        "Dimanche": "09:00-16:30",
+                    },
+                    "phone_number": "+33143862150",
+                },
+                "prochain_rdv": "2021-07-20T07:10:00+00:00",
+                "plateforme": "Maiia",
+                "type": "vaccination-center",
+                "appointment_count": 650,
+                "internal_id": "maiia60017040",
+                "vaccine_type": [{"Pfizer-BioNTech": True}],
+                "appointment_by_phone_only": False,
+                "erreur": None,
+                "last_scan_with_availabilities": None,
+                "request_counts": None,
+                "appointment_schedules": [],
+            },
+        ],
     }
     flattened = list(by_vaccine.flatten_vaccine_types_schedules(data))
-    assert flattened == [("Pfizer", 10), ("Pfizer", 10), ("Astra", 100)]
-    assert reduce(by_vaccine.merge, flattened, {}) == {"Astra": 100, "Pfizer": 20}
+    assert flattened == [("Janssen", 1), ("Pfizer-BioNTech", 1)]
+    assert reduce(by_vaccine.merge, flattened, {}) == {"Janssen": 1, "Pfizer-BioNTech": 1}
