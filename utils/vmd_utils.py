@@ -38,6 +38,7 @@ def get_departements(excluded_departments: List[str] = []) -> List[str]:
         departements = [row["nom_departement"] for row in reader if row["nom_departement"] not in excluded_departments]
         return departements
 
+
 def get_departements_numbers(excluded_departments: List[str] = []) -> List[str]:
     with open(get_conf_inputs()["departements"], encoding="utf8", newline="\n") as csvfile:
         reader = csv.DictReader(csvfile)
@@ -247,11 +248,13 @@ def get_last_scans(centres):
     except Exception as e:
         logger.warning(f"Impossible de récupérer le fichier info_centres: {e}")
         info_centres = {}
+    for centre in info_centres["centres_disponibles"]:
+        if "last_scan_with_availabilities" in centre:
+            last_scans[centre["url"]] = centre["last_scan_with_availabilities"]
 
-    for last_centres in info_centres.values():
-        for centre in last_centres["centres_disponibles"] + last_centres["centres_indisponibles"]:
-            if "last_scan_with_availabilities" in centre:
-                last_scans[centre["url"]] = centre["last_scan_with_availabilities"]
+    for centre in info_centres["centres_disponibles"]:
+        if "last_scan_with_availabilities" in centre:
+            last_scans[centre["url"]] = centre["last_scan_with_availabilities"]
 
     for centre in liste_centres:
         if not centre.prochain_rdv:
