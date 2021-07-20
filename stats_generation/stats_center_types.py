@@ -15,41 +15,36 @@ DATA_AUTO = get_conf_outstats().get("data-auto")
 def compute_plateforme_data(centres_info):
     plateformes = {}
     center_types = {}
+    for centre_dispo in centres_info["centres_disponibles"]:
 
-    for dep in centres_info:
-        dep_data = centres_info[dep]
-        centers = dep_data.get("centres_disponibles", {})
-        centers.extend(dep_data.get("centres_indisponibles", {}))
-        for centre_dispo in centers:
+        plateforme = centre_dispo["plateforme"]
+        if not plateforme:
+            plateforme = "Autre"
 
-            plateforme = centre_dispo["plateforme"]
-            if not plateforme:
-                plateforme = "Autre"
+        center_type = centre_dispo["type"]
+        if not center_type:
+            center_type = "Autre"
 
-            center_type = centre_dispo["type"]
-            if not center_type:
-                center_type = "Autre"
+        next_app = centre_dispo.get("prochain_rdv", None)
+        if plateforme not in plateformes:
+            plateforme_data = {"disponible": 0, "total": 0, "creneaux": 0}
+        else:
+            plateforme_data = plateformes[plateforme]
 
-            next_app = centre_dispo.get("prochain_rdv", None)
-            if plateforme not in plateformes:
-                plateforme_data = {"disponible": 0, "total": 0, "creneaux": 0}
-            else:
-                plateforme_data = plateformes[plateforme]
+        if center_type not in center_types:
+            center_type_data = {"disponible": 0, "total": 0, "creneaux": 0}
+        else:
+            center_type_data = center_types[center_type]
 
-            if center_type not in center_types:
-                center_type_data = {"disponible": 0, "total": 0, "creneaux": 0}
-            else:
-                center_type_data = center_types[center_type]
+        plateforme_data["disponible"] += 1 if next_app else 0
+        plateforme_data["total"] += 1
+        plateforme_data["creneaux"] += centre_dispo.get("appointment_count", 0)
+        plateformes[plateforme] = plateforme_data
 
-            plateforme_data["disponible"] += 1 if next_app else 0
-            plateforme_data["total"] += 1
-            plateforme_data["creneaux"] += centre_dispo.get("appointment_count", 0)
-            plateformes[plateforme] = plateforme_data
-
-            center_type_data["disponible"] += 1 if next_app else 0
-            center_type_data["total"] += 1
-            center_type_data["creneaux"] += centre_dispo.get("appointment_count", 0)
-            center_types[center_type] = center_type_data
+        center_type_data["disponible"] += 1 if next_app else 0
+        center_type_data["total"] += 1
+        center_type_data["creneaux"] += centre_dispo.get("appointment_count", 0)
+        center_types[center_type] = center_type_data
 
     return plateformes, center_types
 
