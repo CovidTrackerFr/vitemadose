@@ -57,9 +57,8 @@ def merge(data: dict, new: tuple) -> dict:
 def flatten_vaccine_types_schedules(data: dict) -> Iterator[Tuple[str, int]]:
     count = defaultdict(int)
     for center in data["centres_disponibles"]:
-        for vaccine in center["vaccine_type"]:
-            for vaccine_name in vaccine.keys():
-                count[vaccine_name] += 1
+        for vaccine_name in center["vaccine_type"]:
+           Vcount[vaccine_name] += 1
     return (
         (vaccine_name, count[vaccine_name])
         for center in data["centres_disponibles"]
