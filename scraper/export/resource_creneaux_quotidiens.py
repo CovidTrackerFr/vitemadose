@@ -5,7 +5,7 @@ from typing import Iterator, Union
 from .resource import Resource
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 
-DEFAULT_NEXT_DAYS = 7
+DEFAULT_NEXT_DAYS = 14
 DEFAULT_TAGS = {"all": lambda creneau: True}
 
 
