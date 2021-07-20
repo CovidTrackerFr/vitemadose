@@ -419,6 +419,8 @@ class AvecmonDoc:
             if first_availability is None or first_availability > date:
                 first_availability = date
         if first_availability is None:
+            if self.lieu:
+                self.found_creneau(PasDeCreneau(lieu=self.lieu, phone_only=request.appointment_by_phone_only))
             return None
         return first_availability.isoformat()
 

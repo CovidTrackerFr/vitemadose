@@ -51,7 +51,8 @@ def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue()):
     # Find the first availability
     date, count, appointment_schedules = center.find_first_availability(request.get_start_date())
     if not date and center.lieu:
-        center.found_creneau(PasDeCreneau(lieu=center.lieu))
+        if center.lieu:
+            center.found_creneau(PasDeCreneau(lieu=center.lieu, phone_only=request.appointment_by_phone_only))
         request.update_appointment_count(0)
         return None
 
