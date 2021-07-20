@@ -73,7 +73,6 @@ def generate_stats_dep_date(centres_stats):
             json.dump(stats_data, stat_graph_file)
         logger.info(f"Stats file already updated: {stats_path}")
         return
-    stats_data["dates"].append(current_time)
 
     for dep in centres_stats:
         if dep == "tout_departement":
@@ -97,27 +96,38 @@ def generate_stats_dep_date(centres_stats):
 def export_centres_stats(
     center_data=Path(get_conf_outputs().get("last_scans")), stats_path=get_conf_outstats().get("global")
 ):
-
     if center_data.exists():
         centres_info = get_centres_info(center_data)
+        print(centres_info["centres_disponibles"])
+
         centres_stats = {"tout_departement": {"disponibles": 0, "total": 0, "creneaux": 0}}
-
         tout_dep_obj = centres_stats["tout_departement"]
+        nombre_disponibles = len(centres_info["centres_disponibles"])
+        count = len(centres_info["centres_indisponibles"]) + nombre_disponibles
+        creneaux = sum([center.get("appointment_count", 0) for center in centres_info["centres_disponibles"]])
 
-        for dep_code, dep_value in centres_info.items():
-            nombre_disponibles = len(dep_value["centres_disponibles"])
-            count = len(dep_value["centres_indisponibles"]) + nombre_disponibles
-            creneaux = sum([center.get("appointment_count", 0) for center in dep_value["centres_disponibles"]])
+        for centre in centres_info["centres_disponibles"]:
+            if not centre["departement"] in centres_stats.keys():
+                centres_stats[centre["departement"]] = {"disponibles": 0, "indisponibles": 0, "creneaux": 0, "total": 0}
+            centres_stats[centre["departement"]]["disponibles"] += 1
+            centres_stats[centre["departement"]]["total"] += 1
+            centres_stats[centre["departement"]]["creneaux"] += sum(
+                [
+                    center.get("appointment_count", 0)
+                    for center in centres_info["centres_disponibles"]
+                    if centre["departement"] == center["departement"]
+                ]
+            )
 
-            centres_stats[dep_code] = {
-                "disponibles": nombre_disponibles,
-                "total": count,
-                "creneaux": creneaux,
-            }
+        for centre in centres_info["centres_indisponibles"]:
+            if not centre["departement"] in centres_stats.keys():
+                centres_stats[centre["departement"]] = {"disponibles": 0, "indisponibles": 0, "creneaux": 0, "total": 0}
+            centres_stats[centre["departement"]]["indisponibles"] += 1
+            centres_stats[centre["departement"]]["total"] += 1
 
-            tout_dep_obj["disponibles"] += nombre_disponibles
-            tout_dep_obj["total"] += count
-            tout_dep_obj["creneaux"] += creneaux
+        tout_dep_obj["disponibles"] = nombre_disponibles
+        tout_dep_obj["total"] = count
+        tout_dep_obj["creneaux"] = creneaux
 
         available_pct = (tout_dep_obj["disponibles"] / max(1, tout_dep_obj["total"])) * 100
         logger.info(
@@ -127,6 +137,7 @@ def export_centres_stats(
                 round(available_pct, 2),
             )
         )
+
         with open(Path("data", "output", stats_path), "w") as stats_file:
             json.dump(centres_stats, stats_file, indent=2)
         if stats_path != get_conf_outstats().get("global"):
