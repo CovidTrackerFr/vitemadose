@@ -51,7 +51,6 @@ trouver_les_rdv:
   script:
     - ./scripts/scrape
     - make stats
-    - cp data/output/stats*.json data/output/departements.json 
   artifacts:
     name: "rdv"
     paths:
