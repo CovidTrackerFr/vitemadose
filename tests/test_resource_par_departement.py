@@ -77,7 +77,7 @@ def test_resource_par_departement__1_creneau():
                 "appointment_count": 1,
                 "appointment_schedules": [],
                 "internal_id": "maiia5fff1f61b1a1aa1cc204f203",
-                "vaccine_type": [{"Moderna": True}],
+                "vaccine_type": ["Moderna"],
                 "appointment_by_phone_only": False,
                 "erreur": None,
             }
@@ -168,7 +168,7 @@ def test_resource_par_departement__3_creneau():
                 "appointment_count": 3,
                 "appointment_schedules": [],
                 "internal_id": "maiia5fff1f61b1a1aa1cc204f203",
-                "vaccine_type": [{"Moderna": True}, {"Pfizer-BioNTech": True}],
+                "vaccine_type": ["Moderna", "Pfizer-BioNTech"],
                 "appointment_by_phone_only": False,
                 "erreur": None,
             }
