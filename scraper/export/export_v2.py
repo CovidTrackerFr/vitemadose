@@ -42,6 +42,12 @@ class JSONExporter:
         lieux_sans_dispo = len(self.resources["info_centres"].centres_indisponibles)
         lieux_bloques_mais_dispo = len(self.resources["info_centres"].centres_bloques_mais_disponibles)
 
+        if lieux_avec_dispo == 0:
+            logger.error(
+                "Aucune disponibilité n'a été trouvée sur aucun centre, c'est bizarre, alors c'est probablement une erreur"
+            )
+            exit(code=1)
+
         logger.info(
             f"{lieux_avec_dispo} centres ont des disponibilités sur {lieux_avec_dispo+lieux_sans_dispo} centre scannés"
         )
