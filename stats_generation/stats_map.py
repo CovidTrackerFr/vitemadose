@@ -1,4 +1,3 @@
-from collections import defaultdict
 import io
 import csv
 import httpx
@@ -10,7 +9,6 @@ from pathlib import Path
 
 from utils.vmd_config import get_conf_inputs
 from utils.vmd_logger import enable_logger_for_debug
-from utils.vmd_utils import get_departements_numbers
 
 timeout = httpx.Timeout(30.0, connect=30.0)
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
@@ -213,36 +211,21 @@ def make_maps(info_centres: dict):
         dept_rdv[code_departement][date_debut_semaine]["rdv_pris"] += rdv_pris
 
     stats = {}
-    centres_total = defaultdict(int)
-    centres_disponibles = defaultdict(int)
-    creneaux_disponibles = defaultdict(int)
 
-    for centre in info_centres["centres_disponibles"]:
-        centres_disponibles[centre["departement"]] += 1
-        centres_total[centre["departement"]] += 1
-        creneaux_disponibles[centre["departement"]] += sum(
-            [
-                center.get("appointment_count", 0)
-                for center in info_centres["centres_disponibles"]
-                if centre["departement"] == center["departement"]
-            ]
-        )
-    # for dept, info_centres_dept in info_centres.items():
-    #     stats[dept] = {}
-    #     centres_disponibles = 0
-    #     centres_total = 0
-    #     creneaux_disponibles = 0
-    #     for centre_disponible in info_centres_dept.get("centres_disponibles", []):
-    #         centres_disponibles += 1
-    #         creneaux_disponibles += centre_disponible["appointment_count"]
-    #     centres_total = centres_disponibles
-    #     centres_total += len(info_centres_dept.get("centres_indisponibles", []))
-    depts = get_departements_numbers()
-    for dept in depts:
+    for dept, info_centres_dept in info_centres.items():
+        stats[dept] = {}
+        centres_disponibles = 0
+        centres_total = 0
+        creneaux_disponibles = 0
+        for centre_disponible in info_centres_dept.get("centres_disponibles", []):
+            centres_disponibles += 1
+            creneaux_disponibles += centre_disponible["appointment_count"]
+        centres_total = centres_disponibles
+        centres_total += len(info_centres_dept.get("centres_indisponibles", []))
         stats[dept] = {
-            "disponibles": centres_disponibles[dept],
-            "total": centres_total[dept],
-            "creneaux": creneaux_disponibles[dept],
+            "disponibles": centres_disponibles,
+            "total": centres_total,
+            "creneaux": creneaux_disponibles,
             "population": dept_pop.get(dept, 0),
         }
 
