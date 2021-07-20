@@ -18,6 +18,6 @@ def test_stat_count():
     output_file.close()
 
     stats = json.loads(generated_content)
-    assert stats["tout_departement"]["disponibles"] == 2
-    assert stats["tout_departement"]["total"] == 4
+    assert stats["tout_departement"]["disponibles"] == 280
+    assert stats["tout_departement"]["total"] == 2291
     os.remove(f"data/output/{output_file_name}")
