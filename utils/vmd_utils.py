@@ -248,11 +248,8 @@ def get_last_scans(centres):
     except Exception as e:
         logger.warning(f"Impossible de récupérer le fichier info_centres: {e}")
         info_centres = {}
-    for centre in info_centres["centres_disponibles"]:
-        if "last_scan_with_availabilities" in centre:
-            last_scans[centre["url"]] = centre["last_scan_with_availabilities"]
 
-    for centre in info_centres["centres_disponibles"]:
+    for centre in info_centres["centres_disponibles"] + info_centres["centres_indisponibles"]:
         if "last_scan_with_availabilities" in centre:
             last_scans[centre["url"]] = centre["last_scan_with_availabilities"]
 
@@ -262,7 +259,6 @@ def get_last_scans(centres):
                 centre.last_scan_with_availabilities = last_scans[centre.url]
         else:
             centre.last_scan_with_availabilities = dt.datetime.now(tz=pytz.timezone("Europe/Paris")).isoformat()
-
     return liste_centres
 
 

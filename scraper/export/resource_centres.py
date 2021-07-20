@@ -51,7 +51,7 @@ class ResourceTousDepartements(Resource):
                     if isinstance(vaccine, Vaccine):
                         vaccine = vaccine.value
                     if not any([vaccine in one_vaccine for one_vaccine in centre["vaccine_type"]]):
-                        centre["vaccine_type"].append({vaccine: True})
+                        centre["vaccine_type"].append(vaccine)
 
     def centre(self, lieu: Lieu):
         return CenterInfo(
