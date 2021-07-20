@@ -9,7 +9,7 @@ from utils.vmd_center_sort import sort_center
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 from utils.vmd_utils import departementUtils, is_reserved_center
 from utils.vmd_blocklist import get_blocklist_urls, is_in_blocklist
-
+import pytz
 
 blocklist = get_blocklist_urls()
 
