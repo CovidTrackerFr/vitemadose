@@ -83,7 +83,7 @@ class ResourceTousDepartements(Resource):
     def asdict(self):
         return {
             "version": 1,
-            "last_updated": self.now(tz=gettz()).replace(microsecond=0).isoformat(),
+            "last_updated": self.now(tz=pytz.timezone("Europe/Paris")).replace(microsecond=0).isoformat(),
             "centres_disponibles": sorted(
                 [self.centre_asdict(c) for c in self.centres_disponibles.values()], key=sort_center
             ),
