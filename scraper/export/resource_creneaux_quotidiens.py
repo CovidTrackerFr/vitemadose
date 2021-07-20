@@ -4,8 +4,10 @@ from datetime import datetime, timedelta
 from typing import Iterator, Union
 from .resource import Resource
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
+from utils.vmd_config import get_config
 
-DEFAULT_NEXT_DAYS = 14
+DEFAULT_NEXT_DAYS = get_config().get("scrape_on_n_days", 7)
+
 DEFAULT_TAGS = {"all": lambda creneau: True}
 
 
