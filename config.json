@@ -189,7 +189,7 @@
       }
     },
     "keldoc": {
-      "enabled": false,
+      "enabled": true,
       "timeout": 40,
       "recognized_urls": [
         "https://vaccination-covid.keldoc.com",
@@ -212,15 +212,13 @@
         "appointment_speciality_urls": [
           "maladies-infectieuses",
           "vaccination-covid-19",
-          "vaccination-covid19",
-          "infectiologue",
-          "infirmier"
+          "vaccination-covid19"
         ],
         "appointment_speciality": [
           "Maladies infectieuses",
           "COVID19 - Vaccination"
         ],
-        "vaccination_speciality_ids":["144","496","153","47"],
+        "vaccination_speciality_ids":["144","496"],
         "appointment_skill": [
           "Centre de vaccination COVID-19"
         ],
