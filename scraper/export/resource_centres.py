@@ -10,6 +10,7 @@ from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 from utils.vmd_utils import departementUtils, is_reserved_center
 from utils.vmd_blocklist import get_blocklist_urls, is_in_blocklist
 import pytz
+from scraper.creneaux.creneau import Plateforme
 
 blocklist = get_blocklist_urls()
 
@@ -20,11 +21,17 @@ class ResourceTousDepartements(Resource):
         self.centres_disponibles = {}
         self.centres_indisponibles = {}
         self.centres_bloques_mais_disponibles = {}
+        self.opendata = []
 
     def on_creneau(self, creneau: Union[Creneau, PasDeCreneau]):
         lieu = creneau.lieu
         centre = None
         is_blocked_center = lambda center: (is_reserved_center(center) or is_in_blocklist(center, blocklist))
+
+        if not any(centre_opendata["url"] == lieu.url for centre_opendata in self.opendata):
+            self.opendata.append(
+                {"departement": lieu.departement, "plateforme": lieu.plateforme.value, "nom": lieu.nom, "url": lieu.url}
+            )
 
         if not is_blocked_center(self.centre(lieu)):
             if isinstance(creneau, PasDeCreneau):

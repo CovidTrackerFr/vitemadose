@@ -25,7 +25,8 @@
       "center_types": "stats_center_types.json",
       "global": "stats.json"
     },
-    "last_scans": "data/output/info_centres.json"
+    "last_scans": "data/output/info_centres.json",
+    "data_gouv" : "data/output/centres_open_data.json"
   },
   "scrape": {
     "pool_size": 50,
