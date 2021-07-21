@@ -9,7 +9,7 @@ import logging
 from typing import Iterator
 from dataclasses import dataclass
 import sys
-
+from utils.vmd_config import get_conf_outputs
 
 logger = logging.getLogger("scraper")
 
@@ -63,6 +63,10 @@ class JSONExporter:
             with open(outfile_path, "w") as outfile:
                 logger.debug(f"Writing file {outfile_path}")
                 json.dump(resource.asdict(), outfile, indent=2)
+
+        with open(get_conf_outputs().get("data_gouv"), "w") as outfile:
+            logger.debug(f'Writing file {get_conf_outputs().get("data_gouv")}')
+            json.dump(self.resources["info_centres"].opendata, outfile, indent=2)
 
 
 @dataclass
