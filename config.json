@@ -189,7 +189,7 @@
       }
     },
     "keldoc": {
-      "enabled": true,
+      "enabled": false,
       "timeout": 40,
       "recognized_urls": [
         "https://vaccination-covid.keldoc.com",
@@ -274,7 +274,7 @@
       "missing_deps":["la-reunion-97", "haute-garonne", "ille-et-villaine", "---"]
     },
     "maiia": {
-      "enabled": true,
+      "enabled": false,
       "timeout": 30,
       "base_url": "https://www.maiia.com",
       "recognized_urls": [
