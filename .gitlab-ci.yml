@@ -1,5 +1,4 @@
 stages:
-  - test
   - scrape
   - deploy
 cache:
