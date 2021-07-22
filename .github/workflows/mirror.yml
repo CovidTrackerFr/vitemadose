@@ -34,9 +34,7 @@ jobs:
 
       name: "Push On Gitlab"
       runs-on: "ubuntu-20.04"
-      deploy: 
-        needs: test
-
+ 
       steps:
         - uses: "actions/checkout@v2"
           with:
