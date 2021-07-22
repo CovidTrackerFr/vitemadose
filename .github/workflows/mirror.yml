@@ -30,23 +30,23 @@ jobs:
         with:
           fail_ci_if_error: true
 
-    push_gitlab:
+  push_gitlab:
 
-        name: "Push On Gitlab"
-        runs-on: "ubuntu-20.04"
-        deploy: 
-          needs: test
+      name: "Push On Gitlab"
+      runs-on: "ubuntu-20.04"
+      deploy: 
+        needs: test
 
-        steps:
-          - uses: "actions/checkout@v2"
-            with:
-              ref: main
-              fetch-depth: 0
-          - name: "Mirror to Gitlab.com"
-            shell: bash
-            env:
-              GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
-            run: |
-              git push "https://vitemadose-github:${GITLAB_TOKEN}@gitlab.com/ViteMaDose/vitemadose.git" main --force
+      steps:
+        - uses: "actions/checkout@v2"
+          with:
+            ref: main
+            fetch-depth: 0
+        - name: "Mirror to Gitlab.com"
+          shell: bash
+          env:
+            GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+          run: |
+            git push "https://vitemadose-github:${GITLAB_TOKEN}@gitlab.com/ViteMaDose/vitemadose.git" main --force
 
 
