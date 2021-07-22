@@ -21,12 +21,16 @@ jobs:
         run: scripts/test
       - name: "List all contributors"
         run: scripts/contributors
+        continue-on-error: true 
       - name: "Install coverage badge"
         run: pip install pytest coverage coverage-badge
+        continue-on-error: true 
       - name: "Generate coverage badge"
         run: coverage-badge
+        continue-on-error: true 
       - name: "Upload coverage to Codecov"
         uses: codecov/codecov-action@v1
+        continue-on-error: true 
         with:
           fail_ci_if_error: true
 
