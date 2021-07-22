@@ -1,28 +1,52 @@
----
-name: Push Gitlab
+name: Test then Push Gitlab
 
 on:
   push:
     branches: ["main"]
-  workflow_dispatch:
+  pull_request:
+    branches: ["main"]
 
 jobs:
-
-  push_gitlab:
-
-    name: "Push On Gitlab"
-
+  test:
+    name: "Test"
     runs-on: "ubuntu-20.04"
-
     steps:
       - uses: "actions/checkout@v2"
+      - uses: "actions/setup-python@v2"
         with:
-          ref: main
-          fetch-depth: 0
-      - name: "Mirror to Gitlab.com"
-        shell: bash
-        env:
-          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
-        run: |
-          git push "https://vitemadose-github:${GITLAB_TOKEN}@gitlab.com/ViteMaDose/vitemadose.git" main --force
+          python-version: "3.8"
+      - name: "Install dependencies"
+        run: scripts/install
+      - name: "Run tests"
+        run: scripts/test
+      - name: "List all contributors"
+        run: scripts/contributors
+      - name: "Install coverage badge"
+        run: pip install pytest coverage coverage-badge
+      - name: "Generate coverage badge"
+        run: coverage-badge
+      - name: "Upload coverage to Codecov"
+        uses: codecov/codecov-action@v1
+        with:
+          fail_ci_if_error: true
+
+    push_gitlab:
+
+        name: "Push On Gitlab"
+        runs-on: "ubuntu-20.04"
+        deploy: 
+          needs: test
+
+        steps:
+          - uses: "actions/checkout@v2"
+            with:
+              ref: main
+              fetch-depth: 0
+          - name: "Mirror to Gitlab.com"
+            shell: bash
+            env:
+              GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+            run: |
+              git push "https://vitemadose-github:${GITLAB_TOKEN}@gitlab.com/ViteMaDose/vitemadose.git" main --force
+
 
