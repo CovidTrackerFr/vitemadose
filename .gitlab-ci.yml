@@ -1,4 +1,5 @@
 stages:
+  - test
   - scrape
   - deploy
 cache:
@@ -12,11 +13,10 @@ test:
     - ./scripts/install
   script:
     - ./scripts/test
-  only:
-    - branches
   except:
     - schedules
     - triggers
+    - branches
 
 lister_contributeurs:
   stage: scrape
