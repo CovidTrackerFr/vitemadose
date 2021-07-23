@@ -15,7 +15,7 @@ DATA_AUTO = get_conf_outstats().get("data-auto")
 def compute_plateforme_data(centres_info):
     plateformes = {}
     center_types = {}
-    for centre_dispo in centres_info["centres_disponibles"]:
+    for centre_dispo in centres_info["centres_disponibles"] + centres_info["centres_indisponibles"]:
 
         plateforme = centre_dispo["plateforme"]
         if not plateforme:
