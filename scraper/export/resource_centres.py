@@ -73,7 +73,6 @@ class ResourceTousDepartements(Resource):
             appointment_count=0,
             internal_id=lieu.internal_id,
             vaccine_type=[],
-            appointment_schedules=[],
             erreur=None,
         )
 

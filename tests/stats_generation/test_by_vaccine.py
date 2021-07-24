@@ -46,7 +46,6 @@ def test_flatten_vaccine_types():
                 "erreur": None,
                 "last_scan_with_availabilities": None,
                 "request_counts": None,
-                "appointment_schedules": [],
             },
             {
                 "departement": "94",
@@ -81,7 +80,6 @@ def test_flatten_vaccine_types():
                 "erreur": None,
                 "last_scan_with_availabilities": None,
                 "request_counts": None,
-                "appointment_schedules": [],
             },
         ],
     }

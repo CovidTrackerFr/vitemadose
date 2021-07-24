@@ -11,7 +11,6 @@ from urllib import parse as urlparse
 from urllib.parse import quote, parse_qs
 from typing import List, Optional, Tuple
 from scraper.profiler import Profiling
-from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
 from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT, DEFAULT_CLIENT
@@ -89,7 +88,7 @@ class MaiiaSlots:
             lieu_type=request.practitioner_type,
             metadata=request.center_info.metadata,
         )
-        first_availability, slots_count, appointment_schedules = self.get_first_availability(
+        first_availability, slots_count = self.get_first_availability(
             center_id, start_date, reasons, client=self._client, request=request
         )
         if first_availability is None:
@@ -101,7 +100,6 @@ class MaiiaSlots:
             request.add_vaccine_type(get_vaccine_name(reason["name"]))
         request.update_internal_id(f"maiia{center_id}")
         request.update_appointment_count(slots_count)
-        request.update_appointment_schedules(appointment_schedules)
         return first_availability.isoformat()
 
     def parse_slots(self, slots: list, request: ScraperRequest) -> Optional[dt.datetime]:
@@ -208,19 +206,12 @@ class MaiiaSlots:
         reasons: List[dict],
         client: httpx.Client = DEFAULT_CLIENT,
         request: ScraperRequest = None,
-        lieu=None,
     ) -> Tuple[Optional[dt.datetime], int, dict]:
         date = isoparse(request_date).replace(tzinfo=None)
         start_date = date.isoformat()
         end_date = (date + dt.timedelta(days=MAIIA_DAY_LIMIT)).isoformat()
         first_availability = None
         slots_count = 0
-        appointment_schedules = []
-        counts = {}
-        counts["chronodose"] = 0
-        for n in INTERVAL_SPLIT_DAYS:
-            counts[f"{n}_days"] = 0
-        datenow = dt.datetime.now()
         for consultation_reason in reasons:
             consultation_reason_name_quote = quote(consultation_reason.get("name"), "")
             if "injectionType" in consultation_reason and consultation_reason["injectionType"] in ["FIRST"]:
@@ -230,37 +221,13 @@ class MaiiaSlots:
                 if slots:
                     for slot in slots:
                         slot["vaccine_type"] = get_vaccine_name(consultation_reason.get("name"))
-
                 slot_availability = self.parse_slots(slots, request)
                 if slot_availability is None:
                     continue
-                for n in (
-                    INTERVAL_SPLIT_DAY
-                    for INTERVAL_SPLIT_DAY in INTERVAL_SPLIT_DAYS
-                    if INTERVAL_SPLIT_DAY <= MAIIA_DAY_LIMIT
-                ):
-                    n_date = (isoparse(start_date) + dt.timedelta(days=n, seconds=-1)).isoformat()
-                    counts[f"{n}_days"] += self.count_slots(slots, start_date, n_date)
                 slots_count += len(slots)
-                if get_vaccine_name(consultation_reason["name"]) in CHRONODOSES["Vaccine"]:
-                    current_date = (paris_tz.localize(datenow + dt.timedelta(days=0))).isoformat()
-                    n_date = (datenow + dt.timedelta(days=1, seconds=-1)).isoformat()
-                    counts["chronodose"] += self.count_slots(slots, current_date, n_date)
                 if first_availability == None or slot_availability < first_availability:
                     first_availability = slot_availability
-        current_date = (paris_tz.localize(datenow + dt.timedelta(days=0))).isoformat()
-        start_date = (paris_tz.localize(date)).isoformat()
-        n_date = (paris_tz.localize(datenow + dt.timedelta(days=1, seconds=-1))).isoformat()
-        appointment_schedules.append(
-            {"name": "chronodose", "from": current_date, "to": n_date, "total": counts["chronodose"]}
-        )
-        for n in INTERVAL_SPLIT_DAYS:
-            n_date = (paris_tz.localize(date + dt.timedelta(days=n, seconds=-1))).isoformat()
-            appointment_schedules.append(
-                {"name": f"{n}_days", "from": start_date, "to": n_date, "total": counts[f"{n}_days"]}
-            )
-        logger.debug(f"appointment_schedules: {appointment_schedules}")
-        return first_availability, slots_count, appointment_schedules
+        return first_availability, slots_count
 
 
 def get_reasons(
