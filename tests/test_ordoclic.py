@@ -7,7 +7,7 @@ from dateutil.parser import isoparse
 from jsonschema import validate
 from scraper.pattern.vaccine import Vaccine
 
-from scraper.ordoclic import (
+from scraper.ordoclic.ordoclic import (
     OrdoclicSlots,
     search,
     get_reasons,
