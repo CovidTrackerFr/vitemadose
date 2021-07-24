@@ -13,7 +13,6 @@ from typing import Optional
 
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
-from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
 from scraper.pattern.vaccine import get_vaccine_name
 from utils.vmd_config import get_conf_platform
 from scraper.profiler import Profiling
@@ -252,29 +251,6 @@ class Mapharma:
         request.update_appointment_count(slot_count)
         request.update_practitioner_type(DRUG_STORE)
         request.add_vaccine_type(get_vaccine_name(campagne["nom"]))
-
-        appointment_schedules = []
-        s_date = paris_tz.localize(isoparse(request.get_start_date()) + timedelta(days=0))
-        n_date = s_date + timedelta(days=CHRONODOSES["Interval"], seconds=-1)
-        chronodoses = 0
-        if get_vaccine_name(campagne["nom"]) in CHRONODOSES["Vaccine"]:
-            chronodoses = self.count_appointements(day_slots, s_date, n_date)
-        appointment_schedules.append(
-            {"name": "chronodose", "from": s_date.isoformat(), "to": n_date.isoformat(), "total": chronodoses}
-        )
-        for n in INTERVAL_SPLIT_DAYS:
-            n_date = s_date + timedelta(days=n, seconds=-1)
-            appointment_schedules.append(
-                {
-                    "name": f"{n}_days",
-                    "from": s_date.isoformat(),
-                    "to": n_date.isoformat(),
-                    "total": self.count_appointements(day_slots, s_date, n_date),
-                }
-            )
-
-        logger.debug(f"appointment_schedules: {appointment_schedules}")
-        request.update_appointment_schedules(appointment_schedules)
 
         if first_availability is None:
             if self.lieu:

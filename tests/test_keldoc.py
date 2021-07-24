@@ -95,21 +95,13 @@ def test_keldoc_parse_center():
     # Find first availability date
     fake_now = dt.datetime(2020, 4, 4, 8, 15)
     with mock_datetime_now(fake_now):
-        date, count, appointment_schedules = test_center_1.find_first_availability("2020-04-04")
+        date, count = test_center_1.find_first_availability("2020-04-04")
     assert not date
     test_center_1.vaccine_motives = motives
     with mock_datetime_now(fake_now):
-        date, count, appointment_schedules = test_center_1.find_first_availability("2020-04-04")
+        date, count = test_center_1.find_first_availability("2020-04-04")
     tz = datetime.timezone(datetime.timedelta(seconds=7200))
     assert date == datetime.datetime(2021, 4, 20, 16, 55, tzinfo=tz)
-    assert appointment_schedules == [
-        {"name": "chronodose", "from": "2020-04-04T08:15:00+02:00", "to": "2020-04-05T08:14:59+02:00", "total": 0},
-        {"name": "1_days", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-04T23:59:59+02:00", "total": 0},
-        {"name": "2_days", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-05T23:59:59+02:00", "total": 0},
-        {"name": "7_days", "from": "2020-04-04T00:00:00+02:00", "to": "2020-04-10T23:59:59+02:00", "total": 0},
-        {"name": "28_days", "from": "2020-04-04T00:00:00+02:00", "to": "2020-05-01T23:59:59+02:00", "total": 0},
-        {"name": "49_days", "from": "2020-04-04T00:00:00+02:00", "to": "2020-05-22T23:59:59+02:00", "total": 0},
-    ]
 
 
 def test_keldoc_motives_connect_error():

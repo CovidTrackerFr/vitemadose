@@ -11,7 +11,7 @@ from pytz import timezone
 from typing import Iterator, Optional, Tuple
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.pattern.center_info import CenterInfo, CenterLocation, INTERVAL_SPLIT_DAYS, CHRONODOSES
+from scraper.pattern.center_info import CenterInfo, CenterLocation
 from scraper.pattern.vaccine import Vaccine, get_vaccine_name
 from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import departementUtils, DummyQueue
@@ -384,18 +384,6 @@ class AvecmonDoc:
             metadata=request.center_info.metadata,
         )
 
-        appointment_schedules = []
-        s_date = paris_tz.localize(isoparse(request.get_start_date()) + timedelta(days=0))
-        n_date = s_date + timedelta(days=CHRONODOSES["Interval"], seconds=-1)
-        appointment_schedules.append(
-            {"name": "chronodose", "from": s_date.isoformat(), "to": n_date.isoformat(), "total": 0}
-        )
-        for n in INTERVAL_SPLIT_DAYS:
-            n_date = s_date + timedelta(days=n, seconds=-1)
-            appointment_schedules.append(
-                {"name": f"{n}_days", "from": s_date.isoformat(), "to": n_date.isoformat(), "total": 0}
-            )
-
         for reason in get_valid_reasons(reasons):
             start_date = isoparse(request.get_start_date())
             end_date = start_date + timedelta(days=AVECMONDOC_CONF.get("slot_limit", 50))
@@ -408,14 +396,6 @@ class AvecmonDoc:
             if date is None:
                 continue
             request.appointment_count += appointment_count
-            for appointment_schedule in appointment_schedules:
-                s_date = isoparse(appointment_schedule["from"])
-                n_date = isoparse(appointment_schedule["to"])
-                name = appointment_schedule["name"]
-                if name == "chronodose" and get_vaccine_name(reason["reason"]) not in CHRONODOSES["Vaccine"]:
-                    continue
-                appointment_schedule["total"] += count_appointements(availabilities, s_date, n_date)
-            request.appointment_schedules = appointment_schedules
             if first_availability is None or first_availability > date:
                 first_availability = date
         if first_availability is None:

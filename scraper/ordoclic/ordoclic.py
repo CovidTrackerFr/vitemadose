@@ -6,7 +6,6 @@ from datetime import datetime, timedelta
 from dateutil.parser import isoparse, parse as dateparse
 from pytz import timezone
 from typing import Dict, Iterator, List, Optional, Tuple, Set
-from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
 from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
@@ -151,7 +150,6 @@ class OrdoclicSlots:
 
             if self.lieu and first_availability is None:
                 self.found_creneau(PasDeCreneau(lieu=self.lieu))
-
         return first_availability
 
     def get_slots(
@@ -236,18 +234,7 @@ class OrdoclicSlots:
             if settings["label"] == "booking_settings" and settings["value"].get("option", "any") == "any":
                 request.set_appointments_only_by_phone(True)
                 return None
-        # create appointment_schedules array with names and dates
-        appointment_schedules = []
-        start_date = paris_tz.localize(isoparse(request.get_start_date()) + timedelta(days=0))
-        end_date = start_date + timedelta(days=CHRONODOSES["Interval"], seconds=-1)
-        appointment_schedules.append(
-            {"name": "chronodose", "from": start_date.isoformat(), "to": end_date.isoformat(), "total": 0}
-        )
-        for n in INTERVAL_SPLIT_DAYS:
-            end_date = start_date + timedelta(days=n, seconds=-1)
-            appointment_schedules.append(
-                {"name": f"{n}_days", "from": start_date.isoformat(), "to": end_date.isoformat(), "total": 0}
-            )
+
         for professional in profile["publicProfessionals"]:
             medicalStaffId = professional["id"]
             reasons = get_reasons(entityId, request=request)
@@ -263,29 +250,13 @@ class OrdoclicSlots:
                 date = self.parse_ordoclic_slots(request, slots, vaccine)
                 if date is None:
                     continue
-                # add counts to appointment_schedules
-                availabilities = slots.get("slots", None)
-                for i in range(0, len(appointment_schedules)):
-                    start_date = isoparse(appointment_schedules[i]["from"])
-                    end_date = isoparse(appointment_schedules[i]["to"])
-                    # do not count chronodose if wrong vaccine
-                    if (
-                        appointment_schedules[i]["name"] == "chronodose"
-                        and get_vaccine_name(reason.get("name", "")) not in CHRONODOSES["Vaccine"]
-                    ):
-                        continue
-                    appointment_schedules[i]["total"] += count_appointements(availabilities, start_date, end_date)
-                request.update_appointment_schedules(appointment_schedules)
-                logger.debug(f"appointment_schedules: {appointment_schedules}")
+
                 if first_availability is None or date < first_availability:
                     first_availability = date
-        request.update_appointment_schedules(appointment_schedules)
         if first_availability is None:
             if self.lieu:
                 self.found_creneau(PasDeCreneau(lieu=self.lieu, phone_only=request.appointment_by_phone_only))
             return None
-        logger.debug(f"appointment_schedules: {request.appointment_schedules}")
-
         return first_availability.isoformat()
 
 

@@ -17,7 +17,6 @@ from scraper.circuit_breaker import ShortCircuit
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 from scraper.doctolib.conf import DoctolibConf
 from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
-from scraper.pattern.center_info import INTERVAL_SPLIT_DAYS, CHRONODOSES
 from scraper.pattern.vaccine import get_vaccine_name, Vaccine
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError, DoublonDoctolib, RequestError
@@ -156,25 +155,7 @@ class DoctolibSlots:
         all_agendas = parse_agenda_ids(rdata)
         first_availability = None
 
-        appointment_schedules = request.get_appointment_schedules()
-
         start_date = request.get_start_date()
-
-        for interval in INTERVAL_SPLIT_DAYS:
-            chronodose = False
-            if interval == CHRONODOSES["Interval"]:
-                chronodose = True
-
-            appointment_schedules = build_appointment_schedules(
-                request,
-                interval,
-                append_date_days(start_date, 0),
-                append_date_days(start_date, days=interval, seconds=-1),
-                0,
-                appointment_schedules,
-                chronodose,
-            )
-        request.update_appointment_schedules(appointment_schedules)
 
         self.lieu = Lieu(
             plateforme=Plateforme.DOCTOLIB,
@@ -202,13 +183,7 @@ class DoctolibSlots:
             practice_ids_q = "-".join(practice_ids)
             motive_ids_q = "-".join(list(map(lambda id: str(id), visite_motive_ids)))
             availability = self.get_timetables(
-                request,
-                vaccine,
-                motive_ids_q,
-                agenda_ids_q,
-                practice_ids_q,
-                timetable_start_date,
-                appointment_schedules,
+                request, vaccine, motive_ids_q, agenda_ids_q, practice_ids_q, timetable_start_date
             )
             if availability and (not first_availability or availability < first_availability):
                 first_availability = availability
@@ -226,7 +201,6 @@ class DoctolibSlots:
         agenda_ids_q: str,
         practice_ids_q: str,
         start_date: datetime,
-        appointment_schedules: list,
         page: int = 1,
         first_availability: Optional[str] = None,
     ) -> Optional[str]:
@@ -239,7 +213,7 @@ class DoctolibSlots:
         """
         if page > DOCTOLIB_CONF.pagination["pages"]:
             return first_availability
-        sdate, appt, schedules, ended, next_slot = self.get_appointments(
+        sdate, appt, ended, next_slot = self.get_appointments(
             request,
             start_date.strftime("%Y-%m-%d"),
             vaccine,
@@ -247,8 +221,6 @@ class DoctolibSlots:
             agenda_ids_q,
             practice_ids_q,
             DOCTOLIB_CONF.pagination["days"],
-            request.get_start_date(),
-            appointment_schedules,
         )
         if ended:
             return first_availability
@@ -269,7 +241,6 @@ class DoctolibSlots:
                 agenda_ids_q,
                 practice_ids_q,
                 next_fetch_date,
-                appointment_schedules,
                 page=1 + max(0, floor(diff.days / DOCTOLIB_CONF.pagination["days"])) + page,
                 first_availability=first_availability,
             )
@@ -278,8 +249,6 @@ class DoctolibSlots:
         if not first_availability or sdate < first_availability:
             first_availability = sdate
         request.update_appointment_count(request.appointment_count + appt)
-        if schedules:
-            request.update_appointment_schedules(schedules)
         if page >= DOCTOLIB_CONF.pagination["pages"]:
             return first_availability
         return self.get_timetables(
@@ -289,7 +258,6 @@ class DoctolibSlots:
             agenda_ids_q,
             practice_ids_q,
             start_date + timedelta(days=DOCTOLIB_CONF.pagination["days"]),
-            appointment_schedules,
             1 + page,
             first_availability=first_availability,
         )
@@ -366,8 +334,6 @@ class DoctolibSlots:
         agenda_ids_q: str,
         practice_ids_q: str,
         limit: int,
-        start_date_original: str,
-        appointment_schedules: list,
     ):
         stop = False
         motive_availability = False
@@ -434,34 +400,6 @@ class DoctolibSlots:
                     )
                 )
 
-            for interval in INTERVAL_SPLIT_DAYS:
-                chronodose = False
-                if vaccine in CHRONODOSES["Vaccine"] and interval == CHRONODOSES["Interval"]:
-                    chronodose = True
-                appointment_schedules = build_appointment_schedules(
-                    request,
-                    interval,
-                    append_date_days(start_date_original, 0),
-                    append_date_days(start_date_original, days=interval, seconds=-1),
-                    0,
-                    appointment_schedules,
-                    chronodose,
-                )
-                if append_date_days(start_date_original, 0) <= append_date_days(start_date_original, interval):
-                    if availability.get("date"):
-                        if append_date_days(availability.get("date"), 0) < append_date_days(
-                            start_date_original, interval
-                        ):
-                            appointment_schedules = build_appointment_schedules(
-                                request,
-                                interval,
-                                append_date_days(start_date_original, 0),
-                                append_date_days(start_date_original, days=interval, seconds=-1),
-                                len(availability.get("slots", [])),
-                                appointment_schedules,
-                                chronodose,
-                            )
-
         if motive_availability:
             request.add_vaccine_type(vaccine)
         # Sometimes Doctolib does not allow to see slots for next weeks
@@ -469,7 +407,7 @@ class DoctolibSlots:
 
         if not first_availability and not slots.get("next_slot", None):
             stop = True
-        return first_availability, appointment_count, appointment_schedules, stop, slots.get("next_slot")
+        return first_availability, appointment_count, stop, slots.get("next_slot")
 
 
 def set_doctolib_center_internal_id(
@@ -597,51 +535,6 @@ def _parse_practice_id(rdv_site_web: str) -> Optional[List[int]]:
     except (ValueError, TypeError, IndexError):
         logger.error(f"failed to parse practice ID: {pid=}")
         return None
-
-
-def build_appointment_schedules(
-    request,
-    interval: int,
-    start_date: str,
-    end_date: str,
-    count: int,
-    appointment_schedules: Optional[List[dict]],
-    chronodose=False,
-) -> List[dict]:
-    if appointment_schedules is None:
-        appointment_schedules = []
-    if isinstance(appointment_schedules, list) and len(appointment_schedules) > 0:
-        for appointment in appointment_schedules:
-            if appointment["name"] == f"{interval}_days":
-                appointment["total"] += count
-
-    if not any(appointment["name"] == f"{interval}_days" for appointment in appointment_schedules):
-        appointment_schedules.append(
-            {
-                "name": f"{interval}_days",
-                "from": start_date,
-                "to": end_date,
-                "total": count,
-            }
-        )
-
-    if chronodose:
-        if isinstance(appointment_schedules, list) and len(appointment_schedules) > 0:
-            for appointment in appointment_schedules:
-                if appointment["name"] == "chronodose":
-                    appointment["total"] += count
-
-        if not any(appointment["name"] == "chronodose" for appointment in appointment_schedules):
-            appointment_schedules.append(
-                {
-                    "name": "chronodose",
-                    "from": start_date,
-                    "to": end_date,
-                    "total": count,
-                }
-            )
-
-    return appointment_schedules
 
 
 def _find_visit_motive_category_id(rdata: dict) -> List[int]:

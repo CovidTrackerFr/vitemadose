@@ -17,7 +17,6 @@
   "outputs": {
     "stats": {
       "data-auto": "https://vitemadose.gitlab.io/vitemadose/",
-      "chronodoses": "data/output/stats_chronodoses.json",
       "by_date": "stats_by_date.json",
       "by_date_dep": "stats_by_date_dep.json",
       "by_vaccine_type": "data/output/stats_by_vaccine.json",
@@ -44,21 +43,6 @@
         "johnnson",
         "j&j"
     ]
-  },
-  "appointment_split_days": [
-    1,
-    2,
-    7,
-    28,
-    49
-  ],
-  "chronodoses": {
-    "vaccine": [
-      "ARNm",
-      "Pfizer-BioNTech",
-      "Moderna"
-    ],
-    "interval": 2
   },
   "reserved_centers": [
     "professions prioritaires",

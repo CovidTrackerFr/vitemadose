@@ -50,7 +50,7 @@ def scrape_debug(urls):  # pragma: no cover
             logger.exception(f"erreur lors du traitement")
         logger.info(f'{result.platform!s:16} {result.next_availability or ""!s:32}')
         if result.request.appointment_count:
-            logger.debug(f"appointments: {result.request.appointment_count}:\n{result.request.appointment_schedules}")
+            logger.debug(f"appointments: {result.request.appointment_count}")
         log_requests(result.request)
 
 

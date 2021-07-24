@@ -11,7 +11,6 @@ class ScraperRequest:
         self.internal_id = internal_id
         self.practitioner_type = practitioner_type
         self.appointment_count = 0
-        self.appointment_schedules = None
         self.vaccine_type = None
         self.appointment_by_phone_only = False
         self.requests = None
@@ -29,9 +28,6 @@ class ScraperRequest:
         self.appointment_count = appointment_count
         return self.appointment_count
 
-    def update_appointment_schedules(self, appointment_schedules: dict):
-        self.appointment_schedules = appointment_schedules
-
     def increase_request_count(self, request_type: str) -> int:
         if self.requests is None:
             self.requests = {}
@@ -41,9 +37,6 @@ class ScraperRequest:
         else:
             self.requests[request_type] += 1
         return self.requests[request_type]
-
-    def get_appointment_schedules(self) -> Optional[list]:
-        return self.appointment_schedules
 
     def add_vaccine_type(self, vaccine_name: Optional[str]):
         # Temp fix due to iOS app issues with empty list

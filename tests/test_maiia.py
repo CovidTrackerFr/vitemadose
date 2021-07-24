@@ -119,10 +119,10 @@ def test_get_first_availability():
     instance = MaiiaSlots(creneau_q=DummyQueue, client=None)
     fake_now = dt.datetime(2021, 4, 29, 18, 20)
     with mock_datetime_now(fake_now):
-        first_availability, slots_count, appointment_schedules = instance.get_first_availability(
+        first_availability, slots_count = instance.get_first_availability(
             "5ffc744c68dedf073a5b87a2", "2021-04-29", reasons, client=client, request=request
         )
-   
+
     assert slots_count == 7980
     assert first_availability.isoformat() == "2021-05-13T13:40:00+00:00"
 

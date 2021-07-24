@@ -17,14 +17,6 @@ from utils.vmd_logger import get_logger
 logger = get_logger()
 
 
-# Schedules array for appointments by interval
-INTERVAL_SPLIT_DAYS = get_config().get("appointment_split_days", [])
-
-# Array for CHRONODOSES parameters
-CHRONODOSE_CONF = get_config().get("chronodoses", {})
-CHRONODOSES = {"Vaccine": CHRONODOSE_CONF.get("vaccine", []), "Interval": CHRONODOSE_CONF.get("interval", 0)}
-
-
 class CenterInfo:
     def __init__(
         self,
@@ -39,7 +31,6 @@ class CenterInfo:
         internal_id: Optional[str] = None,
         type: Optional[str] = None,
         vaccine_type=None,
-        appointment_schedules=[],
         appointment_count=0,
     ):
         self.departement = departement
@@ -57,7 +48,6 @@ class CenterInfo:
         self.erreur = erreur
         self.last_scan_with_availabilities = None
         self.request_counts = None
-        self.appointment_schedules = appointment_schedules
 
     @classmethod
     def from_dict(cls, data: dict) -> CenterInfo:
@@ -112,7 +102,6 @@ class CenterInfo:
         self.plateforme = result.platform
         self.type = result.request.practitioner_type
         self.appointment_count = result.request.appointment_count
-        self.appointment_schedules = result.request.appointment_schedules
         self.internal_id = result.request.internal_id
         self.vaccine_type = result.request.vaccine_type
         self.appointment_by_phone_only = result.request.appointment_by_phone_only

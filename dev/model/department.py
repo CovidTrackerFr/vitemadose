@@ -51,15 +51,7 @@ class Center(BaseModel):
     appointment_by_phone_only: Optional[bool]
     error: Optional[str] = Field(alias="error")
     last_scan_with_availabilities: Optional[datetime]
-    appointment_schedules: Optional[List[Schedule]]
     gid: str
-
-    def __iter__(self) -> Iterator[Schedule]:
-        return (self.appointment_schedules or []).__iter__()
-
-    @property
-    def is_available(self) -> bool:
-        return self.appointment_schedules is not None
 
 
 class Department(BaseModel):

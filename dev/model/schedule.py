@@ -4,7 +4,7 @@ from pydantic import BaseModel
 
 
 class Schedule(BaseModel):
-    name: str  # "chronodoses"
+    name: str
     from_: datetime  # "2021-05-10T00:00:00+02:00"
     to: datetime  # "2021-05-11T23:59:59+02:00"
     total: int

@@ -48,7 +48,6 @@ def test_center_info_fill():
         "appointment_by_phone_only": False,
         "erreur": None,
         "last_scan_with_availabilities": None,
-        "appointment_schedules": None,
         "request_counts": None,
     }
 
