@@ -23,9 +23,8 @@ from .maiia.maiia import centre_iterator as maiia_centre_iterator
 from .maiia.maiia import fetch_slots as maiia_fetch_slots
 from .mapharma.mapharma import centre_iterator as mapharma_centre_iterator
 from .mapharma.mapharma import fetch_slots as mapharma_fetch_slots
-from .opendata.opendata import center_iterator as gouv_centre_iterator
-from .ordoclic import centre_iterator as ordoclic_centre_iterator
-from .ordoclic import fetch_slots as ordoclic_fetch_slots
+from .ordoclic.ordoclic import centre_iterator as ordoclic_centre_iterator
+from .ordoclic.ordoclic import fetch_slots as ordoclic_fetch_slots
 from .avecmondoc.avecmondoc import center_iterator as avecmondoc_centre_iterator
 from .avecmondoc.avecmondoc import fetch_slots as avecmondoc_fetch_slots
 from .mesoigner.mesoigner import center_iterator as mesoigner_centre_iterator
