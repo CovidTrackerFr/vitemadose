@@ -35,7 +35,6 @@ from .circuit_breaker import CircuitBreakerOffException
 POOL_SIZE = int(os.getenv("POOL_SIZE", 50))
 PARTIAL_SCRAPE = float(os.getenv("PARTIAL_SCRAPE", 1.0))
 PARTIAL_SCRAPE = max(0, min(PARTIAL_SCRAPE, 1))
-CRENEAUX_ENABLED = get_config().get("scrape_par_creneaux", False)
 logger = enable_logger_for_production()
 
 
@@ -63,12 +62,11 @@ def scrape(platforms=None):  # pragma: no cover
     profiler = Profiling()
     with Manager() as manager:
         with profiler, Pool(POOL_SIZE, **profiler.pool_args()) as pool:
-            if CRENEAUX_ENABLED:
-                creneau_q = BulkQueue(manager.Queue(maxsize=100))
-                export_process = Process(target=export_by_creneau, args=(creneau_q,))
-                export_process.start()
+            creneau_q = BulkQueue(manager.Queue(maxsize=100))
+            export_process = Process(target=export_by_creneau, args=(creneau_q,))
+            export_process.start()
             centre_iterator_proportion = (
-                (c, creneau_q if CRENEAUX_ENABLED else DummyQueue())
+                (c, creneau_q)
                 for c in centre_iterator(platforms=platforms)
                 if random() < PARTIAL_SCRAPE
             )
@@ -77,9 +75,8 @@ def scrape(platforms=None):  # pragma: no cover
             centres_cherchés = get_last_scans(centres_cherchés)
             log_platform_requests(centres_cherchés)
 
-        if CRENEAUX_ENABLED:
-            creneau_q.put(EOQ)
-            export_process.join()
+        creneau_q.put(EOQ)
+        export_process.join()
 
 
 def export_by_creneau(
