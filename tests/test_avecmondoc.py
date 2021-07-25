@@ -271,7 +271,7 @@ def test_fetch_slots():
     request = ScraperRequest(url, "2021-05-20", center_info=center_info)
     first_availability = fetch_slots(request, client=client)
     assert first_availability == "2021-05-20T09:00:00+00:00"
-    assert request.appointment_count == 108
+    assert request.appointment_count == 60
     assert request.vaccine_type == ["Pfizer-BioNTech"]
 
 

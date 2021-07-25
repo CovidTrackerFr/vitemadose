@@ -13,7 +13,7 @@ from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.center_info import CenterInfo, CenterLocation
 from scraper.pattern.vaccine import Vaccine, get_vaccine_name
-from utils.vmd_config import get_conf_platform
+from utils.vmd_config import get_conf_platform, get_config
 from utils.vmd_utils import departementUtils, DummyQueue
 
 
@@ -26,6 +26,10 @@ AVECMONDOC_VALID_REASONS = AVECMONDOC_FILTERS.get("valid_reasons", [])
 AVECMONDOC_HEADERS = {
     "User-Agent": os.environ.get("AVECMONDOC_API_KEY", ""),
 }
+
+NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
+AVECMONDOC_DAYS_PER_PAGE = AVECMONDOC_CONF.get("days_per_page", 7)
+
 timeout = httpx.Timeout(AVECMONDOC_CONF.get("timeout", 25), connect=AVECMONDOC_CONF.get("timeout", 25))
 DEFAULT_CLIENT = httpx.Client(headers=AVECMONDOC_HEADERS, timeout=timeout)
 logger = logging.getLogger("scraper")
@@ -233,13 +237,12 @@ def get_availabilities_week(
     reason_id: int, organization_id: int, start_date: datetime, client: httpx.Client = DEFAULT_CLIENT
 ) -> Optional[list]:
     url = AVECMONDOC_API.get("availabilities_per_day", "")
-    week_size = AVECMONDOC_CONF.get("week_size", 5)
     payload = {
         "consultationReasonId": reason_id,
         "disabledPeriods": [],
         "fullDisplay": True,
         "organizationId": organization_id,
-        "periodEnd": (start_date + timedelta(days=week_size)).strftime("%Y-%m-%dT%H:%M:%S.000Z"),
+        "periodEnd": (start_date + timedelta(days=(AVECMONDOC_DAYS_PER_PAGE - 1))).strftime("%Y-%m-%dT%H:%M:%S.000Z"),
         "periodStart": start_date.strftime("%Y-%m-%dT%H:%M:%S.000Z"),
         "type": "inOffice",
     }
@@ -266,13 +269,12 @@ def get_availabilities(
     request: ScraperRequest = None,
 ) -> list:
     availabilities = []
-    week_size = AVECMONDOC_CONF.get("week_size", 5)
     page_date = start_date
     while page_date < end_date:
         week_availabilities = get_availabilities_week(reason_id, organization_id, page_date, client)
         if request:
             request.increase_request_count("slots" if page_date == start_date else "next-slots")
-        page_date = page_date + timedelta(days=week_size)
+        page_date = page_date + timedelta(days=(AVECMONDOC_DAYS_PER_PAGE - 1))
 
         for week_availability in week_availabilities:
             if "slots" in week_availability:
@@ -386,7 +388,7 @@ class AvecmonDoc:
 
         for reason in get_valid_reasons(reasons):
             start_date = isoparse(request.get_start_date())
-            end_date = start_date + timedelta(days=AVECMONDOC_CONF.get("slot_limit", 50))
+            end_date = start_date + timedelta(days=NUMBER_OF_SCRAPED_DAYS)
             vaccine = get_vaccine_name(reason["reason"])
             request.add_vaccine_type(vaccine)
             availabilities = get_availabilities(

@@ -55,9 +55,7 @@ class MesoignerSlots:
         self,
         creneau_q=DummyQueue,
         client: httpx.Client = None,
-        cooldown_interval=MESOIGNER_CONF.get("request_sleep", 0.1),
     ):
-        self._cooldown_interval = cooldown_interval
         self._client = DEFAULT_CLIENT if client is None else client
         self.creneau_q = creneau_q
         self.lieu = None
@@ -91,7 +89,6 @@ class MesoignerSlots:
             raise BlockedByMesoignerError(centre_api_url)
 
         response.raise_for_status()
-        time.sleep(self._cooldown_interval)
         rdata = response.json()
 
         first_availability = self.get_appointments(request, rdata)

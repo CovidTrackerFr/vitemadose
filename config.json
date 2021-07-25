@@ -1,4 +1,4 @@
-{ "scrape_on_n_days" : 28,
+{"scrape_on_n_days" : 28,
   "data-auto": {
     "base_url": "https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/"
   },
@@ -53,7 +53,7 @@
   "platforms": {
     "doctolib": {
       "enabled": true,
-      "timeout": 30,
+      "timeout": 5,
       "recognized_urls": [
         "https://partners.doctolib.fr",
         "https://www.doctolib.fr"
@@ -65,11 +65,8 @@
         "scraper": "http://www.doctolib.fr/vaccination-covid-19/france.json?page={0}",
         "scraper_dep": "http://www.doctolib.fr/vaccination-covid-19/{0}.json?page={1}"
       },
-      "request_sleep": 0.1,
-      "pagination": {
-        "pages": 4,
-        "days": 7
-      },
+      "request_sleep": 0.05,
+      "days_per_page":7,
       "filters": {
         "appointment_reason": [
           "1 ere injection",
@@ -166,7 +163,7 @@
     },
     "keldoc": {
       "enabled": true,
-      "timeout": 40,
+      "timeout": 20,
       "recognized_urls": [
         "https://vaccination-covid.keldoc.com",
         "https://keldoc.com"
@@ -180,10 +177,7 @@
         "center_details":"https://www.keldoc.com/api/patients/v2/cabinets/{0}/details"
 
       },
-      "pagination": {
-        "pages": 6,
-        "days": 4
-      },
+      "days_per_page": 5,
       "filters": {  
         "appointment_speciality_urls": [
           "maladies-infectieuses",
@@ -249,7 +243,7 @@
     },
     "maiia": {
       "enabled": true,
-      "timeout": 30,
+      "timeout": 5,
       "base_url": "https://www.maiia.com",
       "recognized_urls": [
         "https://www.maiia.com"
@@ -293,12 +287,11 @@
         "injection_type": [
           "FIRST"
         ]
-      },
-      "calendar_limit": 30
+      }
     },
     "mapharma": {
       "enabled": true,
-      "timeout": 30,
+      "timeout": 5,
       "recognized_urls": [
         "https://mapharma.net"
       ],
@@ -342,7 +335,7 @@
     },
     "ordoclic": {
       "enabled": true,
-      "timeout": 30,
+      "timeout": 20,
       "recognized_urls": [
         "https://app.ordoclic.fr"
       ],
@@ -373,8 +366,7 @@
     "avecmondoc": {
       "enabled": true,
       "timeout": 25,
-      "slot_limit": 50,
-      "week_size": 6,
+      "days_per_page":7,
       "recognized_urls": [
         "https://patient.avecmondoc.com/"
       ],
@@ -431,7 +423,7 @@
         "center_list": "https://www.mesoigner.fr/api/v1/vaccination/centers",
         "slots": "https://www.mesoigner.fr/api/v1/vaccination/centers/{id}/{start_date}"
       },
-      "request_sleep": 0.1,
+      "request_sleep": 0,
       "center_scraper": {
         "minimum_results" : 450,
         "result_path": "data/output/mesoigner_centers.json",
