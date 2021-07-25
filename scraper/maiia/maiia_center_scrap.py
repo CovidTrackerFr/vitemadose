@@ -21,7 +21,6 @@ DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 logger = logging.getLogger("scraper")
 
 MAIIA_URL = MAIIA_CONF.get("base_url")
-MAIIA_DAY_LIMIT = MAIIA_CONF.get("calendar_limit")
 CENTER_TYPES = MAIIA_SCRAPER.get("categories")
 MAIIA_DO_NOT_SCRAP_ID = MAIIA_SCRAPER.get("excluded_ids", [])
 MAIIA_DO_NOT_SCRAP_NAME = MAIIA_SCRAPER.get("excluded_names", [])
@@ -30,7 +29,7 @@ MAIIA_DO_NOT_SCRAP_NAME = MAIIA_SCRAPER.get("excluded_names", [])
 def get_centers(speciality: str, client: httpx.Client = DEFAULT_CLIENT) -> list:
     result = get_paged(
         MAIIA_API.get("scraper").format(speciality=speciality),
-        limit=MAIIA_DAY_LIMIT,
+        limit=50,
         client=client,
     )
     return result["items"]
