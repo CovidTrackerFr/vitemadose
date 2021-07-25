@@ -21,14 +21,25 @@ from scraper.pattern.vaccine import get_vaccine_name, Vaccine
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError, DoublonDoctolib, RequestError
 from scraper.profiler import Profiling
-from utils.vmd_config import get_conf_platform
+from utils.vmd_config import get_conf_platform, get_config
 from utils.vmd_utils import append_date_days, DummyQueue
 
 sys.setrecursionlimit(10 ** 8)
 
 DOCTOLIB_CONF = DoctolibConf(**get_conf_platform("doctolib"))
 
+NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
+DOCTOLIB_DAYS_PER_PAGE = DOCTOLIB_CONF.days_per_page
+
+if NUMBER_OF_SCRAPED_DAYS % DOCTOLIB_DAYS_PER_PAGE == 0:
+
+    DOCTOLIB_PAGES_NUMBER = NUMBER_OF_SCRAPED_DAYS / DOCTOLIB_DAYS_PER_PAGE
+else:
+    DOCTOLIB_PAGES_NUMBER = (NUMBER_OF_SCRAPED_DAYS // DOCTOLIB_DAYS_PER_PAGE) + 1
+
+
 timeout = httpx.Timeout(DOCTOLIB_CONF.timeout, connect=DOCTOLIB_CONF.timeout)
+
 
 DOCTOLIB_HEADERS = {
     "User-Agent": os.environ.get("DOCTOLIB_API_KEY", ""),
@@ -211,7 +222,7 @@ class DoctolibSlots:
         Uses next_slot as a reference for next availability and in order to avoid useless requests when
         we already know if a timetable is empty.
         """
-        if page > DOCTOLIB_CONF.pagination["pages"]:
+        if page > DOCTOLIB_PAGES_NUMBER:
             return first_availability
         sdate, appt, ended, next_slot = self.get_appointments(
             request,
@@ -220,7 +231,7 @@ class DoctolibSlots:
             motive_ids_q,
             agenda_ids_q,
             practice_ids_q,
-            DOCTOLIB_CONF.pagination["days"],
+            DOCTOLIB_DAYS_PER_PAGE,
         )
         if ended:
             return first_availability
@@ -228,11 +239,11 @@ class DoctolibSlots:
             """
             Optimize query count by jumping directly to the first availability date by using ’next_slot’ key
             """
-            next_expected_date = start_date + timedelta(days=DOCTOLIB_CONF.pagination["days"])
+            next_expected_date = start_date + timedelta(days=DOCTOLIB_DAYS_PER_PAGE)
             next_fetch_date = datetime.strptime(next_slot, "%Y-%m-%d")
             diff = next_fetch_date.replace(tzinfo=None) - next_expected_date.replace(tzinfo=None)
 
-            if page > DOCTOLIB_CONF.pagination["pages"]:
+            if page > DOCTOLIB_PAGES_NUMBER:
                 return first_availability
             return self.get_timetables(
                 request,
@@ -241,7 +252,7 @@ class DoctolibSlots:
                 agenda_ids_q,
                 practice_ids_q,
                 next_fetch_date,
-                page=1 + max(0, floor(diff.days / DOCTOLIB_CONF.pagination["days"])) + page,
+                page=1 + max(0, floor(diff.days / DOCTOLIB_DAYS_PER_PAGE)) + page,
                 first_availability=first_availability,
             )
         if not sdate:
@@ -249,7 +260,7 @@ class DoctolibSlots:
         if not first_availability or sdate < first_availability:
             first_availability = sdate
         request.update_appointment_count(request.appointment_count + appt)
-        if page >= DOCTOLIB_CONF.pagination["pages"]:
+        if page >= DOCTOLIB_PAGES_NUMBER:
             return first_availability
         return self.get_timetables(
             request,
@@ -257,7 +268,7 @@ class DoctolibSlots:
             motive_ids_q,
             agenda_ids_q,
             practice_ids_q,
-            start_date + timedelta(days=DOCTOLIB_CONF.pagination["days"]),
+            start_date + timedelta(days=DOCTOLIB_DAYS_PER_PAGE),
             1 + page,
             first_availability=first_availability,
         )

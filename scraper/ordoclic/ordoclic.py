@@ -9,7 +9,7 @@ from typing import Dict, Iterator, List, Optional, Tuple, Set
 from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
-from utils.vmd_config import get_conf_platform
+from utils.vmd_config import get_conf_platform, get_config
 from utils.vmd_utils import departementUtils, DummyQueue
 from scraper.profiler import Profiling
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
@@ -19,6 +19,7 @@ logger = logging.getLogger("scraper")
 ORDOCLIC_CONF = get_conf_platform("ordoclic")
 ORDOCLIC_API = ORDOCLIC_CONF.get("api", {})
 ORDOCLIC_ENABLED = ORDOCLIC_CONF.get("enabled", False)
+NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
 timeout = httpx.Timeout(ORDOCLIC_CONF.get("timeout", 25), connect=ORDOCLIC_CONF.get("timeout", 25))
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
@@ -245,7 +246,7 @@ class OrdoclicSlots:
                 request.add_vaccine_type(vaccine)
                 reasonId = reason["id"]
                 date_obj = datetime.strptime(request.get_start_date(), "%Y-%m-%d")
-                end_date = (date_obj + timedelta(days=50)).strftime("%Y-%m-%d")
+                end_date = (date_obj + timedelta(days=NUMBER_OF_SCRAPED_DAYS)).strftime("%Y-%m-%d")
                 slots = self.get_slots(entityId, medicalStaffId, reasonId, request.get_start_date(), end_date, request)
                 date = self.parse_ordoclic_slots(request, slots, vaccine)
                 if date is None:

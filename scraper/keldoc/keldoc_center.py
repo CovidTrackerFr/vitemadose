@@ -11,7 +11,7 @@ import httpx
 from scraper.keldoc.keldoc_filters import parse_keldoc_availability, filter_vaccine_motives
 from scraper.keldoc.keldoc_routes import API_KELDOC_CALENDAR, API_KELDOC_CENTER, API_KELDOC_CABINETS
 from scraper.pattern.scraper_request import ScraperRequest
-from utils.vmd_config import get_conf_platform
+from utils.vmd_config import get_conf_platform, get_config
 from utils.vmd_utils import DummyQueue
 
 KELDOC_CONF = get_conf_platform("keldoc")
@@ -19,10 +19,18 @@ timeout = httpx.Timeout(KELDOC_CONF.get("timeout", 25), connect=KELDOC_CONF.get(
 KELDOC_HEADERS = {
     "User-Agent": os.environ.get("KELDOC_API_KEY", ""),
 }
-# 16 days is enough for now, due to recent issues with Keldoc API
-KELDOC_SLOT_PAGES = KELDOC_CONF.get("pagination", {}).get("pages", 2)
-KELDOC_DAYS_PER_PAGE = KELDOC_CONF.get("pagination", {}).get("days", 4)
+
+NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
+KELDOC_DAYS_PER_PAGE = KELDOC_CONF.get("days_per_page", 5)
+
+if NUMBER_OF_SCRAPED_DAYS % KELDOC_DAYS_PER_PAGE == 0:
+
+    KELDOC_PAGES_NUMBER = NUMBER_OF_SCRAPED_DAYS / KELDOC_DAYS_PER_PAGE
+else:
+    KELDOC_PAGES_NUMBER = (NUMBER_OF_SCRAPED_DAYS // KELDOC_DAYS_PER_PAGE) + 1
+
 KELDOC_SLOT_TIMEOUT = KELDOC_CONF.get("timeout", 20)
+
 DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
@@ -53,7 +61,7 @@ class KeldocCenter:
     ) -> Iterable[Union[Optional[dict], float]]:
         """
         Get timetables recursively with KELDOC_DAYS_PER_PAGE as the number of days to query.
-        Recursively limited by KELDOC_SLOT_PAGES and appends new availabilities to a ’timetable’,
+        Recursively limited by KELDOC_PAGES_NUMBER and appends new availabilities to a ’timetable’,
         freshly initialized at the beginning.
         Uses date as a reference for next availability and in order to avoid useless requests when
         we already know if a timetable is empty.
@@ -65,7 +73,7 @@ class KeldocCenter:
             return timetable, run
         calendar_url = API_KELDOC_CALENDAR.format(motive_id)
 
-        end_date = (start_date + dt.timedelta(days=KELDOC_DAYS_PER_PAGE)).strftime("%Y-%m-%d")
+        end_date = (start_date + dt.timedelta(days=KELDOC_DAYS_PER_PAGE - 1)).strftime("%Y-%m-%d")
         logger.debug(
             f"get_timetables -> start_date: {start_date} end_date: {end_date} "
             f"motive: {motive_id} agenda: {agenda_ids} (page: {page})"
@@ -114,17 +122,17 @@ class KeldocCenter:
             Checks for the presence of the ’availabilities’ attribute, even if it's not supposed to be set
             """
             if "availabilities" not in current_timetable:
-                next_expected_date = start_date + dt.timedelta(days=KELDOC_DAYS_PER_PAGE)
+                next_expected_date = start_date + dt.timedelta(days=KELDOC_DAYS_PER_PAGE - 1)
                 next_fetch_date = isoparse(current_timetable["date"])
                 diff = next_fetch_date.replace(tzinfo=None) - next_expected_date.replace(tzinfo=None)
 
-                if page >= KELDOC_SLOT_PAGES or run >= KELDOC_SLOT_TIMEOUT:
+                if page >= KELDOC_PAGES_NUMBER or run >= KELDOC_SLOT_TIMEOUT:
                     return timetable, run
                 return self.get_timetables(
                     next_fetch_date,
                     motive_id,
                     agenda_ids,
-                    1 + max(0, floor(diff.days / KELDOC_DAYS_PER_PAGE)) + page,
+                    1 + max(0, floor(diff.days / (KELDOC_DAYS_PER_PAGE - 1))) + page,
                     timetable,
                     run,
                 )
@@ -139,10 +147,10 @@ class KeldocCenter:
         if timetable.get("availabilities") and timetable.get("date"):
             timetable.pop("date")
 
-        if page >= KELDOC_SLOT_PAGES or run >= KELDOC_SLOT_TIMEOUT:
+        if page >= KELDOC_PAGES_NUMBER or run >= KELDOC_SLOT_TIMEOUT:
             return timetable, run
         return self.get_timetables(
-            start_date + dt.timedelta(days=KELDOC_DAYS_PER_PAGE), motive_id, agenda_ids, 1 + page, timetable, run
+            start_date + dt.timedelta(days=KELDOC_DAYS_PER_PAGE - 1), motive_id, agenda_ids, 1 + page, timetable, run
         )
 
     def count_appointements(self, appointments: list, start_date: str, end_date: str) -> int:

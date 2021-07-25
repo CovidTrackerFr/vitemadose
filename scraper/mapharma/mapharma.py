@@ -14,7 +14,7 @@ from typing import Optional
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import DRUG_STORE
 from scraper.pattern.vaccine import get_vaccine_name
-from utils.vmd_config import get_conf_platform
+from utils.vmd_config import get_conf_platform, get_config
 from scraper.profiler import Profiling
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 from utils.vmd_utils import departementUtils, DummyQueue
@@ -36,8 +36,7 @@ MAPHARMA_PATHS = MAPHARMA_CONF.get("paths", {})
 MAPHARMA_OPEN_DATA_FILE = Path(MAPHARMA_PATHS.get("opendata", ""))
 MAPHARMA_OPEN_DATA_URL = MAPHARMA_API.get("opendata", "")
 MAPHARMA_OPEN_DATA_URL_FALLBACK = MAPHARMA_API.get("opendata_fallback", "")
-MAPHARMA_SLOT_LIMIT = MAPHARMA_CONF.get("slot_limit", 50)
-
+NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
 DEFAULT_CLIENT = httpx.Client(headers=MAPHARMA_HEADERS)
 logger = logging.getLogger("scraper")
@@ -233,7 +232,7 @@ class Mapharma:
             return None
         # l'api ne renvoie que 7 jours, on parse un peu plus loin dans le temps
         start_date = date.fromisoformat(request.get_start_date())
-        for delta in range(0, MAPHARMA_SLOT_LIMIT, 6):
+        for delta in range(0, NUMBER_OF_SCRAPED_DAYS, 6):
             new_date = start_date + timedelta(days=delta)
             slots = self.get_slots(id_campagne, id_type, new_date.isoformat(), client, request=request)
             for day, day_slot in slots.items():

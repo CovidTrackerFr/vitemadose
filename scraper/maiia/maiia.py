@@ -29,7 +29,7 @@ logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
 
 MAIIA_URL = MAIIA_CONF.get("base_url")
-MAIIA_DAY_LIMIT = MAIIA_CONF.get("calendar_limit", 50)
+NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
 
 def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue, client: httpx.Client = DEFAULT_CLIENT) -> Optional[str]:
@@ -170,7 +170,7 @@ class MaiiaSlots:
             if not next_slot_date:
                 return None
             next_date = dt.datetime.strptime(next_slot_date, "%Y-%m-%dT%H:%M:%S.%fZ")
-            if next_date - isoparse(start_date) > dt.timedelta(days=MAIIA_DAY_LIMIT):
+            if next_date - isoparse(start_date) > dt.timedelta(days=NUMBER_OF_SCRAPED_DAYS):
                 return None
             start_date = next_date.isoformat()
             url = MAIIA_API.get("slots").format(
@@ -209,7 +209,7 @@ class MaiiaSlots:
     ) -> Tuple[Optional[dt.datetime], int, dict]:
         date = isoparse(request_date).replace(tzinfo=None)
         start_date = date.isoformat()
-        end_date = (date + dt.timedelta(days=MAIIA_DAY_LIMIT)).isoformat()
+        end_date = (date + dt.timedelta(days=NUMBER_OF_SCRAPED_DAYS)).isoformat()
         first_availability = None
         slots_count = 0
         for consultation_reason in reasons:

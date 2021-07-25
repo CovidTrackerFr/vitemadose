@@ -40,7 +40,7 @@ class DoctolibConf(BaseModel):
         "scraper_dep": "http://www.doctolib.fr/vaccination-covid-19/{0}.json?page={1}",
     }
     request_sleep: float = 0.1
-    pagination: Dict[str, int] = {"pages": 4, "days": 7}
+    days_per_page: int = 7
     filters: Dict[str, List[str]] = {
         "appointment_reason": [
             "1 ere injection",

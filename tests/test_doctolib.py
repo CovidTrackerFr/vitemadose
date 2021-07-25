@@ -30,7 +30,7 @@ from scraper.doctolib.doctolib import (
     DOCTOLIB_CONF,
 )
 
-DOCTOLIB_CONF.pagination["pages"] = 1
+DOCTOLIB_PAGES_NUMBER = 1
 
 # -- Tests de l'API (offline) --
 from scraper.pattern.scraper_request import ScraperRequest
@@ -151,7 +151,7 @@ def test_doctolib_sends_creneau():
     while not q.empty():
         actual.append(q.get())
     # Then
-    assert len(actual) == 1
+    assert len(actual) == 2
     assert actual[0] == Creneau(
         reservation_url=base_url,
         horaire=dateutil.parser.parse("2021-04-10"),
