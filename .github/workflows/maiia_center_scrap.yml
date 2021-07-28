@@ -30,7 +30,8 @@ jobs:
           git clone --branch data-auto https://github.com/CovidTrackerFr/vitemadose.git tmp/
           cp -R tmp/data/output/* data/output
           rm -rf tmp/
-          cp maiia_centers.json data/output
+          cp maiia_centers.json maiia_center_list.json
+          cp maiia_centers.json maiia_center_list.json data/output
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Updated Maiia centers
