@@ -31,7 +31,8 @@ jobs:
           git clone --branch data-auto https://github.com/CovidTrackerFr/vitemadose.git tmp/
           cp -R tmp/data/output/* data/output
           rm -rf tmp/
-          cp mesoigner_centers.json data/output
+          cp mesoigner_centers.json mesoigner_center_list.json
+          cp mesoigner_centers.json mesoigner_center_list.json data/output
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Updated Mesoigner centers
