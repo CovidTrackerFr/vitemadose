@@ -27,7 +27,7 @@ from scraper.doctolib.doctolib import (
     _parse_centre,
     _parse_practice_id,
     set_doctolib_center_internal_id,
-    DOCTOLIB_CONF,
+    PLATFORM_CONF as DOCTOLIB_CONF,
 )
 
 DOCTOLIB_PAGES_NUMBER = 1

@@ -20,10 +20,18 @@ PALETTE_FB = ["#ffffff", "#eaeaea", "#cecece", "#80bdf4", "#2d8dfe"]
 PALETTE_FB_RDV = ["#eaeaea", "#F44848", "#FF9255", "#FFD84F", "#FEE487", "#7DF0AE", "#27DF76", "#00B94F"]
 ECHELLE_STROKE = "#797979"
 ECHELLE_FONT = "#424242"
-MAP_SRC_PATH = Path(get_conf_inputs().get("map"))
-CSV_POP_URL = get_conf_inputs().get("dep_pop")
-CSV_RDV_URL = get_conf_inputs().get("rdv_gouv")
-JSON_INFO_CENTRES_URL = get_conf_inputs().get("last_scans")
+MAP_SRC_PATH = Path(get_conf_inputs().get("from_main_branch").get("map"))
+CSV_POP_URL = get_conf_inputs().get("from_main_branch").get("dep_pop")
+CSV_RDV_URL = get_conf_inputs().get("from_data_gouv_website").get("rdv_gouv")
+JSON_INFO_CENTRES_URL = get_conf_inputs().get("from_gitlab_public").get("last_scans")
+
+def get_pop():
+    dept_pop={}
+    with open(CSV_POP_URL, encoding='utf-8', newline='') as file:
+        csvreader = csv.DictReader(file, delimiter=';')
+        for row in csvreader:
+            dept_pop[row["dep"]] = row["departmentPopulation"]
+    return dept_pop
 
 
 def get_csv(url: str, header=True, delimiter=";", encoding="utf-8", client: httpx.Client = DEFAULT_CLIENT):
@@ -190,10 +198,7 @@ def make_stats_rdv(dept_rdv: dict):
 
 def make_maps(info_centres: dict):
     dept_pop = {}
-    csv_pop = get_csv(CSV_POP_URL, header=True, delimiter=";")
-    for row in csv_pop:
-        dept_pop[row["dep"]] = row["departmentPopulation"]
-
+    dept_pop = get_pop()
     dept_rdv = {}
     csv_rdv = get_csv(CSV_RDV_URL, header=True, delimiter=",", encoding="windows-1252")
     if not csv_rdv:

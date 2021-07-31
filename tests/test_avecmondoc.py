@@ -13,10 +13,7 @@ from dateutil.tz import tzutc
 from scraper.avecmondoc.avecmondoc import (
     AvecmonDoc,
     search,
-    get_doctor_slug,
     get_organization_slug,
-    get_by_doctor,
-    get_by_organization,
     get_reasons,
     organization_to_center,
     get_valid_reasons,
@@ -63,18 +60,6 @@ def test_search():
         validate(instance=live_data, schema=schema)
 
 
-def test_get_doctor_slug():
-    def app(request: httpx.Request) -> httpx.Response:
-        assert request.url.path == "/api/Doctors/slug/delphine-rousseau-216"
-        path = Path("tests/fixtures/avecmondoc/get_doctor_slug.json")
-        return httpx.Response(200, json=json.loads(path.read_text(encoding="utf8")))
-
-    client = httpx.Client(transport=httpx.MockTransport(app))
-    data_file = Path("tests/fixtures/avecmondoc/get_doctor_slug.json")
-    data = json.loads(data_file.read_text(encoding="utf8"))
-    assert get_doctor_slug("delphine-rousseau-216", client=client) == data
-
-
 def test_get_organization_slug():
     def app(request: httpx.Request) -> httpx.Response:
         assert request.url.path == "/api/Organizations/slug/delphine-rousseau-159"
@@ -85,31 +70,6 @@ def test_get_organization_slug():
     data_file = Path("tests/fixtures/avecmondoc/get_organization_slug.json")
     data = json.loads(data_file.read_text(encoding="utf8"))
     assert get_organization_slug("delphine-rousseau-159", client=client) == data
-
-
-def test_get_by_doctor():
-    def app(request: httpx.Request) -> httpx.Response:
-        assert request.url.path == "/api/Organizations/getByDoctor/216"
-        path = Path("tests/fixtures/avecmondoc/get_by_doctor.json")
-        return httpx.Response(200, json=json.loads(path.read_text(encoding="utf8")))
-
-    client = httpx.Client(transport=httpx.MockTransport(app))
-    data_file = Path("tests/fixtures/avecmondoc/get_by_doctor.json")
-    data = json.loads(data_file.read_text(encoding="utf8"))
-    assert get_by_doctor(216, client=client) == data
-
-
-def test_get_by_organization():
-    def app(request: httpx.Request) -> httpx.Response:
-        assert request.url.path == "/api/Doctors/getByOrganization/159"
-        path = Path("tests/fixtures/avecmondoc/get_by_organization.json")
-        return httpx.Response(200, json=json.loads(path.read_text(encoding="utf8")))
-
-    client = httpx.Client(transport=httpx.MockTransport(app))
-    data_file = Path("tests/fixtures/avecmondoc/get_by_organization.json")
-    data = json.loads(data_file.read_text(encoding="utf8"))
-    assert get_by_organization(159, client=client) == data
-
 
 def test_get_reasons():
     def app(request: httpx.Request) -> httpx.Response:

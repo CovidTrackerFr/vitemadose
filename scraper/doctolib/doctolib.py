@@ -8,37 +8,34 @@ from math import floor
 from typing import Dict, Iterator, List, Optional, Tuple, Set
 from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 import dateutil
-
 import httpx
 import requests
-import sys
-
-from scraper.circuit_breaker import ShortCircuit
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
-from scraper.doctolib.conf import DoctolibConf
 from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
 from scraper.pattern.vaccine import get_vaccine_name, Vaccine
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import BlockedByDoctolibError, DoublonDoctolib, RequestError
-from scraper.profiler import Profiling
-from utils.vmd_config import get_conf_platform, get_config
-from utils.vmd_utils import append_date_days, DummyQueue
+from utils.vmd_config import get_conf_outputs, get_conf_platform, get_config
+from utils.vmd_utils import DummyQueue
+from cachecontrol import CacheControl
+from cachecontrol.caches.file_cache import FileCache
 
-sys.setrecursionlimit(10 ** 8)
+#PLATFORM MUST BE LOW, PLEASE LET THE "lower()" IN CASE OF BAD INPUT FORMAT.
+PLATFORM = "doctolib".lower()
 
-DOCTOLIB_CONF = DoctolibConf(**get_conf_platform("doctolib"))
+PLATFORM_CONF = get_conf_platform(PLATFORM)
+PLATFORM_ENABLED = PLATFORM_CONF.get("enabled", True)
 
 NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
-DOCTOLIB_DAYS_PER_PAGE = DOCTOLIB_CONF.days_per_page
-
-if NUMBER_OF_SCRAPED_DAYS % DOCTOLIB_DAYS_PER_PAGE == 0:
-
-    DOCTOLIB_PAGES_NUMBER = NUMBER_OF_SCRAPED_DAYS / DOCTOLIB_DAYS_PER_PAGE
+PLATFORM_DAYS_PER_PAGE = PLATFORM_CONF.get("days_per_page", 7)
+if NUMBER_OF_SCRAPED_DAYS % PLATFORM_DAYS_PER_PAGE == 0:
+    PLATFORM_PAGES_NUMBER = NUMBER_OF_SCRAPED_DAYS / PLATFORM_DAYS_PER_PAGE
 else:
-    DOCTOLIB_PAGES_NUMBER = (NUMBER_OF_SCRAPED_DAYS // DOCTOLIB_DAYS_PER_PAGE) + 1
+    PLATFORM_PAGES_NUMBER = (NUMBER_OF_SCRAPED_DAYS // PLATFORM_DAYS_PER_PAGE) + 1
 
-
-timeout = httpx.Timeout(DOCTOLIB_CONF.timeout, connect=DOCTOLIB_CONF.timeout)
+PLATFORM_TIMEOUT = PLATFORM_CONF.get("timeout", 10)
+PLATFORM_REQUEST_SLEEP = PLATFORM_CONF.get("request_sleep", 0.1)
+timeout = httpx.Timeout(PLATFORM_TIMEOUT, connect=PLATFORM_TIMEOUT)
 
 
 DOCTOLIB_HEADERS = {
@@ -61,7 +58,7 @@ logger = logging.getLogger("scraper")
 #   @ShortCircuit("doctolib_slot", trigger=20, release=80, time_limit=40.0)
 # @Profiling.measure("doctolib_slot")
 def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue) -> Optional[str]:
-    if not DOCTOLIB_CONF.enabled:
+    if not PLATFORM_ENABLED:
         return None
     # Fonction principale avec le comportement "de prod".
     doctolib = DoctolibSlots(client=DEFAULT_CLIENT, creneau_q=creneau_q)
@@ -72,9 +69,7 @@ class DoctolibSlots:
     # Permet de passer un faux client HTTP,
     # pour éviter de vraiment appeler Doctolib lors des tests.
 
-    def __init__(
-        self, creneau_q=DummyQueue, client: httpx.Client = None, cooldown_interval=DOCTOLIB_CONF.request_sleep
-    ):
+    def __init__(self, creneau_q=DummyQueue, client: httpx.Client = None, cooldown_interval=PLATFORM_REQUEST_SLEEP):
         self._cooldown_interval = cooldown_interval
         self.creneau_q = creneau_q
         self._client = DEFAULT_CLIENT if client is None else client
@@ -109,7 +104,7 @@ class DoctolibSlots:
         if request.input_data:
             rdata = request.input_data
         else:
-            centre_api_url = DOCTOLIB_CONF.api.get("booking", "").format(centre=centre)
+            centre_api_url = PLATFORM_CONF.get("api").get("booking", "").format(centre=centre)
             request.increase_request_count("booking")
             try:
                 response = self._client.get(centre_api_url, headers=DOCTOLIB_HEADERS)
@@ -169,7 +164,7 @@ class DoctolibSlots:
         start_date = request.get_start_date()
 
         self.lieu = Lieu(
-            plateforme=Plateforme.DOCTOLIB,
+            plateforme=Plateforme[PLATFORM.upper()],
             url=request.url,
             location=request.center_info.location,
             nom=request.center_info.nom,
@@ -222,7 +217,7 @@ class DoctolibSlots:
         Uses next_slot as a reference for next availability and in order to avoid useless requests when
         we already know if a timetable is empty.
         """
-        if page > DOCTOLIB_PAGES_NUMBER:
+        if page > PLATFORM_PAGES_NUMBER:
             return first_availability
         sdate, appt, ended, next_slot = self.get_appointments(
             request,
@@ -231,7 +226,7 @@ class DoctolibSlots:
             motive_ids_q,
             agenda_ids_q,
             practice_ids_q,
-            DOCTOLIB_DAYS_PER_PAGE,
+            PLATFORM_DAYS_PER_PAGE,
         )
         if ended:
             return first_availability
@@ -239,11 +234,11 @@ class DoctolibSlots:
             """
             Optimize query count by jumping directly to the first availability date by using ’next_slot’ key
             """
-            next_expected_date = start_date + timedelta(days=DOCTOLIB_DAYS_PER_PAGE)
+            next_expected_date = start_date + timedelta(days=PLATFORM_DAYS_PER_PAGE)
             next_fetch_date = datetime.strptime(next_slot, "%Y-%m-%d")
             diff = next_fetch_date.replace(tzinfo=None) - next_expected_date.replace(tzinfo=None)
 
-            if page > DOCTOLIB_PAGES_NUMBER:
+            if page > PLATFORM_PAGES_NUMBER:
                 return first_availability
             return self.get_timetables(
                 request,
@@ -252,7 +247,7 @@ class DoctolibSlots:
                 agenda_ids_q,
                 practice_ids_q,
                 next_fetch_date,
-                page=1 + max(0, floor(diff.days / DOCTOLIB_DAYS_PER_PAGE)) + page,
+                page=1 + max(0, floor(diff.days / PLATFORM_DAYS_PER_PAGE)) + page,
                 first_availability=first_availability,
             )
         if not sdate:
@@ -260,7 +255,7 @@ class DoctolibSlots:
         if not first_availability or sdate < first_availability:
             first_availability = sdate
         request.update_appointment_count(request.appointment_count + appt)
-        if page >= DOCTOLIB_PAGES_NUMBER:
+        if page >= PLATFORM_PAGES_NUMBER:
             return first_availability
         return self.get_timetables(
             request,
@@ -268,7 +263,7 @@ class DoctolibSlots:
             motive_ids_q,
             agenda_ids_q,
             practice_ids_q,
-            start_date + timedelta(days=DOCTOLIB_DAYS_PER_PAGE),
+            start_date + timedelta(days=PLATFORM_DAYS_PER_PAGE),
             1 + page,
             first_availability=first_availability,
         )
@@ -350,7 +345,7 @@ class DoctolibSlots:
         motive_availability = False
         first_availability = None
         appointment_count = 0
-        slots_api_url = DOCTOLIB_CONF.api.get("slots", "").format(
+        slots_api_url = PLATFORM_CONF.get("api").get("slots", "").format(
             start_date=start_date,
             motive_id=motive_ids_q,
             agenda_ids_q=agenda_ids_q,
@@ -652,22 +647,30 @@ def is_allowing_online_appointments(rdata: dict) -> bool:
             return True
     return False
 
+class CustomStage:
+    """Generic class to wrap serialization steps with consistent ``dumps()`` and ``loads()`` methods"""
 
-def center_iterator() -> Iterator[Dict]:
-    if not DOCTOLIB_CONF.enabled:
-        logger.warning("Doctolib scrap is disabled in configuration file.")
-        return []
+    def __init__(self, obj, dumps: str = "dumps", loads: str = "loads"):
+        self.obj = obj
+        self.dumps = getattr(obj, dumps)
+        self.loads = getattr(obj, loads)
+
+
+def center_iterator(client=None) -> Iterator[Dict]:
+    if not PLATFORM_ENABLED:
+        logger.warning(f"{PLATFORM.capitalize()} scrap is disabled in configuration file.")
+        return []  
+    
+    session = CacheControl(requests.Session(), cache=FileCache('./cache'))
+    
+    if client:
+        session = client
     try:
-        center_path = "data/output/doctolib-centers.json"
-        url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"
-        response = requests.get(url)
-        response.raise_for_status()
-        data = response.json()
-        file = open(center_path, "w")
-        file.write(json.dumps(data, indent=2))
-        file.close()
-        logger.info(f"Found {len(data)} Doctolib centers (external scraper).")
+        url = f'{get_config().get("base_urls").get("github_public_path")}{get_conf_outputs().get("centers_json_path").format(PLATFORM)}'
+        response=session.get(url)
+        data=response.json()
+        logger.info(f"Found {len(data)} {PLATFORM.capitalize()} centers (external scraper).")
         for center in data:
             yield center
     except Exception as e:
-        logger.warning(f"Unable to scrape doctolib centers: {e}")
+        logger.warning(f"Unable to scrape {PLATFORM} centers: {e}")

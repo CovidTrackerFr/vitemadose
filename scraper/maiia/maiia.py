@@ -5,7 +5,7 @@ import httpx
 import datetime as dt
 from pytz import timezone
 
-import requests
+from typing import Dict, Iterator, List, Optional, Tuple, Set
 from dateutil.parser import isoparse, parse
 from urllib import parse as urlparse
 from urllib.parse import quote, parse_qs
@@ -14,26 +14,30 @@ from scraper.profiler import Profiling
 from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.maiia.maiia_utils import get_paged, MAIIA_LIMIT, DEFAULT_CLIENT
-from utils.vmd_config import get_conf_platform, get_config
+from utils.vmd_config import get_conf_platform, get_config, get_conf_outputs
 from utils.vmd_utils import DummyQueue
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
+import requests
+from cachecontrol import CacheControl
+from cachecontrol.caches.file_cache import FileCache
 
-MAIIA_CONF = get_conf_platform("maiia")
-MAIIA_API = MAIIA_CONF.get("api", {})
-MAIIA_ENABLED = MAIIA_CONF.get("enabled", False)
-MAIIA_SCRAPER = MAIIA_CONF.get("center_scraper", {})
+PLATFORM="maiia".lower()
+PLATFORM_CONF = get_conf_platform("maiia")
+PLATFORM_API = PLATFORM_CONF.get("api", {})
+PLATFORM_ENABLED = PLATFORM_CONF.get("enabled", False)
+PLATFORM_SCRAPER = PLATFORM_CONF.get("center_scraper", {})
 
-# timeout = httpx.Timeout(MAIIA_CONF.get("timeout", 25), connect=MAIIA_CONF.get("timeout", 25))
+# timeout = httpx.Timeout(PLATFORM_CONF.get("timeout", 25), connect=PLATFORM_CONF.get("timeout", 25))
 
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
 
-MAIIA_URL = MAIIA_CONF.get("base_url")
+MAIIA_URL = PLATFORM_CONF.get("base_url")
 NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
 
 def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue, client: httpx.Client = DEFAULT_CLIENT) -> Optional[str]:
-    if not MAIIA_ENABLED:
+    if not PLATFORM_ENABLED:
         return None
 
     # Fonction principale avec le comportement "de prod".
@@ -65,7 +69,7 @@ class MaiiaSlots:
 
     @Profiling.measure("maiia_slot")
     def _fetch(self, request: ScraperRequest, creneau_q=DummyQueue()) -> Optional[str]:
-        if not MAIIA_ENABLED:
+        if not PLATFORM_ENABLED:
             return None
         url = request.get_url()
         start_date = request.get_start_date()
@@ -79,7 +83,7 @@ class MaiiaSlots:
         if not reasons:
             return None
         self.lieu = Lieu(
-            plateforme=Plateforme.MAIIA,
+            plateforme=Plateforme[PLATFORM.upper()],
             url=request.url,
             location=request.center_info.location,
             nom=request.center_info.nom,
@@ -129,7 +133,7 @@ class MaiiaSlots:
         client: httpx.Client = DEFAULT_CLIENT,
         request: ScraperRequest = None,
     ) -> Optional[str]:
-        url = MAIIA_API.get("next_slot").format(
+        url = PLATFORM_API.get("next_slot").format(
             center_id=center_id, consultation_reason_name=consultation_reason_name, start_date=start_date
         )
         if request:
@@ -156,7 +160,7 @@ class MaiiaSlots:
         client: httpx.Client = DEFAULT_CLIENT,
         request: ScraperRequest = None,
     ) -> Optional[list]:
-        url = MAIIA_API.get("slots").format(
+        url = PLATFORM_API.get("slots").format(
             center_id=center_id,
             consultation_reason_name=consultation_reason_name,
             start_date=start_date,
@@ -173,7 +177,7 @@ class MaiiaSlots:
             if next_date - isoparse(start_date) > dt.timedelta(days=NUMBER_OF_SCRAPED_DAYS):
                 return None
             start_date = next_date.isoformat()
-            url = MAIIA_API.get("slots").format(
+            url = PLATFORM_API.get("slots").format(
                 center_id=center_id,
                 consultation_reason_name=consultation_reason_name,
                 start_date=start_date,
@@ -233,29 +237,27 @@ class MaiiaSlots:
 def get_reasons(
     center_id: str, limit=MAIIA_LIMIT, client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None
 ) -> list:
-    url = MAIIA_API.get("motives").format(center_id=center_id)
+    url = PLATFORM_API.get("motives").format(center_id=center_id)
     result = get_paged(url, limit=limit, client=client, request=request, request_type="motives")
     if not result["total"]:
         return []
     return result.get("items", [])
 
-
-def centre_iterator(overwrite_centers_file=True):
-    if not MAIIA_ENABLED:
-        logger.warning("Maiia scrap is disabled in configuration file.")
-        return []
+def center_iterator(client=None) -> Iterator[Dict]:
+    if not PLATFORM_ENABLED:
+        logger.warning(f"{PLATFORM.capitalize()} scrap is disabled in configuration file.")
+        return []  
+    
+    session = CacheControl(requests.Session(), cache=FileCache('./cache'))
+    
+    if client:
+        session = client
     try:
-        center_path = MAIIA_SCRAPER.get("result_path")
-        data_auto = get_config().get("data-auto", {}).get("base_url")
-        url = f"{data_auto}{center_path}"
-        response = requests.get(url)
-        response.raise_for_status()
-        data = response.json()
-        if overwrite_centers_file:
-            with open(center_path, "w") as f:
-                f.write(json.dumps(data, indent=2))
-        logger.info(f"Found {len(data)} Maiia centers (external scraper).")
+        url = f'{get_config().get("base_urls").get("github_public_path")}{get_conf_outputs().get("centers_json_path").format(PLATFORM)}'
+        response=session.get(url)
+        data=response.json()
+        logger.info(f"Found {len(data)} {PLATFORM.capitalize()} centers (external scraper).")
         for center in data:
             yield center
     except Exception as e:
-        logger.warning(f"Unable to scrape Maiia centers: {e}")
+        logger.warning(f"Unable to scrape {PLATFORM} centers: {e}")

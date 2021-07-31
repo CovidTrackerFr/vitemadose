@@ -33,7 +33,7 @@ logger = get_logger()
 
 
 def get_departements() -> List[str]:
-    with open(get_conf_inputs()["departements"], encoding="utf8", newline="\n") as csvfile:
+    with open(get_conf_inputs()["from_main_branch"]["departements"], encoding="utf8", newline="\n") as csvfile:
         reader = list(csv.DictReader(csvfile, delimiter=","))
 
         departements = [
@@ -117,7 +117,7 @@ class KeldocCenterScraper:
                 url_with_query = (
                     f"https://keldoc.com{center['url']}?cabinet={center.get('id')}&specialty={vaccine_speciality}"
                 )
-
+        
         resources = self.parse_keldoc_resources(url_with_query)
         if not resources:
             return None

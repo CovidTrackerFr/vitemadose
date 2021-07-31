@@ -5,7 +5,6 @@ from utils.vmd_config import get_conf_platform
 from utils.vmd_logger import get_logger
 from utils.vmd_utils import get_departements, department_urlify
 
-from scraper.doctolib.conf import DoctolibConf
 from scraper.doctolib.doctolib import DOCTOLIB_HEADERS
 from scraper.doctolib.doctolib_filters import is_vaccination_center
 from scraper.doctolib.doctolib_parsers import (
@@ -22,11 +21,11 @@ from typing import List, Tuple, Dict
 import json
 from urllib import parse
 
-DOCTOLIB_CONF = DoctolibConf(**get_conf_platform("doctolib"))
-SCRAPER_CONF = DOCTOLIB_CONF.center_scraper
+DOCTOLIB_CONF = get_conf_platform("doctolib")
+SCRAPER_CONF = DOCTOLIB_CONF.get("center_scraper")
 
-BASE_URL_DEPARTEMENT = DOCTOLIB_CONF.api.get("scraper_dep")
-BOOKING_URL = DOCTOLIB_CONF.api.get("booking")
+BASE_URL_DEPARTEMENT = DOCTOLIB_CONF.get("api").get("scraper_dep")
+BOOKING_URL = DOCTOLIB_CONF.get("api").get("booking")
 
 DEFAULT_CLIENT = httpx.Client()
 
@@ -50,9 +49,9 @@ class DoctolibCenterScraper:
         page_has_centers = True
         liste_urls = []
 
-        for weird_dep in SCRAPER_CONF.dep_conversion:
+        for weird_dep in SCRAPER_CONF.get("dep_conversion"):
             if weird_dep == departement:
-                departement = SCRAPER_CONF.dep_conversion[weird_dep]
+                departement = SCRAPER_CONF.get("dep_conversion")[weird_dep]
                 break
         centers = []
         while page_has_centers:
@@ -130,7 +129,7 @@ class DoctolibCenterScraper:
 
 
 def fetch_department(department: str):
-    if not DOCTOLIB_CONF.enabled:
+    if not DOCTOLIB_CONF.get("enabled"):
         return None
     scraper = DoctolibCenterScraper()
     return scraper.run_departement_scrap(department)
@@ -159,9 +158,9 @@ def parse_doctolib_centers(page_limit=None) -> List[dict]:
 
 
 if __name__ == "__main__":  # pragma: no cover
-    if DOCTOLIB_CONF.enabled:
+    if DOCTOLIB_CONF.get("enabled"):
         centers = parse_doctolib_centers()
-        path_out = SCRAPER_CONF.result_path
+        path_out = SCRAPER_CONF.get("result_path")
         logger.info(f"Found {len(centers)} centers on Doctolib")
         if len(centers) < 2000:
             # for reference, on 13-05, there were 12k centers
