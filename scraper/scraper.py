@@ -6,7 +6,6 @@ from multiprocessing import Manager, Pool, Process, Queue  # Use actual Process 
 from random import random
 from typing import Tuple
 import sys
-import requests_cache
 from .export.export_v2 import JSONExporter
 from scraper.error import BlockedByDoctolibError, DoublonDoctolib
 from scraper.pattern.center_info import CenterInfo
