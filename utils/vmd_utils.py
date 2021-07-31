@@ -23,24 +23,24 @@ PARIS_TZ = pytz.timezone("Europe/Paris")
 
 
 def load_insee() -> dict:
-    with open(get_conf_inputs().get("postalcode_to_insee")) as json_file:
+    with open(get_conf_inputs().get("from_main_branch").get("postalcode_to_insee")) as json_file:
         return json.load(json_file)
 
 
 def load_cedex_to_insee() -> dict:
-    with open(get_conf_inputs().get("cedex_to_insee")) as json_file:
+    with open(get_conf_inputs().get("from_main_branch").get("cedex_to_insee")) as json_file:
         return json.load(json_file)
 
 
 def get_departements(excluded_departments: List[str] = []) -> List[str]:
-    with open(get_conf_inputs()["departements"], encoding="utf8", newline="\n") as csvfile:
+    with open(get_conf_inputs()["from_main_branch"]["departements"], encoding="utf8", newline="\n") as csvfile:
         reader = csv.DictReader(csvfile)
         departements = [row["nom_departement"] for row in reader if row["nom_departement"] not in excluded_departments]
         return departements
 
 
 def get_departements_numbers(excluded_departments: List[str] = []) -> List[str]:
-    with open(get_conf_inputs()["departements"], encoding="utf8", newline="\n") as csvfile:
+    with open(get_conf_inputs()["from_main_branch"]["departements"], encoding="utf8", newline="\n") as csvfile:
         reader = csv.DictReader(csvfile)
         departements = [row["code_departement"] for row in reader if row["nom_departement"] not in excluded_departments]
         return departements
@@ -93,7 +93,7 @@ class departementUtils:
         >>> sorted(departements) == departements
         True
         """
-        with open(get_conf_inputs().get("departements"), newline="\n") as csvfile:
+        with open(get_conf_inputs().get("from_main_branch").get("departements"), newline="\n") as csvfile:
             reader = csv.DictReader(csvfile)
             return [str(row["code_departement"]) for row in reader]
 
@@ -125,7 +125,7 @@ class departementUtils:
         if len(insee_code) != 5:
             raise ValueError(f"Code INSEE non-valide : {insee_code}")
 
-        with open(get_conf_inputs().get("insee_to_postalcode_and_dep")) as json_file:
+        with open(get_conf_inputs().get("from_main_branch").get("insee_to_postalcode_and_dep")) as json_file:
             insee_to_code_departement_table = json.load(json_file)
 
         if insee_code in insee_to_code_departement_table:
@@ -233,7 +233,7 @@ def fix_scrap_urls(url):
 
 
 def get_last_scans(centres):
-    url = get_conf_inputs().get("last_scans")
+    url =f'{get_config().get("base_urls").get("gitlab_public_path")}/{get_conf_inputs().get("from_gitlab_public").get("last_scans")}'
     last_scans = {}
     liste_centres = []
 

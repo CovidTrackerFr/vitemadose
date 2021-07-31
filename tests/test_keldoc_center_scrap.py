@@ -31,8 +31,10 @@ def test_keldoc_center_scraper():
         return httpx.Response(200, json={})
 
     client = httpx.Client(transport=httpx.MockTransport(app))
+    print(client._base_url)
     scraper = KeldocCenterScraper(session=client)
     result = scraper.run_departement_scrap("ain")
+    print(result)
     assert result == get_test_data("result-ain")
 
 

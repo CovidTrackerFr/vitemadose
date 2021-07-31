@@ -5,11 +5,11 @@ from datetime import datetime
 import pytz
 import requests
 
-from utils.vmd_config import get_conf_outstats
+from utils.vmd_config import get_conf_outstats, get_config, get_conf_inputs
 
 logger = logging.getLogger("scraper")
 
-DATA_AUTO = get_conf_outstats().get("data-auto")
+DATA_AUTO = get_config().get("base_urls").get("gitlab_public_path")
 
 
 def compute_plateforme_data(centres_info):
@@ -50,7 +50,7 @@ def compute_plateforme_data(centres_info):
 
 
 def generate_stats_center_types(centres_info):
-    stats_path = get_conf_outstats().get("center_types")
+    stats_path = get_conf_inputs().get("from_gitlab_public").get("center_types")
     stats_data = {"dates": [], "plateformes": {}, "center_types": {}}
 
     try:

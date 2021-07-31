@@ -68,28 +68,6 @@ def search(client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
         # logger.info(f"Downloaded {j['page']}/{j['pages']}")
     return result
 
-
-def get_doctor_slug(slug: str, client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None) -> Optional[dict]:
-    url = AVECMONDOC_API.get("get_doctor_slug", "").format(slug=slug)
-    try:
-        r = client.get(url)
-        r.raise_for_status()
-    except httpx.TimeoutException as hex:
-        logger.warning(f"request timed out for center: {url} (get_slug)")
-        if request:
-            request.increase_request_count("time-out")
-        return None
-    except httpx.HTTPStatusError as hex:
-        logger.warning(f"{url} returned error {hex.response.status_code}")
-        logger.warning(r.content)
-        if request:
-            request.increase_request_count("error")
-        return None
-    if request:
-        request.increase_request_count("cabinets")
-    return r.json()
-
-
 def get_organization_slug(
     slug: str, client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None
 ) -> Optional[dict]:
@@ -110,52 +88,6 @@ def get_organization_slug(
         return None
     if request:
         request.increase_request_count("cabinets")
-    return r.json()
-
-
-def get_by_doctor(
-    doctor_id: int, client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None
-) -> Optional[list]:
-    url = AVECMONDOC_API.get("get_by_doctor", "").format(id=doctor_id)
-    try:
-        r = client.get(url)
-        r.raise_for_status()
-    except httpx.TimeoutException as hex:
-        logger.warning(f"request timed out for {url} (get_by_doctor)")
-        if request:
-            request.increase_request_count("time-out")
-        return None
-    except httpx.HTTPStatusError as hex:
-        logger.warning(f"{url} returned error {hex.response.status_code}")
-        logger.warning(r.content)
-        if request:
-            request.increase_request_count("error")
-        return None
-    if request:
-        request.increase_request_count("resource")
-    return r.json()
-
-
-def get_by_organization(
-    organization_id: int, client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None
-) -> Optional[list]:
-    url = AVECMONDOC_API.get("get_by_organization", "").format(id=organization_id)
-    try:
-        r = client.get(url)
-        r.raise_for_status()
-    except httpx.TimeoutException as hex:
-        logger.warning(f"request timed out for {url} (get_by_doctor)")
-        if request:
-            request.increase_request_count("time-out")
-        return None
-    except httpx.HTTPStatusError as hex:
-        logger.warning(f"{url} returned error {hex.response.status_code}")
-        logger.warning(r.content)
-        if request:
-            request.increase_request_count("error")
-        return None
-    if request:
-        request.increase_request_count("resource")
     return r.json()
 
 

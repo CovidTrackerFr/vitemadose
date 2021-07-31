@@ -10,23 +10,28 @@ from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.profiler import Profiling
-from utils.vmd_config import get_conf_platform
+from utils.vmd_config import get_conf_platform, get_config, get_conf_outputs
 from scraper.error import BlockedByMesoignerError
 from utils.vmd_utils import DummyQueue, append_date_days
 from typing import Dict, Iterator, List, Optional
 import dateutil
+from cachecontrol import CacheControl
+from cachecontrol.caches.file_cache import FileCache
 
-MESOIGNER_CONF = get_conf_platform("mesoigner")
-MESOIGNER_ENABLED = MESOIGNER_CONF.get("enabled", False)
+
+PLATFORM="mesoigner".lower()
+
+PLATFORM_CONF = get_conf_platform("mesoigner")
+PLATFORM_ENABLED = PLATFORM_CONF.get("enabled", False)
 MESOIGNER_HEADERS = {
     "Authorization": f'Mesoigner apikey="{os.environ.get("MESOIGNER_API_KEY", "")}"',
 }
-MESOIGNER_APIs = MESOIGNER_CONF.get("api", "")
+MESOIGNER_APIs = PLATFORM_CONF.get("api", "")
 
-SCRAPER_CONF = MESOIGNER_CONF.get("center_scraper", {})
-CENTER_LIST_URL = MESOIGNER_CONF.get("api", {}).get("center_list", {})
+SCRAPER_CONF = PLATFORM_CONF.get("center_scraper", {})
+CENTER_LIST_URL = PLATFORM_CONF.get("api", {}).get("center_list", {})
 
-timeout = httpx.Timeout(MESOIGNER_CONF.get("timeout", 30), connect=MESOIGNER_CONF.get("timeout", 30))
+timeout = httpx.Timeout(PLATFORM_CONF.get("timeout", 30), connect=PLATFORM_CONF.get("timeout", 30))
 
 if os.getenv("WITH_TOR", "no") == "yes":
     session = requests.Session()
@@ -43,7 +48,7 @@ logger = logging.getLogger("scraper")
 
 @Profiling.measure("mesoigner_slot")
 def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue) -> Optional[str]:
-    if not MESOIGNER_ENABLED:
+    if not PLATFORM_ENABLED:
         return None
     # Fonction principale avec le comportement "de prod".
     mesoigner = MesoignerSlots(client=DEFAULT_CLIENT, creneau_q=creneau_q)
@@ -70,7 +75,7 @@ class MesoignerSlots:
         start_date = request.get_start_date()
 
         self.lieu = Lieu(
-            plateforme=Plateforme.MESOIGNER,
+            plateforme=Plateforme[PLATFORM.upper()],
             url=request.url,
             location=request.center_info.location,
             nom=request.center_info.nom,
@@ -137,21 +142,21 @@ class MesoignerSlots:
         return first_availability
 
 
-def center_iterator(client: httpx.Client = DEFAULT_CLIENT) -> Iterator[Dict]:
-    if not MESOIGNER_ENABLED:
-        logger.warning("Mesoigner scrap is disabled in configuration file.")
-        return []
+def center_iterator(client=None) -> Iterator[Dict]:
+    if not PLATFORM_ENABLED:
+        logger.warning(f"{PLATFORM.capitalize()} scrap is disabled in configuration file.")
+        return []  
+    
+    session = CacheControl(requests.Session(), cache=FileCache('./cache'))
+    
+    if client:
+        session = client
     try:
-        center_path = "data/output/mesoigner_centers.json"
-        url = f"https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/{center_path}"
-        response = client.get(url)
-        response.raise_for_status()
-        data = response.json()
-        file = open(center_path, "w")
-        file.write(json.dumps(data, indent=2))
-        file.close()
-        logger.info(f"Found {len(data)} mesoigner centers (external scraper).")
+        url = f'{get_config().get("base_urls").get("github_public_path")}{get_conf_outputs().get("centers_json_path").format(PLATFORM)}'
+        response=session.get(url)
+        data=response.json()
+        logger.info(f"Found {len(data)} {PLATFORM.capitalize()} centers (external scraper).")
         for center in data:
             yield center
     except Exception as e:
-        logger.warning(f"Unable to scrape mesoigner centers: {e}")
+        logger.warning(f"Unable to scrape {PLATFORM} centers: {e}")

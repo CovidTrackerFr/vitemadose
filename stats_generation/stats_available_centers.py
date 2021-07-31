@@ -8,16 +8,16 @@ import requests
 from pathlib import Path
 from stats_generation.stats_center_types import generate_stats_center_types
 from stats_generation.stats_map import make_maps
-from utils.vmd_config import get_conf_outstats, get_conf_outputs
+from utils.vmd_config import get_conf_outstats, get_conf_outputs,get_config,get_conf_inputs
 from utils.vmd_logger import enable_logger_for_production
 
 logger = logging.getLogger("scraper")
 
-DATA_AUTO = get_conf_outstats().get("data-auto")
+DATA_AUTO = get_config().get("base_urls").get("gitlab_public_path")
 
 
 def generate_stats_date(centres_stats):
-    stats_path = get_conf_outstats().get("by_date")
+    stats_path = get_conf_inputs().get("from_gitlab_public").get("by_date")
     stats_data = {
         "dates": [],
         "total_centres_disponibles": [],
@@ -51,7 +51,7 @@ def generate_stats_date(centres_stats):
 
 
 def generate_stats_dep_date(centres_stats):
-    stats_path = get_conf_outstats().get("by_date_dep")
+    stats_path = get_conf_inputs().get("from_gitlab_public").get("by_date_dep")
     stats_data = {
         "dates": [],
         "dep_centres_disponibles": {},
@@ -137,7 +137,7 @@ def export_centres_stats(
             )
         )
 
-        with open(Path("data", "output", stats_path), "w") as stats_file:
+        with open(Path(stats_path), "w") as stats_file:
             json.dump(centres_stats, stats_file, indent=2)
         if stats_path != get_conf_outstats().get("global"):
             return

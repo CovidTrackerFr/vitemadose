@@ -6,6 +6,7 @@ from multiprocessing import Manager, Pool, Process, Queue  # Use actual Process 
 from random import random
 from typing import Tuple
 import sys
+import requests_cache
 from .export.export_v2 import JSONExporter
 from scraper.error import BlockedByDoctolibError, DoublonDoctolib
 from scraper.pattern.center_info import CenterInfo
@@ -18,8 +19,8 @@ from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date, q_it
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
 from .keldoc.keldoc import fetch_slots as keldoc_fetch_slots
-from .keldoc.keldoc import center_iterator as keldoc_centre_iterator
-from .maiia.maiia import centre_iterator as maiia_centre_iterator
+from .keldoc.keldoc import center_iterator as keldoc_center_iterator
+from .maiia.maiia import center_iterator as maiia_center_iterator
 from .maiia.maiia import fetch_slots as maiia_fetch_slots
 from .mapharma.mapharma import centre_iterator as mapharma_centre_iterator
 from .mapharma.mapharma import fetch_slots as mapharma_fetch_slots
@@ -236,13 +237,13 @@ def fetch_centre_slots(
 def centre_iterator(platforms=None):  # pragma: no cover
     visited_centers_links = set()
     for center in ialternate(
-        ordoclic_centre_iterator(),
-        mapharma_centre_iterator(),
-        maiia_centre_iterator(),
-        avecmondoc_centre_iterator(),
+        # ordoclic_centre_iterator(),
+        # mapharma_centre_iterator(),
+        maiia_center_iterator(),
+        # avecmondoc_centre_iterator(),
         mesoigner_centre_iterator(),
         doctolib_center_iterator(),
-        keldoc_centre_iterator(),
+        keldoc_center_iterator(),
     ):
 
         platform = get_center_platform(

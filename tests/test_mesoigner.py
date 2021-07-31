@@ -61,7 +61,7 @@ from unittest.mock import patch
 
 # On se place dans le cas où la plateforme est désactivée
 def test_fetch_slots():
-    mesoigner.MESOIGNER_ENABLED = False
+    mesoigner.PLATFORM_ENABLED = False
     center_data = dict()
     center_data = json.load(io.open(TEST_CENTRE_INFO, "r", encoding="utf-8-sig"))
 
@@ -77,7 +77,7 @@ def test_fetch_slots():
 
 
 def test_fetch():
-    mesoigner.MESOIGNER_ENABLED = True
+    mesoigner.PLATFORM_ENABLED = True
 
     center_data = dict()
     center_data = json.load(io.open(TEST_CENTRE_INFO, "r", encoding="utf-8-sig"))
@@ -109,7 +109,7 @@ def test_fetch():
 
 def test_center_iterator():
     result = mesoigner.center_iterator()
-    if mesoigner.MESOIGNER_ENABLED == False:
+    if mesoigner.PLATFORM_ENABLED == False:
         assert result == None
 
 

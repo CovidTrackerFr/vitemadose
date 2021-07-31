@@ -1,13 +1,12 @@
 from typing import Dict, List, Optional
 
-from scraper.doctolib.conf import DoctolibConf
 from scraper.pattern.scraper_result import VACCINATION_CENTER
 from utils.vmd_config import get_conf_platform
 from utils.vmd_utils import departementUtils, format_phone_number
 
 
-DOCTOLIB_CONF = DoctolibConf(**get_conf_platform("doctolib"))
-SCRAPER_CONF = DOCTOLIB_CONF.center_scraper
+DOCTOLIB_CONF = get_conf_platform("doctolib")
+SCRAPER_CONF = DOCTOLIB_CONF.get("center_scraper")
 
 
 def get_coordinates(doctor_dict: Dict):
@@ -21,10 +20,10 @@ def get_coordinates(doctor_dict: Dict):
 
 
 def center_type(url_path: str, nom: str) -> str:
-    for key in SCRAPER_CONF.center_types:
+    for key in SCRAPER_CONF.get("center_types"):
         if key in nom.lower() or key in url_path:
-            return SCRAPER_CONF.center_types[key]
-    return SCRAPER_CONF.center_types.get("*", VACCINATION_CENTER)
+            return SCRAPER_CONF.get("center_types")[key]
+    return SCRAPER_CONF.get("center_types").get("*", VACCINATION_CENTER)
 
 
 def parse_doctor(doctor_dict: Dict) -> Dict:
@@ -86,7 +85,7 @@ def parse_doctolib_business_hours(place: dict) -> Optional[dict]:
 
     for opening_hour in place["opening_hours"]:
         format_hours = ""
-        key_name = SCRAPER_CONF.business_days[opening_hour["day"] - 1]
+        key_name = SCRAPER_CONF.get("business_days")[opening_hour["day"] - 1]
         if not opening_hour.get("enabled", False):
             business_hours[key_name] = None
             continue

@@ -11,7 +11,7 @@ from scraper.maiia.maiia import (
     MaiiaSlots,
     get_reasons,
     fetch_slots,
-    centre_iterator,
+    center_iterator,
     MAIIA_LIMIT,
 )
 from scraper.maiia.maiia_center_scrap import maiia_scrap
@@ -187,9 +187,9 @@ def test_fetch_slots():
     assert first_availability == "2021-05-13T13:40:00+00:00"
 
 
-def test_centre_iterator():
+def test_center_iterator():
     centres = []
-    for centre in centre_iterator(overwrite_centers_file=False):
+    for centre in center_iterator():
         centres.append(centre)
     assert len(centres) > 0
 
