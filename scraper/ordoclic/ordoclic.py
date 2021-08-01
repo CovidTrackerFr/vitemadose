@@ -13,6 +13,9 @@ from utils.vmd_config import get_conf_platform, get_config
 from utils.vmd_utils import departementUtils, DummyQueue
 from scraper.profiler import Profiling
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
+import requests
+from cachecontrol import CacheControl
+from cachecontrol.caches.file_cache import FileCache
 
 logger = logging.getLogger("scraper")
 
@@ -22,7 +25,8 @@ ORDOCLIC_ENABLED = ORDOCLIC_CONF.get("enabled", False)
 NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
 timeout = httpx.Timeout(ORDOCLIC_CONF.get("timeout", 25), connect=ORDOCLIC_CONF.get("timeout", 25))
-DEFAULT_CLIENT = httpx.Client(timeout=timeout)
+session_pre = requests.Session()
+DEFAULT_CLIENT =  CacheControl(session_pre, cache=FileCache('./cache/ordoclic'))
 insee = {}
 paris_tz = timezone("Europe/Paris")
 

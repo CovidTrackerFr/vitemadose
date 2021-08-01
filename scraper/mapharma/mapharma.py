@@ -1,4 +1,5 @@
 import os
+from scraper.avecmondoc.avecmondoc import DEFAULT_CLIENT
 
 import httpx
 import json
@@ -18,6 +19,9 @@ from utils.vmd_config import get_conf_platform, get_config
 from scraper.profiler import Profiling
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 from utils.vmd_utils import departementUtils, DummyQueue
+import requests
+from cachecontrol import CacheControl
+from cachecontrol.caches.file_cache import FileCache
 
 MAPHARMA_CONF = get_conf_platform("mapharma")
 MAPHARMA_API = MAPHARMA_CONF.get("api", {})
@@ -38,7 +42,9 @@ MAPHARMA_OPEN_DATA_URL = MAPHARMA_API.get("opendata", "")
 MAPHARMA_OPEN_DATA_URL_FALLBACK = MAPHARMA_API.get("opendata_fallback", "")
 NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
-DEFAULT_CLIENT = httpx.Client(headers=MAPHARMA_HEADERS)
+session_pre = requests.Session()
+session_pre.headers.update(MAPHARMA_HEADERS)
+DEFAULT_CLIENT =  CacheControl(session_pre, cache=FileCache('./cache/mapharma'))
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
 
