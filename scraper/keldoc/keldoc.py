@@ -31,7 +31,10 @@ timeout = httpx.Timeout(PLATFORM_TIMEOUT, connect=PLATFORM_TIMEOUT)
 KELDOC_HEADERS = {
     "User-Agent": os.environ.get("KELDOC_API_KEY", ""),
 }
-session = httpx.Client(timeout=timeout, headers=KELDOC_HEADERS)
+session_pre = requests.Session()
+session_pre.headers.update(KELDOC_HEADERS)
+DEFAULT_CLIENT =  CacheControl(session_pre, cache=FileCache('./cache/keldoc'))
+
 logger = logging.getLogger("scraper")
 
 # Allow 10 bad runs of keldoc_slot before giving up for the 200 next tries
@@ -43,7 +46,7 @@ def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue()):
         request.url = request.url.replace("keldoc.com", "vaccination-covid.keldoc.com")
     if not PLATFORM_ENABLED:
         return None
-    center = KeldocCenter(request, client=session, creneau_q=creneau_q)
+    center = KeldocCenter(request, client=DEFAULT_CLIENT, creneau_q=creneau_q)
     center.vaccine_motives = filter_vaccine_motives(center.appointment_motives)
 
     center.lieu = Lieu(
@@ -74,7 +77,7 @@ def center_iterator(client=None) -> Iterator[Dict]:
         logger.warning(f"{PLATFORM.capitalize()} scrap is disabled in configuration file.")
         return []  
     
-    session = CacheControl(requests.Session(), cache=FileCache('./cache'))
+    session = CacheControl(requests.Session(), cache=FileCache('./cache/platforms_list'))
     
     if client:
         session = client
