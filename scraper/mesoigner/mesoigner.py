@@ -154,6 +154,13 @@ def center_iterator(client=None) -> Iterator[Dict]:
     try:
         url = f'{get_config().get("base_urls").get("github_public_path")}{get_conf_outputs().get("centers_json_path").format(PLATFORM)}'
         response=session.get(url)
+        # Si on ne vient pas des tests unitaires
+        if not client:
+            if (response.from_cache):
+                logger.info(f"Liste des centres pour {PLATFORM} vient du cache")
+            else:
+                logger.info(f"Liste des centres pour {PLATFORM} est une vraie requête")
+
         data=response.json()
         logger.info(f"Found {len(data)} {PLATFORM.capitalize()} centers (external scraper).")
         for center in data:
