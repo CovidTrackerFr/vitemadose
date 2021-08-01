@@ -44,7 +44,7 @@ NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
 session_pre = requests.Session()
 session_pre.headers.update(MAPHARMA_HEADERS)
-DEFAULT_CLIENT =  CacheControl(session_pre, cache=FileCache('./cache/mapharma'))
+DEFAULT_CLIENT =  CacheControl(session_pre, cache=FileCache('./cache'))
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
 

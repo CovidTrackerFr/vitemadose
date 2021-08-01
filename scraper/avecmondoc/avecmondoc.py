@@ -36,7 +36,7 @@ AVECMONDOC_DAYS_PER_PAGE = AVECMONDOC_CONF.get("days_per_page", 7)
 timeout = httpx.Timeout(AVECMONDOC_CONF.get("timeout", 25), connect=AVECMONDOC_CONF.get("timeout", 25))
 session_pre = requests.Session()
 session_pre.headers.update(AVECMONDOC_HEADERS)
-DEFAULT_CLIENT =  CacheControl(session_pre, cache=FileCache('./cache/avecmondoc'))
+DEFAULT_CLIENT =  CacheControl(session_pre, cache=FileCache('./cache'))
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
 
