@@ -9,7 +9,7 @@ GITLAB_HOST="gitlab.com"
 RUNNER_CONCURRENCY=${RUNNER_CONCURRENCY:-1}
 RUNNER_NAME="Chez ${RUNNER_LOCATION:-inconnu}"
 GITLAB_RUNNER_TOKEN=${GITLAB_RUNNER_TOKEN}
-TAG_LIST="${TAG_LIST:-no_tag},priviledged"
+TAG_LIST="${TAG_LIST:-no_tag},privileged"
 RUN_UNTAGGED=true
 GITLAB_RUN_UNTAGGED=${GITLAB_RUN_UNTAGGED:-true}
 if [[ "${GITLAB_RUN_UNTAGGED}" = "false" ]]; then
@@ -47,9 +47,13 @@ function install_gitlab_runner () {
 
 function install_dd_agent () {
   export DD_AGENT_MAJOR_VERSION=7
-  export DD_API_KEY=${DD_API_KEY}
+  export DD_API_KEY=${DD_API_KEY:-empty}
   export DD_SITE="datadoghq.com"
-  bash -c "$(curl -L https://s3.amazonaws.com/dd-agent/scripts/install_script.sh)"
+  if [[ "${DD_API_KEY}" = "empty" ]]; then
+    echo "Skipping Datadog setup because no DD_API_KEY was specified"
+  else
+    bash -c "$(curl -L https://s3.amazonaws.com/dd-agent/scripts/install_script.sh)"
+  fi
 }
 
 function register_gitlab_runner () {
