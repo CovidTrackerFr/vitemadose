@@ -248,7 +248,7 @@ def center_iterator(client=None) -> Iterator[Dict]:
         logger.warning(f"{PLATFORM.capitalize()} scrap is disabled in configuration file.")
         return []  
     
-    session = CacheControl(requests.Session(), cache=FileCache('./cache/platforms_list'))
+    session = CacheControl(requests.Session(), cache=FileCache('./cache'))
     
     if client:
         session = client

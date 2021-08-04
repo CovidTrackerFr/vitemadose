@@ -15,9 +15,6 @@ from scraper.pattern.center_info import CenterInfo, CenterLocation
 from scraper.pattern.vaccine import Vaccine, get_vaccine_name
 from utils.vmd_config import get_conf_platform, get_config
 from utils.vmd_utils import departementUtils, DummyQueue
-import requests
-from cachecontrol import CacheControl
-from cachecontrol.caches.file_cache import FileCache
 
 
 AVECMONDOC_CONF = get_conf_platform("avecmondoc")
@@ -34,9 +31,7 @@ NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 AVECMONDOC_DAYS_PER_PAGE = AVECMONDOC_CONF.get("days_per_page", 7)
 
 timeout = httpx.Timeout(AVECMONDOC_CONF.get("timeout", 25), connect=AVECMONDOC_CONF.get("timeout", 25))
-session_pre = requests.Session()
-session_pre.headers.update(AVECMONDOC_HEADERS)
-DEFAULT_CLIENT =  CacheControl(session_pre, cache=FileCache('./cache/avecmondoc'))
+DEFAULT_CLIENT = httpx.Client(headers=AVECMONDOC_HEADERS, timeout=timeout)
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
 
