@@ -236,10 +236,10 @@ def fetch_centre_slots(
 def centre_iterator(platforms=None):  # pragma: no cover
     visited_centers_links = set()
     for center in ialternate(
-        # ordoclic_centre_iterator(),
-        # mapharma_centre_iterator(),
+        ordoclic_centre_iterator(),
+        mapharma_centre_iterator(),
         maiia_center_iterator(),
-        # avecmondoc_centre_iterator(),
+        avecmondoc_centre_iterator(),
         mesoigner_centre_iterator(),
         doctolib_center_iterator(),
         keldoc_center_iterator(),

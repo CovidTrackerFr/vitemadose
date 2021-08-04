@@ -403,7 +403,7 @@
             "patient_url": "https://patient.avecmondoc.com/fiche/structure/{slug}",
             "search_tries": 2,
             "api": {
-                "search": "https://api.avecmondoc.com/api/Organizations/public/covid?limit={0}",
+                "search": "https://api.avecmondoc.com/api/Organizations/public/covid",
                 "search_page_size": 10,
                 "get_organization_slug": "https://api.avecmondoc.com/api/Organizations/slug/{slug}",
                 "get_reasons": "https://api.avecmondoc.com/api/Organizations/getConsultationReasons",
