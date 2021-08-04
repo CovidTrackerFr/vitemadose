@@ -33,7 +33,7 @@ KELDOC_HEADERS = {
 }
 session_pre = requests.Session()
 session_pre.headers.update(KELDOC_HEADERS)
-DEFAULT_CLIENT =  CacheControl(session_pre, cache=FileCache('./cache'))
+DEFAULT_CLIENT =  CacheControl(session_pre, cache=FileCache('./cache/keldoc'))
 
 logger = logging.getLogger("scraper")
 
@@ -77,7 +77,7 @@ def center_iterator(client=None) -> Iterator[Dict]:
         logger.warning(f"{PLATFORM.capitalize()} scrap is disabled in configuration file.")
         return []  
     
-    session = CacheControl(requests.Session(), cache=FileCache('./cache'))
+    session = CacheControl(requests.Session(), cache=FileCache('./cache/platforms_list'))
     
     if client:
         session = client

@@ -18,7 +18,7 @@ MAIIA_HEADERS = {
 timeout = httpx.Timeout(MAIIA_CONF.get("timeout", 25), connect=MAIIA_CONF.get("timeout", 25))
 session_pre = requests.Session()
 session_pre.headers.update(MAIIA_HEADERS)
-DEFAULT_CLIENT =  CacheControl(session_pre, cache=FileCache('./cache'))
+DEFAULT_CLIENT =  CacheControl(session_pre, cache=FileCache('./cache/maiia'))
 logger = logging.getLogger("scraper")
 
 MAIIA_LIMIT = MAIIA_SCRAPER.get("centers_per_page")

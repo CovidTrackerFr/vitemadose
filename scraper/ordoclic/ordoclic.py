@@ -26,7 +26,7 @@ NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
 timeout = httpx.Timeout(ORDOCLIC_CONF.get("timeout", 25), connect=ORDOCLIC_CONF.get("timeout", 25))
 session_pre = requests.Session()
-DEFAULT_CLIENT =  CacheControl(session_pre, cache=FileCache('./cache'))
+DEFAULT_CLIENT =  CacheControl(session_pre, cache=FileCache('./cache/ordoclic'))
 insee = {}
 paris_tz = timezone("Europe/Paris")
 
