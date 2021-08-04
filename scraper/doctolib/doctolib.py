@@ -50,7 +50,7 @@ if os.getenv("WITH_TOR", "no") == "yes":
     }
     DEFAULT_CLIENT = session  # type: ignore
 else:
-    DEFAULT_CLIENT = CacheControl(requests.Session(), cache=FileCache('./cache'))
+    DEFAULT_CLIENT = CacheControl(requests.Session(), cache=FileCache('./cache/doctolib'))
 
 logger = logging.getLogger("scraper")
 
@@ -661,7 +661,7 @@ def center_iterator(client=None) -> Iterator[Dict]:
         logger.warning(f"{PLATFORM.capitalize()} scrap is disabled in configuration file.")
         return []  
     
-    session = CacheControl(requests.Session(), cache=FileCache('./cache'))
+    session = CacheControl(requests.Session(), cache=FileCache('./cache/platforms_list'))
     
     if client:
         session = client
