@@ -5,9 +5,6 @@ import os
 
 from scraper.pattern.scraper_request import ScraperRequest
 from utils.vmd_config import get_conf_platform
-import requests
-from cachecontrol import CacheControl
-from cachecontrol.caches.file_cache import FileCache
 
 MAIIA_CONF = get_conf_platform("maiia")
 MAIIA_SCRAPER = MAIIA_CONF.get("center_scraper", {})
@@ -16,9 +13,7 @@ MAIIA_HEADERS = {
 }
 
 timeout = httpx.Timeout(MAIIA_CONF.get("timeout", 25), connect=MAIIA_CONF.get("timeout", 25))
-session_pre = requests.Session()
-session_pre.headers.update(MAIIA_HEADERS)
-DEFAULT_CLIENT =  CacheControl(session_pre, cache=FileCache('./cache/maiia'))
+DEFAULT_CLIENT = httpx.Client(timeout=timeout, headers=MAIIA_HEADERS)
 logger = logging.getLogger("scraper")
 
 MAIIA_LIMIT = MAIIA_SCRAPER.get("centers_per_page")

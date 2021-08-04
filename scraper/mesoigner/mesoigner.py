@@ -17,8 +17,6 @@ from typing import Dict, Iterator, List, Optional
 import dateutil
 from cachecontrol import CacheControl
 from cachecontrol.caches.file_cache import FileCache
-from cachecontrol import CacheControl
-from cachecontrol.caches.file_cache import FileCache
 
 
 PLATFORM="mesoigner".lower()
@@ -43,7 +41,7 @@ if os.getenv("WITH_TOR", "no") == "yes":
     }
     DEFAULT_CLIENT = session  # type: ignore
 else:
-    DEFAULT_CLIENT = CacheControl(requests.Session(), cache=FileCache('./cache/mesoigner'))
+    DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 
 logger = logging.getLogger("scraper")
 
@@ -149,7 +147,7 @@ def center_iterator(client=None) -> Iterator[Dict]:
         logger.warning(f"{PLATFORM.capitalize()} scrap is disabled in configuration file.")
         return []  
     
-    session = CacheControl(requests.Session(), cache=FileCache('./cache/platforms_list'))
+    session = CacheControl(requests.Session(), cache=FileCache('./cache'))
     
     if client:
         session = client

@@ -55,7 +55,7 @@ def test_search():
     # Test online
     schema_file = Path("tests/fixtures/avecmondoc/search-result.schema")
     schema = json.loads(schema_file.read_text())
-    live_data = search(client)
+    live_data = search()
     if live_data:
         validate(instance=live_data, schema=schema)
 

@@ -167,7 +167,7 @@ def test_keldoc_scrape():
 
     center_info = CenterInfo.from_csv_data(centerinfo_1)
     request = ScraperRequest(center1_url, "2020-04-04", input_data=input_data, center_info=center_info)
-    keldoc.DEFAULT_CLIENT = httpx.Client(transport=httpx.MockTransport(app_center1))
+    keldoc.session = httpx.Client(transport=httpx.MockTransport(app_center1))
 
     date = fetch_slots(request)
     # When it's already killed
