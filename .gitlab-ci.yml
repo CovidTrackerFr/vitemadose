@@ -1,6 +1,3 @@
-before_script:
-  - CHCP 65001
-
 stages:
   - test
   - scrape
