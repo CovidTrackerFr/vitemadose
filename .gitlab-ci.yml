@@ -1,3 +1,6 @@
+before_script:
+  - CHCP 65001
+
 stages:
   - test
   - scrape
@@ -43,7 +46,6 @@ trouver_les_rdv:
   tags:
     - ovh
   before_script:
-    - CHCP 65001
     - apk add --no-cache make curl
     - ./scripts/install
     - echo IP publique de sortie du gitlab runner $(curl -s https://ifconfig.me/ip )
