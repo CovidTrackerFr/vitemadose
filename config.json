@@ -469,5 +469,8 @@
                 ]
             }
         }
+    },
+    "logger":{
+        "log_requests_above" : 20
     }
 }
