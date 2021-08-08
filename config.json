@@ -78,7 +78,7 @@
     ],
     "platforms": {
         "doctolib": {
-            "enabled": true,
+            "enabled": false,
             "timeout": 5,
             "recognized_urls": [
                 "https://partners.doctolib.fr",
@@ -188,7 +188,7 @@
             }
         },
         "keldoc": {
-            "enabled": false,
+            "enabled": true,
             "timeout": 20,
             "recognized_urls": [
                 "https://vaccination-covid.keldoc.com",
