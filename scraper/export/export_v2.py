@@ -52,8 +52,8 @@ class JSONExporter:
             f"{lieux_avec_dispo} centres ont des disponibilités sur {lieux_avec_dispo+lieux_sans_dispo} centre scannés"
         )
         logger.info(f"{count} créneaux dans {lieux_avec_dispo} centres")
-
-        logger.info(f"\n{lieux_bloques_mais_dispo} centres sont bloqués mais ont des disponibilités : ")
+        print("\n")
+        logger.info(f"{lieux_bloques_mais_dispo} centres sont bloqués mais ont des disponibilités : ")
         for centre_bloque in self.resources["info_centres"].centres_bloques_mais_disponibles:
             logger.info(f"Le centre {centre_bloque} est bloqué mais a des disponibilités.")
 
