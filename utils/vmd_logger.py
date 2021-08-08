@@ -2,7 +2,6 @@ import logging
 
 from terminaltables import AsciiTable
 
-
 class CustomFormatter(logging.Formatter):
     grey = "\x1b[38;21m"
     yellow = "\x1b[33;21m"
@@ -61,6 +60,24 @@ def enable_logger_for_debug():
         ch.setFormatter(CustomFormatter())
         root_logger.addHandler(ch)
 
+def log_requests_time(centres):
+    from .vmd_utils import get_config
+
+    print("\n\nToo long requests list:")
+    print("Careful, doesn't take account of multiprocessing use")
+
+    #Time in seconds above which request is considered too long
+    timeout=get_config().get("logger").get("log_requests_above")
+    datatable = [["Platform","Internal_id","Request time (sec.)"]]
+
+    for centre in centres:
+        if centre.internal_id and centre.plateforme:
+            if centre.time_for_request>timeout:
+                datatable.append([centre.plateforme,centre.internal_id.lower().split(centre.plateforme.lower())[1] if centre.plateforme.lower() in centre.internal_id.lower() else centre.internal_id,int(centre.time_for_request)])
+
+    too_long_requests = AsciiTable(datatable)
+    print(too_long_requests.table)
+
 
 def log_requests(request):
     logger = get_logger()
@@ -79,7 +96,7 @@ def log_platform_requests(centers):
     logger = get_logger()
     platforms = {}
 
-    print("Requests count:")
+    print("\n\nRequests count:")
     # Not fan of the way I do this
     # maybe python has builtin ways to do this in an easier way
     if not centers:

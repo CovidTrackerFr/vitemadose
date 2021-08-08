@@ -13,7 +13,7 @@ from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform, get_config
-from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug, log_requests, log_platform_requests
+from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug, log_requests, log_platform_requests, log_requests_time
 from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date, q_iter, EOQ, DummyQueue, BulkQueue
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
@@ -30,7 +30,8 @@ from .avecmondoc.avecmondoc import fetch_slots as avecmondoc_fetch_slots
 from .mesoigner.mesoigner import center_iterator as mesoigner_centre_iterator
 from .mesoigner.mesoigner import fetch_slots as mesoigner_fetch_slots
 from .circuit_breaker import CircuitBreakerOffException
-
+import datetime
+from collections import defaultdict
 
 POOL_SIZE = int(os.getenv("POOL_SIZE", 50))
 PARTIAL_SCRAPE = float(os.getenv("PARTIAL_SCRAPE", 1.0))
@@ -73,6 +74,7 @@ def scrape(platforms=None):  # pragma: no cover
             centres_cherchés = pool.imap_unordered(cherche_prochain_rdv_dans_centre, centre_iterator_proportion, 1)
 
             centres_cherchés = get_last_scans(centres_cherchés)
+            log_requests_time(centres_cherchés)
             log_platform_requests(centres_cherchés)
 
         creneau_q.put(EOQ)
@@ -90,8 +92,8 @@ def export_by_creneau(
 
 def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  # pragma: no cover
 
+    timestamp_before_request=datetime.datetime.now()
     centre, creneau_q = data
-    # print(centre)
     center_data = CenterInfo.from_csv_data(centre)
     start_date = get_start_date()
     has_error = None
@@ -139,6 +141,8 @@ def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  #
             f'{centre.get("gid", "")!s:>8} {center_data.plateforme!s:16} {"Erreur" or ""!s:32} {center_data.departement!s:6}'
         )
 
+    time_for_request=(datetime.datetime.now()-timestamp_before_request).total_seconds()
+
     if result is not None and result.request.url is not None:
         center_data.url = result.request.url.lower()
         if result.request.internal_id is None:
@@ -149,6 +153,7 @@ def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  #
     if not center_data.type:
         center_data.type = VACCINATION_CENTER
     center_data.gid = centre.get("gid", "")
+    center_data.time_for_request=time_for_request
     return center_data
 
 
