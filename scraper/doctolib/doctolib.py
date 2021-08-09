@@ -95,7 +95,6 @@ class DoctolibSlots:
         # so if a practice id is present in query, only related agendas
         # should be selected.
         practice_id = _parse_practice_id(request.get_url())
-
         practice_same_adress = False
 
         rdata = None
@@ -592,7 +591,7 @@ def _find_visit_motive_id(rdata: dict, visit_motive_category_id: list = None) ->
         # sont pas non plus rattachés à une catégorie
         # * visit_motive_category_id=<id> : filtre => on veut les motifs qui
         # correspondent à la catégorie en question.
-        if visit_motive_category_id is None or visit_motive.get("visit_motive_category_id") in visit_motive_category_id:
+        if visit_motive_category_id is None or visit_motive.get("visit_motive_category_id") in visit_motive_category_id or visit_motive.get("visit_motive_category_id") is None:
             ids = relevant_motives.get(vaccine_name, set())
             ids.add(visit_motive["id"])
             relevant_motives[vaccine_name] = ids
