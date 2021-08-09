@@ -2,7 +2,7 @@ import os
 import json
 import traceback
 from collections import deque
-from multiprocessing import Manager, Pool, Process, Queue  # Use actual Process for Collecting creneau (CPU intensive)
+from multiprocessing import Manager, Pool, Process, Queue, cpu_count  # Use actual Process for Collecting creneau (CPU intensive)
 from random import random
 from typing import Tuple
 import sys
@@ -32,7 +32,7 @@ from .mesoigner.mesoigner import fetch_slots as mesoigner_fetch_slots
 from .circuit_breaker import CircuitBreakerOffException
 import datetime
 
-POOL_SIZE = int(os.getenv("POOL_SIZE", 50))
+POOL_SIZE = cpu_count()
 PARTIAL_SCRAPE = float(os.getenv("PARTIAL_SCRAPE", 1.0))
 PARTIAL_SCRAPE = max(0, min(PARTIAL_SCRAPE, 1))
 logger = enable_logger_for_production()
