@@ -99,7 +99,7 @@ def scrap_centers():
         return None
 
     results = []
-    with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+    with multiprocessing.Pool(50) as pool:
         centers_with_details = pool.imap_unordered(get_center_details, (center for center in center_list))  
         for center_with_details in centers_with_details:
             results.append(center_with_details)
