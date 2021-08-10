@@ -35,6 +35,9 @@ maiiascrap: ## Retrieve maiia centers from API
 mesoignerscrap: ## Scrap all mesoigner centers, output : data/output/mesoigner_centers.json
 	venv/bin/python -m scraper.mesoigner.mesoigner_center_scrap
 
+bimedocscrap: ## Scrap all bimedoc centers, output : data/output/bimedoc_centers.json
+	venv/bin/python -m scraper.bimedoc.bimedoc_center_scrap
+
 blocklistmanager: ## Blocklist command line manager
 	venv/bin/python -m management_scripts.manage_blocklist
 

@@ -397,7 +397,7 @@
         },
         "avecmondoc": {
             "enabled": true,
-            "timeout": 25,
+            "timeout": 20,
             "days_per_page": 7,
             "recognized_urls": [
                 "https://patient.avecmondoc.com/"
@@ -444,7 +444,7 @@
         },
         "mesoigner": {
             "enabled": true,
-            "timeout": 30,
+            "timeout": 5,
             "recognized_urls": [
                 "mesoigner.fr"
             ],
@@ -460,6 +460,33 @@
             "center_scraper": {
                 "minimum_results": 450,
                 "result_path": "data/output/mesoigner_centers.json",
+                "business_days": [
+                    "lundi",
+                    "mardi",
+                    "mercredi",
+                    "jeudi",
+                    "vendredi",
+                    "samedi",
+                    "dimanche"
+                ]
+            }
+        },
+        "bimedoc": {
+            "enabled": true,
+            "timeout": 20,
+            "recognized_urls": [
+                "app.bimedoc.com"
+            ],
+            "center_types": {
+                "pharmacie": "drugstore"
+            },
+            "api": {
+                "center_list": "https://server.bimedoc.com/vmd/pharmacy-with-slots?start_date={start_date}&end_date={end_date}",
+                "slots": "https://server.bimedoc.com/vmd/pharmacy-with-slots/{pharmacy_id}?start_date={start_date}&end_date={end_date}"
+            },
+            "appointment_url":"https://app.bimedoc.com/application/scheduler/{pharmacy_id}?vmd=true",
+            "center_scraper": {
+                "result_path": "data/output/bimedoc_centers.json",
                 "business_days": [
                     "lundi",
                     "mardi",
