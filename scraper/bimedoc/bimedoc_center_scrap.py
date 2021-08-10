@@ -1,4 +1,3 @@
-from scraper.bimedoc.bimedoc import PLATFORM
 import httpx
 from utils.vmd_logger import get_logger
 from utils.vmd_config import get_conf_platform, get_config
@@ -9,6 +8,8 @@ import os
 import datetime
 import multiprocessing
 NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
+
+PLATFORM="bimedoc".lower()
 
 BIMEDOC_CONF = get_conf_platform("bimedoc")
 BIMEDOC_ENABLED = BIMEDOC_CONF.get("enabled", False)
