@@ -2,7 +2,7 @@ import os
 import json
 import traceback
 from collections import deque
-from multiprocessing import Manager, Pool, Process, Queue  # Use actual Process for Collecting creneau (CPU intensive)
+from multiprocessing import Manager, Pool, Process, Queue, cpu_count  # Use actual Process for Collecting creneau (CPU intensive)
 from random import random
 from typing import Tuple
 import sys

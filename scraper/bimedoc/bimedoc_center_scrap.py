@@ -7,6 +7,8 @@ import json
 import os
 import datetime
 import multiprocessing
+import sys
+
 NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
 PLATFORM="bimedoc".lower()
@@ -38,13 +40,11 @@ def get_center_details(center):
 )
     r.raise_for_status()
     try:
- 
         center_details = r.json()
         if r.status_code != 200:
             logger.error(f"Can't access API center details - {r.status_code} => {json.loads(r.text)}")
 
         else:
-
             useless_keys = ["slots","id", "postcode", "coordinates", "city", "street","building_number", "name"]
             logger.info(f'[Bimedoc] Found Center {center_details["name"]} ({center_details["postcode"]})')
 
@@ -103,6 +103,7 @@ def scrap_centers():
     if len(center_list) == 0:
         return None
 
+    print(center_list)
     results = []
     with multiprocessing.Pool(50) as pool:
         centers_with_details = pool.imap_unordered(get_center_details, (center for center in center_list))  
