@@ -62,7 +62,7 @@ def get_center_details(center):
             [center_details.pop(key) for key in list(center_details.keys()) if key in useless_keys]
 
     except:
-        logger.error(f"Can't access API center details for url {r.url} ")
+        logger.error(f'Can\'t access API center details for url {SLOTS_URL.format(pharmacy_id=center["id"],start_date=start_date, end_date=end_date)} ')
         return None
 
     return center_details
