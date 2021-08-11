@@ -45,30 +45,29 @@ def get_center_details(center):
         print(f"An error occurred while requesting {exc.request.url!r}.")
     except httpx.HTTPStatusError as exc:
         print(f"Error response {exc.response.status_code} while requesting {exc.request.url!r}.")
-
-    center_details = r.json()
-    if r.status_code != 200:
-        logger.error(f"Can't access API center details - {r.status_code} => {json.loads(r.text)}")
-
     else:
-        useless_keys = ["slots","id", "postcode", "coordinates", "city", "street","building_number", "name"]
-        logger.info(f'[Bimedoc] Found Center {center_details["name"]} ({center_details["postcode"]})')
+        center_details = r.json()
+        if r.status_code != 200:
+            logger.error(f"Can't access API center details - {r.status_code} => {json.loads(r.text)}")
 
-        center_details["rdv_site_web"]=APPOINTMENT_URL.format(pharmacy_id=center_details["id"])
-        center_details["platform_is"]=PLATFORM
-        center_details["gid"] = f'bimedoc{center_details["id"]}'
-        center_details["nom"] = center_details["name"]
-        center_details["com_insee"] = departementUtils.cp_to_insee(center_details["postcode"])
-        long_coor1, lat_coor1 = get_coordinates(center_details)
-        address = f'{center_details["street"]}, {center_details["postcode"]} {center_details["city"]}'
-        center_details["address"] = address
-        center_details["long_coor1"] = long_coor1
-        center_details["lat_coor1"] = lat_coor1
-        center_details["type"] = set_center_type("pharmacie")
-        center_details["phone_number"] = format_phone_number(center_details["phone_number"])
-        center_details["vaccine_names"] = [get_vaccine_name(vaccine).value for vaccine in center_details["vaccine_names"]]
-        [center_details.pop(key) for key in list(center_details.keys()) if key in useless_keys]
+        else:
+            useless_keys = ["slots","id", "postcode", "coordinates", "city", "street","building_number", "name"]
+            logger.info(f'[Bimedoc] Found Center {center_details["name"]} ({center_details["postcode"]})')
 
+            center_details["rdv_site_web"]=APPOINTMENT_URL.format(pharmacy_id=center_details["id"])
+            center_details["platform_is"]=PLATFORM
+            center_details["gid"] = f'bimedoc{center_details["id"]}'
+            center_details["nom"] = center_details["name"]
+            center_details["com_insee"] = departementUtils.cp_to_insee(center_details["postcode"])
+            long_coor1, lat_coor1 = get_coordinates(center_details)
+            address = f'{center_details["street"]}, {center_details["postcode"]} {center_details["city"]}'
+            center_details["address"] = address
+            center_details["long_coor1"] = long_coor1
+            center_details["lat_coor1"] = lat_coor1
+            center_details["type"] = set_center_type("pharmacie")
+            center_details["phone_number"] = format_phone_number(center_details["phone_number"])
+            center_details["vaccine_names"] = [get_vaccine_name(vaccine).value for vaccine in center_details["vaccine_names"]]
+            [center_details.pop(key) for key in list(center_details.keys()) if key in useless_keys]
     return center_details
 
 
