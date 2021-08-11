@@ -104,6 +104,7 @@ def scrap_centers():
     if len(center_list) == 0:
         return None
 
+    print(center_list)
     results = []
     with multiprocessing.Pool(50) as pool:
         centers_with_details = pool.imap_unordered(get_center_details, (center for center in center_list))  
