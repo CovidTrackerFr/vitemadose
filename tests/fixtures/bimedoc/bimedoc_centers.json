@@ -1,0 +1,49 @@
+[
+    {
+        "phone_number": "+33478542582",
+        "vaccine_names": [
+            "Moderna"
+        ],
+        "rdv_site_web": "https://app.bimedoc.com/application/scheduler/37df4bc4-8afb-46e5-964a-3e91b72e44b3?vmd=true",
+        "platform_is": "bimedoc",
+        "gid": "bimedoc37df4bc4-8afb-46e5-964a-3e91b72e44b3",
+        "nom": "PHARMACIE GRANDCLEMENT",
+        "com_insee": "69266",
+        "address": "2 Rue LEON BLUM, 69100 Villeurbanne",
+        "long_coor1": 4.89097,
+        "lat_coor1": 45.759376,
+        "type": "drugstore"
+    },
+    {
+        "phone_number": "+33321381376",
+        "vaccine_names": [
+            "Pfizer-BioNTech",
+            "Moderna",
+            "Janssen"
+        ],
+        "rdv_site_web": "https://app.bimedoc.com/application/scheduler/a8c890ec-f95c-40c9-bb6b-db8d4a0877cc?vmd=true",
+        "platform_is": "bimedoc",
+        "gid": "bimedoca8c890ec-f95c-40c9-bb6b-db8d4a0877cc",
+        "nom": "SELARL DE PHARMACIENS D'OFFICINE",
+        "com_insee": "62905",
+        "address": "158 Rue DE DUNKERQUE, 62500 Saint-Omer",
+        "long_coor1": 2.258574,
+        "lat_coor1": 50.753255,
+        "type": "drugstore"
+    },
+    {
+        "phone_number": "+33321382253",
+        "vaccine_names": [
+            "Pfizer-BioNTech"
+        ],
+        "rdv_site_web": "https://app.bimedoc.com/application/scheduler/9cf46288-0080-4a8d-8856-8e9998ced9f7?vmd=true",
+        "platform_is": "bimedoc",
+        "gid": "bimedoc9cf46288-0080-4a8d-8856-8e9998ced9f7",
+        "nom": "Pharmacie de Thêatre | Silvie",
+        "com_insee": "62905",
+        "address": "51 Place du Marechal Foch, 62500 Saint-Omer",
+        "long_coor1": 2.252316,
+        "lat_coor1": 50.750673,
+        "type": "drugstore"
+    }
+]

@@ -2,7 +2,7 @@ import os
 import json
 import traceback
 from collections import deque
-from multiprocessing import Manager, Pool, Process, Queue  # Use actual Process for Collecting creneau (CPU intensive)
+from multiprocessing import Manager, Pool, Process, Queue, cpu_count  # Use actual Process for Collecting creneau (CPU intensive)
 from random import random
 from typing import Tuple
 import sys
@@ -29,6 +29,8 @@ from .avecmondoc.avecmondoc import center_iterator as avecmondoc_centre_iterator
 from .avecmondoc.avecmondoc import fetch_slots as avecmondoc_fetch_slots
 from .mesoigner.mesoigner import center_iterator as mesoigner_centre_iterator
 from .mesoigner.mesoigner import fetch_slots as mesoigner_fetch_slots
+from .bimedoc.bimedoc import center_iterator as bimedoc_centre_iterator
+from .bimedoc.bimedoc import fetch_slots as bimedoc_fetch_slots
 from .circuit_breaker import CircuitBreakerOffException
 import datetime
 
@@ -185,6 +187,10 @@ def get_default_fetch_map():
             "platform_name": "mesoigner",
             "scraper_ptr": mesoigner_fetch_slots,
         },
+        "Bimedoc": {
+            "urls": get_conf_platform("bimedoc").get("recognized_urls", []),
+            "scraper_ptr": bimedoc_fetch_slots
+        }
     }
 
 
@@ -249,6 +255,8 @@ def centre_iterator(platforms=None):  # pragma: no cover
         mesoigner_centre_iterator(),
         doctolib_center_iterator(),
         keldoc_center_iterator(),
+        bimedoc_centre_iterator(),
+
     ):
 
         platform = get_center_platform(

@@ -1,3 +1,4 @@
+from scraper.bimedoc.bimedoc import PLATFORM
 import httpx
 from utils.vmd_logger import get_logger
 from utils.vmd_config import get_conf_platform, get_config
@@ -7,9 +8,8 @@ import json
 import os
 import datetime
 import multiprocessing
-NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
-PLATFORM="bimedoc".lower()
+NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
 BIMEDOC_CONF = get_conf_platform("bimedoc")
 BIMEDOC_ENABLED = BIMEDOC_CONF.get("enabled", False)
@@ -23,7 +23,6 @@ DEFAULT_CLIENT = httpx.Client()
 
 logger = get_logger()
 
-
 BIMEDOC_HEADERS = { 
     "Authorization": os.environ.get("BIMEDOC_API_KEY", "")
 }
@@ -31,20 +30,15 @@ BIMEDOC_HEADERS = {
 def get_center_details(center):
     start_date=datetime.date.today()
     end_date=datetime.date.today()+datetime.timedelta(NUMBER_OF_SCRAPED_DAYS)
-
-    r = DEFAULT_CLIENT.get(
-    SLOTS_URL.format(pharmacy_id=center["id"],start_date=start_date, end_date=end_date),
-    headers=BIMEDOC_HEADERS
-)
-    r.raise_for_status()
+    request_url=SLOTS_URL.format(pharmacy_id=f'{center["id"]}/',start_date=start_date, end_date=end_date)
     try:
- 
+        r = httpx.Client().get(request_url, headers=BIMEDOC_HEADERS)
+        r.raise_for_status()
         center_details = r.json()
         if r.status_code != 200:
             logger.error(f"Can't access API center details - {r.status_code} => {json.loads(r.text)}")
 
         else:
-
             useless_keys = ["slots","id", "postcode", "coordinates", "city", "street","building_number", "name"]
             logger.info(f'[Bimedoc] Found Center {center_details["name"]} ({center_details["postcode"]})')
 
@@ -62,11 +56,9 @@ def get_center_details(center):
             center_details["phone_number"] = format_phone_number(center_details["phone_number"])
             center_details["vaccine_names"] = [get_vaccine_name(vaccine).value for vaccine in center_details["vaccine_names"]]
             [center_details.pop(key) for key in list(center_details.keys()) if key in useless_keys]
-
-    except:
-        logger.error(f"Can't access API center details - {r.status_code}")
+    except httpx.HTTPError as exc:
+        logger.error(f"Can't access API center details for URL {exc.request.url} - {exc}")
         return None
-
     return center_details
 
 
@@ -78,15 +70,11 @@ def scrap_centers():
     end_date=datetime.date.today()+datetime.timedelta(NUMBER_OF_SCRAPED_DAYS)
 
     logger.info(f"[Bimedoc centers] Parsing centers from API")
-
-    r = DEFAULT_CLIENT.get(
-    CENTER_LIST_URL.format(start_date=start_date, end_date=end_date),
-    headers=BIMEDOC_HEADERS
-)
-    r.raise_for_status()
-
+    
+    request_url = CENTER_LIST_URL.format(start_date=start_date, end_date=end_date)
     try:
-
+        r = DEFAULT_CLIENT.get(request_url,headers=BIMEDOC_HEADERS)
+        r.raise_for_status()
         center_list = r.json()
 
         if r.status_code != 200:
@@ -95,7 +83,7 @@ def scrap_centers():
         else:
             logger.info(f"La liste des centres Bimedoc a été récupérée (API CENTER_LIST)")
     except:
-        logger.error(f"Can't access API center list - {r.status_code}")
+        logger.error(f"Can't access API center list - {r}")
         return None
 
     if not center_list:
