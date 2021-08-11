@@ -21,7 +21,7 @@ CENTER_LIST_URL = BIMEDOC_CONF.get("api", {}).get("center_list", {})
 SLOTS_URL = BIMEDOC_CONF.get("api", {}).get("slots", {})
 APPOINTMENT_URL = BIMEDOC_CONF.get("appointment_url", {})
 
-DEFAULT_CLIENT = httpx.Client()
+DEFAULT_CLIENT = httpx.AsyncClient()
 
 logger = get_logger()
 
@@ -36,6 +36,7 @@ def get_center_details(center):
     request_url=SLOTS_URL.format(pharmacy_id=f'{center["id"]}/',start_date=start_date, end_date=end_date)
     try:
         r = DEFAULT_CLIENT.get(request_url, headers=BIMEDOC_HEADERS)
+        time.sleep(0.1)
         print(r)
         r.raise_for_status()
         print(r.status_code)
