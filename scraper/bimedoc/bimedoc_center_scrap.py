@@ -26,7 +26,7 @@ DEFAULT_CLIENT = httpx.Client()
 logger = get_logger()
 
 BIMEDOC_HEADERS = { 
-    "Authorization": os.environ.get("BIMEDOC_API_KEY", "")
+    "Authorization": f'Partner {os.environ.get("BIMEDOC_API_KEY", "")}'
 }
 
 def get_center_details(center):
