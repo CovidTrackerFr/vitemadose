@@ -32,11 +32,13 @@ def get_center_details(center):
     start_date=datetime.date.today()
     end_date=datetime.date.today()+datetime.timedelta(NUMBER_OF_SCRAPED_DAYS)
 
+    r = DEFAULT_CLIENT.get(
+    SLOTS_URL.format(pharmacy_id=center["id"],start_date=start_date, end_date=end_date),
+    headers=BIMEDOC_HEADERS
+)
+    r.raise_for_status()
     try:
-        r = DEFAULT_CLIENT.get(
-            SLOTS_URL.format(pharmacy_id=center["id"],start_date=start_date, end_date=end_date),
-            headers=BIMEDOC_HEADERS,
-        )
+ 
         center_details = r.json()
         if r.status_code != 200:
             logger.error(f"Can't access API center details - {r.status_code} => {json.loads(r.text)}")
@@ -62,7 +64,7 @@ def get_center_details(center):
             [center_details.pop(key) for key in list(center_details.keys()) if key in useless_keys]
 
     except:
-        logger.error(f"Can't access API center details")
+        logger.error(f"Can't access API center details - {r.status_code}")
         return None
 
     return center_details
@@ -76,12 +78,15 @@ def scrap_centers():
     end_date=datetime.date.today()+datetime.timedelta(NUMBER_OF_SCRAPED_DAYS)
 
     logger.info(f"[Bimedoc centers] Parsing centers from API")
+
+    r = DEFAULT_CLIENT.get(
+    CENTER_LIST_URL.format(start_date=start_date, end_date=end_date),
+    headers=BIMEDOC_HEADERS
+)
+    r.raise_for_status()
+
     try:
-        r = DEFAULT_CLIENT.get(
-            CENTER_LIST_URL.format(start_date=start_date, end_date=end_date),
-            headers=BIMEDOC_HEADERS,
-        )
- 
+
         center_list = r.json()
 
         if r.status_code != 200:
@@ -90,7 +95,7 @@ def scrap_centers():
         else:
             logger.info(f"La liste des centres Bimedoc a été récupérée (API CENTER_LIST)")
     except:
-        logger.error(f"Can't access API center list")
+        logger.error(f"Can't access API center list - {r.status_code}")
         return None
 
     if not center_list:
@@ -102,7 +107,8 @@ def scrap_centers():
     with multiprocessing.Pool(50) as pool:
         centers_with_details = pool.imap_unordered(get_center_details, (center for center in center_list))  
         for center_with_details in centers_with_details:
-            results.append(center_with_details)
+            if center_with_details is not None:
+                results.append(center_with_details)
     return results
 
 
