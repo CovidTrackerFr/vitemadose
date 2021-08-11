@@ -39,6 +39,7 @@ def get_center_details(center):
             SLOTS_URL.format(pharmacy_id=center["id"],start_date=start_date, end_date=end_date),
             headers=BIMEDOC_HEADERS,
         )
+        r.raise_for_status()
         center_details = r.json()
         if r.status_code != 200:
             logger.error(f"Can't access API center details - {r.status_code} => {json.loads(r.text)}")
@@ -64,7 +65,7 @@ def get_center_details(center):
             [center_details.pop(key) for key in list(center_details.keys()) if key in useless_keys]
 
     except httpx.RequestError as exc:
-        logger.error(f'Can\'t access API center details - {exc.request.url!r} ')
+        logger.error(f'Can\'t access API center details - {exc.request.status_code!r} ')
         return None
 
     return center_details
