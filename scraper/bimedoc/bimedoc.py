@@ -24,9 +24,11 @@ PLATFORM="bimedoc".lower()
 
 PLATFORM_CONF = get_conf_platform("bimedoc")
 PLATFORM_ENABLED = PLATFORM_CONF.get("enabled", False)
+
 BIMEDOC_HEADERS = { 
-    "Authorization": os.environ.get("BIMEDOC_API_KEY", "")
+    "Authorization": f'Partner {os.environ.get("BIMEDOC_API_KEY", "")}'
 }
+
 
 BIMEDOC_APIs = PLATFORM_CONF.get("api", "")
 
