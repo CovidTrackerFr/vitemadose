@@ -8,6 +8,7 @@ import os
 import datetime
 import multiprocessing
 import sys
+import time
 
 NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
