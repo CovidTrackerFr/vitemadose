@@ -33,11 +33,14 @@ BIMEDOC_HEADERS = {
 def get_center_details(center):
     start_date=datetime.date.today()
     end_date=datetime.date.today()+datetime.timedelta(NUMBER_OF_SCRAPED_DAYS)
-    request_url=SLOTS_URL.format(pharmacy_id=center["id"],start_date=start_date, end_date=end_date)
+    request_url=SLOTS_URL.format(pharmacy_id=f'{center["id"]}/',start_date=start_date, end_date=end_date)
     try:
         r = DEFAULT_CLIENT.get(request_url, headers=BIMEDOC_HEADERS)
+        print(r)
         r.raise_for_status()
+        print(r.status_code)
         center_details = r.json()
+        print(center_details)
         if r.status_code != 200:
             logger.error(f"Can't access API center details - {r.status_code} => {json.loads(r.text)}")
 
