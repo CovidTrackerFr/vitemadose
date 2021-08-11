@@ -63,8 +63,8 @@ def get_center_details(center):
             center_details["vaccine_names"] = [get_vaccine_name(vaccine).value for vaccine in center_details["vaccine_names"]]
             [center_details.pop(key) for key in list(center_details.keys()) if key in useless_keys]
 
-    except:
-        logger.error(f'Can\'t access API center details - {sys.exc_info()[0]} ')
+    except httpx.RequestError as exc:
+        logger.error(f'Can\'t access API center details - {exc.request.url!r} ')
         return None
 
     return center_details
