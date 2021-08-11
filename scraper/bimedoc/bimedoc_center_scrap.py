@@ -9,6 +9,9 @@ import datetime
 import multiprocessing
 import sys
 import time
+import ssl
+
+print(ssl.OPENSSL_VERSION)
 
 NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
