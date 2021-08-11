@@ -65,8 +65,9 @@ def get_center_details(center):
             [center_details.pop(key) for key in list(center_details.keys()) if key in useless_keys]
 
     except httpx.RequestError as exc:
-        logger.error(f'Can\'t access API center details - {exc.request.status_code!r} ')
-        return None
+        print(f"An error occurred while requesting {exc.request.url!r}.")
+    except httpx.HTTPStatusError as exc:
+        print(f"Error response {exc.response.status_code} while requesting {exc.request.url!r}.")
 
     return center_details
 
