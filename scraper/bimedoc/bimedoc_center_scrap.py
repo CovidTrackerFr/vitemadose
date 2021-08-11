@@ -22,7 +22,7 @@ CENTER_LIST_URL = BIMEDOC_CONF.get("api", {}).get("center_list", {})
 SLOTS_URL = BIMEDOC_CONF.get("api", {}).get("slots", {})
 APPOINTMENT_URL = BIMEDOC_CONF.get("appointment_url", {})
 
-DEFAULT_CLIENT = httpx.Client()
+DEFAULT_CLIENT = httpx.Client(verify=False)
 
 logger = get_logger()
 
