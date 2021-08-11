@@ -64,7 +64,7 @@ def get_center_details(center):
             [center_details.pop(key) for key in list(center_details.keys()) if key in useless_keys]
 
     except:
-        logger.error(f'Can\'t access API center details - sys.exc_info()[0]} ')
+        logger.error(f'Can\'t access API center details - {sys.exc_info()[0]} ')
         return None
 
     return center_details
