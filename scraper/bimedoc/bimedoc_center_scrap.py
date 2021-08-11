@@ -7,11 +7,7 @@ import json
 import os
 import datetime
 import multiprocessing
-import sys
 import time
-import ssl
-
-print(ssl.OPENSSL_VERSION)
 
 NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
@@ -29,7 +25,6 @@ DEFAULT_CLIENT = httpx.Client()
 
 logger = get_logger()
 
-
 BIMEDOC_HEADERS = { 
     "Authorization": os.environ.get("BIMEDOC_API_KEY", "")
 }
@@ -40,12 +35,8 @@ def get_center_details(center):
     request_url=SLOTS_URL.format(pharmacy_id=f'{center["id"]}/',start_date=start_date, end_date=end_date)
     try:
         r = httpx.Client().get(request_url, headers=BIMEDOC_HEADERS)
-        time.sleep(0.1)
-        print(r)
         r.raise_for_status()
-        print(r.status_code)
         center_details = r.json()
-        print(center_details)
         if r.status_code != 200:
             logger.error(f"Can't access API center details - {r.status_code} => {json.loads(r.text)}")
 
@@ -68,7 +59,7 @@ def get_center_details(center):
             center_details["vaccine_names"] = [get_vaccine_name(vaccine).value for vaccine in center_details["vaccine_names"]]
             [center_details.pop(key) for key in list(center_details.keys()) if key in useless_keys]
     except httpx.HTTPError as exc:
-        print(f"HTTP Exception for {exc.request.url} - {exc}")
+        logger.error(f"Can't access API center details for URL {exc.request.url} - {exc}")
         return None
     return center_details
 
@@ -81,8 +72,7 @@ def scrap_centers():
     end_date=datetime.date.today()+datetime.timedelta(NUMBER_OF_SCRAPED_DAYS)
 
     logger.info(f"[Bimedoc centers] Parsing centers from API")
-
-        
+    
     request_url = CENTER_LIST_URL.format(start_date=start_date, end_date=end_date)
     try:
         r = DEFAULT_CLIENT.get(request_url,headers=BIMEDOC_HEADERS)
@@ -94,7 +84,6 @@ def scrap_centers():
             return None
         else:
             logger.info(f"La liste des centres Bimedoc a été récupérée (API CENTER_LIST)")
-    
     except:
         logger.error(f"Can't access API center list - {r}")
         return None
@@ -104,7 +93,6 @@ def scrap_centers():
     if len(center_list) == 0:
         return None
 
-    print(center_list)
     results = []
     with multiprocessing.Pool(50) as pool:
         centers_with_details = pool.imap_unordered(get_center_details, (center for center in center_list))  
@@ -146,6 +134,7 @@ if __name__ == "__main__":  # pragma: no cover
         logger.info(f"Found {len(centers)} centers on Bimedoc")
         if len(centers) ==0 :
             logger.error(f"[NOT SAVING RESULTS]{len(centers)} does not seem like enough Bimedoc centers")
+            exit(1)
         else:
             logger.info(f"> Writing them on {path_out}")
             with open(path_out, "w") as f:
