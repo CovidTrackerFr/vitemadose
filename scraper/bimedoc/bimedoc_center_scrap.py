@@ -34,10 +34,9 @@ def get_center_details(center):
     start_date=datetime.date.today()
     end_date=datetime.date.today()+datetime.timedelta(NUMBER_OF_SCRAPED_DAYS)
 
-   
+    r = DEFAULT_CLIENT.get(SLOTS_URL.format(pharmacy_id=center["id"],start_date=start_date, end_date=end_date), headers=BIMEDOC_HEADERS)
+    r.raise_for_status()
     try:
-        r = DEFAULT_CLIENT.get(SLOTS_URL.format(pharmacy_id=center["id"],start_date=start_date, end_date=end_date), headers=BIMEDOC_HEADERS)
-        r.raise_for_status()
         center_details = r.json()
         if r.status_code != 200:
             logger.error(f"Can't access API center details - {r.status_code} => {json.loads(r.text)}")
@@ -77,14 +76,13 @@ def scrap_centers():
 
     logger.info(f"[Bimedoc centers] Parsing centers from API")
 
-
-    try:
         
-        r = DEFAULT_CLIENT.get(
+    r = DEFAULT_CLIENT.get(
         CENTER_LIST_URL.format(start_date=start_date, end_date=end_date),
         headers=BIMEDOC_HEADERS
     )
-        r.raise_for_status()
+    r.raise_for_status()
+    try:
         center_list = r.json()
 
         if r.status_code != 200:
