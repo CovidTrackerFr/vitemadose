@@ -41,11 +41,12 @@ def get_center_details(center):
         )
         r.raise_for_status()
        
-    except httpx.RequestError as exc:
-        print(f"An error occurred while requesting {exc.request.url!r}.")
-        return
+
     except httpx.HTTPStatusError as exc:
         print(f"Error response {exc.response.status_code} while requesting {exc.request.url!r}.")
+        return
+    except httpx.RequestError as exc:
+        print(f"An error occurred while requesting {exc.request.url!r}.")
         return
     else:
         center_details = r.json()
