@@ -52,7 +52,10 @@ class ResourceTousDepartements(Resource):
 
             if not creneau.type_vaccin:
                 return
-
+            
+            if not isinstance(creneau.type_vaccin, list):
+                creneau.type_vaccin=[creneau.type_vaccin]
+        
             for vaccine in creneau.type_vaccin:
                 if vaccine is not None:
                     if isinstance(vaccine, Vaccine):
