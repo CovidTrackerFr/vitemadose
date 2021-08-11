@@ -40,7 +40,13 @@ def get_center_details(center):
             headers=BIMEDOC_HEADERS,
         )
         r.raise_for_status()
-        center_details = r.json()
+       
+    except httpx.RequestError as exc:
+        print(f"An error occurred while requesting {exc.request.url!r}.")
+    except httpx.HTTPStatusError as exc:
+        print(f"Error response {exc.response.status_code} while requesting {exc.request.url!r}.")
+
+    center_details = r.json()
         if r.status_code != 200:
             logger.error(f"Can't access API center details - {r.status_code} => {json.loads(r.text)}")
 
@@ -63,11 +69,6 @@ def get_center_details(center):
             center_details["phone_number"] = format_phone_number(center_details["phone_number"])
             center_details["vaccine_names"] = [get_vaccine_name(vaccine).value for vaccine in center_details["vaccine_names"]]
             [center_details.pop(key) for key in list(center_details.keys()) if key in useless_keys]
-
-    except httpx.RequestError as exc:
-        print(f"An error occurred while requesting {exc.request.url!r}.")
-    except httpx.HTTPStatusError as exc:
-        print(f"Error response {exc.response.status_code} while requesting {exc.request.url!r}.")
 
     return center_details
 
