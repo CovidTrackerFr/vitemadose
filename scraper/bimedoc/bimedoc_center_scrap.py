@@ -7,6 +7,8 @@ import json
 import os
 import datetime
 import multiprocessing
+import sys
+
 NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
 PLATFORM="bimedoc".lower()
@@ -62,7 +64,7 @@ def get_center_details(center):
             [center_details.pop(key) for key in list(center_details.keys()) if key in useless_keys]
 
     except:
-        logger.error(f'Can\'t access API center details for url {SLOTS_URL.format(pharmacy_id=center["id"],start_date=start_date, end_date=end_date)} ')
+        logger.error(f'Can\'t access API center details - sys.exc_info()[0]} ')
         return None
 
     return center_details
