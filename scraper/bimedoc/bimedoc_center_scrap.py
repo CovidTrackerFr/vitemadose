@@ -62,11 +62,9 @@ def get_center_details(center):
             center_details["phone_number"] = format_phone_number(center_details["phone_number"])
             center_details["vaccine_names"] = [get_vaccine_name(vaccine).value for vaccine in center_details["vaccine_names"]]
             [center_details.pop(key) for key in list(center_details.keys()) if key in useless_keys]
-
-    except:
-        logger.error(f"Can't access API center details - {request_url}")
+    except httpx.HTTPError as exc:
+        print(f"HTTP Exception for {exc.request.url} - {exc}")
         return None
-
     return center_details
 
 
@@ -91,6 +89,7 @@ def scrap_centers():
             return None
         else:
             logger.info(f"La liste des centres Bimedoc a été récupérée (API CENTER_LIST)")
+    
     except:
         logger.error(f"Can't access API center list - {r}")
         return None
