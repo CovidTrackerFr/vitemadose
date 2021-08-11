@@ -70,7 +70,7 @@ def get_center_details(center):
             center_details["phone_number"] = format_phone_number(center_details["phone_number"])
             center_details["vaccine_names"] = [get_vaccine_name(vaccine).value for vaccine in center_details["vaccine_names"]]
             [center_details.pop(key) for key in list(center_details.keys()) if key in useless_keys]
-    return center_details
+            return center_details
 
 
 def scrap_centers():
