@@ -21,7 +21,7 @@ CENTER_LIST_URL = BIMEDOC_CONF.get("api", {}).get("center_list", {})
 SLOTS_URL = BIMEDOC_CONF.get("api", {}).get("slots", {})
 APPOINTMENT_URL = BIMEDOC_CONF.get("appointment_url", {})
 
-DEFAULT_CLIENT = httpx.AsyncClient()
+DEFAULT_CLIENT = httpx.Client()
 
 logger = get_logger()
 
