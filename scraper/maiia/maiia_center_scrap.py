@@ -107,7 +107,6 @@ def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
         result = []
         for department in get_departements_numbers():
             result_dep = get_centers(speciality, client, department)
-            time.sleep(0.5)
             result += result_dep
         for root_center in result:
             if root_center.get("type") != "CENTER":
