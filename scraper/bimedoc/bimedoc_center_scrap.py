@@ -7,11 +7,10 @@ import json
 import os
 import datetime
 import multiprocessing
-import time
 
 NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
-PLATFORM="bimedoc".lower()
+PLATFORM = "bimedoc".lower()
 
 BIMEDOC_CONF = get_conf_platform("bimedoc")
 BIMEDOC_ENABLED = BIMEDOC_CONF.get("enabled", False)
@@ -25,14 +24,13 @@ DEFAULT_CLIENT = httpx.Client()
 
 logger = get_logger()
 
-BIMEDOC_HEADERS = { 
-    "Authorization": f'Partner {os.environ.get("BIMEDOC_API_KEY", "")}'
-}
+BIMEDOC_HEADERS = {"Authorization": f'Partner {os.environ.get("BIMEDOC_API_KEY", "")}'}
+
 
 def get_center_details(center):
-    start_date=datetime.date.today()
-    end_date=datetime.date.today()+datetime.timedelta(NUMBER_OF_SCRAPED_DAYS)
-    request_url=SLOTS_URL.format(pharmacy_id=f'{center["id"]}/',start_date=start_date, end_date=end_date)
+    start_date = datetime.date.today()
+    end_date = datetime.date.today() + datetime.timedelta(NUMBER_OF_SCRAPED_DAYS)
+    request_url = SLOTS_URL.format(pharmacy_id=f'{center["id"]}/', start_date=start_date, end_date=end_date)
     try:
         r = httpx.Client().get(request_url, headers=BIMEDOC_HEADERS)
         r.raise_for_status()
@@ -41,11 +39,11 @@ def get_center_details(center):
             logger.error(f"Can't access API center details - {r.status_code} => {json.loads(r.text)}")
 
         else:
-            useless_keys = ["slots","id", "postcode", "coordinates", "city", "street","building_number", "name"]
+            useless_keys = ["slots", "id", "postcode", "coordinates", "city", "street", "building_number", "name"]
             logger.info(f'[Bimedoc] Found Center {center_details["name"]} ({center_details["postcode"]})')
 
-            center_details["rdv_site_web"]=APPOINTMENT_URL.format(pharmacy_id=center_details["id"])
-            center_details["platform_is"]=PLATFORM
+            center_details["rdv_site_web"] = APPOINTMENT_URL.format(pharmacy_id=center_details["id"])
+            center_details["platform_is"] = PLATFORM
             center_details["gid"] = f'bimedoc{center_details["id"]}'
             center_details["nom"] = center_details["name"]
             center_details["com_insee"] = departementUtils.cp_to_insee(center_details["postcode"])
@@ -56,7 +54,9 @@ def get_center_details(center):
             center_details["lat_coor1"] = lat_coor1
             center_details["type"] = set_center_type("pharmacie")
             center_details["phone_number"] = format_phone_number(center_details["phone_number"])
-            center_details["vaccine_names"] = [get_vaccine_name(vaccine).value for vaccine in center_details["vaccine_names"]]
+            center_details["vaccine_names"] = [
+                get_vaccine_name(vaccine).value for vaccine in center_details["vaccine_names"] if vaccine
+            ]
             [center_details.pop(key) for key in list(center_details.keys()) if key in useless_keys]
     except httpx.HTTPError as exc:
         logger.error(f"Can't access API center details for URL {exc.request.url} - {exc}")
@@ -68,14 +68,14 @@ def scrap_centers():
     if not BIMEDOC_ENABLED:
         return None
 
-    start_date=datetime.date.today()
-    end_date=datetime.date.today()+datetime.timedelta(NUMBER_OF_SCRAPED_DAYS)
+    start_date = datetime.date.today()
+    end_date = datetime.date.today() + datetime.timedelta(NUMBER_OF_SCRAPED_DAYS)
 
     logger.info(f"[Bimedoc centers] Parsing centers from API")
-    
+
     request_url = CENTER_LIST_URL.format(start_date=start_date, end_date=end_date)
     try:
-        r = DEFAULT_CLIENT.get(request_url,headers=BIMEDOC_HEADERS)
+        r = DEFAULT_CLIENT.get(request_url, headers=BIMEDOC_HEADERS)
         r.raise_for_status()
         center_list = r.json()
 
@@ -95,7 +95,7 @@ def scrap_centers():
 
     results = []
     with multiprocessing.Pool(50) as pool:
-        centers_with_details = pool.imap_unordered(get_center_details, (center for center in center_list))  
+        centers_with_details = pool.imap_unordered(get_center_details, (center for center in center_list))
         for center_with_details in centers_with_details:
             if center_with_details is not None:
                 results.append(center_with_details)
@@ -103,7 +103,9 @@ def scrap_centers():
 
 
 def get_coordinates(center):
-    coordinates=center["coordinates"]
+    coordinates = center["coordinates"]
+    if not coordinates:
+        return None, None
     longitude = coordinates[0]
     latitude = coordinates[1]
     if longitude:
@@ -119,7 +121,6 @@ def set_center_type(center_type: str):
     return center_type_format[0]
 
 
-
 if __name__ == "__main__":  # pragma: no cover
     if BIMEDOC_ENABLED:
         centers = scrap_centers()
@@ -132,7 +133,7 @@ if __name__ == "__main__":  # pragma: no cover
             exit(1)
 
         logger.info(f"Found {len(centers)} centers on Bimedoc")
-        if len(centers) ==0 :
+        if len(centers) == 0:
             logger.error(f"[NOT SAVING RESULTS]{len(centers)} does not seem like enough Bimedoc centers")
             exit(1)
         else:
