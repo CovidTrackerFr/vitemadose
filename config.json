@@ -23,8 +23,6 @@
             "center_types": "stats_center_types.json",
             "by_date": "stats_by_date.json",
             "by_date_dep": "stats_by_date_dep.json"
-
-
         }
     },
     "outputs": {
@@ -283,7 +281,7 @@
                 "https://www.maiia.com"
             ],
             "api": {
-                "scraper": "https://www.maiia.com/api/pat-public/hcd?distanceMax=10000&AllVaccinationPlaces=true&speciality.shortName={speciality}",
+                "scraper": "https://www.maiia.com/api/pat-public/hcd?distanceMax=10000&AllVaccinationPlaces=true&speciality.shortName={speciality}&departmentCode={department}",
                 "slots": "https://www.maiia.com/api/pat-public/availabilities?centerId={center_id}&consultationReasonName={consultation_reason_name}&from={start_date}&to={end_date}",
                 "next_slot": "https://www.maiia.com/api/pat-public/availability-closests?centerId={center_id}&consultationReasonName={consultation_reason_name}&from={start_date}",
                 "motives": "https://www.maiia.com/api/pat-public/consultation-reason-hcd?rootCenterId={center_id}"
@@ -382,7 +380,9 @@
                 "profile_public_entities": "https://api.ordoclic.fr/v1/public/entities/profile/{slug}"
             },
             "filters": {
-                "valid_injections": [1]
+                "valid_injections": [
+                    1
+                ]
             },
             "scraper_payload": {
                 "page": 1,
@@ -484,7 +484,7 @@
                 "center_list": "https://server.bimedoc.com/vmd/pharmacy-with-slots?start_date={start_date}&end_date={end_date}",
                 "slots": "https://server.bimedoc.com/vmd/pharmacy-with-slots/{pharmacy_id}?start_date={start_date}&end_date={end_date}"
             },
-            "appointment_url":"https://app.bimedoc.com/application/scheduler/{pharmacy_id}?vmd=true",
+            "appointment_url": "https://app.bimedoc.com/application/scheduler/{pharmacy_id}?vmd=true",
             "center_scraper": {
                 "result_path": "data/output/bimedoc_centers.json",
                 "business_days": [
@@ -499,7 +499,7 @@
             }
         }
     },
-    "logger":{
-        "log_requests_above" : 20
+    "logger": {
+        "log_requests_above": 20
     }
 }

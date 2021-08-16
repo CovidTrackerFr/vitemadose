@@ -193,19 +193,3 @@ def test_center_iterator():
         centres.append(centre)
     assert len(centres) > 0
 
-
-def test_maiia_center_scrap():
-    url = "/api/pat-public/hcd"
-
-    def app_mock(request: httpx.Request) -> httpx.Response:
-
-        if request.url.path == url and "pharmacie" in request.url.query.decode("utf-8"):
-            return httpx.Response(200, json=json.loads(Path("tests/fixtures/maiia/scrap-center.json").read_text()))
-        if request.url.path == url and "centre-de-vaccination" in request.url.query.decode("utf-8"):
-            return httpx.Response(200, json={"total": 0, "items": []})
-        return httpx.Response(403)
-
-    client = httpx.Client(transport=httpx.MockTransport(app_mock))
-    centers = maiia_scrap(client, save=False)
-
-    assert centers == json.loads(Path("tests/fixtures/maiia/scrap-center-result.json").read_text())

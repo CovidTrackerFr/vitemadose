@@ -9,7 +9,8 @@ from utils.vmd_utils import departementUtils, format_phone_number
 from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_result import DRUG_STORE, VACCINATION_CENTER
 from .maiia_utils import get_paged
-
+from utils.vmd_utils import get_departements_numbers
+import time
 MAIIA_CONF = get_conf_platform("maiia")
 MAIIA_API = MAIIA_CONF.get("api", {})
 MAIIA_ENABLED = MAIIA_CONF.get("enabled", False)
@@ -26,9 +27,9 @@ MAIIA_DO_NOT_SCRAP_ID = MAIIA_SCRAPER.get("excluded_ids", [])
 MAIIA_DO_NOT_SCRAP_NAME = MAIIA_SCRAPER.get("excluded_names", [])
 
 
-def get_centers(speciality: str, client: httpx.Client = DEFAULT_CLIENT) -> list:
+def get_centers(speciality: str, client: httpx.Client = DEFAULT_CLIENT, department = None) -> list:
     result = get_paged(
-        MAIIA_API.get("scraper").format(speciality=speciality),
+        MAIIA_API.get("scraper").format(speciality=speciality, department=department),
         limit=50,
         client=client,
     )
@@ -103,7 +104,11 @@ def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
 
     for speciality in CENTER_TYPES:
         logger.info(f"Fetching speciality {speciality}")
-        result = get_centers(speciality, client)
+        result = []
+        for department in get_departements_numbers():
+            result_dep = get_centers(speciality, client, department)
+            time.sleep(0.5)
+            result += result_dep
         for root_center in result:
             if root_center.get("type") != "CENTER":
                 continue
