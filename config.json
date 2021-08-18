@@ -77,7 +77,7 @@
     "platforms": {
         "doctolib": {
             "enabled": true,
-            "timeout": 5,
+            "timeout": 10,
             "recognized_urls": [
                 "https://partners.doctolib.fr",
                 "https://www.doctolib.fr"
@@ -473,7 +473,7 @@
         },
         "bimedoc": {
             "enabled": true,
-            "timeout": 20,
+            "timeout": 30,
             "recognized_urls": [
                 "app.bimedoc.com"
             ],
