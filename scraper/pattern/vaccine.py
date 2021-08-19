@@ -27,6 +27,8 @@ def get_vaccine_name(name: Optional[str], fallback: Optional[Vaccine] = None) ->
     if not name:
         return fallback
     name = name.lower().strip()
+    if "contre indications" in name:
+        return fallback
     for vaccine, vaccine_names in VACCINES_NAMES.items():
         for vaccine_name in vaccine_names:
             if vaccine_name in name:
