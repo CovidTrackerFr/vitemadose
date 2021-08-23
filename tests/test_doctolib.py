@@ -151,7 +151,7 @@ def test_doctolib_sends_creneau():
     while not q.empty():
         actual.append(q.get())
     # Then
-    assert len(actual) == 2
+    assert len(actual) == 1
     assert actual[0] == Creneau(
         reservation_url=base_url,
         horaire=dateutil.parser.parse("2021-04-10"),

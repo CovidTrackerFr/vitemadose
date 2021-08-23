@@ -90,7 +90,7 @@
                 "scraper_dep": "http://www.doctolib.fr/vaccination-covid-19/{0}.json?page={1}"
             },
             "request_sleep": 0.05,
-            "days_per_page": 7,
+            "days_per_page": 14,
             "filters": {
                 "appointment_reason": [
                     "1 ere injection",
