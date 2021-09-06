@@ -76,7 +76,7 @@
     ],
     "platforms": {
         "doctolib": {
-            "enabled": true,
+            "enabled": false,
             "timeout": 10,
             "recognized_urls": [
                 "https://partners.doctolib.fr",
@@ -186,7 +186,7 @@
             }
         },
         "keldoc": {
-            "enabled": true,
+            "enabled": false,
             "timeout": 20,
             "recognized_urls": [
                 "https://vaccination-covid.keldoc.com",
@@ -273,7 +273,7 @@
             ]
         },
         "maiia": {
-            "enabled": true,
+            "enabled": false,
             "timeout": 5,
             "base_url": "https://www.maiia.com",
             "recognized_urls": [
@@ -322,13 +322,13 @@
         },
         "mapharma": {
             "enabled": true,
-            "timeout": 5,
+            "timeout": 15,
             "recognized_urls": [
                 "https://mapharma.net"
             ],
             "api": {
                 "opendata": "https://mapharma.net/opendata/rdv",
-                "opendata_fallback": "https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/mapharma_open_data.json",
+                "opendata_fallback": "https://vitemadose.gitlab.io/vitemadose/mapharma_open_data.json",
                 "slots": "https://mapharma.net/api/public/calendar/{campagneId}/{start_date}/{optionId}"
             },
             "headers": {
@@ -365,7 +365,7 @@
             }
         },
         "ordoclic": {
-            "enabled": true,
+            "enabled": false,
             "timeout": 20,
             "recognized_urls": [
                 "https://app.ordoclic.fr"
@@ -395,7 +395,7 @@
             }
         },
         "avecmondoc": {
-            "enabled": true,
+            "enabled": false,
             "timeout": 20,
             "days_per_page": 7,
             "recognized_urls": [
@@ -442,7 +442,7 @@
             }
         },
         "mesoigner": {
-            "enabled": true,
+            "enabled": false,
             "timeout": 5,
             "recognized_urls": [
                 "mesoigner.fr"
@@ -471,7 +471,7 @@
             }
         },
         "bimedoc": {
-            "enabled": true,
+            "enabled": false,
             "timeout": 30,
             "recognized_urls": [
                 "app.bimedoc.com"
