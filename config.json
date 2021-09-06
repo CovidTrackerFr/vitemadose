@@ -328,7 +328,7 @@
             ],
             "api": {
                 "opendata": "https://mapharma.net/opendata/rdv",
-                "opendata_fallback": "https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/data/output/mapharma_open_data.json",
+                "opendata_fallback": "https://vitemadose.gitlab.io/vitemadose/mapharma_open_data.json",
                 "slots": "https://mapharma.net/api/public/calendar/{campagneId}/{start_date}/{optionId}"
             },
             "headers": {

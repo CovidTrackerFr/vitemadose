@@ -70,7 +70,14 @@ def get_mapharma_opendata(
     try:
         request = client.get(opendata_url, headers=MAPHARMA_HEADERS)
         request.raise_for_status()
+
+        #Let's update opendata file
+        f = open(MAPHARMA_OPEN_DATA_FILE, "w", encoding="utf-8")
+        f.write(json.dumps({ "artifact_date" : datetime.today().strftime("%Y-%m-%d %H:%M:%S"), "data": request.json()}, indent=2))
+        f.close()
+
         return request.json()
+        
     except httpx.TimeoutException as hex:
         logger.warning(f"{opendata_url} timed out {hex}")
     except httpx.HTTPStatusError as hex:
@@ -78,7 +85,7 @@ def get_mapharma_opendata(
     try:
         request = client.get(opendata_url_fallback, headers=MAPHARMA_HEADERS)
         request.raise_for_status()
-        return request.json()
+        return request.json()["data"]
     except httpx.TimeoutException as hex:
         logger.warning(f"{opendata_url_fallback} timed out {hex}")
     except httpx.HTTPStatusError as hex:
@@ -133,11 +140,11 @@ class Mapharma:
         self,
         id_campagne: int,
         id_type: int,
-    ) -> [dict, dict]:
+) -> [dict, dict]:
         opendata = list()
         try:
             with open(self.opendata_file, "r", encoding="utf8") as f:
-                opendata = json.load(f)
+                opendata = json.load(f)["data"]
         except IOError as ioex:
             logger.warning(f"Reading {self.opendata_file} returned error {ioex}")
         for pharmacy in opendata:
@@ -300,9 +307,7 @@ def centre_iterator():
     if not opendata:
         logger.error("Mapharma unable to get centre list")
         return
-    # on sauvegarde le payload json reçu si jamais panne du endpoint
-    with open(MAPHARMA_OPEN_DATA_FILE, "w", encoding="utf8") as f:
-        json.dump(opendata, f, indent=2)
+
     for pharmacy in opendata:
         for campagne in pharmacy.get("campagnes"):
             if not is_campagne_valid(campagne):
