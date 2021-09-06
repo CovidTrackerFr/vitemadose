@@ -76,7 +76,7 @@
     ],
     "platforms": {
         "doctolib": {
-            "enabled": false,
+            "enabled": true,
             "timeout": 10,
             "recognized_urls": [
                 "https://partners.doctolib.fr",
@@ -186,7 +186,7 @@
             }
         },
         "keldoc": {
-            "enabled": false,
+            "enabled": true,
             "timeout": 20,
             "recognized_urls": [
                 "https://vaccination-covid.keldoc.com",
@@ -273,7 +273,7 @@
             ]
         },
         "maiia": {
-            "enabled": false,
+            "enabled": true,
             "timeout": 5,
             "base_url": "https://www.maiia.com",
             "recognized_urls": [
@@ -365,7 +365,7 @@
             }
         },
         "ordoclic": {
-            "enabled": false,
+            "enabled": true,
             "timeout": 20,
             "recognized_urls": [
                 "https://app.ordoclic.fr"
@@ -395,7 +395,7 @@
             }
         },
         "avecmondoc": {
-            "enabled": false,
+            "enabled": true,
             "timeout": 20,
             "days_per_page": 7,
             "recognized_urls": [
@@ -442,7 +442,7 @@
             }
         },
         "mesoigner": {
-            "enabled": false,
+            "enabled": true,
             "timeout": 5,
             "recognized_urls": [
                 "mesoigner.fr"
@@ -471,7 +471,7 @@
             }
         },
         "bimedoc": {
-            "enabled": false,
+            "enabled": true,
             "timeout": 30,
             "recognized_urls": [
                 "app.bimedoc.com"
