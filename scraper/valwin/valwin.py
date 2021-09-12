@@ -153,8 +153,6 @@ class Slots:
 
         request.update_appointment_count(request.appointment_count + appointments_number)
 
-        print(request.appointment_count)
-
         return first_availability
 
 
