@@ -38,6 +38,7 @@ def test_get_appointments():
 
     assert center_with_availability.get_appointments(request, slots_api=slots) == "2021-09-17T10:00:00"
     assert request.appointment_count == 12
+    print(request.vaccine_type)
     assert request.vaccine_type == [Vaccine.ASTRAZENECA]
 
     # This one should return no date, neither appointment_count nor vaccine.
