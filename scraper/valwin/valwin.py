@@ -152,7 +152,6 @@ class Slots:
                 first_availability = appointment_exact_date
 
         request.update_appointment_count(request.appointment_count + appointments_number)
-
         return first_availability
 
 

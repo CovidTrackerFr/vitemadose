@@ -8,7 +8,7 @@ import requests
 from pathlib import Path
 from stats_generation.stats_center_types import generate_stats_center_types
 from stats_generation.stats_map import make_maps
-from utils.vmd_config import get_conf_outstats, get_conf_outputs,get_config,get_conf_inputs
+from utils.vmd_config import get_conf_outstats, get_conf_outputs, get_config, get_conf_inputs
 from utils.vmd_logger import enable_logger_for_production
 
 logger = logging.getLogger("scraper")

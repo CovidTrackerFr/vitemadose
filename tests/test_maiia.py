@@ -192,4 +192,3 @@ def test_center_iterator():
     for centre in center_iterator():
         centres.append(centre)
     assert len(centres) > 0
-

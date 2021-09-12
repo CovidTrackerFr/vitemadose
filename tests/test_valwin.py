@@ -31,14 +31,12 @@ def test_get_appointments():
         "https://pharma-api.epharmacie.pro/global/api/meetings/v2/aptiphar18-priker-magny-hameaux/slots",
         "2021-09-11",
         center_info,
-        "Valwinaptiphar18-priker-magny-hameau"
+        "Valwinaptiphar18-priker-magny-hameau",
     )
     center_with_availability = valwin.Slots()
-    slots = json.load(
-        io.open(Path("tests", "fixtures", "valwin", "slots_available.json"), "r", encoding="utf-8-sig")
-    )
+    slots = json.load(io.open(Path("tests", "fixtures", "valwin", "slots_available.json"), "r", encoding="utf-8-sig"))
 
-    assert center_with_availability.get_appointments(request, slots_api=slots) ==  "2021-09-17T11:50:00"
+    assert center_with_availability.get_appointments(request, slots_api=slots) == "2021-09-17T10:00:00"
     assert request.appointment_count == 12
     assert request.vaccine_type == [Vaccine.ASTRAZENECA]
 
@@ -47,7 +45,7 @@ def test_get_appointments():
         "https://pharma-api.epharmacie.pro/global/api/meetings/v2/pharmabest75-plateau-lyon/slots",
         "2021-08-10",
         center_info,
-        "Valwinpharmabest75-plateau-lyon"
+        "Valwinpharmabest75-plateau-lyon",
     )
     center_without_availability = valwin.Slots()
     slots = json.load(
@@ -77,12 +75,10 @@ def test_fetch_slots():
     assert response == None
 
 
-
 def test_fetch():
     def app(requested: httpx.Request) -> httpx.Response:
         assert "User-Agent" in requested.headers
         return httpx.Response(responsecode, json=slots)
-
 
     valwin.PLATFORM_ENABLED = True
 
@@ -97,20 +93,18 @@ def test_fetch():
         "2021-08-10",
         center_info,
     )
-    slots = json.load(
-        io.open(Path("tests", "fixtures", "valwin", "slots_available.json"), "r", encoding="utf-8-sig")
-    )
+    slots = json.load(io.open(Path("tests", "fixtures", "valwin", "slots_available.json"), "r", encoding="utf-8-sig"))
 
-    #Response 200
-    responsecode=200
+    # Response 200
+    responsecode = 200
     client = httpx.Client(transport=httpx.MockTransport(app))
     center_with_availability = valwin.Slots(client=client)
     response = center_with_availability.fetch(request)
-    assert response == "2021-09-17T11:50:00"
+    assert response == "2021-09-17T10:00:00"
 
-    #Response 403
+    # Response 403
 
-    responsecode=403
+    responsecode = 403
     client = httpx.Client(transport=httpx.MockTransport(app))
     center_with_availability = valwin.Slots(client=client)
     with pytest.raises(Exception):

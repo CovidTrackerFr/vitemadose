@@ -71,6 +71,7 @@ def test_get_organization_slug():
     data = json.loads(data_file.read_text(encoding="utf8"))
     assert get_organization_slug("delphine-rousseau-159", client=client) == data
 
+
 def test_get_reasons():
     def app(request: httpx.Request) -> httpx.Response:
         assert request.url.path == "/api/Organizations/getConsultationReasons"

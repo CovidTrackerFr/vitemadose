@@ -31,14 +31,12 @@ def test_get_appointments():
         "https://server.bimedoc.com/vmd/pharmacy-with-slots/9cf46288-0080-4a8d-8856-8e9998ced9f7?start_date=2021-08-10&end_date=2021-08-17",
         "2021-08-10",
         center_info,
-        "Bimedoc9cf46288-0080-4a8d-8856-8e9998ced9f"
+        "Bimedoc9cf46288-0080-4a8d-8856-8e9998ced9f",
     )
     center_with_availability = bimedoc.BimedocSlots()
-    slots = json.load(
-        io.open(Path("tests", "fixtures", "bimedoc", "slots_available.json"), "r", encoding="utf-8-sig")
-    )
+    slots = json.load(io.open(Path("tests", "fixtures", "bimedoc", "slots_available.json"), "r", encoding="utf-8-sig"))
 
-    assert center_with_availability.get_appointments(request, slots_api=slots) ==  "2021-08-11T08:15:00Z"
+    assert center_with_availability.get_appointments(request, slots_api=slots) == "2021-08-11T08:15:00Z"
     assert request.appointment_count == 133
     assert request.vaccine_type == [Vaccine.PFIZER]
 
@@ -69,19 +67,17 @@ def test_fetch_slots():
     request = ScraperRequest(
         "https://server.bimedoc.com/vmd/pharmacy-with-slots/9cf46288-0080-4a8d-8856-8e9998ced9f7?start_date=2021-08-10&end_date=2021-08-17",
         "2021-08-10",
-        center_info
+        center_info,
     )
     response = bimedoc.fetch_slots(request)
     # On devrait trouver None puisque la plateforme est désactivée
     assert response == None
 
 
-
 def test_fetch():
     def app(requested: httpx.Request) -> httpx.Response:
         assert "User-Agent" in requested.headers
         return httpx.Response(responsecode, json=slots)
-
 
     bimedoc.PLATFORM_ENABLED = True
 
@@ -94,22 +90,20 @@ def test_fetch():
     request = ScraperRequest(
         "https://server.bimedoc.com/vmd/pharmacy-with-slots/9cf46288-0080-4a8d-8856-8e9998ced9f7?start_date=2021-08-10&end_date=2021-08-17",
         "2021-08-10",
-        center_info
+        center_info,
     )
-    slots = json.load(
-        io.open(Path("tests", "fixtures", "bimedoc", "slots_available.json"), "r", encoding="utf-8-sig")
-    )
+    slots = json.load(io.open(Path("tests", "fixtures", "bimedoc", "slots_available.json"), "r", encoding="utf-8-sig"))
 
-    #Response 200
-    responsecode=200
+    # Response 200
+    responsecode = 200
     client = httpx.Client(transport=httpx.MockTransport(app))
     center_with_availability = bimedoc.BimedocSlots(client=client)
     response = center_with_availability.fetch(request)
     assert response == "2021-08-11T08:15:00Z"
 
-    #Response 403
+    # Response 403
 
-    responsecode=403
+    responsecode = 403
     client = httpx.Client(transport=httpx.MockTransport(app))
     center_with_availability = bimedoc.BimedocSlots(client=client)
     with pytest.raises(Exception):

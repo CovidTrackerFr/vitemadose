@@ -25,10 +25,11 @@ CSV_POP_URL = get_conf_inputs().get("from_main_branch").get("dep_pop")
 CSV_RDV_URL = get_conf_inputs().get("from_data_gouv_website").get("rdv_gouv")
 JSON_INFO_CENTRES_URL = get_conf_inputs().get("from_gitlab_public").get("last_scans")
 
+
 def get_pop():
-    dept_pop={}
-    with open(CSV_POP_URL, encoding='utf-8', newline='') as file:
-        csvreader = csv.DictReader(file, delimiter=';')
+    dept_pop = {}
+    with open(CSV_POP_URL, encoding="utf-8", newline="") as file:
+        csvreader = csv.DictReader(file, delimiter=";")
         for row in csvreader:
             dept_pop[row["dep"]] = row["departmentPopulation"]
     return dept_pop
