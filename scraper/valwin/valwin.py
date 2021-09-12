@@ -116,7 +116,6 @@ class Slots:
         start_date = request.get_start_date()
 
         for creneau in slots_api.get("result", []):
-            appointment_exact_date = creneau["start"]
             for vaccine in creneau["types"]:
                 vaccine_name = get_vaccine_name(vaccine["label"])
                 vaccine_id = vaccine["id"]
@@ -127,6 +126,7 @@ class Slots:
                     vaccine_ids.append(vaccine_id)
 
         for creneau in slots_api.get("result", []):
+            appointment_exact_date = creneau["start"]
             if len(vaccine_ids) == 1:
                 url = (
                     PLATFORM_CONF.get("build_urls")
@@ -152,7 +152,6 @@ class Slots:
                 first_availability = appointment_exact_date
 
         request.update_appointment_count(request.appointment_count + appointments_number)
-
         return first_availability
 
 

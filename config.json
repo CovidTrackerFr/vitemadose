@@ -508,8 +508,8 @@
                 "slots": "https://pharma-api.epharmacie.pro/global/api/meetings/v2/{id}/slots?pageSize=999999999"
             },
             "build_urls": {
-                "campaign_choice" : "{pharmacy_link}/animations",
-                "campaign_target" : "{pharmacy_link}/animation-details/{vaccine_id}/1/60"
+                "campaign_choice": "{pharmacy_link}/animations",
+                "campaign_target": "{pharmacy_link}/animation-details/{vaccine_id}/1/60"
             },
             "center_scraper": {
                 "result_path": "data/output/valwin_centers.json"

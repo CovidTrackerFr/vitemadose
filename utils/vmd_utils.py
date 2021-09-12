@@ -233,7 +233,7 @@ def fix_scrap_urls(url):
 
 
 def get_last_scans(centres):
-    url =f'{get_config().get("base_urls").get("gitlab_public_path")}/{get_conf_inputs().get("from_gitlab_public").get("last_scans")}'
+    url = f'{get_config().get("base_urls").get("gitlab_public_path")}/{get_conf_inputs().get("from_gitlab_public").get("last_scans")}'
     last_scans = {}
     liste_centres = []
 
