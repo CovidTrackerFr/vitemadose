@@ -168,7 +168,7 @@ def center_iterator(client=None) -> Iterator[Dict]:
     if client:
         session = client
     try:
-        url = f'{get_config().get("base_urls").get("github_public_path")}{get_conf_outputs().get("centers_json_path").format(PLATFORM)}'
+        url = f'{get_config().get("base_urls").get("github_public_path")}{get_conf_outputs().get("centers_json_path").format(PLATFORM.lower())}'
         response = session.get(url)
         # Si on ne vient pas des tests unitaires
         if not client:
