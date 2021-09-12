@@ -8,7 +8,6 @@ import scraper.bimedoc.bimedoc as bimedoc
 from scraper.pattern.vaccine import Vaccine
 from utils.vmd_config import get_conf_platform
 import httpx
-from scraper.error import BlockedByBimedocError
 import pytest
 
 

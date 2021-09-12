@@ -12,7 +12,7 @@ from scraper.doctolib.doctolib_filters import (
     is_appointment_relevant,
     parse_practitioner_type,
 )
-from scraper.error import BlockedByDoctolibError
+from scraper.error import Blocked403
 from scraper.pattern.vaccine import Vaccine
 from scraper.pattern.center_info import CenterInfo
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
@@ -69,7 +69,7 @@ def test_blocked_by_doctolib_par_centre():
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client, cooldown_interval=0)
 
-    with pytest.raises(BlockedByDoctolibError):
+    with pytest.raises(Blocked403):
         slots.fetch(scrap_request)
 
 
@@ -93,7 +93,7 @@ def test_blocked_by_doctolib_par_availabilities():
     client = httpx.Client(transport=httpx.MockTransport(app))
     slots = DoctolibSlots(client=client, cooldown_interval=0)
 
-    with pytest.raises(BlockedByDoctolibError):
+    with pytest.raises(Blocked403):
         slots.fetch(scrap_request)
 
 
@@ -120,7 +120,7 @@ def test_doctolib():
     slots = DoctolibSlots(client=client, cooldown_interval=0)
 
     next_date = slots.fetch(scrap_request)
-    assert next_date == "2021-04-10"
+    assert next_date == "2021-04-10T21:45:00.000+02:00"
 
 
 def test_doctolib_sends_creneau():
@@ -154,7 +154,7 @@ def test_doctolib_sends_creneau():
     assert len(actual) == 1
     assert actual[0] == Creneau(
         reservation_url=base_url,
-        horaire=dateutil.parser.parse("2021-04-10"),
+        horaire=dateutil.parser.parse("2021-04-10T21:45:00.000+02:00"),
         type_vaccin=[Vaccine.MODERNA],
         lieu=Lieu(
             departement="07",

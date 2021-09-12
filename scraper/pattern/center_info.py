@@ -106,7 +106,7 @@ class CenterInfo:
         self.vaccine_type = result.request.vaccine_type
         self.appointment_by_phone_only = result.request.appointment_by_phone_only
         self.request_counts = result.request.requests
-
+        
     def handle_next_availability(self):
         if not self.prochain_rdv:
             return
@@ -129,6 +129,7 @@ class CenterInfo:
             self.vaccine_type = [
                 (vaccine.value if isinstance(vaccine, Vaccine) else vaccine) for vaccine in self.vaccine_type
             ]
+        
         self.handle_next_availability()
         return self.__dict__
 

@@ -9,12 +9,13 @@ from typing import Dict, Iterator, List, Optional, Tuple, Set
 from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 import dateutil
 import httpx
+import pytz
 import requests
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
 from scraper.pattern.vaccine import get_vaccine_name, Vaccine
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.error import BlockedByDoctolibError, DoublonDoctolib, RequestError
+from scraper.error import Blocked403, DoublonDoctolib, RequestError
 from utils.vmd_config import get_conf_outputs, get_conf_platform, get_config
 from utils.vmd_utils import DummyQueue
 from cachecontrol import CacheControl
@@ -115,7 +116,7 @@ class DoctolibSlots:
                 except:
                     request.increase_request_count("error")
                     if response.status_code == 403:
-                        raise BlockedByDoctolibError(centre_api_url)
+                        raise Blocked403(PLATFORM,centre_api_url)
                     if response.status_code == 404:
                         raise RequestError(centre_api_url, response.status_code)
                     return None
@@ -195,7 +196,7 @@ class DoctolibSlots:
 
         if doublon_responses == 0:
             raise DoublonDoctolib(request.get_url())
-
+        
         return first_availability
 
     def get_timetables(
@@ -220,7 +221,7 @@ class DoctolibSlots:
             return first_availability
         sdate, appt, ended, next_slot = self.get_appointments(
             request,
-            start_date.strftime("%Y-%m-%d"),
+            start_date.date().strftime("%Y-%m-%d"),
             vaccine,
             motive_ids_q,
             agenda_ids_q,
@@ -229,14 +230,15 @@ class DoctolibSlots:
         )
         if ended:
             return first_availability
+
+        print(next_slot)
         if next_slot:
             """
             Optimize query count by jumping directly to the first availability date by using ’next_slot’ key
             """
             next_expected_date = start_date + timedelta(days=PLATFORM_DAYS_PER_PAGE)
-            next_fetch_date = datetime.strptime(next_slot, "%Y-%m-%d")
-            diff = next_fetch_date.replace(tzinfo=None) - next_expected_date.replace(tzinfo=None)
-
+            next_fetch_date = datetime.strptime(next_slot, "%Y-%m-%dT%H:%M:%S.%f%z")
+            diff = next_fetch_date.astimezone(tz=pytz.timezone('Europe/Paris')) - next_expected_date.astimezone(tz=pytz.timezone('Europe/Paris'))
             if page > PLATFORM_PAGES_NUMBER:
                 return first_availability
             return self.get_timetables(
@@ -357,10 +359,10 @@ class DoctolibSlots:
         except httpx.ReadTimeout:
             logger.warning(f"Doctolib returned error ReadTimeout for url {request.get_url()}")
             request.increase_request_count("time-out")
-            raise BlockedByDoctolibError(request.get_url())
+            raise Blocked403(PLATFORM,request.get_url())
         if response.status_code == 403 or response.status_code == 400:
             request.increase_request_count("error")
-            raise BlockedByDoctolibError(request.get_url())
+            raise Blocked403(PLATFORM,request.get_url())
 
         response.raise_for_status()
         time.sleep(self._cooldown_interval)

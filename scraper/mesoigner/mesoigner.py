@@ -11,7 +11,7 @@ from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform, get_config, get_conf_outputs
-from scraper.error import BlockedByMesoignerError
+from scraper.error import Blocked403
 from utils.vmd_utils import DummyQueue, append_date_days
 from typing import Dict, Iterator, List, Optional
 import dateutil
@@ -19,7 +19,7 @@ from cachecontrol import CacheControl
 from cachecontrol.caches.file_cache import FileCache
 
 
-PLATFORM="mesoigner".lower()
+PLATFORM="mesoigner"
 
 PLATFORM_CONF = get_conf_platform("mesoigner")
 PLATFORM_ENABLED = PLATFORM_CONF.get("enabled", False)
@@ -91,7 +91,7 @@ class MesoignerSlots:
 
         if response.status_code == 403:
             request.increase_request_count("error")
-            raise BlockedByMesoignerError(centre_api_url)
+            raise Blocked403(PLATFORM,centre_api_url)
 
         response.raise_for_status()
         rdata = response.json()

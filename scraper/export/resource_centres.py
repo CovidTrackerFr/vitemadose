@@ -24,6 +24,7 @@ class ResourceTousDepartements(Resource):
         self.opendata = []
 
     def on_creneau(self, creneau: Union[Creneau, PasDeCreneau]):
+ 
         lieu = creneau.lieu
         centre = None
         is_blocked_center = lambda center: (is_reserved_center(center) or is_in_blocklist(center, blocklist))
@@ -105,8 +106,8 @@ class ResourceTousDepartements(Resource):
             "prochain_rdv": centre["prochain_rdv"].replace(microsecond=0).isoformat()
             if centre["prochain_rdv"]
             else None,
-            "vaccine_type": centre["vaccine_type"],
-        }
+            "vaccine_type": centre["vaccine_type"]
+                }
 
 
 class ResourceParDepartement(ResourceTousDepartements):

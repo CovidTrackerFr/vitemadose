@@ -53,9 +53,10 @@ class JSONExporter:
         )
         logger.info(f"{count} créneaux dans {lieux_avec_dispo} centres")
         print("\n")
-        logger.info(f"{lieux_bloques_mais_dispo} centres sont bloqués mais ont des disponibilités : ")
-        for centre_bloque in self.resources["info_centres"].centres_bloques_mais_disponibles:
-            logger.info(f"Le centre {centre_bloque} est bloqué mais a des disponibilités.")
+        if lieux_bloques_mais_dispo>0:
+            logger.info(f"{lieux_bloques_mais_dispo} centres sont bloqués mais ont des disponibilités : ")
+            for centre_bloque in self.resources["info_centres"].centres_bloques_mais_disponibles:
+                logger.info(f"Le centre {centre_bloque} est bloqué mais a des disponibilités.")
 
         for key, resource in self.resources.items():
             outfile_path = self.outpath_format.format(key)

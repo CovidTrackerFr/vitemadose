@@ -7,7 +7,7 @@ from scraper.pattern.vaccine import Vaccine, get_vaccine_name
 from utils.vmd_utils import departementUtils
 from scraper.scraper import fetch_centre_slots
 from scraper.pattern.scraper_request import ScraperRequest
-from scraper.error import BlockedByDoctolibError
+from scraper.error import Blocked403
 from .utils import mock_datetime_now
 from utils.vmd_utils import DummyQueue
 from scraper.pattern.center_info import CenterInfo
