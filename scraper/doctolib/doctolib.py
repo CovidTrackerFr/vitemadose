@@ -231,7 +231,6 @@ class DoctolibSlots:
         if ended:
             return first_availability
 
-        print(next_slot)
         if next_slot:
             """
             Optimize query count by jumping directly to the first availability date by using ’next_slot’ key
