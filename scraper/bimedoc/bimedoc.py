@@ -20,14 +20,12 @@ from cachecontrol.caches.file_cache import FileCache
 import datetime
 from scraper.pattern.vaccine import Vaccine, get_vaccine_name
 
-PLATFORM="bimedoc".lower()
+PLATFORM = "bimedoc".lower()
 
 PLATFORM_CONF = get_conf_platform("bimedoc")
 PLATFORM_ENABLED = PLATFORM_CONF.get("enabled", False)
 
-BIMEDOC_HEADERS = { 
-    "Authorization": f'Partner {os.environ.get("BIMEDOC_API_KEY", "")}'
-}
+BIMEDOC_HEADERS = {"Authorization": f'Partner {os.environ.get("BIMEDOC_API_KEY", "")}'}
 
 
 BIMEDOC_APIs = PLATFORM_CONF.get("api", "")
@@ -62,6 +60,7 @@ def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue) -> Optional[str]:
     first_availability = bimedoc.fetch(request)
     return first_availability
 
+
 class BimedocSlots:
     def __init__(
         self,
@@ -74,14 +73,14 @@ class BimedocSlots:
 
     def found_creneau(self, creneau):
         self.creneau_q.put(creneau)
-    
+
     def fetch(self, request: ScraperRequest) -> Optional[str]:
 
         gid = request.center_info.internal_id
         platform = request.center_info.plateforme
         center_id = gid.split(platform)[-1]
         start_date = datetime.date.today()
-        end_date=start_date+datetime.timedelta(NUMBER_OF_SCRAPED_DAYS)
+        end_date = start_date + datetime.timedelta(NUMBER_OF_SCRAPED_DAYS)
 
         self.lieu = Lieu(
             plateforme=Plateforme[PLATFORM.upper()],
@@ -93,22 +92,22 @@ class BimedocSlots:
             lieu_type=request.practitioner_type,
             metadata=request.center_info.metadata,
         )
-        
-        
-        centre_api_url = BIMEDOC_APIs.get("slots", "").format(pharmacy_id=center_id, start_date=start_date, end_date=end_date)
+
+        centre_api_url = BIMEDOC_APIs.get("slots", "").format(
+            pharmacy_id=center_id, start_date=start_date, end_date=end_date
+        )
         response = self._client.get(centre_api_url, headers=BIMEDOC_HEADERS)
         request.increase_request_count("slots")
 
         if response.status_code == 403:
             request.increase_request_count("error")
             self.found_creneau(PasDeCreneau(lieu=self.lieu))
-            raise Blocked403(PLATFORM,centre_api_url)
+            raise Blocked403(PLATFORM, centre_api_url)
 
         response.raise_for_status()
         rdata = response.json()
         if not rdata:
             self.found_creneau(PasDeCreneau(lieu=self.lieu))
-
 
         first_availability = self.get_appointments(request, rdata)
         if self.lieu and first_availability is None:
@@ -139,33 +138,31 @@ class BimedocSlots:
 
             request.add_vaccine_type(get_vaccine_name(creneau["vaccine_name"]))
 
-
         return first_availability
 
 
 def center_iterator(client=None) -> Iterator[Dict]:
     if not PLATFORM_ENABLED:
         logger.warning(f"{PLATFORM.capitalize()} scrap is disabled in configuration file.")
-        return []  
-    
-    session = CacheControl(requests.Session(), cache=FileCache('./cache'))
-    
+        return []
+
+    session = CacheControl(requests.Session(), cache=FileCache("./cache"))
+
     if client:
         session = client
     try:
         url = f'{get_config().get("base_urls").get("github_public_path")}{get_conf_outputs().get("centers_json_path").format(PLATFORM)}'
-        response=session.get(url)
+        response = session.get(url)
         # Si on ne vient pas des tests unitaires
         if not client:
-            if (response.from_cache):
+            if response.from_cache:
                 logger.info(f"Liste des centres pour {PLATFORM} vient du cache")
             else:
                 logger.info(f"Liste des centres pour {PLATFORM} est une vraie requête")
 
-        data=response.json()
+        data = response.json()
         logger.info(f"Found {len(data)} {PLATFORM.capitalize()} centers (external scraper).")
         for center in data:
             yield center
     except Exception as e:
         logger.warning(f"Unable to scrape {PLATFORM} centers: {e}")
-

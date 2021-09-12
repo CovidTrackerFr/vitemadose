@@ -42,6 +42,7 @@ class Creneau:
 
     disponible: bool = True
 
+
 @dataclass
 class PasDeCreneau:
     lieu: Lieu

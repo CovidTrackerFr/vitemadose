@@ -5,9 +5,9 @@ from utils.vmd_utils import departementUtils, format_phone_number
 import json
 import os
 
-PLATFORM="Valwin"
+PLATFORM = "Valwin"
 
-PLATFORM_HEADERS={}
+PLATFORM_HEADERS = {}
 
 PLATFORM_CONF = get_conf_platform(PLATFORM)
 PLATFORM_ENABLED = PLATFORM_CONF.get("enabled", False)
@@ -83,7 +83,7 @@ def parse_platform_centers():
 
     unique_centers = []
     centers_list = scrap_centers()
-    useless_keys = ["id", "hasAvailableSlot", "geoTag", "linkToAllSlots", "geoTag", "name","websiteUrl"]
+    useless_keys = ["id", "hasAvailableSlot", "geoTag", "linkToAllSlots", "geoTag", "name", "websiteUrl"]
 
     if centers_list is None:
         return None

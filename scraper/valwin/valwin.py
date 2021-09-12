@@ -18,12 +18,12 @@ from cachecontrol import CacheControl
 from cachecontrol.caches.file_cache import FileCache
 from scraper.error import Blocked403
 
-PLATFORM="Valwin"
+PLATFORM = "Valwin"
 
 PLATFORM_CONF = get_conf_platform(PLATFORM)
 PLATFORM_ENABLED = PLATFORM_CONF.get("enabled", False)
 
-PLATFORM_HEADERS={}
+PLATFORM_HEADERS = {}
 
 PLATFORM_APIs = PLATFORM_CONF.get("api", "")
 
@@ -91,7 +91,7 @@ class Slots:
 
         if response.status_code == 403:
             request.increase_request_count("error")
-            raise Blocked403(PLATFORM,centre_api_url)
+            raise Blocked403(PLATFORM, centre_api_url)
 
         response.raise_for_status()
         rdata = response.json()
@@ -103,7 +103,7 @@ class Slots:
     def get_appointments(self, request: ScraperRequest, slots_api):
         appointments_number = 0
         first_availability = None
-        vaccine_ids=[]
+        vaccine_ids = []
 
         if slots_api:
             if slots_api.get("links"):
@@ -115,9 +115,8 @@ class Slots:
 
         start_date = request.get_start_date()
 
-        
         for creneau in slots_api.get("result", []):
-            appointment_exact_date=creneau["start"]
+            appointment_exact_date = creneau["start"]
             for vaccine in creneau["types"]:
                 vaccine_name = get_vaccine_name(vaccine["label"])
                 vaccine_id = vaccine["id"]
@@ -128,26 +127,30 @@ class Slots:
                     vaccine_ids.append(vaccine_id)
 
         for creneau in slots_api.get("result", []):
-            if len(vaccine_ids)==1:
-                url = PLATFORM_CONF.get("build_urls").get("campaign_target").format(pharmacy_link=request.url, vaccine_id=vaccine_ids[0])
+            if len(vaccine_ids) == 1:
+                url = (
+                    PLATFORM_CONF.get("build_urls")
+                    .get("campaign_target")
+                    .format(pharmacy_link=request.url, vaccine_id=vaccine_ids[0])
+                )
             else:
                 url = PLATFORM_CONF.get("build_urls").get("campaign_choice").format(pharmacy_link=request.url)
 
-            if (self.lieu):
-                self.lieu.url=url
+            if self.lieu:
+                self.lieu.url = url
 
             self.found_creneau(
                 Creneau(
-                horaire=dateutil.parser.parse(appointment_exact_date),
-                reservation_url=url,
-                type_vaccin = vaccine_name,
-                lieu=self.lieu,
+                    horaire=dateutil.parser.parse(appointment_exact_date),
+                    reservation_url=url,
+                    type_vaccin=vaccine_name,
+                    lieu=self.lieu,
                 )
             )
-            
+
             if first_availability is None or appointment_exact_date < first_availability:
                 first_availability = appointment_exact_date
-    
+
         request.update_appointment_count(request.appointment_count + appointments_number)
 
         print(request.appointment_count)
@@ -158,23 +161,23 @@ class Slots:
 def center_iterator(client=None) -> Iterator[Dict]:
     if not PLATFORM_ENABLED:
         logger.warning(f"{PLATFORM.lower().capitalize()} scrap is disabled in configuration file.")
-        return []  
-    
-    session = CacheControl(requests.Session(), cache=FileCache('./cache'))
-    
+        return []
+
+    session = CacheControl(requests.Session(), cache=FileCache("./cache"))
+
     if client:
         session = client
     try:
         url = f'{get_config().get("base_urls").get("github_public_path")}{get_conf_outputs().get("centers_json_path").format(PLATFORM)}'
-        response=session.get(url)
+        response = session.get(url)
         # Si on ne vient pas des tests unitaires
         if not client:
-            if (response.from_cache):
+            if response.from_cache:
                 logger.info(f"Liste des centres pour {PLATFORM.lower().capitalize()} vient du cache")
             else:
                 logger.info(f"Liste des centres pour {PLATFORM.lower().capitalize()} est une vraie requête")
 
-        data=response.json()
+        data = response.json()
         logger.info(f"Found {len(data)} {PLATFORM.lower().capitalize()} centers (external scraper).")
         for center in data:
             yield center

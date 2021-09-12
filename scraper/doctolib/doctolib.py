@@ -21,7 +21,7 @@ from utils.vmd_utils import DummyQueue
 from cachecontrol import CacheControl
 from cachecontrol.caches.file_cache import FileCache
 
-#PLATFORM MUST BE LOW, PLEASE LET THE "lower()" IN CASE OF BAD INPUT FORMAT.
+# PLATFORM MUST BE LOW, PLEASE LET THE "lower()" IN CASE OF BAD INPUT FORMAT.
 PLATFORM = "doctolib".lower()
 
 PLATFORM_CONF = get_conf_platform(PLATFORM)
@@ -116,7 +116,7 @@ class DoctolibSlots:
                 except:
                     request.increase_request_count("error")
                     if response.status_code == 403:
-                        raise Blocked403(PLATFORM,centre_api_url)
+                        raise Blocked403(PLATFORM, centre_api_url)
                     if response.status_code == 404:
                         raise RequestError(centre_api_url, response.status_code)
                     return None
@@ -196,7 +196,7 @@ class DoctolibSlots:
 
         if doublon_responses == 0:
             raise DoublonDoctolib(request.get_url())
-        
+
         return first_availability
 
     def get_timetables(
@@ -238,7 +238,9 @@ class DoctolibSlots:
             """
             next_expected_date = start_date + timedelta(days=PLATFORM_DAYS_PER_PAGE)
             next_fetch_date = datetime.strptime(next_slot, "%Y-%m-%dT%H:%M:%S.%f%z")
-            diff = next_fetch_date.astimezone(tz=pytz.timezone('Europe/Paris')) - next_expected_date.astimezone(tz=pytz.timezone('Europe/Paris'))
+            diff = next_fetch_date.astimezone(tz=pytz.timezone("Europe/Paris")) - next_expected_date.astimezone(
+                tz=pytz.timezone("Europe/Paris")
+            )
             if page > PLATFORM_PAGES_NUMBER:
                 return first_availability
             return self.get_timetables(
@@ -346,12 +348,16 @@ class DoctolibSlots:
         motive_availability = False
         first_availability = None
         appointment_count = 0
-        slots_api_url = PLATFORM_CONF.get("api").get("slots", "").format(
-            start_date=start_date,
-            motive_id=motive_ids_q,
-            agenda_ids_q=agenda_ids_q,
-            practice_ids_q=practice_ids_q,
-            limit=limit,
+        slots_api_url = (
+            PLATFORM_CONF.get("api")
+            .get("slots", "")
+            .format(
+                start_date=start_date,
+                motive_id=motive_ids_q,
+                agenda_ids_q=agenda_ids_q,
+                practice_ids_q=practice_ids_q,
+                limit=limit,
+            )
         )
         request.increase_request_count("slots")
         try:
@@ -359,10 +365,10 @@ class DoctolibSlots:
         except httpx.ReadTimeout:
             logger.warning(f"Doctolib returned error ReadTimeout for url {request.get_url()}")
             request.increase_request_count("time-out")
-            raise Blocked403(PLATFORM,request.get_url())
+            raise Blocked403(PLATFORM, request.get_url())
         if response.status_code == 403 or response.status_code == 400:
             request.increase_request_count("error")
-            raise Blocked403(PLATFORM,request.get_url())
+            raise Blocked403(PLATFORM, request.get_url())
 
         response.raise_for_status()
         time.sleep(self._cooldown_interval)
@@ -593,7 +599,11 @@ def _find_visit_motive_id(rdata: dict, visit_motive_category_id: list = None) ->
         # sont pas non plus rattachés à une catégorie
         # * visit_motive_category_id=<id> : filtre => on veut les motifs qui
         # correspondent à la catégorie en question.
-        if visit_motive_category_id is None or visit_motive.get("visit_motive_category_id") in visit_motive_category_id or visit_motive.get("visit_motive_category_id") is None:
+        if (
+            visit_motive_category_id is None
+            or visit_motive.get("visit_motive_category_id") in visit_motive_category_id
+            or visit_motive.get("visit_motive_category_id") is None
+        ):
             ids = relevant_motives.get(vaccine_name, set())
             ids.add(visit_motive["id"])
             relevant_motives[vaccine_name] = ids
@@ -648,6 +658,7 @@ def is_allowing_online_appointments(rdata: dict) -> bool:
             return True
     return False
 
+
 class CustomStage:
     """Generic class to wrap serialization steps with consistent ``dumps()`` and ``loads()`` methods"""
 
@@ -660,23 +671,23 @@ class CustomStage:
 def center_iterator(client=None) -> Iterator[Dict]:
     if not PLATFORM_ENABLED:
         logger.warning(f"{PLATFORM.capitalize()} scrap is disabled in configuration file.")
-        return []  
-    
-    session = CacheControl(requests.Session(), cache=FileCache('./cache'))
-    
+        return []
+
+    session = CacheControl(requests.Session(), cache=FileCache("./cache"))
+
     if client:
         session = client
     try:
         url = f'{get_config().get("base_urls").get("github_public_path")}{get_conf_outputs().get("centers_json_path").format(PLATFORM)}'
-        response=session.get(url)
+        response = session.get(url)
         # Si on ne vient pas des tests unitaires
         if not client:
-            if (response.from_cache):
+            if response.from_cache:
                 logger.info(f"Liste des centres pour {PLATFORM} vient du cache")
             else:
                 logger.info(f"Liste des centres pour {PLATFORM} est une vraie requête")
 
-        data=response.json()
+        data = response.json()
         logger.info(f"Found {len(data)} {PLATFORM.capitalize()} centers (external scraper).")
         for center in data:
             yield center

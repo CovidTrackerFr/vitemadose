@@ -36,7 +36,7 @@ def get_paged(
         if request:
             request.increase_request_count(request_type)
         try:
-            r = client.get(base_url, headers = MAIIA_HEADERS)
+            r = client.get(base_url, headers=MAIIA_HEADERS)
             r.raise_for_status()
         except httpx.HTTPStatusError as hex:
             logger.warning(f"{base_url} returned error {hex.response.status_code}")

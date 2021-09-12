@@ -2,11 +2,17 @@ import os
 import json
 import traceback
 from collections import deque
-from multiprocessing import Manager, Pool, Process, Queue, cpu_count  # Use actual Process for Collecting creneau (CPU intensive)
+from multiprocessing import (
+    Manager,
+    Pool,
+    Process,
+    Queue,
+    cpu_count,
+)  # Use actual Process for Collecting creneau (CPU intensive)
 from random import random
 from typing import Tuple
 import sys
-from terminaltables import SingleTable,PorcelainTable,DoubleTable
+from terminaltables import SingleTable, PorcelainTable, DoubleTable
 from .export.export_v2 import JSONExporter
 from scraper.error import Blocked403, DoublonDoctolib
 from scraper.pattern.center_info import CenterInfo
@@ -14,7 +20,13 @@ from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.scraper_result import ScraperResult, VACCINATION_CENTER
 from scraper.profiler import Profiling
 from utils.vmd_config import get_conf_platform, get_config
-from utils.vmd_logger import enable_logger_for_production, enable_logger_for_debug, log_requests, log_platform_requests, log_requests_time
+from utils.vmd_logger import (
+    enable_logger_for_production,
+    enable_logger_for_debug,
+    log_requests,
+    log_platform_requests,
+    log_requests_time,
+)
 from utils.vmd_utils import fix_scrap_urls, get_last_scans, get_start_date, q_iter, EOQ, DummyQueue, BulkQueue
 from .doctolib.doctolib import center_iterator as doctolib_center_iterator
 from .doctolib.doctolib import fetch_slots as doctolib_fetch_slots
@@ -72,9 +84,7 @@ def scrape(platforms=None):  # pragma: no cover
             export_process = Process(target=export_by_creneau, args=(creneau_q,))
             export_process.start()
             centre_iterator_proportion = (
-                (c, creneau_q)
-                for c in centre_iterator(platforms=platforms)
-                if random() < PARTIAL_SCRAPE
+                (c, creneau_q) for c in centre_iterator(platforms=platforms) if random() < PARTIAL_SCRAPE
             )
             centres_cherchés = pool.imap_unordered(cherche_prochain_rdv_dans_centre, centre_iterator_proportion, 1)
 
@@ -96,7 +106,7 @@ def export_by_creneau(
 
 
 def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  # pragma: no cover
-    timestamp_before_request=datetime.datetime.now()
+    timestamp_before_request = datetime.datetime.now()
 
     centre, creneau_q = data
     # print(centre)
@@ -123,18 +133,20 @@ def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  #
 
     except DoublonDoctolib as doublon_doctolib:
         has_error = doublon_doctolib
-        doublon = Color('{autored}DOUBLON{/autored}')
+        doublon = Color("{autored}DOUBLON{/autored}")
         gid = centre.get("gid", "") if len(centre.get("gid", "")) < 50 else centre.get("gid", "")[0:50]
         platform = "Doctolib"
         departement = center_data.departement if center_data.departement else ""
-        table_data=  [[
-                    platform+str(" "*(15-len(platform))),
-                    gid+str(" "*(50-len(gid))),
-                    doublon+str(" "*(35-len(doublon))),
-                    departement+str(" "*(3-len(departement)))
-                ]]
- 
-        table_instance = DoubleTable(table_data)   
+        table_data = [
+            [
+                platform + str(" " * (15 - len(platform))),
+                gid + str(" " * (50 - len(gid))),
+                doublon + str(" " * (35 - len(doublon))),
+                departement + str(" " * (3 - len(departement))),
+            ]
+        ]
+
+        table_instance = DoubleTable(table_data)
         table_instance.outer_border = False
         print(table_instance.table)
 
@@ -149,23 +161,26 @@ def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  #
         traceback.print_exc()
 
     else:
-        next_appointment = Color('{autogreen}'+center_data.prochain_rdv+'{/autogreen}') if center_data.prochain_rdv else ""
+        next_appointment = (
+            Color("{autogreen}" + center_data.prochain_rdv + "{/autogreen}") if center_data.prochain_rdv else ""
+        )
         gid = centre.get("gid", "") if len(centre.get("gid", "")) < 50 else centre.get("gid", "")[0:50]
         platform = center_data.plateforme if center_data.plateforme else "Autre"
         departement = center_data.departement if center_data.departement else ""
-        table_data=  [[
-                    platform+str(" "*(15-len(platform))),
-                    gid+str(" "*(50-len(gid))),
-                    next_appointment+str(" "*(35-len(next_appointment))),
-                    departement+str(" "*(3-len(departement)))
-                ]]
-    
-        table_instance = DoubleTable(table_data)   
+        table_data = [
+            [
+                platform + str(" " * (15 - len(platform))),
+                gid + str(" " * (50 - len(gid))),
+                next_appointment + str(" " * (35 - len(next_appointment))),
+                departement + str(" " * (3 - len(departement))),
+            ]
+        ]
+
+        table_instance = DoubleTable(table_data)
         table_instance.outer_border = False
         print(table_instance.table)
 
-
-    time_for_request=(datetime.datetime.now()-timestamp_before_request).total_seconds()
+    time_for_request = (datetime.datetime.now() - timestamp_before_request).total_seconds()
 
     if result is not None and result.request.url is not None:
         center_data.url = result.request.url.lower()
@@ -177,7 +192,7 @@ def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  #
     if not center_data.type:
         center_data.type = VACCINATION_CENTER
     center_data.gid = centre.get("gid", "")
-    center_data.time_for_request=time_for_request
+    center_data.time_for_request = time_for_request
 
     return center_data
 
@@ -211,7 +226,7 @@ def get_default_fetch_map():
         },
         "Bimedoc": {
             "urls": get_conf_platform("bimedoc").get("recognized_urls", []),
-            "scraper_ptr": bimedoc_fetch_slots
+            "scraper_ptr": bimedoc_fetch_slots,
         },
         "Valwin": {
             "platform_name": "Valwin",
@@ -282,8 +297,7 @@ def centre_iterator(platforms=None):  # pragma: no cover
         doctolib_center_iterator(),
         keldoc_center_iterator(),
         bimedoc_centre_iterator(),
-        valwin_centre_iterator()
-
+        valwin_centre_iterator(),
     ):
 
         platform = get_center_platform(

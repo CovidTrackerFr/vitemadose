@@ -5,7 +5,6 @@ import os
 import sys
 
 
-
 def ShortCircuit(name, trigger=3, release=10, time_limit=120):
     def decorator(fn):
         breaker = CircuitBreaker(on=fn, name=name, trigger=trigger, release=release, time_limit=time_limit)
