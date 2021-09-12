@@ -5,19 +5,9 @@ class ScrapeError(Exception):
         self.raison = raison
 
 
-class BlockedByDoctolibError(ScrapeError):
-    def __init__(self, url):
-        super().__init__("Doctolib", f"Doctolib bloque nos appels: 403 {url}")
-
-
-class BlockedByMesoignerError(ScrapeError):
-    def __init__(self, url):
-        super().__init__("Mesoigner", f"Mesoigner bloque nos appels: 403 {url}")
-
-
-class BlockedByBimedocError(ScrapeError):
-    def __init__(self, url):
-        super().__init__("Bimedoc", f"Bimedoc bloque nos appels: 403 {url}")
+class Blocked403(ScrapeError):
+    def __init__(self, platform, url):
+        super().__init__(platform, f"Doctolib bloque nos appels: 403 {url}")
 
 
 class RequestError(ScrapeError):

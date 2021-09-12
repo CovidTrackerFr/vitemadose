@@ -17,6 +17,7 @@ class Plateforme(str, Enum):
     AVECMONDOC = "AvecMonDoc"
     MESOIGNER = "mesoigner"
     BIMEDOC = "Bimedoc"
+    VALWIN = "Valwin"
 
 
 @dataclass
@@ -38,6 +39,7 @@ class Creneau:
     reservation_url: str
     timezone: Timezone = Timezone("Europe/Paris")
     type_vaccin: Optional[List[Vaccine]] = None
+
     disponible: bool = True
 
 

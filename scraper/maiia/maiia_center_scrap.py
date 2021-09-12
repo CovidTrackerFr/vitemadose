@@ -11,6 +11,7 @@ from scraper.pattern.scraper_result import DRUG_STORE, VACCINATION_CENTER
 from .maiia_utils import get_paged
 from utils.vmd_utils import get_departements_numbers
 import time
+
 MAIIA_CONF = get_conf_platform("maiia")
 MAIIA_API = MAIIA_CONF.get("api", {})
 MAIIA_ENABLED = MAIIA_CONF.get("enabled", False)
@@ -27,7 +28,7 @@ MAIIA_DO_NOT_SCRAP_ID = MAIIA_SCRAPER.get("excluded_ids", [])
 MAIIA_DO_NOT_SCRAP_NAME = MAIIA_SCRAPER.get("excluded_names", [])
 
 
-def get_centers(speciality: str, client: httpx.Client = DEFAULT_CLIENT, department = None) -> list:
+def get_centers(speciality: str, client: httpx.Client = DEFAULT_CLIENT, department=None) -> list:
     result = get_paged(
         MAIIA_API.get("scraper").format(speciality=speciality, department=department),
         limit=50,

@@ -117,7 +117,7 @@ class KeldocCenterScraper:
                 url_with_query = (
                     f"https://keldoc.com{center['url']}?cabinet={center.get('id')}&specialty={vaccine_speciality}"
                 )
-        
+
         resources = self.parse_keldoc_resources(url_with_query)
         if not resources:
             return None

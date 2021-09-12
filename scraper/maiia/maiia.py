@@ -21,7 +21,7 @@ import requests
 from cachecontrol import CacheControl
 from cachecontrol.caches.file_cache import FileCache
 
-PLATFORM="maiia".lower()
+PLATFORM = "maiia".lower()
 PLATFORM_CONF = get_conf_platform("maiia")
 PLATFORM_API = PLATFORM_CONF.get("api", {})
 PLATFORM_ENABLED = PLATFORM_CONF.get("enabled", False)
@@ -243,26 +243,27 @@ def get_reasons(
         return []
     return result.get("items", [])
 
+
 def center_iterator(client=None) -> Iterator[Dict]:
     if not PLATFORM_ENABLED:
         logger.warning(f"{PLATFORM.capitalize()} scrap is disabled in configuration file.")
-        return []  
-    
-    session = CacheControl(requests.Session(), cache=FileCache('./cache'))
-    
+        return []
+
+    session = CacheControl(requests.Session(), cache=FileCache("./cache"))
+
     if client:
         session = client
     try:
         url = f'{get_config().get("base_urls").get("github_public_path")}{get_conf_outputs().get("centers_json_path").format(PLATFORM)}'
-        response=session.get(url)
+        response = session.get(url)
         # Si on ne vient pas des tests unitaires
         if not client:
-            if (response.from_cache):
+            if response.from_cache:
                 logger.info(f"Liste des centres pour {PLATFORM} vient du cache")
             else:
                 logger.info(f"Liste des centres pour {PLATFORM} est une vraie requête")
 
-        data=response.json()
+        data = response.json()
         logger.info(f"Found {len(data)} {PLATFORM.capitalize()} centers (external scraper).")
         for center in data:
             yield center

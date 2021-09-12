@@ -68,6 +68,7 @@ def search(client: httpx.Client = DEFAULT_CLIENT) -> Optional[list]:
         # logger.info(f"Downloaded {j['page']}/{j['pages']}")
     return result
 
+
 def get_organization_slug(
     slug: str, client: httpx.Client = DEFAULT_CLIENT, request: ScraperRequest = None
 ) -> Optional[dict]:

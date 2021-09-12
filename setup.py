@@ -20,6 +20,7 @@ setup(
         "diskcache==5.2.1",
         "dotmap==1.3.23",
         "cachecontrol==0.12.6",
-        "lockfile==0.12.2"
+        "lockfile==0.12.2",
+        "colorclass==2.2.0"
     ],
 )

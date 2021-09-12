@@ -6,6 +6,4 @@ def tag_all(creneau: Creneau):
     return True
 
 
-
-
 CURRENT_TAGS = {"all": tag_all}

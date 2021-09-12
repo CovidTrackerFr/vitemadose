@@ -129,6 +129,7 @@ class CenterInfo:
             self.vaccine_type = [
                 (vaccine.value if isinstance(vaccine, Vaccine) else vaccine) for vaccine in self.vaccine_type
             ]
+
         self.handle_next_availability()
         return self.__dict__
 

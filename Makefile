@@ -38,6 +38,9 @@ mesoignerscrap: ## Scrap all mesoigner centers, output : data/output/mesoigner_c
 bimedocscrap: ## Scrap all bimedoc centers, output : data/output/bimedoc_centers.json
 	venv/bin/python -m scraper.bimedoc.bimedoc_center_scrap
 
+valwinscrap: ## Scrap all valwin centers, output : data/output/valwin_centers.json
+	venv/bin/python -m scraper.valwin.valwin_center_scrap
+
 blocklistmanager: ## Blocklist command line manager
 	venv/bin/python -m management_scripts.manage_blocklist
 
