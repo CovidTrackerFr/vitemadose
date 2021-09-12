@@ -115,27 +115,25 @@ class Slots:
 
         start_date = request.get_start_date()
 
+     
         for creneau in slots_api.get("result", []):
+            appointment_exact_date = creneau["start"]
             for vaccine in creneau["types"]:
                 vaccine_name = get_vaccine_name(vaccine["label"])
                 vaccine_id = vaccine["id"]
                 if vaccine_id == "be6c293a-e0a6-49ea-bdb4-31a779bde277":
                     vaccine_name = Vaccine.ASTRAZENECA
                 request.add_vaccine_type(vaccine_name)
-                if vaccine_id not in vaccine_ids:
-                    vaccine_ids.append(vaccine_id)
-
-        for creneau in slots_api.get("result", []):
-            appointment_exact_date = creneau["start"]
-            if len(vaccine_ids) == 1:
+                
+            if len(creneau["types"]) == 1:
                 url = (
                     PLATFORM_CONF.get("build_urls")
                     .get("campaign_target")
-                    .format(pharmacy_link=request.url, vaccine_id=vaccine_ids[0])
+                    .format(pharmacy_link=request.url, vaccine_id=vaccine_id)
                 )
             else:
                 url = PLATFORM_CONF.get("build_urls").get("campaign_choice").format(pharmacy_link=request.url)
-
+            
             if self.lieu:
                 self.lieu.url = url
 
