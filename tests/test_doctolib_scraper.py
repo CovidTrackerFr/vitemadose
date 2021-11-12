@@ -140,6 +140,7 @@ EXPECTED_PARSED_PAGES = [
             ],
         },
         "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
+        "visit_motives_ids": [None, None],
         "phone_number": "+33600000000",
         "business_hours": {
             "lundi": None,
@@ -229,6 +230,7 @@ EXPECTED_PARSED_PAGES = [
             ],
         },
         "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
+        "visit_motives_ids": [None, None],
         "phone_number": "+33638952553",
         "business_hours": {
             "lundi": None,
@@ -457,6 +459,7 @@ def test_centers_parsing(mock_get):
             "type": "vaccination-center",
             "ville": "Le Petit-Quevilly",
             "visit_motives": ["Consultation de suivi spécialiste", "Première consultation de neurochirurgie"],
+            "visit_motives_ids": [None, None],
             "booking": {
                 "profile": {"id": 1, "name_with_title": "Hopital test"},
                 "visit_motives": [

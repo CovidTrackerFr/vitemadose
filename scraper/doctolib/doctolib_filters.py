@@ -29,27 +29,34 @@ def is_category_relevant(category):
 
 
 # Filter by relevant appointments
-def is_appointment_relevant(appointment_name):
+def is_appointment_relevant(motive_id):
+
+    vaccination_motives = [int(item) for item in DOCTOLIB_FILTERS["motives"].keys()]
     """Tell if an appointment name is related to COVID-19 vaccination
 
     Example
     ----------
-    >>> is_appointment_relevant("Vaccin COVID-19 - AstraZeneca (55 ans et plus)")
+    >>> is_appointment_relevant(6970)
     True
-    >>> is_appointment_relevant("Injection unique vaccin COVID-19 (Janssen)")
-    True
-    >>> is_appointment_relevant("consultation pré-vaccinale Pfizer-Moderna")
+    >>> is_appointment_relevant(245617)
     False
     """
-    if not appointment_name:
+    if not motive_id:
         return False
 
-    appointment_name = appointment_name.lower()
-    appointment_name = re.sub(" +", " ", appointment_name)
-    for allowed_appointments in DOCTOLIB_APPOINTMENT_REASON:
-        if allowed_appointments in appointment_name:
-            return True
+    if motive_id in vaccination_motives:
+        return True
+
     return False
+
+
+def dose_number(motive_id: int):
+    if not motive_id:
+        return None
+    dose_number = DOCTOLIB_FILTERS["motives"][str(motive_id)]["dose"]
+    if dose_number:
+        return dose_number
+    return None
 
 
 # Parse practitioner type from Doctolib booking data.
@@ -81,15 +88,14 @@ def is_vaccination_center(center_dict):
 
     Example
     ----------
-    >>> center_without_vaccination = {'gid': 'd258630', 'visit_motives': ['Dépistage COVID-19 test antigénique (prélèvement naso-pharyngé)', 'Dépistage COVID-19 test par ponction capillaire (goutte de sang)']}
+    >>> center_without_vaccination = {'gid': 'd258630', 'visit_motives_ids': [224512]}
     >>> is_vaccination_center(center_without_vaccination)
     False
-    >>> center_with_vaccination = {'gid': 'd257554', 'visit_motives': ['1re injection vaccin COVID-19 (Pfizer-BioNTech)', '2de injection vaccin COVID-19 (Pfizer-BioNTech)', '1re injection vaccin COVID-19 (Moderna)', '2de injection vaccin COVID-19 (Moderna)']}
+    >>> center_with_vaccination = {'gid': 'd257554', 'visit_motives_ids': [6970]}
     >>> is_vaccination_center(center_with_vaccination)
     True
     """
-
-    motives = center_dict.get("visit_motives", [])
+    motives = center_dict.get("visit_motives_ids", [])
 
     # We don't have any motiv
     # so this criteria isn't relevant to determine if a center is a vaccination center

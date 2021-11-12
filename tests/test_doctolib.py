@@ -56,7 +56,7 @@ def test_blocked_by_doctolib_par_centre():
         params = dict(httpx.QueryParams(request.url.query))
         assert params == {
             "start_date": start_date,
-            "visit_motive_ids": "2",
+            "visit_motives_ids": "2",
             "agenda_ids": "3",
             "insurance_sector": "public",
             "practice_ids": "4",
@@ -155,7 +155,7 @@ def test_doctolib_sends_creneau():
     assert actual[0] == Creneau(
         reservation_url=base_url,
         horaire=dateutil.parser.parse("2021-04-10T21:45:00.000+02:00"),
-        type_vaccin=[Vaccine.MODERNA],
+        type_vaccin=[Vaccine.PFIZER],
         lieu=Lieu(
             departement="07",
             plateforme=Plateforme.DOCTOLIB,
@@ -164,6 +164,7 @@ def test_doctolib_sends_creneau():
             internal_id="doctolib123456789pid165752",
             lieu_type="vaccination-center",
         ),
+        dose=1,
     )
 
 
@@ -323,12 +324,13 @@ def test_find_visit_motive_id():
                 "id": 1,
                 "visit_motive_category_id": 42,
                 "name": "1ère injection vaccin COVID-19 (Moderna)",
+                "ref_visit_motive_id": 8740,
                 "vaccination_motive": True,
                 "first_shot_motive": True,
             }
         ]
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.MODERNA: {1}}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.MODERNA: {(1, 1)}}
 
     # Plusieurs motifs dispo
     data = {
@@ -337,6 +339,7 @@ def test_find_visit_motive_id():
                 "id": 1,
                 "visit_motive_category_id": 42,
                 "name": "1ère injection vaccin COVID-19 (Pfizer/BioNTech)",
+                "ref_visit_motive_id": 8740,
                 "vaccination_motive": True,
                 "first_shot_motive": True,
             },
@@ -345,26 +348,28 @@ def test_find_visit_motive_id():
                 "name": "1ère injection vaccin COVID-19 (Moderna)",
                 "visit_motive_category_id": 42,
                 "vaccination_motive": True,
+                "ref_visit_motive_id": 8740,
                 "first_shot_motive": True,
             },
         ]
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.PFIZER: {1}, Vaccine.MODERNA: {2}}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.MODERNA: {(1, 1), (2, 1)}}
 
     # Mix avec un motif autre
     data = {
         "visit_motives": [
-            {"id": 1, "visit_motive_category_id": 42, "name": "Autre motif"},
+            {"id": 1, "visit_motive_category_id": 42, "name": "Autre motif", "ref_visit_motive_id": 45142},
             {
                 "id": 2,
                 "visit_motive_category_id": 42,
                 "name": "1ère injection vaccin COVID-19 (Moderna)",
                 "vaccination_motive": True,
+                "ref_visit_motive_id": 8740,
                 "first_shot_motive": True,
             },
         ]
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.MODERNA: {2}}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.MODERNA: {(2, 1)}}
 
     # Mix avec une catégorie autre
     data = {
@@ -375,6 +380,7 @@ def test_find_visit_motive_id():
                 "name": "1ère injection vaccin COVID-19 (Moderna)",
                 "vaccination_motive": True,
                 "first_shot_motive": True,
+                "ref_visit_motive_id": 8740,
             },
             {
                 "id": 2,
@@ -382,10 +388,11 @@ def test_find_visit_motive_id():
                 "name": "1ère injection vaccin COVID-19 (AstraZeneca)",
                 "vaccination_motive": True,
                 "first_shot_motive": True,
+                "ref_visit_motive_id": 8741,
             },
         ]
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.ASTRAZENECA: {2}}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.ASTRAZENECA: {(2, 1)}}
 
     # Plusieurs types de vaccin
     data = {
@@ -396,6 +403,7 @@ def test_find_visit_motive_id():
                 "name": "1ère injection vaccin COVID-19 (Moderna)",
                 "vaccination_motive": True,
                 "first_shot_motive": True,
+                "ref_visit_motive_id": 8740,
             },
             {
                 "id": 2,
@@ -403,6 +411,7 @@ def test_find_visit_motive_id():
                 "name": "1ère injection vaccin COVID-19 (AstraZeneca)",
                 "vaccination_motive": True,
                 "first_shot_motive": True,
+                "ref_visit_motive_id": 8741,
             },
             {
                 "id": 3,
@@ -410,6 +419,7 @@ def test_find_visit_motive_id():
                 "name": "1ère injection vaccin COVID-19 (Pfizer-BioNTech)",
                 "vaccination_motive": True,
                 "first_shot_motive": True,
+                "ref_visit_motive_id": 6970,
             },
             {
                 "id": 4,
@@ -417,6 +427,7 @@ def test_find_visit_motive_id():
                 "name": "2nde injection vaccin COVID-19 (Moderna)",
                 "vaccination_motive": True,
                 "first_shot_motive": False,
+                "ref_visit_motive_id": 7004,
             },
             {
                 "id": 5,
@@ -424,6 +435,7 @@ def test_find_visit_motive_id():
                 "name": "2nde injection vaccin COVID-19 (AstraZeneca)",
                 "vaccination_motive": True,
                 "first_shot_motive": False,
+                "ref_visit_motive_id": 7108,
             },
             {
                 "id": 6,
@@ -431,13 +443,14 @@ def test_find_visit_motive_id():
                 "name": "2nde injection vaccin COVID-19 (Pfizer-BioNTech)",
                 "vaccination_motive": True,
                 "first_shot_motive": False,
+                "ref_visit_motive_id": 6971,
             },
         ]
     }
     assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {
-        Vaccine.MODERNA: {1},
-        Vaccine.ASTRAZENECA: {2},
-        Vaccine.PFIZER: {3},
+        Vaccine.MODERNA: {(1, 1)},
+        Vaccine.ASTRAZENECA: {(2, 1)},
+        Vaccine.PFIZER: {(3, 1)},
     }
 
 
