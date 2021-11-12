@@ -12,8 +12,13 @@ import httpx
 import pytz
 import requests
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
-from scraper.doctolib.doctolib_filters import is_appointment_relevant, parse_practitioner_type, is_category_relevant
-from scraper.pattern.vaccine import get_vaccine_name, Vaccine
+from scraper.doctolib.doctolib_filters import (
+    dose_number,
+    is_appointment_relevant,
+    parse_practitioner_type,
+    is_category_relevant,
+)
+from scraper.pattern.vaccine import get_vaccine_name, get_doctolib_vaccine_name, Vaccine
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.error import Blocked403, DoublonDoctolib, RequestError
 from utils.vmd_config import get_conf_outputs, get_conf_platform, get_config
@@ -176,26 +181,30 @@ class DoctolibSlots:
 
         timetable_start_date = datetime.fromisoformat(start_date)
 
-        for vaccine, visite_motive_ids in visit_motive_ids_by_vaccine.items():
-            agenda_ids, practice_ids, doublon_responses = _find_agenda_and_practice_ids(
-                rdata, visite_motive_ids, doublon_responses, practice_id_filter=practice_id
-            )
+        for vaccine, visite_motive_ids0 in visit_motive_ids_by_vaccine.items():
+            for i in range(1, 3):
+                dose = i
+                visite_motive_ids = set([key for (key, value) in visite_motive_ids0 if value == i])
 
-            if not agenda_ids or not practice_ids:
-                continue
-            agenda_ids = self.sort_agenda_ids(all_agendas, agenda_ids)
+                agenda_ids, practice_ids, doublon_responses = _find_agenda_and_practice_ids(
+                    rdata, visite_motive_ids, doublon_responses, practice_id_filter=practice_id
+                )
 
-            agenda_ids_q = "-".join(agenda_ids)
-            practice_ids_q = "-".join(practice_ids)
-            motive_ids_q = "-".join(list(map(lambda id: str(id), visite_motive_ids)))
-            availability = self.get_timetables(
-                request, vaccine, motive_ids_q, agenda_ids_q, practice_ids_q, timetable_start_date
-            )
-            if availability and (not first_availability or availability < first_availability):
-                first_availability = availability
+                if not agenda_ids or not practice_ids:
+                    continue
+                agenda_ids = self.sort_agenda_ids(all_agendas, agenda_ids)
 
-        if doublon_responses == 0:
-            raise DoublonDoctolib(request.get_url())
+                agenda_ids_q = "-".join(agenda_ids)
+                practice_ids_q = "-".join(practice_ids)
+                motive_ids_q = "-".join(list(map(lambda id: str(id), visite_motive_ids)))
+                availability = self.get_timetables(
+                    request, vaccine, motive_ids_q, agenda_ids_q, practice_ids_q, timetable_start_date, dose=dose
+                )
+                if availability and (not first_availability or availability < first_availability):
+                    first_availability = availability
+
+            if doublon_responses == 0:
+                raise DoublonDoctolib(request.get_url())
 
         return first_availability
 
@@ -209,6 +218,7 @@ class DoctolibSlots:
         start_date: datetime,
         page: int = 1,
         first_availability: Optional[str] = None,
+        dose: Optional[int] = None,
     ) -> Optional[str]:
         """
         Get timetables recursively with `doctolib.pagination.days` as the number of days to query.
@@ -223,6 +233,7 @@ class DoctolibSlots:
             request,
             start_date.date().strftime("%Y-%m-%d"),
             vaccine,
+            dose,
             motive_ids_q,
             agenda_ids_q,
             practice_ids_q,
@@ -251,6 +262,7 @@ class DoctolibSlots:
                 next_fetch_date,
                 page=1 + max(0, floor(diff.days / PLATFORM_DAYS_PER_PAGE)) + page,
                 first_availability=first_availability,
+                dose=dose,
             )
         if not sdate:
             return first_availability
@@ -268,6 +280,7 @@ class DoctolibSlots:
             start_date + timedelta(days=PLATFORM_DAYS_PER_PAGE),
             1 + page,
             first_availability=first_availability,
+            dose=dose,
         )
 
     def sort_agenda_ids(self, all_agendas, ids) -> List[str]:
@@ -338,6 +351,7 @@ class DoctolibSlots:
         request: ScraperRequest,
         start_date: str,
         vaccine: Vaccine,
+        dose: Optional[int],
         motive_ids_q: str,
         agenda_ids_q: str,
         practice_ids_q: str,
@@ -391,6 +405,7 @@ class DoctolibSlots:
                             reservation_url=request.url,
                             type_vaccin=[vaccine],
                             lieu=self.lieu,
+                            dose=dose,
                         )
                     )
 
@@ -409,6 +424,7 @@ class DoctolibSlots:
                         reservation_url=request.url,
                         type_vaccin=[vaccine],
                         lieu=self.lieu,
+                        dose=dose,
                     )
                 )
 
@@ -573,22 +589,17 @@ def _find_visit_motive_id(rdata: dict, visit_motive_category_id: list = None) ->
     """
     relevant_motives = {}
     for visit_motive in rdata.get("visit_motives", []):
-        vaccine_name = repr(get_vaccine_name(visit_motive["name"]))
         # On ne gère que les 1ère doses (le RDV pour la 2e dose est en général donné
         # après la 1ère dose, donc les gens n'ont pas besoin d'aide pour l'obtenir).
-        if not is_appointment_relevant(visit_motive["name"]):
+        if not is_appointment_relevant(visit_motive["ref_visit_motive_id"]):
+            continue
+        dose = dose_number(visit_motive["ref_visit_motive_id"])
+        vaccine_name = get_doctolib_vaccine_name(visit_motive["ref_visit_motive_id"])
+
+        # Pour le moment on ne retourne que les first_dose avant la mise en prod des doses de rappel
+        if dose != 1:
             continue
 
-        vaccine_name = get_vaccine_name(visit_motive["name"])
-
-        # If it's not a first shot motive
-        # TODO: filter system
-        if (
-            not visit_motive.get("first_shot_motive")
-            and vaccine_name != Vaccine.JANSSEN
-            and "injection unique" not in visit_motive["name"].lower()
-        ):
-            continue
         # Si le lieu de vaccination n'accepte pas les nouveaux patients
         # on ne considère pas comme valable.
         if "allow_new_patients" in visit_motive and not visit_motive["allow_new_patients"]:
@@ -604,7 +615,7 @@ def _find_visit_motive_id(rdata: dict, visit_motive_category_id: list = None) ->
             or visit_motive.get("visit_motive_category_id") is None
         ):
             ids = relevant_motives.get(vaccine_name, set())
-            ids.add(visit_motive["id"])
+            ids.add((visit_motive["id"], dose))
             relevant_motives[vaccine_name] = ids
     return relevant_motives
 

@@ -29,7 +29,9 @@ def is_category_relevant(category):
 
 
 # Filter by relevant appointments
-def is_appointment_relevant(appointment_name):
+def is_appointment_relevant(motive_id):
+
+    vaccination_motives = [int(item) for item in DOCTOLIB_FILTERS["motives"].keys()]
     """Tell if an appointment name is related to COVID-19 vaccination
 
     Example
@@ -41,15 +43,22 @@ def is_appointment_relevant(appointment_name):
     >>> is_appointment_relevant("consultation pré-vaccinale Pfizer-Moderna")
     False
     """
-    if not appointment_name:
+    if not motive_id:
         return False
 
-    appointment_name = appointment_name.lower()
-    appointment_name = re.sub(" +", " ", appointment_name)
-    for allowed_appointments in DOCTOLIB_APPOINTMENT_REASON:
-        if allowed_appointments in appointment_name:
-            return True
+    if motive_id in vaccination_motives:
+        return True
+
     return False
+
+
+def dose_number(motive_id: int):
+    if not motive_id:
+        return None
+    dose_number = DOCTOLIB_FILTERS["motives"][str(motive_id)]["dose"]
+    if dose_number:
+        return dose_number
+    return None
 
 
 # Parse practitioner type from Doctolib booking data.
@@ -88,8 +97,7 @@ def is_vaccination_center(center_dict):
     >>> is_vaccination_center(center_with_vaccination)
     True
     """
-
-    motives = center_dict.get("visit_motives", [])
+    motives = center_dict.get("visit_motives_ids", [])
 
     # We don't have any motiv
     # so this criteria isn't relevant to determine if a center is a vaccination center

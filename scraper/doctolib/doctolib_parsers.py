@@ -50,12 +50,14 @@ def parse_center_places(center_output: Dict) -> List[Dict]:
     places = center_output.get("places", {})
     gid = "d{0}".format(center_output.get("profile", {}).get("id", ""))
     extracted_visit_motives = [vm.get("name") for vm in center_output.get("visit_motives", [])]
+    extracted_visit_ids = [vm.get("ref_visit_motive_id") for vm in center_output.get("visit_motives", [])]
 
     liste_infos_page = []
     for place in places:
         infos_page = parse_place(place)
         infos_page["gid"] = gid
         infos_page["visit_motives"] = extracted_visit_motives
+        infos_page["visit_motives_ids"] = extracted_visit_ids
         infos_page["booking"] = center_output
         liste_infos_page.append(infos_page)
 

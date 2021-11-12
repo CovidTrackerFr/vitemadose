@@ -73,6 +73,7 @@ class DoctolibCenterScraper:
             r = self._client.get(
                 BASE_URL_DEPARTEMENT.format(department_urlify(departement), page_id),
                 headers=DOCTOLIB_HEADERS,
+                follow_redirects=True,
             )
             data = r.json()
         except:
@@ -117,7 +118,7 @@ class DoctolibCenterScraper:
         output = None
 
         try:
-            req = self._client.get(internal_api_url, headers=DOCTOLIB_HEADERS)
+            req = self._client.get(internal_api_url, headers=DOCTOLIB_HEADERS, follow_redirects=True)
             req.raise_for_status()
             data = req.json()
             output = data.get("data", {})
@@ -145,6 +146,7 @@ def parse_doctolib_centers(page_limit=None) -> List[dict]:
 
         for center_list in center_lists:
             centers.extend(center_list)
+
         centers = list(filter(is_vaccination_center, centers))  # Filter vaccination centers
         centers = list(map(center_reducer, centers))  # Remove fields irrelevant to the front
 

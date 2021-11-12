@@ -92,6 +92,56 @@
             "request_sleep": 0.05,
             "days_per_page": 14,
             "filters": {
+                "motives": {
+                    "7107": {
+                        "dose": 1,
+                        "vaccine": "AstraZeneca"
+                    },
+                    "8741": {
+                        "dose": 1,
+                        "vaccine": "AstraZeneca"
+                    },
+                    "6970": {
+                        "dose": 1,
+                        "vaccine": "Pfizer-BioNTech"
+                    },
+                    "8739": {
+                        "dose": 1,
+                        "vaccine": "Pfizer-BioNTech"
+                    },
+                    "8740": {
+                        "dose": 1,
+                        "vaccine": "Moderna"
+                    },
+                    "7005": {
+                        "dose": 1,
+                        "vaccine": "Moderna"
+                    },
+                    "7945": {
+                        "dose": 1,
+                        "vaccine": "Janssen"
+                    },
+                    "7108": {
+                        "dose": 2,
+                        "vaccine": "AstraZeneca"
+                    },
+                    "7004": {
+                        "dose": 2,
+                        "vaccine": "Moderna"
+                    },
+                    "6971": {
+                        "dose": 2,
+                        "vaccine": "Pfizer-BioNTech"
+                    },
+                    "8192": {
+                        "dose": 3,
+                        "vaccine": "Pfizer-BioNTech"
+                    },
+                    "8193": {
+                        "dose": 3,
+                        "vaccine": "Moderna"
+                    }
+                },
                 "appointment_reason": [
                     "1 ere injection",
                     "1 ère injection",
@@ -275,7 +325,7 @@
             ]
         },
         "maiia": {
-            "enabled": true,
+            "enabled": false,
             "timeout": 5,
             "base_url": "https://www.maiia.com",
             "recognized_urls": [
@@ -323,7 +373,7 @@
             }
         },
         "mapharma": {
-            "enabled": true,
+            "enabled": false,
             "timeout": 15,
             "recognized_urls": [
                 "https://mapharma.net"
@@ -367,7 +417,7 @@
             }
         },
         "ordoclic": {
-            "enabled": true,
+            "enabled": false,
             "timeout": 20,
             "recognized_urls": [
                 "https://app.ordoclic.fr"
@@ -397,7 +447,7 @@
             }
         },
         "avecmondoc": {
-            "enabled": true,
+            "enabled": false,
             "timeout": 20,
             "days_per_page": 7,
             "recognized_urls": [
@@ -444,7 +494,7 @@
             }
         },
         "mesoigner": {
-            "enabled": true,
+            "enabled": false,
             "timeout": 5,
             "recognized_urls": [
                 "mesoigner.fr"
@@ -473,7 +523,7 @@
             }
         },
         "bimedoc": {
-            "enabled": true,
+            "enabled": false,
             "timeout": 15,
             "recognized_urls": [
                 "app.bimedoc.com"
@@ -500,7 +550,7 @@
             }
         },
         "Valwin": {
-            "enabled": true,
+            "enabled": false,
             "timeout": 15,
             "center_types": {
                 "pharmacie": "drugstore"
