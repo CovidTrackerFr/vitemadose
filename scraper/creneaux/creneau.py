@@ -37,7 +37,7 @@ class Creneau:
     horaire: datetime
     lieu: Lieu
     reservation_url: str
-    dose: Optional[int]
+    dose: Optional[int] = None
     timezone: Timezone = Timezone("Europe/Paris")
     type_vaccin: Optional[List[Vaccine]] = None
 

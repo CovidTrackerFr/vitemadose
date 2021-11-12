@@ -36,11 +36,9 @@ def is_appointment_relevant(motive_id):
 
     Example
     ----------
-    >>> is_appointment_relevant("Vaccin COVID-19 - AstraZeneca (55 ans et plus)")
+    >>> is_appointment_relevant(6970)
     True
-    >>> is_appointment_relevant("Injection unique vaccin COVID-19 (Janssen)")
-    True
-    >>> is_appointment_relevant("consultation pré-vaccinale Pfizer-Moderna")
+    >>> is_appointment_relevant(245617)
     False
     """
     if not motive_id:
@@ -90,10 +88,10 @@ def is_vaccination_center(center_dict):
 
     Example
     ----------
-    >>> center_without_vaccination = {'gid': 'd258630', 'visit_motives': ['Dépistage COVID-19 test antigénique (prélèvement naso-pharyngé)', 'Dépistage COVID-19 test par ponction capillaire (goutte de sang)']}
+    >>> center_without_vaccination = {'gid': 'd258630', 'visit_motives_ids': [224512]}
     >>> is_vaccination_center(center_without_vaccination)
     False
-    >>> center_with_vaccination = {'gid': 'd257554', 'visit_motives': ['1re injection vaccin COVID-19 (Pfizer-BioNTech)', '2de injection vaccin COVID-19 (Pfizer-BioNTech)', '1re injection vaccin COVID-19 (Moderna)', '2de injection vaccin COVID-19 (Moderna)']}
+    >>> center_with_vaccination = {'gid': 'd257554', 'visit_motives_ids': [6970]}
     >>> is_vaccination_center(center_with_vaccination)
     True
     """

@@ -358,7 +358,7 @@ def test_find_visit_motive_id():
     # Mix avec un motif autre
     data = {
         "visit_motives": [
-            {"id": 1, "visit_motive_category_id": 42, "name": "Autre motif"},
+            {"id": 1, "visit_motive_category_id": 42, "name": "Autre motif", "ref_visit_motive_id": 45142},
             {
                 "id": 2,
                 "visit_motive_category_id": 42,
@@ -369,7 +369,7 @@ def test_find_visit_motive_id():
             },
         ]
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.MODERNA: {2}}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.MODERNA: {(2, 1)}}
 
     # Mix avec une catégorie autre
     data = {
@@ -392,7 +392,7 @@ def test_find_visit_motive_id():
             },
         ]
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.ASTRAZENECA: {2}}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.ASTRAZENECA: {(2, 1)}}
 
     # Plusieurs types de vaccin
     data = {
@@ -448,9 +448,9 @@ def test_find_visit_motive_id():
         ]
     }
     assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {
-        Vaccine.MODERNA: {1},
-        Vaccine.ASTRAZENECA: {2},
-        Vaccine.PFIZER: {3},
+        Vaccine.MODERNA: {(1, 1)},
+        Vaccine.ASTRAZENECA: {(2, 1)},
+        Vaccine.PFIZER: {(3, 1)},
     }
 
 

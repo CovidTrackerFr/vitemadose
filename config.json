@@ -325,7 +325,7 @@
             ]
         },
         "maiia": {
-            "enabled": false,
+            "enabled": true,
             "timeout": 5,
             "base_url": "https://www.maiia.com",
             "recognized_urls": [
@@ -373,7 +373,7 @@
             }
         },
         "mapharma": {
-            "enabled": false,
+            "enabled": true,
             "timeout": 15,
             "recognized_urls": [
                 "https://mapharma.net"
@@ -417,7 +417,7 @@
             }
         },
         "ordoclic": {
-            "enabled": false,
+            "enabled": true,
             "timeout": 20,
             "recognized_urls": [
                 "https://app.ordoclic.fr"
@@ -447,7 +447,7 @@
             }
         },
         "avecmondoc": {
-            "enabled": false,
+            "enabled": true,
             "timeout": 20,
             "days_per_page": 7,
             "recognized_urls": [
@@ -494,7 +494,7 @@
             }
         },
         "mesoigner": {
-            "enabled": false,
+            "enabled": true,
             "timeout": 5,
             "recognized_urls": [
                 "mesoigner.fr"
@@ -523,7 +523,7 @@
             }
         },
         "bimedoc": {
-            "enabled": false,
+            "enabled": true,
             "timeout": 15,
             "recognized_urls": [
                 "app.bimedoc.com"
@@ -550,7 +550,7 @@
             }
         },
         "Valwin": {
-            "enabled": false,
+            "enabled": true,
             "timeout": 15,
             "center_types": {
                 "pharmacie": "drugstore"
