@@ -364,6 +364,11 @@
                     "Vendredi": "FRIDAY",
                     "Samedi": "SATURDAY",
                     "Dimanche": "SUNDAY"
+                },
+                "dose_types": {
+                    "FIRST": 1,
+                    "SECOND": 2,
+                    "BOOSTER": 3
                 }
             },
             "filters": {

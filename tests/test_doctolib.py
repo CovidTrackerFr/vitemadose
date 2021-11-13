@@ -448,9 +448,9 @@ def test_find_visit_motive_id():
         ]
     }
     assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {
-        Vaccine.MODERNA: {(1, 1)},
-        Vaccine.ASTRAZENECA: {(2, 1)},
-        Vaccine.PFIZER: {(3, 1)},
+        Vaccine.MODERNA: {(1, 1), (4, 2)},
+        Vaccine.ASTRAZENECA: {(2, 1), (5, 2)},
+        Vaccine.PFIZER: {(3, 1), (6, 2)},
     }
 
 

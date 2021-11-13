@@ -35,6 +35,8 @@ paris_tz = timezone("Europe/Paris")
 MAIIA_URL = PLATFORM_CONF.get("base_url")
 NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
+MAIIA_DOSES = PLATFORM_SCRAPER.get("dose_types")
+
 
 def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue, client: httpx.Client = DEFAULT_CLIENT) -> Optional[str]:
     if not PLATFORM_ENABLED:
@@ -106,7 +108,7 @@ class MaiiaSlots:
         request.update_appointment_count(slots_count)
         return first_availability.isoformat()
 
-    def parse_slots(self, slots: list, request: ScraperRequest) -> Optional[dt.datetime]:
+    def parse_slots(self, slots: list, request: ScraperRequest, dose: int = None) -> Optional[dt.datetime]:
         if not slots:
             return None
         first_availability = None
@@ -117,6 +119,7 @@ class MaiiaSlots:
                     reservation_url=request.url,
                     type_vaccin=[slot.get("vaccine_type")],
                     lieu=self.lieu,
+                    dose=dose,
                 )
             )
 
@@ -218,14 +221,22 @@ class MaiiaSlots:
         slots_count = 0
         for consultation_reason in reasons:
             consultation_reason_name_quote = quote(consultation_reason.get("name"), "")
-            if "injectionType" in consultation_reason and consultation_reason["injectionType"] in ["FIRST"]:
+            if "injectionType" in consultation_reason:
                 slots = self.get_slots(
                     center_id, consultation_reason_name_quote, start_date, end_date, client=client, request=request
                 )
+                dose_name = consultation_reason["injectionType"]
+                if not dose_name:
+                    dose = None
+                elif dose_name == "NONE":
+                    dose = None
+                else:
+                    dose = MAIIA_DOSES[dose_name]
+
                 if slots:
                     for slot in slots:
                         slot["vaccine_type"] = get_vaccine_name(consultation_reason.get("name"))
-                slot_availability = self.parse_slots(slots, request)
+                slot_availability = self.parse_slots(slots, request, dose)
                 if slot_availability is None:
                     continue
                 slots_count += len(slots)

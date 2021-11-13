@@ -596,10 +596,6 @@ def _find_visit_motive_id(rdata: dict, visit_motive_category_id: list = None) ->
         dose = dose_number(visit_motive["ref_visit_motive_id"])
         vaccine_name = get_doctolib_vaccine_name(visit_motive["ref_visit_motive_id"])
 
-        # Pour le moment on ne retourne que les first_dose avant la mise en prod des doses de rappel
-        if dose != 1:
-            continue
-
         # Si le lieu de vaccination n'accepte pas les nouveaux patients
         # on ne considère pas comme valable.
         if "allow_new_patients" in visit_motive and not visit_motive["allow_new_patients"]:
