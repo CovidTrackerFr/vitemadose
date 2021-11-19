@@ -115,11 +115,11 @@ def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
             center = root_center["center"]
             if center["id"] in MAIIA_DO_NOT_SCRAP_ID:
                 continue
-            if not any(
-                keyword in consultation_reason.get("name").lower()
+             # Si l'intégralité des motifs du centre sont des motifs exclus
+            if sum(1 if keyword in consultation_reason.get("name").lower() else 0
                 for keyword in MAIIA_DO_NOT_SCRAP_NAME
                 for consultation_reason in root_center["consultationReasons"]
-            ):
+            ) == len(root_center["consultationReasons"]):
                 continue
             if center["childCenters"]:
                 continue
