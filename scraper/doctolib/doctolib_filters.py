@@ -6,9 +6,6 @@ from utils.vmd_config import get_conf_platform
 DOCTOLIB_CONF = get_conf_platform("doctolib")
 DOCTOLIB_FILTERS = DOCTOLIB_CONF.get("filters", {})
 
-DOCTOLIB_APPOINTMENT_REASON = DOCTOLIB_FILTERS.get("appointment_reason", [])
-DOCTOLIB_APPOINTMENT_REASON = [c.lower().strip() for c in DOCTOLIB_APPOINTMENT_REASON]
-
 DOCTOLIB_CATEGORY = DOCTOLIB_FILTERS.get("appointment_category", [])
 DOCTOLIB_CATEGORY = [c.lower().strip() for c in DOCTOLIB_CATEGORY]
 

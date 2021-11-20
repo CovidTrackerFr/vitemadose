@@ -49,3 +49,4 @@ class PasDeCreneau:
     lieu: Lieu
     phone_only: bool = False
     disponible: bool = False
+    dose: int = None

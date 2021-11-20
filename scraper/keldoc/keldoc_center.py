@@ -179,13 +179,15 @@ class KeldocCenter:
             motive_id = relevant_motive.get("id", None)
             vaccine = relevant_motive.get("vaccine_type")
             agenda_ids = relevant_motive.get("agendas", None)
+            dose = relevant_motive.get("dose", None)
+
             if not agenda_ids:
                 continue
             timetables, runtime = self.get_timetables(isoparse(start_date), motive_id, agenda_ids)
             logger.debug(
                 f"get_timetables -> result [motive: {motive_id} agenda: {agenda_ids}] -> runtime: {round(runtime, 2)}s"
             )
-            date, appointments = parse_keldoc_availability(self, timetables, appointments, vaccine)
+            date, appointments = parse_keldoc_availability(self, timetables, appointments, vaccine, dose)
             if date is None:
                 continue
             self.request.add_vaccine_type(vaccine)

@@ -225,12 +225,10 @@ class MaiiaSlots:
                 slots = self.get_slots(
                     center_id, consultation_reason_name_quote, start_date, end_date, client=client, request=request
                 )
+                dose = None
                 dose_name = consultation_reason["injectionType"]
-                if not dose_name:
-                    dose = None
-                elif dose_name == "NONE":
-                    dose = None
-                else:
+
+                if dose_name and dose_name!= "NONE":
                     dose = MAIIA_DOSES[dose_name]
 
                 if slots:

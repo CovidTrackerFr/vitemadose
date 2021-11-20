@@ -109,7 +109,6 @@ def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  #
     timestamp_before_request = datetime.datetime.now()
 
     centre, creneau_q = data
-    # print(centre)
     center_data = CenterInfo.from_csv_data(centre)
     start_date = get_start_date()
     has_error = None
