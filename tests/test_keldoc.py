@@ -143,8 +143,11 @@ def test_keldoc_filters():
     assert is_appointment_relevant("Vaccin 1ère inj. +70 ans COVID")
     assert is_appointment_relevant("1ère dose (Pfizer)")
     assert is_appointment_relevant("Première injection de vaccin (Moderna)")
-    assert not is_appointment_relevant("Vaccin 2nde inj. +70 ans COVID")
-    assert not is_appointment_relevant(None)
+    appointment_relevant, dose = is_appointment_relevant("Vaccination antigrippale")
+    assert not appointment_relevant
+
+    appointment_relevant, dose = is_appointment_relevant(None)
+    assert not appointment_relevant
 
     # Test specialties
     assert not is_specialty_relevant(None)

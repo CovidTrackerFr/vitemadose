@@ -16,7 +16,6 @@ MAIIA_CONF = get_conf_platform("maiia")
 MAIIA_API = MAIIA_CONF.get("api", {})
 MAIIA_ENABLED = MAIIA_CONF.get("enabled", False)
 MAIIA_SCRAPER = MAIIA_CONF.get("center_scraper", {})
-MAIIA_FILTERS = MAIIA_CONF.get("filters", {})
 
 timeout = httpx.Timeout(MAIIA_CONF.get("timeout", 25), connect=MAIIA_CONF.get("timeout", 25))
 DEFAULT_CLIENT = httpx.Client(timeout=timeout)
@@ -107,22 +106,29 @@ def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
         logger.info(f"Fetching speciality {speciality}")
         result = []
         for department in get_departements_numbers():
+            logger.info(f"Fetching department {department}")
             result_dep = get_centers(speciality, client, department)
             result += result_dep
+            
         for root_center in result:
+
             if root_center.get("type") != "CENTER":
                 continue
             center = root_center["center"]
+
             if center["id"] in MAIIA_DO_NOT_SCRAP_ID:
                 continue
-             # Si l'intégralité des motifs du centre sont des motifs exclus
+            
+            # Si l'intégralité des motifs du centre sont des motifs exclus
             if sum(1 if keyword in consultation_reason.get("name").lower() else 0
                 for keyword in MAIIA_DO_NOT_SCRAP_NAME
                 for consultation_reason in root_center["consultationReasons"]
             ) == len(root_center["consultationReasons"]):
                 continue
+
             if center["childCenters"]:
                 continue
+
             centers.append(maiia_center_to_csv(center, root_center))
             centers_ids.append(center["id"])
             for child_center in center["childCenters"]:

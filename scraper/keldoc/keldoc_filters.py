@@ -6,7 +6,7 @@ from httpx import TimeoutException
 from scraper.keldoc.keldoc_routes import API_KELDOC_MOTIVES
 from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_request import ScraperRequest
-from utils.vmd_config import get_conf_platform
+from utils.vmd_config import get_conf_platform, get_config
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 import dateutil
 
@@ -20,8 +20,10 @@ KELDOC_APPOINTMENT_REASON = KELDOC_FILTERS.get("appointment_reason", [])
 
 KELDOC_COVID_SKILLS = KELDOC_FILTERS.get("appointment_skill", [])
 
+MAX_DOSE_IN_JSON = get_config().get("max_dose_in_classic_jsons")
 
-def parse_keldoc_availability(self, availability_data, appointments, vaccine=None):
+
+def parse_keldoc_availability(self, availability_data, appointments, vaccine=None, dose=None):
     if not availability_data:
         return None, appointments
     if "date" in availability_data:
@@ -52,6 +54,7 @@ def parse_keldoc_availability(self, availability_data, appointments, vaccine=Non
                     reservation_url=self.base_url,
                     type_vaccin=[vaccine],
                     lieu=self.lieu,
+                    dose=dose,
                 )
             )
     return cdate, appointments
@@ -65,14 +68,17 @@ def filter_vaccine_motives(center_motives):
         motives = motive_cat.get("motives", {})
         for motive in motives:
             motive_name = motive.get("name", None)
-            if not motive_name or not is_appointment_relevant(motive_name):
+            appointment_relevant, dose = is_appointment_relevant(motive_name)
+
+            if not motive_name or not appointment_relevant:
                 continue
             motive_agendas = [motive_agenda.get("id", None) for motive_agenda in motive.get("agendas", {})]
             vaccine_type = get_vaccine_name(motive_name)
             if vaccine_type is None:
                 vaccine_type = get_vaccine_name(motive_cat.get("name"))
+
             vaccine_motives.append(
-                {"id": motive.get("id", None), "vaccine_type": vaccine_type, "agendas": motive_agendas}
+                {"id": motive.get("id", None), "vaccine_type": vaccine_type, "agendas": motive_agendas, "dose": dose}
             )
     return vaccine_motives
 
@@ -80,14 +86,33 @@ def filter_vaccine_motives(center_motives):
 # Filter by relevant appointments
 def is_appointment_relevant(appointment_name: str) -> bool:
     if not appointment_name:
-        return False
+        return False, 0
 
-    appointment_name = appointment_name.lower()
-    appointment_name = re.sub(" +", " ", appointment_name)
-    for allowed_appointments in KELDOC_APPOINTMENT_REASON:
-        if allowed_appointments in appointment_name:
-            return True
-    return False
+    dose = keldoc_dose_number(appointment_name)
+    if not dose:
+        return False, 0
+
+    if dose <= MAX_DOSE_IN_JSON:
+        return True, dose
+
+    return False, 0
+
+
+def keldoc_dose_number(motive):
+
+    if any([tag.lower() in motive.lower() for tag in KELDOC_FILTERS.get("rappel_filter")]) and not any(
+        [tag.lower() in motive.lower() for tag in KELDOC_FILTERS.get("immuno_filter")]
+    ):
+        dose = 3
+        return dose
+
+    if any([tag.lower() in motive.lower() for tag in KELDOC_FILTERS.get("dose2_filter")]):
+        dose = 2
+        return dose
+
+    if any([tag.lower() in motive.lower() for tag in KELDOC_FILTERS.get("dose1_filter")]):
+        dose = 1
+        return dose
 
 
 # Filter by relevant specialties

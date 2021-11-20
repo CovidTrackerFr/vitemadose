@@ -9,10 +9,11 @@ import logging
 from typing import Iterator
 from dataclasses import dataclass
 import sys
-from utils.vmd_config import get_conf_outputs
+from utils.vmd_config import get_conf_outputs, get_config
 
 logger = logging.getLogger("scraper")
 
+MAX_DOSE_IN_JSON=get_config().get("max_dose_in_classic_jsons")
 
 class JSONExporter:
     def __init__(self, departements=None, outpath_format="data/output/{}.json"):
@@ -34,7 +35,11 @@ class JSONExporter:
     def export(self, creneaux: Iterator[Creneau]):
         count = 0
         for creneau in creneaux:
-            count += 1
+            if creneau.dose:
+                if creneau.dose<=MAX_DOSE_IN_JSON:
+                    count += 1
+            else:
+                count+=1
             for resource in self.resources.values():
                 resource.on_creneau(creneau)
 
@@ -49,7 +54,7 @@ class JSONExporter:
             exit(code=1)
 
         logger.info(
-            f"{lieux_avec_dispo} centres ont des disponibilités sur {lieux_avec_dispo+lieux_sans_dispo} centre scannés"
+            f"{lieux_avec_dispo} centres ont des disponibilités sur {lieux_avec_dispo+lieux_sans_dispo} centre scannés (+{lieux_bloques_mais_dispo} bloqués)"
         )
         logger.info(f"{count} créneaux dans {lieux_avec_dispo} centres")
         print("\n")
