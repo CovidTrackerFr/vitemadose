@@ -79,9 +79,9 @@ class DoctolibCenterScraper:
             logger.warn(f"> Could not retrieve centers from department {departement} page_id {page_id}  => {r}.")
             return [], False
 
-        return self.centers_from_page(data, liste_urls)
+        return self.centers_from_page(data, liste_urls, departement, page_id)
 
-    def centers_from_page(self, department_page_data: Dict, liste_urls):
+    def centers_from_page(self, department_page_data: Dict, liste_urls, departement, page_id):
         centers_page = []
         # TODO parallelism can be put here
         for payload in department_page_data["data"]["doctors"]:
@@ -89,17 +89,17 @@ class DoctolibCenterScraper:
             if payload["link"] not in liste_urls:
                 liste_urls.append(payload["link"])
                 # One "doctor" can have multiple places, hence center_from_doctor_dict returns a list
-                centers, stop = self.center_from_doctor_dict(payload)
+                centers, stop = self.center_from_doctor_dict(payload, departement, page_id)
                 centers_page += centers
                 if stop:
                     return centers_page, True
         return centers_page, False
 
-    def center_from_doctor_dict(self, doctor_dict) -> Tuple[dict, bool]:
+    def center_from_doctor_dict(self, doctor_dict, departement, page_id) -> Tuple[dict, bool]:
         liste_centres = []
         dict_infos_browse_page = parse_doctor(doctor_dict)
         url_path = doctor_dict["link"]
-        dict_infos_centers_page = self.get_dict_infos_center_page(url_path)
+        dict_infos_centers_page = self.get_dict_infos_center_page(url_path, departement, page_id)
 
         for info_center in dict_infos_centers_page:
             info_center["rdv_site_web"] = f"https://www.doctolib.fr{url_path}?pid={info_center['place_id']}"
@@ -110,9 +110,9 @@ class DoctolibCenterScraper:
         stop = not doctor_dict["exact_match"]
         return liste_centres, stop
 
-    def get_dict_infos_center_page(self, url_path: str) -> dict:
+    def get_dict_infos_center_page(self, url_path: str, departement, page_id) -> dict:
         internal_api_url = BOOKING_URL.format(centre=parse.urlsplit(url_path).path.split("/")[-1])
-        logger.info(f"> Parsing {internal_api_url}")
+        logger.info(f"> Parsing {internal_api_url} from dep {departement} - page {page_id}")
         output = None
 
         try:
