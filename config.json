@@ -1,6 +1,6 @@
 {
     "scrape_on_n_days": 28,
-    "max_dose_in_classic_jsons": 1,
+    "max_dose_in_classic_jsons": 3,
     "base_urls": {
         "gitlab_public_path": "https://vitemadose.gitlab.io/vitemadose/",
         "github_public_path": "https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/"
