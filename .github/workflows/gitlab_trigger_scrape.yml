@@ -3,23 +3,17 @@ name: Gitlab trigger scrape
 
 on:
   schedule:
-    - cron: "*/6 * * * *" 
-    
-  workflow_dispatch:
+    - cron: "*/5 * * * *"
+
 
 jobs:
 
   trigger_scrape:
     name: "Gitlab scrape trigger"
     runs-on: "ubuntu-20.04"
-    steps:    
-      - uses: "actions/checkout@v2"
-        with:
-          token: ${{secrets.PAT_GRZ}}
-      
+    steps:        
       - name: "Call gitlab api"
-        run: |
-           curl -X POST -F token=${{secrets.GITLAB_TRIGGER_KEY}} -F ref=main https://gitlab.com/api/v4/projects/27510169/trigger/pipeline
+        run: "curl -X POST -F token=${{secrets.GITLAB_TRIGGER_KEY}} -F ref=main https://gitlab.com/api/v4/projects/27510169/trigger/pipeline"
           
           
       
