@@ -27,6 +27,8 @@ SCRAPER_CONF = DOCTOLIB_CONF.get("center_scraper")
 BASE_URL_DEPARTEMENT = DOCTOLIB_CONF.get("api").get("scraper_dep")
 BOOKING_URL = DOCTOLIB_CONF.get("api").get("booking")
 
+BASE_URL = DOCTOLIB_CONF.get("build_url")
+
 DEFAULT_CLIENT = httpx.Client()
 
 logger = get_logger()
@@ -71,7 +73,9 @@ class DoctolibCenterScraper:
     ) -> Tuple[List[dict], bool]:
         try:
             r = self._client.get(
-                BASE_URL_DEPARTEMENT.format(department_urlify(departement), page_id), headers=DOCTOLIB_HEADERS
+                BASE_URL_DEPARTEMENT.format(department_urlify(departement), page_id),
+                headers=DOCTOLIB_HEADERS,
+                follow_redirects=True,
             )
             data = r.json()
         except:
@@ -99,10 +103,12 @@ class DoctolibCenterScraper:
         liste_centres = []
         dict_infos_browse_page = parse_doctor(doctor_dict)
         url_path = doctor_dict["link"]
+        url_path_splited = "/".join([url_path.split("/")[i] for i in range(2, len(url_path.split("/")))])
         dict_infos_centers_page = self.get_dict_infos_center_page(url_path, departement, page_id)
 
         for info_center in dict_infos_centers_page:
-            info_center["rdv_site_web"] = f"https://www.doctolib.fr{url_path}?pid={info_center['place_id']}"
+            info_center["rdv_site_web"] = BASE_URL.format(url_path=url_path_splited, place_id=info_center["place_id"])
+
             # info center overrides the keys found in the SEO page if they are different
             # This is for when centers have multiple practice-ids which are also centers with different addresses
             liste_centres.append({**dict_infos_browse_page, **info_center})
@@ -116,7 +122,7 @@ class DoctolibCenterScraper:
         output = None
 
         try:
-            req = self._client.get(internal_api_url, headers=DOCTOLIB_HEADERS)
+            req = self._client.get(internal_api_url, headers=DOCTOLIB_HEADERS, follow_redirects=True)
             req.raise_for_status()
             data = req.json()
             output = data.get("data", {})
