@@ -87,8 +87,8 @@
             "api": {
                 "booking": "https://partners.doctolib.fr/booking/{centre}.json",
                 "slots": "https://partners.doctolib.fr/availabilities.json?start_date={start_date}&visit_motive_ids={motive_id}&agenda_ids={agenda_ids_q}&insurance_sector=public&practice_ids={practice_ids_q}&destroy_temporary=true&limit={limit}",
-                "scraper": "http://www.doctolib.fr/vaccination-covid-19/france.json?page={0}",
-                "scraper_dep": "http://www.doctolib.fr/vaccination-covid-19/{0}.json?page={1}"
+                "scraper": "http://partners.doctolib.fr/vaccination-covid-19/france.json?page={0}",
+                "scraper_dep": "http://partners.doctolib.fr/vaccination-covid-19/{0}.json?page={1}"
             },
             "request_sleep": 0.05,
             "days_per_page": 14,
