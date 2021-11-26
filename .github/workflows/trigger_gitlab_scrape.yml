@@ -3,7 +3,7 @@ name: Gitlab scrape trigger
 
 on:
   schedule:
-    - cron: */5 * * * *  
+    - cron: "*/5 * * * *" 
     
   # Allow running manually
   workflow_dispatch:
