@@ -74,8 +74,7 @@ class DoctolibCenterScraper:
         try:
             r = self._client.get(
                 BASE_URL_DEPARTEMENT.format(department_urlify(departement), page_id),
-                headers=DOCTOLIB_HEADERS,
-                follow_redirects=True,
+                headers=DOCTOLIB_HEADERS
             )
             data = r.json()
         except:
@@ -122,7 +121,7 @@ class DoctolibCenterScraper:
         output = None
 
         try:
-            req = self._client.get(internal_api_url, headers=DOCTOLIB_HEADERS, follow_redirects=True)
+            req = self._client.get(internal_api_url, headers=DOCTOLIB_HEADERS)
             req.raise_for_status()
             data = req.json()
             output = data.get("data", {})
