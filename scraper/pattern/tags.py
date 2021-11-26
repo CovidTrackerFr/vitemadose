@@ -3,13 +3,7 @@ from scraper.pattern.vaccine import Vaccine
 
 
 def tag_all(creneau: Creneau):
-    if creneau.dose:
-        if creneau.dose == 1:
-            return True
-        else:
-            return False
-    else:
-        return True
+    return True
 
 
 def first_dose(creneau: Creneau):
