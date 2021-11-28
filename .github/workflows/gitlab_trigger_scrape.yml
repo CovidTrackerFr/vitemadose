@@ -1,0 +1,22 @@
+---
+name: Gitlab trigger scrape
+
+on:
+  schedule:
+  - cron: "*/3 * * * *" # Every 20 mins on fridays
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+
+jobs:
+
+  trigger_scrape:
+    name: "Gitlab scrape trigger"
+    runs-on: "ubuntu-20.04"
+    steps:        
+      - name: "Call gitlab api"
+        run: "curl -X POST -F token=${{secrets.GITLAB_TRIGGER_KEY}} -F ref=main https://gitlab.com/api/v4/projects/27510169/trigger/pipeline"
+          
+          
+      
