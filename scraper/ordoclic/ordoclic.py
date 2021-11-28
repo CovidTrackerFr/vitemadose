@@ -28,7 +28,6 @@ paris_tz = timezone("Europe/Paris")
 
 # Filtre pour le rang d'injection
 # Il faut rajouter 2 à la liste si l'on veut les 2èmes injections
-ORDOCLIC_VALID_INJECTION = ORDOCLIC_CONF.get("filters", {}).get("valid_injections", [])
 
 # get all slugs
 def search(client: httpx.Client = DEFAULT_CLIENT):
@@ -70,9 +69,18 @@ def get_reasons(entityId, client: httpx.Client = DEFAULT_CLIENT, request: Scrape
 def is_reason_valid(reason: dict) -> bool:
     if reason.get("canBookOnline", False) is False:
         return False
-    if reason.get("vaccineInjectionDose", -1) not in ORDOCLIC_VALID_INJECTION:
+    if reason.get("vaccineInjectionDose", -1) == -1:
         return False
+
     return True
+
+
+def get_dose_number(reason: dict) -> list:
+    if not reason["vaccineInjectionDose"]:
+        return None
+
+    dose = reason["vaccineInjectionDose"]
+    return dose
 
 
 def count_appointements(appointments: list, start_date: datetime, end_date: datetime) -> int:
@@ -110,7 +118,7 @@ class OrdoclicSlots:
     def found_creneau(self, creneau):
         self.creneau_q.put(creneau)
 
-    def parse_ordoclic_slots(self, request: ScraperRequest, availability_data, vaccine):
+    def parse_ordoclic_slots(self, request: ScraperRequest, availability_data, vaccine, dose):
         first_availability = None
         if not availability_data:
             return None
@@ -127,6 +135,9 @@ class OrdoclicSlots:
                 first_availability += first_availability.replace(tzinfo=timezone("CET")).utcoffset()
                 return first_availability
 
+        if not dose:
+            dose = []
+
         if availabilities is None:
             return None
         for slot in availabilities:
@@ -141,6 +152,7 @@ class OrdoclicSlots:
                     Creneau(
                         horaire=date,
                         reservation_url=request.url,
+                        dose=[dose],
                         type_vaccin=[vaccine],
                         lieu=self.lieu,
                     )
@@ -243,12 +255,13 @@ class OrdoclicSlots:
                 if not is_reason_valid(reason):
                     continue
                 vaccine = get_vaccine_name(reason.get("name", ""))
+                dose = get_dose_number(reason)
                 request.add_vaccine_type(vaccine)
                 reasonId = reason["id"]
                 date_obj = datetime.strptime(request.get_start_date(), "%Y-%m-%d")
                 end_date = (date_obj + timedelta(days=NUMBER_OF_SCRAPED_DAYS)).strftime("%Y-%m-%d")
                 slots = self.get_slots(entityId, medicalStaffId, reasonId, request.get_start_date(), end_date, request)
-                date = self.parse_ordoclic_slots(request, slots, vaccine)
+                date = self.parse_ordoclic_slots(request, slots, vaccine, dose)
                 if date is None:
                     continue
 

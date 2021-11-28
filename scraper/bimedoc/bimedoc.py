@@ -106,6 +106,7 @@ class BimedocSlots:
 
         response.raise_for_status()
         rdata = response.json()
+        print(rdata)
         if not rdata:
             self.found_creneau(PasDeCreneau(lieu=self.lieu))
 

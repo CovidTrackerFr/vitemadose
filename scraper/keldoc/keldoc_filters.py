@@ -20,8 +20,6 @@ KELDOC_APPOINTMENT_REASON = KELDOC_FILTERS.get("appointment_reason", [])
 
 KELDOC_COVID_SKILLS = KELDOC_FILTERS.get("appointment_skill", [])
 
-MAX_DOSE_IN_JSON = get_config().get("max_dose_in_classic_jsons")
-
 
 def parse_keldoc_availability(self, availability_data, appointments, vaccine=None, dose=None):
     if not availability_data:
@@ -54,7 +52,7 @@ def parse_keldoc_availability(self, availability_data, appointments, vaccine=Non
                     reservation_url=self.base_url,
                     type_vaccin=[vaccine],
                     lieu=self.lieu,
-                    dose=dose,
+                    dose=[dose],
                 )
             )
     return cdate, appointments
@@ -92,10 +90,7 @@ def is_appointment_relevant(appointment_name: str) -> bool:
     if not dose:
         return False, 0
 
-    if dose <= MAX_DOSE_IN_JSON:
-        return True, dose
-
-    return False, 0
+    return True, dose
 
 
 def keldoc_dose_number(motive):

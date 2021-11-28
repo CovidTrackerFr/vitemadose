@@ -7,18 +7,21 @@ def tag_all(creneau: Creneau):
 
 
 def first_dose(creneau: Creneau):
-    if creneau.dose == 1:
-        return True
+    if creneau.dose:
+        if 1 in creneau.dose:
+            return True
 
 
 def second_dose(creneau: Creneau):
-    if creneau.dose == 2:
-        return True
+    if creneau.dose:
+        if 2 in creneau.dose:
+            return True
 
 
 def third_dose(creneau: Creneau):
-    if creneau.dose == 3:
-        return True
+    if creneau.dose:
+        if 3 in creneau.dose:
+            return True
 
 
 CURRENT_TAGS = {

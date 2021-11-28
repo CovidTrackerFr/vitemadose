@@ -37,6 +37,8 @@ NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
 MAIIA_DOSES = PLATFORM_SCRAPER.get("dose_types")
 
+MAIIA_DO_NOT_SCRAP_NAME = PLATFORM_SCRAPER.get("excluded_names", [])
+
 
 def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue, client: httpx.Client = DEFAULT_CLIENT) -> Optional[str]:
     if not PLATFORM_ENABLED:
@@ -119,7 +121,7 @@ class MaiiaSlots:
                     reservation_url=request.url,
                     type_vaccin=[slot.get("vaccine_type")],
                     lieu=self.lieu,
-                    dose=dose,
+                    dose=[dose],
                 )
             )
 
@@ -221,6 +223,9 @@ class MaiiaSlots:
         slots_count = 0
         for consultation_reason in reasons:
             consultation_reason_name_quote = quote(consultation_reason.get("name"), "")
+            if any([motive.lower() in consultation_reason["name"].lower() for motive in MAIIA_DO_NOT_SCRAP_NAME]):
+                continue
+
             if "injectionType" in consultation_reason:
                 slots = self.get_slots(
                     center_id, consultation_reason_name_quote, start_date, end_date, client=client, request=request
@@ -228,7 +233,7 @@ class MaiiaSlots:
                 dose = None
                 dose_name = consultation_reason["injectionType"]
 
-                if dose_name and dose_name!= "NONE":
+                if dose_name and dose_name != "NONE":
                     dose = MAIIA_DOSES[dose_name]
 
                 if slots:

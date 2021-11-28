@@ -13,7 +13,6 @@ from utils.vmd_config import get_conf_outputs, get_config
 
 logger = logging.getLogger("scraper")
 
-MAX_DOSE_IN_JSON=get_config().get("max_dose_in_classic_jsons")
 
 class JSONExporter:
     def __init__(self, departements=None, outpath_format="data/output/{}.json"):
@@ -35,11 +34,8 @@ class JSONExporter:
     def export(self, creneaux: Iterator[Creneau]):
         count = 0
         for creneau in creneaux:
-            if creneau.dose:
-                if creneau.dose<=MAX_DOSE_IN_JSON:
-                    count += 1
-            else:
-                count+=1
+            count += 1
+
             for resource in self.resources.values():
                 resource.on_creneau(creneau)
 

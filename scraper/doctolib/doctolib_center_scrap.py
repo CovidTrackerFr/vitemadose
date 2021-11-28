@@ -73,8 +73,7 @@ class DoctolibCenterScraper:
     ) -> Tuple[List[dict], bool]:
         try:
             r = self._client.get(
-                BASE_URL_DEPARTEMENT.format(department_urlify(departement), page_id),
-                headers=DOCTOLIB_HEADERS
+                BASE_URL_DEPARTEMENT.format(department_urlify(departement), page_id), headers=DOCTOLIB_HEADERS
             )
             data = r.json()
         except:
