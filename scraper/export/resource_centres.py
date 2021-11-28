@@ -12,8 +12,6 @@ from utils.vmd_blocklist import get_blocklist_urls, is_in_blocklist
 import pytz
 from scraper.creneaux.creneau import Plateforme
 
-MAX_DOSE_IN_JSON=get_config().get("max_dose_in_classic_jsons")
-
 blocklist = get_blocklist_urls()
 
 
@@ -31,11 +29,6 @@ class ResourceTousDepartements(Resource):
         centre = None
         is_blocked_center = lambda center: (is_reserved_center(center) or is_in_blocklist(center, blocklist))
 
-        too_high_rank=False
-        if creneau.dose:
-            if creneau.dose>MAX_DOSE_IN_JSON:
-                too_high_rank=True
-
         if not any(centre_opendata["url"] == lieu.url for centre_opendata in self.opendata):
             self.opendata.append(
                 {"departement": lieu.departement, "plateforme": lieu.plateforme.value, "nom": lieu.nom, "url": lieu.url}
@@ -45,16 +38,15 @@ class ResourceTousDepartements(Resource):
             if isinstance(creneau, PasDeCreneau):
                 self.centres_indisponibles[creneau.lieu.internal_id] = self.centre(lieu).default()
                 return
-            if too_high_rank:
-                return
+
             if lieu.internal_id not in self.centres_disponibles:
                 self.centres_disponibles[lieu.internal_id] = self.centre(lieu).default()
-            
+
             centre = self.centres_disponibles[lieu.internal_id]
         else:
             self.centres_bloques_mais_disponibles[lieu.internal_id] = self.centre(lieu).default()
 
-        if centre is not None and not too_high_rank:
+        if centre is not None:
             centre["appointment_count"] += 1
 
             if not centre["prochain_rdv"] or centre["prochain_rdv"] > creneau.horaire:

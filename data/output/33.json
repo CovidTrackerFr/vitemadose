@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "last_updated": "2021-11-28T13:45:58+01:00",
+  "centres_disponibles": [
+    {
+      "departement": "33",
+      "nom": "Grande Pharmacie du Centre Ambar\u00e8s",
+      "url": "https://grandepharmacieducentre.epharmacie.pro/animation-details/a77026ad-050d-4885-97db-1939ff32cce7/1/60",
+      "location": {
+        "longitude": -0.4891,
+        "latitude": 44.926121,
+        "city": "Ambar\u00e8s-et-Lagrave",
+        "cp": "33440"
+      },
+      "metadata": {
+        "address": "6, rue du Pr\u00e9sident Coty, 33440 Ambar\u00e8s-et-Lagrave",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-11-29T09:50:00",
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 4200,
+      "internal_id": "Valwincos52-centre-ambares-lagrave",
+      "vaccine_type": [
+        "Moderna",
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "33",
+      "nom": "Pharmacie de l'Alouette",
+      "url": "https://pharmacie-alouette-pessac.pharmabest.com/animation-details/012cc071-64ac-4956-b12e-e0b2c5bb0912/1/60",
+      "location": {
+        "longitude": -0.66428,
+        "latitude": 44.79843,
+        "city": "Pessac",
+        "cp": "33600"
+      },
+      "metadata": {
+        "address": "14, avenue du g\u00e9n\u00e9ral Leclerc, 33600 Pessac",
+        "business_hours": null
+      },
+      "prochain_rdv": "2022-02-16T15:20:00",
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 52,
+      "internal_id": "Valwinpharmabest24-alouette-pessac",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "33",
+      "nom": "Pharmacie Principale",
+      "url": "https://pharmacie-principale-bordeaux.pharmabest.com",
+      "location": {
+        "longitude": -0.574184,
+        "latitude": 44.841478,
+        "city": "Bordeaux",
+        "cp": "33000"
+      },
+      "metadata": {
+        "address": "10, rue Sainte Catherine, 33000 Bordeaux",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest05-principale-bordeaux",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "33",
+      "nom": "Pharmacie de la Gabarre",
+      "url": "https://pharma-libourne.epharmacie.pro",
+      "location": {
+        "longitude": -0.221405,
+        "latitude": 44.90175,
+        "city": "Libourne",
+        "cp": "33500"
+      },
+      "metadata": {
+        "address": "102, avenue du g\u00e9n\u00e9ral de Gaulle - Centre commercial Carrefour Libourne, 33500 Libourne",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwincos67-gabarre-libourne",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "33",
+      "nom": "Pharmacie Lartigau",
+      "url": "https://pharmacielartigau.epharmacie.pro",
+      "location": {
+        "longitude": -0.56309,
+        "latitude": 45.26001,
+        "city": "Saint-Aubin-de-Blaye",
+        "cp": "33820"
+      },
+      "metadata": {
+        "address": "706, avenue de la Libert\u00e9, 33820 Saint-Aubin-de-Blaye",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinaspic05-lartigau-sain-aubin",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

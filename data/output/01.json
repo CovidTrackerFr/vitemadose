@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "last_updated": "2021-11-28T13:45:58+01:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "01",
+      "nom": "Pharmacie de Tr\u00e9voux",
+      "url": "https://www.pharmaciedetrevoux.fr",
+      "location": {
+        "longitude": 4.780905,
+        "latitude": 45.939896,
+        "city": "Tr\u00e9voux",
+        "cp": "01600"
+      },
+      "metadata": {
+        "address": "2, boulevard des Combattants, 01600 Tr\u00e9voux",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmaccord20-trevoux",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "01",
+      "nom": "Pharmacie de Tossiat",
+      "url": "https://pharmacie-tossiat.epharmacie.pro",
+      "location": {
+        "longitude": 5.31614,
+        "latitude": 46.14182,
+        "city": "Tossiat",
+        "cp": "01250"
+      },
+      "metadata": {
+        "address": "15, route de Montagnat, 01250 Tossiat",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpositivepharma01-tossiat",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "01",
+      "nom": "Pharmacie des Rochettes",
+      "url": "https://pharmaciedesrochettes.com",
+      "location": {
+        "longitude": 5.646784,
+        "latitude": 46.24981,
+        "city": "Oyonnax",
+        "cp": "01100"
+      },
+      "metadata": {
+        "address": "53, rue Brillat Savarin, 01100 Oyonnax",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinelsie09-rochettes-oyonnax",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "01",
+      "nom": "Pharmacie Des Deux Rives",
+      "url": "https://pharmacie-des-deux-rives.fr",
+      "location": {
+        "longitude": 5.574481,
+        "latitude": 46.171216,
+        "city": "Montr\u00e9al-la-Cluse",
+        "cp": "01460"
+      },
+      "metadata": {
+        "address": "15, avenue de Bresse, 01460 Montr\u00e9al-la-Cluse",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinph84-deuxrives-montreal-la-cluse",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "01",
+      "nom": "Pharmacie de Norelan",
+      "url": "https://pharmacie-norelan.epharmacie.pro",
+      "location": {
+        "longitude": 5.245721,
+        "latitude": 46.215778,
+        "city": "Bourg-en-Bresse",
+        "cp": "01000"
+      },
+      "metadata": {
+        "address": "68, avenue de Parme, 01000 Bourg-en-Bresse",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpositivepharma02-norelan",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "01",
+      "nom": "GRANDE PHARMACIE AMBERIEU CENTRE",
+      "url": "https://grandepharmacieamberieu.epharmacie.pro",
+      "location": {
+        "longitude": 5.35733,
+        "latitude": 45.96108,
+        "city": "Amb\u00e9rieu en bugey",
+        "cp": "01500"
+      },
+      "metadata": {
+        "address": "39 rue Alexandre B\u00e9rard, 01500 Amb\u00e9rieu en bugey",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinmediprix03-amberieu",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

@@ -33,6 +33,11 @@ def test_search():
             "or.covidOnlineBookingAvailabilities.vaccineJanssen1": "true",
             "or.covidOnlineBookingAvailabilities.vaccinePfizer1": "true",
             "or.covidOnlineBookingAvailabilities.vaccineModerna1": "true",
+            "or.covidOnlineBookingAvailabilities.vaccineAstraZeneca2": "true",
+            "or.covidOnlineBookingAvailabilities.vaccineModerna2": "true",
+            "or.covidOnlineBookingAvailabilities.vaccineModerna3": "true",
+            "or.covidOnlineBookingAvailabilities.vaccinePfizer2": "true",
+            "or.covidOnlineBookingAvailabilities.vaccinePfizer3": "true",
         }
 
         path = Path("tests/fixtures/ordoclic/search.json")
@@ -114,12 +119,14 @@ def test_get_slots():
     request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-meru-meru", "2021-05-08")
     data = {"id": 1}
     vaccine = Vaccine.MODERNA
-    assert not ordoclic.parse_ordoclic_slots(request, data, vaccine)
+    dose = [1]
+    assert not ordoclic.parse_ordoclic_slots(request, data, vaccine, dose)
 
     request = ScraperRequest("https://app.ordoclic.fr/app/pharmacie/pharmacie-de-la-mairie-meru-meru", "2021-05-08")
     data = {"slots": [{"timeEnd": "2021-05-09"}]}
     vaccine = Vaccine.MODERNA
-    assert not ordoclic.parse_ordoclic_slots(request, data, vaccine)
+    dose = [2]
+    assert not ordoclic.parse_ordoclic_slots(request, data, vaccine, dose)
 
 
 def test_get_profile():
@@ -151,19 +158,22 @@ def test_parse_ordoclic_slots():
     request = ScraperRequest("", "2021-04-05")
 
     vaccine = Vaccine.PFIZER
-    assert ordoclic.parse_ordoclic_slots(request, {}, vaccine) == None
+    dose = [3]
+    assert ordoclic.parse_ordoclic_slots(request, {}, vaccine, dose) == None
 
     # Test pas de slots disponibles
     empty_slots_file = Path("tests/fixtures/ordoclic/empty_slots.json")
     empty_slots = json.loads(empty_slots_file.read_text())
     request = ScraperRequest("", "2021-04-05")
-    assert ordoclic.parse_ordoclic_slots(request, empty_slots, vaccine) == None
+    dose = [1]
+    assert ordoclic.parse_ordoclic_slots(request, empty_slots, vaccine, dose) == None
 
     # Test nextAvailableSlotDate
     nextavailable_slots_file = Path("tests/fixtures/ordoclic/nextavailable_slots.json")
     nextavailable_slots = json.loads(nextavailable_slots_file.read_text())
     request = ScraperRequest("", "2021-04-05")
-    assert ordoclic.parse_ordoclic_slots(request, nextavailable_slots, vaccine) == isoparse(
+    dose = [1]
+    assert ordoclic.parse_ordoclic_slots(request, nextavailable_slots, vaccine, dose) == isoparse(
         "2021-06-12T11:30:00Z"
     )  # timezone CET
 
@@ -171,7 +181,8 @@ def test_parse_ordoclic_slots():
     full_slots_file = Path("tests/fixtures/ordoclic/full_slots.json")
     full_slots = json.loads(full_slots_file.read_text())
     request = ScraperRequest("", "2021-04-05")
-    first_availability = ordoclic.parse_ordoclic_slots(request, full_slots, vaccine)
+    dose = [1]
+    first_availability = ordoclic.parse_ordoclic_slots(request, full_slots, vaccine, dose)
     assert first_availability == isoparse("2021-04-19T16:15:00Z")  # timezone CET
     assert request.appointment_count == 42
 
@@ -183,10 +194,6 @@ def test_centre_iterator():
 def test_is_reason_valid():
     # Can't book online
     data = {"canBookOnline": False}
-    assert not is_reason_valid(data)
-
-    # Can't book online
-    data = {"canBookOnline": True, "vaccineInjectionDose": 2}
     assert not is_reason_valid(data)
 
     # First injection
@@ -213,6 +220,11 @@ def test_center_iterator():
             "or.covidOnlineBookingAvailabilities.vaccineJanssen1": "true",
             "or.covidOnlineBookingAvailabilities.vaccinePfizer1": "true",
             "or.covidOnlineBookingAvailabilities.vaccineModerna1": "true",
+            "or.covidOnlineBookingAvailabilities.vaccineAstraZeneca2": "true",
+            "or.covidOnlineBookingAvailabilities.vaccineModerna2": "true",
+            "or.covidOnlineBookingAvailabilities.vaccineModerna3": "true",
+            "or.covidOnlineBookingAvailabilities.vaccinePfizer2": "true",
+            "or.covidOnlineBookingAvailabilities.vaccinePfizer3": "true",
         }
 
         path = Path("tests/fixtures/ordoclic/search.json")

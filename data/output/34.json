@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "last_updated": "2021-11-28T13:45:58+01:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "34",
+      "nom": "Pharmacie du grand M",
+      "url": "https://www.pharmaciedugrandm.fr",
+      "location": {
+        "longitude": 3.856609,
+        "latitude": 43.588722,
+        "city": "Montpellier",
+        "cp": "34070"
+      },
+      "metadata": {
+        "address": "58, rue du latium, 34070 Montpellier",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwincpc01-grand-m-montpellier",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "34",
+      "nom": "Pharmacie de la Corniche",
+      "url": "https://pharmacie-corniche-sete.fr",
+      "location": {
+        "longitude": 3.677088,
+        "latitude": 43.394103,
+        "city": "S\u00e8te",
+        "cp": "34200"
+      },
+      "metadata": {
+        "address": "Place Edouard Herriot, 34200 S\u00e8te",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwincos24-corniche-sete",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "34",
+      "nom": "Pharmacie de la Com\u00e9die - Service 24/24 et 7/7 ",
+      "url": "https://pharmacie-delacomedie.fr",
+      "location": {
+        "longitude": 3.87999,
+        "latitude": 43.60824,
+        "city": "Montpellier",
+        "cp": "34000"
+      },
+      "metadata": {
+        "address": "1, rue de Verdun, 34000 Montpellier",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwincpc05-comedie-montpellier",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "34",
+      "nom": "Pharmacie Neyrac Santapau",
+      "url": "https://pharmacie-neyrac-santapau.epharmacie.pro",
+      "location": {
+        "longitude": 3.485423,
+        "latitude": 43.601277,
+        "city": "Canet",
+        "cp": "34800"
+      },
+      "metadata": {
+        "address": "552, Avenue Commandant Paul Demarne, 34800 Canet",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinph29-neyrac-santapau",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "34",
+      "nom": "Pharmacie Des Grisettes",
+      "url": "https://pharmaciedesgrisettes.fr",
+      "location": {
+        "longitude": 3.858818,
+        "latitude": 43.583646,
+        "city": "Montpellier",
+        "cp": "34070"
+      },
+      "metadata": {
+        "address": "100, rambla des Calissons, 34070  Montpellier",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinelsie05-grisettes-montpellier",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "34",
+      "nom": "Grande Pharmacie des Facult\u00e9s",
+      "url": "https://grandepharmacie-des-facultes-montpellier.pharmabest.com",
+      "location": {
+        "longitude": 3.871058,
+        "latitude": 43.626692,
+        "city": "Montpellier",
+        "cp": "34090"
+      },
+      "metadata": {
+        "address": "60, avenue de la Justice de Castelnau, 34090 Montpellier",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest74-facultes-montpellier",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "34",
+      "nom": "Pharmacie du Progr\u00e8s",
+      "url": "https://pharmacie-du-progres.pharmabest.com",
+      "location": {
+        "longitude": 3.216931,
+        "latitude": 43.343362,
+        "city": "B\u00e9ziers",
+        "cp": "34500"
+      },
+      "metadata": {
+        "address": "23, all\u00e9es Paul Riquet, 34500 B\u00e9ziers",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest06-progres-beziers",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

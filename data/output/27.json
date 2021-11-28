@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "last_updated": "2021-11-28T13:45:58+01:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "27",
+      "nom": "Pharmacie de la Bonneville",
+      "url": "https://pharmacie-bonneville.epharmacie.pro",
+      "location": {
+        "longitude": 1.038979,
+        "latitude": 48.991622,
+        "city": "La Bonneville-sur-Iton",
+        "cp": "27190"
+      },
+      "metadata": {
+        "address": "41, rue Jean Mar\u00e9chal, 27190  La Bonneville-sur-Iton",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinfede4-bonneville",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

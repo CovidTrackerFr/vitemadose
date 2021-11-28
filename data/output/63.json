@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "last_updated": "2021-11-28T13:45:58+01:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "63",
+      "nom": "Grande Pharmacie de la Varenne",
+      "url": "https://grande-pharmacie-varenne.epharmacie.pro",
+      "location": {
+        "longitude": 3.508352,
+        "latitude": 45.838993,
+        "city": "Thiers",
+        "cp": "63300"
+      },
+      "metadata": {
+        "address": "Rue Fran\u00e7ois Truffaut, 63300 Thiers",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwing1000-02-varenne-thiers",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "63",
+      "nom": "Pharmacie Sultana",
+      "url": "https://pharmacie-pontduchateau.epharmacie.pro",
+      "location": {
+        "longitude": 3.248529,
+        "latitude": 45.799086,
+        "city": "Pont du Ch\u00e2teau",
+        "cp": "63430"
+      },
+      "metadata": {
+        "address": "2, place de la R\u00e9publique, 63430 Pont du Ch\u00e2teau",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmaxial01-sultana-pontduchateau",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "63",
+      "nom": "Pharmacie Besson",
+      "url": "https://pharmacie-besson.pharmabest.com",
+      "location": {
+        "longitude": 3.117017,
+        "latitude": 45.87635,
+        "city": "Menetrol",
+        "cp": "63200"
+      },
+      "metadata": {
+        "address": "83, avenue de Clermont C/Cial RIOM-sud, 63200 Menetrol",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest71-besson-menetrol",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

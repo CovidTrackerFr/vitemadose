@@ -1,0 +1,207 @@
+{
+  "version": 1,
+  "last_updated": "2021-11-28T13:45:58+01:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "35",
+      "nom": "Pharmacie de Nemours",
+      "url": "https://pharmacie-de-nemours.com",
+      "location": {
+        "longitude": -1.68006,
+        "latitude": 48.10874,
+        "city": "Rennes",
+        "cp": "35000"
+      },
+      "metadata": {
+        "address": "7, rue de Nemours, 35000 Rennes",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinph59-nemours-rennes",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "35",
+      "nom": "Pharmacie ELY",
+      "url": "https://pharmacie-ely-baindebretagne.epharmacie.pro",
+      "location": {
+        "longitude": -1.6887831687927246,
+        "latitude": 47.8595768907964,
+        "city": "Bain-de-Bretagne",
+        "cp": "35470"
+      },
+      "metadata": {
+        "address": "Centre commercial Leclerc - 27, rue des Estuaires, 35470 Bain-de-Bretagne",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinreseausante11-ely-lescop-bain-bretagne",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "35",
+      "nom": "Pharmacie du Centre Alma",
+      "url": "https://pharmacie-alma-rennes.pharmabest.com",
+      "location": {
+        "longitude": -1.679673,
+        "latitude": 48.083213,
+        "city": "Rennes",
+        "cp": "35200"
+      },
+      "metadata": {
+        "address": "5, rue du Bosphore, 35200 Rennes",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest56-alma-rennes",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "35",
+      "nom": "Pharmacie des Fontenelles",
+      "url": "https://pharmacie-des-fontenelles.epharmacie.pro",
+      "location": {
+        "longitude": -1.979535,
+        "latitude": 48.667941,
+        "city": "Saint-Malo",
+        "cp": "35400"
+      },
+      "metadata": {
+        "address": "19, avenue des Fontenelles, 35400 Saint-Malo",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinmand04-fontenelles",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "35",
+      "nom": "Pharmacie des Fougeretz",
+      "url": "https://pharmacie-des-fougeretz.epharmacie.pro",
+      "location": {
+        "longitude": -1.733657,
+        "latitude": 48.175884,
+        "city": "La Chapelle-des-Fougeretz",
+        "cp": "35520"
+      },
+      "metadata": {
+        "address": "12, Rue des Longrais, 35520 La Chapelle-des-Fougeretz",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwincos32-fougeretz-chapelle-fougeretz",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "35",
+      "nom": "Pharmacie Briand",
+      "url": "https://pharmaciebriandacigne.fr",
+      "location": {
+        "longitude": -1.53434157371521,
+        "latitude": 48.13374509603141,
+        "city": "Acign\u00e9",
+        "cp": "35690"
+      },
+      "metadata": {
+        "address": "Centre Commercial Les Clou\u00e8res, 35690 Acign\u00e9",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinreseausante14-briand-acigne",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "35",
+      "nom": "PARA & Pharmacie de La Douve",
+      "url": "https://pharmaciedouve.fr",
+      "location": {
+        "longitude": -1.2013989686965942,
+        "latitude": 48.35349705322969,
+        "city": "Foug\u00e8res",
+        "cp": "35300"
+      },
+      "metadata": {
+        "address": "Place de la Grande Douve, 35300 Foug\u00e8res",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinreseausante10-douve-fougeres",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "35",
+      "nom": "Pharmacie R\u00e9publique Pr\u00e9 Bott\u00e9",
+      "url": "https://pharmacierepubliqueprebotte.fr",
+      "location": {
+        "longitude": -1.677663,
+        "latitude": 48.109448,
+        "city": "Rennes",
+        "cp": "35000"
+      },
+      "metadata": {
+        "address": "1, rue du Pr\u00e9 Bott\u00e9, 35000 Rennes",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinmand11-republique-pre-botte-rennes",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

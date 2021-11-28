@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "last_updated": "2021-11-28T13:45:58+01:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "41",
+      "nom": "Pharmacie de Courtiras",
+      "url": "https://pharmaciedecourtiras-vendome.fr",
+      "location": {
+        "longitude": 1.042608,
+        "latitude": 47.803261,
+        "city": "Vend\u00f4me",
+        "cp": "41100"
+      },
+      "metadata": {
+        "address": "101 bis, rue de Courtiras, 41100 Vend\u00f4me",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinaelia05-courtiras-vendome",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "41",
+      "nom": "Pharmacie de l\u2019H\u00f4tel de Ville",
+      "url": "https://pharmacie-guyot-lamotte-beuvron.giropharm.fr",
+      "location": {
+        "longitude": 2.024875,
+        "latitude": 47.6019,
+        "city": "Lamotte-Beuvron",
+        "cp": "41600"
+      },
+      "metadata": {
+        "address": "60 avenue de l\u2019H\u00f4tel de Ville, 41600 Lamotte-Beuvron",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwingiro95-hotel-ville-guyot",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

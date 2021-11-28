@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "last_updated": "2021-11-28T13:45:58+01:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "60",
+      "nom": "Pharmacie de Royallieu",
+      "url": "https://pharmacie-royallieu-compiegne.pharmabest.com",
+      "location": {
+        "longitude": 2.796618,
+        "latitude": 49.398073,
+        "city": "Compi\u00e8gne",
+        "cp": "60200"
+      },
+      "metadata": {
+        "address": "Centre Commercial Grands Chemins, 19 Esplanade Marguerite Perey, 60200 Compi\u00e8gne",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest61-royallieu-compiegne",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "60",
+      "nom": "Pharmacie des Trois Rois",
+      "url": "https://pharmacie-des-trois-rois-nogent-sur-oise.giropharm.fr",
+      "location": {
+        "longitude": 2.466736,
+        "latitude": 49.273525,
+        "city": "Nogent-sur-Oise",
+        "cp": "60190"
+      },
+      "metadata": {
+        "address": "Centre commercial des Trois Rois, 60190 Nogent-sur-Oise",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwingiro2-troisrois",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "60",
+      "nom": "Pharmacie Sainte Genevi\u00e8ve",
+      "url": "https://pharmacie-sainte-genevieve.epharmacie.pro",
+      "location": {
+        "longitude": 2.202337,
+        "latitude": 49.290448,
+        "city": "Sainte-Genevi\u00e8ve",
+        "cp": "60730"
+      },
+      "metadata": {
+        "address": "Route Nationale 1, 60730 Sainte-Genevi\u00e8ve",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwincos60-sainte-genevieve",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

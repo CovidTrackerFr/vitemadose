@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "last_updated": "2021-11-28T13:45:58+01:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "16",
+      "nom": "Grande Pharmacie Saint-Martin",
+      "url": "https://grandepharmaciesaintmartin.fr",
+      "location": {
+        "longitude": -0.33414,
+        "latitude": 45.6879,
+        "city": "Cognac",
+        "cp": "16100"
+      },
+      "metadata": {
+        "address": "59, boulevard Oscar Planat, 16100 Cognac",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwincos61-saint-martin-cognac",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

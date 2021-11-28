@@ -1,0 +1,307 @@
+{
+  "version": 1,
+  "last_updated": "2021-11-28T13:45:58+01:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "59",
+      "nom": "Pharmacie centre commercial Auchan Leers",
+      "url": "https://pharmacie-centre-commercial-leers.pharmabest.com",
+      "location": {
+        "longitude": 3.213838,
+        "latitude": 50.683677,
+        "city": "Leers",
+        "cp": "59115"
+      },
+      "metadata": {
+        "address": "1, Avenue de l'Europe, 59115 Leers",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest76-leers",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie des Floralies",
+      "url": "https://pharmacie-marly.fr",
+      "location": {
+        "longitude": 3.548406,
+        "latitude": 50.340706,
+        "city": "Marly",
+        "cp": "59770"
+      },
+      "metadata": {
+        "address": "2, rue des Jacinthes, 59770 Marly",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinlpa01-floralies-marly",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie Billet-Sobrie",
+      "url": "https://pharmacie-billet-sobrie-teteghem.giropharm.fr",
+      "location": {
+        "longitude": 2.443042,
+        "latitude": 51.017999,
+        "city": "T\u00e9teghem",
+        "cp": "59229"
+      },
+      "metadata": {
+        "address": "28, rue de la Mairie, 59229 T\u00e9teghem",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwingiro62-teteghem",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie de la D\u00e9esse",
+      "url": "https://pharmaciedeladeesse.pharmabest.com",
+      "location": {
+        "longitude": 3.062613,
+        "latitude": 50.638148,
+        "city": "Lille",
+        "cp": "59800"
+      },
+      "metadata": {
+        "address": "14, rue du cur\u00e9 Saint Etienne , 59800 Lille",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest02-deesse-lille",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie de Paris",
+      "url": "https://pharmacie-de-paris-roubaix.giropharm.fr",
+      "location": {
+        "longitude": 3.1746884000000364,
+        "latitude": 50.6870487,
+        "city": "Roubaix",
+        "cp": "59100"
+      },
+      "metadata": {
+        "address": "1 Boulevard du G\u00e9n\u00e9ral de Gaulle, 59100 Roubaix",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwingiro1-paris",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie du Manoir",
+      "url": "https://pharmaciedumanoirhalluin.giropharm.fr",
+      "location": {
+        "longitude": 3.115455,
+        "latitude": 50.779038,
+        "city": "Halluin",
+        "cp": "59250"
+      },
+      "metadata": {
+        "address": "2, all\u00e9e des gla\u00efeuls, 59250 Halluin",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwingiro146-manoir-halluin",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "59",
+      "nom": "L'Officine, PHARMACIE DANTOING",
+      "url": "https://pharmaciedantoing.epharmacie.pro",
+      "location": {
+        "longitude": 3.223757,
+        "latitude": 50.566904,
+        "city": "Cysoing",
+        "cp": "59830"
+      },
+      "metadata": {
+        "address": "35 rue de la chanteraine, 59830 Cysoing",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinph72-calipharma-antoing",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie Bri\u00e9",
+      "url": "https://pharmacie-brie-valenciennes.pharmabest.com",
+      "location": {
+        "longitude": 3.523235,
+        "latitude": 50.359601,
+        "city": "Valenciennes",
+        "cp": "59300"
+      },
+      "metadata": {
+        "address": "6, Place du march\u00e9 aux Herbes, 59300 Valenciennes",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest51-brie-valenciennes",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie des Orions",
+      "url": "https://pharmacie-des-orions.giropharm.fr",
+      "location": {
+        "longitude": 3.136644,
+        "latitude": 50.732385,
+        "city": "Tourcoing",
+        "cp": "59200"
+      },
+      "metadata": {
+        "address": "1, place du Mar\u00e9chal de Lattre Tassigny, 59200 Tourcoing",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwingiro132-orions-tourcoing",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie de la Creule",
+      "url": "https://pharmaciedelacreule.fr",
+      "location": {
+        "longitude": 2.546145,
+        "latitude": 50.739216,
+        "city": "Hazebrouck",
+        "cp": "59190"
+      },
+      "metadata": {
+        "address": "CC. Carrefour, rue Notre-Dame, 59190 Hazebrouck",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwingiro187-creule-hazebrouck",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "59",
+      "nom": "Pharmacie Hubau",
+      "url": "https://pharmacie-hubau-perenchies.giropharm.fr",
+      "location": {
+        "longitude": 2.9746,
+        "latitude": 50.666085,
+        "city": "P\u00e9renchies",
+        "cp": "59840"
+      },
+      "metadata": {
+        "address": "39 bis, rue du G\u00e9n\u00e9ral Leclerc, 59840 P\u00e9renchies",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwingiro85-hubau",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "59",
+      "nom": "Grande Pharmacie de Wazemmes",
+      "url": "https://grandepharmaciedewazemmes.pharmabest.com",
+      "location": {
+        "longitude": 3.04829,
+        "latitude": 50.62687,
+        "city": "Lille",
+        "cp": "59000"
+      },
+      "metadata": {
+        "address": "364, rue L\u00e9on Gambetta, 59000 Lille",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest90-wazemmes-lille",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

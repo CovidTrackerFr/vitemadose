@@ -405,7 +405,7 @@ class DoctolibSlots:
                             reservation_url=request.url,
                             type_vaccin=[vaccine],
                             lieu=self.lieu,
-                            dose=dose,
+                            dose=[dose],
                         )
                     )
 
@@ -424,7 +424,7 @@ class DoctolibSlots:
                         reservation_url=request.url,
                         type_vaccin=[vaccine],
                         lieu=self.lieu,
-                        dose=dose,
+                        dose=[dose],
                     )
                 )
 

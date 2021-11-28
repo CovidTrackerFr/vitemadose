@@ -1,0 +1,310 @@
+{
+  "version": 1,
+  "last_updated": "2021-11-28T13:45:58+01:00",
+  "centres_disponibles": [
+    {
+      "departement": "56",
+      "nom": "Pharmacie de Kerjean",
+      "url": "https://www.pharmaciedekerjean.epharmacie.pro/animation-details/012cc071-64ac-4956-b12e-e0b2c5bb0912/1/60",
+      "location": {
+        "longitude": -2.8229,
+        "latitude": 47.87642,
+        "city": "LOCMINE",
+        "cp": "56500"
+      },
+      "metadata": {
+        "address": "ZA de Kerjean, 56500 LOCMINE",
+        "business_hours": null
+      },
+      "prochain_rdv": "2022-01-24T18:00:00",
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 86,
+      "internal_id": "Valwinph71-kerjean",
+      "vaccine_type": [
+        "Pfizer-BioNTech"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "56",
+      "nom": "Pharmacie Le Doujet ",
+      "url": "https://pharmacie-le-doujet.epharmacie.pro",
+      "location": {
+        "longitude": -2.6931095123291016,
+        "latitude": 47.778894468809874,
+        "city": "Plaudren",
+        "cp": "56420"
+      },
+      "metadata": {
+        "address": "10, place de l'\u00c9glise, 56420 Plaudren",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinreseausante17-doujet-plaudren",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "56",
+      "nom": "Pharmacie de Monistrol",
+      "url": "https://pharmacie-monistrol.fr",
+      "location": {
+        "longitude": -3.382847,
+        "latitude": 47.736186,
+        "city": "Lorient",
+        "cp": "56100"
+      },
+      "metadata": {
+        "address": "64, rue Monistrol, 56100 Lorient",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinmand05-monistrol-lorient",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "56",
+      "nom": "Pharmacie Rousteau",
+      "url": "https://pharmacie-rousteau-plumelec.epharmacie.pro",
+      "location": {
+        "longitude": -2.638936936855316,
+        "latitude": 47.83722609466404,
+        "city": "Plumelec",
+        "cp": "56420"
+      },
+      "metadata": {
+        "address": "7, rue du G\u00e9n\u00e9ral de Gaulle, 56420 Plumelec",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinreseausante21-rousteau-plumelec",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "56",
+      "nom": "Pharmacie du Centre",
+      "url": "https://pharmacieducentre.epharmacie.pro",
+      "location": {
+        "longitude": -2.80542,
+        "latitude": 47.698831,
+        "city": "Plescop",
+        "cp": "56890"
+      },
+      "metadata": {
+        "address": "70, Avenue du G\u00e9n\u00e9ral de Gaulle, 56890 Plescop",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinnp34-centre-plescop",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "56",
+      "nom": "Pharmacie de la Madeleine",
+      "url": "https://pharmaciedelamadeleine.epharmacie.pro",
+      "location": {
+        "longitude": -3.2211,
+        "latitude": 47.73782,
+        "city": "Merlevenez",
+        "cp": "56700"
+      },
+      "metadata": {
+        "address": "Z.A. Bellevue, 56700 Merlevenez",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinph78-madeleine",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "56",
+      "nom": "Pharmacie de F\u00e9rel",
+      "url": "https://pharmaciedeferel.epharmacie.pro",
+      "location": {
+        "longitude": -2.34478,
+        "latitude": 47.482014,
+        "city": "F\u00e9rel",
+        "cp": "56130"
+      },
+      "metadata": {
+        "address": "17, rue de la fontaine, 56130 F\u00e9rel",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinnp36-ferel",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "56",
+      "nom": "Pharmacie de la Gardeloupe",
+      "url": "https://pharmaciegardeloupe.fr",
+      "location": {
+        "longitude": -3.258816,
+        "latitude": 47.797835,
+        "city": "Hennebont",
+        "cp": "56700"
+      },
+      "metadata": {
+        "address": "C. cial Leclerc, 56700 Hennebont",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinmand01-gardeloupe",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "56",
+      "nom": "Pharmacie M\u00e9al",
+      "url": "https://pharmacie-meal.epharmacie.pro",
+      "location": {
+        "longitude": -2.765687,
+        "latitude": 47.682435,
+        "city": "Vannes",
+        "cp": "56000"
+      },
+      "metadata": {
+        "address": "181 avenue du 4 Ao\u00fbt 1944, 56000 Vannes",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinmand02-meal",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "56",
+      "nom": "Pharmacie des Ar\u00f4mes",
+      "url": "https://pharmacie-des-aromes.epharmacie.pro",
+      "location": {
+        "longitude": -2.45687,
+        "latitude": 47.66156,
+        "city": "Questembert",
+        "cp": "56230"
+      },
+      "metadata": {
+        "address": "1 place du Marchix, 56230 Questembert",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinphr03-aromes-questembert",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "56",
+      "nom": "Pharmacie de Rohan",
+      "url": "https://pharmacie-rohan-vannes.pharmabest.com",
+      "location": {
+        "longitude": -2.7659,
+        "latitude": 47.66363,
+        "city": "Vannes",
+        "cp": "56000"
+      },
+      "metadata": {
+        "address": "4 bis, avenue Georges Pompidou, 56000 Vannes",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest59-rohan-vannes",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "56",
+      "nom": "Pharmacie Delcroix",
+      "url": "https://pharmacie-delcroix-ploemeur.epharmacie.pro",
+      "location": {
+        "longitude": -3.42902,
+        "latitude": 47.73679,
+        "city": "Pl\u0153meur",
+        "cp": "56270"
+      },
+      "metadata": {
+        "address": "6, place Jean Falqu\u00e9rho, 56270 Pl\u0153meur",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinmand08-delcroix-ploemeur",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

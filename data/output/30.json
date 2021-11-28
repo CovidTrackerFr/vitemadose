@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "last_updated": "2021-11-28T13:45:58+01:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "30",
+      "nom": "Grande Parapharmacie du P\u00e9riph'",
+      "url": "https://parapharmacieduperiph-nimes.pharmabest.com",
+      "location": {
+        "longitude": 4.351443,
+        "latitude": 43.819375,
+        "city": "N\u00eemes",
+        "cp": "30900"
+      },
+      "metadata": {
+        "address": "379, rue de l'archipel, 30900 N\u00eemes",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest57-grande-parapharmacie-periph-nimes",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "30",
+      "nom": "Grande Pharmacie de l'Horloge",
+      "url": "https://grandepharmaciehorloge-nimes.pharmabest.com",
+      "location": {
+        "longitude": 4.358361,
+        "latitude": 43.838018,
+        "city": "N\u00eemes",
+        "cp": "30000"
+      },
+      "metadata": {
+        "address": "1, place de l'Horloge, 30000 N\u00eemes",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest68-horloge-nimes",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "30",
+      "nom": "Pharmacie Agnes Praden",
+      "url": "https://pharmacie-agnes-praden-ales.pharmabest.com",
+      "location": {
+        "longitude": 4.08949,
+        "latitude": 44.13938,
+        "city": "Al\u00e8s",
+        "cp": "30100"
+      },
+      "metadata": {
+        "address": "198, avenue des fr\u00e8res Lumi\u00e8res, 30100 Al\u00e8s",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest23-agnes-praden-ales",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

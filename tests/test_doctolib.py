@@ -164,7 +164,7 @@ def test_doctolib_sends_creneau():
             internal_id="doctolib123456789pid165752",
             lieu_type="vaccination-center",
         ),
-        dose=1,
+        dose=[1],
     )
 
 

@@ -109,7 +109,7 @@ def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
             logger.info(f"Fetching department {department}")
             result_dep = get_centers(speciality, client, department)
             result += result_dep
-            
+
         for root_center in result:
 
             if root_center.get("type") != "CENTER":
@@ -118,9 +118,10 @@ def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
 
             if center["id"] in MAIIA_DO_NOT_SCRAP_ID:
                 continue
-            
+
             # Si l'intégralité des motifs du centre sont des motifs exclus
-            if sum(1 if keyword in consultation_reason.get("name").lower() else 0
+            if sum(
+                1 if keyword in consultation_reason.get("name").lower() else 0
                 for keyword in MAIIA_DO_NOT_SCRAP_NAME
                 for consultation_reason in root_center["consultationReasons"]
             ) == len(root_center["consultationReasons"]):

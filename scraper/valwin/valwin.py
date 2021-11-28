@@ -32,6 +32,8 @@ CENTER_LIST_URL = PLATFORM_CONF.get("api", {}).get("center_list", {})
 
 timeout = httpx.Timeout(PLATFORM_CONF.get("timeout", 30), connect=PLATFORM_CONF.get("timeout", 30))
 
+BOOSTER_VACCINES = get_config().get("vaccines_allowed_for_booster", [])
+
 if os.getenv("WITH_TOR", "no") == "yes":
     session = requests.Session()
     session.proxies = {  # type: ignore
@@ -43,6 +45,14 @@ else:
     DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 
 logger = logging.getLogger("scraper")
+
+
+def get_possible_dose_numbers(vaccine_list: list):
+    if not vaccine_list:
+        return []
+    if any([vaccine in BOOSTER_VACCINES for vaccine in vaccine_list]):
+        return [1, 2, 3]
+    return [1, 2]
 
 
 @Profiling.measure(f"{PLATFORM.lower().capitalize()}_slot")
@@ -115,7 +125,6 @@ class Slots:
 
         start_date = request.get_start_date()
 
-     
         for creneau in slots_api.get("result", []):
             appointment_exact_date = creneau["start"]
             for vaccine in creneau["types"]:
@@ -124,7 +133,7 @@ class Slots:
                 if vaccine_id == "be6c293a-e0a6-49ea-bdb4-31a779bde277":
                     vaccine_name = Vaccine.ASTRAZENECA
                 request.add_vaccine_type(vaccine_name)
-                
+
             if len(creneau["types"]) == 1:
                 url = (
                     PLATFORM_CONF.get("build_urls")
@@ -133,14 +142,17 @@ class Slots:
                 )
             else:
                 url = PLATFORM_CONF.get("build_urls").get("campaign_choice").format(pharmacy_link=request.url)
-            
+
             if self.lieu:
                 self.lieu.url = url
+
+            dose_ranks = get_possible_dose_numbers([vaccine_name])
 
             self.found_creneau(
                 Creneau(
                     horaire=dateutil.parser.parse(appointment_exact_date),
                     reservation_url=url,
+                    dose=dose_ranks,
                     type_vaccin=vaccine_name,
                     lieu=self.lieu,
                 )

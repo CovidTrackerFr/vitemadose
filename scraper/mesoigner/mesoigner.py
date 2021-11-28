@@ -31,6 +31,8 @@ MESOIGNER_APIs = PLATFORM_CONF.get("api", "")
 SCRAPER_CONF = PLATFORM_CONF.get("center_scraper", {})
 CENTER_LIST_URL = PLATFORM_CONF.get("api", {}).get("center_list", {})
 
+BOOSTER_VACCINES = get_config().get("vaccines_allowed_for_booster", [])
+
 timeout = httpx.Timeout(PLATFORM_CONF.get("timeout", 30), connect=PLATFORM_CONF.get("timeout", 30))
 
 if os.getenv("WITH_TOR", "no") == "yes":
@@ -44,6 +46,14 @@ else:
     DEFAULT_CLIENT = httpx.Client(timeout=timeout)
 
 logger = logging.getLogger("scraper")
+
+
+def get_possible_dose_numbers(vaccine_list: list):
+    if not vaccine_list:
+        return []
+    if any([vaccine in BOOSTER_VACCINES for vaccine in vaccine_list]):
+        return [1, 2, 3]
+    return [1, 2]
 
 
 @Profiling.measure("mesoigner_slot")
@@ -123,10 +133,13 @@ class MesoignerSlots:
                 for one_appointment_info in appointments_infos:
                     appointment_exact_date = one_appointment_info["slot_beginning"]
 
+                    dose_ranks = get_possible_dose_numbers(one_appointment_info["available_vaccines"])
+
                     self.found_creneau(
                         Creneau(
                             horaire=dateutil.parser.parse(appointment_exact_date),
                             reservation_url=request.url,
+                            dose=dose_ranks,
                             type_vaccin=one_appointment_info["available_vaccines"],
                             lieu=self.lieu,
                         )

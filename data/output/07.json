@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "last_updated": "2021-11-28T13:45:58+01:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "07",
+      "nom": "Pharmacie Saint-Jean",
+      "url": "https://pharmaciesaintjeandemuzols.fr",
+      "location": {
+        "longitude": 4.81504,
+        "latitude": 45.07588,
+        "city": "Saint-Jean-de-Muzols",
+        "cp": "07300"
+      },
+      "metadata": {
+        "address": "Le Pont du Doux, 07300 Saint-Jean-de-Muzols",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwincos45-one-saint-jean",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

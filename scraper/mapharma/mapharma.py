@@ -38,6 +38,8 @@ MAPHARMA_OPEN_DATA_URL = MAPHARMA_API.get("opendata", "")
 MAPHARMA_OPEN_DATA_URL_FALLBACK = MAPHARMA_API.get("opendata_fallback", "")
 NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
+BOOSTER_VACCINES = get_config().get("vaccines_allowed_for_booster", [])
+
 DEFAULT_CLIENT = httpx.Client(headers=MAPHARMA_HEADERS)
 logger = logging.getLogger("scraper")
 paris_tz = timezone("Europe/Paris")
@@ -45,6 +47,14 @@ paris_tz = timezone("Europe/Paris")
 campagnes_valides = []
 campagnes_inconnues = []
 opendata = []
+
+
+def get_possible_dose_numbers(vaccine_list: list):
+    if not vaccine_list:
+        return []
+    if any([vaccine in BOOSTER_VACCINES for vaccine in vaccine_list]):
+        return [1, 2, 3]
+    return [1, 2]
 
 
 @Profiling.measure("mapharma_slot")
@@ -193,10 +203,13 @@ class Mapharma:
                     timestamp = datetime.strptime(f"{day} {time}", "%Y-%m-%d %H:%M")
                     slot_count += day_slot["places_dispo"]
                     for appointment in range(1, day_slot["places_dispo"] + 1):
+                        dose_ranks = get_possible_dose_numbers([vaccine])
+
                         self.found_creneau(
                             Creneau(
                                 horaire=paris_tz.localize(timestamp),
                                 reservation_url=request.url,
+                                dose=dose_ranks,
                                 type_vaccin=[vaccine],
                                 lieu=self.lieu,
                             )

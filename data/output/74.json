@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "last_updated": "2021-11-28T13:45:58+01:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "74",
+      "nom": "Pharmacie du stade 74",
+      "url": "https://pharmacie-du-stade-74.epharmacie.pro",
+      "location": {
+        "longitude": 6.094217,
+        "latitude": 45.918861,
+        "city": "Meythet",
+        "cp": "74960"
+      },
+      "metadata": {
+        "address": "20, avenue du Stade, 74960 Meythet",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinph33-stade-meythet",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "74",
+      "nom": "PHARMACIE DES CLARINES",
+      "url": "https://pharmacie-clarines.fr",
+      "location": {
+        "longitude": 6.1394741,
+        "latitude": 45.9151192,
+        "city": "Annecy-le-Vieux",
+        "cp": "74940"
+      },
+      "metadata": {
+        "address": "2, chemin de la colline, 74940 Annecy-le-Vieux",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinclarines",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "74",
+      "nom": "Pharmacie d\u2019\u00c9trembi\u00e8res",
+      "url": "https://pharmacieetrembieres.pharmabest.com",
+      "location": {
+        "longitude": 6.231146,
+        "latitude": 46.181415,
+        "city": "\u00c9trembi\u00e8res",
+        "cp": "74100"
+      },
+      "metadata": {
+        "address": "21, rue de l'Industrie - Centre commercial \"Shopping Etrembi\u00e8res\", 74100 \u00c9trembi\u00e8res",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest69-etrembieres",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

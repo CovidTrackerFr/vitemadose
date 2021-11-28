@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "last_updated": "2021-11-28T13:45:58+01:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "95",
+      "nom": "Pharmacie du Ch\u00e2teau",
+      "url": "https://pharmacie-beaumontsuroise.com",
+      "location": {
+        "longitude": 2.28665,
+        "latitude": 49.142929,
+        "city": "Beaumont-sur-Oise",
+        "cp": "95260"
+      },
+      "metadata": {
+        "address": "2, rue Albert 1er, 95260 Beaumont-sur-Oise",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinph54-chateau-beaumont-oise",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "95",
+      "nom": "Pharmacie Bensimhon",
+      "url": "https://pharmacie-bensimhon.pharmabest.com",
+      "location": {
+        "longitude": 2.351365,
+        "latitude": 49.008234,
+        "city": "Saint-Brice-sous-For\u00eat",
+        "cp": "95350"
+      },
+      "metadata": {
+        "address": "Centre Commercial Carrefour - 22, avenue Robert Schuman, 95350 Saint-Brice-sous-For\u00eat",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest07-bensimhon-saint-brice",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

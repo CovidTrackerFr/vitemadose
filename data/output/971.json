@@ -1,0 +1,407 @@
+{
+  "version": 1,
+  "last_updated": "2021-11-28T13:45:58+01:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "971",
+      "nom": "Pharmacie du March\u00e9",
+      "url": "https://pharmaciecorvo-mornealeau.epharmacie.pro",
+      "location": {
+        "longitude": -61.458142,
+        "latitude": 16.332463,
+        "city": "Morne-\u00e0-l'Eau, Guadeloupe",
+        "cp": "97111"
+      },
+      "metadata": {
+        "address": "Rue du D\u00e9barcad\u00e8re, 97111 Morne-\u00e0-l'Eau, Guadeloupe",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoguasphar07-marche-morne-eau",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "971",
+      "nom": "Pharmacie du Centre",
+      "url": "https://pharmacie-centre-basse-terre.epharmacie.pro",
+      "location": {
+        "longitude": -61.730548,
+        "latitude": 15.995231,
+        "city": "Basse-Terre",
+        "cp": "97100"
+      },
+      "metadata": {
+        "address": "5, rue Barb\u00e8s et 19 cours Nolivos, 97100 Basse-Terre",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoguasphar05-centre-basse-terre-guadeloupe",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "971",
+      "nom": "PHARMACIE DE DESHAIES",
+      "url": "https://pharmaciededeshaies.epharmacie.pro",
+      "location": {
+        "longitude": -61.79451,
+        "latitude": 16.30622,
+        "city": "DESHAIES",
+        "cp": "97126"
+      },
+      "metadata": {
+        "address": "152 Bd des Poissonniers, 97126 DESHAIES",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinlpc01-deshaies",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "971",
+      "nom": "Pharmacie Vila",
+      "url": "https://pharmacie-vila-guadeloupe.epharmacie.pro",
+      "location": {
+        "longitude": -61.526299,
+        "latitude": 16.258906,
+        "city": "Les Abymes",
+        "cp": "97139"
+      },
+      "metadata": {
+        "address": " 4-6, avenue du G\u00e9n\u00e9ral de Gaulle - Le Raizet, 97139 Les Abymes",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoguasphar09-vila-abymes",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "971",
+      "nom": "Pharmacie Dorville",
+      "url": "https://pharmacie-dorville.fr",
+      "location": {
+        "longitude": -61.74385,
+        "latitude": 16.012644,
+        "city": "Baillif, Guadeloupe",
+        "cp": "97123"
+      },
+      "metadata": {
+        "address": "Zone Artisanale des P\u00e8res Blancs, 97123 Baillif, Guadeloupe",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoguasphar21-dorville-baillif",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "971",
+      "nom": "Pharmacie de Trois Rivi\u00e8res",
+      "url": "https://pharmacie-de-trois-rivieres.com",
+      "location": {
+        "longitude": -61.644507,
+        "latitude": 15.975999,
+        "city": "Trois Rivi\u00e8res",
+        "cp": "97114"
+      },
+      "metadata": {
+        "address": "Lieu dit Bourg - 13, rue Gerville Reache, 97114 Trois Rivi\u00e8res",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoguasphar12-trois-rivieres",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "971",
+      "nom": "Pharmacie Foucan",
+      "url": "https://pharmaciefoucan-lesabymes.epharmacie.pro",
+      "location": {
+        "longitude": -61.522048,
+        "latitude": 16.253194,
+        "city": "Les Abymes",
+        "cp": "97139"
+      },
+      "metadata": {
+        "address": "R\u00e9sidence les Alo\u00e9s, b\u00e2timent 7, 97139 Les Abymes",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoguasphar14-foucan-abymes",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "971",
+      "nom": "Pharmacie Ebou\u00e9",
+      "url": "https://pharmacie-eboue.epharmacie.pro",
+      "location": {
+        "longitude": -61.59233,
+        "latitude": 16.193244,
+        "city": "Petit bourg",
+        "cp": "97170"
+      },
+      "metadata": {
+        "address": "Rue F\u00e9lix Ebou\u00e9, 97170 Petit bourg",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoguasphar16-eboue-petit-bourg",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "971",
+      "nom": "Pharmacie Comb\u00e9",
+      "url": "https://pharmacie-combe-capesterre-belle-eau.epharmacie.pro",
+      "location": {
+        "longitude": -61.566443,
+        "latitude": 16.040749,
+        "city": "Capesterre Belle Eau",
+        "cp": "97130"
+      },
+      "metadata": {
+        "address": "All\u00e9e dumanoir, 97130 Capesterre Belle Eau",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoguasphar04-combe-caspesterre-belle-eau",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "971",
+      "nom": "Pharmacie de Rigaud",
+      "url": "https://pharmacie-de-rigaud.fr",
+      "location": {
+        "longitude": -61.46081206425305,
+        "latitude": 16.328768019864604,
+        "city": "Morne-\u00c0-l'Eau",
+        "cp": "97111"
+      },
+      "metadata": {
+        "address": "25, rue du Cimeti\u00e8re, 97111 Morne-\u00c0-l'Eau",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoguasphar20-rigaud-morne-eau",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "971",
+      "nom": "Pharmacie du Champ d'Arbaud",
+      "url": "https://pharmacie-du-champ-darbaud.epharmacie.pro",
+      "location": {
+        "longitude": -61.726742,
+        "latitude": 15.993317,
+        "city": "Basse-Terre",
+        "cp": "97100"
+      },
+      "metadata": {
+        "address": "Angle du 10, boulevard F\u00e9lix Ebou\u00e9 & 1, rue Dugommier, 97100 Basse-Terre",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoguasphar22-champ-arbaud-basse-terre",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "971",
+      "nom": "FREBAULT",
+      "url": "https://pharmaciefrebault.epharmacie.pro",
+      "location": {
+        "longitude": -61.53612,
+        "latitude": 16.23781,
+        "city": "Pointe \u00e0 Pitre",
+        "cp": "97110"
+      },
+      "metadata": {
+        "address": "48 rue Fr\u00e9bault, 97110 Pointe \u00e0 Pitre",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwincapguadeloupe01-frebault-pointe-pitre",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "971",
+      "nom": "Pharmacie Fleur de Canne",
+      "url": "https://www.pharmaciefleurdecanne.fr",
+      "location": {
+        "longitude": -61.697003,
+        "latitude": 16.332309,
+        "city": "Sainte-Rose",
+        "cp": "97115"
+      },
+      "metadata": {
+        "address": "Place Tricolore, 97115 Sainte-Rose",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoguasphar01-fleur-canne-sainte-rose",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "971",
+      "nom": "Pharmacie Port Cara\u00efbes",
+      "url": "https://pharmacie-port-caraibe-saint-francois.pharmabest.com",
+      "location": {
+        "longitude": -61.269778,
+        "latitude": 16.252215,
+        "city": "Saint-Fran\u00e7ois, Guadeloupe",
+        "cp": "97118"
+      },
+      "metadata": {
+        "address": "Avenue Kennedy, 97118 Saint-Fran\u00e7ois, Guadeloupe",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest84-port-caraibe-saint-francois",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "971",
+      "nom": "Pharmacie des Isles",
+      "url": "https://pharmacie-des-isles.fr",
+      "location": {
+        "longitude": -61.536799,
+        "latitude": 16.236634,
+        "city": "Pointe-\u00e0-Pitre",
+        "cp": "97110"
+      },
+      "metadata": {
+        "address": "21, rue Achille Ren\u00e9 Boisneuf, 97110 Pointe-\u00e0-Pitre",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoguasphar02-isles-pointe-pitre",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "971",
+      "nom": "Pharmacie de la Gabarre",
+      "url": "https://pharmaciedelagabarre.epharmacie.pro",
+      "location": {
+        "longitude": -61.540873,
+        "latitude": 16.244445,
+        "city": "Pointe-\u00e0-Pitre",
+        "cp": "97110"
+      },
+      "metadata": {
+        "address": "R\u00e9sidence Lo\u00efc Petit, Place des Dissidents, 97110 Pointe-\u00e0-Pitre",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwintripharmax02-gabarre-pointeapitre",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

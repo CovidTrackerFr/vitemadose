@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "last_updated": "2021-11-28T13:45:58+01:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "49",
+      "nom": "Pharmacie la Rose des Vents",
+      "url": "https://pharmacie-larosedesvents.epharmacie.pro",
+      "location": {
+        "longitude": -0.878446,
+        "latitude": 47.678616,
+        "city": "Segr\u00e9- en - Anjou bleu",
+        "cp": "49500"
+      },
+      "metadata": {
+        "address": "Centre Commercial Leclerc - 13, rue du 8 mai 1945, 49500 Segr\u00e9- en - Anjou bleu",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwincos69-rose-des-vents",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "49",
+      "nom": "Pharmacie Ma Campagne",
+      "url": "https://pharmaciemacampagne.epharmacie.pro",
+      "location": {
+        "longitude": -0.50704,
+        "latitude": 47.67852,
+        "city": "Chateauneuf sur Sarthe",
+        "cp": "49330"
+      },
+      "metadata": {
+        "address": "Route de Champign\u00e9, 49330 Chateauneuf sur Sarthe",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwincos73-pharmacie-ma-campagne",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

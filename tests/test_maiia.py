@@ -123,7 +123,7 @@ def test_get_first_availability():
             "5ffc744c68dedf073a5b87a2", "2021-04-29", reasons, client=client, request=request
         )
 
-    assert slots_count == 7980
+    assert slots_count == 7182
     assert first_availability.isoformat() == "2021-05-13T13:40:00+00:00"
 
 
