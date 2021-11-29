@@ -49,6 +49,20 @@ def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue, client: httpx.Cli
     return maiia.fetch(request)
 
 
+def get_vaccine_type_from_name(motive_name):
+    if not motive_name:
+        return None
+    dose = None
+    if "première" in motive_name.lower() or "1" in motive_name.lower():
+        dose = 1
+    if "deuxième" in motive_name.lower() or "seconde" in motive_name.lower() or "2" in motive_name.lower():
+        dose = 2
+    if "rappel" in motive_name.lower() or "troisième" in motive_name.lower() or "3" in motive_name.lower():
+        dose = 3
+
+    return dose
+
+
 class MaiiaSlots:
     # Permet de passer un faux client HTTP,
     # pour éviter de vraiment appeler Doctolib lors des tests.
@@ -114,6 +128,8 @@ class MaiiaSlots:
         if not slots:
             return None
         first_availability = None
+        if dose:
+            dose = [dose]
         for slot in slots:
             self.found_creneau(
                 Creneau(
@@ -121,7 +137,7 @@ class MaiiaSlots:
                     reservation_url=request.url,
                     type_vaccin=[slot.get("vaccine_type")],
                     lieu=self.lieu,
-                    dose=[dose],
+                    dose=dose,
                 )
             )
 
@@ -233,8 +249,14 @@ class MaiiaSlots:
                 dose = None
                 dose_name = consultation_reason["injectionType"]
 
-                if dose_name and dose_name != "NONE":
-                    dose = MAIIA_DOSES[dose_name]
+                if dose_name:
+                    if dose_name != "NONE":
+                        dose = MAIIA_DOSES[dose_name]
+                    else:
+                        if not "covid" in consultation_reason.get("name").lower():
+                            continue
+                if not dose:
+                    dose = get_vaccine_type_from_name(consultation_reason.get("name"))
 
                 if slots:
                     for slot in slots:
