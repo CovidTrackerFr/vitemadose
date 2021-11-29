@@ -160,9 +160,9 @@ def test_resource_creneaux_quotidiens__2_creneau_with_custom_tags():
     # Given
     departement = "07"
     tags = {
-        "all": lambda c: True,
-        "arnm": lambda c: c.type_vaccin == Vaccine.MODERNA or c.type_vaccin == Vaccine.PFIZER,
-        "adeno": lambda c: c.type_vaccin == Vaccine.ASTRAZENECA or c.type_vaccin == Vaccine.JANSSEN,
+        "all": [lambda c: True],
+        "arnm": [lambda c: c.type_vaccin == Vaccine.MODERNA or c.type_vaccin == Vaccine.PFIZER],
+        "adeno": [lambda c: c.type_vaccin == Vaccine.ASTRAZENECA or c.type_vaccin == Vaccine.JANSSEN],
     }
     creneaux = [
         Creneau(

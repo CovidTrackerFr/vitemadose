@@ -24,9 +24,16 @@ def third_dose(creneau: Creneau):
             return True
 
 
+def unknown_dose(creneau: Creneau):
+    if not creneau.dose:
+        return True
+    if len(creneau.dose) == 0:
+        return True
+
+
 CURRENT_TAGS = {
-    "all": tag_all,
-    "first_dose": first_dose,
-    "second_dose": second_dose,
-    "third_dose": third_dose,
+    "all": [tag_all],
+    "first_or_second_dose": [first_dose, second_dose],
+    "third_dose": [third_dose],
+    "unknown_dose": [unknown_dose],
 }

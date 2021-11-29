@@ -8,7 +8,7 @@ from utils.vmd_config import get_config
 
 DEFAULT_NEXT_DAYS = get_config().get("scrape_on_n_days", 7)
 
-DEFAULT_TAGS = {"all": lambda creneau: True}
+DEFAULT_TAGS = {"all": [lambda creneau: True]}
 
 
 class ResourceCreneauxQuotidiens(Resource):
@@ -76,9 +76,10 @@ class ResourceCreneauxParLieu(Resource):
     def on_creneau(self, creneau: Union[Creneau, PasDeCreneau]):
         if creneau.disponible and creneau.lieu.internal_id == self.internal_id:
             self.total += 1
-            for tag, qualifies in self.tags.items():
-                if qualifies(creneau):
-                    self.par_tag[tag]["creneaux"] += 1
+            for tag, qualifies_list in self.tags.items():
+                for qualifies in qualifies_list:
+                    if qualifies(creneau):
+                        self.par_tag[tag]["creneaux"] += 1
 
     def asdict(self):
         return {"lieu": self.internal_id, "creneaux_par_tag": list(self.par_tag.values())}
