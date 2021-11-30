@@ -386,34 +386,12 @@ class DoctolibSlots:
         time.sleep(self._cooldown_interval)
         slots = response.json()
         if slots.get("total"):
-
             appointment_count += int(slots.get("total", 0))
-            if slots.get("total") > 0:
-                print(f'dose {dose} - centre {request.internal_id} - total {slots.get("total")} {slots_api_url}')
-
+  
         for availability in slots["availabilities"]:
             slot_list = availability.get("slots", [])
             if len(slot_list) == 0:
                 continue
-            # if isinstance(slot_list[0], str):
-            #     if slot_list[0] < start_date:
-            #         print("break 2")
-            #         continue
-            #     if not first_availability or slot_list[0] < first_availability:
-            #         print("pass 1")
-
-            #         first_availability = slot_list[0]
-            #         motive_availability = True
-            #     self.found_creneau(
-            #         Creneau(
-            #             horaire=dateutil.parser.parse(slot_list[0]),
-            #             reservation_url=request.url,
-            #             type_vaccin=[vaccine],
-            #             lieu=self.lieu,
-            #             dose=[dose],
-            #         )
-            #     )
-
             for slot_info in slot_list:
                 if isinstance(slot_info, str):
                     sdate = slot_info
