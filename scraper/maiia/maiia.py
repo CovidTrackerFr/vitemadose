@@ -53,11 +53,21 @@ def get_vaccine_type_from_name(motive_name):
     if not motive_name:
         return None
     dose = None
-    if "première" in motive_name.lower() or "1" in motive_name.lower():
+    if "première" in motive_name.lower() or "premiere" in motive_name.lower() or "1" in motive_name.lower():
         dose = 1
-    if "deuxième" in motive_name.lower() or "seconde" in motive_name.lower() or "2" in motive_name.lower():
+    if (
+        "deuxième" in motive_name.lower()
+        or "deuxieme" in motive_name.lower()
+        or "seconde" in motive_name.lower()
+        or "2" in motive_name.lower()
+    ):
         dose = 2
-    if "rappel" in motive_name.lower() or "troisième" in motive_name.lower() or "3" in motive_name.lower():
+    if (
+        "rappel" in motive_name.lower()
+        or "troisième" in motive_name.lower()
+        or "troisieme" in motive_name.lower()
+        or "3" in motive_name.lower()
+    ):
         dose = 3
 
     return dose
