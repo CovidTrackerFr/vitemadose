@@ -182,10 +182,9 @@ class DoctolibSlots:
         timetable_start_date = datetime.fromisoformat(start_date)
 
         for vaccine, visite_motive_ids0 in visit_motive_ids_by_vaccine.items():
-            for i in range(1, 3):
+            for i in range(1, 4):
                 dose = i
                 visite_motive_ids = set([key for (key, value) in visite_motive_ids0 if value == i])
-
                 agenda_ids, practice_ids, doublon_responses = _find_agenda_and_practice_ids(
                     rdata, visite_motive_ids, doublon_responses, practice_id_filter=practice_id
                 )
@@ -387,32 +386,39 @@ class DoctolibSlots:
         time.sleep(self._cooldown_interval)
         slots = response.json()
         if slots.get("total"):
+
             appointment_count += int(slots.get("total", 0))
+            if slots.get("total") > 0:
+                print(f'dose {dose} - centre {request.internal_id} - total {slots.get("total")} {slots_api_url}')
 
         for availability in slots["availabilities"]:
             slot_list = availability.get("slots", [])
             if len(slot_list) == 0:
                 continue
-            if isinstance(slot_list[0], str):
-                if slot_list[0] < start_date:
-                    continue
-                if not first_availability or slot_list[0] < first_availability:
-                    first_availability = slot_list[0]
-                    motive_availability = True
-                    self.found_creneau(
-                        Creneau(
-                            horaire=dateutil.parser.parse(slot_list[0]),
-                            reservation_url=request.url,
-                            type_vaccin=[vaccine],
-                            lieu=self.lieu,
-                            dose=[dose],
-                        )
-                    )
+            # if isinstance(slot_list[0], str):
+            #     if slot_list[0] < start_date:
+            #         print("break 2")
+            #         continue
+            #     if not first_availability or slot_list[0] < first_availability:
+            #         print("pass 1")
+
+            #         first_availability = slot_list[0]
+            #         motive_availability = True
+            #     self.found_creneau(
+            #         Creneau(
+            #             horaire=dateutil.parser.parse(slot_list[0]),
+            #             reservation_url=request.url,
+            #             type_vaccin=[vaccine],
+            #             lieu=self.lieu,
+            #             dose=[dose],
+            #         )
+            #     )
 
             for slot_info in slot_list:
                 if isinstance(slot_info, str):
-                    continue
-                sdate = slot_info.get("start_date", None)
+                    sdate = slot_info
+                if isinstance(slot_info, dict):
+                    sdate = slot_info.get("start_date", None)
                 if not sdate or sdate < start_date:
                     continue
                 if not first_availability or sdate < first_availability:
