@@ -81,6 +81,7 @@
     "platforms": {
         "doctolib": {
             "enabled": true,
+            "scrape_only_atlas_centers": false,
             "timeout": 10,
             "recognized_urls": [
                 "https://partners.doctolib.fr",
@@ -93,7 +94,7 @@
                 "scraper": "http://partners.doctolib.fr/vaccination-covid-19/france.json?page={0}",
                 "scraper_dep": "http://partners.doctolib.fr/vaccination-covid-19/{0}.json?page={1}"
             },
-            "request_sleep": 0.05,
+            "request_sleep": 0.01,
             "days_per_page": 14,
             "filters": {
                 "motives": {

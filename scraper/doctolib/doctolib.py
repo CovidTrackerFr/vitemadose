@@ -31,6 +31,7 @@ PLATFORM = "doctolib".lower()
 
 PLATFORM_CONF = get_conf_platform(PLATFORM)
 PLATFORM_ENABLED = PLATFORM_CONF.get("enabled", True)
+SCRAPE_ONLY_ATLAS = PLATFORM_CONF.get("scrape_only_atlas_centers", False)
 
 NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 PLATFORM_DAYS_PER_PAGE = PLATFORM_CONF.get("days_per_page", 7)
@@ -387,7 +388,7 @@ class DoctolibSlots:
         slots = response.json()
         if slots.get("total"):
             appointment_count += int(slots.get("total", 0))
-  
+
         for availability in slots["availabilities"]:
             slot_list = availability.get("slots", [])
             if len(slot_list) == 0:
@@ -662,6 +663,8 @@ def center_iterator(client=None) -> Iterator[Dict]:
     if not PLATFORM_ENABLED:
         logger.warning(f"{PLATFORM.capitalize()} scrap is disabled in configuration file.")
         return []
+    if SCRAPE_ONLY_ATLAS:
+        logger.warning(f"{PLATFORM.capitalize()} will only scrape ATLASSANTE centers.")
 
     session = CacheControl(requests.Session(), cache=FileCache("./cache"))
 
@@ -679,7 +682,13 @@ def center_iterator(client=None) -> Iterator[Dict]:
 
         data = response.json()
         logger.info(f"Found {len(data)} {PLATFORM.capitalize()} centers (external scraper).")
-        for center in data:
-            yield center
+        if SCRAPE_ONLY_ATLAS:
+            for center in data:
+                if center["booking"]["vaccination_center"] == True:
+                    yield center
+        else:
+            for center in data:
+                yield center
+
     except Exception as e:
         logger.warning(f"Unable to scrape {PLATFORM} centers: {e}")
