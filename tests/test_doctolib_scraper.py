@@ -70,6 +70,8 @@ EXPECTED_PARSED_PAGES = [
         "long_coor1": 2.42283520000001,
         "lat_coor1": 48.8788792,
         "com_insee": "93045",
+        "cp": "93260",
+        "atlas_gid": None,
         "booking": {
             "profile": {"id": 1, "name_with_title": "Hopital test"},
             "visit_motives": [
@@ -160,6 +162,8 @@ EXPECTED_PARSED_PAGES = [
         "long_coor1": 2.27230770000006,
         "lat_coor1": 48.8814861,
         "com_insee": "92051",
+        "atlas_gid": None,
+        "cp": "92200",
         "booking": {
             "profile": {"id": 1, "name_with_title": "Hopital test"},
             "visit_motives": [
@@ -248,7 +252,7 @@ EXPECTED_PARSED_PAGES = [
 def test_parse_places():
     with open("tests/fixtures/doctolib/booking-with-doctors.json", "r", encoding="utf8") as f:
         booking = json.load(f)
-        assert parse_center_places(booking["data"]) == EXPECTED_PARSED_PAGES
+        assert parse_center_places(booking["data"], None, {}) == EXPECTED_PARSED_PAGES
 
 
 def test_parse_place():
@@ -261,6 +265,7 @@ def test_parse_place():
         "landline_number": "05 90 52 27 22",
         "full_address": "Rue Jean-Luc Hamlet Marigot, 97150 97150",
         "opening_hours": [{"day": 1, "ranges": [["09:00", "12:00"], ["14:00", "17:00"]], "enabled": True}],
+        "cp": "97150",
     }
 
     expected_result = {
@@ -272,6 +277,7 @@ def test_parse_place():
         "com_insee": "97801",
         "phone_number": "+33590522722",
         "business_hours": {"lundi": "09:00-12:00, 14:00-17:00"},
+        "cp": "97150",
     }
 
     assert parse_place(test_place) == expected_result
@@ -310,6 +316,7 @@ def test_get_dict_infos_center_page(mock_get):
             "long_coor1": 2.42283520000001,
             "lat_coor1": 48.8788792,
             "com_insee": "93045",
+            "atlas_id": None,
             "phone_number": "+33600000000",
             "place_id": "practice-37157",
             "business_hours": {

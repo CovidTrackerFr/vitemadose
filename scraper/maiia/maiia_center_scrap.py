@@ -4,13 +4,15 @@ import logging
 
 from pathlib import Path
 
-from utils.vmd_config import get_conf_platform
+from utils.vmd_config import get_conf_platform, get_conf_inputs
 from utils.vmd_utils import departementUtils, format_phone_number
 from scraper.pattern.vaccine import get_vaccine_name
 from scraper.pattern.scraper_result import DRUG_STORE, VACCINATION_CENTER
 from .maiia_utils import get_paged
 from utils.vmd_utils import get_departements_numbers
 import time
+from urllib import parse
+import requests
 
 MAIIA_CONF = get_conf_platform("maiia")
 MAIIA_API = MAIIA_CONF.get("api", {})
@@ -25,6 +27,49 @@ MAIIA_URL = MAIIA_CONF.get("base_url")
 CENTER_TYPES = MAIIA_SCRAPER.get("categories")
 MAIIA_DO_NOT_SCRAP_ID = MAIIA_SCRAPER.get("excluded_ids", [])
 MAIIA_DO_NOT_SCRAP_NAME = MAIIA_SCRAPER.get("excluded_names", [])
+
+
+def get_atlas_correct_match(infos_page, atlas_center_list):
+    data = requests.get(
+        "https://api-adresse.data.gouv.fr/search/",
+        params=[("q", infos_page["address"]), ("postcode", infos_page["com_cp"])],
+    ).json()
+    correct_atlas_gid = None
+
+    try:
+        id_adr = data["features"][0]["properties"]["id"]
+        matching_atlas_for_id = [
+            center_id for center_id, center_data in atlas_center_list.items() if center_data["id_adresse"] == id_adr
+        ]
+        if matching_atlas_for_id:
+            correct_atlas_gid = matching_atlas_for_id[0]
+    except:
+        return None
+    return correct_atlas_gid
+
+
+def parse_atlas():
+    url = get_conf_inputs().get("from_data_gouv_website").get("centers_gouv")
+    data = requests.get(url).json()
+    maiia_gouv_centers = {}
+    for center in data["features"]:
+        centre_pro = center["properties"].get("c_reserve_professionels_sante", False)
+        url = center["properties"].get("c_rdv_site_web", None)
+        id_adresse = center["properties"].get("c_id_adr", None)
+        gid = center["properties"].get("c_gid", None)
+
+        if centre_pro:
+            continue
+        if not url:
+            continue
+        if not gid:
+            continue
+        if not "maiia" in url:
+            continue
+        end_url = f'{parse.urlsplit(url).path.split("/")[-1]}'
+
+        maiia_gouv_centers[gid] = {"url_end": end_url, "id_adresse": id_adresse}
+    return maiia_gouv_centers
 
 
 def get_centers(speciality: str, client: httpx.Client = DEFAULT_CLIENT, department=None) -> list:
@@ -49,12 +94,26 @@ def maiia_schedule_to_business_hours(opening_schedules) -> dict:
     return business_hours
 
 
-def maiia_center_to_csv(center: dict, root_center: dict) -> dict:
+def maiia_center_to_csv(center: dict, root_center: dict, atlas_centers: dict) -> dict:
     if "url" not in center:
         logger.warning(f"url not found - {center}")
+
+    atlas_matches = [
+        center_id
+        for center_id, center_data in atlas_centers.items()
+        if center["url"].split("/")[-1] in center_data["url_end"]
+    ]
+
+    if len(atlas_matches) == 0:
+        atlas_gid = None
+    if len(atlas_matches) == 1:
+        atlas_gid = max(atlas_matches)
+
     csv = dict()
     csv["gid"] = center.get("id")[:8]
+
     csv["nom"] = center.get("name")
+    csv["rdv_site_web"] = f'{MAIIA_URL}{center["url"]}?centerid={center["id"]}'
     csv["rdv_site_web"] = f'{MAIIA_URL}{center["url"]}?centerid={center["id"]}'
     if "pharmacie" in center["url"]:
         csv["type"] = DRUG_STORE
@@ -94,15 +153,21 @@ def maiia_center_to_csv(center: dict, root_center: dict) -> dict:
             csv["business_hours"] = maiia_schedule_to_business_hours(
                 center["publicInformation"]["officeInformation"]["openingSchedules"]
             )
+    if len(atlas_matches) > 1:
+        atlas_gid = get_atlas_correct_match(csv, atlas_centers)
+    csv["atlas_gid"] = atlas_gid
+
     return csv
 
 
 def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
+    atlas_center_list = parse_atlas()
     centers = list()
     centers_ids = list()
     logger.info("Starting Maiia centers download")
 
     for speciality in CENTER_TYPES:
+
         logger.info(f"Fetching speciality {speciality}")
         result = []
         for department in get_departements_numbers():
@@ -130,7 +195,7 @@ def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
             if center["childCenters"]:
                 continue
 
-            centers.append(maiia_center_to_csv(center, root_center))
+            centers.append(maiia_center_to_csv(center, root_center, atlas_center_list))
             centers_ids.append(center["id"])
             for child_center in center["childCenters"]:
                 if (
@@ -138,7 +203,7 @@ def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
                     and "url" in child_center
                     and child_center["id"] not in centers_ids
                 ):
-                    centers.append(maiia_center_to_csv(child_center, root_center))
+                    centers.append(maiia_center_to_csv(child_center, root_center, atlas_center_list))
                     centers_ids.append(child_center["id"])
     if not save:
         return centers

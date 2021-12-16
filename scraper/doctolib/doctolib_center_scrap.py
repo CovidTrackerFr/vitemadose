@@ -15,6 +15,7 @@ from scraper.doctolib.doctolib_parsers import (
     parse_center_places,
     parse_doctor,
     center_reducer,
+    parse_atlas,
 )
 
 from typing import List, Tuple, Dict
@@ -37,6 +38,7 @@ logger = get_logger()
 class DoctolibCenterScraper:
     def __init__(self, client: httpx.Client = DEFAULT_CLIENT):
         self._client = client
+        self.atlas_centers = parse_atlas()
 
     def run_departement_scrap(self, departement: str):
         logger.info(f"[Doctolib centers] Parsing pages of departement {departement} through department SEO link")
@@ -73,7 +75,9 @@ class DoctolibCenterScraper:
     ) -> Tuple[List[dict], bool]:
         try:
             r = self._client.get(
-                BASE_URL_DEPARTEMENT.format(department_urlify(departement), page_id), headers=DOCTOLIB_HEADERS
+                BASE_URL_DEPARTEMENT.format(department_urlify(departement), page_id),
+                headers=DOCTOLIB_HEADERS,
+                follow_redirects=True,
             )
             data = r.json()
         except:
@@ -120,7 +124,7 @@ class DoctolibCenterScraper:
         output = None
 
         try:
-            req = self._client.get(internal_api_url, headers=DOCTOLIB_HEADERS)
+            req = self._client.get(internal_api_url, headers=DOCTOLIB_HEADERS, follow_redirects=True)
             req.raise_for_status()
             data = req.json()
             output = data.get("data", {})
@@ -128,7 +132,9 @@ class DoctolibCenterScraper:
             logger.warn(f"> Could not retrieve data from {internal_api_url} => {req}")
             return []
 
-        return parse_center_places(output)
+        end_url = f'{parse.urlsplit(url_path).path.split("/")[-1]}'
+
+        return parse_center_places(output, end_url, self.atlas_centers)
 
 
 def fetch_department(department: str):

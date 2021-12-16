@@ -25,6 +25,8 @@ PLATFORM_ENABLED = PLATFORM_CONF.get("enabled", False)
 
 PLATFORM_TIMEOUT = PLATFORM_CONF.get("timeout", 25)
 
+SCRAPE_ONLY_ATLAS = get_config().get("scrape_only_atlas_centers", False)
+
 timeout = httpx.Timeout(PLATFORM_TIMEOUT, connect=PLATFORM_TIMEOUT)
 # change KELDOC_KILL_SWITCH to True to bypass Keldoc scraping
 
@@ -55,6 +57,7 @@ def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue()):
         departement=request.center_info.departement,
         lieu_type=request.practitioner_type,
         metadata=request.center_info.metadata,
+        atlas_gid=request.atlas_gid,
     )
 
     # Find the first availability
@@ -74,6 +77,9 @@ def center_iterator(client=None) -> Iterator[Dict]:
         logger.warning(f"{PLATFORM.capitalize()} scrap is disabled in configuration file.")
         return []
 
+    if SCRAPE_ONLY_ATLAS:
+        logger.warning(f"{PLATFORM.capitalize()} will only scrape ATLASSANTE centers.")
+
     session = CacheControl(requests.Session(), cache=FileCache("./cache"))
 
     if client:
@@ -89,8 +95,14 @@ def center_iterator(client=None) -> Iterator[Dict]:
                 logger.info(f"Liste des centres pour {PLATFORM} est une vraie requête")
 
         data = response.json()
+
+        if SCRAPE_ONLY_ATLAS:
+            data = [center for center in data if center["atlas_gid"]]
+
         logger.info(f"Found {len(data)} {PLATFORM.capitalize()} centers (external scraper).")
+
         for center in data:
             yield center
+
     except Exception as e:
         logger.warning(f"Unable to scrape {PLATFORM} centers: {e}")

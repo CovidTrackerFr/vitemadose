@@ -121,8 +121,8 @@ def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  #
             creneau_q=creneau_q,
             center_info=center_data,
             input_data=centre.get("booking"),
+            atlas_gid=centre["atlas_gid"] if "atlas_gid" in centre.keys() else None,
         )
-
         center_data.fill_result(result)
     except Blocked403 as blocked_doctolib__error:
         logger.error(
@@ -192,7 +192,6 @@ def cherche_prochain_rdv_dans_centre(data: Tuple[dict, Queue]) -> CenterInfo:  #
         center_data.type = VACCINATION_CENTER
     center_data.gid = centre.get("gid", "")
     center_data.time_for_request = time_for_request
-
     return center_data
 
 
@@ -256,7 +255,14 @@ def get_center_platform(center_url: str, center_platform: str = None, fetch_map:
 
 @Profiling.measure("any_slot")
 def fetch_centre_slots(
-    rdv_site_web, center_platform, start_date, creneau_q, center_info, fetch_map: dict = None, input_data: dict = None
+    rdv_site_web,
+    center_platform,
+    start_date,
+    creneau_q,
+    center_info,
+    fetch_map: dict = None,
+    input_data: dict = None,
+    atlas_gid=None,
 ) -> ScraperResult:
     practitioner_type = None
     internal_id = None
@@ -270,7 +276,12 @@ def fetch_centre_slots(
         internal_id = center_info.internal_id
     rdv_site_web = fix_scrap_urls(rdv_site_web)
     request = ScraperRequest(
-        rdv_site_web, start_date, center_info, internal_id=internal_id, practitioner_type=practitioner_type
+        rdv_site_web,
+        start_date,
+        center_info,
+        internal_id=internal_id,
+        practitioner_type=practitioner_type,
+        atlas_gid=atlas_gid,
     )
     platform = get_center_platform(rdv_site_web, center_platform, fetch_map=fetch_map)
 
