@@ -50,13 +50,16 @@ def parse_doctor(doctor_dict: Dict) -> Dict:
 
 
 def get_atlas_correct_match(atlas_matches, infos_page, atlas_center_list):
-    data = requests.get(
-        "https://api-adresse.data.gouv.fr/search/",
-        params=[("q", infos_page["address"]), ("postcode", infos_page["cp"])],
-    ).json()
     correct_atlas_gid = None
 
+    req = requests.get(
+        "https://api-adresse.data.gouv.fr/search/",
+        params=[("q", infos_page["address"]), ("postcode", infos_page["cp"])],
+    )
+    req.raise_for_status()
+
     try:
+        data = req.json()
         id_adr = data["features"][0]["properties"]["id"]
         matching_atlas_for_id = [
             center_id for center_id, center_data in atlas_center_list.items() if center_data["id_adresse"] == id_adr
