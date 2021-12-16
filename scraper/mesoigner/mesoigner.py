@@ -123,7 +123,6 @@ class MesoignerSlots:
 
         start_date = request.get_start_date()
 
-        # print(slots_api.get("slots", []))
         for day in slots_api.get("slots", []):
 
             for day_date, appointments_infos in day.items():

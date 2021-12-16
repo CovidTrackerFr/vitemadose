@@ -1,9 +1,12 @@
+from types import DynamicClassAttribute
 from typing import Dict, List, Optional
 
 from scraper.pattern.scraper_result import VACCINATION_CENTER
-from utils.vmd_config import get_conf_platform
+from utils.vmd_config import get_conf_platform, get_conf_inputs
 from utils.vmd_utils import departementUtils, format_phone_number
-
+import requests
+import json
+from urllib import parse
 
 DOCTOLIB_CONF = get_conf_platform("doctolib")
 SCRAPER_CONF = DOCTOLIB_CONF.get("center_scraper")
@@ -46,16 +49,47 @@ def parse_doctor(doctor_dict: Dict) -> Dict:
     }
 
 
-def parse_center_places(center_output: Dict) -> List[Dict]:
+def get_atlas_correct_match(atlas_matches, infos_page, atlas_center_list):
+    data = requests.get(
+        "https://api-adresse.data.gouv.fr/search/",
+        params=[("q", infos_page["address"]), ("postcode", infos_page["cp"])],
+    ).json()
+    correct_atlas_gid = None
+
+    try:
+        id_adr = data["features"][0]["properties"]["id"]
+        matching_atlas_for_id = [
+            center_id for center_id, center_data in atlas_center_list.items() if center_data["id_adresse"] == id_adr
+        ]
+        if matching_atlas_for_id:
+            correct_atlas_gid = matching_atlas_for_id[0]
+    except:
+        return None
+    return correct_atlas_gid
+
+
+def parse_center_places(center_output: Dict, url, atlas_center_list) -> List[Dict]:
+
+    # if url in atlas_center_list.keys():
+    #     atlas_gid = atlas_center_list[url]
     places = center_output.get("places", {})
     gid = "d{0}".format(center_output.get("profile", {}).get("id", ""))
     extracted_visit_motives = [vm.get("name") for vm in center_output.get("visit_motives", [])]
     extracted_visit_ids = [vm.get("ref_visit_motive_id") for vm in center_output.get("visit_motives", [])]
 
+    atlas_matches = [center_id for center_id, center_data in atlas_center_list.items() if url in center_data["url_end"]]
+    if len(atlas_matches) == 0:
+        atlas_gid = None
+    if len(atlas_matches) == 1:
+        atlas_gid = max(atlas_matches)
+
     liste_infos_page = []
     for place in places:
         infos_page = parse_place(place)
+        if len(atlas_matches) > 1:
+            atlas_gid = get_atlas_correct_match(atlas_matches, infos_page, atlas_center_list)
         infos_page["gid"] = gid
+        infos_page["atlas_gid"] = atlas_gid
         infos_page["visit_motives"] = extracted_visit_motives
         infos_page["visit_motives_ids"] = extracted_visit_ids
         infos_page["booking"] = center_output
@@ -74,9 +108,34 @@ def parse_place(place: Dict) -> Dict:
         "long_coor1": place.get("longitude"),
         "lat_coor1": place.get("latitude"),
         "com_insee": departementUtils.cp_to_insee(place["zipcode"].replace(" ", "").strip()),
+        "cp": place["zipcode"].replace(" ", "").strip(),
         "phone_number": format_phone_number(phone_number) if phone_number else None,
         "business_hours": parse_doctolib_business_hours(place),
     }
+
+
+def parse_atlas():
+    url = get_conf_inputs().get("from_data_gouv_website").get("centers_gouv")
+    data = requests.get(url).json()
+    doctolib_gouv_centers = {}
+    for center in data["features"]:
+        centre_pro = center["properties"].get("c_reserve_professionels_sante", False)
+        url = center["properties"].get("c_rdv_site_web", None)
+        id_adresse = center["properties"].get("c_id_adr", None)
+        gid = center["properties"].get("c_gid", None)
+
+        if centre_pro:
+            continue
+        if not url:
+            continue
+        if not gid:
+            continue
+        if not "doctolib" in url:
+            continue
+        end_url = f'{parse.urlsplit(url).path.split("/")[-1]}'
+
+        doctolib_gouv_centers[gid] = {"url_end": end_url, "id_adresse": id_adresse}
+    return doctolib_gouv_centers
 
 
 def parse_doctolib_business_hours(place: dict) -> Optional[dict]:

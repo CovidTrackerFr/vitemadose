@@ -79,6 +79,7 @@ class ResourceTousDepartements(Resource):
             internal_id=lieu.internal_id,
             vaccine_type=[],
             erreur=None,
+            atlas_gid=lieu.atlas_gid,
         )
 
     def location_to_dict(self, location):

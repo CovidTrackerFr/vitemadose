@@ -79,6 +79,7 @@ def test_resource_par_departement__1_creneau():
                 "vaccine_type": ["Moderna"],
                 "appointment_by_phone_only": False,
                 "erreur": None,
+                "atlas_gid": None,
             }
         ],
         "centres_indisponibles": [],
@@ -113,6 +114,7 @@ def test_resource_par_departement__0_creneau():
                 "vaccine_type": [],
                 "appointment_by_phone_only": False,
                 "erreur": None,
+                "atlas_gid": None,
             }
         ],
         "centres_disponibles": [],
@@ -168,6 +170,7 @@ def test_resource_par_departement__3_creneau():
                 "vaccine_type": ["Moderna", "Pfizer-BioNTech"],
                 "appointment_by_phone_only": False,
                 "erreur": None,
+                "atlas_gid": None,
             }
         ],
         "centres_indisponibles": [],

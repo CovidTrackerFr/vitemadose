@@ -1,5 +1,6 @@
 {
     "scrape_on_n_days": 60,
+    "scrape_only_atlas_centers": false,
     "base_urls": {
         "gitlab_public_path": "https://vitemadose.gitlab.io/vitemadose/",
         "github_public_path": "https://raw.githubusercontent.com/CovidTrackerFr/vitemadose/data-auto/"
@@ -15,7 +16,7 @@
             "dep_pop": "data/input/dep-pop.csv"
         },
         "from_data_gouv_website": {
-            "centers_gouv": "https://www.data.gouv.fr/fr/datasets/r/5cb21a85-b0b0-4a65-a249-806a040ec372",
+            "centers_gouv": "https://www.data.gouv.fr/fr/datasets/r/d0566522-604d-4af6-be44-a26eefa01756",
             "rdv_gouv": "https://www.data.gouv.fr/fr/datasets/r/b7bd49cd-904c-4c5d-b60f-018b51df9b0e"
         },
         "from_gitlab_public": {
@@ -81,7 +82,6 @@
     "platforms": {
         "doctolib": {
             "enabled": true,
-            "scrape_only_atlas_centers": false,
             "timeout": 10,
             "recognized_urls": [
                 "https://partners.doctolib.fr",

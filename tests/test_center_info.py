@@ -49,6 +49,7 @@ def test_center_info_fill():
         "erreur": None,
         "last_scan_with_availabilities": None,
         "request_counts": None,
+        "atlas_gid": None,
     }
 
 

@@ -10,6 +10,7 @@ from utils.vmd_logger import get_logger
 from utils.vmd_utils import department_urlify, departementUtils
 from scraper.pattern.center_location import CenterLocation
 from scraper.keldoc.keldoc_routes import API_SPECIALITY_IDS
+from urllib import parse
 
 KELDOC_CONF = get_conf_platform("keldoc")
 KELDOC_API = KELDOC_CONF.get("api", {})
@@ -59,10 +60,61 @@ def set_center_type(center_data: dict):
     return center_type
 
 
+def parse_atlas():
+    url = get_conf_inputs().get("from_data_gouv_website").get("centers_gouv")
+    data = requests.get(url).json()
+    keldoc_gouv_centers = {}
+    for center in data["features"]:
+        centre_pro = center["properties"].get("c_reserve_professionels_sante", False)
+        url = center["properties"].get("c_rdv_site_web", None)
+        id_adresse = center["properties"].get("c_id_adr", None)
+        gid = center["properties"].get("c_gid", None)
+
+        if centre_pro:
+            continue
+        if not url:
+            continue
+        if not gid:
+            continue
+
+        if not "keldoc" in url:
+            continue
+        if "redirect" in url:
+            parsed = parse.parse_qs(
+                parse.urlparse(center["properties"]["c_rdv_site_web"]).query, keep_blank_values=True
+            )
+            url = f'http://keldoc.com/{parsed["dom"][0]}/{parsed["inst"][0]}/{parsed["user"][0]}'
+
+        end_url = f'{parse.urlsplit(url).path.split("/")[3]}'
+
+        keldoc_gouv_centers[gid] = {"url_end": end_url, "id_adresse": id_adresse}
+    return keldoc_gouv_centers
+
+
+def get_atlas_correct_match(infos_page, atlas_center_list):
+    data = requests.get(
+        "https://api-adresse.data.gouv.fr/search/",
+        params=[("q", infos_page["address"]), ("postcode", infos_page["cp"])],
+    ).json()
+    correct_atlas_gid = None
+
+    try:
+        id_adr = data["features"][0]["properties"]["id"]
+        matching_atlas_for_id = [
+            center_id for center_id, center_data in atlas_center_list.items() if center_data["id_adresse"] == id_adr
+        ]
+        if matching_atlas_for_id:
+            correct_atlas_gid = matching_atlas_for_id[0]
+    except:
+        return None
+    return correct_atlas_gid
+
+
 class KeldocCenterScraper:
     def __init__(self, vaccination_url_path=None, session: httpx.Client = DEFAULT_SESSION):
         self._session = session
         self.vaccination_url_path = vaccination_url_path
+        self.atlas_centers = parse_atlas()
 
     def run_departement_scrap(self, departement: str) -> list:
         logger.info(f"[Keldoc centers] Parsing pages of departement {departement} through department SEO link")
@@ -126,10 +178,21 @@ class KeldocCenterScraper:
             gid = f'{resources["id"]}pid{center["id"]}'
         else:
             gid = f'{resources["id"]}'
+        atlas_gid = None
+
+        atlas_matches = [
+            center_id
+            for center_id, center_data in self.atlas_centers.items()
+            if parse.urlsplit(url_with_query).path.split("/")[-1] in center_data["url_end"]
+            or parse.urlsplit(url_with_query).path.split("/")[-2] in center_data["url_end"]
+        ]
+
         data = {
             "nom": center["title"],
             "rdv_site_web": url_with_query,
+            "atlas_gid": atlas_gid,
             "com_insee": departementUtils.cp_to_insee(center["cabinet"]["zipcode"]),
+            "cp": center["cabinet"]["zipcode"],
             "gid": gid,
             "address": center["cabinet"]["location"].strip(),
             "lat_coor1": center["coordinates"].split(",")[0],
@@ -138,7 +201,15 @@ class KeldocCenterScraper:
             "phone_number": phone_number,
             "booking": motives,
         }
+        if len(atlas_matches) == 0:
+            atlas_gid = None
+        if len(atlas_matches) == 1:
+            atlas_gid = max(atlas_matches)
+        if len(atlas_matches) > 1:
+            atlas_gid = get_atlas_correct_match(data, self.atlas_centers)
+
         data["type"] = set_center_type(data)
+        data["atlas_gid"] = atlas_gid
         return data
 
     def parse_pages_departement(self, departement: str, page_id: int = 1, centers: list = None) -> list:

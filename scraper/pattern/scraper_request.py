@@ -3,7 +3,14 @@ from typing import List, Optional
 
 class ScraperRequest:
     def __init__(
-        self, url: str, start_date: str, center_info=None, practitioner_type=None, internal_id=None, input_data=None
+        self,
+        url: str,
+        start_date: str,
+        center_info=None,
+        practitioner_type=None,
+        internal_id=None,
+        input_data=None,
+        atlas_gid=None,
     ):
         self.url = url
         self.start_date = start_date
@@ -15,6 +22,7 @@ class ScraperRequest:
         self.appointment_by_phone_only = False
         self.requests = None
         self.input_data = input_data
+        self.atlas_gid = atlas_gid
 
     def update_internal_id(self, internal_id: str) -> str:
         self.internal_id = internal_id

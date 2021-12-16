@@ -39,6 +39,8 @@ MAIIA_DOSES = PLATFORM_SCRAPER.get("dose_types")
 
 MAIIA_DO_NOT_SCRAP_NAME = PLATFORM_SCRAPER.get("excluded_names", [])
 
+SCRAPE_ONLY_ATLAS = get_config().get("scrape_only_atlas_centers", False)
+
 
 def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue, client: httpx.Client = DEFAULT_CLIENT) -> Optional[str]:
     if not PLATFORM_ENABLED:
@@ -119,6 +121,7 @@ class MaiiaSlots:
             departement=request.center_info.departement,
             lieu_type=request.practitioner_type,
             metadata=request.center_info.metadata,
+            atlas_gid=request.atlas_gid,
         )
         first_availability, slots_count = self.get_first_availability(
             center_id, start_date, reasons, client=self._client, request=request
@@ -295,6 +298,9 @@ def center_iterator(client=None) -> Iterator[Dict]:
         logger.warning(f"{PLATFORM.capitalize()} scrap is disabled in configuration file.")
         return []
 
+    if SCRAPE_ONLY_ATLAS:
+        logger.warning(f"{PLATFORM.capitalize()} will only scrape ATLASSANTE centers.")
+
     session = CacheControl(requests.Session(), cache=FileCache("./cache"))
 
     if client:
@@ -310,8 +316,14 @@ def center_iterator(client=None) -> Iterator[Dict]:
                 logger.info(f"Liste des centres pour {PLATFORM} est une vraie requête")
 
         data = response.json()
+
+        if SCRAPE_ONLY_ATLAS:
+            data = [center for center in data if center["atlas_gid"]]
+
         logger.info(f"Found {len(data)} {PLATFORM.capitalize()} centers (external scraper).")
+
         for center in data:
             yield center
+
     except Exception as e:
         logger.warning(f"Unable to scrape {PLATFORM} centers: {e}")

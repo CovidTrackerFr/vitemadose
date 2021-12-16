@@ -61,7 +61,6 @@ def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue) -> Optional[str]:
         return None
     # Fonction principale avec le comportement "de prod".
     parse_availabilities = Slots(client=DEFAULT_CLIENT, creneau_q=creneau_q)
-    # print(request.__dict__)
     return parse_availabilities.fetch(request)
 
 

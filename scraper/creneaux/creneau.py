@@ -30,6 +30,7 @@ class Lieu:
     location: Optional[CenterLocation] = None
     metadata: Optional[dict] = None
     plateforme: Optional[Plateforme] = None
+    atlas_gid: Optional[int] = None
 
 
 @dataclass
