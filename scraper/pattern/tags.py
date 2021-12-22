@@ -40,7 +40,7 @@ def unknown_dose(creneau: Creneau):
 CURRENT_TAGS = {
     "all": [tag_all],
     "first_or_second_dose": [first_dose, second_dose],
-    "kid_first_dose": [kid_first_dose],
+    "kids_first_dose": [kid_first_dose],
     "third_dose": [third_dose],
     "unknown_dose": [unknown_dose],
 }
