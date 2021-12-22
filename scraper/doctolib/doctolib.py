@@ -11,6 +11,7 @@ import dateutil
 import httpx
 import pytz
 import requests
+from collections import defaultdict
 from scraper.creneaux.creneau import Creneau, Lieu, Plateforme, PasDeCreneau
 from scraper.doctolib.doctolib_filters import (
     dose_number,
@@ -183,12 +184,12 @@ class DoctolibSlots:
 
         timetable_start_date = datetime.fromisoformat(start_date)
 
-        for vaccine, visite_motive_ids0 in visit_motive_ids_by_vaccine.items():
-            for i in range(1, 4):
-                dose = i
-                visite_motive_ids = set([key for (key, value) in visite_motive_ids0 if value == i])
+        for dose, motives_for_dose in visit_motive_ids_by_vaccine.items():
+            for motive in motives_for_dose:
+                visite_motive_id = motive["visit_motive"]
+                vaccine = motive["vaccine_name"]
                 agenda_ids, practice_ids, doublon_responses = _find_agenda_and_practice_ids(
-                    rdata, visite_motive_ids, doublon_responses, practice_id_filter=practice_id
+                    rdata, visite_motive_id, doublon_responses, practice_id_filter=practice_id
                 )
 
                 if not agenda_ids or not practice_ids:
@@ -197,7 +198,7 @@ class DoctolibSlots:
 
                 agenda_ids_q = "-".join(agenda_ids)
                 practice_ids_q = "-".join(practice_ids)
-                motive_ids_q = "-".join(list(map(lambda id: str(id), visite_motive_ids)))
+                motive_ids_q = visite_motive_id
                 availability = self.get_timetables(
                     request, vaccine, motive_ids_q, agenda_ids_q, practice_ids_q, timetable_start_date, dose=dose
                 )
@@ -352,7 +353,7 @@ class DoctolibSlots:
         request: ScraperRequest,
         start_date: str,
         vaccine: Vaccine,
-        dose: Optional[int],
+        dose: Optional[str],
         motive_ids_q: str,
         agenda_ids_q: str,
         practice_ids_q: str,
@@ -573,7 +574,7 @@ def _find_visit_motive_id(rdata: dict, visit_motive_category_id: list = None) ->
     l'ID du 1er motif de visite disponible correspondant à une 1ère dose pour
     la catégorie de motif attendue.
     """
-    relevant_motives = {}
+    relevant_motives = defaultdict(list)
     for visit_motive in rdata.get("visit_motives", []):
         # On ne gère que les 1ère doses (le RDV pour la 2e dose est en général donné
         # après la 1ère dose, donc les gens n'ont pas besoin d'aide pour l'obtenir).
@@ -596,14 +597,13 @@ def _find_visit_motive_id(rdata: dict, visit_motive_category_id: list = None) ->
             or visit_motive.get("visit_motive_category_id") in visit_motive_category_id
             or visit_motive.get("visit_motive_category_id") is None
         ):
-            ids = relevant_motives.get(vaccine_name, set())
-            ids.add((visit_motive["id"], dose))
-            relevant_motives[vaccine_name] = ids
+            relevant_motives[dose].append({"visit_motive": visit_motive["id"], "vaccine_name": vaccine_name})
+
     return relevant_motives
 
 
 def _find_agenda_and_practice_ids(
-    data: dict, visit_motive_ids: Set[int], responses=0, practice_id_filter: list = None
+    data: dict, visit_motive_id: int, responses=0, practice_id_filter: list = None
 ) -> Tuple[list, list]:
     """
     Etant donné une réponse à /booking/<centre>.json, renvoie tous les
@@ -622,19 +622,14 @@ def _find_agenda_and_practice_ids(
         if agenda["booking_disabled"]:
             continue
         for practice_id in practice_id_filter:
-            if practice_id in list(map(int, list(agenda["visit_motive_ids_by_practice_id"].keys()))) and any(
-                [
-                    vaccination_motive
-                    for vaccination_motive in visit_motive_ids
-                    if vaccination_motive in agenda["visit_motive_ids_by_practice_id"][str(practice_id)]
-                ]
+            if (
+                practice_id in list(map(int, list(agenda["visit_motive_ids_by_practice_id"].keys())))
+                and visit_motive_id in agenda["visit_motive_ids_by_practice_id"][str(practice_id)]
             ):
                 responses += 1
 
         for pratice_id_agenda, visit_motive_list_agenda in agenda["visit_motive_ids_by_practice_id"].items():
-            if (
-                len(visit_motive_ids.intersection(visit_motive_list_agenda)) > 0
-            ):  # Some motives are present in this agenda
+            if visit_motive_id in visit_motive_list_agenda:  # Some motives are present in this agenda
                 practice_ids.add(str(pratice_id_agenda))
                 agenda_ids.add(str(agenda["id"]))
     return sorted(agenda_ids), sorted(practice_ids), responses

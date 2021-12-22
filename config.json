@@ -99,40 +99,48 @@
             "filters": {
                 "motives": {
                     "7107": {
-                        "dose": 1,
+                        "dose": "1",
                         "vaccine": "AstraZeneca"
                     },
                     "8741": {
-                        "dose": 1,
+                        "dose": "1",
                         "vaccine": "AstraZeneca"
                     },
                     "6970": {
-                        "dose": 1,
+                        "dose": "1",
                         "vaccine": "Pfizer-BioNTech"
                     },
                     "8739": {
-                        "dose": 1,
+                        "dose": "1",
                         "vaccine": "Pfizer-BioNTech"
                     },
                     "8740": {
-                        "dose": 1,
+                        "dose": "1",
                         "vaccine": "Moderna"
                     },
                     "7005": {
-                        "dose": 1,
+                        "dose": "1",
                         "vaccine": "Moderna"
                     },
                     "7945": {
-                        "dose": 1,
+                        "dose": "1",
                         "vaccine": "Janssen"
                     },
                     "8192": {
-                        "dose": 3,
+                        "dose": "3",
                         "vaccine": "Pfizer-BioNTech"
                     },
                     "8193": {
-                        "dose": 3,
+                        "dose": "3",
                         "vaccine": "Moderna"
+                    },
+                    "10515": {
+                        "dose": "1_kid",
+                        "vaccine": "Pfizer-BioNTech"
+                    },
+                    "10516": {
+                        "dose": "1_kid",
+                        "vaccine": "Pfizer-BioNTech"
                     }
                 },
                 "appointment_category": [

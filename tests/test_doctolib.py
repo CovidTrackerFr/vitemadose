@@ -164,7 +164,7 @@ def test_doctolib_sends_creneau():
             internal_id="doctolib123456789pid165752",
             lieu_type="vaccination-center",
         ),
-        dose=[1],
+        dose=["1"],
     )
 
 
@@ -321,7 +321,7 @@ def test_find_visit_motive_id():
     data = {
         "visit_motives": [
             {
-                "id": 1,
+                "id": 12435,
                 "visit_motive_category_id": 42,
                 "name": "1ère injection vaccin COVID-19 (Moderna)",
                 "ref_visit_motive_id": 8740,
@@ -330,13 +330,15 @@ def test_find_visit_motive_id():
             }
         ]
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.MODERNA: {(1, 1)}}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {
+        "1": [{"vaccine_name": "Moderna", "visit_motive": 12435}]
+    }
 
     # Plusieurs motifs dispo
     data = {
         "visit_motives": [
             {
-                "id": 1,
+                "id": 12345,
                 "visit_motive_category_id": 42,
                 "name": "1ère injection vaccin COVID-19 (Pfizer/BioNTech)",
                 "ref_visit_motive_id": 8740,
@@ -344,7 +346,7 @@ def test_find_visit_motive_id():
                 "first_shot_motive": True,
             },
             {
-                "id": 2,
+                "id": 45678,
                 "name": "1ère injection vaccin COVID-19 (Moderna)",
                 "visit_motive_category_id": 42,
                 "vaccination_motive": True,
@@ -353,7 +355,9 @@ def test_find_visit_motive_id():
             },
         ]
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.MODERNA: {(1, 1), (2, 1)}}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {
+        "1": [{"vaccine_name": "Moderna", "visit_motive": 12345}, {"vaccine_name": "Moderna", "visit_motive": 45678}]
+    }
 
     # Mix avec un motif autre
     data = {
@@ -369,7 +373,9 @@ def test_find_visit_motive_id():
             },
         ]
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.MODERNA: {(2, 1)}}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {
+        "1": [{"vaccine_name": "Moderna", "visit_motive": 2}]
+    }
 
     # Mix avec une catégorie autre
     data = {
@@ -392,7 +398,9 @@ def test_find_visit_motive_id():
             },
         ]
     }
-    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {Vaccine.ASTRAZENECA: {(2, 1)}}
+    assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {
+        "1": [{"vaccine_name": "AstraZeneca", "visit_motive": 2}]
+    }
 
     # Plusieurs types de vaccin
     data = {
@@ -448,9 +456,11 @@ def test_find_visit_motive_id():
         ]
     }
     assert _find_visit_motive_id(data, visit_motive_category_id=[42]) == {
-        Vaccine.MODERNA: {(1, 1)},
-        Vaccine.ASTRAZENECA: {(2, 1)},
-        Vaccine.PFIZER: {(3, 1)},
+        "1": [
+            {"vaccine_name": "Moderna", "visit_motive": 1},
+            {"vaccine_name": "AstraZeneca", "visit_motive": 2},
+            {"vaccine_name": "Pfizer-BioNTech", "visit_motive": 3},
+        ]
     }
 
 
@@ -489,7 +499,7 @@ def test_find_agenda_and_practice_ids():
 
     responses = 0
     agenda_ids, practice_ids, responses = _find_agenda_and_practice_ids(
-        data, visit_motive_ids={1}, responses=responses, practice_id_filter=[20]
+        data, visit_motive_id=1, responses=responses, practice_id_filter=[20]
     )
 
     assert agenda_ids == ["10"]
@@ -498,7 +508,7 @@ def test_find_agenda_and_practice_ids():
 
     responses = 0
     agenda_ids, practice_ids, responses = _find_agenda_and_practice_ids(
-        data, visit_motive_ids={1}, responses=responses, practice_id_filter=[21]
+        data, visit_motive_id=1, responses=responses, practice_id_filter=[21]
     )
     assert agenda_ids == ["12"]
     assert practice_ids == ["21", "24"]
@@ -506,7 +516,7 @@ def test_find_agenda_and_practice_ids():
 
     responses = 0
     agenda_ids, practice_ids, responses = _find_agenda_and_practice_ids(
-        data, visit_motive_ids={1}, responses=responses, practice_id_filter=[22]
+        data, visit_motive_id=1, responses=responses, practice_id_filter=[22]
     )
 
     assert agenda_ids == ["11"]
