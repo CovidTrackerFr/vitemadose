@@ -114,7 +114,7 @@ class DoctolibSlots:
             centre_api_url = PLATFORM_CONF.get("api").get("booking", "").format(centre=centre)
             request.increase_request_count("booking")
             try:
-                response = self._client.get(centre_api_url, headers=DOCTOLIB_HEADERS, follow_redirects=True)
+                response = self._client.get(centre_api_url, headers=DOCTOLIB_HEADERS)
                 # response.raise_for_status()
                 time.sleep(self._cooldown_interval)
                 try:
@@ -376,7 +376,7 @@ class DoctolibSlots:
         )
         request.increase_request_count("slots")
         try:
-            response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS, follow_redirects=True)
+            response = self._client.get(slots_api_url, headers=DOCTOLIB_HEADERS)
         except httpx.ReadTimeout:
             logger.warning(f"Doctolib returned error ReadTimeout for url {request.get_url()}")
             request.increase_request_count("time-out")
