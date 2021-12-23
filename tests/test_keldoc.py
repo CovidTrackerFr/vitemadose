@@ -18,8 +18,6 @@ from scraper.keldoc.keldoc_filters import (
 from scraper.pattern.scraper_request import ScraperRequest
 from scraper.pattern.center_info import CenterInfo
 
-fetch_slots.breaker_enabled(False)
-
 CENTER1_KELDOC = {
     "/api/patients/v2/clinics/2563/specialties/144/cabinets": "center1-cabinet",
     "/api/patients/v2/clinics/2563/specialties/144/cabinets/18780/motive_categories": "center1-cabinet-18780",
