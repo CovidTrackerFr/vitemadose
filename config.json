@@ -227,8 +227,8 @@
             }
         },
         "keldoc": {
-            "enabled": false,
-            "timeout": 45,
+            "enabled": true,
+            "timeout": 60,
             "recognized_urls": [
                 "https://vaccination-covid.keldoc.com",
                 "https://keldoc.com"
