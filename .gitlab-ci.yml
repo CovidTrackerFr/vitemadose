@@ -39,7 +39,7 @@ lister_contributeurs:
 trouver_les_rdv:
   stage: scrape
   image: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/python:3.8-alpine
-  timeout: "35 minutes"
+  timeout: "45 minutes"
   tags:
     - clevercloud
   before_script:
