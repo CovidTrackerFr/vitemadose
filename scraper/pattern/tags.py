@@ -8,20 +8,21 @@ def tag_all(creneau: Creneau):
 
 def first_dose(creneau: Creneau):
     if creneau.dose:
-        if "1" in creneau.dose:
+        if "1" in creneau.dose or 1 in creneau.dose:
             return True
 
 
 def second_dose(creneau: Creneau):
     if creneau.dose:
-        if "2" in creneau.dose:
+        if "2" in creneau.dose or 2 in creneau.dose:
             return True
 
 
 def third_dose(creneau: Creneau):
     if creneau.dose:
-        if "3" in creneau.dose:
+        if "3" in creneau.dose or 3 in creneau.dose:
             return True
+
 
 
 def kid_first_dose(creneau: Creneau):
