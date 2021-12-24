@@ -98,15 +98,19 @@ def keldoc_dose_number(motive):
     if any([tag.lower() in motive.lower() for tag in KELDOC_FILTERS.get("rappel_filter")]) and not any(
         [tag.lower() in motive.lower() for tag in KELDOC_FILTERS.get("immuno_filter")]
     ):
-        dose = 3
+        dose = "3"
         return dose
 
     if any([tag.lower() in motive.lower() for tag in KELDOC_FILTERS.get("dose2_filter")]):
-        dose = 2
+        dose = "2"
         return dose
 
     if any([tag.lower() in motive.lower() for tag in KELDOC_FILTERS.get("dose1_filter")]):
-        dose = 1
+        dose = "1"
+        return dose
+
+    if any([tag.lower() in motive.lower() for tag in KELDOC_FILTERS.get("kid_first_dose_filter")]):
+        dose = "1_kid"
         return dose
 
 
