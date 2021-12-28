@@ -25,14 +25,14 @@ location2: Location = {
 
 
 location3: Location = {
-    "full_address": "Rue du Grand But (Lomme) 59000 Lille",
-    "number_street": "Rue du Grand But (Lomme)",
+    "full_address": "Rue du Grand But M654 (Lomme) 59000 Lille",
+    "number_street": "Rue du Grand But M654 (Lomme)",
     "com_name": "Lille",
     "com_zipcode": "59000",
     "com_insee": "59350",
     "departement": "59",
-    "longitude": 2.975057,
-    "latitude": 50.65017,
+    "longitude": 2.974666,
+    "latitude": 50.645856,
 }
 
 
