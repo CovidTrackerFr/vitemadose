@@ -97,6 +97,8 @@ class departementUtils:
             reader = csv.DictReader(csvfile)
             return [str(row["code_departement"]) for row in reader]
 
+    INSEE_TO_POSTALCODE_AND_DEP = None
+
     @staticmethod
     def to_departement_number(insee_code: str) -> str:
         """
@@ -125,12 +127,12 @@ class departementUtils:
         if len(insee_code) != 5:
             raise ValueError(f"Code INSEE non-valide : {insee_code}")
 
-        with open(get_conf_inputs().get("from_main_branch").get("insee_to_postalcode_and_dep")) as json_file:
-            insee_to_code_departement_table = json.load(json_file)
+        if departementUtils.INSEE_TO_POSTALCODE_AND_DEP is None:
+            with open(get_conf_inputs().get("from_main_branch").get("insee_to_postalcode_and_dep")) as json_file:
+                departementUtils.INSEE_TO_POSTALCODE_AND_DEP = json.load(json_file)
 
-        if insee_code in insee_to_code_departement_table:
-            return insee_to_code_departement_table[insee_code]["departement"]
-
+        if insee_code in departementUtils.INSEE_TO_POSTALCODE_AND_DEP:
+            return departementUtils.INSEE_TO_POSTALCODE_AND_DEP[insee_code]["departement"]
         else:
             raise ValueError(f"Code INSEE absent de la base des codes INSEE : {insee_code}")
 
