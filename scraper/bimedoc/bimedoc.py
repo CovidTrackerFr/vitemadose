@@ -38,6 +38,9 @@ NUMBER_OF_SCRAPED_DAYS = get_config().get("scrape_on_n_days", 28)
 
 timeout = httpx.Timeout(PLATFORM_CONF.get("timeout", 30), connect=PLATFORM_CONF.get("timeout", 30))
 
+BOOSTER_VACCINES = get_config().get("vaccines_allowed_for_booster", [])
+VACCINE_CONF = get_config().get("vaccines", {})
+
 if os.getenv("WITH_TOR", "no") == "yes":
     session = requests.Session()
     session.proxies = {  # type: ignore
@@ -59,6 +62,16 @@ def fetch_slots(request: ScraperRequest, creneau_q=DummyQueue) -> Optional[str]:
     bimedoc = BimedocSlots(client=DEFAULT_CLIENT, creneau_q=creneau_q)
     first_availability = bimedoc.fetch(request)
     return first_availability
+
+
+def get_possible_dose_numbers(vaccine_name: str):
+
+    if not vaccine_name:
+        return []
+
+    if any([vaccine for vaccine in BOOSTER_VACCINES if vaccine in vaccine_name]):
+        return [1, 2, 3]
+    return [1, 2]
 
 
 class BimedocSlots:
@@ -96,7 +109,7 @@ class BimedocSlots:
         centre_api_url = BIMEDOC_APIs.get("slots", "").format(
             pharmacy_id=center_id, start_date=start_date, end_date=end_date
         )
-        response = self._client.get(centre_api_url, headers=BIMEDOC_HEADERS)
+        response = self._client.get(centre_api_url, headers=BIMEDOC_HEADERS, follow_redirects=True)
         request.increase_request_count("slots")
 
         if response.status_code == 403:
@@ -124,10 +137,13 @@ class BimedocSlots:
             return None
 
         for creneau in slots_api.get("slots", []):
+            dose_ranks = get_possible_dose_numbers(creneau["vaccine_name"])
+
             self.found_creneau(
                 Creneau(
                     horaire=dateutil.parser.parse(creneau["datetime"]),
                     reservation_url=request.url,
+                    dose=dose_ranks,
                     type_vaccin=get_vaccine_name(creneau["vaccine_name"]),
                     lieu=self.lieu,
                 )
