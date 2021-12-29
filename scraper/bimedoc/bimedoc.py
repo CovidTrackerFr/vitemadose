@@ -109,7 +109,7 @@ class BimedocSlots:
         centre_api_url = BIMEDOC_APIs.get("slots", "").format(
             pharmacy_id=center_id, start_date=start_date, end_date=end_date
         )
-        response = self._client.get(centre_api_url, headers=BIMEDOC_HEADERS, follow_redirects=True)
+        response = self._client.get(centre_api_url, headers=BIMEDOC_HEADERS)
         request.increase_request_count("slots")
 
         if response.status_code == 403:
