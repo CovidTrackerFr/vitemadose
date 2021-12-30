@@ -95,6 +95,10 @@ def is_appointment_relevant(appointment_name: str) -> bool:
 
 def keldoc_dose_number(motive):
 
+    if any([tag.lower() in motive.lower() for tag in KELDOC_FILTERS.get("kid_first_dose_filter")]):
+        dose = "1_kid"
+        return dose
+
     if any([tag.lower() in motive.lower() for tag in KELDOC_FILTERS.get("rappel_filter")]) and not any(
         [tag.lower() in motive.lower() for tag in KELDOC_FILTERS.get("immuno_filter")]
     ):
@@ -107,10 +111,6 @@ def keldoc_dose_number(motive):
 
     if any([tag.lower() in motive.lower() for tag in KELDOC_FILTERS.get("dose1_filter")]):
         dose = "1"
-        return dose
-
-    if any([tag.lower() in motive.lower() for tag in KELDOC_FILTERS.get("kid_first_dose_filter")]):
-        dose = "1_kid"
         return dose
 
 
