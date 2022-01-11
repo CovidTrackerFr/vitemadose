@@ -72,9 +72,9 @@ def parse_atlas():
     return maiia_gouv_centers
 
 
-def get_centers(speciality: str, client: httpx.Client = DEFAULT_CLIENT, department=None) -> list:
+def get_centers(speciality: str, client: httpx.Client = DEFAULT_CLIENT) -> list:
     result = get_paged(
-        MAIIA_API.get("scraper").format(speciality=speciality, department=department),
+        MAIIA_API.get("scraper").format(speciality=speciality),
         limit=50,
         client=client,
     )
@@ -169,11 +169,7 @@ def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
     for speciality in CENTER_TYPES:
 
         logger.info(f"Fetching speciality {speciality}")
-        result = []
-        for department in get_departements_numbers():
-            logger.info(f"Fetching department {department}")
-            result_dep = get_centers(speciality, client, department)
-            result += result_dep
+        result = get_centers(speciality, client)
 
         for root_center in result:
 

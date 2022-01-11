@@ -535,7 +535,7 @@
                 "https://www.maiia.com"
             ],
             "api": {
-                "scraper": "https://www.maiia.com/api/pat-public/hcd?distanceMax=10000&AllVaccinationPlaces=true&speciality.shortName={speciality}&departmentCode={department}",
+                "scraper": "https://www.maiia.com/api/pat-public/hcd?AllVaccinationPlaces=true&speciality.shortName={speciality}",
                 "slots": "https://www.maiia.com/api/pat-public/availabilities?centerId={center_id}&consultationReasonName={consultation_reason_name}&from={start_date}&to={end_date}",
                 "next_slot": "https://www.maiia.com/api/pat-public/availability-closests?centerId={center_id}&consultationReasonName={consultation_reason_name}&from={start_date}",
                 "motives": "https://www.maiia.com/api/pat-public/consultation-reason-hcd?rootCenterId={center_id}"
