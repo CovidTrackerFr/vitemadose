@@ -264,7 +264,7 @@ class AvecmonDoc:
         self.creneau_q.put(creneau)
 
     def parse_availabilities(
-        self, availabilities: list, request: ScraperRequest, vaccine: Vaccine
+        self, availabilities: list, request: ScraperRequest, vaccine: Vaccine, dose: list = None
     ) -> Tuple[Optional[datetime], int]:
         first_appointment = None
         appointment_count = 0
@@ -283,6 +283,7 @@ class AvecmonDoc:
                         reservation_url=request.url,
                         type_vaccin=[vaccine],
                         lieu=self.lieu,
+                        dose=dose,
                     )
                 )
                 if first_appointment is None or date < first_appointment:
@@ -323,11 +324,12 @@ class AvecmonDoc:
             start_date = isoparse(request.get_start_date())
             end_date = start_date + timedelta(days=NUMBER_OF_SCRAPED_DAYS)
             vaccine = get_vaccine_name(reason["reason"])
+            dose = get_vaccine_dose(reason["reason"])
             request.add_vaccine_type(vaccine)
             availabilities = get_availabilities(
                 reason["id"], reason["organizationId"], start_date, end_date, client, request
             )
-            date, appointment_count = self.parse_availabilities(availabilities, request, vaccine)
+            date, appointment_count = self.parse_availabilities(availabilities, request, vaccine, dose)
             if date is None:
                 continue
             request.appointment_count += appointment_count
@@ -339,6 +341,28 @@ class AvecmonDoc:
             return None
         return first_availability.isoformat()
 
+def get_vaccine_dose(motive_name):
+    if not motive_name:
+        return None
+    dose = []
+    motive_low = motive_name.lower()
+    if "première" in motive_low or "premiere" in motive_low:
+        dose.append(1)
+    if (
+        "deuxième" in motive_low
+        or "deuxieme" in motive_low
+        or "seconde" in motive_low
+        or "2" in motive_low
+    ):
+        dose.append(2)
+    if (
+        "rappel" in motive_low
+        or "troisième" in motive_low
+        or "troisieme" in motive_low
+        or "3" in motive_low
+    ):
+        dose.append(3)
+    return dose
 
 def center_to_centerdict(center: CenterInfo) -> dict:
     center_dict = {}
