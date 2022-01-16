@@ -264,7 +264,7 @@ class AvecmonDoc:
         self.creneau_q.put(creneau)
 
     def parse_availabilities(
-        self, availabilities: list, request: ScraperRequest, vaccine: Vaccine, dose: list = None
+        self, availabilities: list, request: ScraperRequest, vaccine: Vaccine, dose: Optional[list] = None
     ) -> Tuple[Optional[datetime], int]:
         first_appointment = None
         appointment_count = 0
