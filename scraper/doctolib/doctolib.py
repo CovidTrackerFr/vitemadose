@@ -144,7 +144,7 @@ class DoctolibSlots:
 
         if practice_id:
             practice_id, practice_same_adress = link_practice_ids(practice_id, rdata)
-        if len(rdata.get("places", [])) > 1 and practice_id is None:
+        if len(rdata.get("places", [])) >= 1 and practice_id is None:
             practice_id = rdata.get("places")[0].get("practice_ids", None)
 
         if len(rdata.get("places", [])) == 0 and practice_id is None:
