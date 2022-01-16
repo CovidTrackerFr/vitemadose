@@ -346,20 +346,24 @@ def get_vaccine_dose(motive_name: str) -> Optional[list]:
         return None
     dose = []
     motive_low = motive_name.lower()
-    if "première" in motive_low or "premiere" in motive_low:
+    if (
+        "première" in motive_low 
+        or "premiere" in motive_low
+        or "1è" in motive_low
+    ):
         dose.append(1)
     if (
         "deuxième" in motive_low
         or "deuxieme" in motive_low
         or "seconde" in motive_low
-        or "2" in motive_low
+        or "2è" in motive_low
     ):
         dose.append(2)
     if (
         "rappel" in motive_low
         or "troisième" in motive_low
         or "troisieme" in motive_low
-        or "3" in motive_low
+        or "3è" in motive_low
     ):
         dose.append(3)
     return dose
