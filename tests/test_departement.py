@@ -1,14 +1,17 @@
 import pytest
+
+from scraper.export.export_v2 import Departement
 from utils.vmd_utils import departementUtils
 
 
 def test_import_departements():
     departements = departementUtils.import_departements()
 
-    assert len(departements) == 101
+    assert len(departements) == 102
     assert departements[:3] == ["01", "02", "03"]
     assert departements[83] == "83"
-    assert departements[-1] == "976"
+    assert departements[-2] == "976"
+    assert departements[-1] == "om"
     assert departements.index("2A") == 28
     assert sorted(departements) == departements
 
@@ -114,3 +117,14 @@ def test_cp_to_insee_with_cedex():
     cedex_st_michel = "16959"
     assert departementUtils.cp_to_insee(cedex_st_michel) == "16341"
     assert departementUtils.cp_to_insee(f"{cedex_st_michel} CEDEX") == "16341"
+
+
+def test_departement_all_should_return_overseas():
+    # Given
+    expected_output_element = Departement("om", "Collectivités d'Outremer", -1, "Outremer")
+
+    # When
+    output = Departement.all()
+
+    # Then
+    assert expected_output_element in output
