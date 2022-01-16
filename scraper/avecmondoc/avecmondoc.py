@@ -341,7 +341,7 @@ class AvecmonDoc:
             return None
         return first_availability.isoformat()
 
-def get_vaccine_dose(motive_name):
+def get_vaccine_dose(motive_name: str) -> Optional[list]:
     if not motive_name:
         return None
     dose = []
