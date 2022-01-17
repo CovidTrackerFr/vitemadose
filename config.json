@@ -670,16 +670,12 @@
             },
             "filters": {
                 "valid_reasons": [
-                    "Premiere injection COVID",
-                    "Première injection COVID",
-                    "Permière injection COVID",
-                    "Première injection vaccinale COVID",
-                    "Rendez-vous de première vaccination Covid",
+                    "injection COVID",
+                    "injection vaccinale COVID",
+                    "vaccination Covid",
                     "1ere vaccination astra",
-                    "Injection vaccinale COVID-19 - Janssen",
                     "Injection monodose Janssen",
-                    "Injection vaccinale monodose Janssen",
-                    "Vaccination covid 19 janssen"
+                    "Injection vaccinale monodose Janssen"
                 ]
             },
             "center_scraper": {
