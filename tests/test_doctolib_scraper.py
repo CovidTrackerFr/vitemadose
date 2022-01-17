@@ -20,7 +20,7 @@ from scraper.pattern.scraper_result import GENERAL_PRACTITIONER, DRUG_STORE, VAC
 
 def test_doctolib_departements():
     dep = get_departements(excluded_departments=["Guyane"])
-    assert len(dep) == 100
+    assert len(dep) == 101
 
 
 def test_center_type():

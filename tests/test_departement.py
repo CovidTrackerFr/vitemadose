@@ -1,14 +1,17 @@
 import pytest
+
+from scraper.export.export_v2 import Departement
 from utils.vmd_utils import departementUtils
 
 
 def test_import_departements():
     departements = departementUtils.import_departements()
 
-    assert len(departements) == 101
+    assert len(departements) == 102
     assert departements[:3] == ["01", "02", "03"]
     assert departements[83] == "83"
-    assert departements[-1] == "976"
+    assert departements[-2] == "976"
+    assert departements[-1] == "om"
     assert departements.index("2A") == 28
     assert sorted(departements) == departements
 
@@ -17,11 +20,15 @@ def test_insee_to_departement_code():
     right_insee_code = "01001"
     short_insee_code = "1001"
     DOM_TOM_insee_code = "97234"
-    passed_linked_to_Guadeloupe_insee_code = "97801"
+    passed_linked_to_Guadeloupe_insee_code = "97120"
     corse_insee_code = "2A004"
     monaco_insee_code = "99138"
     wrong_insee_code = "123"
     not_in_insee_code_table_insee_code = "12345"
+    saint_barthelemy_insee_code = "97701"
+    miquelon_laglande_insee_code = "97501"
+    saint_pierre_insee_code = "97502"
+    saint_martin_insee_code = "97801"
 
     assert departementUtils.to_departement_number(right_insee_code) == right_insee_code[:2]
     assert departementUtils.to_departement_number(short_insee_code) == short_insee_code.zfill(5)[:2]
@@ -33,6 +40,10 @@ def test_insee_to_departement_code():
         departementUtils.to_departement_number(wrong_insee_code)
     with pytest.raises(ValueError):
         departementUtils.to_departement_number(not_in_insee_code_table_insee_code)
+    assert departementUtils.to_departement_number(saint_barthelemy_insee_code) == "om"
+    assert departementUtils.to_departement_number(miquelon_laglande_insee_code) == "om"
+    assert departementUtils.to_departement_number(saint_pierre_insee_code) == "om"
+    assert departementUtils.to_departement_number(saint_martin_insee_code) == "om"
 
 
 def test_get_city():
@@ -114,3 +125,14 @@ def test_cp_to_insee_with_cedex():
     cedex_st_michel = "16959"
     assert departementUtils.cp_to_insee(cedex_st_michel) == "16341"
     assert departementUtils.cp_to_insee(f"{cedex_st_michel} CEDEX") == "16341"
+
+
+def test_departement_all_should_return_overseas():
+    # Given
+    expected_output_element = Departement("om", "Collectivités d'Outremer", -1, "Outremer")
+
+    # When
+    output = Departement.all()
+
+    # Then
+    assert expected_output_element in output

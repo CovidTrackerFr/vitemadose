@@ -112,7 +112,7 @@ class departementUtils:
         >>> to_departement_number('75106')  # Paris 6e arr
         '75'
         >>> to_departement_number('97701')  # Saint-Barthélémy
-        '971'
+        'om'
         """
         if not insee_code:
             logger.warning("Null insee code")
