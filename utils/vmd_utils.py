@@ -249,7 +249,7 @@ def get_last_scans(centres):
 
     except Exception as e:
         logger.warning(f"Impossible de récupérer le fichier info_centres: {e}")
-        info_centres = {}
+        info_centres = {"centres_disponibles": [], "centres_indisponibles": []}
 
     for centre in info_centres["centres_disponibles"] + info_centres["centres_indisponibles"]:
         if "last_scan_with_availabilities" in centre:
