@@ -42,6 +42,7 @@ jobs:
         run: |
               sleep 30
               echo ${{ steps.connect_vpn.outputs.STATUS }}
+              curl https://ipecho.net/plain ; echo
               
       - name: "Doctolib scrap..."
         run: make doctoscrap
