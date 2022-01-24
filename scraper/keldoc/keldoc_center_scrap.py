@@ -307,7 +307,6 @@ if __name__ == "__main__":  # pragma: no cover
         if len(centers) < 90:
             # for reference, on 17-05, there were 97 centers
             logger.error(f"[NOT SAVING RESULTS] {len(centers)} does not seem like enough Keldoc centers")
-            exit(1)
         else:
             logger.info(f"> Writing them on {path_out}")
             with open(path_out, "w") as f:

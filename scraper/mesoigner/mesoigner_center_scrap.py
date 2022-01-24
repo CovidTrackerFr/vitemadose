@@ -123,7 +123,6 @@ if __name__ == "__main__":  # pragma: no cover
         logger.info(f"Found {len(centers)} centers on Mesoigner")
         if len(centers) < SCRAPER_CONF.get("minimum_results", 0):
             logger.error(f"[NOT SAVING RESULTS]{len(centers)} does not seem like enough Mesoigner centers")
-            exit(1)
         else:
             logger.info(f"> Writing them on {path_out}")
             with open(path_out, "w") as f:
