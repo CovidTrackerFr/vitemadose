@@ -247,13 +247,13 @@ def get_last_scans(centres):
         response.raise_for_status()
         info_centres = response.json()
 
+        for centre in info_centres["centres_disponibles"] + info_centres["centres_indisponibles"]:
+            if "last_scan_with_availabilities" in centre:
+                last_scans[centre["url"]] = centre["last_scan_with_availabilities"]
+
     except Exception as e:
         logger.warning(f"Impossible de récupérer le fichier info_centres: {e}")
         info_centres = {}
-
-    for centre in info_centres["centres_disponibles"] + info_centres["centres_indisponibles"]:
-        if "last_scan_with_availabilities" in centre:
-            last_scans[centre["url"]] = centre["last_scan_with_availabilities"]
 
     for centre in liste_centres:
         if not centre.prochain_rdv:
