@@ -177,7 +177,16 @@ def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
                 continue
             center = root_center["center"]
 
-            if center["id"] in MAIIA_DO_NOT_SCRAP_ID:
+            center_id = None
+            if "id" in center:
+                center_id = center["id"]
+            elif "siret" in center:
+                center_id = center["siret"]
+            else:
+                logger.warning(f"Center without 'id' or 'siret': {center}")
+                continue
+
+            if center_id in MAIIA_DO_NOT_SCRAP_ID:
                 continue
 
             # Si l'intégralité des motifs du centre sont des motifs exclus
@@ -192,15 +201,23 @@ def maiia_scrap(client: httpx.Client = DEFAULT_CLIENT, save=False):
                 continue
 
             centers.append(maiia_center_to_csv(center, root_center, atlas_center_list))
-            centers_ids.append(center["id"])
+            centers_ids.append(center_id)
             for child_center in center["childCenters"]:
+                child_center_id = None
+                if "id" in child_center:
+                    child_center_id = child_center["id"]
+                elif "siret" in center:
+                    child_center_id = child_center["siret"]
+                else:
+                    logger.warning(f"Child center without 'id' or 'siret': {child_center}")
+                    continue
                 if (
                     child_center["speciality"]["code"] == MAIIA_SCRAPER.get("specialities")[0]
                     and "url" in child_center
-                    and child_center["id"] not in centers_ids
+                    and child_center_id not in centers_ids
                 ):
                     centers.append(maiia_center_to_csv(child_center, root_center, atlas_center_list))
-                    centers_ids.append(child_center["id"])
+                    centers_ids.append(child_center_id)
     if not save:
         return centers
     # pragma: no cover
