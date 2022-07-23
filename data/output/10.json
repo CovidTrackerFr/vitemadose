@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "last_updated": "2021-09-11T23:03:09+02:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "10",
+      "nom": "Pharmacie Fernandes",
+      "url": "https://pharmacie-fernandes-troyes.pharmabest.com",
+      "location": {
+        "longitude": 4.073852,
+        "latitude": 48.298226,
+        "city": "Troyes",
+        "cp": "10000"
+      },
+      "metadata": {
+        "address": "10 - 12, rue de la R\u00e9publique, 10000 Troyes",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest22-fernandes-troyes",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}
