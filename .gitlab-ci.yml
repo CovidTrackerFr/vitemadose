@@ -30,6 +30,7 @@ lister_contributeurs:
     - ./scripts/contributors
   artifacts:
     name: "contributors"
+    expire_in: "1 week"
     paths:
       - data/output
   only:
@@ -53,6 +54,7 @@ trouver_les_rdv:
     - make stats
   artifacts:
     name: "rdv"
+    expire_in: "1 week"
     paths:
       - data/output
   only:
@@ -74,5 +76,6 @@ pages:
     - gitlab-publish
     - schedules
   artifacts:
+    expire_in: "1 month"
     paths:
       - public
