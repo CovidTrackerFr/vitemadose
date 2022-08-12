@@ -55,7 +55,7 @@ def get_center_details(center):
             center_details["type"] = set_center_type("pharmacie")
             center_details["phone_number"] = format_phone_number(center_details["phone_number"])
             center_details["vaccine_names"] = [
-                get_vaccine_name(vaccine).value for vaccine in center_details["vaccine_names"] if vaccine
+                get_vaccine_name(vaccine).value for vaccine in center_details["vaccine_names"] if vaccine and get_vaccine_name(vaccine) is not None
             ]
             [center_details.pop(key) for key in list(center_details.keys()) if key in useless_keys]
     except httpx.HTTPError as exc:
