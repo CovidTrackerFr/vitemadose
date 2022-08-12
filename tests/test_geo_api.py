@@ -1,14 +1,14 @@
 from utils.vmd_geo_api import get_location_from_address, get_location_from_coordinates, Location, Coordinates
 
 location1: Location = {
-    "full_address": "389 Av Mal de Lattre de Tassigny 71000 Mâcon",
-    "number_street": "389 Av Mal de Lattre de Tassigny",
+    "full_address": "389 avenue mal de lattre de tassigny 71000 Mâcon",
+    "number_street": "389 avenue mal de lattre de tassigny",
     "com_name": "Mâcon",
     "com_zipcode": "71000",
     "com_insee": "71270",
     "departement": "71",
-    "longitude": 4.839588,
-    "latitude": 46.315857,
+    "longitude": 4.840267,
+    "latitude": 46.316225,
 }
 
 
@@ -31,8 +31,8 @@ location3: Location = {
     "com_zipcode": "59000",
     "com_insee": "59350",
     "departement": "59",
-    "longitude": 2.975057,
-    "latitude": 50.65017,
+    "longitude": 2.974304,
+    "latitude": 50.649991,
 }
 
 
