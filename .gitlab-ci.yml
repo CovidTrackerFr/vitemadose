@@ -54,7 +54,7 @@ trouver_les_rdv:
     - make stats
   artifacts:
     name: "rdv"
-    expire_in: "1 week"
+    expire_in: "2 days"
     paths:
       - data/output
   only:
@@ -76,6 +76,6 @@ pages:
     - gitlab-publish
     - schedules
   artifacts:
-    expire_in: "1 month"
+    expire_in: "1 week"
     paths:
       - public
