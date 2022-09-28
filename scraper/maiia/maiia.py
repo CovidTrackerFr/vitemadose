@@ -288,8 +288,6 @@ def get_reasons(
 ) -> list:
     url = PLATFORM_API.get("motives").format(center_id=center_id)
     result = get_paged(url, limit=limit, client=client, request=request, request_type="motives")
-    if not result["total"]:
-        return []
     return result.get("items", [])
 
 
