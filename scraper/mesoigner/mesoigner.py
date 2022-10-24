@@ -32,6 +32,8 @@ SCRAPER_CONF = PLATFORM_CONF.get("center_scraper", {})
 CENTER_LIST_URL = PLATFORM_CONF.get("api", {}).get("center_list", {})
 
 BOOSTER_VACCINES = get_config().get("vaccines_allowed_for_booster", [])
+BOOSTER_ONLY_VACCINES = get_config().get("vaccines_for_booster_only", [])
+
 
 timeout = httpx.Timeout(PLATFORM_CONF.get("timeout", 30), connect=PLATFORM_CONF.get("timeout", 30))
 
@@ -53,6 +55,8 @@ def get_possible_dose_numbers(vaccine_list: list):
         return []
     if any([vaccine in BOOSTER_VACCINES for vaccine in vaccine_list]):
         return [1, 2, 3]
+    elif any([vaccine in BOOSTER_ONLY_VACCINES for vaccine in vaccine_list]):
+        return [3]
     return [1, 2]
 
 
