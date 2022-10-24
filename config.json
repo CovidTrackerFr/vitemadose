@@ -80,6 +80,12 @@
         "Pfizer-BioNTech",
         "Moderna"
     ],
+    
+    "vaccines_for_booster_only": [
+        "Moderna BA.1",
+        "Pfizer BA.5"
+    ],
+    
     "platforms": {
         "doctolib": {
             "enabled": true,
