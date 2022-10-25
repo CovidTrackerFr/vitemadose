@@ -1,6 +1,7 @@
 import json
 import pytest
 import logging
+from urllib.parse import parse_qs
 from scraper.pattern.center_info import CenterInfo
 from utils.vmd_utils import DummyQueue
 import httpx
@@ -25,6 +26,11 @@ logger = logging.getLogger("scraper")
 
 def app(request: httpx.Request) -> httpx.Response:
     try:
+        qs = parse_qs(
+            request.url._uri_reference.query
+        )  # we dont access request.url.query because its return query.encode('ascii'), will crashed
+        if int(qs.get("page", ["0"])[0]) >= 1:
+            return httpx.Response(200, json={"items": [], "total": 0})
         slug = request.url.path.split("/")[-1]
         endpoint = slug.split("?")[0]
         path = Path("tests", "fixtures", "maiia", f"{endpoint}.json")
@@ -128,7 +134,9 @@ def test_get_first_availability():
     assert first_availability.isoformat() == "2021-05-13T13:40:00+00:00"
 
 
-@pytest.mark.skip(reason="je n'ai aucune connaissance de ce scrapper et je dois supprimer les artifacts qui encombrent gitlab :D")
+@pytest.mark.skip(
+    reason="je n'ai aucune connaissance de ce scrapper et je dois supprimer les artifacts qui encombrent gitlab :D"
+)
 def test_fetch_slots():
 
     # Oops I forgot centerid
