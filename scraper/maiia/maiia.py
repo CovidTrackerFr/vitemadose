@@ -109,7 +109,7 @@ class MaiiaSlots:
             return None
         center_id = url_query["centerid"][0]
 
-        reasons = get_reasons(center_id, self._client, request=request)
+        reasons = get_reasons(center_id, client=self._client, request=request)
         if not reasons:
             return None
         self.lieu = Lieu(
