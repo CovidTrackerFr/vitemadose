@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "last_updated": "2021-09-11T23:03:09+02:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "13",
+      "nom": "Pharmacie Xavier",
+      "url": "https://pharmacie-xavier-st-remy.epharmacie.pro",
+      "location": {
+        "longitude": 4.82724,
+        "latitude": 43.79399,
+        "city": "Saint-R\u00e9my-de-Provence",
+        "cp": "13210"
+      },
+      "metadata": {
+        "address": "ZA de la Gare, 13210 Saint-R\u00e9my-de-Provence",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinelsie03-xavier-saint-remy-provence",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "13",
+      "nom": "Pharmacie Prado Mermoz",
+      "url": "https://pharmacie-prado-mermoz-marseille.pharmabest.com",
+      "location": {
+        "longitude": 5.3867865,
+        "latitude": 43.2741222,
+        "city": "Marseille",
+        "cp": "13008"
+      },
+      "metadata": {
+        "address": "244, avenue du Prado , 13008 Marseille",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest52-prado-mermoz-marseille",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}
