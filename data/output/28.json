@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "last_updated": "2021-09-11T23:03:09+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "28",
+      "nom": "Pharmacie de Combray",
+      "url": "https://pharmaciedecombray.epharmacie.pro/animation-details/a77026ad-050d-4885-97db-1939ff32cce7/1/60",
+      "location": {
+        "longitude": 1.25814,
+        "latitude": 48.3043,
+        "city": "Illiers-Combray",
+        "cp": "28120"
+      },
+      "metadata": {
+        "address": "Avenue Marcel Proust, 28120 Illiers-Combray",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-09-14T17:05:00",
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 12,
+      "internal_id": "Valwinreseausante46-combray",
+      "vaccine_type": [
+        "Moderna"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "28",
+      "nom": "Pharmacie Centrale Loup\u00e9enne",
+      "url": "https://pharmaciecentrale-laloupe.epharmacie.pro",
+      "location": {
+        "longitude": 1.014079,
+        "latitude": 48.471157,
+        "city": "La Loupe",
+        "cp": "28240"
+      },
+      "metadata": {
+        "address": "4, rue du 17 juin 1944 , 28240 La Loupe",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinph31-centrale-loupe",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "28",
+      "nom": "Pharmacie des Halles",
+      "url": "https://pharmacie-des-halles-senonches.epharmacie.pro",
+      "location": {
+        "longitude": 1.03849,
+        "latitude": 48.559597,
+        "city": "Senonches",
+        "cp": "28250"
+      },
+      "metadata": {
+        "address": "5, Place des Halles, 28250 Senonches",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinreseausante42-halles-senonches",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "28",
+      "nom": "Pharmacie de la Madeleine ",
+      "url": "https://pharmacie-madeleine-chartres.pharmabest.com",
+      "location": {
+        "longitude": 1.52602,
+        "latitude": 48.45238,
+        "city": "Chartres",
+        "cp": "28000"
+      },
+      "metadata": {
+        "address": "Avenue Marcel Proust, Carrefour, 28000 Chartres",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest10-madeleine-chartres",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

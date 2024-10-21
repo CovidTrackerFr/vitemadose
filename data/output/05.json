@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "last_updated": "2021-09-11T23:03:09+02:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "05",
+      "nom": "Pharmacie du th\u00e9\u00e2tre",
+      "url": "https://pharmaciedutheatregap.epharmacie.pro",
+      "location": {
+        "longitude": 6.07946,
+        "latitude": 44.556133,
+        "city": "GAP",
+        "cp": "05000"
+      },
+      "metadata": {
+        "address": "113 boulevard pompidou, 05000 GAP",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinph64-theatre-gap",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

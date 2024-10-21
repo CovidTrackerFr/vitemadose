@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "last_updated": "2021-09-11T23:03:09+02:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "71",
+      "nom": "Pharmacie de La Villeneuve",
+      "url": "https://pharmacie-villeneuve71.fr",
+      "location": {
+        "longitude": 4.893279,
+        "latitude": 46.772589,
+        "city": "Saint-Marcel",
+        "cp": "71380"
+      },
+      "metadata": {
+        "address": "1 bis, Rue de la Villeneuve, 71380 Saint-Marcel",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwingiro151-villeneuve-saint-marcel",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "71",
+      "nom": "Pharmacie de Saint-Pan",
+      "url": "https://pharmaciedesaintpan.fr",
+      "location": {
+        "longitude": 4.312051,
+        "latitude": 46.962126,
+        "city": "Autun",
+        "cp": "71400"
+      },
+      "metadata": {
+        "address": "94 av de la R\u00e9publique.Centre Commercial SAINT PANTALEON face \u00e0 Lidl , 71400 Autun",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwingiro99-saint-pan-autun",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}
