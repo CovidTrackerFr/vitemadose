@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "last_updated": "2021-09-11T23:03:09+02:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "45",
+      "nom": "Pharmacie de l'Isle",
+      "url": "https://pharmacie-delisle.fr",
+      "location": {
+        "longitude": 2.74048,
+        "latitude": 48.04388,
+        "city": "Cepoy",
+        "cp": "45120"
+      },
+      "metadata": {
+        "address": "13, avenue du Ch\u00e2teau, 45120 Cepoy",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwincos42-chollet-cepoy",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "45",
+      "nom": "PHARMACIE 2000",
+      "url": "https://pharmacie2000.epharmacie.pro",
+      "location": {
+        "longitude": 1.886685,
+        "latitude": 47.961196,
+        "city": "Saran",
+        "cp": "45770"
+      },
+      "metadata": {
+        "address": "Centre Commercial Cap Saran, RN 20, 45770 Saran",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinph79-2000",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "45",
+      "nom": "Pharmacie du Martroi",
+      "url": "https://pharmaciedumartroi.epharmacie.pro",
+      "location": {
+        "longitude": 2.254142,
+        "latitude": 48.17381,
+        "city": "Pithiviers",
+        "cp": "45300"
+      },
+      "metadata": {
+        "address": "41, Place du Martroi, 45300 Pithiviers",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwincos63-martroi-pithiviers",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "45",
+      "nom": "Pharmacie de la Cigogne",
+      "url": "https://pharmacie-cigogne-orleans.pharmabest.com",
+      "location": {
+        "longitude": 1.905298,
+        "latitude": 47.887442,
+        "city": "Orl\u00e9ans",
+        "cp": "45100"
+      },
+      "metadata": {
+        "address": "1 bis, route d'Olivet, 45100 Orl\u00e9ans",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest11-cigogne-orleans",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "45",
+      "nom": "Pharmacie des Trois Fontaines",
+      "url": "https://pharmaciedestroisfontaines.epharmacie.pro",
+      "location": {
+        "longitude": 1.86549,
+        "latitude": 47.90435,
+        "city": "Saint-Jean-de-la-Ruelle",
+        "cp": "45140"
+      },
+      "metadata": {
+        "address": "Avenue Pierre Mendes France - Centre Commercial, 45140 Saint-Jean-de-la-Ruelle",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwingiro196-trois-fontaines",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

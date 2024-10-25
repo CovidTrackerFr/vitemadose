@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "last_updated": "2021-09-11T23:03:09+02:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "31",
+      "nom": "Pharmacie du Prat",
+      "url": "https://pharmacie-du-prat-colomiers.pharmabest.com",
+      "location": {
+        "longitude": 1.3294666,
+        "latitude": 43.6149062,
+        "city": "Colomiers",
+        "cp": "31770"
+      },
+      "metadata": {
+        "address": "124, rue du Prat , 31770 Colomiers ",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest47-prat-colomiers",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "31",
+      "nom": "Pharmacie Albert",
+      "url": "https://pharmaciealbert.fr",
+      "location": {
+        "longitude": 1.192269,
+        "latitude": 43.259212,
+        "city": "Rieux-Volvestre",
+        "cp": "31310"
+      },
+      "metadata": {
+        "address": "1 bis chemin Chantemesse, 31310 Rieux-Volvestre",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwingiro117-albert-rieux-volvestre",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "31",
+      "nom": "Pharmacie Toulouse Montaudran",
+      "url": "https://pharmacie-toulouse-montaudran.epharmacie.pro",
+      "location": {
+        "longitude": 1.49983,
+        "latitude": 43.570671,
+        "city": "Toulouse",
+        "cp": "31400"
+      },
+      "metadata": {
+        "address": "175, route de Revel, 31400 Toulouse",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwincos70-toulouse-montaudran",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}
