@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "last_updated": "2021-09-11T23:03:09+02:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "2A",
+      "nom": "Pharmacie Paolini",
+      "url": "https://pharmacie-paolini-porto-vecchio.pharmabest.com",
+      "location": {
+        "longitude": 9.23027,
+        "latitude": 41.5852238,
+        "city": "Porto Vecchio",
+        "cp": "20137"
+      },
+      "metadata": {
+        "address": "Rond Point d'Arca La Rocade, 20137 Porto Vecchio",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest79-paolini-porto-vecchio",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "2A",
+      "nom": "Grande Pharmacie des Salines",
+      "url": "https://grande-pharmacie-des-salines.pharmabest.com",
+      "location": {
+        "longitude": 8.747253,
+        "latitude": 41.934879,
+        "city": "Ajaccio",
+        "cp": "20090"
+      },
+      "metadata": {
+        "address": "Cours Prince imp\u00e9rial, 20090 Ajaccio",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest78-salines-ajaccio",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

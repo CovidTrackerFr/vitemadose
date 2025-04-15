@@ -1,0 +1,235 @@
+{
+  "version": 1,
+  "last_updated": "2021-09-11T23:03:09+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "44",
+      "nom": "Pharmacie Espace 23",
+      "url": "https://pharmacie-espace23-ancenis.pharmabest.com/animations",
+      "location": {
+        "longitude": -1.195119,
+        "latitude": 47.373708,
+        "city": "Saint-G\u00e9r\u00e9on",
+        "cp": "44150"
+      },
+      "metadata": {
+        "address": "Centre commercial Espace 23, Boulevard de la Prairie, 44150 Saint-G\u00e9r\u00e9on",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-09-27T11:15:00",
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 27,
+      "internal_id": "Valwinpharmabest66-espace23-ancenis",
+      "vaccine_type": [
+        "Moderna"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "44",
+      "nom": "Pharmacie Saint Nicolas",
+      "url": "https://pharmaciesaintnicolas.epharmacie.pro",
+      "location": {
+        "longitude": -1.55868,
+        "latitude": 47.21574,
+        "city": "Nantes",
+        "cp": "44000"
+      },
+      "metadata": {
+        "address": "9 Rue de Feltre, 44000 Nantes",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwingiphar03-saint-nicolas",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "44",
+      "nom": "Pharmacie des Congr\u00e8s",
+      "url": "https://pharmaciedescongres.epharmacie.pro",
+      "location": {
+        "longitude": -1.54622,
+        "latitude": 47.21399,
+        "city": "NANTES",
+        "cp": "44000"
+      },
+      "metadata": {
+        "address": "7 Rue Four\u00e9, 44000 NANTES",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwingiphar04-congres",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "44",
+      "nom": "Phamacie des Dervalli\u00e8res",
+      "url": "https://pharmaciedesdervallieres.epharmacie.pro",
+      "location": {
+        "longitude": -1.598341,
+        "latitude": 47.223437,
+        "city": "Nantes",
+        "cp": "44100"
+      },
+      "metadata": {
+        "address": "Place des dervalli\u00e8res, 44100 Nantes",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwingiphar05-dervalliere",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "44",
+      "nom": "Grande Pharmacie de Paris/ la gare ",
+      "url": "https://grande-pharmacie-paris-nantes.pharmabest.com",
+      "location": {
+        "longitude": -1.557661,
+        "latitude": 47.214315,
+        "city": "Nantes",
+        "cp": "44000"
+      },
+      "metadata": {
+        "address": "17, rue d'Orl\u00e9ans, 44000 Nantes",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest16-paris-nantes",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "44",
+      "nom": "Pharmacie Saint Paul",
+      "url": "https://pharmaciesaintpaul.epharmacie.pro",
+      "location": {
+        "longitude": -1.5464,
+        "latitude": 47.1852,
+        "city": "Rez\u00e9",
+        "cp": "44000"
+      },
+      "metadata": {
+        "address": "86 rue jean jaur\u00e9s, 44000 Rez\u00e9",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinlpa03-saintpaul",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "44",
+      "nom": "Pharmacie Atout Sud",
+      "url": "https://pharmacieatoutsud.fr",
+      "location": {
+        "longitude": -1.573119,
+        "latitude": 47.193085,
+        "city": "Reze",
+        "cp": "44400"
+      },
+      "metadata": {
+        "address": "1, rue Ordronneau, 44400 Reze",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinreseausante57-atout-sud-reze",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "44",
+      "nom": "Pharmacie du Vieux Doulon ",
+      "url": "https://www.pharmacie-vieux-doulon-nantes.fr",
+      "location": {
+        "longitude": -1.504914,
+        "latitude": 47.234393,
+        "city": "Nantes",
+        "cp": "44300"
+      },
+      "metadata": {
+        "address": "195-197 Boulevard Auguste Peneau, 44300 Nantes",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwingiro73-vieuxdoulon",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "44",
+      "nom": "Pharmacie Misler",
+      "url": "https://pharmacie-misler.epharmacie.pro",
+      "location": {
+        "longitude": -1.483578,
+        "latitude": 47.250989,
+        "city": "Sainte-Luce-sur-Loire",
+        "cp": "44980"
+      },
+      "metadata": {
+        "address": "1, Rue du Stade, 44980 Sainte-Luce-sur-Loire",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinreseausante34-misler-sainte-luce-loire",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

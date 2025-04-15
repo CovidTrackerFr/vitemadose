@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "last_updated": "2021-09-11T23:03:09+02:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "38",
+      "nom": "Pharmacie Championnet",
+      "url": "https://pharmacie-championnet.com",
+      "location": {
+        "longitude": 5.7222179,
+        "latitude": 45.1855229,
+        "city": "Grenoble",
+        "cp": "38000"
+      },
+      "metadata": {
+        "address": "8, place Championnet, 38000 Grenoble",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinph43-championnet-grenoble",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "38",
+      "nom": "Pharmacie Grisot Winocq",
+      "url": "https://pharmacie-grisot-winocq-septeme.giropharm.fr",
+      "location": {
+        "longitude": 5.004088,
+        "latitude": 45.55331,
+        "city": "Sept\u00e8me",
+        "cp": "38780"
+      },
+      "metadata": {
+        "address": "286 Place Cecillon, le Village, 38780 Sept\u00e8me",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwingiro120-grisot-winocq",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "38",
+      "nom": "Pharmacie des Boulevards",
+      "url": "https://pharmab-grenoble.fr",
+      "location": {
+        "longitude": 5.716806,
+        "latitude": 45.180134,
+        "city": "Grenoble",
+        "cp": "38100"
+      },
+      "metadata": {
+        "address": "1, cours de la Lib\u00e9ration et du G\u00e9n\u00e9ral de Gaulle, 38100 Grenoble",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinaptiphar14-boulevards-grenoble",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "38",
+      "nom": "Pharmacie de Saint-Georges",
+      "url": "https://pharmaciedelpon.fr",
+      "location": {
+        "longitude": 5.078879,
+        "latitude": 45.555335,
+        "city": "Saint-Georges d'Esperanche",
+        "cp": "38790"
+      },
+      "metadata": {
+        "address": "4, place Edmond Budillon, 38790 Saint-Georges d'Esperanche",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmaccord11-delpon-georges-esperanche",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "38",
+      "nom": "Pharmacie Pillon",
+      "url": "https://pharmaciepillon.fr",
+      "location": {
+        "longitude": 4.964177,
+        "latitude": 45.516577,
+        "city": "Estrablin",
+        "cp": "38780"
+      },
+      "metadata": {
+        "address": "61, rue de l'Europe, 38780 Estrablin",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmaccord22-pillon-estrablin",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "38",
+      "nom": "Pharmacie de Ruy",
+      "url": "https://pharmaciederuy.fr",
+      "location": {
+        "longitude": 5.309164,
+        "latitude": 45.588552,
+        "city": "Ruy-Montceau",
+        "cp": "38300"
+      },
+      "metadata": {
+        "address": "45, avenue des Cantini\u00e8res, 38300 Ruy-Montceau",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmaccord24-ruy-ruy-montceau",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

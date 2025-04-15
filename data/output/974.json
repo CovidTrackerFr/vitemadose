@@ -1,0 +1,282 @@
+{
+  "version": 1,
+  "last_updated": "2021-09-11T23:03:09+02:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "974",
+      "nom": "Pharmacie du Centre",
+      "url": "https://pharmacie-saint-andre.pharmabest.com",
+      "location": {
+        "longitude": 55.64723,
+        "latitude": -20.97182,
+        "city": "Saint-Andr\u00e9",
+        "cp": "97440"
+      },
+      "metadata": {
+        "address": "199, avenue de Bourbon, 97440 Saint-Andr\u00e9",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest93-centre-saint-andre",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "974",
+      "nom": "Pharmacie de Cambuston",
+      "url": "https://pharmacie-cambuston-st-andre.epharmacie.pro",
+      "location": {
+        "longitude": 55.646019,
+        "latitude": -20.932346,
+        "city": "Saint Andr\u00e9",
+        "cp": "97440"
+      },
+      "metadata": {
+        "address": "427 rue Cambuston, 97440 Saint Andr\u00e9",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoco17-cambuston-saint-andre",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "974",
+      "nom": "Pharmacie Zac Bank",
+      "url": "https://pharmacie-bank-saint-pierre.epharmacie.pro",
+      "location": {
+        "longitude": 55.472384,
+        "latitude": -21.331046,
+        "city": "Saint-Pierre",
+        "cp": "97410"
+      },
+      "metadata": {
+        "address": "126, rue Luc Lorion, 97410 Saint-Pierre",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoco18-zac-bank-saint-pierre",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "974",
+      "nom": "Pharmacie des Avirons",
+      "url": "https://pharmacie-des-avirons.epharmacie.pro",
+      "location": {
+        "longitude": 55.332869,
+        "latitude": -21.242011,
+        "city": "les Avirons",
+        "cp": "97425"
+      },
+      "metadata": {
+        "address": "60, rue du g\u00e9n\u00e9ral de Gaulle, 97425 les Avirons",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoco20-avirons",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "974",
+      "nom": "Pharmacie des Trois Mares",
+      "url": "https://pharmaciedestroismares-letampon.epharmacie.pro",
+      "location": {
+        "longitude": 55.503863,
+        "latitude": -21.260505,
+        "city": "Le Tampon, R\u00e9union",
+        "cp": "97430"
+      },
+      "metadata": {
+        "address": "34, rue Charles Baudelaire, 97430 Le Tampon, R\u00e9union",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoco19-trois-mares-tampon",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "974",
+      "nom": "Pharmacie des Alo\u00e8s",
+      "url": "https://pharmaciedesaloes.epharmacie.pro",
+      "location": {
+        "longitude": 55.65045,
+        "latitude": -20.96095,
+        "city": "Saint-Andr\u00e9",
+        "cp": "97440"
+      },
+      "metadata": {
+        "address": "62 avenue de la R\u00e9publique, 97440 Saint-Andr\u00e9",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoco21-aloes-saint-andre",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "974",
+      "nom": "Pharmacie du Moufia",
+      "url": "https://pharmacie-du-moufia.epharmacie.pro",
+      "location": {
+        "longitude": 55.492008,
+        "latitude": -20.899799,
+        "city": "Sainte-Clotilde",
+        "cp": "97490"
+      },
+      "metadata": {
+        "address": "43, route du Moufia, 97490 Sainte-Clotilde",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoco12-moufia-sainte-clotilde",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "974",
+      "nom": "Pharmacie des Bons Enfants",
+      "url": "https://pharmaciedesbonsenfants.re",
+      "location": {
+        "longitude": 55.47315,
+        "latitude": -21.33957,
+        "city": "Saint-Pierre",
+        "cp": "97410"
+      },
+      "metadata": {
+        "address": "82, rue des Bons Enfants, 97410 Saint-Pierre",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinarenarun01-bons-enfants-reunion",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "974",
+      "nom": "Pharmacie de la Gare",
+      "url": "https://pharmaciegaresaintandre.epharmacie.pro",
+      "location": {
+        "longitude": 55.652604,
+        "latitude": -20.958989,
+        "city": "Saint Andr\u00e9",
+        "cp": "97440"
+      },
+      "metadata": {
+        "address": "315, Rue de la Gare, 97440 Saint Andr\u00e9",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoco11-gare-saint-andre",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "974",
+      "nom": "Pharmacie des deux rives",
+      "url": "https://pharmacie2rives.epharmacie.pro",
+      "location": {
+        "longitude": 55.62536,
+        "latitude": -20.9504,
+        "city": "SAINTE SUZANNE",
+        "cp": "97441"
+      },
+      "metadata": {
+        "address": "2 rue G Nasseau, 97441 SAINTE SUZANNE",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoco16-2-rives-sainte-suzanne-reunion",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "974",
+      "nom": "Pharmacie de la Clinique",
+      "url": "https://pharmaciedelaclinique.epharmacie.pro",
+      "location": {
+        "longitude": 55.47683,
+        "latitude": -20.90388,
+        "city": "Sainte-Clotilde",
+        "cp": "97490"
+      },
+      "metadata": {
+        "address": "Route de bois de N\u00e8fles, 97490 Sainte-Clotilde",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinsoco23-clinique",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

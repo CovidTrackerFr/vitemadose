@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "last_updated": "2021-09-11T23:03:09+02:00",
+  "centres_disponibles": [],
+  "centres_indisponibles": [
+    {
+      "departement": "68",
+      "nom": "Pharmacie du Nordfeld",
+      "url": "https://pharmaciedunordfeld.fr",
+      "location": {
+        "longitude": 7.34696,
+        "latitude": 47.75222,
+        "city": "Mulhouse",
+        "cp": "68100"
+      },
+      "metadata": {
+        "address": "87, rue du Nordfeld, 68100 Mulhouse",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwincos50-nordfeld-mulhouse",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "last_updated": "2021-09-11T23:03:09+02:00",
+  "centres_disponibles": [
+    {
+      "departement": "33",
+      "nom": "Grande Pharmacie du Centre Ambar\u00e8s",
+      "url": "https://grandepharmacieducentre.epharmacie.pro/animations",
+      "location": {
+        "longitude": -0.4891,
+        "latitude": 44.926121,
+        "city": "Ambar\u00e8s-et-Lagrave",
+        "cp": "33440"
+      },
+      "metadata": {
+        "address": "6, rue du Pr\u00e9sident Coty, 33440 Ambar\u00e8s-et-Lagrave",
+        "business_hours": null
+      },
+      "prochain_rdv": "2021-10-29T17:20:00",
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 1800,
+      "internal_id": "Valwincos52-centre-ambares-lagrave",
+      "vaccine_type": [
+        "Moderna"
+      ],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ],
+  "centres_indisponibles": [
+    {
+      "departement": "33",
+      "nom": "Pharmacie Principale",
+      "url": "https://pharmacie-principale-bordeaux.pharmabest.com",
+      "location": {
+        "longitude": -0.574184,
+        "latitude": 44.841478,
+        "city": "Bordeaux",
+        "cp": "33000"
+      },
+      "metadata": {
+        "address": "10, rue Sainte Catherine, 33000 Bordeaux",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest05-principale-bordeaux",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    },
+    {
+      "departement": "33",
+      "nom": "Pharmacie de l'Alouette",
+      "url": "https://pharmacie-alouette-pessac.pharmabest.com",
+      "location": {
+        "longitude": -0.66428,
+        "latitude": 44.79843,
+        "city": "Pessac",
+        "cp": "33600"
+      },
+      "metadata": {
+        "address": "14, avenue du g\u00e9n\u00e9ral Leclerc, 33600 Pessac",
+        "business_hours": null
+      },
+      "prochain_rdv": null,
+      "plateforme": "Valwin",
+      "type": "drugstore",
+      "appointment_count": 0,
+      "internal_id": "Valwinpharmabest24-alouette-pessac",
+      "vaccine_type": [],
+      "appointment_by_phone_only": false,
+      "erreur": null,
+      "last_scan_with_availabilities": null,
+      "request_counts": null
+    }
+  ]
+}
